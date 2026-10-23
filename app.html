@@ -1037,7 +1037,8 @@ const IMPORT_KEY = 'wh-imported';
 const importedKept = () => { const v = store.get(IMPORT_KEY, []); return Array.isArray(v) ? v.filter(x => x && typeof x === 'object' && typeof x.id === 'string' && x.json) : []; };
 const importStale = [];
 if(window.WH_IMPORT) for(const x of importedKept()){
-  const r = WH_IMPORT.resolve(x.json, D, { id:x.id, date:x.date });
+  // (a kept export that cannot be read at all is listed as out of date, with Remove: it never stops the app)
+  let r; try { r = WH_IMPORT.resolve(x.json, D, { id:x.id, date:x.date }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }
   if(r.ok && !D.armies.some(a => a.id === r.army.id)) D.armies.push(r.army);
   else importStale.push({ id:x.id, name:String(x.name || 'Imported list'), date:x.date, errors:r.ok ? ['a list with this id is already in the app'] : r.errors });
 }
@@ -1610,7 +1611,8 @@ function runImport(text){
   if(!String(text || '').trim()){ out.innerHTML = '<div class="impno"><p class="qh">Nothing to import</p><p class="lead">Choose the .json file, or paste the export first.</p></div>'; return; }
   let json = null; try { json = JSON.parse(text); } catch(e){}
   const taken = new Set(D.armies.map(a => a.id).concat(importedKept().map(x => x.id)));
-  const date = today(), r = WH_IMPORT.resolve(json || text, D, { date });
+  const date = today();
+  let r; try { r = WH_IMPORT.resolve(json || text, D, { date }); } catch(e){ r = { ok:false, errors:['not a New Recruit JSON export (it could not be read)'] }; }
   if(!r.ok){
     out.innerHTML = '<div class="impno"><p class="qh">Not imported · ' + r.errors.length + (r.errors.length === 1 ? ' item' : ' items') + ' not recognized</p>' + impList(r.errors) +
       '<p class="note">Nothing was added. The app takes a list only when it already has every part of it.</p></div>';
@@ -1619,8 +1621,7 @@ function runImport(text){
   }
   const A = r.army; let id = A.id, k = 2; while(taken.has(id)) id = A.id + '-' + k++;
   A.id = id;
-  const kept = importedKept().concat([{ id, name:A.name, date, json:WH_IMPORT.slim(json) }]);
-  store.set(IMPORT_KEY, kept);
+  try { store.set(IMPORT_KEY, importedKept().concat([{ id, name:A.name, date, json:WH_IMPORT.slim(json) }])); } catch(e){}
   const saved = importedKept().some(x => x.id === id);
   D.armies.push(A); ONLY = D.armies.length === 1 ? D.armies[0] : null;
   hideSheet(); go({ s:'army', army:id }, 'sheet');
@@ -1628,7 +1629,8 @@ function runImport(text){
 }
 // an imported list's Overview ends with where it came from and its Remove (a confirm on the page, not a browser dialog)
 const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);
-  return '<div class="sec-h"><h2>On this phone</h2></div><p class="note">Imported from New Recruit' + (x && x.date ? ' on ' + esc(x.date) : '') + ', made of units the app’s own lists have. Kept on this phone only.</p>' +
+  return '<div class="sec-h"><h2>On this phone</h2></div><p class="note">Imported from New Recruit' + (x && x.date ? ' on ' + esc(x.date) : '') + ', made of units the app’s own lists have. ' +
+    (x ? 'Kept on this phone only.' : 'This phone could not keep it: it is gone when the app next starts.') + '</p>' +
     '<div class="imprm" id="impRm">' + impRmBtn(a.id) + '</div>'; };
 const impRmBtn = id => '<button class="btn2" data-imprm="' + esc(id) + '">Remove this list</button>';
 function askRemove(id){
@@ -1643,6 +1645,7 @@ function removeImported(id){
   store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));
   const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);
   const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);
+  try { localStorage.removeItem('wh-used-' + id); } catch(e){}   // its per-battle ticks
   ONLY = D.armies.length === 1 ? D.armies[0] : null;
   hideSheet(); go({ s:'home' }, 'replace');
   toast('Removed ' + name);

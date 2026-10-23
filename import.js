@@ -30,13 +30,15 @@ const pts = costs => (costs || []).filter(c => c.name === 'pts').reduce((t, c) =
 const clone = o => JSON.parse(JSON.stringify(o));
 const and = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
 
-// one part's signature: every selection below it as a path of entry ids from the part, with its count
-// (a models line's and a wargear item's count; an option holding models, "8 chainblades", counts once)
+// one part's signature: every selection below it as a path of entry ids from the part, with its count (every models line,
+// wargear item and option, a bundle of weapons too; the same path twice adds up). An option that holds models ("8 chainblades":
+// New Recruit counts it once, BSData's roster once per model) counts once per selection: its models carry the count, and resolve
+// refuses such an option taken more than once
 function signature(rootId, kids){
   const m = new Map();
   const walk = (s, p) => {
     const k = (p ? p + '/' : '') + s.id;
-    if(!s.kids.length || s.model) m.set(k, (m.get(k) || 0) + s.n); else m.set(k, 1);
+    m.set(k, (m.get(k) || 0) + (!s.model && s.kids.some(c => c.model) ? 1 : s.n));
     for(const c of s.kids) walk(c, k);
   };
   for(const c of kids) walk(c, '');
@@ -61,15 +63,39 @@ function slim(j){
     forces:(r.forces || []).map(f => ({ name:f.name, catalogueId:f.catalogueId, catalogueName:f.catalogueName, selections:(f.selections || []).map(sel), forces:f.forces })) } };
 }
 
+// the shape resolve reads, checked first: a malformed export is refused, never half read
+const isObj = v => !!v && typeof v === 'object' && !Array.isArray(v);
+const optArr = v => v === undefined || Array.isArray(v);
+function malformed(j){
+  if(!isObj(j) || !isObj(j.roster) || !Array.isArray(j.roster.forces)) return 'no roster';
+  const R = j.roster;
+  if(!optArr(R.costs) || !optArr(R.costLimits) || ![...(R.costs || []), ...(R.costLimits || [])].every(isObj)) return 'its points are malformed';
+  if(R.forces.length !== 1 || !isObj(R.forces[0])) return null;   // (refused with its own message)
+  const F = R.forces[0];
+  if(!Array.isArray(F.selections)) return 'the force has no selections';
+  let bad = null;
+  const sel = (s, d) => {
+    if(bad) return;
+    if(!isObj(s) || typeof s.entryId !== 'string' || typeof s.name !== 'string' || typeof s.type !== 'string' || !Number.isInteger(s.number) || s.number < 0 ||
+      !optArr(s.selections) || !optArr(s.costs) || !optArr(s.associations) || !(s.costs || []).every(isObj) || !(s.associations || []).every(isObj) || d > 12){ bad = 'a selection is malformed'; return; }
+    for(const c of s.selections || []) sel(c, d + 1);
+  };
+  for(const s of F.selections) sel(s, 0);
+  return bad;
+}
 function resolve(input, D, opt){
-  opt = opt || {};
+  let j = input;
+  if(typeof j === 'string'){ try { j = JSON.parse(j); } catch(e){ return { ok:false, errors:['not a New Recruit JSON export (the text is not JSON)'] }; } }
+  const bad = malformed(j);
+  if(bad) return { ok:false, errors:['not a New Recruit JSON export (' + bad + ')'] };
+  try { return resolveRoster(j, D, opt || {}); }
+  catch(e){ return { ok:false, errors:['not a New Recruit JSON export (it could not be read)'] }; }
+}
+function resolveRoster(j, D, opt){
   const errors = [], err = m => { if(!errors.includes(m)) errors.push(m); };
   const fail = () => ({ ok:false, errors });
-  let j = input;
-  if(typeof j === 'string'){ try { j = JSON.parse(j); } catch(e){ err('not a New Recruit JSON export (the text is not JSON)'); return fail(); } }
   const T = D.bsIds;
   if(!T){ err('this version of the app cannot import lists'); return fail(); }
-  if(!j || !j.roster || !Array.isArray(j.roster.forces)){ err('not a New Recruit JSON export (no roster)'); return fail(); }
   const R = j.roster;
   if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }
   const F = R.forces[0];
@@ -85,26 +111,45 @@ function resolve(input, D, opt){
   }
   const FAC = D.factions[fac];
 
-  /* the list: battle size, detachments, disposition, config */
-  let battleSize = null, disposition = null; const dets = [], config = {};
+  /* the list: one battle size, one detachment selection, one Force Disposition, config; every top-level selection is one of
+     these or holds no list content (Show/Hide Options and rules references, whose own choices must be known ones too) */
+  let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};
+  const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };
   for(const t of top){
     const id = lastId(t.entryId), kids = t.selections || [];
-    if(T.info[id]) continue;                                   // Show/Hide Options, rules references
-    if(T.config[id]){ if(kids.length) config[T.config[id]] = kids.map(c => typo(nn(c.name))).join(', '); continue; }
-    const known = kids.filter(c => T.battleSizes[lastId(c.entryId)] || T.dispositions[lastId(c.entryId)] || T.detachments[lastId(c.entryId)]);
-    if(!kids.length || (!known.length && !/^(Battle Size|Detachment|Force Disposition)$/.test(nn(t.name)))){ err('selection ' + nn(t.name) + ' not recognized'); continue; }
+    if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }
+    if(T.info[id]){
+      for(const c of kids) if(!T.infoKids[lastId(c.entryId)] || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
+      continue;
+    }
+    if(T.config[id]){
+      const key = T.config[id];
+      if(key in config){ err('selection ' + nn(t.name) + ' twice not recognized'); continue; }
+      const odd = kids.filter(c => T.configKids[lastId(c.entryId)] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1);
+      for(const c of odd) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
+      if(!odd.length && kids.length) config[key] = kids.map(c => typo(nn(c.name))).join(', ');
+      continue;
+    }
+    const kind = T.roots[id];
+    if(!kind){ err('selection ' + nn(t.name) + ' not recognized'); continue; }
+    if(seen[kind]){ err(KIND[kind] + ' selection ' + nn(t.name) + ' twice not recognized'); continue; }
+    seen[kind] = true;
     for(const c of kids){
       const cid = lastId(c.entryId), nm = nn(c.name);
-      if(T.battleSizes[cid]){ battleSize = T.battleSizes[cid]; continue; }
-      if(T.dispositions[cid] && T.dispositions[cid] === nm){ disposition = nm; continue; }
-      const d = T.detachments[cid], dk = d && d.split('/');
-      if(d && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ dets.push(dk[1]); continue; }
-      const kind = nn(t.name) === 'Battle Size' ? 'battle size' : nn(t.name) === 'Force Disposition' ? 'disposition' : 'detachment';
-      err(kind + ' ' + nm + ' not recognized');
+      const once = Number(c.number) === 1 && !(c.selections || []).length;
+      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
+      if(kind === 'disposition' && T.dispositions[cid] === nm && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
+      const d = kind === 'detachment' && T.detachments[cid], dk = d && d.split('/');
+      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
+      err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');
     }
   }
   if(!battleSize && !errors.some(e => /^battle size/.test(e))) err('battle size not recognized (the export names none)');
   if(!dets.length && !errors.some(e => /^detachment/.test(e))) err('detachment not recognized (the export names none)');
+  // the points limit is the battle size's (BSData), not the export's word for it
+  const limit = pts(R.costLimits), total = pts(R.costs);
+  if(battleSize && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');
+  if(battleSize && total > T.limits[battleSize]) err('points total ' + total + ' not recognized: over the ' + battleSize + ' limit of ' + T.limits[battleSize] + ' pts');
   if(disposition && dets.length){
     const allowed = new Set(dets.flatMap(k => FAC.detachments[k].dispositions || []));
     if(!allowed.has(disposition)) err('disposition ' + disposition + ' not recognized for ' + and(dets.map(k => FAC.detachments[k].name)));
@@ -115,7 +160,7 @@ function resolve(input, D, opt){
   const byId = new Map(roots.map(s => [s.id, s]));
   const leadsTo = new Map();
   for(const s of roots) for(const a of s.associations || []) if(a.type === 'outgoing' && a.action === 'group'){
-    if(!byId.has(a.to)){ err('leader attachment of ' + nn(s.name) + ' not recognized (the unit it ' + String(a.name || 'leads').toLowerCase() + ' is not in the list)'); continue; }
+    if(!byId.has(a.to)){ err('leader attachment of ' + nn(s.name) + ' not recognized (what it ' + (a.name === 'Supporting' ? 'supports' : 'leads') + ' is not a unit of the list)'); continue; }
     if(leadsTo.has(s)){ err('leader attachment of ' + nn(s.name) + ' to two units not recognized'); continue; }
     leadsTo.set(s, byId.get(a.to));
   }
@@ -128,12 +173,11 @@ function resolve(input, D, opt){
   for(const g of groups) g.at = Math.min(...g.parts.map(p => roots.indexOf(p)));
   groups.sort((a, b) => a.at - b.at);
 
-  // the lists of this faction; a unit is taken only from one with the same detachments and config
-  const sameSet = (a, b) => a.length === b.length && a.slice().sort().join('\n') === b.slice().sort().join('\n');
-  const ctxKey = (d, c) => d.slice().sort().join('+') + '|' + JSON.stringify(Object.keys(c).sort().map(k => [k, c[k]]));
-  const mine = ctxKey(dets, config);
+  // the lists of this faction; a unit is taken only from one with the same detachments, config and battle size
+  const ctxKey = (d, c, b) => d.slice().sort().join('+') + '|' + JSON.stringify(Object.keys(c).sort().map(k => [k, c[k]])) + '|' + b;
+  const mine = ctxKey(dets, config, battleSize);
   const facArmies = D.armies.filter(a => a.faction === fac && !a.imported && T.units[a.id + '/' + (a.units[0] || {}).id]);
-  const pool = facArmies.filter(a => ctxKey(a.detachments, a.config || {}) === mine);
+  const pool = facArmies.filter(a => ctxKey(a.detachments, a.config || {}, a.battleSize) === mine);
   const instances = facArmies.flatMap(a => a.units.map(u => ({ a, u, sigs:(T.units[a.id + '/' + u.id] || []).slice().sort() })));
   const partSigs = instances.flatMap(x => x.sigs);
   if(!errors.length && !pool.length) err('detachment' + (dets.length > 1 ? 's ' : ' ') + and(dets.map(k => FAC.detachments[k].name)) + (Object.keys(config).length ? ' with ' + Object.entries(config).map(([k, v]) => k + ' ' + v).join(', ') : '') +
@@ -163,7 +207,7 @@ function resolve(input, D, opt){
     for(const x of extra){
       const n = x.slice(0, x.indexOf('×')), path = x.slice(x.indexOf('×') + 1), c = byPath.get(path) || {};
       const nm = nn(c.name || T.names[path.split('/').pop()] || path);
-      if(nm === 'Warlord') err('warlord ' + unit + ' not recognized (the app has no such unit as Warlord in this faction)');
+      if(nm === 'Warlord') err(n !== '1' ? 'warlord ×' + n + ' on unit ' + unit + ' not recognized' : 'warlord ' + unit + ' not recognized (the app has no such unit as Warlord in this faction)');
       else if(/^Enhancements/.test(c.group || '')) err('enhancement ' + nm + ' not recognized (on ' + unit + ')');
       else err('option ' + (n !== '1' || c.type === 'model' ? n + '× ' : '') + nm + ' on unit ' + unit + ' not recognized');
     }
@@ -184,6 +228,10 @@ function resolve(input, D, opt){
     const unit = label(g);
     if(!g.parts.every(p => namesOk(p, nn(p.name)))) return;
     for(const p of g.parts) if(Number(p.number) !== 1) err('unit ' + nn(p.name) + ' ×' + p.number + ' not recognized');
+    // an option holding models ("8 chainblades") is taken once: its models carry the count
+    const holders = x => { for(const c of x.selections || []){ if(c.type !== 'model' && (c.selections || []).some(y => y.type === 'model') && Number(c.number) !== 1) err('option ' + c.number + '× ' + nn(c.name) + ' on unit ' + unit + ' not recognized'); holders(c); } };
+    g.parts.forEach(holders);
+    const before = errors.length;
     const c = cands[i];
     if(!c.length){
       // the closest unit of the same datasheets (the same leader on the same bodyguard): what differs from it
@@ -193,6 +241,7 @@ function resolve(input, D, opt){
         const mineS = want[i], diff = x => mineS.filter(s => !x.sigs.includes(s)).length;
         const best = like.slice().sort((x, y) => (pool.includes(y.a) - pool.includes(x.a)) || diff(x) - diff(y))[0];   // a usable list's first
         g.parts.forEach(p => { if(!best.sigs.includes(sigOf(p))) explainPart(p, nn(p.name), best.sigs); });
+        if(errors.length === before) err('leader attachment ' + unit + ' not recognized (the app has these parts, but not together like this)');
         return;
       }
       const known = g.parts.map(p => partSigs.includes(sigOf(p)));
@@ -210,9 +259,20 @@ function resolve(input, D, opt){
     if(!priced.length){ err('points of unit ' + unit + ' not recognized: ' + cost + ' pts in the export, ' + inPool[0].u.pts + ' in the app'); return; }
     const pick = priced.find(x => (used.get(x.u) || 0) < (x.u.copies || 1)) || priced[0];
     used.set(pick.u, (used.get(pick.u) || 0) + 1);
-    picks.push(pick);
+    picks.push(Object.assign({}, pick));
   });
-  const total = pts(R.costs), limit = pts(R.costLimits);
+  // the list as a whole: at most one Warlord, and each entry no more often than BSData allows per list (an enhancement once, an
+  // Epic Hero once); a unit the app has may be taken more often than a list of the app takes it, as long as these hold
+  if(!errors.length){
+    const wl = picks.filter(x => x.u.warlord);
+    // (none only as a list of the app has none: the owner's 4 megas and a destrier, as New Recruit printed it)
+    if(wl.length > 1 || (!wl.length && !pool.some(a => !a.units.some(u => u.warlord)))) err('warlord not recognized: ' + (wl.length ? wl.length + ' units are the Warlord (' + and(wl.map(x => x.u.name)) + ')' : 'no unit is the Warlord'));
+    // how many of each entry the list takes, against BSData's max per list (an enhancement once, an Epic Hero once)
+    const n = new Map(), walk = (x, isRoot) => { const id = lastId(x.entryId); n.set(id, { x, n:((n.get(id) || {}).n || 0) + Number(x.number), isRoot }); for(const c of x.selections || []) walk(c, false); };
+    roots.forEach(r => walk(r, true));
+    for(const [id, { x, n:k, isRoot }] of n) if(T.maxPerList[id] !== undefined && k > T.maxPerList[id])
+      err((isRoot ? 'unit ' : /^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + ' ×' + k + ' not recognized (BSData allows ' + T.maxPerList[id] + ' per list)');
+  }
   if(!errors.length){
     const sum = picks.reduce((t, x) => t + x.u.pts, 0);
     if(sum !== total) err('points total ' + total + ' not recognized: the units add up to ' + sum);

@@ -1143,7 +1143,7 @@ function rosters() {
     if (R) { const all = R.roster.desc(false).filter((s) => s.node); for (const s of all) applyOwnCats(s); for (const s of all) s.hidden = selHidden(s); }
     out.push({ army, R, issues });
   }
-  return { DATA, SRC, MAP, out, kids, costOf, rootNode, searchBelow };
+  return { DATA, SRC, MAP, out, kids, costOf, rootNode, rootLinksOf, searchBelow, node };
 }
 function main() {
   const MAP = setup();

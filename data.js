@@ -5111,8 +5111,25 @@ const BS_IDS = {
     "b984-7317-81cc-20f":"tyranids",
     "df9a-59b2-f464-59ad":"world-eaters"
   },
+  roots:{
+    "1162-9cd5-d6b0-1663":"detachment",
+    "2f69-9148-45b4-86a8":"disposition",
+    "3b0d-dccf-8661-be1c":"detachment",
+    "564e-fbc6-5266-3ea4":"battleSize",
+    "5a84-ea91-b707-1656":"detachment",
+    "6470-c44a-45f4-3313":"detachment",
+    "73c2-d0ed-3c7e-7e17":"detachment",
+    "84c8-b821-877d-72e6":"detachment",
+    "a435-b94a-eb7b-7c0c":"detachment",
+    "a6ad-d379-46ee-2c24":"detachment",
+    "bac9-a18e-5a8a-48d1":"detachment",
+    "c82f-1b42-946-9c9a":"detachment"
+  },
   battleSizes:{
     "baf8-997f-e323-a090":"Strike Force"
+  },
+  limits:{
+    "Strike Force":2000
   },
   dispositions:{
     "081d-bc07-5d4e-ab22":"Priority Assets",
@@ -5148,10 +5165,34 @@ const BS_IDS = {
   config:{
     "9508-a2b1-713f-cf7b":"Code Chivalric"
   },
+  configKids:{
+    "35d6-ec47-0b46-bce5":"Deed",
+    "36a1-1871-451c-0405":"Quality"
+  },
   info:{
     "5558-f47e-9f45-3fca":"Blessings of Khorne Reference",
     "87f0-0a14-9b6b-f367":"Rituals reference",
     "e8ef-836a-a9d1-901d":"Show/Hide Options"
+  },
+  infoKids:{
+    "1248-8642-b42f-1dca":"Show Tzeentch Daemons",
+    "2973-ea51-7f8d-5403":"Show Unaligned Forces",
+    "41bc-337c-cae2-eb21":"Show Pariah Nexus content",
+    "5700-66f7-a020-7386":"Show Armageddon content",
+    "57cc-822a-1d43-be52":"Show Crucible Characters",
+    "9869-d845-89a6-6273":"Show Killzone Upgrade: Shadowvaults content",
+    "9ed-cbf4-bfe5-90bf":"Show Legends",
+    "aeb4-96de-7401-eaa3":"Show Chaos Knights",
+    "c00c-b9d6-e0f7-4c37":"Show White Dwarf content",
+    "c566-c14f-c589-5375":"Show Tyrannic War content",
+    "c9b3-8039-f1e9-c975":"Show Nachmund Gauntlet content",
+    "d3ff-16f0-dad2-c03c":"Show Slaanesh Daemons",
+    "e08b-2448-5606-fefb":"Show Imperial Agents",
+    "e82c-6f8c-2b97-a287":"Show Imperial Knights",
+    "e916-2cf4-a49d-b8c4":"Show Unaligned Fortifications",
+    "f26b-79db-80e0-3a3b":"Show Titans",
+    "f486-5e38-994c-15ec":"Show Nurgle Daemons",
+    "f5f9-1339-84bb-ae85":"Show Khorne Daemons"
   },
   units:{
     "4-megas-and-a-destrier/canis-rex":["55fb-9c91-1a4f-3037|1×84c0-f59d-901a-e94f,1×84c0-f59d-901a-e94f/43a9-66c5-ec02-baa9,1×84c0-f59d-901a-e94f/70b4-8523-6b7c-1b0a,1×84c0-f59d-901a-e94f/f1aa-b2e0-2fa8-4c39,1×a41b-81a0-ca89-75c1,1×a41b-81a0-ca89-75c1/b74a-d992-b5eb-23ff,1×a41b-81a0-ca89-75c1/e8b4-ffab-1b5c-d2a0"],
@@ -5750,6 +5791,61 @@ const BS_IDS = {
     "fbee-427a-1c46-f621":"Big Mek",
     "fc2d-063a-a9fa-968f":"Frag bombard",
     "fe4b-b3a4-69b7-3088":"Sekhetar Robots"
+  },
+  maxPerList:{
+    "10f9-eb42-632e-3a6f":1,
+    "1150-7501-d526-d373":1,
+    "131b-ff57-84bb-e87a":1,
+    "13f7-1a3-eff-7393":1,
+    "190d-7321-6e85-5251":1,
+    "1f1e-2989-4762-cf88":1,
+    "217d-4d10-bad0-1d6e":3,
+    "27b4-53af-ee1b-688a":1,
+    "2ab7-ab71-0af4-5d39":1,
+    "2c4c-5aac-b510-28ef":1,
+    "33e2-4ee8-2e10-3e47":1,
+    "3449-7dac-6ac8-5d51":1,
+    "3811-a215-d4a1-d197":1,
+    "3924-3f8-745d-7097":1,
+    "3bfa-bf00-b5ed-cc81":1,
+    "40fb-e485-dca0-cb12":1,
+    "42e1-e706-eb89-6cb6":1,
+    "44f2-27ca-fad5-70ad":1,
+    "4676-0c32-b62c-debd":1,
+    "4ea0-6b70-c17c-bc00":1,
+    "4ff3-7dce-5a52-94e9":1,
+    "55fb-9c91-1a4f-3037":1,
+    "5b76-3e1c-8801-1e4b":1,
+    "6836-5818-2135-a8aa":1,
+    "68b0-c798-79a8-28f5":3,
+    "6d28-ca9d-79a5-063a":1,
+    "7135-8430-eb02-ded4":1,
+    "71d9-9dc2-2b9a-6db3":1,
+    "7213-a7b3-4c8e-96bc":1,
+    "75ce-5ce7-0a6e-a876":1,
+    "80c4-14b2-d02d-d289":1,
+    "8ba4-a299-ac96-fbc5":3,
+    "91dc-9aad-0505-52a8":1,
+    "a336-1346-0281-b4b2":3,
+    "a886-5b5b-d3b2-cf38":1,
+    "b02a-a6e2-3eb4-4872":3,
+    "b42b-ea0-38f1-6300":1,
+    "c799-77ce-c706-3079":1,
+    "c84c-683a-79be-1620":1,
+    "cb31-e496-08de-77d4":1,
+    "cc5a-e1bc-3dd8-f367":1,
+    "ce45-db08-3795-18a9":1,
+    "d40a-c9a6-74d5-288d":3,
+    "e201-253f-1f52-e389":1,
+    "e390-b58b-db9-816":1,
+    "e4da-4f2d-19c3-416b":1,
+    "e584-f803-7858-05bc":1,
+    "ebfb-d2a4-5280-a6e6":3,
+    "ed0c-e9cb-399f-a5a2":1,
+    "eddd-9b27-00c2-b0ce":1,
+    "f3f0-a73b-d062-9dc6":1,
+    "f4b8-1179-de57-4d69":1,
+    "fb26-6d89-aa65-fb7e":1
   }
 };
 // ---- end of BS_IDS ----

@@ -566,6 +566,15 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400);
     const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length }), id);
     if(gone.s !== 'home' || gone.there || gone.kept !== '[]' || gone.n !== armies.length) fail('import-remove', L, 'Remove', JSON.stringify(gone));
+    // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
+    await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
+    await page.reload(); await page.evaluate(() => document.fonts.ready);
+    const st = await page.evaluate(() => { hideSheet(); go({ s:'home' }); const r = document.querySelector('#view [data-impstale="import-broken"]'); return { row:!!r, n:WH_DATA.armies.length }; });
+    if(!st.row || st.n !== armies.length) fail('import-stale', L, 'a kept export that cannot be read', JSON.stringify(st));
+    await page.waitForTimeout(400); await page.click('#view [data-impstale="import-broken"]'); await page.waitForTimeout(300);
+    await page.click('#sheetIn [data-imprm]'); await page.waitForTimeout(200); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(300);
+    const st2 = await page.evaluate(() => ({ row:!!document.querySelector('#view [data-impstale]'), kept:localStorage.getItem('wh-imported') }));
+    if(st2.row || st2.kept !== '[]') fail('import-stale', L, 'Remove', JSON.stringify(st2));
     counts[L] = { screens:6, links:0 };
   }
   if(pageErrors.length) fail('page-errors', '', '', pageErrors.join(' | '));

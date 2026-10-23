@@ -5,12 +5,15 @@
    already has, taken from BSData as verify/bsdata.js builds each list's roster:
      factions      catalogue id → faction            battleSizes   entry id → battle size (data.js name)
      detachments   entry id → faction/detachment     dispositions  entry id → Force Disposition
-     config        root entry id → army config key (Code Chivalric), whose choices become the list's `config`
-     info          root entry ids that hold no list content (Show/Hide Options, rules references)
+     roots         root entry id → battleSize | disposition | detachment (the selection that holds each choice)
+     limits        battle size → its points limit (BSData's name: "Strike Force (2000 Point limit)")
+     config        root entry id → army config key (Code Chivalric), whose choices become the list's `config`; configKids: its choices
+     info          root entry ids that hold no list content (Show/Hide Options, rules references); infoKids: their choices
      units         army/unit → one signature per part of the unit (leader, other characters, bodyguard), in the
                    unit's order: "rootId|n×path,…" with every selection below the part as a path of entry ids from
                    the part (a models line's and a wargear item's count; a group-like option's count is 1)
      names         entry id → BSData name (an export's selection must carry the same name)
+     maxPerList    entry id → how many a list may take (BSData's max per roster/force: enhancements, Epic Heroes)
    Usage: node verify/import-ids.js           check that data.js holds exactly this table (exit 1 if not)
           node verify/import-ids.js --write   write it
    Needs the BSData clone (sh verify/fetch.sh). */
@@ -28,7 +31,7 @@ function table() {
   const B = require('./bsdata.js');
   const X = B.rosters();
   if (X.SRC.mode !== 'clone') throw new Error('needs the BSData clone (sh verify/fetch.sh)');
-  const T = { factions:{}, battleSizes:{}, dispositions:{}, detachments:{}, config:{}, info:{}, units:{}, names:{} };
+  const T = { factions:{}, roots:{}, battleSizes:{}, limits:{}, dispositions:{}, detachments:{}, config:{}, configKids:{}, info:{}, infoKids:{}, units:{}, names:{}, maxPerList:{} };
   const name = (id, n) => { T.names[id] = B.nn(n); };
   const gs = X.SRC.gameSystem();
   // battle sizes: the game system's options, named as data.js names them (map-bsdata.json battleSize)
@@ -37,9 +40,13 @@ function table() {
     const p = X.searchBelow(bsRoot.n, (k) => k.type === 'upgrade' && B.nn(k.name) === B.nn(bs))[0];
     if (!p) throw new Error('no battle size ' + bs);
     T.battleSizes[p[p.length - 1].id] = app;
+    const lim = /\((\d+) Point limit\)/.exec(bs); if (!lim) throw new Error('no points limit in ' + bs);
+    T.limits[app] = Number(lim[1]);
   }
+  T.roots[bsRoot.n.id] = 'battleSize';
   // Force Dispositions: the game system's options (verify/dispositions.js checks which each detachment allows)
   const fdRoot = X.rootNode(gs, 'Force Disposition')[0];
+  T.roots[fdRoot.n.id] = 'disposition';
   for (const p of X.searchBelow(fdRoot.n, (k) => k.type === 'upgrade')) { const n = p[p.length - 1]; T.dispositions[n.id] = B.nn(n.name); }
   for (const [fac, f] of Object.entries(X.DATA.factions)) {
     const cat = X.SRC.catalogueByName(X.MAP.catalogues[fac]);
@@ -47,18 +54,29 @@ function table() {
     T.factions[cat.obj.id] = fac;
     // detachments: every one data.js has for the faction, below any of the catalogue's Detachment entries
     const roots = X.rootNode(cat, 'Detachment');
+    for (const r of roots) T.roots[r.n.id] = 'detachment';
     for (const [k, d] of Object.entries(f.detachments)) {
       const p = roots.map((r) => X.searchBelow(r.n, (x) => x.type === 'upgrade' && B.nn(x.name) === B.nn(d.name))[0]).find(Boolean);
       if (!p) throw new Error('no BSData detachment ' + d.name + ' (' + fac + ')');
       T.detachments[p[p.length - 1].id] = fac + '/' + k;
     }
-    for (const n of ['Show/Hide Options', 'Rituals reference', 'Blessings of Khorne Reference']) for (const h of X.rootNode(cat, n)) T.info[h.n.id] = B.nn(h.n.name);
+    // the catalogue's own "Show …" entries (Show Imperial Agents), which New Recruit lists under Show/Hide Options
+    for (const r of X.rootLinksOf(cat)) { const o = r.link ? X.SRC.get(r.link.targetId) : r.entry; if (o && /^Show /.test(o.name || '')) T.infoKids[o.id] = B.nn(o.name); }
+    // (every link to them: the catalogue's own Show/Hide Options link holds its own options, Show Imperial Agents)
+    for (const r of X.rootLinksOf(cat)) {
+      const o = r.link ? X.SRC.get(r.link.targetId) : r.entry;
+      if (!o || !['Show/Hide Options', 'Rituals reference', 'Blessings of Khorne Reference'].includes(B.nn(o.name))) continue;
+      const h = X.node(o, r.link || null);
+      T.info[h.id] = B.nn(h.name);
+      for (const p of X.searchBelow(h, (k) => k.type === 'upgrade')) { const k = p[p.length - 1]; T.infoKids[k.id] = B.nn(k.name); }
+    }
   }
   // config: the keys the lists have (New Recruit's "Code Chivalric: Deed, Quality")
   for (const a of X.DATA.armies) for (const k of Object.keys(a.config || {})) {
     const cat = X.SRC.catalogueByName(X.MAP.catalogues[a.faction]);
     const h = X.rootNode(cat, k); if (h.length !== 1) throw new Error('config ' + k + ': ' + h.length + ' root entries');
     T.config[h[0].n.id] = k;
+    for (const p of X.searchBelow(h[0].n, (x) => x.type === 'upgrade')) { const x = p[p.length - 1]; T.configKids[x.id] = B.nn(x.name); }
   }
   // units: each part of each unit as bsdata.js selects it
   for (const { army, R, issues } of X.out) {
@@ -67,6 +85,21 @@ function table() {
       const conv = (s) => { name(s.node.id, s.node.name); return { id:s.node.id, n:s.count, model:s.node.type === 'model', kids:s.children.filter((c) => !c.hidden).map(conv) }; };
       T.units[army.id + '/' + u.id] = copies[0].roots.map((r) => { name(r.node.id, r.node.name); return signature(r.node.id, r.children.filter((c) => !c.hidden).map(conv)); });
     }
+  }
+  // how many of an entry a list may take (BSData's max per roster or force: an enhancement once, an Epic Hero once, Synaptoprescience
+  // three times), for every entry the units have
+  T.maxPerList = {};
+  const linksTo = new Map();   // the entry links to each entry (their modifiers count too)
+  const lw = (x) => { if (Array.isArray(x)) x.forEach(lw); else if (x && typeof x === 'object') { if (x.targetId && x.type !== 'profile' && x.type !== 'rule') { if (!linksTo.has(x.targetId)) linksTo.set(x.targetId, []); linksTo.get(x.targetId).push(x); } Object.values(x).forEach(lw); } };
+  for (const f of Object.values(X.SRC.files)) lw(f.obj);
+  for (const id of Object.keys(T.names)) {
+    const o = X.SRC.get(id); if (!o) continue;
+    // (only a max no modifier changes: Battleline units and detachments raise some, Runt Swarm's Gretchin; those are not checked)
+    const changed = new Set(); const walk = (x) => { if (Array.isArray(x)) x.forEach(walk); else if (x && typeof x === 'object') { if (x.field) changed.add(x.field); Object.values(x).forEach(walk); } };
+    walk(o.modifiers); walk(o.modifierGroups);
+    for (const l of linksTo.get(id) || []) { walk(l.modifiers); walk(l.modifierGroups); }
+    const m = (o.constraints || []).filter((c) => c.type === 'max' && c.field === 'selections' && (c.scope === 'roster' || c.scope === 'force') && !changed.has(c.id)).map((c) => c.value);
+    if (m.length) T.maxPerList[id] = Math.min(...m);
   }
   return T;
 }
