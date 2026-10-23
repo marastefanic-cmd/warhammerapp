@@ -599,7 +599,7 @@ const FACTIONS = {
             target:'One **WORLD EATERS** unit from your army.',
             effect:'Select one friendly **BLOOD LEGIONS** unit within 6" of your unit. One destroyed **MOUNTED** model, up to D3 destroyed **BEAST** models, or up to D6 destroyed **INFANTRY** models are returned to that **BLOOD LEGIONS** unit with their full wounds remaining.',
             restrictions:'This Stratagem cannot be used to return destroyed **CHARACTER** models to Attached units.' },
-          { id:'murder-call', gist:'Remove your unit from the battlefield and place it into Strategic Reserves.', name:'Murder-call', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Blood Legions'] },
+          { id:'murder-call', gist:'Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.', name:'Murder-call', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Blood Legions'] },
             when:'End of your opponent’s Fight phase.',
             target:'One **BLOOD LEGIONS** unit from your army that is on the battlefield and not within **Engagement Range** of one or more enemy units.',
             effect:'Remove your unit from the battlefield and place it into **Strategic Reserves**.' }

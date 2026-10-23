@@ -95,6 +95,12 @@
   "at": "2026-10-16",
   "why": "Any phase, either turn."
  },
+ "02ca421cdad3526d": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Enhancement, Faction Pack 1.3 Rules Update wording: \"LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.\" (Wahapedia errata identical; its old \"LEADER: FLESH HOUNDS, BLOODCRUSHERS\" line is gone in the update, so leading Khorne Berzerkers is allowed by the Lord's own Leader list)."
+ },
  "0333c0bb038ffe4d": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -371,6 +377,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this unit is selected to make a Normal or Advance move\": these are move types of Move Units in the Movement phase (core 09.02 \"The active player moves their units\"), so your Movement phase only."
  },
+ "09203d109369a328": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"WHEN: Your Command phase.\""
+ },
  "096905690d41d3e3": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -461,6 +473,12 @@
   "at": "2026-10-16",
   "why": "Labels: EXTRA ATTACKS, [EXTRA ATTACKS], \"[EXTRA ATTACKS]:\" (Select Weapons heading), unit rule; all 24.11."
  },
+ "0af8d60d386d9d67": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "The Lord on Juggernaut's datasheet ability (New Recruit \"Aggressive Advance - Lord on Juggernaut\")."
+ },
  "0afa9cadc3bcda56": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -526,6 +544,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Their turn."
+ },
+ "0d16f5c226759018": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"TARGET: One WORLD EATERS unit from your army\": the TARGET; the BLOOD LEGIONS unit the models return to is selected in the EFFECT."
  },
  "0d2b3aa46edcb194": {
   "verdict": "ok",
@@ -731,6 +755,12 @@
   "at": "2026-10-17",
   "why": "“Change the Damage characteristic of that attack to 0.” The second sentence, “If you are using fast dice rolling, select one of those attacks you failed a saving throw for”, only says which attack “that attack” is when saves are rolled together. The gist’s singular “that attack” keeps the one-attack limit, so the meaning is unchanged."
  },
+ "13e6e6024e3bf09e": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Each time this model makes a melee attack that targets a CHARACTER unit\": melee, in either player's Fight phase."
+ },
  "1465a561e896e637": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -917,6 +947,12 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability.\""
  },
+ "19f94423981500cc": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit: \"1x Skarbrand  Bellow of endless fury, Slaughter and Carnage\"; Slaughter and Carnage has strike and sweep profiles (New Recruit, Wahapedia)."
+ },
  "1a26079f75de4fea": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -952,6 +988,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
+ },
+ "1b693444a4d2059c": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit: Gore Hound (Burning roar, Collar of Khorne, Gore-drenched fangs), 4× Flesh Hound (Collar of Khorne, Gore-drenched fangs): one Burning roar, ×5 fangs."
  },
  "1b7519333c1fcc2d": {
   "verdict": "ok",
@@ -1036,6 +1078,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "This is the Rules Update wording (Faction Pack 1.2, “Change Unnatural Fortitude to: ‘When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase: ▪ Models in this unit have a 5+ invulnerable save. ▪ Models in this unit have the Feel No Pain 6+ ability.’”). The line keeps the Empowered condition and the “or” (a choice the player makes) and the duration."
+ },
+ "1dacf8bc8fd403f5": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"At the end of your opponent’s turn\": listed at the end of the opponent's turn (at) in the last phase, the same as the signed-off Ambushing Hunters."
  },
  "1dd70c039f74eaa3": {
   "verdict": "ok",
@@ -1253,6 +1301,12 @@
   "at": "2026-10-16",
   "why": "NR/datasheet: \"Lord of the Planet of the Sorcerers (Psychic)\"."
  },
+ "23b512819636bff8": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit\": any of the two keywords (02.05.01 \"or\")."
+ },
  "23be1ed5124fe6d1": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1264,6 +1318,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "“at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two”: the start of the battle round is filed under Command with at:'Start of the battle round' shown, the settled convention (Da Boss, Doctrina Imperatives, Wrathful Presence). Dismay is “In the Battle-shock step of your opponent’s Command phase”, also Command. Doom (“Each time this model makes an attack”) names no phase, which is how Doctrina Imperatives was left at Command only (Pledges to the Dark Prince went the other way and lists Shooting/Fight); Doom's numbers are the Damage tab's calcMods tick."
+ },
+ "24082ff6c43abfe8": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Keeps the WHEN (\"when the last model in a unit is destroyed\") and the TARGET (\"BLOODLETTERS unit from your army that is in Reserves\"), the set-up distances and the once-per-battle-round restriction; no interpretation."
  },
  "245471d573bda22a": {
   "verdict": "ok",
@@ -1402,6 +1462,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "WHEN: “Fight phase, when a friendly ORKS VEHICLE unit … is selected to fight”. text: case only, Wahapedia “[Cleave 1]”, app “[CLEAVE 1]”. Wahapedia already prints “[CLEAVE]” in the second bullet."
+ },
+ "2792f58b963e34d9": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"While a friendly BLOOD LEGIONS unit is within 6\" ... each time a model in that unit makes a melee attack, add 1 to the Hit roll\": needs BLOOD LEGIONS, melee +1 to hit. The Lord + Khorne Berzerkers unit is a BLOOD LEGIONS unit (02.05.01: a unit with one or more models with that keyword) and every model in it gets the +1, as the words say \"a model in that unit\". selfAlways: 22.01."
  },
  "2799ddb19d97e698": {
   "verdict": "ok",
@@ -1547,6 +1613,12 @@
   "at": "2026-10-16",
   "why": "\"TYRANIDS MONSTER model ... with the Deadly Demise ability that cannot FLY\": all MONSTERs here have Deadly Demise and none has FLY."
  },
+ "2a14053a5c04cb69": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities\": listed in the Command phase (the points are gained whenever a unit destroys one; the abilities last \"until the end of the battle\")."
+ },
  "2a4120da97843063": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -1594,6 +1666,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR Categories: “…Skitarii, Tech-Priest, Vehicle, Kastelan Robots*, Walker*, *from combined unit”. Wahapedia’s Datasmith keywords have no WALKER, KASTELAN ROBOTS or SKITARII. The Kastelan Robots keywords are “VEHICLE; WALKER; IMPERIUM; LEGIO CYBERNETICA; KASTELAN ROBOTS”. The enhancement: “Models in the bearer’s unit have the SKITARII keyword.”"
+ },
+ "2bb0ef9ddb708873": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"While this model is leading a unit\": New Recruit lists the Master of Executions on its own, leading nothing (its only bodyguard, KHORNE BERZERKERS, is led by the Lord on Juggernaut). Marked, not hidden."
  },
  "2c137b1eec00c2bb": {
   "verdict": "ok",
@@ -1877,6 +1955,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “Your Movement phase, when a friendly ORKS MOUNTED/VEHICLE unit is selected to move”. text: same as Wahapedia word for word."
  },
+ "3381a9da536afe9e": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit \"Daemon Lord of Khorne (Aura)\", Wahapedia \"(Aura)\"."
+ },
  "3419a390c2c27281": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -1990,6 +2074,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "TARGET: \"That TERMINATOR SQUAD unit\"."
+ },
+ "37eacdae1bf16546": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"TARGET: One BLOOD LEGIONS unit from your army that is within 6\" of a friendly WORLD EATERS unit...\": the TARGET is the BLOOD LEGIONS unit; the WORLD EATERS unit that benefits is handled by shield."
  },
  "3805cc77f15d7051": {
   "verdict": "ok",
@@ -2141,6 +2231,12 @@
   "at": "2026-10-18",
   "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +3 to the result if your unit has ~~DEFF DREAD~~: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” The gist has the same condition (“a model in your unit”, “not selected to fight this phase”), the same roll (“roll one D6”, “on a 4+”) and the same removal timing (“until A or B” means whichever comes first), so nothing is added or changed. It leaves out only “with +3 to the result if your unit has ~~DEFF DREAD~~”, which is allowed because the gist ends with “…”. Leaving it out also avoids deciding what the strikethrough means; the gist does not resolve it. The gist is 144 chars, over the ~110 aim, but every shorter cut would drop a condition or the removal timing. text: same words as Wahapedia; the only difference is markup, the app has ~~**DEFF DREAD**~~ where Wahapedia has ~~DEFF DREAD~~ (bold inside the strikethrough)."
  },
+ "3bbc7460956c3720": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"At the end of the Fight phase\": either player's Fight phase."
+ },
  "3bca809001bd76a5": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -2206,6 +2302,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Counts match: plasma pistol 1+3+1=5, bolt pistol 15, chainblade 1+15=16, eviscerator 3+1=4; Lord has bladed horn, exalted chainblade, plasma pistol."
+ },
+ "3cc073245406c8b9": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"your opponent’s Fight phase\": opponent's turn."
  },
  "3ceb60ac9ae9c89e": {
   "verdict": "ok",
@@ -2285,6 +2387,12 @@
   "at": "2026-10-22",
   "why": "\"Start of the Fight phase\": either turn."
  },
+ "3e8f6067e2cbddc8": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit prints \"Rage Embodied (Aura)\", Wahapedia \"Rage Embodied (Aura):\"; it affects units within a stated range (22.01)."
+ },
  "3eb2673c5f83a752": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -2314,6 +2422,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "BSData’s categories, per model: the unit “Epic Hero, Character, Imperium, Faction: Imperial Knights”; the Canis Rex model “Vehicle, Walker, Titanic, Towering, Canis Rex, Questoris, Character, Epic Hero”; the Sir Hekhtur model “Infantry, Sir Hekhtur, Character, Epic Hero”. So VEHICLE, WALKER, TITANIC, TOWERING, QUESTORIS and CANIS REX are Canis Rex’s, INFANTRY and SIR HEKHTUR are Sir Hekhtur’s, and the rest both models’: exactly the judgement. Wahapedia’s Canis Rex (“KEYWORDS: VEHICLE; WALKER; TITANIC; TOWERING; QUESTORIS; CHARACTER; EPIC HERO; IMPERIUM; CANIS REX”, no INFANTRY) agrees for the Knight. New Recruit prints all twelve on the unit."
+ },
+ "3fa3553464dccc08": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Your opponent’s Shooting phase or the Fight phase\"."
  },
  "3fbe206fda6a4e3f": {
   "verdict": "ok",
@@ -2464,6 +2578,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\""
+ },
+ "42d03644c3ae336f": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby (its fix)",
+  "at": "2026-10-23",
+  "why": "The gist drops the TARGET's conditions (\"that is on the battlefield and not within Engagement Range of one or more enemy units\"); gists keep them, as the signed-off Flanking Manoeuvres and Encircling Pack (\"Your unit ... and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.\")."
  },
  "42e7f382865b6520": {
   "verdict": "ok",
@@ -2735,6 +2855,12 @@
   "at": "2026-10-22",
   "why": "\"Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll\": all attacks, target keywords as the player's tick (vs any), both re-rolls; reaches Lucius's weapons only (\"this model makes\")."
  },
+ "4aa043e5f4f2e084": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "The EFFECT and the RESTRICTIONS as printed: \"Select one friendly BLOOD LEGIONS unit within 6\" of your unit. One destroyed MOUNTED model, up to D3 destroyed BEAST models, or up to D6 destroyed INFANTRY models are returned ... with their full wounds remaining\"; \"cannot be used to return destroyed CHARACTER models to Attached units\". The WHEN is the phase/turn, the TARGET has no condition."
+ },
  "4aa2ccdaaa8b2664": {
   "verdict": "ok",
   "by": "review:infernal-lance (its fix)",
@@ -2777,6 +2903,12 @@
   "at": "2026-10-22",
   "why": "“One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.”"
  },
+ "4b8620b97f0f1295": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"re-roll Advance rolls\" (your Movement phase) and \"each time that unit makes a Blood Surge move\" (Blood Surge: \"In your opponent’s Shooting phase\"): movement in your turn, shooting in the opponent's."
+ },
  "4b8d05889b445c4b": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -2800,6 +2932,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "“Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].” The rule only covers melee attacks. Core 07.02 says “FIGHT PHASE: Both players’ units make attacks with their melee weapons” and the Shooting phase uses “ranged weapons”, so Fight is the only phase. text: same words as Wahapedia; only the case differs (Wahapedia “[Sustained Hits 1]”, app “[SUSTAINED HITS 1]”)."
+ },
+ "4c30080b8d62d835": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "unitDetRules(u) (rule needs: any BLOOD LEGIONS / WORLD EATERS) then each part whose needs matches(u) by the unit's keywords: a unit with any model with the keyword meets it (02.05.01, 19.03), right for Daemonic Rage, Boon of Blood and Might of Khorne (\"BLOOD LEGIONS units\") and for Enraged Abjuration (every model of the list is BLOOD LEGIONS or WORLD EATERS)."
  },
  "4c634939000c699c": {
   "verdict": "ok",
@@ -3113,6 +3251,12 @@
   "at": "2026-10-21",
   "why": "\"Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.\" defCalc {t:1, model:'Kastelan Robot'} matches. Without defAlways it is now an unticked box, which fits \"you can select one protocol … it remains in that protocol until it enters a different one\", a choice the player makes."
  },
+ "550447e5bda72242": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit lines: Lord (Bladed horn, Exalted chainblade, Plasma pistol), Champion (Chainblade, Plasma pistol), 15× (Bolt pistol, Chainblade), 4× (Khornate eviscerator, Plasma pistol): Berzerker plasma pistols 1+4 = 5 (New Recruit x5), bolt pistols 15, chainblades 16, eviscerators 4, as printed."
+ },
  "553078c211266651": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -3148,6 +3292,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Fight phase in either turn; the shooting override is item c8433eeae24f96d5."
+ },
+ "55e2587d7c8f72da": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Khorne Berzerkers datasheet ability (Faction Pack \"Add new ability: Murderous Charge\"; New Recruit \"- Khorne Berzerkers\"). \"this unit’s melee attacks\" reaches the whole attached unit (19.04), which the footnote does."
  },
  "55fd6f94a01c46f5": {
   "verdict": "ok",
@@ -3280,6 +3430,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: Firing Deck 2 (Chaos Rhino), Firing Deck X; 24.14."
+ },
+ "596bbe4cb3d1d0f1": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Wahapedia: Lord on Juggernaut KEYWORDS MOUNTED, CHARACTER, CHAOS, KHORNE, LORD ON JUGGERNAUT, faction WORLD EATERS; Khorne Berzerkers INFANTRY, BATTLELINE, GRENADES, CHAOS, KHORNE, BERZERKERS, faction WORLD EATERS. With Disciple of Khorne the Lord has BLOOD LEGIONS \"instead of\" WORLD EATERS, so the unit's Faction: World Eaters comes only from the Berzerkers and its Faction: Blood Legions from the Lord, as the note says (New Recruit marks the same five \"*from combined unit\"). The note quotes, it does not interpret."
  },
  "59767b546c15283c": {
   "verdict": "ok",
@@ -3611,6 +3767,12 @@
   "at": "2026-10-16",
   "why": "\"At the start of the battle round\" belongs to the Command phase; the round starts before whichever player goes first, so either turn."
  },
+ "62a8604d6bae5cef": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Your Command phase\": your turn."
+ },
  "62c6a1f7832cf597": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -3629,11 +3791,23 @@
   "at": "2026-10-22",
   "why": "NR prints the selection “Houndpack Lance Character” on the models line and “Character” in Categories; Wahapedia's Brigand KEYWORDS have no CHARACTER. The quote is the detachment rule word for word (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”), without the Designer's Note, so the note only says where the keyword comes from (kwStars stars CHARACTER and shows “*from Houndpack Lance Character (…)”) and nothing more than the rule."
  },
+ "64385370643e5b6e": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit's models lines have no Icon of Khorne (Champion: Chainblade, Plasma pistol; 15× Bolt pistol, Chainblade; 4× Khornate eviscerator, Plasma pistol); \"If the bearer’s unit contains one or more Icons of Khorne\" never holds. Marked, not hidden."
+ },
  "64452615088d1087": {
   "verdict": "ok",
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Final Howl (Aura) is one of the Houndpack Lance Enhancements (Wahapedia “Enhancements - Final Howl (Aura) 20 pts”); NR lists it in the Brigand's options (155 pts = 135 + 20). Tag Enhancement is right; the “(Aura)” stays in its name."
+ },
+ "6481a63ec3979d0e": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit: Lord on Juggernaut 110 (95 + Disciple of Khorne 15), (20) Khorne Berzerkers 330, card 440 PTS. Same form as the other attached units' ptsNote."
  },
  "64a8871fca1a85af": {
   "verdict": "ok",
@@ -3676,6 +3850,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR roster: Sorcerer in Terminator Armour 140, (10) Scarab Occult Terminators 425; card 565 PTS."
+ },
+ "652ed55ed33b5ac1": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Adds to a unit's footnotes the mod of each part of its detachment rules whose own needs it meets (unitDetParts), cited as the rule (Blood Tithe) with the part's own when (\"Daemonic Rage active (3BTP)\"). For this list: Daemonic Rage's [LANCE] on Skarbrand, the Bloodthirster, both Flesh Hounds and the Lord + Berzerkers unit (a BLOOD LEGIONS unit by the Lord, 02.05.01), on all of its melee weapons as \"Melee weapons equipped by BLOOD LEGIONS units\" says; not on Angron, the Daemon Prince, Goremongers, Jakhals or the Master of Executions. The rest is unchanged signed-off code; the Damage tab reads \"[LANCE]\" (dmEffects)."
  },
  "65358cf27ed741b6": {
   "verdict": "ok",
@@ -3802,6 +3982,12 @@
   "by": "review:r24-tdb",
   "at": "2026-10-22",
   "why": "Each label states exactly its table row: '1–2: +1 A', '3–4: +2 S', '5–6: +1 AP'; the pair labels join two rows' effects ('This unit's attacks have the relevant rule(s)'), matching each pick's existing note. The six picks cover every outcome of 'roll either one D6 or two D6 (keep re-rolling duplicate results)': under the recorded owner reading (a duplicate result = the same table row, so two D6 always land on two different rows) the three pairs are all C(3,2) combinations; even if read as duplicate numbers, two D6 landing in one band (e.g. 1 and 2) give only that row's one rule, which the single picks already cover. Names (the calc keys), notes, when and the mod note are unchanged; label is display-only (app dmPickLabel falls back to name). Versus 8ef74cb, this entry's only change is the added label fields and their comment."
+ },
+ "69927a84f146fea4": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"At the start of the Command phase\": either player's Command phase."
  },
  "6995fec6263b70b9": {
   "verdict": "ok",
@@ -4013,6 +4199,12 @@
   "at": "2026-10-16",
   "why": "15.06 \"WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.\""
  },
+ "70046468e20fa613": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"While this model has 1-7 wounds remaining\" with W 20 (New Recruit and Wahapedia: W 20)."
+ },
  "70059ed2a01c31f9": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -4090,6 +4282,18 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "\"if a friendly TERMINATOR SQUAD unit is engaged … active for friendly TERMINATOR SQUAD units\": the rule names only TERMINATOR SQUAD, which the Chaos Terminators carry (\"Terminator Squad\" in New Recruit’s Categories)."
+ },
+ "732567c4f762a2db": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"WHEN: Start of your Fight phase.\""
+ },
+ "733e2fe1b139e22c": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Khorne Berzerkers wargear ability (New Recruit \"Icon of Khorne - Khorne Berzerkers\")."
  },
  "737ce6747e17b50f": {
   "verdict": "ok",
@@ -4210,6 +4414,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
+ },
+ "76c5e19cbb491d29": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit: \"1x Master of Executions  Blood-forged Armour, Axe of dismemberment, Bolt pistol\"."
  },
  "773b138935941351": {
   "verdict": "ok",
@@ -4342,6 +4552,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Boss' Ammo Runt (Once per battle, per unit)”; the text’s single token agrees."
+ },
+ "7ab4bf7c066cd17c": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"add 2 to the Attacks characteristic of this model’s Slaughter and Carnage\" (New Recruit; Wahapedia: \"this model’s melee weapons\"): Slaughter and Carnage is its only melee weapon, so melee +2 A under the Damaged band is the same thing."
  },
  "7abc2c8d40093482": {
   "verdict": "ok",
@@ -4505,6 +4721,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"That WORLD EATERS unit\"."
  },
+ "7f328c5bc26a0d40": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Shooting phase in the opponent's turn, the Fight phase in either: turn either with the per-phase turns."
+ },
  "7f441a4e6f223e1e": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -4600,6 +4822,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"When this model uses its Crude Surgery ability, you can add D3 to the number of wounds healed.\" It has no phase words of its own. It works only at the moment Crude Surgery is used, and Crude Surgery's text is \"In your Command phase, this unit heals 3 wounds.\" Nothing else in the list uses Crude Surgery, so {ph:['command'], turn:'your'} is the only moment the text can apply."
+ },
+ "81bbf60286288ff2": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "New Recruit: \"1x Bloodthirster  Hellfire breath, Great axe of Khorne\"; Great axe of Khorne has strike and sweep (Wahapedia, New Recruit)."
  },
  "81c7db638c9ca6d3": {
   "verdict": "ok",
@@ -4733,6 +4961,12 @@
   "at": "2026-10-22",
   "why": "TARGET “One friendly unengaged unit (excluding TITANIC units)” = “Your unengaged unit” (the TITANIC exclusion is the users column, which says “it excludes TITANIC units, and every unit here is TITANIC” where none can); WHEN “End of your opponent’s Movement phase” is the row’s tag “End of their Movement”; EFFECT “Your unit shoots using snap shooting” literal."
  },
+ "849d866c5cb818ed": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "The Khorne Daemonkin Enhancement (Wahapedia, 30 pts; New Recruit lists it on the Daemon Prince). \"WORLD EATERS model only\": the Daemon Prince of Khorne has Faction: World Eaters."
+ },
  "84bd5ba1ef63a645": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4799,6 +5033,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Time Flux (Aura, Psychic)\"."
  },
+ "861e770df158c1d3": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"TARGET: One BLOODLETTERS unit from your army that is in Reserves\": needs BLOODLETTERS; no unit of this list has it, so it is shown on none."
+ },
  "86527755ef593c5b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4852,6 +5092,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR prints it under the \"Crimson King | Effect\" sub-table of Magnus, the only model; Unearthly Power: \"select one of the abilities in the Crimson King section\"."
+ },
+ "87fd0b90f5d17311": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "The Khorne Daemonkin Enhancement (Wahapedia 20 pts; New Recruit on the Master of Executions). \"BLOOD LEGIONS or WORLD EATERS model only\": it is a WORLD EATERS model."
  },
  "8811cf92804280e3": {
   "verdict": "ok",
@@ -5207,6 +5453,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Impossible Form (Psychic)\" in the Crimson King table."
  },
+ "906dbb5ef76b96b5": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "The Lord on Juggernaut's datasheet ability (New Recruit \"Crush All Who Stand Before Us - Lord on Juggernaut\")."
+ },
  "909e57bc7683322b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5273,6 +5525,12 @@
   "at": "2026-10-16",
   "why": "NR Tyrannofex W 16, \"Damaged: 1-5 Wounds Remaining\"."
  },
+ "925069c78f587594": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"The bearer\": the Lord on Juggernaut (New Recruit \"Disciple of Khorne - Lord on Juggernaut\"). 19.04: an enhancement's ability only ever applies to its bearer, so the keyword swap and Deep Strike are the Lord's alone."
+ },
  "92596b7aebf1192c": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -5314,6 +5572,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR: “1x Skorpius Disintegrator — Armoured hull, 3x Cognis heavy stubber, Disruptor missile launcher, Ferrumite cannon”, with the row “Cognis heavy stubber (x3)”."
+ },
+ "935e63f60c8a1b67": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"WHEN: Any phase\": every phase, as Blood Offering."
  },
  "93738af1e4eaf618": {
   "verdict": "ok",
@@ -5561,6 +5825,12 @@
   "at": "2026-10-16",
   "why": "\"charge move(s)\", \"charge targets\", and the data's \"charge move engaged\" (Harpooned markup) — all Charge Move (11.04)."
  },
+ "9b066e2e84257dc7": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"WHEN: Fight phase, just after ... has fought\"."
+ },
  "9b3cdc05e599bee4": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5633,11 +5903,23 @@
   "at": "2026-10-21",
   "why": "Sanctuary is under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Destrier's NR Options (\"Sanctuary, Questoris heavy stubber, ...\")."
  },
+ "9d3e520c45152207": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Faction Pack Rules Update: \"In your opponent's Movement phase, if an enemy unit ends a move within 8\"...\": Movement phase, opponent's turn."
+ },
  "9d3e763483cd94d7": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "\"Each time an enemy unit ... is selected to Fall Back ... must Remain Stationary this phase instead\": fall-back and remain-stationary are move types the active player selects in the Move Units step of the Movement phase (09.02, 09.04, 09.07), so the enemy's (your opponent's) Movement phase, as signed off for Harpoon Barbs."
+ },
+ "9d960f233b6aa06a": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "protects WORLD EATERS units (the unit whose models get the save: \"models in your WORLD EATERS unit\" are all of the unit's models, the BLOOD LEGIONS Lord in the Lord + Berzerkers unit too), by a BLOOD LEGIONS unit of the list; \"their Shooting phase\" is the opponent's, the wording of the signed-off shields (Grot Shields); 6\" is said, a range the player judges."
  },
  "9d9bcb9766e506d9": {
   "verdict": "ok",
@@ -5656,6 +5938,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Brute Bosses enhancement taken by this model (NR options \"Brutal But Kunnin'\")."
+ },
+ "9dc6713df612e39a": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "The EFFECT as printed: \"Select one friendly WORLD EATERS unit within 6\" of your unit. Until the end of the turn, melee weapons ... have the [LANCE] ability. If the Daemonic Rage ability is active ... until the end of the phase ... [TWIN-LINKED]\". The WHEN is in the phase/turn, the TARGET has no condition beyond BLOOD LEGIONS. No footnote is fair: the app puts a stratagem's footnote on the units its TARGET names (eligible), which here are the BLOOD LEGIONS units, while the [LANCE] goes to another unit; a footnote would give [LANCE] to the wrong units (see the report on the missing helper line for WORLD EATERS units)."
  },
  "9de67b108f809d1e": {
   "verdict": "ok",
@@ -5777,6 +6065,12 @@
   "at": "2026-10-16",
   "why": "Helm of Brazen Ire is a Berzerker Warband Enhancement."
  },
+ "a0c98d5661f941f6": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Fight phase\" with no \"your\": either."
+ },
  "a0d2b594aafc28a2": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5878,6 +6172,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "The Faction Pack prints \"GORE-STAINED VETERANS UPGRADE\" and Wahapedia \"Gore-Stained Veterans UPGRADE 20 pts\". Its \"+1 WS\" is already in the WS values (Wahapedia 3+/4+/3+ → New Recruit 2+/3+/2+, from:{WS:'Gore-stained Veterans'}), and no footnote adds it again."
+ },
+ "a3b0dd39f4946a5a": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"TARGET: One BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range\": needs BLOOD LEGIONS (the Lord + Berzerkers unit included)."
  },
  "a3c5154f53f6b0dd": {
   "verdict": "ok",
@@ -6040,6 +6340,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"Friendly BEAST SNAGGA units' attacks\": selects Mozrog and both Beastbosses."
+ },
+ "a84a61e9ae0e111f": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"each time a model in that unit makes a melee attack, add 1 to the Hit roll\": only melee attacks, in either player's Fight phase."
  },
  "a852b235d09609e6": {
   "verdict": "ok",
@@ -6287,6 +6593,12 @@
   "at": "2026-10-16",
   "why": "\"ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.\""
  },
+ "af5bc0e30fb8a963": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Your opponent’s Shooting phase\": shooting opp (Fight phase either)."
+ },
  "afa25b759c672600": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -6461,6 +6773,12 @@
   "at": "2026-10-21",
   "why": "NR: every one of the four models lines has \"Tzaangor blades\" (Brayhorn and Herd banner are printed on their lines, kept in the line names); Tzaangor blades (x10) = 1+7+1+1."
  },
+ "b3e3c481f1c7193d": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"TARGET: That BLOOD LEGIONS or WORLD EATERS unit\": any of the two."
+ },
  "b4467ac786a00744": {
   "verdict": "ok",
   "by": "review:woof-woof (its fix)",
@@ -6557,6 +6875,12 @@
   "at": "2026-10-21",
   "why": "Wahapedia Runt Swarm FAQ: \"Q:When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’? A: No.\" The note quotes it exactly."
  },
+ "b7a6780d56fd885e": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"WHEN: End of your opponent’s Fight phase.\""
+ },
  "b7ec56bb88fd2790": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -6592,6 +6916,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll\": attacks in the Fight phase are melee; the target condition \"has not been selected to fight this phase\" is kept."
+ },
+ "b959201e367ec20f": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Keeps the WHEN (\"has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks\") and the EFFECT (\"gain D3BTP and ... spend one or more BTP ... to activate one of the Blood Tithe abilities\")."
  },
  "b95a561fd8de124d": {
   "verdict": "ok",
@@ -6923,6 +7253,12 @@
   "at": "2026-10-16",
   "why": "Labels: LETHAL HITS, LETHAL HITS: non-MONSTER/VEHICLE, [LETHAL HITS]; 24.23, the suffix being a 24.01 target restriction of the same ability."
  },
+ "c0fc3a325b226c4a": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Deep Strike: \"if every model in this unit has this ability\" (New Recruit's rule text, 24.09). Disciple of Khorne gives it to \"The bearer\" only (19.04: an enhancement applies only to that model), so it is the Lord's only and the attached unit cannot use it; partialRules names the Lord, as Canis Rex's Lone Operative."
+ },
  "c1566df972fc3159": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -6946,6 +7282,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR roster: Zodgrod 50, Runtherd 10, \"(20) Gretchin 90\"; header \"150 PTS\". The 90 is NR's printed figure: 80 for 20 models (Wahapedia) plus Extra Sneaky 10. The upgrade is counted in the bodyguard's points, like Supa-glowy Fing in the Big Mek in Mega Armour's 115."
+ },
+ "c2b8906217fee897": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Start of your Fight phase\": your turn."
  },
  "c32874b78951a6cd": {
   "verdict": "ok",
@@ -7066,6 +7408,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.” The footnote is ranged, in your Shooting phase. It is literal."
+ },
+ "c6a4c9a198ed8e69": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Adds one \"When targeted\" line per part with a def (Enraged Abjuration on every unit, Boon of Blood on the BLOOD LEGIONS units incl. the Lord + Berzerkers unit), naming Blood Tithe; no phase filter, right as they last \"until the end of the battle\". The shield loop shows Blessing of Burning Blood on each WORLD EATERS unit when another BLOOD LEGIONS unit is in the list (here Skarbrand, Bloodthirster, Flesh Hounds), as the TARGET needs. Rest unchanged signed-off code."
  },
  "c6d44a7bda5336cc": {
   "verdict": "ok",
@@ -7366,6 +7714,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“After your unit has shot, select one enemy unit hit by one or more of those attacks … Battle-shock test; if the test is failed, until the end of your opponent’s next turn, it is aflame … subtract 2\" from its Move characteristic and subtract 2 from Charge rolls.” Everything is kept. Leaving out “has not been selected to shoot this phase” follows the approved gists (Swarm-guided Salvoes, Unshackled Wrath, Devastating Sorcery …), and it is implied by “after your unit has shot”."
+ },
+ "ced2e2594a5549ba": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Each part on the units its words name: Enraged Abjuration \"BLOOD LEGIONS and WORLD EATERS models\" (every model in this list has one of the two, models-level so any:[both]); Daemonic Rage \"Melee weapons equipped by BLOOD LEGIONS units\" (unit-level: the Lord + Berzerkers unit is one, so all its melee weapons, the Berzerkers' too, have [LANCE]); Boon of Blood \"BLOOD LEGIONS units ... 4+ invulnerable save\" (the whole Lord + Berzerkers unit); Might of Khorne \"BLOOD LEGIONS units ... gain the Blessings of Khorne ability\" (Skarbrand, Bloodthirster, Flesh Hounds lack it; the Lord unit has it already). Each marked \"active (nBTP)\", the player's choice."
  },
  "cf29a9c8fd4333ff": {
   "verdict": "ok",
@@ -7763,6 +8117,12 @@
   "at": "2026-10-16",
   "why": "Every term it matches in the data is the weapon ability (\"HAZARDOUS\", \"[HAZARDOUS]\" in Treason of Tzeentch/Psychic Dominion); \"hazard roll(s)\" does not start with \"hazardous\", and \"hazardous roll(s)/test(s)\" are excluded and caught later by the Hazard Roll alias. No faction alias precedes it."
  },
+ "da132797e5594c55": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"The bearer has the Feel No Pain 3+ ability against Psychic Attacks\": every model has a Collar of Khorne (New Recruit, Wahapedia \"Every Flesh Hound is equipped with: ... collar of Khorne\"), and the unconditional FNP 3+ from the Rules line is not added again (defenceItems skips it when an ability's def has it)."
+ },
  "da2c70ff17427c72": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -8081,6 +8441,12 @@
   "at": "2026-10-16",
   "why": "15.03 \"WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight.\""
  },
+ "e0ea97ce5ece42ee": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"TARGET: One BLOOD LEGIONS unit from your army\": the TARGET only (the WORLD EATERS unit is selected in the EFFECT). The Lord + Berzerkers unit is a BLOOD LEGIONS unit (02.05.01), so it is a target too."
+ },
  "e13f23b385f429e0": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -8147,6 +8513,12 @@
   "at": "2026-10-21",
   "why": "NR prints “Repulsor Grid - Kastelan Robots”."
  },
+ "e3bdc552a8d8cd29": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Any phase, when the last model in a unit is destroyed\": either player's turn."
+ },
  "e406e6ca486638e7": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -8188,6 +8560,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"In your Movement phase, when this unit ends a normal move …\". The text names your Movement phase, so {ph:['movement'], turn:'your'}, the same as the approved shooty Mek Bomb Squig timing."
+ },
+ "e51753c355c6f546": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll\": melee, vs CHARACTER (a target condition, ticked by the player), the words kept (\"can\"). The 1CP part does not change attacks."
  },
  "e52c38c6c9f25b0f": {
   "verdict": "ok",
@@ -8279,6 +8657,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One TYRANIDS MONSTER unit from your army...\". The TITANIC exclusion is about models moved through, not the target."
  },
+ "e7a7e7552d9d779a": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Khorne Berzerkers datasheet ability (New Recruit \"Blood Surge - Khorne Berzerkers\"); \"this unit\" is the attached unit while a Berzerker lives (19.04)."
+ },
  "e7e23bb54c7b0bc5": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -8320,6 +8704,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.” Same."
+ },
+ "e8b3d6bde7654555": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"a friendly BLOOD LEGIONS unit ... add 1 to the Attacks characteristic of melee weapons equipped by models in that unit\": needs BLOOD LEGIONS, +1 A to melee. A unit has the keywords of all its models (02.05.01, 19.03), so the Lord on Juggernaut + Khorne Berzerkers unit is a BLOOD LEGIONS unit through the Lord, and the rule names the unit's models, so every model of it (Berzerkers too) gets +1 A. Skarbrand is in range of his own aura (22.01), so selfAlways is right."
  },
  "e8dd005a87f8053e": {
   "verdict": "ok",
@@ -8398,6 +8788,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "A Houndpack Lance Enhancement (Wahapedia “Panoply of the Cursed Knight 15 pts”); NR lists it on the Karnivore (160 = 145 + 15). Tag Enhancement. (The name differs between the sources; see the report.)"
+ },
+ "ea2888557162c916": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "\"While a friendly BLOOD LEGIONS unit is within 6\"... add 1 to the Attacks characteristic of melee weapons\": only melee attacks change, in either player's Fight phase."
  },
  "ea4ea78104a4a851": {
   "verdict": "ok",
@@ -8884,6 +9280,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Synapse: \"Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\""
+ },
+ "f8fd52931c70ec6f": {
+  "verdict": "ok",
+  "by": "review:big-demons-baby",
+  "at": "2026-10-23",
+  "why": "Keeps the WHEN (\"just after an enemy unit has selected its targets\"), the TARGET's condition (a WORLD EATERS unit within 6\" of your unit that was selected as a target) and the EFFECT (\"models in your WORLD EATERS unit have a 5+ invulnerable save\", 4+ with Boon of Blood) until the end of the phase."
  },
  "f9b5ec8830e2c3e2": {
   "verdict": "ok",
