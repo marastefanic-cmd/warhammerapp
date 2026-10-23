@@ -30460,6 +30460,15 @@
      "type": "selectionEntry"
     },
     {
+     "name": "Master of Executions",
+     "id": "ca7d-c77a-28e2-7b6b",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "targetId": "1b56-682c-ac33-bc5f",
+     "type": "selectionEntry"
+    },
+    {
      "name": "Khorne Berzerkers",
      "id": "b250-a2f9-7098-353d",
      "collective": false,
@@ -30571,6 +30580,30 @@
      "hidden": false,
      "import": true,
      "targetId": "71c9-b10b-b55f-483e",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Skarbrand",
+     "id": "048d-f3fd-c642-e828",
+     "hidden": false,
+     "import": true,
+     "targetId": "71d9-9dc2-2b9a-6db3",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Bloodthirster",
+     "id": "71c3-4281-83fc-fc74",
+     "hidden": false,
+     "import": true,
+     "targetId": "4ad2-bd20-6dfe-776b",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Flesh Hounds",
+     "id": "6977-dedc-7051-b76d",
+     "hidden": false,
+     "import": true,
+     "targetId": "b657-1743-6e3a-0838",
      "type": "selectionEntry"
     }
    ],
@@ -33187,6 +33220,804 @@
             {
              "name": "Keywords",
              "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Master of Executions",
+     "id": "1b56-682c-ac33-bc5f",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "model",
+     "associations": [
+      {
+       "name": "Leading",
+       "id": "ad11-c28d-9de2-f834",
+       "action": "group",
+       "childId": "unit",
+       "childName": "unit",
+       "includeChildSelections": true,
+       "label": "",
+       "max": 1,
+       "min": 0,
+       "scope": "force",
+       "conditionGroups": [
+        {
+         "type": "or",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditionGroups": [
+            {
+             "type": "or",
+             "conditions": [
+              {
+               "childId": "f05b-e25f-cda0-4669",
+               "childName": "Jakhals",
+               "field": "selections",
+               "scope": "self",
+               "shared": true,
+               "type": "instanceOf",
+               "value": 1
+              },
+              {
+               "childId": "ae66-6f22-4ba5-8ef4",
+               "childName": "Goremongers",
+               "field": "selections",
+               "scope": "self",
+               "shared": true,
+               "type": "instanceOf",
+               "value": 1
+              }
+             ]
+            }
+           ],
+           "conditions": [
+            {
+             "childId": "3109-eff5-24d5-cf3d",
+             "childName": "Butcher Lord",
+             "field": "selections",
+             "includeChildSelections": true,
+             "queryFromSelf": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ],
+         "conditions": [
+          {
+           "childId": "802c-f8e1-e339-84b3",
+           "childName": "Berzerkers",
+           "field": "selections",
+           "scope": "self",
+           "shared": true,
+           "type": "instanceOf",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "categoryLinks": [
+      {
+       "name": "Faction: World Eaters",
+       "id": "77ad-98ea-d018-8fd1",
+       "hidden": false,
+       "primary": false,
+       "targetId": "bd1d-c1a5-6ca2-c791"
+      },
+      {
+       "name": "Infantry",
+       "id": "7067-89c2-1c45-86ac",
+       "hidden": false,
+       "primary": false,
+       "targetId": "cf47-a0d7-7207-29dc"
+      },
+      {
+       "name": "Character",
+       "id": "a7bd-72f4-e18b-d2aa",
+       "hidden": false,
+       "primary": true,
+       "targetId": "9cfd-1c32-585f-7d5c"
+      },
+      {
+       "name": "Chaos",
+       "id": "204e-9c8e-d147-a52c",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "Khorne",
+       "id": "d66c-4125-9791-d773",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4bd-5ee0-f179-2fc5"
+      },
+      {
+       "name": "Master of Executions",
+       "id": "d718-e0e4-2b17-25af",
+       "hidden": false,
+       "primary": false,
+       "targetId": "11bd-04b2-ef68-f7b7"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "94e5-a1e3-c965-2ccc",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "942c-b6bb-c504-3de8",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 6
+      },
+      {
+       "id": "7fe4-d93a-d079-33df",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "0b5f-a58e-8d76-84ea",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 60
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Enhancements",
+       "id": "ab18-70d2-8b85-a0fb",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "7b6d-6d90-0ffe-b45b",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Warlord",
+       "id": "ff03-58c5-c684-1fe8",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "9754-481c-c292-a1f9",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Crusade",
+       "id": "1279-ff6c-c4eb-2413",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "8bbb-e890-a169-863e",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Leader",
+       "id": "197d-cc6a-7869-3520",
+       "hidden": false,
+       "targetId": "b4dd-3e1f-41cb-218f",
+       "type": "rule"
+      },
+      {
+       "name": "Blessings of Khorne",
+       "id": "45dd-2067-f513-8fe2",
+       "hidden": false,
+       "targetId": "e68b-b42f-6f7c-4670",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "7fe4-d93a-d079-33df",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "0b5f-a58e-8d76-84ea",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "94e5-a1e3-c965-2ccc",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "affects": "self.entries.recursive.profiles.Melee Weapons",
+       "comment": "Relentless Rage",
+       "field": "2337-daa1-6682-b110",
+       "type": "increment",
+       "value": 1,
+       "conditions": [
+        {
+         "childId": "3490-ec82-70b3-c5cf",
+         "childName": "Berzerker Warband",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Master of Executions",
+       "id": "4f23-6f02-7847-5fdd",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "8\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "5",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "3+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "4",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "6+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "1",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "40mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Leader",
+       "id": "c217-2971-b9ed-1cb1",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "This model can be attached to the following unit: KHORNE BERZERKERS",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "A Worthy Skull",
+       "id": "4f7f-4559-76e4-b73a",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "Each time this model makes a melee attack that targets a ^^**Character^^** unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's unit destroys a ^^**Character^^** model, you gain 1CP.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Forwards, For Blood!",
+       "id": "22df-03a4-7b94-437f",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Wargear",
+       "id": "3189-3478-7451-d99c",
+       "hidden": false,
+       "sortIndex": 4,
+       "selectionEntries": [
+        {
+         "name": "Axe of dismemberment",
+         "id": "6105-a18c-fcd1-a9da",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "categoryLinks": [
+          {
+           "name": "Not Extra Attacks",
+           "id": "267b-15e0-1855-6c40",
+           "hidden": false,
+           "primary": false,
+           "targetId": "e811-5ddb-e54f-52da"
+          },
+          {
+           "name": "Melee Weapon",
+           "id": "79c8-fbd6-8470-7c30",
+           "hidden": false,
+           "primary": false,
+           "targetId": "ccdd-3987-11ed-90cd"
+          }
+         ],
+         "constraints": [
+          {
+           "id": "1c77-7275-7093-db20",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "84e6-78ac-7005-df15",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Upgrades",
+           "id": "7b75-0832-b7e8-e2b8",
+           "hidden": false,
+           "import": true,
+           "targetId": "0c12-8254-24b9-c538",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Precision",
+           "id": "b816-8089-3ca3-ba88",
+           "hidden": false,
+           "targetId": "9143-31ae-e0a6-6007",
+           "type": "rule"
+          },
+          {
+           "name": "Devastating Wounds",
+           "id": "29fb-a494-dfef-5d83",
+           "hidden": false,
+           "targetId": "be1e-ac8e-1e2c-3528",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Axe of dismemberment",
+           "id": "d596-29c4-bf15-c7e1",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "5",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "2+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "7",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-2",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "2",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Devastating Wounds, Precision",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Bolt pistol",
+         "id": "c41d-61c0-3e59-01b5",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "categoryLinks": [
+          {
+           "name": "Ranged Weapon",
+           "id": "960f-0536-f4fb-5065",
+           "hidden": false,
+           "primary": false,
+           "targetId": "eeda-8544-a2f3-3fab"
+          }
+         ],
+         "constraints": [
+          {
+           "id": "856a-94eb-d085-27ed",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "54c6-609c-44af-82c3",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Upgrades",
+           "id": "64fc-6ceb-ba69-6967",
+           "hidden": false,
+           "import": true,
+           "targetId": "0c12-8254-24b9-c538",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Pistol",
+           "id": "8ad5-5e26-44c9-6b87",
+           "hidden": false,
+           "targetId": "8bf7-8812-923d-29e4",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Bolt pistol",
+           "id": "2682-33c5-c4f5-4bf9",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "12\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "1",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "3+",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "5",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-1",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "1",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Pistol",
+             "typeId": "7f1b-8591-2fcf-d01c"
             }
            ]
           }
@@ -46127,6 +46958,2078 @@
        ]
       }
      ]
+    },
+    {
+     "name": "Skarbrand",
+     "id": "71d9-9dc2-2b9a-6db3",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "page": "7-8",
+     "publicationId": "e3ec-7a32-ae62-8727",
+     "type": "model",
+     "categoryLinks": [
+      {
+       "name": "Monster",
+       "id": "33e8-d230-f29b-b8a0",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9693-cf84-fe69-37a9"
+      },
+      {
+       "name": "Character",
+       "id": "e2e8-2cf5-e1eb-4b9d",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9cfd-1c32-585f-7d5c"
+      },
+      {
+       "name": "Epic Hero",
+       "id": "b55f-5a64-19d1-8005",
+       "hidden": false,
+       "primary": true,
+       "targetId": "4f3a-f0f7-6647-348d"
+      },
+      {
+       "name": "Chaos",
+       "id": "68e7-7798-096a-c3ac",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "Daemon",
+       "id": "c1cf-5def-0b95-d0bb",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9c0e-7e25-4580-e439"
+      },
+      {
+       "name": "Khorne",
+       "id": "01d1-4fea-0b73-dcee",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4bd-5ee0-f179-2fc5"
+      },
+      {
+       "name": "Faction: Blood Legions",
+       "id": "adfb-eaa1-27c0-8f4a",
+       "hidden": false,
+       "primary": false,
+       "targetId": "18a4-7d13-9553-d947"
+      },
+      {
+       "name": "Skarbrand",
+       "id": "d89b-90d0-ab80-bf92",
+       "hidden": false,
+       "primary": false,
+       "targetId": "cf5f-f4da-11a0-021e"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "ba7e-17c6-8ac7-642a",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 315
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deadly Demise",
+       "id": "6d4b-7d73-7319-0c46",
+       "hidden": false,
+       "targetId": "b68a-5ded-65ac-98c",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "name",
+         "type": "append",
+         "value": "D6"
+        }
+       ]
+      },
+      {
+       "name": "Deep Strike",
+       "id": "4dd4-b78f-a6d7-78fc",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "hidden",
+       "type": "set",
+       "value": true,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "cac3-71d1-ea4b-795d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 1
+          },
+          {
+           "childId": "1558-660f-466b-a087",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Skarbrand",
+       "id": "59c1-1e2a-b589-f345",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "10\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "11",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "3+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "20",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "6+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "5",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "4+",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "100mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Rage Embodied (Aura)",
+       "id": "727c-b62e-0603-2f54",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "While a friendly ^^Blood Legions^^ unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Murderlust",
+       "id": "7ea2-91f0-ede9-7063",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Damaged: 1-7 wounds remaining",
+       "id": "221f-b271-5cd0-32fe",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Bellow of endless fury",
+       "id": "1d6b-5a43-7bc9-18af",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "type": "upgrade",
+       "constraints": [
+        {
+         "id": "9505-1242-b3cc-9290",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 1
+        },
+        {
+         "id": "4080-84e6-6af7-f3e3",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 1
+        }
+       ],
+       "costs": [
+        {
+         "name": "pts",
+         "typeId": "51b2-306e-1021-d207",
+         "value": 0
+        }
+       ],
+       "infoLinks": [
+        {
+         "name": "Ignores Cover",
+         "id": "d12c-fe9b-c702-c390",
+         "hidden": false,
+         "targetId": "4640-43e7-30b-215a",
+         "type": "rule"
+        },
+        {
+         "name": "Torrent",
+         "id": "8320-b9d5-cf19-f5f2",
+         "hidden": false,
+         "targetId": "5edf-d619-23e0-9b56",
+         "type": "rule"
+        }
+       ],
+       "profiles": [
+        {
+         "name": "Bellow of endless fury",
+         "id": "d9ae-8795-b1d1-90d0",
+         "hidden": false,
+         "typeId": "f77d-b953-8fa4-b762",
+         "typeName": "Ranged Weapons",
+         "characteristics": [
+          {
+           "name": "Range",
+           "$text": "12\"",
+           "typeId": "9896-9419-16a1-92fc"
+          },
+          {
+           "name": "A",
+           "$text": "2D6",
+           "typeId": "3bb-c35f-f54-fb08"
+          },
+          {
+           "name": "BS",
+           "$text": "N/A",
+           "typeId": "94d-8a98-cf90-183e"
+          },
+          {
+           "name": "S",
+           "$text": "8",
+           "typeId": "2229-f494-25db-c5d3"
+          },
+          {
+           "name": "AP",
+           "$text": "-1",
+           "typeId": "9ead-8a10-520-de15"
+          },
+          {
+           "name": "D",
+           "$text": "1",
+           "typeId": "a354-c1c8-a745-f9e3"
+          },
+          {
+           "name": "Keywords",
+           "$text": "Ignores Cover, Torrent",
+           "typeId": "7f1b-8591-2fcf-d01c"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Slaughter and Carnage",
+       "id": "78e7-69eb-d93a-2b00",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "type": "upgrade",
+       "constraints": [
+        {
+         "id": "0447-714f-419c-f796",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 1
+        },
+        {
+         "id": "7f37-83a8-74b0-dec7",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 1
+        }
+       ],
+       "costs": [
+        {
+         "name": "pts",
+         "typeId": "51b2-306e-1021-d207",
+         "value": 0
+        }
+       ],
+       "profiles": [
+        {
+         "name": "➤ Slaughter and Carnage - strike",
+         "id": "9fbc-c84b-96f6-be7f",
+         "hidden": false,
+         "typeId": "8a40-4aaa-c780-9046",
+         "typeName": "Melee Weapons",
+         "characteristics": [
+          {
+           "name": "Range",
+           "$text": "Melee",
+           "typeId": "914c-b413-91e3-a132"
+          },
+          {
+           "name": "A",
+           "$text": "8",
+           "typeId": "2337-daa1-6682-b110"
+          },
+          {
+           "name": "WS",
+           "$text": "2+",
+           "typeId": "95d1-95f-45b4-11d6"
+          },
+          {
+           "name": "S",
+           "$text": "16",
+           "typeId": "ab33-d393-96ce-ccba"
+          },
+          {
+           "name": "AP",
+           "$text": "-4",
+           "typeId": "41a0-1301-112a-e2f2"
+          },
+          {
+           "name": "D",
+           "$text": "6",
+           "typeId": "3254-9fe6-d824-513e"
+          },
+          {
+           "name": "Keywords",
+           "typeId": "893f-9000-ccf7-648e"
+          }
+         ]
+        },
+        {
+         "name": "➤ Slaughter and Carnage - sweep",
+         "id": "6173-7b58-80b2-83ca",
+         "hidden": false,
+         "typeId": "8a40-4aaa-c780-9046",
+         "typeName": "Melee Weapons",
+         "characteristics": [
+          {
+           "name": "Range",
+           "$text": "Melee",
+           "typeId": "914c-b413-91e3-a132"
+          },
+          {
+           "name": "A",
+           "$text": "16",
+           "typeId": "2337-daa1-6682-b110"
+          },
+          {
+           "name": "WS",
+           "$text": "2+",
+           "typeId": "95d1-95f-45b4-11d6"
+          },
+          {
+           "name": "S",
+           "$text": "8",
+           "typeId": "ab33-d393-96ce-ccba"
+          },
+          {
+           "name": "AP",
+           "$text": "-2",
+           "typeId": "41a0-1301-112a-e2f2"
+          },
+          {
+           "name": "D",
+           "$text": "2",
+           "typeId": "3254-9fe6-d824-513e"
+          },
+          {
+           "name": "Keywords",
+           "typeId": "893f-9000-ccf7-648e"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Crusade",
+       "id": "aec0-75cd-bc1d-09ea",
+       "hidden": false,
+       "sortIndex": 1,
+       "entryLinks": [
+        {
+         "name": "Mighty Champions",
+         "id": "98ef-917b-2ca9-12a1",
+         "hidden": false,
+         "import": true,
+         "targetId": "f842-6e90-bc5a-80f1",
+         "type": "selectionEntryGroup"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Bloodthirster",
+     "id": "4ad2-bd20-6dfe-776b",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "model",
+     "categoryLinks": [
+      {
+       "name": "Monster",
+       "id": "5a39-83b0-fe3a-02ab",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9693-cf84-fe69-37a9"
+      },
+      {
+       "name": "Character",
+       "id": "82e9-4ae0-59af-16a2",
+       "hidden": false,
+       "primary": true,
+       "targetId": "9cfd-1c32-585f-7d5c"
+      },
+      {
+       "name": "Fly",
+       "id": "6e81-7f88-8c2b-25e9",
+       "hidden": false,
+       "primary": false,
+       "targetId": "c619-2086-bbcf-69c9"
+      },
+      {
+       "name": "Chaos",
+       "id": "9475-6eb6-a7fa-aa2e",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "Daemon",
+       "id": "62dc-3d9b-5e96-63df",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9c0e-7e25-4580-e439"
+      },
+      {
+       "name": "Khorne",
+       "id": "2642-93f6-af74-564b",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4bd-5ee0-f179-2fc5"
+      },
+      {
+       "name": "Faction: Blood Legions",
+       "id": "b2f6-4c20-ae90-041a",
+       "hidden": false,
+       "primary": false,
+       "targetId": "18a4-7d13-9553-d947"
+      },
+      {
+       "name": "Summoned",
+       "id": "c2a2-dc12-528b-460a",
+       "hidden": false,
+       "primary": false,
+       "targetId": "086e-5f18-3aa3-0aef"
+      },
+      {
+       "name": "Bloodthirster",
+       "id": "5abd-8e70-90c5-7475",
+       "hidden": false,
+       "primary": false,
+       "targetId": "b5c9-b7ee-4bce-c456"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "bd81-d689-8143-f9c3",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 320
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Enhancements",
+       "id": "a554-e89b-604b-ad86",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "7b6d-6d90-0ffe-b45b",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deadly Demise",
+       "id": "162c-67bd-c61c-edf6",
+       "hidden": false,
+       "targetId": "b68a-5ded-65ac-98c",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "name",
+         "type": "append",
+         "value": "D6"
+        }
+       ]
+      },
+      {
+       "name": "Deep Strike",
+       "id": "c2e3-9957-4282-d9ff",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "hidden",
+       "type": "set",
+       "value": true,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "cac3-71d1-ea4b-795d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 1
+          },
+          {
+           "childId": "1558-660f-466b-a087",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "bd81-d689-8143-f9c3",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "increment",
+       "value": 15,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "localConditionGroups": [
+          {
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "repeats": 1,
+           "scope": "parent",
+           "type": "atLeast",
+           "value": 2,
+           "conditions": [
+            {
+             "childId": "any",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "before",
+             "value": 1
+            },
+            {
+             "childId": "4ad2-bd20-6dfe-776b",
+             "childName": "Bloodthirster",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Daemon Lord of Khorne (Aura)",
+       "id": "03a9-d9fd-9407-779c",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "While a friendly ^^Blood Legions^^ unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Relentless Carnage",
+       "id": "8ead-9c6b-6fa8-c6f9",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Bloodthirster",
+       "id": "0c7e-c74f-66d6-4d82",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "12\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "11",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "3+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "18",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "6+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "5",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "4+",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "120x92mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Damaged: 1-6 wounds remaining",
+       "id": "72d7-be5f-fd51-0230",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Wargear",
+       "id": "737a-dbe0-550e-4a2e",
+       "hidden": false,
+       "sortIndex": 2,
+       "selectionEntries": [
+        {
+         "name": "Hellfire breath",
+         "id": "9064-698b-c833-b972",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "35f2-5c38-ca79-83b9",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "767e-9fcf-c39b-8338",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Ignores Cover",
+           "id": "8dcf-6554-276b-10bc",
+           "hidden": false,
+           "targetId": "4640-43e7-30b-215a",
+           "type": "rule"
+          },
+          {
+           "name": "Torrent",
+           "id": "97e6-b055-d989-95de",
+           "hidden": false,
+           "targetId": "5edf-d619-23e0-9b56",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Hellfire breath",
+           "id": "27b2-ec70-49ca-d5c7",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "12\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "D6",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "N/A",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "5",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-1",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "1",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Ignores Cover, Torrent",
+             "typeId": "7f1b-8591-2fcf-d01c"
+            }
+           ],
+           "modifiers": [
+            {
+             "field": "3bb-c35f-f54-fb08",
+             "join": "",
+             "type": "append",
+             "value": "+0",
+             "conditions": [
+              {
+               "childId": "2801-9f1c-645d-cb3d",
+               "field": "selections",
+               "includeChildSelections": true,
+               "scope": "self",
+               "shared": true,
+               "type": "atLeast",
+               "value": 1
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "selectionEntryGroups": [
+        {
+         "name": "Replace great axe",
+         "id": "1e91-049b-6156-a2f1",
+         "collective": false,
+         "defaultSelectionEntryId": "f55d-30fe-6117-ac",
+         "hidden": false,
+         "import": true,
+         "constraints": [
+          {
+           "id": "d4cb-1a02-a64a-b7d5",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "57cb-752e-9083-e8b3",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "selectionEntries": [
+          {
+           "name": "Great axe of Khorne",
+           "id": "819a-63a5-f90c-7794",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "type": "upgrade",
+           "costs": [
+            {
+             "name": "pts",
+             "typeId": "51b2-306e-1021-d207",
+             "value": 0
+            }
+           ],
+           "profiles": [
+            {
+             "name": "➤ Great axe of Khorne - strike",
+             "id": "9dfd-3138-2111-f204",
+             "hidden": false,
+             "typeId": "8a40-4aaa-c780-9046",
+             "typeName": "Melee Weapons",
+             "characteristics": [
+              {
+               "name": "Range",
+               "$text": "Melee",
+               "typeId": "914c-b413-91e3-a132"
+              },
+              {
+               "name": "A",
+               "$text": "7",
+               "typeId": "2337-daa1-6682-b110"
+              },
+              {
+               "name": "WS",
+               "$text": "2+",
+               "typeId": "95d1-95f-45b4-11d6"
+              },
+              {
+               "name": "S",
+               "$text": "16",
+               "typeId": "ab33-d393-96ce-ccba"
+              },
+              {
+               "name": "AP",
+               "$text": "-4",
+               "typeId": "41a0-1301-112a-e2f2"
+              },
+              {
+               "name": "D",
+               "$text": "D6+2",
+               "typeId": "3254-9fe6-d824-513e"
+              },
+              {
+               "name": "Keywords",
+               "typeId": "893f-9000-ccf7-648e"
+              }
+             ]
+            },
+            {
+             "name": "➤ Great axe of Khorne - sweep",
+             "id": "78d3-f6d0-45c4-9145",
+             "hidden": false,
+             "typeId": "8a40-4aaa-c780-9046",
+             "typeName": "Melee Weapons",
+             "characteristics": [
+              {
+               "name": "Range",
+               "$text": "Melee",
+               "typeId": "914c-b413-91e3-a132"
+              },
+              {
+               "name": "A",
+               "$text": "14",
+               "typeId": "2337-daa1-6682-b110"
+              },
+              {
+               "name": "WS",
+               "$text": "2+",
+               "typeId": "95d1-95f-45b4-11d6"
+              },
+              {
+               "name": "S",
+               "$text": "10",
+               "typeId": "ab33-d393-96ce-ccba"
+              },
+              {
+               "name": "AP",
+               "$text": "-2",
+               "typeId": "41a0-1301-112a-e2f2"
+              },
+              {
+               "name": "D",
+               "$text": "2",
+               "typeId": "3254-9fe6-d824-513e"
+              },
+              {
+               "name": "Keywords",
+               "typeId": "893f-9000-ccf7-648e"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Axe and flail",
+           "id": "a49c-ab0e-a06b-1762",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "type": "upgrade",
+           "costs": [
+            {
+             "name": "pts",
+             "typeId": "51b2-306e-1021-d207",
+             "value": 0
+            }
+           ],
+           "selectionEntries": [
+            {
+             "name": "Axe of Khorne",
+             "id": "66de-d69d-97d2-f941",
+             "hidden": false,
+             "import": true,
+             "type": "upgrade",
+             "constraints": [
+              {
+               "id": "8c15-f6c8-4e0f-1e17",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "min",
+               "value": 1
+              },
+              {
+               "id": "1c49-b375-61ee-4357",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "max",
+               "value": 1
+              }
+             ],
+             "infoLinks": [
+              {
+               "name": "➤ Axe of Khorne - strike",
+               "id": "fbf4-a877-f352-cd66",
+               "hidden": false,
+               "targetId": "6260-10af-22ef-f664",
+               "type": "profile"
+              },
+              {
+               "name": "➤ Axe of Khorne - sweep",
+               "id": "5dc5-d013-6a0b-c1e3",
+               "hidden": false,
+               "targetId": "a72c-25d4-1924-fe3c",
+               "type": "profile"
+              }
+             ]
+            },
+            {
+             "name": "Bloodflail",
+             "id": "0b6e-342d-770e-957f",
+             "hidden": false,
+             "import": true,
+             "type": "upgrade",
+             "constraints": [
+              {
+               "id": "a926-339c-e9ae-a199",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "min",
+               "value": 1
+              },
+              {
+               "id": "8bb2-9632-c389-5576",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "max",
+               "value": 1
+              }
+             ],
+             "infoLinks": [
+              {
+               "name": "Devastating Wounds",
+               "id": "72bb-9af4-d637-d06f",
+               "hidden": false,
+               "targetId": "be1e-ac8e-1e2c-3528",
+               "type": "rule"
+              }
+             ],
+             "profiles": [
+              {
+               "name": "Bloodflail",
+               "id": "6fe5-b0db-58e3-ab95",
+               "hidden": false,
+               "typeId": "f77d-b953-8fa4-b762",
+               "typeName": "Ranged Weapons",
+               "characteristics": [
+                {
+                 "name": "Range",
+                 "$text": "12\"",
+                 "typeId": "9896-9419-16a1-92fc"
+                },
+                {
+                 "name": "A",
+                 "$text": "1",
+                 "typeId": "3bb-c35f-f54-fb08"
+                },
+                {
+                 "name": "BS",
+                 "$text": "2+",
+                 "typeId": "94d-8a98-cf90-183e"
+                },
+                {
+                 "name": "S",
+                 "$text": "16",
+                 "typeId": "2229-f494-25db-c5d3"
+                },
+                {
+                 "name": "AP",
+                 "$text": "-3",
+                 "typeId": "9ead-8a10-520-de15"
+                },
+                {
+                 "name": "D",
+                 "$text": "D6+1",
+                 "typeId": "a354-c1c8-a745-f9e3"
+                },
+                {
+                 "name": "Keywords",
+                 "$text": "Devastating Wounds",
+                 "typeId": "7f1b-8591-2fcf-d01c"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Axe and lash",
+           "id": "fe7a-c05d-a8a4-480e",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "type": "upgrade",
+           "costs": [
+            {
+             "name": "pts",
+             "typeId": "51b2-306e-1021-d207",
+             "value": 0
+            }
+           ],
+           "selectionEntries": [
+            {
+             "name": "Axe of Khorne",
+             "id": "b25b-a544-1001-4908",
+             "hidden": false,
+             "import": true,
+             "type": "upgrade",
+             "constraints": [
+              {
+               "id": "25f3-223b-46c8-9ef1",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "min",
+               "value": 1
+              },
+              {
+               "id": "e49f-9a50-77cd-64e3",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "max",
+               "value": 1
+              }
+             ],
+             "infoLinks": [
+              {
+               "name": "➤ Axe of Khorne - strike",
+               "id": "0bde-0f1e-6a1c-ef7d",
+               "hidden": false,
+               "targetId": "6260-10af-22ef-f664",
+               "type": "profile"
+              },
+              {
+               "name": "➤ Axe of Khorne - sweep",
+               "id": "03ac-6842-3635-4312",
+               "hidden": false,
+               "targetId": "a72c-25d4-1924-fe3c",
+               "type": "profile"
+              }
+             ]
+            },
+            {
+             "name": "Lash of Khorne",
+             "id": "040f-81c8-7559-740f",
+             "hidden": false,
+             "import": true,
+             "type": "upgrade",
+             "constraints": [
+              {
+               "id": "dbf9-18e9-9179-2a26",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "min",
+               "value": 1
+              },
+              {
+               "id": "eb06-3344-88d3-ddbd",
+               "field": "selections",
+               "includeChildSelections": false,
+               "scope": "parent",
+               "shared": true,
+               "type": "max",
+               "value": 1
+              }
+             ],
+             "profiles": [
+              {
+               "name": "Lash of Khorne",
+               "id": "a6a3-e0e6-f400-ac07",
+               "hidden": false,
+               "typeId": "f77d-b953-8fa4-b762",
+               "typeName": "Ranged Weapons",
+               "characteristics": [
+                {
+                 "name": "Range",
+                 "$text": "12\"",
+                 "typeId": "9896-9419-16a1-92fc"
+                },
+                {
+                 "name": "A",
+                 "$text": "9",
+                 "typeId": "3bb-c35f-f54-fb08"
+                },
+                {
+                 "name": "BS",
+                 "$text": "2+",
+                 "typeId": "94d-8a98-cf90-183e"
+                },
+                {
+                 "name": "S",
+                 "$text": "8",
+                 "typeId": "2229-f494-25db-c5d3"
+                },
+                {
+                 "name": "AP",
+                 "$text": "-1",
+                 "typeId": "9ead-8a10-520-de15"
+                },
+                {
+                 "name": "D",
+                 "$text": "2",
+                 "typeId": "a354-c1c8-a745-f9e3"
+                },
+                {
+                 "name": "Keywords",
+                 "typeId": "7f1b-8591-2fcf-d01c"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Flesh Hounds",
+     "id": "b657-1743-6e3a-0838",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Beast",
+       "id": "8347-6485-8790-5f85",
+       "hidden": false,
+       "primary": true,
+       "targetId": "4c3e-9310-a516-3590"
+      },
+      {
+       "name": "Chaos",
+       "id": "e839-2029-8e6c-66ba",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "Daemon",
+       "id": "7573-b092-f03e-9b0c",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9c0e-7e25-4580-e439"
+      },
+      {
+       "name": "Khorne",
+       "id": "a903-8ec2-f526-51ea",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4bd-5ee0-f179-2fc5"
+      },
+      {
+       "name": "Faction: Blood Legions",
+       "id": "847b-c32c-702a-d6de",
+       "hidden": false,
+       "primary": false,
+       "targetId": "18a4-7d13-9553-d947"
+      },
+      {
+       "name": "Summoned",
+       "id": "6184-8751-1369-cafa",
+       "hidden": false,
+       "primary": false,
+       "targetId": "086e-5f18-3aa3-0aef"
+      },
+      {
+       "name": "Flesh Hounds",
+       "id": "d46f-5cb9-2b6c-3316",
+       "hidden": false,
+       "primary": false,
+       "targetId": "5e7d-6fd6-38e3-69e0"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "cc6a-b7aa-4b5a-6441",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "3e2b-542e-ba4c-9020",
+       "childId": "1556-9b56-fba6-4370",
+       "childName": "Leader",
+       "field": "associations",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 75
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deep Strike",
+       "id": "e44d-7d13-0908-c16a",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "set",
+       "value": 150,
+       "conditions": [
+        {
+         "childId": "model",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": true,
+         "percentValue": false,
+         "scope": "b657-1743-6e3a-0838",
+         "shared": true,
+         "type": "atLeast",
+         "value": 6
+        }
+       ]
+      },
+      {
+       "field": "hidden",
+       "type": "set",
+       "value": true,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "cac3-71d1-ea4b-795d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 1
+          },
+          {
+           "childId": "1558-660f-466b-a087",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "cc6a-b7aa-4b5a-6441",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Flesh Hounds",
+       "id": "3d4d-d4bc-08b3-b77e",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "12\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "4",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "7+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "2",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "7+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "1",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "5+",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "60x35.5mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Hunters from the Warp",
+       "id": "3a6e-bf45-e5bf-39e6",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "4-9 Flesh Hounds",
+       "id": "c6a4-dd6f-93b9-33b9",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "selectionEntries": [
+        {
+         "name": "Flesh Hound",
+         "id": "13cd-5399-07f2-6d79",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "model",
+         "constraints": [
+          {
+           "id": "01be-4d53-37a3-126e",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 9
+          },
+          {
+           "id": "faa5-23b1-358c-648c",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 4
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Collar of Khorne",
+           "id": "0ee4-07bf-b036-5d8a",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "c7e3-601f-3442-250b",
+           "type": "selectionEntry"
+          },
+          {
+           "name": "Gore-drenched fangs",
+           "id": "a277-05d2-122a-7b9e",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "dd8d-1bc7-029f-3674",
+           "type": "selectionEntry"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Gore Hound",
+       "id": "3a27-2521-ef3f-433d",
+       "hidden": false,
+       "sortIndex": 1,
+       "selectionEntries": [
+        {
+         "name": "Gore Hound",
+         "id": "a0d5-2805-f05a-29e1",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "model",
+         "constraints": [
+          {
+           "id": "3350-10d9-ffe0-cc7d",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "98c9-832a-3a74-e202",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Collar of Khorne",
+           "id": "3b34-aa47-b772-4998",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "c7e3-601f-3442-250b",
+           "type": "selectionEntry"
+          },
+          {
+           "name": "Gore-drenched fangs",
+           "id": "b7f1-a1e3-9691-2a2e",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "dd8d-1bc7-029f-3674",
+           "type": "selectionEntry"
+          }
+         ],
+         "selectionEntries": [
+          {
+           "name": "Burning roar",
+           "id": "c214-c491-ef49-04ec",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "type": "upgrade",
+           "constraints": [
+            {
+             "id": "0b94-9937-b8d3-9b8e",
+             "field": "selections",
+             "includeChildForces": false,
+             "includeChildSelections": false,
+             "percentValue": false,
+             "scope": "parent",
+             "shared": true,
+             "type": "min",
+             "value": 1
+            },
+            {
+             "id": "481c-e8c6-63e8-48c5",
+             "field": "selections",
+             "includeChildForces": false,
+             "includeChildSelections": false,
+             "percentValue": false,
+             "scope": "parent",
+             "shared": true,
+             "type": "max",
+             "value": 1
+            }
+           ],
+           "costs": [
+            {
+             "name": "pts",
+             "typeId": "51b2-306e-1021-d207",
+             "value": 0
+            }
+           ],
+           "infoLinks": [
+            {
+             "name": "Ignores Cover",
+             "id": "e4a7-06df-ca2c-a242",
+             "hidden": false,
+             "targetId": "4640-43e7-30b-215a",
+             "type": "rule"
+            },
+            {
+             "name": "Torrent",
+             "id": "f82b-e868-dcd5-7ff2",
+             "hidden": false,
+             "targetId": "5edf-d619-23e0-9b56",
+             "type": "rule"
+            }
+           ],
+           "profiles": [
+            {
+             "name": "Burning roar",
+             "id": "ba2e-3d4f-136e-22c1",
+             "hidden": false,
+             "typeId": "f77d-b953-8fa4-b762",
+             "typeName": "Ranged Weapons",
+             "characteristics": [
+              {
+               "name": "Range",
+               "$text": "12\"",
+               "typeId": "9896-9419-16a1-92fc"
+              },
+              {
+               "name": "A",
+               "$text": "D6",
+               "typeId": "3bb-c35f-f54-fb08"
+              },
+              {
+               "name": "BS",
+               "$text": "N/A",
+               "typeId": "94d-8a98-cf90-183e"
+              },
+              {
+               "name": "S",
+               "$text": "4",
+               "typeId": "2229-f494-25db-c5d3"
+              },
+              {
+               "name": "AP",
+               "$text": "0",
+               "typeId": "9ead-8a10-520-de15"
+              },
+              {
+               "name": "D",
+               "$text": "1",
+               "typeId": "a354-c1c8-a745-f9e3"
+              },
+              {
+               "name": "Keywords",
+               "$text": "Ignores Cover, Torrent",
+               "typeId": "7f1b-8591-2fcf-d01c"
+              }
+             ],
+             "modifiers": [
+              {
+               "field": "3bb-c35f-f54-fb08",
+               "join": "",
+               "type": "append",
+               "value": "+0",
+               "conditions": [
+                {
+                 "childId": "2801-9f1c-645d-cb3d",
+                 "field": "selections",
+                 "includeChildSelections": true,
+                 "scope": "self",
+                 "shared": true,
+                 "type": "atLeast",
+                 "value": 1
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Collar of Khorne",
+     "id": "c7e3-601f-3442-250b",
+     "collective": true,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "constraints": [
+      {
+       "id": "9b3d-9a18-181e-0448",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": false,
+       "percentValue": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "min",
+       "value": 1
+      },
+      {
+       "id": "2b2b-e0d2-273c-8e56",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": false,
+       "percentValue": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Feel No Pain",
+       "id": "49d1-4f1c-6d04-d3d0",
+       "hidden": false,
+       "targetId": "9bf4-280f-bbe2-6fbb",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "name",
+         "type": "append",
+         "value": "3+"
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Collar of Khorne",
+       "id": "a6ef-af24-771a-5e48",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Gore-drenched fangs",
+     "id": "dd8d-1bc7-029f-3674",
+     "collective": true,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "constraints": [
+      {
+       "id": "9e18-fcac-c2f2-eee1",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": false,
+       "percentValue": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "min",
+       "value": 1
+      },
+      {
+       "id": "9758-5ea3-c649-6629",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": false,
+       "percentValue": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Gore-drenched fangs",
+       "id": "a9e0-6a61-fb4d-4b7d",
+       "hidden": false,
+       "typeId": "8a40-4aaa-c780-9046",
+       "typeName": "Melee Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "Melee",
+         "typeId": "914c-b413-91e3-a132"
+        },
+        {
+         "name": "A",
+         "$text": "3",
+         "typeId": "2337-daa1-6682-b110"
+        },
+        {
+         "name": "WS",
+         "$text": "3+",
+         "typeId": "95d1-95f-45b4-11d6"
+        },
+        {
+         "name": "S",
+         "$text": "5",
+         "typeId": "ab33-d393-96ce-ccba"
+        },
+        {
+         "name": "AP",
+         "$text": "-1",
+         "typeId": "41a0-1301-112a-e2f2"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "3254-9fe6-d824-513e"
+        },
+        {
+         "name": "Keywords",
+         "typeId": "893f-9000-ccf7-648e"
+        }
+       ]
+      }
+     ]
     }
    ],
    "sharedSelectionEntryGroups": [
@@ -49967,6 +52870,11 @@
      "hidden": false
     },
     {
+     "name": "Master of Executions",
+     "id": "11bd-04b2-ef68-f7b7",
+     "hidden": false
+    },
+    {
      "name": "Berzerkers",
      "id": "802c-f8e1-e339-84b3",
      "hidden": false
@@ -50012,6 +52920,88 @@
      "hidden": false
     },
     {
+     "name": "Faction: Blood Legions",
+     "id": "18a4-7d13-9553-d947",
+     "hidden": false,
+     "constraints": [
+      {
+       "id": "3b93-b9c5-7711-6789",
+       "field": "51b2-306e-1021-d207",
+       "includeChildSelections": true,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "3b93-b9c5-7711-6789",
+       "type": "set",
+       "value": 500,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "3b93-b9c5-7711-6789",
+       "type": "set",
+       "value": 1000,
+       "conditions": [
+        {
+         "childId": "baf8-997f-e323-a090",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "3b93-b9c5-7711-6789",
+       "type": "set",
+       "value": 1500,
+       "conditions": [
+        {
+         "childId": "4204-82d0-908c-a62a",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "3b93-b9c5-7711-6789",
+       "type": "set",
+       "value": -1,
+       "conditions": [
+        {
+         "childId": "cac3-71d1-ea4b-795d",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "instanceOf",
+         "value": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "Slaughterbound",
      "id": "ce19-794a-29b1-ee64",
      "hidden": false
@@ -50020,6 +53010,32 @@
      "name": "Jakhal",
      "id": "bb39-1180-801e-0655",
      "hidden": true
+    },
+    {
+     "name": "Skarbrand",
+     "id": "cf5f-f4da-11a0-021e",
+     "hidden": false
+    },
+    {
+     "name": "Summoned",
+     "id": "086e-5f18-3aa3-0aef",
+     "hidden": false
+    },
+    {
+     "name": "Bloodthirster",
+     "id": "b5c9-b7ee-4bce-c456",
+     "hidden": false
+    },
+    {
+     "name": "Flesh Hounds",
+     "id": "5e7d-6fd6-38e3-69e0",
+     "hidden": false
+    },
+    {
+     "name": "Faction: Blood Legions",
+     "id": "a175-8b88-b0b3-6cc8",
+     "comment": "Dupe for Juggerlord",
+     "hidden": false
     },
     {
      "name": "Not Extra Attacks",
@@ -112221,6 +115237,11 @@
     {
      "name": "Titanic",
      "id": "5929-ad51-d006-e008",
+     "hidden": false
+    },
+    {
+     "name": "Beast",
+     "id": "4c3e-9310-a516-3590",
      "hidden": false
     },
     {

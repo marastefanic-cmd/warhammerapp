@@ -4466,6 +4466,258 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'big-demons-baby', name:'Big demons baby', faction:'world-eaters', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Priority Assets',
+  detachments:['khorne-daemonkin','vessels-of-wrath'],
+  source:'New Recruit, exported 23 Oct 2026',
+  units:[
+    {
+      id:'angron', name:'Angron', role:'Epic Hero', pts:330, warlord:true,
+      models:['1× Angron'],
+      gear:[['Samni’arius and Spinegrinder']],
+      stats:[
+        { name:'Angron', M:'14"', T:'11', Sv:'2+', W:'16', Ld:'5+', OC:'6', InSv:'4+', base:'100mm' }
+      ],
+      melee:[
+        { group:'Samni’arius and Spinegrinder', name:'strike', range:'Melee', A:'8', WS:'2+', S:'14', AP:'-3', D:'D6+2', kw:['DEVASTATING WOUNDS'] },
+        { group:'Samni’arius and Spinegrinder', name:'sweep', range:'Melee', A:'16', WS:'2+', S:'7', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS'] }
+      ],
+      abilities:[
+        { name:'Reborn in Blood', ph:['command','movement'], turn:'either', turns:{ movement:'your' }, text:'At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining.' },
+        { name:'Wrathful Presence', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.' },
+        { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+        // the three Wrathful Presence abilities: Angron has the one selected at the start of the battle round
+        { name:'The Blood God’s Favour', who:'Wrathful Presence: pick one', text:'Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.' },
+        // GW Faction Pack Rules Update wording (BSData has it too)
+        { name:'Driven by Ultimate Rage', who:'Wrathful Presence: pick one', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
+        { name:'Overwhelming Wrath', who:'Wrathful Presence: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
+      ],
+      aura:[
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Angron, if he has Driven by Ultimate Rage this round', selfWhen:'Own aura, if he has Driven by Ultimate Rage this round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Driven by Ultimate Rage' }
+      ],
+      rules:['Deadly Demise D6','Deep Strike','Blessings of Khorne','Devastating Wounds'],
+      kw:['Angron','Chaos','Character','Daemon','Epic Hero','Faction: World Eaters','Fly','Khorne','Monster','Primarch','Warlord']
+    },
+    {
+      id:'skarbrand', name:'Skarbrand', role:'Epic Hero', pts:315,
+      models:['1× Skarbrand'],
+      gear:[['Bellow of endless fury','Slaughter and Carnage']],
+      stats:[
+        { name:'Skarbrand', M:'10"', T:'11', Sv:'3+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Bellow of endless fury', range:'12"', A:'2D6', BS:'–', S:'8', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
+      ],
+      melee:[
+        { group:'Slaughter and Carnage', name:'strike', range:'Melee', A:'8', WS:'2+', S:'16', AP:'-4', D:'6', kw:[] },
+        { group:'Slaughter and Carnage', name:'sweep', range:'Melee', A:'16', WS:'2+', S:'8', AP:'-2', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Rage Embodied', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **BLOOD LEGIONS** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.' },
+        { name:'Murderlust', text:'This unit is eligible to declare a charge in a turn in which it Advanced.' },
+        { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Damaged (1-7 wounds left)', note:'+2 A', from:'Damaged: 1-7 wounds remaining' }
+      ],
+      // "a friendly BLOOD LEGIONS unit": an attached unit with a BLOOD LEGIONS model (the Lord on Juggernaut with Disciple of Khorne) is one
+      aura:[
+        { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of Skarbrand', selfWhen:'Own aura', note:'+1 A', from:'Rage Embodied', selfAlways:true }
+      ],
+      rules:['Deadly Demise D6','Deep Strike','Ignores Cover','Torrent'],
+      kw:['Chaos','Character','Daemon','Epic Hero','Faction: Blood Legions','Khorne','Monster','Skarbrand']
+    },
+    {
+      id:'bloodthirster', name:'Bloodthirster', role:'Character', pts:320,
+      models:['1× Bloodthirster'],
+      gear:[['Hellfire breath','Great axe of Khorne']],
+      stats:[
+        { name:'Bloodthirster', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'120×92mm' }
+      ],
+      ranged:[
+        { name:'Hellfire breath', range:'12"', A:'D6', BS:'–', S:'5', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
+      ],
+      melee:[
+        { group:'Great axe of Khorne', name:'strike', range:'Melee', A:'7', WS:'2+', S:'16', AP:'-4', D:'D6+2', kw:[] },
+        { group:'Great axe of Khorne', name:'sweep', range:'Melee', A:'14', WS:'2+', S:'10', AP:'-2', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Daemon Lord of Khorne', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **BLOOD LEGIONS** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**.' },
+        { name:'Relentless Carnage', ph:['fight'], turn:'either', text:'At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.' },
+        { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
+      ],
+      // "a friendly BLOOD LEGIONS unit": an attached unit with a BLOOD LEGIONS model (the Lord on Juggernaut with Disciple of Khorne) is one
+      aura:[
+        { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of the Bloodthirster', selfWhen:'Own aura', note:'+1 to hit', from:'Daemon Lord of Khorne', selfAlways:true }
+      ],
+      rules:['Deadly Demise D6','Deep Strike','Ignores Cover','Torrent'],
+      kw:['Bloodthirster','Chaos','Character','Daemon','Faction: Blood Legions','Fly','Khorne','Monster','Summoned']
+    },
+    {
+      id:'daemon-prince-of-khorne', name:'Daemon Prince of Khorne', short:'Daemon Prince', role:'Character', pts:230, enhancement:'Blade of Endless Bloodshed',
+      models:['1× Daemon Prince of Khorne'],
+      gear:[['Hellforged weapons','Infernal cannon']],
+      stats:[
+        { name:'Daemon Prince of Khorne', M:'10"', T:'10', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
+      ],
+      ranged:[
+        { name:'Infernal cannon', range:'24"', A:'3', BS:'3+', S:'5', AP:'-1', D:'2', kw:['RAPID FIRE 1'] }
+      ],
+      melee:[
+        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'9', WS:'2+', S:'9', AP:'-2', D:'4', kw:[], from:{ A:'Blade of Endless Bloodshed', S:'Blade of Endless Bloodshed', D:'Blade of Endless Bloodshed' } },
+        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'17', WS:'2+', S:'7', AP:'-1', D:'2', kw:[], from:{ A:'Blade of Endless Bloodshed', S:'Blade of Endless Bloodshed', D:'Blade of Endless Bloodshed' } }
+      ],
+      abilities:[
+        { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit', text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
+        { name:'Devastating Assault', ph:['charge','fight'], turn:'either', text:'Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability.' },
+        { name:'Direct the Slaughter', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.' },
+        { name:'Blade of Endless Bloodshed', tag:'Enhancement', text:'**WORLD EATERS** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn', from:'Devastating Assault' }
+      ],
+      rules:['Deadly Demise D3','Blessings of Khorne','Rapid Fire'],
+      kw:['Chaos','Character','Daemon','Daemon Prince','Faction: World Eaters','Khorne','Monster']
+    },
+    {
+      id:'master-of-executions', name:'Master of Executions', role:'Character', pts:80, enhancement:'Blood-forged Armour',
+      models:['1× Master of Executions'],
+      gear:[['Axe of dismemberment','Bolt pistol']],
+      stats:[
+        { name:'Master of Executions', M:'8"', T:'5', Sv:'2+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm', from:{ Sv:'Blood-forged Armour' } }
+      ],
+      ranged:[
+        { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+      ],
+      melee:[
+        { name:'Axe of dismemberment', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS','PRECISION'] }
+      ],
+      abilities:[
+        { name:'A Worthy Skull', ph:['fight'], turn:'either', text:'Each time this model makes a melee attack that targets a **CHARACTER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model’s unit destroys a **CHARACTER** model, you gain 1CP.' },
+        { name:'Forwards, For Blood!', na:'Not leading a unit in this list', ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' }, text:'While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.' },
+        { name:'Blood-forged Armour', tag:'Enhancement', text:'**BLOOD LEGIONS** or **WORLD EATERS** model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Melee attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'A Worthy Skull', vs:{ any:['Character'] } }
+      ],
+      rules:['Leader','Blessings of Khorne','Precision','Devastating Wounds','Pistol'],
+      kw:['Chaos','Character','Faction: World Eaters','Infantry','Khorne','Master of Executions']
+    },
+    {
+      id:'lord-on-juggernaut-khorne-berzerkers', name:'Lord on Juggernaut', role:'Character', pts:440, ptsNote:'110 + Khorne Berzerkers 330', enhancement:'Disciple of Khorne',
+      leads:'Khorne Berzerkers',
+      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
+      gear:[['Bladed horn','Exalted chainblade','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
+      stats:[
+        { name:'Lord on Juggernaut', M:'10"', T:'6', Sv:'3+', W:'7', Ld:'6+', OC:'2', InSv:'4+', base:'90×52.5mm' },
+        { name:'Khorne Berzerker ×20', M:'10"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm', from:{ M:'Aggressive Advance' } }
+      ],
+      ranged:[
+        { group:'Plasma pistol', who:'Lord on Juggernaut', name:'standard', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
+        { group:'Plasma pistol', who:'Lord on Juggernaut', name:'supercharge', range:'12"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL'] },
+        { group:'Plasma pistol', who:'Khorne Berzerkers', n:5, name:'standard', range:'12"', A:'1', BS:'4+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
+        { group:'Plasma pistol', who:'Khorne Berzerkers', n:5, name:'supercharge', range:'12"', A:'1', BS:'4+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL'] },
+        { name:'Bolt pistol', who:'Khorne Berzerkers', n:15, range:'12"', A:'1', BS:'4+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+      ],
+      melee:[
+        { name:'Bladed horn', who:'Lord on Juggernaut', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS','LANCE'] },
+        { name:'Exalted chainblade', who:'Lord on Juggernaut', range:'Melee', A:'7', WS:'2+', S:'6', AP:'-1', D:'2', kw:[] },
+        { name:'Chainblade', who:'Khorne Berzerkers', n:16, range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
+        { name:'Khornate eviscerator', who:'Khorne Berzerkers', n:4, range:'Melee', A:'3', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Aggressive Advance', who:'Lord on Juggernaut', ph:['movement','charge'], turn:'your', turns:{ charge:'either' }, text:'While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.' },
+        { name:'Crush All Who Stand Before Us', who:'Lord on Juggernaut', ph:['fight'], turn:'either', text:'Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.' },
+        { name:'Disciple of Khorne', who:'Lord on Juggernaut', tag:'Enhancement', text:'**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.' },
+        { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
+        { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
+        { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 S', from:'Murderous Charge' }
+      ],
+      rules:['Leader','Blessings of Khorne','Deep Strike','Extra Attacks','Lance','Pistol','Hazardous'],
+      kw:['Chaos','Character','Faction: Blood Legions','Khorne','Lord on Juggernaut','Mounted','Battleline','Berzerkers','Faction: World Eaters','Grenades','Infantry'],
+      // Deep Strike is the Lord on Juggernaut's (Disciple of Khorne); the Khorne Berzerkers don't have it, so the unit can't use it (24.09)
+      partialRules:{ 'Deep Strike':'Lord on Juggernaut' },
+      kwNote:'Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”).'
+    },
+    {
+      id:'goremongers', name:'Goremongers', role:'Infantry', pts:70,
+      models:['1× Blood Herald','7× Goremonger w/ chainblade'],
+      gear:[['Autopistol','Chainblade','Close combat weapon'],['Autopistol','Chainblade','Close combat weapon']],
+      stats:[
+        { name:'Goremongers', M:'9"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Autopistol', n:8, range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['PISTOL'] }
+      ],
+      melee:[
+        { name:'Chainblade', n:8, range:'Melee', A:'3', WS:'4+', S:'3', AP:'0', D:'1', kw:['LANCE'] },
+        { name:'Close combat weapon', n:8, range:'Melee', A:'2', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Loping Speed', ph:['movement'], turn:'opp', text:'In your opponent\'s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6".' }
+      ],
+      rules:['Infiltrators','Blessings of Khorne','Pistol','Lance'],
+      kw:['Chaos','Faction: World Eaters','Goremongers','Grenades','Infantry','Khorne']
+    },
+    {
+      id:'jakhals', name:'Jakhals', role:'Infantry', pts:65,
+      models:['1× Jakhal Pack Leader','1× Dishonoured w/ paired manglers','8× Jakhal'],
+      gear:[['Autopistol','Chainblades'],['Paired manglers'],['Autopistol','Chainblades']],
+      stats:[
+        { name:'Jakhal', M:'7"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'28.5mm' },
+        { name:'Dishonoured w/ paired manglers', M:'7"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
+      ],
+      ranged:[
+        { name:'Autopistol', n:9, range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['PISTOL'] }
+      ],
+      melee:[
+        { name:'Chainblades', n:9, range:'Melee', A:'3', WS:'4+', S:'3', AP:'0', D:'1', kw:[] },
+        { name:'Paired manglers', range:'Melee', A:'4', WS:'4+', S:'4', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Objective Ravaged', ph:['command'], turn:'your', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' }
+      ],
+      rules:['Blessings of Khorne','Pistol'],
+      kw:['Chaos','Faction: World Eaters','Grenades','Infantry','Jakhals','Khorne']
+    },
+    {
+      id:'flesh-hounds', name:'Flesh Hounds', role:'Beast', pts:75, copies:2,
+      models:['1× Gore Hound (Collar of Khorne)','4× Flesh Hound (Collar of Khorne)'],
+      gear:[['Burning roar','Gore-drenched fangs'],['Gore-drenched fangs']],
+      stats:[
+        { name:'Flesh Hounds', M:'12"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm' }
+      ],
+      ranged:[
+        { name:'Burning roar', range:'12"', A:'D6', BS:'–', S:'4', AP:'0', D:'1', kw:['IGNORES COVER','TORRENT'] }
+      ],
+      melee:[
+        { name:'Gore-drenched fangs', n:5, range:'Melee', A:'3', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Hunters from the Warp', at:'End of your opponent’s turn', ph:['fight'], turn:'opp', text:'At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.' },
+        { name:'Collar of Khorne', def:'Feel No Pain 3+ against Psychic Attacks', text:'The bearer has the Feel No Pain 3+ ability against Psychic Attacks.' }
+      ],
+      rules:['Deep Strike','Ignores Cover','Torrent','Feel No Pain 3+'],
+      kw:['Beast','Chaos','Daemon','Faction: Blood Legions','Flesh Hounds','Khorne','Summoned']
+    }
+  ]
+},
 ];
 
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have
