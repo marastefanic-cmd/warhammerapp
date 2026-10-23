@@ -1109,7 +1109,8 @@ function comparePoints(army, built, failArmy) {
    Main
 --------------------------------------------------------------------- */
 let DATA = null;
-function main() {
+// data.js, the name mapping and the BSData source (the clone, else the pinned extract)
+function setup() {
   global.window = {}; require(P.data); DATA = global.window.WH_DATA;
   const MAP = JSON.parse(fs.readFileSync(P.map, 'utf8'));
   // the catalogue of each faction: sources/factions.json (map-bsdata.json may still name one)
@@ -1119,6 +1120,20 @@ function main() {
   const useExtract = flag('--extract') || !haveClone;
   if (flag('--write-extract') && useExtract) { console.error('--write-extract needs the BSData clone (sh verify/fetch.sh)'); process.exit(2); }
   SRC = useExtract ? loadExtract(P.extract) : loadFull(P.bsdata, catalogueNames);
+  return MAP;
+}
+// every army's roster as this check builds it (for verify/import-ids.js): the selections of each unit, evaluated
+function rosters() {
+  const MAP = setup(); const out = [];
+  for (const army of DATA.armies) {
+    const issues = []; const R = buildRoster(army, MAP, issues);
+    if (R) { const all = R.roster.desc(false).filter((s) => s.node); for (const s of all) applyOwnCats(s); for (const s of all) s.hidden = selHidden(s); }
+    out.push({ army, R, issues });
+  }
+  return { DATA, SRC, MAP, out, kids, costOf, rootNode, searchBelow };
+}
+function main() {
+  const MAP = setup();
   const failures = []; const pin = pinnedCommit();
   const push = (army, f) => failures.push({ army, unit: f.unit, field: f.field, app: str(f.app), source: str(f.source), where: f.where });
   if (pin && !(SRC.commit || '').startsWith(pin)) push('(all)', { unit: '(source)', field: 'bsdata.commit', app: pin, source: SRC.commit || 'unknown', where: `${SRC.mode}: BSData commit differs from the pin in verify/fetch.sh` });
@@ -1185,4 +1200,5 @@ function explainUnit(u, F) {
   console.log(`  rules ${F.rules.map((r) => r.name + (r.weapon ? '(w)' : '') + (r.infoGroup ? '(g)' : '')).join(', ')}`);
   console.log(`  categories ${[...F.cats].join(', ')}`);
 }
-main();
+if (require.main === module) main();
+module.exports = { rosters, nn };
