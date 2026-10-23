@@ -1,0 +1,191 @@
+[
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter",
+  "judgement": {
+   "tag": "Aura · Once per battle round"
+  },
+  "source": {
+   "ability": "Direct the Slaughter",
+   "text": "Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12\" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP."
+  },
+  "key": "64b75a233e2464e6"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Sekhetar Robots · Prophetic Sentinels",
+  "judgement": {
+   "tag": "Once per turn"
+  },
+  "source": {
+   "ability": "Prophetic Sentinels",
+   "text": "Once per turn, when you target this unit with the **Fire Overwatch**/**Heroic Intervention** stratagem, that use is -1 CP."
+  },
+  "key": "6c01bc8bce6ada5b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · The Swarmlord · Malign Presence",
+  "judgement": {
+   "tag": "Aura · Once per turn"
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP."
+  },
+  "key": "77f2ded0bfcaf2bf"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Hive Tyrant · Will of the Hive Mind",
+  "judgement": {
+   "tag": "Aura · Once per battle round"
+  },
+  "source": {
+   "ability": "Will of the Hive Mind",
+   "text": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+  },
+  "key": "c64529aafbd35e8d"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Norn Assimilator · Harpoon Barbs",
+  "judgement": {
+   "tag": "Aura · Once per turn"
+  },
+  "source": {
+   "ability": "Harpoon Barbs",
+   "text": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "key": "dc32675303fc4bb7"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "38ae70e3feb11873"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Canis Rex · Chainbreaker",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Chainbreaker",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12\" of this model. That unit is no longer Battle-shocked."
+  },
+  "key": "a4e35bc068c8fef5"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Canis Rex · Legendary Freeblade",
+  "judgement": {
+   "tag": "Once per turn"
+  },
+  "source": {
+   "ability": "Legendary Freeblade",
+   "text": "Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP."
+  },
+  "key": "a7bcf41c25496882"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-tag",
+  "where": "purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Canticles of the Omnissiah",
+   "text": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, that unit has the **Stealth** ability."
+  },
+  "key": "cdd34c011cb76f07"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-tag",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer · Necromechanic",
+  "judgement": {
+   "tag": "Enhancement · Aura"
+  },
+  "source": {
+   "ability": "Necromechanic",
+   "text": "**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+  },
+  "key": "209e61b314704242"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Euphoric Strikes",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+  },
+  "key": "ac0320d1ad5b083f"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Chaos Rhino · Transport",
+  "judgement": {
+   "tag": "Capacity"
+  },
+  "source": {
+   "ability": "Transport",
+   "text": "This model has a transport capacity of 12 Emperor’s Children Infantrymodels (excluding Terminator and Flawless Blade models)."
+  },
+  "key": "0c943028a617befa"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-tag",
+  "where": "woof-woof · War Dog Brigand · Final Howl (Aura)",
+  "judgement": {
+   "tag": "Enhancement · Aura"
+  },
+  "source": {
+   "ability": "Final Howl (Aura)",
+   "text": "**WAR DOG** model only. While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1."
+  },
+  "key": "d5b0cdbc119cec53"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "isEnhancement",
+  "judgement": {
+   "code": "const isEnhancement = ab => /(^|, | · )Enhancement(, | · |$)/.test(ab.tag || '');"
+  },
+  "source": {
+   "implements": "the Enhancement chip on an ability row: its tag is \"Enhancement\" or has it as one part (\"Enhancement · Aura\": Final Howl, Necromechanic)"
+  },
+  "key": "a5a8a2348e4f6c1b"
+ }
+]

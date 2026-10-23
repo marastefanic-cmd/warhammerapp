@@ -4205,11 +4205,13 @@ const abilityNote = ab => ab.note ? '<p class="note it">' + esc(ab.note) + '</p>
 const STAT_KEYS = new Set(['M','T','Sv','W','Ld','OC','InSv','range','A','BS','WS','S','AP','D']);
 const alreadyIn = (ab, u) => !u ? '' : [...new Set([...u.stats, ...(u.ranged || []), ...(u.melee || [])].flatMap(x => Object.entries(x.from || {})
   .filter(([k, v]) => STAT_KEYS.has(k) && [].concat(v).includes(ab.name)).map(([k]) => k === 'range' ? 'Range' : k)))].join(', ');
+// an enhancement's row has the Enhancement chip: its tag is "Enhancement" or has it as one part ("Enhancement · Aura")
+const isEnhancement = ab => /(^|, | · )Enhancement(, | · |$)/.test(ab.tag || '');
 function abilityList(abs, u, suffix){
   return '<div class="abl">' + abs.map(ab => {
     const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab), inv = alreadyIn(ab, u);
     return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (suffix && ab.who ? '<span class="awho">- ' + esc(ab.who) + '</span>' : '') +
-      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (inv ? '<span class="tg m">Already in ' + esc(inv) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
+      (isEnhancement(ab) ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (inv ? '<span class="tg m">Already in ' + esc(inv) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
       (ab.ph && !na ? '<span class="aw">' + shortWhen(ab).split(' · ').map(x => '<span class="nw">' + esc(x) + '</span>').join(' · ') + '</span>' : '') + chev + '</summary><div class="body">' +
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + abilityNote(ab) + '</div></details>';
   }).join('') + '</div>';

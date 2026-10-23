@@ -121,6 +121,7 @@ const CODE_RULES = {
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
   defenceItems:'what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah\'s Blessing, Necromechanic)',
   onceTag:'"Once per …" limits shown on the ability row',
+  isEnhancement:'the Enhancement chip on an ability row: its tag is "Enhancement" or has it as one part ("Enhancement · Aura": Final Howl, Necromechanic)',
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',
   auraMods:'auras from other units in the list',

@@ -498,9 +498,12 @@ const TAG_RULES = [
 function tagParts(tag){
   const out = [];
   let t = String(tag || '');
-  const once = /^(?:once|twice) per [a-z ]+(?:, (?:once|twice) per [a-z ]+)?(?:, per (?:army|unit))?/i.exec(t);
-  if(once){ out.push(once[0]); t = t.slice(once[0].length).replace(/^,\s*/, ''); }
-  for(const p of t.split(/\s*,\s*/)) if(p) out.push(p);
+  // (a "Once per …" part anywhere: "Aura · Once per turn")
+  for(const seg of t.split(' · ')){
+    const once = /^(?:once|twice) per [a-z ]+(?:, (?:once|twice) per [a-z ]+)?(?:, per (?:army|unit))?/i.exec(seg);
+    if(once){ out.push(once[0]); t = t.replace(once[0], '').replace(/^\s*(?:,| · )\s*|\s*(?:,| · )\s*$/g, ''); }
+  }
+  for(const p of t.split(/\s*(?:,| · )\s*/)) if(p) out.push(p);
   return out;
 }
 const DERIVABLE_TAG = p => /^(Aura|Enhancement|Upgrade|Bondsman|Capacity)$/.test(p) || /^(once|twice) per /i.test(p);
@@ -898,13 +901,13 @@ function screenFns(){
   const grab = re => { const m = re.exec(html); if(!m) throw new Error('app.html: ' + re); return m[0]; };
   const fn = name => { const m = new RegExp('\\n(function ' + name + '\\(|const ' + name + ' = )').exec(html); const rest = html.slice(m.index + 1), end = rest.slice(1).search(/\n(function |const |let |\/\/ |\/\*)/); return rest.slice(0, end + 1); };
   const src = [grab(/const PHASES = [^\n]*/), grab(/const PHASE_NAME = [^\n]*/), grab(/const TURN_NAME = [^\n]*/), grab(/const PHASE_SHORT = [^\n]*/),
-    fn('phasesOf'), fn('phTurn'), fn('whenTag'), fn('shortWhen'), fn('onceTag')].join('\n');
-  return new Function(src + '\nreturn { whenTag, shortWhen, onceTag };')();
+    fn('phasesOf'), fn('phTurn'), fn('whenTag'), fn('shortWhen'), fn('onceTag'), fn('isEnhancement')].join('\n');
+  return new Function(src + '\nreturn { whenTag, shortWhen, onceTag, isEnhancement };')();
 }
 function screenOf(F, ab){
   const once = F.onceTag(ab), row = (ab.ph && !ab.na ? F.shortWhen(ab) : '');
   const meta = [ab.tag, ab.ph ? F.whenTag(ab) : ''].filter(Boolean).join(' · ');
-  return ['row: ' + [ab.tag === 'Enhancement' ? '[Enhancement]' : '', once ? '[' + once + ']' : '', row].filter(Boolean).join(' '), 'opened: ' + (meta || '—')].join(' | ');
+  return ['row: ' + [F.isEnhancement(ab) ? '[Enhancement]' : '', once ? '[' + once + ']' : '', row].filter(Boolean).join(' '), 'opened: ' + (meta || '—')].join(' | ');
 }
 function wouldChange(items){
   const F = screenFns(), out = [];
@@ -929,7 +932,7 @@ function wouldChange(items){
   for(const it of ab){
     if(it.kind === 'ability-tag' && it.status === 'different'){
       const keep = (it.notDerivableParts || []);
-      const tag = [...new Set([].concat(it.derived ? it.derived.split(/, (?!per )/) : [], keep))].join(', ');
+      const tag = [...new Set([].concat(it.derived ? it.derived.split(/, (?!per )/) : [], keep))].join(' · ');   // parts the app adds: " · " (verify/nr.js)
       propose(it, { tag }, 'the tag the text gives (' + it.reasons.map(r => r.rule).join(', ') + ')');
     }
     if(it.kind === 'ability-timing' && it.status === 'different' && it.derived){

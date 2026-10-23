@@ -598,7 +598,7 @@ Warlord
 Canticles of the Omnissiah
 Your Command
 
-Command · Your turn
+Aura · Command · Your turn
 
 At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.
 
@@ -686,7 +686,7 @@ Necromechanic
 Enhancement
 Once per battle round
 
-Enhancement
+Enhancement · Aura
 
 TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.
 
@@ -2430,7 +2430,7 @@ ABILITIES
 Canticles of the Omnissiah
 Your Command
 
-Command · Your turn
+Aura · Command · Your turn
 
 At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.
 
@@ -2705,7 +2705,7 @@ Necromechanic
 Enhancement
 Once per battle round
 
-Enhancement
+Enhancement · Aura
 
 TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.
 
@@ -3511,7 +3511,7 @@ Ask about this ability
 **Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:
 - **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.
 **Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability. · PURGE GOES THE FOE Purge goes the Foe
-ABILITY · COMMAND · YOUR TURN
+ABILITY · AURA · COMMAND · YOUR TURN
 
 Canticles of the Omnissiah
 
