@@ -94,8 +94,9 @@ function resolve(input, D, opt){
 function resolveRoster(j, D, opt){
   const errors = [], err = m => { if(!errors.includes(m)) errors.push(m); };
   const fail = () => ({ ok:false, errors });
-  const T = D.bsIds;
-  if(!T){ err('this version of the app cannot import lists'); return fail(); }
+  if(!D.bsIds){ err('this version of the app cannot import lists'); return fail(); }
+  // the tables without a prototype: an export's id such as "constructor" or "toString" is no key of them
+  const T = {}; for(const k of Object.keys(D.bsIds)) T[k] = Object.assign(Object.create(null), D.bsIds[k]);
   const R = j.roster;
   if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }
   const F = R.forces[0];
@@ -285,12 +286,14 @@ function resolveRoster(j, D, opt){
   const roleAt = r => ROLES.includes(r) ? ROLES.indexOf(r) : ROLES.length;
   picks.forEach((x, k) => { x.k = k; });
   picks.sort((a, b) => (roleAt(a.u.role) - roleAt(b.u.role)) || ((a.u.leads ? 1 : 0) - (b.u.leads ? 1 : 0)) || (a.k - b.k));
-  const units = [], seenIds = new Set(), made = new Map();
+  // (the same unit of two of the app's lists, field for field, is one unit with its copies)
+  const units = [], seenIds = new Set(), made = new Map(), same = u => JSON.stringify(Object.assign({}, u, { copies:undefined }));
   for(const x of picks){
-    if(made.has(x.u)){ const u = made.get(x.u); u.copies = (u.copies || 1) + 1; continue; }
+    const key = same(x.u);
+    if(made.has(key)){ const u = made.get(key); u.copies = (u.copies || 1) + 1; continue; }
     const u = clone(x.u); delete u.copies;
     let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++;
-    u.id = id; seenIds.add(id); made.set(x.u, u); units.push(u);
+    u.id = id; seenIds.add(id); made.set(key, u); units.push(u);
   }
   const name = typo(nn(R.name)) || 'Imported list';
   const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,
