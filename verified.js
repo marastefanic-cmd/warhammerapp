@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "37a6ce823b",
- "data": "2026-10-23.3",
+ "build": "665fa97d3e",
+ "data": "2026-10-23.4",
  "date": "23 Oct 2026",
  "checks": [
   {
