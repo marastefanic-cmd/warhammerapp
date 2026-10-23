@@ -1,0 +1,1236 @@
+[
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Skarbrand · Rage Embodied",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Rage Embodied",
+   "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+  },
+  "key": "ea2888557162c916"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Skarbrand · Rage Embodied",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Rage Embodied",
+   "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+  },
+  "key": "3e8f6067e2cbddc8"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-damaged",
+  "where": "big-demons-baby · Skarbrand · Damaged: 1-7 wounds remaining",
+  "judgement": {
+   "damaged": "1-7",
+   "W": "20"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage."
+  },
+  "key": "70046468e20fa613"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-footnote",
+  "where": "big-demons-baby · Skarbrand",
+  "judgement": {
+   "kind": "melee",
+   "when": "Damaged (1-7 wounds left)",
+   "note": "+2 A",
+   "from": "Damaged: 1-7 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage."
+  },
+  "key": "7ab4bf7c066cd17c"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-aura",
+  "where": "big-demons-baby · Skarbrand",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "any": [
+     "Faction: Blood Legions"
+    ]
+   },
+   "when": "Within 6\" of Skarbrand",
+   "selfWhen": "Own aura",
+   "note": "+1 A",
+   "from": "Rage Embodied",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Rage Embodied",
+   "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+  },
+  "key": "e8b3d6bde7654555"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-weapons",
+  "where": "big-demons-baby · Skarbrand",
+  "judgement": {
+   "gear": [
+    [
+     "Bellow of endless fury",
+     "Slaughter and Carnage"
+    ]
+   ],
+   "weapons": [
+    "Bellow of endless fury",
+    "Slaughter and Carnage · strike",
+    "Slaughter and Carnage · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Skarbrand"
+   ],
+   "leads": null
+  },
+  "key": "19f94423981500cc"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Bloodthirster · Daemon Lord of Khorne",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Daemon Lord of Khorne",
+   "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "a84a61e9ae0e111f"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Bloodthirster · Daemon Lord of Khorne",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Daemon Lord of Khorne",
+   "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "3381a9da536afe9e"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Bloodthirster · Relentless Carnage",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Relentless Carnage",
+   "text": "At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound."
+  },
+  "key": "3bbc7460956c3720"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-aura",
+  "where": "big-demons-baby · Bloodthirster",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "any": [
+     "Faction: Blood Legions"
+    ]
+   },
+   "when": "Within 6\" of the Bloodthirster",
+   "selfWhen": "Own aura",
+   "note": "+1 to hit",
+   "from": "Daemon Lord of Khorne",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Daemon Lord of Khorne",
+   "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "2792f58b963e34d9"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-weapons",
+  "where": "big-demons-baby · Bloodthirster",
+  "judgement": {
+   "gear": [
+    [
+     "Hellfire breath",
+     "Great axe of Khorne"
+    ]
+   ],
+   "weapons": [
+    "Hellfire breath",
+    "Great axe of Khorne · strike",
+    "Great axe of Khorne · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Bloodthirster"
+   ],
+   "leads": null
+  },
+  "key": "81bbf60286288ff2"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Daemon Prince of Khorne · Blade of Endless Bloodshed",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Blade of Endless Bloodshed",
+   "text": "**WORLD EATERS** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead."
+  },
+  "key": "849d866c5cb818ed"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Master of Executions · A Worthy Skull",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "A Worthy Skull",
+   "text": "Each time this model makes a melee attack that targets a **CHARACTER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model’s unit destroys a **CHARACTER** model, you gain 1CP."
+  },
+  "key": "13e6e6024e3bf09e"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Master of Executions · Forwards, For Blood!",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "ability": "Forwards, For Blood!",
+   "text": "While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move."
+  },
+  "key": "4b8620b97f0f1295"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-na",
+  "where": "big-demons-baby · Master of Executions · Forwards, For Blood!",
+  "judgement": {
+   "na": "Not leading a unit in this list",
+   "armyUnits": [
+    "Angron [Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord]",
+    "Skarbrand [Chaos, Character, Daemon, Epic Hero, Faction: Blood Legions, Khorne, Monster, Skarbrand]",
+    "Bloodthirster [Bloodthirster, Chaos, Character, Daemon, Faction: Blood Legions, Fly, Khorne, Monster, Summoned]",
+    "Daemon Prince of Khorne [Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster]",
+    "Master of Executions [Chaos, Character, Faction: World Eaters, Infantry, Khorne, Master of Executions]",
+    "Lord on Juggernaut [Chaos, Character, Faction: Blood Legions, Khorne, Lord on Juggernaut, Mounted, Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry]",
+    "Goremongers [Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne]",
+    "Jakhals [Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne]",
+    "Flesh Hounds [Beast, Chaos, Daemon, Faction: Blood Legions, Flesh Hounds, Khorne, Summoned]"
+   ]
+  },
+  "source": {
+   "ability": "Forwards, For Blood!",
+   "text": "While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move."
+  },
+  "key": "2bb0ef9ddb708873"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Master of Executions · Blood-forged Armour",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Blood-forged Armour",
+   "text": "**BLOOD LEGIONS** or **WORLD EATERS** model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point."
+  },
+  "key": "87fd0b90f5d17311"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-footnote",
+  "where": "big-demons-baby · Master of Executions",
+  "judgement": {
+   "kind": "melee",
+   "when": "Melee attacks that target a CHARACTER unit",
+   "note": "can re-roll the hit roll and the wound roll",
+   "from": "A Worthy Skull",
+   "vs": {
+    "any": [
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "ability": "A Worthy Skull",
+   "text": "Each time this model makes a melee attack that targets a **CHARACTER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model’s unit destroys a **CHARACTER** model, you gain 1CP."
+  },
+  "key": "e51753c355c6f546"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-weapons",
+  "where": "big-demons-baby · Master of Executions",
+  "judgement": {
+   "gear": [
+    [
+     "Axe of dismemberment",
+     "Bolt pistol"
+    ]
+   ],
+   "weapons": [
+    "Bolt pistol",
+    "Axe of dismemberment"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Master of Executions"
+   ],
+   "leads": null
+  },
+  "key": "76c5e19cbb491d29"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Aggressive Advance",
+  "judgement": {
+   "who": "Lord on Juggernaut",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Aggressive Advance",
+   "text": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features."
+  },
+  "key": "0af8d60d386d9d67"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Crush All Who Stand Before Us",
+  "judgement": {
+   "who": "Lord on Juggernaut",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Crush All Who Stand Before Us",
+   "text": "Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit."
+  },
+  "key": "906dbb5ef76b96b5"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Lord on Juggernaut · Disciple of Khorne",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Disciple of Khorne",
+   "text": "**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword."
+  },
+  "key": "02ca421cdad3526d"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Disciple of Khorne",
+  "judgement": {
+   "who": "Lord on Juggernaut",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Disciple of Khorne",
+   "text": "**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword."
+  },
+  "key": "925069c78f587594"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Blood Surge",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Blood Surge",
+   "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+  },
+  "key": "e7a7e7552d9d779a"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Murderous Charge",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Murderous Charge",
+   "text": "If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
+  },
+  "key": "55e2587d7c8f72da"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+  },
+  "key": "733e2fe1b139e22c"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-na",
+  "where": "big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+  "judgement": {
+   "na": "No Icon of Khorne in this unit",
+   "armyUnits": [
+    "Angron [Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord]",
+    "Skarbrand [Chaos, Character, Daemon, Epic Hero, Faction: Blood Legions, Khorne, Monster, Skarbrand]",
+    "Bloodthirster [Bloodthirster, Chaos, Character, Daemon, Faction: Blood Legions, Fly, Khorne, Monster, Summoned]",
+    "Daemon Prince of Khorne [Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster]",
+    "Master of Executions [Chaos, Character, Faction: World Eaters, Infantry, Khorne, Master of Executions]",
+    "Lord on Juggernaut [Chaos, Character, Faction: Blood Legions, Khorne, Lord on Juggernaut, Mounted, Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry]",
+    "Goremongers [Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne]",
+    "Jakhals [Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne]",
+    "Flesh Hounds [Beast, Chaos, Daemon, Faction: Blood Legions, Flesh Hounds, Khorne, Summoned]"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+  },
+  "key": "64385370643e5b6e"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-kwNote",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Lord on Juggernaut W7 OC2",
+    "Khorne Berzerker ×20 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Bladed horn 4 -1 2 EXTRA ATTACKS, LANCE",
+    "Exalted chainblade 7 -1 2",
+    "Chainblade 4 -1 1",
+    "Khornate eviscerator 3 -2 2"
+   ]
+  },
+  "key": "596bbe4cb3d1d0f1"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-ptsNote",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "ptsNote": "110 + Khorne Berzerkers 330"
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Lord on Juggernaut W7 OC2",
+    "Khorne Berzerker ×20 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Bladed horn 4 -1 2 EXTRA ATTACKS, LANCE",
+    "Exalted chainblade 7 -1 2",
+    "Chainblade 4 -1 1",
+    "Khornate eviscerator 3 -2 2"
+   ]
+  },
+  "key": "6481a63ec3979d0e"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-partialRules",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "partialRules": {
+    "Deep Strike": "Lord on Juggernaut"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "rules": [
+    "Leader",
+    "Blessings of Khorne",
+    "Deep Strike",
+    "Extra Attacks",
+    "Lance",
+    "Pistol",
+    "Hazardous"
+   ],
+   "abilities": [
+    "Lord on Juggernaut · Aggressive Advance: While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+    "Lord on Juggernaut · Crush All Who Stand Before Us: Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
+    "Lord on Juggernaut · Disciple of Khorne: **LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.",
+    "Khorne Berzerkers · Blood Surge: In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+    "Khorne Berzerkers · Murderous Charge: If this unit made a charge move this turn, this unit’s melee attacks have +1 S.",
+    "Khorne Berzerkers · Icon of Khorne: If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+   ]
+  },
+  "key": "c0fc3a325b226c4a"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-weapons",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "gear": [
+    [
+     "Bladed horn",
+     "Exalted chainblade",
+     "Plasma pistol"
+    ],
+    [
+     "Chainblade",
+     "Plasma pistol"
+    ],
+    [
+     "Bolt pistol",
+     "Chainblade"
+    ],
+    [
+     "Khornate eviscerator",
+     "Plasma pistol"
+    ]
+   ],
+   "weapons": [
+    "Lord on Juggernaut · Plasma pistol · standard",
+    "Lord on Juggernaut · Plasma pistol · supercharge",
+    "Khorne Berzerkers · ×5 · Plasma pistol · standard",
+    "Khorne Berzerkers · ×5 · Plasma pistol · supercharge",
+    "Khorne Berzerkers · ×15 · Bolt pistol",
+    "Lord on Juggernaut · Bladed horn",
+    "Lord on Juggernaut · Exalted chainblade",
+    "Khorne Berzerkers · ×16 · Chainblade",
+    "Khorne Berzerkers · ×4 · Khornate eviscerator"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "leads": "Khorne Berzerkers"
+  },
+  "key": "550447e5bda72242"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Goremongers · Loping Speed",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Loping Speed",
+   "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6\"."
+  },
+  "key": "9d3e520c45152207"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing",
+  "where": "big-demons-baby · Flesh Hounds · Hunters from the Warp",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Hunters from the Warp",
+   "text": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+  },
+  "key": "1dacf8bc8fd403f5"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-def",
+  "where": "big-demons-baby · Flesh Hounds · Collar of Khorne",
+  "judgement": {
+   "def": "Feel No Pain 3+ against Psychic Attacks"
+  },
+  "source": {
+   "ability": "Collar of Khorne",
+   "text": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks."
+  },
+  "key": "da132797e5594c55"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-weapons",
+  "where": "big-demons-baby · Flesh Hounds",
+  "judgement": {
+   "gear": [
+    [
+     "Burning roar",
+     "Gore-drenched fangs"
+    ],
+    [
+     "Gore-drenched fangs"
+    ]
+   ],
+   "weapons": [
+    "Burning roar",
+    "×5 · Gore-drenched fangs"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Gore Hound (Collar of Khorne)",
+    "4× Flesh Hound (Collar of Khorne)"
+   ],
+   "leads": null
+  },
+  "key": "1b693444a4d2059c"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "rule-ph",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Blood Tithe",
+   "text": "Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**."
+  },
+  "key": "2a14053a5c04cb69"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "rule-turn",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Blood Tithe",
+   "text": "Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**."
+  },
+  "key": "69927a84f146fea4"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "rule-needs",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Faction: Blood Legions",
+     "Faction: World Eaters"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Blood Tithe",
+   "text": "Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**."
+  },
+  "key": "23b512819636bff8"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "rule-parts",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "judgement": {
+   "parts": [
+    {
+     "name": "Enraged Abjuration",
+     "needs": {
+      "any": [
+       "Faction: Blood Legions",
+       "Faction: World Eaters"
+      ]
+     },
+     "def": "Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds"
+    },
+    {
+     "name": "Daemonic Rage",
+     "needs": {
+      "any": [
+       "Faction: Blood Legions"
+      ]
+     },
+     "mod": {
+      "kind": "melee",
+      "when": "Daemonic Rage active (3BTP)",
+      "note": "[LANCE]"
+     }
+    },
+    {
+     "name": "Boon of Blood",
+     "needs": {
+      "any": [
+       "Faction: Blood Legions"
+      ]
+     },
+     "def": "Boon of Blood active (4BTP): 4+ invulnerable save"
+    },
+    {
+     "name": "Might of Khorne",
+     "needs": {
+      "any": [
+       "Faction: Blood Legions"
+      ]
+     },
+     "grants": "Blessings of Khorne",
+     "when": "Might of Khorne active (5BTP)"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Blood Tithe",
+   "text": "Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**."
+  },
+  "key": "ced2e2594a5549ba"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-phases",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Summoned by Slaughter",
+   "text": "WHEN: Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a **TRANSPORT**, any units embarked within that **TRANSPORT** model must disembark first).\nTARGET: One **BLOODLETTERS** unit from your army that is in Reserves.\nEFFECT: Set your unit up anywhere on the battlefield wholly within 9\" of that destroyed model and more than 6\" horizontally away from all enemy units, then remove the destroyed model from play.\nRESTRICTIONS: You cannot use this Stratagem more than once per battle round."
+  },
+  "key": "935e63f60c8a1b67"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turn",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Summoned by Slaughter",
+   "text": "WHEN: Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a **TRANSPORT**, any units embarked within that **TRANSPORT** model must disembark first).\nTARGET: One **BLOODLETTERS** unit from your army that is in Reserves.\nEFFECT: Set your unit up anywhere on the battlefield wholly within 9\" of that destroyed model and more than 6\" horizontally away from all enemy units, then remove the destroyed model from play.\nRESTRICTIONS: You cannot use this Stratagem more than once per battle round."
+  },
+  "key": "e3bdc552a8d8cd29"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-needs",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Bloodletters"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Summoned by Slaughter",
+   "text": "WHEN: Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a **TRANSPORT**, any units embarked within that **TRANSPORT** model must disembark first).\nTARGET: One **BLOODLETTERS** unit from your army that is in Reserves.\nEFFECT: Set your unit up anywhere on the battlefield wholly within 9\" of that destroyed model and more than 6\" horizontally away from all enemy units, then remove the destroyed model from play.\nRESTRICTIONS: You cannot use this Stratagem more than once per battle round."
+  },
+  "key": "861e770df158c1d3"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-gist",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "judgement": {
+   "gist": "The last model of a unit is destroyed: set your BLOODLETTERS unit in Reserves up wholly within 9\" of that model and more than 6\" horizontally away from all enemy units (once per battle round)."
+  },
+  "source": {
+   "stratagem": "Summoned by Slaughter",
+   "text": "WHEN: Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a **TRANSPORT**, any units embarked within that **TRANSPORT** model must disembark first).\nTARGET: One **BLOODLETTERS** unit from your army that is in Reserves.\nEFFECT: Set your unit up anywhere on the battlefield wholly within 9\" of that destroyed model and more than 6\" horizontally away from all enemy units, then remove the destroyed model from play.\nRESTRICTIONS: You cannot use this Stratagem more than once per battle round."
+  },
+  "key": "24082ff6c43abfe8"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-phases",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Daemonic Fury",
+   "text": "WHEN: Start of your Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army.\nEFFECT: Select one friendly **WORLD EATERS** unit within 6\" of your unit. Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability."
+  },
+  "key": "732567c4f762a2db"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turn",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Daemonic Fury",
+   "text": "WHEN: Start of your Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army.\nEFFECT: Select one friendly **WORLD EATERS** unit within 6\" of your unit. Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability."
+  },
+  "key": "c2b8906217fee897"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-needs",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Blood Legions"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Daemonic Fury",
+   "text": "WHEN: Start of your Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army.\nEFFECT: Select one friendly **WORLD EATERS** unit within 6\" of your unit. Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability."
+  },
+  "key": "e0ea97ce5ece42ee"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-gist",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "judgement": {
+   "gist": "Select one friendly WORLD EATERS unit within 6\" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active)."
+  },
+  "source": {
+   "stratagem": "Daemonic Fury",
+   "text": "WHEN: Start of your Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army.\nEFFECT: Select one friendly **WORLD EATERS** unit within 6\" of your unit. Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability."
+  },
+  "key": "9dc6713df612e39a"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-phases",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "A Worthy Skull",
+   "text": "WHEN: Fight phase, just after a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army has fought, and one or more enemy **CHARACTER** or **MONSTER** models were destroyed as a result of those attacks.\nTARGET: That **BLOOD LEGIONS** or **WORLD EATERS** unit.\nEFFECT: You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities."
+  },
+  "key": "9b066e2e84257dc7"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turn",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "A Worthy Skull",
+   "text": "WHEN: Fight phase, just after a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army has fought, and one or more enemy **CHARACTER** or **MONSTER** models were destroyed as a result of those attacks.\nTARGET: That **BLOOD LEGIONS** or **WORLD EATERS** unit.\nEFFECT: You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities."
+  },
+  "key": "a0c98d5661f941f6"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-needs",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Faction: Blood Legions",
+     "Faction: World Eaters"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "A Worthy Skull",
+   "text": "WHEN: Fight phase, just after a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army has fought, and one or more enemy **CHARACTER** or **MONSTER** models were destroyed as a result of those attacks.\nTARGET: That **BLOOD LEGIONS** or **WORLD EATERS** unit.\nEFFECT: You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities."
+  },
+  "key": "b3e3c481f1c7193d"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-gist",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "judgement": {
+   "gist": "Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities."
+  },
+  "source": {
+   "stratagem": "A Worthy Skull",
+   "text": "WHEN: Fight phase, just after a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army has fought, and one or more enemy **CHARACTER** or **MONSTER** models were destroyed as a result of those attacks.\nTARGET: That **BLOOD LEGIONS** or **WORLD EATERS** unit.\nEFFECT: You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities."
+  },
+  "key": "b959201e367ec20f"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-phases",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Blessing of Burning Blood",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **BLOOD LEGIONS** unit from your army that is within 6\" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save."
+  },
+  "key": "3fa3553464dccc08"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turn",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Blessing of Burning Blood",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **BLOOD LEGIONS** unit from your army that is within 6\" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save."
+  },
+  "key": "7f328c5bc26a0d40"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turns",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Blessing of Burning Blood",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **BLOOD LEGIONS** unit from your army that is within 6\" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save."
+  },
+  "key": "af5bc0e30fb8a963"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-needs",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Blood Legions"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Blessing of Burning Blood",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **BLOOD LEGIONS** unit from your army that is within 6\" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save."
+  },
+  "key": "37eacdae1bf16546"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-gist",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "judgement": {
+   "gist": "A WORLD EATERS unit within 6\" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active)."
+  },
+  "source": {
+   "stratagem": "Blessing of Burning Blood",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **BLOOD LEGIONS** unit from your army that is within 6\" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save."
+  },
+  "key": "f8fd52931c70ec6f"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-shield",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "judgement": {
+   "shield": {
+    "protects": {
+     "all": [
+      "Faction: World Eaters"
+     ]
+    },
+    "by": {
+     "all": [
+      "Faction: Blood Legions"
+     ]
+    },
+    "def": "their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6\": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)"
+   }
+  },
+  "source": {
+   "stratagem": "Blessing of Burning Blood",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **BLOOD LEGIONS** unit from your army that is within 6\" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save."
+  },
+  "key": "9d960f233b6aa06a"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-phases",
+  "where": "Khorne Daemonkin · Daemontide",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Daemontide",
+   "text": "WHEN: Your Command phase.\nTARGET: One **WORLD EATERS** unit from your army.\nEFFECT: Select one friendly **BLOOD LEGIONS** unit within 6\" of your unit. One destroyed **MOUNTED** model, up to D3 destroyed **BEAST** models, or up to D6 destroyed **INFANTRY** models are returned to that **BLOOD LEGIONS** unit with their full wounds remaining.\nRESTRICTIONS: This Stratagem cannot be used to return destroyed **CHARACTER** models to Attached units."
+  },
+  "key": "09203d109369a328"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turn",
+  "where": "Khorne Daemonkin · Daemontide",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Daemontide",
+   "text": "WHEN: Your Command phase.\nTARGET: One **WORLD EATERS** unit from your army.\nEFFECT: Select one friendly **BLOOD LEGIONS** unit within 6\" of your unit. One destroyed **MOUNTED** model, up to D3 destroyed **BEAST** models, or up to D6 destroyed **INFANTRY** models are returned to that **BLOOD LEGIONS** unit with their full wounds remaining.\nRESTRICTIONS: This Stratagem cannot be used to return destroyed **CHARACTER** models to Attached units."
+  },
+  "key": "62a8604d6bae5cef"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-needs",
+  "where": "Khorne Daemonkin · Daemontide",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Daemontide",
+   "text": "WHEN: Your Command phase.\nTARGET: One **WORLD EATERS** unit from your army.\nEFFECT: Select one friendly **BLOOD LEGIONS** unit within 6\" of your unit. One destroyed **MOUNTED** model, up to D3 destroyed **BEAST** models, or up to D6 destroyed **INFANTRY** models are returned to that **BLOOD LEGIONS** unit with their full wounds remaining.\nRESTRICTIONS: This Stratagem cannot be used to return destroyed **CHARACTER** models to Attached units."
+  },
+  "key": "0d16f5c226759018"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-gist",
+  "where": "Khorne Daemonkin · Daemontide",
+  "judgement": {
+   "gist": "Select one friendly BLOOD LEGIONS unit within 6\" of your unit: one destroyed MOUNTED model, up to D3 destroyed BEAST models or up to D6 destroyed INFANTRY models return to it with full wounds (not CHARACTER models to Attached units)."
+  },
+  "source": {
+   "stratagem": "Daemontide",
+   "text": "WHEN: Your Command phase.\nTARGET: One **WORLD EATERS** unit from your army.\nEFFECT: Select one friendly **BLOOD LEGIONS** unit within 6\" of your unit. One destroyed **MOUNTED** model, up to D3 destroyed **BEAST** models, or up to D6 destroyed **INFANTRY** models are returned to that **BLOOD LEGIONS** unit with their full wounds remaining.\nRESTRICTIONS: This Stratagem cannot be used to return destroyed **CHARACTER** models to Attached units."
+  },
+  "key": "4aa043e5f4f2e084"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-phases",
+  "where": "Khorne Daemonkin · Murder-call",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Murder-call",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army that is on the battlefield and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "b7a6780d56fd885e"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-turn",
+  "where": "Khorne Daemonkin · Murder-call",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Murder-call",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army that is on the battlefield and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "3cc073245406c8b9"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-needs",
+  "where": "Khorne Daemonkin · Murder-call",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Blood Legions"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Murder-call",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army that is on the battlefield and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "a3b0dd39f4946a5a"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-gist",
+  "where": "Khorne Daemonkin · Murder-call",
+  "judgement": {
+   "gist": "Remove your unit from the battlefield and place it into Strategic Reserves."
+  },
+  "source": {
+   "stratagem": "Murder-call",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army that is on the battlefield and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "5ad8024a6ebd6899"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "unitMods",
+  "judgement": {
+   "code": "function unitMods(u, kind){\n  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)))\n    .concat(unitDetParts(u).filter(x => x.part.mod).map(x => Object.assign({ from:x.rule.name, rule:x.rule.name }, x.part.mod)));\n  for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){\n    const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];\n    if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });\n  }\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12\" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });\n  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));\n  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');\n}"
+  },
+  "source": {
+   "implements": "which footnotes a unit gets: its own, detachment rules matching its keywords (and the parts of a detachment rule whose needs it meets), auras, stratagems it is eligible for; Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)"
+  },
+  "key": "652ed55ed33b5ac1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "unitDetParts",
+  "judgement": {
+   "code": "const unitDetParts = u => unitDetRules(u).flatMap(r => (r.parts || []).filter(p => matches(p.needs, u)).map(p => ({ rule:r, part:p })));"
+  },
+  "source": {
+   "implements": "the parts of a detachment rule that apply to a unit: those of the rules that apply to it (by keyword) whose own needs it meets (Blood Tithe: Daemonic Rage and Boon of Blood for BLOOD LEGIONS units, Might of Khorne giving them the Blessings of Khorne ability)"
+  },
+  "key": "4c30080b8d62d835"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph, opts){\n  const out = [];\n  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)\n  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))\n    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });\n  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,\n  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit\n  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u))\n    out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah's Blessing, Necromechanic)"
+  },
+  "key": "c6a4c9a198ed8e69"
+ }
+]

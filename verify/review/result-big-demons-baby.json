@@ -1,0 +1,407 @@
+[
+ {
+  "key": "ea2888557162c916",
+  "where": "big-demons-baby · Skarbrand · Rage Embodied",
+  "verdict": "ok",
+  "why": "\"While a friendly BLOOD LEGIONS unit is within 6\"... add 1 to the Attacks characteristic of melee weapons\": only melee attacks change, in either player's Fight phase."
+ },
+ {
+  "key": "3e8f6067e2cbddc8",
+  "where": "big-demons-baby · Skarbrand · Rage Embodied",
+  "verdict": "ok",
+  "why": "New Recruit prints \"Rage Embodied (Aura)\", Wahapedia \"Rage Embodied (Aura):\"; it affects units within a stated range (22.01)."
+ },
+ {
+  "key": "70046468e20fa613",
+  "where": "big-demons-baby · Skarbrand · Damaged: 1-7 wounds remaining",
+  "verdict": "ok",
+  "why": "\"While this model has 1-7 wounds remaining\" with W 20 (New Recruit and Wahapedia: W 20)."
+ },
+ {
+  "key": "7ab4bf7c066cd17c",
+  "where": "big-demons-baby · Skarbrand",
+  "verdict": "ok",
+  "why": "\"add 2 to the Attacks characteristic of this model’s Slaughter and Carnage\" (New Recruit; Wahapedia: \"this model’s melee weapons\"): Slaughter and Carnage is its only melee weapon, so melee +2 A under the Damaged band is the same thing."
+ },
+ {
+  "key": "e8b3d6bde7654555",
+  "where": "big-demons-baby · Skarbrand",
+  "verdict": "ok",
+  "why": "\"a friendly BLOOD LEGIONS unit ... add 1 to the Attacks characteristic of melee weapons equipped by models in that unit\": needs BLOOD LEGIONS, +1 A to melee. A unit has the keywords of all its models (02.05.01, 19.03), so the Lord on Juggernaut + Khorne Berzerkers unit is a BLOOD LEGIONS unit through the Lord, and the rule names the unit's models, so every model of it (Berzerkers too) gets +1 A. Skarbrand is in range of his own aura (22.01), so selfAlways is right."
+ },
+ {
+  "key": "19f94423981500cc",
+  "where": "big-demons-baby · Skarbrand",
+  "verdict": "ok",
+  "why": "New Recruit: \"1x Skarbrand  Bellow of endless fury, Slaughter and Carnage\"; Slaughter and Carnage has strike and sweep profiles (New Recruit, Wahapedia)."
+ },
+ {
+  "key": "a84a61e9ae0e111f",
+  "where": "big-demons-baby · Bloodthirster · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "\"each time a model in that unit makes a melee attack, add 1 to the Hit roll\": only melee attacks, in either player's Fight phase."
+ },
+ {
+  "key": "3381a9da536afe9e",
+  "where": "big-demons-baby · Bloodthirster · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "New Recruit \"Daemon Lord of Khorne (Aura)\", Wahapedia \"(Aura)\"."
+ },
+ {
+  "key": "3bbc7460956c3720",
+  "where": "big-demons-baby · Bloodthirster · Relentless Carnage",
+  "verdict": "ok",
+  "why": "\"At the end of the Fight phase\": either player's Fight phase."
+ },
+ {
+  "key": "2792f58b963e34d9",
+  "where": "big-demons-baby · Bloodthirster",
+  "verdict": "ok",
+  "why": "\"While a friendly BLOOD LEGIONS unit is within 6\" ... each time a model in that unit makes a melee attack, add 1 to the Hit roll\": needs BLOOD LEGIONS, melee +1 to hit. The Lord + Khorne Berzerkers unit is a BLOOD LEGIONS unit (02.05.01: a unit with one or more models with that keyword) and every model in it gets the +1, as the words say \"a model in that unit\". selfAlways: 22.01."
+ },
+ {
+  "key": "81bbf60286288ff2",
+  "where": "big-demons-baby · Bloodthirster",
+  "verdict": "ok",
+  "why": "New Recruit: \"1x Bloodthirster  Hellfire breath, Great axe of Khorne\"; Great axe of Khorne has strike and sweep (Wahapedia, New Recruit)."
+ },
+ {
+  "key": "849d866c5cb818ed",
+  "where": "big-demons-baby · Daemon Prince of Khorne · Blade of Endless Bloodshed",
+  "verdict": "ok",
+  "why": "The Khorne Daemonkin Enhancement (Wahapedia, 30 pts; New Recruit lists it on the Daemon Prince). \"WORLD EATERS model only\": the Daemon Prince of Khorne has Faction: World Eaters."
+ },
+ {
+  "key": "13e6e6024e3bf09e",
+  "where": "big-demons-baby · Master of Executions · A Worthy Skull",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a melee attack that targets a CHARACTER unit\": melee, in either player's Fight phase."
+ },
+ {
+  "key": "4b8620b97f0f1295",
+  "where": "big-demons-baby · Master of Executions · Forwards, For Blood!",
+  "verdict": "ok",
+  "why": "\"re-roll Advance rolls\" (your Movement phase) and \"each time that unit makes a Blood Surge move\" (Blood Surge: \"In your opponent’s Shooting phase\"): movement in your turn, shooting in the opponent's."
+ },
+ {
+  "key": "2bb0ef9ddb708873",
+  "where": "big-demons-baby · Master of Executions · Forwards, For Blood!",
+  "verdict": "ok",
+  "why": "\"While this model is leading a unit\": New Recruit lists the Master of Executions on its own, leading nothing (its only bodyguard, KHORNE BERZERKERS, is led by the Lord on Juggernaut). Marked, not hidden."
+ },
+ {
+  "key": "87fd0b90f5d17311",
+  "where": "big-demons-baby · Master of Executions · Blood-forged Armour",
+  "verdict": "ok",
+  "why": "The Khorne Daemonkin Enhancement (Wahapedia 20 pts; New Recruit on the Master of Executions). \"BLOOD LEGIONS or WORLD EATERS model only\": it is a WORLD EATERS model."
+ },
+ {
+  "key": "e51753c355c6f546",
+  "where": "big-demons-baby · Master of Executions",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll\": melee, vs CHARACTER (a target condition, ticked by the player), the words kept (\"can\"). The 1CP part does not change attacks."
+ },
+ {
+  "key": "76c5e19cbb491d29",
+  "where": "big-demons-baby · Master of Executions",
+  "verdict": "ok",
+  "why": "New Recruit: \"1x Master of Executions  Blood-forged Armour, Axe of dismemberment, Bolt pistol\"."
+ },
+ {
+  "key": "0af8d60d386d9d67",
+  "where": "big-demons-baby · Lord on Juggernaut · Aggressive Advance",
+  "verdict": "ok",
+  "why": "The Lord on Juggernaut's datasheet ability (New Recruit \"Aggressive Advance - Lord on Juggernaut\")."
+ },
+ {
+  "key": "906dbb5ef76b96b5",
+  "where": "big-demons-baby · Lord on Juggernaut · Crush All Who Stand Before Us",
+  "verdict": "ok",
+  "why": "The Lord on Juggernaut's datasheet ability (New Recruit \"Crush All Who Stand Before Us - Lord on Juggernaut\")."
+ },
+ {
+  "key": "02ca421cdad3526d",
+  "where": "big-demons-baby · Lord on Juggernaut · Disciple of Khorne",
+  "verdict": "ok",
+  "why": "Enhancement, Faction Pack 1.3 Rules Update wording: \"LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.\" (Wahapedia errata identical; its old \"LEADER: FLESH HOUNDS, BLOODCRUSHERS\" line is gone in the update, so leading Khorne Berzerkers is allowed by the Lord's own Leader list)."
+ },
+ {
+  "key": "925069c78f587594",
+  "where": "big-demons-baby · Lord on Juggernaut · Disciple of Khorne",
+  "verdict": "ok",
+  "why": "\"The bearer\": the Lord on Juggernaut (New Recruit \"Disciple of Khorne - Lord on Juggernaut\"). 19.04: an enhancement's ability only ever applies to its bearer, so the keyword swap and Deep Strike are the Lord's alone."
+ },
+ {
+  "key": "e7a7e7552d9d779a",
+  "where": "big-demons-baby · Lord on Juggernaut · Blood Surge",
+  "verdict": "ok",
+  "why": "Khorne Berzerkers datasheet ability (New Recruit \"Blood Surge - Khorne Berzerkers\"); \"this unit\" is the attached unit while a Berzerker lives (19.04)."
+ },
+ {
+  "key": "55e2587d7c8f72da",
+  "where": "big-demons-baby · Lord on Juggernaut · Murderous Charge",
+  "verdict": "ok",
+  "why": "Khorne Berzerkers datasheet ability (Faction Pack \"Add new ability: Murderous Charge\"; New Recruit \"- Khorne Berzerkers\"). \"this unit’s melee attacks\" reaches the whole attached unit (19.04), which the footnote does."
+ },
+ {
+  "key": "733e2fe1b139e22c",
+  "where": "big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+  "verdict": "ok",
+  "why": "Khorne Berzerkers wargear ability (New Recruit \"Icon of Khorne - Khorne Berzerkers\")."
+ },
+ {
+  "key": "64385370643e5b6e",
+  "where": "big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+  "verdict": "ok",
+  "why": "New Recruit's models lines have no Icon of Khorne (Champion: Chainblade, Plasma pistol; 15× Bolt pistol, Chainblade; 4× Khornate eviscerator, Plasma pistol); \"If the bearer’s unit contains one or more Icons of Khorne\" never holds. Marked, not hidden."
+ },
+ {
+  "key": "596bbe4cb3d1d0f1",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Wahapedia: Lord on Juggernaut KEYWORDS MOUNTED, CHARACTER, CHAOS, KHORNE, LORD ON JUGGERNAUT, faction WORLD EATERS; Khorne Berzerkers INFANTRY, BATTLELINE, GRENADES, CHAOS, KHORNE, BERZERKERS, faction WORLD EATERS. With Disciple of Khorne the Lord has BLOOD LEGIONS \"instead of\" WORLD EATERS, so the unit's Faction: World Eaters comes only from the Berzerkers and its Faction: Blood Legions from the Lord, as the note says (New Recruit marks the same five \"*from combined unit\"). The note quotes, it does not interpret."
+ },
+ {
+  "key": "6481a63ec3979d0e",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "New Recruit: Lord on Juggernaut 110 (95 + Disciple of Khorne 15), (20) Khorne Berzerkers 330, card 440 PTS. Same form as the other attached units' ptsNote."
+ },
+ {
+  "key": "c0fc3a325b226c4a",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Deep Strike: \"if every model in this unit has this ability\" (New Recruit's rule text, 24.09). Disciple of Khorne gives it to \"The bearer\" only (19.04: an enhancement applies only to that model), so it is the Lord's only and the attached unit cannot use it; partialRules names the Lord, as Canis Rex's Lone Operative."
+ },
+ {
+  "key": "550447e5bda72242",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "New Recruit lines: Lord (Bladed horn, Exalted chainblade, Plasma pistol), Champion (Chainblade, Plasma pistol), 15× (Bolt pistol, Chainblade), 4× (Khornate eviscerator, Plasma pistol): Berzerker plasma pistols 1+4 = 5 (New Recruit x5), bolt pistols 15, chainblades 16, eviscerators 4, as printed."
+ },
+ {
+  "key": "9d3e520c45152207",
+  "where": "big-demons-baby · Goremongers · Loping Speed",
+  "verdict": "ok",
+  "why": "Faction Pack Rules Update: \"In your opponent's Movement phase, if an enemy unit ends a move within 8\"...\": Movement phase, opponent's turn."
+ },
+ {
+  "key": "1dacf8bc8fd403f5",
+  "where": "big-demons-baby · Flesh Hounds · Hunters from the Warp",
+  "verdict": "ok",
+  "why": "\"At the end of your opponent’s turn\": listed at the end of the opponent's turn (at) in the last phase, the same as the signed-off Ambushing Hunters."
+ },
+ {
+  "key": "da132797e5594c55",
+  "where": "big-demons-baby · Flesh Hounds · Collar of Khorne",
+  "verdict": "ok",
+  "why": "\"The bearer has the Feel No Pain 3+ ability against Psychic Attacks\": every model has a Collar of Khorne (New Recruit, Wahapedia \"Every Flesh Hound is equipped with: ... collar of Khorne\"), and the unconditional FNP 3+ from the Rules line is not added again (defenceItems skips it when an ability's def has it)."
+ },
+ {
+  "key": "1b693444a4d2059c",
+  "where": "big-demons-baby · Flesh Hounds",
+  "verdict": "ok",
+  "why": "New Recruit: Gore Hound (Burning roar, Collar of Khorne, Gore-drenched fangs), 4× Flesh Hound (Collar of Khorne, Gore-drenched fangs): one Burning roar, ×5 fangs."
+ },
+ {
+  "key": "2a14053a5c04cb69",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "\"At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities\": listed in the Command phase (the points are gained whenever a unit destroys one; the abilities last \"until the end of the battle\")."
+ },
+ {
+  "key": "69927a84f146fea4",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "\"At the start of the Command phase\": either player's Command phase."
+ },
+ {
+  "key": "23b512819636bff8",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "\"Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit\": any of the two keywords (02.05.01 \"or\")."
+ },
+ {
+  "key": "ced2e2594a5549ba",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "Each part on the units its words name: Enraged Abjuration \"BLOOD LEGIONS and WORLD EATERS models\" (every model in this list has one of the two, models-level so any:[both]); Daemonic Rage \"Melee weapons equipped by BLOOD LEGIONS units\" (unit-level: the Lord + Berzerkers unit is one, so all its melee weapons, the Berzerkers' too, have [LANCE]); Boon of Blood \"BLOOD LEGIONS units ... 4+ invulnerable save\" (the whole Lord + Berzerkers unit); Might of Khorne \"BLOOD LEGIONS units ... gain the Blessings of Khorne ability\" (Skarbrand, Bloodthirster, Flesh Hounds lack it; the Lord unit has it already). Each marked \"active (nBTP)\", the player's choice."
+ },
+ {
+  "key": "935e63f60c8a1b67",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase\": every phase, as Blood Offering."
+ },
+ {
+  "key": "e3bdc552a8d8cd29",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "verdict": "ok",
+  "why": "\"Any phase, when the last model in a unit is destroyed\": either player's turn."
+ },
+ {
+  "key": "861e770df158c1d3",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "verdict": "ok",
+  "why": "\"TARGET: One BLOODLETTERS unit from your army that is in Reserves\": needs BLOODLETTERS; no unit of this list has it, so it is shown on none."
+ },
+ {
+  "key": "24082ff6c43abfe8",
+  "where": "Khorne Daemonkin · Summoned by Slaughter",
+  "verdict": "ok",
+  "why": "Keeps the WHEN (\"when the last model in a unit is destroyed\") and the TARGET (\"BLOODLETTERS unit from your army that is in Reserves\"), the set-up distances and the once-per-battle-round restriction; no interpretation."
+ },
+ {
+  "key": "732567c4f762a2db",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "verdict": "ok",
+  "why": "\"WHEN: Start of your Fight phase.\""
+ },
+ {
+  "key": "c2b8906217fee897",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "verdict": "ok",
+  "why": "\"Start of your Fight phase\": your turn."
+ },
+ {
+  "key": "e0ea97ce5ece42ee",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "verdict": "ok",
+  "why": "\"TARGET: One BLOOD LEGIONS unit from your army\": the TARGET only (the WORLD EATERS unit is selected in the EFFECT). The Lord + Berzerkers unit is a BLOOD LEGIONS unit (02.05.01), so it is a target too."
+ },
+ {
+  "key": "9dc6713df612e39a",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "verdict": "ok",
+  "why": "The EFFECT as printed: \"Select one friendly WORLD EATERS unit within 6\" of your unit. Until the end of the turn, melee weapons ... have the [LANCE] ability. If the Daemonic Rage ability is active ... until the end of the phase ... [TWIN-LINKED]\". The WHEN is in the phase/turn, the TARGET has no condition beyond BLOOD LEGIONS. No footnote is fair: the app puts a stratagem's footnote on the units its TARGET names (eligible), which here are the BLOOD LEGIONS units, while the [LANCE] goes to another unit; a footnote would give [LANCE] to the wrong units (see the report on the missing helper line for WORLD EATERS units)."
+ },
+ {
+  "key": "9b066e2e84257dc7",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase, just after ... has fought\"."
+ },
+ {
+  "key": "a0c98d5661f941f6",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "verdict": "ok",
+  "why": "\"Fight phase\" with no \"your\": either."
+ },
+ {
+  "key": "b3e3c481f1c7193d",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "verdict": "ok",
+  "why": "\"TARGET: That BLOOD LEGIONS or WORLD EATERS unit\": any of the two."
+ },
+ {
+  "key": "b959201e367ec20f",
+  "where": "Khorne Daemonkin · A Worthy Skull",
+  "verdict": "ok",
+  "why": "Keeps the WHEN (\"has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks\") and the EFFECT (\"gain D3BTP and ... spend one or more BTP ... to activate one of the Blood Tithe abilities\")."
+ },
+ {
+  "key": "3fa3553464dccc08",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase or the Fight phase\"."
+ },
+ {
+  "key": "7f328c5bc26a0d40",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "verdict": "ok",
+  "why": "Shooting phase in the opponent's turn, the Fight phase in either: turn either with the per-phase turns."
+ },
+ {
+  "key": "af5bc0e30fb8a963",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase\": shooting opp (Fight phase either)."
+ },
+ {
+  "key": "37eacdae1bf16546",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "verdict": "ok",
+  "why": "\"TARGET: One BLOOD LEGIONS unit from your army that is within 6\" of a friendly WORLD EATERS unit...\": the TARGET is the BLOOD LEGIONS unit; the WORLD EATERS unit that benefits is handled by shield."
+ },
+ {
+  "key": "f8fd52931c70ec6f",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "verdict": "ok",
+  "why": "Keeps the WHEN (\"just after an enemy unit has selected its targets\"), the TARGET's condition (a WORLD EATERS unit within 6\" of your unit that was selected as a target) and the EFFECT (\"models in your WORLD EATERS unit have a 5+ invulnerable save\", 4+ with Boon of Blood) until the end of the phase."
+ },
+ {
+  "key": "9d960f233b6aa06a",
+  "where": "Khorne Daemonkin · Blessing of Burning Blood",
+  "verdict": "ok",
+  "why": "protects WORLD EATERS units (the unit whose models get the save: \"models in your WORLD EATERS unit\" are all of the unit's models, the BLOOD LEGIONS Lord in the Lord + Berzerkers unit too), by a BLOOD LEGIONS unit of the list; \"their Shooting phase\" is the opponent's, the wording of the signed-off shields (Grot Shields); 6\" is said, a range the player judges."
+ },
+ {
+  "key": "09203d109369a328",
+  "where": "Khorne Daemonkin · Daemontide",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Command phase.\""
+ },
+ {
+  "key": "62a8604d6bae5cef",
+  "where": "Khorne Daemonkin · Daemontide",
+  "verdict": "ok",
+  "why": "\"Your Command phase\": your turn."
+ },
+ {
+  "key": "0d16f5c226759018",
+  "where": "Khorne Daemonkin · Daemontide",
+  "verdict": "ok",
+  "why": "\"TARGET: One WORLD EATERS unit from your army\": the TARGET; the BLOOD LEGIONS unit the models return to is selected in the EFFECT."
+ },
+ {
+  "key": "4aa043e5f4f2e084",
+  "where": "Khorne Daemonkin · Daemontide",
+  "verdict": "ok",
+  "why": "The EFFECT and the RESTRICTIONS as printed: \"Select one friendly BLOOD LEGIONS unit within 6\" of your unit. One destroyed MOUNTED model, up to D3 destroyed BEAST models, or up to D6 destroyed INFANTRY models are returned ... with their full wounds remaining\"; \"cannot be used to return destroyed CHARACTER models to Attached units\". The WHEN is the phase/turn, the TARGET has no condition."
+ },
+ {
+  "key": "b7a6780d56fd885e",
+  "where": "Khorne Daemonkin · Murder-call",
+  "verdict": "ok",
+  "why": "\"WHEN: End of your opponent’s Fight phase.\""
+ },
+ {
+  "key": "3cc073245406c8b9",
+  "where": "Khorne Daemonkin · Murder-call",
+  "verdict": "ok",
+  "why": "\"your opponent’s Fight phase\": opponent's turn."
+ },
+ {
+  "key": "a3b0dd39f4946a5a",
+  "where": "Khorne Daemonkin · Murder-call",
+  "verdict": "ok",
+  "why": "\"TARGET: One BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range\": needs BLOOD LEGIONS (the Lord + Berzerkers unit included)."
+ },
+ {
+  "key": "5ad8024a6ebd6899",
+  "where": "Khorne Daemonkin · Murder-call",
+  "verdict": "fix",
+  "why": "The gist drops the TARGET's conditions (\"that is on the battlefield and not within Engagement Range of one or more enemy units\"); gists keep them, as the signed-off Flanking Manoeuvres and Encircling Pack (\"Your unit ... and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.\").",
+  "fix": {
+   "gist": "Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves."
+  }
+ },
+ {
+  "key": "652ed55ed33b5ac1",
+  "where": "unitMods",
+  "verdict": "ok",
+  "why": "Adds to a unit's footnotes the mod of each part of its detachment rules whose own needs it meets (unitDetParts), cited as the rule (Blood Tithe) with the part's own when (\"Daemonic Rage active (3BTP)\"). For this list: Daemonic Rage's [LANCE] on Skarbrand, the Bloodthirster, both Flesh Hounds and the Lord + Berzerkers unit (a BLOOD LEGIONS unit by the Lord, 02.05.01), on all of its melee weapons as \"Melee weapons equipped by BLOOD LEGIONS units\" says; not on Angron, the Daemon Prince, Goremongers, Jakhals or the Master of Executions. The rest is unchanged signed-off code; the Damage tab reads \"[LANCE]\" (dmEffects)."
+ },
+ {
+  "key": "4c30080b8d62d835",
+  "where": "unitDetParts",
+  "verdict": "ok",
+  "why": "unitDetRules(u) (rule needs: any BLOOD LEGIONS / WORLD EATERS) then each part whose needs matches(u) by the unit's keywords: a unit with any model with the keyword meets it (02.05.01, 19.03), right for Daemonic Rage, Boon of Blood and Might of Khorne (\"BLOOD LEGIONS units\") and for Enraged Abjuration (every model of the list is BLOOD LEGIONS or WORLD EATERS)."
+ },
+ {
+  "key": "c6a4c9a198ed8e69",
+  "where": "defenceItems",
+  "verdict": "ok",
+  "why": "Adds one \"When targeted\" line per part with a def (Enraged Abjuration on every unit, Boon of Blood on the BLOOD LEGIONS units incl. the Lord + Berzerkers unit), naming Blood Tithe; no phase filter, right as they last \"until the end of the battle\". The shield loop shows Blessing of Burning Blood on each WORLD EATERS unit when another BLOOD LEGIONS unit is in the list (here Skarbrand, Bloodthirster, Flesh Hounds), as the TARGET needs. Rest unchanged signed-off code."
+ }
+]

@@ -144,6 +144,9 @@ function cellPenalty(text, opts = {}) {
   if (/.\s*➤/.test(text)) p += 5;
   if (/[,-]$/.test(text)) p += 3;
   if (opts.who && opts.who.length && !opts.who.some(w => endsWithWho(text, w))) p += 5;
+  // ... and only at its end: a " - <unit>" with another name after it is two names run together (the Lord on Juggernaut's
+  // "Aggressive Advance - Lord on Juggernaut" over "Crush All Who Stand Before Us - Lord on Juggernaut" and "Disciple of Khorne")
+  if (opts.who && opts.who.some(w => new RegExp('-\\s+' + escRe(w) + '(\\[\\d+\\])?\\s+[A-Z]').test(text))) p += 5;
   return p;
 }
 const endsWithWho = (text, w) => new RegExp('-\\s+' + escRe(w) + '(\\[\\d+\\])?$').test(text);

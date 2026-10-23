@@ -85,3 +85,7 @@ chaos-daemons Nurglings
 chaos-knights War-Dog-Brigand
 chaos-knights War-Dog-Executioner
 chaos-knights War-Dog-Karnivore
+world-eaters Skarbrand
+world-eaters Bloodthirster
+world-eaters Master-of-Executions
+world-eaters Flesh-Hounds

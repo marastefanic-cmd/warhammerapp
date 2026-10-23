@@ -54,11 +54,20 @@ with open(out, 'w', encoding='utf-8') as f:
         while node is not None and node.next_sibling is None: node = node.parent
         el = node.next_sibling if node is not None else None
         parts = []
-        while el is not None:
-            if isinstance(el, Tag) and (el is nxt or (nxt is not None and nxt in el.descendants)):
-                break
-            parts.append(el)
-            el = el.next_sibling
+        while True:
+            while el is not None:
+                if isinstance(el, Tag) and (el is nxt or (nxt is not None and nxt in el.descendants)):
+                    break
+                parts.append(el)
+                el = el.next_sibling
+            # the page's unbalanced tags (a stray "</tbody></tbody></table></div>" after Khorne Daemonkin's
+            # enhancements) can close the section's container early: the rest of the section then follows an
+            # ancestor, so carry on after it, up to the next outline header
+            if el is not None or nxt is None or node is None: break
+            node = node.parent
+            while node is not None and node.next_sibling is None: node = node.parent
+            if node is None: break
+            el = node.next_sibling
         for p in parts:
             if isinstance(p, Tag): f.write(render(p) + '\n')
             elif str(p).strip(): f.write(str(p).strip() + '\n')

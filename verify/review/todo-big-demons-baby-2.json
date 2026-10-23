@@ -1,0 +1,66 @@
+[
+ {
+  "army": "big-demons-baby",
+  "kind": "strat-help",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "judgement": {
+   "help": {
+    "to": {
+     "all": [
+      "Faction: World Eaters"
+     ]
+    },
+    "by": {
+     "all": [
+      "Faction: Blood Legions"
+     ]
+    },
+    "via": "its target: a BLOOD LEGIONS unit within 6\"",
+    "mod": {
+     "kind": "melee",
+     "when": "Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6\" (until the end of the turn)",
+     "note": "[LANCE] or [LANCE], [TWIN-LINKED]",
+     "pick": [
+      {
+       "name": "[LANCE]",
+       "note": "[LANCE]"
+      },
+      {
+       "name": "Daemonic Rage active",
+       "note": "[LANCE], [TWIN-LINKED]"
+      }
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Daemonic Fury",
+   "text": "WHEN: Start of your Fight phase.\nTARGET: One **BLOOD LEGIONS** unit from your army.\nEFFECT: Select one friendly **WORLD EATERS** unit within 6\" of your unit. Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability."
+  },
+  "key": "30f5e8c11eeba055"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "unitMods",
+  "judgement": {
+   "code": "function unitMods(u, kind){\n  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)))\n    .concat(unitDetParts(u).filter(x => x.part.mod).map(x => Object.assign({ from:x.rule.name, rule:x.rule.name }, x.part.mod)));\n  for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){\n    const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];\n    if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });\n  }\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12\" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });\n  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod))\n    .concat(helpedBy(u).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.help.mod)));\n  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');\n}"
+  },
+  "source": {
+   "implements": "which footnotes a unit gets: its own, detachment rules matching its keywords (and the parts of a detachment rule whose needs it meets), auras, stratagems it is eligible for, and those another unit of the list is the target of whose effect changes its attacks (helpedBy); Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)"
+  },
+  "key": "aa0b2dc073430170"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "helpedBy",
+  "judgement": {
+   "code": "const helpedBy = (u, a) => allStratagems(a).filter(s => s.help && matches(s.help.to, u) && (a || army()).units.some(x => x !== u && matches(s.help.by, x)));"
+  },
+  "source": {
+   "implements": "a stratagem whose TARGET is another unit of the list (help.by) and whose effect changes this unit's attacks (help.to: Daemonic Fury, a BLOOD LEGIONS target selecting a friendly WORLD EATERS unit within 6\"): listed on this unit's datasheet with who is its target, its footnote on this unit"
+  },
+  "key": "4d4bd04ff488a071"
+ }
+]
