@@ -4638,6 +4638,328 @@
    "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
   },
   {
+   "item": "thousand-sons / detachment:ritual-of-regeneration",
+   "field": "name",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Ritual of Regeneration 1DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/rule",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/enhancement:Eruption of Vitality",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Ritual of Regeneration 1DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/enhancement:Eruption of Vitality",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/enhancement:Curse of Life",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Ritual of Regeneration 1DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/enhancement:Curse of Life",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:relentless-rebirth",
+   "field": "when",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (RELENTLESS REBIRTH)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:relentless-rebirth",
+   "field": "target",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (RELENTLESS REBIRTH)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:relentless-rebirth",
+   "field": "effect",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (RELENTLESS REBIRTH)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:mutagenic-magicks",
+   "field": "when",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (MUTAGENIC MAGICKS)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:mutagenic-magicks",
+   "field": "target",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (MUTAGENIC MAGICKS)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:mutagenic-magicks",
+   "field": "effect",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (MUTAGENIC MAGICKS)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:multitudinous-limbs",
+   "field": "when",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (MULTITUDINOUS LIMBS)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:multitudinous-limbs",
+   "field": "target",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (MULTITUDINOUS LIMBS)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:ritual-of-regeneration/stratagem:multitudinous-limbs",
+   "field": "effect",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p2 (MULTITUDINOUS LIMBS)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact",
+   "field": "name",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p10, Rules Updates: WARPMELD PACT DETACHMENT / Warpmeld Sacrifice Detachment Rule",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/rule",
+   "field": "text (KEYWORDS)",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Warpmeld Dagger",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Warpmeld Dagger",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Diamond of Distortion",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Diamond of Distortion",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Bray Lord",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Bray Lord / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p10, Rules Updates: WARPMELD PACT DETACHMENT / Bray Lord Enhancement",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Flowing Flesh",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Flowing Flesh",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
+   "field": "restrictions",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:warped-vicissitude",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (WARPED VICISSITUDE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:warped-vicissitude",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (WARPED VICISSITUDE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:warped-vicissitude",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (WARPED VICISSITUDE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:deranged-ferocity",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (DERANGED FEROCITY)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:deranged-ferocity",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (DERANGED FEROCITY)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:deranged-ferocity",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (DERANGED FEROCITY)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:blessed-transmutations",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (BLESSED TRANSMUTATIONS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:blessed-transmutations",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (BLESSED TRANSMUTATIONS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:blessed-transmutations",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (BLESSED TRANSMUTATIONS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TOUCHED BY TZEENTCH)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TOUCHED BY TZEENTCH)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TOUCHED BY TZEENTCH)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TWISTED MIRAGE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TWISTED MIRAGE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p10, Rules Updates: WARPMELD PACT DETACHMENT / Twisted Mirage Stratagem, Effect Section",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p10, Rules Updates: WARPMELD PACT DETACHMENT / Twisted Mirage Stratagem, Effect Section",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
    "item": "tyranids / detachment:crusher-stampede",
    "field": "name",
    "doc": "waha:tyranids",
@@ -6486,6 +6808,13 @@
    "sha256": null
   },
   {
+   "item": "pubstomper / exalted-sorcerer-rubric-marines / ability:Incandaeum",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Incandaeum (Grand Coven) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "pubstomper / sorcerer-in-terminator-armour-scarab-occult-terminators / ability:Umbralefic Crystal",
    "field": "text",
    "doc": "data.js",
@@ -6682,6 +7011,27 @@
    "sha256": null
   },
   {
+   "item": "mucho-mutantes / tzaangor-shaman-tzaangor-enlightened-curse-of-life / ability:Curse of Life",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Curse of Life (Ritual of Regeneration) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "mucho-mutantes / tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion / ability:Diamond of Distortion",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Diamond of Distortion (Warpmeld Pact) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "mucho-mutantes / tzaangor-shaman-tzaangor-enlightened-flowing-flesh / ability:Flowing Flesh",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Flowing Flesh (Warpmeld Pact) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
    "field": "ability:The Betrayer (Khârn the Betrayer)",
    "doc": "pack:world-eaters",
@@ -6829,6 +7179,13 @@
    "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
   },
   {
+   "item": "pubstomper / sekhetar-robots / ability:Prophetic Sentinels",
+   "field": "ability:Prophetic Sentinels",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p11, Rules Updates: DATASHEETS / Sekhetar Robots, Prophetic Sentinels Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
    "item": "nidzillas / the-swarmlord / ability:Malign Presence",
    "field": "ability:Malign Presence",
    "doc": "pack:tyranids",
@@ -6953,6 +7310,34 @@
    "doc": "pack:world-eaters",
    "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Goremongers, Loping Speed Ability",
    "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "mucho-mutantes / ahriman-tzaangor-enlightened-with-fatecaster-greatbows / ability:Malign Trickery (Tzaangor Enlightened with Fatecaster greatbows)",
+   "field": "ability:Malign Trickery (Tzaangor Enlightened with Fatecaster greatbows)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p11, Rules Updates: DATASHEETS / Tzaangor Enlightened with Fatecaster Greatbows, Malign Trickery Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "mucho-mutantes / daemon-prince-of-tzeentch-with-wings / ability:Aetherstride",
+   "field": "ability:Aetherstride",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p10, Rules Updates: DATASHEETS / Daemon Prince of Tzeentch with Wings, Aetherstride Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "mucho-mutantes / exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows / ability:Malign Trickery (Tzaangor Enlightened with Fatecaster greatbows)",
+   "field": "ability:Malign Trickery (Tzaangor Enlightened with Fatecaster greatbows)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p11, Rules Updates: DATASHEETS / Tzaangor Enlightened with Fatecaster Greatbows, Malign Trickery Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "mucho-mutantes / sekhetar-robots / ability:Prophetic Sentinels",
+   "field": "ability:Prophetic Sentinels",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p11, Rules Updates: DATASHEETS / Sekhetar Robots, Prophetic Sentinels Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
   },
   {
    "item": "purge-goes-the-foe / belisarius-cawl / rules",

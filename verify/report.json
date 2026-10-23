@@ -1,6 +1,6 @@
 {
- "hash": "665fa97d3e40eb36d335cbf47f68e2091a9252c6885b6a26a90042603a756716",
- "at": "2026-10-23T13:11:59.422Z",
+ "hash": "e1174ffba4a3956941f6899bed35406f3beb025e08605b84c303f778ea62befc",
+ "at": "2026-10-23T14:27:29.593Z",
  "ok": true,
  "steps": {
   "data": {
@@ -17,15 +17,15 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 9311 facts checked against BSData 173d0ef (clone) {\"gear\":664,\"stats\":1332,\"weapons\":4540,\"abilities\":866,\"keywords\":999,\"rules\":501,\"grants\":241,\"points\":167,\"extract\":1}; 46 deviations used; 0 failures"
+   "summary": "bsdata: 10100 facts checked against BSData 173d0ef (clone) {\"gear\":724,\"stats\":1458,\"weapons\":4900,\"abilities\":939,\"keywords\":1100,\"rules\":562,\"grants\":234,\"points\":182,\"extract\":1}; 54 deviations used; 0 failures"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 10580 facts checked (army 165, units 115, roster 487, pts 230, copies 115, models 115, enhancement 230, warlord 230, leads 345, gear 200, stats 1300, ranged 2221, from 169, melee 2095, abilities 1164, kw 157, rules 1007, glossary 235); 55 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11473 facts checked (army 176, units 124, roster 528, pts 248, copies 124, models 124, enhancement 248, warlord 248, leads 372, gear 219, stats 1421, ranged 2401, from 169, melee 2257, abilities 1251, kw 175, rules 1129, glossary 259); 63 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 2657 checked facts, 11 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 2866 checked facts, 11 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "calc": {
    "ok": true,
@@ -33,11 +33,11 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 1834 screens and popups, 1096 helper texts, 0 failures"
+   "summary": "render at 390px: 1959 screens and popups, 1164 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 1834 screens and popups, 1096 helper texts, 0 failures"
+   "summary": "render at 320px: 1959 screens and popups, 1164 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -45,7 +45,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1276 judgements, 1276 approved, 0 to check, 319 stale approvals"
+   "summary": "helpers: 1376 judgements, 1376 approved, 0 to check, 331 stale approvals"
   }
  }
 }

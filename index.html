@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '665fa97d3e';</script>
+<script>window.WH_BUILD = 'e1174ffba4';</script>
 </head>
 <body>
 <style>
@@ -195,6 +195,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .row .rb .t.f{color:var(--accent-ink); background:var(--accent)}
 .row .rb .t.d{color:var(--muted); background:none; box-shadow:inset 0 0 0 1px var(--line)}
 .army-sub{font-size:13.5px; line-height:1.4; color:var(--muted)}
+#armyHead{padding-top:10px}
 
 /* ---------- search ---------- */
 .search{display:flex; align-items:center; gap:8px; margin:12px 0 4px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:0 12px}
@@ -827,7 +828,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .askway{margin:12px 0; padding:12px; border:1px solid var(--line); border-radius:10px}
 .askway b{display:block; font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
 .askway .note{margin:4px 0 10px}
-a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center; text-decoration:none}
+a.btn.askclaude, a.btn.askcopy{display:inline-flex; align-items:center; justify-content:center; text-decoration:none}
+a.btn.askcopy{display:flex; width:100%; margin-top:8px}
 .askwait{display:flex; align-items:center; gap:9px; font-size:14px; color:var(--muted)}
 .askwait.sm{font-size:12.5px; margin-top:4px}
 .askspin{width:20px; height:20px; flex:none; color:var(--accent); animation:askspin 1.4s linear infinite, askpulse 1.4s ease-in-out infinite}
@@ -1010,9 +1012,9 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=665fa97d3e"></script>
-<script src="data.js?v=665fa97d3e"></script>
-<script src="calc.js?v=665fa97d3e"></script>
+<script src="verified.js?v=e1174ffba4"></script>
+<script src="data.js?v=e1174ffba4"></script>
+<script src="calc.js?v=e1174ffba4"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1616,20 +1618,8 @@ function screenArmy(){
       row('rules', 'i-book', 'Rules', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
       (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
-    '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '') +
-    (!EMBEDDED && (matchMedia('(display-mode: standalone)').matches || navigator.standalone === true) ? '<p class="note" id="frameInfo"></p>' : '');   // temporary: the screen's measurements in the installed app (bottom bar gap)
+    '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
 }
-// temporary: what the installed iPhone app reports, to find the gap under the bottom bar
-setInterval(() => {
-  const el = document.getElementById('frameInfo'); if(!el) return;
-  const pr = document.createElement('div'); pr.style.cssText = 'position:fixed;visibility:hidden;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)';
-  document.body.appendChild(pr); const ps = getComputedStyle(pr), it = ps.paddingTop, ib = ps.paddingBottom; pr.remove();
-  const de = document.documentElement, vv = window.visualViewport, bb = document.getElementById('bbar');
-  el.textContent = 'Frame: ' + [ 'win ' + innerWidth + '×' + innerHeight, 'screen ' + screen.width + '×' + screen.height, 'vv ' + (vv ? Math.round(vv.height) + ' @' + Math.round(vv.offsetTop) : '-'),
-    'client ' + de.clientHeight, 'doc ' + de.scrollHeight, 'body ' + Math.round(document.body.getBoundingClientRect().height) + ' min ' + getComputedStyle(document.body).minHeight,
-    'scr-h ' + (de.style.getPropertyValue('--scr-h') || '-'), 'inset ' + it + '/' + ib, 'coarse ' + matchMedia('(pointer: coarse)').matches,
-    'bar ' + (bb && !bb.hidden ? Math.round(bb.getBoundingClientRect().bottom) : '-'), 'top ' + Math.round(document.getElementById('top').getBoundingClientRect().top) + ' · ua ' + (navigator.userAgent.match(/OS [\d_]+/) || ['-'])[0], 'data ' + D.version + ' · build ' + (window.WH_BUILD || '-') ].join(' · ');
-}, 500);
 
 /* ---------- screen: damage ----------
    "The answer, and what moves it". One of your units attacks a target set by hand: your unit · Shoot / Fight / Both, then the
@@ -3590,7 +3580,47 @@ function askFresh(){
   const P = dmPair(dmState());
   if(P.au) askRefs.push({ k:'unit', v:P.au.id, army:P.A.id, label:unitLabel(P.au) });
 }
+// the owner's Claude Project for rules questions (project/ in the repo: its files, instructions and skills): the app writes the
+// question with this list, the screen and anything added to it, the player pastes it into a chat there (their subscription)
+let askKeyChat = false;   // "Other ways to ask" → the API key chat, once
+const askProjUrl = () => askCfg().project || 'https://claude.ai/projects';
+function askExport(q){
+  const a = cur.army && army();
+  const head = a ? 'KODEX · ' + a.name + ' · ' + faction().name + ' · ' + detachments().map(d => d.name).join(' + ') + (a.disposition ? ' · ' + a.disposition : '') + ' · data ' + D.version : 'KODEX · data ' + D.version;
+  const about = askRefs.map(askRefText).filter(Boolean);
+  // on the Damage tab: the answer the app shows and what it counts (the chips under it), as the player sees them
+  let dm = '';
+  if(cur.s === 'damage'){ const big = document.querySelector('#view .dmans .dmbig'), chips = [...document.querySelectorAll('#view .dmans .dmchips > *')].map(x => x.textContent.trim()).filter(Boolean);
+    if(big) dm = 'Damage tab shows: ' + [...big.children].map(x => x.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ') + (chips.length ? ' · counted: ' + chips.join(' · ') : ''); }
+  return [head, 'Looking at: ' + askWhere(), dm, about.length ? 'About:\n' + about.join('\n\n') : '', 'Question: ' + q].filter(Boolean).join('\n');
+}
+function askProject(){
+  const a = cur.army ? army() : null, set = !!askCfg().project;
+  openSheet('Rules question · your Claude Project', a ? a.name : 'Rules question',
+    '<p class="askctx">On: ' + esc(askWhere()) + '</p><div id="askRefs">' + askRefChips() + '</div>' +
+    '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '"></textarea></div>' +
+    '<a class="btn askcopy" role="button" data-askcopy href="' + esc(askProjUrl()) + '" target="_blank" rel="noopener">Copy and open Claude</a>' +
+    '<p class="note">Copies your question with ' + (a ? 'this list, ' : '') + 'this screen' + (askRefs.length ? ' and what it is about' : '') + ', then opens ' + (set ? 'your Project' : 'your Claude projects') + ': start a chat there and paste.' +
+    (set ? '' : ' Add your Project’s link in Settings to open it straight away.') + '</p>' +
+    '<button class="textbtn" data-askother>Other ways to ask</button>');
+  setTimeout(() => { const q = $('#askQ'); if(q) q.focus(); }, 50);
+}
+function askCopy(e){
+  const q = (($('#askQ') || {}).value || '').trim();
+  if(!q && !askRefs.length){ e.preventDefault(); toast('Type your question first'); return; }
+  const text = askExport(q || 'What should I know about this?');
+  // copied two ways in this tap: the old way first (it works in every browser and finishes before the link opens Claude),
+  // then the clipboard API; the question stays in the sheet to copy by hand if both fail
+  let ok = false;
+  try { const t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', ''); t.style.cssText = 'position:fixed;top:0;left:0;opacity:0;font-size:16px';
+    document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length); ok = document.execCommand('copy'); t.remove(); } catch(err){}
+  try { if(navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {}); } catch(err){}
+  if(!ok && !navigator.clipboard){ e.preventDefault(); toast('Could not copy here: select the question and copy it'); }
+}
 function openAsk(){
+  // outside Claude the Project comes first once its link is saved (Other ways to ask: the API key chat)
+  if(!EMBEDDED && (askCfg().project || !askOn()) && !askKeyChat){ askProject(); return; }
+  askKeyChat = false;
   if(!askOn()){ askChoose(); return; }
   const a = cur.army ? army() : null, ctx = a ? a.id : '';
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
@@ -3665,14 +3695,17 @@ async function askSendAcct(text, turn, a, cfg, ctrl, draw){
   } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
 // Settings: the key, the model, GW's Core Rules PDF
+// the Project's link (outside Claude): where "Copy and open Claude" goes
+const askProjRow = c => EMBEDDED ? '' : '<div class="askway"><b>Your Claude Project</b><p class="note">The ? copies your question with this list and screen, and opens this Project in Claude, where it runs on your subscription. Paste the Project’s link (claude.ai/project/…) here.</p>' +
+  '<div class="askkey"><input id="askProj" type="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://claude.ai/project/…" value="' + esc(c.project || '') + '" aria-label="Claude Project link"><button class="btn" data-askprojsave>Save</button></div></div>';
 function askSettings(){
   const c = askCfg();
   const models = () => ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('');
   if(askAcct) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Opened in Claude, rules questions (the ? in the top bar) use your Claude account: no API key needed, and they count towards your plan’s usage. The first question asks you to allow it. In the app on your home screen an API key is still the way.</p>' +
     '<div class="list">' + models() + '</div><p class="note">Each question sends your list, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
-  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
+  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div>' + askProjRow(c) + '<div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
     '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div></div>';
-  return '<div class="sec-h"><h2>Rules questions</h2></div><div class="list">' +
+  return '<div class="sec-h"><h2>Rules questions</h2></div>' + askProjRow(c) + '<div class="list">' +
     '<div class="row"><span class="rb"><b>API key</b><span>Saved on this phone · …' + esc(c.key.slice(-4)) + '</span></span><button class="textbtn" data-askforget>Remove</button></div>' +
     ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') +
     '</div><p class="note">Each question sends the Core Rules (with errata and FAQs), your list and the question; the rules part is cached for an hour, so follow-up questions cost little.</p>';
@@ -4269,7 +4302,8 @@ function screenUnit(){
       u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc(s.base) + '</small></span>' +
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
-    unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
+    // (a part of a detachment rule for some of its units can carry one too: Warpmeld Sacrifice's KEYWORDS, for TZAANGORS units)
+    unitDetRules(u).filter(r => r.statNote).map(r => [r, r.statNote]).concat(unitDetParts(u).filter(x => x.part.statNote).map(x => [x.rule, x.part.statNote])).map(([r, sn]) => { const n = modelCount(u) === 1 && sn.single ? sn.single : sn.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
     (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => defLine(x, u)).join(' · ') + '</div>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
@@ -4852,6 +4886,11 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
   if(el.hasAttribute('data-ask')){ askFresh(); openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
+  if(el.hasAttribute('data-askcopy')){ askCopy(e); return; }   // the link then opens the Project
+  if(el.hasAttribute('data-askother')){ if(askOn()){ askKeyChat = true; openAsk(); } else askChoose(); return; }
+  if(el.hasAttribute('data-askprojsave')){ const v = (($('#askProj') || {}).value || '').trim();
+    if(v && !/^https:\/\/claude\.ai\/project\/[\w-]+/.test(v)){ toast('Paste the link of your Project (claude.ai/project/…)'); return; }
+    store.set('wh-ask', Object.assign(askCfg(), { project:v })); rerender(); toast(v ? 'Project link saved on this phone' : 'Project link removed'); return; }
   if(el.hasAttribute('data-askkeygo')){ hideSheet(); go({ s:'settings' }); const k = $('#askKey'); if(k){ k.scrollIntoView({ block:'center' }); k.focus(); } return; }
   if(el.hasAttribute('data-askstop')){ if(askBusy) askBusy.abort(); return; }
   if(ds.askref){ const i = ds.askref.indexOf('|'), k = ds.askref.slice(0, i), v = ds.askref.slice(i + 1);
