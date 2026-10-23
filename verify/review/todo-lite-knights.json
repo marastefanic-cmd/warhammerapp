@@ -1,0 +1,1684 @@
+[
+ {
+  "army": "lite-knights",
+  "kind": "ability-tag",
+  "where": "lite-knights · Trajann Valoris · Captain-General",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+  },
+  "key": "90e869074fec6562"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Captain-General",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+  },
+  "key": "ccd7646698c9a313"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-timing",
+  "where": "lite-knights · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "4e4a370749b23e24"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-tag",
+  "where": "lite-knights · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "tag": "Once per battle, per army"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "784cc5ad34633d53"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "177d3443fc3f5686"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-def",
+  "where": "lite-knights · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "def": "Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "0f621935ba5ce60a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Slayers of Tyrants",
+  "judgement": {
+   "who": "Allarus Custodians",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Slayers of Tyrants",
+   "text": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "0fbdbdeb8df67f57"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Vexilla",
+  "judgement": {
+   "who": "Allarus Custodians",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Vexilla",
+   "text": "- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+  },
+  "key": "5f02fcbd81c9d429"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-footnote",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Watcher’s Axe",
+   "when": "Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase",
+   "note": "+3 A",
+   "from": "Moment Shackle"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "e376866f9bb28fcf"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-footnote",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "kind": "melee",
+   "when": "Target has a T greater than this unit’s T",
+   "note": "+1 to wound rolls",
+   "from": "Slayers of Tyrants"
+  },
+  "source": {
+   "ability": "Slayers of Tyrants",
+   "text": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "55455a699ef2303f"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-aura",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   },
+   "when": "Within 6\" of Trajann Valoris",
+   "selfWhen": "Own aura",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Captain-General",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+  },
+  "key": "8b737277a9fff988"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-kwNote",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "kwNote": "Allarus Custodians, Terminator come from the led Allarus Custodians."
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "stats": [
+    "Trajann Valoris W10 OC3",
+    "Allarus Custodian ×2 W6 OC3"
+   ],
+   "weapons": [
+    "Eagle’s Scream 2 -2 2 ASSAULT, RAPID FIRE 2",
+    "Balistus grenade launcher 3 -1 1 ASSAULT, BLAST 1",
+    "Castellan axe 2 -1 2 ASSAULT, RAPID FIRE 2",
+    "Watcher’s Axe 6 -3 4 CLEAVE 1",
+    "Castellan axe 3 -2 4"
+   ]
+  },
+  "key": "c3acfee6233606e5"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-ptsNote",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "ptsNote": "265 + Allarus Custodians 180"
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "stats": [
+    "Trajann Valoris W10 OC3",
+    "Allarus Custodian ×2 W6 OC3"
+   ],
+   "weapons": [
+    "Eagle’s Scream 2 -2 2 ASSAULT, RAPID FIRE 2",
+    "Balistus grenade launcher 3 -1 1 ASSAULT, BLAST 1",
+    "Castellan axe 2 -1 2 ASSAULT, RAPID FIRE 2",
+    "Watcher’s Axe 6 -3 4 CLEAVE 1",
+    "Castellan axe 3 -2 4"
+   ]
+  },
+  "key": "fd359b630340efb6"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-partialRules",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Aquila Commander",
+    "Aegis of the Emperor",
+    "Martial Ka'tah",
+    "Leader",
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1",
+    "Trajann Valoris · Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Allarus Custodians · Slayers of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "86b25361d29e7621"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "gear": [
+    [
+     "Eagle’s Scream",
+     "Watcher’s Axe"
+    ],
+    [
+     "Balistus grenade launcher",
+     "Castellan axe"
+    ],
+    [
+     "Balistus grenade launcher",
+     "Castellan axe"
+    ]
+   ],
+   "weapons": [
+    "Trajann Valoris · Eagle’s Scream",
+    "Allarus Custodians · ×2 · Balistus grenade launcher",
+    "Allarus Custodians · ×2 · Castellan axe",
+    "Trajann Valoris · Watcher’s Axe",
+    "Allarus Custodians · ×2 · Castellan axe"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "leads": "Allarus Custodians"
+  },
+  "key": "1e75c9b64778131a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-timing",
+  "where": "lite-knights · Prosecutor Squad · Purity of Execution",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Purity of Execution",
+   "text": "In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3\" **detection range**."
+  },
+  "key": "b397aab21657df9a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Prosecutor Squad",
+  "judgement": {
+   "gear": [
+    [
+     "Boltgun",
+     "Gun Stock"
+    ]
+   ],
+   "weapons": [
+    "×4 · Boltgun",
+    "×4 · Gun Stock"
+   ]
+  },
+  "source": {
+   "models": [
+    "4× Prosecutor"
+   ],
+   "leads": null
+  },
+  "key": "9f3efe1dbebf9a4c"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-timing",
+  "where": "lite-knights · Witchseeker Squad · Sanctified Flames",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Sanctified Flames",
+   "text": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit."
+  },
+  "key": "1bcf20bb0734645a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Witchseeker Squad",
+  "judgement": {
+   "gear": [
+    [
+     "Flamer",
+     "Gun Stock"
+    ]
+   ],
+   "weapons": [
+    "×4 · Flamer",
+    "×4 · Gun Stock"
+   ]
+  },
+  "source": {
+   "models": [
+    "4× Witchseeker"
+   ],
+   "leads": null
+  },
+  "key": "691de4c8f967b4df"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Witchseeker Squad",
+  "judgement": {
+   "gear": [
+    [
+     "Flamer",
+     "Gun Stock"
+    ]
+   ],
+   "weapons": [
+    "×5 · Flamer",
+    "×5 · Gun Stock"
+   ]
+  },
+  "source": {
+   "models": [
+    "5× Witchseeker"
+   ],
+   "leads": null
+  },
+  "key": "fd5d37a2a95f8b2b"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-footnote",
+  "where": "lite-knights · Caladius Annihilator Grav-tank",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "re-roll one hit roll, one wound roll and one damage roll",
+   "from": "Advanced Firepower",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+  },
+  "key": "649eba0fd02c5533"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-footnote",
+  "where": "lite-knights · Telemon Heavy Dreadnought",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (5 or fewer wounds remaining)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged 5"
+  },
+  "source": {
+   "rule": "Damaged 5",
+   "text": "Damaged 5: *Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*"
+  },
+  "key": "fb66ae254646a250"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Caladius Annihilator Grav-tank",
+  "judgement": {
+   "gear": [
+    [
+     "Arachnus Blaze Carronade",
+     "Twin Lastrum Bolt Cannon",
+     "Armoured hull"
+    ]
+   ],
+   "weapons": [
+    "Arachnus Blaze Carronade",
+    "Twin Lastrum Bolt Cannon",
+    "Armoured hull"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Caladius Annihilator Grav-tank"
+   ],
+   "leads": null
+  },
+  "key": "6fc94ed89a54ac2f"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-def",
+  "where": "lite-knights · Contemptor-Galatus Dreadnought · Unyielding Ancient",
+  "judgement": {
+   "def": "-1 to wound rolls for attacks with S greater than its T"
+  },
+  "source": {
+   "ability": "Unyielding Ancient",
+   "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "c295271ab6e55029"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-footnote",
+  "where": "lite-knights · Contemptor-Galatus Dreadnought",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (4 or fewer wounds remaining)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged 4"
+  },
+  "source": {
+   "rule": "Damaged 4",
+   "text": "Damaged 4: *Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*"
+  },
+  "key": "673e37f192acf9f8"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Contemptor-Achillus Dreadnought",
+  "judgement": {
+   "gear": [
+    [
+     "Dreadspear",
+     "Lastrum storm bolter",
+     "Lastrum storm bolter"
+    ]
+   ],
+   "weapons": [
+    "Dreadspear",
+    "×2 · Lastrum storm bolter",
+    "Dreadspear"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Contemptor-Achillus Dreadnought"
+   ],
+   "leads": null
+  },
+  "key": "4925fe816af1b538"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-tag",
+  "where": "lite-knights · Contemptor-Galatus Dreadnought · Memento Moritoi",
+  "judgement": {
+   "tag": "Upgrade"
+  },
+  "source": {
+   "ability": "Memento Moritoi",
+   "text": "**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**."
+  },
+  "key": "590402ea61d5f6ed"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Contemptor-Galatus Dreadnought",
+  "judgement": {
+   "gear": [
+    [
+     "Warblade"
+    ]
+   ],
+   "weapons": [
+    "Warblade",
+    "Warblade"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Contemptor-Galatus Dreadnought"
+   ],
+   "leads": null
+  },
+  "key": "0552feb28e72a019"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-def",
+  "where": "lite-knights · Telemon Heavy Dreadnought · Guardian Eternal",
+  "judgement": {
+   "def": "Ranged attacks that target it have -1 D"
+  },
+  "source": {
+   "ability": "Guardian Eternal",
+   "text": "Ranged attacks that target this unit have -1 **D**."
+  },
+  "key": "66ffc7e01cdba942"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-tag",
+  "where": "lite-knights · Telemon Heavy Dreadnought · Augury Uplink",
+  "judgement": {
+   "tag": "Upgrade"
+  },
+  "source": {
+   "ability": "Augury Uplink",
+   "text": "**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**."
+  },
+  "key": "2385abd2c8787023"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-def",
+  "where": "lite-knights · Telemon Heavy Dreadnought · Augury Uplink",
+  "judgement": {
+   "def": "Feel No Pain 5+"
+  },
+  "source": {
+   "ability": "Augury Uplink",
+   "text": "**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**."
+  },
+  "key": "e472a10ce5ba6af8"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Telemon Heavy Dreadnought",
+  "judgement": {
+   "gear": [
+    [
+     "Spiculus bolt launcher",
+     "Dual Caestus Fists",
+     "Twin Neutronium Cascade Projectors",
+     "Twin Neutronium Cascade Projectors"
+    ]
+   ],
+   "weapons": [
+    "Spiculus bolt launcher",
+    "×2 · Twin Neutronium Cascade Projectors",
+    "Dual Caestus Fists"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Telemon Heavy Dreadnought"
+   ],
+   "leads": null
+  },
+  "key": "6c6442cf5b023f31"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-weapons",
+  "where": "lite-knights · Telemon Heavy Dreadnought",
+  "judgement": {
+   "gear": [
+    [
+     "Spiculus bolt launcher",
+     "Adrathic Desolator",
+     "Caestus Fist",
+     "Twin Neutronium Cascade Projectors"
+    ]
+   ],
+   "weapons": [
+    "Spiculus bolt launcher",
+    "Adrathic Desolator",
+    "Twin Neutronium Cascade Projectors",
+    "Caestus Fist"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Telemon Heavy Dreadnought"
+   ],
+   "leads": null
+  },
+  "key": "5eb9a1e967923752"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-ph",
+  "where": "adeptus-custodes army rule · Martial Ka’tah",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Martial Ka’tah",
+   "text": "At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2\" **M** in addition to the normal effect of Calistus.\nConservai: KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.\nCalistus: KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSalvus: KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.\nDacatarai: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.\nKaptaris: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.\nRendax: KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**."
+  },
+  "key": "76a73133dbb46638"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-turn",
+  "where": "adeptus-custodes army rule · Martial Ka’tah",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Martial Ka’tah",
+   "text": "At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2\" **M** in addition to the normal effect of Calistus.\nConservai: KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.\nCalistus: KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSalvus: KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.\nDacatarai: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.\nKaptaris: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.\nRendax: KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**."
+  },
+  "key": "3e100adca590d6b3"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-turns",
+  "where": "adeptus-custodes army rule · Martial Ka’tah",
+  "judgement": {
+   "turns": {
+    "command": "your",
+    "movement": "your",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Martial Ka’tah",
+   "text": "At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2\" **M** in addition to the normal effect of Calistus.\nConservai: KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.\nCalistus: KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSalvus: KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.\nDacatarai: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.\nKaptaris: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.\nRendax: KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**."
+  },
+  "key": "0694175f1315c442"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-calcMods",
+  "where": "adeptus-custodes army rule · Martial Ka’tah",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "ranged",
+     "from": "Martial Ka’tah",
+     "when": "Salvus (your Shooting phase, a readied unit selected to shoot)",
+     "note": "can ignore modifiers to BS, hit rolls and wound rolls",
+     "calc": {
+      "ignoreHitMods": true
+     }
+    },
+    {
+     "kind": "melee",
+     "from": "Martial Ka’tah",
+     "when": "Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets",
+     "note": "re-roll hit rolls of 1",
+     "vs": {
+      "none": [
+       "Monster",
+       "Vehicle"
+      ]
+     }
+    },
+    {
+     "kind": "melee",
+     "from": "Martial Ka’tah",
+     "when": "Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets",
+     "note": "[LETHAL HITS]",
+     "vs": {
+      "any": [
+       "Monster",
+       "Vehicle"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "rule": "Martial Ka’tah",
+   "text": "At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2\" **M** in addition to the normal effect of Calistus.\nConservai: KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.\nCalistus: KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSalvus: KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.\nDacatarai: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.\nKaptaris: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.\nRendax: KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**."
+  },
+  "key": "07777853ab40e531"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-def",
+  "where": "adeptus-custodes army rule · Aegis of the Emperor",
+  "judgement": {
+   "def": "Feel No Pain 5+ against mortal wounds"
+  },
+  "source": {
+   "rule": "Aegis of the Emperor",
+   "text": "Friendly **ADEPTUS CUSTODES** units with this ability have Feel No Pain 5+ against mortal wounds."
+  },
+  "key": "77afe33b4fcd0028"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-ph",
+  "where": "adeptus-custodes army rule · Aquila Commander",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Aquila Commander",
+   "text": "At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP."
+  },
+  "key": "dcdac8d8d772cd9a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-turn",
+  "where": "adeptus-custodes army rule · Aquila Commander",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Aquila Commander",
+   "text": "At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP."
+  },
+  "key": "77c4ef47c43f8925"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-def",
+  "where": "adeptus-custodes army rule · Daughters of the Abyss",
+  "judgement": {
+   "def": "Feel No Pain 3+ against psychic attacks"
+  },
+  "source": {
+   "rule": "Daughters of the Abyss",
+   "text": "- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit have **Feel No Pain 5+** against **psychic attacks**."
+  },
+  "key": "6731038055618c21"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-ph",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Magna Imperator",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "ed45f881d6b4e36f"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-turn",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Magna Imperator",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "46b53281649bbf35"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-turns",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Magna Imperator",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "af22164a538427da"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-needs",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Magna Imperator",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "01d8e526de862696"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-mod",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Selected to attack",
+    "note": "re-roll one hit roll and re-roll one wound roll"
+   }
+  },
+  "source": {
+   "rule": "Magna Imperator",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "5d16956003a085ed"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Emperor’s Chosen · In Auramite Clad",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "In Auramite Clad",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "9832e689f96d71d5"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Emperor’s Chosen · In Auramite Clad",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "In Auramite Clad",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "56b52f826fe1acb4"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turns",
+  "where": "Emperor’s Chosen · In Auramite Clad",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "In Auramite Clad",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "30c46afb2eab8a29"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Emperor’s Chosen · In Auramite Clad",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Custodian Wardens"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "In Auramite Clad",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "e81706fd5640e6bf"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-def",
+  "where": "Emperor’s Chosen · In Auramite Clad",
+  "judgement": {
+   "def": "their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)"
+  },
+  "source": {
+   "stratagem": "In Auramite Clad",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "b04cbb09d3e9856b"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Emperor’s Chosen · In Auramite Clad",
+  "judgement": {
+   "gist": "An enemy unit targets your unit: attacks that target your unit have -1 AP until that enemy unit has attacked."
+  },
+  "source": {
+   "stratagem": "In Auramite Clad",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "cd227c0f9d666444"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Emperor’s Chosen · Superhuman Focus",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this **stratagem** more than once per battle round."
+  },
+  "key": "0eaf090d296936fb"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Emperor’s Chosen · Superhuman Focus",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this **stratagem** more than once per battle round."
+  },
+  "key": "a5d9cc0a61fc2d2f"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Emperor’s Chosen · Superhuman Focus",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this **stratagem** more than once per battle round."
+  },
+  "key": "9852395df715d9a1"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Emperor’s Chosen · Superhuman Focus",
+  "judgement": {
+   "gist": "End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round)."
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this **stratagem** more than once per battle round."
+  },
+  "key": "07146dcc83a16530"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Emperor’s Chosen · Impenetrable Bastion",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Impenetrable Bastion",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units).\nEFFECT: Select one **objective** your unit is controlling. That **objective** is **secured**."
+  },
+  "key": "08df86c119fd6e0a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Emperor’s Chosen · Impenetrable Bastion",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Impenetrable Bastion",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units).\nEFFECT: Select one **objective** your unit is controlling. That **objective** is **secured**."
+  },
+  "key": "335302779dae8b79"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Emperor’s Chosen · Impenetrable Bastion",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Impenetrable Bastion",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units).\nEFFECT: Select one **objective** your unit is controlling. That **objective** is **secured**."
+  },
+  "key": "dbd7f8aa8556362e"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Emperor’s Chosen · Impenetrable Bastion",
+  "judgement": {
+   "gist": "Select one objective your unit is controlling: that objective is secured."
+  },
+  "source": {
+   "stratagem": "Impenetrable Bastion",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units).\nEFFECT: Select one **objective** your unit is controlling. That **objective** is **secured**."
+  },
+  "key": "96432cbd07f9aedb"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-needs",
+  "where": "Grav-Assault Force rule · Flare Shields",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Grav-assault"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Flare Shields",
+   "text": "Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks."
+  },
+  "key": "0b465384adf7d3c1"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-def",
+  "where": "Grav-Assault Force rule · Flare Shields",
+  "judgement": {
+   "def": "4+ InSv against ranged attacks"
+  },
+  "source": {
+   "rule": "Flare Shields",
+   "text": "Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks."
+  },
+  "key": "4e14d49884b44431"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Grav-Assault Force · Victory Before Death",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Victory Before Death",
+   "text": "WHEN: Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.\nTARGET: That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.\nEFFECT: Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**."
+  },
+  "key": "b1d9e68ec5885587"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Grav-Assault Force · Victory Before Death",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Victory Before Death",
+   "text": "WHEN: Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.\nTARGET: That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.\nEFFECT: Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**."
+  },
+  "key": "734861921ce91a6e"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Grav-Assault Force · Victory Before Death",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Grav-assault"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Victory Before Death",
+   "text": "WHEN: Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.\nTARGET: That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.\nEFFECT: Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**."
+  },
+  "key": "b061dc7bd1e5391d"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Grav-Assault Force · Victory Before Death",
+  "judgement": {
+   "gist": "Your unit within range of an objective is destroyed: an objective it was controlling, with no enemy units (excluding AIRCRAFT) within range, is secured."
+  },
+  "source": {
+   "stratagem": "Victory Before Death",
+   "text": "WHEN: Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.\nTARGET: That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.\nEFFECT: Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**."
+  },
+  "key": "ce38da4b681f1809"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Grav-Assault Force · Advanced Stabilisers",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Advanced Stabilisers",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit’s ranged attacks have **[Assault]**."
+  },
+  "key": "8b8c7f5e314712a4"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Grav-Assault Force · Advanced Stabilisers",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Advanced Stabilisers",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit’s ranged attacks have **[Assault]**."
+  },
+  "key": "27e3b985f28735d8"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Grav-Assault Force · Advanced Stabilisers",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Grav-assault"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Advanced Stabilisers",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit’s ranged attacks have **[Assault]**."
+  },
+  "key": "353a64316ed79924"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-mod",
+  "where": "Grav-Assault Force · Advanced Stabilisers",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot",
+    "note": "ranged attacks have [ASSAULT]"
+   }
+  },
+  "source": {
+   "stratagem": "Advanced Stabilisers",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit’s ranged attacks have **[Assault]**."
+  },
+  "key": "14abab85c345e201"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Grav-Assault Force · Advanced Stabilisers",
+  "judgement": {
+   "gist": "Your unit’s ranged attacks have [ASSAULT]."
+  },
+  "source": {
+   "stratagem": "Advanced Stabilisers",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit’s ranged attacks have **[Assault]**."
+  },
+  "key": "fa5aad39673f48bf"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Grav-Assault Force · Inevitable Annihilation",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Inevitable Annihilation",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**."
+  },
+  "key": "53a18db43776ed8a"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Grav-Assault Force · Inevitable Annihilation",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Inevitable Annihilation",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**."
+  },
+  "key": "945ccc84b6770171"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Grav-Assault Force · Inevitable Annihilation",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Grav-assault"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Inevitable Annihilation",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**."
+  },
+  "key": "733c3c059ea1612f"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-mod",
+  "where": "Grav-Assault Force · Inevitable Annihilation",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot",
+    "note": "can ignore modifiers to BS and hit rolls",
+    "calc": {
+     "ignoreHitMods": true
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Inevitable Annihilation",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**."
+  },
+  "key": "65d677763a1c70ab"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Grav-Assault Force · Inevitable Annihilation",
+  "judgement": {
+   "gist": "Your unit can ignore modifiers to its BS and hit rolls."
+  },
+  "source": {
+   "stratagem": "Inevitable Annihilation",
+   "text": "WHEN: Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.\nTARGET: That **GRAV-ASSAULT** unit.\nEFFECT: Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**."
+  },
+  "key": "79ddfff58c9d553d"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-needs",
+  "where": "Might of the Moritoi rule · Moritoi Ancients",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Dreadnought"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Moritoi Ancients",
+   "text": "- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1."
+  },
+  "key": "e72b9680562c9b12"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-mod",
+  "where": "Might of the Moritoi rule · Moritoi Ancients",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Below starting strength, or below half-strength",
+    "note": "below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1",
+    "pick": [
+     {
+      "name": "Below starting strength",
+      "note": "re-roll hit rolls of 1"
+     },
+     {
+      "name": "Below half-strength",
+      "note": "re-roll hit rolls of 1 and wound rolls of 1"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Moritoi Ancients",
+   "text": "- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1."
+  },
+  "key": "9df4349f85161f85"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-note",
+  "where": "Might of the Moritoi rule · Moritoi Ancients",
+  "judgement": {
+   "note": "GW’s Faction Pack 1.2 prints another detachment named Might of the Moritoi (rule March of the Honoured Dead, no Memento Moritoi or Augury Uplink). This is the one New Recruit and Wahapedia print; the sources don’t say which applies."
+  },
+  "source": {
+   "rule": "Moritoi Ancients",
+   "text": "- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1."
+  },
+  "key": "e164a96d4cf82252"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "51fd68c0bdc98cad"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "d3e819f790eb7ac0"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turns",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "dc43c1b2910ae1c6"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Dreadnought"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "9de51d19f675b1ce"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-mod",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6\")",
+    "note": "re-roll hit rolls of 1"
+   }
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "877bc4d0766d9e3e"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "gist": "Your unit has the Honoured Interred aura: friendly ADEPTUS CUSTODES units within 6\" can re-roll hit rolls of 1."
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "8b574b43f3bb7eb3"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Might of the Moritoi · Unceasing Onslaught",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Unceasing Onslaught",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: - Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "e947904565862a18"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Might of the Moritoi · Unceasing Onslaught",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Unceasing Onslaught",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: - Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "3268b663ea586f06"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Might of the Moritoi · Unceasing Onslaught",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Dreadnought"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unceasing Onslaught",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: - Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "c3f4a81388c5ebdf"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-mod",
+  "where": "Might of the Moritoi · Unceasing Onslaught",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Ended an advance move this turn (until the end of the turn)",
+    "note": "ranged attacks have [ASSAULT]"
+   }
+  },
+  "source": {
+   "stratagem": "Unceasing Onslaught",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: - Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "05ef13c63a41f5b3"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Might of the Moritoi · Unceasing Onslaught",
+  "judgement": {
+   "gist": "Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge."
+  },
+  "source": {
+   "stratagem": "Unceasing Onslaught",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: - Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "89b5116d60d62722"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-phases",
+  "where": "Might of the Moritoi · Unstoppable Momentum",
+  "judgement": {
+   "phases": [
+    "movement",
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Unstoppable Momentum",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **selected to move** or **declares a charge**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "82ffb09003531615"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-turn",
+  "where": "Might of the Moritoi · Unstoppable Momentum",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Unstoppable Momentum",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **selected to move** or **declares a charge**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "b43ebd69f2ae39b4"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-needs",
+  "where": "Might of the Moritoi · Unstoppable Momentum",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Dreadnought"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unstoppable Momentum",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **selected to move** or **declares a charge**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "39fe97ca8ce81031"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-gist",
+  "where": "Might of the Moritoi · Unstoppable Momentum",
+  "judgement": {
+   "gist": "Your unit selected to move or declaring a charge has MOBILE."
+  },
+  "source": {
+   "stratagem": "Unstoppable Momentum",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **selected to move** or **declares a charge**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "aa296d5ad5b7825f"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^damaged \\d+$/i",
+  "judgement": {
+   "opens": "Damaged"
+  },
+  "source": {
+   "rule": "Damaged",
+   "text": "*Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*"
+  },
+  "key": "bfbf7b899d822668"
+ },
+ {
+  "army": "Adeptus Custodes",
+  "kind": "rule-alias",
+  "where": "/^martial ka'tah$/i",
+  "judgement": {
+   "opens": "Martial Ka’tah"
+  },
+  "source": {
+   "rule": "Martial Ka’tah"
+  },
+  "key": "34c69ad196993fa0"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph, opts){\n  const out = [];\n  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line\n  // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, \"Feel No Pain 5+ against mortal\n  // wounds\"); New Recruit's starred \"Feel No Pain 5+*\" is that one, so it is not said again without its condition\n  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && u.rules.includes(r.name));\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:(u.rules.filter(x => /^feel no pain/i.test(x)).length > 1 && partialWho(u, r)) || undefined }); }   // (who: one model's, partialRules, where the unit has another Feel No Pain to tell it from)\n  for(const r of armyDefs) out.push({ t:r.def, a:'rule', v:r.name });\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)\n  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))\n    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });\n  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,\n  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit\n  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u))\n    out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah's Blessing, Necromechanic)"
+  },
+  "key": "8f384da7bba22847"
+ }
+]
