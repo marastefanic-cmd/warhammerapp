@@ -1,0 +1,5075 @@
+######## army · WOOF WOOF Big demons baby
+World Eaters · 2000 / 2000 pts · Strike Force
+
+Khorne Daemonkin · Vessels of Wrath · Disposition: Priority Assets
+
+Overview
+Bases & proxies
+54
+Units
+10
+Stratagems
+19
+Ranged weapons
+10
+Melee weapons
+14
+Abilities
+29
+Rules
+Damage calculator
+
+New Recruit, exported 23 Oct 2026
+
+######## pregame · BIG DEMONS BABY Overview
+YOUR LIST
+WARLORD
+Angron
+ENHANCE­MENTS
+Blade of Endless Bloodshed 30 pts on Daemon Prince
+Blood-forged Armour 20 pts on Master of Executions
+Disciple of Khorne 15 pts on Lord on Juggernaut
+ATTACHED
+Lord on Juggernaut leads Khorne Berzerkers
+DETACH­MENTS
+Khorne Daemonkin (2 DP), Vessels of Wrath (1 DP)
+Disposition: Priority Assets
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Blessings of Khorne
+Start of the battle round
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+Blood Tithe
+Khorne Daemonkin · Command
+
+Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:
+
+Enraged Abjuration [2BTP]
+
+BLOOD LEGIONS and WORLD EATERS models from your army have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.
+
+Daemonic Rage [3BTP]
+
+Melee weapons equipped by BLOOD LEGIONS units from your army have the [lance] ability.
+
+Boon of Blood [4BTP]
+
+BLOOD LEGIONS units from your army have a 4+ invulnerable save.
+
+Might of Khorne [5BTP]
+
+BLOOD LEGIONS units from your army gain the Blessings of Khorne ability.
+
+RESTRICTIONS
+
+You can include the BLOOD LEGIONS units in your army. The combined points cost of such units you can include in your army is:
+
+Incursion: Up to 500 pts
+Strike Force: Up to 1000 pts
+Onslaught: Up to 1500 pts
+
+No BLOOD LEGIONS model from your army can be your WARLORD.
+
+APPLIES TOAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+
+Wrath of Khorne
+Vessels of Wrath · Fight
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+APPLIES TODaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Angron 330 pts
+Skarbrand 315 pts
+Bloodthirster 320 pts
+Flesh Hounds 75 pts each, ×2
+All of them: 1115 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+INFILTRATORS
+Goremongers Infiltrators
+START OF THE BATTLE AND THE BATTLE ROUNDS
+EVERY ROUND
+Blessings of Khorne · World Eaters army rule
+Reborn in Blood · Angron
+Wrathful Presence · Angron
+USES PER BATTLE
+NEW GAME
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+2
+Angron
+Warlord
+14"
+11
+2+
+16
+5+
+6
+4+
+330
+Skarbrand
+10"
+11
+3+
+20
+6+
+5
+4+
+315
+CHARACTERS
+4
+Bloodthirster
+12"
+11
+3+
+18
+6+
+5
+4+
+320
+Daemon Prince of Khorne
+Blade of Endless Bloodshed
+10"
+10
+2+
+10
+6+
+3
+4+
+230
+Master of Executions
+Blood-forged Armour
+8"
+5
+2+
+4
+6+
+1
+–
+80
+Lord on Juggernaut
++ Khorne Berzerkers
+Disciple of Khorne
+440
+Lord on Juggernaut
+10"
+6
+3+
+7
+6+
+2
+4+
+Khorne Berzerker×20
+10"
+5
+3+
+2
+6+
+2
+–
+INFANTRY
+2
+Goremongers
+1× Blood Herald, 7× Goremonger w/ chainblade
+9"
+4
+6+
+1
+7+
+1
+–
+70
+Jakhals
+65
+Jakhal×9
+7"
+4
+6+
+1
+7+
+1
+–
+Dishonoured w/ paired manglers
+7"
+4
+6+
+1
+7+
+1
+–
+BEASTS
+2
+Flesh Hounds
+1× Gore Hound (Collar of Khorne), 4× Flesh Hound (Collar of Khorne)
+12"
+4
+7+
+2
+7+
+1
+5+
+2×75
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Skarbrand
+Bellow of endless fury
+12"
+2D6
+–
+8
+-1
+1
+IGNORES COVER, TORRENT
+Bloodthirster
+Hellfire breath
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Daemon Prince of Khorne
+Blade of Endless Bloodshed
+Infernal cannon
+24"
+3
+3+
+5
+-1
+2
+RAPID FIRE 1
+Master of Executions
+Blood-forged Armour
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+Lord on Juggernaut
+Disciple of Khorne
++ Khorne Berzerkers
+LORD ON JUGGERNAUT
+Plasma pistol
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+KHORNE BERZERKERS
+Plasma pistol×5
+➤standard
+12"
+1
+4+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+4+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Bolt pistol×15
+12"
+1
+4+
+5
+-1
+1
+PISTOL
+Goremongers
+Autopistol×8
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Jakhals
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Flesh Hounds
+×2 units
+Burning roar
+12"
+D6
+–
+4
+0
+1
+IGNORES COVER, TORRENT
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Angron
+Warlord
+Samni’arius and Spinegrinder
+➤strike
+8
+2+
+14
+-3
+D6+2
+DEVASTATING WOUNDS
+➤sweep
+16
+2+
+7
+-2
+2
+DEVASTATING WOUNDS
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+Skarbrand
+Slaughter and Carnage
+➤strike
+8
+2+
+16
+-4
+6
+➤sweep
+16
+2+
+8
+-2
+2
+Damaged (1-7 wounds left): +2 A (Damaged: 1-7 wounds remaining)
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Own aura: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Bloodthirster
+Great axe of Khorne
+➤strike
+7
+2+
+16
+-4
+D6+2
+➤sweep
+14
+2+
+10
+-2
+2
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Own aura: +1 to hit (Daemon Lord of Khorne)
+Daemon Prince of Khorne
+Blade of Endless Bloodshed
+Hellforged weapons
+➤strike
+9
+2+
+9
+-2
+4
+➤sweep
+17
+2+
+7
+-1
+2
+Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Master of Executions
+Blood-forged Armour
+Axe of dismemberment
+5
+2+
+7
+-2
+2
+DEVASTATING WOUNDS, PRECISION
+Melee attacks that target a CHARACTER unit: can re-roll the hit roll and the wound roll (A Worthy Skull)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Lord on Juggernaut
+Disciple of Khorne
++ Khorne Berzerkers
+LORD ON JUGGERNAUT
+Exalted chainblade
+7
+2+
+6
+-1
+2
++
+Bladed horn
+4
+3+
+6
+-1
+2
+EXTRA ATTACKS, LANCE
+KHORNE BERZERKERS
+Chainblade×16
+4
+3+
+5
+-1
+1
+Khornate eviscerator×4
+3
+3+
+8
+-2
+2
+Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Goremongers
+Chainblade×8
+3
+4+
+3
+0
+1
+LANCE
+OR
+Close combat weapon×8
+2
+4+
+3
+0
+1
+Made a charge move this turn: Chainblade +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+Jakhals
+Chainblades×9
+3
+4+
+3
+0
+1
+Paired manglersDISHONOURED
+4
+4+
+4
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+Flesh Hounds
+×2 units
+Gore-drenched fangs×5
+3
+3+
+5
+-1
+1
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+
+######## abilities · MELEE Abilities
+Angron
+Warlord
+Reborn in Blood
+Command · Your Move
+
+Command (either turn) / Your Movement
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+Wrathful Presence
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+WRATHFUL PRESENCE: PICK ONE
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Skarbrand
+Rage Embodied
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly BLOOD LEGIONS unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.
+
+Murderlust
+
+This unit is eligible to declare a charge in a turn in which it Advanced.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
+
+Bloodthirster
+Daemon Lord of Khorne
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly BLOOD LEGIONS unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.
+
+Relentless Carnage
+Fight
+
+Fight · Either turn
+
+At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Daemon Prince of Khorne
+Blade of Endless Bloodshed
+Lord of Murder
+
+While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
+
+Devastating Assault
+Charge/Fight
+
+Charge / Fight · Either turn
+
+Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+
+Direct the Slaughter
+Once per battle round, per army
+Any phase
+
+Any phase · Either turn
+
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+
+Blade of Endless Bloodshed
+Enhancement
+Already in A, S, D
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Master of Executions
+Blood-forged Armour
+A Worthy Skull
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
+
+Forwards, For Blood!
+Not leading a unit in this list
+
+Not leading a unit in this list
+
+Your Movement / Their Shooting
+
+While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.
+
+Blood-forged Armour
+Enhancement
+Already in Sv
+
+Enhancement
+
+BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.
+
+Lord on Juggernaut
+Disciple of Khorne
++ Khorne Berzerkers
+LORD ON JUGGERNAUT
+Aggressive Advance
+Already in M
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
+
+Crush All Who Stand Before Us
+Fight
+
+Fight · Either turn
+
+Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
+
+Disciple of Khorne
+Enhancement
+
+Enhancement
+
+LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.
+
+KHORNE BERZERKERS
+Blood Surge
+Their Shooting
+
+Shooting · Their turn
+
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".
+
+Murderous Charge
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+
+Icon of Khorne
+No Icon of Khorne in this unit
+
+No Icon of Khorne in this unit
+
+If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
+
+Goremongers
+Loping Speed
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+Jakhals
+Objective Ravaged
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Flesh Hounds
+×2 units
+Hunters from the Warp
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+Collar of Khorne
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+######## rules · ABILITIES Rules
+World Eaters · Priority Assets
+ARMY RULES
+Blessings of Khorne
+Start of the battle round
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+DETACHMENTS
+KHORNE DAEMONKIN
+Blood Tithe
+Detachment rule · Command
+
+Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:
+
+Enraged Abjuration [2BTP]
+
+BLOOD LEGIONS and WORLD EATERS models from your army have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.
+
+Daemonic Rage [3BTP]
+
+Melee weapons equipped by BLOOD LEGIONS units from your army have the [lance] ability.
+
+Boon of Blood [4BTP]
+
+BLOOD LEGIONS units from your army have a 4+ invulnerable save.
+
+Might of Khorne [5BTP]
+
+BLOOD LEGIONS units from your army gain the Blessings of Khorne ability.
+
+RESTRICTIONS
+
+You can include the BLOOD LEGIONS units in your army. The combined points cost of such units you can include in your army is:
+
+Incursion: Up to 500 pts
+Strike Force: Up to 1000 pts
+Onslaught: Up to 1500 pts
+
+No BLOOD LEGIONS model from your army can be your WARLORD.
+
+APPLIES TOAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+
+Blood-forged Armour
+Enhancement · 20 pts · on Master of Executions
+
+BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.
+
+ONMaster of Executions
+
+Disciple of Khorne
+Enhancement · 15 pts · on Lord on Juggernaut + Khorne Berzerkers
+
+LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.
+
+ONLord on Juggernaut + Khorne Berzerkers
+
+Blade of Endless Bloodshed
+Enhancement · 30 pts · on Daemon Prince of Khorne
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+ONDaemon Prince of Khorne
+
+Other enhancements
+1 not in this list
+Icon of War 25 pts
+
+WORLD EATERS model only. While a friendly BLOOD LEGIONS unit is within 6" of the bearer, that unit has the Blessings of Khorne ability. If the Might of Khorne ability is active for your army, then while a friendly BLOOD LEGIONS unit is within 6" of the bearer, you can re-roll Battle-shock tests taken for that unit.
+
+STRATAGEMSDaemontide, Blessing of Burning Blood, Daemonic Fury, A Worthy Skull, Murder-call, Summoned by Slaughter (no unit in this list)
+
+VESSELS OF WRATH
+Wrath of Khorne
+Detachment rule · Fight
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+APPLIES TODaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+
+Other enhancements
+2 not in this list
+Archslaughterer 30 pts
+
+WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
+
+Gateways to Glory 10 pts
+
+WORLD EATERS DAEMON PRINCE model only. This model has:
+
+MOBILE.
++1 to charge rolls.
+
+STRATAGEMSPunish the Craven, Aspire to Infamy, Scorn the Witch
+
+UNIT RULES
+Deadly Demise
+Angron D6
+Skarbrand D6
+Bloodthirster D6
+Daemon Prince · Blade of Endless Bloodshed D3
+Deep Strike
+Angron
+Reborn in Blood: At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+Skarbrand
+Bloodthirster
+Lord on Juggernaut + Khorne Berzerkers: Lord on Juggernaut only
+Disciple of Khorne: LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.
+Flesh Hounds
+Feel No Pain
+Flesh Hounds 3+
+Infiltrators
+Goremongers
+Leader
+Master of Executions · Blood-forged Armour
+Lord on Juggernaut leads Khorne Berzerkers
+Lone Operative
+Daemon Prince · Blade of Endless Bloodshed
+Lord of Murder: While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
+Psychic
+Flesh Hounds
+Collar of Khorne: The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+9× 28.5mm
+28× 32mm
+2× 40mm
+1× 60mm
+10× 60×35.5mm
+1× 90×52.5mm
+2× 100mm
+1× 120×92mm
+
+WHAT TO WRITE ON EACH BASE
+
+Angron
+1× 100mm
+Angron · Warlord
+Skarbrand
+1× 100mm
+Skarbrand
+Bloodthirster
+1× 120×92mm
+Bloodthirster
+Daemon Prince of Khorne · Blade of Endless Bloodshed
+1× 60mm
+Daemon Prince of Khorne · Blade of Endless Bloodshed
+Master of Executions · Blood-forged Armour
+1× 40mm
+Master of Executions · Blood-forged Armour
+Lord on Juggernaut · Disciple of Khorne
++ Khorne Berzerkers
+1× 90×52.5mm
+Lord on Juggernaut · Disciple of Khorne
+1× 32mm
+Champion · Plasma pistol
+15× 32mm
+standard Bolt pistol, Chainblade
+4× 32mm
+Khornate eviscerator + Plasma pistol · no Bolt pistol, no Chainblade
+Goremongers
+1× 32mm
+Blood Herald
+7× 32mm
+standard Autopistol, Chainblade, Close combat weapon
+Jakhals
+1× 28.5mm
+Pack Leader
+1× 40mm
+Dishonoured · Paired manglers
+8× 28.5mm
+standard Autopistol, Chainblades
+Flesh Hounds
+2 units: mark them apart (1, 2)
+1× 60×35.5mm
+Gore Hound · Burning roar · Collar of Khorne
+4× 60×35.5mm
+standard Gore-drenched fangs
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Skarbrand
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+1.2
+of 5 destroyed
+2.9 wounds lost · wiped in <1% of games
+Nothing ticked: the datasheets as printed
+1 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Skarbrand
+Bellow of endless fury
+RNG
+12"
+A
+2D6
+BS
+–
+S
+8
+AP
+-1
+D
+1
+IGNORES COVER, TORRENT
+−1.2
+MODELS IF UNTICKED
+SITUATION AND RULES
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (6)
+
+Nothing to count: 1CP Daemonic Fury, 1CP A Worthy Skull, 1CP Murder-call, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Blessing of Burning Blood (in the other player’s turn only)
+
+NOT COUNTED BY THE CALCULATOR (1)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Angron
+SHOOT
+no ranged weapons
+FIGHT
+BOTH
+fight only
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.8
+of 5 destroyed
+9.6 wounds lost · wiped in 86% of games
+Samni’arius and Spinegrinder: sweep
+Charged this turn
+×
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Angron
+Samni’arius and Spinegrinder
+A
+16
+WS
+2+
+S
+7
+AP
+-2
+D
+2
+DEVASTATING WOUNDS
+−86% wiped
+−4.8
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+4.4
+A
+8
+WS
+2+
+S
+14
+AP
+-3
+D
+D6+2
+DEVASTATING WOUNDS
+sweep
+4.8
+BEST
+A
+16
+WS
+2+
+S
+7
+AP
+-2
+D
+2
+DEVASTATING WOUNDS
+SITUATION AND RULES
+Driven by Ultimate Rage
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+if it applies
++13% wiped
++0.2
+MODELS
+Martial Excellence
+Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
+if it applies
++8% wiped
++0.1
+MODELS
+Warp Blades
+Blessing of Khorne active this battle round: [LETHAL HITS]
+if it applies
++5% wiped
++0.1
+MODELS
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Decapitating Strikes
+Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+if it applies
+0
+Damaged (1-6 wounds left)
+-1 to hit rolls
+if it applies
+−20% wiped
+−0.4
+MODELS
+STRATAGEMS
+with their CP
+1CP Daemonic Fury
+Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6": [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase)
+if used
++11% wiped
++0.2
+MODELS
+[LANCE]
++0.2
+Daemonic Rage active
++0.2
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP A Worthy Skull
+Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Skarbrand
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in 98% of games
+
+Shoot 1.19 · Fight 3.79 · the charge is taken to succeed
+
+Slaughter and Carnage: sweep
+Charged this turn
+×
+Rage Embodied
+8 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Skarbrand
+Bellow of endless fury
+RNG
+12"
+A
+2D6
+BS
+–
+S
+8
+AP
+-1
+D
+1
+IGNORES COVER, TORRENT
+−3% wiped
+≈0
+MODELS IF UNTICKED
++1 MORE ▾
+SITUATION AND RULES
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (6)
+
+Nothing to count: 1CP Daemonic Fury, 1CP A Worthy Skull, 1CP Murder-call, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Blessing of Burning Blood (in the other player’s turn only)
+
+NOT COUNTED BY THE CALCULATOR (1)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Skarbrand
+
+Against what the shooting left of the target, in each game.
+
+Slaughter and Carnage
+A
+16
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+−98% wiped
+−3.8
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+5.0
+A
+8
+WS
+2+
+S
+16
+AP
+-4
+D
+6
+sweep
+5.0
+A
+16
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+SITUATION AND RULES
+Damaged (1-7 wounds left)
++2 A
+if it applies
++1% wiped
+≈0
+MODELS
+Martial Excellence
+Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [SUSTAINED HITS 1]
+if it applies
++1% wiped
+≈0
+MODELS
+Decapitating Strikes
+Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit (Might of Khorne active (5BTP)): [DEVASTATING WOUNDS]
+if it applies
+≈0
+MODELS
+Warp Blades
+Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [LETHAL HITS]
+if it applies
+≈0
+MODELS
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Blood Tithe
+Daemonic Rage active (3BTP): [LANCE]
+if it applies
+no change: already wounds on 2+
+0
+Rage Embodied
+Own aura: +1 A
+always counted · you can leave it out
+if left out: ≈0 models
+Daemon Lord of Khorne (Bloodthirster)
+Within 6" of the Bloodthirster: +1 to hit
+if it applies
+no change: already hits on 2+
+0
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (7)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Daemonic Fury
+Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).
+1CP A Worthy Skull
+Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
+1CP Blessing of Burning Blood
+A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
+1CP Murder-call
+Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+KHORNE DAEMONKIN
+6
+1
+CP
+Daemontide
+Select one friendly BLOOD LEGIONS unit within 6" of your unit: one destroyed MOUNTED model, up to D3 destroyed BEAST models or up to D6 destroyed INFANTRY models return to it with full wounds (not CHARACTER models to Attached units).
+Your Command Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
+1
+CP
+Blessing of Burning Blood
+A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
+Their Shoot · Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
+1
+CP
+Daemonic Fury
+Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).
+Start of your Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
+1
+CP
+A Worthy Skull
+Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
+Fight Any unit
+1
+CP
+Murder-call
+Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
+End of their Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
+1
+CP
+Summoned by Slaughter
+The last model of a unit is destroyed: set your BLOODLETTERS unit in Reserves up wholly within 9" of that model and more than 6" horizontally away from all enemy units (once per battle round).
+Any phase No unit in this list can use it (needs BLOODLETTERS)
+VESSELS OF WRATH
+3
+1
+CP
+Punish the Craven
+An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+Their Movement Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+1
+CP
+Aspire to Infamy
+Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.
+Fight Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+1
+CP
+Scorn the Witch
+Your unit has Feel No Pain 4+ against mortal wounds.
+Any phase Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement All but Angron
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+KHORNE DAEMONKIN
+6
+1
+CP
+Daemontide
+Your Command Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
+WHEN
+
+Your Command phase.
+
+TARGETOne WORLD EATERS unit from your army.
+
+EFFECT
+
+Select one friendly BLOOD LEGIONS unit within 6" of your unit. One destroyed MOUNTED model, up to D3 destroyed BEAST models, or up to D6 destroyed INFANTRY models are returned to that BLOOD LEGIONS unit with their full wounds remaining.
+
+RESTRICTIONSThis Stratagem cannot be used to return destroyed CHARACTER models to Attached units.
+
+USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
+
+1
+CP
+Blessing of Burning Blood
+Their Shoot · Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne BLOOD LEGIONS unit from your army that is within 6" of a friendly WORLD EATERS unit that was selected as the target as one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your WORLD EATERS unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your WORLD EATERS unit have a 4+ invulnerable save.
+
+USED BYSkarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Flesh Hounds
+
+1
+CP
+Daemonic Fury
+Start of your Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
+WHEN
+
+Start of your Fight phase.
+
+TARGETOne BLOOD LEGIONS unit from your army.
+
+EFFECT
+
+Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the [TWIN-LINKED] ability.
+
+USED BYSkarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Flesh Hounds
+
+1
+CP
+A Worthy Skull
+Fight Any unit
+WHEN
+
+Fight phase, just after a BLOOD LEGIONS or WORLD EATERS unit from your army has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks.
+
+TARGETThat BLOOD LEGIONS or WORLD EATERS unit.
+
+EFFECT
+
+You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities.
+
+USED BYany unit
+
+1
+CP
+Murder-call
+End of their Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYSkarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Flesh Hounds
+
+1
+CP
+Summoned by Slaughter
+Any phase No unit in this list can use it (needs BLOODLETTERS)
+WHEN
+
+Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a TRANSPORT, any units embarked within that TRANSPORT model must disembark first).
+
+TARGETOne BLOODLETTERS unit from your army that is in Reserves.
+
+EFFECT
+
+Set your unit up anywhere on the battlefield wholly within 9" of that destroyed model and more than 6" horizontally away from all enemy units, then remove the destroyed model from play.
+
+RESTRICTIONSYou cannot use this Stratagem more than once per battle round.
+
+USED BYno unit in this list (needs BLOODLETTERS)
+
+VESSELS OF WRATH
+3
+1
+CP
+Punish the Craven
+Their Movement Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+WHEN
+
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+
+USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+1
+CP
+Aspire to Infamy
+Fight Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+WHEN
+
+Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit’s CHARACTER models’ melee attacks have:
+
++1 A.
++2 S.
+
+USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+1
+CP
+Scorn the Witch
+Any phase Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+WHEN
+
+Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit has Feel No Pain 4+ against mortal wounds.
+
+USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement All but Angron
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYSkarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+
+1
+CP
+Explosives
+Your Shooting Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYLord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
+
+1
+CP
+Crushing Impact
+Your Charge Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit angron · STRATAGEMS Big demons baby
+ANGRON
+330 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Angron
+Samni’arius and Spinegrinder
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Angron
+100mm
+14"
+11
+2+
+16
+5+
+6
+4+
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Samni’arius and Spinegrinder
+➤strike
+8
+2+
+14
+-3
+D6+2
+DEVASTATING WOUNDS
+➤sweep
+16
+2+
+7
+-2
+2
+DEVASTATING WOUNDS
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+ABILITIES
+Reborn in Blood
+Command · Your Move
+
+Command (either turn) / Your Movement
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+Wrathful Presence
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+The Blood God’s Favour
+- Wrathful Presence: pick one
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage
+- Wrathful Presence: pick one
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath
+- Wrathful Presence: pick one
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Rules
+Deadly Demise D6, Deep Strike, Blessings of Khorne, Blood Tithe
+Stratagems
+
+KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+
+VESSELS OF WRATH Punish the Craven
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+ANGRON
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: WORLD EATERS
+FLY
+KHORNE
+MONSTER
+PRIMARCH
+WARLORD
+Ask about this unit
+Skarbrand ›
+
+######## unit skarbrand · ANGRON Big demons baby
+SKARBRAND
+315 PTS
+Epic Hero
+Models
+Options
+1× Skarbrand
+Bellow of endless fury, Slaughter and Carnage
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Skarbrand
+100mm
+10"
+11
+3+
+20
+6+
+5
+4+
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save
+DAMAGED 1-7 W
++2 A
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Bellow of endless fury
+12"
+2D6
+–
+8
+-1
+1
+IGNORES COVER, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Slaughter and Carnage
+➤strike
+8
+2+
+16
+-4
+6
+➤sweep
+16
+2+
+8
+-2
+2
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Own aura: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Rage Embodied
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly BLOOD LEGIONS unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.
+
+Murderlust
+
+This unit is eligible to declare a charge in a turn in which it Advanced.
+
+Rules
+Deadly Demise D6, Deep Strike, Blood Tithe
+Stratagems
+
+KHORNE DAEMONKIN Blessing of Burning Blood, Daemonic Fury, A Worthy Skull, Murder-call
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: BLOOD LEGIONS
+KHORNE
+MONSTER
+SKARBRAND
+Ask about this unit
+‹ Angron
+Bloodthirster ›
+
+######## unit bloodthirster · SKARBRAND Big demons baby
+BLOODTHIRSTER
+320 PTS
+Character
+Models
+Options
+1× Bloodthirster
+Hellfire breath, Great axe of Khorne
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Bloodthirster
+120×92mm
+12"
+11
+3+
+18
+6+
+5
+4+
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Hellfire breath
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Great axe of Khorne
+➤strike
+7
+2+
+16
+-4
+D6+2
+➤sweep
+14
+2+
+10
+-2
+2
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Own aura: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Daemon Lord of Khorne
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly BLOOD LEGIONS unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.
+
+Relentless Carnage
+Fight
+
+Fight · Either turn
+
+At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Rules
+Deadly Demise D6, Deep Strike, Blood Tithe
+Stratagems
+
+KHORNE DAEMONKIN Blessing of Burning Blood, Daemonic Fury, A Worthy Skull, Murder-call
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+BLOODTHIRSTER
+CHAOS
+CHARACTER
+DAEMON
+FACTION: BLOOD LEGIONS
+FLY
+KHORNE
+MONSTER
+SUMMONED
+Ask about this unit
+‹ Skarbrand
+Daemon Prince · Blade of Endless Bloodshed ›
+
+######## unit daemon-prince-of-khorne · BLOODTHIRSTER Big demons baby
+DAEMON PRINCE OF KHORNE
+230 PTS
+Character
+Blade of Endless Bloodshed
+Models
+Options
+1× Daemon Prince of Khorne
+Hellforged weapons, Infernal cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Daemon Prince of Khorne
+60mm
+10"
+10
+2+
+10
+6+
+3
+4+
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Infernal cannon
+24"
+3
+3+
+5
+-1
+2
+RAPID FIRE 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hellforged weapons
+➤strike
+9
+2+
+9
+-2
+4
+➤sweep
+17
+2+
+7
+-1
+2
+Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+ABILITIES
+Lord of Murder
+
+While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
+
+Devastating Assault
+Charge/Fight
+
+Charge / Fight · Either turn
+
+Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+
+Direct the Slaughter
+Once per battle round, per army
+Any phase
+
+Any phase · Either turn
+
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+
+Blade of Endless Bloodshed
+Enhancement
+Already in A, S, D
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Rules
+Deadly Demise D3, Blessings of Khorne, Blood Tithe, Wrath of Khorne
+Stratagems
+
+KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+
+VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+DAEMON PRINCE
+FACTION: WORLD EATERS
+KHORNE
+MONSTER
+Ask about this unit
+‹ Bloodthirster
+Master of Executions · Blood-forged Armour ›
+
+######## unit master-of-executions · DAEMON PRINCE OF KHORNE Big demons baby
+MASTER OF EXECUTIONS
+80 PTS
+Character
+Blood-forged Armour
+Models
+Options
+1× Master of Executions
+Axe of dismemberment, Bolt pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Master of Executions
+40mm
+8"
+5
+2+
+4
+6+
+1
+–
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Axe of dismemberment
+5
+2+
+7
+-2
+2
+DEVASTATING WOUNDS, PRECISION
+Melee attacks that target a CHARACTER unit: can re-roll the hit roll and the wound roll (A Worthy Skull)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+ABILITIES
+A Worthy Skull
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
+
+Forwards, For Blood!
+Not leading a unit in this list
+
+Not leading a unit in this list
+
+Your Movement / Their Shooting
+
+While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.
+
+Blood-forged Armour
+Enhancement
+Already in Sv
+
+Enhancement
+
+BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.
+
+Rules
+Leader, Blessings of Khorne, Blood Tithe, Wrath of Khorne
+Stratagems
+
+KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+
+VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+MASTER OF EXECUTIONS
+Ask about this unit
+‹ Daemon Prince · Blade of Endless Bloodshed
+Lord on Juggernaut · Disciple of Khorne ›
+
+######## unit lord-on-juggernaut-khorne-berzerkers · MASTER OF EXECUTIONS Big demons baby
+LORD ON JUGGERNAUT + KHORNE BERZERKERS
+440 PTS
+Character · 110 + Khorne Berzerkers 330
+Disciple of Khorne
+Models
+Options
+1× Lord on Juggernaut
+Bladed horn, Exalted chainblade, Plasma pistol
+Leading Khorne Berzerkers
+1× Khorne Berzerker Champion
+Chainblade, Plasma pistol
+15× Khorne Berzerker
+Bolt pistol, Chainblade
+4× Khorne Berzerker w/ eviscerator and plasma pistol
+Khornate eviscerator, Plasma pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Lord on Juggernaut
+90×52.5mm
+10"
+6
+3+
+7
+6+
+2
+4+
+Khorne Berzerker×20
+32mm
+10"
+5
+3+
+2
+6+
+2
+–
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+RANGED WEAPONS
+Plasma pistol ×6, Bolt pistol ×15 · all pistols
+Range
+A
+BS
+S
+AP
+D
+LORD ON JUGGERNAUT
+Plasma pistol
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+KHORNE BERZERKERS
+Plasma pistol×5
+➤standard
+12"
+1
+4+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+4+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Bolt pistol×15
+12"
+1
+4+
+5
+-1
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+LORD ON JUGGERNAUT
+Exalted chainblade
+7
+2+
+6
+-1
+2
++
+Bladed horn
+4
+3+
+6
+-1
+2
+EXTRA ATTACKS, LANCE
+KHORNE BERZERKERS
+Chainblade×16
+4
+3+
+5
+-1
+1
+Khornate eviscerator×4
+3
+3+
+8
+-2
+2
+WHOLE UNIT
+Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+ABILITIES
+Aggressive Advance
+- Lord on Juggernaut
+Already in M
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
+
+Crush All Who Stand Before Us
+- Lord on Juggernaut
+Fight
+
+Fight · Either turn
+
+Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
+
+Disciple of Khorne
+- Lord on Juggernaut
+Enhancement
+
+Enhancement
+
+LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.
+
+Blood Surge
+- Khorne Berzerkers
+Their Shooting
+
+Shooting · Their turn
+
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".
+
+Murderous Charge
+- Khorne Berzerkers
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+
+Icon of Khorne
+- Khorne Berzerkers
+No Icon of Khorne in this unit
+
+No Icon of Khorne in this unit
+
+If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
+
+Rules
+Leader, Blessings of Khorne, Deep Strike (Lord on Juggernaut), Blood Tithe, Wrath of Khorne
+Stratagems
+
+KHORNE DAEMONKIN Daemontide, Blessing of Burning Blood, Daemonic Fury, A Worthy Skull, Murder-call
+
+VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: BLOOD LEGIONS
+KHORNE
+LORD ON JUGGERNAUT
+MOUNTED
+BATTLELINE*
+BERZERKERS*
+FACTION: WORLD EATERS*
+GRENADES*
+INFANTRY*
+*from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)
+Ask about this unit
+‹ Master of Executions · Blood-forged Armour
+Goremongers ›
+
+######## unit goremongers · LORD ON JUGGERNAUT Big demons baby
+GOREMONGERS
+70 PTS
+Infantry
+Models
+Options
+1× Blood Herald
+Autopistol, Chainblade, Close combat weapon
+7× Goremonger w/ chainblade
+Autopistol, Chainblade, Close combat weapon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Goremongers
+32mm
+9"
+4
+6+
+1
+7+
+1
+–
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Autopistol×8
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblade×8
+3
+4+
+3
+0
+1
+LANCE
+OR
+Close combat weapon×8
+2
+4+
+3
+0
+1
+Made a charge move this turn: Chainblade +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+ABILITIES
+Loping Speed
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+Rules
+Infiltrators, Blessings of Khorne, Blood Tithe
+Stratagems
+
+KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+GOREMONGERS
+GRENADES
+INFANTRY
+KHORNE
+Ask about this unit
+‹ Lord on Juggernaut · Disciple of Khorne
+Jakhals ›
+
+######## unit jakhals · GOREMONGERS Big demons baby
+JAKHALS
+65 PTS
+Infantry
+Models
+Options
+1× Jakhal Pack Leader
+Autopistol, Chainblades
+1× Dishonoured w/ paired manglers
+Paired manglers
+8× Jakhal
+Autopistol, Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Jakhal
+28.5mm
+7"
+4
+6+
+1
+7+
+1
+–
+Dishonoured w/ paired manglers
+40mm
+7"
+4
+6+
+1
+7+
+1
+–
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblades×9
+3
+4+
+3
+0
+1
+Paired manglersDISHONOURED
+4
+4+
+4
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · KHORNE DAEMONKIN
+1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
+ABILITIES
+Objective Ravaged
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Rules
+Blessings of Khorne, Blood Tithe
+Stratagems
+
+KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+GRENADES
+INFANTRY
+JAKHALS
+KHORNE
+Ask about this unit
+‹ Goremongers
+Flesh Hounds ›
+
+######## unit flesh-hounds · JAKHALS Big demons baby
+FLESH HOUNDS
+75 PTS EACH
+Beast · ×2 in list
+Models
+Options
+1× Gore Hound (Collar of Khorne)
+Burning roar, Gore-drenched fangs
+4× Flesh Hound (Collar of Khorne)
+Gore-drenched fangs
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Flesh Hounds
+60×35.5mm
+12"
+4
+7+
+2
+7+
+1
+5+
+WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save · Feel No Pain 3+ against Psychic Attacks
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Burning roar
+12"
+D6
+–
+4
+0
+1
+IGNORES COVER, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Gore-drenched fangs×5
+3
+3+
+5
+-1
+1
+Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Hunters from the Warp
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+Collar of Khorne
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+Rules
+Deep Strike, Feel No Pain 3+, Blood Tithe
+Stratagems
+
+KHORNE DAEMONKIN Blessing of Burning Blood, Daemonic Fury, A Worthy Skull, Murder-call
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+BEAST
+CHAOS
+DAEMON
+FACTION: BLOOD LEGIONS
+FLESH HOUNDS
+KHORNE
+SUMMONED
+Ask about this unit
+‹ Jakhals
+
+######## popup ability:big-demons-baby|A Worthy Skull|Each time this model makes a melee attack that targets a **CHARACTER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model’s unit destroys a **CHARACTER** model, you gain 1CP. · FLESH HOUNDS Big demons baby
+ABILITY · FIGHT · EITHER TURN
+
+A Worthy Skull
+
+Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
+
+UNITMaster of Executions · Blood-forged Armour
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Collar of Khorne|The bearer has the Feel No Pain 3+ ability against Psychic Attacks. · BIG DEMONS BABY Big demons baby
+ABILITY
+
+Collar of Khorne
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+UNITFlesh Hounds
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Daemon Lord of Khorne|While a friendly **BLOOD LEGIONS** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**. · BIG DEMONS BABY Big demons baby
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Daemon Lord of Khorne
+
+While a friendly BLOOD LEGIONS unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.
+
+UNITBloodthirster
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · BIG DEMONS BABY Big demons baby
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITAngron, Bloodthirster
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Damaged: 1-7 wounds remaining|While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage. · BIG DEMONS BABY Big demons baby
+ABILITY
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
+
+UNITSkarbrand
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Devastating Assault|Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability. · BIG DEMONS BABY Big demons baby
+ABILITY · CHARGE / FIGHT · EITHER TURN
+
+Devastating Assault
+
+Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+
+UNITDaemon Prince · Blade of Endless Bloodshed
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Disciple of Khorne|**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword. · BIG DEMONS BABY Big demons baby
+ABILITY · ENHANCEMENT
+
+Disciple of Khorne
+
+LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.
+
+UNITLord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Driven by Ultimate Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:
+- Re-roll hit rolls of 1.
+- Re-roll wound rolls of 1. · BIG DEMONS BABY Big demons baby
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Driven by Ultimate Rage
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+UNITAngron
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Lord of Murder|While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability. · BIG DEMONS BABY Big demons baby
+ABILITY
+
+Lord of Murder
+
+While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
+
+UNITDaemon Prince · Blade of Endless Bloodshed
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Murderous Charge|If this unit made a charge move this turn, this unit’s melee attacks have +1 S. · BIG DEMONS BABY Big demons baby
+ABILITY · FIGHT · EITHER TURN
+
+Murderous Charge
+
+If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+
+UNITLord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Rage Embodied|While a friendly **BLOOD LEGIONS** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. · BIG DEMONS BABY Big demons baby
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Rage Embodied
+
+While a friendly BLOOD LEGIONS unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.
+
+UNITSkarbrand
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · BIG DEMONS BABY Big demons baby
+ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
+
+Reborn in Blood
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+UNITAngron
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Wrathful Presence|At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability. · BIG DEMONS BABY Big demons baby
+ABILITY · START OF THE BATTLE ROUND
+
+Wrathful Presence
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+TO PICK FROM: WRATHFUL PRESENCE
+
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage Aura
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath Aura
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+UNITAngron
+
+Ask about this ability
+
+######## popup enh:khorne-daemonkin|Blade of Endless Bloodshed · BIG DEMONS BABY Big demons baby
+ENHANCEMENT · KHORNE DAEMONKIN · 30 PTS
+
+Blade of Endless Bloodshed
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+ONDaemon Prince of Khorne
+
+Ask about this enhancement
+
+######## popup enh:khorne-daemonkin|Blood-forged Armour · BIG DEMONS BABY Big demons baby
+ENHANCEMENT · KHORNE DAEMONKIN · 20 PTS
+
+Blood-forged Armour
+
+BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.
+
+ONMaster of Executions
+
+Ask about this enhancement
+
+######## popup enh:khorne-daemonkin|Disciple of Khorne · BIG DEMONS BABY Big demons baby
+ENHANCEMENT · KHORNE DAEMONKIN · 15 PTS
+
+Disciple of Khorne
+
+LORD ON JUGGERNAUT model only. The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.
+
+ONLord on Juggernaut + Khorne Berzerkers
+
+Ask about this enhancement
+
+######## popup grant:["Aggressive Advance","lord-on-juggernaut-khorne-berzerkers","M 10\"",null] · BIG DEMONS BABY Big demons baby
+M 10" · GRANTED BY
+
+Aggressive Advance
+
+Lord on Juggernaut · datasheet ability
+
+While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","A 17",null] · BIG DEMONS BABY Big demons baby
+A 17 · GRANTED BY
+
+Blade of Endless Bloodshed
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","A 9",null] · BIG DEMONS BABY Big demons baby
+A 9 · GRANTED BY
+
+Blade of Endless Bloodshed
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","D 2",null] · BIG DEMONS BABY Big demons baby
+D 2 · GRANTED BY
+
+Blade of Endless Bloodshed
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","D 4",null] · BIG DEMONS BABY Big demons baby
+D 4 · GRANTED BY
+
+Blade of Endless Bloodshed
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","S 7",null] · BIG DEMONS BABY Big demons baby
+S 7 · GRANTED BY
+
+Blade of Endless Bloodshed
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","S 9",null] · BIG DEMONS BABY Big demons baby
+S 9 · GRANTED BY
+
+Blade of Endless Bloodshed
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Blood-forged Armour","master-of-executions","SV 2+",null] · BIG DEMONS BABY Big demons baby
+SV 2+ · GRANTED BY
+
+Blood-forged Armour
+
+Enhancement
+
+BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:Advance roll · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Battle-shock tests · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Blessing of Khorne · BIG DEMONS BABY Big demons baby
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+Ask about this rule
+
+######## popup rule:Blessings of Khorne · BIG DEMONS BABY Big demons baby
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+Ask about this rule
+
+######## popup rule:Blood Tithe · BIG DEMONS BABY Big demons baby
+KHORNE DAEMONKIN DETACHMENT RULE
+
+Blood Tithe
+
+Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:
+
+Enraged Abjuration [2BTP]
+
+BLOOD LEGIONS and WORLD EATERS models from your army have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.
+
+Daemonic Rage [3BTP]
+
+Melee weapons equipped by BLOOD LEGIONS units from your army have the [lance] ability.
+
+Boon of Blood [4BTP]
+
+BLOOD LEGIONS units from your army have a 4+ invulnerable save.
+
+Might of Khorne [5BTP]
+
+BLOOD LEGIONS units from your army gain the Blessings of Khorne ability.
+
+RESTRICTIONS
+
+You can include the BLOOD LEGIONS units in your army. The combined points cost of such units you can include in your army is:
+
+Incursion: Up to 500 pts
+Strike Force: Up to 1000 pts
+Onslaught: Up to 1500 pts
+
+No BLOOD LEGIONS model from your army can be your WARLORD.
+
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+
+Ask about this rule
+
+######## popup rule:Charge roll · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Consolidation move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Consolidation Move
+
+MAXIMUM DISTANCE: 3"
+
+ELIGIBLE IF: It is the Fight phase and your unit was eligible to fight this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select consolidation mode:
+
+Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is engaged with.
+Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those objectives.
+
+WHILE MOVING:
+
+Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Objective Consolidation: Each model that is moved must end its move within range of the selected objective if possible, or closer to it if not.
+
+AFTER MOVING:
+
+Ongoing Consolidation: Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.
+Engaging Consolidation: Your unit must be engaged with all of the selected enemy units. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight (12.04).
+Objective Consolidation: Your unit must be within range of the selected objective.
+
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
+
+App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Daemon Prince · Blade of Endless Bloodshed (in Devastating Assault), Master of Executions · Blood-forged Armour
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6 · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+
+Ask about this rule
+
+######## popup rule:Deep Strike · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Lord on Juggernaut · Disciple of Khorne (Lord on Juggernaut only), Flesh Hounds
+
+Ask about this rule
+
+######## popup rule:EXTRA ATTACKS · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYLord on Juggernaut · Disciple of Khorne
+
+Ask about this rule
+
+######## popup rule:Engagement Range · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYFlesh Hounds
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 3+ · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Feel No Pain 3+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYFlesh Hounds
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 4+ · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYFlesh Hounds
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYFlesh Hounds
+
+Ask about this rule
+
+######## popup rule:Fights First · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:HAZARDOUS · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYLord on Juggernaut · Disciple of Khorne
+
+Ask about this rule
+
+######## popup rule:Hazard roll · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYSkarbrand, Bloodthirster, Flesh Hounds
+
+Ask about this rule
+
+######## popup rule:Infiltrators · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYGoremongers
+
+Ask about this rule
+
+######## popup rule:LANCE · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord on Juggernaut · Disciple of Khorne, Goremongers
+
+Ask about this rule
+
+######## popup rule:Lance · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord on Juggernaut · Disciple of Khorne, Goremongers
+
+Ask about this rule
+
+######## popup rule:Leader · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYMaster of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+
+Ask about this rule
+
+######## popup rule:Lone Operative · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYDaemon Prince · Blade of Endless Bloodshed (in Lord of Murder)
+
+Ask about this rule
+
+######## popup rule:MOBILE · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+MOBILE
+
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+Ask about this rule
+
+######## popup rule:Normal move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:PISTOL · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYMaster of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals
+
+Ask about this rule
+
+######## popup rule:PRECISION · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYMaster of Executions · Blood-forged Armour
+
+Ask about this rule
+
+######## popup rule:Psychic · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYFlesh Hounds (in Collar of Khorne)
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 1 · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYDaemon Prince · Blade of Endless Bloodshed
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Select Weapons · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Ask about this rule
+
+######## popup rule:Strategic Reserves · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:TORRENT · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYSkarbrand, Bloodthirster, Flesh Hounds
+
+Ask about this rule
+
+######## popup rule:Wrath of Khorne · BIG DEMONS BABY Big demons baby
+VESSELS OF WRATH DETACHMENT RULE
+
+Wrath of Khorne
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+IN THIS ARMYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+
+Ask about this rule
+
+######## popup rule:[CLEAVE 1] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+CLEAVE 1
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+Ask about this rule
+
+######## popup rule:[DEVASTATING WOUNDS] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Daemon Prince · Blade of Endless Bloodshed (in Devastating Assault), Master of Executions · Blood-forged Armour
+
+Ask about this rule
+
+######## popup rule:[LANCE] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord on Juggernaut · Disciple of Khorne, Goremongers
+
+Ask about this rule
+
+######## popup rule:[LETHAL HITS] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYMaster of Executions · Blood-forged Armour
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+Ask about this rule
+
+######## popup rule:[TWIN-LINKED] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+Ask about this rule
+
+######## popup rule:[lance] · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord on Juggernaut · Disciple of Khorne, Goremongers
+
+Ask about this rule
+
+######## popup rule:advance move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:battle-shocked · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:desperate escape · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:engaged · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:fall-back move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:hazard rolls · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:ingress move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:a-worthy-skull · BIG DEMONS BABY Big demons baby
+1CP · FIGHT · EITHER TURN
+
+A Worthy Skull
+WHEN
+
+Fight phase, just after a BLOOD LEGIONS or WORLD EATERS unit from your army has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks.
+
+TARGETThat BLOOD LEGIONS or WORLD EATERS unit.
+
+EFFECT
+
+You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:aspire-to-infamy · BIG DEMONS BABY Big demons baby
+1CP · FIGHT · EITHER TURN
+
+Aspire to Infamy
+WHEN
+
+Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit’s CHARACTER models’ melee attacks have:
+
++1 A.
++2 S.
+
+USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this stratagem
+
+######## popup strat:blessing-of-burning-blood · BIG DEMONS BABY Big demons baby
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Blessing of Burning Blood
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne BLOOD LEGIONS unit from your army that is within 6" of a friendly WORLD EATERS unit that was selected as the target as one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your WORLD EATERS unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your WORLD EATERS unit have a 4+ invulnerable save.
+
+USED BYSkarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Flesh Hounds
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · BIG DEMONS BABY Big demons baby
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · BIG DEMONS BABY Big demons baby
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · BIG DEMONS BABY Big demons baby
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+
+Ask about this stratagem
+
+######## popup strat:daemonic-fury · BIG DEMONS BABY Big demons baby
+1CP · FIGHT · YOUR TURN
+
+Daemonic Fury
+WHEN
+
+Start of your Fight phase.
+
+TARGETOne BLOOD LEGIONS unit from your army.
+
+EFFECT
+
+Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the [TWIN-LINKED] ability.
+
+USED BYSkarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Flesh Hounds
+
+Ask about this stratagem
+
+######## popup strat:daemontide · BIG DEMONS BABY Big demons baby
+1CP · COMMAND · YOUR TURN
+
+Daemontide
+WHEN
+
+Your Command phase.
+
+TARGETOne WORLD EATERS unit from your army.
+
+EFFECT
+
+Select one friendly BLOOD LEGIONS unit within 6" of your unit. One destroyed MOUNTED model, up to D3 destroyed BEAST models, or up to D6 destroyed INFANTRY models are returned to that BLOOD LEGIONS unit with their full wounds remaining.
+
+RESTRICTIONSThis Stratagem cannot be used to return destroyed CHARACTER models to Attached units.
+
+USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · BIG DEMONS BABY Big demons baby
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this stratagem
+
+######## popup strat:explosives · BIG DEMONS BABY Big demons baby
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYLord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · BIG DEMONS BABY Big demons baby
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYSkarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · BIG DEMONS BABY Big demons baby
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · BIG DEMONS BABY Big demons baby
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:murder-call · BIG DEMONS BABY Big demons baby
+1CP · FIGHT · THEIR TURN
+
+Murder-call
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYSkarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Flesh Hounds
+
+Ask about this stratagem
+
+######## popup strat:punish-the-craven · BIG DEMONS BABY Big demons baby
+1CP · MOVEMENT · THEIR TURN
+
+Punish the Craven
+WHEN
+
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+
+USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · BIG DEMONS BABY Big demons baby
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:scorn-the-witch · BIG DEMONS BABY Big demons baby
+1CP · ANY PHASE · EITHER TURN
+
+Scorn the Witch
+WHEN
+
+Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit has Feel No Pain 4+ against mortal wounds.
+
+USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this stratagem
+
+######## popup strat:summoned-by-slaughter · BIG DEMONS BABY Big demons baby
+1CP · ANY PHASE · EITHER TURN
+
+Summoned by Slaughter
+WHEN
+
+Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a TRANSPORT, any units embarked within that TRANSPORT model must disembark first).
+
+TARGETOne BLOODLETTERS unit from your army that is in Reserves.
+
+EFFECT
+
+Set your unit up anywhere on the battlefield wholly within 9" of that destroyed model and more than 6" horizontally away from all enemy units, then remove the destroyed model from play.
+
+RESTRICTIONSYou cannot use this Stratagem more than once per battle round.
+
+USED BYno unit in this list (needs BLOODLETTERS)
+
+Ask about this stratagem

@@ -104,7 +104,7 @@ Nidzillas
 Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
 WORLD EATERS
-3
+4
 Princes
 2000 pts
 Berzerker Warband · Vessels of Wrath
@@ -117,6 +117,10 @@ Super Terminators
 2000 pts
 Berzerker Warband · Butchers of Khorne
 TAKE AND HOLD
+Big demons baby
+2000 pts
+Khorne Daemonkin · Vessels of Wrath
+PRIORITY ASSETS
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
