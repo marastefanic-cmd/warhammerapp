@@ -31,9 +31,9 @@
    "code": "const ckTriggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\\*\\*|~~/g, ''); return CK_LIMIT.test(p) || CK_ACT.test(p) || CK_MAKE.test(p) || CK_ROLL.test(p); });"
   },
   "source": {
-   "implements": "which rules and abilities the Phase checklist lists (\"triggered\"; always-on ones are on the datasheets): the CHECKLIST entry names when (t or at, from verify/derive.js), or the words or tag limit its uses (once/twice/three times per battle, battle round, turn or phase), have the player act (you can use this ability / can use it / this part / this Enhancement, you can select or choose, select or choose one…, when …, you can … other than a re-roll, can make a named move or action: \"can make a Warpmeld Sacrifice\"), or roll dice or take a test when something happens (roll one/two/a/an/N/up to…, not a re-roll; take a … test)"
+   "implements": "which rules and abilities the Phase checklist lists (\"triggered\"; always-on ones are on the datasheets): the CHECKLIST entry names when (t or at, from verify/derive.js), or the words or tag limit its uses (once/twice/three times per battle, battle round, turn or phase), have the player act (you can use this ability / can use it / this part / this Enhancement, you can select or choose, select or choose one… (not after \"cannot\"/\"not\"), when …, you can … other than a re-roll, can make a named move or action: \"can make a Warpmeld Sacrifice\", a choice of alternatives: a \"- Or:\" line), or roll dice or take a test when something happens (roll one/two/a/an/N/up to…, not a re-roll; take a … test)"
   },
-  "key": "5ef1b9899a7b7472"
+  "key": "e73e79e2f929ea1d"
  },
  {
   "army": "code",

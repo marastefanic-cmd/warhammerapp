@@ -597,8 +597,8 @@ function optionsOf(t, table){
     m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
     if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
   });
-  // army-building limits ("**Incursion:** Up to 500 pts") are not options
-  for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text))) opts.splice(i, 1);
+  // army-building limits ("**Incursion:** Up to 500 pts") are not options, and nor is a worked example ("**Example:** …", Martial Ka'tah)
+  for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text)) || /^examples?$/i.test(opts[i].name)) opts.splice(i, 1);
   return opts;
 }
 

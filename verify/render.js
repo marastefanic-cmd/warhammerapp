@@ -197,10 +197,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       };
       const CK = WH_DATA.checklist || {};
       // "triggered", as the screen's note documents it, written out again here (not the app's ckTriggered): when named (t, at), a
-      // limit on its uses, the player acting, a named move or action, dice rolled or a test taken as something happens
+      // limit on its uses, the player acting, a named move or action or a "- Or:" choice, dice rolled or a test taken as something happens
       const triggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\*\*|~~/g, '');
-        return /\b(once|twice|three times) per (battle|battle round|turn|phase)\b/i.test(p) || /\bcan make an? [A-Z]/.test(p) ||
-          /\byou can (use this|select|choose)\b|\bcan use (it|this ability|this enhancement|this part)\b|\b(select|choose)s? (one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i.test(p) ||
+        return /\b(once|twice|three times) per (battle|battle round|turn|phase)\b/i.test(p) || /\bcan make an? [A-Z]|(?:^|\n)- Or:/.test(p) ||
+          /\byou can (use this|select|choose)\b|\bcan use (it|this ability|this enhancement|this part)\b|(?<!\bcannot |\bnot )\b(select|choose)s? (one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i.test(p) ||
           /(?<!-)\broll (one|two|a|an|\d+|up to)\b|\btakes? an? [a-z-]+ test\b/i.test(p); });
       if(document.querySelector('#view [data-strat]')) out.push(['checklist-sections', armyId, 'a stratagem is listed']);
       const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).filter(d => d.rule).map(d => d.rule));

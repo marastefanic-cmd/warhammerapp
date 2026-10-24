@@ -4697,12 +4697,13 @@ function screenPregame(){
 // "triggered", the only rules and abilities listed (always-on ones are on the datasheets), by these rules alone: its CHECKLIST entry
 // names when (t: a phase its words name, at: the moment it opens with), or its words (or tag) limit its uses ("once/twice per
 // battle / battle round / turn / phase"), have the player act ("you can use this ability", "can use it", "you can select/choose",
-// "select one…", "when …, you can …" other than a re-roll, "can make a" named move or action: a Warpmeld Sacrifice), or roll dice or have a unit take a test as something happens ("roll one
+// "select one…" (not "cannot select a…"), "when …, you can …" other than a re-roll, "can make a" named move or action: a Warpmeld Sacrifice, a choice of
+// alternatives: a "- Or:" line, as Wrath of Khorne's), or roll dice or have a unit take a test as something happens ("roll one
 // D6", "take a Leadership test"). An option of a triggered rule is what it puts in force: listed; one of another rule, only with a
 // trigger of its own
 const CK_LIMIT = /\b(?:once|twice|three times) per (?:battle round|battle|turn|phase)\b/i;
-const CK_ACT = /\byou can (?:use this|select|choose)\b|\bcan use (?:it|this ability|this enhancement|this part)\b|\b(?:select|choose)s? (?:one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i;
-const CK_MAKE = /\bcan make an? [A-Z]/;
+const CK_ACT = /\byou can (?:use this|select|choose)\b|\bcan use (?:it|this ability|this enhancement|this part)\b|(?<!\bcannot |\bnot )\b(?:select|choose)s? (?:one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i;
+const CK_MAKE = /\bcan make an? [A-Z]|(?:^|\n)- Or:/;
 const CK_ROLL = /(?<!-)\broll (?:one|two|a|an|\d+|up to)\b|\btakes? an? [a-z-]+ test\b/i;
 const ckTriggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\*\*|~~/g, ''); return CK_LIMIT.test(p) || CK_ACT.test(p) || CK_MAKE.test(p) || CK_ROLL.test(p); });
 const ckKey = () => 'wh-check-' + (cur.army || '');
