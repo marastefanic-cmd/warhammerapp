@@ -4686,7 +4686,7 @@ function screenPregame(){
 }
 
 /* ---------- screen: Phase checklist ----------
-   The list's triggered rules and abilities (ckTriggered) phase by phase, each phase in your turn and in your opponent's, each folded
+   What the list asks you to remember at a moment of the game sequence (ckListed) phase by phase, each phase in your turn and in your opponent's, each folded
    (the fold kept open for the session, like a stratagem card), as data.js CHECKLIST has them
    (the rule tables of verify/derive.js, read from each text): "To do now" where its text says it is triggered (or the moment
    before a phase it opens with), "Active now" where its effect is used, and the once-per-battle ones on their own, with the
@@ -4694,18 +4694,12 @@ function screenPregame(){
    triggered with its rule. A rule or ability another rule gives to units by keyword says so (Might of Khorne: Blessings of Khorne
    to BLOOD LEGIONS units). What the tables cannot place is under When unclear, what has no phase under No phase. No stratagems:
    the Stratagems tab has them. The boxes are kept on the phone per list; Reset clears them, not the once-per-battle ones. */
-// "triggered", the only rules and abilities listed (always-on ones are on the datasheets), by these rules alone: its CHECKLIST entry
-// names when (t: a phase its words name, at: the moment it opens with), or its words (or tag) limit its uses ("once/twice per
-// battle / battle round / turn / phase"), have the player act ("you can use this ability", "can use it", "you can select/choose",
-// "select one…" (not "cannot select a…"), "when …, you can …" other than a re-roll, "can make a" named move or action: a Warpmeld Sacrifice, a choice of
-// alternatives: a "- Or:" line, as Wrath of Khorne's), or roll dice or have a unit take a test as something happens ("roll one
-// D6", "take a Leadership test"). An option of a triggered rule is what it puts in force: listed; one of another rule, only with a
-// trigger of its own
-const CK_LIMIT = /\b(?:once|twice|three times) per (?:battle round|battle|turn|phase)\b/i;
-const CK_ACT = /\byou can (?:use this|select|choose)\b|\bcan use (?:it|this ability|this enhancement|this part)\b|(?<!\bcannot |\bnot )\b(?:select|choose)s? (?:one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i;
-const CK_MAKE = /\bcan make an? [A-Z]|(?:^|\n)- Or:/;
-const CK_ROLL = /(?<!-)\broll (?:one|two|a|an|\d+|up to)\b|\btakes? an? [a-z-]+ test\b/i;
-const ckTriggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\*\*|~~/g, ''); return CK_LIMIT.test(p) || CK_ACT.test(p) || CK_MAKE.test(p) || CK_ROLL.test(p); });
+// what is listed (verify/derive.js seqTrigger writes s): a rule, ability or option whose own words name a fixed moment of the game
+// sequence with no unit activation (start or end of a battle round, turn or phase; a Command phase; another phase with a choice), a
+// once-per-battle use (perBattle), and an item derive cannot place that data.js gives a moment (at); the options of a listed rule,
+// unless their own words are a unit activation (a). The rest is remembered from the unit's datasheet
+const ckListed = (e, once) => !!(e.s || e.stored || once);
+const ckOptListed = (o, parentIn) => !!(o.s || (parentIn && !o.a));
 const ckKey = () => 'wh-check-' + (cur.army || '');
 const ckDone = () => new Set(Array.isArray(store.get(ckKey())) ? store.get(ckKey()) : []);
 // an ability's entry: a hash of its name and text (verify/derive.js ckHash), so an imported list's copy of a unit finds it too
@@ -4723,8 +4717,8 @@ function ckOption(o, rule){
   if(o.u) return { u:o.u, via:{ t:rule.t, at:rule.at } };
   return rule.t || rule.at ? { t:rule.t, at:rule.at } : { x:1 };
 }
-// a rule or ability the tables cannot place but data.js has a phase tag for (ph, turn, at: when it triggers, as its row shows it)
-const ckStored = (e, x) => e.x && (phasesOf(x).length || x.at) ? Object.assign({}, e, { x:0, at:x.at, t:phasesOf(x).map(p => p + ':' + phTurn(x, p)).join(',') }) : e;
+// a rule or ability the tables cannot place but data.js gives a moment (at): that moment only, not its display phase tags
+const ckStored = (e, x) => e.x && x.at ? Object.assign({}, e, { x:0, at:x.at, stored:1 }) : e;
 function screenChecklist(){
   const a = army(), f = faction(), units = a.units;
   const entry = k => (D.checklist || {})[k] || { x:1 };
@@ -4744,10 +4738,10 @@ function screenChecklist(){
     // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option, as on the Overview
     const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
     const pb = !na && !each && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
-    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na), trig = ckTriggered(e, r);
+    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na), trig = ckListed(e, pb);
     if(trig){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null }); forced(e.f, r.name, 'rules', 'r:' + r.name); }
     for(const o of e.o || []){
-      if(!trig && !o.t && !o.at) continue;   // an option of an always-on rule, with no trigger of its own
+      if(!ckOptListed(o, trig)) continue;   // an option of a rule not listed, or one that is a unit activation
       if(units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;   // an ability it gives units (Protean Purpose): listed as theirs
       const row = each && !na && (r.table.find(t => t[0] === o.row) || [])[0];
       const ol = linkTo('rule', r.name, o.n) + from('option of ' + esc(r.name) + given(o.n)) + naTag(na);
@@ -4759,16 +4753,17 @@ function screenChecklist(){
   const groups = new Map();
   for(const u of units) for(const ab of u.abilities){ const k = ab.name + '|' + ab.text + '|' + (naReason(ab) ? 'na' : ''); if(!groups.has(k)) groups.set(k, { ab, units:[] }); groups.get(k).units.push(u); }
   for(const { ab, units:us } of groups.values()){
-    const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab), trig = ckTriggered(e, ab);
-    if(!trig && !(e.o || []).some(o => o.t || o.at)) continue;   // always on: on its datasheet
+    const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab), trig = ckListed(e, pb);
+    const aid = 'a:' + ab.name + '|' + ckHash(ab.text) + (na ? '|na' : '');   // (a copy the list cannot use: its own boxes, as its own line)
+    if(!trig && !(e.o || []).some(o => o.s)) continue;   // on its datasheet
     const line = linkTo('ability', key, ab.name) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
     // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)
     const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class="tg once">per army</span>']]
       : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
         linkTo('ability', key, ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
-    if(trig){ items.push({ id:'a:' + ab.name + '|' + ckHash(ab.text), kind:'abs', e, line, what:ab.name, once }); forced(e.f, ab.name, 'abs', 'a:' + ab.name + '|' + ckHash(ab.text)); }
-    for(const o of e.o || []) if(trig || o.t || o.at){ items.push({ id:'ao:' + ab.name + '|' + ckHash(ab.text) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
-      line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null }); forced(o.f, o.n, 'abs', 'ao:' + ab.name + '|' + ckHash(ab.text) + ':' + o.n); }
+    if(trig){ items.push({ id:aid, kind:'abs', e, line, what:ab.name, once }); forced(e.f, ab.name, 'abs', aid); }
+    for(const o of e.o || []) if(ckOptListed(o, trig)){ items.push({ id:'ao' + aid.slice(1) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
+      line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null }); forced(o.f, o.n, 'abs', 'ao' + aid.slice(1) + ':' + o.n); }
   }
   // each to its sections: a moment, or a phase in one player's turn ("command|your")
   const sec = {}, put = (s, g, html) => { const x = sec[s] = sec[s] || {}; (x[g] = x[g] || []).push(html); };
@@ -4794,7 +4789,7 @@ function screenChecklist(){
       (parts.length ? metaLine(...parts.map(([x, , w]) => g[x].length + ' ' + w)) : 'nothing') + '</span></span>' + chev + '</summary><div class="body">' +
       (parts.length ? parts.map(([x, l]) => '<div class="ckg"><p class="qh">' + l + '</p>' + g[x].join('') + '</div>').join('') : '<p class="note">Nothing in this list.</p>') + '</div></details>'; };
   return '<div class="ckl"><div class="sec-h"><h2>Phase by phase</h2><button class="textbtn" data-ckreset>Reset</button></div><div class="abl">' + order.map(fold).join('') + '</div>' +
-    '<p class="note">Listed: the rules and abilities with a trigger (their words name a phase or a moment, limit their uses, have you use, select, choose or make something, or roll dice or take a test when something happens), To do now where they are triggered, and Active now where what they put in force is used (a rule they name in bold as a state units are in, such as riled up, for as long as their words say); always-on abilities are on the datasheets. When unclear: triggered, but its words name no phase those rules can read. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
+    '<p class="note">Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there), and once-per-battle uses (Once per battle). Active now: what those put in force, where it is used and for as long as their words say: their options, and a rule they name in bold as a state units are in (Riled up). What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
 }
 
 /* ---------- screen: rules & keywords ---------- */

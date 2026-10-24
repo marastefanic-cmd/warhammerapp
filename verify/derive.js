@@ -604,17 +604,42 @@ function optionsOf(t, table){
 
 // ---- the checklist table (data.js CHECKLIST) ----
 // a rule's or ability's own text without its options (each option has its own entry)
-const withoutOptions = (text, table) => { const t = rulesText(text); return optionsOf(t, table).reduce((s2, o) => s2.replace(o.text, ''), t); };
+const withoutOptions = (text, table) => { const t = rulesText(text); return optionsOf(t, table).reduce((s2, o) => s2.replace(o.text, ''), t).replace(/^(?:- )?\*\*Examples?(?::\*\*|\*\*:).*$/gim, ''); };
 const phStr = m => m ? PH.filter(p => m[p]).map(p => p + ':' + m[p]).join(',') : '';
+// The checklist's scope, a fixed rule (s: listed): a rule, ability or option whose own words (without its options' words, durations
+// and italic notes) have, in one sentence with no unit activation in it, a fixed moment of the game sequence: the start or end of a
+// battle round, turn or phase ("At the start of the battle round", "At the end of your Command phase", "WHEN: Start of the Fight
+// phase"), or a Command phase ("In your Command phase, you can …", "WHEN: Your Command phase"), or another phase with a choice
+// ("In your Movement phase, you can select …"). Unit activation (remembered from that unit's datasheet): "selected to …", "each time /
+// when this (or a) unit or model …", "this unit's move / attacks", "makes an attack / a charge / a move", "is targeted", "targets this",
+// "destroys", "is destroyed", "the first time". An option without such a sentence is listed with its rule (what the rule puts in
+// force) unless its own words are a unit activation (a: Calistus, "WHEN: … selected to move"). Once-per-battle uses are listed too
+// (the app's perBattle), and an item derive cannot place with a moment data.js stores (at: Icon of Khorne).
+const SEQ = {
+  moment:/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i,
+  command:/\b(?:your |your opponent['’]s |the |each |either player['’]s )command phase\b/i,
+  choice:/\b(?:your |your opponent['’]s |the |each |either player['’]s )?(?:movement|shooting|charge|fight) phase,?[^.]*?\b(?:you can|select|choose)\b/i,
+  activation:/\bselected to\b|\beach time (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b|\bwhen (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b[^.,]*?\b(?:is|are|makes?|ends?|has|have|was)\b|\b(?:this|that|the bearer['’]?s?) (?:unit|model)['’]s (?:move|attacks?)\b|\bmakes? an? (?:attack|charge|move)\b|\bis targeted\b|\btargets? (?:this|that|the bearer)\b|\bdestroys?\b|\b(?:is|are) destroyed\b|\bfirst time\b/i,
+};
+function seqTrigger(text){
+  // sentence by sentence; in each, "until the start of your next Command phase", "once per Command phase" are not a moment
+  return sentences(plain(rulesText(text))).map(x => NOT_TIMING.reduce((y, r) => y.replace(r.re, ' '), x))
+    .some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && !SEQ.activation.test(x));
+}
 // t: where it is triggered (the phases the text names, less those only its opening moment gives), u: where its effect is used,
 // at: the moment it opens with; none: no phase (before the battle, what a unit carries); x: not derivable
-function ckEntry(d){
+function ckEntry(d, text){
   if(d.how === 'none') return { x:1 };
   const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];
   const e = {};
   if(d.at) e.at = d.at;
   if(phStr(tp)) e.t = phStr(tp);
-  if(phStr(d.usedPh)) e.u = phStr(d.usedPh);
+  // triggered in named phases and lasting no longer ("In your Shooting phase, when … selected to shoot, that unit's attacks can
+  // re-roll"): used only there, in the trigger's turn, not in every phase its words could be read for (no "until", "this turn", "next")
+  let up = d.usedPh;
+  if(phStr(tp) && !d.at && !/\buntil\b|\bthis turn\b|\bnext\b|\bfor the rest of\b/i.test(plain(text || '')))
+    up = Object.fromEntries(Object.entries(up || {}).filter(([p]) => tp[p]).map(([p, o]) => [p, o === 'either' ? tp[p] : tp[p] === 'either' || tp[p] === o ? o : null]).filter(([, o]) => o));
+  if(phStr(up)) e.u = phStr(up);
   return Object.keys(e).length ? e : { none:1 };
 }
 // what a triggered text puts in force from a rule defined elsewhere (f): a bold term of its text that is one of its faction's army
@@ -653,13 +678,15 @@ function coverOf(dur, e){
   const trig = Object.entries(Object.fromEntries(String(e.t || '').split(',').filter(Boolean).map(x => x.split(':')))).flatMap(([p, w]) => (w === 'either' ? T : [w]).map(x => p + '|' + x));
   const startRound = /^start of the (?:first )?battle round$/i.test(e.at || ''), endOpp = /^end of your opponent.s turn$/i.test(e.at || '');
   if(startRound) trig.push('command|your', 'command|opp');
-  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound)) return { x:1 };
+  // "until the end of the phase" from the start of the battle round names no phase in progress: not read
+  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound) || (dur === 'phase' && startRound)) return { x:1 };
   const from = s => { const [p, w] = s.split('|'), i = PH.indexOf(p); return PH.slice(i).map(x => x + '|' + w); };
   const all = w => PH.map(x => x + '|' + w), other = w => w === 'your' ? 'opp' : 'your';
   for(const s of trig){ const w = s.split('|')[1];
     const add = dur === 'phase' ? [s] : dur === 'turn' ? from(s) : dur === 'next' ? from(s).concat(all(other(w))) : dur === 'yournext' ? from(s).concat(w === 'your' ? all('opp') : []) : seq;
     add.forEach(x => cov.add(x)); }
-  if(endOpp){ if(dur === 'next' || dur === 'battle') all('your').forEach(x => cov.add(x)); else if(dur !== 'yournext') return { x:1 }; }
+  // at the end of your opponent's turn: the next turn is yours; to the end of the battle is every phase after it, in both turns
+  if(endOpp){ if(dur === 'next') all('your').forEach(x => cov.add(x)); else if(dur === 'battle') seq.forEach(x => cov.add(x)); else if(dur !== 'yournext') return { x:1 }; }
   if(!cov.size) return { x:1 };
   const m = {}; for(const x of cov){ const [p, w] = x.split('|'); m[p] = m[p] && m[p] !== w ? 'either' : w; }
   return { u:phStr(m) };
@@ -672,8 +699,8 @@ const CK_END = '// ---- end of CHECKLIST ----';
 function ckBlock(T){
   return CK_START + '\n' +
     '// The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
-    '// tables of verify/derive.js give it: t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
-    '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own),\n' +
+    '// tables of verify/derive.js give it: s listed (a fixed moment of the sequence, seqTrigger), t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
+    '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own; a its own words a unit activation),\n' +
     '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition)\n' +
     'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
 }
@@ -737,7 +764,7 @@ function derive(D){
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments });
-      { const ce = ckEntry(timing(withoutOptions(r.text, r.table), ctx)), fo = inForce(withoutOptions(r.text, r.table), f, r.name, ce); if(fo.length) ce.f = fo; ckPut('r|' + fk + '|' + r.name, ce); }
+      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ctx), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -776,7 +803,7 @@ function derive(D){
           return r ? r.text : null;
         } };
         timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
-        { const ce = ckEntry(timing(withoutOptions(ab.text, null), actx)), fo = inForce(withoutOptions(ab.text, null), f, ab.name, ce); if(fo.length) ce.f = fo; ckPut(abilityCk(ab), ce); }
+        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, actx), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -864,6 +891,7 @@ function derive(D){
         const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
         const fo = inForce(o.text, D.factions[fk], o.name, { t:phStr(tp), at:tr && tr.at });
         if(fo.length) e.f = fo;
+        if(seqTrigger(o.text)) e.s = 1; else if(SEQ.activation.test(plain(rulesText(o.text)))) e.a = 1;
         sink.opts.push(e);
       }
       grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self, sink, o.name);

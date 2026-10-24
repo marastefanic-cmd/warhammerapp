@@ -169,8 +169,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       go({ s:'pregame', army:armyId });
       const ov = [...document.querySelectorAll('#view .rr > summary b')].map(b => b.textContent);
       for(const d of detachmentsOf(A)) if(d.rule && !ov.includes(d.rule.name)) out.push(['overview-rules', armyId, d.rule.name + ' is not in the Overview’s rules']);
-      // the Phase checklist: every triggered (ckTriggered) army and detachment rule, option and ability of the list is on it, and no
-      // other, each in the sections its CHECKLIST entry names (To do now where it is triggered, or at the moment it opens with; Active
+      // the Phase checklist: every army and detachment rule, option and ability of the list it lists (listed: a fixed moment of the
+      // sequence, a once-per-battle use, a stored moment) is on it, and no other, each in the sections its CHECKLIST entry names (To do now where it is triggered, or at the moment it opens with; Active
       // now where its effect is used and it is not triggered; Once per battle, from where it is triggered, for an ability with uses per
       // battle); what the entry cannot place under When unclear (unless data.js has its phase tag) or No phase; no stratagem; each
       // section a fold, closed at first, its line counting each part; a box ticked is kept, Reset clears it and not a once-per-battle box
@@ -188,20 +188,26 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const usedOf = e => Object.entries(ckMap(e.u)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w));
       // each place an entry should be: [section heading, group]
       const want = (e, once, kind, x) => {
-        if(!triggered(e && x ? ckStored(e, x) : e || { x:1 }, x || {})) return [];   // always on: not listed
-        if(!e || e.x) return x && (phasesOf(x).length || x.at) ? null : [['When unclear', kind]];
+        if(x && !listed(e, x, once)) return [];   // on its datasheet: not listed
+        if(!e || e.x){ if(x && x.at) e = { at:x.at }; else return [['When unclear', kind]]; }
         if(e.none) return [['No phase', kind]];
         const tr = secsOf(e), act = usedOf(e).filter(s => !tr.includes(s));
         if(once) return (tr.length ? tr : act).map(s => [T(s), 'Once per battle']);
         return tr.map(s => [T(s), 'To do now']).concat(act.map(s => [T(s), 'Active now']));
       };
       const CK = WH_DATA.checklist || {};
-      // "triggered", as the screen's note documents it, written out again here (not the app's ckTriggered): when named (t, at), a
-      // limit on its uses, the player acting, a named move or action or a "- Or:" choice, dice rolled or a test taken as something happens
-      const triggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\*\*|~~/g, '');
-        return /\b(once|twice|three times) per (battle|battle round|turn|phase)\b/i.test(p) || /\bcan make an? [A-Z]|(?:^|\n)- Or:/.test(p) ||
-          /\byou can (use this|select|choose)\b|\bcan use (it|this ability|this enhancement|this part)\b|(?<!\bcannot |\bnot )\b(select|choose)s? (one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i.test(p) ||
-          /(?<!-)\broll (one|two|a|an|\d+|up to)\b|\btakes? an? [a-z-]+ test\b/i.test(p); });
+      // what is listed, as the screen's note documents it, written out again here (not derive.js's seqTrigger): a sentence of the item's
+      // own words (its options' lines, worked examples, italic notes and durations left out) naming the start or end of a battle round,
+      // turn or phase, a Command phase, or another phase with a choice, with no unit activation in it; a once-per-battle use; a moment
+      // data.js stores for an item derive cannot place
+      const seqOwn = (x, e) => { const L = String(x.text || '').split('\n'), drop = new Set();
+        L.forEach((l, i) => { const b = l.replace(/^- /, ''); if(/^\*\*Examples?(?::\*\*|\*\*:)/i.test(b) || /^\*[^*].*\*$/.test(l)) drop.add(i);
+          if(((e && e.o) || []).some(o => b.startsWith('**' + o.n))){ drop.add(i); if(/^- \*\*[^*]+\*\*\s*$/.test(l)) drop.add(i + 1); } });
+        const t = L.filter((l, i) => !drop.has(i)).join('\n').replace(/\*\*|~~/g, '');
+        return t.split(/\n+|(?<=[.!?])\s+/).map(z => z.replace(/\buntil the (?:start|end) of [^,.;]*/gi, ' ').replace(/\b(?:once|twice) per \w+ phase\b/gi, ' ')).some(z => (/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i.test(z) ||
+          /\b(?:your |your opponent['’]s |the |each |either player['’]s )command phase\b/i.test(z) || /\b(?:your |your opponent['’]s |the |each |either player['’]s )?(?:movement|shooting|charge|fight) phase,?[^.]*?\b(?:you can|select|choose)\b/i.test(z)) &&
+          !/\bselected to\b|\beach time (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b|\bwhen (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b[^.,]*?\b(?:is|are|makes?|ends?|has|have|was)\b|\b(?:this|that|the bearer['’]?s?) (?:unit|model)['’]s (?:move|attacks?)\b|\bmakes? an? (?:attack|charge|move)\b|\bis targeted\b|\btargets? (?:this|that|the bearer)\b|\bdestroys?\b|\b(?:is|are) destroyed\b|\bfirst time\b/i.test(z)); };
+      const listed = (e, x, once) => !!(seqOwn(x, e) || (e && e.x && x.at) || once);
       if(document.querySelector('#view [data-strat]')) out.push(['checklist-sections', armyId, 'a stratagem is listed']);
       const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).filter(d => d.rule).map(d => d.rule));
       for(const r of ckRules){
@@ -209,14 +215,15 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         if(!e0) out.push(['checklist-sections', armyId, r.name + ': no CHECKLIST entry (node verify/derive.js --write)']);
         const hit = l => [...l.querySelectorAll('[data-rule]')].some(x => x.dataset.rule === r.name) && l.textContent.startsWith(r.name + ' · ');
         const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
-        const w = want(e0, !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''), 'Rules', r);
+        const onceR = !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''), inR = listed(e0, r, onceR);
+        const w = want(e0, onceR, 'Rules', r);
         const listedR = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)));
         if(listedR !== !!(w && w.length || !w)) out.push(['checklist-sections', armyId, r.name + (listedR ? ' is listed, and is always on' : ' is not listed')]);
         else if(w) for(const [sec, grp] of w) if(!lineIn(sec, grp, hit)) out.push(['checklist-sections', armyId, r.name + ' is not under ' + sec + ' · ' + grp]);
         for(const o of (e && e.o) || []){
           if(A.units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;
-          const oIn = !!(triggered(e, r) || o.t || o.at), oListed = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(l => l.textContent.startsWith(o.n + ' · option of ' + r.name))));
-          if(oIn !== oListed) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + (oListed ? ' is listed, an option of an always-on rule' : ' is not listed')]);
+          const oIn = !!(o.s || (inR && !o.a)), oListed = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(l => l.textContent.startsWith(o.n + ' · option of ' + r.name))));
+          if(oIn !== oListed) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + (oListed ? ' is listed, and should not be' : ' is not listed')]);
           if(!oIn) continue;
           const oe = o.x ? { x:1 } : o.t || o.at ? o : o.u ? { u:o.u } : { t:e.t, at:e.at }, oh = l => l.textContent.startsWith(o.n + ' · option of ' + r.name);
           const ow = each && !inertRule(r.name) && !o.x ? (o.t || o.at ? secsOf(o) : secsOf(e)).map(s => [T(s), 'Once per battle']) : want(oe, false, 'Rules');
@@ -229,12 +236,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         const N = x.n.charAt(0).toUpperCase() + x.n.slice(1) + ' (' + src + ') · ' + x.r, fh = l => l.textContent.startsWith(N);
         const fw = x.x ? [['When unclear', kind]] : usedOf({ u:x.u }).map(s => [T(s), 'Active now']);
         for(const [sec, grp] of fw) if(!lineIn(sec, grp, fh)) out.push(['checklist-sections', armyId, N + ' is not under ' + sec + ' · ' + grp]); } };
-      for(const r of ckRules){ const e0 = CK['r|' + A.faction + '|' + r.name]; if(!e0) continue; const e = ckStored(e0, r);
-        if(triggered(e, r)) forcedIn(e0.f, r.name, 'Rules');
-        for(const o of e0.o || []) if((triggered(e, r) || o.t || o.at) && !A.units.some(u => u.abilities.some(ab => ab.name === o.n))) forcedIn(o.f, o.n, 'Rules'); }
-      for(const ab of new Set(A.units.flatMap(u => u.abilities))){ const e0 = CK['a|' + ckHash(ab.name + '\n' + ab.text)]; if(!e0) continue; const e = ckStored(e0, ab);
-        if(triggered(e, ab)) forcedIn(e0.f, ab.name, 'Abilities');
-        for(const o of e0.o || []) if(triggered(e, ab) || o.t || o.at) forcedIn(o.f, o.n, 'Abilities'); }
+      for(const r of ckRules){ const e0 = CK['r|' + A.faction + '|' + r.name]; if(!e0) continue;
+        const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table, inR = listed(e0, r, !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''));
+        if(inR) forcedIn(e0.f, r.name, 'Rules');
+        for(const o of e0.o || []) if((o.s || (inR && !o.a)) && !A.units.some(u => u.abilities.some(ab => ab.name === o.n))) forcedIn(o.f, o.n, 'Rules'); }
+      for(const ab of new Set(A.units.flatMap(u => u.abilities))){ const e0 = CK['a|' + ckHash(ab.name + '\n' + ab.text)]; if(!e0) continue;
+        const inA = listed(e0, ab, !naReason(ab) && !!perBattle(ab));
+        if(inA) forcedIn(e0.f, ab.name, 'Abilities');
+        for(const o of e0.o || []) if(o.s || (inA && !o.a)) forcedIn(o.f, o.n, 'Abilities'); }
       const firstOf = ab => A.units.flatMap(u => u.abilities).find(x => x.name === ab.name && x.text === ab.text && !naReason(x) === !naReason(ab));
       for(const u of A.units) for(const ab of u.abilities){
         const e = CK['a|' + ckHash(ab.name + '\n' + ab.text)], key = abilityKey(ab);
