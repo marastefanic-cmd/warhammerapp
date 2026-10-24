@@ -92,7 +92,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
-    for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
+    // (the Phase checklist from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
+    for(const s of ['army','checklist','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
     // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons
     // shooting (Shoot), its first unit with melee weapons fighting, charged (Fight), and its first unit with both shooting, charging
     // and fighting (Both); each taken once every effect is worked out (the list's order and every number settled: the background work
@@ -168,6 +169,144 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       go({ s:'pregame', army:armyId });
       const ov = [...document.querySelectorAll('#view .rr > summary b')].map(b => b.textContent);
       for(const d of detachmentsOf(A)) for(const r of (d.rule ? [d.rule].concat(d.moreRules || []) : [])) if(!ov.includes(r.name)) out.push(['overview-rules', armyId, r.name + ' is not in the Overview’s rules']);
+      // the Phase checklist: every army and detachment rule, option and ability of the list it lists (listed: a fixed moment of the
+      // sequence, a once-per-battle use, a stored moment) is on it, and no other, each in the sections its CHECKLIST entry names (To do now where it is triggered, or at the moment it opens with; Active
+      // now where its effect is used and it is not triggered; Once per battle, from where it is triggered, for an ability with uses per
+      // battle); what the entry cannot place under When unclear (unless data.js has its phase tag) or No phase; no stratagem; each
+      // section a fold, closed at first, its line counting each part; a box ticked is kept, Reset clears it and not a once-per-battle box
+      for(const k of [...openStrats]) if(k.startsWith('ck|')) openStrats.delete(k);
+      go({ s:'checklist', army:armyId });
+      const ck = {};
+      if(document.querySelector('#view [data-ckfold][open]')) out.push(['checklist-folds', armyId, 'a section starts open']);
+      for(const d of document.querySelectorAll('#view [data-ckfold]')){ const g = ck[d.querySelector('summary b').textContent] = {};
+        for(const x of d.querySelectorAll('.ckg')) g[x.querySelector('.qh').textContent] = [...x.querySelectorAll('.tl')];
+        const said = d.querySelector('summary .rs').textContent, n = Object.entries(g).map(([k, ls]) => ls.length + ' ' + (k === 'To do now' ? 'to do' : k === 'Active now' ? 'active' : k.toLowerCase())).join(' · ') || 'nothing';
+        if(said !== n) out.push(['checklist-folds', armyId, d.querySelector('summary b').textContent + ': the line says “' + said + '”, the fold has ' + n]); }
+      const lineIn = (sec, grp, test) => ((ck[sec] || {})[grp] || []).some(test);
+      const T = s => s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
+      const secsOf = e => [...new Set(ckAt(e.at).concat(Object.entries(ckMap(e.t)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w)), e.ae ? [e.ae] : []))];
+      const usedOf = e => Object.entries(ckMap(e.u)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w));
+      // each place an entry should be: [section heading, group]
+      const want = (e, once, kind, x, force) => {
+        if(x && !force && !listed(e, x, once)) return [];   // on its datasheet: not listed
+        if(!e || e.x){ if(x && x.at) e = { at:x.at }; else return [['When unclear', kind]]; }
+        if(e.none) return [['No phase', kind]];
+        const tr = secsOf(e), act = usedOf(e).filter(s => !tr.includes(s));
+        if(once) return (tr.length ? tr : act).map(s => [T(s), 'Once per battle']);
+        return tr.map(s => [T(s), 'To do now']).concat(act.map(s => [T(s), 'Active now']));
+      };
+      const CK = WH_DATA.checklist || {};
+      // what is listed, as the screen's note documents it, written out again here (not derive.js's seqTrigger): a sentence of the item's
+      // own words (its options' lines, worked examples, italic notes and durations left out) naming the start or end of a battle round,
+      // turn or phase, a Command phase, or another phase with a choice, with no unit activation in it; a once-per-battle use; a moment
+      // data.js stores for an item derive cannot place
+      const ACT = /\bselected to\b|\beach time (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b|\bwhen (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b[^.,]*?\b(?:is|are|makes?|ends?|has|have|was)\b|\b(?:this|that|the bearer['’]?s?) (?:unit|model)['’]s (?:move|attacks?)\b|\bmakes? an? (?:attack|charge|move)\b|\bis targeted\b|\btargets? (?:this|that|the bearer)\b|\bafter (?:this|that|the) (?:unit|model|bearer)\b[^.,]*?\bhas (?:shot|fought|moved|charged)\b|\bdestroys?\b|\bfirst time\b/i;
+      // paragraph by paragraph: in one that opens with a unit activation, a later moment counts only with a choice of its own; a moment
+      // named only as a past reference ("was within … at the start of the turn") is not one
+      const seqOwn = (x, e) => { const L = String(x.text || '').split('\n'), drop = new Set();
+        L.forEach((l, i) => { const b = l.replace(/^- /, ''); if(/^\*\*Examples?(?::\*\*|\*\*:)/i.test(b) || /^\*[^*].*\*$/.test(l)) drop.add(i);
+          if(((e && e.o) || []).some(o => b.startsWith('**' + o.n))){ drop.add(i); if(/^- \*\*[^*]+\*\*\s*$/.test(l)) drop.add(i + 1);
+            if(/:\s*$/.test(l)) for(let k = i + 1; k < L.length && /^- (?!\*\*)/.test(L[k]); k++) drop.add(k); } });
+        return L.filter((l, i) => !drop.has(i)).join('\n').replace(/\*\*|~~/g, '').split(/\n+/).some(par => {
+          const ss = par.split(/(?<=[.!?])\s+/).map(z => z.replace(/\buntil the (?:start|end) of [^,.;]*/gi, ' ').replace(/\b(?:once|twice) per \w+ phase\b/gi, ' ')
+            .replace(/\b(?:was|were)\b[^.;:]*?\b(?:at the )?(?:start|end) of (?:the|that) (?:turn|phase|battle round)\b/gi, ' '));
+          const opensAct = ss.length && ACT.test(ss[0]);
+          return ss.some(z => (/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i.test(z) ||
+            /\b(?:your |your opponent['’]s |the |each |either player['’]s )command phase\b/i.test(z) || /\b(?:your |your opponent['’]s |the |each |either player['’]s )?(?:movement|shooting|charge|fight) phase,?[^.]*?\b(?:you can|select|choose)\b/i.test(z)) &&
+            !ACT.test(z) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(z))); }); };
+      const listed = (e, x, once) => !!(seqOwn(x, e) || (e && e.x && x.at) || once);
+      if(document.querySelector('#view [data-strat]')) out.push(['checklist-sections', armyId, 'a stratagem is listed']);
+      const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).flatMap(d => d.rule ? [d.rule].concat(d.moreRules || []) : []));
+      // "Each time you make a X roll": where the list's listed rules and abilities make that roll (written out again, not ckRollMoments)
+      const plainT = t => String(t || '').replace(/\*\*|~~/g, ''), rollM = {};
+      for(const [x, e0] of ckRules.map(r => [r, CK['r|' + A.faction + '|' + r.name]]).concat(A.units.flatMap(u => u.abilities.map(ab => [ab, CK['a|' + ckHash(ab.name + '\n' + ab.text)]])))){
+        if(!e0 || !listed(e0, x, false)) continue; const e = e0.x && x.at ? { at:x.at } : e0;
+        for(const sent of plainT(x.text).split(/(?<=[.!?])\s+|\n+/)){ if(/\b(?:each time|when) you make\b/i.test(sent)) continue;
+          for(const m of sent.matchAll(/\bmake an? ([A-Z][\w’'-]*(?: (?:of|[A-Z][\w’'-]*))*) roll\b/g)){ const y = rollM[m[1]] = rollM[m[1]] || { at:'', t:{} };
+            if(e.at && !y.at) y.at = e.at; for(const [p, w] of Object.entries(ckMap(e.t))) y.t[p] = y.t[p] && y.t[p] !== w ? 'either' : w; } } }
+      const rolled = (e0, x) => { const k = (/\b[Ee]ach time you make an? ([A-Z][\w’'-]*(?: (?:of|[A-Z][\w’'-]*))*) roll\b/.exec(plainT(x.text)) || [])[1], y = k && rollM[k];
+        if(!y || !(y.at || Object.keys(y.t).length) || seqOwn(x, e0)) return null; const t = Object.entries(y.t).map(([p, w]) => p + ':' + w).join(',');
+        return Object.assign({}, y.at ? { at:y.at } : {}, t ? { t } : {}); };
+      for(const r of ckRules){
+        const e0 = CK['r|' + A.faction + '|' + r.name], e = e0 && ckStored(e0, r);
+        if(!e0) out.push(['checklist-sections', armyId, r.name + ': no CHECKLIST entry (node verify/derive.js --write)']);
+        const hit = l => [...l.querySelectorAll('[data-rule]')].some(x => x.dataset.rule === r.name) && l.textContent.startsWith(r.name + ' · ');
+        const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
+        const onceR = !inertRule(r.name) && !each && !CK_EACH_ONCE.test(r.text || '') && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''), inR = listed(e0, r, onceR);
+        // listed only through options with moments of their own: the rule, once, without its options
+        const collapse = !inR && ((e0 && e0.o) || []).some(o => o.s && !A.units.some(u => u.abilities.some(ab => ab.name === o.n)));
+        // (at the end moments its options name, Code Chivalric's Deeds; none: as its entry says)
+        const ends = collapse ? [...new Set((e0.o || []).flatMap(o => o.ends || []))] : [];
+        const w = ends.length ? ends.map(z => [z, 'To do now']) : want(e0, onceR, 'Rules', r, collapse);
+        const listedR = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)));
+        if(listedR !== !!(w && w.length || !w)) out.push(['checklist-sections', armyId, r.name + (listedR ? ' is listed, and is always on' : ' is not listed')]);
+        else if(w) for(const [sec, grp] of w) if(!lineIn(sec, grp, hit)) out.push(['checklist-sections', armyId, r.name + ' is not under ' + sec + ' · ' + grp]);
+        for(const o of (e && e.o) || []){
+          if(A.units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;
+          const oIn = !collapse && !!(o.s || (inR && !o.a)), oListed = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(l => l.textContent.startsWith(o.n + ' · option of ' + r.name))));
+          if(oIn !== oListed) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + (oListed ? ' is listed, and should not be' : ' is not listed')]);
+          if(!oIn) continue;
+          const oc = e.oc || e.pk, oe = !o.x && (o.t || o.at) ? o : !o.x && o.u ? { u:o.u } : oc && oc.u ? { u:oc.u } : { x:1 }, oh = l => l.textContent.startsWith(o.n + ' · option of ' + r.name);
+          const ow = each && !inertRule(r.name) && !o.x ? (o.t || o.at ? secsOf(o) : secsOf(e)).map(s => [T(s), 'Once per battle']) : want(oe, false, 'Rules');
+          for(const [sec, grp] of ow) if(!lineIn(sec, grp, oh)) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + ' is not under ' + sec + ' · ' + grp]);
+        }
+      }
+      // what a listed rule or ability puts in force from a rule of the list (CHECKLIST f): "Riled up (War Cry) · Waaagh!" under Active
+      // now in each phase its entry names, or When unclear
+      const onceR0 = r => { const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table; return !inertRule(r.name) && !each && !CK_EACH_ONCE.test(r.text || '') && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''); };
+      const forcedIn = (fs, src, kind) => { for(const x of fs || []){ if(!ckRules.some(y => y.name === x.r)) continue;
+        const N = x.n.charAt(0).toUpperCase() + x.n.slice(1) + ' (' + src + ') · ' + x.r, fh = l => l.textContent.startsWith(N);
+        const fw = x.x ? [['When unclear', kind]] : usedOf({ u:x.u }).map(s => [T(s), 'Active now']);
+        for(const [sec, grp] of fw) if(!lineIn(sec, grp, fh)) out.push(['checklist-sections', armyId, N + ' is not under ' + sec + ' · ' + grp]); } };
+      for(const r of ckRules){ const e0 = CK['r|' + A.faction + '|' + r.name]; if(!e0) continue;
+        const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table, inR = listed(e0, r, !inertRule(r.name) && !each && !CK_EACH_ONCE.test(r.text || '') && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''));
+        if(inR && !onceR0(r)) forcedIn(e0.f, r.name, 'Rules');   // (what a once-per-battle use puts in force: its box only)
+        const collapse = !inR && (e0.o || []).some(o => o.s && !A.units.some(u => u.abilities.some(ab => ab.name === o.n)));
+        for(const o of e0.o || []) if(!collapse && (o.s || (inR && !o.a)) && !A.units.some(u => u.abilities.some(ab => ab.name === o.n))) forcedIn(o.f, o.n, 'Rules'); }
+      for(const ab of new Set(A.units.flatMap(u => u.abilities))){ const e0 = CK['a|' + ckHash(ab.name + '\n' + ab.text)]; if(!e0) continue;
+        const onceA = !naReason(ab) && !!perBattle(ab), inA = listed(e0, ab, onceA);
+        if(inA && !onceA) forcedIn(e0.f, ab.name, 'Abilities');
+        // the ability a listed one selects (pickOptions): Active now where it is used within its selector's duration (pk), unless it is
+        // listed itself or its own trigger is a unit activation (a)
+        if(inA && !onceA && e0.pk) for(const P of pickOptions(ab, A.units.find(u => u.abilities.includes(ab))).list){
+          const eP = CK['a|' + ckHash(P.name + '\n' + P.text)] || { x:1 };
+          if(eP.a || listed(eP, P, !naReason(P) && !!perBattle(P)) || rolled(eP, P)) continue;
+          // where it is used: its own use, or its options' when every one is read; none read: the selector's whole duration
+          const oU = !eP.u && (eP.o || []).length && eP.o.every(o => o.u) ? eP.o.map(o => o.u) : null;
+          const uni = us => { const m = {}; for(const x of us) for(const [p, t] of Object.entries(ckMap(x))) m[p] = m[p] && m[p] !== t ? 'either' : t; return Object.entries(m).map(([p, t]) => p + ':' + t).join(','); };
+          const use = eP.u || (oU && uni(oU));
+          const within = (a, b) => { const B = ckMap(b); return Object.entries(ckMap(a)).map(([p, t]) => [p, !B[p] ? null : t === 'either' ? B[p] : B[p] === 'either' || B[p] === t ? t : null]).filter(([, t]) => t).map(([p, t]) => p + ':' + t).join(','); };
+          const u2 = e0.pk.x ? '' : use ? within(use, e0.pk.u) : e0.pk.u, N = P.name + ' (' + ab.name + ') · ';
+          const pw = u2 ? usedOf({ u:u2 }).map(z => [T(z), 'Active now']) : [['When unclear', 'Abilities']];
+          for(const [sec, grp] of pw) if(!lineIn(sec, grp, l => l.textContent.startsWith(N))) out.push(['checklist-sections', armyId, N + 'is not under ' + sec + ' · ' + grp]); }
+        for(const o of e0.o || []) if(o.s || (inA && !o.a)) forcedIn(o.f, o.n, 'Abilities'); }
+      const firstOf = ab => A.units.flatMap(u => u.abilities).find(x => x.name === ab.name && x.text === ab.text && !naReason(x) === !naReason(ab));
+      for(const u of A.units) for(const ab of u.abilities){
+        const e = CK['a|' + ckHash(ab.name + '\n' + ab.text)], key = abilityKey(ab);
+        if(!e) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + ': no CHECKLIST entry under the app’s key (node verify/derive.js --write)']);
+        // (an ability a listed one selects names its selector: "The Blood God’s Favour (Wrathful Presence) · Angron")
+        const hit = l => [...l.querySelectorAll('[data-ability]')].some(x => x.dataset.ability === key) && (l.textContent.startsWith(ab.name + ' ·') || l.textContent.startsWith(ab.name + ' (')) &&
+          !/\|pk:/.test((l.querySelector('[data-ctick]') || { dataset:{} }).dataset.ctick || '');   // (not its line as the ability another selects: pk)
+        const R = e && rolled(e, firstOf(ab));
+        const w = R ? want(R, !naReason(ab) && !!perBattle(ab), 'Abilities', firstOf(ab), true) : want(e, !naReason(ab) && !!perBattle(ab), 'Abilities', firstOf(ab), !!e && !listed(e, firstOf(ab), !naReason(ab) && !!perBattle(ab)) && (e.o || []).some(o => o.s));
+        const listedA = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)));
+        if(listedA !== !!(w && w.length || !w)) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + (listedA ? ' is listed, and is always on' : ' is not listed')]);
+        else if(w) for(const [sec, grp] of w) if(!lineIn(sec, grp, hit)) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + ' is not under ' + sec + ' · ' + grp]);
+      }
+      { navAt = -1e9;
+        const cb = document.querySelector('#view [data-ctick]'), ob = document.querySelector('#view [data-tick]'), ck0 = cb && cb.dataset.ctick, ob0 = ob && ob.dataset.tick;
+        if(!cb || !document.querySelector('#view .sec-h [data-ckreset]')) out.push(['checklist-ticks', armyId, 'no box or no Reset']);
+        else {
+          cb.click(); if(ob) ob.click();
+          const kept = JSON.parse(localStorage.getItem('wh-check-' + armyId) || '[]').includes(ck0);
+          go({ s:'checklist', army:armyId }); navAt = -1e9;
+          const on = (document.querySelector('#view [data-ctick="' + CSS.escape(ck0) + '"]') || {}).className || '';
+          document.querySelector('#view [data-ckreset]').click();
+          const cleared = !document.querySelector('#view [data-ctick].on') && JSON.parse(localStorage.getItem('wh-check-' + armyId) || '[]').length === 0;
+          const onceKept = !ob || usedSet().has(ob0);
+          if(!kept || !/\bon\b/.test(on) || !cleared || !onceKept) out.push(['checklist-ticks', armyId, JSON.stringify({ kept, on, cleared, onceKept })]);
+          localStorage.removeItem('wh-check-' + armyId); localStorage.removeItem('wh-used-' + armyId); $('#toast').classList.remove('show', 'act'); undoFn = null;
+        } }
       // the damage calculator, for every unit of this list as the attacker (every rule ticked), at a target set by hand:
       // - a value New Recruit already includes (a weapon's `from`) is never added again by the same rule
       // - a rule for one weapon or one model of an attached unit reaches only that weapon or model
@@ -238,6 +377,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       return out;
     }, a.id);
     for(const [check, where, detail] of res) fail(check, a.id, where, detail);
+    // a Phase checklist fold opened stays open when the screen is drawn again (for the session, like a stratagem card)
+    const kept = await page.evaluate(async armyId => { hideSheet(); for(const k of [...openStrats]) if(k.startsWith('ck|')) openStrats.delete(k);
+      go({ s:'checklist', army:armyId }); const d = document.querySelectorAll('#view [data-ckfold]')[1]; if(!d) return 'no folds';
+      const k = d.dataset.ckfold; d.open = true; await new Promise(r => setTimeout(r, 50)); go({ s:'checklist', army:armyId });
+      const again = document.querySelector('#view [data-ckfold="' + CSS.escape(k) + '"]'), n = document.querySelectorAll('#view [data-ckfold][open]').length;
+      openStrats.delete(k); saveSession(); go({ s:'army', army:armyId });   // (back on Find, where the checks above leave each list)
+      return again && again.open && n === 1 ? '' : 'opened ' + k + ', drawn again: ' + (again && again.open) + ', ' + n + ' open'; }, a.id);
+    if(kept) fail('checklist-folds', a.id, 'kept open', kept);
 
     if(main) fs.writeFileSync(path.join(ROOT, 'verify/out/snapshots', a.id + '.txt'), snap.join('\n\n') + '\n');
     counts[a.id] = { screens:snap.length, links:links.size };
@@ -547,7 +694,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const same = await page.evaluate(([id, orig]) => { const out = [], A = armyById(id); if(!A) return ['not there after a reload'];
       const txt = (s, a, x) => { hideSheet(); go(Object.assign({ s, army:a }, x || {})); document.querySelectorAll('#view details').forEach(d => d.open = true); return $('#view').innerText; };
       const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '') : t.replace(/New Recruit, exported [^\n]*/, '');
-      for(const s of ['army', 'pregame', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
+      for(const s of ['army', 'pregame', 'checklist', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
       for(const u of armyById(orig).units) if(txt('unit', orig, { unit:u.id }) !== txt('unit', id, { unit:u.id })) out.push('unit ' + u.id + ' differs');
       hideSheet(); go({ s:'home' });
       const rows = [...document.querySelectorAll('#view .arow')].filter(r => r.dataset.army === id || r.dataset.army === orig).map(r => r.closest('.list').previousElementSibling.textContent);
@@ -563,9 +710,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('[data-imprmno]'); await page.waitForTimeout(200);
     const kept = await page.evaluate(id => !!armyById(id) && !!document.querySelector('[data-imprm]'), id);
     if(!kept) fail('import-remove', L, 'Keep it', 'the list or its Remove is gone');
+    // (with a per-battle tick and a Phase checklist box kept for it: Remove clears both)
+    await page.evaluate(id => { localStorage.setItem('wh-used-' + id, '["x"]'); localStorage.setItem('wh-check-' + id, '["x"]'); }, id);
     await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400);
-    const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length }), id);
-    if(gone.s !== 'home' || gone.there || gone.kept !== '[]' || gone.n !== armies.length) fail('import-remove', L, 'Remove', JSON.stringify(gone));
+    const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, ticks:[localStorage.getItem('wh-used-' + id), localStorage.getItem('wh-check-' + id)] }), id);
+    if(gone.s !== 'home' || gone.there || gone.kept !== '[]' || gone.n !== armies.length || gone.ticks.some(x => x !== null)) fail('import-remove', L, 'Remove', JSON.stringify(gone));
     // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
     await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
     await page.reload(); await page.evaluate(() => document.fonts.ready);

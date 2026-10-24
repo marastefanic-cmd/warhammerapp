@@ -6,6 +6,7 @@ Berzerker Warband · Butchers of Khorne
 Dispositions: Purge the Foe · Take and Hold (chosen)
 
 Overview
+Phase checklist
 Bases & proxies
 54
 Units
@@ -22,6 +23,96 @@ Rules
 Damage calculator
 
 New Recruit, exported 20 Oct 2026
+
+######## checklist · SUPER TERMINATORS Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+4 to do
+
+TO DO NOW
+
+Blessings of Khorne · World Eaters army rule
+Reborn in Blood · Angron
+Wrathful Presence · Angron
+The Blood God’s Favour (Wrathful Presence) · Angron
+Command · Your turn
+1 to do
+
+TO DO NOW
+
+Objective Ravaged · Jakhals
+Command · Their turn
+nothing
+
+Nothing in this list.
+
+Movement · Your turn
+nothing
+
+Nothing in this list.
+
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+nothing
+
+Nothing in this list.
+
+Shooting · Their turn
+nothing
+
+Nothing in this list.
+
+Charge · Your turn
+1 active
+
+ACTIVE NOW
+
+Unbridled Bloodlust · option of Blessings of Khorne
+Charge · Their turn
+1 active
+
+ACTIVE NOW
+
+Unbridled Bloodlust · option of Blessings of Khorne
+Fight · Your turn
+2 to do · 6 active
+
+TO DO NOW
+
+Adamantine Avalanche · Butchers of Khorne
+The Blood God’s Favour (Wrathful Presence) · Angron
+
+ACTIVE NOW
+
+Rage-fuelled Invigoration · option of Blessings of Khorne
+Total Carnage · option of Blessings of Khorne
+Martial Excellence · option of Blessings of Khorne
+Warp Blades · option of Blessings of Khorne
+Decapitating Strikes · option of Blessings of Khorne
+Driven by Ultimate Rage (Wrathful Presence) · Angron
+Fight · Their turn
+2 to do · 6 active
+
+TO DO NOW
+
+Adamantine Avalanche · Butchers of Khorne
+The Blood God’s Favour (Wrathful Presence) · Angron
+
+ACTIVE NOW
+
+Rage-fuelled Invigoration · option of Blessings of Khorne
+Total Carnage · option of Blessings of Khorne
+Martial Excellence · option of Blessings of Khorne
+Warp Blades · option of Blessings of Khorne
+Decapitating Strikes · option of Blessings of Khorne
+Driven by Ultimate Rage (Wrathful Presence) · Angron
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · SUPER TERMINATORS Overview
 YOUR LIST
@@ -2955,12 +3046,34 @@ UNITForgefiend
 
 Ask about this ability
 
+######## popup ability:super-terminators|Objective Ravaged|At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. · SUPER TERMINATORS Super Terminators
+ABILITY · COMMAND · YOUR TURN
+
+Objective Ravaged
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+UNITJakhals
+
+Ask about this ability
+
 ######## popup ability:super-terminators|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · SUPER TERMINATORS Super Terminators
 ABILITY · START OF THE BATTLE ROUND
 
 Reborn in Blood
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+UNITAngron
+
+Ask about this ability
+
+######## popup ability:super-terminators|The Blood God’s Favour|Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled. · SUPER TERMINATORS Super Terminators
+ABILITY
+
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
 
 UNITAngron
 

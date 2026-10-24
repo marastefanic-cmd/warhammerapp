@@ -6,6 +6,7 @@ Freeblade Company
 Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
+Phase checklist
 Bases & proxies
 6
 Units
@@ -22,6 +23,95 @@ Rules
 Damage calculator
 
 New Recruit, exported 20 Oct 2026
+
+######## checklist · 4 MEGAS AND A DESTRIER Phase checklist
+PHASE BY PHASE
+RESET
+Command · Your turn
+2 to do · 1 once per battle
+
+TO DO NOW
+
+Bondsman · Imperial Knights army rule no unit in this list it applies to
+Knights of Legend · Freeblade Company
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Movement · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Movement · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Shooting · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Shooting · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Charge · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Charge · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Fight · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+Fight · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Chainbreaker · Canis Rex
+End of your turn
+1 to do
+
+TO DO NOW
+
+Code Chivalric · Imperial Knights army rule
+End of your opponent’s turn
+1 to do
+
+TO DO NOW
+
+Code Chivalric · Imperial Knights army rule
+End of the battle round
+1 to do
+
+TO DO NOW
+
+Code Chivalric · Imperial Knights army rule
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · 4 MEGAS AND A DESTRIER Overview
 YOUR LIST

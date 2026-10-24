@@ -6,6 +6,7 @@ Khorne Daemonkin · Vessels of Wrath
 Dispositions: Priority Assets (chosen) · Reconnaissance
 
 Overview
+Phase checklist
 Bases & proxies
 54
 Units
@@ -22,6 +23,134 @@ Rules
 Damage calculator
 
 New Recruit, exported 23 Oct 2026
+
+######## checklist · BIG DEMONS BABY Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+5 to do
+
+TO DO NOW
+
+Blessings of Khorne · World Eaters army rule; Might of Khorne (Blood Tithe) gives it to BLOOD LEGIONS units
+Reborn in Blood · Angron
+Wrathful Presence · Angron
+The Blood God’s Favour (Wrathful Presence) · Angron
+Icon of Khorne · Lord on Juggernaut
+Command · Your turn
+2 to do · 2 active
+
+TO DO NOW
+
+Blood Tithe · Khorne Daemonkin
+Objective Ravaged · Jakhals
+
+ACTIVE NOW
+
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Command · Their turn
+1 to do · 2 active
+
+TO DO NOW
+
+Blood Tithe · Khorne Daemonkin
+
+ACTIVE NOW
+
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Movement · Your turn
+2 active
+
+ACTIVE NOW
+
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Movement · Their turn
+2 active
+
+ACTIVE NOW
+
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Shooting · Your turn
+2 active
+
+ACTIVE NOW
+
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Shooting · Their turn
+3 active
+
+ACTIVE NOW
+
+Enraged Abjuration · option of Blood Tithe
+Boon of Blood · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Charge · Your turn
+3 active
+
+ACTIVE NOW
+
+Unbridled Bloodlust · option of Blessings of Khorne
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Charge · Their turn
+3 active
+
+ACTIVE NOW
+
+Unbridled Bloodlust · option of Blessings of Khorne
+Enraged Abjuration · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Fight · Your turn
+1 to do · 10 active
+
+TO DO NOW
+
+Relentless Carnage · Bloodthirster
+
+ACTIVE NOW
+
+Rage-fuelled Invigoration · option of Blessings of Khorne
+Total Carnage · option of Blessings of Khorne
+Martial Excellence · option of Blessings of Khorne
+Warp Blades · option of Blessings of Khorne
+Decapitating Strikes · option of Blessings of Khorne
+Enraged Abjuration · option of Blood Tithe
+Daemonic Rage · option of Blood Tithe
+Boon of Blood · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Driven by Ultimate Rage (Wrathful Presence) · Angron
+Fight · Their turn
+1 to do · 10 active
+
+TO DO NOW
+
+Relentless Carnage · Bloodthirster
+
+ACTIVE NOW
+
+Rage-fuelled Invigoration · option of Blessings of Khorne
+Total Carnage · option of Blessings of Khorne
+Martial Excellence · option of Blessings of Khorne
+Warp Blades · option of Blessings of Khorne
+Decapitating Strikes · option of Blessings of Khorne
+Enraged Abjuration · option of Blood Tithe
+Daemonic Rage · option of Blood Tithe
+Boon of Blood · option of Blood Tithe
+Might of Khorne · option of Blood Tithe
+Driven by Ultimate Rage (Wrathful Presence) · Angron
+End of your opponent’s turn
+1 to do
+
+TO DO NOW
+
+Hunters from the Warp · Flesh Hounds
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · BIG DEMONS BABY Overview
 YOUR LIST
@@ -3400,6 +3529,28 @@ UNITAngron
 
 Ask about this ability
 
+######## popup ability:big-demons-baby|Hunters from the Warp|At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves. · BIG DEMONS BABY Big demons baby
+ABILITY · END OF YOUR OPPONENT’S TURN
+
+Hunters from the Warp
+
+At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+UNITFlesh Hounds
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Icon of Khorne|If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost. · BIG DEMONS BABY Big demons baby
+ABILITY · START OF THE BATTLE ROUND
+
+Icon of Khorne
+
+If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
+
+UNITLord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+
+Ask about this ability
+
 ######## popup ability:big-demons-baby|Lord of Murder|While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability. · BIG DEMONS BABY Big demons baby
 ABILITY
 
@@ -3422,6 +3573,17 @@ UNITLord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 Ask about this ability
 
+######## popup ability:big-demons-baby|Objective Ravaged|At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. · BIG DEMONS BABY Big demons baby
+ABILITY · COMMAND · YOUR TURN
+
+Objective Ravaged
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+UNITJakhals
+
+Ask about this ability
+
 ######## popup ability:big-demons-baby|Rage Embodied|While a friendly **BLOOD LEGIONS** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. · BIG DEMONS BABY Big demons baby
 ABILITY · AURA · FIGHT · EITHER TURN
 
@@ -3439,6 +3601,28 @@ ABILITY · START OF THE BATTLE ROUND
 Reborn in Blood
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+UNITAngron
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|Relentless Carnage|At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound. · BIG DEMONS BABY Big demons baby
+ABILITY · FIGHT · EITHER TURN
+
+Relentless Carnage
+
+At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+UNITBloodthirster
+
+Ask about this ability
+
+######## popup ability:big-demons-baby|The Blood God’s Favour|Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled. · BIG DEMONS BABY Big demons baby
+ABILITY
+
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
 
 UNITAngron
 

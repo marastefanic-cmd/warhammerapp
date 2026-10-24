@@ -6,6 +6,7 @@ Bully Boyz · Runt Swarm · Shoota Boyz
 Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
+Phase checklist
 Bases & proxies
 89
 Units
@@ -22,6 +23,83 @@ Rules
 Damage calculator
 
 New Recruit, exported 20 Oct 2026
+
+######## checklist · OOGA BOOGA Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Da Boss · Orks army rule
+Command · Your turn
+1 to do · 4 once per battle
+
+TO DO NOW
+
+Crude Surgery · Big Mek
+
+ONCE PER BATTLE
+
+War Cry · Orks army rule
+Catch Dat Red Bit · Big Mek + Painboy + Nobz · Unit 1
+Catch Dat Red Bit · Big Mek + Painboy + Nobz · Unit 2
+Fix Dat Armour Up · Big Mek in Mega Armour + Meganobz
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+War Cry · Orks army rule
+Movement · Your turn
+1 to do · 1 once per battle
+
+TO DO NOW
+
+Thievin’ Scavengers · Zodgrod Wortsnagga, Gretchin
+
+ONCE PER BATTLE
+
+Makari, Hoist Dat Banner! · Ghazghkull Thraka per army
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+2 once per battle
+
+ONCE PER BATTLE
+
+Ammo Runts · Big Mek + Painboy + Nobz · Unit 1
+Ammo Runts · Big Mek + Painboy + Nobz · Unit 2
+Shooting · Their turn
+nothing
+
+Nothing in this list.
+
+Charge · Your turn
+nothing
+
+Nothing in this list.
+
+Charge · Their turn
+nothing
+
+Nothing in this list.
+
+Fight · Your turn
+nothing
+
+Nothing in this list.
+
+Fight · Their turn
+nothing
+
+Nothing in this list.
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · OOGA BOOGA Overview
 YOUR LIST
@@ -3349,6 +3427,17 @@ UNITBig Mek + Painboy + Nobz ×2
 
 Ask about this ability
 
+######## popup ability:ooga-booga|Crude Surgery|In your Command phase, this unit **heals** 3 wounds. · OOGA BOOGA Ooga booga
+ABILITY · COMMAND · YOUR TURN
+
+Crude Surgery
+
+In your Command phase, this unit heals 3 wounds.
+
+UNITBig Mek + Painboy + Nobz ×2
+
+Ask about this ability
+
 ######## popup ability:ooga-booga|Da Grand Warlord’s Ladz|While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**. · OOGA BOOGA Ooga booga
 ABILITY
 
@@ -3474,6 +3563,17 @@ This unit is riled up.
 This unit’s Scavenged Shivs weapons have +1 A, WS and S.
 
 UNITZodgrod Wortsnagga + Runtherd + Gretchin
+
+Ask about this ability
+
+######## popup ability:ooga-booga|Thievin’ Scavengers|At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**. · OOGA BOOGA Ooga booga
+ABILITY · MOVEMENT · YOUR TURN
+
+Thievin’ Scavengers
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+UNITZodgrod Wortsnagga + Runtherd + Gretchin, Gretchin
 
 Ask about this ability
 

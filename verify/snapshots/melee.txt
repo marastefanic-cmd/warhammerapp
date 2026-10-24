@@ -6,6 +6,7 @@ War Horde
 Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
+Phase checklist
 Bases & proxies
 54
 Units
@@ -22,6 +23,84 @@ Rules
 Damage calculator
 
 New Recruit, exported 20 Oct 2026
+
+######## checklist · MELEE Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Da Boss · Orks army rule
+Command · Your turn
+1 to do · 3 once per battle
+
+TO DO NOW
+
+Crude Surgery · Big Mek
+
+ONCE PER BATTLE
+
+War Cry · Orks army rule
+Catch Dat Red Bit · Big Mek + Painboy + Nobz
+Fix Dat Armour Up · Big Mek in Mega Armour + Meganobz
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+War Cry · Orks army rule
+Movement · Your turn
+1 to do · 2 once per battle
+
+TO DO NOW
+
+Thievin’ Scavengers · Gretchin
+
+ONCE PER BATTLE
+
+Makari, Hoist Dat Banner! · Ghazghkull Thraka per army
+Bomb Squig · Squighog Boyz
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Ammo Runts · Big Mek + Painboy + Nobz
+Shooting · Their turn
+nothing
+
+Nothing in this list.
+
+Charge · Your turn
+nothing
+
+Nothing in this list.
+
+Charge · Their turn
+nothing
+
+Nothing in this list.
+
+Fight · Your turn
+nothing
+
+Nothing in this list.
+
+Fight · Their turn
+1 to do
+
+TO DO NOW
+
+Aerial Manoover · Deffkoptas
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · MELEE Overview
 YOUR LIST
@@ -3553,8 +3632,19 @@ SQUIGHOG BOYZ
 Ask about this unit
 ‹ Deffkoptas
 
+######## popup ability:melee|Aerial Manoover|At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**. · SQUIGHOG BOYZ Melee
+ABILITY · FIGHT · THEIR TURN
+
+Aerial Manoover
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+UNITDeffkoptas
+
+Ask about this ability
+
 ######## popup ability:melee|Ammo Runts|In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.
-*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.* · SQUIGHOG BOYZ Melee
+*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.* · MELEE Melee
 ABILITY · ONCE PER BATTLE, PER UNIT · SHOOTING · YOUR TURN
 
 Ammo Runts
@@ -3637,6 +3727,17 @@ Catch Dat Red Bit
 When this model uses its Crude Surgery ability, you can add D3 to the number of wounds healed.
 
 Place a Grot Orderly token next to the unit, removing it when this ability is used.
+
+UNITBig Mek + Painboy + Nobz · Kunnin’ But Brutal
+
+Ask about this ability
+
+######## popup ability:melee|Crude Surgery|In your Command phase, this unit **heals** 3 wounds. · MELEE Melee
+ABILITY · COMMAND · YOUR TURN
+
+Crude Surgery
+
+In your Command phase, this unit heals 3 wounds.
 
 UNITBig Mek + Painboy + Nobz · Kunnin’ But Brutal
 
@@ -3802,6 +3903,17 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 +1 to wound rolls.
 
 UNITGhazghkull Thraka
+
+Ask about this ability
+
+######## popup ability:melee|Thievin’ Scavengers|At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**. · MELEE Melee
+ABILITY · MOVEMENT · YOUR TURN
+
+Thievin’ Scavengers
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+UNITGretchin
 
 Ask about this ability
 

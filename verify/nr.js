@@ -771,7 +771,8 @@ function compareArmy(D, A, nr, out, srcFile) {
   // rules that act on the whole army, which New Recruit names in a weapon's "(…)" when it applied them
   const armyRuleNames = new Set(A.detachments.map(id => F.detachments[id]).filter(Boolean).flatMap(d => detRules_(d).map(r => r.name)).concat(F.armyRules.map(r => r.name)).filter(Boolean).map(x => lc(nm(x))));
   // New Recruit names a detachment rule's effect by the rule ("(Dakka! Dakka! Dakka!)") or by the detachment ("(War Horde)")
-  const detRules = new Map(A.detachments.map(id => F.detachments[id]).filter(d => d && d.rule).map(d => [lc(nm(d.name)), lc(nm(d.rule.name))]));
+  // (each of its rules: rule, then moreRules)
+  const detRules = new Map(A.detachments.map(id => F.detachments[id]).filter(d => d && d.rule).map(d => [lc(nm(d.name)), detRules_(d).map(r => lc(nm(r.name)))]));
   for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { armyRuleNames, detRules, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
 
   // glossary: every rule New Recruit prints at the end opens something in the app
@@ -851,7 +852,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   const fromNames = o => new Set(Object.values((o && o.from) || {}).flat().map(x => lc(nm(x))));
   const annotated = (label, parens, obj) => {
     for (const p of uniq(parens.flatMap(b => b.split(/,\s*/)))) { chk('from'); boosts.push(p);
-      if (!fromNames(obj).has(lc(p)) && !(detRules.has(lc(p)) && fromNames(obj).has(detRules.get(lc(p))))) fail('from[' + label + ']', obj && obj.from ? JSON.stringify(obj.from) : null, 'New Recruit marks "(' + p + ')" as applied'); }
+      if (!fromNames(obj).has(lc(p)) && !(detRules.has(lc(p)) && detRules.get(lc(p)).some(n => fromNames(obj).has(n)))) fail('from[' + label + ']', obj && obj.from ? JSON.stringify(obj.from) : null, 'New Recruit marks "(' + p + ')" as applied'); }
   };
   for (const ns of nrStats) {
     const as = appStats.find(x => x.name === ns.name) ;

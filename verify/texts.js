@@ -33,6 +33,7 @@
    Exit 1 when there is any failure not covered by verify/deviations-texts.json (a stale deviation is a failure). */
 'use strict';
 const fs = require('fs');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
@@ -396,6 +397,8 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
       docs = opts.packDocs || gwDocs; less = wahaDocs;
       const q = /^(.*?\?)\s+(.*)$/.exec(c.body);   // "<question>? <answer>": both word for word (the pack prints "Q: … A: …")
       parts = q ? [q[1], q[2]] : [c.body];
+      // and the answer is the one printed right after that question ("…? A: …"), not words found anywhere else in the pack
+      if (q && !locate(normApp(q[1] + ' A: ' + q[2]), docs)) fail(cat, army, unit, field, raw.trim(), 'the answer is not printed right after its question ("Q: … A: …") in ' + docsLabel(docs), '');
     }
     if ((c.kind === 'appsec' || c.kind === 'sec') && !c.inherited) {
       // the quoted section heading must exist as "Title NN.NN" or "NN.NN Title"
@@ -864,7 +867,7 @@ for (const fk of FACTIONS) {
     const upd = UPD[fk].filter(e => e.section && norm(e.section) === norm(det.name + ' detachment'));
 
     /* rules: each of the detachment's rules (rule, then moreRules) against the source's, in order; one missing on either side fails */
-    const appRules = det.rule ? [det.rule].concat(det.moreRules || []) : [], srcRules = ((pack ? pack.rules : W.rules) || []).filter(r => r.name);
+    const appRules = detRules_(det), srcRules = ((pack ? pack.rules : W.rules) || []).filter(r => r.name);
     for (let ri = 0; ri < Math.max(appRules.length, srcRules.length, 1); ri++) {
     const R = appRules[ri] || {};
     const srcRule = srcRules[ri];
@@ -1206,7 +1209,7 @@ function ruleText(a, label) {
   for (const [re, key] of f.aliases || []) if (re.test(clean)) { clean = key; break; }
   const lc = clean.toLowerCase();
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc); if (ar) return { text: ar.text, src: 'army rule ' + ar.name };
-  for (const d of a.detachments.map(x => f.detachments[x]).filter(Boolean)) if (d.rule && d.rule.name.toLowerCase() === lc) return { text: d.rule.text, src: 'detachment rule ' + d.rule.name };
+  for (const d of a.detachments.map(x => f.detachments[x]).filter(Boolean)) for (const r of detRules_(d)) if (r.name.toLowerCase() === lc) return { text: r.text, src: 'detachment rule ' + r.name };
   for (const [re, key] of D.ruleAliases) if (re.test(clean)) return { text: D.rules[key], src: ((D.ruleSrc || {})[key] || 'core rule') + ' ' + key };
   if (D.rules[clean]) return { text: D.rules[clean], src: 'core rule ' + clean };
   return null;
@@ -1217,7 +1220,7 @@ for (const a of D.armies) {
   const enhs = dets.flatMap(d => (d.enhancements || []).map(e => Object.assign({ det: d.name }, e)));
   // abilities a detachment rule gives to units: "**Protean Purpose:** (Once per battle, per unit) …"
   const given = [];
-  for (const d of dets) for (const l of String(d.rule && d.rule.text || '').split('\n')) { const m = /^\*\*([^*]+?):\*\*\s*(.*)$/.exec(l.trim()); if (m) given.push({ name: m[1], text: m[2], det: d.name }); }
+  for (const d of dets) for (const l of detRules_(d).map(r => r.text || '').join('\n').split('\n')) { const m = /^\*\*([^*]+?):\*\*\s*(.*)$/.exec(l.trim()); if (m) given.push({ name: m[1], text: m[2], det: d.name }); }
   for (const u of a.units) {
     // the enhancement the unit takes is one of its army's detachments' enhancements
     if (u.enhancement) {
@@ -1409,7 +1412,7 @@ for (const fk of FACTIONS) {
   const F = D.factions[fk];
   for (const r of F.armyRules) if (r.note) checkQuotes(fk, 'armyRule:' + r.name, r.note, [r.text].concat((r.table || []).map(t => t[1])));
   for (const [dk, d] of Object.entries(F.detachments || {})) {
-    if (d.rule && d.rule.note) checkQuotes(fk, 'detachment:' + dk + '/rule', d.rule.note, [d.rule.text]);
+    for (const r of detRules_(d)) if (r.note) checkQuotes(fk, 'detachment:' + dk + '/rule' + (r === d.rule ? '' : ':' + r.name), r.note, [r.text]);
     for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
     // the "When targeted" line a stratagem gives the units it protects (Grot Shields), with the FAQ it quotes
     for (const s of d.stratagems || []) if (s.shield && s.shield.def) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id + ' (shield)', s.shield.def, stratOwn(s));
@@ -1418,7 +1421,7 @@ for (const fk of FACTIONS) {
 for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities || []) if (ab.note) {
   const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
   // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
-  const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.filter(d => d.rule).map(d => d.rule.text));
+  const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.flatMap(d => detRules_(d).map(r => r.text)));
   checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own);
 }
 

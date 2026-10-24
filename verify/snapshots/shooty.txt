@@ -143,6 +143,15 @@ Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
+ULTRAMARINES
+1
+Nerf when
+2000 pts
+Assault Brethren · Deathwatch Support · Terminator Storm Force
+DISRUPTION
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
 WORLD EATERS
 4
 Princes
@@ -213,6 +222,7 @@ Dread Mob · Shoota Boyz · Wreckas
 Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
+Phase checklist
 Bases & proxies
 69
 Units
@@ -229,6 +239,89 @@ Rules
 Damage calculator
 
 New Recruit, exported 17 Oct 2026
+
+######## checklist · ME SHOOTY YER’ BOOTY Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Da Boss · Orks army rule
+Command · Your turn
+2 to do · 2 once per battle
+
+TO DO NOW
+
+Full Throttle · Wazdakka Gutsmek
+Shokk Attack Engine (Full Throttle) · Wazdakka Gutsmek
+
+ONCE PER BATTLE
+
+War Cry · Orks army rule
+Fix Dat Armour Up · Big Mek in Mega Armour
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+War Cry · Orks army rule
+Movement · Your turn
+1 to do · 2 once per battle
+
+TO DO NOW
+
+Thievin’ Scavengers · Gretchin
+
+ONCE PER BATTLE
+
+Bomb Squig · Mek + Tankbustas · Unit 1
+Bomb Squig · Mek + Tankbustas · Unit 2
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+1 to do · 1 once per battle
+
+TO DO NOW
+
+Dreadherder · Big Mek
+
+ONCE PER BATTLE
+
+Boss’ Ammo Runt · Warboss
+Shooting · Their turn
+nothing
+
+Nothing in this list.
+
+Charge · Your turn
+nothing
+
+Nothing in this list.
+
+Charge · Their turn
+nothing
+
+Nothing in this list.
+
+Fight · Your turn
+1 active
+
+ACTIVE NOW
+
+Dreadherder · Big Mek
+Fight · Their turn
+1 to do
+
+TO DO NOW
+
+Aerial Manoover · Deffkoptas
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · ME SHOOTY YER’ BOOTY Overview
 YOUR LIST
@@ -3879,7 +3972,18 @@ WALKER
 Ask about this unit
 ‹ Deffkoptas
 
-######## popup ability:shooty|Blitz Dem Gitz!|In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**. · KILLA KANS Me shooty yer’ booty
+######## popup ability:shooty|Aerial Manoover|At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**. · KILLA KANS Me shooty yer’ booty
+ABILITY · FIGHT · THEIR TURN
+
+Aerial Manoover
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+UNITDeffkoptas
+
+Ask about this ability
+
+######## popup ability:shooty|Blitz Dem Gitz!|In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · SHOOTING · YOUR TURN
 
 Blitz Dem Gitz!
@@ -3989,6 +4093,31 @@ UNITBig Mek · Supa-glowy Fing
 
 Ask about this ability
 
+######## popup ability:shooty|Full Throttle|In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+ABILITY · COMMAND / MOVEMENT / CHARGE · YOUR TURN
+
+Full Throttle
+
+In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
+
+TO PICK FROM: THROTTLEROKKIT SHOKKA ENGINE
+
+Turbo Engine
+
+When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.
+
+Pulse Jet
+
+In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.
+
+Shokk Attack Engine
+
+In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+UNITWazdakka Gutsmek
+
+Ask about this ability
+
 ######## popup ability:shooty|Might is Right|If this unit made a **charge move** this turn, this model’s melee attacks have:
 - +3 **A**.
 - +2 **S**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
@@ -4032,6 +4161,17 @@ UNITWazdakka Gutsmek
 
 Ask about this ability
 
+######## popup ability:shooty|Shokk Attack Engine|In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+ABILITY · COMMAND · YOUR TURN
+
+Shokk Attack Engine
+
+In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+UNITWazdakka Gutsmek
+
+Ask about this ability
+
 ######## popup ability:shooty|Spiteful Power Trip|This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
@@ -4040,6 +4180,17 @@ Spiteful Power Trip
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
 UNITKilla Kans
+
+Ask about this ability
+
+######## popup ability:shooty|Thievin’ Scavengers|At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+ABILITY · MOVEMENT · YOUR TURN
+
+Thievin’ Scavengers
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+UNITGretchin
 
 Ask about this ability
 
