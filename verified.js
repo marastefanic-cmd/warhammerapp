@@ -1,25 +1,25 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "ac48da28a8",
- "data": "2026-10-24.6",
+ "build": "26f0083ab7",
+ "data": "2026-10-24.7",
  "date": "24 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (12240 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (13570 facts)."
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (13270 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (14305 facts)."
   },
   {
    "label": "Granted values:",
-   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (275 values)."
+   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (288 values)."
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (3681 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (3940 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,17 +27,17 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1869 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1960 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "2567 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "2817 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
   {
    "label": "New Recruit:",
-   "detail": "Me shooty yer’ booty, Melee, Princes, Standard, Pubstomper, Nidzillas, 6 bigs, 4 megas and a destrier, Ooga booga, Super Terminators, Purge goes the Foe, Defilers and friends, Infernal Lance, Woof Woof, Big demons baby, Mucho Mutantes, Lite Knights, Nerf when, The Exiled Legion, Fellhammer Siege Task Force (your PDFs)."
+   "detail": "Me shooty yer’ booty, Melee, Princes, Standard, Pubstomper, Nidzillas, 6 bigs, 4 megas and a destrier, Ooga booga, Super Terminators, Purge goes the Foe, Defilers and friends, Infernal Lance, Woof Woof, Big demons baby, Mucho Mutantes, Lite Knights, Nerf when, The Exiled Legion, Fellhammer Siege Task Force, Emperor’s Chosen, Dread Host (your PDFs)."
   },
   {
    "label": "BSData:",

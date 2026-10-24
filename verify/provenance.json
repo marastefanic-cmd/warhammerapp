@@ -6755,6 +6755,321 @@
    "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
   },
   {
+   "item": "adeptus-custodes / detachment:honoured-companions",
+   "field": "name",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/rule",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/enhancement:Arae-Shrike",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/enhancement:Arae-Shrike",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/enhancement:Celeritous Sentries",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/enhancement:Celeritous Sentries",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:emperors-domain",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (EMPEROR'S DOMAIN)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:emperors-domain",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (EMPEROR'S DOMAIN)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:emperors-domain",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (EMPEROR'S DOMAIN)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:avenge-the-fallen",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (AVENGE THE FALLEN)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:avenge-the-fallen",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (AVENGE THE FALLEN)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:avenge-the-fallen",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (AVENGE THE FALLEN)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:swift-as-the-eagle",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (SWIFT AS THE EAGLE)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:swift-as-the-eagle",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (SWIFT AS THE EAGLE)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:honoured-companions/stratagem:swift-as-the-eagle",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Honoured Companions 1DP (SWIFT AS THE EAGLE)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor",
+   "field": "name",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/rule",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/enhancement:Lightning Descent",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/enhancement:Lightning Descent",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/enhancement:Leonine Ferocity",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/enhancement:Leonine Ferocity",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:vigil-unending",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (VIGIL UNENDING)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:vigil-unending",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (VIGIL UNENDING)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:vigil-unending",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (VIGIL UNENDING)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:unleash-the-lions",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (UNLEASH THE LIONS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:unleash-the-lions",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (UNLEASH THE LIONS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:unleash-the-lions",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (UNLEASH THE LIONS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:fury-of-the-emperor",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (FURY OF THE EMPEROR)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:fury-of-the-emperor",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (FURY OF THE EMPEROR)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:lions-of-the-emperor/stratagem:fury-of-the-emperor",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Lions of the Emperor 1DP (FURY OF THE EMPEROR)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host",
+   "field": "name",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/rule",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/enhancement:Flawless Bladework",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/enhancement:Flawless Bladework",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/enhancement:Auric Exemplar",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/enhancement:Auric Exemplar",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:lightning-wrath",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (LIGHTNING WRATH)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:lightning-wrath",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (LIGHTNING WRATH)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:lightning-wrath",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (LIGHTNING WRATH)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:golden-light-of-the-moiraides",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (GOLDEN LIGHT OF THE MOIRAIDES)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:golden-light-of-the-moiraides",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (GOLDEN LIGHT OF THE MOIRAIDES)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:golden-light-of-the-moiraides",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (GOLDEN LIGHT OF THE MOIRAIDES)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:preternatural-rapidity",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (PRETERNATURAL RAPIDITY)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:preternatural-rapidity",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (PRETERNATURAL RAPIDITY)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:dread-host/stratagem:preternatural-rapidity",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Dread Host 1DP (PRETERNATURAL RAPIDITY)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
    "item": "ultramarines / detachment:assault-brethren",
    "field": "name",
    "doc": "waha:ultramarines",
@@ -9382,7 +9697,31 @@
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
+   "item": "lite-knights / trajann-valoris-allarus-custodians / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
    "item": "nerf-when / roboute-guilliman / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "emperors-chosen / trajann-valoris-allarus-custodians / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "dread-host / trajann-valoris-allarus-custodians / ability:Supreme Commander",
    "field": "note",
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
