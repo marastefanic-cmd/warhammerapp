@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 10
 Abilities
-14
+15
 Rules
 Damage calculator
 
@@ -712,6 +712,12 @@ Trajann Valoris
 Warlord
 + Allarus Custodians
 TRAJANN VALORIS
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
 Captain-General
 
 Aura
@@ -2521,6 +2527,13 @@ WHOLE UNIT
 Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
 Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
 ABILITIES
+Supreme Commander
+- Trajann Valoris
+
+If this model is in your army, it must be your WARLORD.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
 Captain-General
 - Trajann Valoris
 

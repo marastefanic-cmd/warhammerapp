@@ -50,7 +50,7 @@ DISPOSITION
 YOUR ARMIES
 RANDOM
 ADEPTUS CUSTODES
-1
+3
 Lite Knights
 2000 pts
 Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
@@ -58,6 +58,20 @@ PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
 RECONNAISSANCE
+Emperor’s Chosen
+2000 pts
+Emperor’s Chosen · Honoured Companions · Lions of the Emperor
+DISRUPTION
+, CHOSEN
+PRIORITY ASSETS
+TAKE AND HOLD
+Dread Host
+2000 pts
+Dread Host · Honoured Companions · Lions of the Emperor
+DISRUPTION
+, CHOSEN
+PURGE THE FOE
+TAKE AND HOLD
 ADEPTUS MECHANICUS
 1
 Purge goes the Foe
