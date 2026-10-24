@@ -861,16 +861,6 @@
  },
  {
   "army": "nerf-when",
-  "unit": "roboute-guilliman",
-  "field": "ability",
-  "app": "",
-  "source": "Supreme Commander",
-  "reason": "GW names the ability null, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) Supreme Commander. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html: \"null\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
   "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
   "field": "stats.base",
   "app": "Marneus Calgar: 50mm",
@@ -917,16 +907,6 @@
   "source": "Lucia Vestha: 40mm",
   "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Lucia Vestha: 40mm; GW’s base size guide (Event Companion) has 28.5mm; New Recruit’s export (catalogue revision 8) has 40mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3665: \"Wardens of Ultramar: Gaius Silva, Aemelia Minervas, Dainal Kornelius, Lucia Vestha  28.5mm\"; verify/sources/nr-json/nerf-when.json: 40mm.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
-  "field": "stats.InSv",
-  "app": "Veteran Sergeant Metaurus: –",
-  "source": "Veteran Sergeant Metaurus: 4+",
-  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Veteran Sergeant Metaurus: 4+; GW’s datasheet (the new codex, as Wahapedia transcribes it) has –; New Recruit’s export (catalogue revision 8) has 4+. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Wardens-of-Ultramar-1.html: Veteran Sergeant Metaurus InSv –; verify/sources/nr-json/nerf-when.json: 4+.",
   "by": "verify/from-json.js"
  },
  {

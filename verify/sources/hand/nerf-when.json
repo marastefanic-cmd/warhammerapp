@@ -1,5 +1,5 @@
 {
- "_about": "What verify/from-json.js cannot fill mechanically for nerf-when, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). rules: a detachment rule's Damage-tab calcMods (hand). units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01) and stats values a rule of the list gives that New Recruit's export does not show. Each is a judgement verify/helpers.js lists for sign-off.",
+ "_about": "What verify/from-json.js cannot fill mechanically for nerf-when, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). rules: a detachment rule's Damage-tab calcMods (hand). units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), notes on its abilities (notes: Supreme Commander's, as Ghazghkull Thraka's), its auras (only what GW tags (Aura), Core Rules 22.01) and stats values a rule of the list gives that New Recruit's export does not show. Each is a judgement verify/helpers.js lists for sign-off.",
  "gists": {
   "assault-brethren/armour-of-contempt": {
    "by": "AI (Claude)",
@@ -141,7 +141,10 @@
      "selfAlways": true
     }
    ],
-   "why": "Codex Adept: the devastator doctrine is active for this unit (its ranged attacks have [ASSAULT]). Primarch of the XIII (Aura): friendly ADEPTUS ASTARTES units within 6\", his own unit included (22.01)."
+   "why": "Codex Adept: the devastator doctrine is active for this unit (its ranged attacks have [ASSAULT]). Primarch of the XIII (Aura): friendly ADEPTUS ASTARTES units within 6\", his own unit included (22.01).",
+   "notes": {
+    "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+   }
   },
   "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad": {
    "defs": {
@@ -195,8 +198,8 @@
    "mods": [
     {
      "kind": "ranged",
-     "when": "Always",
-     "note": "re-roll damage rolls",
+     "when": "Every ranged attack",
+     "note": "can re-roll damage rolls",
      "from": "Total Obliteration",
      "always": true
     }

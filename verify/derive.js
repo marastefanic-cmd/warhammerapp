@@ -65,6 +65,8 @@ const MOMENT_RULES = [
     why:'the text opens with "At the start of the battle round": a moment before either player\'s Command phase (07.01)' },
   { id:'start-battle-round-later', re:/\b(?:at the )?start of the (?:first )?battle round\b/i, ph:{ command:'either' },
     why:'"the start of the battle round" later in the text: listed with the Command phase, no moment tag (the text does not open with it)' },
+  { id:'start-your-command', rulesOnly:true, re:/^at the start of your command phase\b/i, at:'Start of your Command phase', ph:{ command:'your' },
+    why:'an army or detachment rule whose text opens with "At the start of your Command phase": the moment its choice is made, before anything else in that phase (Martial Ka’tah, Combat Doctrines); not read on abilities or rule options' },
   { id:'end-opp-turn', re:/^at the end of your opponent's turn\b/i, at:'End of your opponent’s turn', ph:{ fight:'opp' },
     why:'"At the end of your opponent\'s turn": after their Fight phase, the last phase of the turn' },
 ];
@@ -137,6 +139,7 @@ function explicitTiming(text, opts){
   const reasons = [], out = {};
   let at;
   for(const r of MOMENT_RULES){
+    if(r.rulesOnly && !(opts && opts.rule)) continue;
     const m = r.re.exec(t);
     if(!m) continue;
     if(r.id === 'start-battle-round-later' && at) continue;      // already the opening moment
@@ -247,7 +250,7 @@ function usedIn(text, ctx, trig){
   return { ph:out, reasons, none, blocked };
 }
 function timing(text, ctx){
-  const trig = explicitTiming(text);
+  const trig = explicitTiming(text, ctx && ctx.rule ? { rule:true } : undefined);
   const used = usedIn(text, ctx, trig);
   const ph = Object.assign({}, trig ? trig.ph : {});
   for(const [p, o] of Object.entries(used.ph)) addPh(ph, p, o);
@@ -641,7 +644,7 @@ function derive(D){
       .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name, det:true })));
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
-      timingItem('rule-timing', where, r, r.text, { comments });
+      timingItem('rule-timing', where, r, r.text, { comments }, { core:D.coreStratagems, rule:true });
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -820,6 +823,16 @@ function ruleTables(D){
       m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
       if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
     });
+    // a rule with no table whose options are headings of their own, each followed by its text: a bold line ("**Furor Tactics**",
+    // Wahapedia's sub-heading: Mission Tactics) or, when it has none, a line in capitals ("ASSAULT DOCTRINE": Combat Doctrines)
+    if(!opts.length && !(s.table || []).length){
+      const heads = (re, how) => { const out = [];
+        lines.forEach((l, i) => { const m = re.exec(l.trim()), nx = lines[i + 1];
+          if(m && nx && !re.test(nx.trim()) && !/^\s*- /.test(nx) && /[a-z]/.test(nx)) out.push({ name:m[1].trim(), text:nx, how }); });
+        return out; };
+      const bold = heads(/^\*\*([^*]{3,60})\*\*$/, 'heading "**Name**" and its line');
+      opts.push(...(bold.length ? bold : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line')));
+    }
     // army-building limits ("**Incursion:** Up to 500 pts") are not options
     for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text))) opts.splice(i, 1);
     // the rule's own trigger: its text without its options
@@ -833,9 +846,9 @@ function ruleTables(D){
       reasons.push((trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))));
       grantRows(s.where, o.name, o.text, o.name + ' active');
     }
-    grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null);
+    grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null, opts.filter(o => /^heading/.test(o.how)));
   }
-  function grantRows(rule, option, text, whileOpt){
+  function grantRows(rule, option, text, whileOpt, headed){
     for(const sent of sentences(norm(text))){
       let m, name;
       for(const x of sent.matchAll(GRANT_RE)){
@@ -843,6 +856,13 @@ function ruleTables(D){
         if(!notAGrant(sent, x, rule, n)){ m = x; name = n; break; }
       }
       if(!m) continue;
+      // "… have the following abilities:" then headed options: it gives those (Mission Tactics: Furor, Malleus and Purgatus Tactics)
+      if(m[2] && headed && headed.length && /abilities/i.test(m[0])){
+        const before = sent.slice(0, m.index), subj = friendlyUnit(V, before + ' ', { any:true }), rs = [];
+        const to = subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+        for(const o of headed) grants.push(Object.assign({ rule }, { grants:o.name, type:'ability', to, while:null, text:sent }));
+        continue;
+      }
       if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
       const before = sent.slice(0, m.index);
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });

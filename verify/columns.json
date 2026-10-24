@@ -765,6 +765,10 @@
      "source": "newrecruit",
      "note": "what New Recruit prints for a value shown with a rule applied BSData does not apply (verify/nr.js)"
     },
+    "own": {
+     "source": "gw",
+     "note": "the datasheet's own value of a stat a rule of the list changed (from), where no list shows it unchanged: GW's datasheet (verify/from-json.js); written to the DATASHEETS row by verify/tables.js --write, not kept on the entry"
+    },
     "M": {
      "source": "bsdata",
      "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"

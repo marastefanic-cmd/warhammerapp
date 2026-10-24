@@ -1420,7 +1420,7 @@ const FACTIONS = {
     name: 'Ultramarines',
     // army rules: Wahapedia, Ultramarines, Army Rules (the ones the list’s units name), written by verify/from-json.js
     armyRules: [
-      { name:'Combat Doctrines', ph:['command','movement','shooting','charge'], turn:'your', text:'At the start of your Command phase, you can select one **combat doctrine** listed below. If you do, that **combat doctrine** is active for friendly **ADEPTUS ASTARTES** units with this ability until the start of your next Command phase.\nASSAULT DOCTRINE\nWhen this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.\nDEVASTATOR DOCTRINE\nThis unit’s ranged attacks have **[ASSAULT]**.\nTACTICAL DOCTRINE\nWhen this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge**.\nUnless otherwise stated:\n- You can only select each **combat doctrine** once per battle.\n- Only one **combat doctrine** can be active for each unit. If a rule makes a **combat doctrine** active for a unit, any **combat doctrine** previously active for that unit is no longer active for that unit.' },
+      { name:'Combat Doctrines', at:'Start of your Command phase', ph:['command','movement','shooting','charge'], turn:'your', text:'At the start of your Command phase, you can select one **combat doctrine** listed below. If you do, that **combat doctrine** is active for friendly **ADEPTUS ASTARTES** units with this ability until the start of your next Command phase.\nASSAULT DOCTRINE\nWhen this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.\nDEVASTATOR DOCTRINE\nThis unit’s ranged attacks have **[ASSAULT]**.\nTACTICAL DOCTRINE\nWhen this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge**.\nUnless otherwise stated:\n- You can only select each **combat doctrine** once per battle.\n- Only one **combat doctrine** can be active for each unit. If a rule makes a **combat doctrine** active for a unit, any **combat doctrine** previously active for that unit is no longer active for that unit.' },
       { name:'Transhuman Strategist', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' },
       { name:'Librarius', text:'**ADEPTUS ASTARTES PSYKER** units with this ability have a **psyker level** of 1 or higher, specified in that unit’s abilities. Each **psychic ability** has a **psychic level** of 1 or higher, specified in that ability’s name.\nIn a battle round, a friendly **ADEPTUS ASTARTES PSYKER** unit can use a number of **psychic abilities** whose total **psychic level** does not exceed that **PSYKER** unit’s **psyker level**.\n**Example:** In a battle round, a **psyker level 3 PSYKER** unit could use three **psychic level 1** abilities, or one **psychic level 1** ability and one **psychic level 2** ability, or one **psychic level 3** ability.' },
       { name:'Space Marine Chapters', text:'If an **ADEPTUS ASTARTES** unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Marneus Calgar has both the **ADEPTUS ASTARTES** and **ULTRAMARINES** Faction keywords,and is therefore from the Ultramarines Chapter.\nYou cannot include units from more than one Chapter in your army.' },
@@ -1444,7 +1444,7 @@ const FACTIONS = {
       // Deathwatch Support: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'deathwatch-support': {
         name:'Deathwatch Support', dispositions:['Disruption'], dp:1,
-        rule:{ name:'Mission Tactics', needs:{ all:['Kill Team'] }, ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, calcMods:[{ kind:'all', from:'Furor Tactics', when:'Furor Tactics (the devastator doctrine is active for your unit)', note:'[SUSTAINED HITS 1]' },{ kind:'all', from:'Malleus Tactics', when:'Malleus Tactics (the tactical doctrine is active for your unit)', note:'[LETHAL HITS]' }], text:'Friendly **KILL TEAM** units with this ability have the following abilities:\nFuror Tactics\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\nMalleus Tactics\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\nPurgatus Tactics\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules.' },
+        rule:{ name:'Mission Tactics', needs:{ all:['Kill Team'] }, ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, calcMods:[{ kind:'all', from:'Furor Tactics', when:'Furor Tactics (the devastator doctrine is active for your unit)', note:'[SUSTAINED HITS 1]' },{ kind:'all', from:'Malleus Tactics', when:'Malleus Tactics (the tactical doctrine is active for your unit)', note:'[LETHAL HITS]' }], text:'Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules.' },
         enhancements:[
           { name:'Beacon Angelis', pts:25, text:'**ADEPTUS ASTARTES** model only. If this unit is a **KILL TEAM** unit, this unit has:\n- **Deep Strike**.\n- When you target this unit with the **Rapid Ingress Stratagem**, that use is -1CP.' }
         ],
@@ -4415,8 +4415,9 @@ const ARMIES = [
       ],
       rules:['Deep Strike','Combat Doctrines','Leader','Transhuman Strategist','Close-quarters','Twin-linked','Extra Attacks','Support','Assault','Heavy','Rapid Fire','Blast','Psychic','Devastating Wounds'],
       kw:['Chapter Master','Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Infantry','Marneus Calgar','Terminator','Explosives','Psyker','Tacticus','Wardens of Ultramar','Bladeguard Veteran Squad'],
-      kwNote:'Explosives, Psyker, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit.',
-      partialRules:{ 'Deep Strike':'Marneus Calgar' }
+      kwNote:'Explosives, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit.',
+      partialRules:{ 'Deep Strike':'Marneus Calgar' },
+      kwOnly:{ Psyker:'Dainal Kornelius' }
     },
     {
       id:'librarian-in-phobos-armour', ds:'ultramarines/librarian-in-phobos-armour', pts:75,
@@ -4468,7 +4469,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'ranged', when:'Always', note:'re-roll damage rolls', from:'Total Obliteration', always:true }
+        { kind:'ranged', when:'Every ranged attack', note:'can re-roll damage rolls', from:'Total Obliteration', always:true }
       ]
     },
     {
@@ -6505,7 +6506,8 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Author of the Codex', ph:['movement'], turn:'your', text:'In your Movement phase, you can select one **visible** friendly **ADEPTUS ASTARTES** unit within 12" of this model, and select one **combat doctrine**. That **combat doctrine** is active for that unit in addition to any other **combat doctrines** that are active for that unit until the start of your next Command phase.' },
-    { name:'Leader of Astartes', ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' }, def:'Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit', text:'While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.', defOf:'21019393' },
+    { name:'Leader of Astartes', def:'Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit', text:'While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.', defOf:'21019393' },
+    { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
     { name:'Primarch of the XIII', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **ADEPTUS ASTARTES** unit is within 6" of this unit, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
     { name:'Codex Adept', text:'The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.' }
   ],
@@ -6538,7 +6540,7 @@ const DATASHEETS = {
     { name:'Dainal Kornelius', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'28.5mm' },
     { name:'Gaius Silva', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'28.5mm' },
     { name:'Lucia Vestha', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'28.5mm' },
-    { name:'Veteran Sergeant Metaurus', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+    { name:'Veteran Sergeant Metaurus', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
   ],
   ranged:[
     { name:'Archeotech Laspistol', range:'12"', A:'1', BS:'3+', S:'4', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] },
@@ -6590,9 +6592,9 @@ const DATASHEETS = {
     { name:'Force weapon [Psychic]', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-2', D:'2', kw:['PSYCHIC'] }
   ],
   abilities:[
-    { name:'Shrouding', tag:'psychic level 1', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, def:'Shrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase', text:'When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a psychic roll for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Attacks that target this unit have -1 to **hit rolls** until the end of the phase.', defOf:'c99822c4' },
+    { name:'Shrouding', tag:'psychic level 1', def:'Shrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase', text:'When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a psychic roll for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Attacks that target this unit have -1 to **hit rolls** until the end of the phase.', defOf:'c99822c4' },
     { name:'Soul Sight', tag:'psychic level 1', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit. Ranged attacks that target that enemy unit have **[IGNORES COVER]**.' },
-    { name:'Psychic Hood', tag:'Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, def:'Feel No Pain 4+ against psychic attacks', text:'This unit has **Feel No Pain 4+** against **psychic attacks**.', defOf:'3eefcb3b' },
+    { name:'Psychic Hood', tag:'Psychic', def:'Feel No Pain 4+ against psychic attacks', text:'This unit has **Feel No Pain 4+** against **psychic attacks**.', defOf:'3eefcb3b' },
     { name:'Librarian', tag:'psyker level 1', text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' }
   ],
   rules:['Leader','Deep Strike','Combat Doctrines','Scouts 6"','Librarius','Stealth','Infiltrators','Close-quarters','Psychic','Hazardous','Devastating Wounds'],
@@ -6613,7 +6615,7 @@ const DATASHEETS = {
     { name:'Ceramite Fists', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Unyielding in the Face of the Foe', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, def:'+1 to save rolls while it is controlling an objective', text:'While this unit is controlling an **objective**, this unit has +1 to **save rolls**.', defOf:'4c01a4b4' }
+    { name:'Unyielding in the Face of the Foe', def:'+1 to save rolls while it is controlling an objective', text:'While this unit is controlling an **objective**, this unit has +1 to **save rolls**.', defOf:'4c01a4b4' }
   ],
   rules:['Combat Doctrines','Close-quarters','Heavy','Rapid Fire','Sustained Hits'],
   kw:['Battleline','Explosives','Faction: Adeptus Astartes','Gravis','Heavy Intercessor Squad','Imperium','Infantry']
@@ -6621,7 +6623,7 @@ const DATASHEETS = {
 'ultramarines/impulsor':{
   name:'Impulsor', faction:'ultramarines', bsId:'bfb1-7512-e1a3-9fa2', role:'Dedicated Transport',
   stats:[
-    { name:'Impulsor', M:'12"', T:'9', Sv:'3+', W:'11', Ld:'6+', OC:'2', base:'100mm' }
+    { name:'Impulsor', M:'12"', T:'9', Sv:'3+', W:'11', Ld:'6+', OC:'2', base:'100mm', InSv:'–' }
   ],
   ranged:[
     { name:'Ironhail Heavy Stubber', range:'36"', A:'3', BS:'3+', S:'4', AP:'-1', D:'1', kw:['RAPID FIRE 3'] },
@@ -6633,7 +6635,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Transport', text:'This model has a **transport capacity** of 7 **ADEPTUS ASTARTES INFANTRY** models. It cannot transport **TERMINATOR/JUMP PACK** models. Each **GRAVIS** model takes up the space of 2 models.' },
     { name:'Rapid Disembarkation', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**.' },
-    { name:'Shield Dome', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'This unit has 5+ **InSv**.' }
+    { name:'Shield Dome', text:'This unit has 5+ **InSv**.' }
   ],
   rules:['Deadly Demise D3','Firing Deck 7','Combat Doctrines','Rapid Fire'],
   kw:['Dedicated Transport','Faction: Adeptus Astartes','Frame','Imperium','Impulsor','Transport','Vehicle']
@@ -6683,7 +6685,7 @@ const DATASHEETS = {
 'ultramarines/deathwatch-terminator-squad':{
   name:'Deathwatch Terminator Squad', faction:'ultramarines', bsId:'390e-706b-a059-378b', role:'Allies: Deathwatch',
   stats:[
-    { name:'Deathwatch Terminator Sergeant', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
+    { name:'Deathwatch Terminator Sergeant', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm', W:'3' },
     { name:'Deathwatch Terminator', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm', W:'3' }
   ],
   ranged:[
@@ -7656,7 +7658,13 @@ const RULE_OPTIONS = [
   { rule:'Adeptus Custodes army rule · Martial Ka’tah', option:'Example', text:'If you selected the Solar Watch **detachment**, when you select the Calistus **ka\'tah ability** for a **readied** unit, that unit has +2" **M** in addition to the normal effect of Calistus.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['movement'], turn:'your' }, phases:{ ph:['command','movement'], turn:'your' } },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', option:'Psychic Null (Aura)', text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } } },
   { rule:'Adeptus Custodes · Emperor’s Chosen rule · Magna Imperator', option:'Additional Effect', text:'You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:', found:'"**Name:** effect"', explicit:false, trigger:null, used:null, phases:null },
+  { rule:'Ultramarines army rule · Combat Doctrines', option:'ASSAULT DOCTRINE', text:'When this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.', found:'heading in capitals and its line, trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['movement','charge'], turn:'your' }, phases:{ ph:['command','movement','charge'], turn:'your' } },
+  { rule:'Ultramarines army rule · Combat Doctrines', option:'DEVASTATOR DOCTRINE', text:'This unit\'s ranged attacks have **[ASSAULT]**.', found:'heading in capitals and its line, trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['shooting'], turn:'your' }, phases:{ ph:['command','shooting'], turn:'your' } },
+  { rule:'Ultramarines army rule · Combat Doctrines', option:'TACTICAL DOCTRINE', text:'When this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge**.', found:'heading in capitals and its line, trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['command','movement','shooting','charge'], turn:'your' } },
   { rule:'Ultramarines army rule · Librarius', option:'Example', text:'In a battle round, a **psyker level 3 PSYKER** unit could use three **psychic level 1** abilities, or one **psychic level 1** ability and one **psychic level 2** ability, or one **psychic level 3** ability.', found:'"**Name:** effect"', explicit:false, trigger:null, used:null, phases:null },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', option:'Furor Tactics', text:'If the **devastator doctrine** is active for your unit, your unit\'s attacks have **[SUSTAINED HITS 1]**.', found:'heading "**Name**" and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', option:'Malleus Tactics', text:'If the **tactical doctrine** is active for your unit, your unit\'s attacks have **[LETHAL HITS]**.', found:'heading "**Name**" and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', option:'Purgatus Tactics', text:'If the **assault doctrine** is active for your unit, your unit\'s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.', found:'heading "**Name**" and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Invocation of Machine Vengeance', text:'At the start of your Command phase, select one unit from your opponent\'s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.', found:'"**Name:** effect"', explicit:true, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' } }, phases:{ ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' } } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Mantra of Discipline', text:'This model has the **BATTLELINE** keyword and has the following ability:', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Binharic Courage (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
@@ -7682,7 +7690,9 @@ const GRANTS = [
   { rule:'Chaos Knights · Houndpack Lance rule · Marked Prey', grants:'CHARACTER', type:'keyword or weapon ability', to:null, while:'Until the end of the battle', text:'Until the end of the battle, those units have the **CHARACTER** keyword.*' },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', option:'Psychic Null (Aura)', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Faction: Adeptus Custodes'] }, while:'Psychic Null (Aura) active', text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', grants:'Psychic Null (Aura)', type:'ability', to:{ all:['Faction: Anathema Psykana'] }, while:null, text:'- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:' },
-  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'devastator doctrine', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Furor Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Malleus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Purgatus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'shooty · Big Mek Dakkarig · Dreadherder', grants:'Lone Operative', type:'ability', to:'this unit / model', while:null, text:'- This model has **Lone Operative**.' },
   { rule:'melee · Ghazghkull Thraka · Da Grand Warlord’s Ladz', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
   { rule:'melee · Mozrog Skragbad · Beast Snagga Following', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
@@ -7716,8 +7726,8 @@ const GRANTS = [
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','leads','support','also','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
-  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','leads','support','also','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
+  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from'],
   abilities:['name','who','at','tag','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']
@@ -7735,7 +7745,7 @@ const TABLE_ORDER = {
 function resolveArmies(armies, sheets, order, opts){
   opts = opts || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'];
-  var HIDE = ['ds', 'over', 'of', 'why', 'faction', 'bsId'].concat(["gistOf","defOf"]).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(["gistOf","defOf"]).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -7764,7 +7774,9 @@ function resolveArmies(armies, sheets, order, opts){
           var at = find(parts, kind, r);
           if(at.j < 0){ if(opts.trace) opts.trace(a, u, kind, n, null, -1); return put({}, r); }
           if(opts.trace) opts.trace(a, u, kind, n, ids[at.p], at.j);
-          var row = put({}, copy(parts[at.p][kind][at.j])); put(row, r); if(r.over) put(row, r.over);
+          var ds = parts[at.p][kind][at.j], row = put({}, copy(ds)); put(row, r); if(r.over) put(row, r.over);
+          // (for --expand: the datasheet's own value of a stat a rule of the list changed, own, so --write gives it back)
+          if(kind === 'stats' && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }
           return sorted(row, order[kind] || []);
         });
       });

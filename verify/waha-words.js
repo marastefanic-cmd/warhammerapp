@@ -157,7 +157,7 @@ function unitSrc(u) {
   let s = '    {\n      ' + head + ',\n';
   if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + (u.also ? ', also:' + lit(u.also) : '') + ',\n';
   s += '      models:' + lit(u.models) + ',\n' + (u.unplaced ? '      unplaced:' + lit(u.unplaced) + ',\n' : '') + '      gear:' + lit(u.gear) + ',\n';
-  const AB = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
+  const AB = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'note', 'def', 'na', 'text'];   // an ability's fields in data.js's order
   const abs = u.abilities.map(a => Object.fromEntries(Object.keys(a).sort((x, y) => (AB.indexOf(x) + 1 || 99) - (AB.indexOf(y) + 1 || 99)).map(k => [k, a[k]])));
   s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
   if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
@@ -232,10 +232,14 @@ function wahaDatasheet(html, chapter) {
     const bM = /dsModelBase[^2][^>]*>([^<]*)</.exec(blk) || /dsModelBase"[^>]*>([^<]*)</.exec(blk); if (bM) p.base = txt(bM[1]).replace(/^\(⌀?|\)$/g, '').trim();
     out.profiles.push(p);
   }
-  // "* Gaius Silva only": the invulnerable save of the models it names
-  const invOnly = /dsInvulComment[^>]*>\s*\*\s*([^<]*?)\s+only\s*</.exec(top);
-  const onlyNames = invOnly ? txt(invOnly[1]).split(/\s*(?:,|\band\b)\s*/).filter(Boolean).map(x => x.toLowerCase()) : null;
-  if (inv) for (const p of out.profiles) if (!onlyNames || onlyNames.includes(String(p.name || '').toLowerCase())) p.INSV = txt(inv[1]);
+  // each invulnerable save box, with its footnote for the models it is for ("INSV* 5+ * Gaius Silva only", then "INSV* 4+ * Veteran
+  // Sergeant Metaurus only"): a box without a footnote is every model's
+  const boxes = top.split('class="dsInvulWrap"').slice(1).map(b => {
+    const v = /dsCharInvulValue[^>]*>([^<]*)</.exec(b), only = /dsInvulComment[^>]*>\s*\*\s*([^<]*?)\s+only\s*</.exec(b.split('class="dsInvulWrap"')[0]);
+    return v ? { v: txt(v[1]), names: only ? txt(only[1]).split(/\s*(?:,|\band\b)\s*/).filter(Boolean).map(x => x.toLowerCase()) : null } : null;
+  }).filter(Boolean);
+  if (!boxes.length && inv) boxes.push({ v: txt(inv[1]), names: null });
+  for (const p of out.profiles) { const b = boxes.find(x => x.names && x.names.includes(String(p.name || '').toLowerCase())) || boxes.find(x => !x.names); if (b) p.INSV = b.v; }
   for (const m of top.matchAll(/<tr class="dsWeaponRow">([\s\S]*?)<\/tr>/g)) {
     const row = m[1], name = txt((/dsWeaponName">([\s\S]*?)<\/b>/.exec(row) || [])[1] || '');
     const kws = [...row.matchAll(/<span class="kwbw[^"]*">([\s\S]*?)<\/span><\/span><\/span>/g)].map(k => txt(k[1]));

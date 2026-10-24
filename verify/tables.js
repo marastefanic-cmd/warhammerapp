@@ -58,7 +58,7 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 function resolveArmies(armies, sheets, order, opts){
   opts = opts || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'];
-  var HIDE = ['ds', 'over', 'of', 'why', 'faction', 'bsId'].concat(${JSON.stringify(Object.values(FINGERPRINT))}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(${JSON.stringify(Object.values(FINGERPRINT))}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -87,7 +87,9 @@ function resolveArmies(armies, sheets, order, opts){
           var at = find(parts, kind, r);
           if(at.j < 0){ if(opts.trace) opts.trace(a, u, kind, n, null, -1); return put({}, r); }
           if(opts.trace) opts.trace(a, u, kind, n, ids[at.p], at.j);
-          var row = put({}, copy(parts[at.p][kind][at.j])); put(row, r); if(r.over) put(row, r.over);
+          var ds = parts[at.p][kind][at.j], row = put({}, copy(ds)); put(row, r); if(r.over) put(row, r.over);
+          // (for --expand: the datasheet's own value of a stat a rule of the list changed, own, so --write gives it back)
+          if(kind === 'stats' && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }
           return sorted(row, order[kind] || []);
         });
       });
@@ -104,7 +106,7 @@ const stable = v => JSON.stringify(v, (k, x) => x instanceof RegExp ? String(x) 
 const eq = (a, b) => stable(a) === stable(b);
 // the lists as the app sees them are the same: equal, but for the fingerprints of AI-written columns, which the table form hides
 // and the old form (every unit in full, --expand) keeps on its rows
-const noFp = v => JSON.parse(JSON.stringify(v, (k, x) => FP_KEYS.includes(k) ? undefined : x));
+const noFp = v => JSON.parse(JSON.stringify(v, (k, x) => FP_KEYS.includes(k) || k === 'own' ? undefined : x));
 const sameLists = (a, b) => eq(noFp(a), noFp(b));
 const slug = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const baseName = n => String(n).replace(/ ×\d+$/, '');
@@ -131,7 +133,7 @@ function read(src){
   // resolve, and trace where each row came from (to put each comment of the datasheet table on every place it shows)
   const tr = new Map();   // "ai/ui/kind" -> [{ sid, j }] per row
   const aIndex = new Map(A.value.map((a, i) => [a, i]));
-  const armies = resolveArmies(A.value, sheets, order, { keep:FP_KEYS, trace:(a, u, kind, n, sid, j) => {
+  const armies = resolveArmies(A.value, sheets, order, { keep:FP_KEYS.concat('own'), trace:(a, u, kind, n, sid, j) => {
     const k = aIndex.get(a) + '/' + a.units.indexOf(u) + '/' + kind;
     if(!tr.has(k)) tr.set(k, []);
     tr.get(k)[n] = { sid, j };
@@ -257,7 +259,7 @@ function build(R){
     if(k === 'name' || (o.why && k in o.why)) return true;
     if(k === 'who') return o.kind !== 'abilities' || o.U.multi;
     if(k === 'na') return true;   // why it does nothing in this list
-    if(o.kind === 'stats') return k === 'from' || k === 'printed' || k in from;
+    if(o.kind === 'stats') return k === 'from' || k === 'printed' || k === 'own' || k in from;
     if(o.kind === 'ranged' || o.kind === 'melee') return ['n', 'from', 'enh'].includes(k) || k in from || (k === 'kw' && Object.keys(from).some(x => !WEAPON_FIELDS.includes(x)));
     return false;
   };
@@ -336,6 +338,13 @@ function build(R){
         const d = decide(...args);
         if(d.conflict) R.conflict.add(f); else if(!d.none) R.ds[f] = d.value;
       }
+      // a stat every list has changed by a rule (the Deathwatch Terminator Sergeant's W 4 from its Storm Shield): the datasheet's own
+      // value, from the lists' `own` (from-json.js: GW's datasheet), when they agree
+      if(kind === 'stats') for(const f of [...new Set(R.obs.flatMap(o => Object.keys(o.r.own || {})))]){
+        if(f in R.ds || R.conflict.has(f)) continue;
+        const vs = [...new Set(R.obs.filter(o => o.r.own && f in o.r.own).map(o => o.r.own[f]))];
+        if(vs.length === 1) R.ds[f] = vs[0]; else conflicts.push({ where:s.id + ' · stats · ' + R.key, field:'own.' + f, values:vs.map(v => ({ value:v })) });
+      }
     }
     s.ds = { name:s.name, faction:s.faction };
     if(s.bs.size === 1) s.ds.bsId = [...s.bs.keys()][0];
@@ -390,7 +399,7 @@ function build(R){
     }
     const R = o.R, e = { name:o.r.name }, over = {};
     for(const k of Object.keys(o.r)){
-      if(k === 'name') continue;
+      if(k === 'name' || k === 'own') continue;   // own: the datasheet's (below)
       if(listLevel(o, k)) e[k] = o.r[k];
       else if(R.conflict.has(k)) over[k] = o.r[k];
     }

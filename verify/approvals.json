@@ -41,6 +41,12 @@
   "at": "2026-10-23",
   "why": "“Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” needs all Faction: Adeptus Custodes, none Monster/Vehicle (so not the Anathema Psykana squads, whose only faction keyword is ANATHEMA PSYKANA, nor the Caladius/Dreadnoughts); tagged Aura, so 22.01 “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability” puts his own unit in it (selfAlways, Own aura). Note literal; the change is only the from’s and text’s punctuation."
  },
+ "01338a760bf739b4": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}."
+ },
  "0136d9f91fceaafb": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -88,6 +94,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Krumpin' Time - Meganobz\" (the footnote is correctly shown for the whole unit)."
+ },
+ "0258f182c9b79fa0": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“Your KILL TEAM unit is selected to shoot: its ranged attacks have +6\" range and +1 S.” = the EFFECT. Leaving the phase out of the gist is how the app’s approved gists read (the card shows the phase)."
  },
  "026498bae86d7674": {
   "verdict": "ok",
@@ -221,6 +233,12 @@
   "at": "2026-10-16",
   "why": "Matches \"add 1 to the Hit roll\" vs the unit selected at the start of your Shooting phase, until end of phase - only ranged attacks happen then."
  },
+ "04ec2d13effc83a2": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.” = WHEN + TARGET + EFFECT, word for word."
+ },
  "04fc12816f090f44": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -262,6 +280,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability” (kind all). Bondsman: “select one friendly ARMIGER model within 12\" of that model”, so the filter is the ARMIGER keyword copied from that text. The ‘not itself’ exclusion (notSelf) is gone. The (Bondsman) label is printed in the ability name (settled)."
+ },
+ "0591f3731327bd34": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW prints \"Shrouding (psychic level 1):\" under PSYCHIC ABILITIES (Wahapedia Librarian in Phobos Armour). Librarius reads the level from the ability's name."
  },
  "05ceaa88cf8ca796": {
   "verdict": "ok",
@@ -454,6 +478,18 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Wahapedia: “Every model is equipped with: heavy warpflamer; hellfyre missile rack; pyreflux meltagun; close combat weapon.” New Recruit: 2× Sekhetar Robot with Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun. ×2 each."
+ },
+ "0904693ef699aff2": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” The start of the battle round comes before either player’s turn (07.01): 'either', as for Doctrina Imperatives."
+ },
+ "090e1adb2d526076": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit\": the Fight phase, either turn. The opening-phase fix now gives this; there is no Shooting label."
  },
  "09187654343d9487": {
   "verdict": "ok",
@@ -665,6 +701,12 @@
   "at": "2026-10-16",
   "why": "Their turn."
  },
+ "0cbaae2772ed3657": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “One friendly unengaged ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
+ },
  "0cdae548b1769f3d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -719,6 +761,12 @@
   "at": "2026-10-21",
   "why": "NR: “1x Belisarius Cawl — Arc scourge, Cawl's Omnissian axe, Mechadendrite hive, Solar atomiser, Warlord”. The weapons are its table rows (Solar atomiser; Arc Scourge, Cawl's Omnissian axe, Mechadendrite hive). Wahapedia: “equipped with: solar atomiser; arc scourge; Cawl’s Omnissian axe; mechadendrite hive”."
  },
+ "0deaeb8cc4dc3799": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "It keeps both conditions (an enemy unit targets it; it is not battle-shocked), the psychic level, the D6 roll with its 1 = battle-shocked cost, and \"-1 to hit rolls until the end of the phase\". Both bullets follow \"If you do\", so the -1 applies whatever the roll, as the def says. There is no core definition of \"psychic roll\" that the def would drop."
+ },
  "0e4da38b92e20cd4": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -730,6 +778,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6 …” names no phase, so it is listed in all five."
+ },
+ "0e71a6f3ae11f8b9": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "The +1 to hit option of Bladeguard: \"In the Fight phase, when this unit is selected to fight\". The when says it is once per turn and instead of the -1 option, so the choice is stated and not made. Melee only (\"This unit’s melee attacks\"). Under 19.04 it covers the whole attached unit."
  },
  "0eaf090d296936fb": {
   "verdict": "ok",
@@ -760,6 +814,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "NR prints “Slayers of Tyrants - Allarus Custodians”; it is the Allarus datasheet’s ability (Wahapedia “Slayer of Tyrants”). “This unit’s melee attacks” then applies to the whole attached unit (19.04: bodyguard unit ability applies to every model while a bodyguard model lives)."
+ },
+ "0fe6f52c8dc8fe0a": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW prints \"Terror Troops (Aura):\". The tag is right, and it gives no friendly aura (enemy models only)."
  },
  "0ff21a306632496e": {
   "verdict": "ok",
@@ -874,6 +934,12 @@
   "by": "review:cooking (its fix)",
   "at": "2026-10-16",
   "why": "An always-on rule for \"attacks that target a MONSTER/VEHICLE unit\". Fire Overwatch (End of your opponent's Movement phase) gives Beast Snagga ranged attacks (Thump Gun, Slugga, Gobshot Thunderbuss), and the +1 AP applies to them. Add their Movement phase."
+ },
+ "1349107b6a372350": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Shock and Assault Disembark Moves (18.07, 18.06) are move types; Core Rules 18.03: a unit disembarks “In the active player’s Movement phase” by making a disembark move, and 09.02 lists move types as what a unit selected to move does. Shock disembark’s AFTER MOVING: “not eligible to declare a charge until the end of the turn”. Movement + Charge (the charge restriction) is what the words name. The text in data.js is Wahapedia’s word for word, including its order (Shock before Assault)."
  },
  "136517423185fba3": {
   "verdict": "ok",
@@ -1024,6 +1090,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“WHEN: Your Command phase.”"
+ },
+ "17309237e40aa4f9": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” Filed under Command with at:'Start of the battle round', the settled convention (Doctrina Imperatives, Harbingers of Dread, derive.js start-battle-round)."
  },
  "17369ac9a4a5482c": {
   "verdict": "ok",
@@ -1313,6 +1385,12 @@
   "at": "2026-10-22",
   "why": "This is the Rules Update wording (Faction Pack 1.2, “Change Unnatural Fortitude to: ‘When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase: ▪ Models in this unit have a 5+ invulnerable save. ▪ Models in this unit have the Feel No Pain 6+ ability.’”). The line keeps the Empowered condition and the “or” (a choice the player makes) and the duration."
  },
+ "1d9ab0107c51d47c": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
+ },
  "1dacf8bc8fd403f5": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -1397,6 +1475,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Errant's Duty (Bondsman)\" and the Bondsman rule says these abilities are \"tagged with the word 'Bondsman'\"."
  },
+ "203df83b4b43bba0": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"At the start of the Fight phase\": Fight, either turn."
+ },
  "2048454965bf9873": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1439,6 +1523,12 @@
   "at": "2026-10-16",
   "why": "Saves are failed in either turn."
  },
+ "211407f5f5d0d3ca": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "On Calgar's own datasheet (Wahapedia), so who = Marneus Calgar."
+ },
  "211bb480ebe7c73a": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1474,6 +1564,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In your Movement phase, at the start or end of this unit's move…\""
+ },
+ "216b67336cafb3a1": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Note “re-roll wound rolls of 1, [IGNORES COVER]” = the EFFECT; dmEffects reads it as {rrWound:'1s', ignoresCover:true}."
  },
  "217d30d04b7b74e9": {
   "verdict": "ok",
@@ -1612,6 +1708,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Thundering Stampede (Aura)\". [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "2493ada64abaf73d": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.” = WHEN + TARGET + EFFECT, word for word."
  },
  "24da4bd6a53c5f0c": {
   "verdict": "ok",
@@ -1792,6 +1894,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Your Command phase\"."
+ },
+ "27dc6f1e5df68454": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "The export takes the upgrade on the Bladeguard Veteran Squad unit (\"1× Furious Assault (Upgrade)\" under it). It names a unit, not a model, so under 19.04 its weapon keyword is on every melee weapon of the attached unit."
  },
  "27e31c34a78901f0": {
   "verdict": "ok",
@@ -2003,6 +2111,12 @@
   "at": "2026-10-18",
   "why": "EFFECT: “Your unit’s melee attacks have [LETHAL HITS]”. WHEN: “Fight phase”. The footnote has the same kind (melee), the same timing and the same ability. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”."
  },
+ "2c72703136054ad2": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes."
+ },
  "2c9260478782ab06": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -2014,6 +2128,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'Krumpin' Time - Meganobz' (l.184); BSData profile is on the Meganobz unit (the bodyguard). Models match NR."
+ },
+ "2cd0dde0d05c311d": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That KILL TEAM unit.” = {all:['Kill Team']} (the Deathwatch Terminators carry KILL TEAM)."
  },
  "2cd7024961fb6a08": {
   "verdict": "ok",
@@ -2159,6 +2279,12 @@
   "at": "2026-10-21",
   "why": "\"Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.\" {woundMinusSgt:1} (calc.js compares the attack’s S, after modifiers, with the T it meets: the bodyguard’s highest, 19.02) and {woundMinus:1} match; it is used in the opponent’s Shooting phase only (phases shooting, turn opp)."
  },
+ "3011fcbea1efc630": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“Friendly ADEPTUS ASTARTES TERMINATOR units”: {all:['Faction: Adeptus Astartes','Terminator']}."
+ },
  "3050abb455be6ffa": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2219,6 +2345,12 @@
   "at": "2026-10-19",
   "why": "EFFECT: “Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” The footnote is mod {kind:'ranged', when:'Your Shooting phase, vs targets within 9\"', note:'+1 AP'}. I ran app.html stratModLines with this mod and the Kustom Dakka one. It prints the label “Stratagems · Shoota Boyz · Your Shooting phase”, then “1CP +1 AP vs targets within 9\" (Glowin’ Dakka)”. The condition starts with “vs”, so it is joined with a space, not a comma. If the detachment’s footnotes had different phases, it would print “1CP +1 AP, Your Shooting phase, vs targets within 9\"”, which says the same thing. Checks: (1) The effect matches: “+1 AP” is the rule’s own words, not changed into “AP -1” or “improve AP”. (2) The attacks match: kind:'ranged' means the line only appears with the unit’s ranged weapons, and the rule covers only “ranged attacks”. (3) The condition matches: “vs targets within 9\"” means attacks against a target unit within 9\", which is the rule’s “that target a unit within 9\"”. Nothing is added: no visibility, closest-target or once-per-phase limit. Nothing is lost. (4) The phase is right: WHEN is “Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot”. It is shown once on the detachment label. Leaving out “when selected to shoot” matches the Kustom Dakka line, and 1CP matches cp:1. (5) Which units get it: TARGET “That ORKS INFANTRY unit” comes from needs {all:['Faction: Orks','Infantry']} through eligible(), so the line only appears on ORKS INFANTRY sheets. Ambiguity: the rule does not say what the 9\" is measured from. The usual reading is the shooting unit (“your unit”). The footnote sits under this unit’s ranged weapons, so it reads the same way and is no vaguer than the rule. The old wording “target within 9\"” had the same open point. Changing “a unit” to “targets” does not change what the rule means."
  },
+ "315113e94fa82c96": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
+ },
  "3152e3c7e12905be": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -2260,6 +2392,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Your Movement phase”: your."
+ },
+ "3278f57c7017697c": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1]” = the EFFECT. Nothing added."
  },
  "329af067dc5867be": {
   "verdict": "ok",
@@ -2501,6 +2639,12 @@
   "at": "2026-10-21",
   "why": "\"While this model has 1-10 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
  },
+ "385f2544c7af1b81": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "On Calgar's own datasheet (Wahapedia), so who = Marneus Calgar."
+ },
  "38658844e5eb6636": {
   "verdict": "ok",
   "by": "review:tables",
@@ -2524,6 +2668,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "WHEN: \"Fight phase.\""
+ },
+ "38da2c61aabdac5b": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW prints \"Psychic Hood (Psychic):\"."
  },
  "38dabf55500e7076": {
   "verdict": "ok",
@@ -2639,6 +2789,12 @@
   "at": "2026-10-21",
   "why": "“each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll”, until the end of the phase: ranged, the condition and the effect are kept."
  },
+ "3b3a4be93ae1f9c4": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: Sergeant HBR, one \"Heavy Intercessor w/Heavy Bolter\", 3 HBR, and every model Bolt pistol + Ceramite Fists. Wahapedia allows \"For every 5 models … 1 Heavy Intercessor model can have their Heavy Bolt Rifle replaced with 1 Heavy Bolter\". The counts are right: Bolt pistol ×5, HBR ×4, Heavy Bolter ×1, Ceramite Fists ×5. The profiles match Wahapedia (HBR 30\" A2 S5 AP-1 D2 [HEAVY, RAPID FIRE 1]; Heavy Bolter 36\" A3 S5 AP-1 D2 [HEAVY, RAPID FIRE 2, SUSTAINED HITS 1]; Fists A3 WS3+ S5 AP0 D1). The overview's model counts for this unit are wrong (see the report), but that is the stats rows, not this item."
+ },
  "3b3c07f5bd4e30e4": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -2728,6 +2884,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "NR: “3x Nurgling Swarm — Diseased claws and teeth”, printed “Diseased claws and teeth (x3)”. Wahapedia: “Every model is equipped with: diseased claws and teeth.” ×3 for three models is correct."
+ },
+ "3c9286dd62d38623": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}."
  },
  "3ca40c1c6892df1b": {
   "verdict": "ok",
@@ -2945,6 +3107,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Movement phase\"."
  },
+ "412b958c21267cc6": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Fight only."
+ },
  "414f9c27f36dbed4": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -3023,6 +3191,18 @@
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Nazdreg's Know-wotz - Nazdreg\" (its effect covers \"this unit\", the whole attached unit)."
  },
+ "421d8b86e03aa2e2": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Charge rolls are also made in the opponent’s Charge phase: Heroic Intervention (15.11, “End of your opponent’s Charge phase … Resolve a charge … before making the charge roll”). So 'either' is right; the same as the approved Unbridled Bloodlust (+1 to charge rolls)."
+ },
+ "422813e5128e080f": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.” Charge rolls: Charge phase (derive.js charge-move)."
+ },
  "42429a200f694cdf": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3076,6 +3256,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "WHEN: “Any phase”. Core 07.02 says “a series of five phases” (Command, Movement, Shooting, Charge, Fight), and the judgement lists all five. The Start of Turn and End of Turn steps are not phases. text: same as Wahapedia word for word."
+ },
+ "4331ad19f8eb4deb": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Text (Wahapedia Ultramarines, Army Rules, word for word in data.js): selected “At the start of your Command phase”; the doctrines are an advance move that does not prevent a charge (Movement, Charge), [ASSAULT] on ranged attacks (Shooting), a fall-back move that does not prevent shooting or a charge (Movement, Shooting, Charge). All of it is your turn: advance and fall-back moves are made in your Movement phase (09.02), declaring a charge is your Charge phase, and [ASSAULT] only matters for shooting after an advance. Nothing is used in the opponent’s turn, so 'your' (no turns map needed)."
  },
  "435c34643eb505d9": {
   "verdict": "ok",
@@ -3142,6 +3328,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "The Icon is carried by a Rubric Marine (NR \"Icon of Flame - Rubric Marines\")."
+ },
+ "453652530610e0da": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: “Your unit’s melee attacks have: [Lance]. Or: If the assault doctrine is active for your unit, [Lance] and +1 AP.” kind melee, when “Fight phase, selected to fight”, note “[LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)”: both branches and their condition are kept, nothing added. I ran index.html’s dmEffects on the note: it returns null (the condition words are left over), so the Damage tab lists it as not counted and never adds +1 AP without the doctrine. That is honest; a pick ([LANCE] / [LANCE] and +1 AP, the player says which) would let it count, an option for later, not an error."
  },
  "45807b12c577c8eb": {
   "verdict": "ok",
@@ -3238,6 +3430,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"WHEN: Your Command phase\"."
+ },
+ "4775df3fd73ab7b3": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia: Calgar 180 (\"1 model | 180\"), Wardens 115 (\"6 models | 115\"), Bladeguard \"6 models | 180\" + Furious Assault 10 = 190. The total is 485, and the list comes to 2000 (415+485+75+115+2×100+2×85+2×70+2×200). The 10 sits on the Bladeguard, where the export takes it."
  },
  "4777c00b7b396028": {
   "verdict": "ok",
@@ -3340,6 +3538,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“One TZEENTCH MUTANT unit from your army”."
+ },
+ "49d2820a1a78b12d": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “One friendly unengaged KILL TEAM unit.” = {all:['Kill Team']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
  },
  "4a1e7204bd251a77": {
   "verdict": "ok",
@@ -3466,6 +3670,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "“Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].” The rule only covers melee attacks. Core 07.02 says “FIGHT PHASE: Both players’ units make attacks with their melee weapons” and the Shooting phase uses “ranged weapons”, so Fight is the only phase. text: same words as Wahapedia; only the case differs (Wahapedia “[Sustained Hits 1]”, app “[SUSTAINED HITS 1]”)."
+ },
+ "4c2830aaf678c12b": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That KILL TEAM unit.” = {all:['Kill Team']} (the Deathwatch Terminators carry KILL TEAM)."
  },
  "4c30080b8d62d835": {
   "verdict": "ok",
@@ -3965,6 +4175,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering with also any Monster/Vehicle now requires both, as \"that target\" does (dmVs fails on either), and the condition is target keywords only, so always is right."
  },
+ "577be42d085ae727": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: Hand of Dominion and The Emperor's Sword. Wahapedia: \"1 Emperor’s Sword; 1 Hand of Dominion\". Hand of Dominion has a ranged profile and a melee one; the owner decided weapons keep New Recruit's names. All profiles match Wahapedia: Hand 36\" A4 BS2+ S6 AP-2 D2 [RAPID FIRE 2, SUSTAINED HITS 1]; melee A7 WS2+ S14 AP-4 D4 [LETHAL HITS]; Sword A10 WS2+ S10 AP-3 D2 [CLEAVE 2, DEVASTATING WOUNDS]."
+ },
  "5782e15cb3c43b35": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -3982,6 +4198,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"Your unit’s attacks can: Re-roll hit rolls of 1. If your unit is riled up, re-roll hit rolls.\" The rule says \"attacks\", so kind is all. The when copies the WHEN phases, and the note is the effect. No hit re-roll is printed by NR, so nothing is doubled."
+ },
+ "584f7d7af5785e53": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: “Attacks that target your unit have -1 D until that enemy unit has attacked.” The def “their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)” is the same, in the AoC form. Nothing added (no minimum-1 clause, since the text has none)."
  },
  "5856dfe907ed2957": {
   "verdict": "ok",
@@ -4169,6 +4391,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": vs any Character and the note match, and the only condition is the target’s keyword, so always is right. An attached unit with a CHARACTER leader is a CHARACTER unit (19.03)."
  },
+ "5c7b3499e1ab38f9": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Text (Wahapedia Ultramarines, Army Rules, word for word in data.js): selected “At the start of your Command phase”; the doctrines are an advance move that does not prevent a charge (Movement, Charge), [ASSAULT] on ranged attacks (Shooting), a fall-back move that does not prevent shooting or a charge (Movement, Shooting, Charge). Command + Movement + Shooting + Charge is every phase the words name; no Fight-phase effect. The other approved choice rule, Martial Ka’tah, also stores at:'Start of your Command phase'; this one has no at (not part of this judgement, see the report)."
+ },
  "5c8d6fea5fd59583": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -4211,6 +4439,12 @@
   "at": "2026-10-23",
   "why": "“that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.” Kind all, when “Selected to attack”; the Damage tab marks it not counted (one re-roll). The Favoured Ka’tah (Rendax) additional effect is mortal wounds on an engaged enemy MONSTER/VEHICLE, not a change to the attacks, so it has no footnote."
  },
+ "5da06918f9f834c9": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
+ },
  "5df7ecf601b79724": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -4246,6 +4480,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "NR: “1 Fist and 1 Projectors (Adrathic Desolator, Caestus Fist, Twin Neutronium Cascade Projectors)”; Wahapedia option “1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors”."
+ },
+ "5eba8634959d8c12": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “End of your opponent’s Fight phase.” “your opponent’s”: 'opp'."
  },
  "5ed6689ef3c39cad": {
   "verdict": "ok",
@@ -4294,6 +4534,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "An Infernal Lance enhancement (Wahapedia “Bestial Aspect 30 pts”). NR: “Options: Warlord, Bestial Aspect, …”."
+ },
+ "5f9f02d7ff99cc87": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "An always-on melee modifier (\"This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle]\"): Fight, either turn, the same convention as other melee always-on abilities."
  },
  "5f9fd1aac73ee831": {
   "verdict": "ok",
@@ -4384,6 +4630,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Any phase, either turn."
+ },
+ "61172defd03cddda": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Gist keeps WHEN (Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit), the condition (not yet selected to fight), the D6 with +1 for the assault doctrine, and the 4+ result with both removal points. “removed only when your unit has fought or at the end of the phase” = the text’s “whichever comes first”. Nothing added."
  },
  "611c8b6cf344c2c0": {
   "verdict": "ok",
@@ -4481,6 +4733,12 @@
   "at": "2026-10-22",
   "why": "NR prints the selection “Houndpack Lance Character” on the models line and “Character” in Categories; Wahapedia's Brigand KEYWORDS have no CHARACTER. The quote is the detachment rule word for word (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”), without the Designer's Note, so the note only says where the keyword comes from (kwStars stars CHARACTER and shows “*from Houndpack Lance Character (…)”) and nothing more than the rule."
  },
+ "6364d2e89ebde917": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "The rule leaves a choice (\"you can select one of the following\"), and the def says it is instead of the +1 to hit option. It keeps \"once per turn\" (GW tag) and \"in the Fight phase\", and it is the \"when an enemy unit targets this unit\" trigger. \"-1 to hit rolls\" is GW's. Under 19.04 it covers the whole attached unit, as shown."
+ },
  "638a4fdf554bf3dd": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -4498,6 +4756,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Final Howl (Aura) is one of the Houndpack Lance Enhancements (Wahapedia “Enhancements - Final Howl (Aura) 20 pts”); NR lists it in the Brigand's options (155 pts = 135 + 20). Tag Enhancement is right; the “(Aura)” stays in its name."
+ },
+ "6450e771ea24010b": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: Sergeant and one Terminator with \"Thunder Hammer & Storm Shield\" (+5 each), and 3 \"w/ Heavy Weapon\" with Plasma cannon + Chainfist. This is legal under Wahapedia's options (\"Storm Bolter and 1 Chainfist\", then \"Up to 3 … Storm Bolter replaced with … 1 Plasma Cannon\"). Points 190 + 2×5 = 200. The counts are right: Plasma ×3 (standard and supercharge), Thunder Hammer ×2, Chainfist ×3 (Standard and Hunter). The profiles match Wahapedia: Plasma 36\" A3 BS3+ S9 AP-2 D2 [BLAST 1] / S10 AP-3 D3 [BLAST 1, HAZARDOUS]; Thunder Hammer A3 WS3+ S8 AP-2 D3 [DEVASTATING WOUNDS] (GW D3 over the pin's 2); Chainfist A2 WS4+ S8 AP-2 D2 / Hunter A3 WS3+ S12 AP-2 D3. Storm Shield: W4 on the two bearers. The overview's W4 ×4 row is wrong (see the report), but that is the stats rows, not this item."
  },
  "647a19681f6e214a": {
   "verdict": "ok",
@@ -4757,6 +5021,12 @@
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase, when a friendly ORKS TRANSPORT unit is selected to shoot.” Shooting."
  },
+ "6a8c69c292be75d3": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
+ },
  "6a9a665463a5064d": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -4853,6 +5123,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your opponent’s Shooting phase, just after an enemy unit has shot.” TARGET: “One SKITARII INFANTRY unit from your army that lost one or more models as a result of the attacking unit’s attacks.” react 'lost' names it, not counted, to the side shooting that unit (“Once it loses models to these attacks, it can shoot back”). The EFFECT is quoted, including “can only do so if that enemy unit is an eligible target”. It shows only in the Shooting phase and not in Fire Overwatch."
  },
+ "6cceab9ffaaa1b4b": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes, same form as the approved 'Faction: World Eaters' needs."
+ },
  "6cdf8b09fde67376": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -4870,6 +5146,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
+ },
+ "6d535890dcc331d0": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "On Calgar's own datasheet (Wahapedia), so who = Marneus Calgar."
  },
  "6d62361b5f4cf98d": {
   "verdict": "ok",
@@ -4906,6 +5188,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "NR: “Titanic feet, Ruinspear rocket pod, Diabolus heavy stubber, 2x Gatling cannon and flamer (Despoiler gatling cannon, Heavy darkflamer)”. The weapons are therefore ×2 gatling cannon and ×2 heavy darkflamer. This is legal per Wahapedia's options: the reaper chainsword and the warpstrike claw can each be replaced with “1 despoiler gatling cannon and 1 heavy darkflamer”, the meltagun with a heavy stubber, and it can take a ruinspear rocket pod."
+ },
+ "6e4d9278440f0b7f": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"In your Movement phase, you can select…\": Movement, your turn."
  },
  "6e625fc7be865aa6": {
   "verdict": "ok",
@@ -5051,6 +5339,12 @@
   "at": "2026-10-23",
   "why": "“INFANTRY/MOUNTED THOUSAND SONS PSYKER model only”: the Shaman is INFANTRY, MOUNTED, PSYKER and the bearer."
  },
+ "711ecd9fcac72b06": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Only Primarch of the XIII is GW-tagged (Aura), and Terror Troops affects enemy models only. needs Faction: Adeptus Astartes = \"friendly ADEPTUS ASTARTES unit\". selfAlways follows 22.01: \"it is always within range of its own aura ability\". Same form as the approved Ghazghkull Prophet aura (when \"Within 6\" of …\", selfWhen \"Own aura\"). The note keeps \"of 1\" for both rolls. The snapshot shows it on every Adeptus Astartes unit, Deathwatch Terminators and Calgar's whole unit included."
+ },
  "714c0fca8fe26bbb": {
   "verdict": "ok",
   "by": "review:r18b-game",
@@ -5134,6 +5428,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "“At the start of your Shooting phase, select one enemy VEHICLE unit within 12\" of this model…”"
+ },
+ "73bb789eb21a9247": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) 'either' (the Fight phase of both turns)."
  },
  "73f50943dc167694": {
   "verdict": "ok",
@@ -5230,6 +5530,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” Same duration, condition and re-rolls."
+ },
+ "75ca10d32d1676b6": {
+  "verdict": "ok",
+  "by": "review:nerf-units (its fix)",
+  "at": "2026-10-24",
+  "why": "The content is right: ranged, \"re-roll damage rolls\", from Total Obliteration, always. But when:'Always' is new and appears nowhere else in data.js. Approved always-on footnotes say \"Every ranged attack\" (More Dakka, Bringers of Change) or \"Every melee attack\" (Bringer of Justice, Excessive Assault), and the screen then reads \"Every ranged attack: re-roll damage rolls\". GW's \"can\" is kept the way the approved \"can re-roll wound rolls\" (Da Bigger Dey Iz…) keeps it."
  },
  "76066f03893cf1da": {
   "verdict": "ok",
@@ -5459,6 +5765,12 @@
   "at": "2026-10-16",
   "why": "Text: \"(Once per battle, per unit)\"."
  },
+ "7a7833219556d107": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting + Fight."
+ },
  "7a94c964a5582ba2": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -5488,6 +5800,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF: Nazdreg 165 and (5) Meganobz 190, for a total of 355."
+ },
+ "7ac5d515c07c8a74": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.” “Fight phase” with no owner: either player’s (phase-either)."
  },
  "7ac6a215047d8dab": {
   "verdict": "ok",
@@ -5717,6 +6035,12 @@
   "at": "2026-10-17",
   "why": "WHEN “Fight phase”. EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6 … On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” The def leaves out the clause “+3 to the result if your unit has ~~DEFF DREAD~~”. That keyword is struck through in the source (Wahapedia prints it that way), and no unit in the Cooking list has DEFF DREAD (a list fact), so the clause changes nothing for the WALKER units this line is shown on."
  },
+ "801593e0ebc7a385": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Same shape as the approved Da Grand Warlord’s Ladz def (\"Lone Operative while within 3\" of another friendly ORKS INFANTRY unit\"). It keeps the condition and adds nothing. \"another\" is rightly absent: GW's text has \"a friendly\"."
+ },
  "8018bd63e4af5718": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5885,6 +6209,12 @@
   "at": "2026-10-16",
   "why": "Both Destriers carry chastiser gatling cannon, frag bombard, heavy stubber and titanic feet (NR); Thundercharge needs \"a thundershock spear and a bellatus reaper chainsword\" and only the Destrier has it."
  },
+ "83cc0a1e8a9b3098": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “End of your opponent’s Fight phase.” Filed under Fight (the end of the phase), as derive.js and the approved end-of-phase stratagems do."
+ },
  "83d6f34a55c9a057": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -5938,6 +6268,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "The Khorne Daemonkin Enhancement (Wahapedia, 30 pts; New Recruit lists it on the Daemon Prince). \"WORLD EATERS model only\": the Daemon Prince of Khorne has Faction: World Eaters."
+ },
+ "84bb08851ed1db5e": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Codex Adept: \"The assault doctrine, devastator doctrine and tactical doctrine are active for this unit\". The army rule's Devastator Doctrine reads \"This unit’s ranged attacks have [ASSAULT]\", so ranged [ASSAULT] is always on (Codex Adept is the \"unless otherwise stated\" exception to one doctrine per unit). On Calgar's attached unit it covers every model, because Core 19.04 says \"abilities/rules that affect a unit … apply to every model in an attached unit\". On Guilliman it is his own unit. The other two doctrines do not change a weapon profile."
  },
  "84bd5ba1ef63a645": {
   "verdict": "ok",
@@ -6101,6 +6437,12 @@
   "at": "2026-10-16",
   "why": "Rage Eternal is the Slaughterbound's ability."
  },
+ "8841f790ef10b9c2": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Shooting + Fight."
+ },
  "885c721aff8af508": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -6233,6 +6575,12 @@
   "at": "2026-10-16",
   "why": "Labels: PRECISION, [PRECISION] (incl. Epic Challenge); all 24.28."
  },
+ "8b058ec31b3d13ed": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Note “[ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks)” keeps the exclusion. dmEffects returns null for it (the exclusion words are left over), so the Damage tab lists it as not counted. It does not wrongly read “[DEVASTATING WOUNDS]” as a gain, so there is no miscount."
+ },
  "8b0c201a70a8441b": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -6298,6 +6646,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "WHEN: \"Your Shooting phase.\""
+ },
+ "8c447361aeaf5d14": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting is the opponent’s only: {shooting:'opp'}."
  },
  "8c4f84275cbd4977": {
   "verdict": "ok",
@@ -6389,6 +6743,12 @@
   "at": "2026-10-23",
   "why": "Export categories: Khârn “Faction: World Eaters, Infantry, Character, Epic Hero, Grenades, Chaos, Khorne, Khârn the Betrayer”; Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Only Battleline and Berzerkers come from the bodyguard."
  },
+ "8dae4f49a6278c7c": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW tags it: Wahapedia prints \"Primarch of the XIII (Aura):\". This is a 22.01 aura."
+ },
  "8de4eb361882a921": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -6448,6 +6808,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army … add 1 to the Objective Control characteristic of models in that unit” (Faction Pack v1.4 Rules Updates): LEGIO CYBERNETICA picks only the Datasmith + Kastelan Robots unit here."
+ },
+ "8efa35a03ccbe7e0": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "The use the text names is \"When you target this unit with the Rapid Ingress stratagem\". Core Rapid Ingress: \"WHEN: End of your opponent’s Movement phase\". So Movement, their turn (derive.js identical). The pre-battle token set-up is not a phase."
  },
  "8f35934d70da634a": {
   "verdict": "ok",
@@ -6647,6 +7013,12 @@
   "at": "2026-10-16",
   "why": "Steps Command→Movement→Shooting→Charge→Fight, and after Fight flips your/their (07.02: the same player always goes first, so turns strictly alternate across rounds too); with turn \"all\" it keeps \"all\"; no button on \"all phases\". Snapshots read \"Next: Your Fight\" → \"Next: Their Command\" → … → \"Next: Your Command\"."
  },
+ "9441ed7a73340d03": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER]” = the EFFECT. Nothing added."
+ },
  "945ccc84b6770171": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -6676,6 +7048,12 @@
   "by": "review:knights-nids (its fix)",
   "at": "2026-10-16",
   "why": "The trigger is \"Each time this model is selected to shoot or fight\". Knights are TITANIC, so Fire Overwatch (\"excluding TITANIC units\") is out, and none can be selected to shoot in the opponent’s Shooting phase. Shooting is your turn only; fight stays either."
+ },
+ "95ab8a26242ab12f": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That KILL TEAM unit.” = {all:['Kill Team']} (the Deathwatch Terminators carry KILL TEAM)."
  },
  "95c6517685c56b6f": {
   "verdict": "ok",
@@ -6743,6 +7121,12 @@
   "at": "2026-10-16",
   "why": "NR: \"Beacons of Rage (Aura)\"."
  },
+ "97a157926c270ace": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
+ },
  "980ff948d3a100d1": {
   "verdict": "ok",
   "by": "review:gists",
@@ -6802,6 +7186,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "As in item 8: every BEAST SNAGGA unit in the list (Mozrog and both Beastbosses) is a MONSTER CHARACTER."
+ },
+ "98ddb53f04b721d4": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.” 'your'."
  },
  "98fe49f606c42ffb": {
   "verdict": "ok",
@@ -7006,6 +7396,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "protects WORLD EATERS units (the unit whose models get the save: \"models in your WORLD EATERS unit\" are all of the unit's models, the BLOOD LEGIONS Lord in the Lord + Berzerkers unit too), by a BLOOD LEGIONS unit of the list; \"their Shooting phase\" is the opponent's, the wording of the signed-off shields (Grot Shields); 6\" is said, a range the player judges."
+ },
+ "9d9a0e5f06c502e0": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW prints \"Soul Sight (psychic level 1):\"."
  },
  "9d9ae95a9c7f1cac": {
   "verdict": "ok",
@@ -7229,6 +7625,12 @@
   "at": "2026-10-16",
   "why": "TARGET \"One friendly unengaged unit (excluding TITANIC units)\": none:[Titanic] is exact; all four Knights correctly excluded. (Units with no ranged weapon — Hive Tyrant, Neurogaunts, Tzaangors, Enlightened, Eightbound, Slaughterbound — are legal targets but cannot attack, 04.01.01; suits() already keeps it off their datasheets, the strat card still says \"any unit\".)"
  },
+ "a1ae4e24d304e423": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+]”: the EFFECT with its exclusion. Nothing added."
+ },
  "a1c499e7334d1bb1": {
   "verdict": "ok",
   "by": "review:gists",
@@ -7264,6 +7666,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Your Shooting phase."
+ },
+ "a299b4e3405368d4": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes."
  },
  "a2b31e149a65539e": {
   "verdict": "ok",
@@ -7354,6 +7762,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"WHEN: Your opponent’s Shooting phase\"."
+ },
+ "a4ca116f8e5cc3ea": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "On the Wardens of Ultramar datasheet (Wahapedia Wardens-of-Ultramar-1)."
  },
  "a4e35bc068c8fef5": {
   "verdict": "ok",
@@ -7487,6 +7901,12 @@
   "at": "2026-10-22",
   "why": "\"Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll\": all attacks, +1 to hit, the target's state as the player's tick."
  },
+ "a74febbc2fb49fe7": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW's words with the condition kept: \"+1 to save rolls while it is controlling an objective\"."
+ },
  "a75a8239eb67c7fb": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -7564,6 +7984,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
+ },
+ "a9e89bbe276b851b": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Deep Strike is a core ability on Calgar's datasheet (\"CORE ABILITIES | Deep Strike, Leader\"). The Wardens' sheet has only Support, and the Bladeguard's none. So the combined unit cannot use it, and the app names Calgar."
  },
  "aa0b2dc073430170": {
   "verdict": "ok",
@@ -8165,6 +8591,12 @@
   "at": "2026-10-23",
   "why": "\"WHEN: End of your opponent’s Fight phase.\""
  },
+ "b7ceb86876ad30fe": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "On the Bladeguard Veteran Squad datasheet."
+ },
  "b7ec56bb88fd2790": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -8351,6 +8783,12 @@
   "at": "2026-10-22",
   "why": "The added TARGET conditions are right: “One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn” = “Your unengaged unit, eligible to shoot and with no advance move this turn”. But step 2 of the EFFECT is “Select one unengaged enemy unit within 8\" of and visible to that model”; the gist’s “at an enemy unit within 8\"” drops “unengaged” and “visible to”, the two conditions that decide which enemy unit it can be used on. With them in, nothing of the text is left out, so the trailing “…” goes."
  },
+ "bb87958ebbf30455": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: “Your unit’s ranged attacks have: Have +6\" R. Have +1 S.” The note “+6\" range and +1 S” says the same. dmEffects reads it as {range:6, s:1}, which is what the EFFECT gives."
+ },
  "bbc956efd0611697": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -8404,6 +8842,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "TARGET: \"One WORLD EATERS unit from your army\"."
+ },
+ "bd24da2775a2adc2": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW prints \"Bladeguard (Once per turn, per unit):\" (Wahapedia Bladeguard Veteran Squad)."
  },
  "bd62b2f936439385": {
   "verdict": "ok",
@@ -8543,6 +8987,12 @@
   "at": "2026-10-21",
   "why": "TARGET: “One SKITARII unit from your army that has not been selected to shoot this phase”: SKITARII (Rangers, Ironstriders, Onager, Skorpius, Datasmith + Kastelans via Martial Signatum Amplificator)."
  },
+ "c0095ccd5dd301b3": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia Assault Brethren: \"Furious Assault UPGRADE 10 pts\". The export has \"Furious Assault (Upgrade) [pts=10]\"."
+ },
  "c046c2e490b089ba": {
   "verdict": "ok",
   "by": "review:lite-knights-2",
@@ -8597,6 +9047,12 @@
   "at": "2026-10-16",
   "why": "\"at the start of the Fight phase\" with no turn restriction = Fight, either turn."
  },
+ "c2373661d53dd21e": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: Bolt pistol, Force weapon, Smite. Wahapedia: \"1 Bolt Pistol; 1 Force Weapon; 1 Smite\". \"Force weapon [Psychic]\" is New Recruit's profile name (the owner keeps NR names). Smite's two profiles match Wahapedia: Witchfire 24\" D6 BS3+ S6 AP-1 D2 [PSYCHIC]; Focused Witchfire 24\" D3+3 S6 AP-2 D2 [DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC]. Force Weapon A4 WS3+ S6 AP-2 D2 [PSYCHIC]."
+ },
  "c2661910b178dd44": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -8620,6 +9076,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"Start of your Fight phase\": your turn."
+ },
+ "c2f5b0b9a3fb203f": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"In your Movement phase, when this unit ends an advance move\": Movement, your turn."
  },
  "c32874b78951a6cd": {
   "verdict": "ok",
@@ -8783,6 +9245,12 @@
   "at": "2026-10-22",
   "why": "\"Your Shooting phase\"."
  },
+ "c6e809dfd742958c": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "An always-on attack modifier (\"This unit’s ranged attacks can re-roll damage rolls\"): their Movement (Fire Overwatch) and your Shooting. Same label as the approved Even More Dakka (\"this unit’s ranged attacks have …\")."
+ },
  "c7186ee01822ed24": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -8837,6 +9305,12 @@
   "at": "2026-10-16",
   "why": "\"each time this model makes an attack, subtract 1 from the Hit roll\" while 1-6 wounds remain; all attacks."
  },
+ "c7c6e3fe943d491e": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” The Fight phase of either turn plus the opponent’s Shooting phase: 'either'."
+ },
  "c7cb12f2d240e1cc": {
   "verdict": "ok",
   "by": "review:m1-units",
@@ -8848,6 +9322,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.\""
+ },
+ "c7f0202546d49470": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Bare “Fight phase”: either."
  },
  "c80f94d1003289c5": {
   "verdict": "ok",
@@ -8879,6 +9359,12 @@
   "at": "2026-10-23",
   "why": "“WHEN: Any phase.”"
  },
+ "c9039e1d13a9689b": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: Armoured Hull, Ironhail Heavy Stubber, Shield Dome, Storm Bolters. This is legal: one of the four options (Shield Dome), plus \"can be equipped with 1 Ironhail Heavy Stubber\". Points 70 each (1st to 3rd; only Orbital Comms costs +10). The profiles match Wahapedia: Stubber 36\" A3 S4 AP-1 D1 [RAPID FIRE 3]; Storm Bolters 24\" A4 S5 AP-1 D1 [RAPID FIRE 4]; Armoured Hull A3 WS4+ S6 AP0 D1."
+ },
  "c952caab83d5eeb5": {
   "verdict": "ok",
   "by": "review:gists",
@@ -8908,6 +9394,12 @@
   "by": "review:r15-v2",
   "at": "2026-10-21",
   "why": "“EFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.” lasts 'round' is exactly that duration."
+ },
+ "c9d5aad39f37ac07": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "An always-on attack modifier (\"that unit’s attacks can: re-roll hit rolls of 1 / wound rolls of 1\"). It is labelled with the phases its attacks are made in: their Movement (Fire Overwatch), your Shooting, and the Fight phase in either turn. This is the approved convention for attack-side always-on abilities (Killa Kans’ Spiteful Power Trip has the same label) and is identical to derive.js."
  },
  "ca1a81c9c364bcef": {
   "verdict": "ok",
@@ -8950,6 +9442,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit’s melee attacks have +2 S.”"
+ },
+ "cb7a322291178fcc": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “End of your opponent’s Fight phase.” “your opponent’s”: 'opp'."
  },
  "cbcfb662e87e20d7": {
   "verdict": "ok",
@@ -9179,6 +9677,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: “each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through …”. The gist drops whose moves: “Normal, Advance and Fall Back moves can pass through”. For the taller terrain the text says “after its unit has moved, roll one D6”, and the gist’s “then roll one D6” loses that timing. The rest is literal: excluding TITANIC, “4\" or less in height”, “cannot end that move within Engagement Range”, “on a 1, your unit is Battle-shocked”."
  },
+ "cfd5c44c13bc1214": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Gist = WHEN/TARGET/EFFECT nearly word for word (“attacks that target your unit have -1 D until that enemy unit has attacked”)."
+ },
  "cffe2a24d218822d": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -9263,6 +9767,12 @@
   "at": "2026-10-22",
   "why": "“At the start of your Command phase”: your turn."
  },
+ "d16e739b6391ffe4": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Shooting is the opponent’s only (turns {shooting:'opp'}); Fight stays either."
+ },
  "d17aa45acd2b9011": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -9274,6 +9784,12 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (standard p6): \"1x Slaughterbound | Lacerator and daemonic claw\", the only weapon row."
+ },
+ "d1896f0fb562f1be": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: Eradicator and Sergeant with Melta rifle, \"Eradicator with Multi-melta\", and all three with Bolt pistol + Ceramite Fists. Wahapedia: \"For every 3 models … 1 Eradicator model can have their Melta Rifle replaced with 1 Multi-melta\". Melta rifle ×2 and Multi-melta ×1, each with a standard and a hunter profile. The profiles match Wahapedia: Melta Rifle 18\" A1 BS3+ S10 AP-3 D3+2 [MELTA 2], Hunter BS2+ S12. Multi-melta A2 BS3+ S10 [MELTA 3], Hunter BS2+ S12. The names are NR's (\"… HUNTER:Monster/Vehicle\"), per the owner."
  },
  "d19eadff1ab8ea2d": {
   "verdict": "ok",
@@ -9352,6 +9868,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "NR prints \"Atrapos' Duty (Bondsman)\" and the GW datasheet \"Atrapos' Duty (Bondsman)\"."
+ },
+ "d3d33f2b306a1c60": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "“Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.” Same as the EFFECT, both branches and the condition kept. ‘[Lance]’ capitalised as the app’s gists do."
  },
  "d3d39dd9727e4789": {
   "verdict": "ok",
@@ -9599,6 +10121,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual)”. The gist now states the moment but drops its own limit “(before resolving that Ritual)”: the re-roll must be made before the Ritual is resolved, not after its effect is seen. Four words keep it. EFFECT “Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)” is literal."
  },
+ "dac73165ac0ea8dc": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Shock and Assault Disembark Moves (18.07, 18.06) are move types; Core Rules 18.03: a unit disembarks “In the active player’s Movement phase” by making a disembark move, and 09.02 lists move types as what a unit selected to move does. Shock disembark’s AFTER MOVING: “not eligible to declare a charge until the end of the turn”. Both are the active player’s, i.e. your turn: 'your'."
+ },
  "dad38003a3f3f010": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -9628,6 +10156,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "WHEN “Fight phase, when an enemy unit targets a friendly ORKS WALKER unit (excluding TITANIC units)” = “An enemy unit targets your unit” (Fight is the row’s timing tag; the TITANIC exclusion is the users column, as for every gist whose TARGET is the unit using it). EFFECT “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6” = “a model of it destroyed while your unit has not been selected to fight this phase: roll one D6”; “On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed” = “on a 4+ it stays until your unit has fought or the phase ends”. The “+3 … if your unit has ~~DEFF DREAD~~” is struck out on Wahapedia (its tooltip: “Keyword does not appear in that faction.”) and is not summarised as if it applied; the “…” only says the text has more."
+ },
+ "db69153a5c63331d": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.” Shooting."
  },
  "db70644d5fe0d9ec": {
   "verdict": "ok",
@@ -9815,6 +10349,12 @@
   "at": "2026-10-21",
   "why": "Wahapedia: \"Onslaught (Aura, Psychic): While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.\" 22.01 puts the Hive Tyrant within its own aura and nothing else conditions it, so selfAlways is right (this Hive Tyrant has no ranged weapons, so it changes nothing here)."
  },
+ "df42fa0678206190": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: a destroyed model, if the unit has not been selected to fight this phase, D6 with +1 if the assault doctrine is active; on a 4+ it is not removed until the unit has fought or the end of the phase, whichever comes first. The def “Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase” keeps the condition, the roll, the modifier and both end points (“until X or Y” = the first of them). Same shape as the approved Hatred Eternal / Total Carnage defs."
+ },
  "df522ec971752b32": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -9995,6 +10535,12 @@
   "at": "2026-10-17",
   "why": "The new summary, “Every model can shoot with one or more of its guns”, is 04.01 (“You can select one or more ranged weapons that model has”). It is used only when every per-model sentence is the plain ‘Can shoot with one or both / one or more of these’ form. The rest is list facts: which models line carries which weapons, the one-model carrier names, ×N counts, and leader vs bodyguard lines (19.04). The one rule problem sits in useSentence (see that item)."
  },
+ "e35d0ff5c26a2ab2": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"At the end of your Movement phase\": Movement, your turn."
+ },
  "e376866f9bb28fcf": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -10013,6 +10559,12 @@
   "at": "2026-10-21",
   "why": "NR prints “Repulsor Grid - Kastelan Robots”."
  },
+ "e3af9f0c5998d344": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "Export: 5 models, each with Bolt Carbine, Monomolecular Combat Knife and Special Issue Bolt Pistol, and no Grav-chutes or Grapnel Launchers. The profiles match Wahapedia: Bolt Carbine 18\" A3 S5 AP-1 D1 [ASSAULT, PRECISION]; Special-issue Bolt Pistol 12\" A1 S5 AP-2 D1 [CLOSE-QUARTERS, PRECISION]; Knife A4 WS3+ S5 AP-1 D1 [PRECISION]. 85 pts for 5."
+ },
  "e3bdc552a8d8cd29": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -10024,6 +10576,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The Shaman's ability (“this model can use this ability … Psychic weapons equipped by this model”)."
+ },
+ "e3d7716aca76d96b": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.” Fight only."
  },
  "e406e6ca486638e7": {
   "verdict": "ok",
@@ -10085,6 +10643,12 @@
   "at": "2026-10-23",
   "why": "\"Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll\": melee, vs CHARACTER (a target condition, ticked by the player), the words kept (\"can\"). The 1CP part does not change attacks."
  },
+ "e52acaad25316ad4": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: ranged attacks have [Lethal Hits] and [Sustained Hits 1]. The note “[LETHAL HITS] and [SUSTAINED HITS 1]” is read by dmEffects as {lethal:true, sus:'1'}, so it is counted correctly."
+ },
  "e52c38c6c9f25b0f": {
   "verdict": "ok",
   "by": "review:r18-game",
@@ -10114,6 +10678,18 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Until the end of the phase, ranged weapons … have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.” Same."
+ },
+ "e5e5671e6020b94b": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "Gist repeats WHEN/TARGET (“Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit”) and EFFECT nearly word for word (“attacks that target your unit have -1 AP until that enemy unit has attacked”). Nothing added, nothing left out."
+ },
+ "e6085e546aadd2e6": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "This is the export's loadout model for model. Aemelia and Gaius: Archeotech Laspistol + Power Weapon. Gadriel: Bolt Rifle + Ceramite Fists. Dainal: Astropathic Blast + Force Stave. Lucia: Laspistol + Ultramarian Combat Weapons. Metaurus: Heavy Bolt Pistol + Master-crafted power weapon. Bladeguard Sergeant: Neo-volkite Pistol (a legal swap for the Heavy Bolt Pistol) + MCPW. 5 Veterans: Heavy Bolt Pistol + MCPW. The counts are right: Laspistol ×3, Power Weapon ×2, Heavy Bolt Pistol ×5 (BG), MCPW ×6 (BG). All profiles match Wahapedia, including the Wardens' Master-crafted Power Weapon [PRECISION] (A5 WS2+) and the Bladeguard's (A4 WS3+)."
  },
  "e6593957c1bf983f": {
   "verdict": "ok",
@@ -10240,6 +10816,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches the NR line \"Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword\"."
+ },
+ "e87a01b57978d418": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "It keeps its condition (\"against psychic attacks\"), as the owner's Feel No Pain rule asks. The words are GW's."
  },
  "e88f06fffd4beae6": {
   "verdict": "ok",
@@ -10499,6 +11081,12 @@
   "at": "2026-10-16",
   "why": "NR labels it \"Transport Capacity\"."
  },
+ "ed1113af3b144459": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"In your Movement phase, you can select…\" (Wahapedia Guilliman datasheet, word for word): Movement, your turn. The duration \"until the start of your next Command phase\" is not a timing (derive.js until rule)."
+ },
  "ed4a37246699c0cb": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -10529,6 +11117,18 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase, one or more models ... with a Bondsman ability can use that ability.\""
  },
+ "ee575adfc42944f4": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"re-roll charge rolls\" and \"After this unit ends a charge move\": Charge. It is either turn because core Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge\") also makes a charge roll and charge move."
+ },
+ "ee687c87b037675f": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "On the Wardens of Ultramar datasheet (Wahapedia Wardens-of-Ultramar-1)."
+ },
  "ee6aba0591e6f19e": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -10546,6 +11146,12 @@
   "by": "review:r11-misc",
   "at": "2026-10-21",
   "why": "New Recruit's glossary (purge-goes-the-foe) prints \"Cyber Psalm-Programming: Add 2\" to the Move characteristic of models in Legio Cybernetica units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control…\". GW's Faction Pack prints the same words under \"Cyber-psalm Programming Detachment Rule\" (BSData's name is \"Cyber Psalm-Programming\"). It is the Cohort Cybernetica rule, a detachment this list takes."
+ },
+ "ef328771d9d937ec": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
  },
  "ef335b8753a11075": {
   "verdict": "ok",
@@ -10643,11 +11249,23 @@
   "at": "2026-10-16",
   "why": "\"Honoured\" is defined only in Code Chivalric (\"your army becomes Honoured\"). The pattern is anchored and Imperial Knights only, so World Eaters’ \"Dishonoured\" cannot match. No other IK rule in the app starts with \"Honoured\" (\"Honoured to Serve\" is a Throne-Bonded stratagem the app does not carry)."
  },
+ "f232cab76c600583": {
+  "verdict": "ok",
+  "by": "review:nerf-units (its fix)",
+  "at": "2026-10-24",
+  "why": "PSYKER is one model's keyword, not the combined unit's. Wahapedia's Wardens of Ultramar prints \"KEYWORDS – ALL MODELS: INFANTRY; EPIC HERO; EXPLOSIVES; IMPERIUM; TACTICUS / Dainal Komelius: PSYKER\" (waha-words.js already reads this as modelKeywords). The approved convention for a keyword only some models have is kwOnly, with the keyword left out of the \"come from\" note. The Rubric Marines and Scarab Occult units carry `kwOnly:{ Psyker:… }` and their kwNote does not name Psyker. So the unit also needs kwOnly:{ Psyker:'Dainal Kornelius' }, and Psyker stays in kw. Explosives and Tacticus are on every Warden and Bladeguard model and not on Calgar (Calgar: INFANTRY; CHAPTER MASTER; CHARACTER; EPIC HERO; IMPERIUM; TERMINATOR), so they rightly come from the combined unit."
+ },
  "f247965b9c4f9bc6": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "15.04 \"WHEN: Battle-shock step of your Command phase\"."
+ },
+ "f25cea45a74e0325": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: “Attacks that target your unit have -1 AP until that enemy unit has attacked.” The def “their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)” says exactly that, in the approved form of the other AoC-style defs (“their Shooting phase or the Fight phase: worsen the AP … (until that enemy unit has attacked)”). Nothing added."
  },
  "f2603203e43d1fbe": {
   "verdict": "ok",
@@ -10708,6 +11326,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase … EFFECT: Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” The footnote has the WHEN’s phase, the same target exclusion and the same effect, and it is labelled as the 1CP stratagem."
+ },
+ "f45203885ac319ad": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "\"In your Shooting phase\": Shooting, your turn."
  },
  "f45eb2bc6b70eec2": {
   "verdict": "ok",
@@ -11099,6 +11723,12 @@
   "at": "2026-10-16",
   "why": "Counts match the models lines: plasma pistol 1+2=3, bolt pistol 7, chainblade 1+7=8, eviscerator 2; Khârn has Gorechild and plasma pistol."
  },
+ "fddfbbd452fa700f": {
+  "verdict": "ok",
+  "by": "review:nerf-rules",
+  "at": "2026-10-24",
+  "why": "WHEN: “End of your opponent’s Fight phase.” Filed under Fight (the end of the phase), as derive.js and the approved end-of-phase stratagems do."
+ },
  "fe0f2cc5b9a306a6": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -11188,6 +11818,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
+ },
+ "fff370a48c622460": {
+  "verdict": "ok",
+  "by": "review:nerf-units",
+  "at": "2026-10-24",
+  "why": "GW prints \"Librarian (psyker level 1):\". Librarius: \"psyker level of 1 or higher, specified in that unit’s abilities\"."
  },
  "fffea01d7b0e2b2e": {
   "verdict": "ok",
