@@ -787,5 +787,369 @@
   "where": "not a category of Caladius Annihilator Grav-tank",
   "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/lite-knights.txt line 167 (Categories: \"Caladius Annihilator Grav-tank, Faction: Adeptus Custodes, Fly, Frame, Grav-assault, Imperium, Vehicle\")."
+ },
+ {
+  "army": "nerf-when",
+  "unit": "heavy-intercessor-squad",
+  "field": "relink",
+  "link": "d13a-2ed1-2746-d933",
+  "from": "6c7d-af5b-482-6fbe",
+  "to": "0bb3-01f1-8be5-f285",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Space Marines, revision 19) links the Heavy Intercessor w/Heavy Bolter model’s melee weapon entry (d13a-2ed1-2746-d933) to \"Close combat weapon\"; GW’s datasheet equips every Heavy Intercessor model with Ceramite Fists, and New Recruit’s export (a newer catalogue) has the same entry as Ceramite Fists (0bb3-01f1-8be5-f285, the target the other two models’ entries have at the pin). The list is built from BSData with that entry linked to Ceramite Fists. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Heavy-Intercessor-Squad.html (MELEE WEAPONS: Ceramite Fists only; \"Every model is equipped with: 1 Bolt Pistol; 1 Ceramite Fists; 1 Heavy Bolt Rifle\"); verify/sources/nr-json/nerf-when.json: Heavy Intercessor w/Heavy Bolter › Ceramite Fists, entryId 44a8-9703-5aed-64f::d13a-2ed1-2746-d933::0bb3-01f1-8be5-f285.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "pts",
+  "app": "485",
+  "source": "395",
+  "reason": "BSData at the pin prices the Bladeguard Veteran Squad at 90 pts (its 180 pts for 6 models is a modifier counting an entry, fa1c-b448-12fa-e1d6, that is not the Bladeguard Veterans model entry the list takes, 48fe-1424-5571-d7ee), so 6 models plus Furious Assault come to 100. GW prices 6 models at 180 pts (your 1st to 2nd units) and Furious Assault at 10 pts, as New Recruit’s export does (180 + 10). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Bladeguard-Veteran-Squad.html (YOUR 1ST TO 2ND UNITS COST: 3 models 90, 6 models 180); verify/.cache/waha/ultramarines.txt (Assault Brethren, Enhancements: \"Furious AssaultUPGRADE 10 pts\"); verify/sources/nr-json/nerf-when.json: Bladeguard Veteran Squad 180 pts, Furious Assault (Upgrade) 10 pts.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "ptsNote",
+  "app": "180 + Wardens of Ultramar 115 + Bladeguard Veteran Squad 190",
+  "source": "180 + Wardens of Ultramar 115 + Bladeguard Veteran Squad 100",
+  "reason": "BSData at the pin prices the Bladeguard Veteran Squad at 90 pts (its 180 pts for 6 models is a modifier counting an entry, fa1c-b448-12fa-e1d6, that is not the Bladeguard Veterans model entry the list takes, 48fe-1424-5571-d7ee), so 6 models plus Furious Assault come to 100. GW prices 6 models at 180 pts (your 1st to 2nd units) and Furious Assault at 10 pts, as New Recruit’s export does (180 + 10). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Bladeguard-Veteran-Squad.html (YOUR 1ST TO 2ND UNITS COST: 3 models 90, 6 models 180); verify/.cache/waha/ultramarines.txt (Assault Brethren, Enhancements: \"Furious AssaultUPGRADE 10 pts\"); verify/sources/nr-json/nerf-when.json: Bladeguard Veteran Squad 180 pts, Furious Assault (Upgrade) 10 pts.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "deathwatch-terminator-squad",
+  "field": "role",
+  "app": "Allies: Deathwatch",
+  "source": "Infantry",
+  "reason": "New Recruit’s export (Ultramarines catalogue revision 8) takes the Deathwatch Terminator Squad through an entry link of the Ultramarines catalogue (206e-3133-dac8-8d40) whose primary category is \"Allies: Deathwatch\", as New Recruit lists a unit the Deathwatch Support detachment’s DEATHWATCH ALLIES rule lets the army include; BSData at the pin (Ultramarines revision 7) has no such link, so the check takes the unit from the Deathwatch catalogue itself (map-bsdata.json), where its primary category is Infantry and it has no \"Allies\" category. The app keeps New Recruit’s grouping, as for the Chaos Knights’ Nurglings (\"Allies: Legiones Daemonica\").",
+  "evidence": "verify/sources/nr-json/nerf-when.json: Deathwatch Terminator Squad, entryId 206e-3133-dac8-8d40::390e-706b-a059-378b, categories \"Allies: Deathwatch\" (primary); verify/.cache/waha/ultramarines.txt (Deathwatch Support, DEATHWATCH ALLIES: \"You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword as other units in your army\").",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "deathwatch-terminator-squad",
+  "field": "kw",
+  "app": "Allies: Deathwatch",
+  "source": "",
+  "reason": "New Recruit’s export (Ultramarines catalogue revision 8) takes the Deathwatch Terminator Squad through an entry link of the Ultramarines catalogue (206e-3133-dac8-8d40) whose primary category is \"Allies: Deathwatch\", as New Recruit lists a unit the Deathwatch Support detachment’s DEATHWATCH ALLIES rule lets the army include; BSData at the pin (Ultramarines revision 7) has no such link, so the check takes the unit from the Deathwatch catalogue itself (map-bsdata.json), where its primary category is Infantry and it has no \"Allies\" category. The app keeps New Recruit’s grouping, as for the Chaos Knights’ Nurglings (\"Allies: Legiones Daemonica\").",
+  "evidence": "verify/sources/nr-json/nerf-when.json: Deathwatch Terminator Squad, entryId 206e-3133-dac8-8d40::390e-706b-a059-378b, categories \"Allies: Deathwatch\" (primary); verify/.cache/waha/ultramarines.txt (Deathwatch Support, DEATHWATCH ALLIES: \"You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword as other units in your army\").",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "roboute-guilliman",
+  "field": "ability.text",
+  "app": "Primarch of the XIII: While a friendly **ADEPTUS ASTARTES** unit is within 6\" of this unit, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.",
+  "source": "While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: \n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: - Re-roll hit rolls of 1 - Re…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html: \"While a friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: - Re-roll hit rolls of 1. - Re-roll wound rolls of 1.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "roboute-guilliman",
+  "field": "ability.text",
+  "app": "Codex Adept: The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.",
+  "source": "The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html: \"The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "stats.base",
+  "app": "Marneus Calgar: 50mm",
+  "source": "Marneus Calgar: ~50mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Marneus Calgar: ~50mm; Wahapedia’s datasheet has 50mm; New Recruit’s export (catalogue revision 8) has ~50mm. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Marneus-Calgar.html: \"(⌀50mm)\"; verify/sources/nr-json/nerf-when.json: ~50mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "stats.base",
+  "app": "Aemelia Minervas: 28.5mm",
+  "source": "Aemelia Minervas: 40mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Aemelia Minervas: 40mm; GW’s base size guide (Event Companion) has 28.5mm; New Recruit’s export (catalogue revision 8) has 40mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3665: \"Wardens of Ultramar: Gaius Silva, Aemelia Minervas, Dainal Kornelius, Lucia Vestha  28.5mm\"; verify/sources/nr-json/nerf-when.json: 40mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "stats.base",
+  "app": "Dainal Kornelius: 28.5mm",
+  "source": "Dainal Kornelius: 40mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Dainal Kornelius: 40mm; GW’s base size guide (Event Companion) has 28.5mm; New Recruit’s export (catalogue revision 8) has 40mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3665: \"Wardens of Ultramar: Gaius Silva, Aemelia Minervas, Dainal Kornelius, Lucia Vestha  28.5mm\"; verify/sources/nr-json/nerf-when.json: 40mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "stats.base",
+  "app": "Gaius Silva: 28.5mm",
+  "source": "Gaius Silva: 40mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Gaius Silva: 40mm; GW’s base size guide (Event Companion) has 28.5mm; New Recruit’s export (catalogue revision 8) has 40mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3665: \"Wardens of Ultramar: Gaius Silva, Aemelia Minervas, Dainal Kornelius, Lucia Vestha  28.5mm\"; verify/sources/nr-json/nerf-when.json: 40mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "stats.base",
+  "app": "Lucia Vestha: 28.5mm",
+  "source": "Lucia Vestha: 40mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Lucia Vestha: 40mm; GW’s base size guide (Event Companion) has 28.5mm; New Recruit’s export (catalogue revision 8) has 40mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3665: \"Wardens of Ultramar: Gaius Silva, Aemelia Minervas, Dainal Kornelius, Lucia Vestha  28.5mm\"; verify/sources/nr-json/nerf-when.json: 40mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "melee.kw",
+  "app": "Master-crafted power weapon (Wardens of Ultramar): PRECISION, SUSTAINED HITS 1: NON-MONSTER/VEHICLE",
+  "source": "SUSTAINED HITS 1: NON-MONSTER/VEHICLE",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has SUSTAINED HITS 1: NON-MONSTER/VEHICLE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has PRECISION; New Recruit’s export (catalogue revision 8) has SUSTAINED HITS 1: non-Monster/Vehicle. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Wardens-of-Ultramar-1.html: Master-crafted power weapon kw PRECISION; verify/sources/nr-json/nerf-when.json: SUSTAINED HITS 1: non-Monster/Vehicle.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "ability.text",
+  "app": "Codex Adept: The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.",
+  "source": "The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Marneus-Calgar.html: \"The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "ability.text",
+  "app": "Bladeguard: In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**.",
+  "source": "(Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n\n\n▪ This unit’s melee attacks have +1 to hit rolls.\n▪ Or: Attacks that target this unit have ‑1 to hit rolls.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"(Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this un…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Bladeguard-Veteran-Squad.html: \"In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following: - This unit's melee attacks have +1 to hit rolls. - Or: Attacks that target this unit have -1 to hit rolls…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
+  "field": "ability.text",
+  "app": "Furious Assault: **ADEPTUS ASTARTES INFANTRY** unit only. This unit’s melee attacks have **[Sustained Hits 1: non-Monster/Vehicle]**.",
+  "source": "Adeptus Astartes Infantry unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle]",
+  "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"Adeptus Astartes Infantry unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle]\"). GW wins.",
+  "evidence": "verify/.cache/waha/ultramarines.txt: \"ADEPTUS ASTARTES INFANTRY unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle].\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "librarian-in-phobos-armour",
+  "field": "ability",
+  "app": "Shrouding",
+  "source": "",
+  "reason": "GW names the ability Shrouding, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) [Psychic Abilities] - Shrouding. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Shrouding\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "librarian-in-phobos-armour",
+  "field": "ability",
+  "app": "Soul Sight",
+  "source": "",
+  "reason": "GW names the ability Soul Sight, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) [Psychic Abilities] - Soul Sight. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Soul Sight\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "librarian-in-phobos-armour",
+  "field": "ability.text",
+  "app": "Librarian: This model has the **psychic abilities** listed in the Psychic Abilities section.",
+  "source": "This model has the psychic abilities listed in the Psychic Abilities section (see left).",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"This model has the psychic abilities listed in the Psychic Abilities section (see left).\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"This model has the psychic abilities listed in the Psychic Abilities section.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "librarian-in-phobos-armour",
+  "field": "ability",
+  "app": "",
+  "source": "[Psychic Abilities] - Shrouding (Psychic Level 1)",
+  "reason": "GW names the ability Shrouding, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) [Psychic Abilities] - Shrouding. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Shrouding\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "librarian-in-phobos-armour",
+  "field": "ability",
+  "app": "",
+  "source": "[Psychic Abilities] - Soul Sight (Psychic Level 1)",
+  "reason": "GW names the ability Soul Sight, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) [Psychic Abilities] - Soul Sight. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Soul Sight\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "ability.text",
+  "app": "Rapid Disembarkation: In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**.",
+  "source": "In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move (pg 157).",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark …\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: \"In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "ability.text",
+  "app": "Shield Dome: This unit has 5+ **InSv**.",
+  "source": "This unit has a 5+ InvSv",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit has a 5+ InvSv\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: \"This unit has 5+ InSv.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "kw",
+  "app": "Frame",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword FRAME, as New Recruit’s export (catalogue revision 8) does; BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "rules",
+  "app": "Firing Deck 7",
+  "source": "Deadly Demise D3, Firing Deck 6, Combat Doctrines",
+  "reason": "GW’s datasheet prints Firing Deck 7 (CORE ABILITIES / ARMY RULES); BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) does not give the unit it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: \"Deadly Demise D3, Firing Deck 7, Combat Doctrines\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "rules",
+  "app": "",
+  "source": "Firing Deck 6",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) gives the unit Firing Deck 6; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 8) does not have it either). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Firing Deck 7, Combat Doctrines\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "eradicator-squad-with-melta-rifles",
+  "field": "stats.base",
+  "app": "Eradicator Squad ×2: 40mm",
+  "source": "Eradicator Squad: ~40mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Eradicator Squad: ~40mm; GW’s base size guide (Event Companion) has 40mm; New Recruit’s export (catalogue revision 8) has ~40mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3590: \"Eradicator Squad  40mm\"; verify/sources/nr-json/nerf-when.json: ~40mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "eradicator-squad-with-melta-rifles",
+  "field": "stats.base",
+  "app": "Eradicator Sergeant: 40mm",
+  "source": "Eradicator Sergeant: ~40mm",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has Eradicator Sergeant: ~40mm; GW’s base size guide (Event Companion) has 40mm; New Recruit’s export (catalogue revision 8) has ~40mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3590: \"Eradicator Squad  40mm\"; verify/sources/nr-json/nerf-when.json: ~40mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "eradicator-squad-with-melta-rifles",
+  "field": "ranged.hunter",
+  "app": "Melta rifle - Melta Rifle HUNTER:Monster/Vehicle: true",
+  "source": "no Hunter profile",
+  "reason": "The app marks Melta rifle - Melta Rifle HUNTER:Monster/Vehicle as a Hunter profile: GW’s datasheet names it Melta Rifle - Hunter (its Hunter profile, used against MONSTER/VEHICLE units). BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) and New Recruit’s export (catalogue revision 8) name it \"Melta Rifle HUNTER:Monster/Vehicle\", which verify/bsdata.js does not read as a Hunter profile (\"… (Hunter: …)\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Eradicator-Squad-with-Melta-Rifles.html; verify/sources/nr-json/nerf-when.json: Melta Rifle HUNTER:Monster/Vehicle.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "eradicator-squad-with-melta-rifles",
+  "field": "ranged.hunter",
+  "app": "Multi-melta - Multi-melta HUNTER:Monster/Vehicle: true",
+  "source": "no Hunter profile",
+  "reason": "The app marks Multi-melta - Multi-melta HUNTER:Monster/Vehicle as a Hunter profile: GW’s datasheet names it Multi-melta - Hunter (its Hunter profile, used against MONSTER/VEHICLE units). BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) and New Recruit’s export (catalogue revision 8) name it \"Multi-melta HUNTER:Monster/Vehicle\", which verify/bsdata.js does not read as a Hunter profile (\"… (Hunter: …)\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Eradicator-Squad-with-Melta-Rifles.html; verify/sources/nr-json/nerf-when.json: Multi-melta HUNTER:Monster/Vehicle.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "eradicator-squad-with-melta-rifles",
+  "field": "ability.text",
+  "app": "Total Obliteration: This unit’s ranged attacks can re-roll **damage rolls**.",
+  "source": "This unit's ranged attacks can re-roll damage rolls",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit's ranged attacks can re-roll damage rolls\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Eradicator-Squad-with-Melta-Rifles.html: \"This unit's ranged attacks can re-roll damage rolls.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "deathwatch-terminator-squad",
+  "field": "melee.D",
+  "app": "Thunder Hammer: 3",
+  "source": "2",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has 2; GW’s datasheet (the new codex, as Wahapedia transcribes it) has 3; New Recruit’s export (catalogue revision 8) has 2. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html: Thunder Hammer D 3; verify/sources/nr-json/nerf-when.json: 2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "deathwatch-terminator-squad",
+  "field": "melee.hunter",
+  "app": "Chainfist - Hunter: Monster/Vehicle: true",
+  "source": "no Hunter profile",
+  "reason": "The app marks Chainfist - Hunter: Monster/Vehicle as a Hunter profile: GW’s datasheet names it Chainfist - Hunter (its Hunter profile, used against MONSTER/VEHICLE units). BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) and New Recruit’s export (catalogue revision 8) name it \"Hunter: Monster/Vehicle\", which verify/bsdata.js does not read as a Hunter profile (\"… (Hunter: …)\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html; verify/sources/nr-json/nerf-when.json: Hunter: Monster/Vehicle.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "deathwatch-terminator-squad",
+  "field": "ability.text",
+  "app": "Storm Shield: This model has +1 **W**.",
+  "source": "The bearer has a Wounds characteristic of 4.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) has its own wording; New Recruit’s export (catalogue revision 8) has \"The bearer has a Wounds characteristic of 4.\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html: \"This model has +1 W.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "deathwatch-terminator-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Plasma",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 7) gives the unit the category Plasma (New Recruit’s export (catalogue revision 8) does not); GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html: KEYWORDS (no PLASMA).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "faction": "ultramarines",
+  "detachment": "Deathwatch Support",
+  "field": "dispositions",
+  "app": [
+   "Disruption"
+  ],
+  "source": null,
+  "reason": "BSData at the pin has no Force Disposition for Deathwatch Support (its entry is the unfinished \"Deathwatch Support (ITS NOT READY)\", with no disposition marker); the Wahapedia faction page (the codex) marks the detachment Disruption, as New Recruit’s export does (its category \"Disruption\"). GW wins.",
+  "evidence": "verify/.cache/waha/ultramarines.html, Deathwatch Support: \"Force Disposition: Disruption\"; verify/sources/nr-json/nerf-when.json: Detachment › Deathwatch Support categories.",
+  "by": "verify/from-json.js"
  }
 ]

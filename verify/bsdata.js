@@ -673,8 +673,12 @@ function buildUnit(army, u, um, cat, force, issues) {
   // the characters (the unit's own name, then `also`: a Warboss leading the Breaka Boyz a Bigboss supports), then the bodyguard
   const names = [um.entry || u.name].concat((u.also || []).map((c) => ((um.alsoEntry || {})[c.name]) || c.name)); if (u.leads) names.push(um.leadsEntry || u.leads);
   for (const nm of names) {
-    const hits = rootNode(cat, nm);
-    if (hits.length !== 1) { fail('entry', nm, hits.map((h) => h.n.name).join(' | '), `${cat.fname}: ${hits.length} root entries named "${nm}"`); continue; }
+    // (map-bsdata.json: a part from another faction's catalogue, catalogue: { name: catalogue } (the Deathwatch Terminator Squad an
+    // Ultramarines list takes through Deathwatch Support); one of two root entries of the same name, entryId: { name: root id })
+    const pcat = (um.catalogue || {})[nm] ? SRC.catalogueByName(um.catalogue[nm]) || cat : cat;
+    let hits = rootNode(pcat, nm);
+    if (hits.length > 1 && (um.entryId || {})[nm]) hits = hits.filter((h) => h.n.id === um.entryId[nm] || (h.n.linkId || '') === um.entryId[nm]);
+    if (hits.length !== 1) { fail('entry', nm, hits.map((h) => h.n.name).join(' | '), `${pcat.fname}: ${hits.length} root entries named "${nm}"`); continue; }
     roots.push(new Sel(hits[0].n, 1, force));
   }
   if (!roots.length) return { roots };
@@ -761,7 +765,8 @@ function buildUnit(army, u, um, cat, force, issues) {
   // an UPGRADE enhancement goes on the unit it upgrades: the bodyguard (last root)
   if (u.upgrade) {
     const host = roots[roots.length - 1];
-    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && nn(k.name) === nn(u.upgrade))[0];
+    // (BSData can name it with its kind: "Furious Assault (Upgrade)")
+    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.upgrade) || nn(k.name) === nn(u.upgrade + ' (Upgrade)')))[0];
     if (!p) fail('upgrade', u.upgrade, '', `no upgrade "${u.upgrade}" for ${host.node.name}`);
     else {
       const last = p[p.length - 1];
@@ -1134,17 +1139,33 @@ function comparePoints(army, built, failArmy) {
    Main
 --------------------------------------------------------------------- */
 let DATA = null;
+// declared deviations of the kind "relink" (verify/deviations-bsdata.json): an entry link whose target BSData at the pin is not GW's,
+// where the newer catalogue New Recruit's export was made from links it to GW's (the Heavy Intercessor w/Heavy Bolter's melee weapon:
+// the pin links "Close combat weapon", the export and GW's datasheet have Ceramite Fists). The rosters are built with the declared
+// target; the extract keeps the pin's (restoreRelinks)
+const RELINKS = [];
+function applyRelinks() {
+  const devs = fs.existsSync(P.dev) ? JSON.parse(fs.readFileSync(P.dev, 'utf8')) : [];
+  for (const d of (Array.isArray(devs) ? devs : devs.deviations || []).filter((x) => x.field === 'relink')) {
+    const o = SRC.byId.get(d.link), ok = !!(o && o.targetId === d.from && SRC.byId.get(d.to));
+    RELINKS.push({ d, o, ok });
+    if (ok) o.targetId = d.to;
+  }
+}
+function restoreRelinks() { for (const r of RELINKS) if (r.ok) r.o.targetId = r.d.from; }
 // data.js, the name mapping and the BSData source (the clone, else the pinned extract)
 function setup() {
   global.window = {}; require(P.data); DATA = global.window.WH_DATA;
   const MAP = JSON.parse(fs.readFileSync(P.map, 'utf8'));
   // the catalogue of each faction: sources/factions.json (map-bsdata.json may still name one)
   for (const [k, v] of Object.entries(JSON.parse(fs.readFileSync(path.join(HERE, 'sources', 'factions.json'), 'utf8')))) if (k[0] !== '_' && v.bsdata) MAP.catalogues[k] = MAP.catalogues[k] || v.bsdata;
-  const catalogueNames = [...new Set(DATA.armies.map((a) => MAP.catalogues[a.faction]))];
+  // (and the catalogues map-bsdata.json takes a unit's part from: the Deathwatch's)
+  const catalogueNames = [...new Set(DATA.armies.map((a) => MAP.catalogues[a.faction]).concat(Object.values(MAP.units || {}).flatMap((u) => Object.values(u.catalogue || {}))))];
   const haveClone = fs.existsSync(path.join(P.bsdata, 'Warhammer 40,000.json'));
   const useExtract = flag('--extract') || !haveClone;
   if (flag('--write-extract') && useExtract) { console.error('--write-extract needs the BSData clone (sh verify/fetch.sh)'); process.exit(2); }
   SRC = useExtract ? loadExtract(P.extract) : loadFull(P.bsdata, catalogueNames);
+  applyRelinks();
   return MAP;
 }
 // every army's roster as this check builds it (for verify/import-ids.js): the selections of each unit, evaluated
@@ -1191,13 +1212,16 @@ function main() {
 
   // deviations: the only accepted differences
   const devs = fs.existsSync(P.dev) ? JSON.parse(fs.readFileSync(P.dev, 'utf8')) : [];
-  const devList = Array.isArray(devs) ? devs : devs.deviations || [];
+  // (a detachment's Force Dispositions are verify/dispositions.js's: its deviations are checked there)
+  const devList = (Array.isArray(devs) ? devs : devs.deviations || []).filter((d) => d.field !== 'dispositions' && d.field !== 'relink');
+  for (const r of RELINKS) if (!r.ok) failures.push({ army: r.d.army, unit: r.d.unit, field: 'deviation.stale', app: r.d.to, source: r.d.from, where: `verify/deviations-bsdata.json: the relink of ${r.d.link} does not match BSData (its target is not ${r.d.from}, or ${r.d.to} is not there)` });
   const keyOf = (x) => JSON.stringify([x.army, x.unit, x.field, str(x.app), str(x.source)]);
   const devKeys = new Map(devList.map((d) => [keyOf(d), d]));
   const usedDev = new Set(); const remaining = [];
   for (const f of failures) { const k = keyOf(f); if (devKeys.has(k)) usedDev.add(k); else remaining.push(f); }
   for (const d of devList) if (!usedDev.has(keyOf(d))) remaining.push({ army: d.army, unit: d.unit, field: 'deviation.stale', app: str(d.app), source: str(d.source), where: `verify/deviations-bsdata.json: nothing matches this deviation (${d.field})` });
 
+  restoreRelinks();
   if (flag('--write-extract')) {
     const x = buildExtract(SRC); fs.mkdirSync(path.dirname(P.extract), { recursive: true });
     fs.writeFileSync(P.extract, JSON.stringify(x, null, 1) + '\n');

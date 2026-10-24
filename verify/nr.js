@@ -947,6 +947,28 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
 // the same readings for verify/import-nr.js, so the importer writes what this file checks
 Object.assign(module.exports, { enhNamesOf, nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, q, cellV, appText, textEq, compareArmy });
 
+// ---------------------------------------------------------------- a list from its JSON export
+// The export's Unit profiles carry New Recruit's base size (characteristic typeId nr-base-size): every stats row of the list
+// must have the base size of the profile of its name in the units that make it up (leader and bodyguard), both ways.
+function compareJsonArmy(D, A, J, out, where) {
+  const sels = ((J.roster || {}).forces || [{}])[0].selections || [];
+  const bases = new Map();   // root selection name -> profile name -> base
+  const walk = (s, m) => { for (const p of s.profiles || []) if (p.typeName === 'Unit') { const b = (p.characteristics || []).find(c => c.typeId === 'nr-base-size'); m.set(nrStatName(p.name, []).name, b ? cellV(b.$text || '') : NONE); } for (const c of s.selections || []) walk(c, m); };
+  for (const s of sels) if (s.type !== 'upgrade') { const m = bases.get(nm(s.name)) || new Map(); walk(s, m); bases.set(nm(s.name), m); }
+  out.checked.army = (out.checked.army || 0) + 1;
+  for (const u of A.units) {
+    const parts = [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).map(nm);
+    for (const r of u.stats || []) {
+      out.checked.stats = (out.checked.stats || 0) + 1;
+      const n = nm(r.name).replace(/ x\d+$/, '');
+      const hit = parts.map(p => bases.get(p)).filter(Boolean).find(m => m.has(n));
+      if (!hit) { out.failures.push({ army: A.id, unit: u.id, field: 'stats[' + n + ']', app: r.name, source: null, where: where + ': no profile of this name in ' + parts.join(' / ') }); continue; }
+      const src = hit.get(n);   // (cellV: × and x alike)
+      if (cellV(r.base) !== src) out.failures.push({ army: A.id, unit: u.id, field: 'stats[' + n + '].base', app: r.base, source: src, where: where + ' (' + n + ': New Recruit’s base size)' });
+    }
+  }
+}
+
 // ---------------------------------------------------------------- main
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);
@@ -962,7 +984,14 @@ function main(args) {
   // every army in data.js, each against its own PDF text (verify/sources/nr/<armyId>.txt)
   for (const A of D.armies) {
     const id = A.id, file = path.join(args.sources, id + '.txt');
-    if (!fs.existsSync(file)) { out.failures.push({ army: id, unit: null, field: 'army', app: 'present', source: null, where: 'no New Recruit PDF for this army (' + path.relative(ROOT, file) + ')' }); continue; }
+    if (!fs.existsSync(file)) {
+      // a list made from its New Recruit JSON export (verify/from-json.js) has no PDF: what New Recruit adds to BSData is checked
+      // against the export (the base sizes it prints); everything else is BSData's (verify/bsdata.js) and the export must import
+      // to exactly this list (verify/import-test.js)
+      const jf = path.join(ROOT, 'verify/sources/nr-json', id + '.json');
+      if (fs.existsSync(jf)) { compareJsonArmy(D, A, JSON.parse(fs.readFileSync(jf, 'utf8')), out, path.relative(ROOT, jf)); continue; }
+      out.failures.push({ army: id, unit: null, field: 'army', app: 'present', source: null, where: 'no New Recruit PDF for this army (' + path.relative(ROOT, file) + ')' }); continue;
+    }
     const nr = parseNR(file, enhOf(A));
     for (const u of nr.units) for (const n of u.notes) out.parseNotes.push(id + ' / ' + u.header + ': ' + n);
     compareArmy(D, A, nr, out, file);

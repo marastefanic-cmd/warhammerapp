@@ -1,0 +1,217 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for nerf-when, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). rules: a detachment rule's Damage-tab calcMods (hand). units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), notes on its abilities (notes: Supreme Commander's, as Ghazghkull Thraka's), its auras (only what GW tags (Aura), Core Rules 22.01) and stats values a rule of the list gives that New Recruit's export does not show. Each is a judgement verify/helpers.js lists for sign-off.",
+ "gists": {
+  "assault-brethren/armour-of-contempt": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked.",
+   "gistOf": "d40ab81e",
+   "def": "their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)",
+   "defOf": "d40ab81e"
+  },
+  "assault-brethren/gene-wrought-might": {
+   "by": "AI (Claude)",
+   "gist": "Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.",
+   "gistOf": "f8229239",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "melee",
+    "when": "Fight phase, selected to fight",
+    "note": "[LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)"
+   }
+  },
+  "assault-brethren/duty-in-death": {
+   "by": "AI (Claude)",
+   "gist": "Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase.",
+   "gistOf": "aaca68f5",
+   "def": "Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase",
+   "defOf": "aaca68f5"
+  },
+  "deathwatch-support/kraken-rounds": {
+   "by": "AI (Claude)",
+   "gist": "Your KILL TEAM unit is selected to shoot: its ranged attacks have +6\" range and +1 S.",
+   "gistOf": "0ec4f7bb",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot",
+    "note": "+6\" range and +1 S"
+   }
+  },
+  "deathwatch-support/dragonfire-rounds": {
+   "by": "AI (Claude)",
+   "gist": "Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].",
+   "gistOf": "a2eb55d2",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot",
+    "note": "re-roll wound rolls of 1, [IGNORES COVER]"
+   }
+  },
+  "deathwatch-support/hellfire-rounds": {
+   "by": "AI (Claude)",
+   "gist": "Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].",
+   "gistOf": "be854996",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot",
+    "note": "[ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks)"
+   }
+  },
+  "deathwatch-support/blackstar-extraction": {
+   "by": "AI (Claude)",
+   "gist": "End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.",
+   "gistOf": "22f956b5"
+  },
+  "terminator-storm-force/tactical-dreadnought-fortitude": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked.",
+   "gistOf": "45bccdf8",
+   "def": "their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)",
+   "defOf": "45bccdf8"
+  },
+  "terminator-storm-force/merciless-veterans": {
+   "by": "AI (Claude)",
+   "gist": "Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].",
+   "gistOf": "f957f56d",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot",
+    "note": "[LETHAL HITS] and [SUSTAINED HITS 1]"
+   }
+  },
+  "terminator-storm-force/gunship-extraction": {
+   "by": "AI (Claude)",
+   "gist": "End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.",
+   "gistOf": "ec24cfb9"
+  }
+ },
+ "rules": {
+  "deathwatch-support": {
+   "by": "hand (Claude)",
+   "why": "the Damage tab: each Tactics a box the player ticks (which combat doctrine is active is theirs to say); Purgatus Tactics’ [PRECISION] changes no number of the attack",
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Furor Tactics",
+     "when": "Furor Tactics (the devastator doctrine is active for your unit)",
+     "note": "[SUSTAINED HITS 1]"
+    },
+    {
+     "kind": "all",
+     "from": "Malleus Tactics",
+     "when": "Malleus Tactics (the tactical doctrine is active for your unit)",
+     "note": "[LETHAL HITS]"
+    }
+   ]
+  }
+ },
+ "units": {
+  "roboute-guilliman": {
+   "defs": {
+    "Leader of Astartes": {
+     "by": "AI (Claude)",
+     "def": "Lone Operative while within 3\" of a friendly ADEPTUS ASTARTES INFANTRY unit",
+     "defOf": "21019393"
+    }
+   },
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Codex Adept (the devastator doctrine is active for this unit)",
+     "note": "[ASSAULT]",
+     "from": "Codex Adept",
+     "always": true
+    }
+   ],
+   "aura": [
+    {
+     "kind": "all",
+     "needs": {
+      "all": [
+       "Faction: Adeptus Astartes"
+      ]
+     },
+     "when": "Within 6\" of Roboute Guilliman",
+     "selfWhen": "Own aura",
+     "note": "re-roll hit rolls of 1 and wound rolls of 1",
+     "from": "Primarch of the XIII",
+     "selfAlways": true
+    }
+   ],
+   "why": "Codex Adept: the devastator doctrine is active for this unit (its ranged attacks have [ASSAULT]). Primarch of the XIII (Aura): friendly ADEPTUS ASTARTES units within 6\", his own unit included (22.01).",
+   "notes": {
+    "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+   }
+  },
+  "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad": {
+   "defs": {
+    "Bladeguard": {
+     "by": "AI (Claude)",
+     "def": "Bladeguard (once per turn, in the Fight phase, when an enemy unit targets it, instead of +1 to hit for its own melee attacks): attacks that target it have -1 to hit rolls",
+     "defOf": "7366a778"
+    }
+   },
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Codex Adept (the devastator doctrine is active for this unit)",
+     "note": "[ASSAULT]",
+     "from": "Codex Adept",
+     "always": true
+    },
+    {
+     "kind": "melee",
+     "when": "Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it)",
+     "note": "+1 to hit rolls",
+     "from": "Bladeguard"
+    }
+   ],
+   "why": "Codex Adept (Marneus Calgar): the doctrines are active for this unit, the whole attached unit (19.04); Bladeguard: one of its two effects, once per turn."
+  },
+  "librarian-in-phobos-armour": {
+   "defs": {
+    "Shrouding": {
+     "by": "AI (Claude)",
+     "def": "Shrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase",
+     "defOf": "c99822c4"
+    },
+    "Psychic Hood": {
+     "by": "AI (Claude)",
+     "def": "Feel No Pain 4+ against psychic attacks",
+     "defOf": "3eefcb3b"
+    }
+   }
+  },
+  "heavy-intercessor-squad": {
+   "defs": {
+    "Unyielding in the Face of the Foe": {
+     "by": "AI (Claude)",
+     "def": "+1 to save rolls while it is controlling an objective",
+     "defOf": "4c01a4b4"
+    }
+   }
+  },
+  "eradicator-squad-with-melta-rifles": {
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Every ranged attack",
+     "note": "can re-roll damage rolls",
+     "from": "Total Obliteration",
+     "always": true
+    }
+   ]
+  },
+  "impulsor": {
+   "stats": {
+    "Impulsor": {
+     "InSv": "5+"
+    }
+   },
+   "why": "Shield Dome: \"This unit has 5+ InSv.\" BSData’s modifier gives it (the \"+\" mark names Shield Dome); New Recruit’s export shows none."
+  }
+ }
+}

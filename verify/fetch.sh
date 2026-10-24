@@ -10,7 +10,8 @@ BSDATA_COMMIT=173d0ef
 [ -d .cache/bsdata ] || git clone -q https://github.com/BSData/wh40k-11e .cache/bsdata
 git -C .cache/bsdata checkout -q $BSDATA_COMMIT
 # the factions of the lists (sources/factions.json): "<faction> <wahapedia page> <faction pack file or ->"
-FACTIONS=$(node -e 'const f = require("./sources/factions.json"); for(const [k, v] of Object.entries(f)) if(k[0] !== "_") console.log(k, v.waha, v.pack ? v.pack.file : "-")')
+# (a fourth column: the Wahapedia faction of its datasheet pages, when it is not the faction page: the Ultramarines' are space-marines)
+FACTIONS=$(node -e 'const f = require("./sources/factions.json"); for(const [k, v] of Object.entries(f)) if(k[0] !== "_") console.log(k, v.waha, v.pack ? v.pack.file : "-", v.wahaDs || v.waha)')
 # Games Workshop's official documents: core rules, updates, and each faction's Faction Pack
 PACKS=$(echo "$FACTIONS" | awk '$3 != "-" { print $3 }')
 for f in eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf \
@@ -20,7 +21,7 @@ for f in eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf \
   [ -s .cache/gw/${out%.pdf}.txt ] || pdftotext -layout .cache/gw/$out .cache/gw/${out%.pdf}.txt
 done
 # Wahapedia (changes over time: verify/run.js records the sha256 it checked against)
-echo "$FACTIONS" | while read -r fac page pack; do
+echo "$FACTIONS" | while read -r fac page pack dspage; do
   [ -f .cache/waha/$fac.html ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$page/" -o .cache/waha/$fac.html
 done
 [ -f .cache/waha/core.html ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/" -o .cache/waha/core.html
@@ -28,7 +29,7 @@ done
 mkdir -p .cache/waha/ds
 while read -r fac unit; do
   # the faction's Wahapedia page name (sources/factions.json: emperors-children is "emperor-s-children"), else the faction itself
-  page=$(echo "$FACTIONS" | awk -v f="$fac" '$1 == f { print $2 }'); page=${page:-$fac}
+  page=$(echo "$FACTIONS" | awk -v f="$fac" '$1 == f { print $4 }'); page=${page:-$fac}
   # a page that cannot be fetched (a misspelt name: Wahapedia's addresses are case-sensitive) is reported, not fatal
   [ -f ".cache/waha/ds/${fac}_${unit}.html" ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$page/$unit" -o ".cache/waha/ds/${fac}_${unit}.html" || echo "could not fetch the Wahapedia datasheet $page/$unit: check its name in sources/waha-datasheets.txt" >&2
 done < sources/waha-datasheets.txt

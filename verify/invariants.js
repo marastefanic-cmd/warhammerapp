@@ -135,11 +135,21 @@ function run(D){
     const seen = new Set();
     // in an attached unit, the first models lines are the characters' (the unit's own name, then `also`), the rest the bodyguard's
     const chars = u.leads ? [u.name].concat((u.also || []).map(c => c.name)) : [];
-    const body = lines.slice(Math.max(chars.length, 1));
+    // a character part of several models (the Wardens of Ultramar): its models lines are those whose weapons are all that part's
+    const weapons = [...(u.ranged || []), ...(u.melee || [])];
+    // (a line whose weapons several parts have is the part of the line before it, when that part has them: lines are in the parts' order)
+    const lineWhos = []; { let cur = null; for(const l of lines){
+      let ws = null;   // the parts that have every weapon of the line
+      for(const g of l.gear){ const s = new Set(weapons.filter(x => (x.group || x.name) === g && x.who).map(x => x.who)); if(s.size) ws = ws ? new Set([...ws].filter(x => s.has(x))) : s; }
+      if(ws && ws.size === 1) cur = [...ws][0]; else if(ws && ws.size && !ws.has(cur)) cur = null;
+      lineWhos.push(ws && ws.size ? cur : null); } }
+    const lineWho = l => lineWhos[lines.indexOf(l)];
+    const multiChar = new Set(chars.filter(c => c !== u.name && lines.filter(l => lineWho(l) === c).length > 1));
+    const body = lines.slice(Math.max(chars.length, 1)).filter(l => !multiChar.has(lineWho(l)));
     const charLine = w => u.leads && w.who && w.who !== u.leads && body.every(l => l.name.replace(/ w\/.*$/, '') !== w.who) ? Math.max(chars.indexOf(w.who), 0) : -1;
     for(const w of [...(u.ranged || []), ...(u.melee || [])]){
       const g = w.group || w.name; if(seen.has(g + '|' + w.who)) continue; seen.add(g + '|' + w.who);
-      const mine = !u.leads ? lines : charLine(w) >= 0 ? [lines[charLine(w)]] : body;
+      const mine = !u.leads ? lines : multiChar.has(w.who) ? lines.filter(l => lineWho(l) === w.who) : charLine(w) >= 0 ? [lines[charLine(w)]] : body;
       // a gear line that names a weapon twice (the Two-Busta Tankbusta) is two of it per model
       const carriers = mine.reduce((t, l) => t + l.n * l.gear.filter(x => x === g).length, 0);
       if(total > 1 && carriers > 1 && +w.n !== carriers) F('weapon-count', a.id + ' · ' + u.name + ' · ' + g, carriers + ' carried by its models, the app says ×' + (w.n || 1));
