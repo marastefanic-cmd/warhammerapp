@@ -97,7 +97,11 @@ function run(D){
     const ar = f.armyRules.find(r => r.name === name);
     if(ar) return ar.text + JSON.stringify(ar.table || '');
     for(const id of a.detachments){ const d = f.detachments[id]; if(d && d.rule && d.rule.name === name) return d.rule.text + JSON.stringify(d.rule.table || ''); }
-    return D.rules[name] || '';
+    if(D.rules[name]) return D.rules[name];
+    // a core rule with its value in its name on the Rules line ("Damaged 5"): the glossary entry its alias names, and the name, whose
+    // number is the X of "Damaged X"
+    const k = (D.ruleAliases.find(([re]) => re.test(name)) || [])[1];
+    return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : '';
   };
   for(const a of armies){
     const strats = stratsOf(a).concat(D.coreStratagems);

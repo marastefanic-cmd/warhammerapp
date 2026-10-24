@@ -56,6 +56,12 @@
    "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
   },
   {
+   "id": "pack:adeptus-custodes",
+   "label": "GW Printed Product Updates Adeptus Custodes",
+   "file": "verify/.cache/gw/eng_14-10_wh40k_printed_product_updates_adeptus_custodes_updates-fmj4bdwwhh-0qshh8eauk.pdf",
+   "sha256": "1adb1ccfde5c11b2e521a6cbe740095ecf3340954c8b1fbfd19f09876afa2357"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -104,6 +110,12 @@
    "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
   },
   {
+   "id": "waha:adeptus-custodes",
+   "label": "Wahapedia adeptus-custodes (text)",
+   "file": "verify/.cache/waha/adeptus-custodes.txt",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -150,6 +162,12 @@
    "label": "Wahapedia chaos-knights",
    "file": "verify/.cache/waha/chaos-knights.html",
    "sha256": "fd1ab9e09637c57491d66c4d6ecbf284358a3d6ad73d5f9af0428acbdcd89a5e"
+  },
+  {
+   "id": "wahahtml:adeptus-custodes",
+   "label": "Wahapedia adeptus-custodes",
+   "file": "verify/.cache/waha/adeptus-custodes.html",
+   "sha256": "87fc3c5c0b21e5246f0df8f0c20825ee2ae071661edf1b69b7e7cff437697fef"
   },
   {
    "id": "wahahtml:core",
@@ -596,6 +614,14 @@
    "doc": "core",
    "where": "PDF p80",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Damaged / text",
+   "field": "text",
+   "text": "*Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability a",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 24.28.01 Precision and Devastating Wounds",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Feel No Pain / text",
@@ -6353,6 +6379,328 @@
    "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
   },
   {
+   "item": "adeptus-custodes / detachment:emperors-chosen",
+   "field": "name",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/rule",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/enhancement:From the Hall of Armouries",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/enhancement:From the Hall of Armouries",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/enhancement:Radiant Mantle",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/enhancement:Radiant Mantle",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:in-auramite-clad",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (IN AURAMITE CLAD)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:in-auramite-clad",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (IN AURAMITE CLAD)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:in-auramite-clad",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (IN AURAMITE CLAD)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:superhuman-focus",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (SUPERHUMAN FOCUS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:superhuman-focus",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (SUPERHUMAN FOCUS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:superhuman-focus",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (SUPERHUMAN FOCUS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:superhuman-focus",
+   "field": "restrictions",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (SUPERHUMAN FOCUS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:impenetrable-bastion",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (IMPENETRABLE BASTION)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:impenetrable-bastion",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (IMPENETRABLE BASTION)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:emperors-chosen/stratagem:impenetrable-bastion",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Emperor’s Chosen 1DP (IMPENETRABLE BASTION)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force",
+   "field": "name",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/rule",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/enhancement:Anti-gravitic Mobility",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/enhancement:Anti-gravitic Mobility",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/enhancement:Combat Deployment",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/enhancement:Combat Deployment",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:victory-before-death",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (VICTORY BEFORE DEATH)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:victory-before-death",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (VICTORY BEFORE DEATH)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:victory-before-death",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (VICTORY BEFORE DEATH)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:advanced-stabilisers",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (ADVANCED STABILISERS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:advanced-stabilisers",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (ADVANCED STABILISERS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:advanced-stabilisers",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (ADVANCED STABILISERS)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:inevitable-annihilation",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (INEVITABLE ANNIHILATION)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:inevitable-annihilation",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (INEVITABLE ANNIHILATION)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:grav-assault-force/stratagem:inevitable-annihilation",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Grav-Assault Force 1DP (INEVITABLE ANNIHILATION)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi",
+   "field": "name",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/rule",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/enhancement:Memento Moritoi",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/enhancement:Memento Moritoi",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/enhancement:Augury Uplink",
+   "field": "pts",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/enhancement:Augury Uplink",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:honoured-interred",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (HONOURED INTERRED)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:honoured-interred",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (HONOURED INTERRED)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:honoured-interred",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (HONOURED INTERRED)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:unceasing-onslaught",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (UNCEASING ONSLAUGHT)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:unceasing-onslaught",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (UNCEASING ONSLAUGHT)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:unceasing-onslaught",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (UNCEASING ONSLAUGHT)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:unstoppable-momentum",
+   "field": "when",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (UNSTOPPABLE MOMENTUM)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:unstoppable-momentum",
+   "field": "target",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (UNSTOPPABLE MOMENTUM)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / detachment:might-of-the-moritoi/stratagem:unstoppable-momentum",
+   "field": "effect",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Might of the Moritoi 1DP (UNSTOPPABLE MOMENTUM)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -6717,6 +7065,83 @@
    "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
   },
   {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah/row:Conservai",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah/row:Calistus",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah/row:Salvus",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah/row:Dacatarai",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah/row:Kaptaris",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Martial Ka’tah/row:Rendax",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Martial Ka’tah)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Aegis of the Emperor",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Aegis of the Emperor)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Aquila Commander",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Aquila Commander)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Daughters of the Abyss",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Daughters of the Abyss)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
+   "item": "adeptus-custodes / armyRule:Anathema Psykana",
+   "field": "text",
+   "doc": "waha:adeptus-custodes",
+   "where": "Wahapedia adeptus-custodes § Army Rules (Anathema Psykana)",
+   "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -7029,6 +7454,20 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Flowing Flesh (Warpmeld Pact) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "lite-knights / contemptor-galatus-dreadnought / ability:Memento Moritoi",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Memento Moritoi (Might of the Moritoi) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "lite-knights / telemon-heavy-dreadnought / ability:Augury Uplink",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Augury Uplink (Might of the Moritoi) (whose source is recorded under that item)",
    "sha256": null
   },
   {

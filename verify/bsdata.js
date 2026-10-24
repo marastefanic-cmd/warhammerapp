@@ -581,7 +581,11 @@ function assignGear(items) {            // items: [{ name, cands: [path] }]
     return sc;
   };
   // a group holds selections of distinct entries directly below it (two items inside one bundle are one selection)
-  let best = null; const used = new Map(); const taken = new Set(); const pick = [];
+  // a place can be taken as often as its entry's maximum per parent allows (the Contemptor-Achillus's Lastrum storm bolter: one
+  // entry, max 2): the second take is the same selection with count 2
+  const cap = (p) => { const n = p[p.length - 1]; const c = n.constraints.find((x) => x.type === 'max' && x.scope === 'parent' && x.field === 'selections');
+    return c ? Math.max(1, Math.floor(c.value / fixedCount(n))) : 1; };
+  let best = null; const used = new Map(); const taken = new Map(); const pick = [];
   const below = (p) => p.map((g, j) => g.type === 'group' ? [g.id + '|' + g.linkId, groupMax(g), pathKey([p[j + 1]])] : null).filter(Boolean);
   const go = (i, total) => {
     if (i === items.length) { if (!best || total > best.total) best = { total, pick: pick.slice() }; return; }
@@ -589,14 +593,14 @@ function assignGear(items) {            // items: [{ name, cands: [path] }]
     if (!cands.length) { pick.push(null); go(i + 1, total - 100); pick.pop(); return; }
     let any = false;
     for (const p of cands) {
-      const k = pathKey(p); if (taken.has(k)) continue;
+      const k = pathKey(p); if ((taken.get(k) || 0) >= cap(p)) continue;
       const gs = below(p);
       if (gs.some(([g, max, child]) => { const set = used.get(g) || new Map(); return !set.has(child) && set.size >= max; })) continue;
       any = true;
-      taken.add(k); for (const [g, , child] of gs) { const set = used.get(g) || new Map(); set.set(child, (set.get(child) || 0) + 1); used.set(g, set); }
+      taken.set(k, (taken.get(k) || 0) + 1); for (const [g, , child] of gs) { const set = used.get(g) || new Map(); set.set(child, (set.get(child) || 0) + 1); used.set(g, set); }
       pick.push(p); go(i + 1, total + score(p)); pick.pop();
       for (const [g, , child] of gs) { const set = used.get(g); const n = set.get(child) - 1; if (n) set.set(child, n); else set.delete(child); }
-      taken.delete(k);
+      if (taken.get(k) > 1) taken.set(k, taken.get(k) - 1); else taken.delete(k);
     }
     if (!any) { pick.push(null); go(i + 1, total - 100); pick.pop(); }
   };
@@ -630,12 +634,15 @@ function buildRoster(army, MAP, issues) {
     const top = new Sel(bsRoot.n, 1, force); if (p) addChain(top, p, 1);
     else issues.push({ unit: '(army)', field: 'battleSize', app: army.battleSize, source: '', where: 'Battle Size options' });
   }
-  const detRoot = rootNode(cat, 'Detachment')[0];
-  const detTop = detRoot ? new Sel(detRoot.n, 1, force) : null;
+  // (the Adeptus Custodes catalogue holds its detachments under a root entry "Detachments", the others under "Detachment")
+  const detRoots = rootNode(cat, 'Detachment').concat(rootNode(cat, 'Detachments'));
+  const detTops = new Map();
   for (const d of army.detachments) {
     const name = (MAP.detachments || {})[d] || (DATA.factions[army.faction].detachments[d] || {}).name || d;
-    const p = detRoot && searchBelow(detRoot.n, (k) => k.type === 'upgrade' && nn(k.name) === nn(name))[0];
-    if (p) addChain(detTop, p, 1);
+    let p = null, detRoot = null;
+    for (const r of detRoots) { p = searchBelow(r.n, (k) => k.type === 'upgrade' && nn(k.name) === nn(name))[0]; if (p) { detRoot = r; break; } }
+    if (p && !detTops.has(detRoot)) detTops.set(detRoot, new Sel(detRoot.n, 1, force));
+    if (p) addChain(detTops.get(detRoot), p, 1);
     else issues.push({ unit: '(army)', field: 'detachment', app: name, source: '', where: `${cat.fname} › Detachment` });
   }
   // the Show/Hide Options the PDF prints ("Nurgle Daemons are visible"): BSData hides an allied unit (Nurglings) unless the
@@ -698,11 +705,15 @@ function buildUnit(army, u, um, cat, force, issues) {
     // BSData gives the Two-Busta model its launcha as one selection of 2 (min = max = 2);
     // the app's gear names it once per weapon: the repeats are that one selection
     const perPath = (q) => q.filter((n) => n.type === 'upgrade').reduce((c, n) => c * fixedCount(n), 1);
+    // (where only some places give it as a fixed 2, the Telemon's "Dual Fists and 2 Projectors" bundle among bundles of 1: the
+    // repeats are that place's one selection, and only those places are left for it)
     for (let j = 0; j < own.length; j++) {
-      const it = own[j]; const f = it.cands.length ? perPath(it.cands[0]) : 1;
-      if (f < 2 || !it.cands.every((q) => perPath(q) === f)) continue;
+      const it = own[j]; const f = it.cands.length ? Math.max(...it.cands.map(perPath)) : 1;
+      if (f < 2) continue;
       const rep = own.map((x, k) => k).filter((k) => k > j && own[k].name === it.name).slice(0, f - 1);
-      if (rep.length === f - 1) for (const k of rep.reverse()) own.splice(k, 1);
+      if (rep.length !== f - 1) continue;
+      if (!it.cands.every((q) => perPath(q) === f)) it.cands = it.cands.filter((q) => perPath(q) === f);
+      for (const k of rep.reverse()) own.splice(k, 1);
     }
     const picks = assignGear(own);
     // an item named twice whose second place is taken: the same option taken twice (one selection of 2: a Nob's two Rokkit

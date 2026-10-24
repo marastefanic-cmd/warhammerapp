@@ -1293,7 +1293,7 @@ function matches(n, u){
   if(n.none && n.none.some(k => hasKw(u, k))) return false;
   if(n.unless && matches(n.unless, u)) return false;
   // rule: the unit's Rules line names one of these rules (a Chaos Knight's Super-Heavy Walker, or a Preyslayer's Mantle bearer's)
-  if(n.rule && !n.rule.some(r => (u.rules || []).some(x => x.toLowerCase() === r.toLowerCase()))) return false;
+  if(n.rule && !n.rule.some(r => hasRule(u, r))) return false;
   if(n.attached && !u.leads) return false;   // "a friendly attached … unit": one with a leader or support character
   return true;
 }
@@ -1342,7 +1342,8 @@ const allUnitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter
 const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones that do something in this list
 // a rule of the unit only one of its models has (data.js partialRules: Canis Rex's Lone Operative is Sir Hekhtur's): that model
 const partialWho = (u, label) => { const p = u.partialRules || {}; if(hasOwn(p, label)) return p[label];
-  const k = ruleKey(label), e = k && Object.entries(p).find(([r]) => ruleKey(r) === k); return e ? e[1] : ''; };
+  // (not another entry of the same Rules line: Trajann's own "Feel No Pain 5+" is not the unit's "Feel No Pain 5+*")
+  const rl = u.rules || [], k = ruleKey(label), e = k && Object.entries(p).find(([r]) => ruleKey(r) === k && !(rl.includes(r) && rl.includes(label))); return e ? e[1] : ''; };
 // "Canis Rex: Sir Hekhtur only" on a line of its own, "Canis Rex (Sir Hekhtur only)" in a list
 const onlyTag = (u, label, inList) => !partialWho(u, label) ? '' : '<span class="from">' + (inList ? ' (' : ': ') + esc(partialWho(u, label)) + ' only' + (inList ? ')' : '') + '</span>';
 // an army rule that needs units this army doesn't have, e.g. Bondsman with no ARMIGER models
@@ -1446,7 +1447,8 @@ function ruleFor(label){
   return null;
 }
 const ruleKey = label => (ruleFor(label) || {}).key;
-const mentions = (text, key) => new RegExp('\\b' + key.replace(/[-]/g, '.') + '\\b', 'i').test(text);
+// (not the end of a hyphenated word: "GRAV-ASSAULT" does not mention Assault; "ANTI-PSYKER" does mention Anti)
+const mentions = (text, key) => new RegExp('(?<![\\w-])' + key.replace(/[-]/g, '.') + '\\b', 'i').test(text);
 // the units in this army a core rule applies to: unit rules, weapon keywords, ability text
 const CONCEPT = new Set(D.concepts || []);   // general terms (charge, destroyed…) that every unit "uses"
 function ruleUsers(key){
@@ -1894,10 +1896,14 @@ const dmLasts = s => { const t = [(s.mod || {}).when, (s.mod || {}).note, s.def,
 // reaches every THOUSAND SONS model of the army)
 // (or that a part of a detachment rule of the list gives it, grants: Blood Tithe's Might of Khorne gives BLOOD LEGIONS units the
 // Blessings of Khorne ability; its condition joins the when)
+// a unit's Rules line names this rule: names compared with either apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's
+// "Martial Ka’tah") and in any case
+const ruleNameN = s => String(s || '').toLowerCase().replace(/[’‘]/g, "'");
+const hasRule = (u, name) => (u.rules || []).some(r => ruleNameN(r) === ruleNameN(name));
 const dmArmyOf = (L, u, kind, key) => { if(!L || !u) return [];
   const via = inArmy(L, () => unitDetParts(u)).filter(x => x.part.grants);
-  return factionOf(L).armyRules.filter(r => r[key]).flatMap(r => { const g = !u.rules.includes(r.name) && via.find(x => x.part.grants === r.name);
-    return r[key].filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : u.rules.includes(r.name) || !!g))
+  return factionOf(L).armyRules.filter(r => r[key]).flatMap(r => { const g = !hasRule(u, r.name) && via.find(x => x.part.grants === r.name);
+    return r[key].filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : hasRule(u, r.name) || !!g))
       .map(m => Object.assign({ from:r.name, rule:r.name, ar:r }, m, g && !m.needs ? { when:m.when + ' (' + g.part.when + ')' } : {})); }); };
 // a stratagem's name from any list (its id)
 const dmStratName = id => { for(const f of Object.values(D.factions)) for(const d of Object.values(f.detachments)) for(const s of d.stratagems || []) if(s.id === id) return s.name;
@@ -4326,7 +4332,11 @@ function abilityList(abs, u, suffix){
 function defenceItems(u, ph, opts){
   const out = [];
   // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
-  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
+  // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, "Feel No Pain 5+ against mortal
+  // wounds"); New Recruit's starred "Feel No Pain 5+*" is that one, so it is not said again without its condition
+  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && hasRule(u, r.name));
+  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: the one model that has it, partialRules)
+  for(const r of armyDefs) if(!(ph && r.defPh && !r.defPh.includes(ph))) out.push({ t:r.def, a:'rule', v:r.name });   // (defPh: Kaptaris, the Fight phase only)
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
   for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)
   // (who, name: the model of an attached unit the ability is on, for the datasheet's line)
@@ -4336,7 +4346,8 @@ function defenceItems(u, ph, opts){
     out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });
   // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,
   // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit
-  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u))
+  // (one line for the same help from several units: the three Anathema Psykana units' Psychic Null)
+  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !out.some(x => x.guard && x.t === g.when + ': ' + g.note))
     out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });
   if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });
   return out;
@@ -4353,7 +4364,7 @@ function defLine(x, u){
   if(x.guard) return esc(x.t) + ' <span class="from">(' + linkTo(x.a, x.v, x.guard.from) + ')</span>';
   if(x.riled){ const ar = alwaysRiled(u); return linkTo(x.a, x.v, 'Riled up') + (ar ? ' (' + ar + ')' : '') + esc(x.t.slice('Riled up'.length)); }
   const who = x.who && u.leads && !(i > 0 && x.who.startsWith(x.t.slice(0, i))) ? esc(x.who) + ' · ' : '';
-  if(who && i < 0) return who + linkTo(x.a, x.v, x.name) + ': ' + esc(x.t);
+  if(who && i < 0) return who + (x.name ? linkTo(x.a, x.v, x.name) + ': ' + esc(x.t) : linkTo(x.a, x.v, x.t));   // (a rule of one model: Trajann's Feel No Pain 5+)
   return who + (i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t));
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
