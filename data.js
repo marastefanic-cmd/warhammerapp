@@ -2556,8 +2556,7 @@ const ARMIES = [
       partialRules:{ 'Cabal of Sorcerers':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
       // Wahapedia's Scarab Occult Terminators: "SCARAB OCCULT SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Scarab Occult Sorcerer
       // only)"; BSData has both on the Scarab Occult Sorcerer model; the Sorcerer in Terminator Armour has both on his own datasheet
-      kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
-      why:{ rules:{ 'Deep Strike':'Umbralefic Crystal' } }
+      kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' }
     },
     {
       id:'tzaangors', ds:'thousand-sons/tzaangors', pts:75,

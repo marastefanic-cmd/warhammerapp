@@ -281,10 +281,10 @@ function build(R){
     if(!to || typeof to !== 'object' || Object.keys(to).some(k => !['all', 'any', 'none'].includes(k))) return !to;
     return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
   // each BSData entry's own categories (verify/sources/bsdata-extract.json, by id), before any modifier of a rule
-  let BSC = null;
+  let BSC = null; const BSR = new Map();   // (and its own rules: core abilities BSData links to it, "Deep Strike")
   const bsCats = () => { if(BSC) return BSC; BSC = new Map();
     try { const x = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources/bsdata-extract.json'), 'utf8'));
-      const walk = o => { if(Array.isArray(o)){ o.forEach(walk); return; } if(!o || typeof o !== 'object') return; if(o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); for(const k in o) if(o[k] && typeof o[k] === 'object') walk(o[k]); };
+      const walk = o => { if(Array.isArray(o)){ o.forEach(walk); return; } if(!o || typeof o !== 'object') return; if(o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); if(o.id && (o.infoLinks || o.rules)) BSR.set(o.id, [].concat(o.infoLinks || [], o.rules || []).map(c => c.name)); for(const k in o) if(o[k] && typeof o[k] === 'object') walk(o[k]); };
       walk(x.files); } catch(e) {}
     return BSC; };
   const ownAbilities = u => (u.abilities || []).filter(x => /\b(Enhancement|Upgrade)\b/.test(x.tag || ''));
@@ -296,6 +296,7 @@ function build(R){
     if(u.warlord && kwOf('Warlord')) put('kw', kwOf('Warlord'), 'Warlord');
     // (a keyword a rule gives that a datasheet of the unit already has, its own BSData category: no reason, it is the datasheet's;
     // the Forgefiend's DAEMON, which Soul Forge Boons also gives HERETIC ASTARTES VEHICLE units)
+    const nativeRule = r => U.ids.some(id => { const s = sheets.get(id); bsCats(); return s && [...s.bs.keys()].some(b => (BSR.get(b) || []).some(x => lc(x) === lc(r))); });
     const native = k => U.ids.some(id => { const s = sheets.get(id); return s && [...s.bs.keys()].some(b => (bsCats().get(b) || []).some(x => lc(x) === lc(k))); });
     const inForce = [F.name + ' army rule · '].concat(a.detachments.map(d => F.name + ' · ' + ((F.detachments || {})[d] || {}).name + ' rule · '));
     for(const g of R.grants || []){
@@ -309,6 +310,7 @@ function build(R){
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
     const own = ownAbilities(u);
     for(const r of u.rules || []){
+      if(nativeRule(r)) continue;   // (a rule the datasheet itself has: the Sorcerer in Terminator Armour's Deep Strike, not Umbralefic Crystal's)
       const esc = lc(r).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const ab = own.find(x => new RegExp('\\*\\*' + esc + '\\*\\*|\\[' + esc + '[\\]\\s-]').test(lc(x.text)));   // it gives the rule by name
       if(ab){ put('rules', r, ab.name); continue; }
