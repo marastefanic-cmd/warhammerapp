@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "26f0083ab7",
- "data": "2026-10-24.7",
+ "build": "7f578c068c",
+ "data": "2026-10-24.8",
  "date": "24 Oct 2026",
  "checks": [
   {
@@ -11,7 +11,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (14305 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (14308 facts)."
   },
   {
    "label": "Granted values:",
@@ -41,7 +41,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "BSData:",
-   "detail": "wh40k-11e, commit 173d0ef."
+   "detail": "wh40k-11e, commit b4dc3f4."
   },
   {
    "label": "Games Workshop:",

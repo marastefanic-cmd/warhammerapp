@@ -1,6 +1,6 @@
 {
- "hash": "26f0083ab7f91a1cf555b0e7aaee54e008b5043b07b83d42cb59ff1fe60d52cc",
- "at": "2026-10-24T20:07:55.828Z",
+ "hash": "7f578c068ca1d170335422ebb7eb62f0ad2d3a7e32141c4b612fa737dc75d637",
+ "at": "2026-10-24T20:54:40.770Z",
  "ok": true,
  "steps": {
   "data": {
@@ -29,15 +29,15 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 14305 facts checked against BSData 173d0ef (clone) {\"gear\":1039,\"stats\":2180,\"weapons\":6820,\"abilities\":1276,\"keywords\":1540,\"rules\":906,\"grants\":288,\"points\":255,\"extract\":1}; 217 deviations used; 0 failures"
+   "summary": "bsdata: 14308 facts checked against BSData b4dc3f4 (clone) {\"gear\":1039,\"stats\":2187,\"weapons\":6820,\"abilities\":1276,\"keywords\":1540,\"rules\":902,\"grants\":288,\"points\":255,\"extract\":1}; 164 deviations used; 0 failures"
   },
   "dispositions": {
    "ok": true,
-   "summary": "dispositions: 35 detachments match BSData (1 declared deviation used); every list’s disposition is one its detachments allow"
+   "summary": "dispositions: 35 detachments match BSData; every list’s disposition is one its detachments allow"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 13570 facts checked (army 212, units 149, roster 633, pts 298, copies 149, models 149, enhancement 298, warlord 298, leads 447, gear 262, stats 1737, ranged 2777, from 171, melee 2534, abilities 1414, kw 212, rules 1493, glossary 337); 151 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 13570 facts checked (army 212, units 149, roster 633, pts 298, copies 149, models 149, enhancement 298, warlord 298, leads 447, gear 262, stats 1737, ranged 2777, from 171, melee 2534, abilities 1414, kw 212, rules 1493, glossary 337); 152 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
