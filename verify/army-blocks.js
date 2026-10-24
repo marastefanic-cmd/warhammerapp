@@ -11,7 +11,8 @@
                                                             there (code, glossary, factions) to bring by hand
 
    A list's block is its { … } in ARMIES, from the line "{" to its closing "}," (data.js is in the
-   importer's layout, one list after another). */
+   importer's layout, one list after another). data.js in table form (DATASHEETS) is read in the old form (every
+   unit in full: verify/tables.js), so a block holds its units whole, and is written back in table form. */
 'use strict';
 const fs = require('fs'), path = require('path');
 const { execFileSync } = require('child_process');
@@ -43,16 +44,20 @@ function blocks(text) {
 }
 const dataFile = p => path.join(p, 'data.js');
 const read = f => fs.readFileSync(f, 'utf8');
+const T = require('./tables');
+const tabled = t => /\nconst DATASHEETS = /.test(t);
+const readData = f => { const t = read(f); return tabled(t) ? T.oldForm(t) : t; };
+const writeData = (f, text) => fs.writeFileSync(f, tabled(read(f)) ? T.tableForm(text).text : text);
 
 if (cmd === 'list') {
-  const { out } = blocks(read(dataFile(ROOT)));
+  const { out } = blocks(readData(dataFile(ROOT)));
   for (const b of out) console.log(b.id.padEnd(28) + ' lines ' + (b.start + 1) + '-' + (b.end + 1));
 } else if (cmd === 'keep') {
   const keep = new Set((a1 || '').split(',').filter(Boolean));
-  const t = read(dataFile(ROOT)), { L, out } = blocks(t);
+  const t = readData(dataFile(ROOT)), { L, out } = blocks(t);
   const drop = out.filter(b => !keep.has(b.id));
   for (const b of drop.reverse()) L.splice(b.start, b.end - b.start + 1);
-  fs.writeFileSync(dataFile(ROOT), L.join('\n'));
+  writeData(dataFile(ROOT), L.join('\n'));
   console.log('data.js keeps ' + [...keep].join(', ') + '; dropped ' + drop.map(b => b.id).join(', '));
   // the dropped lists' declared deviations go too (they would fail as stale here; merge brings back only the kept list's)
   const gone = new Set(drop.map(b => b.id));
@@ -66,14 +71,14 @@ if (cmd === 'list') {
   const wt = path.resolve(a1), id = a2;
   if (!wt || !id) { console.error('usage: node verify/army-blocks.js merge <worktree> <armyId>'); process.exit(2); }
   // 1. the list's block
-  const theirs = blocks(read(dataFile(wt))), mine = blocks(read(dataFile(ROOT)));
+  const theirs = blocks(readData(dataFile(wt))), mine = blocks(readData(dataFile(ROOT)));
   const tb = theirs.out.find(b => b.id === id), mb = mine.out.find(b => b.id === id);
   if (!tb) { console.error('no list ' + id + ' in ' + dataFile(wt)); process.exit(1); }
   let block = theirs.L.slice(tb.start, tb.end + 1);
   if (!/,\s*$/.test(block[block.length - 1])) block[block.length - 1] += ',';
   if (mb) mine.L.splice(mb.start, mb.end - mb.start + 1, ...block);
   else mine.L.splice(mine.end, 0, ...block);
-  fs.writeFileSync(dataFile(ROOT), mine.L.join('\n'));
+  writeData(dataFile(ROOT), mine.L.join('\n'));
   console.log('data.js: ' + id + ' from ' + wt + ' (' + block.length + ' lines)');
   // 2. its deviations (army = the list; for the text check also its faction, reported under the faction)
   for (const f of ['deviations-nr.json', 'deviations-bsdata.json', 'deviations-texts.json']) {
@@ -105,8 +110,10 @@ if (cmd === 'list') {
     const changed = execFileSync('git', ['-C', wt, 'diff', '--name-only', base], { encoding: 'utf8' }).split('\n').filter(Boolean)
       .filter(f => !/^verify\/(out|review)\/|^verify\/(deviations-(nr|bsdata|texts)|map-bsdata|approvals|provenance|report)\.json$|^verify\/snapshots\/|^verify\/sources\/(bsdata-extract\.json|waha-datasheets\.txt)$|^(index\.html|sw\.js|verified\.js|version\.json)$/.test(f));
     const dj = changed.includes('data.js') ? execFileSync('git', ['-C', wt, 'diff', base, '--', 'data.js'], { encoding: 'utf8' }) : '';
-    const outside = dj && (() => { const L = read(dataFile(wt)).split('\n'), t = blocks(read(dataFile(wt))); const own = new Set(); t.out.forEach(b => { for (let i = b.start; i <= b.end; i++) own.add(i + 1); });
-      return [...dj.matchAll(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/gm)].some(m => { const s = +m[1], n = +(m[2] || 1); for (let i = s; i < s + n; i++) if (i < t.s0 + 1 || i > t.end + 1) return true; return false; }); })();
+    const outside = dj && (() => { const t = blocks(read(dataFile(wt))); const own = new Set(); t.out.forEach(b => { for (let i = b.start; i <= b.end; i++) own.add(i + 1); });
+      // the tables verify/tables.js writes from the lists (DATASHEETS, RULE_OPTIONS, GRANTS, the resolver) are the lists' too
+      const W = read(dataFile(wt)).split('\n'); let inT = false; W.forEach((l, i) => { if (/^\/\/ ---- (DATASHEETS|RULE_OPTIONS|resolveArmies)/.test(l)) inT = true; if (inT) own.add(i + 1); if (/^\/\/ ---- end of (DATASHEETS|RULE_OPTIONS|resolveArmies)/.test(l)) inT = false; });
+      return [...dj.matchAll(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/gm)].some(m => { const s = +m[1], n = +(m[2] || 1); for (let i = s; i < s + n; i++) if ((i < t.s0 + 1 || i > t.end + 1) && !own.has(i)) return true; return false; }); })();
     const rest = changed.filter(f => f !== 'data.js').concat(outside ? ['data.js (outside ARMIES: glossary or factions)'] : []);
     if (rest.length) console.log('also changed in the worktree (bring by hand, see git -C ' + wt + ' diff ' + base.slice(0, 8) + '): ' + rest.join(', '));
   }

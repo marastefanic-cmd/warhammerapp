@@ -11,11 +11,13 @@
 // approvals live in verify/approvals.json: { key: { verdict:'ok', by, at, why } }
 const fs = require('fs'), path = require('path');
 const { ROOT, key, loadData, readJSON, writeJSON } = require('./lib');
+const FP_KEYS = Object.values(require('./tables').FINGERPRINT);
 
 function items(D, appSource){
   const out = [];
+  // (a fingerprint next to an AI-written column, gistOf / defOf, is not a judgement: verify/tables.js --fingerprints checks it)
   const add = (army, kind, where, judgement, source) => out.push({ army, kind, where, judgement, source,
-    key:key(kind + '\n' + JSON.stringify(judgement) + '\n' + JSON.stringify(source)) });
+    key:key(kind + '\n' + JSON.stringify(judgement, (k, v) => FP_KEYS.includes(k) ? undefined : v) + '\n' + JSON.stringify(source)) });
   const fr = f => D.factions[f];
   const ruleText = (army, name) => {
     const a = D.armies.find(x => x.id === army), f = fr(a.faction);
@@ -146,10 +148,14 @@ const CODE_RULES = {
   runImport:'Import (the sheet): a refused export (or one resolve cannot read) lists every message, one per line, and nothing is kept; an imported one is kept on the phone as the export (resolved again at every start, each in a try: one that cannot be read is listed as out of date), gets an id no list has, and opens; if the phone cannot keep it, the toast says so',
   importedFoot:'an imported list\'s Overview ends with where it came from, whether this phone keeps it, and Remove this list (a confirm on the page: Remove / Keep it)',
   removeImported:'Remove: the list leaves the phone (the kept export, the list and its per-battle ticks), the app goes to the home screen',
+  armyRuleOption:'the datasheet (unit screen) does not spell out an army rule\'s options: a "When targeted" line of an army rule that starts with the name of one of its options (RULE_OPTIONS: Martial Ka\'tah\'s Kaptaris) is left out there, the Rules line opens the whole rule; the Damage tab and the Overview keep it',
+  // data.js's own code (written by verify/tables.js)
+  resolveArmies:'the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet\'s columns, then the entry\'s own (null: none); each row the datasheet\'s row of that name (a stats row without its "×N"; for an attached unit the part its who or of names, else the first part that has it) with the entry row\'s fields on top, a row the datasheet does not have as the list\'s own; an entry without a kind of rows takes all of its datasheet\'s; over (a fact two lists have differently) on top of all; ds, over, of, faction, bsId and fingerprints hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet\'s values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was',
 };
 function appFunctions(html){
   const out = {};
   html += '\n' + fs.readFileSync(path.join(ROOT, 'import.js'), 'utf8');   // the list import's own file, reviewed as code like the app's
+  html += '\n' + fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');     // data.js's resolver (resolveArmies)
   for(const name of Object.keys(CODE_RULES)){
     const m = new RegExp('\\n(function ' + name + '\\(|const ' + name + ' = )').exec(html);
     if(!m){ out[name] = 'MISSING'; continue; }

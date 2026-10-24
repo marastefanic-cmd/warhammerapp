@@ -586,7 +586,9 @@ function commentsNear(src, name){
 
 function derive(D){
   const V = vocab(D);
-  const src = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
+  // the comments next to an item: data.js in the old form (each unit in full, as the lists were written), where each comment
+  // is on every unit it is about (verify/tables.js)
+  const src = require('./tables').oldForm(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
   const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   // the app's own matches(), so "selects the same units" means what the app does
   const matches = new Function('hasKw', appFunctions(html).matches + '\nreturn matches;')((u, k) => u.kw.some(x => norm(x).toLowerCase() === norm(k).toLowerCase()));
@@ -708,31 +710,101 @@ function derive(D){
     for(const g of u.guard || []) if(g.from === ab.name) out.push((g.note || '') + ' ' + JSON.stringify(g.calc || {}).replace(/"fnp":/, 'feel no pain '));
     return out.length ? ' | elsewhere: ' + out.join(' | ') : '';
   }
-  // ---- rule options and grants (coverage only) ----
+  // ---- rule options and grants (coverage only): the rows of data.js's RULE_OPTIONS and GRANTS (verify/tables.js --write writes
+  // them from ruleTables below, which reads them from the words), each against what the rule's footnotes and the unit sheets store ----
+  const fresh = ruleTables(D);
+  const TB = { options:D.ruleOptions || [], grants:D.grants || [] };
+  Object.defineProperty(items, 'tablesStale', { value:JSON.stringify(TB) !== JSON.stringify({ options:fresh.options, grants:fresh.grants }) });
+  const whyOf = new Map(); fresh.options.forEach((o, i) => { const k = o.rule + '\n' + o.option; if(!whyOf.has(k)) whyOf.set(k, fresh.reasons[i]); });
+  for(const s of ruleSources(D)) optionsAndGrants(s.where, s.stored, s.fk, s.self);
+  function optionsAndGrants(where, stored, fk, self){
+    for(const o of TB.options.filter(x => x.rule === where)){
+      const phs = o.phases && o.phases.ph ? o.phases.ph : [];
+      const mine = stored.filter(sx => sx.name && norm(sx.name).toLowerCase().startsWith(norm(o.option).toLowerCase()) || (sx.picks || []).some(n => norm(o.option).toLowerCase().startsWith(norm(n).toLowerCase()) || norm(n).toLowerCase().startsWith(norm(o.option).split(' ')[0].toLowerCase())));
+      const storedPh = new Set(mine.flatMap(sx => sx.kind === 'melee' ? ['fight'] : sx.kind === 'ranged' ? ['shooting'] : sx.kind === 'all' ? ['shooting', 'fight'] : sx.kind === 'def' ? ['shooting', 'fight'] : []));
+      const inDerived = [...storedPh].every(p => phs.includes(p));
+      const status = !phs.length ? 'not-derivable' : !mine.length ? 'different' : inDerived ? 'identical' : 'different';
+      add({ kind:'rule-option', coverage:true, where:where + ' · ' + o.option, stored:mine.length ? mine.map(sx => sx.what + (sx.picks && sx.picks.length ? ' picks ' + sx.picks.join('/') : '')).join('; ') : null,
+        derived:phs.length ? o.phases : null, trigger:o.trigger, used:o.used,
+        how:o.explicit ? 'explicit' : 'activity', status, noPerOption:!mine.length || undefined, optionFrom:o.found,
+        reasons:whyOf.get(o.rule + '\n' + o.option) || [], text:o.text });
+      grantItems(where, o.option, stored, fk, self);
+    }
+    grantItems(where, undefined, stored, fk, self);
+  }
+  // "BLOOD LEGIONS units from your army gain the Blessings of Khorne ability", "Friendly X units have the following ability:"
+  function grantItems(where, option, stored, fk, self){
+    for(const g of TB.grants.filter(x => x.rule === where && x.option === option)){
+      const { grants:grantName, type, to, text:sent } = g, wh = g.while;
+      const inParts = stored.find(sx => sx.grants && norm(sx.grants).toLowerCase() === norm(grantName).toLowerCase());
+      const holds = u => (u.rules || []).concat(u.abilities.map(y => y.name), u.kw || []).some(r => norm(r).toLowerCase() === norm(grantName).toLowerCase() || norm(r).toLowerCase().startsWith(norm(grantName).toLowerCase() + ' '));
+      // who should hold it: this unit (an ability's own grant) or the units it is for
+      const forUnits = to === 'this unit / model' ? (self ? [self] : []) : to ? D.armies.filter(a => a.faction === fk).flatMap(a => a.units.filter(u => matches(to, u))) : [];
+      const onSheets = forUnits.filter(holds).map(u => u.name);
+      const storedG = inParts ? { grants:inParts.grants, to:inParts.needs || null, while:inParts.when || null } : onSheets.length ? 'on the datasheet' + (onSheets.length > 1 ? 's' : '') + ' (Rules line, abilities or keywords): ' + [...new Set(onSheets)].slice(0, 5).join(', ') + (new Set(onSheets).size > 5 ? '…' : '') + (onSheets.length < forUnits.length ? ' (' + onSheets.length + ' of ' + forUnits.length + ' units it is for)' : '') : null;
+      const same = inParts ? JSON.stringify(canonNeeds(inParts.needs)) === JSON.stringify(canonNeeds(typeof to === 'object' ? to : null)) : !!onSheets.length;
+      add({ kind:'rule-grant', coverage:true, where:where + (option !== undefined ? ' · ' + option : '') + ' → ' + grantName, derived:{ grants:grantName, type, to, while:wh }, stored:storedG,
+        how:'explicit', status:same ? 'identical' : 'different', noPerOption:!storedG || undefined, reasons:[{ rule:'grant', match:clip(plain(sent), 120) }], text:sent });
+    }
+  }
+  function cover(kind, where, table, text, said, stored, src, dedupe){
+    const got = table.filter(b => b.re.test(text)), has = table.filter(b => b.note.test(said));
+    if(!got.length && !has.length) return;
+    const missing = got.filter(b => !has.includes(b)).map(b => b.id), extra = has.filter(b => !got.includes(b)).map(b => b.id);
+    const shownElsewhere = /\| elsewhere: /.test(said) ? said.split('| elsewhere: ')[1] : undefined;
+    add({ kind, coverage:true, where, stored, shownElsewhere, derived:got.map(b => b.id).join(', ') || null, how:got.length ? 'explicit' : 'none',
+      status:!got.length ? 'not-derivable' : !missing.length && !extra.length ? 'identical' : 'different',
+      reasons:got.map(b => ({ rule:b.id, match:(b.re.exec(text) || [''])[0] })), missing:missing.length ? missing : undefined, extra:extra.length ? extra : undefined, text:src, dedupe });
+  }
+  return items;
+}
+
+// ---------------------------------------------------------------------------------------------
+// RULE_OPTIONS and GRANTS: the options inside a rule or ability, and the abilities a rule gives units, read from the words.
+// verify/tables.js --write writes them into data.js; derive() reads them there and fails the gate when the words say otherwise.
+// ---------------------------------------------------------------------------------------------
+// what the rule's footnotes and the unit sheets store for its options (compared, not part of the tables)
+function storedOptionsOfRule(r){
+  const out = [];
+  for(const m of r.calcMods || []) out.push({ name:m.from, what:'calcMods (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name) });
+  for(const p of r.parts || []) out.push({ name:p.name, what:'parts' + (p.mod ? ' mod (' + p.mod.kind + ')' : p.def ? ' def' : p.grants ? ' grants ' + p.grants : ''), kind:p.mod ? p.mod.kind : p.def ? 'def' : null, grants:p.grants, needs:p.needs, when:p.when });
+  if(r.mod) out.push({ name:null, what:'mod (' + r.mod.kind + ')', kind:r.mod.kind, picks:(r.mod.pick || []).map(p => p.name), note:r.mod.note });
+  return out;
+}
+function storedOptionsOfAbility(u, ab){
+  return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
+}
+// the rules and abilities read for options and grants: every army and detachment rule, then every ability of every list (once per words)
+function ruleSources(D){
+  const out = [];
   for(const [fk, f] of Object.entries(D.factions)){
     const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
       .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
-    for(const { r, where } of rules) optionsAndGrants(where, r, r.text, r.table, storedOptionsOfRule(r), fk);
+    for(const { r, where } of rules) out.push({ where, text:r.text, table:r.table, stored:storedOptionsOfRule(r), fk });
   }
-  { const seen = new Set();
-    for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
-      const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
-      optionsAndGrants(a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, null, storedOptionsOfAbility(u, ab), a.faction, u);
-    } }
-  function storedOptionsOfRule(r){
-    const out = [];
-    for(const m of r.calcMods || []) out.push({ name:m.from, what:'calcMods (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name) });
-    for(const p of r.parts || []) out.push({ name:p.name, what:'parts' + (p.mod ? ' mod (' + p.mod.kind + ')' : p.def ? ' def' : p.grants ? ' grants ' + p.grants : ''), kind:p.mod ? p.mod.kind : p.def ? 'def' : null, grants:p.grants, needs:p.needs, when:p.when });
-    if(r.mod) out.push({ name:null, what:'mod (' + r.mod.kind + ')', kind:r.mod.kind, picks:(r.mod.pick || []).map(p => p.name), note:r.mod.note });
-    return out;
+  const seen = new Set();
+  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
+    const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
+    out.push({ where:a.id + ' · ' + u.name + ' · ' + ab.name, text:ab.text, table:null, stored:storedOptionsOfAbility(u, ab), fk:a.faction, self:u });
   }
-  function storedOptionsOfAbility(u, ab){
-    return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
-  }
-  function optionsAndGrants(where, x, text, table, stored, fk, self){
-    const t = rulesText(text);
+  return out;
+}
+// a grant: "has / have / gain(s) the X keyword / ability" said of units, with no negation in its clause, not inside a condition
+// ("if this unit has the BATTLELINE keyword": it depends on it) or a relative clause ("units that have the X ability": who it is
+// for), not of a detachment ("This detachment has the WAR DOGS tag"), and not the rule's own name
+const GRANT_RE = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/g;
+const notAGrant = (sent, m, rule, name) => {
+  const clause = sent.slice(0, m.index).split(/[,;:]/).pop();
+  return /^\s*(?:-\s*)?(?:if|unless|whether|each time|every time|when|whenever)\b/i.test(clause) || /\b(?:that|which|who|with)\s*$/i.test(clause) ||
+    /\b(?:not|cannot|never|no longer)\b/i.test(clause) || /\bdetachment\b/i.test(clause) || /^\s+tag\b/i.test(sent.slice(m.index + m[0].length)) ||
+    norm(name).toLowerCase() === norm(String(rule).split(' · ').pop()).toLowerCase();
+};
+function ruleTables(D){
+  const V = vocab(D), options = [], grants = [], reasons = [];
+  for(const s of ruleSources(D)){
+    const t = rulesText(s.text);
     const opts = [];
-    for(const row of table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row' });
+    for(const row of s.table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row' });
     const lines = t.split('\n');
     lines.forEach((l, i) => {
       let m = /^(?:- )?\*\*([^*]{3,60}?)(?::\*\*|\*\*:)\s*(.+)$/.exec(l);
@@ -748,24 +820,21 @@ function derive(D){
       const own = explicitTiming(o.text), trig = own || parentTrig;
       const used = usedIn(o.text, { core:D.coreStratagems }, trig);
       const ph = Object.assign({}, trig ? trig.ph : {}); for(const [p, v] of Object.entries(used.ph)) addPh(ph, p, v);
-      const mine = stored.filter(sx => sx.name && norm(sx.name).toLowerCase().startsWith(norm(o.name).toLowerCase()) || (sx.picks || []).some(n => norm(o.name).toLowerCase().startsWith(norm(n).toLowerCase()) || norm(n).toLowerCase().startsWith(norm(o.name).split(' ')[0].toLowerCase())));
-      const storedPh = new Set(mine.flatMap(sx => sx.kind === 'melee' ? ['fight'] : sx.kind === 'ranged' ? ['shooting'] : sx.kind === 'all' ? ['shooting', 'fight'] : sx.kind === 'def' ? ['shooting', 'fight'] : []));
-      const inDerived = [...storedPh].every(p => ph[p]);
-      const status = !Object.keys(ph).length ? 'not-derivable' : !mine.length ? 'different' : inDerived ? 'identical' : 'different';
-      add({ kind:'rule-option', coverage:true, where:where + ' · ' + o.name, stored:mine.length ? mine.map(sx => sx.what + (sx.picks && sx.picks.length ? ' picks ' + sx.picks.join('/') : '')).join('; ') : null,
-        derived:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null, trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null,
-        how:own ? 'explicit' : 'activity', status, noPerOption:!mine.length || undefined, optionFrom:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''),
-        reasons:(trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))), text:o.text });
-      grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self);
+      options.push({ rule:s.where, option:o.name, text:o.text, found:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''), explicit:!!own,
+        trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null, phases:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null });
+      reasons.push((trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))));
+      grantRows(s.where, o.name, o.text, o.name + ' active');
     }
-    grantsIn(where, opts.reduce((s2, o) => s2.replace(o.text, ''), t), stored, fk, null, self);
+    grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null);
   }
-  // "BLOOD LEGIONS units from your army gain the Blessings of Khorne ability", "Friendly X units have the following ability:"
-  function grantsIn(where, text, stored, fk, whileOpt, self){
+  function grantRows(rule, option, text, whileOpt){
     for(const sent of sentences(norm(text))){
-      const m = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/.exec(sent);
+      let m, name;
+      for(const x of sent.matchAll(GRANT_RE)){
+        const n = (x[3] || x[4] || (x[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
+        if(!notAGrant(sent, x, rule, n)){ m = x; name = n; break; }
+      }
       if(!m) continue;
-      const name = (m[3] || m[4] || (m[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
       if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
       const before = sent.slice(0, m.index);
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
@@ -775,27 +844,10 @@ function derive(D){
       const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
       const grantName = name.replace(/ ability$/i, '');
       const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
-      const inParts = stored.find(sx => sx.grants && norm(sx.grants).toLowerCase() === norm(grantName).toLowerCase());
-      const holds = u => (u.rules || []).concat(u.abilities.map(y => y.name), u.kw || []).some(r => norm(r).toLowerCase() === norm(grantName).toLowerCase() || norm(r).toLowerCase().startsWith(norm(grantName).toLowerCase() + ' '));
-      // who should hold it: this unit (an ability's own grant) or the units it is for
-      const forUnits = to === 'this unit / model' ? (self ? [self] : []) : to ? D.armies.filter(a => a.faction === fk).flatMap(a => a.units.filter(u => matches(to, u))) : [];
-      const onSheets = forUnits.filter(holds).map(u => u.name);
-      const storedG = inParts ? { grants:inParts.grants, to:inParts.needs || null, while:inParts.when || null } : onSheets.length ? 'on the datasheet' + (onSheets.length > 1 ? 's' : '') + ' (Rules line, abilities or keywords): ' + [...new Set(onSheets)].slice(0, 5).join(', ') + (new Set(onSheets).size > 5 ? '…' : '') + (onSheets.length < forUnits.length ? ' (' + onSheets.length + ' of ' + forUnits.length + ' units it is for)' : '') : null;
-      const same = inParts ? JSON.stringify(canonNeeds(inParts.needs)) === JSON.stringify(canonNeeds(typeof to === 'object' ? to : null)) : !!onSheets.length;
-      add({ kind:'rule-grant', coverage:true, where:where + ' → ' + grantName, derived:{ grants:grantName, type, to, while:wh }, stored:storedG,
-        how:'explicit', status:same ? 'identical' : 'different', noPerOption:!storedG || undefined, reasons:[{ rule:'grant', match:clip(plain(sent), 120) }], text:sent });
+      grants.push(Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:grantName, type, to, while:wh, text:sent }));
     }
   }
-  function cover(kind, where, table, text, said, stored, src, dedupe){
-    const got = table.filter(b => b.re.test(text)), has = table.filter(b => b.note.test(said));
-    if(!got.length && !has.length) return;
-    const missing = got.filter(b => !has.includes(b)).map(b => b.id), extra = has.filter(b => !got.includes(b)).map(b => b.id);
-    const shownElsewhere = /\| elsewhere: /.test(said) ? said.split('| elsewhere: ')[1] : undefined;
-    add({ kind, coverage:true, where, stored, shownElsewhere, derived:got.map(b => b.id).join(', ') || null, how:got.length ? 'explicit' : 'none',
-      status:!got.length ? 'not-derivable' : !missing.length && !extra.length ? 'identical' : 'different',
-      reasons:got.map(b => ({ rule:b.id, match:(b.re.exec(text) || [''])[0] })), missing:missing.length ? missing : undefined, extra:extra.length ? extra : undefined, text:src, dedupe });
-  }
-  return items;
+  return { options, grants, reasons };
 }
 
 // =============================================================================================
@@ -989,6 +1041,7 @@ if(require.main === module){
   console.log('derive: ' + Object.keys(agreed).length + ' agreed labels hold' + (drift.length ? ' except ' + drift.length : '') + '; ' + total('different') + ' differ, ' + total('not-derivable') + ' not derivable (not failing; verify/out/derive.md)' + (stale.length ? '; ' + stale.length + ' agreed items no longer exist' : ''));
   console.log('  identical/different/not derivable: ' + KINDS.map(k => k + ' ' + L(k)).join(' · '));
   for(const d of drift) console.log('  DRIFT ' + d);
-  process.exit(drift.length ? 1 : 0);
+  if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
+  process.exit(drift.length || items.tablesStale ? 1 : 0);
 }
-module.exports = { derive, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ruleTables, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
