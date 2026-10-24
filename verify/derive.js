@@ -652,9 +652,29 @@ function actOf(text){
 function pickCover(text, e){
   const t = plain(rulesText(text));
   if(!/\bselect one of the abilities in the .+? section\b|\bselect one [^.,;]+? ability\b/i.test(t)) return null;
-  const d = DURATIONS.find(x => x.re.test(t));
+  // the first duration in its words (not the first in DURATIONS' order: "this turn" would win over a later-listed "until the start of your next Command phase")
+  const d = DURATIONS.map(x => ({ id:x.id, i:t.search(x.re) })).filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
   return coverOf(d && d.id, e);
 }
+// the duration a rule's or ability's own words give its options (oc): coverOf on the first duration in its own words, from where it is
+// triggered, when it has options; null when none is read
+function optCover(text, own, table, e){
+  if(!optionsOf(rulesText(text), table).length) return null;
+  const t = plain(own), d = DURATIONS.map(x => ({ id:x.id, i:t.search(x.re) })).filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  if(!d) return null; const c = coverOf(d.id, e); return c.u ? c : null;
+}
+// a protection against mortal wounds (a Feel No Pain or a save "against … mortal wounds", Enraged Abjuration) is used whenever mortal
+// wounds are suffered: every phase of both turns
+const MORTAL_GUARD = /\b(?:feel no pain|invulnerable save|saving throws?|save)\b[^.]*\bmortal wounds\b/i;
+const EVERY_PHASE = PH.map(p => p + ':either').join(',');
+// the end moments a text names as when something is checked or done ("This Deed is completed at the end of a turn"): ends
+const endsOf = text => { const t = plain(rulesText(text)).replace(/\buntil the (?:start|end) of [^,.;]*/gi, ' '), out = new Set();
+  for(const m of t.matchAll(/\bat the end of (a|your|your opponent['’]s|the) (turn|battle round)\b/gi)){
+    const w = m[1].toLowerCase();
+    if(m[2].toLowerCase() === 'battle round') out.add('End of the battle round');
+    else if(w === 'a' || w === 'the') { out.add('End of your turn'); out.add('End of your opponent’s turn'); }
+    else out.add(w === 'your' ? 'End of your turn' : 'End of your opponent’s turn'); }
+  return [...out]; };
 // t: where it is triggered (the phases the text names, less those only its opening moment gives), u: where its effect is used,
 // at: the moment it opens with; none: no phase (before the battle, what a unit carries); x: not derivable
 function ckEntry(d, text){
@@ -675,6 +695,7 @@ function ckEntry(d, text){
   let up = d.usedPh;
   if(phStr(tp) && !d.at && !/\buntil\b|\bthis turn\b|\bnext\b|\bfor the rest of\b/i.test(plain(text || '')))
     up = Object.fromEntries(Object.entries(up || {}).filter(([p]) => tp[p]).map(([p, o]) => [p, o === 'either' ? tp[p] : tp[p] === 'either' || tp[p] === o ? o : null]).filter(([, o]) => o));
+  if(MORTAL_GUARD.test(pt)) up = Object.fromEntries(PH.map(p => [p, 'either']));
   if(phStr(up)) e.u = phStr(up);
   return Object.keys(e).length ? e : { none:1 };
 }
@@ -690,7 +711,7 @@ function ckEntry(d, text){
 const DURATIONS = [
   { id:'phase', re:/\buntil the end of the phase\b/i }, { id:'next', re:/\buntil the end of the next turn\b/i },
   { id:'turn', re:/\buntil the end of (?:the|this|that) turn\b|\bthis turn\b/i }, { id:'yournext', re:/\buntil the start of your next (?:turn|command phase)\b/i },
-  { id:'battle', re:/\buntil the end of the battle\b(?! round)/i }, { id:'round', re:/\buntil the end of the battle round\b|\buntil the start of the next battle round\b/i },
+  { id:'battle', re:/\buntil the end of the battle\b(?! round)|\buntil (?:it|they) enters? a different one\b|\buntil (?:it is |they are )?changed\b/i }, { id:'round', re:/\buntil the end of the battle round\b|\buntil the start of the next battle round\b/i },
 ];
 function inForce(text, f, self, e){
   const out = [], seen = new Set(), t = rulesText(text);
@@ -739,7 +760,8 @@ function ckBlock(T){
     '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own; a its own WHEN line a unit activation),\n' +
     '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition); f what it puts\n' +
     '// in force from a rule (inForce); ae a sentence at the end of the battle round; a its own trigger a unit activation (actOf); pk where\n' +
-    '// the ability it selects is in force (pickCover)\n' +
+    '// the ability it selects is in force (pickCover); oc where its options are in force (optCover); an option\'s ends the end moments it\n' +
+    '// names (endsOf)\n' +
     'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
 }
 
@@ -804,7 +826,7 @@ function derive(D){
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments });
-      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ctx), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; ckPut('r|' + fk + '|' + r.name, ce); }
+      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ctx), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -843,7 +865,7 @@ function derive(D){
           return r ? r.text : null;
         } };
         timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
-        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, actx), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; ckPut(abilityCk(ab), ce); }
+        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, actx), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; { const oc = optCover(ab.text, own, null, ce); if(oc) ce.oc = oc; } ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -996,6 +1018,8 @@ function ruleTables(D){
         if(o.row) e.row = o.row;
         if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
         if(phStr(used.ph)) e.u = phStr(used.ph);
+        if(MORTAL_GUARD.test(plain(o.text))) e.u = EVERY_PHASE;
+        { const en = endsOf(o.text); if(en.length) e.ends = en; }
         if(!Object.keys(ph).length && !(own && own.at)) e.x = 1;
         const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
         const fo = inForce(o.text, D.factions[s.fk], o.name, { t:phStr(tp), at:tr && tr.at });

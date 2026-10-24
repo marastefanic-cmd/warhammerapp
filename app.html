@@ -4705,7 +4705,7 @@ function screenPregame(){
 // sequence with no unit activation (start or end of a battle round, turn or phase; a Command phase; another phase with a choice), a
 // once-per-battle use (perBattle), and an item derive cannot place that data.js gives a moment (at); the options of a listed rule,
 // unless their own WHEN line is a unit activation (a). The rest is remembered from the unit's datasheet
-const ckListed = (e, once) => !!(e.s || e.stored || once);
+const ckListed = (e, once) => !!(e.s || e.stored || e.rolled || once);
 const ckOptListed = (o, parentIn) => !!(o.s || (parentIn && !o.a));
 const ckKey = () => 'wh-check-' + (cur.army || '');
 const ckDone = () => new Set(Array.isArray(store.get(ckKey())) ? store.get(ckKey()) : []);
@@ -4719,27 +4719,54 @@ const kwWords = n => [(n.all || []).join(' '), (n.any || []).join(' or ')].filte
 // an option's phases: its own trigger, or (none named) its rule's when its effect names no phase of its own; via: the rule's
 // trigger, when a once-per-battle option is chosen (Kindred Sorcery's, in your Command phase)
 function ckOption(o, rule){
-  if(o.x) return { x:1 };
-  if(o.t || o.at) return { t:o.t, at:o.at, u:o.u };
+  if(!o.x && (o.t || o.at)) return { t:o.t, at:o.at, u:o.u };
   if(o.u) return { u:o.u, via:{ t:rule.t, at:rule.at } };
-  // none of its own and no use read: not guessed from its rule's trigger (When unclear); via keeps a once-per-battle one
-  // (Kindred Sorcery's) where it is chosen
-  return rule.t || rule.at ? { x:1, via:{ t:rule.t, at:rule.at } } : { x:1 };
+  // none of its own and no use read: in force for the duration its rule's own words give from where it is chosen (oc, derive's
+  // coverOf on that duration; pk for an ability's section, Canticles of the Omnissiah): Active now there ("until the end of the battle",
+  // Might of Khorne; "until the start of your next Command phase", Shroudpsalm); no duration read: When unclear, not guessed from its
+  // rule's trigger; via keeps a once-per-battle one (Kindred Sorcery's) where it is chosen
+  // (an option of which nothing is read, a Dread ability "active until the end of the battle": the whole of its rule's duration)
+  const via = rule.t || rule.at ? { t:rule.t, at:rule.at } : null, oc = rule.oc || rule.pk;
+  if(oc && oc.u) return via ? { u:oc.u, via } : { u:oc.u };
+  return via ? { x:1, via } : { x:1 };
 }
 // phases where both say (phase:your|opp|either): where a selected ability is used, within its selector's duration
 const ckWithin = (a, b) => { const B = ckMap(b), m = Object.entries(ckMap(a)).map(([p, t]) => [p, !B[p] ? null : t === 'either' ? B[p] : B[p] === 'either' || B[p] === t ? t : null]).filter(([, t]) => t);
   return m.length ? { u:m.map(([p, t]) => p + ':' + t).join(',') } : { x:1 }; };
 // a rule or ability the tables cannot place but data.js gives a moment (at): that moment only, not its display phase tags
 const ckStored = (e, x) => e.x && x.at ? Object.assign({}, e, { x:0, at:x.at, stored:1 }) : e;
+// "Each time you make a Blessings of Khorne roll" (The Blood God’s Favour, Icon of Khorne): where the list's listed rules and abilities
+// make that roll ("at the start of the battle round, you can make a Blessings of Khorne roll", Blessings of Khorne; "At the start of
+// the Fight phase, … make a Blessings of Khorne roll", Adamantine Avalanche), as To do now there (rolled)
+const CK_EACH_ROLL = /\b[Ee]ach time you make an? ([A-Z][\w’'-]*(?: (?:of|[A-Z][\w’'-]*))*) roll\b/;
+function ckRollMoments(list){
+  const m = {};
+  for(const [x, e] of list) for(const sent of String(x.text || '').replace(/\*\*|~~/g, '').split(/(?<=[.!?])\s+|\n+/)){
+    if(/\b(?:each time|when) you make\b/i.test(sent)) continue;
+    for(const r of sent.matchAll(/\bmake an? ([A-Z][\w’'-]*(?: (?:of|[A-Z][\w’'-]*))*) roll\b/g)){ const k = r[1], y = m[k] = m[k] || { at:'', t:{} };
+      if(e.at && !y.at) y.at = e.at; for(const [p, w] of Object.entries(ckMap(e.t))) y.t[p] = y.t[p] && y.t[p] !== w ? 'either' : w; } }
+  return m;
+}
+const ckRolled = (e, x, rm) => { const k = (CK_EACH_ROLL.exec(String(x.text || '').replace(/\*\*|~~/g, '')) || [])[1], y = k && rm[k];
+  if(!y || !(y.at || Object.keys(y.t).length) || e.s) return e;
+  const t = Object.entries(y.t).map(([p, w]) => p + ':' + w).join(',');
+  return Object.assign({}, e, { x:0, rolled:1 }, y.at ? { at:y.at } : {}, t ? { t } : {}); };
 function screenChecklist(){
   const a = army(), f = faction(), units = a.units;
-  const entry = k => (D.checklist || {})[k] || { x:1 };
+  const entry0 = k => (D.checklist || {})[k] || { x:1 };
   const rules = f.armyRules.map(r => ({ r, src:f.name + ' army rule' })).concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name })));
+  // the moments the list's listed rules and abilities make a named roll (ckRollMoments), then each entry with them (ckRolled)
+  const rm = ckRollMoments(rules.map(x => [x.r, ckStored(entry0('r|' + a.faction + '|' + x.r.name), x.r)]).concat(units.flatMap(u => u.abilities.map(ab => [ab, ckStored(entry0('a|' + ckHash(ab.name + '\n' + ab.text)), ab)])))
+    .filter(([x, e]) => e.s || e.stored));
+  const named = new Map(rules.map(x => ['r|' + a.faction + '|' + x.r.name, x.r]).concat(units.flatMap(u => u.abilities.map(ab => ['a|' + ckHash(ab.name + '\n' + ab.text), ab]))));
+  const entry = k => named.has(k) ? ckRolled(entry0(k), named.get(k), rm) : entry0(k);
   // what another rule of the list gives to units by keyword: "Might of Khorne (Blood Tithe) gives it to BLOOD LEGIONS units"
   const given = name => rules.flatMap(x => (entry('r|' + a.faction + '|' + x.r.name).g || []).filter(g => g.name === name && units.some(u => matches(g.to, u)))
     .map(g => '; ' + esc((g.opt ? g.opt + ' (' + x.r.name + ')' : x.r.name) + ' gives it to ' + kwWords(g.to) + ' units'))).join('');
   const from = s => ' <span class="from">· ' + s + '</span>', naTag = t => t ? ' <span class="tg m">' + esc(t) + '</span>' : '';
   const tl = (boxes, text) => '<div class="tl">' + boxes + '<span>' + text + '</span></div>';
+  // several uses as one (phase:your|opp|either; your and opp of one phase: either)
+  const ckUnion = us => { const m = {}; for(const u of us) for(const [p, t] of Object.entries(ckMap(u))) m[p] = m[p] && m[p] !== t ? 'either' : t; return Object.entries(m).map(([p, t]) => p + ':' + t).join(','); };
   const items = [];   // { id, kind, e: its entry, line, what, once: its once-per-battle lines [boxes, text] }
   // what a triggered rule or ability puts in force from a rule defined elsewhere (CHECKLIST f): "Riled up (War Cry) · Waaagh!", opening
   // that rule, Active now in the phases the trigger's duration covers (When unclear when the duration cannot be read)
@@ -4750,9 +4777,13 @@ function screenChecklist(){
     // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option, as on the Overview
     const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
     const pb = !na && !each && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
-    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na), trig = ckListed(e, pb);
+    // which battle rounds, quoted, when its words name some ("at the start of the first, third and fifth battle rounds")
+    const rounds = /\bat the start of the ((?:(?:first|second|third|fourth|fifth)(?:, | and | or ))*(?:first|second|third|fourth|fifth)) battle rounds\b/i.exec(String(r.text || '').replace(/\*\*|~~/g, ''));
+    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name) + (rounds ? ' (' + esc(rounds[1]) + ' battle rounds)' : '')) + naTag(na), trig = ckListed(e, pb);
     // a rule listed only through options with moments of their own (Code Chivalric's Deeds): the rule, once; its options are in its text
-    if(!trig && (e.o || []).some(o => o.s && !units.some(u => u.abilities.some(ab => ab.name === o.n)))){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:null }); continue; }
+    // (placed at the end moments its options name, Code Chivalric's Deeds: a reminder to check, at each; none: as its own entry says)
+    if(!trig && (e.o || []).some(o => o.s && !units.some(u => u.abilities.some(ab => ab.name === o.n)))){ const ends = [...new Set((e.o || []).flatMap(o => o.ends || []))];
+      items.push({ id:'r:' + r.name, kind:'rules', e:ends.length ? { ends } : e, line, what:r.name, once:null }); continue; }
     // (what a once-per-battle use puts in force is not listed: its box is)
     if(trig){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null }); if(!pb) forced(e.f, r.name, 'rules', 'r:' + r.name); }
     for(const o of e.o || []){
@@ -4783,7 +4814,10 @@ function screenChecklist(){
       // used, within the duration its words give (pk), unless it is listed itself or its own trigger is a unit activation (a)
       if(e.pk) for(const P of pickOptions(ab, us[0]).list){ const eP = ckStored(entry('a|' + ckHash(P.name + '\n' + P.text)), P);
         if(eP.a || ckListed(eP, !naReason(P) && perBattle(P))) continue;
-        items.push({ id:'pk:' + aid + ':' + P.name, kind:'abs', e:e.pk.x ? { x:1 } : eP.u ? ckWithin(eP.u, e.pk.u) : { u:e.pk.u }, what:P.name,
+        // where it is used: its own use, or, for one made only of options (Icon of War), theirs when every one is read; none read: When unclear
+        // (The Blood God’s Favour, x), not the selector's whole duration
+        const oU = !eP.u && (eP.o || []).length && eP.o.every(o => o.u) ? eP.o.map(o => o.u) : null, use = eP.u || (oU && ckUnion(oU));
+        items.push({ id:'pk:' + aid + ':' + P.name, kind:'abs', e:e.pk.x || !use ? { x:1 } : ckWithin(use, e.pk.u), what:P.name,
           line:linkTo('ability', abilityKey(P), P.name + ' (' + ab.name + ')') + from(esc(unitNames(us))), once:null }); } }
     for(const o of e.o || []) if(ckOptListed(o, true)){ items.push({ id:'ao' + aid.slice(1) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
       line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null }); forced(o.f, o.n, 'abs', 'ao' + aid.slice(1) + ':' + o.n); }
@@ -4793,8 +4827,9 @@ function screenChecklist(){
   const turns = t => t === 'either' ? ['your', 'opp'] : [t];
   for(const it of items){
     const e = it.e;
-    if((e.x || !(e.t || e.u || e.at || e.none)) && !(it.once && e.via && (e.via.t || e.via.at))){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
+    if((e.x || !(e.t || e.u || e.at || e.none || e.ends)) && !(it.once && e.via && (e.via.t || e.via.at))){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
     if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what), it.line)); continue; }
+    if(e.ends && !e.t && !e.at && !e.u){ for(const s of e.ends) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line)); continue; }
     const secs = x => (x.at ? [x.at] : []).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)), x.ae ? [x.ae] : []);
     const trig = secs(e), act = Object.entries(ckMap(e.u)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)).filter(s => !trig.includes(s));
     // once per battle: where it is used from (its trigger, its rule's, or else where its effect is used)
@@ -4804,8 +4839,8 @@ function screenChecklist(){
   }
   const GROUPS = [['todo', 'To do now', 'to do'], ['active', 'Active now', 'active'], ['once', 'Once per battle', 'once per battle'], ['rules', 'Rules', 'rules'], ['abs', 'Abilities', 'abilities']];
   const phaseSecs = PHASES.flatMap(([p]) => [p + '|your', p + '|opp']);
-  // the moments in the order of the game: before the phases, after Fight · Their turn (the end of your opponent's turn, then of the round)
-  const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, ['End of your opponent’s turn', 'End of the battle round', 'unclear', 'none'].filter(s => sec[s]));
+  // the moments in the order of the game: before the phases, after Fight · Their turn (the end of your turn, of your opponent's, of the round)
+  const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, ['End of your turn', 'End of your opponent’s turn', 'End of the battle round', 'unclear', 'none'].filter(s => sec[s]));
   const title = s => s === 'unclear' ? 'When unclear' : s === 'none' ? 'No phase' : s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
   // each section a fold, as the Overview's rules: its name, and on the line under it how many lines each part has
   const fold = s => { const g = sec[s] || {}, parts = GROUPS.filter(([k]) => g[k]), k = 'ck|' + a.id + '|' + s;

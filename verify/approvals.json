@@ -755,6 +755,12 @@
   "at": "2026-10-23",
   "why": "“select one of the following … until the end of the phase: … This model has 3+ InSv.” The line keeps once per battle, start of any phase, “one of its two effects” (the other is the Watcher’s Axe +3 A, so the player chooses) and “until the end of the phase”; defenceItems shows it as “Trajann Valoris · Moment Shackle …”, i.e. his model only, as “This model” says."
  },
+ "0fbc5bb898648525": {
+  "verdict": "ok",
+  "by": "review:checklist-3 (its fix)",
+  "at": "2026-10-24",
+  "why": "This is the cause of regressions 1 and 2. With no trigger of its own and no use read, an option goes to When unclear even when its rule's own words give the duration it is in force for. Scope (c) puts options of listed rules under Active now 'for its duration'. 'When unclear' is only for timing that cannot be read. Might of Khorne: Blood Tithe says 'At the start of the Command phase, you can spend … to activate one of the following abilities until the end of the battle' (data.js; same on Wahapedia world-eaters). Its moment is Blood Tithe's, already To do now in both Command phases. Its duration is every phase after that. The previous To do now placement was not right either: the spending is Blood Tithe's line. Mantra of Discipline, Binharic Courage (Aura) and Shroudpsalm (Aura): Canticles of the Omnissiah says 'At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.' (Wahapedia Belisarius Cawl errata, the same). From Command · Your turn that covers every phase of both turns, and the entry already carries it as pk. The fix uses the rule's own-words duration (oc), or pk, as the option's Active now phases, and keeps x only when no duration is read. derive.js must write oc. In ruleTables, after ckEntry for rules (line 807) and abilities (line 846), add `{ const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; }`, and the same with ab.text, own, null, ce. optCover(text, own, table, e) returns null unless optionsOf(rulesText(text), table) is non-empty. Otherwise it returns coverOf(the duration that comes first in plain(own)) when that has u. It would be safer to limit it to the 'until …' durations, because 'this turn' in Cabal of Sorcerers ('not yet attempted a Ritual this turn') reads as a duration; all of Cabal's options have u, so this does no harm today. Tested in a scratch copy (derive --write, build, every list rendered). Might of Khorne moves from When unclear to Active now in all 10 sections (big-demons-baby). Mantra of Discipline, Binharic Courage and Shroudpsalm move to Active now in all 10 sections (purge-goes-the-foe). Kindred Sorcery's once-per-battle boxes stay in Command · Your turn (via). No other line changes. Aegis Protocol stays When unclear, because 'it remains in that protocol until it enters a different one' is not a duration DURATIONS reads (owner). render.js's oe fallback needs the same change."
+ },
  "0fbdbdeb8df67f57": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -1168,6 +1174,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "New Recruit: Disc 95 + Fatecasters 110 = 205."
+ },
+ "1aa4baf42f082502": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "Harbingers of Dread and Icon of Khorne appear only under Start of the battle round, not in either Command phase. Note for the owner: Harbingers' text says 'at the start of the first, third and fifth battle rounds', but the section is the general 'Start of the battle round'."
  },
  "1ad5c7528c89ec8c": {
   "verdict": "ok",
@@ -2651,6 +2663,12 @@
   "at": "2026-10-17",
   "why": "Matches the New Recruit PDF: options “Fixit's Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust” on the single model; ranged rows Grabba Dragga and Psyko-gatler, melee rows Fixit's Wrench, Grabba Dragga, Speeding Bulk and Flaming Exhaust."
  },
+ "3b422f640e96ebe4": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "An option is listed when its own words are s, or when its rule is listed and it is not a. Checked on every list. Calistus, Salvus, Rendax ('WHEN: … selected to move/shoot/fight') and Malefic Surge's three options (a, through actOf) are not listed. Blessings of Khorne's six effects, Doctrina Imperatives', Pledges' 1+/3+/5+/7+, Cabal's Rituals, Blood Tithe's four, Canticles' four and Battle Protocols' three are listed. Try Dat Button!'s dice results are gone, because the rule itself is not listed: 'when … selected to attack'."
+ },
  "3b5301c710246603": {
   "verdict": "ok",
   "by": "review:gists",
@@ -3664,6 +3682,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR Options: \"Da Grabzappa, Squigstoppa\" (Zodgrod), \"Runtherd's Toolz, Slugga\" (Runtherd), \"Grot Blasta, Scavenged Shivs\" (20x Gretchin); weapon rows \"Squigstoppa … - Zodgrod Wortsnagga\", \"Slugga … - Runtherd\", \"Grot Blasta … (x20) - Gretchin\", \"Scavenged Shivs (Super Runts) (x20) - Gretchin\". All match."
+ },
+ "50ed795bc2be1e98": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "Code unchanged from the version approved twice. War Cry, Makari and Archslaughterer are once per battle, so per the owner nothing they put in force is shown. Intimidating Motivation and Keep Huntin’ carry f but are not listed (activation). Even More Dakka, More Dakka and Krumpin’ Time ('if this unit is riled up') are skipped. No 'Riled up' line appears on any list, which is what the owner decided."
  },
  "511f75f68d8576ea": {
   "verdict": "ok",
@@ -5021,6 +5045,12 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
  },
+ "703c1640294bb3ac": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "Run directly. True: Diabolic Power ('When this unit is selected to shoot or fight'), Unholy Hunger, Unnatural Fortitude, Pulse Jet ('In your Movement phase, when this unit is selected to move'), Overwhelming Wrath ('Each time an enemy unit … is selected to Fall Back'), Turbo Engine, Calistus/Salvus/Rendax (WHEN line). False: Conservai ('WHEN: Your Command phase'), a Blessing's 'Each time a model in this unit makes a melee attack', The Blood God’s Favour ('Each time you make a Blessings of Khorne roll'). On screen: Overwhelming Wrath, Turbo Engine and Pulse Jet are not shown as selected abilities; Driven by Ultimate Rage, Impossible Form and Time Flux are. Note: 'Each time this unit makes a Charge move' (Daemonic Destruction, Prophesied Doom) is not a, because the first sentence neither opens with When nor has 'selected to'. No such text is an option or a selected ability in the data today."
+ },
  "703e80dd796c6ea7": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -5524,6 +5554,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "\"At the start of the Fight phase … Until the end of the phase, that Blessing of Khorne is active\": the roll and the effect are both in the Fight phase."
+ },
+ "7be42863e297671c": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "Run directly and checked against the pk values: round from the Start of the battle round gives every phase (Wrathful Presence, Unearthly Power). yournext from command:your gives every phase of both turns (Rod of the War Forge, Canticles, Full Throttle). battle from command:either gives every phase (Blood Tithe, in the scratch test). phase from the start of the round gives x. Edge cases fixed in earlier reviews still hold."
  },
  "7c00106c3da079a2": {
   "verdict": "ok",
@@ -6064,6 +6100,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” The target is within its own aura (22.01), so its own attacks re-roll 1s: kind all, note literal. No duration is printed; 01.02.02 “If a rule or effect is given to a unit and it does not specify how long it is active for, it is only active for the phase in which it was given”, so no lasts is right. (Other Custodes units in the aura get no mark: see the report.)"
+ },
+ "877ef3be32e05e71": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "Own words checked for every rule and ability with options. Malefic Surge loses Unnatural Fortitude's two '- ' lines, so it has no u. Canticles, Icon of War, Battle Protocols, Blood Tithe, Daughters of the Abyss, Magna Imperator and Higher Imperatives keep only their own sentences and option headers, and the Examples line is stripped from Martial Ka’tah."
  },
  "87acdc950cb3d834": {
   "verdict": "ok",
@@ -10121,6 +10163,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the phase, ranged weapons … have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.” Same."
  },
+ "e5d3510077ef9a12": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "The intersection is right: either ∩ your = your, your ∩ opp = none, either ∩ either = either, and empty gives x. Driven by Ultimate Rage (fight:either) within Wrathful Presence's every phase gives Fight in both turns. Impossible Form (movement:your,shooting:opp,fight:either) and Time Flux (movement:your) within Unearthly Power are unchanged. The screenChecklist fix uses it for an option-built use too."
+ },
  "e6593957c1bf983f": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -10793,6 +10841,12 @@
   "at": "2026-10-17",
   "why": "“While a model is affected by this ability, … ranged weapons equipped by that model have the [ASSAULT] ability” (kind ranged). Bondsman: “select one friendly ARMIGER model within 12\" of that model”, so the filter is the ARMIGER keyword copied from that text. The ‘not itself’ exclusion (notSelf) is gone. The (Bondsman) label is printed in the ability name (settled)."
  },
+ "f6c73ba80fb994a6": {
+  "verdict": "ok",
+  "by": "review:checklist-3 (its fix)",
+  "at": "2026-10-24",
+  "why": "Its description says it uses 'the first duration its words give', but DURATIONS.find takes the first in the array's order (phase, next, turn, yournext, battle, round). 'turn' also matches a bare 'this turn', so a selector reading 'Until the start of your next Command phase, this model has that ability; … this turn' would get 'turn', the rest of that turn only. Run directly: the text 'At the start of your Command phase, select one of the abilities in the X section. Until the end of this turn …; until the start of your next Command phase …' gives command…fight:your. No text in data.js is affected: Wrathful Presence, Unearthly Power, Rod of the War Forge, Canticles and Full Throttle each have one duration and all give every phase, which is correct ('Until the start of the next battle round' from the start of the round; 'until the start of your next Command phase' from your Command phase). The durations do cover the phases the screen shows. inForce has the same find, approved earlier, and could take the same change."
+ },
  "f7015b406bb00eed": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -11104,6 +11158,12 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (standard) roster rows \"Slaughterbound Character 125\" (90 + Berzerker Glaive 35 per BSData/Wahapedia) and \"(3) Exalted Eightbound Infantry 130\"; the datasheet prints \"255 PTS\" = 125 + 130."
+ },
+ "fd845c90b8ebd4f1": {
+  "verdict": "ok",
+  "by": "review:checklist-3",
+  "at": "2026-10-24",
+  "why": "Run directly and on every list. Thrill Seekers ('was within … at the start of the turn'), Warpmeld Sacrifice, Daemonic Patrons, Binding Tendrils ('after this model has shot'), Rokkit Barrage, Sanctified Flames, Berserker Frenzy ('The first time this model is destroyed, at the end of the phase'), Krumpin’ Time / Blitz Dem Gitz! / Finderz Keeperz / Deff from Above (a phase with no choice), Supreme Kunnin’, Loping Speed, Malign Trickery and Meet Any Challenge (an enemy unit's move) are out. Reborn in Blood ('if this model is destroyed' is a state), Icon of Excess ('At the end of your Shooting phase or the Fight phase'), the Objective Ravaged/Scouted/Defiled abilities ('At the end of your Command phase'), Scenting Fear and Purity of Execution ('In your Shooting phase, you can select') and Blood Tithe (a choice after an activation paragraph) are in."
  },
  "fdaafb6702e8e3c2": {
   "verdict": "ok",
