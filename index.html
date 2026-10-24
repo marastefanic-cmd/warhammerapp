@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '2af203f5d8';</script>
+<script>window.WH_BUILD = 'ac48da28a8';</script>
 </head>
 <body>
 <style>
@@ -1033,10 +1033,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=2af203f5d8"></script>
-<script src="data.js?v=2af203f5d8"></script>
-<script src="calc.js?v=2af203f5d8"></script>
-<script src="import.js?v=2af203f5d8"></script>
+<script src="verified.js?v=ac48da28a8"></script>
+<script src="data.js?v=ac48da28a8"></script>
+<script src="calc.js?v=ac48da28a8"></script>
+<script src="import.js?v=ac48da28a8"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -4437,8 +4437,12 @@ function screenUnit(){
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports
   const cs = charsOf(u);
   const gearText = g => { const c = new Map(); for(const x of g) c.set(x, (c.get(x) || 0) + 1); return [...c].map(([x, n]) => (n > 1 ? n + '× ' : '') + x).join(', '); };
+  // (each character on its own models line: the k-th line, else the line of its name when the k-th is another model's, as the
+  // Dark Apostle's Dark Disciples are)
+  const mName = m => m.replace(/^\d+× /, '');
+  const csAt = cs.map((c, k) => { if(!u.models[k] || mName(u.models[k]).startsWith(c.name)) return k; const j = u.models.findIndex(m => mName(m).startsWith(c.name)); return j >= 0 ? j : k; });
   const models = '<section class="dsx mdl" id="sec-models"><div class="dhd"><span>Models</span><span>Options</span></div>' + u.models.map((m, i) => {
-    const c = i < cs.length ? cs[i] : null;
+    const c = cs[csAt.indexOf(i)] || null;
     const role = c ? '<span class="mlt">' + linkTo('rule', c.support ? 'Support' : 'Leader', (c.support ? 'Supporting ' : 'Leading ') + u.leads) + '</span>' : '';
     const g = (u.gear || [])[i] || [];
     const sn = u.srcNote && u.srcNote.at === m.replace(/^\d+× /, '') ? '<span class="mlt">' + esc(u.srcNote.note) + '</span>' : '';   // the sources disagree about this model
