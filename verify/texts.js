@@ -598,16 +598,29 @@ function wahaSection(faction, title) {
   const pi = d.pages.findIndex(p => p.section && norm(p.section).replace(/ \d+dp$/, '') === norm(title));
   return pi < 0 ? null : { d, pi, page: d.pages[pi] };
 }
-// Wahapedia detachment: "Detachment Rule(s)" name + body, "Enhancements" "- Name N pts" + body, "Stratagems" blocks
+// the names of the detachments' rules, as the Wahapedia faction page's contents list them under "Detachment Rule" (Blood Legion:
+// Murdercall, Blood Tainted): a detachment can have more than one; a rule's heading starts the next and ends a spoiler before it
+const RULEHEADS = {};
+function wahaRuleHeads(faction) {
+  if (RULEHEADS[faction]) return RULEHEADS[faction];
+  const f = path.join(__dirname, '.cache/waha', faction + '.html'), out = new Set();
+  if (fs.existsSync(f)) for (const m of fs.readFileSync(f, 'utf8').matchAll(/class="cnClrInv">Detachment Rules?<\/a><\/div>((?:<div class="[^"]*\bi50\b[^"]*"[^>]*><a href="[^"]*" class="cnClrInv">[^<]+<\/a><\/div>)+)/g))
+    for (const x of m[1].matchAll(/class="cnClrInv">([^<]+)</g)) out.add(norm(x[1].replace(/&rsquo;|&#8217;/g, '’')));
+  return (RULEHEADS[faction] = out);
+}
+// Wahapedia detachment: "Detachment Rule(s)" name + body (each of its rules: rules), "Enhancements" "- Name N pts" + body, "Stratagems" blocks
 function wahaDetachment(faction, name) {
   const sec = wahaSection(faction, name); if (!sec) return null;
   const L = docLines(sec.d, sec.pi, sec.pi);
   const dp = /(\d+)DP$/.exec(sec.page.section);
-  const res = { dp: dp ? +dp[1] : null, where: sec.page.where, d: sec.d, rule: null, enh: [], strats: [] };
+  const res = { dp: dp ? +dp[1] : null, where: sec.page.where, d: sec.d, rule: null, rules: [], enh: [], strats: [] };
   let seg = null, cur = null, inNote = false;
+  const heads = wahaRuleHeads(faction);
   for (let i = 0; i < L.length; i++) {
     const t = L[i].text;
-    if (SEGHEAD.test(t)) { seg = /^Detachment/.test(t) ? 'rule' : t === 'Enhancements' ? 'enh' : 'strat'; cur = null; inNote = false; if (seg === 'rule') res.rule = { name: null, body: [] }; continue; }
+    if (SEGHEAD.test(t)) { seg = /^Detachment/.test(t) ? 'rule' : t === 'Enhancements' ? 'enh' : 'strat'; cur = null; inNote = false; if (seg === 'rule') { res.rule = { name: null, body: [] }; res.rules = [res.rule]; } continue; }
+    if (seg === 'rule' && res.rule.name && heads.has(norm(t)) && !res.rules.some(r => norm(r.name) === norm(t))) {   // (a table headed with the rule's own name is not another rule: Try Dat Button!)
+    res.rule = { name: t, body: [], at: L[i] }; res.rules.push(res.rule); inNote = false; continue; }
     if (NOTEHEAD.test(t)) { inNote = true; continue; }
     if (seg === 'rule') { if (inNote) continue; if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; } else res.rule.body.push(L[i]); }
     else if (seg === 'enh') {
@@ -620,6 +633,7 @@ function wahaDetachment(faction, name) {
     }
   }
   res.strats = parseStrats(L, wahaHeader, stopWaha);
+  res.rule = res.rules[0] || null;   // (its first rule)
   return res;
 }
 // Faction Pack: the contents page names the detachments it prints; each starts on the page whose first line is its name
@@ -645,15 +659,18 @@ function packDetachment(faction, name) {
   if (p0 < 0) return { error: 'detachment ' + name + ' is in the contents but no page starts with its name', d };
   const p1 = p0 + (toc[k + 1].page - toc[k].page) - 1;
   const L = docLines(d, p0, p1);
-  const res = { d, pages: [p0, p1], where: d.label + ' PDF p' + (p0 + 1) + (p1 > p0 ? '-' + (p1 + 1) : ''), rule: null, enh: [], strats: [] };
+  const res = { d, pages: [p0, p1], where: d.label + ' PDF p' + (p0 + 1) + (p1 > p0 ? '-' + (p1 + 1) : ''), rule: null, rules: [], enh: [], strats: [] };
   let seg = null, cur = null;
+  const heads = wahaRuleHeads(faction);
   for (let i = 0; i < L.length; i++) {
     const t = L[i].text;
-    if (/^DETACHMENT RULES?$/.test(t)) { seg = 'rule'; res.rule = { name: null, body: [] }; continue; }
+    if (/^DETACHMENT RULES?$/.test(t)) { seg = 'rule'; res.rule = { name: null, body: [] }; res.rules = [res.rule]; continue; }
     if (t === 'ENHANCEMENTS') { seg = 'enh'; cur = null; continue; }
     if (packHeader(L, i) || /STRATAGEM$/.test(t) || /^\d+$/.test(t) || /^\dCP$/.test(t)) { seg = null; continue; }
     if (seg === 'rule') {
       if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; continue; }
+      // (the detachment's next rule, a heading the Wahapedia page's contents name as one: BLOOD TAINTED after MURDERCALL)
+      if (isHead(t) && heads.has(norm(t)) && !res.rules.some(r => norm(r.name || '') === norm(t))) { res.rule = { name: t, body: [], at: L[i] }; res.rules.push(res.rule); continue; }
       if (isHead(t)) { seg = null; continue; }
       res.rule.body.push(L[i]);
     } else if (seg === 'enh') {
@@ -662,6 +679,7 @@ function packDetachment(faction, name) {
     }
   }
   res.strats = parseStrats(L, packHeader, stopPdf);
+  res.rule = res.rules[0] || null;   // (its first rule)
   // CP: on the name line ("SCORN THE WITCH 1CP"); else, when every CP badge on these pages is the same, that value
   const badges = [...new Set(L.filter(l => /^\dCP$/.test(l.text)).map(l => +l.text[0]))];
   for (const st of res.strats) if (st.cp == null && badges.length === 1) { st.cp = badges[0]; st.cpFrom = 'the CP badges on these pages (all ' + badges[0] + 'CP)'; }
@@ -845,51 +863,56 @@ for (const fk of FACTIONS) {
     if (det.dp != null && W.dp != null && det.dp !== W.dp) fail('detachment', army, U, 'dp', String(det.dp), W.dp + 'DP', W.where);
     const upd = UPD[fk].filter(e => e.section && norm(e.section) === norm(det.name + ' detachment'));
 
-    /* rule */
-    const R = det.rule || {};
-    const srcRule = pack ? pack.rule : W.rule;
+    /* rules: each of the detachment's rules (rule, then moreRules) against the source's, in order; one missing on either side fails */
+    const appRules = det.rule ? [det.rule].concat(det.moreRules || []) : [], srcRules = ((pack ? pack.rules : W.rules) || []).filter(r => r.name);
+    for (let ri = 0; ri < Math.max(appRules.length, srcRules.length, 1); ri++) {
+    const R = appRules[ri] || {};
+    const srcRule = srcRules[ri];
+    const Wr = (W.rules || [])[ri];
+    const UR = U + '/rule' + (ri ? ':' + (R.name || (srcRule && srcRule.name) || ri) : '');
     count('detachment');
-    if (!srcRule || !srcRule.name) fail('detachment', army, U + '/rule', 'name', R.name || '', 'no detachment rule found in the source', where);
-    else if (norm(R.name || '') !== norm(srcRule.name)) fail('detachment', army, U + '/rule', 'name', R.name || '', srcRule.name, where);
+    if (!srcRule || !srcRule.name) fail('detachment', army, UR, 'name', R.name || '', 'no detachment rule found in the source', where);
+    else if (norm(R.name || '') !== norm(srcRule.name)) fail('detachment', army, UR, 'name', R.name || '', srcRule.name, where);
     const ruleUpd = upd.find(e => titleN(e) === nameN(R.name + ' detachment rule'));
     // "Change Unnatural Fortitude to:": one named part of the rule ("- **Unnatural Fortitude:** …" and the bullets under it)
     const partOf = (text, name) => { const L = String(text).split('\n'), k = L.findIndex(l => nameN(l.replace(/^-\s+/, '').replace(/\*\*/g, '')).startsWith(nameN(name) + ':'));
       if (k < 0) return null; const out = [L[k].replace(/^-\s+/, '').replace(/^\*\*[^*]+:\*\*\s*|^[^:]+:\s*/, '')];
       for (let j = k + 1; j < L.length && /^-\s+(?!\*\*)/.test(L[j]); j++) out.push(L[j]); return out.join('\n'); };
     const ruleNamed = ruleUpd && /^Change (.+) to:$/.exec(ruleUpd.instr);
-    if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, U + '/rule', 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
+    if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, UR, 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
     else if (ruleUpd) {
       // a Rules Update of the rule changes its text, not the KEYWORDS section after it (Warpmeld Pact): that part is checked against
       // Wahapedia's KEYWORDS lines
       const kw = String(R.text).split('\n'), kAt = kw.findIndex(l => /^KEYWORDS$/.test(l.trim()));
-      checkUpdate('detachment', army, U + '/rule', 'text (Rules Updates)', kAt < 0 ? R.text : kw.slice(0, kAt).join('\n'), ruleUpd);
+      checkUpdate('detachment', army, UR, 'text (Rules Updates)', kAt < 0 ? R.text : kw.slice(0, kAt).join('\n'), ruleUpd);
       if (kAt >= 0) {
         count('detachment');
-        const wb = W.rule ? W.rule.body : [], wAt = wb.findIndex(l => /^KEYWORDS$/.test(l.text.trim()));
+        const wb = Wr ? Wr.body : [], wAt = wb.findIndex(l => /^KEYWORDS$/.test(l.text.trim()));
         const probs = wAt < 0 ? [{ app: 'KEYWORDS', msg: 'no KEYWORDS section in the source' }] : compareWahaBody(kw.slice(kAt).join('\n'), null, wb.slice(wAt), '');
-        prov.push({ item: army + ' / ' + U + '/rule', field: 'text (KEYWORDS)', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
-        for (const pr of probs) fail('detachment', army, U + '/rule', 'text (KEYWORDS)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
+        prov.push({ item: army + ' / ' + UR, field: 'text (KEYWORDS)', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
+        for (const pr of probs) fail('detachment', army, UR, 'text (KEYWORDS)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
       }
     }
     if (srcRule && srcRule.name) {
       count('detachment');
-      if (pack && W.rule && !suffixOf(W.rule.body.map(l => l.text).join('\n'), srcRule.body).ok)
-        info.push({ army, unit: U + '/rule', field: 'text', note: 'the Faction Pack and Wahapedia differ; the app is checked against the pack', wahapedia: joinNorm(W.rule.body.map(l => l.text)) });
+      if (pack && Wr && !suffixOf(Wr.body.map(l => l.text).join('\n'), srcRule.body).ok)
+        info.push({ army, unit: UR, field: 'text', note: 'the Faction Pack and Wahapedia differ; the app is checked against the pack', wahapedia: joinNorm(Wr.body.map(l => l.text)) });
       if (pack) {
         const r = suffixOf(R.text, srcRule.body);
-        provRow(army + ' / ' + U + '/rule', 'text', pack.d, null, { where: pack.where });
-        const ls = r.ok && lostStart(R.text, W.rule && W.rule.body, srcRule.body);
-        if (ls) fail('detachment', army, U + '/rule', 'text', R.text, ls, pack.where);
+        provRow(army + ' / ' + UR, 'text', pack.d, null, { where: pack.where });
+        const ls = r.ok && lostStart(R.text, Wr && Wr.body, srcRule.body);
+        if (ls) fail('detachment', army, UR, 'text', R.text, ls, pack.where);
         if (!r.ok) {
-          const w = compareWahaBody(R.text, R.table, W.rule ? W.rule.body : [], W.rule ? W.rule.name : '');
-          fail('detachment', army, U + '/rule', 'text', R.text, (w.length ? '' : 'matches the less authoritative Wahapedia text, not the Faction Pack: ') + r.msg, pack.where);
+          const w = compareWahaBody(R.text, R.table, Wr ? Wr.body : [], Wr ? Wr.name : '');
+          fail('detachment', army, UR, 'text', R.text, (w.length ? '' : 'matches the less authoritative Wahapedia text, not the Faction Pack: ') + r.msg, pack.where);
         }
       } else if (!ruleUpd) {
         const probs = compareWahaBody(R.text, R.table, srcRule.body, srcRule.name);
-        prov.push({ item: army + ' / ' + U + '/rule', field: 'text', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
-        for (const pr of probs) fail('detachment', army, U + '/rule', pr.app != null ? 'text' : 'text (missing)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
-        if (!sameStruck(R.text, srcRule.body)) fail('detachment', army, U + '/rule', 'text (struck through)', R.text, 'struck-through words differ from the source', W.where);
+        prov.push({ item: army + ' / ' + UR, field: 'text', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
+        for (const pr of probs) fail('detachment', army, UR, pr.app != null ? 'text' : 'text (missing)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
+        if (!sameStruck(R.text, srcRule.body)) fail('detachment', army, UR, 'text (struck through)', R.text, 'struck-through words differ from the source', W.where);
       }
+    }
     }
 
     /* enhancements: both ways */

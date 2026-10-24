@@ -1475,13 +1475,16 @@ const FACTIONS = {
     name: 'Chaos Daemons',
     // army rules: Wahapedia, Chaos Daemons, Army Rules (the ones the list’s units name), written by verify/from-json.js
     armyRules: [
-      { name:'The Shadow of Chaos', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*' }
+      { name:'The Shadow of Chaos', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*' }
     ],
     detachments: {
       // Blood Legion: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'blood-legion': {
         name:'Blood Legion', dispositions:['Purge the Foe'], dp:2,
         rule:{ name:'Murdercall', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, ph:['movement'], turn:'opp', text:'In your opponent\'s movement phase, each time an enemy unit (excluding **AIRCRAFT**) ends a move within 8" of one or more **LEGIONES DAEMONICA KHORNE** units from your army, one of those **LEGIONES DAEMONICA KHORNE** units can make a **surge move** of up to D6".' },
+        moreRules:[
+          { name:'Blood Tainted', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, ph:['command','movement','shooting','charge','fight'], turn:'either', text:'At the end of a phase in which a **LEGIONES DAEMONICA KHORNE** unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' }
+        ],
         enhancements:[
           { name:'Slaughterthirst (Aura)', pts:25, text:'**LEGIONES DAEMONICA KHORNE** model only. While a friendly **LEGIONES DAEMONICA KHORNE** unit (excluding **MONSTERS**) is within 6" of the bearer, weapons equipped by models in that unit have the **[LANCE]** ability.' },
           { name:'Fury’s Cage', pts:20, text:'**LEGIONES DAEMONICA KHORNE MONSTER** model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 **mortal wounds**, and until the end of the phase, each time it makes an attack, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' },
@@ -1489,7 +1492,7 @@ const FACTIONS = {
           { name:'Gateway Unto Damnation', pts:10, text:'**LEGIONES DAEMONICA KHORNE MONSTER** model only. The bearer’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.' }
         ],
         stratagems:[
-          { id:'wrath-undeniable', gist:'Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, a model destroyed by a melee attack before it has fought stays on a D6 of 4+, fights after the attacking unit, then is removed.', gistOf:'562b28e1', def:'Fight phase, just after an enemy unit selects it as a target: until the end of the phase, a model destroyed by a melee attack before it has fought stays on a D6 of 4+, fights after the attacking unit, then is removed', defOf:'562b28e1', name:'Wrath Undeniable', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Fight phase, just after an enemy unit has selected its targets.', target:'One **LEGIONES DAEMONICA KHORNE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.' },
+          { id:'wrath-undeniable', gist:'Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, each time a model in it is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed.', gistOf:'562b28e1', def:'Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed', defOf:'562b28e1', name:'Wrath Undeniable', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Fight phase, just after an enemy unit has selected its targets.', target:'One **LEGIONES DAEMONICA KHORNE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.' },
           { id:'gore-hungry-onslaught', gist:'Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA KHORNE unit can move through terrain features.', gistOf:'a85a797e', name:'Gore‑hungry Onslaught', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Your Movement phase or your Charge phase.', target:'One **LEGIONES DAEMONICA KHORNE** unit from your army.', effect:'Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**.' },
           { id:'skulls-beget-blood', gist:'Your Shooting phase, your unengaged LEGIONES DAEMONICA KHORNE INFANTRY or MOUNTED unit that did not Fall Back this turn: select an enemy unit within 8" of and visible to it, not within Engagement Range of your army; roll six D6, 1 mortal wound for each 4+.', gistOf:'74a62074', name:'Skulls Beget Blood', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Khorne'], any:['Infantry','Mounted'] }, when:'Your Shooting phase.', target:'One **LEGIONES DAEMONICA KHORNE INFANTRY** or **LEGIONES DAEMONICA KHORNE MOUNTED** unit from your army (excluding units that Fell Back this turn) that is not within **Engagement Range** of one or more enemy units.', effect:'Select one enemy unit that is not within Engagement Range of one or more units from your army and is within 8" of and **visible** to your unit. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
           { id:'blood-begets-skulls', gist:'Your Charge phase, your LEGIONES DAEMONICA KHORNE unit not yet selected to charge: until the end of the phase it can declare a charge in a turn in which it Advanced.', gistOf:'bd5f64bd', name:'Blood Begets Skulls', cp:1, phases:['charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Your Charge phase.', target:'One **LEGIONES DAEMONICA KHORNE** unit from your army that has not been selected to charge this phase.', effect:'Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.' },
@@ -1500,7 +1503,7 @@ const FACTIONS = {
       // Warptide: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'warptide': {
         name:'Warptide', dispositions:['Reconnaissance'], dp:1,
-        rule:{ name:'Shudderblink', needs:{ all:['Faction: Legiones Daemonica','Battleline'] }, ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' }, text:'When a friendly **LEGIONES DAEMONICA BATTLELINE** unit is selected to make an **advance move**:\n- That unit’s ranged attacks have **[ASSAULT]** until the end of the turn.\n- That move does not prevent that unit from being **eligible to declare a charge**.' },
+        rule:{ name:'Shudderblink', needs:{ all:['Faction: Legiones Daemonica','Battleline'] }, ph:['movement','shooting','charge'], turn:'your', text:'When a friendly **LEGIONES DAEMONICA BATTLELINE** unit is selected to make an **advance move**:\n- That unit’s ranged attacks have **[ASSAULT]** until the end of the turn.\n- That move does not prevent that unit from being **eligible to declare a charge**.' },
         enhancements:[
           { name:'Bane-Forged Weapons', nr:'Bane-forged weapons', pts:15, upgrade:true, text:'**LEGIONES DAEMONICA BATTLELINE** unit only. This unit’s attacks have +1 **S**.' },
           { name:'Soul-Hungry Slaughterers', pts:10, upgrade:true, text:'**LEGIONES DAEMONICA BATTLELINE** unit only. When you target this unit with the **Heroic Intervention**/**Fire Overwatch stratagem**, that use is -1 CP.' }
@@ -4599,7 +4602,7 @@ const ARMIES = [
       mods:[
         { kind:'melee', when:'Melee attacks that target Karanak’s prey', note:'can re-roll the wound roll', from:'Prey of the Blood God' }
       ],
-      rules:['Deep Strike','Leader','The Shadow of Chaos','Feel No Pain','Ignores Cover','Torrent','Precision','Anti','Feel No Pain 3+'],
+      rules:['Deep Strike','Leader','The Shadow of Chaos','Ignores Cover','Torrent','Precision','Anti'],
       kw:['Beast','Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Karanak','Khorne','Flesh Hounds'],
       kwNote:'Flesh Hounds comes from the led Flesh Hounds.'
     },
@@ -4621,13 +4624,13 @@ const ARMIES = [
         { name:'Lord of Decapitations', who:'Skulltaker' },
         { name:'Skulls for Khorne', who:'Skulltaker' },
         { name:'Bane of Cowards', who:'Bloodletters' },
-        { name:'Bane-Forged Weapons', who:'Bloodletters', tag:'Upgrade', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'**LEGIONES DAEMONICA BATTLELINE** unit only. This unit’s attacks have +1 **S**.' },
+        { name:'Bane-Forged Weapons', who:'Bloodletters', tag:'Upgrade', text:'**LEGIONES DAEMONICA BATTLELINE** unit only. This unit’s attacks have +1 **S**.' },
         { name:'Daemonic Icon', who:'Bloodletters' },
         { name:'Instrument of Chaos', who:'Bloodletters' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'all', who:'Skulltaker', when:'Attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'Skulls for Khorne', vs:{ any:['Character'] } }
+        { kind:'all', who:'Skulltaker', when:'Attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'Skulls for Khorne', vs:{ any:['Character'] }, always:true }
       ],
       rules:['Deep Strike','The Shadow of Chaos','Leader','Devastating Wounds','Precision'],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Infantry','Khorne','Skulltaker','Battleline','Bloodletters'],
@@ -4671,7 +4674,7 @@ const ARMIES = [
         { kind:'all', needs:{ all:['Faction: Legiones Daemonica','Khorne'], none:['Monster'] }, when:'Within 6" of the Daemon Prince of Chaos', note:'[LANCE]', from:'Slaughterthirst (Aura)' }
       ],
       guard:[
-        { from:'Prince of Darkness', needs:{ all:['Faction: Legiones Daemonica'] }, kind:'ranged', when:'Within 6" of the Daemon Prince of Chaos', note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true } }
+        { from:'Prince of Darkness', needs:{ all:['Faction: Legiones Daemonica'] }, kind:'ranged', when:'Within 6" of the Daemon Prince of Chaos', selfWhen:'Own aura', selfAlways:true, note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true } }
       ],
       kw:['Chaos','Character','Daemon','Daemon Prince of Chaos','Faction: Legiones Daemonica','Khorne','Monster'],
       why:{ kw:{ Khorne:'Daemonic Allegiance: Khorne' } }
@@ -4683,7 +4686,7 @@ const ARMIES = [
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
         { kind:'all', when:'Fight phase, attacks that target the enemy unit selected with Blood Throne', note:'improve S, AP and D by 1', from:'Blood Throne' },
-        { kind:'melee', when:'Melee attacks that target a CHARACTER or MONSTER unit', note:'can re-roll the wound roll', from:'Champion Slayer', vs:{ any:['Character','Monster'] } }
+        { kind:'melee', when:'Melee attacks that target a CHARACTER or MONSTER unit', note:'can re-roll the wound roll', from:'Champion Slayer', vs:{ any:['Character','Monster'] }, always:true }
       ]
     },
     {
@@ -4704,7 +4707,7 @@ const ARMIES = [
         { name:'Bloodmaster', who:'Bloodmaster' },
         { name:'A Gory Path', who:'Bloodmaster' },
         { name:'Bane of Cowards', who:'Bloodletters' },
-        { name:'Bane-Forged Weapons', who:'Bloodletters', tag:'Upgrade', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'**LEGIONES DAEMONICA BATTLELINE** unit only. This unit’s attacks have +1 **S**.' },
+        { name:'Bane-Forged Weapons', who:'Bloodletters', tag:'Upgrade', text:'**LEGIONES DAEMONICA BATTLELINE** unit only. This unit’s attacks have +1 **S**.' },
         { name:'Daemonic Icon', who:'Bloodletters' },
         { name:'Instrument of Chaos', who:'Bloodletters' }
       ],
@@ -6965,7 +6968,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Rage Embodied', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.' },
-    { name:'Murderlust', ph:['movement','charge'], turn:'your', text:'This unit is eligible to declare a charge in a turn in which it Advanced.' },
+    { name:'Murderlust', text:'This unit is eligible to declare a charge in a turn in which it Advanced.' },
     { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.' },
     { name:'Greater Daemon of Khorne', tag:'Aura', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' }
   ],
@@ -7015,7 +7018,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Lord of Decapitations', ph:['fight'], turn:'either', text:'While this model is leading a unit, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.' },
-    { name:'Skulls for Khorne', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP.' }
+    { name:'Skulls for Khorne', text:'Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP.' }
   ]
 },
 'chaos-daemons/bloodletters':{
@@ -7027,7 +7030,7 @@ const DATASHEETS = {
     { name:'Hellblade', range:'Melee', A:'2', WS:'3+', AP:'-2', D:'2', kw:[], S:'5' }
   ],
   abilities:[
-    { name:'Bane of Cowards', ph:['movement'], turn:'your', text:'Each time an enemy unit (excluding **MONSTERS** and **VEHICLES**) within **Engagement Range** of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also **Battle-shocked**, subtract 1 from each of those Desperate Escape tests.' },
+    { name:'Bane of Cowards', ph:['movement'], turn:'opp', text:'Each time an enemy unit (excluding **MONSTERS** and **VEHICLES**) within **Engagement Range** of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also **Battle-shocked**, subtract 1 from each of those Desperate Escape tests.' },
     { name:'Daemonic Icon', text:'Models in the bearer’s unit have a Leadership characteristic of 6+.' },
     { name:'Instrument of Chaos', ph:['charge'], turn:'either', text:'Add 1 to **Charge rolls** made for the bearer’s unit.' }
   ]
@@ -7047,7 +7050,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Daemon Lord of Khorne', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**.' },
     { name:'Relentless Carnage', ph:['fight'], turn:'either', text:'At the end of the Fight phase, you can select one enemy unit within **Engagement Range** of this model and roll eight D6: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
     { name:'Greater Daemon of Khorne', tag:'Aura', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' }
   ],
   rules:['Deadly Demise D6','Deep Strike','The Shadow of Chaos','Ignores Cover','Torrent'],
@@ -7067,9 +7070,9 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Prince of Darkness', tag:'Aura', text:'While a friendly **LEGIONES DAEMONICA** unit is within 6" of this model, models in that unit have the **Stealth** ability.' },
-    { name:'Unholy Vigour', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'Unholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase', text:'Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.', defOf:'bee73dc9' },
+    { name:'Unholy Vigour', tag:'Once per battle', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'Unholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase', text:'Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.', defOf:'bee73dc9' },
     { name:'Daemonic Lord', def:'Lone Operative while within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit', text:'While this model is within 3" of one or more friendly **LEGIONES DAEMONICA INFANTRY** units, this model has the **Lone Operative** ability.', defOf:'e269580e' },
-    { name:'Daemonic Allegiance', ph:['movement'], turn:'your', text:'**Daemon Prince of Khorne:** If this model has the **KHORNE** keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.\n**Daemon Prince of Tzeentch:** If this model has the **TZEENTCH** keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.\n**Daemon Prince of Nurgle:** If this model has the **NURGLE** keyword, add 1 to this model’s Toughness characteristic.\n**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2" to this model’s Move characteristic.' }
+    { name:'Daemonic Allegiance', text:'**Daemon Prince of Khorne:** If this model has the **KHORNE** keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.\n**Daemon Prince of Tzeentch:** If this model has the **TZEENTCH** keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.\n**Daemon Prince of Nurgle:** If this model has the **NURGLE** keyword, add 1 to this model’s Toughness characteristic.\n**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2" to this model’s Move characteristic.' }
   ],
   rules:['Deep Strike','The Shadow of Chaos','Deadly Demise D3'],
   kw:['Chaos','Character','Daemon','Daemon Prince of Chaos','Faction: Legiones Daemonica','Monster']
@@ -7099,7 +7102,7 @@ const DATASHEETS = {
     { name:'Blade of blood', range:'Melee', A:'5', WS:'2+', AP:'-2', D:'3', kw:[], S:'6' }
   ],
   abilities:[
-    { name:'Bloodmaster', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Wound roll**.' },
+    { name:'Bloodmaster', text:'While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Wound roll**.' },
     { name:'A Gory Path', text:'Each time this model’s unit Consolidates, it can move up to 6" instead of up to 3".' }
   ]
 },
@@ -7113,7 +7116,7 @@ const DATASHEETS = {
     { name:'Juggernaut’s bladed horn', range:'Melee', A:'4', WS:'4+', S:'6', AP:'-1', D:'1', kw:['EXTRA ATTACKS','LANCE'] }
   ],
   abilities:[
-    { name:'Skullmaster’s Fury', ph:['charge'], turn:'either', text:'While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.' },
+    { name:'Skullmaster’s Fury', ph:['charge','fight'], turn:'either', text:'While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.' },
     { name:'Devastating Charge', ph:['charge'], turn:'either', text:'Each time this model’s unit ends a **Charge move**, each enemy unit within **Engagement Range** of that unit must take a **Battle-shock test**.' }
   ]
 },
@@ -7141,7 +7144,7 @@ const DATASHEETS = {
     { name:'Putrid appendages', range:'Melee', A:'6', WS:'4+', S:'6', AP:'-1', D:'2', kw:['DEVASTATING WOUNDS'] }
   ],
   abilities:[
-    { name:'Grotesque Regeneration', text:'At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.' }
+    { name:'Grotesque Regeneration', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.' }
   ],
   rules:['Deep Strike','The Shadow of Chaos','Deadly Demise 1','Scouts 6"','Devastating Wounds'],
   kw:['Beast','Beasts of Nurgle','Chaos','Daemon','Faction: Legiones Daemonica','Nurgle']
@@ -8190,7 +8193,7 @@ const RULE_OPTIONS = [
 const GRANTS = [
   { rule:'Orks · Runt Swarm rule · Sneaky Little Gitz', grants:'BATTLELINE', type:'keyword or weapon ability', to:{ all:['Gretchin'] }, while:null, text:'- Friendly **GRETCHIN** units have **BATTLELINE**.' },
   { rule:'Imperial Knights · Freeblade Company rule · Knights of Legend', grants:'Feel No Pain 6+', type:'ability', to:{ all:['Faction: Imperial Knights'] }, while:null, text:'**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability.' },
-  { rule:'World Eaters · Khorne Daemonkin rule · Blood Tithe', option:'Enraged Abjuration', grants:'Feel No Pain 5+', type:'ability', to:{ any:['Faction: Blood Legions','Faction: World Eaters'] }, while:'Enraged Abjuration active', text:'**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.' },
+  { rule:'World Eaters · Khorne Daemonkin rule · Blood Tithe', option:'Enraged Abjuration', grants:'Feel No Pain 5+ against Psychic Attacks and mortal wounds', type:'ability', to:{ any:['Faction: Blood Legions','Faction: World Eaters'] }, while:'Enraged Abjuration active', text:'**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.' },
   { rule:'World Eaters · Khorne Daemonkin rule · Blood Tithe', option:'Might of Khorne', grants:'Blessings of Khorne', type:'ability', to:{ all:['Faction: Blood Legions'] }, while:'Might of Khorne active', text:'**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.' },
   { rule:'Thousand Sons · Warpmeld Pact rule · Warpmeld Sacrifice', grants:'BATTLELINE', type:'keyword or weapon ability', to:{ all:['Tzaangors'] }, while:null, text:'**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit.' },
   { rule:'Tyranids · Talons of the Norn Queen rule · Higher Imperatives', grants:'Protean Purpose', type:'ability', to:{ any:['Norn Emissary','Norn Assimilator'] }, while:null, text:'Friendly **NORN EMISSARY/NORN ASSIMILATOR** units have the following ability:' },
@@ -8199,7 +8202,7 @@ const GRANTS = [
   { rule:'Chaos Knights · Infernal Lance rule · Malefic Surge', grants:'Feel No Pain 6+', type:'ability', to:'this unit / model', while:null, text:'- Models in this unit have the **Feel No Pain 6+** ability.' },
   { rule:'Chaos Knights · Houndpack Lance rule · Marked Prey', grants:'BATTLELINE', type:'keyword or weapon ability', to:{ all:['War Dog'] }, while:null, text:'- **WAR DOG** units from your army have the **BATTLELINE** keyword.' },
   { rule:'Chaos Knights · Houndpack Lance rule · Marked Prey', grants:'CHARACTER', type:'keyword or weapon ability', to:null, while:'Until the end of the battle', text:'Until the end of the battle, those units have the **CHARACTER** keyword.*' },
-  { rule:'Adeptus Custodes army rule · Daughters of the Abyss', option:'Psychic Null (Aura)', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Faction: Adeptus Custodes'] }, while:'Psychic Null (Aura) active', text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
+  { rule:'Adeptus Custodes army rule · Daughters of the Abyss', option:'Psychic Null (Aura)', grants:'Feel No Pain 5+ against psychic attacks', type:'ability', to:{ all:['Faction: Adeptus Custodes'] }, while:'Psychic Null (Aura) active', text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', grants:'Psychic Null (Aura)', type:'ability', to:{ all:['Faction: Anathema Psykana'] }, while:null, text:'- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Furor Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Malleus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
@@ -8214,7 +8217,7 @@ const GRANTS = [
   { rule:'pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' },
   { rule:'nidzillas · Neurogaunts · Neurocytes', grants:'SYNAPSE', type:'keyword or weapon ability', to:'this unit / model', while:'While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units)', text:'While this unit is within **Synapse Range** of your friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.' },
   { rule:'nidzillas · Norn Assimilator · Singular Purpose', grants:'Feel No Pain 5+', type:'ability', to:'this unit / model', while:'Until the end of the battle', text:'Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
-  { rule:'nidzillas · Norn Emissary · Unnatural Resistance', grants:'Feel No Pain 4+', type:'ability', to:'this unit / model', while:null, text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' },
+  { rule:'nidzillas · Norn Emissary · Unnatural Resistance', grants:'Feel No Pain 4+ against Mortal Wounds', type:'ability', to:'this unit / model', while:null, text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Mantra of Discipline', grants:'BATTLELINE', type:'keyword or weapon ability', to:'this unit / model', while:'Mantra of Discipline active', text:'This model has the **BATTLELINE** keyword and has the following ability:' },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Shroudpsalm (Aura)', grants:'Stealth', type:'ability', to:{ all:['Faction: Adeptus Mechanicus'] }, while:'Shroudpsalm (Aura) active; While a friendly ADEPTUS MECHANICUS unit is within 6" of this model', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.' },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Mechanicus Bodyguard', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
@@ -8230,10 +8233,10 @@ const GRANTS = [
   { rule:'lite-knights · Telemon Heavy Dreadnought · Augury Uplink', grants:'Feel No Pain 5+', type:'ability', to:'this unit / model', while:null, text:'This model has **Feel No Pain 5+**.' },
   { rule:'nerf-when · Roboute Guilliman · Leader of Astartes', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit', text:'While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.' },
   { rule:'nerf-when · Marneus Calgar · Thunderhawk Insertion', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'That unit has **Deep Strike**.' },
-  { rule:'nerf-when · Librarian in Phobos Armour · Psychic Hood', grants:'Feel No Pain 4+', type:'ability', to:'this unit / model', while:null, text:'This unit has **Feel No Pain 4+** against **psychic attacks**.' },
+  { rule:'nerf-when · Librarian in Phobos Armour · Psychic Hood', grants:'Feel No Pain 4+ against psychic attacks', type:'ability', to:'this unit / model', while:null, text:'This unit has **Feel No Pain 4+** against **psychic attacks**.' },
   { rule:'nerf-when · Librarian in Phobos Armour · Librarian', grants:'psychic abilities', type:'ability', to:'this unit / model', while:null, text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' },
-  { rule:'the-exiled-legion · Karanak · Brass Collar of Bloody Vengeance', grants:'Feel No Pain 3+', type:'ability', to:'this unit / model', while:null, text:'The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks** and **mortal wounds**.' },
-  { rule:'the-exiled-legion · Karanak · Collar of Khorne', grants:'Feel No Pain 3+', type:'ability', to:'this unit / model', while:null, text:'The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks**.' },
+  { rule:'the-exiled-legion · Karanak · Brass Collar of Bloody Vengeance', grants:'Feel No Pain 3+ against Psychic Attacks and mortal wounds', type:'ability', to:'this unit / model', while:null, text:'The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks** and **mortal wounds**.' },
+  { rule:'the-exiled-legion · Karanak · Collar of Khorne', grants:'Feel No Pain 3+ against Psychic Attacks', type:'ability', to:'this unit / model', while:null, text:'The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks**.' },
   { rule:'the-exiled-legion · Daemon Prince of Chaos · Prince of Darkness', grants:'Stealth', type:'ability', to:{ all:['Faction: Legiones Daemonica'] }, while:'While a friendly LEGIONES DAEMONICA unit is within 6" of this model', text:'While a friendly **LEGIONES DAEMONICA** unit is within 6" of this model, models in that unit have the **Stealth** ability.' },
   { rule:'the-exiled-legion · Daemon Prince of Chaos · Daemonic Lord', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units', text:'While this model is within 3" of one or more friendly **LEGIONES DAEMONICA INFANTRY** units, this model has the **Lone Operative** ability.' }
 ];
@@ -8245,7 +8248,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from','own'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','at','tag','damaged','embarked','na','ph','riled','turn','turns','note','def','text','defOf']
+  abilities:['name','who','at','tag','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

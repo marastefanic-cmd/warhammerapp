@@ -167,7 +167,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       // the Overview lists the detachment rules with the army rules
       go({ s:'pregame', army:armyId });
       const ov = [...document.querySelectorAll('#view .rr > summary b')].map(b => b.textContent);
-      for(const d of detachmentsOf(A)) if(d.rule && !ov.includes(d.rule.name)) out.push(['overview-rules', armyId, d.rule.name + ' is not in the Overview’s rules']);
+      for(const d of detachmentsOf(A)) for(const r of (d.rule ? [d.rule].concat(d.moreRules || []) : [])) if(!ov.includes(r.name)) out.push(['overview-rules', armyId, r.name + ' is not in the Overview’s rules']);
       // the damage calculator, for every unit of this list as the attacker (every rule ticked), at a target set by hand:
       // - a value New Recruit already includes (a weapon's `from`) is never added again by the same rule
       // - a rule for one weapon or one model of an attached unit reaches only that weapon or model

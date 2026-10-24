@@ -1,0 +1,312 @@
+[
+ {
+  "key": "22e0644c73aab229",
+  "where": "chaos-daemons army rule · The Shadow of Chaos",
+  "verdict": "ok",
+  "why": "“At the start of any phase …” and battle-shock rolls/tests can happen in any phase (Daemonic Manifestation, Daemonic Terror), so every phase. This is the convention for “any phase” rules. Text checked against GW’s pack p.2 word for word. Wahapedia’s FAQ line is GW’s own FAQ (pack, Rules Updates)."
+ },
+ {
+  "key": "11305ad4f138d536",
+  "where": "chaos-daemons army rule · The Shadow of Chaos",
+  "verdict": "ok",
+  "why": "Your deployment zone is always in the Shadow, and the rule works on battle-shock in either player’s turn: either."
+ },
+ {
+  "key": "25edac79bb1e98f7",
+  "where": "Blood Legion rule · Murdercall",
+  "verdict": "ok",
+  "why": "“In your opponent's movement phase …”: Movement. Matches GW p.123 (GW also has lowercase “movement phase”). Note that GW’s Blood Legion detachment rule has a second part, BLOOD TAINTED, which data.js leaves out (see the completeness entry). If it is added to this rule, the labels have to be redone."
+ },
+ {
+  "key": "5d45b212a931ea6d",
+  "where": "Blood Legion rule · Murdercall",
+  "verdict": "ok",
+  "why": "The opponent’s Movement phase only: opp."
+ },
+ {
+  "key": "017d51a2c5b13890",
+  "where": "Blood Legion rule · Murdercall",
+  "verdict": "ok",
+  "why": "“one or more LEGIONES DAEMONICA KHORNE units from your army … one of those … units can make a surge move”: the Faction keyword and Khorne."
+ },
+ {
+  "key": "1c897ff53c1fce90",
+  "where": "Blood Legion · Wrath Undeniable",
+  "verdict": "ok",
+  "why": "WHEN “Fight phase, just after an enemy unit has selected its targets”: Fight. Text matches GW p.124 word for word; 1CP."
+ },
+ {
+  "key": "ce6578deba6e0b05",
+  "where": "Blood Legion · Wrath Undeniable",
+  "verdict": "ok",
+  "why": "The Fight phase of either turn (the enemy unit fights in either player’s Fight phase): either."
+ },
+ {
+  "key": "b8ba89ea3b4e6014",
+  "where": "Blood Legion · Wrath Undeniable",
+  "verdict": "ok",
+  "why": "TARGET “One LEGIONES DAEMONICA KHORNE unit from your army”: Faction keyword and Khorne."
+ },
+ {
+  "key": "af274a65762b07f5",
+  "where": "Blood Legion · Wrath Undeniable",
+  "verdict": "fix",
+  "why": "EFFECT: “each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+ … it can fight after the attacking unit has finished making its attacks”. The def changes two things. (1) “before it has fought” drops “this phase”, so it reads as a model that has never fought. (2) “fights after” turns GW’s “can fight” into something it must do. The fix keeps the text’s condition and its “can”.",
+  "fix": {
+   "def": "Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed"
+  }
+ },
+ {
+  "key": "42d2c0d623269c07",
+  "where": "Blood Legion · Wrath Undeniable",
+  "verdict": "fix",
+  "why": "Same two slips as the def. “before it has fought” drops GW’s “if that model has not fought this phase”, and “fights after” turns GW’s “it can fight after the attacking unit has finished making its attacks” into a must. The rest is faithful: WHEN, TARGET “selected as the target of one or more of the attacking unit’s attacks”, 4+, removed afterwards.",
+  "fix": {
+   "gist": "Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, each time a model in it is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed."
+  }
+ },
+ {
+  "key": "c5cb11a5572e00ca",
+  "where": "Blood Legion · Gore‑hungry Onslaught",
+  "verdict": "ok",
+  "why": "WHEN “Your Movement phase or your Charge phase”. Text matches GW word for word; 1CP (GW’s 1CP sits beside this stratagem’s TARGET line, and the 2CP belongs to Fools’ Flight)."
+ },
+ {
+  "key": "bb896513699eb7d8",
+  "where": "Blood Legion · Gore‑hungry Onslaught",
+  "verdict": "ok",
+  "why": "“Your” Movement and Charge phases: your."
+ },
+ {
+  "key": "fb3e7312b711cc8e",
+  "where": "Blood Legion · Gore‑hungry Onslaught",
+  "verdict": "ok",
+  "why": "TARGET “One LEGIONES DAEMONICA KHORNE unit from your army”."
+ },
+ {
+  "key": "b79ada5a178bfa2e",
+  "where": "Blood Legion · Gore‑hungry Onslaught",
+  "verdict": "ok",
+  "why": "EFFECT “Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features”: the gist is faithful and complete."
+ },
+ {
+  "key": "bbd615f224a8b3af",
+  "where": "Blood Legion · Skulls Beget Blood",
+  "verdict": "ok",
+  "why": "WHEN “Your Shooting phase”. Text matches GW word for word; 1CP."
+ },
+ {
+  "key": "01b56e08893cc2e3",
+  "where": "Blood Legion · Skulls Beget Blood",
+  "verdict": "ok",
+  "why": "Your Shooting phase: your."
+ },
+ {
+  "key": "844fcb1b33b02613",
+  "where": "Blood Legion · Skulls Beget Blood",
+  "verdict": "ok",
+  "why": "“LEGIONES DAEMONICA KHORNE INFANTRY or LEGIONES DAEMONICA KHORNE MOUNTED”: the shared keywords for all, plus Infantry or Mounted (kw-or-common). The Fell Back and unengaged conditions are states, not keywords."
+ },
+ {
+  "key": "4f40367d1741ea31",
+  "where": "Blood Legion · Skulls Beget Blood",
+  "verdict": "ok",
+  "why": "Every condition is kept: unengaged (“not within Engagement Range of one or more enemy units”), not Fell Back this turn, and an enemy unit within 8\" and visible that is not within Engagement Range of your army. Six D6, 1 mortal wound for each 4+. Nothing is added."
+ },
+ {
+  "key": "5fc49dce6ef14af2",
+  "where": "Blood Legion · Blood Begets Skulls",
+  "verdict": "ok",
+  "why": "WHEN “Your Charge phase”. Matches GW word for word; 1CP."
+ },
+ {
+  "key": "010ea51f71907527",
+  "where": "Blood Legion · Blood Begets Skulls",
+  "verdict": "ok",
+  "why": "your."
+ },
+ {
+  "key": "005ec09ff99dfe82",
+  "where": "Blood Legion · Blood Begets Skulls",
+  "verdict": "ok",
+  "why": "TARGET LEGIONES DAEMONICA KHORNE."
+ },
+ {
+  "key": "9a5ff8d65eae40d3",
+  "where": "Blood Legion · Blood Begets Skulls",
+  "verdict": "ok",
+  "why": "“has not been selected to charge this phase” → “not yet selected to charge”, said in the Charge phase, and “is eligible to declare a charge in a turn in which it Advanced” → “can declare a charge …”. Faithful."
+ },
+ {
+  "key": "a54555e4333402f7",
+  "where": "Blood Legion · Fools’ Flight",
+  "verdict": "ok",
+  "why": "WHEN “Your opponent’s Movement phase, when an enemy unit ends a fall-back move”. Text is the errata’d version and matches GW p.124 word for word; 2CP as GW prints it."
+ },
+ {
+  "key": "15327a598475bfd7",
+  "where": "Blood Legion · Fools’ Flight",
+  "verdict": "ok",
+  "why": "The opponent’s Movement phase: opp."
+ },
+ {
+  "key": "a2b106f2aef303ed",
+  "where": "Blood Legion · Fools’ Flight",
+  "verdict": "ok",
+  "why": "TARGET “friendly unengaged LEGIONES DAEMONICA KHORNE unit”: the Faction keyword and Khorne. Unengaged is a state."
+ },
+ {
+  "key": "758c11eada2dd44a",
+  "where": "Blood Legion · Fools’ Flight",
+  "verdict": "ok",
+  "why": "Faithful. It keeps the trigger, unengaged, within 6\" of that enemy unit, and only units “that made a fall-back move this phase and are within the maximum distance”."
+ },
+ {
+  "key": "4444f7317c4d0b26",
+  "where": "Blood Legion · Sheathed in Brass",
+  "verdict": "ok",
+  "why": "WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets”. Matches GW word for word; 1CP (Battle Tactic)."
+ },
+ {
+  "key": "49a32fb79585e04c",
+  "where": "Blood Legion · Sheathed in Brass",
+  "verdict": "ok",
+  "why": "opp."
+ },
+ {
+  "key": "31a1d78b49674f87",
+  "where": "Blood Legion · Sheathed in Brass",
+  "verdict": "ok",
+  "why": "TARGET LEGIONES DAEMONICA KHORNE."
+ },
+ {
+  "key": "1798200929c13cf2",
+  "where": "Blood Legion · Sheathed in Brass",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, models in your unit have a Save characteristic of 3+”, in their Shooting phase once targeted: faithful."
+ },
+ {
+  "key": "1fe59d86fe263de4",
+  "where": "Blood Legion · Sheathed in Brass",
+  "verdict": "ok",
+  "why": "Faithful and complete."
+ },
+ {
+  "key": "7d1cd073bd4fd6bf",
+  "where": "Warptide rule · Shudderblink",
+  "verdict": "ok",
+  "why": "An advance move (your Movement phase), [ASSAULT] on ranged attacks until the end of that turn (your Shooting phase), and eligible to declare a charge (your Charge phase). Text matches GW p.122 word for word."
+ },
+ {
+  "key": "a716424933693854",
+  "where": "Warptide rule · Shudderblink",
+  "verdict": "ok",
+  "why": "An advance move is made in your Movement phase (09.06), and both effects last only that turn: your."
+ },
+ {
+  "key": "f688846c6f4550a5",
+  "where": "Warptide rule · Shudderblink",
+  "verdict": "fix",
+  "why": "The {movement:\"either\"} comes from derive.js’s Fire Overwatch modifier, which it applies to “always-on” ranged effects. Shudderblink is not always on. It is triggered “When a friendly … unit is selected to make an advance move”, and its [ASSAULT] lasts “until the end of the turn”, which is the unit’s own turn (advance moves are your Movement phase, 09.06). By the opponent’s Movement phase, where Fire Overwatch is used, the [ASSAULT] has ended. The approved Thulia Ghuld rows differ: their effect lasts “until the start of your next Command phase”. So there is no opponent’s-turn entry, and all phases are your turn: remove turns.",
+  "fix": {}
+ },
+ {
+  "key": "0754c41a7ab25cc5",
+  "where": "Warptide rule · Shudderblink",
+  "verdict": "ok",
+  "why": "“a friendly LEGIONES DAEMONICA BATTLELINE unit”."
+ },
+ {
+  "key": "b9bc61c052484217",
+  "where": "Warptide · Daemonic Infestation",
+  "verdict": "ok",
+  "why": "WHEN “Your Command phase”. Matches GW word for word; 1CP."
+ },
+ {
+  "key": "a5e9683a992beace",
+  "where": "Warptide · Daemonic Infestation",
+  "verdict": "ok",
+  "why": "your."
+ },
+ {
+  "key": "342647f2f8e54e30",
+  "where": "Warptide · Daemonic Infestation",
+  "verdict": "ok",
+  "why": "“LEGIONES DAEMONICA BATTLELINE unit (excluding PINK HORRORS units)”: all, plus none Pink Horrors."
+ },
+ {
+  "key": "c8b6ad9ba94de105",
+  "where": "Warptide · Daemonic Infestation",
+  "verdict": "ok",
+  "why": "Faithful."
+ },
+ {
+  "key": "22461afa86e0db5d",
+  "where": "Warptide · Soulseeing",
+  "verdict": "ok",
+  "why": "WHEN “Start of your Shooting phase”. Matches GW word for word; 1CP. (The EFFECT names no duration, and the gist does not invent one.)"
+ },
+ {
+  "key": "a76b6720254a7b15",
+  "where": "Warptide · Soulseeing",
+  "verdict": "ok",
+  "why": "your."
+ },
+ {
+  "key": "9a29a9f64e4a33ad",
+  "where": "Warptide · Soulseeing",
+  "verdict": "ok",
+  "why": "“One friendly LEGIONES DAEMONICA BATTLELINE unit”."
+ },
+ {
+  "key": "353ce3d86aba23c0",
+  "where": "Warptide · Soulseeing",
+  "verdict": "ok",
+  "why": "“Select one visible enemy unit within 12\" of your unit. That enemy unit has +6\" detection range.” Faithful; no duration is added."
+ },
+ {
+  "key": "a226f68b062541d8",
+  "where": "Warptide · Incorporeal Entities",
+  "verdict": "ok",
+  "why": "WHEN “Your opponent’s Shooting phase …”. Matches GW word for word; 1CP."
+ },
+ {
+  "key": "649b4d63c23ec11b",
+  "where": "Warptide · Incorporeal Entities",
+  "verdict": "ok",
+  "why": "opp."
+ },
+ {
+  "key": "d6802c7690a786d0",
+  "where": "Warptide · Incorporeal Entities",
+  "verdict": "ok",
+  "why": "The unit WHEN names, and TARGET: LEGIONES DAEMONICA BATTLELINE."
+ },
+ {
+  "key": "a1a333c7d6e2c75e",
+  "where": "Warptide · Incorporeal Entities",
+  "verdict": "ok",
+  "why": "“Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls”: faithful."
+ },
+ {
+  "key": "1a6aa9e35c46220c",
+  "where": "Warptide · Incorporeal Entities",
+  "verdict": "ok",
+  "why": "Faithful and complete."
+ },
+ {
+  "key": "5ee7d2c363d79e2a",
+  "where": "resolveArmies",
+  "verdict": "ok",
+  "why": "The only change extends the --expand-only “own” branch (opts.keep has 'own'; own stays in HIDE, so the app’s load is unchanged) from stats to ranged and melee rows. A weapon row’s from-keys are fields (A, S, D …) or weapon-ability names (“SUSTAINED HITS 1”), and the `f in ds` guard skips the ability names. The array-valued kw is never a from-key, so the !== comparison only compares strings. Run with keep:['own'], it gives own only where a rule changed a value (Relentless Rage A, Bane-Forged S, Daemonic Allegiance S …). Every resolved list except the new one is identical to main 24f66fe’s (loadData, JSON-equal), and no ARMIES entry of an existing list changed in the diff."
+ },
+ {
+  "key": "completeness:blood-legion-blood-tainted",
+  "where": "chaos-daemons · Blood Legion · detachment rule",
+  "verdict": "fix",
+  "why": "GW’s Blood Legion page (Faction Pack 1.2 p.123, “DETACHMENT RULE”) and Wahapedia both print two parts: MURDERCALL and BLOOD TAINTED. data.js has only Murdercall. from-json.js’s wahaDetachment() stops reading the rule segment at Murdercall’s “Errata” spoiler (note=true), so the Blood Tainted heading and its text after the spoiler are silently dropped, and texts.js did not catch it. Blood Tainted must be added with GW’s words, and the rule’s labels must be re-derived (it acts “At the end of a phase”: every phase, either turn). from-json.js should end a note at the next rule heading.",
+  "fix": {
+   "missing": "Blood Tainted: At the end of a phase in which a **LEGIONES DAEMONICA KHORNE** unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  }
+ }
+]

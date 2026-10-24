@@ -51,6 +51,8 @@ const R = J.roster, FORCE = R.forces[0];
 
 // ---------------------------------------------------------------- small helpers
 const typo = s => String(s).replace(/'/g, '’');
+// a detachment's rules: `rule`, then any further ones (`moreRules`)
+const detRulesOf = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];
 const slug = s => nm(s).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const uniq = a => [...new Set(a)];
 const lastId = e => String(e || '').split('::').pop();
@@ -158,6 +160,13 @@ const SUBHEADS = (() => { const f = path.join(ROOT, 'verify/.cache/waha', factio
   return new Set([...fs.readFileSync(f, 'utf8').matchAll(/<span class="hi_custom">([^<]+)<\/span>/g)].map(m => m[1].replace(/&rsquo;|&#8217;/g, '’').trim()).filter(x => /[a-z]/.test(x))); })();   // (one in capitals stays as printed)
 const ruleLines = lines => balanced(lines).map(l => !/\*\*/.test(l) && SUBHEADS.has(l.trim()) ? '**' + l.trim() + '**' : l);
 const SEGHEAD = /^(Detachment Rules?|Enhancements|Stratagems)$/, NOTEHEAD = /^(FAQ|Errata|FAQ \/ Errata)$/;
+// the names of the detachments' rules, as the page's contents list them under "Detachment Rule" (Blood Legion: Murdercall, Blood
+// Tainted): a detachment can have more than one, and a rule's heading ends an Errata or FAQ spoiler before it
+const DETRULEHEADS = (() => { const f = path.join(ROOT, 'verify/.cache/waha', factionId + '.html'); if (!fs.existsSync(f)) return new Set();
+  const h = fs.readFileSync(f, 'utf8'), out = new Set();
+  for (const m of h.matchAll(/class="cnClrInv">Detachment Rules?<\/a><\/div>((?:<div class="[^"]*\bi50\b[^"]*"[^>]*><a href="[^"]*" class="cnClrInv">[^<]+<\/a><\/div>)+)/g))
+    for (const x of m[1].matchAll(/class="cnClrInv">([^<]+)</g)) out.add(x[1].replace(/&rsquo;|&#8217;/g, '’').trim());
+  return out; })();
 const SMALL = new Set(['a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'into', 'of', 'on', 'or', 'the', 'to', 'with']);
 // GW prints stratagem names in capitals; data.js in title case (texts.js compares them case-insensitively)
 const titleCase = s => s.toLowerCase().split(' ').map((w, i) => i > 0 && SMALL.has(w) ? w : w.replace(/(^|[-’'])([a-z])/g, (m, a, b) => a + b.toUpperCase())).join(' ').replace(/’S\b/g, '’s');
@@ -166,12 +175,14 @@ function wahaDetachment(name) {
   const sec = wahaSections().find(s => lc(s.title.replace(/ \d+DP$/, '')) === lc(name));
   if (!sec) return null;
   const dp = /(\d+)DP$/.exec(sec.title);
-  const res = { dp: dp ? +dp[1] : null, rule: null, enh: [], strats: [] };
+  const res = { dp: dp ? +dp[1] : null, rule: null, rules: [], enh: [], strats: [] };
   let seg = null, cur = null, note = false, field = null;
   const L = sec.lines;
   for (let i = 0; i < L.length; i++) {
     const t = L[i], b = bare(t);
-    if (SEGHEAD.test(b)) { seg = /^Detachment/.test(b) ? 'rule' : b === 'Enhancements' ? 'enh' : 'strat'; cur = null; note = false; if (seg === 'rule') res.rule = { name: null, lines: [] }; continue; }
+    if (SEGHEAD.test(b)) { seg = /^Detachment/.test(b) ? 'rule' : b === 'Enhancements' ? 'enh' : 'strat'; cur = null; note = false; if (seg === 'rule') { res.rule = { name: null, lines: [] }; res.rules = [res.rule]; } continue; }
+    // the detachment's next rule (its heading in the page's contents): it ends the spoiler before it
+    if (seg === 'rule' && res.rule.name && [...DETRULEHEADS].some(x => lc(x) === lc(b)) && !res.rules.some(r => lc(r.name) === lc(b))) { res.rule = { name: b, lines: [] }; res.rules.push(res.rule); note = false; continue; }
     if (NOTEHEAD.test(b)) { note = true; continue; }
     if (seg === 'rule') { if (note) continue; if (!res.rule.name) res.rule.name = b; else res.rule.lines.push(t); }
     else if (seg === 'enh') {
@@ -189,6 +200,7 @@ function wahaDetachment(name) {
       if (field) cur.fields[field].push(t);
     }
   }
+  res.rule = res.rules[0] || null;   // (its first rule)
   return res;
 }
 // the army rules section: rule name lines, each followed by its text (as verify/texts.js reads them)
@@ -273,11 +285,18 @@ const detIds = detNames.map(n => {
     else want('detachment ' + n, 'dispositions', 'not found in BSData or on the Wahapedia page');
   }
   det.dp = W.dp;
-  det.rule = { name: typo(W.rule.name) };
-  // a Damage-tab reading written by hand (verify/sources/hand/<army>.json rules)
-  const hr = (HAND.rules || {})[id];
-  if (hr && hr.calcMods) { det.rule.calcMods = hr.calcMods; handDone.push({ what: 'calcMods of ' + W.rule.name + ' (' + n + ')', by: hr.by, text: hr.calcMods.map(m => m.from + ': ' + m.note).join('; ') }); }
-  det.rule.text = ruleLines(W.rule.lines).join('\n');
+  // its rules: the first is `rule`, any further ones `moreRules` (Blood Legion's Blood Tainted after Murdercall)
+  const ruleOf = (WR, i) => {
+    const r = { name: typo(WR.name) };
+    // a Damage-tab reading written by hand (verify/sources/hand/<army>.json rules: the detachment's id for its first rule, "<id>/<rule
+    // name>" for a further one)
+    const hr = (HAND.rules || {})[i ? id + '/' + r.name : id];
+    if (hr && hr.calcMods) { r.calcMods = hr.calcMods; handDone.push({ what: 'calcMods of ' + WR.name + ' (' + n + ')', by: hr.by, text: hr.calcMods.map(m => m.from + ': ' + m.note).join('; ') }); }
+    r.text = ruleLines(WR.lines).join('\n');
+    return r;
+  };
+  det.rule = ruleOf(W.rules[0], 0);
+  if (W.rules.length > 1) det.moreRules = W.rules.slice(1).map((r, i) => ruleOf(r, i + 1));
   det.enhancements = W.enh.map(e => {
     // "Memento Moritoi (one per army)": GW's name with its limit; BSData and New Recruit name it without (nr: their spelling)
     const lim = /^(.*?) \((one per army)\)$/i.exec(e.name);
@@ -302,7 +321,7 @@ const detIds = detNames.map(n => {
     else want('stratagem ' + o.name + ' (' + n + ')', 'gist', 'a one-line summary is the app’s own words: write it in verify/sources/hand/' + armyId + '.json (gists), marked by whom');
     return o;
   });
-  filled.push({ what: 'detachment ' + n + ': rule ' + det.rule.name + ', ' + det.enhancements.length + ' enhancements, ' + det.stratagems.length + ' stratagems, ' + W.dp + 'DP', from: 'Wahapedia ' + factionId + '.txt (' + n + ' ' + W.dp + 'DP); dispositions from BSData' });
+  filled.push({ what: 'detachment ' + n + ': rule' + (det.moreRules ? 's ' : ' ') + [det.rule].concat(det.moreRules || []).map(r => r.name).join(', ') + ', ' + det.enhancements.length + ' enhancements, ' + det.stratagems.length + ' stratagems, ' + W.dp + 'DP', from: 'Wahapedia ' + factionId + '.txt (' + n + ' ' + W.dp + 'DP); dispositions from BSData' });
   facSrc.detachments[id] = det;
   return id;
 });
@@ -738,7 +757,7 @@ for (const u of units) {
       continue;
     }
     // a detachment rule BSData shows on the unit ("Flare Shields"): the rule's words, as the detachment prints them
-    const dr = detIds.map(id => ((F && F.detachments[id]) || facSrc.detachments[id] || {}).rule).find(r => r && lc(r.name) === lc(ab.name));
+    const dr = detIds.flatMap(id => detRulesOf((F && F.detachments[id]) || facSrc.detachments[id])).find(r => r && lc(r.name) === lc(ab.name));
     if (dr) {
       ab.text = dr.text;
       if (!textEq(dr.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: ab.name, app: ab.text, bsdata: plain, why: 'the detachment rule as Wahapedia (the codex) prints it; BSData restates it for the unit', file: 'verify/.cache/waha/' + factionId + '.txt' });
@@ -800,6 +819,17 @@ for (const u of units) {
     u.rules.splice(u.rules.indexOf(r), 1); u._dsRules.splice(u._dsRules.indexOf(r), 1);
     devs.push({ kind: 'bsdata', unit: u.id, field: 'rules', name: r, app: null, bsdata: r, why: 'GW’s datasheet does not print ' + r, file: G.files.join(', ') });
   }
+  // a Feel No Pain its wargear gives only "against …" (Karanak's Brass Collar of Bloody Vengeance: "against Psychic Attacks and mortal
+  // wounds"): not on the Rules line, where it would read as unconditional (GW's CORE ABILITIES do not print it); its When targeted line
+  // keeps the condition
+  for (const r of u.rules.slice()) {
+    if (!/^Feel No Pain(?: \d\+)?$/i.test(r) || u._dsRules.some(x => lc(x) === lc(r)) || gw.some(x => lc(x) === lc(r))) continue;
+    const by = u.abilities.find(a => new RegExp('\\bFeel No Pain' + (/\d\+$/.test(r) ? ' ' + r.slice(-2).replace('+', '\\+') : '') + '(?![\\d+])[^.]*?\\bagainst\\b', 'i').test(bare(a.text || '')));
+    if (!by) continue;
+    u.rules.splice(u.rules.indexOf(r), 1);
+    devs.push({ kind: 'nr', unit: u.id, field: 'rules', name: r, app: null, bsdata: r, why: by.name + ' gives Feel No Pain only against what it names', file: G.files.join(', ') });
+    filled.push({ what: 'Rules line of ' + u.name + ' without ' + r, from: by.name + ': “' + bare(by.text) + '” (its When targeted line keeps the condition)' });
+  }
   // a core ability only some parts of an attached unit have (Trajann's Feel No Pain 5+, not the Allarus Custodians'): the model
   // that has it (partialRules), from each datasheet's CORE ABILITIES (Leader / Support: a character's own, never marked)
   if (u._parts.length > 1 && G.byPart.every(Boolean)) {
@@ -820,7 +850,7 @@ const ruleNames = uniq(units.flatMap(u => u.rules));
 if (!F) {
   const W = wahaArmyRules();
   // the army rules the units name, and those the list's detachment rules name ("Favoured ka’tah: RENDAX")
-  const detText = detIds.map(id => ((F && F.detachments[id]) || facSrc.detachments[id] || {}).rule).filter(Boolean).map(r => bare(r.text)).join('\n');
+  const detText = detIds.flatMap(id => detRulesOf((F && F.detachments[id]) || facSrc.detachments[id])).map(r => bare(r.text)).join('\n');
   // and the ones named as a keyword of the list's units ("Anathema Psykana": the rule that lets the list take those units)
   const kws = new Set(units.flatMap(u => u.kw.map(k => lc(k.replace(/^Faction: /, '')))));
   // and the ones whose sub-headings a unit's ability names (Special Move Types: the Impulsor's Rapid Disembarkation names the
@@ -834,13 +864,16 @@ if (!F) {
     const fnp = /\bwith this ability have \**Feel No Pain (\d\+)\** against \**([^.*]+?)\**\./i.exec(r.lines.join(' '));
     if (fnp) { ar.def = 'Feel No Pain ' + fnp[1] + ' against ' + fnp[2]; filled.push({ what: 'army rule ' + r.name + ' def: ' + ar.def, from: 'its words ("units with this ability have Feel No Pain … against …")' }); }
     ar.text = ruleLines(r.lines).join('\n');
+    // a FAQ GW's Faction Pack prints about it (its Rules Updates), quoted: verify/sources/hand/<army>.json armyRules.<name>.faq, each
+    // "*FAQ (Faction Pack 1.2): <question> <answer>*" (verify/texts.js checks it in the pack)
+    for (const q of ((HAND.armyRules || {})[ar.name] || {}).faq || []) { ar.text += '\n' + q; handDone.push({ what: 'FAQ on ' + ar.name, by: 'hand (Claude), quoted', text: q }); }
     facSrc.armyRules.push(ar);
     filled.push({ what: 'army rule ' + r.name, from: 'Wahapedia ' + factionId + '.txt (Army Rules)' });
   }
 }
 // rules no glossary entry opens
 const known = n => (F ? F.armyRules : facSrc.armyRules).some(r => lc(r.name) === lc(n)) || D.ruleAliases.some(([re]) => re.test(n)) || Object.keys(D.rules).some(k => lc(k) === lc(n)) ||
-  detIds.some(id => lc((((F && F.detachments[id]) || facSrc.detachments[id] || {}).rule || {}).name || '') === lc(n));
+  detIds.some(id => detRulesOf((F && F.detachments[id]) || facSrc.detachments[id]).some(r => lc(r.name) === lc(n)));
 // a core ability data.js lacks ("Damaged 5"): its section in Wahapedia's core rules ("DAMAGED24.39"); a line GW's Core Rules PDF
 // does not print is marked as Wahapedia's (verify/texts.js checks it there)
 const newRules = {}, newAliases = [];
@@ -939,6 +972,7 @@ function factionSrc() {
     let s = I + '  // ' + d.name + ': Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)\n';
     s += I + "  '" + id + "': {\n" + I + '    name:' + lit(d.name) + ', dispositions:' + lit(d.dispositions || []) + ', dp:' + d.dp + ',\n';
     s += I + '    rule:' + lit(d.rule) + ',\n';
+    if (d.moreRules) s += I + '    moreRules:[\n' + d.moreRules.map(r => I + '      ' + lit(r)).join(',\n') + '\n' + I + '    ],\n';
     s += I + '    enhancements:[\n' + d.enhancements.map(e => I + '      ' + lit(e)).join(',\n') + '\n' + I + '    ],\n';
     s += I + '    stratagems:[\n' + d.stratagems.map(x => I + '      ' + lit(x)).join(',\n') + '\n' + I + '    ]\n' + I + '  }';
     return s;
@@ -1012,12 +1046,32 @@ const setIn = (needle, from, ins) => { const i = d.indexOf(needle, from); if (i 
 const lab = x => { const o = {}; if (x.at) o.at = x.at; if (x.ph && x.ph.length) { o.ph = x.ph; o.turn = x.turn; } if (x.turns) o.turns = x.turns; return o; };
 const litKV = o => Object.entries(o).map(([k, v]) => k + ':' + lit(v)).join(', ');
 const aStart = () => d.indexOf("{\n  id:'" + armyId + "',");
+// an ability of the list: its unit entry and where its row starts in data.js
+const abAt = it => {
+  const [, uName, ...rest] = it.where.split(' · '); const abName = rest[rest.length - 1].replace(/ #\d+$/, '');
+  const u = D.armies.find(a => a.id === armyId).units.find(x => x.name === uName.replace(/ \[.*\]$/, '') && (!/\[/.test(uName) || x.id === /\[(.*)\]/.exec(uName)[1]));
+  if (!u) return null;
+  const us = d.indexOf("      id:'" + u.id + "',", aStart());
+  return { u, abName, ai: d.indexOf("{ name:" + lit(abName), us) };
+};
 for (const it of labels) {
+  // a timing label written by hand (verify/sources/hand/<army>.json units.<id>.labels: {} for none), where derive.js's reading is not the
+  // one the signed-off lists store (a reviewer's fix)
+  if (it.kind === 'ability-timing') {
+    const at = abAt(it), ov = at && (((HAND.units || {})[at.u.id] || {}).labels || {})[at.abName];
+    if (ov) {
+      if (Object.keys(ov).length) { const ti0 = d.indexOf(" text:'", at.ai), cand = [" note:'", " def:'"].map(x => d.indexOf(x, at.ai)).filter(x => x >= 0 && x < ti0), ti = cand.length ? Math.min(...cand) : ti0; d = d.slice(0, ti) + ' ' + litKV(ov) + ',' + d.slice(ti); }
+      handDone.push({ what: 'timing label of ' + at.u.name + ' · ' + at.abName + ': ' + JSON.stringify(ov), by: 'hand (Claude), a reviewer’s fix', text: 'derive.js: ' + JSON.stringify(it.derived || null) });
+      continue;
+    }
+  }
   if (it.status === 'not-derivable' || it.derived == null) {
     if (it.kind === 'ability-tag') continue;   // the tag the source names ("(Aura)" in BSData's name, Wahapedia's "(Once per battle, per army)") is kept
     want(it.where, it.kind.replace('-', ' '), 'derive.js has no rule that gives it from the words: left out (no label)'); continue;
   }
   if (it.kind === 'ability-timing') {
+    // a Damaged band: no timing label, as every approved list stores it (its damaged chip and footnote show it)
+    if (/ · Damaged: [^·]* wounds remaining$/.test(it.where.replace(/ #\d+$/, ''))) { filled.push({ what: 'no timing label ' + it.where, from: 'a Damaged band (stored without timing, as in the approved lists)' }); continue; }
     // an always-on ability that protects the unit and names no phase (Feel No Pain, an InSv, +1 to save rolls, Lone Operative while …,
     // "when an enemy unit targets this unit"): no timing label, as the signed-off lists store none (Kustom Force Field, Augury Uplink,
     // Da Grand Warlord’s Ladz, the Repulsor Grid); its When targeted line (def) or stat column shows it
@@ -1036,6 +1090,16 @@ for (const it of labels) {
     filled.push({ what: 'label ' + it.where + ': ' + JSON.stringify(o), from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') });
   } else if (it.kind === 'ability-tag') {
     if (it.status === 'identical') continue;
+    // a tag the words give ("Once per battle, at the start of any phase, …") where the source prints none: the derived tag, as the
+    // approved lists store an untagged once-per-battle ability
+    if (it.stored == null && it.derived) {
+      const at = abAt(it); if (!at || at.ai < 0) continue;
+      const end = d.indexOf(' }', at.ai), row = d.slice(at.ai, end), wm = /^\{ name:'(?:[^'\\]|\\.)*',(?: who:'(?:[^'\\]|\\.)*',)?/.exec(row);
+      if (!wm || /\btag:'/.test(row)) continue;
+      d = d.slice(0, at.ai + wm[0].length) + ' tag:' + lit(it.derived) + ',' + d.slice(at.ai + wm[0].length);
+      filled.push({ what: 'tag ' + it.where + ': ' + it.derived, from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') + ' (the source prints no tag)' });
+      continue;
+    }
     want(it.where, 'ability tag', 'derive.js gives ' + it.derived + ', the export ' + JSON.stringify(it.stored) + ': kept as the export has it');
   } else if (it.kind === 'strat-timing' || it.kind === 'strat-needs') {
     const sName = it.where.split(' · ').pop();
@@ -1130,6 +1194,8 @@ const NRDEVF = path.join(ROOT, 'verify/deviations-nr.json');
 const nrDevs = JSON.parse(fs.readFileSync(NRDEVF, 'utf8')).filter(x => !(x.army === armyId && x.by === 'verify/from-json.js'));
 for (const f of (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/out/nr.json'), 'utf8')).failures || []).filter(f => f.army === armyId)) {
   const m = /^stats\[(.*)\]\.base$/.exec(f.field), fact = m && gwFacts.get(f.unit + '|stats|' + nm(m[1]) + '|base');
+  const nrRule = f.field === 'rules' || /^rules\b/.test(f.field) ? devs.find(x => x.kind === 'nr' && x.unit === f.unit && x.field === 'rules' && (x.name === f.source || String(f.source || '').includes(x.name))) : null;
+  if (nrRule) { nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' lists ' + nrRule.name + ' on the Rules line; ' + nrRule.why + ', so the app leaves it off the Rules line (its When targeted line keeps the condition; GW’s datasheet does not print it among CORE ABILITIES). GW wins.', evidence: nrRule.file + '; ' + EXP + ': rule ' + nrRule.name + '.', by: 'verify/from-json.js' }); continue; }
   if (fact && gwN(fact.gw) === gwN(f.app)) nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' gives the base as ' + f.source + '; ' + fact.src + ' has ' + fact.gw + '. GW wins (base sizes too).', evidence: fact.file + '; ' + EXP + ': Base ' + f.source + '.', by: 'verify/from-json.js' });
   else want(f.unit + ' ' + f.field, 'verify/nr.js: app ' + JSON.stringify(f.app) + ', export ' + JSON.stringify(f.source), 'no GW evidence from this run: look at it by hand');
 }

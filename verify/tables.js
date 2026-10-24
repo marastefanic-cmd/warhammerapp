@@ -634,6 +634,7 @@ function sites(D, armies){
     (f.armyRules || []).forEach((r, i) => rule([fk, 'armyRules', i], f.name + ' army rule · ' + r.name, r));
     for(const [dk, d] of Object.entries(f.detachments || {})){
       if(d.rule) rule([fk, 'detachments', dk, 'rule'], f.name + ' · ' + d.name + ' rule · ' + d.rule.name, d.rule);
+      (d.moreRules || []).forEach((r, i) => rule([fk, 'detachments', dk, 'moreRules', i], f.name + ' · ' + d.name + ' rule · ' + r.name, r));
       (d.stratagems || []).forEach((x, i) => each('FACTIONS', [fk, 'detachments', dk, 'stratagems', i], f.name + ' · ' + d.name + ' · ' + x.name, x, stratText(x)));
     }
   }
@@ -675,7 +676,7 @@ function columnsInData(src){
     add('FACTIONS', f);
     (f.armyRules || []).forEach(r => add('FACTIONS.armyRules', r));
     for(const d of Object.values(f.detachments || {})){
-      add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule);
+      add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule); (d.moreRules || []).forEach(r => add('FACTIONS.detachments.moreRules', r));
       (d.stratagems || []).forEach(x => add('FACTIONS.detachments.stratagems', x)); (d.enhancements || []).forEach(x => add('FACTIONS.detachments.enhancements', x));
     }
   }

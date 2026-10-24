@@ -898,7 +898,7 @@ function grantNames(army) {
   const f = DATA.factions[army.faction];
   const dets = army.detachments.map((d) => f.detachments[d]).filter(Boolean);
   const m = new Map();
-  for (const d of dets) if (d.rule) { m.set(nn(d.rule.name), d.rule.name); m.set(nn(d.name), d.rule.name); }
+  for (const d of dets) if (d.rule) { m.set(nn(d.rule.name), d.rule.name); m.set(nn(d.name), d.rule.name); for (const r of d.moreRules || []) m.set(nn(r.name), r.name); }
   for (const r of f.armyRules || []) m.set(nn(r.name), r.name);
   return m;
 }

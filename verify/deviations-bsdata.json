@@ -1174,6 +1174,26 @@
  },
  {
   "army": "the-exiled-legion",
+  "unit": "karanak-flesh-hounds",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the unit Feel No Pain; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Karanak.html, verify/.cache/waha/ds/chaos-daemons_Flesh-Hounds.html: CORE ABILITIES / ARMY RULES \"Deep Strike, Leader, The Shadow of Chaos\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "karanak-flesh-hounds",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 3+",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the unit Feel No Pain 3+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Karanak.html, verify/.cache/waha/ds/chaos-daemons_Flesh-Hounds.html: CORE ABILITIES / ARMY RULES \"Deep Strike, Leader, The Shadow of Chaos\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
   "unit": "skulltaker-bloodletters",
   "field": "ability.text",
   "app": "Bane-Forged Weapons: **LEGIONES DAEMONICA BATTLELINE** unit only. This unit’s attacks have +1 **S**.",

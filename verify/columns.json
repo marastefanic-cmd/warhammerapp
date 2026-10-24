@@ -303,6 +303,10 @@
      "source": "gw",
      "note": "see FACTIONS.detachments.rule"
     },
+    "moreRules": {
+     "source": "gw",
+     "note": "a detachment's further rules after `rule`, in GW's order (Blood Legion: Blood Tainted after Murdercall); each as FACTIONS.detachments.rule"
+    },
     "enhancements": {
      "source": "gw",
      "note": "see FACTIONS.detachments.enhancements"
@@ -315,6 +319,107 @@
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "GW's Faction Pack, or Wahapedia where GW has none (verify/texts.js)"
+    },
+    "text": {
+     "source": "gw",
+     "note": "word for word: GW's Faction Pack, or Wahapedia (verify/texts.js)"
+    },
+    "table": {
+     "source": "gw",
+     "note": "the rule's table, word for word (verify/texts.js)"
+    },
+    "tag": {
+     "source": "newrecruit",
+     "note": "GW's tag as New Recruit prints it after the name; derive.js derives the \"Once per…\" parts"
+    },
+    "ph": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "at": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "needs": {
+     "source": "derived",
+     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+    },
+    "coreTwin": {
+     "source": "hand",
+     "note": "the core ability of the same name it is shown with; signed off"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "calcNc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcMods": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcDefs": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "limit": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "both": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "mod": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "parts": {
+     "source": "hand",
+     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
+    },
+    "statNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "tableAt": {
+     "source": "hand",
+     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+    },
+    "missing": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "defPh": {
+     "source": "derived",
+     "note": "the phases its \"When targeted\" line (def) is for, from its words; signed off with the def (approvals.json, ability-def / rule-def)"
+    }
+   }
+  },
+  "FACTIONS.detachments.moreRules": {
+   "what": "a detachment's further rule (moreRules), with the columns of its first",
    "columns": {
     "name": {
      "source": "gw",

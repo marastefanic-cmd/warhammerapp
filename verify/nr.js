@@ -18,6 +18,7 @@
 // The normalisation applied before comparing is listed in NORMALISATION below and in the output.
 'use strict';
 const fs = require('fs');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 const path = require('path');
 const vm = require('vm');
 
@@ -768,7 +769,7 @@ function compareArmy(D, A, nr, out, srcFile) {
   for (const r of roster.filter(r => !r.used)) { chk('roster'); fail(null, 'roster line', null, (r.count ? '(' + r.count + ') ' : '') + r.name + ' ' + r.role + ' ' + r.pts, 1); }
 
   // rules that act on the whole army, which New Recruit names in a weapon's "(…)" when it applied them
-  const armyRuleNames = new Set(A.detachments.map(id => F.detachments[id]).filter(Boolean).map(d => d.rule && d.rule.name).concat(F.armyRules.map(r => r.name)).filter(Boolean).map(x => lc(nm(x))));
+  const armyRuleNames = new Set(A.detachments.map(id => F.detachments[id]).filter(Boolean).flatMap(d => detRules_(d).map(r => r.name)).concat(F.armyRules.map(r => r.name)).filter(Boolean).map(x => lc(nm(x))));
   // New Recruit names a detachment rule's effect by the rule ("(Dakka! Dakka! Dakka!)") or by the detachment ("(War Horde)")
   const detRules = new Map(A.detachments.map(id => F.detachments[id]).filter(d => d && d.rule).map(d => [lc(nm(d.name)), lc(nm(d.rule.name))]));
   for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { armyRuleNames, detRules, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
@@ -784,7 +785,7 @@ function ruleKnown(D, A, label) {
   for (const [re, key] of f.aliases || []) if (re.test(clean)) { clean = key; break; }
   const l = lc(clean);
   if (f.armyRules.some(r => lc(r.name) === l)) return true;
-  if (A.detachments.some(id => { const d = f.detachments[id]; return d && d.rule && lc(d.rule.name) === l; })) return true;
+  if (A.detachments.some(id => detRules_(f.detachments[id]).some(r => lc(r.name) === l))) return true;
   if (D.ruleAliases.some(([re]) => re.test(clean))) return true;
   return Object.keys(D.rules).some(k => lc(k) === l);
 }
