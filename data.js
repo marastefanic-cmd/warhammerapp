@@ -6934,7 +6934,7 @@ const DATASHEETS = {
   kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
 },
 'adeptus-custodes/shield-captain':{
-  name:'Shield-Captain', faction:'adeptus-custodes',
+  name:'Shield-Captain', faction:'adeptus-custodes', bsId:'b61c-b815-65c0-b1cc',
   stats:[
     // OC: GW's datasheets give the Shield-Captain OC 2 and the Sentinel Guard OC 3; New Recruit prints 3 and 4, Vexilla's +1 OC ("This
     // unit has +1 OC", on one Sentinel Guard of the attached unit)
@@ -6954,7 +6954,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/sentinel-guard-sodality':{
-  name:'Sentinel Guard Sodality', faction:'adeptus-custodes',
+  name:'Sentinel Guard Sodality', faction:'adeptus-custodes', bsId:'df80-bbdc-bd0a-3428',
   stats:[
     { name:'Sentinel Guard', M:'8"', T:'7', Sv:'2+', W:'5', Ld:'5+', InSv:'4+', base:'40mm' }
   ],
@@ -6971,7 +6971,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/custodian-guard-sodality':{
-  name:'Custodian Guard Sodality', faction:'adeptus-custodes', role:'Battleline',
+  name:'Custodian Guard Sodality', faction:'adeptus-custodes', bsId:'91b3-2e1c-e642-d213', role:'Battleline',
   stats:[
     { name:'Custodian Guard', M:'8"', T:'7', Sv:'2+', W:'5', Ld:'5+', InSv:'4+', base:'40mm' }
   ],
@@ -6989,7 +6989,7 @@ const DATASHEETS = {
   kw:['Battleline','Custodian Guard Sodality','Faction: Adeptus Custodes','Imperium','Infantry','Trusted Sentinel']
 },
 'adeptus-custodes/custodian-wardens':{
-  name:'Custodian Wardens', faction:'adeptus-custodes', role:'Infantry',
+  name:'Custodian Wardens', faction:'adeptus-custodes', bsId:'9610-b148-8433-93b8', role:'Infantry',
   stats:[
     { name:'Custodian Warden', M:'8"', T:'7', Sv:'2+', W:'6', Ld:'5+', InSv:'4+', base:'40mm' }
   ],
@@ -7009,7 +7009,7 @@ const DATASHEETS = {
   kw:['Custodian Wardens','Faction: Adeptus Custodes','Imperium','Infantry','Trusted Sentinel']
 },
 'adeptus-custodes/vertus-praetors':{
-  name:'Vertus Praetors', faction:'adeptus-custodes', role:'Mounted',
+  name:'Vertus Praetors', faction:'adeptus-custodes', bsId:'918b-c9ed-7af7-74df', role:'Mounted',
   stats:[
     { name:'Vertus Praetors', M:'12"', T:'8', Sv:'2+', W:'7', Ld:'5+', OC:'2', InSv:'4+', base:'75×42mm Oval' }
   ],
