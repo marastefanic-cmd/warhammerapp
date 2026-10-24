@@ -6,8 +6,8 @@
       enhancements, detachments, disposition), except the differences listed in INTENDED; the export kept on the
       phone (import.js slim) imports to the same. An export that differs from the New Recruit PDF the app's list
       was made from is listed in EXPORT_DIFFERS with the exact messages the import gives (and fails if it ever
-      imports, or says anything else). An export that matches no list must fail (Adeptus Custodes: no such faction).
-   3. Changed exports fail with the right messages: a unit renamed, a detachment changed, an unknown enhancement,
+      imports, or says anything else). An export that matches no list must fail with NO_LIST's message.
+   3. Changed exports fail with the right messages: a faction the app does not have, a unit renamed, a detachment changed, an unknown enhancement,
       an extra weapon, and more (NEGATIVE).
    4. A list made of units of two lists with the same faction, detachments and config imports from both.
    Exit 0 only when everything holds. */
@@ -102,6 +102,11 @@ const drop = (j, n, k) => { const s = byName(j, n, k); sels(j).splice(sels(j).in
 const add = (j, s, id) => { const c = Object.assign(clone(s), { id }); if(!c.keepAssoc) delete c.associations; sels(j).push(c); j.roster.costs[0].value += cost(c); return c; };
 const L = id => byArmy[id];
 const PL = 'points total 2375 not recognized: over the Strike Force limit of 2000 pts';
+if(L('lite-knights'))
+  neg('a faction the app does not have', 'lite-knights', j => { const F = j.roster.forces[0]; F.catalogueId = '0000-aaaa-bbbb-cccc'; F.catalogueName = 'Imperium - Adeptus Astartes - Ultramarines'; },
+    ['faction Ultramarines not recognized', "detachment Emperor's Chosen not recognized", 'detachment Grav-Assault Force not recognized', 'detachment Might of the Moritoi not recognized',
+     'unit Trajann Valoris not recognized', 'unit Allarus Custodians not recognized', 'unit Prosecutor Squad not recognized', 'unit Witchseeker Squad not recognized',
+     'unit Caladius Annihilator Grav-tank not recognized', 'unit Contemptor-Achillus Dreadnought not recognized', 'unit Contemptor-Galatus Dreadnought not recognized', 'unit Telemon Heavy Dreadnought not recognized']);
 if(L('6-bigs')){
   neg('a unit renamed', '6-bigs', j => { byName(j, 'Knight Errant').name = 'Knight Errant Mk II'; }, ['unit Knight Errant Mk II not recognized']);
   neg('a unit of another datasheet id', '6-bigs', j => { const s = byName(j, 'Knight Errant'); s.entryId = s.entryId.replace(/[^:]+$/, '0000-0000-0000-0000'); }, ['unit Knight Errant not recognized']);
