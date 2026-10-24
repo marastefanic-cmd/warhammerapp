@@ -922,8 +922,7 @@ BASES TO PRINT
 
 20× 25mm
 2× 28.5mm
-1× 50mm
-1× 60mm
+2× 60mm
 4× 100mm
 2× 120×92mm
 
@@ -933,7 +932,7 @@ The Swarmlord
 1× 60mm
 The Swarmlord
 Hive Tyrant · Monstrous Nemesis
-1× 50mm
+1× 60mm
 Hive Tyrant · Warlord · Monstrous Nemesis
 Neurogaunts
 2 units: mark them apart (1, 2)
@@ -2317,7 +2316,7 @@ LD
 OC
 InSv
 Hive Tyrant
-50mm
+60mm
 8"
 10
 2+
