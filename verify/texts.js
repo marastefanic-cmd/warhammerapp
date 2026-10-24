@@ -589,7 +589,8 @@ const FIELDS = ['when', 'target', 'effect', 'restrictions'];
 }
 
 /* ------------------------------------------------------------------ source parsers: detachments */
-const isHead = t => !/[a-z]/.test(t) && /[A-Z]{3}/.test(t) && !/^\d/.test(t) && !/\dCP$/.test(t) && !/[.,:;)\]]$/.test(t);
+// (a heading can end in GW's "(AURA)": the Chaos Daemons' enhancement SLAUGHTERTHIRST (AURA))
+const isHead = t => !/[a-z]/.test(t) && /[A-Z]{3}/.test(t) && !/^\d/.test(t) && !/\dCP$/.test(t) && (!/[.,:;)\]]$/.test(t) || /[A-Z]{3}.* \(AURA\)$/.test(t));
 const SEGHEAD = /^(Detachment Rules?|Enhancements|Stratagems)$/;
 const NOTEHEAD = /^(FAQ|Errata|FAQ \/ Errata)$/;
 function wahaSection(faction, title) {
