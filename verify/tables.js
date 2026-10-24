@@ -89,7 +89,7 @@ function resolveArmies(armies, sheets, order, opts){
           if(opts.trace) opts.trace(a, u, kind, n, ids[at.p], at.j);
           var ds = parts[at.p][kind][at.j], row = put({}, copy(ds)); put(row, r); if(r.over) put(row, r.over);
           // (for --expand: the datasheet's own value of a stat a rule of the list changed, own, so --write gives it back)
-          if(kind === 'stats' && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }
+          if((kind === 'stats' || kind === 'ranged' || kind === 'melee') && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }
           return sorted(row, order[kind] || []);
         });
       });
@@ -260,7 +260,7 @@ function build(R){
     if(k === 'who') return o.kind !== 'abilities' || o.U.multi;
     if(k === 'na') return true;   // why it does nothing in this list
     if(o.kind === 'stats') return k === 'from' || k === 'printed' || k === 'own' || k in from;
-    if(o.kind === 'ranged' || o.kind === 'melee') return ['n', 'from', 'enh'].includes(k) || k in from || (k === 'kw' && Object.keys(from).some(x => !WEAPON_FIELDS.includes(x)));
+    if(o.kind === 'ranged' || o.kind === 'melee') return ['n', 'from', 'enh', 'own'].includes(k) || k in from || (k === 'kw' && Object.keys(from).some(x => !WEAPON_FIELDS.includes(x)));
     return false;
   };
   const conflicts = [];
@@ -306,6 +306,13 @@ function build(R){
     // a keyword the unit's enhancement or upgrade gives by name ("Models in the bearer's unit have the **SOUL FORGE** keyword")
     for(const ab of ownAbilities(u)){
       for(const m of String(ab.text || '').matchAll(/\b(?:have|has|gains?) the \*\*([^*]+)\*\* keyword/gi)){ const k = kwOf(m[1]); if(k && !(why.kw && why.kw[k]) && !native(k)) put('kw', k, ab.name); }
+    }
+    // a keyword the list selected for the unit, as its models line names it ("1× Daemon Prince of Chaos (Khorne)"): the ability of the
+    // datasheet that names the keyword (Daemonic Allegiance), with the selection
+    for(const m of u.models || []) for(const x of (/\(([^()]*)\)$/.exec(m) || [, ''])[1].split(/,\s*/)){
+      const k = kwOf(x); if(!k || (why.kw && why.kw[k])) continue;
+      const ab = (u.abilities || []).find(y => (y.text || '').includes('**' + k.toUpperCase() + '**'));
+      put('kw', k, (ab ? ab.name + ': ' : 'its selection ') + x);
     }
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
     const own = ownAbilities(u);
@@ -356,10 +363,10 @@ function build(R){
       }
       // a stat every list has changed by a rule (the Deathwatch Terminator Sergeant's W 4 from its Storm Shield): the datasheet's own
       // value, from the lists' `own` (from-json.js: GW's datasheet), when they agree
-      if(kind === 'stats') for(const f of [...new Set(R.obs.flatMap(o => Object.keys(o.r.own || {})))]){
+      if(['stats', 'ranged', 'melee'].includes(kind)) for(const f of [...new Set(R.obs.flatMap(o => Object.keys(o.r.own || {})))]){
         if(f in R.ds || R.conflict.has(f)) continue;
         const vs = [...new Set(R.obs.filter(o => o.r.own && f in o.r.own).map(o => o.r.own[f]))];
-        if(vs.length === 1) R.ds[f] = vs[0]; else conflicts.push({ where:s.id + ' · stats · ' + R.key, field:'own.' + f, values:vs.map(v => ({ value:v })) });
+        if(vs.length === 1) R.ds[f] = vs[0]; else conflicts.push({ where:s.id + ' · ' + kind + ' · ' + R.key, field:'own.' + f, values:vs.map(v => ({ value:v })) });
       }
     }
     s.ds = { name:s.name, faction:s.faction };
@@ -643,6 +650,7 @@ function sites(D, armies){
     (f.armyRules || []).forEach((r, i) => rule([fk, 'armyRules', i], f.name + ' army rule · ' + r.name, r));
     for(const [dk, d] of Object.entries(f.detachments || {})){
       if(d.rule) rule([fk, 'detachments', dk, 'rule'], f.name + ' · ' + d.name + ' rule · ' + d.rule.name, d.rule);
+      (d.moreRules || []).forEach((r, i) => rule([fk, 'detachments', dk, 'moreRules', i], f.name + ' · ' + d.name + ' rule · ' + r.name, r));
       (d.stratagems || []).forEach((x, i) => each('FACTIONS', [fk, 'detachments', dk, 'stratagems', i], f.name + ' · ' + d.name + ' · ' + x.name, x, stratText(x)));
     }
   }
@@ -684,7 +692,7 @@ function columnsInData(src){
     add('FACTIONS', f);
     (f.armyRules || []).forEach(r => add('FACTIONS.armyRules', r));
     for(const d of Object.values(f.detachments || {})){
-      add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule);
+      add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule); (d.moreRules || []).forEach(r => add('FACTIONS.detachments.moreRules', r));
       (d.stratagems || []).forEach(x => add('FACTIONS.detachments.stratagems', x)); (d.enhancements || []).forEach(x => add('FACTIONS.detachments.enhancements', x));
     }
   }

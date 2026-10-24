@@ -68,6 +68,12 @@
    "sha256": "98c2b114e4e4b33ea385c7115bb9acba83c32ae4e17f753a3d73ef20c7d45d1f"
   },
   {
+   "id": "pack:chaos-daemons",
+   "label": "GW Faction Pack Chaos Daemons",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.pdf",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -128,6 +134,12 @@
    "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
   },
   {
+   "id": "waha:chaos-daemons",
+   "label": "Wahapedia chaos-daemons (text)",
+   "file": "verify/.cache/waha/chaos-daemons.txt",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -186,6 +198,12 @@
    "label": "Wahapedia ultramarines",
    "file": "verify/.cache/waha/ultramarines.html",
    "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
+  },
+  {
+   "id": "wahahtml:chaos-daemons",
+   "label": "Wahapedia chaos-daemons",
+   "file": "verify/.cache/waha/chaos-daemons.html",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
   },
   {
    "id": "wahahtml:core",
@@ -7041,6 +7059,314 @@
    "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
   },
   {
+   "item": "chaos-daemons / detachment:blood-legion",
+   "field": "name",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/rule",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/rule:Blood Tainted",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Slaughterthirst (Aura)",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Slaughterthirst (Aura)",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Fury’s Cage",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Fury’s Cage",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Brazenmaw",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Brazenmaw",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Gateway Unto Damnation",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Gateway Unto Damnation",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:wrath-undeniable",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (WRATH UNDENIABLE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:wrath-undeniable",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (WRATH UNDENIABLE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:wrath-undeniable",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (WRATH UNDENIABLE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:gore-hungry-onslaught",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (GORE‑HUNGRY ONSLAUGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:gore-hungry-onslaught",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (GORE‑HUNGRY ONSLAUGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:gore-hungry-onslaught",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (GORE‑HUNGRY ONSLAUGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:skulls-beget-blood",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SKULLS BEGET BLOOD)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:skulls-beget-blood",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SKULLS BEGET BLOOD)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:skulls-beget-blood",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SKULLS BEGET BLOOD)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:blood-begets-skulls",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (BLOOD BEGETS SKULLS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:blood-begets-skulls",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (BLOOD BEGETS SKULLS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:blood-begets-skulls",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (BLOOD BEGETS SKULLS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:fools-flight",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (FOOLS’ FLIGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:fools-flight",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (FOOLS’ FLIGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:fools-flight",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (FOOLS’ FLIGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:sheathed-in-brass",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SHEATHED IN BRASS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:sheathed-in-brass",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SHEATHED IN BRASS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:sheathed-in-brass",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SHEATHED IN BRASS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide",
+   "field": "name",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Warptide 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/rule",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Bane-Forged Weapons",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Warptide 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Bane-Forged Weapons",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Soul-Hungry Slaughterers",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Warptide 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Soul-Hungry Slaughterers",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:daemonic-infestation",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (DAEMONIC INFESTATION)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:daemonic-infestation",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (DAEMONIC INFESTATION)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:daemonic-infestation",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (DAEMONIC INFESTATION)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:soulseeing",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (SOULSEEING)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:soulseeing",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (SOULSEEING)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:soulseeing",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (SOULSEEING)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:incorporeal-entities",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (INCORPOREAL ENTITIES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:incorporeal-entities",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (INCORPOREAL ENTITIES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:incorporeal-entities",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (INCORPOREAL ENTITIES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -7517,6 +7843,45 @@
    "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
   },
   {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos",
+   "field": "text",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Army Rules (The Shadow of Chaos)",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within",
+   "doc": "wahahtml:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Chaos Daemons",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within",
+   "doc": "wahahtml:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Chaos Daemons",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES D",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES D",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -7850,6 +8215,41 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Furious Assault (Assault Brethren) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / skulltaker-bloodletters / ability:Bane-Forged Weapons",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bane-Forged Weapons (Warptide) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / bloodthirster / ability:Gateway Unto Damnation",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Gateway Unto Damnation (Blood Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Slaughterthirst (Aura)",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Slaughterthirst (Aura) (Blood Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / bloodmaster-bloodletters / ability:Bane-Forged Weapons",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bane-Forged Weapons (Warptide) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / skullmaster-bloodcrushers / ability:Brazenmaw",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Brazenmaw (Blood Legion) (whose source is recorded under that item)",
    "sha256": null
   },
   {

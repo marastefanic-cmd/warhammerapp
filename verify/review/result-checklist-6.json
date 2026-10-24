@@ -1,0 +1,20 @@
+[
+ {
+  "key": "c50cc858a05f0be7",
+  "where": "screenChecklist",
+  "verdict": "ok",
+  "why": "The code under review is the code in app.html, word for word. The only change from 10498c2 is the CK_EACH_ONCE guard on pb and ckAt inside secs (now de-duplicated with a Set). I rendered 10498c2 in its own worktree, and the checklist screen for all 17 older lists is byte-identical to HEAD's. For nerf-when the screen matches the owner's scope and the rule texts in data.js and Wahapedia (verify/.cache/waha/ultramarines.txt and ds/ultramarines_*.html): Transhuman Strategist is To do now under Start of the battle round. Combat Doctrines is To do now under Command · Your turn, with no Once-per-battle box. DEVASTATOR DOCTRINE is Active now under Shooting · Your turn. ASSAULT and TACTICAL DOCTRINE are left out (a:1, triggered by the unit being selected to advance or fall back). Author of the Codex, Master Tactician and Raise the Banner (\"At the end of your Movement phase\") are To do now under Movement · Your turn. Soul Sight is To do now under Shooting · Your turn. Fearsome Assault (\"At the start of the Fight phase\") is To do now under both Fight · Your turn and Fight · Their turn. Mission Tactics (phase-scoped bonuses with no choice), Death Blow, Assault Mastery, Librarius and Special Move Types are not listed, and no stratagem is listed. The gate's screens and small-phone steps pass."
+ },
+ {
+  "key": "0e295c9eade5da10",
+  "where": "ckAt",
+  "verdict": "ok",
+  "why": "CHECKLIST has 'at' values of exactly six kinds. 'Start of your Command phase' (Combat Doctrines, and after the merge also Martial Ka'tah and Marked Prey) maps to command|your. The other five (Start of the battle round, Start of the first battle round, End of your turn, End of your opponent's turn, End of the battle round) don't match, are passed through unchanged, and all have sections in the order list. Without ckAt, a 'Start of your Command phase' section wouldn't be in the order list and its line would silently disappear, so the change is needed. Martial Ka'tah and Marked Prey already had t command:your, and the Set removes the duplicate, so their output is unchanged (custodes and chaos-knights checklists are byte-identical to 10498c2). The alternation tries 'your' before 'your opponent's', but the anchored regex backtracks, so opponent moments map to opp; 'the', 'each' and 'either player's' map to both turns."
+ },
+ {
+  "key": "9b7e5b606eb636ee",
+  "where": "CK_EACH_ONCE",
+  "verdict": "ok",
+  "why": "Among the army and detachment rules, the regex matches only three. Combat Doctrines is intended: it is no longer a once-per-battle box and stays To do now under Command · Your turn. Kindred Sorcery was already excluded by 'each' and keeps one box per option. Blessings of Khorne says 'once per battle round', which perBattle already rejects. So the older lists don't move: their checklist output, including the Kindred Sorcery boxes in pubstomper, is byte-identical to 10498c2. The guard is only in the checklist's rules loop. The Overview still uses perBattle, and its text in every list is identical to main's accepted snapshot; the only additions are popups the checklist opens. Minor note, no change needed for current data: the regex has no (?! round) and accepts any 'each' earlier in the sentence. A future rule such as 'At the start of each battle round, once per battle, ...' would lose its box. Tightening it to /\\b(?:select|use|activate) each\\b[^.;]*\\bonce per battle\\b(?! round)/i would be safer."
+ }
+]

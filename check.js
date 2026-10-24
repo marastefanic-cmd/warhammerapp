@@ -4,6 +4,7 @@
 // opens nothing, a stratagem id used twice, points that don't add up, a weapon group split in two.
 'use strict';
 const fs = require('fs');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 const path = require('path');
 const vm = require('vm');
 
@@ -25,7 +26,7 @@ function check(file){
     for(const [re, key] of f.aliases || []) if(re.test(clean)){ clean = key; break; }
     const lc = clean.toLowerCase();
     if(f.armyRules.some(r => r.name.toLowerCase() === lc)) return true;
-    if(detachmentsOf(a).some(d => d.rule && d.rule.name.toLowerCase() === lc)) return true;
+    if(detachmentsOf(a).some(d => detRules_(d).some(r => r.name.toLowerCase() === lc))) return true;
     return D.ruleAliases.some(([re]) => re.test(clean)) || !!D.rules[clean];
   }
   const timing = (x, where) => {
@@ -57,7 +58,7 @@ function check(file){
     for(const r of f.armyRules || [])timing(r, 'army rule ' + r.name);
     for(const [dk, d] of Object.entries(f.detachments || {})){
       for(const k of ['name','enhancements','stratagems']) if(!d[k]) P('detachment', dk, 'missing', k);
-      if(d.rule) timing(d.rule, 'detachment rule ' + d.rule.name);
+      for(const r of detRules_(d)) timing(r, 'detachment rule ' + r.name);
       (d.stratagems || []).forEach(s => strat(s, dk));
     }
   }

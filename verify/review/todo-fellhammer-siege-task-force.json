@@ -1,101 +1,113 @@
 [
  {
   "army": "fellhammer-siege-task-force",
-  "kind": "unit-aura",
-  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Demagogue",
   "judgement": {
-   "kind": "ranged",
-   "needs": {
-    "all": [
-     "Faction: Heretic Astartes"
-    ]
-   },
-   "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start",
-   "note": "re-roll wound rolls of 1",
-   "from": "Spirit Thief",
-   "vs": {
-    "any": [
-     "Vehicle"
-    ]
-   },
-   "notSelf": true
+   "tag": "Once per battle"
   },
   "source": {
-   "ability": "Spirit Thief",
-   "text": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1."
+   "ability": "Demagogue",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12\" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked."
   },
-  "key": "3efff1d8594ccecc"
+  "key": "f14170abb5ad85cf"
  },
  {
   "army": "fellhammer-siege-task-force",
-  "kind": "unit-aura",
-  "where": "fellhammer-siege-task-force · Warpsmith",
-  "judgement": {
-   "kind": "all",
-   "needs": {
-    "all": [
-     "Faction: Heretic Astartes",
-     "Vehicle"
-    ]
-   },
-   "when": "Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3\")",
-   "note": "that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase",
-   "from": "Master of Mechanisms",
-   "calc": {
-    "hit": 1
-   },
-   "oneModel": true,
-   "lasts": "round"
-  },
-  "source": {
-   "ability": "Master of Mechanisms",
-   "text": "In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3\" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase."
-  },
-  "key": "10ac82460327eacd"
- },
- {
-  "army": "fellhammer-siege-task-force",
-  "kind": "ability-timing",
-  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "kind": "rule-ph",
+  "where": "chaos-space-marines army rule · Dark Pacts",
   "judgement": {
    "ph": [
-    "shooting"
-   ],
-   "turn": "your"
+    "movement",
+    "shooting",
+    "fight"
+   ]
   },
   "source": {
-   "ability": "Warp Rift Firepower",
-   "text": "In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**."
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
   },
-  "key": "822f7cc159c91760"
+  "key": "3b8cd5020b450005"
  },
  {
   "army": "fellhammer-siege-task-force",
-  "kind": "ability-tag",
-  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "kind": "rule-turn",
+  "where": "chaos-space-marines army rule · Dark Pacts",
   "judgement": {
-   "tag": "Once per battle, per unit"
+   "turn": "either"
   },
   "source": {
-   "ability": "Warp Rift Firepower",
-   "text": "In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**."
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
   },
-  "key": "c5356644338833da"
+  "key": "22c6bf17856662ed"
  },
  {
   "army": "fellhammer-siege-task-force",
-  "kind": "unit-footnote",
-  "where": "fellhammer-siege-task-force · Obliterators",
+  "kind": "rule-turns",
+  "where": "chaos-space-marines army rule · Dark Pacts",
   "judgement": {
-   "kind": "ranged",
-   "when": "Once per battle, your Shooting phase, when selected to shoot",
-   "note": "[INDIRECT FIRE]",
-   "from": "Warp Rift Firepower"
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
   },
   "source": {
-   "ability": "Warp Rift Firepower",
-   "text": "In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**."
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
   },
-  "key": "cd338dd29bccd0c3"
+  "key": "f10d931971814222"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-calcMods",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Dark Pacts",
+     "when": "A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase",
+     "note": "[LETHAL HITS] or [SUSTAINED HITS 1]",
+     "pick": [
+      {
+       "name": "[LETHAL HITS]",
+       "note": "[LETHAL HITS]"
+      },
+      {
+       "name": "[SUSTAINED HITS 1]",
+       "note": "[SUSTAINED HITS 1]"
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "note": "[LETHAL HITS], [SUSTAINED HITS 1]"
+      }
+     ]
+    }
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "802703d0e469d2c9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-both",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "both": [
+    {
+     "strat": "touch-of-the-arkifane"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "1e53958ebb9107bc"
  }
 ]

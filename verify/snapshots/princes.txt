@@ -6,6 +6,7 @@ Berzerker Warband · Vessels of Wrath
 Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
+Phase checklist
 Bases & proxies
 54
 Units
@@ -22,6 +23,99 @@ Rules
 Damage calculator
 
 New Recruit, exported 20 Oct 2026
+
+######## checklist · PRINCES Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+2 to do
+
+TO DO NOW
+
+Blessings of Khorne · World Eaters army rule
+Icon of Khorne · Khârn the Betrayer, Lord on Juggernaut
+Command · Your turn
+2 to do · 1 once per battle
+
+TO DO NOW
+
+Rage Eternal · Slaughterbound
+Objective Ravaged · Jakhals
+
+ONCE PER BATTLE
+
+Archslaughterer · Lord on Juggernaut per army
+Command · Their turn
+nothing
+
+Nothing in this list.
+
+Movement · Your turn
+nothing
+
+Nothing in this list.
+
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+nothing
+
+Nothing in this list.
+
+Shooting · Their turn
+nothing
+
+Nothing in this list.
+
+Charge · Your turn
+1 to do · 1 active
+
+TO DO NOW
+
+The Betrayer · Khârn the Betrayer
+
+ACTIVE NOW
+
+Unbridled Bloodlust · option of Blessings of Khorne
+Charge · Their turn
+1 active
+
+ACTIVE NOW
+
+Unbridled Bloodlust · option of Blessings of Khorne
+Fight · Your turn
+5 active · 1 once per battle
+
+ACTIVE NOW
+
+Rage-fuelled Invigoration · option of Blessings of Khorne
+Total Carnage · option of Blessings of Khorne
+Martial Excellence · option of Blessings of Khorne
+Warp Blades · option of Blessings of Khorne
+Decapitating Strikes · option of Blessings of Khorne
+
+ONCE PER BATTLE
+
+Possessed Lord · Slaughterbound + Exalted Eightbound
+Fight · Their turn
+5 active · 1 once per battle
+
+ACTIVE NOW
+
+Rage-fuelled Invigoration · option of Blessings of Khorne
+Total Carnage · option of Blessings of Khorne
+Martial Excellence · option of Blessings of Khorne
+Warp Blades · option of Blessings of Khorne
+Decapitating Strikes · option of Blessings of Khorne
+
+ONCE PER BATTLE
+
+Possessed Lord · Slaughterbound + Exalted Eightbound
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · PRINCES Overview
 YOUR LIST
@@ -3801,6 +3895,17 @@ UNITDaemon Prince · Helm of Brazen Ire
 
 Ask about this ability
 
+######## popup ability:princes|Icon of Khorne|If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost. · PRINCES Princes
+ABILITY · START OF THE BATTLE ROUND
+
+Icon of Khorne
+
+If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
+
+UNITKhârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer
+
+Ask about this ability
+
 ######## popup ability:princes|Legendary Killer|While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. · PRINCES Princes
 ABILITY · FIGHT · EITHER TURN
 
@@ -3845,12 +3950,34 @@ UNITKhârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut + Khorne Berzerk
 
 Ask about this ability
 
+######## popup ability:princes|Objective Ravaged|At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. · PRINCES Princes
+ABILITY · COMMAND · YOUR TURN
+
+Objective Ravaged
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+UNITJakhals
+
+Ask about this ability
+
 ######## popup ability:princes|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability. · PRINCES Princes
 ABILITY · ONCE PER BATTLE · FIGHT · EITHER TURN
 
 Possessed Lord
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+
+UNITSlaughterbound + Exalted Eightbound · Battle-lust
+
+Ask about this ability
+
+######## popup ability:princes|Rage Eternal|While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit. · PRINCES Princes
+ABILITY · COMMAND · YOUR TURN
+
+Rage Eternal
+
+While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
 
 UNITSlaughterbound + Exalted Eightbound · Battle-lust
 
@@ -3864,6 +3991,20 @@ Rend and Tear
 Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
 
 UNITSlaughterbound + Exalted Eightbound · Battle-lust
+
+Ask about this ability
+
+######## popup ability:princes|The Betrayer|At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**:
+- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**. · PRINCES Princes
+ABILITY · CHARGE · YOUR TURN
+
+The Betrayer
+
+At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
+
+If that leadership roll is failed, one bodyguard model in this unit is destroyed.
+
+UNITKhârn the Betrayer + Khorne Berzerkers
 
 Ask about this ability
 

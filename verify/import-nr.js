@@ -27,6 +27,7 @@
                                                                      (default verify/out/import-<armyId>.js) */
 'use strict';
 const fs = require('fs'), path = require('path');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 const NR = require('./nr');
 const { nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, cellV, appText, textEq } = NR;
 const ROOT = path.resolve(__dirname, '..');
@@ -274,13 +275,13 @@ for (const nu of nrUnits) {
     if (prev.partialRules) { const keep = Object.entries(prev.partialRules).filter(([k]) => u.rules.includes(k)); if (keep.length) u.partialRules = Object.fromEntries(keep); }
     const names = new Set(u.abilities.map(a => a.name));
     for (const k of ['mods', 'aura']) {
-      const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => ((F.detachments[id] || {}).rule || {}).name === m.from));
+      const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => detRules_(F.detachments[id]).some(r => r.name === m.from)));
       (prev[k] || []).filter(m => !keep.includes(m)).forEach(m => note(tag0, k + ' from ' + m.from + ' dropped: the unit no longer has it'));
       if (keep.length) u[k] = keep;
     }
   }
   // a unit new to this army: what another list's copy of the datasheet has, where it is the same
-  const armyNames = new Set((F ? F.armyRules.map(r => r.name) : []).concat(detIds.map(id => ((F && F.detachments[id] || {}).rule || {}).name).filter(Boolean)));
+  const armyNames = new Set((F ? F.armyRules.map(r => r.name) : []).concat(detIds.flatMap(id => detRules_(F && F.detachments[id]).map(r => r.name))));
   if (!prev) {
     // the whole unit's footnotes and auras: only from a unit of the same shape (same characters and bodyguard)
     const shape = x => [x.name].concat((x.also || []).map(c => c.name), x.leads ? [x.leads] : []).map(nm).join('+');
@@ -344,7 +345,7 @@ for (const u of units) {
 if (F) for (const g of nr.glossary) {
   let clean = NR.q(g).replace(/^\[|\]$/g, '').trim();
   for (const [re, key] of F.aliases || []) if (re.test(clean)) { clean = key; break; }
-  const known = F.armyRules.some(r => lc(r.name) === lc(clean)) || detIds.some(id => lc(((F.detachments[id] || {}).rule || {}).name || '') === lc(clean)) ||
+  const known = F.armyRules.some(r => lc(r.name) === lc(clean)) || detIds.some(id => detRules_(F.detachments[id]).some(r => lc(r.name || '') === lc(clean))) ||
     D.ruleAliases.some(([re]) => re.test(clean)) || Object.keys(D.rules).some(k => lc(k) === lc(clean));
   if (!known) note(null, 'rule ' + g + ' (New Recruit’s glossary) is not in data.js RULES: add GW’s wording');
 }
