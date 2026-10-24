@@ -14,6 +14,8 @@
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
 //   choice      verify/choice.js: every weapon with several profiles is "pick one" or "all fire" as BSData and Wahapedia mark it
 //   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
+//   bases       verify/bases.js: every model's base is GW's, as GW's base size guide (Event Companion) prints it; a row the
+//               guide has under another name, or not at all, declared in verify/deviations-bases.json
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
 //   calc        verify/calc-test.js: the damage calculator (calc.js) gives the averages worked out by hand from the Core Rules
@@ -60,6 +62,7 @@ step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);
 step('bsdata', ['verify/bsdata.js']);
 step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against BSData
+step('bases', ['verify/bases.js']);   // every base size against GW's base size guide
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases

@@ -7,8 +7,14 @@
      G.lookup('Adeptus Custodes', ['Caladius Annihilator Grav-tank'])
         -> { base:'170×109mm Oval', printed:'170x109mm Oval Base', entry:'Caladius Grav-tank', line:2625, file, how } | null
 
-   A unit is found by the first of its names (datasheet name, then model names) that matches an entry:
-     exact          the same name (quotes, dashes and case alike)
+   A unit is found by the first of its names (datasheet name, then model names) that matches an entry, in this order:
+     model          a row for some models of the unit ("Neurogaunts: Nodebeasts"): the unit's name as for plural/squad, and
+                    a model name the same, the same as for plural/squad, or all of its words in the row's name
+                    ("Jakhals: Dishonoured" for "Dishonoured w/ paired manglers", "Nodebeasts" for "Neurogaunt Nodebeast")
+     exact          the same name (quotes, dashes and case alike), a model's own name first ("Sir Hekhtur" before
+                    "Canis Rex", the datasheet he is on)
+     model of       a model's own name, in the one row of another unit that names it ("Dark Apostle: Dark Disciple" for the
+                    Dark Disciples of an attached unit, "Gretchin: Runtherd" for the Runtherd)
      plural/squad   the same once a trailing "s" and the word "Squad" are dropped ("Prosecutor Squad" = "Prosecutors")
      words          every word of the entry is a word of the name, and no other entry of the faction does that with
                     more words ("Caladius Grav-tank" in "Caladius Annihilator Grav-tank")
@@ -63,14 +69,23 @@ function lookup(faction, names, unit) {
   for (const f of facs) { const key = Object.keys(G.factions).find(k => norm(k) === norm(f)); if (key) rows.push(...G.factions[key]); }
   if (!rows.length) return null;
   const hit = (e, how, n) => Object.assign({}, e, { entry: e.name, file: G.file, how, for: n, line: e.first || e.line });
-  if (unit) for (const n of names.filter(Boolean)) {
-    const e = rows.find(r => r.models && norm(r.models.unit) === norm(unit) && r.models.models.some(x => norm(x) === norm(n)));
+  const all = names.filter(Boolean), own = unit ? all.filter(n => norm(n) !== norm(unit)) : all;
+  // a model of a row for some models: the same, the same as for plural/squad, or all of its words in the name
+  const wset = n => new Set(words(n).map(w => w.replace(/s$/, '')));
+  const modelIs = [(x, n) => norm(x) === norm(n), (x, n) => loose(x) === loose(n), (x, n) => { const nw = wset(n); return words(x).every(w => nw.has(w.replace(/s$/, ''))); }];
+  if (unit) for (const is of modelIs) for (const n of all) {
+    const e = rows.find(r => r.models && loose(r.models.unit) === loose(unit) && r.models.models.some(x => is(x, n)));
     if (e) return hit(e, 'model', n);
   }
-  for (const n of names.filter(Boolean)) {
+  for (const n of own) {
     const e = rows.find(r => norm(r.name) === norm(n)); if (e) return hit(e, 'exact', n);
   }
-  for (const n of names.filter(Boolean)) {
+  const modelOf = n => { const ok = rows.filter(r => r.models && r.models.models.some(x => norm(x) === norm(n))); return ok.length === 1 ? hit(ok[0], 'model of ' + ok[0].models.unit, n) : null; };
+  for (const n of own) { const e = modelOf(n); if (e) return e; }
+  for (const n of all) {
+    const e = rows.find(r => norm(r.name) === norm(n)); if (e) return hit(e, 'exact', n);
+  }
+  for (const n of all) {
     const e = rows.find(r => loose(r.name) === loose(n)); if (e) return hit(e, 'plural/squad', n);
   }
   for (const n of names.filter(Boolean)) {
@@ -78,6 +93,7 @@ function lookup(faction, names, unit) {
     const ok = rows.filter(r => !r.models && words(r.name).every(w => nw.has(w.replace(/s$/, '')))).sort((a, b) => words(b.name).length - words(a.name).length);
     if (ok.length && (ok.length === 1 || words(ok[0].name).length > words(ok[1].name).length) && words(ok[0].name).length >= 2) return hit(ok[0], 'words', n);
   }
+  for (const n of all) { const e = modelOf(n); if (e) return e; }
   return null;
 }
 

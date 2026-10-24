@@ -1627,5 +1627,335 @@
   "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/dread-host.txt line 275.",
   "by": "hand (Claude)"
+ },
+ {
+  "army": "shooty",
+  "unit": "wazdakka",
+  "field": "stats.base",
+  "app": "Wazdakka Gutsmek: 120mm",
+  "source": "Wazdakka Gutsmek: 120x92mm",
+  "where": "Wazdakka Gutsmek",
+  "reason": "GW’s base size guide gives Wazdakka Gutsmek a 120mm base; BSData (Wazdakka Gutsmek) gives 120x92mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3539 (\"Wazdakka Gutsmek  120mm\"); verify/.cache/bsdata/Orks.json line 33403 (Wazdakka Gutsmek, Base 120x92mm)."
+ },
+ {
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "stats.base",
+  "app": "Warboss: 40mm",
+  "source": "Warboss: 50mm",
+  "where": "Warboss",
+  "reason": "GW’s base size guide gives Warboss a 40mm base; BSData (Warboss) gives 50mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3535 (\"Warboss  40mm\"); verify/.cache/bsdata/Orks.json line 21535 (Warboss, Base 50mm)."
+ },
+ {
+  "army": "shooty",
+  "unit": "deffkoptas",
+  "field": "stats.base",
+  "app": "Deffkoptas ×3: 75×42mm Oval",
+  "source": "Deffkoptas: 75x42mm",
+  "where": "Deffkoptas › Deffkopta",
+  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; BSData (Deffkoptas) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3498 (\"Deffkoptas  75x42mm Oval Base\"); verify/.cache/bsdata/Orks.json line 427 (Deffkoptas, Base 75x42mm)."
+ },
+ {
+  "army": "melee",
+  "unit": "deffkoptas",
+  "field": "stats.base",
+  "app": "Deffkoptas ×3: 75×42mm Oval",
+  "source": "Deffkoptas: 75x42mm",
+  "where": "Deffkoptas › Deffkopta",
+  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; BSData (Deffkoptas) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3498 (\"Deffkoptas  75x42mm Oval Base\"); verify/.cache/bsdata/Orks.json line 427 (Deffkoptas, Base 75x42mm)."
+ },
+ {
+  "army": "melee",
+  "unit": "squighog-boyz",
+  "field": "stats.base",
+  "app": "Nob on Smasha Squig: 90×52.5mm Oval",
+  "source": "Nob on Smasha Squig: 90x52.5mm",
+  "where": "Squighog Boyz › Nob on Smasha Squig",
+  "reason": "GW’s base size guide prints the base as an oval, \"90x52.5mm Oval Base\"; BSData (Nob on Smasha Squig) gives 90x52.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3528 (\"Squighog Boyz: Nob on Smasha Squig  90x52.5mm Oval Base\"); verify/.cache/bsdata/Orks.json line 18394 (Nob on Smasha Squig, Base 90x52.5mm)."
+ },
+ {
+  "army": "melee",
+  "unit": "squighog-boyz",
+  "field": "stats.base",
+  "app": "Squighog Boyz ×3: 75×42mm Oval",
+  "source": "Squighog Boyz: 75x42mm",
+  "where": "Squighog Boyz › Squighog Boy",
+  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; BSData (Squighog Boyz) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3527 (\"Squighog Boyz  75x42mm Oval Base\"); verify/.cache/bsdata/Orks.json line 18483 (Squighog Boyz, Base 75x42mm)."
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "stats.base",
+  "app": "Lord on Juggernaut: 90×52.5mm Oval",
+  "source": "Lord on Juggernaut: 90x52.5mm",
+  "where": "Lord on Juggernaut",
+  "reason": "GW’s base size guide prints the base as an oval, \"90x52.5mm Oval Base\"; BSData (Lord on Juggernaut) gives 90x52.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3895 (\"Lord on Juggernaut  90x52.5mm Oval Base\"); verify/.cache/bsdata/Chaos - World Eaters.json line 7156 (Lord on Juggernaut, Base 90x52.5mm)."
+ },
+ {
+  "army": "princes",
+  "unit": "forgefiend",
+  "field": "stats.base",
+  "app": "Forgefiend: 120×92mm Oval",
+  "source": "Forgefiend: 120x92mm",
+  "where": "Forgefiend",
+  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; BSData (Forgefiend) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3885 (\"Forgefiend  120x92mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Space Marines.json line 36341 (Forgefiend, Base 120x92mm)."
+ },
+ {
+  "army": "standard",
+  "unit": "lord-on-juggernaut",
+  "field": "stats.base",
+  "app": "Lord on Juggernaut: 90×52.5mm Oval",
+  "source": "Lord on Juggernaut: 90x52.5mm",
+  "where": "Lord on Juggernaut",
+  "reason": "GW’s base size guide prints the base as an oval, \"90x52.5mm Oval Base\"; BSData (Lord on Juggernaut) gives 90x52.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3895 (\"Lord on Juggernaut  90x52.5mm Oval Base\"); verify/.cache/bsdata/Chaos - World Eaters.json line 7156 (Lord on Juggernaut, Base 90x52.5mm)."
+ },
+ {
+  "army": "standard",
+  "unit": "forgefiend",
+  "field": "stats.base",
+  "app": "Forgefiend: 120×92mm Oval",
+  "source": "Forgefiend: 120x92mm",
+  "where": "Forgefiend",
+  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; BSData (Forgefiend) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3885 (\"Forgefiend  120x92mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Space Marines.json line 36341 (Forgefiend, Base 120x92mm)."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "tyrannofex",
+  "field": "stats.base",
+  "app": "Tyrannofex: 120×92mm Oval",
+  "source": "Tyrannofex: 120x92mm",
+  "where": "Tyrannofex",
+  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; BSData (Tyrannofex) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3857 (\"Tyrannofex  120x92mm Oval Base\"); verify/.cache/bsdata/Tyranids.json line 10824 (Tyrannofex, Base 120x92mm)."
+ },
+ {
+  "army": "6-bigs",
+  "unit": "knight-destrier",
+  "field": "stats.base",
+  "app": "Knight Destrier: 150×95mm Oval",
+  "source": "Knight Destrier: 150x95mm",
+  "where": "Knight Destrier",
+  "reason": "GW’s base size guide prints the base as an oval, \"150x95mm Oval Base\"; BSData (Knight Destrier) gives 150x95mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3352 (\"Knight Destrier  150x95mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 11862 (Knight Destrier, Base 150x95mm)."
+ },
+ {
+  "army": "6-bigs",
+  "unit": "knight-errant",
+  "field": "stats.base",
+  "app": "Knight Errant: 170×109mm Oval",
+  "source": "Knight Errant: 170x109mm",
+  "where": "Knight Errant",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Errant) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3353 (\"Knight Errant  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 2404 (Knight Errant, Base 170x109mm)."
+ },
+ {
+  "army": "6-bigs",
+  "unit": "knight-paladin",
+  "field": "stats.base",
+  "app": "Knight Paladin: 170×109mm Oval",
+  "source": "Knight Paladin: 170x109mm",
+  "where": "Knight Paladin",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Paladin) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3355 (\"Knight Paladin  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 1971 (Knight Paladin, Base 170x109mm)."
+ },
+ {
+  "army": "6-bigs",
+  "unit": "knight-warden",
+  "field": "stats.base",
+  "app": "Knight Warden: 170×109mm Oval",
+  "source": "Knight Warden: 170x109mm",
+  "where": "Knight Warden",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Warden) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3358 (\"Knight Warden  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 3221 (Knight Warden, Base 170x109mm)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "canis-rex",
+  "field": "stats.base",
+  "app": "Canis Rex: 170×109mm Oval",
+  "source": "Canis Rex: 170x109mm",
+  "where": "Canis Rex › Canis Rex",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Canis Rex) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3347 (\"Canis Rex  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 288 (Canis Rex, Base 170x109mm)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "cerastus-knight-atrapos",
+  "field": "stats.base",
+  "app": "Cerastus Knight Atrapos: 170×109mm Oval",
+  "source": "Cerastus Knight Atrapos: 170x109mm",
+  "where": "Cerastus Knight Atrapos",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Cerastus Knight Atrapos) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3364 (\"Cerastus Knight Atrapos  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 8533 (Cerastus Knight Atrapos, Base 170x109mm)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "cerastus-knight-lancer",
+  "field": "stats.base",
+  "app": "Cerastus Knight Lancer: 170×109mm Oval",
+  "source": "Cerastus Knight Lancer: 170x109mm",
+  "where": "Cerastus Knight Lancer",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Cerastus Knight Lancer) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3366 (\"Cerastus Knight Lancer  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 7081 (Cerastus Knight Lancer, Base 170x109mm)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-crusader",
+  "field": "stats.base",
+  "app": "Knight Crusader: 170×109mm Oval",
+  "source": "Knight Crusader: 170x109mm",
+  "where": "Knight Crusader",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Crusader) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3350 (\"Knight Crusader  170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 3605 (Knight Crusader, Base 170x109mm)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-destrier",
+  "field": "stats.base",
+  "app": "Knight Destrier: 150×95mm Oval",
+  "source": "Knight Destrier: 150x95mm",
+  "where": "Knight Destrier",
+  "reason": "GW’s base size guide prints the base as an oval, \"150x95mm Oval Base\"; BSData (Knight Destrier) gives 150x95mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3352 (\"Knight Destrier  150x95mm Oval Base\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 11862 (Knight Destrier, Base 150x95mm)."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "forgefiend",
+  "field": "stats.base",
+  "app": "Forgefiend: 120×92mm Oval",
+  "source": "Forgefiend: 120x92mm",
+  "where": "Forgefiend",
+  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; BSData (Forgefiend) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3885 (\"Forgefiend  120x92mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Space Marines.json line 36341 (Forgefiend, Base 120x92mm)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "belisarius-cawl",
+  "field": "stats.base",
+  "app": "Belisarius Cawl: 105×70mm Oval",
+  "source": "Belisarius Cawl: 105x70mm",
+  "where": "Belisarius Cawl",
+  "reason": "GW’s base size guide prints the base as an oval, \"105x70mm Oval Base\"; BSData (Belisarius Cawl) gives 105x70mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2645 (\"Belisarius Cawl  105x70mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Mechanicus.json line 1792 (Belisarius Cawl, Base 105x70mm)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "ironstrider-ballistarii",
+  "field": "stats.base",
+  "app": "Ironstrider Ballistarii ×3: 105×70mm Oval",
+  "source": "Ironstrider Ballistarii: 105x70mm",
+  "where": "Ironstrider Ballistarii › Ironstrider Ballistarius (Twin cognis lascannon)",
+  "reason": "GW’s base size guide prints the base as an oval, \"105x70mm Oval Base\"; BSData (Ironstrider Ballistarii) gives 105x70mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2651 (\"Ironstrider Ballistarii  105x70mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Mechanicus.json line 528 (Ironstrider Ballistarii, Base 105x70mm)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "ironstrider-ballistarii-2",
+  "field": "stats.base",
+  "app": "Ironstrider Ballistarii ×3: 105×70mm Oval",
+  "source": "Ironstrider Ballistarii: 105x70mm",
+  "where": "Ironstrider Ballistarii › Ironstrider Ballistarius (Twin cognis autocannon)",
+  "reason": "GW’s base size guide prints the base as an oval, \"105x70mm Oval Base\"; BSData (Ironstrider Ballistarii) gives 105x70mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2651 (\"Ironstrider Ballistarii  105x70mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Mechanicus.json line 528 (Ironstrider Ballistarii, Base 105x70mm)."
+ },
+ {
+  "army": "defilers-and-friends",
+  "unit": "maulerfiend",
+  "field": "stats.base",
+  "app": "Maulerfiend: 120×92mm Oval",
+  "source": "Maulerfiend: 120x92mm",
+  "where": "Maulerfiend",
+  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; BSData (Maulerfiend) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3219 (\"Maulerfiend  120x92mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Space Marines.json line 38366 (Maulerfiend, Base 120x92mm)."
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "chaos-cerastus-knight-atrapos",
+  "field": "stats.base",
+  "app": "Chaos Cerastus Knight Atrapos: 170×109mm Oval",
+  "source": "Chaos Cerastus Knight Atrapos: 170x109mm",
+  "where": "Chaos Cerastus Knight Atrapos",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Chaos Cerastus Knight Atrapos) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3001 (\"Chaos Cerastus Knight Atrapos  170x109mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Knights Library.json line 11198 (Chaos Cerastus Knight Atrapos, Base 170x109mm)."
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "chaos-cerastus-knight-lancer",
+  "field": "stats.base",
+  "app": "Chaos Cerastus Knight Lancer: 170×109mm Oval",
+  "source": "Chaos Cerastus Knight Lancer: 170x109mm",
+  "where": "Chaos Cerastus Knight Lancer",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Chaos Cerastus Knight Lancer) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3003 (\"Chaos Cerastus Knight Lancer  170x109mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Knights Library.json line 9711 (Chaos Cerastus Knight Lancer, Base 170x109mm)."
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "knight-despoiler",
+  "field": "stats.base",
+  "app": "Knight Despoiler: 170×109mm Oval",
+  "source": "Knight Despoiler: 170x109mm",
+  "where": "Knight Despoiler",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Despoiler) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2988 (\"Knight Despoiler  170x109mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Knights Library.json line 3898 (Knight Despoiler, Base 170x109mm)."
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "knight-ruinator-fleshmetal-fusion",
+  "field": "stats.base",
+  "app": "Knight Ruinator: 170×109mm Oval",
+  "source": "Knight Ruinator: 170x109mm",
+  "where": "Knight Ruinator",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Ruinator) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2990 (\"Knight Ruinator  170x109mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Knights Library.json line 13745 (Knight Ruinator, Base 170x109mm)."
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "knight-ruinator",
+  "field": "stats.base",
+  "app": "Knight Ruinator: 170×109mm Oval",
+  "source": "Knight Ruinator: 170x109mm",
+  "where": "Knight Ruinator",
+  "reason": "GW’s base size guide prints the base as an oval, \"170x109mm Oval Base\"; BSData (Knight Ruinator) gives 170x109mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2990 (\"Knight Ruinator  170x109mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Knights Library.json line 13745 (Knight Ruinator, Base 170x109mm)."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "bloodthirster",
+  "field": "stats.base",
+  "app": "Bloodthirster: 120×92mm Oval",
+  "source": "Bloodthirster: 120x92mm",
+  "where": "Bloodthirster",
+  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; BSData (Bloodthirster) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3903 (\"Bloodthirster  120x92mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Daemons Library.json line 2120 (Bloodthirster, Base 120x92mm)."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "stats.base",
+  "app": "Lord on Juggernaut: 90×52.5mm Oval",
+  "source": "Lord on Juggernaut: 90x52.5mm",
+  "where": "Lord on Juggernaut",
+  "reason": "GW’s base size guide prints the base as an oval, \"90x52.5mm Oval Base\"; BSData (Lord on Juggernaut) gives 90x52.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3895 (\"Lord on Juggernaut  90x52.5mm Oval Base\"); verify/.cache/bsdata/Chaos - World Eaters.json line 7156 (Lord on Juggernaut, Base 90x52.5mm)."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "flesh-hounds",
+  "field": "stats.base",
+  "app": "Flesh Hounds: 60×35.5mm Oval",
+  "source": "Flesh Hounds: 60x35.5mm",
+  "where": "Flesh Hounds",
+  "reason": "GW’s base size guide prints the base as an oval, \"60x35.5mm Oval Base\"; BSData (Flesh Hounds) gives 60x35.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3904 (\"Flesh Hounds  60x35.5mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Daemons Library.json line 5571 (Flesh Hounds, Base 60x35.5mm)."
  }
 ]
