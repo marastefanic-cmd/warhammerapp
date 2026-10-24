@@ -17,7 +17,7 @@ Ranged weapons
 Melee weapons
 10
 Abilities
-15
+14
 Rules
 Damage calculator
 
@@ -679,11 +679,6 @@ This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
 Re-roll one hit roll.
 Re-roll one wound roll.
 Re-roll one damage roll.
-Flare Shields
-Already in InSv
-
-This unit has a 4+ InSv against ranged attacks.
-
 Contemptor-Achillus Dreadnought
 Unyielding Ancient
 
@@ -2804,11 +2799,6 @@ This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
 Re-roll one hit roll.
 Re-roll one wound roll.
 Re-roll one damage roll.
-Flare Shields
-Already in InSv
-
-This unit has a 4+ InSv against ranged attacks.
-
 Rules
 Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 5, Deep Strike, Magna Imperator, Flare Shields
 Stratagems
@@ -2822,6 +2812,7 @@ MIGHT OF THE MORITOI Honoured Interred (its aura: within 6" of the ADEPTUS CUSTO
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffensive, Command Re-roll
 
 Keywords
+CALADIUS
 CALADIUS ANNIHILATOR GRAV-TANK
 FACTION: ADEPTUS CUSTODES
 FLY
@@ -3362,9 +3353,9 @@ INV 5+, 4+* · GRANTED BY
 
 Flare Shields
 
-datasheet ability
+Grav-Assault Force detachment rule
 
-This unit has a 4+ InSv against ranged attacks.
+Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.
 
 Already in the value shown (as New Recruit and BSData list it).
 
