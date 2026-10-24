@@ -66,6 +66,14 @@ Cohort Cybernetica · Eradication Cohort
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
+CHAOS DAEMONS
+1
+The Exiled Legion
+1995 pts
+Blood Legion · Warptide
+PURGE THE FOE
+, CHOSEN
+RECONNAISSANCE
 CHAOS KNIGHTS
 2
 Infernal Lance
