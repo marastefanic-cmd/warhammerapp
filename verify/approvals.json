@@ -1679,6 +1679,12 @@
   "at": "2026-10-21",
   "why": "NR, Wahapedia and BSData: W 11, and “While this model has 1-4 wounds remaining…”."
  },
+ "1e53958ebb9107bc": {
+  "verdict": "ok",
+  "by": "review:fellhammer-3",
+  "at": "2026-10-24",
+  "why": "Touch of the Arkifane (data.js = GW Faction Pack p8 = Wahapedia): “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” It is the only rule in this list’s detachments that lets the player select both. Ruination’s Bounty gives [LETHAL HITS] and [SUSTAINED HITS 1] on its own terms and has its own mod, so it rightly stays out. The FAQ lines name no enabler."
+ },
  "1e75c9b64778131a": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -1954,6 +1960,12 @@
   "by": "review:pubstomper",
   "at": "2026-10-23",
   "why": "NR \"Incandeum - Exalted Sorcerer\"; \"EXALTED SORCERER model only … the bearer\" = the Exalted Sorcerer. Model lines match NR."
+ },
+ "22c6bf17856662ed": {
+  "verdict": "ok",
+  "by": "review:fellhammer-3",
+  "at": "2026-10-24",
+  "why": "The default turn is “either” because the Fight phase is in both turns (selected to fight). The turns override covers Movement and Shooting. The full text, FAQ lines included, names no other turn."
  },
  "231379af293895c5": {
   "verdict": "ok",
@@ -3268,6 +3280,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "On the Rendmaster’s own weapons this is GW’s effect (S, AP and D improved by 1), its timing (Fight phase, until the end of the phase) and its target (the selected unit). The Rendmaster is itself a friendly KHORNE LEGIONES DAEMONICA unit. Blood Throne is not tagged (Aura) (GW and Wahapedia: “Blood Throne:”), so under the owner’s rule it cannot be an aura entry. Whether it should also appear on the other Khorne units is the owner’s decision #1: the rule does affect them, but the app has no approved non-aura cross-unit footnote."
+ },
+ "3b8cd5020b450005": {
+  "verdict": "ok",
+  "by": "review:fellhammer-3",
+  "at": "2026-10-24",
+  "why": "Dark Pacts: “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … until the end of the phase”. Selected to shoot happens in your Shooting phase. Selected to fight happens in the Fight phase. The second FAQ line, now part of the text, says a unit targeted by Fire Overwatch “is selected to shoot”, and in data.js Fire Overwatch is at the “End of your opponent’s Movement phase.” So the phases are Movement, Shooting and Fight. Both FAQ lines match Wahapedia’s CSM Army Rules FAQ (verify/.cache/waha/chaos-space-marines.txt lines 25–30) word for word and in the same order: “Q:Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? A: No.” and “Q:When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? A: Yes, as the unit is selected to shoot.” Only Wahapedia’s bold on “Dark Pact” and “Fire Overwatch” is dropped, as the italic FAQ lines do elsewhere in data.js. GW’s CSM Faction Pack (30-09) prints the same two Q&As, but in the other order and with the first question worded “When I target a unit with the Fire Overwatch Stratagem, can that unit make a Dark Pact?”. The lines are labelled “Wahapedia FAQ”, so quoting Wahapedia’s wording is right, and the meaning is the same."
  },
  "3ba458e3d4acca52": {
   "verdict": "ok",
@@ -6916,6 +6934,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"select one friendly ARMIGER model\": with no ARMIGER the rule is inert, so any:[Armiger] is the right gate (this list has none, and the Duty abilities show \"No ARMIGER models in this list\")."
+ },
+ "802703d0e469d2c9": {
+  "verdict": "ok",
+  "by": "review:fellhammer-3",
+  "at": "2026-10-24",
+  "why": "kind “all” matches “that unit’s weapons” (both shooting and fighting). The when keeps the trigger (selected to shoot or fight), the Leadership test, D3 mortal wounds on a failed test, and the duration “until the end of the phase”. The pick offers [LETHAL HITS] or [SUSTAINED HITS 1], as the text’s “select one of the following”. Both is marked both:true, so it counts only with an enabler. Nothing is always on, because the pact is optional (“can”). The two FAQ lines change none of this: the first only forbids picking a shooter with no eligible targets, and the second is the Overwatch phase."
  },
  "8047940d9bc9febb": {
   "verdict": "ok",
@@ -12862,6 +12886,18 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR prints it in the \"Transport | Capacity\" table of the one-model Rhino; the label is that table's name (same pattern as \"Crimson King\"), it names no model."
+ },
+ "f10d931971814222": {
+  "verdict": "ok",
+  "by": "review:fellhammer-3",
+  "at": "2026-10-24",
+  "why": "Movement is the opponent’s: the FAQ’s Fire Overwatch is at the “End of your opponent’s Movement phase” (data.js fire-overwatch). Shooting is yours: a unit is selected to shoot in your own Shooting phase. The FAQ “no eligible targets → No” line adds no phase. Fight keeps the default, either."
+ },
+ "f14170abb5ad85cf": {
+  "verdict": "ok",
+  "by": "review:fellhammer-3",
+  "at": "2026-10-24",
+  "why": "Demagogue (data.js = Wahapedia): “Once per battle, at the start of any phase, you can select one friendly HERETIC ASTARTES unit that is Battle-shocked and within 12\" of this unit’s DARK APOSTLE model. That unit is no longer Battle-shocked.” The text opens with “Once per battle”, so the derived tag “Once per battle” is right. Nothing in the text says per unit or per army."
  },
  "f155569f299b28dc": {
   "verdict": "ok",
