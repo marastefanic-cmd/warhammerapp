@@ -131,6 +131,8 @@ if(L('6-bigs')){
   neg('points changed', '6-bigs', j => { byName(j, 'Knight Errant').costs[0].value = 350; j.roster.costs[0].value = 1995; }, ['points of unit Knight Errant not recognized: 350 pts in the export, 355 in the app']);
   neg('the points limit changed', '6-bigs', j => { j.roster.costLimits[0].value = 123456; }, ['points limit 123456 not recognized: Strike Force is 2000 pts']);
   neg('over the points limit', '6-bigs', j => { add(j, byName(L('6-bigs'), 'Knight Paladin'), 'p3'); }, [PL]);
+  // an export that names no points limit (no costLimits, as fellhammer-siege-task-force's): the battle size's limit still holds
+  neg('over the points limit, no costLimits in the export', '6-bigs', j => { delete j.roster.costLimits; add(j, byName(L('6-bigs'), 'Knight Paladin'), 'p3'); }, [PL]);
   neg('two battle sizes', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size'); b.selections.push(Object.assign(clone(b.selections[0]), { name:'Incursion (1000 Point limit)' })); },
     ['battle size Incursion (1000 Point limit) not recognized (a list has one battle size)']);
   neg('an unknown battle size', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size').selections[0]; b.name = 'Apocalypse'; b.entryId = b.entryId.replace(/[^:]+$/, 'aaaa-0000-0000-0000'); },

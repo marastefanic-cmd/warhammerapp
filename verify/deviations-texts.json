@@ -97,5 +97,14 @@
   "source": "world eaters model only. add 1 to the attacks, strength and damage characteristics of the bearers melee weapons. each time the bearer's unit destroys an enemy unit with a melee attack, do not roll to gain a blood tithe point, you automatically gain 1 blood tithe point instead. | differs at \"… characteristics of the bearer['s melee weapons. each time the bearer's…]\" vs source \"… characteristics of the bearer[s melee weapons. each time the bearer's …]\"",
   "reason": "Typo on Wahapedia (\"the bearers melee weapons\", no apostrophe). BSData and New Recruit print \"the bearer’s melee weapons\" (and the next sentence on Wahapedia has \"the bearer’s unit\"); GW’s Faction Pack does not print this detachment. The app has \"bearer’s\"; every other word is Wahapedia’s.",
   "evidence": "verify/.cache/waha/world-eaters.txt § Khorne Daemonkin 2DP, Enhancements: \"- Blade of Endless Bloodshed 30 pts / **WORLD EATERS** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearers melee weapons. …\"; New Recruit prints \"Add 1 to the Attacks, Strength and Damage characteristics of the bearer's melee weapons.\": verify/sources/nr/big-demons-baby.txt line 209."
+ },
+ {
+  "army": "chaos-space-marines",
+  "unit": "detachment:cult-of-the-arkifane/stratagem:unholy-fortitude",
+  "field": "effect",
+  "app": "Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.",
+  "source": "matches the less authoritative Wahapedia text, not the Faction Pack: Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit. | differs at \"… the phase, add 1 to the tough[ness characteristic of models in your un…]\" vs source \"… the phase, add 1 to the tough[enss characteristic of models in your un…]\"",
+  "reason": "A misprint in GW's Faction Pack: it prints \"Toughenss\" for the Toughness characteristic; Wahapedia (the codex) prints \"Toughness\", and every other word is the Faction Pack's. The owner chose \"Toughness\" (24 Oct 2026): the app keeps the characteristic's name.",
+  "evidence": "GW Faction Pack Chaos Space Marines PDF p8, Unholy Fortitude, EFFECT: \"Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.\"; verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane, UNHOLY FORTITUDE: \"Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.\""
  }
 ]

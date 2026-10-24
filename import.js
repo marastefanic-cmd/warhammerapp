@@ -147,9 +147,9 @@ function resolveRoster(j, D, opt){
   }
   if(!battleSize && !errors.some(e => /^battle size/.test(e))) err('battle size not recognized (the export names none)');
   if(!dets.length && !errors.some(e => /^detachment/.test(e))) err('detachment not recognized (the export names none)');
-  // the points limit is the battle size's (BSData), not the export's word for it
+  // the points limit is the battle size's (BSData), not the export's word for it (an export can name none: no costLimits)
   const limit = pts(R.costLimits), total = pts(R.costs);
-  if(battleSize && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');
+  if(battleSize && (R.costLimits || []).length && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');
   if(battleSize && total > T.limits[battleSize]) err('points total ' + total + ' not recognized: over the ' + battleSize + ' limit of ' + T.limits[battleSize] + ' pts');
   if(disposition && dets.length){
     const allowed = new Set(dets.flatMap(k => FAC.detachments[k].dispositions || []));
@@ -297,7 +297,7 @@ function resolveRoster(j, D, opt){
   }
   const name = typo(nn(R.name)) || 'Imported list';
   const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,
-    points:limit || null, pointsUsed:total, battleSize, disposition, detachments:dets };
+    points:limit || (battleSize && T.limits[battleSize]) || null, pointsUsed:total, battleSize, disposition, detachments:dets };
   if(Object.keys(config).length) army.config = config;
   army.source = 'New Recruit, imported ' + (opt.date || new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }));
   army.units = units;

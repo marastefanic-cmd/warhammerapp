@@ -105,7 +105,7 @@ const ACTIVITY_RULES = [
     why:'melee attacks / "selected to fight" / pile-in and consolidation moves: the Fight phase of either turn' },
   { id:'ranged', re:/(?<!against |target of a |with )\branged (?:attacks?|weapons?)\b|\bselected to shoot\b|\beligible to shoot\b|\bhas shot\b|\bshoots\b/i, ph:{ shooting:'your' }, shoots:true,
     why:'ranged attacks / "selected to shoot": your Shooting phase' },
-  { id:'any-attack', re:/\bmakes? an attack\b|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
+  { id:'any-attack', re:/\bmakes? an attack\b(?! with an? (?:ranged|melee) weapon)|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
     why:'"makes an attack" (ranged or melee): your Shooting phase and the Fight phase' },
   { id:'charge-move', re:/\bcharge (?:rolls?|moves?)\b|\bends a charge\b|\bmakes a charge\b/i, ph:{ charge:'either' },
     why:'charge rolls / charge moves: the Charge phase (either turn: a Heroic Intervention is a charge move too)' },
@@ -121,6 +121,8 @@ const USED_MODIFIERS = [
   { id:'after-charge', re:/\bmade a charge move this turn\b/i,
     why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn (its attacks are not in the Shooting phase)' },
   { id:'overwatch', why:'an always-on ranged effect (no trigger in the text) is also used when the unit shoots with a Core stratagem whose EFFECT is "Your unit shoots" (Fire Overwatch: its WHEN, your opponent\'s Movement phase); when it protects against ranged attacks, the same moment in the other turn (the enemy\'s Fire Overwatch)' },
+  { id:'phase-locked', re:/\[HEAVY\]/i,
+    why:'[HEAVY] works "In your Shooting phase" only (Core Rules 24.16), so it is phase-locked (07.02.01) and not used with Fire Overwatch: a clause that gives only [HEAVY] adds no Overwatch' },
   { id:'trigger-phase', why:'an effect used in the phase it is triggered in has the trigger\'s turn ("In your opponent\'s Movement phase, … this unit can make a Normal move": the opponent\'s Movement phase only)' },
   { id:'opening-phase', re:/^in (?:the|your|your opponent's) (?:command|movement|shooting|charge|fight) phase,/i,
     why:'the text opens with its phase ("In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, …") and says no duration: every effect is used in that phase only (Bladeguard\'s -1 to hit rolls for attacks that target it is not used in the Shooting phase)' },
@@ -161,6 +163,7 @@ function explicitTiming(text, opts){
   return Object.keys(out).length ? { ph:out, at, reasons, atOnly:atPh.filter(p => !named.has(p)) } : null;
 }
 
+const PHASE_LOCKED = USED_MODIFIERS.find(r => r.id === 'phase-locked');
 // table 1 in full: where it is triggered (the phases and moments the text names) and where its effect is used
 function usedIn(text, ctx, trig){
   let t = plain(rulesText(text));
@@ -209,7 +212,10 @@ function usedIn(text, ctx, trig){
         if(r.id === 'any-stratagem' && reasons.some(x => x.rule === 'named-core-stratagem')) continue;
         if(r.id === 'any-stratagem' && ctx && ctx.noStrat) continue;   // (the checklist: no phase reached through a stratagem)
         if(r.id === 'move-own' && /\benemy unit\b/i.test(s) && ACTIVITY_RULES.find(x => x.id === 'move-enemy').re.test(s)) continue;
-        if(r.shoots && !(afterCharge && r.id === 'any-attack')) shoots = true;
+        // (a clause whose only weapon ability is [HEAVY]: phase-locked, no Overwatch from it)
+        const locked = PHASE_LOCKED.re.test(s) && !/\[(?!HEAVY\])/i.test(s) && !/\bBS\b|\bballistic skill\b|\bhit roll/i.test(s);
+        if(locked && !reasons.some(x => x.rule === 'phase-locked')) reasons.push({ rule:'phase-locked', match:'[HEAVY]' });
+        if(r.shoots && !locked && !(afterCharge && r.id === 'any-attack')) shoots = true;
         add(r.ph, r);
         reasons.push({ rule:r.id, match:m[0] });
       }
@@ -472,13 +478,38 @@ function stratNeeds(V, s){
   if(/\battached\b/i.test(plain(s.when + ' ' + s.target))){ n.attached = true; reasons.push({ rule:'attached', match:(/[^.]*\battached\b[^.]*/i.exec(plain(s.when + ' ' + s.target)) || [''])[0].trim().slice(0, 80) }); }
   return { how:'explicit', needs:n, reasons };
 }
+// the sentences after the first unit's that open with a friendly unit phrase of keywords ("X units from your army …"), as needs
+function ruleSubjects(V, text, first){
+  const out = [], firstS = sentences(text).findIndex(x => prepBold(x).includes(first.matched));
+  sentences(text).forEach((sen, i) => {
+    if(i <= firstS) return;
+    const u = friendlyUnit(V, sen, { keyword:true });
+    if(!u || u.at > 2 || !/^\s*'?\s*from your army\b/i.test(u.after)) return;
+    const n = needsOf(V, u, []);
+    if(!n.bad) out.push({ unit:u, n });
+  });
+  return out;
+}
 function ruleNeeds(V, r){
   const reasons = [];
   const unit = friendlyUnit(V, rulesText(r.text), { keyword:true });
   if(unit){
     reasons.push({ rule:'first-unit', match:clip(plain(unit.matched), 80) });
-    const n = needsOf(V, unit, reasons);
+    let n = needsOf(V, unit, reasons);
     if(n.bad) return { how:'none', reasons:[{ rule:'unparsed', match:n.bad }] };
+    // every other sentence whose subject is a friendly unit phrase ("**SOUL FORGE** units from your army have a 5+ invulnerable
+    // save."): the rule reaches those units too, so its needs are the "or" of them all (Soul Forge Boons: three sentences)
+    const more = ruleSubjects(V, rulesText(r.text), unit);
+    if(more.length){
+      const alts = [n].concat(more.map(x => x.n));
+      // (one alternative per keyword of an "any": HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE)
+      const sets = []; for(const a of alts) for(const k of (a.any.length ? a.any : [null])){ const x = a.all.concat(k ? [k] : []); if(!sets.some(y => y.join('|') === x.join('|'))) sets.push(x); }
+      const c = sets.length > 1 ? combineAlts(sets) : { all:sets[0], any:[], rules:[] };
+      if(!c.bad && alts.every(a => !a.none.length && !a.rule)){
+        n = { all:c.all, any:c.any, none:[] };
+        reasons.push(...more.map(x => ({ rule:'more-subjects', match:clip(plain(x.unit.matched), 80) })), { rule:c.rules.join('+') || 'kw-all', match:sets.map(x => x.join(' ')).join(' | ') });
+      }
+    }
     if(/\battached\b/i.test(plain(r.text))) { n.attached = true; reasons.push({ rule:'attached', match:'attached' }); }
     return { how:'explicit', needs:n, reasons };
   }

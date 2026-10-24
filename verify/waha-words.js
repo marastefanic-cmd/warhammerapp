@@ -262,10 +262,13 @@ function wahaDatasheet(html, chapter) {
         if (!m[1] && ldOnly(m[2])) { out2 += s.slice(last, m.index); skip = 1; from = re.lastIndex; code = /(?:^|\s)LD([A-Z0-9]{2})(?:\s|$)/.exec(clsOf(m[2]))[1]; } }
       return out2 + (skip ? '' : s.slice(last)); };
     kw[1] = dropLd(kw[1]);
-    const all = txt(kw[1]), m0 = /^(.*?)\s+([A-Z][a-z][^:;]*:[\s\S]*)$/.exec(all);
+    // (each model's own keywords follow a vertical line: "… CHAOS | DARK APOSTLE ONLY: CHARACTER; DARK APOSTLE", in capitals too)
+    const segs = kw[1].split(/<span class="dsVertLine"><\/span>/);
+    const all = txt(segs[0]), m0 = segs.length > 1 ? null : /^(.*?)\s+([A-Z][a-z][^:;]*:[\s\S]*)$/.exec(all);
     out.keywords = (m0 ? m0[1] : all).split(/\s*[;,]\s*/).filter(Boolean);
     out.modelKeywords = {};
     if (m0) for (const m of m0[2].matchAll(/([A-Z][a-z][^:;]*?):\s*([A-Z][A-Z ;,-]*[A-Z])/g)) out.modelKeywords[m[1].trim()] = m[2].split(/\s*[;,]\s*/).filter(Boolean);
+    for (const sg of segs.slice(1)) { const m = /^(.*?):\s*(.*)$/.exec(txt(sg)); if (m) out.modelKeywords[m[1].replace(/\s+ONLY$/i, '').trim()] = m[2].split(/\s*[;,]\s*/).filter(Boolean); }
     out.factionKeywords = txt(kw[2]).split(/\s*[;,]\s*/).filter(Boolean);
   }
   return out;

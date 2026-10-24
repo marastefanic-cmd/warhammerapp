@@ -18,6 +18,8 @@
   "adeptus-custodes": { "waha": "adeptus-custodes", "bsdata": "Imperium - Adeptus Custodes",
     "pack": { "file": "eng_14-10_wh40k_printed_product_updates_adeptus_custodes_updates-fmj4bdwwhh-0qshh8eauk.pdf", "label": "GW Printed Product Updates Adeptus Custodes" },
     "note": "GW's newest Adeptus Custodes document is the Printed Product Updates of 14 Oct 2026 for the new Codex: Adeptus Custodes; the Faction Pack 1.2 (eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.pdf, 30 Sep 2026) is the previous codex's and is not used." },
+  "chaos-space-marines": { "waha": "chaos-space-marines", "bsdata": "Chaos - Chaos Space Marines",
+    "pack": { "file": "eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.pdf", "label": "GW Faction Pack Chaos Space Marines" } },
   "ultramarines": { "waha": "space-marines/ultramarines", "wahaDs": "space-marines", "wahaChapter": "UL", "bsdata": "Imperium - Adeptus Astartes - Ultramarines",
     "pack": { "file": "eng_14-10_wh40k_printed_product_updates_space_marines_updates-91hillwcff-wzs8qnozam.pdf", "label": "GW Printed Product Updates Space Marines" },
     "baseGuide": ["SPACE MARINES", "DEATHWATCH"],

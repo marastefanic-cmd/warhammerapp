@@ -1,0 +1,425 @@
+[
+ {
+  "key": "4de252d2ceb1c6a8",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Unholy Mechanisms",
+  "verdict": "ok",
+  "why": "verify/.cache/waha/ds/chaos-space-marines_Vashtorr-The-Arkifane.html prints \"Unholy Mechanisms (Aura):\"; the export has \"Unholy Mechanisms (Aura)\"; GW Faction Pack p. Rules Updates rewords it and keeps it an aura. GW tags it, so tag Aura is right (22.01)."
+ },
+ {
+  "key": "a03218d5f5ca6b25",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Reorder Reality",
+  "verdict": "ok",
+  "why": "Matches GW (Faction Pack Vashtorr update, Wahapedia): an enemy unit within 18\" that targets him gets -1 to the Hit roll and [HAZARDOUS] on its ranged weapons until the end of the phase. Nothing added; \"him\" is Vashtorr."
+ },
+ {
+  "key": "0186be77147590cb",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Indentured Daemon Engines",
+  "verdict": "ok",
+  "why": "GW Faction Pack adds Indentured Daemon Engines: \"While this model is within 3\\\" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.\" The def keeps the condition; same shape as the approved Dreadherder/Warpsmith-style Lone Operative defs."
+ },
+ {
+  "key": "a0cc9407fb165477",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Damaged: 1-4 wounds remaining",
+  "verdict": "ok",
+  "why": "Wahapedia/export: \"DAMAGED: 1-4 WOUNDS REMAINING\", W 14 on the datasheet and the export. No timing label (Damaged band), as required."
+ },
+ {
+  "key": "09ee89c8fc904e4a",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane",
+  "verdict": "ok",
+  "why": "The only (Aura)-tagged ability in the list. Needs all DAEMON + VEHICLE (GW: \"friendly DAEMON VEHICLE unit\"), within 6\", +2 S (parsed by the Damage tab). Vashtorr is a MONSTER, not a VEHICLE, so no selfAlways is right (22.01 only puts him in range of his own aura, and he does not qualify). Reaches the Predators/Vindicator (DAEMON via Soul Forge Boons), Forgefiend and Maulerfiend; the snapshot shows the line on them."
+ },
+ {
+  "key": "1bf7c88b1e6b3a19",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane",
+  "verdict": "ok",
+  "why": "Export: Vashtorr's claw; Vashtorr's hammer (strike/sweep). Profiles match GW Faction Pack (strike 6 2+ 14 -3 3; sweep 12 2+ 8 -1 2; claw 12\" D6 S5 AP-2 D1 [ANTI-VEHICLE 4+, TORRENT]). Curly apostrophe matches approved convention (Hekhtur’s pistol)."
+ },
+ {
+  "key": "9613375029f7cc82",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Corrupt Machine Spirits",
+  "verdict": "ok",
+  "why": "\"At the start of your Shooting phase\" (GW Faction Pack wording): Shooting, your turn."
+ },
+ {
+  "key": "698dbcd54a530bcf",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Spirit Thief",
+  "verdict": "ok",
+  "why": "\"At the start of your Shooting phase\": Shooting, your turn."
+ },
+ {
+  "key": "d670be3723cdd038",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Mark of the Soul Forges",
+  "verdict": "ok",
+  "why": "\"Each time the bearer makes an attack\": same label as approved every-attack abilities (Hunter of Souls, Spiteful Power Trip): their Movement (overwatch), your Shooting, Fight."
+ },
+ {
+  "key": "3f5758aac63171fb",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Mark of the Soul Forges",
+  "verdict": "ok",
+  "why": "Cult of the Arkifane enhancement (Wahapedia 20 pts; export Enhancements=1), so tag Enhancement."
+ },
+ {
+  "key": "1372c45944297afe",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "verdict": "ok",
+  "why": "GW: \"Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\" Single-model unit, so every attack; always + calc critHit 5 are right."
+ },
+ {
+  "key": "877b855f44fa96c9",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "verdict": "fix",
+  "why": "Spirit Thief lasts only \"Until the end of the phase\" that starts at \"the start of your Shooting phase\"; only ranged attacks are made in the Shooting phase, but kind \"all\" shows the line under ALL ATTACKS (snapshot), i.e. also for his melee weapons and the Fight-phase Damage tab. It should be kind ranged (as the approved \"Your Shooting phase, vs non-MONSTER/VEHICLE targets\" mod). Note: the rule reaches every friendly HERETIC ASTARTES model, not only him; approved lists carry such picked-target effects as aura entries (Omnissiah’s Blessing, Clever Know-wotz, Dreadherder) — see report.",
+  "fix": {
+   "kind": "ranged",
+   "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start",
+   "note": "re-roll wound rolls of 1",
+   "from": "Spirit Thief",
+   "vs": {
+    "any": [
+     "Vehicle"
+    ]
+   }
+  }
+ },
+ {
+  "key": "66a2fc4bc05afdeb",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "verdict": "ok",
+  "why": "Default GW loadout (Wahapedia: bolt pistol; Helstalker autocannon; techno-virus injector; bladed limbs; impaler chainglaive) = export. Profiles match GW Faction Pack (chainglaive 5 2+ 8 -3 3 [LANCE]); bolt pistol BS2+ S5 AP-1."
+ },
+ {
+  "key": "b3f14315ceb24f6c",
+  "where": "fellhammer-siege-task-force · Warpsmith · Warpsmith",
+  "verdict": "ok",
+  "why": "GW: \"While this model is within 3\\\" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.\" Faithful."
+ },
+ {
+  "key": "4942ee35902ec75f",
+  "where": "fellhammer-siege-task-force · Warpsmith · Master of Mechanisms",
+  "verdict": "ok",
+  "why": "Command phase pick, +1 to hit until your next Command phase: Command (your), Shooting (your), Fight (either). Matches the approved persisting-buff convention (Clever Know-wotz: no overwatch phase)."
+ },
+ {
+  "key": "823cf3fb0ae4dd65",
+  "where": "fellhammer-siege-task-force · Warpsmith · Enrage Machine Spirits",
+  "verdict": "ok",
+  "why": "\"At the end of your Movement phase\": Movement, your turn."
+ },
+ {
+  "key": "4396219b07999ee7",
+  "where": "fellhammer-siege-task-force · Warpsmith · Wyredjinn",
+  "verdict": "ok",
+  "why": "\"At the start of your Command phase\": Command, your turn."
+ },
+ {
+  "key": "5edf51648a65df64",
+  "where": "fellhammer-siege-task-force · Warpsmith · Wyredjinn",
+  "verdict": "ok",
+  "why": "Cult of the Arkifane enhancement Wyredjinn (25 pts): tag Enhancement. 65 + 25 = 90 pts as the list shows."
+ },
+ {
+  "key": "8b79f9264cf24046",
+  "where": "fellhammer-siege-task-force · Warpsmith",
+  "verdict": "ok",
+  "why": "Wahapedia: \"equipped with: flamer tendril; melta tendril; plasma pistol; forge weapon\" = export. Profiles match Wahapedia (Melta tendril [MELTA 2] per GW, BSData MELTA 1 declared)."
+ },
+ {
+  "key": "7c229db5caf9265c",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Dark Zealotry",
+  "verdict": "ok",
+  "why": "Melee attacks while leading: Fight, either turn (approved convention for leader melee buffs)."
+ },
+ {
+  "key": "730222f6b64fa49c",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Dark Zealotry",
+  "verdict": "ok",
+  "why": "Dark Apostle datasheet ability (Wahapedia Dark Apostle sheet)."
+ },
+ {
+  "key": "581818851f806a90",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Demagogue",
+  "verdict": "ok",
+  "why": "\"at the start of any phase\": every phase, either turn."
+ },
+ {
+  "key": "d8c6138b9b5f852a",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Demagogue",
+  "verdict": "ok",
+  "why": "Dark Apostle datasheet ability."
+ },
+ {
+  "key": "1f48d86a4e788be1",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Malign Sacrifice",
+  "verdict": "ok",
+  "why": "\"At the start of the Fight phase\": Fight, either turn."
+ },
+ {
+  "key": "0f41fa2a8e263075",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Malign Sacrifice",
+  "verdict": "ok",
+  "why": "Dark Apostle datasheet ability (needs Dark Disciples, which are the Dark Apostle's own models)."
+ },
+ {
+  "key": "e13e4e446ddbee89",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font",
+  "verdict": "ok",
+  "why": "Cult of the Arkifane enhancement (20 pts); export Cybinfernal Font Enhancements=1."
+ },
+ {
+  "key": "6bbec732e73b47fb",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font",
+  "verdict": "ok",
+  "why": "Borne by the Dark Apostle (export: under the Dark Apostle model)."
+ },
+ {
+  "key": "287f8bb74ac4fe5d",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Warp-sighted Butcher",
+  "verdict": "ok",
+  "why": "Melee attacks while leading: Fight, either turn. A Support unit \"leads\" its bodyguard unit (Core 19.01: \"Both of these abilities allow such units to lead other friendly units\"), so the wording holds after the Leader→Support change."
+ },
+ {
+  "key": "ba1d0f9e7aa26376",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Warp-sighted Butcher",
+  "verdict": "ok",
+  "why": "Master of Executions datasheet ability (Wahapedia MoE sheet; export)."
+ },
+ {
+  "key": "9db18882d8b297f3",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Trophy Taker",
+  "verdict": "ok",
+  "why": "Master of Executions datasheet ability; always-on, no timing label."
+ },
+ {
+  "key": "137fe53f0dd53afc",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "verdict": "ok",
+  "why": "\"Each time a model in this unit makes an attack\": same label as approved every-attack abilities (their Movement/overwatch, your Shooting, Fight)."
+ },
+ {
+  "key": "9dd05bb660b62a09",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "verdict": "ok",
+  "why": "Wahapedia \"Visions of Suffering (Psychic):\", export \"Visions of Suffering (Psychic)\": tag Psychic."
+ },
+ {
+  "key": "11b56249fff71aee",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "verdict": "ok",
+  "why": "Nemesis Claw datasheet ability."
+ },
+ {
+  "key": "c137c821155a2589",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Attached Unit",
+  "verdict": "ok",
+  "why": "Nemesis Claw datasheet box \"ATTACHED UNIT\"; the text matches GW."
+ },
+ {
+  "key": "a0a78423e2b63527",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Voice eater",
+  "verdict": "ok",
+  "why": "Nemesis Claw wargear ability (one Legionary’s voice eater, export)."
+ },
+ {
+  "key": "e8ff7e822cf29d57",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "GW: while leading and containing a DARK APOSTLE model, melee attacks of that unit +1 to wound; kind melee, the whole attached unit (19.04). always: the DA leads in this list (approved leader-buff convention)."
+ },
+ {
+  "key": "6de648290f715c44",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "GW: re-roll the Hit roll vs a unit below Starting Strength; also the Wound roll if Below Half-strength; melee only, \"you can\". The pick keeps the condition and the choice; pick notes parse (\"re-roll hit rolls and wound rolls\"). Same pick shape as the approved Visions-type entry (data.js line ~869)."
+ },
+ {
+  "key": "40d27e41a0c6fd07",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "GW: +1 to hit vs a unit below Starting Strength, also +1 to wound if Below Half-strength; any attack (kind all); the whole attached unit (19.04: a bodyguard ability applies to every model). Pick shape as approved."
+ },
+ {
+  "key": "8b5d0bebf256e163",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "MASTER OF EXECUTIONS (MoE), NEMESIS CLAW and PSYKER (Nemesis Claw: \"INFANTRY; PSYKER; CHAOS; GRENADES; NEMESIS CLAW\") are not on the Dark Apostle sheet; the others (CHAOS, CHARACTER, GRENADES, INFANTRY) are. SOUL FORGE is the list’s (Cybinfernal Font), not \"from the combined unit\", so it is rightly left out of the note."
+ },
+ {
+  "key": "c5f7f625026e1437",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Dark Apostle 70 (Wahapedia, export) + Cybinfernal Font 20 = 90; MoE 75; Nemesis Claw 5 models 105. 270 total; list total 1995 checks out."
+ },
+ {
+  "key": "9141ce3953fc81b2",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Stealth is on the Nemesis Claw sheet only (\"CORE ABILITIES | Stealth\"); the Dark Apostle and MoE do not have it."
+ },
+ {
+  "key": "e32f89f5240ca97c",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "fix",
+  "why": "Wahapedia Dark Apostle: \"KEYWORDS – ALL MODELS: INFANTRY; GRENADES; CHAOS / DARK APOSTLE ONLY: CHARACTER; DARK APOSTLE\" — right for the Dark Apostle's own unit. But in this combined unit the Master of Executions also has CHARACTER (Wahapedia MoE: \"INFANTRY; CHARACTER; GRENADES; CHAOS; MASTER OF EXECUTIONS\"; export MoE categories include Character). The unit screen now prints \"Dark Apostle only: CHARACTER\", which is false for the MoE. Approved convention names every model that has it (Thousand Sons: \"Exalted Sorcerer and Aspiring Sorcerer\").",
+  "fix": {
+   "kwOnly": {
+    "Character": "Dark Apostle and Master of Executions",
+    "Dark Apostle": "Dark Apostle"
+   }
+  }
+ },
+ {
+  "key": "d0dc66d71af201b1",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Models and gear match the export and the Wahapedia options: Visionary bolt pistol→plasma pistol + Nostraman chainblade; four Legionaries with boltgun swapped for accursed weapon / Nostraman chainglaive / paired accursed weapons / voice eater + Astartes chainsword, each keeping bolt pistol and CCW; 2 Dark Disciples CCW. Counts ×4 bolt pistols, ×4 CCW right. Profiles match GW after Faction Pack (chainblade S5, chainsword S5, Nemesis Claw CCW S4 unchanged since only Bikers/Havocs/Legionaries/Raptors get S5)."
+ },
+ {
+  "key": "ce9462d5e344066a",
+  "where": "fellhammer-siege-task-force · Cultist Mob · For the Dark Gods",
+  "verdict": "ok",
+  "why": "\"At the end of your Command phase\": Command, your turn."
+ },
+ {
+  "key": "797ded3561923cd9",
+  "where": "fellhammer-siege-task-force · Cultist Mob",
+  "verdict": "ok",
+  "why": "Export: Champion bolt pistol (autopistol replaced, a Wahapedia option) + brutal assault weapon; 9 Cultists autopistol + BAW. Counts right; Cultist bolt pistol stays S4 AP0 (not in the Faction Pack bolt pistol list). 10 models 50 pts."
+ },
+ {
+  "key": "56f29e3b35a4b967",
+  "where": "fellhammer-siege-task-force · Havocs · Stabilisation Talons",
+  "verdict": "fix",
+  "why": "Stabilisation Talons is for ranged attacks only (\"makes an attack with a ranged weapon\"), so the Fight phase does not belong in its label: the snapshot reads \"Their Move · Your Shoot · Fight\". Approved ranged-only abilities (Total Obliteration, and here Annihilator/Destructor/Siege Shield) are {ph:[movement, shooting], turn:opp, turns:{shooting:your}} (overwatch + your Shooting).",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "7ac8d6c1ecfaa2d9",
+  "where": "fellhammer-siege-task-force · Havocs",
+  "verdict": "ok",
+  "why": "GW wording kept; the Damage tab parses it to ignoreHitMods; always is right (passive)."
+ },
+ {
+  "key": "ebd42db6df992477",
+  "where": "fellhammer-siege-task-force · Havocs",
+  "verdict": "ok",
+  "why": "Export: Champion power fist + plasma gun (both Wahapedia options), 4 Havocs with lascannon + CCW. Havocs W3 (Faction Pack), CCW S5 (Faction Pack), power fist 3 3+ 8 -2 2. 135 pts each (1st–2nd unit)."
+ },
+ {
+  "key": "e751aabfa08bd6c9",
+  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase, when this unit is selected to shoot\": Shooting, your turn."
+ },
+ {
+  "key": "36b804912d8ea4a4",
+  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "GW Faction Pack: \"Warp Rift Firepower (Once per battle, per unit): …\"; Wahapedia and the export likewise."
+ },
+ {
+  "key": "543d07a51016a9ba",
+  "where": "fellhammer-siege-task-force · Obliterators",
+  "verdict": "ok",
+  "why": "Optional once-per-battle [INDIRECT FIRE] when selected to shoot; not always (a choice), condition kept."
+ },
+ {
+  "key": "3644cdda4e1f2d45",
+  "where": "fellhammer-siege-task-force · Obliterators",
+  "verdict": "ok",
+  "why": "Export: 2 Obliterators, fleshmetal guns (3 profiles) + crushing fists; names follow NR (\"Fleshmetal guns - focused malice\" etc.). Profiles match Wahapedia. 160 pts."
+ },
+ {
+  "key": "8f1a4d42041913ad",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator · Annihilator",
+  "verdict": "ok",
+  "why": "Ranged attacks: their Movement (overwatch) + your Shooting, as approved Total Obliteration."
+ },
+ {
+  "key": "fe120c3b8fad0846",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator",
+  "verdict": "ok",
+  "why": "GW Faction Pack wording; vs MONSTER/VEHICLE, always while vs holds."
+ },
+ {
+  "key": "9e9f9fdd1693af6f",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator",
+  "verdict": "ok",
+  "why": "Export: twin lascannon, armoured tracks, 2 lascannons, combi-bolter, Havoc launcher (all Wahapedia options, no extra cost). Combi-bolter S5 AP-1 per Faction Pack. 140 pts."
+ },
+ {
+  "key": "71c9a581300f0fac",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor · Destructor",
+  "verdict": "ok",
+  "why": "Ranged attacks: their Movement + your Shooting, as approved Total Obliteration."
+ },
+ {
+  "key": "36a12a1284646acb",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor",
+  "verdict": "ok",
+  "why": "+1 AP vs INFANTRY (parsed), ranged, always while vs holds."
+ },
+ {
+  "key": "f001afb95531221a",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor",
+  "verdict": "ok",
+  "why": "Export: Predator autocannon, armoured tracks (WS 4+ per Faction Pack), 2 heavy bolters, combi-bolter, Havoc launcher. 145 pts."
+ },
+ {
+  "key": "9307e40eab51e623",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator · Siege Shield",
+  "verdict": "ok",
+  "why": "Ranged attacks: their Movement + your Shooting."
+ },
+ {
+  "key": "984f18bb80704834",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator",
+  "verdict": "ok",
+  "why": "Both parts of Siege Shield kept, condition (no other friendly unit in Engagement Range) kept. Passive, so always is acceptable; note it is not counted by the calculator (listed only)."
+ },
+ {
+  "key": "728d1f6352e9325f",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator",
+  "verdict": "ok",
+  "why": "Export: demolisher cannon, armoured tracks, combi-bolter, Havoc launcher. 180 pts."
+ },
+ {
+  "key": "69b56852834dd4ce",
+  "where": "fellhammer-siege-task-force · Forgefiend · Daemonic Ordnance",
+  "verdict": "ok",
+  "why": "\"Each time this model is selected to shoot\": their Movement (overwatch) + your Shooting."
+ },
+ {
+  "key": "62d3d4be59b6eea3",
+  "where": "fellhammer-siege-task-force · Forgefiend",
+  "verdict": "ok",
+  "why": "Optional (\"it can use this ability\"): not always; [DEVASTATING WOUNDS] and [HAZARDOUS] parse."
+ },
+ {
+  "key": "216ce3ee8b1ae4dc",
+  "where": "fellhammer-siege-task-force · Forgefiend",
+  "verdict": "ok",
+  "why": "Export: 2 ectoplasma cannons (replacing the Hades autocannons, 2×5 pts) + \"Ectoplasma cannon and limbs\" (replacing the jaws, 5 pts): 3 ectoplasma cannons + armoured limbs; 155 + 15 = 170. CSM profiles (BS3+, no [RAPID FIRE], armoured limbs 2 3+ 6 0 2) differ from the World Eaters Forgefiend, so a separate row is right."
+ },
+ {
+  "key": "5d04cd60d4777216",
+  "where": "fellhammer-siege-task-force · Maulerfiend · Siege Crawler",
+  "verdict": "ok",
+  "why": "Move characteristic (your Movement) and Advance/Charge rolls: same as approved Brayhorn."
+ },
+ {
+  "key": "878744a6a70c34e2",
+  "where": "fellhammer-siege-task-force · Maulerfiend",
+  "verdict": "ok",
+  "why": "Export: Maulerfiend fists + lasher tendrils (default). 125 pts."
+ }
+]

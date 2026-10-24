@@ -280,6 +280,13 @@ function build(R){
   const matchNeeds = (to, u) => { const has = k => (u.kw || []).some(x => lc(x) === lc(k));
     if(!to || typeof to !== 'object' || Object.keys(to).some(k => !['all', 'any', 'none'].includes(k))) return !to;
     return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
+  // each BSData entry's own categories (verify/sources/bsdata-extract.json, by id), before any modifier of a rule
+  let BSC = null; const BSR = new Map();   // (and its own rules: core abilities BSData links to it, "Deep Strike")
+  const bsCats = () => { if(BSC) return BSC; BSC = new Map();
+    try { const x = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources/bsdata-extract.json'), 'utf8'));
+      const walk = o => { if(Array.isArray(o)){ o.forEach(walk); return; } if(!o || typeof o !== 'object') return; if(o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); if(o.id && (o.infoLinks || o.rules)) BSR.set(o.id, [].concat(o.infoLinks || [], o.rules || []).map(c => c.name)); for(const k in o) if(o[k] && typeof o[k] === 'object') walk(o[k]); };
+      walk(x.files); } catch(e) {}
+    return BSC; };
   const ownAbilities = u => (u.abilities || []).filter(x => /\b(Enhancement|Upgrade)\b/.test(x.tag || ''));
   // always the list's: the Warlord keyword, a keyword a rule in force gives (GRANTS), a rule an enhancement or upgrade gives
   const unitWhy = U => {
@@ -287,10 +294,18 @@ function build(R){
     const put = (f, k, r) => { (why[f] = why[f] || {})[k] = r; };
     const kwOf = k => (u.kw || []).find(x => lc(x) === lc(k));
     if(u.warlord && kwOf('Warlord')) put('kw', kwOf('Warlord'), 'Warlord');
+    // (a keyword a rule gives that a datasheet of the unit already has, its own BSData category: no reason, it is the datasheet's;
+    // the Forgefiend's DAEMON, which Soul Forge Boons also gives HERETIC ASTARTES VEHICLE units)
+    const nativeRule = r => U.ids.some(id => { const s = sheets.get(id); bsCats(); return s && [...s.bs.keys()].some(b => (BSR.get(b) || []).some(x => lc(x) === lc(r))); });
+    const native = k => U.ids.some(id => { const s = sheets.get(id); return s && [...s.bs.keys()].some(b => (bsCats().get(b) || []).some(x => lc(x) === lc(k))); });
     const inForce = [F.name + ' army rule · '].concat(a.detachments.map(d => F.name + ' · ' + ((F.detachments || {})[d] || {}).name + ' rule · '));
     for(const g of R.grants || []){
       if(!/keyword/.test(g.type) || g.to === 'this unit / model' || !inForce.some(p => g.rule.startsWith(p)) || !matchNeeds(g.to, u)) continue;
-      const k = kwOf(g.grants); if(k && !(why.kw && why.kw[k])) put('kw', k, g.option || g.rule.split(' · ').pop());
+      const k = kwOf(g.grants); if(k && !(why.kw && why.kw[k]) && !native(k)) put('kw', k, g.option || g.rule.split(' · ').pop());
+    }
+    // a keyword the unit's enhancement or upgrade gives by name ("Models in the bearer's unit have the **SOUL FORGE** keyword")
+    for(const ab of ownAbilities(u)){
+      for(const m of String(ab.text || '').matchAll(/\b(?:have|has|gains?) the \*\*([^*]+)\*\* keyword/gi)){ const k = kwOf(m[1]); if(k && !(why.kw && why.kw[k]) && !native(k)) put('kw', k, ab.name); }
     }
     // a keyword the list selected for the unit, as its models line names it ("1× Daemon Prince of Chaos (Khorne)"): the ability of the
     // datasheet that names the keyword (Daemonic Allegiance), with the selection
@@ -302,6 +317,7 @@ function build(R){
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
     const own = ownAbilities(u);
     for(const r of u.rules || []){
+      if(nativeRule(r)) continue;   // (a rule the datasheet itself has: the Sorcerer in Terminator Armour's Deep Strike, not Umbralefic Crystal's)
       const esc = lc(r).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const ab = own.find(x => new RegExp('\\*\\*' + esc + '\\*\\*|\\[' + esc + '[\\]\\s-]').test(lc(x.text)));   // it gives the rule by name
       if(ab){ put('rules', r, ab.name); continue; }
@@ -312,7 +328,7 @@ function build(R){
     }
     return why;
   };
-  for(const U of units) U.why = U.multi ? {} : unitWhy(U);
+  for(const U of units) U.why = unitWhy(U);
   // the list's only where lists differ: a value an ability of the unit gives (Kustom Force Field: 4+* InSv), a weapon ability
   // on the Rules line from the wargear taken
   const rowWhy = (o, f) => {

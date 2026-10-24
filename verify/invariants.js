@@ -146,8 +146,11 @@ function run(D){
       lineWhos.push(ws && ws.size ? cur : null); } }
     const lineWho = l => lineWhos[lines.indexOf(l)];
     const multiChar = new Set(chars.filter(c => c !== u.name && lines.filter(l => lineWho(l) === c).length > 1));
-    const body = lines.slice(Math.max(chars.length, 1)).filter(l => !multiChar.has(lineWho(l)));
-    const charLine = w => u.leads && w.who && w.who !== u.leads && body.every(l => l.name.replace(/ w\/.*$/, '') !== w.who) ? Math.max(chars.indexOf(w.who), 0) : -1;
+    // (the leader's own part of several models, the Dark Apostle and his Dark Disciples: its first lines, while their weapons are its)
+    let lead = 1; if(u.leads) while(lead < lines.length - 1 && lineWho(lines[lead]) === u.name) lead++;
+    if(lead > 1) multiChar.add(u.name);
+    const body = lines.slice(Math.max(chars.length + lead - 1, 1)).filter(l => !multiChar.has(lineWho(l)));
+    const charLine = w => u.leads && w.who && w.who !== u.leads && body.every(l => l.name.replace(/ w\/.*$/, '') !== w.who) ? Math.max(chars.indexOf(w.who) + (chars.indexOf(w.who) > 0 ? lead - 1 : 0), 0) : -1;
     for(const w of [...(u.ranged || []), ...(u.melee || [])]){
       const g = w.group || w.name; if(seen.has(g + '|' + w.who)) continue; seen.add(g + '|' + w.who);
       const mine = !u.leads ? lines : multiChar.has(w.who) ? lines.filter(l => lineWho(l) === w.who) : charLine(w) >= 0 ? [lines[charLine(w)]] : body;

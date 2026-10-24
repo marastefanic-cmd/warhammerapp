@@ -1,0 +1,356 @@
+[
+ {
+  "key": "27a869932bfcd52f",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. Selected to shoot: your Shooting phase, and Fire Overwatch in the opponent’s Movement phase. The Faction Pack FAQ says so: “When I target a unit with the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.” Selected to fight: the Fight phase. So Movement, Shooting and Fight."
+ },
+ {
+  "key": "8c4e974c3c36bbec",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. Fight is in either turn and Overwatch is in the opponent’s turn, so the default is “either”, with turns overriding Movement and Shooting."
+ },
+ {
+  "key": "21a298e0b0ed4e38",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. Overwatch is at the end of your opponent’s Movement phase, and the FAQ says that is a Dark Pact. A unit is selected to shoot only in your own Shooting phase. Fight is either, the default."
+ },
+ {
+  "key": "b87623059425ee83",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. kind “all” matches “that unit’s weapons”. The when keeps the trigger, the Leadership test, the D3 mortal wounds on a failed test and the duration. The pick offers either ability. Both is marked both:true, so it counts only with what makes it possible. Each note parses in dmEffects. Nothing is added: the Dark Pact is optional (“can”), and the pick shows that."
+ },
+ {
+  "key": "d29b57f95b6fbbd9",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Touch of the Arkifane is the only rule that lets the player “select both abilities for that unit’s weapons to gain”: “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities…” (GW Faction Pack p8, Wahapedia). Ruination’s Bounty does not let you pick both. It gives [LETHAL HITS] and [SUSTAINED HITS 1] itself, and has its own mod for that, so it rightly stays out of this list."
+ },
+ {
+  "key": "7293f4be7c72cfaa",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "verdict": "fix",
+  "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Approved lists give no timing to an always-on rule or ability whose text names no phase, and keep it out of the phase lists. The nerf-when review settled this (5323e019a2990a95: Kustom Force Field InSv, Flowing Flesh/Augury Uplink FNP, Unyielding Ancient, Repulsor Grid all {}), and Aegis of the Emperor (an army-rule FNP) stores no ph either. The InSv shows in the units’ InSv column (5+ on the vehicles, the MoE and the Nemesis Claw), and the keywords show on the units. Remove ph, turn and turns from this rule. The derived label is not locked in derive-agreed.json.",
+  "fix": {}
+ },
+ {
+  "key": "95b9482fc7e94ee0",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "verdict": "fix",
+  "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Approved lists give no timing to an always-on rule or ability whose text names no phase, and keep it out of the phase lists. The nerf-when review settled this (5323e019a2990a95: Kustom Force Field InSv, Flowing Flesh/Augury Uplink FNP, Unyielding Ancient, Repulsor Grid all {}), and Aegis of the Emperor (an army-rule FNP) stores no ph either. The InSv shows in the units’ InSv column (5+ on the vehicles, the MoE and the Nemesis Claw), and the keywords show on the units. Remove ph, turn and turns from this rule. The derived label is not locked in derive-agreed.json.",
+  "fix": {}
+ },
+ {
+  "key": "85c7c0f27199a869",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "verdict": "fix",
+  "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Approved lists give no timing to an always-on rule or ability whose text names no phase, and keep it out of the phase lists. The nerf-when review settled this (5323e019a2990a95: Kustom Force Field InSv, Flowing Flesh/Augury Uplink FNP, Unyielding Ancient, Repulsor Grid all {}), and Aegis of the Emperor (an army-rule FNP) stores no ph either. The InSv shows in the units’ InSv column (5+ on the vehicles, the MoE and the Nemesis Claw), and the keywords show on the units. Remove ph, turn and turns from this rule. The derived label is not locked in derive-agreed.json.",
+  "fix": {}
+ },
+ {
+  "key": "0ebce068d4f70074",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "verdict": "ok",
+  "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Sentence 1: HERETIC ASTARTES VEHICLE. Sentence 2: HERETIC ASTARTES VEHICLE, LORD DISCORDANT, VASHTORR THE ARKIFANE. Sentence 3: SOUL FORGE. The union is {all:[Faction: Heretic Astartes], any:[Vehicle, Lord Discordant, Vashtorr the Arkifane, Soul Forge]}, exactly as required. “Faction: Heretic Astartes” on Lord Discordant, Vashtorr and SOUL FORGE units is a narrowing the text does not state. In this faction they are all HERETIC ASTARTES, and “from your army” in a CSM army makes it hold. I re-ran derive on the branch data with main’s and the branch’s derive.js: only this item’s derived needs change. With main’s data the two derive.js give identical output (1291 items)."
+ },
+ {
+  "key": "76ba10b0097c3940",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "verdict": "ok",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” “Any phase” covers all five phases (the convention)."
+ },
+ {
+  "key": "89c0927b9753e6dc",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "verdict": "ok",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” “Any phase”: either turn."
+ },
+ {
+  "key": "b6f11545957dc8ca",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "verdict": "ok",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” {all:[Faction: Heretic Astartes], none:[Damned]} is the TARGET."
+ },
+ {
+  "key": "f20a637fee5da414",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "verdict": "ok",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” Everything is kept: the target, the “not selected to shoot or fight this phase” condition, the duration, and both abilities on a Dark Pact. Writing “makes a Dark Pact” for “is selected to make a Dark Pact” is a shortening and changes nothing."
+ },
+ {
+  "key": "d5ea9f974fa17c37",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "verdict": "ok",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” Shooting and Fight are what the WHEN names."
+ },
+ {
+  "key": "5a7a8c8df970f9ff",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "verdict": "ok",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” “Your Shooting phase or the Fight phase” gives turn either, with Shooting overridden to your (like Strength from Exile and Armed to da Teef)."
+ },
+ {
+  "key": "8c8ddbe32d792fe4",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "verdict": "ok",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” {shooting:your}: “Your Shooting phase”."
+ },
+ {
+  "key": "9aac32d76501d2d8",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "verdict": "ok",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” {all:[Soul Forge]} is the TARGET. In this list it matches Vashtorr, the Lord Discordant, the Dark Apostle unit (Cybinfernal Font) and the five vehicles, whose kw carries Soul Forge."
+ },
+ {
+  "key": "438f31c63d56fa7c",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "verdict": "ok",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” kind all (every attack). The when keeps the phases and the duration. The note “+1 AP” is the app’s form of “improve AP by 1”, and dmEffects reads it as ap+1."
+ },
+ {
+  "key": "3cf55122e2c20e53",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "verdict": "ok",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” The target, the condition, the duration and the +1 AP are all there. Nothing is added."
+ },
+ {
+  "key": "8aefa2c44752b4ac",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” Shooting and Fight."
+ },
+ {
+  "key": "b312c12e8af0c53c",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” “Your Shooting phase or the Fight phase” gives either."
+ },
+ {
+  "key": "00be46ddd3c40784",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” {shooting:your}."
+ },
+ {
+  "key": "3119d9f672bc8ad0",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” {all:[Soul Forge]} is the TARGET."
+ },
+ {
+  "key": "c6f96e3ab6567f53",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” kind all. vs {any:[Character, Monster, Vehicle]} is the targets the EFFECT names. The note “re-roll the wound roll” reads in dmEffects as rrWound all. The when keeps the phases, the duration and the targets."
+ },
+ {
+  "key": "cde6ffc16feaefa2",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” The text shortened, with nothing added or dropped."
+ },
+ {
+  "key": "93de54cbfacf23a0",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "verdict": "ok",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” Command."
+ },
+ {
+  "key": "434fe837aee895df",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "verdict": "ok",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” “Your Command phase”: your turn."
+ },
+ {
+  "key": "053205d01e3006f6",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "verdict": "ok",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” {all:[Faction: Heretic Astartes], none:[Damned]} is the TARGET."
+ },
+ {
+  "key": "e8f8a886ea29a056",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "verdict": "ok",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” D3, and 3 with SOUL FORGE, on one model: right."
+ },
+ {
+  "key": "a62ee0cc4f90f54e",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "verdict": "ok",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” The phases come from the WHEN (convention): Movement."
+ },
+ {
+  "key": "dfaf09176ad99f17",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "verdict": "ok",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” Your turn."
+ },
+ {
+  "key": "258e300333abbaeb",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "verdict": "ok",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” {all:[Faction: Heretic Astartes]}. Unlike the other strats, nothing excludes DAMNED."
+ },
+ {
+  "key": "c1b3e6b05dd45fd1",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "verdict": "ok",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” The trigger, the duration and both cases are kept. “In a turn in which it Advanced” follows from the trigger."
+ },
+ {
+  "key": "1928bc7934deb95e",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "verdict": "ok",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” Shooting."
+ },
+ {
+  "key": "8f7a8042028783e6",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "verdict": "ok",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” The opponent’s."
+ },
+ {
+  "key": "36f3f0eef598ab10",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "verdict": "ok",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” {all:[Soul Forge]}."
+ },
+ {
+  "key": "443804bc77453fac",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "verdict": "ok",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” The when-targeted line keeps the moment, +1 T and the duration."
+ },
+ {
+  "key": "226c3ce0aa6d267b",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "verdict": "ok",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” Right, nothing added. “Toughness” is the owner’s decision, recorded in deviations-texts.json (see the report: its reason still reads PROPOSED)."
+ },
+ {
+  "key": "df456f7975ef4940",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "verdict": "fix",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” [HEAVY] (Core Rules 24.16) works only “In your Shooting phase”. That makes it phase-locked (07.02.01: “any other rule that explicitly states the phase in which that rule applies” cannot be used with out-of-phase rules such as Fire Overwatch). So Overwatch in the opponent’s Movement phase gets nothing from Rain of Ruin. derive.js adds Overwatch for every always-on ranged keyword, and that is wrong for [HEAVY]. Fix: ph [shooting], turn your, no turns.",
+  "fix": {
+   "ph": [
+    "shooting"
+   ]
+  }
+ },
+ {
+  "key": "4a672e33f795e8c8",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "verdict": "fix",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” [HEAVY] (Core Rules 24.16) works only “In your Shooting phase”. That makes it phase-locked (07.02.01: “any other rule that explicitly states the phase in which that rule applies” cannot be used with out-of-phase rules such as Fire Overwatch). So Overwatch in the opponent’s Movement phase gets nothing from Rain of Ruin. derive.js adds Overwatch for every always-on ranged keyword, and that is wrong for [HEAVY]. Fix: ph [shooting], turn your, no turns.",
+  "fix": {
+   "turn": "your"
+  }
+ },
+ {
+  "key": "03747248abcdc46e",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "verdict": "fix",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” [HEAVY] (Core Rules 24.16) works only “In your Shooting phase”. That makes it phase-locked (07.02.01: “any other rule that explicitly states the phase in which that rule applies” cannot be used with out-of-phase rules such as Fire Overwatch). So Overwatch in the opponent’s Movement phase gets nothing from Rain of Ruin. derive.js adds Overwatch for every always-on ranged keyword, and that is wrong for [HEAVY]. Fix: ph [shooting], turn your, no turns. With ph [shooting] and turn your, no turns map is needed.",
+  "fix": {}
+ },
+ {
+  "key": "49c4b473ec9a4578",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "verdict": "ok",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” Needs {any:[Havocs, Obliterators]} are the two named units. Like Wahapedia, the text does not restrict it to HERETIC ASTARTES."
+ },
+ {
+  "key": "a9aa41aeb7dd564c",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "verdict": "ok",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Shooting."
+ },
+ {
+  "key": "160c051fe38eb2a3",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "verdict": "ok",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Your turn."
+ },
+ {
+  "key": "06e5099a8eecdb00",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "verdict": "ok",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” {any:[Havocs, Obliterators]}."
+ },
+ {
+  "key": "c330c8b423249df0",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "verdict": "ok",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” kind ranged (“ranged attacks”). The when keeps the trigger and the Dark Pacts condition. dmEffects reads the note as lethal plus sustained 1."
+ },
+ {
+  "key": "19fbae67146837c2",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "verdict": "ok",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Faithful."
+ },
+ {
+  "key": "5c3118406321679f",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "verdict": "ok",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” Movement."
+ },
+ {
+  "key": "530787891908c7bc",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "verdict": "ok",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” The opponent’s."
+ },
+ {
+  "key": "348e4cf06ae78de8",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "verdict": "ok",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” {all:[Havocs]}. Unengaged is a condition in play, not a keyword."
+ },
+ {
+  "key": "ebe0fa8eed0b3ab4",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "verdict": "ok",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” Faithful, with unengaged kept."
+ },
+ {
+  "key": "09aa8dfadf2d0bd9",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "verdict": "ok",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” Shooting."
+ },
+ {
+  "key": "1f44b2f453dbb3b6",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "verdict": "ok",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” The opponent’s."
+ },
+ {
+  "key": "d0b4035f30bd248a",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "verdict": "ok",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” {any:[Havocs, Obliterators]}."
+ },
+ {
+  "key": "68f3ecb6dbc72cc2",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "verdict": "ok",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” The when-targeted line keeps the phase, the S>T condition and -1 to wound. Like the text, it gives no duration."
+ },
+ {
+  "key": "b9c3dc2b86455805",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "verdict": "ok",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” Faithful."
+ },
+ {
+  "key": "95d67d33bc7d67b2",
+  "where": "resolveRoster",
+  "verdict": "ok",
+  "why": "The judged code is identical to the live import.js resolveRoster (diffed). The change: the limit check runs only when the export has costLimits, and army.points falls back to T.limits[battleSize]. An over-limit list cannot get through. Two checks still hold: total (R.costs) > T.limits[battleSize] is refused, and the units’ app points must equal that total. T.limits has an entry for every battle size in T.battleSizes (import-ids.js throws otherwise), so the check never compares against undefined. Run against the Fellhammer export (no costLimits): as is → OK, 2000/1995. Extra Havocs with costs updated → “points total 2130 … over the Strike Force limit of 2000 pts”. Extra Havocs with costs not updated → “the units add up to 2130”. No costs → refused (0 ≠ 1995). costLimits [] → OK. costLimits 3000 → refused. Non-pts costLimits → refused. null → malformed. node verify/import-test.js: 19/19 identical, 45 changed exports refused, 144 checks, 0 failures. The implements text still holds (a limit the export names must be BSData’s). Suggestion, not a blocker: import-test has no negative case for “no costLimits and over the limit”."
+ }
+]

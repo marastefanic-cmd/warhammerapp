@@ -124,3 +124,17 @@ chaos-daemons Bloodletters
 chaos-daemons Bloodcrushers
 chaos-daemons Beasts-Of-Nurgle
 chaos-daemons Flesh-Hounds
+chaos-space-marines Vashtorr-The-Arkifane
+chaos-space-marines Dark-Apostle
+chaos-space-marines Lord-Discordant-On-Helstalker
+chaos-space-marines Master-Of-Executions
+chaos-space-marines Warpsmith
+chaos-space-marines Cultist-Mob
+chaos-space-marines Havocs
+chaos-space-marines Nemesis-Claw
+chaos-space-marines Obliterators
+chaos-space-marines Chaos-Predator-Annihilator
+chaos-space-marines Chaos-Predator-Destructor
+chaos-space-marines Chaos-Vindicator
+chaos-space-marines Forgefiend
+chaos-space-marines Maulerfiend
