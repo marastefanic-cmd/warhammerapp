@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-23.10';
+const VERSION = '2026-10-24.1';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -54,6 +54,7 @@ const RULES = {
 
   'Deep Strike': 'Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n*App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).*',
   'Deadly Demise': 'This ability always takes the form **Deadly Demise X**. Each time a model in this unit is **destroyed**, after the units embarked within it (if any) have made their **emergency disembark moves**, roll one D6. On a 6, that model suffers a **deadly demise**; each unit within 6" of that model suffers a number of **mortal wounds** denoted by **X** (if this is a random number, roll separately for each unit within 6").',
+  'Damaged': '*Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*',
   'Feel No Pain': 'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.',
   'Leader': 'Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it.',
   'Support': 'Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it.',
@@ -112,7 +113,7 @@ const RULE_ALIASES = [
   [/^leader\b/i, 'Leader'], [/^lone operative/i, 'Lone Operative'], [/^mobile/i, 'Mobile'], [/^hunter/i, 'Hunter'], [/^snap shooting/i, 'Snap Shooting'],
   [/^fights first/i, 'Fights First'], [/^actions?$/i, 'Actions'],
   [/^melta/i, 'Melta'], [/^lance/i, 'Lance'], [/^super-heavy walker/i, 'Super-Heavy Walker'],
-  [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'],
+  [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'], [/^damaged \d+$/i, 'Damaged'],
   [/^psychic$/i, 'Psychic'],
   [/^harpooned$/i, 'Harpooned'],
   [/^hazard(ous)? (roll|test)s?$/i, 'Hazard Roll'],
@@ -1283,6 +1284,134 @@ const FACTIONS = {
             when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.',
             target:'That **WAR DOG** unit.',
             effect:'Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked.' }
+        ]
+      }
+    }
+  },
+  'adeptus-custodes': {
+    name: 'Adeptus Custodes',
+    // New Recruit (BSData) spells the army rule with a straight apostrophe, Wahapedia "Martial Ka’tah"
+    aliases: [[/^martial ka'tah$/i, 'Martial Ka’tah']],
+    // Sources: the new Codex: Adeptus Custodes as Wahapedia prints it (with GW's Printed Product Updates of 14 Oct 2026, which change
+    // nothing in this list). GW's Faction Pack 1.2 (legal from 30 Sep 2026) is the previous codex's: its Rules Updates and its
+    // detachments (a Might of the Moritoi of its own among them) are not used.
+    // army rules: Wahapedia, Adeptus Custodes, Army Rules. Martial Ka’tah: the rule, then its Favoured Ka’tah paragraph
+    // (a sub-heading inside the rule on Wahapedia); the table is the six ka’tah abilities (name, then their WHEN / TARGET / EFFECT).
+    // Wahapedia also lists Special Move Types (the Shock Disembark Move, for a unit embarked within a TRANSPORT): no TRANSPORT in these
+    // lists, so it is left out.
+    armyRules: [
+      // def: Kaptaris, the ka’tah ability that protects the unit (Fight phase)
+      { name:'Martial Ka’tah', at:'Start of your Command phase', ph:['command','movement','shooting','fight'], turn:'either', turns:{ command:'your', movement:'your', shooting:'your' },
+        def:'Kaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls', defPh:['fight'],
+        text:'At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2" **M** in addition to the normal effect of Calistus.',
+        table:[
+          ['Conservai', 'KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.'],
+          ['Calistus', 'KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.'],
+          ['Salvus', 'KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.'],
+          ['Dacatarai', 'KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.'],
+          ['Kaptaris', 'KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.'],
+          ['Rendax', 'KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**.']
+        ],
+        // the Damage tab's reading (read by it alone): the ka’tah abilities that change your unit's attacks, each a box the player ticks
+        // (whether the unit is readied and which ka’tah it uses are theirs to say). Salvus: the calculator counts the hit roll part.
+        // Kaptaris protects the unit and Calistus / Conservai change no numbers of its attacks
+        calcMods:[
+          { kind:'ranged', from:'Salvus', when:'Salvus (your Shooting phase, a readied unit selected to shoot)', note:'can ignore modifiers to BS, hit rolls and wound rolls', calc:{ ignoreHitMods:true } },
+          { kind:'melee', from:'Dacatarai', when:'Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets', note:'re-roll hit rolls of 1', vs:{ none:['Monster','Vehicle'] } },
+          { kind:'melee', from:'Rendax', when:'Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets', note:'[LETHAL HITS]', vs:{ any:['Monster','Vehicle'] } }
+        ] },
+      { name:'Aegis of the Emperor', def:'Feel No Pain 5+ against mortal wounds',
+        text:'Friendly **ADEPTUS CUSTODES** units with this ability have Feel No Pain 5+ against mortal wounds.' },
+      { name:'Aquila Commander', at:'Start of the battle round', ph:['command'], turn:'either',
+        text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' },
+      { name:'Daughters of the Abyss', def:'Feel No Pain 3+ against psychic attacks',
+        text:'- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
+      // how an Adeptus Custodes army includes the Prosecutors and Witchseekers (ANATHEMA PSYKANA, not ADEPTUS CUSTODES)
+      { name:'Anathema Psykana',
+        text:'You can include **ANATHEMA PSYKANA** units in your army, even though they do not have the **ADEPTUS CUSTODES** faction keyword.\nWhen mustering your army, unless otherwise stated:\n- You cannot select **ANATHEMA PSYKANA** as your army faction.\n- You cannot select an **ANATHEMA PSYKANA** model to be your **WARLORD**.' }
+    ],
+    detachments: {
+      // Emperor’s Chosen: rule, enhancements and stratagems from Wahapedia (the codex)
+      'emperors-chosen': {
+        name:'Emperor’s Chosen', dispositions:['Priority Assets'], dp:1,
+        // ph/turn: "selected to attack" (shoot or fight, and Fire Overwatch in the opponent's Movement phase); the Favoured Ka’tah's additional effect is Rendax's, in the Fight phase
+        rule:{ name:'Magna Imperator', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes'] },
+          mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll' },
+          text:'When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**.' },
+        enhancements:[
+          { name:'From the Hall of Armouries', pts:15, text:'**ADEPTUS CUSTODES** model only. This model’s melee attacks have **[Devastating Wounds]**.' },
+          { name:'Radiant Mantle', pts:40, text:'**ADEPTUS CUSTODES INFANTRY** model only. Attacks that target this unit have -1 to **hit rolls**.' }
+        ],
+        stratagems:[
+          { id:'in-auramite-clad', gist:'An enemy unit targets your unit: attacks that target your unit have -1 AP until that enemy unit has attacked.', def:'their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)', name:'In Auramite Clad', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Adeptus Custodes'], none:['Custodian Wardens'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).',
+            target:'That **ADEPTUS CUSTODES** unit.',
+            effect:'Attacks that target your unit have -1 **AP** until that enemy unit has attacked.' },
+          { id:'superhuman-focus', gist:'End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).', name:'Superhuman Focus', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Adeptus Custodes'] },
+            when:'End of any phase.',
+            target:'One friendly **ADEPTUS CUSTODES** unit that is not **readied**.',
+            effect:'Your unit is **readied**.',
+            restrictions:'You cannot select the same unit as the target of this **stratagem** more than once per battle round.' },
+          // Wahapedia strikes MONSTER through (its mark for a keyword that does not appear in the faction)
+          { id:'impenetrable-bastion', gist:'Select one objective your unit is controlling: that objective is secured.', name:'Impenetrable Bastion', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] },
+            when:'End of your Movement phase.',
+            target:'One friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units).',
+            effect:'Select one **objective** your unit is controlling. That **objective** is **secured**.' }
+        ]
+      },
+      // Grav-Assault Force: Wahapedia wording (the codex)
+      'grav-assault-force': {
+        name:'Grav-Assault Force', dispositions:['Reconnaissance'], dp:1,
+        rule:{ name:'Flare Shields', needs:{ all:['Grav-assault'] }, def:'4+ InSv against ranged attacks',
+          text:'Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.' },
+        enhancements:[
+          { name:'Anti-gravitic Mobility', pts:15, upgrade:true, text:'**GRAV-ASSAULT** unit only. When this unit makes a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot**.' },
+          { name:'Combat Deployment', pts:20, upgrade:true, text:'**GRAV-ASSAULT TRANSPORT** model only. When a friendly **ADEPTUS CUSTODES** unit is selected to make a **disembark move** from this unit, until the end of the turn:\n- That unit can re-roll **charge rolls**.\n- Enemy units cannot target that unit with **snap shooting** attacks.' }
+        ],
+        stratagems:[
+          { id:'victory-before-death', gist:'Your unit within range of an objective is destroyed: select one objective it was controlling when it was destroyed, with no enemy units (excluding AIRCRAFT) within range of it: that objective is secured.', name:'Victory Before Death', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Grav-assault'] },
+            when:'Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.',
+            target:'That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.',
+            effect:'Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**.' },
+          { id:'advanced-stabilisers', gist:'Your unit’s ranged attacks have [ASSAULT].', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'ranged attacks have [ASSAULT]' }, name:'Advanced Stabilisers', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
+            when:'Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.',
+            target:'That **GRAV-ASSAULT** unit.',
+            effect:'Your unit’s ranged attacks have **[Assault]**.' },
+          // the calculator counts the hit roll part (BS and hit roll modifiers)
+          { id:'inevitable-annihilation', gist:'Your unit can ignore modifiers to its BS and hit rolls.', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'can ignore modifiers to BS and hit rolls', calc:{ ignoreHitMods:true } }, name:'Inevitable Annihilation', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
+            when:'Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.',
+            target:'That **GRAV-ASSAULT** unit.',
+            effect:'Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**.' }
+        ]
+      },
+      // Might of the Moritoi: the codex detachment (Moritoi Ancients, Memento Moritoi, Augury Uplink), as Wahapedia, BSData and New
+      // Recruit print it
+      'might-of-the-moritoi': {
+        name:'Might of the Moritoi', dispositions:['Take and Hold'], dp:1,
+        // the re-rolls for below starting strength / below half-strength: one pick (OC +2 at starting strength is not an attack)
+        rule:{ name:'Moritoi Ancients', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+          mod:{ kind:'all', when:'Below starting strength, or below half-strength', note:'below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1',
+            pick:[{ name:'Below starting strength', note:'re-roll hit rolls of 1' }, { name:'Below half-strength', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
+          text:'- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
+        // limit: Wahapedia prints "(one per army)" after the name; New Recruit and BSData name them without it
+        enhancements:[
+          { name:'Memento Moritoi', limit:'one per army', pts:30, upgrade:true, text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.' },
+          { name:'Augury Uplink', limit:'one per army', pts:30, upgrade:true, text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.' }
+        ],
+        stratagems:[
+          { id:'honoured-interred', help:{ to:{ all:['Faction: Adeptus Custodes'] }, by:{ all:['Faction: Adeptus Custodes','Dreadnought'] }, via:'its aura: within 6" of the ADEPTUS CUSTODES DREADNOUGHT unit with it',
+              mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred', note:'re-roll hit rolls of 1' } }, gist:'Your unit has the Honoured Interred aura: friendly ADEPTUS CUSTODES units within 6" can re-roll hit rolls of 1.', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")', note:'re-roll hit rolls of 1' }, name:'Honoured Interred', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+            when:'Your Shooting phase or the Fight phase.',
+            target:'One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.',
+            effect:'Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit can re-roll **hit rolls** of 1.' },
+          { id:'unceasing-onslaught', gist:'Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge.', mod:{ kind:'ranged', when:'Ended an advance move this turn (until the end of the turn)', note:'ranged attacks have [ASSAULT]' }, name:'Unceasing Onslaught', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+            when:'Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.',
+            target:'That **ADEPTUS CUSTODES DREADNOUGHT** unit.',
+            effect:'- Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**.' },
+          { id:'unstoppable-momentum', gist:'Your unit selected to move or declaring a charge has MOBILE.', name:'Unstoppable Momentum', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+            when:'Your Movement/Charge phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **selected to move** or **declares a charge**.',
+            target:'That **ADEPTUS CUSTODES DREADNOUGHT** unit.',
+            effect:'Your unit has **MOBILE**.' }
         ]
       }
     }
@@ -3965,6 +4094,257 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'lite-knights', name:'Lite Knights', faction:'adeptus-custodes', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Take and Hold',
+  detachments:['emperors-chosen','grav-assault-force','might-of-the-moritoi'],
+  source:'New Recruit, exported 23 Oct 2026',
+  units:[
+    {
+      id:'trajann-valoris-allarus-custodians', name:'Trajann Valoris', role:'Epic Hero', pts:445, ptsNote:'265 + Allarus Custodians 180', warlord:true,
+      leads:'Allarus Custodians',
+      models:['1× Trajann Valoris','1× Allarus Custodian','1× Allarus Custodian (Vexilla)'],
+      gear:[['Eagle’s Scream','Watcher’s Axe'],['Balistus grenade launcher','Castellan axe'],['Balistus grenade launcher','Castellan axe']],
+      stats:[
+        { name:'Trajann Valoris', M:'8"', T:'7', Sv:'2+', W:'10', Ld:'5+', OC:'3', InSv:'4+', base:'40mm', from:{ 'OC':'Vexilla' } },
+        { name:'Allarus Custodian ×2', M:'7"', T:'8', Sv:'2+', W:'6', Ld:'5+', OC:'3', InSv:'4+', base:'40mm', from:{ 'OC':'Vexilla' } }
+      ],
+      ranged:[
+        { name:'Eagle’s Scream', who:'Trajann Valoris', range:'24"', A:'2', BS:'2+', S:'6', AP:'-2', D:'2', kw:['ASSAULT','RAPID FIRE 2'] },
+        { name:'Balistus grenade launcher', who:'Allarus Custodians', n:2, range:'18"', A:'3', BS:'2+', S:'5', AP:'-1', D:'1', kw:['ASSAULT','BLAST 1'] },
+        { name:'Castellan axe', who:'Allarus Custodians', n:2, range:'24"', A:'2', BS:'2+', S:'5', AP:'-1', D:'2', kw:['ASSAULT','RAPID FIRE 2'] }
+      ],
+      melee:[
+        { name:'Watcher’s Axe', who:'Trajann Valoris', range:'Melee', A:'6', WS:'2+', S:'12', AP:'-3', D:'4', kw:['CLEAVE 1'] },
+        { name:'Castellan axe', who:'Allarus Custodians', n:2, range:'Melee', A:'3', WS:'2+', S:'10', AP:'-2', D:'4', kw:[] }
+      ],
+      abilities:[
+        // the new codex's wording (Wahapedia); New Recruit prints the bullets without full stops
+        { name:'Captain-General', who:'Trajann Valoris', tag:'Aura', text:'Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
+        // ph/turn: "at the start of any phase"; the +3 A is the Watcher's Axe footnote, the 3+ InSv the When targeted line (one of the two)
+        { name:'Moment Shackle', who:'Trajann Valoris', tag:'Once per battle, per army', ph:['command','movement','shooting','charge','fight'], turn:'either',
+          def:'Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase',
+          text:'(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.' },
+        // the new codex's name (Wahapedia); New Recruit prints "Slayers of Tyrants"
+        { name:'Slayer of Tyrants', who:'Allarus Custodians', text:'This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.' },
+        { name:'Vexilla', who:'Allarus Custodians', text:'- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
+      ],
+      rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
+      kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
+      kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
+      // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
+      partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
+      mods:[
+        { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle' },
+        { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayer of Tyrants' }
+      ],
+      // Captain-General: friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of Trajann, his own unit included
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }, when:'Within 6" of Trajann Valoris', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Captain-General', selfAlways:true }
+      ]
+    },
+    {
+      id:'prosecutor-squad', name:'Prosecutor Squad', role:'Infantry', pts:45, copies:2,
+      models:['4× Prosecutor'],
+      gear:[['Boltgun','Gun Stock']],
+      stats:[
+        { name:'Prosecutor ×4', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Boltgun', n:4, range:'24"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','RAPID FIRE 1'] }
+      ],
+      melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
+        { name:'Gun Stock', n:4, range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Purity of Execution', ph:['shooting'], turn:'your', text:'In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**:\n- While a unit is **detected**, that unit has +3" **detection range**.' }
+      ],
+      rules:['Feel No Pain 3+*','Daughters of the Abyss','Assault','Anti','Rapid Fire'],
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
+      guard:[
+        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
+      ],
+      kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Prosecutor Squad']
+    },
+    {
+      id:'witchseeker-squad', name:'Witchseeker Squad', role:'Infantry', pts:55,
+      models:['4× Witchseeker'],
+      gear:[['Flamer','Gun Stock']],
+      stats:[
+        { name:'Witchseeker ×4', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Flamer', n:4, range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
+      ],
+      melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
+        { name:'Gun Stock', n:4, range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
+        { name:'Sanctified Flames', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.' }
+      ],
+      rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
+      guard:[
+        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
+      ],
+      kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad']
+    },
+    {
+      id:'witchseeker-squad-2', name:'Witchseeker Squad', role:'Infantry', pts:60,
+      models:['5× Witchseeker'],
+      gear:[['Flamer','Gun Stock']],
+      stats:[
+        { name:'Witchseeker ×5', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Flamer', n:5, range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
+      ],
+      melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
+        { name:'Gun Stock', n:5, range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
+        { name:'Sanctified Flames', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.' }
+      ],
+      rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
+      guard:[
+        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
+      ],
+      kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad']
+    },
+    {
+      id:'caladius-annihilator-grav-tank', name:'Caladius Annihilator Grav-tank', role:'Vehicle', pts:250,
+      models:['1× Caladius Annihilator Grav-tank'],
+      gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
+      stats:[
+        // base: GW's Base Size Guide (Event Companion, Oct 2026) "Caladius Grav-tank 170x109mm Oval Base"; BSData, and so New Recruit,
+        // give 150×95mm (deviations-nr.json, deviations-bsdata.json)
+        { name:'Caladius Annihilator Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'5+, 4+*', base:'170×109mm Oval', from:{ 'InSv':'Flare Shields' } }
+      ],
+      ranged:[
+        { name:'Arachnus Blaze Carronade', range:'48"', A:'4', BS:'2+', S:'12', AP:'-3', D:'D6+2', kw:['LETHAL HITS: MONSTER/VEHICLE'] },
+        { name:'Twin Lastrum Bolt Cannon', range:'36"', A:'3', BS:'2+', S:'6', AP:'-2', D:'2', kw:['SUSTAINED HITS 1','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Armoured hull', range:'Melee', A:'4', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Advanced Firepower', text:'This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.' },
+      ],
+      rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Lethal Hits','Sustained Hits'],
+      // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
+      // "Caladius Annihilator Grav-tank" and not CALADIUS. Flare Shields is the Grav-Assault Force detachment rule (GW's words), which
+      // applies to it as a GRAV-ASSAULT unit; New Recruit prints it as an ability of the unit in its own words (deviations-nr.json)
+      kw:['Caladius','Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle'],
+      mods:[
+        { kind:'ranged', when:'vs MONSTER/VEHICLE', note:'re-roll one hit roll, one wound roll and one damage roll', from:'Advanced Firepower', always:true, vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
+      ]
+    },
+    {
+      id:'contemptor-achillus-dreadnought', name:'Contemptor-Achillus Dreadnought', role:'Vehicle', pts:230,
+      models:['1× Contemptor-Achillus Dreadnought'],
+      gear:[['Dreadspear','Lastrum storm bolter','Lastrum storm bolter']],
+      stats:[
+        { name:'Contemptor-Achillus Dreadnought', M:'9"', T:'10', Sv:'2+', W:'12', Ld:'5+', OC:'3', InSv:'5+', base:'60mm' }
+      ],
+      ranged:[
+        { name:'Dreadspear', range:'18"', A:'2', BS:'2+', S:'10', AP:'-3', D:'D3+2', kw:[] },
+        { name:'Lastrum storm bolter', n:2, range:'24"', A:'3', BS:'2+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Dreadspear', range:'Melee', A:'5', WS:'2+', S:'12', AP:'-3', D:'D3+3', kw:['LANCE'] }
+      ],
+      abilities:[
+        { name:'Unyielding Ancient', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Lance','Rapid Fire'],
+      kw:['Contemptor-Achillus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4' }
+      ]
+    },
+    {
+      id:'contemptor-galatus-dreadnought', name:'Contemptor-Galatus Dreadnought', role:'Vehicle', pts:250, upgrade:'Memento Moritoi',
+      models:['1× Contemptor-Galatus Dreadnought'],
+      gear:[['Warblade']],
+      stats:[
+        { name:'Contemptor-Galatus Dreadnought', M:'9"', T:'10', Sv:'2+', W:'12', Ld:'5+', OC:'3', InSv:'4+', base:'60mm' }
+      ],
+      ranged:[
+        { name:'Warblade', range:'12"', A:'4', BS:'–', S:'6', AP:'-1', D:'2', kw:['BLAST 2','TORRENT','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Warblade', range:'Melee', A:'9', WS:'2+', S:'11', AP:'-2', D:'4', kw:['CLEAVE 1','SUSTAINED HITS 1: non-MONSTER/VEHICLE'], from:{ 'A':'Memento Moritoi', 'S':'Memento Moritoi', 'D':'Memento Moritoi' } }
+      ],
+      abilities:[
+        { name:'Unyielding Ancient', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' },
+        // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out; the +1 A, S and D are in the
+        // Warblade's melee profile already (from)
+        { name:'Memento Moritoi', tag:'Upgrade', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Blast','Torrent','Twin-linked'],
+      kw:['Contemptor-Galatus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4' }
+      ]
+    },
+    {
+      id:'telemon-heavy-dreadnought', name:'Telemon Heavy Dreadnought', role:'Vehicle', pts:310, upgrade:'Augury Uplink',
+      models:['1× Telemon Heavy Dreadnought'],
+      gear:[['Spiculus bolt launcher','Dual Caestus Fists','Twin Neutronium Cascade Projectors','Twin Neutronium Cascade Projectors']],
+      stats:[
+        { name:'Telemon Heavy Dreadnought', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'4+', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Spiculus bolt launcher', range:'36"', A:'6', BS:'2+', S:'5', AP:'-1', D:'1', kw:['BLAST 2'] },
+        { name:'Twin Neutronium Cascade Projectors', n:2, range:'12"', A:'3', BS:'–', S:'7', AP:'-2', D:'1', kw:['BLAST 1','TORRENT','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Dual Caestus Fists', range:'Melee', A:'7', WS:'2+', S:'14', AP:'-3', D:'4', kw:['TWIN-LINKED'] }
+      ],
+      abilities:[
+        { name:'Guardian Eternal', def:'Ranged attacks that target it have -1 D', text:'Ranged attacks that target this unit have -1 **D**.' },
+        // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out
+        { name:'Augury Uplink', tag:'Upgrade', def:'Feel No Pain 5+', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Feel No Pain 5+','Blast','Twin-linked','Torrent'],
+      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
+      ]
+    },
+    {
+      id:'telemon-heavy-dreadnought-2', name:'Telemon Heavy Dreadnought', role:'Vehicle', pts:310,
+      models:['1× Telemon Heavy Dreadnought'],
+      gear:[['Spiculus bolt launcher','Adrathic Desolator','Caestus Fist','Twin Neutronium Cascade Projectors']],
+      stats:[
+        { name:'Telemon Heavy Dreadnought', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'4+', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Spiculus bolt launcher', range:'36"', A:'6', BS:'2+', S:'5', AP:'-1', D:'1', kw:['BLAST 2'] },
+        { name:'Adrathic Desolator', range:'24"', A:'4', BS:'2+', S:'10', AP:'-2', D:'4', kw:[] },
+        { name:'Twin Neutronium Cascade Projectors', range:'12"', A:'3', BS:'–', S:'7', AP:'-2', D:'1', kw:['BLAST 1','TORRENT','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Caestus Fist', range:'Melee', A:'5', WS:'2+', S:'14', AP:'-3', D:'4', kw:[] }
+      ],
+      abilities:[
+        { name:'Guardian Eternal', def:'Ranged attacks that target it have -1 D', text:'Ranged attacks that target this unit have -1 **D**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Blast','Torrent','Twin-linked'],
+      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
+      ]
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -5802,6 +6182,7 @@ const BS_IDS = {
   factions:{
     "03fe-a162-4c02-f07b":"emperors-children",
     "1069-10ff-3ba9-873b":"thousand-sons",
+    "1f19-6509-d906-ca10":"adeptus-custodes",
     "25dd-7aa0-6bf4-f2d5":"imperial-knights",
     "46d8-abc8-ef3a-9f85":"chaos-knights",
     "77b9-2f66-3f9b-5cf3":"adeptus-mechanicus",
@@ -5813,6 +6194,7 @@ const BS_IDS = {
     "1162-9cd5-d6b0-1663":"detachment",
     "2f69-9148-45b4-86a8":"disposition",
     "3b0d-dccf-8661-be1c":"detachment",
+    "5218-339c-eb34-9ac0":"detachment",
     "564e-fbc6-5266-3ea4":"battleSize",
     "5a84-ea91-b707-1656":"detachment",
     "6470-c44a-45f4-3313":"detachment",
@@ -5839,6 +6221,8 @@ const BS_IDS = {
   detachments:{
     "0985-28ae-cf24-2fba":"world-eaters/butchers-of-khorne",
     "1558-660f-466b-a087":"world-eaters/khorne-daemonkin",
+    "1bb5-5aba-6c8f-7afc":"adeptus-custodes/might-of-the-moritoi",
+    "1c7e-56bc-3196-b5cd":"adeptus-custodes/emperors-chosen",
     "3490-ec82-70b3-c5cf":"world-eaters/berzerker-warband",
     "496c-ddb9-3e71-e0b3":"orks/war-horde",
     "4b17-a73a-7a0a-a265":"orks/bully-boyz",
@@ -5856,6 +6240,7 @@ const BS_IDS = {
     "8d8b-a030-83d5-f4e6":"tyranids/talons-of-the-norn-queen",
     "9aba-cb08-cd38-9e01":"thousand-sons/grand-coven",
     "9db8-cf55-983f-9671":"emperors-children/coterie-of-the-conceited",
+    "ccb7-6823-6a97-7c19":"adeptus-custodes/grav-assault-force",
     "f67d-6f59-21b8-e1f9":"adeptus-mechanicus/cohort-cybernetica",
     "f782-e3f1-c132-fe52":"orks/wreckas",
     "fca1-ecdf-4e4a-df41":"orks/shoota-boyz"
@@ -5869,6 +6254,7 @@ const BS_IDS = {
   },
   info:{
     "5558-f47e-9f45-3fca":"Blessings of Khorne Reference",
+    "7a3e-cedf-9f08-fcac":"Martial Ka'tah Reference",
     "87f0-0a14-9b6b-f367":"Rituals reference",
     "e8ef-836a-a9d1-901d":"Show/Hide Options"
   },
@@ -5925,6 +6311,15 @@ const BS_IDS = {
     "infernal-lance/knight-ruinator":["c0a2-eb65-6d34-5bc6|1×9e94-b7d4-ec7f-9163,1×b4ca-3419-c219-f429,1×f075-4ccc-9a91-5e6d"],
     "infernal-lance/knight-ruinator-fleshmetal-fusion":["c0a2-eb65-6d34-5bc6|1×27b4-53af-ee1b-688a,1×9e94-b7d4-ec7f-9163,1×b4ca-3419-c219-f429,1×f075-4ccc-9a91-5e6d"],
     "infernal-lance/nurglings":["e403-3a9-279e-41b7|3×7212-7cc9-ec49-72b8,3×7212-7cc9-ec49-72b8/2aea-961-8345-fce5"],
+    "lite-knights/caladius-annihilator-grav-tank":["dbf0-5211-463c-40ec|1×62a1-1fa7-70b7-614d,1×d9ca-c6b0-ba9c-b6c8,1×dca3-638e-52a2-b1b8"],
+    "lite-knights/contemptor-achillus-dreadnought":["db3b-02cd-87a2-3b52|1×b1eb-9d70-dfc2-208b,2×d9a6-8dbd-2c01-862b"],
+    "lite-knights/contemptor-galatus-dreadnought":["4988-d93e-5034-2b3c|1×5514-3810-cf3e-3b23,1×a287-990-9f34-9836"],
+    "lite-knights/prosecutor-squad":["3ec3-a4df-fdbf-5507|4×6814-ce42-4b23-72a9,4×6814-ce42-4b23-72a9/3d5c-4127-b923-d579,4×6814-ce42-4b23-72a9/77b6-41ee-7952-e94d"],
+    "lite-knights/telemon-heavy-dreadnought":["e7d8-1c73-7d03-8b62|1×1189-dcd8-e3ed-7837,1×3f27-79c1-1aea-5be7,1×3f27-79c1-1aea-5be7/8dc7-bea2-997b-a1c9,2×3f27-79c1-1aea-5be7/9f43-3691-5be1-8623,1×7b41-35aa-3265-14d7"],
+    "lite-knights/telemon-heavy-dreadnought-2":["e7d8-1c73-7d03-8b62|1×1189-dcd8-e3ed-7837,1×8555-148a-0e35-4749,1×8555-148a-0e35-4749/6445-6811-f628-9750,1×8555-148a-0e35-4749/72c5-8bd0-19f5-f246,1×8555-148a-0e35-4749/9f43-3691-5be1-8623"],
+    "lite-knights/trajann-valoris-allarus-custodians":["7d7c-c212-47a3-38e4|1×0574-f558-2957-584f,1×5622-c756-d3e8-85ae,1×b330-bad6-ea21-ecb","c8a6-a4c5-703e-b717|1×59ef-1bf3-f681-c8ae,2×fab4-d437-6e07-eb33,2×fab4-d437-6e07-eb33/4863-f443-2b45-e18b,2×fab4-d437-6e07-eb33/94b3-ef7f-f71f-c86e"],
+    "lite-knights/witchseeker-squad":["503b-f7be-eeeb-9e31|4×9fdd-e31a-5f28-85ea,4×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,4×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
+    "lite-knights/witchseeker-squad-2":["503b-f7be-eeeb-9e31|5×9fdd-e31a-5f28-85ea,5×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,5×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
     "melee/beastboss-on-squigosaur-headwoppas-killchoppa":["a8b7-351-d911-a4d6|1×109a-db29-c4a5-f826,1×40fb-e485-dca0-cb12,1×4dcd-5d7f-65c2-245b,1×6084-9fb5-76d2-8487,1×d231-f7e4-f722-d987"],
     "melee/big-mek-in-mega-armour-meganobz":["95e9-6da3-5e75-2566|1×6b9e-c6ae-2626-45c9,1×e0c6-58cd-a822-8b84,1×ed0c-e9cb-399f-a5a2,1×f65e-dc30-e7c0-7e47","7067-34f4-5272-e05f|5×731f-2f2-7ca0-23ed,5×731f-2f2-7ca0-23ed/b46a-4885-3b28-428b"],
     "melee/big-mek-painboy-nobz":["fbee-427a-1c46-f621|1×673b-c3e-6682-ae28,1×df3a-0414-6edc-005a,1×e201-253f-1f52-e389","7669-1442-2c0b-e0c9|1×96d6-846e-edd3-332f,1×e083-787f-1fff-4170","b16a-7132-3f8a-abe5|8×252b-cdba-84bd-3ed3,8×252b-cdba-84bd-3ed3/392a-657c-8bfe-a1e6,8×252b-cdba-84bd-3ed3/8bba-d0bf-1102-2131,2×cff4-311e-b386-0879,2×cff4-311e-b386-0879/392a-657c-8bfe-a1e6,2×cff4-311e-b386-0879/9a9f-3dab-02c0-8be7"],
@@ -6023,6 +6418,7 @@ const BS_IDS = {
     "0119-8c04-435e-c782":"Knight Despoiler",
     "02c9-ea19-b105-af58":"Combi-bolter",
     "0567-0f45-90e8-d3f4":"Flawless Blade",
+    "0574-f558-2957-584f":"Warlord",
     "0580-79ca-da98-77c3":"Warlord",
     "0620-25eb-4da2-5dae":"Jakhal",
     "062f-464f-9cfe-5dce":"Close combat weapon",
@@ -6037,6 +6433,7 @@ const BS_IDS = {
     "10f9-eb42-632e-3a6f":"Supa-glowy Fing",
     "1150-7501-d526-d373":"Incandeum",
     "1187-f3db-ea97-bada":"Reaper chainsword",
+    "1189-dcd8-e3ed-7837":"Spiculus bolt launcher",
     "131b-ff57-84bb-e87a":"Monstrous Nemesis",
     "13cd-5399-07f2-6d79":"Flesh Hound",
     "13f7-1a3-eff-7393":"The Swarmlord",
@@ -6113,12 +6510,15 @@ const BS_IDS = {
     "3bee-8c85-68f7-e54b":"Warlord",
     "3bfa-bf00-b5ed-cc81":"Ahriman",
     "3cbf-631a-2bbe-6b54":"Rubric Marine w/ soulreaper cannon",
+    "3d5c-4127-b923-d579":"Boltgun",
     "3d89-dec1-eaa9-47f3":"Galvanic rifle",
     "3ded-7df8-ef3e-913a":"Chastiser gatling cannon",
     "3e4b-1a3a-8473-578c":"Hellforged weapons",
     "3e96-8098-3401-77af":"Hive Tyrant",
     "3ea6-60b4-5fb0-b40f":"Kan Blasta",
+    "3ec3-a4df-fdbf-5507":"Prosecutor Squad",
     "3f1f-49de-78f6-e59e":"Samni'arius and Spinegrinder",
+    "3f27-79c1-1aea-5be7":"Dual Fists and 2 Projectors",
     "3f41-4b71-a07b-506a":"Titanic feet",
     "3fcc-b6a1-399b-1a29":"Skorpius Disintegrator",
     "406-60ac-f728-9c6d":"Graviton singularity cannon",
@@ -6146,8 +6546,10 @@ const BS_IDS = {
     "47f0-7e05-a4aa-2cef":"Multi-busta Launcha",
     "484b-6da4-9390-33ae":"Deffkopta w/ Kustom mega-blasta",
     "4858-7bde-a8d4-e7da":"Cawl's Omnissian axe",
+    "4863-f443-2b45-e18b":"Balistus grenade launcher",
     "48a2-a603-9607-4df8":"Gatling cannon and flamer",
     "48de-a40a-2252-66c":"Force weapon",
+    "4988-d93e-5034-2b3c":"Contemptor-Galatus Dreadnought",
     "4aa5-24c5-89bc-7023":"Scarab Occult Sorcerer",
     "4ad2-bd20-6dfe-776b":"Bloodthirster",
     "4b2a-4860-aed5-56b6":"Forgefiend claws",
@@ -6156,16 +6558,20 @@ const BS_IDS = {
     "4ea0-6b70-c17c-bc00":"Ghazghkull Thraka",
     "4fc1-2679-a110-3cd":"Avenger gatling cannon",
     "4ff3-7dce-5a52-94e9":"Bestial Aspect",
+    "503b-f7be-eeeb-9e31":"Witchseeker Squad",
     "5059-e78f-c558-c8e8":"Ferrumite cannon",
     "50f3-6a18-bc71-2a59":"Toxinjecter harpoon",
     "5447-603b-27a0-7240":"Psyko-gatler",
     "545a-eead-e216-5939":"Cerastus shock lance",
     "54ca-fec8-f0c6-2c77":"Ectoplasma cannon and claws",
+    "5514-3810-cf3e-3b23":"Memento Moritoi",
     "55fb-9c91-1a4f-3037":"Canis Rex",
+    "5622-c756-d3e8-85ae":"Watcher's Axe",
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
     "5720-2873-8c2c-edc3":"Norn Emissary",
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
+    "59ef-1bf3-f681-c8ae":"Vexilla",
     "5b76-3e1c-8801-1e4b":"Archslaughterer",
     "5b9-7d59-48fd-b485":"Tzaangor w/ Tzaangor blades",
     "5be8-d319-e2a9-8409":"Twin cognis autocannon",
@@ -6180,7 +6586,9 @@ const BS_IDS = {
     "60c9-9f30-7dc8-2b63":"Malefic Curse",
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
     "626e-72e0-7869-82c1":"Skitarii Ranger w/ omnispex",
+    "62a1-1fa7-70b7-614d":"Twin Lastrum Bolt Cannon",
     "636b-f3ef-1a09-d692":"Shearing claws",
+    "6445-6811-f628-9750":"Adrathic Desolator",
     "646c-5f7f-cd1c-d5c9":"Questoris heavy stubber",
     "6483-eb5-46a4-ff63":"Galvanic rifle",
     "656c-8b78-8e59-0591":"Maulerfiend",
@@ -6195,6 +6603,7 @@ const BS_IDS = {
     "6739-941d-5e71-b461":"Speeding Bulk and Flaming Exhaust",
     "673b-c3e-6682-ae28":"Drilla",
     "67d3-0a50-aa82-c444":"Twin Onager heavy phosphor blaster",
+    "6814-ce42-4b23-72a9":"Prosecutor",
     "6836-5818-2135-a8aa":"Helm of Brazen Ire",
     "68b0-c798-79a8-28f5":"Snarling Rivalry",
     "6a83-8e1f-63ef-50c3":"Squighog Boyz",
@@ -6217,6 +6626,7 @@ const BS_IDS = {
     "7212-7cc9-ec49-72b8":"Nurgling Swarm",
     "7213-a7b3-4c8e-96bc":"Eldritch Vortex of E'taph",
     "723d-aaaa-3268-09e3":"Terminator Champion",
+    "72c5-8bd0-19f5-f246":"Caestus Fist",
     "731f-2f2-7ca0-23ed":"Meganob w/ Twin Killsaw",
     "7361-7d8a-dbfc-b6e8":"Prosperine khopesh",
     "73e9-498e-2d97-e18":"Atrapos lascutter",
@@ -6226,6 +6636,7 @@ const BS_IDS = {
     "75ce-5ce7-0a6e-a876":"Blade of Endless Bloodshed",
     "7669-1442-2c0b-e0c9":"Painboy",
     "7695-54a2-f38b-a89c":"Havoc launcher",
+    "77b6-41ee-7952-e94d":"Gun Stock",
     "7819-56c3-cf02-6cdb":"Busta Rokkit Launcha",
     "782c-e91c-5a17-27c4":"Soulreaper cannon",
     "782f-6bfe-7238-960a":"Combi-bolter, power fist",
@@ -6233,10 +6644,12 @@ const BS_IDS = {
     "78be-1bfa-16ca-f674":"Ectoplasma destructor",
     "78e7-69eb-d93a-2b00":"Slaughter and Carnage",
     "7a17-4fb0-c0f5-e22":"Bone Sabres",
+    "7b41-35aa-3265-14d7":"Augury Uplink",
     "7b4c-dfe0-6a0a-304a":"Lord Exultant",
     "7b4e-03d3-6b3f-6c48":"Divining spear",
     "7d0f-67d3-25b-f6fe":"Kaptin",
     "7d49-39ac-d17e-63bf":"Rokkit Launcha",
+    "7d7c-c212-47a3-38e4":"Trajann Valoris",
     "7dfc-efc5-a31c-a724":"Da Grabzappa",
     "7e60-1733-57d1-71f3":"Eightbound",
     "7ebd-c3dc-8467-70ae":"Aviarch",
@@ -6254,6 +6667,7 @@ const BS_IDS = {
     "8441-8356-5e7c-69ee":"Knight Paladin",
     "8488-2efe-825f-a403":"Neurogaunt Nodebeast",
     "84c0-f59d-901a-e94f":"Canis Rex",
+    "8555-148a-0e35-4749":"Adrathic Desolator, 1 Fist and 1 Projectors",
     "86c9-46db-4de-4a5d":"Thermal cannon",
     "8719-8732-d0be-c527":"Exalted Eightbound",
     "882-910a-c7c4-13b2":"Transuranic arquebus",
@@ -6272,6 +6686,7 @@ const BS_IDS = {
     "8c36-c946-2e0f-f648":"Killa Kans",
     "8cbb-0e54-096a-e053":"Khorne Berzerker w/ eviscerator and plasma pistol",
     "8ccc-3f27-7e4e-da81":"Neurogaunts",
+    "8dc7-bea2-997b-a1c9":"Dual Caestus Fists",
     "8df0-fc3c-8ced-ffce":"War Dog Executioner",
     "8e1d-9846-a460-6002":"Icon of Khorne",
     "8fc1-9168-5137-2b5d":"Ironstrider Ballistarius (Twin cognis lascannon)",
@@ -6285,6 +6700,7 @@ const BS_IDS = {
     "93c3-d64f-2d6e-ea":"Questoris heavy stubber",
     "93c8-9c05-8892-b481":"Black Staff of Ahriman",
     "9435-1f44-7e5b-d510":"Eightbound",
+    "94b3-ef7f-f71f-c86e":"Castellan Axe",
     "954d-5938-64d8-597c":"Squighog Boy",
     "95e9-6da3-5e75-2566":"Big Mek in Mega Armour",
     "96d6-846e-edd3-332f":"'Urty syringe",
@@ -6303,11 +6719,14 @@ const BS_IDS = {
     "9ee-e289-bc6c-d943":"Cerastus Knight Lancer",
     "9ef8-1cb6-2f19-cc1b":"2 magma cutters",
     "9efd-ec72-353f-4b23":"Knight Errant",
+    "9f43-3691-5be1-8623":"Twin Neutronium Cascade Projectors",
+    "9fdd-e31a-5f28-85ea":"Witchseeker",
     "a021-c1a0-c35c-f10f":"Warlord",
     "a05e-db63-84ad-4c5e":"Rapid-fire battlecannon and Questoris heavy stubber",
     "a085-ae61-1810-46d0":"Lacerator and daemonic claw",
     "a0d5-2805-f05a-29e1":"Gore Hound",
     "a1b4-80b4-e85e-96ec":"Power fist",
+    "a287-990-9f34-9836":"Warblade",
     "a289-aacb-7152-e243":"Astral Blast",
     "a30-4bad-cef5-5e55":"Synaptic Pulse",
     "a30d-6752-d912-315e":"Avenger chaincannon",
@@ -6344,8 +6763,10 @@ const BS_IDS = {
     "b114-2c55-f1b6-6f98":"Tzeentch's Firestorm",
     "b16a-7132-3f8a-abe5":"Nobz",
     "b1cf-c5-5121-92a4":"Scarab Occult Terminators",
+    "b1eb-9d70-dfc2-208b":"Dreadspear",
     "b27b-4fee-2644-a355":"Kustom Blasta X",
     "b27c-7f37-083e-9234":"Skitarii Ranger w/ galvanic rifle",
+    "b330-bad6-ea21-ecb":"Eagle's Scream",
     "b399-9b66-e550-8050":"Goremongers",
     "b42b-ea0-38f1-6300":"Mozrog Skragbad",
     "b464-6a59-916f-c9d9":"Infernal cannon",
@@ -6386,6 +6807,7 @@ const BS_IDS = {
     "c7a7-3164-12bc-3462":"Warlord",
     "c7e3-601f-3442-250b":"Collar of Khorne",
     "c84c-683a-79be-1620":"Flowing Flesh",
+    "c8a6-a4c5-703e-b717":"Allarus Custodians",
     "c95f-7907-e078-7e21":"Gaze of Hate",
     "ca02-db54-10e6-f20e":"Heavy flamer",
     "ca9c-de3c-61e1-31":"Hellforged weapons",
@@ -6417,9 +6839,14 @@ const BS_IDS = {
     "d813-7c6b-1dfe-e99a":"Tormentor",
     "d877-3dd3-2d5a-e092":"2 Hades autocannons",
     "d92d-2a5e-3dd9-f60f":"Twin Kastelan fist",
+    "d9a6-8dbd-2c01-862b":"Lastrum storm bolter",
+    "d9ca-c6b0-ba9c-b6c8":"Arachnus Blaze Carronade",
     "d9f5-2270-b9b2-8060":"Icon of Flame",
     "dadc-d370-ef10-853c":"Tankbustas",
+    "db3b-02cd-87a2-3b52":"Contemptor-Achillus Dreadnought",
+    "dbf0-5211-463c-40ec":"Caladius Annihilator Grav-tank",
     "dc69-1094-613-6daf":"Monstrous scything talons",
+    "dca3-638e-52a2-b1b8":"Armoured hull",
     "dd8d-1bc7-029f-3674":"Gore-drenched fangs",
     "de59-f65c-181a-8509":"Skitarii Rangers",
     "de8f-24f9-c543-92b7":"Gretchin",
@@ -6437,6 +6864,7 @@ const BS_IDS = {
     "e4b2-478b-a217-f999":"Skitarii Ranger Alpha",
     "e4da-4f2d-19c3-416b":"Martial Signatum Amplificator",
     "e584-f803-7858-05bc":"Hunter's Eye",
+    "e7d8-1c73-7d03-8b62":"Telemon Heavy Dreadnought",
     "e849-ce40-ee43-7623":"Chaos Rhino",
     "e8b4-ffab-1b5c-d2a0":"Hekhtur's pistol",
     "e92-e1d4-babd-22b2":"Inferno combi-bolter",
@@ -6462,6 +6890,7 @@ const BS_IDS = {
     "f09-36ce-d80d-1464":"Twin cognis lascannon",
     "f0b2-e942-6896-6acf":"Reaper autocannon",
     "f0e4-fd2b-1ba8-7234":"Scarab Occult Terminator w/ soulreaper cannon",
+    "f12b-b113-de8a-4f1e":"Flamer",
     "f132-71e1-81e2-5074":"Infernal cannon",
     "f158-2979-c38b-65b5":"Defiler",
     "f1aa-b2e0-2fa8-4c39":"Las-impulsor",
@@ -6485,6 +6914,7 @@ const BS_IDS = {
     "f8bc-c08c-22f0-8ebb":"Chainblades",
     "f909-00c7-8ba4-018a":"Khorne Berzerkers",
     "fa30-43a8-57eb-a82e":"Squig Jaws",
+    "fab4-d437-6e07-eb33":"Allarus Custodian",
     "fb26-6d89-aa65-fb7e":"Panoply of the Cursed Knights",
     "fbee-427a-1c46-f621":"Big Mek",
     "fc2d-063a-a9fa-968f":"Frag bombard",
@@ -6512,6 +6942,7 @@ const BS_IDS = {
     "4676-0c32-b62c-debd":1,
     "4ea0-6b70-c17c-bc00":1,
     "4ff3-7dce-5a52-94e9":1,
+    "5514-3810-cf3e-3b23":1,
     "55fb-9c91-1a4f-3037":1,
     "5b76-3e1c-8801-1e4b":1,
     "6836-5818-2135-a8aa":1,
@@ -6521,6 +6952,8 @@ const BS_IDS = {
     "71d9-9dc2-2b9a-6db3":1,
     "7213-a7b3-4c8e-96bc":1,
     "75ce-5ce7-0a6e-a876":1,
+    "7b41-35aa-3265-14d7":1,
+    "7d7c-c212-47a3-38e4":1,
     "80c4-14b2-d02d-d289":1,
     "8ba4-a299-ac96-fbc5":3,
     "91dc-9aad-0505-52a8":1,

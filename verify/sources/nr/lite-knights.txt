@@ -1,0 +1,456 @@
+10/23/26, 10:58 PM                                                   Lite Knights - New Recruit
+
+                                                       Lite Knights [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Imperium - Adeptus Custodes)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Emperor's Chosen [1Detachment Points], Grav-Assault Force [1Detachment Points],
+  Might of the Moritoi [1Detachment Points]
+  • Force Disposition: Take and Hold
+  • Show/Hide Options: Imperial Agents are visible
+  NAME                                 ROLE      PTS OPTIONS
+   Trajann Valoris                                  Epic Hero 265
+                                                                        Trajann Valoris
+   (2) Allarus Custodians                           Infantry    180
+                                                                        2x Allarus Custodian: Vexilla
+   (4) Prosecutor Squad                             Infantry    45
+   (4) Prosecutor Squad                             Infantry    45
+   (4) Witchseeker Squad                            Infantry    55
+   (5) Witchseeker Squad                            Infantry    60
+   Caladius Annihilator Grav-tank                   Vehicle     250
+   Contemptor-Achillus Dreadnought Vehicle                      230
+   Contemptor-Galatus Dreadnought Vehicle                       250
+   Telemon Heavy Dreadnought                        Vehicle     310
+   Telemon Heavy Dreadnought                        Vehicle     310
+   Martial Ka'tah Reference                         Reference
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                            1/14
+10/23/26, 10:58 PM                                                  Lite Knights - New Recruit
+     445 PTS                                               TRAJANN VALORIS
+   Models                                     Options
+                                              Warlord, Eagle's Scream, Watcher's Axe
+   1x Trajann Valoris
+                                              • Leading: Allarus Custodians
+   1x Allarus Custodian                       Balistus grenade launcher, Castellan Axe
+   1x Allarus Custodian                       Balistus grenade launcher, Castellan Axe, Vexilla
+   Unit                                                                M      T    Sv      W      LD        OC       InSv     Base
+   Trajann Valoris - Trajann Valoris                                   8"     7    2+      10     5+        3        4+       40mm
+   Allarus Custodian (x2) - Allarus Custodians                         7"     8    2+      6      5+        3        4+       40mm
+   Ranged Weapons                                                     Range       A BS       S AP      D Keywords
+   Eagle's Scream - Trajann Valoris                                   24"         2 2+       6 -2      2 Assault, Rapid Fire 2
+   Balistus grenade launcher (x2) - Allarus Custodians                18"         3 2+       5 -1      1    Assault, Blast 1
+   Castellan axe (x2) - Allarus Custodians                            24"         2 2+       5 -1      2    Assault, Rapid Fire 2
+   Melee Weapons                                                    Range         A     WS       S         AP    D        Keywords
+   Watcher's Axe - Trajann Valoris                                  Melee         6     2+       12        -3    4        Cleave 1
+   Castellan axe (x2) - Allarus Custodians                          Melee          3    2+       10        -2    4
+   Abilities                             Description
+                                         Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within
+   Captain-General (Aura) -              6" of this model can:
+   Trajann Valoris                        Re-roll hit rolls of 1
+                                          Re-roll wound rolls of 1
+                                         (Once per battle, per army)
+                                         At the start of any phase, you can select one of the following to take effect until
+   Moment Shackle - Trajann
+                                         the end of the phase:
+   Valoris
+                                           This model’s Watcher’s Axe weapon has +3 A.
+                                           This model has 3+ InSv.
+   Slayers of Tyrants - Allarus          This unit's melee attacks that target a unit with a T greater than this unit's T
+   Custodians                            have +1 to wound rolls.
+                                           This unit has +1 OC.
+   Vexilla - Allarus Custodians
+                                           This unit can ignore modifiers to this unit's Ld.
+    Rules Aquila Commander, Aegis of the Emperor, Martial Ka'tah, Leader, Deep Strike, Feel No Pain 5+*,
+          Feel No Pain 5+, Assault, Rapid Fire, Cleave, Deep Strike, Martial Ka'tah, Aegis of the Emperor,
+          Feel No Pain 5+*, Blast, Assault
+    Categories Character, Epic Hero, Faction: Adeptus Custodes, Imperium, Infantry, Trajann Valoris, Warlord,
+               Allarus Custodians*, Terminator*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                         2/14
+10/23/26, 10:58 PM                                                    Lite Knights - New Recruit
+     45 PTS                                                PROSECUTOR SQUAD                                           x2
+   Models                                                     Options
+   4x Prosecutor                                               Boltgun, Gun Stock
+   Unit                                     M          T       Sv       W        LD           OC   InSv        Base
+   Prosecutor (x4)                          7"         3       3+       1        6+           2                32mm
+   Ranged Weapons               Range        A    BS       S   AP   D    Keywords
+   Boltgun (x4)                 24"          1    3+       5   -1   1    Anti-PSYKER 4+, Assault, Rapid Fire 1
+   Melee Weapons                             Range              A       WS          S        AP    D      Keywords
+   Gun Stock (x4)                            Melee              3       3+          3        0     1
+   Abilities             Description
+                         In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That
+   Purity of
+                         unit is detected.
+   Execution
+                           While a unit is detected, that unit has +3" detection range.
+    Rules Feel No Pain 3+*, Daughters of the Abyss, Assault, Anti, Rapid Fire
+
+    Categories Anathema Psykana, Faction: Anathema Psykana, Imperium, Infantry, Prosecutor Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                               3/14
+10/23/26, 10:58 PM                                                          Lite Knights - New Recruit
+     55 PTS                                             WITCHSEEKER SQUAD
+   Models                                                      Options
+   4x Witchseeker                                                        Flamer, Gun Stock
+   Unit                                         M       T           Sv         W         LD          OC       InSv         Base
+   Witchseeker (x4)                             7"      3           3+         1         6+          1                     32mm
+   Ranged Weapons              Range        A    BS    S       AP       D   Keywords
+   Flamer (x4)                 12"          3    -     4       -1       1   Anti-PSYKER 4+, Assault, Blast 1, Torrent
+   Melee Weapons                             Range                  A        WS           S        AP     D          Keywords
+   Gun Stock (x4)                            Melee                  3        3+           3        0      1
+   Abilities         Description
+                     In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks.
+   Sanctified
+                     That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit
+   Flames
+                     is a Psyker unit..
+    Rules Scouts 7", Feel No Pain 3+*, Daughters of the Abyss, Anti, Torrent, Assault, Blast
+
+    Categories Anathema Psykana, Faction: Anathema Psykana, Imperium, Infantry, Witchseeker Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                      4/14
+10/23/26, 10:58 PM                                                          Lite Knights - New Recruit
+     60 PTS                                             WITCHSEEKER SQUAD
+   Models                                                      Options
+   5x Witchseeker                                                        Flamer, Gun Stock
+   Unit                                         M       T           Sv         W         LD          OC       InSv         Base
+   Witchseeker (x5)                             7"      3           3+         1         6+          1                     32mm
+   Ranged Weapons              Range        A    BS    S       AP       D   Keywords
+   Flamer (x5)                 12"          3    -     4       -1       1   Anti-PSYKER 4+, Assault, Blast 1, Torrent
+   Melee Weapons                             Range                  A        WS           S        AP     D          Keywords
+   Gun Stock (x5)                            Melee                  3        3+           3        0      1
+   Abilities         Description
+                     In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks.
+   Sanctified
+                     That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit
+   Flames
+                     is a Psyker unit..
+    Rules Scouts 7", Feel No Pain 3+*, Daughters of the Abyss, Anti, Torrent, Assault, Blast
+
+    Categories Anathema Psykana, Faction: Anathema Psykana, Imperium, Infantry, Witchseeker Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                      5/14
+10/23/26, 10:58 PM                                                       Lite Knights - New Recruit
+     250 PTS                                     CALADIUS ANNIHILATOR GRAV-TANK
+   Models                                        Options
+   1x Caladius Annihilator Grav-tank             Arachnus Blaze Carronade, Twin Lastrum Bolt Cannon, Armoured hull
+   Unit                                                         M        T     Sv    W     LD     OC InSv         Base
+   Caladius Annihilator Grav-tank (Flare Shields)               10"      11    2+    14    5+     4  5+, 4+*      150x95mm Oval
+   Ranged Weapons                          Range       A   BS       S     AP     D           Keywords
+   Arachnus Blaze Carronade                48"         4   2+       12    -3     D6+2        Lethal Hits: MONSTER/VEHICLE
+   Twin Lastrum Bolt Cannon                36"         3   2+       6     -2     2           Sustained Hits 1, Twin-linked
+   Melee Weapons                            Range               A        WS            S        AP      D     Keywords
+   Armoured hull                            Melee               4        4+            6        0       1
+   Abilities                       Description
+                                   This unit's ranged attacks that target a MONSTER/VEHICLE unit can:
+                                    Re-roll one hit roll.
+   Advanced Firepower
+                                    Re-roll one wound roll.
+                                    Re-roll one damage roll.
+   Flare Shields                   This unit has a 4+ InSv against ranged attacks.
+    Rules Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 5, Deep Strike, Lethal Hits,
+          Sustained Hits
+    Categories Caladius Annihilator Grav-tank, Faction: Adeptus Custodes, Fly, Frame, Grav-assault, Imperium, Vehicle
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                      6/14
+10/23/26, 10:58 PM                                                       Lite Knights - New Recruit
+     230 PTS                                 CONTEMPTOR-ACHILLUS DREADNOUGHT
+   Models                                                     Options
+   1x Contemptor-Achillus Dreadnought                                     Dreadspear, 2x Lastrum storm bolter
+   Unit                                                         M         T         Sv         W        LD      OC   InSv     Base
+   Contemptor-Achillus Dreadnought                              9"        10        2+         12       5+      3    5+       60mm
+   Ranged Weapons                                    Range           A        BS         S         AP       D        Keywords
+   Dreadspear                                        18"             2        2+         10        -3       D3+2
+   Lastrum storm bolter (x2)                          24"            3        2+         5         -1       1        Rapid Fire 3
+   Melee Weapons                        Range               A   WS             S              AP        D            Keywords
+   Dreadspear                            Melee              5   2+             12             -3        D3+3         Lance
+   Abilities                Description
+   Unyielding Ancient       Attacks that target this unit with a S greater than this unit's T have -1 to wound rolls.
+    Rules Martial Ka'tah, Deadly Demise 1, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4, Lance, Rapid Fire
+
+    Categories Contemptor-Achillus Dreadnought, Dreadnought, Faction: Adeptus Custodes, Imperium, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                         7/14
+10/23/26, 10:58 PM                                                     Lite Knights - New Recruit
+     250 PTS                                 CONTEMPTOR-GALATUS DREADNOUGHT
+   Models                                                          Options
+   1x Contemptor-Galatus Dreadnought                                              Memento Moritoi, Warblade
+   Unit                                                           M     T         Sv       W        LD   OC     InSv   Base
+   Contemptor-Galatus Dreadnought                                 9"    10        2+       12       5+   3      4+     60mm
+   Ranged Weapons                   Range          A      BS      S    AP     D        Keywords
+   Warblade                         12"              4    -       6    -1     2        Blast 2, Torrent, Twin-linked
+   Melee Weapons          Range      A WS       S        AP    D Keywords
+   Warblade               Melee      9 2+       11       -2    4 Cleave 1, Sustained Hits 1: non-MONSTER/VEHICLE
+   Abilities                Description
+   Unyielding Ancient       Attacks that target this unit with a S greater than this unit's T have -1 to wound rolls.
+   Memento Moritoi          This model's melee attacks have +1 A, S and D.
+    Rules Martial Ka'tah, Deadly Demise 1, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4, Blast, Torrent,
+          Twin-linked
+    Categories Contemptor-Galatus Dreadnought, Dreadnought, Faction: Adeptus Custodes, Imperium, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                  8/14
+10/23/26, 10:58 PM                                                           Lite Knights - New Recruit
+     310 PTS                                      TELEMON HEAVY DREADNOUGHT
+   Models                               Options
+   1x                                   Augury Uplink, Spiculus bolt launcher, Dual Fists and 2 Projectors (Dual Caestus Fists,
+   Telemon Heavy Dreadnought            2x Twin Neutronium Cascade Projectors)
+   Unit                                                    M             T         Sv         W     LD       OC      InSv      Base
+   Telemon Heavy Dreadnought                               10"           11        2+         14    5+       4       4+        100mm
+   Ranged Weapons                                              Range          A BS       S AP       D Keywords
+   Spiculus bolt launcher                                      36"            6 2+       5 -1       1 Blast 2
+   Twin Neutronium Cascade Projectors (x2)                     12"            3    -     7     -2   1     Blast 1, Torrent, Twin-linked
+   Melee Weapons                               Range                 A        WS          S         AP        D     Keywords
+   Dual Caestus Fists                          Melee                 7        2+          14        -3        4     Twin-linked
+   Abilities                            Description
+   Guardian Eternal                     Ranged attacks that target this unit have -1 D.
+   Augury Uplink                        This model has Feel No Pain 5+.
+    Rules Martial Ka'tah, Deadly Demise D3, Damaged 5, Aegis of the Emperor, Feel No Pain 5+*, Feel No Pain 5+, Blast,
+          Twin-linked, Torrent
+    Categories Dreadnought, Faction: Adeptus Custodes, Imperium, Telemon Heavy Dreadnought, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                              9/14
+10/23/26, 10:58 PM                                                       Lite Knights - New Recruit
+     310 PTS                                      TELEMON HEAVY DREADNOUGHT
+   Models                               Options
+   1x                                   Spiculus bolt launcher, Adrathic Desolator, 1 Fist and 1 Projectors (Adrathic Desolator,
+   Telemon Heavy Dreadnought            Caestus Fist, Twin Neutronium Cascade Projectors)
+   Unit                                                    M         T         Sv         W        LD       OC      InSv      Base
+   Telemon Heavy Dreadnought                               10"       11        2+         14       5+       4       4+        100mm
+   Ranged Weapons                                       Range        A    BS     S        AP   D        Keywords
+   Spiculus bolt launcher                               36"          6    2+     5        -1   1        Blast 2
+   Adrathic Desolator                                   24"          4    2+     10       -2   4
+   Twin Neutronium Cascade Projectors                   12"          3    -      7        -2   1        Blast 1, Torrent, Twin-linked
+   Melee Weapons                           Range                 A       WS           S            AP         D      Keywords
+   Caestus Fist                            Melee                 5       2+           14           -3         4
+   Abilities                            Description
+   Guardian Eternal                     Ranged attacks that target this unit have -1 D.
+    Rules Martial Ka'tah, Deadly Demise D3, Damaged 5, Aegis of the Emperor, Feel No Pain 5+*, Blast, Torrent,
+          Twin-linked
+    Categories Dreadnought, Faction: Adeptus Custodes, Imperium, Telemon Heavy Dreadnought, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                            10/14
+10/23/26, 10:58 PM                                                  Lite Knights - New Recruit
+                                                    MARTIAL KA'TAH REFERENCE
+   Martial Ka'tah When                                    Target
+                                                             Effect
+                     Your Movement phase, when               When your unit makes a normal/advance/fall-
+                                                That readied
+   Calistus          a friendly readied unit is              back move, your unit can move through all types
+                                                unit
+                     selected to move.                       of model.
+                                                                         Until the end of the turn:
+                                                                          Being engaged/battle-shocked does not
+                                                          One friendly     prevent your unit from being eligible to start
+   Conservai         Your Command phase
+                                                          readied unit     an action.
+                                                                          Starting an action does not prevent your unit
+                                                                           from being eligible to shoot.
+                                                                        Your unit's melee attacks that target an enemy
+                                                          One friendly
+   Dacatarai         Start of the Fight phase.                          unit (excluding Monster/Vehicle units) can re-roll
+                                                          readied unit.
+                                                                        **hit rolls" of 1.
+                                                          One friendly   Melee attacks that target your unit have -1 to hit
+   Kaptaris          Start of the Fight phase
+                                                          readied unit   rolls.
+                     Fight phase, when a friendly
+                                                          One friendly   Your unit's melee attacks have [LETHAL HITS:
+   Rendax            readied unit is selected to
+                                                          readied unit   MONSTER/VEHICLE].
+                     fight.
+                     Your Shooting phase, when a              Your unit can ignore modifiers to your unit's:
+                                                 That readied
+   Salvus            readied unit is selected to               BS
+                                                 unit.
+                     shoot.                                    Hit rolls and wound rolls.
+    Categories Reference
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                                  11/14
+10/23/26, 10:58 PM                                             Lite Knights - New Recruit
+
+
+  Rules
+  Aegis of the Emperor:
+  Friendly Adeptus Custodes units with this ability have Feel No Pain 5+ against mortal wounds.
+
+  Anti:
+  This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the
+  target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+  Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical
+  wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon
+  against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.
+
+  Aquila Commander:
+  At the start of the battle round, if a model with this ability is your Warlord, gain 1CP.
+
+  Assault:
+  Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Cleave:
+  This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if
+  you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down).
+  ***Example: If a *[CLEAVE 1]* weapon with an A characteristic of 3 targets one unit containing 16 models, you
+  would gather three additional attack dice for that weapon (for a total of six for that weapon).*
+
+  Damaged 4 / Damaged 5:
+  This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X,
+  that model is damaged:
+    While a model is damaged, that model's attacks have -1 to hit rolls.
+
+  Daughters of the Abyss:
+    Friendly Anathema Psykana units with this ability have Feel No Pain 3+ against psychic attacks.
+    Friendly Anathema Psykana units with this ability have the following ability:
+     Psychic Null (Aura): Friendly Adeptus Custodes units within 6" of this unit have Feel No Pain 5+ against
+     psychic attacks.
+
+  Deadly Demise 1 / Deadly Demise D3:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                          12/14
+10/23/26, 10:58 PM                                             Lite Knights - New Recruit
+
+  Feel No Pain 3+* / Feel No Pain 5+ / Feel No Pain 5+*:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Flare Shields:
+  Friendly Grav-Assault units have 4+ InSv against ranged attacks.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Magna Imperator:
+  When a friendly Adeptus Custodes unit is selected to attack, that unit's attacks can:
+   Re-roll one hit roll.
+   Re-roll one wound roll.
+
+  Favoured Ka'tah: RENDAX
+  Additional Effect: You can select one enemy Monster/Vehicle unit engaged with your unit and roll one D6:
+   On a 1-2, that enemy unit suffers 1 mortal wound.
+   On a 3-5, that enemy unit suffers D3 mortal wounds**.
+   On a 6, that enemy unit suffers 3 mortal wounds.
+
+  Martial Ka'tah:
+  At the start of your Command phase, friendly Adeptus Custodes units with this ability are readied. While a
+  friendly unit is readied, you can select one of the ka-tah abilities for that unit to use. If you do, that unit is no
+  longer readied.
+  Each ka-tah ability will tell you when that ka-tah ability can be used and the effects that ka-tah ability has
+  on the unit using it.
+
+  Moritoi Ancients:
+    While a friendly Adeptus Custodes Dreadnought unit is at starting strength, that unit has +2 OC.
+    While a friendly Adeptus Custodes Dreadnought unit is below starting strength, that unit's attacks can re-roll
+     hit rolls of 1.
+     While a friendly Adeptus Custodes Dreadnought unit is below half-strength, that unit's attacks can:
+    Re-roll hit rolls of 1.
+    Re-roll wound rolls of 1.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                         13/14
+10/23/26, 10:58 PM                                             Lite Knights - New Recruit
+
+  Scouts 7":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+  Twin-linked:
+  Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad8826ed32199671feb4687                                                        14/14
+

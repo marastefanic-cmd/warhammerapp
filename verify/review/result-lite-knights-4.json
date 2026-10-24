@@ -1,0 +1,27 @@
+[
+ {
+  "where": "data.js lite-knights/caladius-annihilator-grav-tank kw (CALADIUS); deviations-nr.json #93, deviations-bsdata.json #82",
+  "verdict": "ok",
+  "why": "Wahapedia ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html reads \"KEYWORDS: VEHICLE ; CALADIUS ; FLY ; FRAME ; GRAV-ASSAULT ; IMPERIUM\". BSData Imperium - Adeptus Custodes.json has no CALADIUS category, only the names 'Caladius Grav-tank' and 'Caladius Annihilator Grav-tank', and verify/sources/nr/lite-knights.txt line 167 lists no Caladius category, so both deviations are accurate and their evidence line numbers check out. The GW Faction Pack of 30 Sep (an older 'Caladius Grav-tank', KEYWORDS \"Vehicle, Fly, Frame, Imperium, Caladius Grav-tank\") comes before the new codex datasheet. No rule in data.js needs 'Caladius', so the keyword changes no reach. The snapshot shows CALADIUS on the unit."
+ },
+ {
+  "where": "data.js Caladius abilities (Flare Shields removed), FACTIONS adeptus-custodes grav-assault-force rule; deviations-nr.json #92, deviations-bsdata.json #81; snapshot lite-knights.txt",
+  "verdict": "ok",
+  "why": "The Wahapedia datasheet's ABILITIES list has only Advanced Firepower, and its InSv is 5+. waha/adeptus-custodes.txt lines 525-526 have the Grav-Assault Force rule \"Flare Shields / Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.\", which matches data.js's rule text word for word. BSData's 'Flare Shields' is a hidden ability on the unit that sets the InSv annotation and appends 4+*, as the deviation says. The rule has needs {all:['Grav-assault']}. Of the list's 8 Wahapedia datasheets, only the Caladius has GRAV-ASSAULT, and the snapshot's APPLIES TO / IN THIS ARMY lists only the Caladius. The stat still shows 'INV 5+, 4+*' with from {InSv:'Flare Shields'}. Its grant popup names 'Grav-Assault Force detachment rule' with GW's text and says 'Already in the value shown', and When targeted keeps '4+ InSv against ranged attacks'. The Abilities count drops 15→14 and the two 'Flare Shields / Already in InSv' ability blocks are gone, as intended."
+ },
+ {
+  "where": "app.html mentions() (line 1448)",
+  "verdict": "ok",
+  "why": "I compared the old and new mentions() for all 106 rule keys (D.rules, RULE_ALIASES targets, army and detachment rule names) against all 3221 strings in data.js. Every changed result is a LOST match after a hyphen, and none is GAINED. Assault is lost in Grav-Assault/GRAV-ASSAULT (11 strings). Hazardous is lost in SUPA-HAZARDOUS/Supa-hazardous, a rule of its own. Heavy is lost in Super-Heavy Walker and telemon-heavy. Lance is lost in infernal-lance/houndpack-lance, Hunter in cunning-hunter, Charge in servo-driven-charge and Destroyed in just-destroyed. Every one of these old matches was wrong. Over unit ability texts, the only inputs the app's call sites pass, only two pairs change: shooty/bigmek-mega and ooga-booga/big-mek-in-mega-armour-meganobz, ability Supa-glowy Fing, key Hazardous. Both units already have HAZARDOUS weapons, so their 'used by' entries render the same. [ASSAULT], ANTI-INFANTRY (Anti) and TWIN-LINKED still match. `node verify/run.js`: VERIFIED, snapshots unchanged; I restored the generated files afterwards. Pre-existing and unchanged by this edit: keys ending in '!' (Waaagh!, Dakka! Dakka! Dakka!, Try Dat Button!) keep a trailing \\b that needs a word character after the '!'."
+ },
+ {
+  "where": "verify/import-ids.js, data.js BS_IDS, verify/import-test.js NO_LIST",
+  "verdict": "fix",
+  "why": "The data is right. `node verify/import-ids.js` reports 'BS_IDS matches BSData for every list (133 units)', and the new ids are in BSData: 1f19-6509-d906-ca10 is the catalogue, 5218-339c-eb34-9ac0 is the root 'Detachments' upgrade (and the lite-knights export's Detachment entryId ends in it), 7a3e-cedf-9f08-fcac is \"Martial Ka'tah Reference\", and ccb7…, 1bb5… and 1c7e… are Grav-Assault Force, Might of the Moritoi and Emperor's Chosen. The import step passes 17/17. Minor defect: with NO_LIST now {}, import.js's 'faction … not recognized' path (import.js:108) has no test, and the import-test.js header (line 9) still says 'An export that matches no list must fail (Adeptus Custodes: no such faction)', which is now false. Add a neg() case, for example 6-bigs with its catalogueId set to an unknown id expecting 'faction … not recognized', and update the comment."
+ },
+ {
+  "where": "verify/snapshots/lite-knights.txt; merge a537f62 (verify/approvals.json, verify/deviations-nr.json)",
+  "verdict": "ok",
+  "why": "The snapshot diff contains only the intended changes: Abilities 15→14, the two Flare Shields ability blocks removed, CALADIUS added to the keywords, and the InSv grant popup now naming the Grav-Assault Force detachment rule with GW's wording. run.js reports 'snapshots unchanged' and no other list's snapshot moved. In the merge (base 4fa762d), approvals.json has 1708 base + 108 wt-lite + 47 main = 1863 keys, with none lost, no extra keys, no key edited on both sides and no merged value that differs from its side. deviations-nr.json has 63 + 16 + 13 = 92 entries, with none lost or added, no exact or logical (army/unit/field/where/app/source) duplicates, and no base entry dropped. After 9a56588 the Caladius deviations (base, Flare Shields, kw, Martial Ka'tah) each appear once per file. review/todo-lite-knights-4.json is [] and helpers reports 0 to check."
+ }
+]

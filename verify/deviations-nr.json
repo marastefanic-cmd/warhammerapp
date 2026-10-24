@@ -823,5 +823,202 @@
   "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
   "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
   "superseded": "verify/sources/nr-json/big-demons-baby.json"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "abilities[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..",
+  "where": "verify/sources/nr/lite-knights.txt p4",
+  "reason": "New Recruit (from BSData) prints Sanctified Flames without \"you can\", with stray asterisks (\"*battle-shock roll\", \"battle-shock roll*\") and a double full stop; the app has the datasheet's wording, as Wahapedia prints it (\"when this unit has shot, you can select one enemy unit … makes a battle-shock roll, with -1 …\"), which leaves the selection to the player.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"Sanctified Flames: In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\"; New Recruit: verify/sources/nr/lite-knights.txt page 4 (lines 110-114 / 134-138)."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "abilities[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..",
+  "where": "verify/sources/nr/lite-knights.txt p5",
+  "reason": "New Recruit (from BSData) prints Sanctified Flames without \"you can\", with stray asterisks (\"*battle-shock roll\", \"battle-shock roll*\") and a double full stop; the app has the datasheet's wording, as Wahapedia prints it (\"when this unit has shot, you can select one enemy unit … makes a battle-shock roll, with -1 …\"), which leaves the selection to the player.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"Sanctified Flames: In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\"; New Recruit: verify/sources/nr/lite-knights.txt page 5 (lines 110-114 / 134-138)."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-galatus-dreadnought",
+  "field": "abilities[Memento Moritoi].text",
+  "app": "ADEPTUS CUSTODES DREADNOUGHT model only. This model's melee attacks have +1 A, S and D.",
+  "source": "This model's melee attacks have +1 A, S and D.",
+  "where": "verify/sources/nr/lite-knights.txt p8",
+  "reason": "The upgrade's official text starts with its restriction \"ADEPTUS CUSTODES DREADNOUGHT model only.\" (the Might of the Moritoi enhancement in data.js, which verify/texts.js checks the unit's text against); New Recruit's (BSData's) text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 494-495: \"- Memento Moritoi (one per army)UPGRADE 30 pts / **ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.\"; verify/sources/nr/lite-knights.txt line 206."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "telemon-heavy-dreadnought",
+  "field": "abilities[Augury Uplink].text",
+  "app": "ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.",
+  "source": "This model has Feel No Pain 5+.",
+  "where": "verify/sources/nr/lite-knights.txt p9",
+  "reason": "The upgrade's official text starts with its restriction \"ADEPTUS CUSTODES DREADNOUGHT model only.\" (the Might of the Moritoi enhancement in data.js, which verify/texts.js checks the unit's text against); New Recruit's (BSData's) text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 496-497: \"- Augury Uplink (one per army)UPGRADE 30 pts / **ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.\"; verify/sources/nr/lite-knights.txt line 229."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "stats[Caladius Annihilator Grav-tank].base",
+  "app": "170x109mm Oval",
+  "source": "150x95mm Oval",
+  "where": "verify/sources/nr/lite-knights.txt p6",
+  "reason": "GW's Base Size Guide gives the Caladius Grav-tank a 170x109mm oval base; BSData gives the Caladius Annihilator Grav-tank 150x95mm oval and New Recruit prints it. The owner, 2026-10-23: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2508-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2625 (\"Caladius Grav-tank 170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Custodes.json line 11604 (Base 150x95mm Oval); verify/sources/nr/lite-knights.txt line 152."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Captain-General (Aura) | Trajann Valoris].text",
+  "app": "Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.",
+  "source": "Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1 Re-roll wound rolls of 1",
+  "where": "verify/sources/nr/lite-knights.txt p2",
+  "reason": "Punctuation only: the new codex ends each of the two bullets with a full stop; New Recruit (BSData) prints them without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html, ABILITIES: \"Captain-General (Aura): … within 6\\\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\"; verify/sources/nr/lite-knights.txt lines 49-52."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Slayers of Tyrants | Allarus Custodians]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/lite-knights.txt p2",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Slayer of Tyrants | Allarus Custodians]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/lite-knights.txt p2",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "abilities[Purity of Execution].text",
+  "app": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected: While a unit is detected, that unit has +3\" detection range.",
+  "source": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected. While a unit is detected, that unit has +3\" detection range.",
+  "where": "verify/sources/nr/lite-knights.txt p3",
+  "reason": "Punctuation only: the new codex has \"That unit is detected:\" before its bullet; New Recruit (BSData) prints \"That unit is detected.\". The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, ABILITIES: \"Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\\\" of this unit. That unit is detected: While a unit is detected, that unit has +3\\\" detection range.\"; verify/sources/nr/lite-knights.txt lines 86-90."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise 1",
+  "where": "verify/sources/nr/lite-knights.txt p7",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 186 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "where": "verify/sources/nr/lite-knights.txt p7",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 186 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise 1",
+  "where": "verify/sources/nr/lite-knights.txt p8",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 207 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "where": "verify/sources/nr/lite-knights.txt p8",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 207 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/lite-knights.txt p3",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 84 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/lite-knights.txt p4",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 108 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/lite-knights.txt p5",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 132 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "abilities[Flare Shields]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/lite-knights.txt p6",
+  "reason": "Flare Shields is the Grav-Assault Force detachment rule, in GW's words \"Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.\"; the Caladius datasheet has no such ability. New Recruit (BSData) prints it on the unit as an ability in its own words (\"This unit has a 4+ InSv against ranged attacks.\"). The app has the detachment rule, which applies to the Caladius as a GRAV-ASSAULT unit (its When targeted line and its InSv's from mark name it), and no ability of that name on the unit.",
+  "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 525-526 (Grav-Assault Force, Detachment Rules: \"Flare Shields / Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.\"); verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html (ABILITIES: Advanced Firepower only); verify/sources/nr/lite-knights.txt lines 164 and 371 (\"Flare Shields  This unit has a 4+ InSv against ranged attacks.\"; glossary \"Friendly Grav-Assault units have 4+ InSv against ranged attacks.\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "kw",
+  "app": [
+   "Caladius",
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "source": [
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p6",
+  "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/lite-knights.txt line 167 (Categories: \"Caladius Annihilator Grav-tank, Faction: Adeptus Custodes, Fly, Frame, Grav-assault, Imperium, Vehicle\")."
  }
 ]

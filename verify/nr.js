@@ -274,6 +274,9 @@ function parseArmy(lines) {
   const rows = [], Ls = [], Rs = [];
   for (; i < lines.length; i++) {
     const line = lines[i]; if (!line.trim()) continue;
+    // a reference card New Recruit lists with the units ("Martial Ka'tah Reference   Reference", no points): not a unit
+    const ref = /^\s*(.+?)\s+Reference$/.exec(line);
+    if (ref) { (army.references = army.references || []).push(ref[1].trim()); continue; }
     const r = roleRe.exec(line);
     if (r) { rows.push({ i, name: r[1].trim(), role: r[2], pts: +r[3], opt: r[4].trim() }); continue; }
     if (indentOf(line) <= 6) { const s = splitAt(line, optCol - 2, { gap: 3, minCol: 20 }); if (s.L) Ls.push({ i, t: s.L }); if (s.R) Rs.push({ i, t: s.R }); }
@@ -294,6 +297,7 @@ function parseArmy(lines) {
 // ---------------------------------------------------------------- unit pages
 const RE = {
   unit: /^\s*(\d+) PTS\s{2,}(\S.*?)(?:\s{2,}x(\d+))?$/,
+  reference: /^\s{10,}[A-Z][A-Z'’ -]+ REFERENCE$/,
   models: /^\s*Models\s+Options$/,
   stats: /^\s*Unit\s+M\s+T\s+Sv\s+W\s+LD\s+OC\s+InSv(\s+Base)?$/,
   // "Keywords" can wrap onto a line of its own (Ghazghkull's melee table): see sectionsOf
@@ -308,7 +312,7 @@ const RE = {
 function splitUnits(pages) {
   const all = [];
   for (const p of pages.slice(1)) for (const l of p.lines) all.push({ t: l, page: p.n });
-  const units = []; let cur = null; let glossary = null;
+  const units = []; let cur = null; let glossary = null, ref = false;
   for (let k = 0; k < all.length; k++) {
     const { t, page } = all[k];
     if (RE.glossary.test(t)) { glossary = all.slice(k + 1); break; }
@@ -317,7 +321,10 @@ function splitUnits(pages) {
     // what follows is not a "Models" box then (two units printed alike each start with one)
     const next = all.slice(k + 1).find(x => x.t.trim());
     if (m && cur && page !== cur.lastPage && +m[1] === cur.pts && m[2] === cur.header && !(next && RE.models.test(next.t))) { cur.lastPage = page; continue; }
-    if (m) { cur = { pts: +m[1], header: m[2], copies: m[3] ? +m[3] : 1, page, lastPage: page, lines: [] }; units.push(cur); continue; }
+    if (m) { cur = { pts: +m[1], header: m[2], copies: m[3] ? +m[3] : 1, page, lastPage: page, lines: [] }; units.push(cur); ref = false; continue; }
+    // a reference card ("MARTIAL KA'TAH REFERENCE": no points, its own page, Categories "Reference") is not part of the unit before it
+    if (RE.reference.test(t)) { cur = null; ref = true; continue; }
+    if (ref) continue;
     if (cur) cur.lastPage = page;
     if (!cur) { if (t.trim()) throw new Error('text before the first unit: ' + t.trim()); continue; }
     cur.lines.push(t);
@@ -411,10 +418,12 @@ function parseStats(sec) {
     const m = /^\s*(?:(.*?\S)\s+)?(\d+"|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)((?:\s+\S+)*)$/.exec(t);
     if (!m) { others.push({ i, t: t.trim() }); continue; }
     const rest = m[8].trim() ? m[8].trim().split(/\s+/) : [];
-    let InSv = '', Base = '';
-    if (rest.length === 2) [InSv, Base] = rest;
-    else if (rest.length === 1) { if (/^\d\+\*?$/.test(rest[0])) InSv = rest[0]; else Base = rest[0]; }
-    else if (rest.length > 2) throw new Error('stat row with too many cells: ' + t.trim());
+    // InSv: one or more saves ("5+, 4+*": one for every unit, one from a rule), then the base, which can be
+    // more than one word ("150x95mm Oval")
+    let k = 0;
+    while (k < rest.length && /^(\d\+\*?|-),?$/.test(rest[k]) && (k === 0 || rest[k - 1].endsWith(','))) k++;
+    if (k && rest[k - 1].endsWith(',')) throw new Error('stat row with an unfinished InSv cell: ' + t.trim());
+    const InSv = rest.slice(0, k).join(' '), Base = rest.slice(k).join(' ');
     rows.push({ i, name: (m[1] || '').trim(), M: m[2], T: m[3], Sv: m[4], W: m[5], LD: m[6], OC: m[7], InSv, Base });
   }
   const pieces = (k, idx) => [...idx.map(ii => others.find(x => x.i === ii)), ...(rows[k].name ? [{ i: rows[k].i, t: rows[k].name }] : [])];
@@ -698,7 +707,8 @@ function compareArmy(D, A, nr, out, srcFile) {
     const enh = nu.models.map(m => nrOptions(m.options, enhNames).enhancement).find(Boolean) || null;
     let c = pool.filter(u => nm(u.name).toUpperCase() === nm(nu.header));
     if (c.length > 1 && c.some(u => u.pts === nu.pts)) c = c.filter(u => u.pts === nu.pts);
-    if (c.length > 1) c = c.filter(u => (u.enhancement ? nm(u.enhancement) : null) === enh);
+    // (an UPGRADE enhancement, on the unit as `upgrade`, tells two units apart too: the Telemon with Augury Uplink)
+    if (c.length > 1) c = c.filter(u => (u.enhancement || u.upgrade ? nm(u.enhancement || u.upgrade) : null) === enh);
     // two units printed alike ("Supporting: Tankbustas[1]" and "[2]"): the next one of them
     if (c.length > 1 && c.every(u => u.pts === c[0].pts && (u.leads || '') === (c[0].leads || ''))) c = [c[0]];
     chk('units');

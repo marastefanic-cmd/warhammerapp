@@ -1,0 +1,236 @@
+[
+ {
+  "army": "lite-knights",
+  "kind": "ability-tag",
+  "where": "lite-knights · Trajann Valoris · Captain-General",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "a5a287161527b4ba"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Captain-General",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "0f607c076cfd1a4b"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Slayer of Tyrants",
+  "judgement": {
+   "who": "Allarus Custodians",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Slayer of Tyrants",
+   "text": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "b674fae6fc22f084"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-footnote",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "kind": "melee",
+   "when": "Target has a T greater than this unit’s T",
+   "note": "+1 to wound rolls",
+   "from": "Slayer of Tyrants"
+  },
+  "source": {
+   "ability": "Slayer of Tyrants",
+   "text": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "7c86803ae6394099"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-aura",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   },
+   "when": "Within 6\" of Trajann Valoris",
+   "selfWhen": "Own aura",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Captain-General",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "011fdf31644d27da"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-partialRules",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Aquila Commander",
+    "Aegis of the Emperor",
+    "Martial Ka'tah",
+    "Leader",
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Trajann Valoris · Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Allarus Custodians · Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "4a833940db5de0dc"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-timing",
+  "where": "lite-knights · Prosecutor Squad · Purity of Execution",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Purity of Execution",
+   "text": "In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**:\n- While a unit is **detected**, that unit has +3\" **detection range**."
+  },
+  "key": "e74b6194b5f8ccbf"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-guard",
+  "where": "lite-knights · Witchseeker Squad",
+  "judgement": {
+   "from": "Daughters of the Abyss",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   },
+   "kind": "all",
+   "when": "Within 6\" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)",
+   "note": "Feel No Pain 5+ against psychic attacks"
+  },
+  "source": {
+   "rule": "Daughters of the Abyss",
+   "text": "- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit have **Feel No Pain 5+** against **psychic attacks**."
+  },
+  "key": "2701ca620ee7bea8"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "rule-def",
+  "where": "adeptus-custodes army rule · Martial Ka’tah",
+  "judgement": {
+   "def": "Kaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls"
+  },
+  "source": {
+   "rule": "Martial Ka’tah",
+   "text": "At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2\" **M** in addition to the normal effect of Calistus.\nConservai: KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.\nCalistus: KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSalvus: KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.\nDacatarai: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.\nKaptaris: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.\nRendax: KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**."
+  },
+  "key": "c046c2e490b089ba"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "strat-help",
+  "where": "Might of the Moritoi · Honoured Interred",
+  "judgement": {
+   "help": {
+    "to": {
+     "all": [
+      "Faction: Adeptus Custodes"
+     ]
+    },
+    "by": {
+     "all": [
+      "Faction: Adeptus Custodes",
+      "Dreadnought"
+     ]
+    },
+    "via": "its aura: within 6\" of the ADEPTUS CUSTODES DREADNOUGHT unit with it",
+    "mod": {
+     "kind": "all",
+     "when": "Your Shooting phase or the Fight phase, within 6\" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred",
+     "note": "re-roll hit rolls of 1"
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Honoured Interred",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6\" of this unit can re-roll **hit rolls** of 1."
+  },
+  "key": "5205e5c60865dd26"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph, opts){\n  const out = [];\n  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line\n  // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, \"Feel No Pain 5+ against mortal\n  // wounds\"); New Recruit's starred \"Feel No Pain 5+*\" is that one, so it is not said again without its condition\n  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && hasRule(u, r.name));\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: the one model that has it, partialRules)\n  for(const r of armyDefs) if(!(ph && r.defPh && !r.defPh.includes(ph))) out.push({ t:r.def, a:'rule', v:r.name });   // (defPh: Kaptaris, the Fight phase only)\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)\n  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))\n    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });\n  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,\n  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit\n  // (one line for the same help from several units: the three Anathema Psykana units' Psychic Null)\n  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !out.some(x => x.guard && x.t === g.when + ': ' + g.note))\n    out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah's Blessing, Necromechanic)"
+  },
+  "key": "4414a51b9c3313b1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "matches",
+  "judgement": {
+   "code": "function matches(n, u){\n  if(!n) return true;\n  if(n.all && !n.all.every(k => hasKw(u, k))) return false;\n  if(n.any && !n.any.some(k => hasKw(u, k))) return false;\n  if(n.none && n.none.some(k => hasKw(u, k))) return false;\n  if(n.unless && matches(n.unless, u)) return false;\n  // rule: the unit's Rules line names one of these rules (a Chaos Knight's Super-Heavy Walker, or a Preyslayer's Mantle bearer's)\n  if(n.rule && !n.rule.some(r => hasRule(u, r))) return false;\n  if(n.attached && !u.leads) return false;   // \"a friendly attached … unit\": one with a leader or support character\n  return true;\n}"
+  },
+  "source": {
+   "implements": "stratagem/rule eligibility by keywords (all / any / none)"
+  },
+  "key": "2263d87656a62028"
+ }
+]
