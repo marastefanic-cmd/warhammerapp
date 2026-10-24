@@ -1,0 +1,1709 @@
+{
+ "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai (AI-written; carries a fingerprint of the text it was written from).",
+ "tables": {
+  "RULES": {
+   "what": "core rules and weapon abilities: name → text (glossary)",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "the rule's name in the Core Rules"
+    },
+    "text": {
+     "source": "gw",
+     "note": "GW's Core Rules / Universal Rules Updates, or Wahapedia's core rules where marked; checked by verify/texts.js"
+    }
+   }
+  },
+  "RULE_SRC": {
+   "what": "where a RULES entry comes from when it is not a core rule",
+   "columns": {
+    "name": {
+     "source": "hand",
+     "note": "the RULES entry"
+    },
+    "source": {
+     "source": "hand",
+     "note": "where it is from"
+    }
+   }
+  },
+  "RULE_ALIASES": {
+   "what": "which RULES entry a keyword or rule chip opens: [pattern, rule]",
+   "columns": {
+    "pattern": {
+     "source": "hand",
+     "note": "signed off (approvals.json, rule-alias)"
+    },
+    "rule": {
+     "source": "hand",
+     "note": "the RULES entry it opens"
+    }
+   }
+  },
+  "CONCEPTS": {
+   "what": "core terms kept out of a unit's rule list",
+   "columns": {
+    "term": {
+     "source": "gw",
+     "note": "Core Rules terms"
+    }
+   }
+  },
+  "CORE_STRATAGEMS": {
+   "what": "the core stratagems",
+   "columns": {
+    "id": {
+     "source": "hand",
+     "note": "stable id (the app links by it)"
+    },
+    "gist": {
+     "source": "ai",
+     "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
+    },
+    "gistOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "name": {
+     "source": "gw",
+     "note": "GW's document, or Wahapedia where GW has none; checked by verify/texts.js"
+    },
+    "cp": {
+     "source": "gw",
+     "note": "checked by verify/texts.js"
+    },
+    "phases": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "when": {
+     "source": "gw",
+     "note": "WHEN, word for word (verify/texts.js)"
+    },
+    "target": {
+     "source": "gw",
+     "note": "TARGET, word for word (verify/texts.js)"
+    },
+    "effect": {
+     "source": "gw",
+     "note": "EFFECT, word for word (verify/texts.js)"
+    },
+    "restrictions": {
+     "source": "gw",
+     "note": "RESTRICTIONS, word for word (verify/texts.js)"
+    },
+    "needs": {
+     "source": "derived",
+     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "limit": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defCalc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "cpNote": {
+     "source": "hand",
+     "note": "the extra CP part, from the words; signed off"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "mod": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "shield": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "help": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defPick": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "react": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "weaponKw": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "FACTIONS": {
+   "what": "one row per faction: its army rules, detachments and aliases",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "the faction's name"
+    },
+    "aliases": {
+     "source": "hand",
+     "note": "words players use for a rule that has another name; signed off (rule-alias)"
+    },
+    "armyRules": {
+     "source": "gw",
+     "note": "see FACTIONS.armyRules"
+    },
+    "detachments": {
+     "source": "gw",
+     "note": "see FACTIONS.detachments"
+    }
+   }
+  },
+  "FACTIONS.armyRules": {
+   "what": "a faction's army rules",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "GW's Faction Pack, or Wahapedia where GW has none (verify/texts.js)"
+    },
+    "text": {
+     "source": "gw",
+     "note": "word for word: GW's Faction Pack, or Wahapedia (verify/texts.js)"
+    },
+    "table": {
+     "source": "gw",
+     "note": "the rule's table, word for word (verify/texts.js)"
+    },
+    "tag": {
+     "source": "newrecruit",
+     "note": "GW's tag as New Recruit prints it after the name; derive.js derives the \"Once per…\" parts"
+    },
+    "ph": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "at": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "needs": {
+     "source": "derived",
+     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+    },
+    "coreTwin": {
+     "source": "hand",
+     "note": "the core ability of the same name it is shown with; signed off"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "calcNc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcMods": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcDefs": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "limit": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "both": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "mod": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "parts": {
+     "source": "hand",
+     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
+    },
+    "statNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "tableAt": {
+     "source": "hand",
+     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+    },
+    "missing": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    }
+   }
+  },
+  "FACTIONS.detachments": {
+   "what": "a faction's detachments",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "GW / Wahapedia (verify/texts.js)"
+    },
+    "dispositions": {
+     "source": "bsdata",
+     "note": "the Force Dispositions it allows, from BSData (verify/dispositions.js --write)"
+    },
+    "dp": {
+     "source": "gw",
+     "note": "its detachment points, checked against GW / Wahapedia (verify/texts.js)"
+    },
+    "rule": {
+     "source": "gw",
+     "note": "see FACTIONS.detachments.rule"
+    },
+    "enhancements": {
+     "source": "gw",
+     "note": "see FACTIONS.detachments.enhancements"
+    },
+    "stratagems": {
+     "source": "gw",
+     "note": "see FACTIONS.detachments.stratagems"
+    }
+   }
+  },
+  "FACTIONS.detachments.rule": {
+   "what": "a detachment's rule",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "GW's Faction Pack, or Wahapedia where GW has none (verify/texts.js)"
+    },
+    "text": {
+     "source": "gw",
+     "note": "word for word: GW's Faction Pack, or Wahapedia (verify/texts.js)"
+    },
+    "table": {
+     "source": "gw",
+     "note": "the rule's table, word for word (verify/texts.js)"
+    },
+    "tag": {
+     "source": "newrecruit",
+     "note": "GW's tag as New Recruit prints it after the name; derive.js derives the \"Once per…\" parts"
+    },
+    "ph": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "at": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "needs": {
+     "source": "derived",
+     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+    },
+    "coreTwin": {
+     "source": "hand",
+     "note": "the core ability of the same name it is shown with; signed off"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "calcNc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcMods": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcDefs": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "limit": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "both": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "mod": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "parts": {
+     "source": "hand",
+     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
+    },
+    "statNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "tableAt": {
+     "source": "hand",
+     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+    },
+    "missing": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    }
+   }
+  },
+  "FACTIONS.detachments.stratagems": {
+   "what": "a detachment's stratagems",
+   "columns": {
+    "id": {
+     "source": "hand",
+     "note": "stable id (the app links by it)"
+    },
+    "gist": {
+     "source": "ai",
+     "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
+    },
+    "gistOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "name": {
+     "source": "gw",
+     "note": "GW's document, or Wahapedia where GW has none; checked by verify/texts.js"
+    },
+    "cp": {
+     "source": "gw",
+     "note": "checked by verify/texts.js"
+    },
+    "phases": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "when": {
+     "source": "gw",
+     "note": "WHEN, word for word (verify/texts.js)"
+    },
+    "target": {
+     "source": "gw",
+     "note": "TARGET, word for word (verify/texts.js)"
+    },
+    "effect": {
+     "source": "gw",
+     "note": "EFFECT, word for word (verify/texts.js)"
+    },
+    "restrictions": {
+     "source": "gw",
+     "note": "RESTRICTIONS, word for word (verify/texts.js)"
+    },
+    "needs": {
+     "source": "derived",
+     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "limit": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defCalc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "cpNote": {
+     "source": "hand",
+     "note": "the extra CP part, from the words; signed off"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "mod": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "shield": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "help": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defPick": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "react": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "weaponKw": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "FACTIONS.detachments.enhancements": {
+   "what": "a detachment's enhancements",
+   "columns": {
+    "name": {
+     "source": "gw",
+     "note": "GW / Wahapedia (verify/texts.js)"
+    },
+    "pts": {
+     "source": "newrecruit",
+     "note": "points as New Recruit prints them (verify/nr.js), checked against BSData (verify/bsdata.js)"
+    },
+    "text": {
+     "source": "gw",
+     "note": "word for word (verify/texts.js)"
+    },
+    "upgrade": {
+     "source": "bsdata",
+     "note": "an UPGRADE enhancement (taken by the bodyguard), as BSData has it"
+    },
+    "nr": {
+     "source": "newrecruit",
+     "note": "New Recruit's spelling of the name where it differs (verify/nr.js)"
+    }
+   }
+  },
+  "ARMIES": {
+   "what": "one row per list",
+   "columns": {
+    "id": {
+     "source": "hand",
+     "note": "stable id (the app keeps per-list state by it)"
+    },
+    "name": {
+     "source": "newrecruit",
+     "note": "the list's name in New Recruit"
+    },
+    "faction": {
+     "source": "newrecruit",
+     "note": "the army faction (key into FACTIONS)"
+    },
+    "points": {
+     "source": "newrecruit",
+     "note": "the battle size's points limit"
+    },
+    "pointsUsed": {
+     "source": "newrecruit",
+     "note": "the list's total (verify/nr.js)"
+    },
+    "battleSize": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it"
+    },
+    "disposition": {
+     "source": "newrecruit",
+     "note": "the Force Disposition (verify/dispositions.js: one its detachments allow)"
+    },
+    "detachments": {
+     "source": "newrecruit",
+     "note": "keys into the faction's detachments"
+    },
+    "source": {
+     "source": "newrecruit",
+     "note": "which New Recruit export it was transcribed from"
+    },
+    "config": {
+     "source": "newrecruit",
+     "note": "the other selections printed under the army name, as printed"
+    },
+    "units": {
+     "source": "hand",
+     "note": "the unit entries, see ARMIES.units"
+    }
+   }
+  },
+  "ARMIES.units": {
+   "what": "a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS",
+   "columns": {
+    "id": {
+     "source": "hand",
+     "note": "stable id (per-list state, links)"
+    },
+    "ds": {
+     "source": "derived",
+     "note": "the datasheet(s) it is: faction/name of each part (leader, other characters, bodyguard); written by verify/tables.js --write"
+    },
+    "pts": {
+     "source": "newrecruit",
+     "note": "points of the whole attached unit (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "ptsNote": {
+     "source": "newrecruit",
+     "note": "how the points add up, from the New Recruit PDF"
+    },
+    "copies": {
+     "source": "newrecruit",
+     "note": "identical units taken (\"x3\") (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "models": {
+     "source": "newrecruit",
+     "note": "the \"Models\" lines (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "gear": {
+     "source": "newrecruit",
+     "note": "per models line, the weapons it carries (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "unplaced": {
+     "source": "newrecruit",
+     "note": "wargear on no models line (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "enhancement": {
+     "source": "newrecruit",
+     "note": "the enhancement taken (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "warlord": {
+     "source": "newrecruit",
+     "note": "the Warlord (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "enhOn": {
+     "source": "newrecruit",
+     "note": "the character with the enhancement, when not the first"
+    },
+    "warlordOn": {
+     "source": "newrecruit",
+     "note": "the Warlord, when not the first character"
+    },
+    "upgrade": {
+     "source": "newrecruit",
+     "note": "an UPGRADE enhancement the bodyguard has (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "leads": {
+     "source": "newrecruit",
+     "note": "the unit it leads (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "support": {
+     "source": "newrecruit",
+     "note": "attached as Support (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "also": {
+     "source": "newrecruit",
+     "note": "the other characters attached to the same bodyguard (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+    },
+    "short": {
+     "source": "hand",
+     "note": "a shorter name where two units share one"
+    },
+    "role": {
+     "source": "newrecruit",
+     "note": "the roster section New Recruit lists it in; on an entry only where the datasheet's differs (an attached unit)"
+    },
+    "name": {
+     "source": "newrecruit",
+     "note": "on an entry only where it is not its datasheet's"
+    },
+    "rules": {
+     "source": "newrecruit",
+     "note": "the Rules line; on an entry only for an attached unit (the parts together)"
+    },
+    "kw": {
+     "source": "newrecruit",
+     "note": "the keywords; on an entry only for an attached unit (the parts together)"
+    },
+    "kwNote": {
+     "source": "hand",
+     "note": "where an attached unit's keywords come from; signed off"
+    },
+    "kwOnly": {
+     "source": "hand",
+     "note": "keywords only some models have (Wahapedia / BSData); signed off"
+    },
+    "partialRules": {
+     "source": "hand",
+     "note": "rules only one model of the unit has; signed off"
+    },
+    "srcNote": {
+     "source": "hand",
+     "note": "where the sources disagree about the unit; signed off"
+    },
+    "stats": {
+     "source": "newrecruit",
+     "note": "its stats rows (see ARMIES.units.stats)"
+    },
+    "ranged": {
+     "source": "newrecruit",
+     "note": "its ranged weapon rows (see ARMIES.units.ranged)"
+    },
+    "melee": {
+     "source": "newrecruit",
+     "note": "its melee weapon rows (see ARMIES.units.melee)"
+    },
+    "abilities": {
+     "source": "newrecruit",
+     "note": "its ability rows (see ARMIES.units.abilities)"
+    },
+    "mods": {
+     "source": "hand",
+     "note": "footnotes under its weapon tables, copied from the words of the rule each cites and signed off (approvals.json, unit-footnote); the Damage tab's numbers"
+    },
+    "aura": {
+     "source": "hand",
+     "note": "what it gives other units of the list, copied from the words and signed off (unit-aura)"
+    },
+    "guard": {
+     "source": "hand",
+     "note": "help it gives other units when they are attacked, signed off (unit-guard)"
+    },
+    "over": {
+     "source": "hand",
+     "note": "a datasheet fact this list has otherwise than another list (verify/out/tables.md): the list's own value, kept until decided; source as the column it replaces"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    }
+   }
+  },
+  "ARMIES.units.stats": {
+   "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the model's name, with \"×N\" in an attached unit"
+    },
+    "from": {
+     "source": "bsdata",
+     "note": "values a rule of the list changed: BSData's modifiers (verify/write-grants.js), checked against New Recruit's \"(…)\" marks (verify/nr.js)"
+    },
+    "printed": {
+     "source": "newrecruit",
+     "note": "what New Recruit prints for a value shown with a rule applied BSData does not apply (verify/nr.js)"
+    },
+    "M": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "T": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "Sv": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "W": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "Ld": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "OC": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "InSv": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "base": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "over": {
+     "source": "hand",
+     "note": "see ARMIES.units.over"
+    },
+    "of": {
+     "source": "derived",
+     "note": "which part of an attached unit the row is from, when who does not say (verify/tables.js)"
+    }
+   }
+  },
+  "ARMIES.units.ranged": {
+   "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the weapon (its datasheet row)"
+    },
+    "who": {
+     "source": "newrecruit",
+     "note": "the model or part of the unit that carries it"
+    },
+    "n": {
+     "source": "newrecruit",
+     "note": "how many models carry it"
+    },
+    "from": {
+     "source": "bsdata",
+     "note": "values and keywords a rule of the list changed: BSData's modifiers, checked against New Recruit (verify/nr.js)"
+    },
+    "enh": {
+     "source": "newrecruit",
+     "note": "a weapon from an enhancement"
+    },
+    "range": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "A": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "BS": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "WS": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "S": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "AP": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "D": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "kw": {
+     "source": "bsdata",
+     "note": "the keywords, with ones a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "over": {
+     "source": "hand",
+     "note": "see ARMIES.units.over"
+    },
+    "of": {
+     "source": "derived",
+     "note": "which part of an attached unit the row is from (verify/tables.js)"
+    }
+   }
+  },
+  "ARMIES.units.melee": {
+   "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the weapon (its datasheet row)"
+    },
+    "who": {
+     "source": "newrecruit",
+     "note": "the model or part of the unit that carries it"
+    },
+    "n": {
+     "source": "newrecruit",
+     "note": "how many models carry it"
+    },
+    "from": {
+     "source": "bsdata",
+     "note": "values and keywords a rule of the list changed: BSData's modifiers, checked against New Recruit (verify/nr.js)"
+    },
+    "enh": {
+     "source": "newrecruit",
+     "note": "a weapon from an enhancement"
+    },
+    "range": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "A": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "BS": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "WS": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "S": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "AP": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "D": {
+     "source": "bsdata",
+     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "kw": {
+     "source": "bsdata",
+     "note": "the keywords, with ones a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+    },
+    "over": {
+     "source": "hand",
+     "note": "see ARMIES.units.over"
+    },
+    "of": {
+     "source": "derived",
+     "note": "which part of an attached unit the row is from (verify/tables.js)"
+    }
+   }
+  },
+  "ARMIES.units.abilities": {
+   "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the ability (its datasheet row, or the list's own: an enhancement's or upgrade's)"
+    },
+    "who": {
+     "source": "newrecruit",
+     "note": "the part of an attached unit it is on, as New Recruit prints it"
+    },
+    "over": {
+     "source": "hand",
+     "note": "see ARMIES.units.over"
+    },
+    "of": {
+     "source": "derived",
+     "note": "which part of an attached unit the row is from (verify/tables.js)"
+    },
+    "text": {
+     "source": "wahapedia",
+     "note": "the list's own ability (an enhancement): GW's / Wahapedia's words (verify/texts.js)"
+    },
+    "tag": {
+     "source": "newrecruit",
+     "note": "\"Enhancement\" / \"Upgrade\" and GW's tags as New Recruit prints them"
+    },
+    "ph": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "at": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "na": {
+     "source": "hand",
+     "note": "why it does nothing in this list; signed off"
+    },
+    "damaged": {
+     "source": "hand",
+     "note": "the wounds range of a Damaged ability, from its words (verify/invariants.js)"
+    },
+    "riled": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "embarked": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defAlways": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defCalc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcDef": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "fightOnDeath": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "comeback": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "ARMIES.units.mods": {
+   "what": "footnotes under a unit's weapon tables",
+   "columns": {
+    "kind": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "weapon": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "who": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "set": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "when": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "cond": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
+    },
+    "from": {
+     "source": "hand",
+     "note": "the ability, rule or stratagem it cites"
+    },
+    "always": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "pick": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "rule": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "vs": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "needs": {
+     "source": "hand",
+     "note": "which units of the list it is for (keywords); signed off"
+    },
+    "selfWhen": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "selfAlways": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "oneModel": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "notSelf": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "one": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "ARMIES.units.aura": {
+   "what": "what a unit gives other units of its list",
+   "columns": {
+    "kind": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "weapon": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "who": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "set": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "when": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "cond": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
+    },
+    "from": {
+     "source": "hand",
+     "note": "the ability, rule or stratagem it cites"
+    },
+    "always": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "pick": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "rule": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "vs": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "needs": {
+     "source": "hand",
+     "note": "which units of the list it is for (keywords); signed off"
+    },
+    "selfWhen": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "selfAlways": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "oneModel": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "notSelf": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "one": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "ARMIES.units.guard": {
+   "what": "help a unit gives other units of its list when they are attacked",
+   "columns": {
+    "kind": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "weapon": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "who": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "set": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "when": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "cond": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
+    },
+    "from": {
+     "source": "hand",
+     "note": "the ability, rule or stratagem it cites"
+    },
+    "always": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "pick": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "rule": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "vs": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "needs": {
+     "source": "hand",
+     "note": "which units of the list it is for (keywords); signed off"
+    },
+    "selfWhen": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "selfAlways": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "oneModel": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "notSelf": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "one": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "DATASHEETS": {
+   "what": "one row per datasheet (faction + datasheet name): its facts, shared by every list that has it",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the datasheet's name as New Recruit prints it (the id: faction/name)"
+    },
+    "faction": {
+     "source": "derived",
+     "note": "the faction of the list it is in"
+    },
+    "bsId": {
+     "source": "bsdata",
+     "note": "its BSData entry id (BS_IDS, verify/import-ids.js); left out where the lists name two"
+    },
+    "role": {
+     "source": "newrecruit",
+     "note": "the roster section (Epic Hero, Character, Battleline, …)"
+    },
+    "rules": {
+     "source": "newrecruit",
+     "note": "the core-rule line (Rules) as New Recruit prints it (verify/nr.js; verify/bsdata.js)"
+    },
+    "kw": {
+     "source": "newrecruit",
+     "note": "the keywords (\"Categories\"), checked against BSData (verify/bsdata.js)"
+    },
+    "kwOnly": {
+     "source": "hand",
+     "note": "keywords only some models have (Wahapedia's \"… ONLY:\", BSData's categories on one model); signed off"
+    },
+    "partialRules": {
+     "source": "hand",
+     "note": "rules only one model has; signed off"
+    },
+    "srcNote": {
+     "source": "hand",
+     "note": "where the sources disagree about the unit; signed off"
+    },
+    "leaders": {
+     "source": "bsdata",
+     "note": "(none yet) the units its Leader ability can lead"
+    },
+    "stats": {
+     "source": "newrecruit",
+     "note": "one row per model profile"
+    },
+    "ranged": {
+     "source": "newrecruit",
+     "note": "ranged weapon profiles"
+    },
+    "melee": {
+     "source": "newrecruit",
+     "note": "melee weapon profiles"
+    },
+    "abilities": {
+     "source": "wahapedia",
+     "note": "abilities and their texts"
+    }
+   }
+  },
+  "DATASHEETS.stats": {
+   "what": "a datasheet's model profiles",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the model"
+    },
+    "M": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "T": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "Sv": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "W": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "Ld": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "OC": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "InSv": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "base": {
+     "source": "newrecruit",
+     "note": "as the New Recruit PDF prints it (the owner's rule, 18 Oct 2026)"
+    }
+   }
+  },
+  "DATASHEETS.ranged": {
+   "what": "a datasheet's ranged weapon profiles",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the weapon / profile"
+    },
+    "range": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "A": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "BS": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "WS": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "S": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "AP": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "D": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "kw": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "group": {
+     "source": "bsdata",
+     "note": "joins the profiles of one weapon: \"pick one\" (verify/choice.js: BSData and Wahapedia)"
+    },
+    "fireAll": {
+     "source": "bsdata",
+     "note": "the profiles all fire (verify/choice.js: BSData and Wahapedia)"
+    },
+    "hunter": {
+     "source": "newrecruit",
+     "note": "the Hunter profile: against MONSTER/VEHICLE"
+    }
+   }
+  },
+  "DATASHEETS.melee": {
+   "what": "a datasheet's melee weapon profiles",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the weapon / profile"
+    },
+    "range": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "A": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "BS": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "WS": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "S": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "AP": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "D": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "kw": {
+     "source": "newrecruit",
+     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+    },
+    "group": {
+     "source": "bsdata",
+     "note": "joins the profiles of one weapon: \"pick one\" (verify/choice.js: BSData and Wahapedia)"
+    },
+    "fireAll": {
+     "source": "bsdata",
+     "note": "the profiles all fire (verify/choice.js: BSData and Wahapedia)"
+    },
+    "hunter": {
+     "source": "newrecruit",
+     "note": "the Hunter profile: against MONSTER/VEHICLE"
+    }
+   }
+  },
+  "DATASHEETS.abilities": {
+   "what": "a datasheet's abilities",
+   "columns": {
+    "name": {
+     "source": "newrecruit",
+     "note": "the ability's name as New Recruit prints it"
+    },
+    "who": {
+     "source": "newrecruit",
+     "note": "the model or wargear that has it"
+    },
+    "text": {
+     "source": "wahapedia",
+     "note": "Wahapedia's datasheet wording (GW's Faction Pack update where there is one), matched word for word to New Recruit's (verify/nr.js, verify/texts.js)"
+    },
+    "tag": {
+     "source": "newrecruit",
+     "note": "GW's tags as New Recruit prints them; derive.js derives the \"Once per…\" parts"
+    },
+    "ph": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turn": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "turns": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "at": {
+     "source": "derived",
+     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+    },
+    "def": {
+     "source": "ai",
+     "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
+    },
+    "defOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
+    },
+    "note": {
+     "source": "hand",
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "na": {
+     "source": "hand",
+     "note": "why it does nothing in this list; signed off"
+    },
+    "damaged": {
+     "source": "hand",
+     "note": "the wounds range of a Damaged ability, from its words (verify/invariants.js)"
+    },
+    "riled": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "embarked": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defAlways": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defCalc": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcDef": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "lasts": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "fightOnDeath": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "comeback": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "calcNote": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    }
+   }
+  },
+  "RULE_OPTIONS": {
+   "what": "the options inside a rule or ability, each with the phases its words give",
+   "columns": {
+    "rule": {
+     "source": "derived",
+     "note": "the rule or ability (faction · detachment · rule, or list · unit · ability)"
+    },
+    "option": {
+     "source": "derived",
+     "note": "the option's name"
+    },
+    "text": {
+     "source": "derived",
+     "note": "its words"
+    },
+    "found": {
+     "source": "derived",
+     "note": "how verify/derive.js found it (a table row, \"**Name:** effect\", a bullet)"
+    },
+    "explicit": {
+     "source": "derived",
+     "note": "its own words name when it is used"
+    },
+    "trigger": {
+     "source": "derived",
+     "note": "when it is used (its words, or the rule's)"
+    },
+    "used": {
+     "source": "derived",
+     "note": "where its effect is used"
+    },
+    "phases": {
+     "source": "derived",
+     "note": "trigger and used together"
+    }
+   }
+  },
+  "GRANTS": {
+   "what": "a rule or option giving units an ability or keyword",
+   "columns": {
+    "rule": {
+     "source": "derived",
+     "note": "the rule or ability"
+    },
+    "option": {
+     "source": "derived",
+     "note": "the option of it that gives it"
+    },
+    "grants": {
+     "source": "derived",
+     "note": "the ability or keyword given"
+    },
+    "type": {
+     "source": "derived",
+     "note": "ability, or keyword / weapon ability"
+    },
+    "to": {
+     "source": "derived",
+     "note": "which units (needs), or this unit / model"
+    },
+    "while": {
+     "source": "derived",
+     "note": "the option active, or the words' condition"
+    },
+    "text": {
+     "source": "derived",
+     "note": "the sentence that gives it"
+    }
+   }
+  },
+  "BS_IDS": {
+   "what": "the BSData ids the list import resolves an export by (verify/import-ids.js --write)",
+   "columns": {
+    "factions": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "roots": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "battleSizes": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "limits": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "dispositions": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "detachments": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "config": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "configKids": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "info": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "infoKids": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "units": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "names": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    },
+    "maxPerList": {
+     "source": "bsdata",
+     "note": "verify/import-ids.js"
+    }
+   }
+  }
+ }
+}

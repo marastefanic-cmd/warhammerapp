@@ -6,6 +6,9 @@
 //
 // Steps (each must pass):
 //   data        check.js: the data is complete and consistent
+//   tables      verify/tables.js: data.js is in table form (every unit entry a reference to its datasheet, as --write writes it),
+//               every column has a source (verify/columns.json); datasheet facts two lists have differently: verify/out/tables.md
+//   fingerprints  verify/tables.js --fingerprints: every AI-written column (gist, def) matches the text it was written from
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
@@ -50,6 +53,8 @@ const step = (name, args, env) => {
 // the verified files: the app, its data, the calculator's engine and the list import
 const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
+step('tables', ['verify/tables.js']);
+step('fingerprints', ['verify/tables.js', '--fingerprints']);
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);

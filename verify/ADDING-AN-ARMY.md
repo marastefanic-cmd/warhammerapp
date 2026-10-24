@@ -48,7 +48,11 @@ Add the faction's catalogue and pack to `verify/sources/factions.json` if `add-a
 
 ## 3. What the import cannot know
 
-Each line of `import-<id>.md`, written in the list's block in `data.js` (field reference above `ARMIES`):
+Each line of `import-<id>.md`, written in `data.js` (field reference above `ARMIES`; `docs/tables.md`): an ability's
+`ph` / `turn` / `turns` / `def` / `tag` / `who` on its datasheet's row in `DATASHEETS` (every list with that datasheet
+shows them), `mods`, `aura`, `na`, `kwNote`, `ptsNote` on the list's entry in `ARMIES`. Or write them in the list's
+block in the old form (`node verify/tables.js --expand`, edit, `node verify/tables.js --write`). A new `gist` or `def`:
+`node verify/tables.js --stamp` after checking it against its text (its fingerprint):
 
 - `ph` / `turn` / `turns`: the phase(s) and turn an ability's words name ("In your Shooting phase" →
   `ph:['shooting'], turn:'your'`). No phase words and no moment: leave it untagged.
