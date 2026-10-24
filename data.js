@@ -1416,6 +1416,67 @@ const FACTIONS = {
       }
     }
   },
+  'ultramarines': {
+    name: 'Ultramarines',
+    // army rules: Wahapedia, Ultramarines, Army Rules (the ones the list’s units name), written by verify/from-json.js
+    armyRules: [
+      { name:'Combat Doctrines', ph:['command','movement','shooting','charge'], turn:'your', text:'At the start of your Command phase, you can select one **combat doctrine** listed below. If you do, that **combat doctrine** is active for friendly **ADEPTUS ASTARTES** units with this ability until the start of your next Command phase.\nASSAULT DOCTRINE\nWhen this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.\nDEVASTATOR DOCTRINE\nThis unit’s ranged attacks have **[ASSAULT]**.\nTACTICAL DOCTRINE\nWhen this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge**.\nUnless otherwise stated:\n- You can only select each **combat doctrine** once per battle.\n- Only one **combat doctrine** can be active for each unit. If a rule makes a **combat doctrine** active for a unit, any **combat doctrine** previously active for that unit is no longer active for that unit.' },
+      { name:'Transhuman Strategist', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' },
+      { name:'Librarius', text:'**ADEPTUS ASTARTES PSYKER** units with this ability have a **psyker level** of 1 or higher, specified in that unit’s abilities. Each **psychic ability** has a **psychic level** of 1 or higher, specified in that ability’s name.\nIn a battle round, a friendly **ADEPTUS ASTARTES PSYKER** unit can use a number of **psychic abilities** whose total **psychic level** does not exceed that **PSYKER** unit’s **psyker level**.\n**Example:** In a battle round, a **psyker level 3 PSYKER** unit could use three **psychic level 1** abilities, or one **psychic level 1** ability and one **psychic level 2** ability, or one **psychic level 3** ability.' },
+      { name:'Space Marine Chapters', text:'If an **ADEPTUS ASTARTES** unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Marneus Calgar has both the **ADEPTUS ASTARTES** and **ULTRAMARINES** Faction keywords,and is therefore from the Ultramarines Chapter.\nYou cannot include units from more than one Chapter in your army.' },
+      { name:'Special Move Types', ph:['movement','charge'], turn:'your', text:'The following are special **move types** that certain or all of your units are eligible to make.\nSHOCK DISEMBARK MOVE18.07\n**SET-UP DISTANCE:** 3"\n**ELIGIBLE IF:**\n- Embarked within a **TRANSPORT** on the battlefield\n- Did not embark within that **TRANSPORT** this phase\n**EFFECT:** Set up as described in Set Up (03.02).\n**WHILE MOVING:** Set up each model wholly within the **set-up distance** of that **TRANSPORT**.\n**AFTER MOVING:** Your unit is not **eligible to declare a charge** until the end of the turn.\nASSAULT DISEMBARK MOVE18.06\n**SET-UP DISTANCE:** 3"\n**ELIGIBLE IF:**\n- Embarked within a **TRANSPORT** on the battlefield\n- Did not embark within that **TRANSPORT** this phase\n- That **TRANSPORT** has not made an **advance**/**fall-back move** this phase\n**EFFECT:** Set up as described in Set Up (03.02).\n**WHILE MOVING:** Set up each model wholly within the **set-up distance** of that **TRANSPORT**.' }
+    ],
+    detachments: {
+      // Assault Brethren: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'assault-brethren': {
+        name:'Assault Brethren', dispositions:['Take and Hold'], dp:1,
+        rule:{ name:'Assault Mastery', text:'You can select the **assault doctrine** one additional time per battle.' },
+        enhancements:[
+          { name:'Imperium’s Sword', pts:20, text:'**ADEPTUS ASTARTES** model only. This model has the following weapon:\nImperium’s Sword: Melee A6 WS2+ S7 AP-3 D3 []' },
+          { name:'Furious Assault', pts:10, upgrade:true, text:'**ADEPTUS ASTARTES INFANTRY** unit only. This unit’s melee attacks have **[Sustained Hits 1: non-Monster/Vehicle]**.' }
+        ],
+        stratagems:[
+          { id:'armour-of-contempt', def:'their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)', defOf:'d40ab81e', gist:'Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked.', gistOf:'d40ab81e', name:'Armour of Contempt', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Adeptus Astartes'] }, when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES** unit.', target:'That **ADEPTUS ASTARTES** unit.', effect:'Attacks that target your unit have -1 **AP** until that enemy unit has attacked.' },
+          { id:'gene-wrought-might', mod:{ kind:'melee', when:'Fight phase, selected to fight', note:'[LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)' }, gist:'Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.', gistOf:'f8229239', name:'Gene-Wrought Might', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Fight phase, when a friendly **ADEPTUS ASTARTES** unit is **selected to fight**.', target:'That **ADEPTUS ASTARTES** unit.', effect:'Your unit’s melee attacks have:\n- **[Lance]**.\n- Or: If the **assault doctrine** is active for your unit, **[Lance]** and +1 **AP**.' },
+          { id:'duty-in-death', def:'Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase', defOf:'aaca68f5', gist:'Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase.', gistOf:'aaca68f5', name:'Duty in Death', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES** unit.', target:'That **ADEPTUS ASTARTES** unit.', effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if the **assault doctrine** is active for your unit:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' }
+        ]
+      },
+      // Deathwatch Support: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'deathwatch-support': {
+        name:'Deathwatch Support', dispositions:['Disruption'], dp:1,
+        // the Damage tab's reading: each Tactics a box the player ticks (which combat doctrine is active is theirs to say); Purgatus
+        // Tactics' [PRECISION] changes no number of the attack
+        rule:{ name:'Mission Tactics', needs:{ all:['Kill Team'] },
+          calcMods:[
+            { kind:'all', from:'Furor Tactics', when:'Furor Tactics (the devastator doctrine is active for your unit)', note:'[SUSTAINED HITS 1]' },
+            { kind:'all', from:'Malleus Tactics', when:'Malleus Tactics (the tactical doctrine is active for your unit)', note:'[LETHAL HITS]' }
+          ], ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Friendly **KILL TEAM** units with this ability have the following abilities:\nFuror Tactics\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\nMalleus Tactics\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\nPurgatus Tactics\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules.' },
+        enhancements:[
+          { name:'Beacon Angelis', pts:25, text:'**ADEPTUS ASTARTES** model only. If this unit is a **KILL TEAM** unit, this unit has:\n- **Deep Strike**.\n- When you target this unit with the **Rapid Ingress Stratagem**, that use is -1CP.' }
+        ],
+        stratagems:[
+          { id:'kraken-rounds', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'+6" range and +1 S' }, gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks have +6" range and +1 S.', gistOf:'0ec4f7bb', name:'Kraken Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks have:\n- Have +6" **R**.\n- Have +1 **S**.' },
+          { id:'dragonfire-rounds', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'re-roll wound rolls of 1, [IGNORES COVER]' }, gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].', gistOf:'a2eb55d2', name:'Dragonfire Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks:\n- Can re-roll **wound rolls** of 1.\n- Have **[IGNORES COVER]**.' },
+          { id:'hellfire-rounds', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'[ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks)' }, gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].', gistOf:'be854996', name:'Hellfire Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks (excluding **[DEVASTATING WOUNDS]** attacks) have **[ANTI-non-VEHICLE 4+]**.' },
+          { id:'blackstar-extraction', gist:'End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.', gistOf:'22f956b5', name:'Blackstar Extraction', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Kill Team'] }, when:'End of your opponent’s Fight phase.', target:'One friendly **unengaged KILL TEAM** unit.', effect:'Place your unit in **strategic reserves**.' }
+        ]
+      },
+      // Terminator Storm Force: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'terminator-storm-force': {
+        name:'Terminator Storm Force', dispositions:['Priority Assets'], dp:1,
+        rule:{ name:'Death Blow', needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, ph:['charge'], turn:'either', text:'Friendly **ADEPTUS ASTARTES TERMINATOR** units have +1 to **charge rolls**.' },
+        enhancements:[
+          { name:'Champion of the First Company', pts:20, text:'**ADEPTUS ASTARTES TERMINATOR** model only. This unit’s melee attacks have **[Lethal Hits]**.' },
+          { name:'Corporeum Reliquary', pts:25, text:'**ADEPTUS ASTARTES TERMINATOR** model only. In your first Movement phase, this unit can make an **ingress move**.' }
+        ],
+        stratagems:[
+          { id:'tactical-dreadnought-fortitude', def:'their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)', defOf:'45bccdf8', gist:'Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked.', gistOf:'45bccdf8', name:'Tactical Dreadnought Fortitude', cp:2, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES TERMINATOR** unit.', target:'That **ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Attacks that target your unit have -1 **D** until that enemy unit has attacked.' },
+          { id:'merciless-veterans', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, gist:'Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'f957f56d', name:'Merciless Veterans', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'Your Shooting phase, when a friendly **ADEPTUS ASTARTES TERMINATOR** unit is **selected to shoot**.', target:'That **ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Your unit’s ranged attacks have:\n- **[Lethal Hits]**.\n- **[Sustained Hits 1]**.' },
+          { id:'gunship-extraction', gist:'End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.', gistOf:'ec24cfb9', name:'Gunship Extraction', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'End of your opponent’s Fight phase.', target:'One friendly **unengaged ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Place your unit in **strategic reserves**.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------
@@ -4285,6 +4346,175 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'nerf-when', name:'Nerf when', faction:'ultramarines', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Take and Hold',
+  detachments:['assault-brethren','deathwatch-support','terminator-storm-force'],
+  source:'New Recruit, exported 24 Oct 2026 (JSON)',
+  units:[
+    {
+      id:'roboute-guilliman', ds:'ultramarines/roboute-guilliman', pts:415, warlord:true,
+      models:['1× Roboute Guilliman'],
+      gear:[['Hand of Dominion','The Emperor’s Sword']],
+      // Codex Adept: the devastator doctrine is active for this unit (its ranged attacks have [ASSAULT])
+      mods:[
+        { kind:'ranged', when:'Codex Adept (the devastator doctrine is active for this unit)', note:'[ASSAULT]', from:'Codex Adept', always:true }
+      ],
+      // Primarch of the XIII (Aura): friendly ADEPTUS ASTARTES units within 6" of Roboute Guilliman, his own unit included (22.01)
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Within 6" of Roboute Guilliman', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Primarch of the XIII', selfAlways:true }
+      ],
+      kw:['Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Mobile','Monster','Primarch','Roboute Guilliman','Warlord'],
+      why:{ kw:{ Warlord:'Warlord' } }
+    },
+    {
+      id:'marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad', ds:['ultramarines/marneus-calgar','ultramarines/wardens-of-ultramar','ultramarines/bladeguard-veteran-squad'], role:'Epic Hero', pts:485, ptsNote:'180 + Wardens of Ultramar 115 + Bladeguard Veteran Squad 190', upgrade:'Furious Assault',
+      leads:'Bladeguard Veteran Squad',
+      also:[
+        { name:'Wardens of Ultramar', support:true }
+      ],
+      models:['1× Marneus Calgar','1× Aemelia Minervas','1× Ancient Gadriel','1× Dainal Kornelius','1× Gaius Silva','1× Lucia Vestha','1× Veteran Sergeant Metaurus','1× Bladeguard Veteran Sergeant','5× Bladeguard Veterans'],
+      gear:[['Gauntlets of Ultramar'],['Archeotech Laspistol','Power Weapon'],['Bolt Rifle','Ceramite Fists'],['Astropathic Blast','Force Stave'],['Archeotech Laspistol','Power Weapon'],['Archeotech Laspistol','Ultramarian Combat Weapons'],['Heavy Bolt Pistol','Master-crafted power weapon'],['Master-crafted power weapon','Neo-volkite Pistol'],['Heavy Bolt Pistol','Master-crafted power weapon']],
+      stats:[
+        { name:'Marneus Calgar' },
+        { name:'Aemelia Minervas' },
+        { name:'Ancient Gadriel' },
+        { name:'Dainal Kornelius' },
+        { name:'Gaius Silva' },
+        { name:'Lucia Vestha' },
+        { name:'Veteran Sergeant Metaurus' },
+        { name:'Bladeguard Veteran Sergeant' },
+        { name:'Bladeguard Veteran ×5' }
+      ],
+      ranged:[
+        { name:'Gauntlets of Ultramar', who:'Marneus Calgar' },
+        { name:'Archeotech Laspistol', who:'Wardens of Ultramar', n:3 },
+        { name:'Focused Fire', who:'Wardens of Ultramar' },
+        { name:'Saturation', who:'Wardens of Ultramar' },
+        { name:'Astropathic Blast', who:'Wardens of Ultramar' },
+        { name:'Heavy Bolt Pistol', who:'Wardens of Ultramar' },
+        { name:'Neo-volkite Pistol', who:'Bladeguard Veteran Squad' },
+        { name:'Heavy Bolt Pistol', who:'Bladeguard Veteran Squad', n:5 }
+      ],
+      melee:[
+        { name:'Gauntlets of Ultramar', who:'Marneus Calgar', kw:['TWIN-LINKED','SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Gauntlets of Ultramar (Overhead Smash)', who:'Marneus Calgar', kw:['EXTRA ATTACKS','TWIN-LINKED','SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Power Weapon', who:'Wardens of Ultramar', n:2, kw:['SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Ceramite Fists', who:'Wardens of Ultramar', kw:['SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Force Stave', who:'Wardens of Ultramar', kw:['PSYCHIC','SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Ultramarian Combat Weapons', who:'Wardens of Ultramar', kw:['SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Master-crafted power weapon', who:'Wardens of Ultramar', kw:['PRECISION','SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } },
+        { name:'Master-crafted power weapon', who:'Bladeguard Veteran Squad', n:6, kw:['SUSTAINED HITS 1: non-Monster/Vehicle'], from:{ 'SUSTAINED HITS 1: non-Monster/Vehicle':'Furious Assault' } }
+      ],
+      abilities:[
+        { name:'Master Tactician', who:'Marneus Calgar' },
+        { name:'Thunderhawk Insertion', who:'Marneus Calgar' },
+        { name:'Codex Adept', who:'Marneus Calgar' },
+        { name:'Raise the Banner', who:'Wardens of Ultramar' },
+        { name:'Strategium Command', who:'Wardens of Ultramar' },
+        { name:'Bladeguard', who:'Bladeguard Veteran Squad' },
+        { name:'Furious Assault', who:'Bladeguard Veteran Squad', tag:'Upgrade', ph:['fight'], turn:'either', text:'**ADEPTUS ASTARTES INFANTRY** unit only. This unit’s melee attacks have **[Sustained Hits 1: non-Monster/Vehicle]**.' }
+      ],
+      // Codex Adept (Marneus Calgar): the doctrines are active for this unit, the whole attached unit (19.04); Bladeguard: one of its two
+      // effects, once per turn
+      mods:[
+        { kind:'ranged', when:'Codex Adept (the devastator doctrine is active for this unit)', note:'[ASSAULT]', from:'Codex Adept', always:true },
+        { kind:'melee', when:'Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it)', note:'+1 to hit rolls', from:'Bladeguard' }
+      ],
+      rules:['Deep Strike','Combat Doctrines','Leader','Transhuman Strategist','Close-quarters','Twin-linked','Extra Attacks','Support','Assault','Heavy','Rapid Fire','Blast','Psychic','Devastating Wounds'],
+      kw:['Chapter Master','Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Infantry','Marneus Calgar','Terminator','Explosives','Psyker','Tacticus','Wardens of Ultramar','Bladeguard Veteran Squad'],
+      kwNote:'Explosives, Psyker, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit.',
+      partialRules:{ 'Deep Strike':'Marneus Calgar' }
+    },
+    {
+      id:'librarian-in-phobos-armour', ds:'ultramarines/librarian-in-phobos-armour', pts:75,
+      models:['1× Librarian in Phobos Armour'],
+      gear:[['Bolt pistol','Force weapon [Psychic]','Smite']]
+    },
+    {
+      id:'heavy-intercessor-squad', ds:'ultramarines/heavy-intercessor-squad', pts:115,
+      models:['1× Heavy Intercessor Sergeant','1× Heavy Intercessor w/Heavy Bolter','3× Heavy Intercessors'],
+      gear:[['Bolt pistol','Ceramite Fists','Heavy Bolt Rifle'],['Bolt pistol','Ceramite Fists','Heavy Bolter'],['Bolt pistol','Ceramite Fists','Heavy Bolt Rifle']],
+      stats:[
+        { name:'Heavy Intercessor Sergeant' },
+        { name:'Heavy intercessor Squad ×4' }
+      ],
+      ranged:[
+        { name:'Bolt pistol', n:5 },
+        { name:'Heavy Bolt Rifle', n:4 },
+        { name:'Heavy Bolter' }
+      ],
+      melee:[
+        { name:'Ceramite Fists', n:5 }
+      ]
+    },
+    {
+      id:'impulsor', ds:'ultramarines/impulsor', pts:70, copies:2,
+      models:['1× Impulsor (Shield Dome)'],
+      gear:[['Armoured Hull','Ironhail Heavy Stubber','Storm Bolters']],
+      stats:[
+        { name:'Impulsor', InSv:'5+', from:{ InSv:'Shield Dome' } }
+      ]
+    },
+    {
+      id:'eradicator-squad-with-melta-rifles', ds:'ultramarines/eradicator-squad-with-melta-rifles', pts:100, copies:2,
+      models:['1× Eradicator','1× Eradicator Sergeant','1× Eradicator with Multi-melta'],
+      gear:[['Bolt pistol','Ceramite Fists','Melta rifle'],['Bolt pistol','Ceramite Fists','Melta rifle'],['Bolt pistol','Ceramite Fists','Multi-melta']],
+      stats:[
+        { name:'Eradicator Squad ×2' },
+        { name:'Eradicator Sergeant' }
+      ],
+      ranged:[
+        { name:'Bolt pistol', n:3 },
+        { name:'Melta Rifle HUNTER:Monster/Vehicle', n:2 },
+        { name:'Melta Rifle', n:2 },
+        { name:'Multi-melta' },
+        { name:'Multi-melta HUNTER:Monster/Vehicle' }
+      ],
+      melee:[
+        { name:'Ceramite Fists', n:3 }
+      ],
+      mods:[
+        { kind:'ranged', when:'Always', note:'re-roll damage rolls', from:'Total Obliteration', always:true }
+      ]
+    },
+    {
+      id:'reiver-squad', ds:'ultramarines/reiver-squad', pts:85, copies:2,
+      models:['1× Reiver Sergeant','4× Reivers'],
+      gear:[['Bolt Carbine','Monomolecular Combat Knife','Special-issue Bolt Pistol'],['Bolt Carbine','Monomolecular Combat Knife','Special-issue Bolt Pistol']],
+      stats:[
+        { name:'Reiver Sergeant' },
+        { name:'Reiver Squad ×4' }
+      ],
+      ranged:[
+        { name:'Bolt Carbine', n:5 },
+        { name:'Special-issue Bolt Pistol', n:5 }
+      ],
+      melee:[
+        { name:'Monomolecular Combat Knife', n:5 }
+      ]
+    },
+    {
+      id:'deathwatch-terminator-squad', ds:'ultramarines/deathwatch-terminator-squad', pts:200, copies:2,
+      models:['1× Deathwatch Terminator Sergeant (Storm Shield)','1× Deathwatch Terminator (Storm Shield)','3× Deathwatch Terminator w/ Heavy Weapon'],
+      gear:[['Thunder Hammer'],['Thunder Hammer'],['Plasma cannon','Chainfist']],
+      stats:[
+        { name:'Deathwatch Terminator Sergeant', W:'4', from:{ W:'Storm Shield' } },
+        { name:'Deathwatch Terminator', W:'4', from:{ W:'Storm Shield' } },
+        { name:'Deathwatch Terminator ×3' }
+      ],
+      ranged:[
+        { name:'standard', n:3 },
+        { name:'supercharge', n:3 }
+      ],
+      melee:[
+        { name:'Thunder Hammer', n:2 },
+        { name:'Standard', n:3 },
+        { name:'Hunter: Monster/Vehicle', n:3 }
+      ]
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -6267,6 +6497,218 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*'],
   kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
+},
+'ultramarines/roboute-guilliman':{
+  name:'Roboute Guilliman', faction:'ultramarines', bsId:'4aea-b1cc-6c69-1c44', role:'Epic Hero',
+  stats:[
+    { name:'Roboute Guilliman', M:'8"', T:'10', Sv:'2+', W:'16', Ld:'5+', OC:'4', InSv:'4+', base:'60mm' }
+  ],
+  ranged:[
+    { name:'Hand of Dominion', range:'36"', A:'4', BS:'2+', S:'6', AP:'-2', D:'2', kw:['RAPID FIRE 2','SUSTAINED HITS 1'] }
+  ],
+  melee:[
+    { name:'Hand of Dominion', range:'Melee', A:'7', WS:'2+', S:'14', AP:'-4', D:'4', kw:['LETHAL HITS'] },
+    { name:'The Emperor’s Sword', range:'Melee', A:'10', WS:'2+', S:'10', AP:'-3', D:'2', kw:['CLEAVE 2','DEVASTATING WOUNDS'] }
+  ],
+  abilities:[
+    { name:'Author of the Codex', ph:['movement'], turn:'your', text:'In your Movement phase, you can select one **visible** friendly **ADEPTUS ASTARTES** unit within 12" of this model, and select one **combat doctrine**. That **combat doctrine** is active for that unit in addition to any other **combat doctrines** that are active for that unit until the start of your next Command phase.' },
+    { name:'Leader of Astartes', ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' }, def:'Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit', text:'While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.', defOf:'21019393' },
+    { name:'Primarch of the XIII', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **ADEPTUS ASTARTES** unit is within 6" of this unit, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
+    { name:'Codex Adept', text:'The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.' }
+  ],
+  rules:['Combat Doctrines','Feel No Pain 5+','Transhuman Strategist','Lethal Hits','Rapid Fire','Sustained Hits','Devastating Wounds','Cleave'],
+  kw:['Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Mobile','Monster','Primarch','Roboute Guilliman']
+},
+'ultramarines/marneus-calgar':{
+  name:'Marneus Calgar', faction:'ultramarines', bsId:'a136-76f7-34d1-8035',
+  stats:[
+    { name:'Marneus Calgar', M:'6"', T:'6', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' }
+  ],
+  ranged:[
+    { name:'Gauntlets of Ultramar', range:'18"', A:'4', BS:'2+', S:'5', AP:'-2', D:'2', kw:['CLOSE-QUARTERS','TWIN-LINKED'] }
+  ],
+  melee:[
+    { name:'Gauntlets of Ultramar', group:'Gauntlets of Ultramar', range:'Melee', A:'6', WS:'2+', S:'10', AP:'-3', D:'3' },
+    { name:'Gauntlets of Ultramar (Overhead Smash)', group:'Gauntlets of Ultramar', range:'Melee', A:'1', WS:'2+', S:'14', AP:'-3', D:'D3+3' }
+  ],
+  abilities:[
+    { name:'Master Tactician', ph:['movement'], turn:'your', text:'In your Movement phase, you can select one **visible** friendly **ADEPTUS ASTARTES** unit within 9" of this model, and select one **combat doctrine**. That **combat doctrine** is active for that unit until the start of your next Command phase.' },
+    { name:'Thunderhawk Insertion', text:'In the Declare Battle Formations step, you can select one friendly **GRAVIS/PHOBOS/TACTICUS** unit. That unit has **Deep Strike**.' },
+    { name:'Codex Adept', text:'The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.' }
+  ]
+},
+'ultramarines/wardens-of-ultramar':{
+  name:'Wardens of Ultramar', faction:'ultramarines', bsId:'b793-b77e-9e49-d397',
+  stats:[
+    { name:'Aemelia Minervas', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'28.5mm' },
+    { name:'Ancient Gadriel', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'2', InSv:'–', base:'40mm' },
+    { name:'Dainal Kornelius', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'28.5mm' },
+    { name:'Gaius Silva', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'28.5mm' },
+    { name:'Lucia Vestha', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'28.5mm' },
+    { name:'Veteran Sergeant Metaurus', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Archeotech Laspistol', range:'12"', A:'1', BS:'3+', S:'4', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] },
+    { name:'Focused Fire', group:'Bolt Rifle', range:'24"', A:'1', BS:'3+', S:'6', AP:'-1', D:'2', kw:['HEAVY','RAPID FIRE 1'] },
+    { name:'Saturation', group:'Bolt Rifle', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['ASSAULT','RAPID FIRE 1'] },
+    { name:'Astropathic Blast', range:'12"', A:'3', BS:'3+', S:'4', AP:'-1', D:'1', kw:['BLAST 1','PSYCHIC'] },
+    { name:'Heavy Bolt Pistol', range:'18"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] }
+  ],
+  melee:[
+    { name:'Power Weapon', range:'Melee', A:'4', WS:'2+', S:'4', AP:'-2', D:'1' },
+    { name:'Ceramite Fists', range:'Melee', A:'4', WS:'3+', S:'5', AP:'0', D:'1' },
+    { name:'Force Stave', range:'Melee', A:'1', WS:'2+', S:'5', AP:'-2', D:'2' },
+    { name:'Ultramarian Combat Weapons', range:'Melee', A:'4', WS:'3+', S:'4', AP:'0', D:'1' },
+    { name:'Master-crafted power weapon', range:'Melee', A:'5', WS:'2+', S:'5', AP:'-2', D:'2' }
+  ],
+  abilities:[
+    { name:'Raise the Banner', ph:['movement'], turn:'your', text:'At the end of your Movement phase, if this unit is controlling an **objective**, that **objective** is **secured**.' },
+    { name:'Strategium Command', text:'When both players have deployed their armies, you can redeploy up to three friendly **ADEPTUS ASTARTES** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**.' }
+  ]
+},
+'ultramarines/bladeguard-veteran-squad':{
+  name:'Bladeguard Veteran Squad', faction:'ultramarines', bsId:'7044-bf1-f949-c32d',
+  stats:[
+    { name:'Bladeguard Veteran Sergeant', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
+    { name:'Bladeguard Veteran', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Neo-volkite Pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'0', D:'2', kw:['DEVASTATING WOUNDS','CLOSE-QUARTERS'] },
+    { name:'Heavy Bolt Pistol', range:'18"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] }
+  ],
+  melee:[
+    { name:'Master-crafted power weapon', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'2' }
+  ],
+  abilities:[
+    { name:'Bladeguard', tag:'Once per turn, per unit', ph:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, def:'Bladeguard (once per turn, in the Fight phase, when an enemy unit targets it, instead of +1 to hit for its own melee attacks): attacks that target it have -1 to hit rolls', text:'In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**.', defOf:'7366a778' }
+  ]
+},
+'ultramarines/librarian-in-phobos-armour':{
+  name:'Librarian in Phobos Armour', faction:'ultramarines', bsId:'137c-2add-1a51-ee96', role:'Character',
+  stats:[
+    { name:'Librarian in Phobos Armor', M:'8"', T:'4', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] },
+    { name:'Witchfire', group:'Smite', range:'24"', A:'D6', BS:'3+', S:'6', AP:'-1', D:'2', kw:['PSYCHIC'] },
+    { name:'Focused Witchfire', group:'Smite', range:'24"', A:'D3+3', BS:'3+', S:'6', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS','HAZARDOUS','PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Force weapon [Psychic]', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-2', D:'2', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'Shrouding', tag:'psychic level 1', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, def:'Shrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase', text:'When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a psychic roll for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Attacks that target this unit have -1 to **hit rolls** until the end of the phase.', defOf:'c99822c4' },
+    { name:'Soul Sight', tag:'psychic level 1', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit. Ranged attacks that target that enemy unit have **[IGNORES COVER]**.' },
+    { name:'Psychic Hood', tag:'Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, def:'Feel No Pain 4+ against psychic attacks', text:'This unit has **Feel No Pain 4+** against **psychic attacks**.', defOf:'3eefcb3b' },
+    { name:'Librarian', tag:'psyker level 1', text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' }
+  ],
+  rules:['Leader','Deep Strike','Combat Doctrines','Scouts 6"','Librarius','Stealth','Infiltrators','Close-quarters','Psychic','Hazardous','Devastating Wounds'],
+  kw:['Character','Explosives','Faction: Adeptus Astartes','Imperium','Infantry','Librarian','Phobos','Psyker']
+},
+'ultramarines/heavy-intercessor-squad':{
+  name:'Heavy Intercessor Squad', faction:'ultramarines', bsId:'7324-e591-939b-b675', role:'Battleline',
+  stats:[
+    { name:'Heavy Intercessor Sergeant', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'–', base:'40mm' },
+    { name:'Heavy intercessor Squad', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'–', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] },
+    { name:'Heavy Bolt Rifle', range:'30"', A:'2', BS:'3+', S:'5', AP:'-1', D:'2', kw:['HEAVY','RAPID FIRE 1'] },
+    { name:'Heavy Bolter', range:'36"', A:'3', BS:'3+', S:'5', AP:'-1', D:'2', kw:['HEAVY','RAPID FIRE 2','SUSTAINED HITS 1'] }
+  ],
+  melee:[
+    { name:'Ceramite Fists', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Unyielding in the Face of the Foe', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, def:'+1 to save rolls while it is controlling an objective', text:'While this unit is controlling an **objective**, this unit has +1 to **save rolls**.', defOf:'4c01a4b4' }
+  ],
+  rules:['Combat Doctrines','Close-quarters','Heavy','Rapid Fire','Sustained Hits'],
+  kw:['Battleline','Explosives','Faction: Adeptus Astartes','Gravis','Heavy Intercessor Squad','Imperium','Infantry']
+},
+'ultramarines/impulsor':{
+  name:'Impulsor', faction:'ultramarines', bsId:'bfb1-7512-e1a3-9fa2', role:'Dedicated Transport',
+  stats:[
+    { name:'Impulsor', M:'12"', T:'9', Sv:'3+', W:'11', Ld:'6+', OC:'2', base:'100mm' }
+  ],
+  ranged:[
+    { name:'Ironhail Heavy Stubber', range:'36"', A:'3', BS:'3+', S:'4', AP:'-1', D:'1', kw:['RAPID FIRE 3'] },
+    { name:'Storm Bolters', range:'24"', A:'4', BS:'3+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 4'] }
+  ],
+  melee:[
+    { name:'Armoured Hull', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Transport', text:'This model has a **transport capacity** of 7 **ADEPTUS ASTARTES INFANTRY** models. It cannot transport **TERMINATOR/JUMP PACK** models. Each **GRAVIS** model takes up the space of 2 models.' },
+    { name:'Rapid Disembarkation', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**.' },
+    { name:'Shield Dome', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'This unit has 5+ **InSv**.' }
+  ],
+  rules:['Deadly Demise D3','Firing Deck 7','Combat Doctrines','Rapid Fire'],
+  kw:['Dedicated Transport','Faction: Adeptus Astartes','Frame','Imperium','Impulsor','Transport','Vehicle']
+},
+'ultramarines/eradicator-squad-with-melta-rifles':{
+  name:'Eradicator Squad with Melta Rifles', faction:'ultramarines', bsId:'c570-c6ba-c9dc-5a44', role:'Infantry',
+  stats:[
+    { name:'Eradicator Squad', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' },
+    { name:'Eradicator Sergeant', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['CLOSE-QUARTERS'] },
+    { name:'Melta Rifle HUNTER:Monster/Vehicle', group:'Melta rifle', hunter:true, range:'18"', A:'1', BS:'2+', S:'12', AP:'-3', D:'D3+2', kw:['MELTA 2'] },
+    { name:'Melta Rifle', group:'Melta rifle', range:'18"', A:'1', BS:'3+', S:'10', AP:'-3', D:'D3+2', kw:['MELTA 2'] },
+    { name:'Multi-melta', group:'Multi-melta', range:'18"', A:'2', BS:'3+', S:'10', AP:'-3', D:'D3+2', kw:['MELTA 3'] },
+    { name:'Multi-melta HUNTER:Monster/Vehicle', group:'Multi-melta', hunter:true, range:'18"', A:'2', BS:'2+', S:'12', AP:'-3', D:'D3+2', kw:['MELTA 3'] }
+  ],
+  melee:[
+    { name:'Ceramite Fists', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Total Obliteration', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'This unit’s ranged attacks can re-roll **damage rolls**.' }
+  ],
+  rules:['Combat Doctrines','Close-quarters','Melta'],
+  kw:['Eradicator Squad with Melta Rifles','Explosives','Faction: Adeptus Astartes','Gravis','Imperium','Infantry']
+},
+'ultramarines/reiver-squad':{
+  name:'Reiver Squad', faction:'ultramarines', bsId:'a7ae-e495-683b-7c90', role:'Infantry',
+  stats:[
+    { name:'Reiver Sergeant', M:'8"', T:'4', Sv:'3+', W:'2', Ld:'6+', OC:'1', InSv:'–', base:'32mm' },
+    { name:'Reiver Squad', M:'8"', T:'4', Sv:'3+', W:'2', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Bolt Carbine', range:'18"', A:'3', BS:'3+', S:'5', AP:'-1', D:'1', kw:['ASSAULT','PRECISION'] },
+    { name:'Special-issue Bolt Pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-2', D:'1', kw:['CLOSE-QUARTERS','PRECISION'] }
+  ],
+  melee:[
+    { name:'Monomolecular Combat Knife', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:['PRECISION'] }
+  ],
+  abilities:[
+    { name:'Fearsome Assault', ph:['fight'], turn:'either', text:'At the start of the Fight phase, each enemy unit **engaged** with a unit with this ability makes a **battle-shock roll**, with -1 to that **battle-shock roll**.' },
+    { name:'Terror Troops', tag:'Aura', text:'While an enemy model is within 3" of this unit, that enemy model has -1 **OC**.' }
+  ],
+  rules:['Scouts 6"','Combat Doctrines','Assault','Precision','Close-quarters'],
+  kw:['Explosives','Faction: Adeptus Astartes','Imperium','Infantry','Phobos','Reiver Squad','Smoke']
+},
+'ultramarines/deathwatch-terminator-squad':{
+  name:'Deathwatch Terminator Squad', faction:'ultramarines', bsId:'390e-706b-a059-378b', role:'Allies: Deathwatch',
+  stats:[
+    { name:'Deathwatch Terminator Sergeant', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
+    { name:'Deathwatch Terminator', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm', W:'3' }
+  ],
+  ranged:[
+    { name:'standard', group:'Plasma cannon', range:'36"', A:'3', BS:'3+', S:'9', AP:'-2', D:'2', kw:['BLAST 1'] },
+    { name:'supercharge', group:'Plasma cannon', range:'36"', A:'3', BS:'3+', S:'10', AP:'-3', D:'3', kw:['BLAST 1','HAZARDOUS'] }
+  ],
+  melee:[
+    { name:'Thunder Hammer', range:'Melee', A:'3', WS:'3+', S:'8', AP:'-2', D:'3', kw:['DEVASTATING WOUNDS'] },
+    { name:'Standard', group:'Chainfist', range:'Melee', A:'2', WS:'4+', S:'8', AP:'-2', D:'2', kw:[] },
+    { name:'Hunter: Monster/Vehicle', group:'Chainfist', hunter:true, range:'Melee', A:'3', WS:'3+', S:'12', AP:'-2', D:'3', kw:[] }
+  ],
+  abilities:[
+    { name:'Terminatus Assault', ph:['charge'], turn:'either', text:'- This unit can re-roll **charge rolls**.\n- After this unit ends a **charge move**, each enemy unit **engaged** with this unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if it’s a non-**IMPERIUM/CHAOS** unit.' },
+    { name:'Teleport Homer', ph:['movement'], turn:'opp', text:'At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:\n- When you target this unit with the **Rapid Ingress stratagem**, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that **stratagem**, this unit must be set up within 3" of that Teleport Homer token and not within 8" of an enemy unit. That Teleport Homer token is then removed from the battlefield.\n- If an enemy unit ends a move within 1" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.' },
+    { name:'Storm Shield', text:'This model has +1 **W**.' }
+  ],
+  rules:['Deep Strike','Combat Doctrines','Devastating Wounds','Hazardous','Blast'],
+  kw:['Allies: Deathwatch','Deathwatch Terminator Squad','Faction: Adeptus Astartes','Faction: Deathwatch','Imperium','Infantry','Kill Team','Terminator']
 }
 };
 // ---- end of DATASHEETS ----
@@ -6281,6 +6723,7 @@ const BS_IDS = {
     "1069-10ff-3ba9-873b":"thousand-sons",
     "1f19-6509-d906-ca10":"adeptus-custodes",
     "25dd-7aa0-6bf4-f2d5":"imperial-knights",
+    "4029-9237-e8db-af55":"ultramarines",
     "46d8-abc8-ef3a-9f85":"chaos-knights",
     "77b9-2f66-3f9b-5cf3":"adeptus-mechanicus",
     "a55f-b7b3-6c65-a05f":"orks",
@@ -6296,6 +6739,7 @@ const BS_IDS = {
     "5a84-ea91-b707-1656":"detachment",
     "6470-c44a-45f4-3313":"detachment",
     "73c2-d0ed-3c7e-7e17":"detachment",
+    "82cb-ba1-1aae-3b1d":"detachment",
     "84c8-b821-877d-72e6":"detachment",
     "a435-b94a-eb7b-7c0c":"detachment",
     "a6ad-d379-46ee-2c24":"detachment",
@@ -6320,13 +6764,16 @@ const BS_IDS = {
     "1558-660f-466b-a087":"world-eaters/khorne-daemonkin",
     "1bb5-5aba-6c8f-7afc":"adeptus-custodes/might-of-the-moritoi",
     "1c7e-56bc-3196-b5cd":"adeptus-custodes/emperors-chosen",
+    "1dc3-0d2d-7cb8-b84b":"ultramarines/terminator-storm-force",
     "3490-ec82-70b3-c5cf":"world-eaters/berzerker-warband",
     "496c-ddb9-3e71-e0b3":"orks/war-horde",
     "4b17-a73a-7a0a-a265":"orks/bully-boyz",
     "4b8b-16b7-091d-7b6f":"thousand-sons/ritual-of-regeneration",
     "4e8e-50db-0d32-423c":"imperial-knights/freeblade-company",
+    "549e-86b2-b786-c802":"ultramarines/assault-brethren",
     "5be7-3aa8-5d64-cbaf":"thousand-sons/warpmeld-pact",
     "5d30-981f-43b8-81be":"chaos-knights/hunting-warpack",
+    "5eb6-4ed2-6aca-c7f1":"ultramarines/deathwatch-support",
     "6cb5-45cf-c626-fa86":"chaos-knights/houndpack-lance",
     "6d06-9e26-0d3c-5317":"adeptus-mechanicus/eradication-cohort",
     "70d9-0c7a-6b46-65fa":"world-eaters/vessels-of-wrath",
@@ -6435,6 +6882,14 @@ const BS_IDS = {
     "mucho-mutantes/tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion":["c251-bd54-441-4799|1×190d-7321-6e85-5251,1×1a98-844f-f54b-f76c,1×4287-4c82-30d5-bfaa","1703-3edd-5eb3-fcef|1×7ebd-c3dc-8467-70ae,1×7ebd-c3dc-8467-70ae/7b4e-03d3-6b3f-6c48,5×996-bd56-400b-a51e,5×996-bd56-400b-a51e/7b4e-03d3-6b3f-6c48"],
     "mucho-mutantes/tzaangor-shaman-tzaangor-enlightened-flowing-flesh":["c251-bd54-441-4799|1×1a98-844f-f54b-f76c,1×4287-4c82-30d5-bfaa,1×c84c-683a-79be-1620","1703-3edd-5eb3-fcef|1×7ebd-c3dc-8467-70ae,1×7ebd-c3dc-8467-70ae/7b4e-03d3-6b3f-6c48,5×996-bd56-400b-a51e,5×996-bd56-400b-a51e/7b4e-03d3-6b3f-6c48"],
     "mucho-mutantes/tzaangors":["f5b9-50c8-5c60-d8ea|1×255b-146d-ca61-55fb,1×255b-146d-ca61-55fb/ee84-120d-a66b-0b72,9×5b9-7d59-48fd-b485,9×5b9-7d59-48fd-b485/a484-6a41-3648-bce1"],
+    "nerf-when/deathwatch-terminator-squad":["390e-706b-a059-378b|3×259f-d98e-e052-ec64,3×259f-d98e-e052-ec64/8d7-b5ed-f870-e86e,3×259f-d98e-e052-ec64/8d7-b5ed-f870-e86e/5a2-c6a5-9b4b-605f,3×259f-d98e-e052-ec64/8d7-b5ed-f870-e86e/7efe-d1b8-35d1-f9c1,1×4595-7ad2-617a-c07d,1×4595-7ad2-617a-c07d/f831-6dfb-6b1b-8112,1×4595-7ad2-617a-c07d/f831-6dfb-6b1b-8112/8ad7-4a78-859d-2305,1×4595-7ad2-617a-c07d/f831-6dfb-6b1b-8112/ff14-7e0a-4b32-6fc1,1×45fa-9a7-8352-362e,1×45fa-9a7-8352-362e/f831-6dfb-6b1b-8112,1×45fa-9a7-8352-362e/f831-6dfb-6b1b-8112/8ad7-4a78-859d-2305,1×45fa-9a7-8352-362e/f831-6dfb-6b1b-8112/ff14-7e0a-4b32-6fc1"],
+    "nerf-when/eradicator-squad-with-melta-rifles":["c570-c6ba-c9dc-5a44|1×71fb-48d9-b0da-332c,1×71fb-48d9-b0da-332c/0bb3-01f1-8be5-f285,1×71fb-48d9-b0da-332c/18b0-8c2-173f-5,1×71fb-48d9-b0da-332c/c88c-d4a0-4ec4-625c,1×ab61-e814-8c4d-1cb,1×ab61-e814-8c4d-1cb/0bb3-01f1-8be5-f285,1×ab61-e814-8c4d-1cb/18b0-8c2-173f-5,1×ab61-e814-8c4d-1cb/c88c-d4a0-4ec4-625c,1×eba8-6f8c-759-4e22,1×eba8-6f8c-759-4e22/0bb3-01f1-8be5-f285,1×eba8-6f8c-759-4e22/18b0-8c2-173f-5,1×eba8-6f8c-759-4e22/4bff-1982-fbf1-7a8f"],
+    "nerf-when/heavy-intercessor-squad":["7324-e591-939b-b675|1×5f80-3d00-6e4d-cfaf,1×5f80-3d00-6e4d-cfaf/0bb3-01f1-8be5-f285,1×5f80-3d00-6e4d-cfaf/18b0-8c2-173f-5,1×5f80-3d00-6e4d-cfaf/36dc-bea0-75e7-f76a,1×bc1-73c2-c18-8687,1×bc1-73c2-c18-8687/0bb3-01f1-8be5-f285,1×bc1-73c2-c18-8687/18b0-8c2-173f-5,1×bc1-73c2-c18-8687/d941-c4cd-8b82-c453,3×deb4-6018-b8cf-1d66,3×deb4-6018-b8cf-1d66/0bb3-01f1-8be5-f285,3×deb4-6018-b8cf-1d66/18b0-8c2-173f-5,3×deb4-6018-b8cf-1d66/6881-277b-1f28-22f2"],
+    "nerf-when/impulsor":["bfb1-7512-e1a3-9fa2|1×1c66-4903-10ca-2a27,1×7685-1ab3-8d12-fac7,1×836c-fa5c-db9d-7566,1×a879-624d-42ab-2b43"],
+    "nerf-when/librarian-in-phobos-armour":["137c-2add-1a51-ee96|1×18b0-8c2-173f-5,1×4aaa-f353-5fa5-fd92,1×905d-bd38-f44c-9eef"],
+    "nerf-when/marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad":["a136-76f7-34d1-8035|1×2bb4-99f4-3659-5eda","b793-b77e-9e49-d397|1×0157-e958-1a91-3024,1×0157-e958-1a91-3024/3a9a-05a5-41e6-7e70,1×0157-e958-1a91-3024/6155-c404-a228-cb72,1×4b4d-ba83-4eba-ba61,1×4b4d-ba83-4eba-ba61/3b8f-1cb7-3c6e-4455,1×4b4d-ba83-4eba-ba61/ebda-08ed-994a-b579,1×6821-a4bf-a017-4487,1×6821-a4bf-a017-4487/8e0c-d8f7-eeb8-ed2a,1×6821-a4bf-a017-4487/9415-965c-37e9-d374,1×74ce-a593-af24-5ef7,1×74ce-a593-af24-5ef7/6dc0-a9d5-a111-daf2,1×74ce-a593-af24-5ef7/9415-965c-37e9-d374,1×cc2c-abb5-1cb7-d195,1×cc2c-abb5-1cb7-d195/197b-3dd4-bc46-2ef7,1×cc2c-abb5-1cb7-d195/1fbe-32e7-bd69-93b5,1×d8dd-5401-5ac7-5922,1×d8dd-5401-5ac7-5922/6dc0-a9d5-a111-daf2,1×d8dd-5401-5ac7-5922/9415-965c-37e9-d374","7044-bf1-f949-c32d|5×48fe-1424-5571-d7ee,5×48fe-1424-5571-d7ee/2b6b-56b9-13a8-3320,5×48fe-1424-5571-d7ee/83a1-feb8-d495-aa28,1×b681-8092-2465-7ba0,1×ca9e-52d-14-a439,1×ca9e-52d-14-a439/2b6b-56b9-13a8-3320,1×ca9e-52d-14-a439/8519-75f2-2df8-8610"],
+    "nerf-when/reiver-squad":["a7ae-e495-683b-7c90|4×5069-49f-6f54-5039,4×5069-49f-6f54-5039/3f4f-efd-2d8f-e37d,4×5069-49f-6f54-5039/7acc-f148-1490-419d,4×5069-49f-6f54-5039/a5fb-aa4d-100f-e1bb,1×a18e-7629-e4fd-53c6,1×a18e-7629-e4fd-53c6/3f4f-efd-2d8f-e37d,1×a18e-7629-e4fd-53c6/7acc-f148-1490-419d,1×a18e-7629-e4fd-53c6/a5fb-aa4d-100f-e1bb"],
+    "nerf-when/roboute-guilliman":["4aea-b1cc-6c69-1c44|1×4c53-6d36-742f-85ca,1×b5b2-5c6-e593-69a7,1×caa-f869-3cbd-b48e"],
     "nidzillas/hive-tyrant":["3e96-8098-3401-77af|1×131b-ff57-84bb-e87a,1×ceab-62d9-31bf-7c61,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6"],
     "nidzillas/neurogaunts":["8ccc-3f27-7e4e-da81|1×8488-2efe-825f-a403,1×8488-2efe-825f-a403/65d0-a5c5-919a-6444,10×a998-39ce-f312-129,10×a998-39ce-f312-129/65d0-a5c5-919a-6444"],
     "nidzillas/norn-assimilator-synaptoprescience":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
@@ -6513,6 +6968,7 @@ const BS_IDS = {
   names:{
     "005c-b2d1-4432-415a":"Ruinspear rocket pod",
     "0119-8c04-435e-c782":"Knight Despoiler",
+    "0157-e958-1a91-3024":"Ancient Gadriel",
     "02c9-ea19-b105-af58":"Combi-bolter",
     "0567-0f45-90e8-d3f4":"Flawless Blade",
     "0574-f558-2957-584f":"Warlord",
@@ -6522,6 +6978,7 @@ const BS_IDS = {
     "07b7-836e-524b-7227":"Gork's Klaw",
     "0955-1e48-ac34-156f":"Moonchewa",
     "0b63-2988-ec78-7913":"Daemonbreath spear",
+    "0bb3-01f1-8be5-f285":"Ceramite Fists",
     "0d87-7d7c-2a4a-7a09":"Excruciator cannon",
     "0dc4-725f-e51b-77f7":"Heavy warpflamer",
     "109a-db29-c4a5-f826":"Thump Gun",
@@ -6532,6 +6989,7 @@ const BS_IDS = {
     "1187-f3db-ea97-bada":"Reaper chainsword",
     "1189-dcd8-e3ed-7837":"Spiculus bolt launcher",
     "131b-ff57-84bb-e87a":"Monstrous Nemesis",
+    "137c-2add-1a51-ee96":"Librarian in Phobos Armour",
     "13cd-5399-07f2-6d79":"Flesh Hound",
     "13f7-1a3-eff-7393":"The Swarmlord",
     "140d-7163-8a11-81c5":"Grot Blasta",
@@ -6541,11 +6999,14 @@ const BS_IDS = {
     "1705-379b-330d-36d4":"Tyrannofex",
     "1724-8c9c-c385-16c6":"Exalted Sorcerer on Disc of Tzeentch",
     "183e-f3bb-3ce6-7b55":"Flawless Blades",
+    "18b0-8c2-173f-5":"Bolt pistol",
     "190d-7321-6e85-5251":"Diamond of Distortion",
     "1911-226b-90f1-d420":"Disruptor missile launcher",
+    "197b-3dd4-bc46-2ef7":"Astropathic Blast",
     "1a98-844f-f54b-f76c":"Baleful Devolution",
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
+    "1c66-4903-10ca-2a27":"Ironhail Heavy Stubber",
     "1d21-9b32-c427-398e":"Kustom Mega-slugga",
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
     "1de9-b138-28a1-9c4b":"Flash Gitz",
@@ -6553,6 +7014,7 @@ const BS_IDS = {
     "1e27-a6de-3840-a050":"Knight Crusader",
     "1e68-75a-f434-7977":"Brayhorn",
     "1f1e-2989-4762-cf88":"Belisarius Cawl",
+    "1fbe-32e7-bd69-93b5":"Force Stave",
     "1fd1-28df-182d-bfcb":"Prosperine khopesh",
     "20cf-5b7c-71d2-451d":"Kastelan Robot",
     "217a-9e22-3821-27e9":"Chainblades",
@@ -6567,6 +7029,7 @@ const BS_IDS = {
     "252b-cdba-84bd-3ed3":"Nob w/ Kustom Shoota and Kustom Krumpa",
     "255b-146d-ca61-55fb":"Twistbray",
     "2575-9440-a8cf-1c50":"Spinnin' Blades",
+    "259f-d98e-e052-ec64":"Deathwatch Terminator w/ Heavy Weapon",
     "273-38fa-249e-3aa4":"Stormspear rocket pod",
     "27b4-53af-ee1b-688a":"Fleshmetal Fusion",
     "288c-1cbc-8340-9c0a":"Titanic feet",
@@ -6577,7 +7040,9 @@ const BS_IDS = {
     "2aea-961-8345-fce5":"Diseased claws and teeth",
     "2afa-364b-7daf-f95e":"Warpflamer",
     "2b1f-798d-9bca-4ad9":"Mechanicus pistol",
+    "2b6b-56b9-13a8-3320":"Master-crafted power weapon",
     "2ba4-635b-fffd-0f59":"Bolt pistol",
+    "2bb4-99f4-3659-5eda":"Gauntlets of Ultramar",
     "2c4c-5aac-b510-28ef":"Berzerker Glaive",
     "2ca0-73ea-2725-79c7":"Ectoplasma destructor",
     "2ce1-75b2-4291-586e":"Incendine combustor",
@@ -6597,13 +7062,17 @@ const BS_IDS = {
     "3469-166f-44f3-51b8":"Bolt pistol",
     "34b5-f449-28f6-b365":"Heavy reaper autocannon",
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
+    "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
     "37a7-d156-1e4c-8fe1":"Cerastus Knight Atrapos",
     "3811-a215-d4a1-d197":"Umbralefic Crystal",
     "38fb-1df5-8eb6-fdf6":"Khorne Berzerker Champion",
+    "390e-706b-a059-378b":"Deathwatch Terminator Squad",
     "3924-3f8-745d-7097":"Dreadherder",
     "392a-657c-8bfe-a1e6":"Kustom Krumpa",
     "3a22-1796-8a64-6d3b":"Goremonger w/ chainblade",
+    "3a9a-05a5-41e6-7e70":"Ceramite Fists",
     "3b2-8c11-616a-1005":"Mek",
+    "3b8f-1cb7-3c6e-4455":"Heavy Bolt Pistol",
     "3bee-8c85-68f7-e54b":"Warlord",
     "3bfa-bf00-b5ed-cc81":"Ahriman",
     "3cbf-631a-2bbe-6b54":"Rubric Marine w/ soulreaper cannon",
@@ -6617,6 +7086,7 @@ const BS_IDS = {
     "3f1f-49de-78f6-e59e":"Samni'arius and Spinegrinder",
     "3f27-79c1-1aea-5be7":"Dual Fists and 2 Projectors",
     "3f41-4b71-a07b-506a":"Titanic feet",
+    "3f4f-efd-2d8f-e37d":"Special Issue Bolt Pistol",
     "3fcc-b6a1-399b-1a29":"Skorpius Disintegrator",
     "406-60ac-f728-9c6d":"Graviton singularity cannon",
     "407b-a252-25b0-0cf4":"Broad spectrum data-tether",
@@ -6636,7 +7106,9 @@ const BS_IDS = {
     "4494-dd7d-69f7-306c":"Tormentors",
     "44b0-1947-ea4a-3005":"Chainblade",
     "44f2-27ca-fad5-70ad":"Curse of Life",
+    "4595-7ad2-617a-c07d":"Deathwatch Terminator Sergeant",
     "45f6-8429-a1d9-2a51":"Chaos Terminators",
+    "45fa-9a7-8352-362e":"Deathwatch Terminator",
     "4676-0c32-b62c-debd":"Knight Diabolus",
     "47af-ef6b-9d50-2c4a":"Jakhal Pack Leader",
     "47e1-9e86-8a80-66e1":"Plasma pistol",
@@ -6646,17 +7118,24 @@ const BS_IDS = {
     "4863-f443-2b45-e18b":"Balistus grenade launcher",
     "48a2-a603-9607-4df8":"Gatling cannon and flamer",
     "48de-a40a-2252-66c":"Force weapon",
+    "48fe-1424-5571-d7ee":"Bladeguard Veterans",
     "4988-d93e-5034-2b3c":"Contemptor-Galatus Dreadnought",
     "4aa5-24c5-89bc-7023":"Scarab Occult Sorcerer",
+    "4aaa-f353-5fa5-fd92":"Smite",
     "4ad2-bd20-6dfe-776b":"Bloodthirster",
+    "4aea-b1cc-6c69-1c44":"Roboute Guilliman",
     "4b2a-4860-aed5-56b6":"Forgefiend claws",
+    "4b4d-ba83-4eba-ba61":"Veteran Sergeant Metaurus",
     "4ba8-dbf3-05f9-f868":"Sekhetar Robot w/ pyreflux meltagun",
+    "4bff-1982-fbf1-7a8f":"Multi-melta",
+    "4c53-6d36-742f-85ca":"The Emperor's Sword",
     "4dcd-5d7f-65c2-245b":"Squigosaur's jaws",
     "4ea0-6b70-c17c-bc00":"Ghazghkull Thraka",
     "4fc1-2679-a110-3cd":"Avenger gatling cannon",
     "4ff3-7dce-5a52-94e9":"Bestial Aspect",
     "503b-f7be-eeeb-9e31":"Witchseeker Squad",
     "5059-e78f-c558-c8e8":"Ferrumite cannon",
+    "5069-49f-6f54-5039":"Reivers",
     "50f3-6a18-bc71-2a59":"Toxinjecter harpoon",
     "5447-603b-27a0-7240":"Psyko-gatler",
     "545a-eead-e216-5939":"Cerastus shock lance",
@@ -6669,6 +7148,7 @@ const BS_IDS = {
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
     "59ef-1bf3-f681-c8ae":"Vexilla",
+    "5a2-c6a5-9b4b-605f":"Chainfist",
     "5b76-3e1c-8801-1e4b":"Archslaughterer",
     "5b9-7d59-48fd-b485":"Tzaangor w/ Tzaangor blades",
     "5be8-d319-e2a9-8409":"Twin cognis autocannon",
@@ -6679,9 +7159,11 @@ const BS_IDS = {
     "5e8b-2f7f-6ef5-42e3":"Alpha combat weapon",
     "5efb-f61f-fdb6-a7d7":"Stikka",
     "5f1f-f3bb-d6dd-6714":"Heavy weapon",
+    "5f80-3d00-6e4d-cfaf":"Heavy Intercessor Sergeant",
     "6084-9fb5-76d2-8487":"Beastchoppa",
     "60c9-9f30-7dc8-2b63":"Malefic Curse",
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
+    "6155-c404-a228-cb72":"Bolt Rifle",
     "626e-72e0-7869-82c1":"Skitarii Ranger w/ omnispex",
     "62a1-1fa7-70b7-614d":"Twin Lastrum Bolt Cannon",
     "636b-f3ef-1a09-d692":"Shearing claws",
@@ -6701,7 +7183,9 @@ const BS_IDS = {
     "673b-c3e-6682-ae28":"Drilla",
     "67d3-0a50-aa82-c444":"Twin Onager heavy phosphor blaster",
     "6814-ce42-4b23-72a9":"Prosecutor",
+    "6821-a4bf-a017-4487":"Lucia Vestha",
     "6836-5818-2135-a8aa":"Helm of Brazen Ire",
+    "6881-277b-1f28-22f2":"Heavy Bolt Rifle",
     "68b0-c798-79a8-28f5":"Snarling Rivalry",
     "6a83-8e1f-63ef-50c3":"Squighog Boyz",
     "6a9b-8e2f-edac-fa2d":"Norn Assimilator",
@@ -6709,29 +7193,35 @@ const BS_IDS = {
     "6b9e-c6ae-2626-45c9":"Kustom Force Field",
     "6cc8-d237-eec9-d038":"Aviarch",
     "6d28-ca9d-79a5-063a":"Disciple of Khorne",
+    "6dc0-a9d5-a111-daf2":"Power Weapon",
     "6f2c-fc26-53bc-34bd":"Eightbound Champion",
     "6f81-4538-a414-251e":"Jakhals",
     "6fd1-efa4-7787-db82":"Plasma pistol",
     "6feb-277f-7f31-504a":"Stompy Feet",
+    "7044-bf1-f949-c32d":"Bladeguard Veteran Squad",
     "7067-34f4-5272-e05f":"Meganobz",
     "70b4-8523-6b7c-1b0a":"Freedom's Hand",
     "7135-8430-eb02-ded4":"Thulia Ghuld",
     "7193-1dfe-7721-ecbd":"War Dog autocannon",
     "71c9-b10b-b55f-483e":"Slaughterbound",
     "71d9-9dc2-2b9a-6db3":"Skarbrand",
+    "71fb-48d9-b0da-332c":"Eradicator Sergeant",
     "7205-f4fe-f064-0edf":"Dark Blessing",
     "7212-7cc9-ec49-72b8":"Nurgling Swarm",
     "7213-a7b3-4c8e-96bc":"Eldritch Vortex of E'taph",
     "723d-aaaa-3268-09e3":"Terminator Champion",
     "72c5-8bd0-19f5-f246":"Caestus Fist",
     "731f-2f2-7ca0-23ed":"Meganob w/ Twin Killsaw",
+    "7324-e591-939b-b675":"Heavy Intercessor Squad",
     "7361-7d8a-dbfc-b6e8":"Prosperine khopesh",
     "73e9-498e-2d97-e18":"Atrapos lascutter",
+    "74ce-a593-af24-5ef7":"Aemelia Minervas",
     "74f5-4553-6d71-b44c":"Force weapon",
     "753d-4e02-eda3-4809":"War Dog Brigand",
     "7546-5742-581c-9e8b":"Graviton singularity cannon",
     "75ce-5ce7-0a6e-a876":"Blade of Endless Bloodshed",
     "7669-1442-2c0b-e0c9":"Painboy",
+    "7685-1ab3-8d12-fac7":"Shield Dome",
     "7695-54a2-f38b-a89c":"Havoc launcher",
     "77b6-41ee-7952-e94d":"Gun Stock",
     "7819-56c3-cf02-6cdb":"Busta Rokkit Launcha",
@@ -6741,6 +7231,7 @@ const BS_IDS = {
     "78be-1bfa-16ca-f674":"Ectoplasma destructor",
     "78e7-69eb-d93a-2b00":"Slaughter and Carnage",
     "7a17-4fb0-c0f5-e22":"Bone Sabres",
+    "7acc-f148-1490-419d":"Monomolecular Combat Knife",
     "7b41-35aa-3265-14d7":"Augury Uplink",
     "7b4c-dfe0-6a0a-304a":"Lord Exultant",
     "7b4e-03d3-6b3f-6c48":"Divining spear",
@@ -6751,6 +7242,7 @@ const BS_IDS = {
     "7e60-1733-57d1-71f3":"Eightbound",
     "7ebd-c3dc-8467-70ae":"Aviarch",
     "7efb-de37-79c4-cccb":"Ironstrider Ballistarii",
+    "7efe-d1b8-35d1-f9c1":"Plasma cannon",
     "7f5-23ea-19ab-176":"Adamantine 'Eadbutt",
     "8097-77df-1ed5-1e1a":"Fatecaster greatbow",
     "80c4-14b2-d02d-d289":"Nazdreg",
@@ -6761,9 +7253,12 @@ const BS_IDS = {
     "81fb-325e-49fd-9a6f":"Servo arm",
     "82ba-6095-1f1f-202d":"Close combat weapon",
     "82cc-4b0b-8e55-bf48":"Tellyport Blasta",
+    "836c-fa5c-db9d-7566":"Storm Bolters",
+    "83a1-feb8-d495-aa28":"Heavy Bolt Pistol",
     "8441-8356-5e7c-69ee":"Knight Paladin",
     "8488-2efe-825f-a403":"Neurogaunt Nodebeast",
     "84c0-f59d-901a-e94f":"Canis Rex",
+    "8519-75f2-2df8-8610":"Neo-volkite Pistol",
     "8555-148a-0e35-4749":"Adrathic Desolator, 1 Fist and 1 Projectors",
     "86c9-46db-4de-4a5d":"Thermal cannon",
     "8719-8732-d0be-c527":"Exalted Eightbound",
@@ -6774,6 +7269,7 @@ const BS_IDS = {
     "89c4-132e-6ad6-2a08":"Despoiler gatling cannon",
     "8a59-c996-8ae9-8bd6":"Icon of Excess",
     "8a8f-5ceb-8a0a-6c6c":"Saddlegit's Shiv",
+    "8ad7-4a78-859d-2305":"Storm Shield",
     "8ae1-aa47-e1d1-1b31":"Chaos Rhino",
     "8b1d-9029-f9e1-42d9":"Chaos Cerastus Knight Atrapos",
     "8b5-898c-f79b-5a9c":"Warlord",
@@ -6783,12 +7279,15 @@ const BS_IDS = {
     "8c36-c946-2e0f-f648":"Killa Kans",
     "8cbb-0e54-096a-e053":"Khorne Berzerker w/ eviscerator and plasma pistol",
     "8ccc-3f27-7e4e-da81":"Neurogaunts",
+    "8d7-b5ed-f870-e86e":"Plasma Cannon",
     "8dc7-bea2-997b-a1c9":"Dual Caestus Fists",
     "8df0-fc3c-8ced-ffce":"War Dog Executioner",
+    "8e0c-d8f7-eeb8-ed2a":"Ultramarian Combat Weapons",
     "8e1d-9846-a460-6002":"Icon of Khorne",
     "8fc1-9168-5137-2b5d":"Ironstrider Ballistarius (Twin cognis lascannon)",
     "8fca-90dd-a784-b5c0":"Choppa",
     "8ff6-03ed-5125-9b6d":"Boltgun",
+    "905d-bd38-f44c-9eef":"Force weapon",
     "9064-698b-c833-b972":"Hellfire breath",
     "90fb-6049-048b-b4d2":"Galvanic rifle",
     "9147-8824-3c93-86ed":"Inferno combi-bolter",
@@ -6796,6 +7295,7 @@ const BS_IDS = {
     "91dc-9aad-0505-52a8":"Magnus the Red",
     "93c3-d64f-2d6e-ea":"Questoris heavy stubber",
     "93c8-9c05-8892-b481":"Black Staff of Ahriman",
+    "9415-965c-37e9-d374":"Archeotech Laspistol",
     "9435-1f44-7e5b-d510":"Eightbound",
     "94b3-ef7f-f71f-c86e":"Castellan Axe",
     "954d-5938-64d8-597c":"Squighog Boy",
@@ -6822,6 +7322,8 @@ const BS_IDS = {
     "a05e-db63-84ad-4c5e":"Rapid-fire battlecannon and Questoris heavy stubber",
     "a085-ae61-1810-46d0":"Lacerator and daemonic claw",
     "a0d5-2805-f05a-29e1":"Gore Hound",
+    "a136-76f7-34d1-8035":"Marneus Calgar",
+    "a18e-7629-e4fd-53c6":"Reiver Sergeant",
     "a1b4-80b4-e85e-96ec":"Power fist",
     "a287-990-9f34-9836":"Warblade",
     "a289-aacb-7152-e243":"Astral Blast",
@@ -6836,8 +7338,11 @@ const BS_IDS = {
     "a453-2220-cdf7-ef10":"Aspiring Sorcerer",
     "a484-6a41-3648-bce1":"Tzaangor blades",
     "a58b-974d-14a0-ece2":"Ectoplasma cannon",
+    "a5fb-aa4d-100f-e1bb":"Bolt Carbine",
     "a61b-434-6817-679a":"Herd banner",
+    "a7ae-e495-683b-7c90":"Reiver Squad",
     "a7ee-9112-4e83-bc2":"Scarab Occult Terminator",
+    "a879-624d-42ab-2b43":"Armoured Hull",
     "a87e-4f8-a6f7-15de":"Powerful limbs",
     "a886-5b5b-d3b2-cf38":"Necromechanic",
     "a8b7-351-d911-a4d6":"Beastboss on Squigosaur",
@@ -6845,6 +7350,7 @@ const BS_IDS = {
     "a998-39ce-f312-129":"Neurogaunt",
     "aa3c-6662-6bf0-6a7e":"Runtherd's Toolz",
     "aac1-5b0f-4802-1628":"Arcane Fire",
+    "ab61-e814-8c4d-1cb":"Eradicator",
     "ab80-e71b-5a84-2852":"Close combat weapon",
     "ab93-64bd-1c95-c6a7":"Plasma caliver",
     "ad65-d3cb-c677-7cb3":"Warlord",
@@ -6873,15 +7379,20 @@ const BS_IDS = {
     "b541-3292-a5cc-dbeb":"Defiler",
     "b568-8a23-be6f-a14d":"Khorne Berzerker",
     "b59f-e25b-6248-8f90":"Obsessionist",
+    "b5b2-5c6-e593-69a7":"Hand of Dominion",
     "b657-1743-6e3a-0838":"Flesh Hounds",
+    "b681-8092-2465-7ba0":"Furious Assault (Upgrade)",
     "b717-8754-263b-3a20":"Meltagun",
     "b74a-d992-b5eb-23ff":"Close combat weapon",
     "b77f-43c5-91b6-7da7":"Shearing claws",
+    "b793-b77e-9e49-d397":"Wardens of Ultramar",
     "b7a3-bfbd-1464-141d":"Omnispex",
     "b93c-a0a7-1c46-66c4":"Skitarii Ranger w/ arc rifle",
+    "bc1-73c2-c18-8687":"Heavy Intercessor w/Heavy Bolter",
     "bd01-88b9-7d60-b49a":"Excruciator cannon",
     "bd33-fe8e-fe90-2bb7":"Magma cutter",
     "bd6c-8683-8bc4-962d":"Kastelan Robots",
+    "bfb1-7512-e1a3-9fa2":"Impulsor",
     "c089-546a-0546-3537":"Two excruciator cannons",
     "c0a2-eb65-6d34-5bc6":"Knight Ruinator",
     "c0e0-4d86-96d2-ec86":"Tech-Priest Enginseer",
@@ -6894,6 +7405,7 @@ const BS_IDS = {
     "c26c-fe9c-e557-e706":"Grabba Dragga",
     "c3a6-8fab-45f0-2d45":"Exalted Sorcerer",
     "c41d-61c0-3e59-01b5":"Bolt pistol",
+    "c570-c6ba-c9dc-5a44":"Eradicator Squad with Melta Rifles",
     "c609-c87e-f9dd-5006":"Knight Warden",
     "c62a-bc9c-37fb-2b36":"Titanic feet",
     "c6a8-0dbc-ab1b-38b5":"Tormentor w/ meltagun",
@@ -6904,11 +7416,15 @@ const BS_IDS = {
     "c7a7-3164-12bc-3462":"Warlord",
     "c7e3-601f-3442-250b":"Collar of Khorne",
     "c84c-683a-79be-1620":"Flowing Flesh",
+    "c88c-d4a0-4ec4-625c":"Melta rifle",
     "c8a6-a4c5-703e-b717":"Allarus Custodians",
     "c95f-7907-e078-7e21":"Gaze of Hate",
     "ca02-db54-10e6-f20e":"Heavy flamer",
     "ca9c-de3c-61e1-31":"Hellforged weapons",
+    "ca9e-52d-14-a439":"Bladeguard Veteran Sergeant",
+    "caa-f869-3cbd-b48e":"Warlord",
     "cb31-e496-08de-77d4":"Sanctuary",
+    "cc2c-abb5-1cb7-d195":"Dainal Kornelius",
     "cc5a-e1bc-3dd8-f367":"Bringer of Justice",
     "cd60-e6ca-4de4-bf07":"Blade of the Laer",
     "cdad-e2e0-9db3-93fc":"Meganob w/ Kombi-weapon and Power Klaw",
@@ -6935,7 +7451,9 @@ const BS_IDS = {
     "d7b7-a7e-ef2-783a":"Kan Klaw",
     "d813-7c6b-1dfe-e99a":"Tormentor",
     "d877-3dd3-2d5a-e092":"2 Hades autocannons",
+    "d8dd-5401-5ac7-5922":"Gaius Silva",
     "d92d-2a5e-3dd9-f60f":"Twin Kastelan fist",
+    "d941-c4cd-8b82-c453":"Heavy Bolter",
     "d9a6-8dbd-2c01-862b":"Lastrum storm bolter",
     "d9ca-c6b0-ba9c-b6c8":"Arachnus Blaze Carronade",
     "d9f5-2270-b9b2-8060":"Icon of Flame",
@@ -6947,6 +7465,7 @@ const BS_IDS = {
     "dd8d-1bc7-029f-3674":"Gore-drenched fangs",
     "de59-f65c-181a-8509":"Skitarii Rangers",
     "de8f-24f9-c543-92b7":"Gretchin",
+    "deb4-6018-b8cf-1d66":"Heavy Intercessors",
     "df3a-0414-6edc-005a":"Kustom mega-blasta",
     "dfe8-cea0-8d16-db95":"Diabolus heavy stubber",
     "e083-787f-1fff-4170":"Dok's Toolz",
@@ -6970,6 +7489,8 @@ const BS_IDS = {
     "ea82-9845-1b96-c57c":"Infractor",
     "ea86-f483-33bb-182b":"Power sword",
     "eb85-7ead-6dee-f00f":"Dunecrawler legs",
+    "eba8-6f8c-759-4e22":"Eradicator with Multi-melta",
+    "ebda-08ed-994a-b579":"Master-crafted power weapon",
     "ebfb-d2a4-5280-a6e6":"Gore-stained Veterans",
     "ec72-f024-4283-0558":"Lord on Juggernaut",
     "ed0c-e9cb-399f-a5a2":"Follow Me Ladz",
@@ -7008,6 +7529,7 @@ const BS_IDS = {
     "f6b2-238a-4613-a59f":"Malefic Curse",
     "f70d-d0cb-5cb8-3be9":"Autopistol",
     "f76c-0f51-ad33-c118":"Armoured tracks",
+    "f831-6dfb-6b1b-8112":"Thunder Hammer & Storm Shield",
     "f8bc-c08c-22f0-8ebb":"Chainblades",
     "f909-00c7-8ba4-018a":"Khorne Berzerkers",
     "fa30-43a8-57eb-a82e":"Squig Jaws",
@@ -7015,7 +7537,8 @@ const BS_IDS = {
     "fb26-6d89-aa65-fb7e":"Panoply of the Cursed Knights",
     "fbee-427a-1c46-f621":"Big Mek",
     "fc2d-063a-a9fa-968f":"Frag bombard",
-    "fe4b-b3a4-69b7-3088":"Sekhetar Robots"
+    "fe4b-b3a4-69b7-3088":"Sekhetar Robots",
+    "ff14-7e0a-4b32-6fc1":"Thunder Hammer"
   },
   maxPerList:{
     "10f9-eb42-632e-3a6f":1,
@@ -7037,6 +7560,7 @@ const BS_IDS = {
     "42e1-e706-eb89-6cb6":1,
     "44f2-27ca-fad5-70ad":1,
     "4676-0c32-b62c-debd":1,
+    "4aea-b1cc-6c69-1c44":1,
     "4ea0-6b70-c17c-bc00":1,
     "4ff3-7dce-5a52-94e9":1,
     "5514-3810-cf3e-3b23":1,
@@ -7054,10 +7578,13 @@ const BS_IDS = {
     "80c4-14b2-d02d-d289":1,
     "8ba4-a299-ac96-fbc5":3,
     "91dc-9aad-0505-52a8":1,
+    "a136-76f7-34d1-8035":1,
     "a336-1346-0281-b4b2":3,
     "a886-5b5b-d3b2-cf38":1,
     "b02a-a6e2-3eb4-4872":3,
     "b42b-ea0-38f1-6300":1,
+    "b681-8092-2465-7ba0":3,
+    "b793-b77e-9e49-d397":1,
     "c799-77ce-c706-3079":1,
     "c84c-683a-79be-1620":1,
     "cb31-e496-08de-77d4":1,
@@ -7136,6 +7663,7 @@ const RULE_OPTIONS = [
   { rule:'Adeptus Custodes army rule · Martial Ka’tah', option:'Example', text:'If you selected the Solar Watch **detachment**, when you select the Calistus **ka\'tah ability** for a **readied** unit, that unit has +2" **M** in addition to the normal effect of Calistus.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['movement'], turn:'your' }, phases:{ ph:['command','movement'], turn:'your' } },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', option:'Psychic Null (Aura)', text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } } },
   { rule:'Adeptus Custodes · Emperor’s Chosen rule · Magna Imperator', option:'Additional Effect', text:'You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:', found:'"**Name:** effect"', explicit:false, trigger:null, used:null, phases:null },
+  { rule:'Ultramarines army rule · Librarius', option:'Example', text:'In a battle round, a **psyker level 3 PSYKER** unit could use three **psychic level 1** abilities, or one **psychic level 1** ability and one **psychic level 2** ability, or one **psychic level 3** ability.', found:'"**Name:** effect"', explicit:false, trigger:null, used:null, phases:null },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Invocation of Machine Vengeance', text:'At the start of your Command phase, select one unit from your opponent\'s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.', found:'"**Name:** effect"', explicit:true, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' } }, phases:{ ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' } } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Mantra of Discipline', text:'This model has the **BATTLELINE** keyword and has the following ability:', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Binharic Courage (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
@@ -7161,6 +7689,7 @@ const GRANTS = [
   { rule:'Chaos Knights · Houndpack Lance rule · Marked Prey', grants:'CHARACTER', type:'keyword or weapon ability', to:null, while:'Until the end of the battle', text:'Until the end of the battle, those units have the **CHARACTER** keyword.*' },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', option:'Psychic Null (Aura)', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Faction: Adeptus Custodes'] }, while:'Psychic Null (Aura) active', text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
   { rule:'Adeptus Custodes army rule · Daughters of the Abyss', grants:'Psychic Null (Aura)', type:'ability', to:{ all:['Faction: Anathema Psykana'] }, while:null, text:'- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:' },
+  { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'devastator doctrine', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'shooty · Big Mek Dakkarig · Dreadherder', grants:'Lone Operative', type:'ability', to:'this unit / model', while:null, text:'- This model has **Lone Operative**.' },
   { rule:'melee · Ghazghkull Thraka · Da Grand Warlord’s Ladz', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
   { rule:'melee · Mozrog Skragbad · Beast Snagga Following', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
@@ -7184,7 +7713,11 @@ const GRANTS = [
   { rule:'defilers-and-friends · Lucius the Eternal · Duellist’s Hubris', grants:'Fights First', type:'ability', to:'this unit / model', while:null, text:'At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability.' },
   { rule:'big-demons-baby · Lord on Juggernaut · Disciple of Khorne', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.' },
   { rule:'mucho-mutantes · Tzaangor Shaman · Flowing Flesh', grants:'Feel No Pain 4+', type:'ability', to:'this unit / model', while:null, text:'The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.' },
-  { rule:'lite-knights · Telemon Heavy Dreadnought · Augury Uplink', grants:'Feel No Pain 5+', type:'ability', to:'this unit / model', while:null, text:'This model has **Feel No Pain 5+**.' }
+  { rule:'lite-knights · Telemon Heavy Dreadnought · Augury Uplink', grants:'Feel No Pain 5+', type:'ability', to:'this unit / model', while:null, text:'This model has **Feel No Pain 5+**.' },
+  { rule:'nerf-when · Roboute Guilliman · Leader of Astartes', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit', text:'While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.' },
+  { rule:'nerf-when · Marneus Calgar · Thunderhawk Insertion', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'That unit has **Deep Strike**.' },
+  { rule:'nerf-when · Librarian in Phobos Armour · Psychic Hood', grants:'Feel No Pain 4+', type:'ability', to:'this unit / model', while:null, text:'This unit has **Feel No Pain 4+** against **psychic attacks**.' },
+  { rule:'nerf-when · Librarian in Phobos Armour · Librarian', grants:'psychic abilities', type:'ability', to:'this unit / model', while:null, text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 

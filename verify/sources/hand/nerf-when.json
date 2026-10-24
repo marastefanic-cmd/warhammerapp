@@ -1,0 +1,15 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for nerf-when, written by hand and read by it on every run. gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added). Written AI-assisted (Claude, 24 Oct 2026) from the stratagem's words (Wahapedia, Codex: Space Marines); each is fingerprinted (verify/tables.js --stamp) and is a judgement verify/helpers.js lists for sign-off.",
+ "gists": {
+  "assault-brethren/armour-of-contempt": { "by": "AI (Claude)", "gist": "Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked." },
+  "assault-brethren/gene-wrought-might": { "by": "AI (Claude)", "gist": "Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP." },
+  "assault-brethren/duty-in-death": { "by": "AI (Claude)", "gist": "Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase." },
+  "deathwatch-support/kraken-rounds": { "by": "AI (Claude)", "gist": "Your KILL TEAM unit is selected to shoot: its ranged attacks have +6\" range and +1 S." },
+  "deathwatch-support/dragonfire-rounds": { "by": "AI (Claude)", "gist": "Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER]." },
+  "deathwatch-support/hellfire-rounds": { "by": "AI (Claude)", "gist": "Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+]." },
+  "deathwatch-support/blackstar-extraction": { "by": "AI (Claude)", "gist": "End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves." },
+  "terminator-storm-force/tactical-dreadnought-fortitude": { "by": "AI (Claude)", "gist": "Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked." },
+  "terminator-storm-force/merciless-veterans": { "by": "AI (Claude)", "gist": "Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1]." },
+  "terminator-storm-force/gunship-extraction": { "by": "AI (Claude)", "gist": "End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves." }
+ }
+}

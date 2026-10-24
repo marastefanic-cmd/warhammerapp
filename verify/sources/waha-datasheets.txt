@@ -102,3 +102,13 @@ adeptus-custodes Caladius-Annihilator-Grav-Tank
 adeptus-custodes Contemptor-Achillus-Dreadnought
 adeptus-custodes Contemptor-Galatus-Dreadnought
 adeptus-custodes Telemon-Heavy-Dreadnought
+ultramarines Roboute-Guilliman
+ultramarines Marneus-Calgar
+ultramarines Wardens-of-Ultramar-1
+ultramarines Bladeguard-Veteran-Squad
+ultramarines Librarian-In-Phobos-Armour
+ultramarines Heavy-Intercessor-Squad
+ultramarines Impulsor
+ultramarines Eradicator-Squad-with-Melta-Rifles
+ultramarines Reiver-Squad
+ultramarines Deathwatch-Terminator-Squad

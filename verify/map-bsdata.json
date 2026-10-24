@@ -1,9 +1,22 @@
 {
- "_about": "How data.js names map to BSData (wh40k-11e) where they are not the same. Units are found by exact name (after nn() normalisation); only differences go here. units[\"army/unitId\"]: entry/leadsEntry = BSData root entry names, models = {app model name: BSData model entry}, gear = {app gear name: BSData wargear entry}.",
+ "_about": "How data.js names map to BSData (wh40k-11e) where they are not the same. Units are found by exact name (after nn() normalisation); only differences go here. units[\"army/unitId\"]: entry/leadsEntry = BSData root entry names, models = {app model name: BSData model entry}, gear = {app gear name: BSData wargear entry}. catalogue = {BSData root entry name: the catalogue it is taken from, when not the faction’s}, entryId = {BSData root entry name: the id of the one of two root entries of that name}. detachments[\"<detachment id>\"] = its BSData entry name.",
  "catalogues": {},
  "battleSize": {
   "Strike Force": "2. Strike Force (2000 Point limit)"
  },
- "detachments": {},
- "units": {}
+ "detachments": {
+  "deathwatch-support": "Deathwatch Support (ITS NOT READY)"
+ },
+ "units": {
+  "nerf-when/marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad": {
+   "entryId": {
+    "Marneus Calgar": "a136-76f7-34d1-8035"
+   }
+  },
+  "nerf-when/deathwatch-terminator-squad": {
+   "catalogue": {
+    "Deathwatch Terminator Squad": "Imperium - Adeptus Astartes - Deathwatch"
+   }
+  }
+ }
 }
