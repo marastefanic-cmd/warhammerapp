@@ -1931,6 +1931,12 @@
   "at": "2026-10-24",
   "why": "The area is re-evaluated \"at the start of any phase\", and Manifestation and Terror apply to battle-shock rolls and tests whenever they happen, so all five phases is right. The added line is a word-for-word quote of the Faction Pack 1.2 FAQ (pack text: 'Q: Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? A: Yes, it is considered to have made a successful battle-shock roll.'). texts.js checks it as packfaq: a mutated question or answer fails. It is an italic note line, so derive.js ignores it for timing."
  },
+ "25420d666615aedc": {
+  "verdict": "ok",
+  "by": "review:exiled-3",
+  "at": "2026-10-24",
+  "why": "Compared with main, exactly one line differs: `f.armyRules.concat(Object.values(f.detachments).map(d => d.rule).filter(Boolean))` became `.flatMap(detRules)`. detRules is a hoisted function declaration in derive.js and reads only its first argument, so flatMap's index and array arguments do no harm. A detachment without a rule gives [], the same as the old filter(Boolean). Nothing else changed. The other derive.js changes on this branch (the any-phase regex for 'At the end of a/each phase', move-enemy 'falls back', the Overwatch same-turn guard, the Feel No Pain 'against …' grant) come from the wt-exiled side and are not in these two functions."
+ },
  "25625aa24f7450c2": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -2008,6 +2014,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "The rule is titled \"Support\" and its text is about \"each leader and support unit in your army\". Typing \"support unit(s)\" plainly names that rule."
+ },
+ "26b58f2284435e3a": {
+  "verdict": "ok",
+  "by": "review:exiled-3",
+  "at": "2026-10-24",
+  "why": "Extracted from app.html at c488612 and compared with main (cbc2b20). Exactly one line differs: `rules = f.armyRules … .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name })))` became `.concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name }))))`. detRules(d) is `d && d.rule ? [d.rule].concat(d.moreRules || []) : []`, so a detachment without a rule still adds nothing, as before, and Blood Legion now adds Murdercall and then Blood Tainted. Nothing else in the function changed. Rendered result for The Exiled Legion: Blood Tainted is under To do now in every phase of both turns, and Murdercall is left out (its CHECKLIST entry has no s). For the other 18 lists, verify/out/snapshots differ from main's only in shooty.txt (the home list gains the Exiled Legion card), plus the new the-exiled-legion.txt."
  },
  "26b637bcf7e0a936": {
   "verdict": "ok",
