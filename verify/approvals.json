@@ -77,6 +77,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.186); BSData profile is on the Meganobz unit. Models match NR."
  },
+ "0142096fcb539e29": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'One friendly ADEPTUS CUSTODES TERMINATOR unit that has 2+ models.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "0154e8fd609430d4": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -154,6 +160,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "“Your KILL TEAM unit is selected to shoot: its ranged attacks have +6\" range and +1 S.” = the EFFECT. Leaving the phase out of the gist is how the app’s approved gists read (the card shows the phase)."
+ },
+ "025d833559a88c73": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Keeps the condition (made an ingress move this turn), the trigger (declaring a charge) and the effect (+2 to charge rolls). 'declares a charge' for 'is selected to declare a charge' is a shortening with the same meaning."
  },
  "026498bae86d7674": {
   "verdict": "ok",
@@ -725,6 +737,12 @@
   "at": "2026-10-23",
   "why": "“Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks”: needs Grav-assault (only the Caladius in this list)."
  },
+ "0b6dbb69e142b1ba": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'your opponent’s Fight phase': opp. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "0b8a49825e1a49d4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1060,6 +1078,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“End of any phase”, with no player named, so either turn."
+ },
+ "123dd68e6cd7f46e": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'At the end of your opponent’s Fight phase' (waha l.455): Fight phase only. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "12449d993b191c9f": {
   "verdict": "ok",
@@ -1481,6 +1505,12 @@
   "at": "2026-10-16",
   "why": "Both bonuses apply (bullets with no \"Or\"): \"CHARACTER models' melee attacks have: +1 A. +2 S.\""
  },
+ "1ae73b19a118d888": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Its melee attacks after a charge move: Fight phase, either turn (Heroic Intervention charges in their turn), same as approved Brutal Impact/Might is Right."
+ },
  "1b0a15bdafbac5b6": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -1504,6 +1534,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
+ },
+ "1b6859cc9bb993b8": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "GW header: 'Master of Ka’tahs (Once per battle round, per unit)'. Correct; no phase named, so untagged phase is right, and ka'tah options are not spelled out."
  },
  "1b693444a4d2059c": {
   "verdict": "ok",
@@ -1763,6 +1799,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Errant's Duty (Bondsman)\" and the Bondsman rule says these abilities are \"tagged with the word 'Bondsman'\"."
  },
+ "203744a761df1f72": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "203df83b4b43bba0": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -1919,6 +1961,12 @@
   "at": "2026-10-24",
   "why": "WHEN “Start of your Shooting phase”. Matches GW word for word; 1CP. (The EFFECT names no duration, and the gist does not invent one.)"
  },
+ "224e8afdc47f82ce": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Your opponent’s Shooting phase or the Fight phase' (waha l.467); icons Shooting, Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "225510c7f65187ce": {
   "verdict": "ok",
   "by": "review:nerf-3",
@@ -2026,6 +2074,18 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "Keeps the WHEN (\"when the last model in a unit is destroyed\") and the TARGET (\"BLOODLETTERS unit from your army that is in Reserves\"), the set-up distances and the once-per-battle-round restriction; no interpretation."
+ },
+ "240d4660ba0c3c6c": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Stand Vigil: 'This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if' unit or target within range of an objective. Core weapon abilities: a keyword-qualified ability applies only vs targets with (here: without) those keywords, so vs none Monster/Vehicle is right. 'This unit' is a bodyguard ability: applies to the whole attached unit incl. the Shield-Captain (core 19.04). kind all (ranged+melee), cond objective. Correct."
+ },
+ "244977472ae6210a": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Text: 'a friendly TRUSTED SENTINEL unit'. Trusted Sentinel is a keyword (Custodian Guard, Wardens, Sentinel Guard in data.js). verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "245471d573bda22a": {
   "verdict": "ok",
@@ -2417,6 +2477,18 @@
   "at": "2026-10-23",
   "why": "\"At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities\": listed in the Command phase (the points are gained whenever a unit destroys one; the abilities last \"until the end of the battle\")."
  },
+ "2a1bcd98b5b9c1d8": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'a friendly ADEPTUS CUSTODES TERMINATOR unit'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "2a35b89d8730d383": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Gives both effects (-1 to hit rolls for attacks that target it; no snap shooting attacks against it), the duration (until the start of your next turn) and the trigger (its ingress move). Nothing added."
+ },
  "2a4120da97843063": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -2675,6 +2747,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"That ORKS WALKER unit\"."
  },
+ "30748dba43821db2": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Stand Vigil is on the Sentinel Guard Sodality datasheet."
+ },
  "307dbc6f7bf5efca": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -2771,6 +2849,18 @@
   "at": "2026-10-16",
   "why": "\"At the start of your opponent’s Shooting phase\"."
  },
+ "31f1b569011d84d6": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Quotes the effect exactly: all attacks, while within range of an objective, re-roll wound rolls of 1. No cond is right: DM_FACTS 'objective' means 'this unit or the target', and this rule needs the unit itself; the Damage tab reads the re-roll from the note's words."
+ },
+ "31f1eb595c703efd": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Gives the phases, the -1 D to attacks that target the unit, and its limit (until that enemy unit has attacked). Word for word the approved In Auramite Clad def, with D in place of AP."
+ },
  "321c6d18f3c24f82": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2825,6 +2915,12 @@
   "at": "2026-10-16",
   "why": "True. NR prints the tendril profiles \"(Destabilising Predation)\" with \"Anti-Character 2+\"; the second Emissary (no enhancement) lacks it."
  },
+ "331ddfdaf60aa799": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Covers the trigger (an enemy unit ends a move within 8\"), the unengaged condition and the effect (normal move of up to D3+3\"). Nothing added."
+ },
  "334ae6a5ff412542": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -2861,6 +2957,12 @@
   "at": "2026-10-23",
   "why": "New Recruit \"Daemon Lord of Khorne (Aura)\", Wahapedia \"(Aura)\"."
  },
+ "33d48e086be9d624": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Trigger (selected to make a pile-in move) and effect (can move up to D3+3\") as the text has them."
+ },
  "33fd22b16d34f394": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -2890,6 +2992,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"either player’s Command phase\"."
+ },
+ "34412297cb59fe1b": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Keeps the 2+ models requirement, the split into one-model units, and each new unit's starting strength of 1. Nothing added."
  },
  "346475051be17cf3": {
   "verdict": "ok",
@@ -3101,6 +3209,12 @@
   "at": "2026-10-24",
   "why": "I diffed main 24781aa's data.js against this branch's resolved lists for all 17 lists. Every field is the same apart from the five declared corrections and key order. The key-order changes are in 64 objects: weapon rows now have name before who/n, abilities have who before tag, and partialRules, kwOnly, mods and aura have moved within units. No datasheet in use has two rows of one name in a kind, and no RegExp values, so first-match lookup and the JSON copy are both safe. Hidden fields (ds, over, of, why, faction, bsId, gistOf, defOf) don't reach units or rows. A unit without ds is passed through unchanged, so in the old form its defOf/why aren't hidden. That's why `--expand` then `--write` is refused (see the report); it isn't a fault in the resolution itself."
  },
+ "3867bf3f2a78d8ba": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Leader is Trajann's; text matches GW's (Wahapedia) Leader list exactly, incl. SENTINEL GUARD SODALITY."
+ },
  "3888f74cfb047c1b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -3148,6 +3262,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "07: “START OF BATTLE ROUND / PLAYER TURNS / END OF BATTLE ROUND … the mission you are playing will tell you which player this is.” 07.02: Start of Turn step, five phases, End of Turn step. 08: “Both players gain 1 Command Point (CP)”, and “one battle-shock roll … for each unit in their army that … is currently battle-shocked … is at, or below, half-strength”. 05.01/05.02 (dice checked on PDF p18: 1, 6, 2+ to 6+). 05.04: the InSv row has no AP, and only the ‘Save and AP’ row says “After modifying the result by the attacking weapon’s AP”. The allocation note now copies all three 05.03 bullets, including “non-CHARACTER” and the wounded-CHARACTER-group order."
+ },
+ "3939cc8629508920": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Same verbatim 25.04 quote. GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
  },
  "394a9ad28bbec937": {
   "verdict": "ok",
@@ -3509,6 +3629,12 @@
   "at": "2026-10-17",
   "why": "“In your Command phase, this unit heals 3 wounds.” The text names your Command phase."
  },
+ "3ec05fa8aad994f0": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "3efff1d8594ccecc": {
   "verdict": "ok",
   "by": "review:fellhammer-2",
@@ -3622,6 +3748,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Movement phase\"."
+ },
+ "40e7a6fb30af770c": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "GW header: 'Vengeful Surge (Once per battle, per unit)'. Correct."
  },
  "412b958c21267cc6": {
   "verdict": "ok",
@@ -3838,6 +3970,12 @@
   "by": "review:lite-knights-2",
   "at": "2026-10-23",
   "why": "Read with rendering (verify/out/snapshots/lite-knights.txt). armyDefs: army rules with a def on the unit’s Rules line, via hasRule so NR’s straight-apostrophe “Martial Ka'tah” matches “Martial Ka’tah” (Trajann/Dreadnoughts show Kaptaris; Caladius, lacking the rule, does not). defPh honoured (ph 'fight' only for Kaptaris; with no ph, the datasheet, it shows). Starred FNP suppressed only when an army-rule def says that same FNP (Prosecutors’ “Feel No Pain 3+*” → “Feel No Pain 3+ against psychic attacks”; Aegis’ 5+* → “against mortal wounds”), plain ones kept (Trajann’s, Telemon’s Augury Uplink 5+). Guard dedupe keys on the rendered text, so the three Anathema squads’ identical Psychic Null is one line linking to the first; a different guard text still shows. No other list has an army-rule def, so nothing else changes except partialWho’s who on a plain FNP (the mucho-mutantes line, a correction). defences() is unused. No failing input found."
+ },
+ "441a2c840044dbd2": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Same verbatim 25.04 quote as the approved Guilliman/lite-knights note. GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
  },
  "4427fde92e0ac639": {
   "verdict": "ok",
@@ -4247,6 +4385,12 @@
   "at": "2026-10-18",
   "why": "“Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].” The rule only covers melee attacks. Core 07.02 says “FIGHT PHASE: Both players’ units make attacks with their melee weapons” and the Shooting phase uses “ranged weapons”, so Fight is the only phase. text: same words as Wahapedia; only the case differs (Wahapedia “[Sustained Hits 1]”, app “[SUSTAINED HITS 1]”)."
  },
+ "4bf42da02de84158": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Shooting only in the opponent's turn ('Your opponent’s Shooting phase'). Same as In Auramite Clad. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "4c2830aaf678c12b": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -4403,6 +4547,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly attached ORKS INFANTRY unit”. TARGET: “That ORKS INFANTRY unit”. Orks + Infantry + attached are copied from these. The trigger “becomes battle-shocked” is not a keyword filter. text: same as Wahapedia word for word."
  },
+ "4f1e9d95be85a3a6": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Quote matches Wahapedia core 25.04 'Select Units' word for word (the same note the approved Guilliman row uses); it quotes the rule with no added reading. GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
+ },
  "4f229dbb60f0eec6": {
   "verdict": "ok",
   "by": "review:fellhammer-rules (its fix)",
@@ -4463,11 +4613,23 @@
   "at": "2026-10-21",
   "why": "NR Options: \"Da Grabzappa, Squigstoppa\" (Zodgrod), \"Runtherd's Toolz, Slugga\" (Runtherd), \"Grot Blasta, Scavenged Shivs\" (20x Gretchin); weapon rows \"Squigstoppa … - Zodgrod Wortsnagga\", \"Slugga … - Runtherd\", \"Grot Blasta … (x20) - Gretchin\", \"Scavenged Shivs (Super Runts) (x20) - Gretchin\". All match."
  },
+ "50e05621ad8bc857": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Trigger (an enemy unit targets your unit) and effect (-1 D until that enemy unit has attacked), as the text has them. Same wording as the approved In Auramite Clad gist."
+ },
  "50ed795bc2be1e98": {
   "verdict": "ok",
   "by": "review:checklist-3",
   "at": "2026-10-24",
   "why": "Code unchanged from the version approved twice. War Cry, Makari and Archslaughterer are once per battle, so per the owner nothing they put in force is shown. Intimidating Motivation and Keep Huntin’ carry f but are not listed (activation). Even More Dakka, More Dakka and Krumpin’ Time ('if this unit is riled up') are skipped. No 'Riled up' line appears on any list, which is what the owner decided."
+ },
+ "5104d2eb43d76309": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Attacks happen in both players' turns (Fight phase, Fire Overwatch in the opponent's Movement phase), so 'either'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "511f75f68d8576ea": {
   "verdict": "ok",
@@ -4498,6 +4660,12 @@
   "by": "review:r20-damage",
   "at": "2026-10-21",
   "why": "The Protector ranged pick is “[HEAVY] … Improve the Ballistic Skill characteristic … by 1” = heavy + skill 1. Conqueror ranged is “[ASSAULT]”, no number. Conqueror melee is “Improve the Weapon Skill characteristic of melee weapons … by 1” = skill 1. The Conqueror part “improve the Armour Penetration characteristic of that attack by 1” (any attack, if BATTLELINE and/or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) = ap 1 on both kinds, under that fact (a BATTLELINE unit meets it by itself). lasts 'round' is “Until the end of the battle round”, and only units with the ability get it (“units … that have the Doctrina Imperatives ability”)."
+ },
+ "51d77e7b195fb8b5": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Your Movement phase': your; icon str11Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "51fd68c0bdc98cad": {
   "verdict": "ok",
@@ -5111,6 +5279,12 @@
   "at": "2026-10-24",
   "why": "It keeps every condition: once per battle, used at the start of a phase, 3+ invulnerable save until the end of the phase. The words are GW’s."
  },
+ "5d40d366f2de81ee": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Movement only by Fire Overwatch (end of your opponent's Movement phase, core 15.08); Shooting only your own. Matches Magna Imperator's approved turns. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "5d45b212a931ea6d": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -5429,6 +5603,12 @@
   "at": "2026-10-24",
   "why": "Optional (\"it can use this ability\"): not always; [DEVASTATING WOUNDS] and [HAZARDOUS] parse."
  },
+ "62ee5bc7806906e4": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Trigger, duration and both effects, as the text has them."
+ },
  "6300d931facc5642": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -5464,6 +5644,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is on the Bloodletters datasheet."
+ },
+ "63f34627918d7e4b": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "64385370643e5b6e": {
   "verdict": "ok",
@@ -5645,6 +5831,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
  },
+ "6787c37b62061f56": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Shield-Captain: Eternity-pattern Paragon Blade (6 2+ 10 -3 3 Precision), no ranged weapon (Pyrithite Spear replaced). 3 Sentinel Guard: Sentinel Blade ranged 12\" A4 2+ S5 -1 2 Assault, Close-quarters; melee A5 2+ S6 -2 2. Matches Wahapedia and NR."
+ },
  "67b6147bab7ca864": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5693,6 +5885,12 @@
   "at": "2026-10-16",
   "why": "\"normal\", \"Normal\", \"normal move\", \"Normal Move\"; every bare \"normal\" sits in \"normal, advance or fall-back move\" (Super-Heavy Walker, Crusher Stampede)."
  },
+ "68dacdf0aeb2c33e": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Charge rolls happen in both turns (Heroic Intervention), and the Fight phase belongs to both players: either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "68f3ecb6dbc72cc2": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -5722,6 +5920,12 @@
   "by": "review:lite-knights (its fix)",
   "at": "2026-10-23",
   "why": "With the Movement phase added (Fire Overwatch, the opponent’s Movement phase) its turn is opp; shooting stays your (your Shooting phase is where your units are selected to shoot), fight either — as Spiteful Power Trip / Hunter of Souls."
+ },
+ "69507f23ff788422": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Captain-General is Trajann's datasheet ability (tagged (Aura) by GW); text matches Wahapedia."
  },
  "6963d9f43a348593": {
   "verdict": "ok",
@@ -6047,6 +6251,12 @@
   "at": "2026-10-23",
   "why": "65 + Flowing Flesh 10 = 75, Tzaangor Enlightened 90: 165."
  },
+ "6f82f1f696f2f252": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Sentinel Guard Sodality's datasheet ability Praesidium Shield (unit-wide 'Attacks that target this unit...')."
+ },
  "6fc94ed89a54ac2f": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -6100,6 +6310,12 @@
   "by": "review:checklist-5",
   "at": "2026-10-24",
   "why": "Implements the rule: the first DURATIONS match that begins with 'until' in the protection's own words (a bare 'this turn' is skipped, the same filter as review 4's optCover), placed by coverOf from where the text is triggered (for an option, its own trigger or its rule's). No 'until' gives EVERY_PHASE. Index handling is sound: undefined indexes are filtered out, and 'battle' excludes ' round', so it never ties with 'round'. It changes nothing today, because no protection in checklist scope states a duration (verified: derive --write output is identical apart from the stratagem changes). Note, not a fix: when a stated duration cannot be placed (coverOf x, e.g. no named trigger), it returns null and the entry keeps table 1's targeted reading (Shooting · Their turn, Fight). That is the general handling of every other entry, as the description says. But When unclear (x) would follow 'never guessed' more strictly. No text reaches this case."
+ },
+ "7061e81c670c37e0": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "The Fight phase has no owner, so 'either'. Same as the approved In Auramite Clad. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "70df0ecc9690d001": {
   "verdict": "ok",
@@ -6263,6 +6479,12 @@
   "at": "2026-10-16",
   "why": "The rule says \"within 3\" of a friendly ORKS WALKER unit (excluding BIG MEK units)\"; \"friendly\" is dropped."
  },
+ "74312787820e5df0": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Text says 'In your opponent's Shooting phase' -> Shooting, their turn. Correct."
+ },
  "7444d389c8dda237": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -6292,6 +6514,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR: 2 Hades autocannons, ectoplasma cannon and claws."
+ },
+ "74c8036a651088a2": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Master of Ka’tahs is on the Shield-Captain datasheet (GW's name; NR's 'Master of the Ka'tahs' is a deviation)."
  },
  "74ec1cd7b0afc248": {
   "verdict": "ok",
@@ -6430,6 +6658,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR roster: Lord Exultant 95, (5) Infractors 95; card \"190 PTS\"."
+ },
+ "77639f82388c69ea": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Hand-written needs, checked: WHEN says 'a friendly ADEPTUS CUSTODES unit' and TARGET 'That ADEPTUS CUSTODES Unit' (Wahapedia's capital U, also in the HTML). So the only requirement is the faction keyword, as for Lightning Wrath and Preternatural Rapidity. derive.js marks it not derivable (rule no-unit, the capital U), as data.js's comment says."
  },
  "779abb4c642ccc74": {
   "verdict": "ok",
@@ -6725,6 +6959,12 @@
   "at": "2026-10-21",
   "why": "\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.\" The note is now only that unconditional part, calc {rrWound:'1s'} says it exactly, and always is right. It is the Rubric Marines’ (bodyguard) ability, so it covers the Sorcerer’s attacks too (19.04)."
  },
+ "7c4307c3c42cfbaf": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Impenetrable Defence: [SUSTAINED HITS 1: non-MONSTER/VEHICLE] under the same two objective conditions; footnote mirrors Stand Vigil. Correct."
+ },
  "7c4ca3120689bf18": {
   "verdict": "ok",
   "by": "review:nerf-3",
@@ -6748,6 +6988,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "Roster: Nazdreg 165 and '(5) Meganobz 200 Nazdreg'. Unit header '365 PTS'. 165 + 200 = 365 = data.js pts."
+ },
+ "7cdcf12b4c4c5519": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "GW Sentinel Guard keywords INFANTRY, BATTLELINE, IMPERIUM, TRUSTED SENTINEL (+ name keyword per NR convention); Shield-Captain has none of the three. Correct."
  },
  "7ce0e49e679deb18": {
   "verdict": "ok",
@@ -7091,6 +7337,12 @@
   "at": "2026-10-22",
   "why": "“Your Shooting phase”: your turn."
  },
+ "834a30f81a0ad367": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Companion’s Watch (waha l.383) re-rolls wound rolls of 1 for 'that unit’s attacks': attacks are made in your Shooting phase, the Fight phase, and by Fire Overwatch (core 15.08, end of your opponent's Movement phase). Same labelling as the approved Magna Imperator. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "836312dea8f3763f": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -7409,6 +7661,18 @@
   "at": "2026-10-16",
   "why": "\"Your Movement phase\"."
  },
+ "89376fce25bc235b": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Charge rolls are made in your Charge phase and in the opponent's, by Heroic Intervention (core 15.11, end of your opponent's Charge phase: 'Resolve a charge... charge roll'). The Dacatarai additional effect is on enemy pile-in/consolidation moves in the Fight phase. Dacatarai's own WHEN is 'Start of the Fight phase' (data.js Martial Ka’tah). verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "895dd696c7d54cb1": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Shield-Captain's own Praesidium Shield ('Attacks allocated to this model have -1 D'), distinct from the Sentinel Guard ability of the same name. He keeps the shield with the Paragon Blade option (GW wargear: only the Pyrithite Spear is replaced)."
+ },
  "89abbff4dbb5107e": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -7535,6 +7799,12 @@
   "at": "2026-10-16",
   "why": "charge/charge roll(s)/declare(s/d) a charge/eligible to declare a charge/resolve a charge: all 11.02 terms."
  },
+ "8b528b2587553581": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Your opponent’s Movement phase' (waha l.408); icons Movement, Enemy. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "8b56a4a4c5a45193": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -7660,6 +7930,12 @@
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "Rule says \"friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units)\"; the faction keyword is missing. Same units selected here (two Daemon Princes, Lord's and Slaughterbound's units; Khârn excluded), but the filter should match the wording."
+ },
+ "8ccf606fbfe3d2a6": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins. Source of the ability is Trajann; lite-knights' models line matches the row (1 Allarus + 1 Allarus Vexilla)."
  },
  "8cd6e0396bb13428": {
   "verdict": "ok",
@@ -7846,6 +8122,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"while a TYRANIDS MONSTER unit ... (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic\"; for one model, at Starting Strength = no wounds lost."
+ },
+ "90bccea45a0af3fd": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "90e3a85921028ec9": {
   "verdict": "ok",
@@ -8069,6 +8351,12 @@
   "at": "2026-10-16",
   "why": "The trigger is \"Each time this model is selected to shoot or fight\". Knights are TITANIC, so Fire Overwatch (\"excluding TITANIC units\") is out, and none can be selected to shoot in the opponent’s Shooting phase. Shooting is your turn only; fight stays either."
  },
+ "94f49a7eefd3a249": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Friendly ADEPTUS CUSTODES units'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "95ab8a26242ab12f": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -8141,6 +8429,12 @@
   "at": "2026-10-22",
   "why": "Sources differ: New Recruit and BSData say \"targets the closest enemy unit\", Wahapedia \"the closest eligible target\"; GW's pack doesn't print it. The app quotes New Recruit's wording, as for every unit ability. It affects WAR DOG models only and this list has none."
  },
+ "973bebc37d63d6a3": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "5 Prosecutors: Boltgun (24\" A1 3+ S5 -1 1 Anti-Psyker 4+, Assault, RF1) + Gun Stock (A2 per Wahapedia new codex; NR's A3 is a declared deviation, lite-knights' decision). OC2, 50 pts."
+ },
  "97554ed70c9ee4a2": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -8158,6 +8452,18 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR: \"Beacons of Rage (Aura)\"."
+ },
+ "9786e8e04aca6067": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Fight phase, ...' (waha l.402); icons Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "9797e35f78b82468": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "97a157926c270ace": {
   "verdict": "ok",
@@ -8236,6 +8542,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "As in item 8: every BEAST SNAGGA unit in the list (Mozrog and both Beastbosses) is a MONSTER CHARACTER."
+ },
+ "98d2f70c1662129d": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That ADEPTUS CUSTODES unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "98ddb53f04b721d4": {
   "verdict": "ok",
@@ -8489,6 +8801,18 @@
   "at": "2026-10-21",
   "why": "\"Each time an enemy unit ... is selected to Fall Back ... must Remain Stationary this phase instead\": fall-back and remain-stationary are move types the active player selects in the Move Units step of the Movement phase (09.02, 09.04, 09.07), so the enemy's (your opponent's) Movement phase, as signed off for Harpoon Barbs."
  },
+ "9d6ceb45b3b7b3e2": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Your Movement phase' (waha l.205); icons Movement, Your. Rapid Ingress (end of the opponent's Movement phase) does not meet this WHEN. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "9d870c5ac696af05": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Fight phase, ...' (waha l.395); Wahapedia's card icons: Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "9d960f233b6aa06a": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -8669,6 +8993,12 @@
   "at": "2026-10-21",
   "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
  },
+ "9fd2f3e4a73f4cfd": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Your Command phase.' (waha l.473); icons Command, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "9ff8605c6ff55b02": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -8752,6 +9082,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Any phase, no turn restriction."
+ },
+ "a11bd415529d55d1": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
  },
  "a12e7d11b523b83f": {
   "verdict": "ok",
@@ -8843,11 +9179,23 @@
   "at": "2026-10-21",
   "why": "The sentence is now found on the **-free text it searches. Every list’s when still reads as its rule does: “At the end of the Read Mission Objectives step”, “At the start of the first battle round”, “At the start of the battle round”, “In your Command phase”, “At the start of your Command phase”."
  },
+ "a2c158a43915108b": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'does not prevent it from declaring a charge' for 'does not prevent your unit from being eligible to declare a charge'. Same wording as the approved Unceasing Onslaught gist. Nothing added or left out."
+ },
  "a329d040325f33fd": {
   "verdict": "ok",
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"WHEN: Fight phase, when ... is selected to fight\"."
+ },
+ "a32a7cb99d1c7d85": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "NR: Trajann Eagle's Scream + Watcher's Axe; 3 Allarus each Balistus grenade launcher + Castellan Axe (one with Vexilla). Profiles match Wahapedia (BGL 18\" A3 2+ S5 -1 1 Assault/Blast 1; axe 24\" A2 S5 -1 2 Assault/RF2; melee A3 S10 -2 4; Watcher's Axe A6 S12 -3 4 Cleave 1; Eagle's Scream 24\" A2 S6 -2 2). Names follow NR."
  },
  "a34ded60a975424e": {
   "verdict": "ok",
@@ -8885,6 +9233,12 @@
   "at": "2026-10-23",
   "why": "\"TARGET: One BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range\": needs BLOOD LEGIONS (the Lord + Berzerkers unit included)."
  },
+ "a3c4207a8f68dfb6": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "3 Custodian Guard, each Guardian Spear (24\" A2 2+ S5 -1 2 Assault RF2; melee A6 2+ S8 -2 2). Matches Wahapedia/NR."
+ },
  "a3c5154f53f6b0dd": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -8896,6 +9250,12 @@
   "by": "review:m1-strats (its fix)",
   "at": "2026-10-18",
   "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” Three things change. (1) “Your model”: the source says “a model in your unit” (the TARGET), but “your model” could mean any of your models. (2) “before your unit is selected to fight”: the source checks a state, “has not been selected to fight this phase”. The gist drops “this phase”, and it reads as if the unit must be selected later, but the source also covers a unit that is never selected. (3) “roll one D6” is dropped, so the “4+” has no roll. The part “stays until your unit has fought or the phase ends” is fine: it is the source’s removal timing, since “until A or B” means whichever comes first. The gist is also 139 chars. The fix is 152 chars. A version of 110 or fewer would have to stop at “on a 4+ it stays…” and drop the removal timing. text: same as Wahapedia word for word."
+ },
+ "a4131ae669135c57": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Fight phase' with no owner: either; Wahapedia icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "a4436e2fc77801f3": {
   "verdict": "ok",
@@ -8968,6 +9328,18 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "WHEN “when … suffers a mortal wound”, EFFECT “Your unit has Feel No Pain 5+ against mortal wounds”: the condition and the limit kept."
+ },
+ "a567de1409021a1a": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That ADEPTUS CUSTODES TERMINATOR unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "a576573d691ea89b": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Your Charge phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "a58c5a00ddee38cb": {
   "verdict": "ok",
@@ -9095,6 +9467,12 @@
   "at": "2026-10-22",
   "why": "\"Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll\": all attacks, +1 to hit, the target's state as the player's tick."
  },
+ "a732f6466a8685d1": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Vexilla is Sentinel Guard wargear (NR: one Sentinel Guard with Vexilla); GW wargear option '1 model can be equipped with 1 Vexilla'."
+ },
  "a74febbc2fb49fe7": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -9130,6 +9508,12 @@
   "by": "review:checklist-4",
   "at": "2026-10-24",
   "why": "Scanned all texts. The only named rolls a listed rule makes are Blessings of Khorne ('at the start of the battle round, you can make a Blessings of Khorne roll': at Start of the battle round) and Adamantine Avalanche ('At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll': fight:either). Sentences with 'each time you make' (Icon of Khorne, The Blood God’s Favour) are skipped as intended, and `**` is stripped before matching. Only listed entries (s or stored) count. Minor: the first `at` found wins. Two rules making the same roll at different moments would keep one. No list has that."
+ },
+ "a7b3e71584c4debf": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Faithful to 'Attacks allocated to this model have -1 D'; '(the Shield-Captain)' only names 'this model' on an attached-unit screen, no added reading. Defensive always-on, no timing label."
  },
  "a7b64f37579c67aa": {
   "verdict": "ok",
@@ -9238,6 +9622,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "\"At the start of the Fight phase\" names no player, so every Fight phase, in either turn."
+ },
+ "aa68eaf31bdfc477": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "'Attacks that target this unit have -1 AP' -> '-1 AP to attacks that target it', the approved In Auramite Clad / Armour of Contempt wording. Always-on defensive, no timing label."
  },
  "aab2889bb2157c6a": {
   "verdict": "ok",
@@ -9383,6 +9773,12 @@
   "at": "2026-10-16",
   "why": "W 18; \"1-6 wounds remaining\"."
  },
+ "ad913e3a384cf2cf": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Fight phase, ...' (waha l.199); icons Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "ad94ada820936d61": {
   "verdict": "ok",
   "by": "review:pubstomper",
@@ -9430,6 +9826,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"WHEN: Your Shooting phase\"."
+ },
+ "ae4ba2712c859010": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Your Movement phase' (waha l.213); icons Movement, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "ae6008ec9323de25": {
   "verdict": "ok",
@@ -9580,6 +9982,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Your unit can make a normal move of up to 6\", and must end that move within range of an objective. Your unit is not eligible to declare a charge until the end of the turn.” “ending within range” states the same end condition; the charge restriction and its duration are kept."
+ },
+ "b0fcbc7632690b08": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Covers the WHEN condition (below starting strength, selected to fight) and the whole EFFECT, the CHARACTER exclusion included. It adds nothing."
  },
  "b0fda1c21fe98354": {
   "verdict": "ok",
@@ -9899,6 +10307,12 @@
   "at": "2026-10-22",
   "why": "“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”"
  },
+ "b802abe8d4064c44": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "WHEN 'Your Charge phase' (waha l.479); icons Charge, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "b8165ca6f4d415a0": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -10085,6 +10499,12 @@
   "at": "2026-10-16",
   "why": "\"If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1]\": exact."
  },
+ "baecade978ae2f87": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Vexilla is the Allarus wargear ability (one model has it: NR line 3x Allarus: Vexilla on one). Text matches Wahapedia."
+ },
  "baee5fef4d4573fe": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -10199,6 +10619,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One WORLD EATERS unit from your army\"."
  },
+ "bd098545a20734cb": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Your opponent’s Movement phase': opp; icon str11Enemy. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "bd24da2775a2adc2": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -10253,6 +10679,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll …” and “while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15”: neither has a phase or turn limit."
  },
+ "be00a44eee99c703": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Slayer of Tyrants is on the Allarus Custodians datasheet (GW's name; NR's 'Slayers' is a deviation). Text matches Wahapedia."
+ },
  "be191e2787fe9310": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -10295,6 +10727,12 @@
   "at": "2026-10-16",
   "why": "Faction Pack v1.2 Rules Updates: Knight Errant Damaged \"While this model has 1-9 wounds remaining\"; W 26."
  },
+ "bf30d07404212c80": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Shield-Captain 180 (1st unit) + Praesidium Shield 25 = 205 (Wahapedia wargear cost); Sentinel Guard 3 models 240 (1st-3rd). 445 matches NR."
+ },
  "bf473018d2a96268": {
   "verdict": "ok",
   "by": "review:nerf-3",
@@ -10318,6 +10756,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "The ability starts “While this model is leading a unit”. In standard the Lord on Juggernaut leads nothing: New Recruit lists him alone (“Lord on Juggernaut Character 95”, no “Leading:” line), data.js has no leads, and his unit is only “1× Lord on Juggernaut”. So the ability does nothing in this list; it stays on the datasheet with the mark (the owner’s “marked rather than hidden”, fixlist 19 “Rage Eternal / Aggressive Advance on a lone character marked”)."
+ },
+ "bf8f72027464478c": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "'If this unit made a charge move this turn, melee attacks have [SUSTAINED HITS 1]' -> melee, cond charged. Matches Brutal Impact convention."
  },
  "bf9ef6e10673785e": {
   "verdict": "ok",
@@ -10499,6 +10943,12 @@
   "at": "2026-10-17",
   "why": "Rituals are attempted “at the start of your Shooting phase”. Temporal Surge: “until the end of the turn, that unit is not eligible to declare a charge”, which reaches your Charge phase. The rule’s own turn is “your”."
  },
+ "c362671247e8d7d6": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "Says only what the text says: WHEN (selected to make a consolidation move) and EFFECT (objective consolidation mode, regardless of that move's Before Moving restrictions). The italic sentence is GW's explanation, not an extra effect, so leaving it out loses nothing."
+ },
  "c38829cfd385e069": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -10564,6 +11014,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour\"."
+ },
+ "c4c9092c178fed09": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Vengeful Surge is on the Shield-Captain datasheet."
  },
  "c4f48c4ac55f62f3": {
   "verdict": "ok",
@@ -10787,6 +11243,12 @@
   "at": "2026-10-16",
   "why": "\"Your opponent’s Shooting phase\"."
  },
+ "c859a17a3a686c98": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That ADEPTUS CUSTODES unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
  "c87e613ffc3039cb": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -10816,6 +11278,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "Export: Armoured Hull, Ironhail Heavy Stubber, Shield Dome, Storm Bolters. This is legal: one of the four options (Shield Dome), plus \"can be equipped with 1 Ironhail Heavy Stubber\". Points 70 each (1st to 3rd; only Orbital Comms costs +10). The profiles match Wahapedia: Stubber 36\" A3 S4 AP-1 D1 [RAPID FIRE 3]; Storm Bolters 24\" A4 S5 AP-1 D1 [RAPID FIRE 4]; Armoured Hull A3 WS4+ S6 AP0 D1."
+ },
+ "c90ba8137bd2ca50": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "NR: 2 Allarus, each Balistus grenade launcher + Guardian Spear (one Vexilla). Guardian Spear profiles added to the Allarus datasheet match Wahapedia (24\" A2 S5 -1 2 Assault RF2; melee A6 S8 -2 2)."
  },
  "c952caab83d5eeb5": {
   "verdict": "ok",
@@ -11213,6 +11681,12 @@
   "at": "2026-10-22",
   "why": "Faction Pack 1.2, Hunting Warpack: “SNARLING RIVALRY UPGRADE … EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].” BSData has it as type “upgrade”, NR prints it in the options. Tag Upgrade is the pack's word. Its [IGNORES COVER] is on the autocannons and the heavy stubber (NR prints it on both) and not on the Armoured feet, which matches “ranged attacks”."
  },
+ "d0687964cd8e6bd2": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Same def as approved Unyielding Ancient (identical GW text). No timing label (defensive always-on)."
+ },
  "d068c1b7d947105c": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -11224,6 +11698,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "“each time a model in that unit makes a melee attack”: Fight, either turn. It is identical to the approved WE Bloodthirster."
+ },
+ "d07f0b91ea4d46ac": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Leader is the Shield-Captain's; GW's list (Wahapedia) includes SENTINEL GUARD SODALITY, which the NR (old codex) text lacks while NR still attaches him. GW wins."
  },
  "d0a621623d627290": {
   "verdict": "ok",
@@ -11285,6 +11765,12 @@
   "at": "2026-10-22",
   "why": "“At the start of your Command phase”: your turn."
  },
+ "d162e18158962b1a": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "NR (EC): 2 Wardens with Guardian Spear (one Vexilla). Profiles match Wahapedia."
+ },
  "d16e739b6391ffe4": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -11344,6 +11830,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "“At the end of your opponent’s turn” is the opponent’s turn, last phase, with at. It is identical to the approved WE Flesh Hounds and Ambushing Hunters."
+ },
+ "d25fff2c1d962b64": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "TARGET 'That ADEPTUS CUSTODES TERMINATOR unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "d268c4fdf0b8daf2": {
   "verdict": "ok",
@@ -11476,6 +11968,12 @@
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "Drops \"friendly\": the rule is \"within 3\\\" of one or more friendly WORLD EATERS INFANTRY units\" (matters in a mirror match). The army does have such units (Jakhals, Eightbound, Slaughterbound's and Khârn's/Lord's units)."
+ },
+ "d587d9bedfb7d0d1": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Moment Shackle is Trajann's datasheet ability; text matches Wahapedia."
  },
  "d593106bad9e458b": {
   "verdict": "ok",
@@ -11614,6 +12112,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR Categories: \"Rubricae*, Scarab Occult*, *from combined unit\"."
+ },
+ "d827575ed4f389ce": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "2 Vertus Praetors: Salvo launcher (24\" A2 2+ S10 -2 D3+2, no keywords) + Interceptor lance (A6 2+ S8 -2 2 Lance). Matches Wahapedia; names per NR. M12 T8 W7 OC2, 75×42mm Oval (GW guide), 220 pts."
  },
  "d8572c3256baf0d4": {
   "verdict": "ok",
@@ -11855,6 +12359,12 @@
   "at": "2026-10-17",
   "why": "“While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability” (kind all). Bondsman: “select one friendly ARMIGER model within 12\" of that model”, so the filter is the ARMIGER keyword copied from that text. The ‘not itself’ exclusion (notSelf) is gone. The (Bondsman) label is printed in the ability name (settled)."
  },
+ "dd21cf0a01f29cbd": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Trajann's datasheet has Feel No Pain 5+ as a core ability; Allarus do not. Core 19.04 FAQ: a rule that grants a model Feel No Pain applies only to that model. Unchanged judgement; stale only because Supreme Commander joined the source."
+ },
  "dd2cfd5794734b16": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -11903,6 +12413,12 @@
   "at": "2026-10-22",
   "why": "“While this model has 1-5 wounds remaining” = damaged 1-5; W 14 matches NR (“War Dog Karnivore … W 14”), Wahapedia and every War Dog in the list (same key)."
  },
+ "de5ed27db3726ca0": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "GW Trajann keywords: INFANTRY, CHARACTER, EPIC HERO, IMPERIUM; Allarus: INFANTRY, IMPERIUM, TERMINATOR. ALLARUS CUSTODIANS (name keyword, NR/lite-knights convention) and TERMINATOR come from the led unit (core 19.03). Correct."
+ },
  "de73571038d7b631": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -11914,6 +12430,12 @@
   "by": "review:r15-v2",
   "at": "2026-10-21",
   "why": "“counted for every attack” is what the calculator does (defAlways, ticked in each step) and what the rule does (“each time an attack targets this unit, subtract 1 from the Wound roll”). “as if a PSYKER model stays in the unit” truthfully says that “While this unit contains one or more PSYKER models” is not tracked, and Core Rules 05.03 make that nearly exact: the CHARACTER Sorcerer is allocated last, so only [PRECISION] (05.04.01) can remove him early. Who is the Scarab Occult Terminators, matching NR “Rites of Coalescence - Scarab Occult Terminators”."
+ },
+ "de800c55a093d64f": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "As lite-knights: FNP 5+ is Trajann's own core ability; per 19.04 FAQ it applies only to him. Feel No Pain 5+* (Aegis, vs mortal wounds) stays whole-unit."
  },
  "de9ecd05bde1cd60": {
   "verdict": "ok",
@@ -12232,6 +12754,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.” Unconditional FNP 5+; the Telemon is a one-model unit. The unit’s plain “Feel No Pain 5+” rule is not said twice (defenceItems skips a rule FNP an ability def already has)."
+ },
+ "e4859893613e72e7": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "Trajann 265 (Wahapedia 1 model 265); 3 Allarus 270 (1st-2nd unit bracket; Dread Host has 2 Allarus units, 270 and 180). Total 535 matches NR."
  },
  "e4c004b9b108f7b0": {
   "verdict": "ok",
@@ -12821,6 +13349,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Follow Me Ladz - Big Mek in Mega Armour' (l.181); it is a War Horde enhancement taken on the BMiMA (NR Options 'Follow Me Ladz, ...'). Models match NR."
  },
+ "ef897a9349cdd0d4": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT: 'melee attacks (excluding those made by CHARACTER models) have +2 A', and the WHEN conditions: Fight phase, selected to fight, below starting strength. The note keeps the CHARACTER exclusion. Same form as the approved Focused Ferocity (+1 A, no calc)."
+ },
  "ef8da100f97135b7": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -13103,6 +13637,12 @@
   "at": "2026-10-22",
   "why": "NR: “Houndpack Lance Character, Panoply of the Cursed Knights …” and Categories “Character”; Wahapedia KEYWORDS have no CHARACTER. The quote is the detachment rule word for word and the note only names where the keyword comes from. Accurate, and no more than the rule says."
  },
+ "f5d6fe23f028e1c6": {
+  "verdict": "ok",
+  "by": "review:custodes-units",
+  "at": "2026-10-24",
+  "why": "NR: 2 Wardens with Castellan Axe (GW option 'All models can each have their Guardian Spear replaced with 1 Castellan Axe'). Profiles: 24\" A2 S5 -1 2 Assault RF2; melee A3 S10 -2 4 — match Wahapedia."
+ },
  "f60bc79bbd228e3a": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -13252,6 +13792,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Clever Know-wotz - Mek” on the Flash Gitz sheet; model lines as NR (1x Mek, 1x Kaptin, 9x Flash Gitz)."
+ },
+ "f9eb187ebda3ddac": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Your Command phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "fa34fc0a23a23671": {
   "verdict": "ok",
@@ -13486,6 +14032,12 @@
   "by": "review:exiled-units (its fix)",
   "at": "2026-10-24",
   "why": "An enemy unit Falls Back in its own Movement phase, so the trigger is your opponent’s Movement phase, not yours. derive.js read “Falls Back” as this unit’s own move. The approved abilities with this trigger are all {ph:[movement], turn:opp}: Overwhelming Wrath (“Each time an enemy unit within 6\" … is selected to Fall Back”), Harpoon Barbs (“when an enemy unit within Engagement Range … is chosen to Fall Back”) and the WE stratagem Punish the Craven."
+ },
+ "fdc6dffb1e91d281": {
+  "verdict": "ok",
+  "by": "review:custodes-rules",
+  "at": "2026-10-24",
+  "why": "'Your Movement phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
  "fddfbbd452fa700f": {
   "verdict": "ok",

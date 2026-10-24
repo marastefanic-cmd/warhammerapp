@@ -1,0 +1,248 @@
+[
+ {
+  "key": "8ccf606fbfe3d2a6",
+  "where": "lite-knights · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins. Source of the ability is Trajann; lite-knights' models line matches the row (1 Allarus + 1 Allarus Vexilla)."
+ },
+ {
+  "key": "4f1e9d95be85a3a6",
+  "where": "lite-knights · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Quote matches Wahapedia core 25.04 'Select Units' word for word (the same note the approved Guilliman row uses); it quotes the rule with no added reading. GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
+ },
+ {
+  "key": "dd21cf0a01f29cbd",
+  "where": "lite-knights · Trajann Valoris",
+  "verdict": "ok",
+  "why": "Trajann's datasheet has Feel No Pain 5+ as a core ability; Allarus do not. Core 19.04 FAQ: a rule that grants a model Feel No Pain applies only to that model. Unchanged judgement; stale only because Supreme Commander joined the source."
+ },
+ {
+  "key": "3867bf3f2a78d8ba",
+  "where": "dread-host · Trajann Valoris · Leader",
+  "verdict": "ok",
+  "why": "Leader is Trajann's; text matches GW's (Wahapedia) Leader list exactly, incl. SENTINEL GUARD SODALITY."
+ },
+ {
+  "key": "a11bd415529d55d1",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
+ },
+ {
+  "key": "441a2c840044dbd2",
+  "where": "emperors-chosen · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Same verbatim 25.04 quote as the approved Guilliman/lite-knights note. GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
+ },
+ {
+  "key": "69507f23ff788422",
+  "where": "dread-host · Trajann Valoris · Captain-General",
+  "verdict": "ok",
+  "why": "Captain-General is Trajann's datasheet ability (tagged (Aura) by GW); text matches Wahapedia."
+ },
+ {
+  "key": "d587d9bedfb7d0d1",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "Moment Shackle is Trajann's datasheet ability; text matches Wahapedia."
+ },
+ {
+  "key": "be00a44eee99c703",
+  "where": "dread-host · Trajann Valoris · Slayer of Tyrants",
+  "verdict": "ok",
+  "why": "Slayer of Tyrants is on the Allarus Custodians datasheet (GW's name; NR's 'Slayers' is a deviation). Text matches Wahapedia."
+ },
+ {
+  "key": "baecade978ae2f87",
+  "where": "dread-host · Trajann Valoris · Vexilla",
+  "verdict": "ok",
+  "why": "Vexilla is the Allarus wargear ability (one model has it: NR line 3x Allarus: Vexilla on one). Text matches Wahapedia."
+ },
+ {
+  "key": "de5ed27db3726ca0",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "GW Trajann keywords: INFANTRY, CHARACTER, EPIC HERO, IMPERIUM; Allarus: INFANTRY, IMPERIUM, TERMINATOR. ALLARUS CUSTODIANS (name keyword, NR/lite-knights convention) and TERMINATOR come from the led unit (core 19.03). Correct."
+ },
+ {
+  "key": "e4859893613e72e7",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "Trajann 265 (Wahapedia 1 model 265); 3 Allarus 270 (1st-2nd unit bracket; Dread Host has 2 Allarus units, 270 and 180). Total 535 matches NR."
+ },
+ {
+  "key": "de800c55a093d64f",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "As lite-knights: FNP 5+ is Trajann's own core ability; per 19.04 FAQ it applies only to him. Feel No Pain 5+* (Aegis, vs mortal wounds) stays whole-unit."
+ },
+ {
+  "key": "a32a7cb99d1c7d85",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "NR: Trajann Eagle's Scream + Watcher's Axe; 3 Allarus each Balistus grenade launcher + Castellan Axe (one with Vexilla). Profiles match Wahapedia (BGL 18\" A3 2+ S5 -1 1 Assault/Blast 1; axe 24\" A2 S5 -1 2 Assault/RF2; melee A3 S10 -2 4; Watcher's Axe A6 S12 -3 4 Cleave 1; Eagle's Scream 24\" A2 S6 -2 2). Names follow NR."
+ },
+ {
+  "key": "d07f0b91ea4d46ac",
+  "where": "dread-host · Shield-Captain · Leader",
+  "verdict": "ok",
+  "why": "Leader is the Shield-Captain's; GW's list (Wahapedia) includes SENTINEL GUARD SODALITY, which the NR (old codex) text lacks while NR still attaches him. GW wins."
+ },
+ {
+  "key": "74312787820e5df0",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "verdict": "ok",
+  "why": "Text says 'In your opponent's Shooting phase' -> Shooting, their turn. Correct."
+ },
+ {
+  "key": "40e7a6fb30af770c",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "verdict": "ok",
+  "why": "GW header: 'Vengeful Surge (Once per battle, per unit)'. Correct."
+ },
+ {
+  "key": "c4c9092c178fed09",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "verdict": "ok",
+  "why": "Vengeful Surge is on the Shield-Captain datasheet."
+ },
+ {
+  "key": "1b6859cc9bb993b8",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "verdict": "ok",
+  "why": "GW header: 'Master of Ka’tahs (Once per battle round, per unit)'. Correct; no phase named, so untagged phase is right, and ka'tah options are not spelled out."
+ },
+ {
+  "key": "74c8036a651088a2",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "verdict": "ok",
+  "why": "Master of Ka’tahs is on the Shield-Captain datasheet (GW's name; NR's 'Master of the Ka'tahs' is a deviation)."
+ },
+ {
+  "key": "895dd696c7d54cb1",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "ok",
+  "why": "Shield-Captain's own Praesidium Shield ('Attacks allocated to this model have -1 D'), distinct from the Sentinel Guard ability of the same name. He keeps the shield with the Paragon Blade option (GW wargear: only the Pyrithite Spear is replaced)."
+ },
+ {
+  "key": "a7b3e71584c4debf",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "ok",
+  "why": "Faithful to 'Attacks allocated to this model have -1 D'; '(the Shield-Captain)' only names 'this model' on an attached-unit screen, no added reading. Defensive always-on, no timing label."
+ },
+ {
+  "key": "30748dba43821db2",
+  "where": "dread-host · Shield-Captain · Stand Vigil",
+  "verdict": "ok",
+  "why": "Stand Vigil is on the Sentinel Guard Sodality datasheet."
+ },
+ {
+  "key": "a732f6466a8685d1",
+  "where": "dread-host · Shield-Captain · Vexilla",
+  "verdict": "ok",
+  "why": "Vexilla is Sentinel Guard wargear (NR: one Sentinel Guard with Vexilla); GW wargear option '1 model can be equipped with 1 Vexilla'."
+ },
+ {
+  "key": "6f82f1f696f2f252",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "ok",
+  "why": "Sentinel Guard Sodality's datasheet ability Praesidium Shield (unit-wide 'Attacks that target this unit...')."
+ },
+ {
+  "key": "d0687964cd8e6bd2",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "ok",
+  "why": "Same def as approved Unyielding Ancient (identical GW text). No timing label (defensive always-on)."
+ },
+ {
+  "key": "240d4660ba0c3c6c",
+  "where": "dread-host · Shield-Captain",
+  "verdict": "ok",
+  "why": "Stand Vigil: 'This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if' unit or target within range of an objective. Core weapon abilities: a keyword-qualified ability applies only vs targets with (here: without) those keywords, so vs none Monster/Vehicle is right. 'This unit' is a bodyguard ability: applies to the whole attached unit incl. the Shield-Captain (core 19.04). kind all (ranged+melee), cond objective. Correct."
+ },
+ {
+  "key": "7cdcf12b4c4c5519",
+  "where": "dread-host · Shield-Captain",
+  "verdict": "ok",
+  "why": "GW Sentinel Guard keywords INFANTRY, BATTLELINE, IMPERIUM, TRUSTED SENTINEL (+ name keyword per NR convention); Shield-Captain has none of the three. Correct."
+ },
+ {
+  "key": "bf30d07404212c80",
+  "where": "dread-host · Shield-Captain",
+  "verdict": "ok",
+  "why": "Shield-Captain 180 (1st unit) + Praesidium Shield 25 = 205 (Wahapedia wargear cost); Sentinel Guard 3 models 240 (1st-3rd). 445 matches NR."
+ },
+ {
+  "key": "6787c37b62061f56",
+  "where": "dread-host · Shield-Captain",
+  "verdict": "ok",
+  "why": "Shield-Captain: Eternity-pattern Paragon Blade (6 2+ 10 -3 3 Precision), no ranged weapon (Pyrithite Spear replaced). 3 Sentinel Guard: Sentinel Blade ranged 12\" A4 2+ S5 -1 2 Assault, Close-quarters; melee A5 2+ S6 -2 2. Matches Wahapedia and NR."
+ },
+ {
+  "key": "7c4307c3c42cfbaf",
+  "where": "dread-host · Custodian Guard Sodality",
+  "verdict": "ok",
+  "why": "Impenetrable Defence: [SUSTAINED HITS 1: non-MONSTER/VEHICLE] under the same two objective conditions; footnote mirrors Stand Vigil. Correct."
+ },
+ {
+  "key": "a3c4207a8f68dfb6",
+  "where": "dread-host · Custodian Guard Sodality",
+  "verdict": "ok",
+  "why": "3 Custodian Guard, each Guardian Spear (24\" A2 2+ S5 -1 2 Assault RF2; melee A6 2+ S8 -2 2). Matches Wahapedia/NR."
+ },
+ {
+  "key": "aa68eaf31bdfc477",
+  "where": "dread-host · Custodian Wardens · Living Fortress",
+  "verdict": "ok",
+  "why": "'Attacks that target this unit have -1 AP' -> '-1 AP to attacks that target it', the approved In Auramite Clad / Armour of Contempt wording. Always-on defensive, no timing label."
+ },
+ {
+  "key": "d162e18158962b1a",
+  "where": "emperors-chosen · Custodian Wardens",
+  "verdict": "ok",
+  "why": "NR (EC): 2 Wardens with Guardian Spear (one Vexilla). Profiles match Wahapedia."
+ },
+ {
+  "key": "973bebc37d63d6a3",
+  "where": "emperors-chosen · Prosecutor Squad",
+  "verdict": "ok",
+  "why": "5 Prosecutors: Boltgun (24\" A1 3+ S5 -1 1 Anti-Psyker 4+, Assault, RF1) + Gun Stock (A2 per Wahapedia new codex; NR's A3 is a declared deviation, lite-knights' decision). OC2, 50 pts."
+ },
+ {
+  "key": "1ae73b19a118d888",
+  "where": "emperors-chosen · Vertus Praetors · Quicksilver Execution",
+  "verdict": "ok",
+  "why": "Its melee attacks after a charge move: Fight phase, either turn (Heroic Intervention charges in their turn), same as approved Brutal Impact/Might is Right."
+ },
+ {
+  "key": "bf8f72027464478c",
+  "where": "emperors-chosen · Vertus Praetors",
+  "verdict": "ok",
+  "why": "'If this unit made a charge move this turn, melee attacks have [SUSTAINED HITS 1]' -> melee, cond charged. Matches Brutal Impact convention."
+ },
+ {
+  "key": "d827575ed4f389ce",
+  "where": "emperors-chosen · Vertus Praetors",
+  "verdict": "ok",
+  "why": "2 Vertus Praetors: Salvo launcher (24\" A2 2+ S10 -2 D3+2, no keywords) + Interceptor lance (A6 2+ S8 -2 2 Lance). Matches Wahapedia; names per NR. M12 T8 W7 OC2, 75×42mm Oval (GW guide), 220 pts."
+ },
+ {
+  "key": "3939cc8629508920",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Same verbatim 25.04 quote. GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins."
+ },
+ {
+  "key": "c90ba8137bd2ca50",
+  "where": "dread-host · Allarus Custodians",
+  "verdict": "ok",
+  "why": "NR: 2 Allarus, each Balistus grenade launcher + Guardian Spear (one Vexilla). Guardian Spear profiles added to the Allarus datasheet match Wahapedia (24\" A2 S5 -1 2 Assault RF2; melee A6 S8 -2 2)."
+ },
+ {
+  "key": "f5d6fe23f028e1c6",
+  "where": "dread-host · Custodian Wardens",
+  "verdict": "ok",
+  "why": "NR: 2 Wardens with Castellan Axe (GW option 'All models can each have their Guardian Spear replaced with 1 Castellan Axe'). Profiles: 24\" A2 S5 -1 2 Assault RF2; melee A3 S10 -2 4 — match Wahapedia."
+ }
+]

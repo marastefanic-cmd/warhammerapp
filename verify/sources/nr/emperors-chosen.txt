@@ -1,0 +1,479 @@
+10/24/26, 6:09 PM                                                   Emperor's Chosen - New Recruit
+
+                                                    Emperor's Chosen [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Imperium - Adeptus Custodes)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Emperor's Chosen [1Detachment Points], Honoured Companions [1Detachment
+  Points], Lions of the Emperor [1Detachment Points]
+  • Force Disposition: Disruption
+  • Show/Hide Options
+  NAME                             ROLE         PTS OPTIONS
+   Trajann Valoris                              Epic Hero 265
+   Shield-Captain                               Character 205
+   (3) Custodian Guard Sodality                 Battleline     240
+   (3) Sentinel Guard Sodality                  Battleline     240 Shield-Captain
+                                                                      Trajann Valoris
+   (3) Allarus Custodians                       Infantry       270
+                                                                      3x Allarus Custodian: Vexilla
+   (2) Custodian Wardens                        Infantry       200 2x Custodian Warden: Vexilla
+   (5) Prosecutor Squad                         Infantry       50
+   (5) Witchseeker Squad                        Infantry       60
+   (2) Vertus Praetors                          Mounted        220
+   Caladius Annihilator Grav-tank Vehicle                      250
+   Martial Ka'tah Reference                     Reference
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                          1/13
+10/24/26, 6:09 PM                                                   Emperor's Chosen - New Recruit
+     535 PTS                                                   TRAJANN VALORIS
+   Models                                      Options
+                                               Warlord, Eagle's Scream, Watcher's Axe
+   1x Trajann Valoris
+                                               • Leading: Allarus Custodians
+   2x Allarus Custodian                        Balistus grenade launcher, Castellan Axe
+   1x Allarus Custodian                        Balistus grenade launcher, Castellan Axe, Vexilla
+   Unit                                                                   M     T    Sv      W       LD        OC       InSv     Base
+   Trajann Valoris - Trajann Valoris                                      8"    7    2+      10      5+        3        4+       40mm
+   Allarus Custodian (x3) - Allarus Custodians                            7"    8    2+      6       5+        3        4+       40mm
+   Ranged Weapons                                                       Range       A BS       S AP       D Keywords
+   Eagle's Scream - Trajann Valoris                                     24"         2 2+       6 -2       2 Assault, Rapid Fire 2
+   Balistus grenade launcher (x3) - Allarus Custodians                   18"        3 2+       5 -1       1    Assault, Blast 1
+   Castellan axe (x3) - Allarus Custodians                               24"        2 2+       5 -1       2    Assault, Rapid Fire 2
+   Melee Weapons                                                       Range         A    WS         S        AP    D        Keywords
+   Watcher's Axe - Trajann Valoris                                     Melee         6    2+         12       -3    4        Cleave 1
+   Castellan axe (x3) - Allarus Custodians                             Melee         3    2+         10       -2    4
+   Abilities            Description
+                        This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON
+                        TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH
+   Leader -
+                        SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY
+   Trajann Valoris
+                        WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS,
+                        CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
+   Captain-             Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within 6" of this
+   General (Aura)       model can:
+    - Trajann            Re-roll hit rolls of 1
+   Valoris               Re-roll wound rolls of 1
+                        (Once per battle, per army)
+   Moment               At the start of any phase, you can select one of the following to take effect until the end of the
+   Shackle -            phase:
+   Trajann Valoris       This model’s Watcher’s Axe weapon has +3 A.
+                         This model has 3+ InSv.
+   Slayers of
+   Tyrants -            This unit's melee attacks that target a unit with a T greater than this unit's T have +1 to
+   Allarus              wound rolls.
+   Custodians
+   Vexilla -
+                          This unit has +1 OC.
+   Allarus
+   Custodians             This unit can ignore modifiers to this unit's Ld.
+
+    Rules Aquila Commander, Aegis of the Emperor, Martial Ka'tah, Leader, Deep Strike, Feel No Pain 5+*,
+          Feel No Pain 5+, Assault, Rapid Fire, Cleave, Deep Strike, Martial Ka'tah, Aegis of the Emperor,
+          Feel No Pain 5+*, Blast, Assault
+    Categories Character, Epic Hero, Faction: Adeptus Custodes, Imperium, Infantry, Trajann Valoris, Warlord,
+               Allarus Custodians*, Terminator*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                            2/13
+10/24/26, 6:09 PM                                                   Emperor's Chosen - New Recruit
+     445 PTS                                                   SHIELD-CAPTAIN
+   Models                                       Options
+                                                Paragon Blade & Praesidium Shield
+   1x Shield-Captain
+                                                • Leading: Sentinel Guard Sodality
+   2x Sentinel Guard                            Praesidium Shield, Sentinel blade
+   1x Sentinel Guard                            Praesidium Shield, Sentinel blade, Vexilla
+   Unit                                                                     M     T    Sv      W      LD    OC    InSv    Base
+   Shield-Captain - Shield-Captain                                          8"    7    2+      8      5+    3     4+      40mm
+   Sentinel Guard (x3) - Sentinel Guard Sodality                            8"    7    2+      5      5+    4     4+      40mm
+   Ranged Weapons                                                  Range      A   BS     S    AP     D Keywords
+   Sentinel Blade (x3) - Sentinel Guard Sodality                   12"        4   2+     5    -1     2 Assault, Close-quarters
+   Melee Weapons                                                             Range        A    WS      S     AP   D    Keywords
+   Eternity-pattern Paragon Blade - Shield-Captain                           Melee        6    2+      10    -3   3    Precision
+   Sentinel Blade (x3) - Sentinel Guard Sodality                              Melee       5    2+      6     -2   2
+   Abilities               Description
+                           This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN
+   Leader - Shield-Captain GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS,
+                           SAGITTARUM CUSTODIANS
+                                 (Once per battle, per unit)
+   Vengeful Surge -              In your opponent's Shooting phase, when an enemy unit has shot, if a model in this
+   Shield-Captain                unit lost a wound as a result of those attacks, this unit can make a surge move of up
+                                 to D6+2"
+   Master of the Ka'tahs -       (Once per battle round, per unit)
+   Shield-Captain                If this unit is not readied, you can use this ability. If you do, this unit is readied.
+   Praesidium Shield -
+                                 Attacks allocated to this model have -1 D.
+   Shield-Captain
+                                 This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the
+   Stand Vigil - Sentinel        following apply:
+   Guard Sodality                  This unit is within range of an objective.
+                                   The target of those attacks is within range of an objective.
+   Vexilla - Sentinel              This unit has +1 OC.
+   Guard Sodality                  This unit can ignore modifiers to this unit's Ld.
+   Praesidium Shield -
+                                 Attacks that target this unit with a S greater than this unit's T have -1 to wound rolls.
+   Sentinel Guard Sodality
+    Rules Deep Strike, Leader, Martial Ka'tah, Aegis of the Emperor, Aquila Commander, Feel No Pain 5+*, Precision,
+          Deep Strike, Martial Ka'tah, Aegis of the Emperor, Feel No Pain 5+*, Assault, Close-quarters
+    Categories Character, Faction: Adeptus Custodes, Imperium, Infantry, Shield-Captain, Battleline*,
+               Sentinel Guard Sodality*, Trusted Sentinel*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                       3/13
+10/24/26, 6:09 PM                                                  Emperor's Chosen - New Recruit
+     240 PTS                                         CUSTODIAN GUARD SODALITY
+   Models                                                      Options
+   2x Custodian Guard                                              Guardian Spear
+   1x Custodian Guard                                              Guardian Spear, Vexilla
+   Unit                                               M        T    Sv          W     LD        OC       InSv          Base
+   Custodian Guard (x3)                               8"       7    2+          5     5+        4        4+            40mm
+   Ranged Weapons                             Range            A   BS       S    AP      D     Keywords
+   Guardian Spear (x3)                        24"              2   2+       5    -1      2     Assault, Rapid Fire 2
+   Melee Weapons                                      Range             A       WS      S      AP      D        Keywords
+   Guardian Spear (x3)                                Melee             6       2+      8      -2      2
+   Abilities                  Description
+                              This unit's attacks have [**SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the
+   Impenetrable               following apply:
+   Defence                      This unit is within range of an objective.
+                                The target of those attacks is within range of an objective.
+                                This unit has +1 OC.
+   Vexilla
+                                This unit can ignore modifiers to this unit's Ld.
+    Rules Deep Strike, Martial Ka'tah, Aegis of the Emperor, Feel No Pain 5+*, Assault, Rapid Fire
+
+    Categories Battleline, Custodian Guard Sodality, Faction: Adeptus Custodes, Imperium, Infantry, Trusted Sentinel
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                  4/13
+10/24/26, 6:09 PM                                                      Emperor's Chosen - New Recruit
+     200 PTS                                             CUSTODIAN WARDENS
+   Models                                                         Options
+   1x Custodian Warden                                                      Guardian Spear
+   1x Custodian Warden                                                      Guardian Spear, Vexilla
+   Unit                                                 M          T        Sv        W      LD         OC        InSv        Base
+   Custodian Warden (x2)                                8"         7        2+        6      5+         3         4+          40mm
+   Ranged Weapons                             Range            A       BS        S    AP     D        Keywords
+   Guardian Spear (x2)                        24"              2       2+        5    -1     2        Assault, Rapid Fire 2
+   Melee Weapons                                      Range                 A        WS      S        AP      D      Keywords
+   Guardian Spear (x2)                                Melee                 6        2+      8        -2      2
+   Abilities                         Description
+   Living Fortress                   Attacks that target this unit have -1AP.
+                                       This unit has +1 OC.
+   Vexilla
+                                       This unit can ignore modifiers to this unit's Ld.
+    Rules Deep Strike, Martial Ka'tah, Feel No Pain 5+*, Aegis of the Emperor, Assault, Rapid Fire
+
+    Categories Custodian Wardens, Faction: Adeptus Custodes, Imperium, Infantry, Trusted Sentinel
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                         5/13
+10/24/26, 6:09 PM                                                    Emperor's Chosen - New Recruit
+     50 PTS                                                 PROSECUTOR SQUAD
+   Models                                                      Options
+   5x Prosecutor                                                Boltgun, Gun Stock
+   Unit                                      M          T       Sv        W        LD         OC      InSv        Base
+   Prosecutor (x5)                           7"         3       3+        1        6+         2                   32mm
+   Ranged Weapons                Range        A    BS       S   AP    D     Keywords
+   Boltgun (x5)                  24"          1    3+       5   -1    1     Anti-PSYKER 4+, Assault, Rapid Fire 1
+   Melee Weapons                              Range              A        WS          S      AP       D      Keywords
+   Gun Stock (x5)                             Melee              3        3+          3      0        1
+   Abilities              Description
+                          In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That
+   Purity of
+                          unit is detected.
+   Execution
+                            While a unit is detected, that unit has +3" detection range.
+    Rules Feel No Pain 3+*, Daughters of the Abyss, Assault, Anti, Rapid Fire
+
+    Categories Anathema Psykana, Faction: Anathema Psykana, Imperium, Infantry, Prosecutor Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                             6/13
+10/24/26, 6:09 PM                                                        Emperor's Chosen - New Recruit
+     60 PTS                                               WITCHSEEKER SQUAD
+   Models                                                        Options
+   5x Witchseeker                                                        Flamer, Gun Stock
+   Unit                                          M       T          Sv          W       LD           OC       InSv         Base
+   Witchseeker (x5)                              7"       3         3+          1       6+           1                     32mm
+   Ranged Weapons               Range        A    BS    S      AP        D   Keywords
+   Flamer (x5)                  12"          3    -     4      -1        1   Anti-PSYKER 4+, Assault, Blast 1, Torrent
+   Melee Weapons                              Range                 A        WS           S      AP       D          Keywords
+   Gun Stock (x5)                             Melee                 3        3+           3      0        1
+   Abilities         Description
+                     In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks.
+   Sanctified
+                     That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit
+   Flames
+                     is a Psyker unit..
+    Rules Scouts 7", Feel No Pain 3+*, Daughters of the Abyss, Anti, Torrent, Assault, Blast
+
+    Categories Anathema Psykana, Faction: Anathema Psykana, Imperium, Infantry, Witchseeker Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                      7/13
+10/24/26, 6:09 PM                                                       Emperor's Chosen - New Recruit
+     220 PTS                                               VERTUS PRAETORS
+   Models                                             Options
+   2x Vertus Praetor                                  Interceptor lance, Salvo launcher
+   Unit                                      M          T      Sv         W       LD        OC        InSv      Base
+   Vertus Praetors (x2)                      12"        8      2+         7       5+        2         4+        75x42mm Oval
+   Ranged Weapons                               Range               A      BS          S         AP      D           Keywords
+   Salvo launcher (x2)                          24"                 2      2+          10        -2      D3+2
+   Melee Weapons                                        Range                 A    WS            S     AP       D   Keywords
+   Interceptor lance (x2)                               Melee                 6    2+            8     -2       2   Lance
+   Abilities                  Description
+   Quicksilver                If this unit made a charge move this turn, this unit's melee attacks have [SUSTAINED
+   Execution                  HITS 1]
+    Rules Martial Ka'tah, Aegis of the Emperor, Feel No Pain 5+*, Deep Strike, Lance
+
+    Categories Faction: Adeptus Custodes, Fly, Imperium, Mounted, Vertus Praetors
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                    8/13
+10/24/26, 6:09 PM                                                       Emperor's Chosen - New Recruit
+     250 PTS                                      CALADIUS ANNIHILATOR GRAV-TANK
+   Models                                         Options
+   1x Caladius Annihilator Grav-tank              Arachnus Blaze Carronade, Twin Lastrum Bolt Cannon, Armoured hull
+   Unit                                                M        T            Sv        W    LD    OC     InSv    Base
+   Caladius Annihilator Grav-tank                      10"      11           2+        14   5+    4      5+      150x95mm Oval
+   Ranged Weapons                           Range       A      BS       S         AP   D         Keywords
+   Arachnus Blaze Carronade                 48"         4      2+       12        -3   D6+2      Lethal Hits: MONSTER/VEHICLE
+   Twin Lastrum Bolt Cannon                 36"         3      2+       6         -2    2        Sustained Hits 1, Twin-linked
+   Melee Weapons                             Range                  A         WS            S      AP       D     Keywords
+   Armoured hull                             Melee                  4         4+            6      0        1
+   Abilities                        Description
+                                    This unit's ranged attacks that target a MONSTER/VEHICLE unit can:
+                                     Re-roll one hit roll.
+   Advanced Firepower
+                                     Re-roll one wound roll.
+                                     Re-roll one damage roll.
+    Rules Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 5, Deep Strike, Lethal Hits,
+          Sustained Hits
+    Categories Caladius Annihilator Grav-tank, Faction: Adeptus Custodes, Fly, Frame, Grav-assault, Imperium, Vehicle
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                     9/13
+10/24/26, 6:09 PM                                                   Emperor's Chosen - New Recruit
+                                                     MARTIAL KA'TAH REFERENCE
+   Martial Ka'tah When                                     Target
+                                                             Effect
+                     Your Movement phase, when               When your unit makes a normal/advance/fall-
+                                                That readied
+   Calistus          a friendly readied unit is              back move, your unit can move through all types
+                                                unit
+                     selected to move.                       of model.
+                                                                            Until the end of the turn:
+                                                                             Being engaged/battle-shocked does not
+                                                           One friendly       prevent your unit from being eligible to start
+   Conservai         Your Command phase
+                                                           readied unit       an action.
+                                                                             Starting an action does not prevent your unit
+                                                                              from being eligible to shoot.
+                                                                         Your unit's melee attacks that target an enemy
+                                                           One friendly
+   Dacatarai         Start of the Fight phase.                           unit (excluding Monster/Vehicle units) can re-roll
+                                                           readied unit.
+                                                                         **hit rolls" of 1.
+                                                           One friendly     Melee attacks that target your unit have -1 to hit
+   Kaptaris          Start of the Fight phase
+                                                           readied unit     rolls.
+                     Fight phase, when a friendly
+                                                           One friendly     Your unit's melee attacks have [LETHAL HITS:
+   Rendax            readied unit is selected to
+                                                           readied unit     MONSTER/VEHICLE].
+                     fight.
+                     Your Shooting phase, when a              Your unit can ignore modifiers to your unit's:
+                                                 That readied
+   Salvus            readied unit is selected to               BS
+                                                 unit.
+                     shoot.                                    Hit rolls and wound rolls.
+    Categories Reference
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                                     10/13
+10/24/26, 6:09 PM                                              Emperor's Chosen - New Recruit
+
+
+  Rules
+  Aegis of the Emperor:
+  Friendly Adeptus Custodes units with this ability have Feel No Pain 5+ against mortal wounds.
+
+  Anti:
+  This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the
+  target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+  Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical
+  wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon
+  against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.
+
+  Aquila Commander:
+  At the start of the battle round, if a model with this ability is your Warlord, gain 1CP.
+
+  Assault:
+  Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Cleave:
+  This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if
+  you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down).
+  ***Example: If a *[CLEAVE 1]* weapon with an A characteristic of 3 targets one unit containing 16 models, you
+  would gather three additional attack dice for that weapon (for a total of six for that weapon).*
+
+  Close-quarters:
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Companion's Watch:
+  While a friendly Trusted Sentinel unit is within range of an objective, that unit's attacks can re-roll wound
+  rolls of 1.
+
+  Damaged 5:
+  This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X,
+  that model is damaged:
+    While a model is damaged, that model's attacks have -1 to hit rolls.
+
+  Daughters of the Abyss:
+    Friendly Anathema Psykana units with this ability have Feel No Pain 3+ against psychic attacks.
+    Friendly Anathema Psykana units with this ability have the following ability:
+     Psychic Null (Aura): Friendly Adeptus Custodes units within 6" of this unit have Feel No Pain 5+ against
+     psychic attacks.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                       11/13
+10/24/26, 6:09 PM                                              Emperor's Chosen - New Recruit
+
+  Deadly Demise D3:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Feel No Pain 3+* / Feel No Pain 5+ / Feel No Pain 5+*:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Magna Imperator:
+  When a friendly Adeptus Custodes unit is selected to attack, that unit's attacks can:
+   Re-roll one hit roll.
+   Re-roll one wound roll.
+
+  Favoured Ka'tah: RENDAX
+  Additional Effect: You can select one enemy Monster/Vehicle unit engaged with your unit and roll one D6:
+   On a 1-2, that enemy unit suffers 1 mortal wound.
+   On a 3-5, that enemy unit suffers D3 mortal wounds**.
+   On a 6, that enemy unit suffers 3 mortal wounds.
+
+  Martial Ka'tah:
+  At the start of your Command phase, friendly Adeptus Custodes units with this ability are readied. While a
+  friendly unit is readied, you can select one of the ka-tah abilities for that unit to use. If you do, that unit is no
+  longer readied.
+  Each ka-tah ability will tell you when that ka-tah ability can be used and the effects that ka-tah ability has
+  on the unit using it.
+
+  On Gilded Wings:
+  At the end of your opponent's Fight phase, if a friendly Adeptus Custodes Terminator unit is unengaged, you
+  can place that unit in strategic reserves.
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                          12/13
+10/24/26, 6:09 PM                                              Emperor's Chosen - New Recruit
+
+  Precision:
+  While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step
+  (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking
+  models, the active player can select one allocation group that contains one of those visible CHARACTER
+  models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever
+  happens first), that CHARACTER group is the current allocation group.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Scouts 7":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4ea8077d9d924fd835fcf                                                        13/13
+

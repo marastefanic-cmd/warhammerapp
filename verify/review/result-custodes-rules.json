@@ -1,0 +1,308 @@
+[
+ {
+  "key": "834a30f81a0ad367",
+  "where": "Honoured Companions rule · Companion’s Watch (rule-ph)",
+  "verdict": "ok",
+  "why": "Companion’s Watch (waha l.383) re-rolls wound rolls of 1 for 'that unit’s attacks': attacks are made in your Shooting phase, the Fight phase, and by Fire Overwatch (core 15.08, end of your opponent's Movement phase). Same labelling as the approved Magna Imperator. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "5104d2eb43d76309",
+  "where": "Honoured Companions rule · Companion’s Watch (rule-turn)",
+  "verdict": "ok",
+  "why": "Attacks happen in both players' turns (Fight phase, Fire Overwatch in the opponent's Movement phase), so 'either'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "5d40d366f2de81ee",
+  "where": "Honoured Companions rule · Companion’s Watch (rule-turns)",
+  "verdict": "ok",
+  "why": "Movement only by Fire Overwatch (end of your opponent's Movement phase, core 15.08); Shooting only your own. Matches Magna Imperator's approved turns. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "244977472ae6210a",
+  "where": "Honoured Companions rule · Companion’s Watch (rule-needs)",
+  "verdict": "ok",
+  "why": "Text: 'a friendly TRUSTED SENTINEL unit'. Trusted Sentinel is a keyword (Custodian Guard, Wardens, Sentinel Guard in data.js). verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "31f1b569011d84d6",
+  "where": "Honoured Companions rule · Companion’s Watch (rule-mod)",
+  "verdict": "ok",
+  "why": "Quotes the effect exactly: all attacks, while within range of an objective, re-roll wound rolls of 1. No cond is right: DM_FACTS 'objective' means 'this unit or the target', and this rule needs the unit itself; the Damage tab reads the re-roll from the note's words."
+ },
+ {
+  "key": "9d870c5ac696af05",
+  "where": "Honoured Companions · Emperor’s Domain (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Fight phase, ...' (waha l.395); Wahapedia's card icons: Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "a4131ae669135c57",
+  "where": "Honoured Companions · Emperor’s Domain (strat-turn)",
+  "verdict": "ok",
+  "why": "'Fight phase' with no owner: either; Wahapedia icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "63f34627918d7e4b",
+  "where": "Honoured Companions · Emperor’s Domain (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "c362671247e8d7d6",
+  "where": "Honoured Companions · Emperor’s Domain (strat-gist)",
+  "verdict": "ok",
+  "why": "Says only what the text says: WHEN (selected to make a consolidation move) and EFFECT (objective consolidation mode, regardless of that move's Before Moving restrictions). The italic sentence is GW's explanation, not an extra effect, so leaving it out loses nothing."
+ },
+ {
+  "key": "9786e8e04aca6067",
+  "where": "Honoured Companions · Avenge the Fallen (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Fight phase, ...' (waha l.402); icons Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "203744a761df1f72",
+  "where": "Honoured Companions · Avenge the Fallen (strat-turn)",
+  "verdict": "ok",
+  "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "9797e35f78b82468",
+  "where": "Honoured Companions · Avenge the Fallen (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "ef897a9349cdd0d4",
+  "where": "Honoured Companions · Avenge the Fallen (strat-mod)",
+  "verdict": "ok",
+  "why": "EFFECT: 'melee attacks (excluding those made by CHARACTER models) have +2 A', and the WHEN conditions: Fight phase, selected to fight, below starting strength. The note keeps the CHARACTER exclusion. Same form as the approved Focused Ferocity (+1 A, no calc)."
+ },
+ {
+  "key": "b0fcbc7632690b08",
+  "where": "Honoured Companions · Avenge the Fallen (strat-gist)",
+  "verdict": "ok",
+  "why": "Covers the WHEN condition (below starting strength, selected to fight) and the whole EFFECT, the CHARACTER exclusion included. It adds nothing."
+ },
+ {
+  "key": "8b528b2587553581",
+  "where": "Honoured Companions · Swift as the Eagle (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Your opponent’s Movement phase' (waha l.408); icons Movement, Enemy. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "bd098545a20734cb",
+  "where": "Honoured Companions · Swift as the Eagle (strat-turn)",
+  "verdict": "ok",
+  "why": "'Your opponent’s Movement phase': opp; icon str11Enemy. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "90bccea45a0af3fd",
+  "where": "Honoured Companions · Swift as the Eagle (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "331ddfdaf60aa799",
+  "where": "Honoured Companions · Swift as the Eagle (strat-gist)",
+  "verdict": "ok",
+  "why": "Covers the trigger (an enemy unit ends a move within 8\"), the unengaged condition and the effect (normal move of up to D3+3\"). Nothing added."
+ },
+ {
+  "key": "123dd68e6cd7f46e",
+  "where": "Lions of the Emperor rule · On Gilded Wings (rule-ph)",
+  "verdict": "ok",
+  "why": "'At the end of your opponent’s Fight phase' (waha l.455): Fight phase only. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "0b6dbb69e142b1ba",
+  "where": "Lions of the Emperor rule · On Gilded Wings (rule-turn)",
+  "verdict": "ok",
+  "why": "'your opponent’s Fight phase': opp. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "2a1bcd98b5b9c1d8",
+  "where": "Lions of the Emperor rule · On Gilded Wings (rule-needs)",
+  "verdict": "ok",
+  "why": "'a friendly ADEPTUS CUSTODES TERMINATOR unit'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "224e8afdc47f82ce",
+  "where": "Lions of the Emperor · Vigil Unending (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Your opponent’s Shooting phase or the Fight phase' (waha l.467); icons Shooting, Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "7061e81c670c37e0",
+  "where": "Lions of the Emperor · Vigil Unending (strat-turn)",
+  "verdict": "ok",
+  "why": "The Fight phase has no owner, so 'either'. Same as the approved In Auramite Clad. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "4bf42da02de84158",
+  "where": "Lions of the Emperor · Vigil Unending (strat-turns)",
+  "verdict": "ok",
+  "why": "Shooting only in the opponent's turn ('Your opponent’s Shooting phase'). Same as In Auramite Clad. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "a567de1409021a1a",
+  "where": "Lions of the Emperor · Vigil Unending (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That ADEPTUS CUSTODES TERMINATOR unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "31f1eb595c703efd",
+  "where": "Lions of the Emperor · Vigil Unending (strat-def)",
+  "verdict": "ok",
+  "why": "Gives the phases, the -1 D to attacks that target the unit, and its limit (until that enemy unit has attacked). Word for word the approved In Auramite Clad def, with D in place of AP."
+ },
+ {
+  "key": "50e05621ad8bc857",
+  "where": "Lions of the Emperor · Vigil Unending (strat-gist)",
+  "verdict": "ok",
+  "why": "Trigger (an enemy unit targets your unit) and effect (-1 D until that enemy unit has attacked), as the text has them. Same wording as the approved In Auramite Clad gist."
+ },
+ {
+  "key": "9fd2f3e4a73f4cfd",
+  "where": "Lions of the Emperor · Unleash the Lions (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Your Command phase.' (waha l.473); icons Command, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "f9eb187ebda3ddac",
+  "where": "Lions of the Emperor · Unleash the Lions (strat-turn)",
+  "verdict": "ok",
+  "why": "'Your Command phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "0142096fcb539e29",
+  "where": "Lions of the Emperor · Unleash the Lions (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'One friendly ADEPTUS CUSTODES TERMINATOR unit that has 2+ models.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "34412297cb59fe1b",
+  "where": "Lions of the Emperor · Unleash the Lions (strat-gist)",
+  "verdict": "ok",
+  "why": "Keeps the 2+ models requirement, the split into one-model units, and each new unit's starting strength of 1. Nothing added."
+ },
+ {
+  "key": "b802abe8d4064c44",
+  "where": "Lions of the Emperor · Fury of the Emperor (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Your Charge phase' (waha l.479); icons Charge, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "a576573d691ea89b",
+  "where": "Lions of the Emperor · Fury of the Emperor (strat-turn)",
+  "verdict": "ok",
+  "why": "'Your Charge phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "d25fff2c1d962b64",
+  "where": "Lions of the Emperor · Fury of the Emperor (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That ADEPTUS CUSTODES TERMINATOR unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "025d833559a88c73",
+  "where": "Lions of the Emperor · Fury of the Emperor (strat-gist)",
+  "verdict": "ok",
+  "why": "Keeps the condition (made an ingress move this turn), the trigger (declaring a charge) and the effect (+2 to charge rolls). 'declares a charge' for 'is selected to declare a charge' is a shortening with the same meaning."
+ },
+ {
+  "key": "89376fce25bc235b",
+  "where": "Dread Host rule · Instruments of the Emperor’s Wrath (rule-ph)",
+  "verdict": "ok",
+  "why": "Charge rolls are made in your Charge phase and in the opponent's, by Heroic Intervention (core 15.11, end of your opponent's Charge phase: 'Resolve a charge... charge roll'). The Dacatarai additional effect is on enemy pile-in/consolidation moves in the Fight phase. Dacatarai's own WHEN is 'Start of the Fight phase' (data.js Martial Ka’tah). verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "68dacdf0aeb2c33e",
+  "where": "Dread Host rule · Instruments of the Emperor’s Wrath (rule-turn)",
+  "verdict": "ok",
+  "why": "Charge rolls happen in both turns (Heroic Intervention), and the Fight phase belongs to both players: either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "94f49a7eefd3a249",
+  "where": "Dread Host rule · Instruments of the Emperor’s Wrath (rule-needs)",
+  "verdict": "ok",
+  "why": "'Friendly ADEPTUS CUSTODES units'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "ad913e3a384cf2cf",
+  "where": "Dread Host · Lightning Wrath (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Fight phase, ...' (waha l.199); icons Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "3ec05fa8aad994f0",
+  "where": "Dread Host · Lightning Wrath (strat-turn)",
+  "verdict": "ok",
+  "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "98d2f70c1662129d",
+  "where": "Dread Host · Lightning Wrath (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That ADEPTUS CUSTODES unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "33d48e086be9d624",
+  "where": "Dread Host · Lightning Wrath (strat-gist)",
+  "verdict": "ok",
+  "why": "Trigger (selected to make a pile-in move) and effect (can move up to D3+3\") as the text has them."
+ },
+ {
+  "key": "9d6ceb45b3b7b3e2",
+  "where": "Dread Host · Golden Light of the Moiraides (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Your Movement phase' (waha l.205); icons Movement, Your. Rapid Ingress (end of the opponent's Movement phase) does not meet this WHEN. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "51d77e7b195fb8b5",
+  "where": "Dread Host · Golden Light of the Moiraides (strat-turn)",
+  "verdict": "ok",
+  "why": "'Your Movement phase': your; icon str11Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "77639f82388c69ea",
+  "where": "Dread Host · Golden Light of the Moiraides (strat-needs)",
+  "verdict": "ok",
+  "why": "Hand-written needs, checked: WHEN says 'a friendly ADEPTUS CUSTODES unit' and TARGET 'That ADEPTUS CUSTODES Unit' (Wahapedia's capital U, also in the HTML). So the only requirement is the faction keyword, as for Lightning Wrath and Preternatural Rapidity. derive.js marks it not derivable (rule no-unit, the capital U), as data.js's comment says."
+ },
+ {
+  "key": "2a35b89d8730d383",
+  "where": "Dread Host · Golden Light of the Moiraides (strat-def)",
+  "verdict": "ok",
+  "why": "Gives both effects (-1 to hit rolls for attacks that target it; no snap shooting attacks against it), the duration (until the start of your next turn) and the trigger (its ingress move). Nothing added."
+ },
+ {
+  "key": "62ee5bc7806906e4",
+  "where": "Dread Host · Golden Light of the Moiraides (strat-gist)",
+  "verdict": "ok",
+  "why": "Trigger, duration and both effects, as the text has them."
+ },
+ {
+  "key": "ae4ba2712c859010",
+  "where": "Dread Host · Preternatural Rapidity (strat-phases)",
+  "verdict": "ok",
+  "why": "WHEN 'Your Movement phase' (waha l.213); icons Movement, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "fdc6dffb1e91d281",
+  "where": "Dread Host · Preternatural Rapidity (strat-turn)",
+  "verdict": "ok",
+  "why": "'Your Movement phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "c859a17a3a686c98",
+  "where": "Dread Host · Preternatural Rapidity (strat-needs)",
+  "verdict": "ok",
+  "why": "TARGET 'That ADEPTUS CUSTODES unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ {
+  "key": "a2c158a43915108b",
+  "where": "Dread Host · Preternatural Rapidity (strat-gist)",
+  "verdict": "ok",
+  "why": "'does not prevent it from declaring a charge' for 'does not prevent your unit from being eligible to declare a charge'. Same wording as the approved Unceasing Onslaught gist. Nothing added or left out."
+ }
+]

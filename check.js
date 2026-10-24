@@ -125,8 +125,10 @@ function check(file){
       }
       if(u.enhancement && !detachmentsOf(a).some(d => d.enhancements.some(e => e.name === u.enhancement))) P(where, 'enhancement not in its detachments:', u.enhancement);
       for(const ab of u.abilities || []) timing(ab, where + ' ability ' + ab.name);
-      const names = (u.abilities || []).map(ab => ab.name);
-      names.forEach((n, i) => { if(names.indexOf(n) !== i) P(where, 'ability listed twice:', n); });
+      // (by name and who: two parts of an attached unit can each have an ability of the same name, the Shield-Captain's and the
+      // Sentinel Guard's Praesidium Shield)
+      const names = (u.abilities || []).map(ab => ab.name + '|' + (ab.who || ''));
+      names.forEach((n, i) => { if(names.indexOf(n) !== i) P(where, 'ability listed twice:', n.replace(/\|$/, '')); });
     }
     if(pts !== a.pointsUsed) P('army', a.id, 'points add up to', pts, 'but pointsUsed is', a.pointsUsed);
   }

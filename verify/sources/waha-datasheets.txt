@@ -112,6 +112,11 @@ ultramarines Impulsor
 ultramarines Eradicator-Squad-with-Melta-Rifles
 ultramarines Reiver-Squad
 ultramarines Deathwatch-Terminator-Squad
+adeptus-custodes Shield-Captain
+adeptus-custodes Sentinel-Guard-Sodality
+adeptus-custodes Custodian-Guard-Sodality
+adeptus-custodes Custodian-Wardens
+adeptus-custodes Vertus-Praetors
 chaos-daemons Karanak
 chaos-daemons Skarbrand
 chaos-daemons Skulltaker

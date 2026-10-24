@@ -112151,6 +112151,24 @@
      "type": "selectionEntry"
     },
     {
+     "name": "Custodian Guard Sodality",
+     "id": "d0ce-f2d3-358f-4530",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "targetId": "91b3-2e1c-e642-d213",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Custodian Wardens",
+     "id": "2bbd-2d61-e435-d902",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "targetId": "9610-b148-8433-93b8",
+     "type": "selectionEntry"
+    },
+    {
      "name": "Prosecutor Squad",
      "id": "71c0-19d8-f88b-c89",
      "collective": false,
@@ -112160,12 +112178,30 @@
      "type": "selectionEntry"
     },
     {
+     "name": "Shield-Captain",
+     "id": "3ab2-181b-28a4-6978",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "targetId": "b61c-b815-65c0-b1cc",
+     "type": "selectionEntry"
+    },
+    {
      "name": "Trajann Valoris",
      "id": "87ec-de53-6df9-9c22",
      "collective": false,
      "hidden": false,
      "import": true,
      "targetId": "7d7c-c212-47a3-38e4",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Vertus Praetors",
+     "id": "6c75-afbb-c482-7e3e",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "targetId": "918b-c9ed-7af7-74df",
      "type": "selectionEntry"
     },
     {
@@ -112253,6 +112289,14 @@
        "type": "selectionEntry"
       }
      ]
+    },
+    {
+     "name": "Sentinel Guard Sodality",
+     "id": "dc83-9680-c6e7-d451",
+     "hidden": false,
+     "import": true,
+     "targetId": "df80-bbdc-bd0a-3428",
+     "type": "selectionEntry"
     },
     {
      "name": "Caladius Annihilator Grav-tank",
@@ -112959,6 +113003,1481 @@
            "hidden": false,
            "import": true,
            "targetId": "ab4a-1a4f-5898-70db",
+           "type": "selectionEntry"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Custodian Guard Sodality",
+     "id": "91b3-2e1c-e642-d213",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Custodian Guard Sodality",
+       "id": "2ac3-bd71-9569-963e",
+       "hidden": false,
+       "primary": false,
+       "targetId": "c4f-4c5f-3507-e4bc"
+      },
+      {
+       "name": "Infantry",
+       "id": "f175-44b1-144b-4755",
+       "hidden": false,
+       "primary": false,
+       "targetId": "cf47-a0d7-7207-29dc"
+      },
+      {
+       "name": "Battleline",
+       "id": "dcb0-ca32-5099-4a7b",
+       "hidden": false,
+       "primary": true,
+       "targetId": "e338-111e-d0c6-b687"
+      },
+      {
+       "name": "Imperium",
+       "id": "226d-dfed-65e6-3bb4",
+       "hidden": false,
+       "primary": false,
+       "targetId": "aff3-d6a3-2a95-9dc"
+      },
+      {
+       "name": "Faction: Adeptus Custodes",
+       "id": "2786-903b-da5e-432d",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eea5-aeaf-bbf0-d5ee"
+      },
+      {
+       "name": "Trusted Sentinel",
+       "id": "2613-e9db-de24-7f05",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9f85-13d9-aec7-f57b"
+      },
+      {
+       "name": "Emissaries",
+       "id": "acdd-f502-040b-cd05",
+       "hidden": false,
+       "primary": false,
+       "targetId": "1070-413c-cf8f-338f"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "3a5d-9d18-e400-b945",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 6
+      },
+      {
+       "id": "d845-b7cf-29ef-e935",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "2eda-1280-01bd-6e8a",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "ce94-66ec-7a0e-2a8d",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      },
+      {
+       "id": "36e3-a2ac-e3ce-0754",
+       "childId": "any",
+       "field": "f759-1bc4-cb3a-f0d2",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "message": "An Attached Unit can only take 1 Enhancement.",
+       "scope": "root-entry",
+       "shared": true,
+       "traverseAssociationGroup": true,
+       "type": "max",
+       "value": 1
+      },
+      {
+       "id": "88a5-ace5-24c1-3a98",
+       "childId": "1556-9b56-fba6-4370",
+       "childName": "Leader",
+       "field": "associations",
+       "includeChildForces": false,
+       "scope": "self",
+       "shared": true,
+       "traverseAssociationGroup": false,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 240
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Crusade",
+       "id": "5658-c9ef-32e0-84f3",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "dffe-91f2-f156-0566",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Vexilla",
+       "id": "9fac-cebe-c113-e9bf",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "59ef-1bf3-f681-c8ae",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Enhancements",
+       "id": "d4b6-3e38-ad71-6200",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "a43b-fe98-3d93-435d",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deep Strike",
+       "id": "7b07-a545-c54e-3b07",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      },
+      {
+       "name": "Martial Ka'tah",
+       "id": "7e24-d751-7717-6adb",
+       "hidden": false,
+       "targetId": "e348-7090-3aff-ee2c",
+       "type": "rule"
+      },
+      {
+       "name": "Aegis of the Emperor",
+       "id": "66c3-1a6e-3c29-e612",
+       "hidden": false,
+       "targetId": "a398-0a1d-ef92-162b",
+       "type": "rule"
+      },
+      {
+       "name": "Feel No Pain 5+*",
+       "id": "0753-e00d-c40a-cd17",
+       "hidden": false,
+       "targetId": "faec-8b1b-5a21-0087",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "d845-b7cf-29ef-e935",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "2eda-1280-01bd-6e8a",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "ce94-66ec-7a0e-2a8d",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "3a5d-9d18-e400-b945",
+       "type": "set",
+       "value": 4,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "increment",
+       "value": 30,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "localConditionGroups": [
+          {
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "repeats": 1,
+           "scope": "parent",
+           "type": "atLeast",
+           "value": 3,
+           "conditions": [
+            {
+             "childId": "any",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "before",
+             "value": 1
+            },
+            {
+             "childId": "91b3-2e1c-e642-d213",
+             "childName": "Custodian Guard",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "error",
+       "type": "add",
+       "value": "An Attached Unit can only take 1 Enhancement.",
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "3dd3-8e5d-36b1-b804",
+           "childName": "Celeritous Sentries",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "traverseAssociationGroup": true,
+           "type": "atLeast",
+           "value": 1
+          },
+          {
+           "childId": "b2be-907f-f3fd-a540",
+           "childName": "Auric Eagle",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "traverseAssociationGroup": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Impenetrable Defence",
+       "id": "12b9-05c9-9ace-f098",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "This unit's attacks have [**SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply:\n- This unit is within range of an objective.\n- The target of those attacks is within range of an objective.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Custodian Guard",
+       "id": "01c4-5ae9-0cf0-5fb3",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 4,
+       "type": "model",
+       "constraints": [
+        {
+         "id": "d31b-d08f-2091-9dac-min",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 3
+        },
+        {
+         "id": "d31b-d08f-2091-9dac-max",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 3
+        }
+       ],
+       "costs": [
+        {
+         "name": "pts",
+         "typeId": "51b2-306e-1021-d207",
+         "value": 0
+        }
+       ],
+       "profiles": [
+        {
+         "name": "Custodian Guard",
+         "id": "d49a-7864-97ac-e2c4",
+         "hidden": false,
+         "typeId": "c547-1836-d8a-ff4f",
+         "typeName": "Unit",
+         "characteristics": [
+          {
+           "name": "M",
+           "$text": "6\"",
+           "typeId": "e703-ecb6-5ce7-aec1"
+          },
+          {
+           "name": "T",
+           "$text": "6",
+           "typeId": "d29d-cf75-fc2d-34a4"
+          },
+          {
+           "name": "Sv",
+           "$text": "2+",
+           "typeId": "450-a17e-9d5e-29da"
+          },
+          {
+           "name": "W",
+           "$text": "3",
+           "typeId": "750a-a2ec-90d3-21fe"
+          },
+          {
+           "name": "LD",
+           "$text": "6+",
+           "typeId": "58d2-b879-49c7-43bc"
+          },
+          {
+           "name": "OC",
+           "$text": "2",
+           "typeId": "bef7-942a-1a23-59f8"
+          },
+          {
+           "name": "InSv",
+           "$text": "4+",
+           "typeId": "55a7-5b54-c60d-11dc"
+          },
+          {
+           "name": "Base",
+           "$text": "40mm",
+           "typeId": "nr-base-size"
+          }
+         ]
+        }
+       ],
+       "selectionEntries": [
+        {
+         "name": "Guardian Spear",
+         "id": "e7d7-e613-0029-4d08",
+         "collective": true,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "8a10-4687-c5f4-479c",
+           "field": "selections",
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "74b8-cb66-4bf9-f6ab",
+           "field": "selections",
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "fc52-61e7-9234-ece1",
+           "flatten": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Assault",
+           "id": "da06-dcc6-a966-681f",
+           "hidden": false,
+           "targetId": "fc8a-8c24-bae9-cc1c",
+           "type": "rule"
+          },
+          {
+           "name": "Rapid Fire",
+           "id": "4762-601d-e327-af25",
+           "hidden": false,
+           "targetId": "c5c8-8b58-b8b6-7786",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Guardian Spear",
+           "id": "44ce-c5bc-13f5-4de0",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "6",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "2+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "8",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-2",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "2",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          },
+          {
+           "name": "Guardian Spear",
+           "id": "b6b4-4fa2-c559-43b4",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "24\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "2",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "2+",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "5",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-1",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "2",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Assault, Rapid Fire 2",
+             "typeId": "7f1b-8591-2fcf-d01c"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Custodian Wardens",
+     "id": "9610-b148-8433-93b8",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Custodian Wardens",
+       "id": "1468-7a77-ab57-dab8",
+       "hidden": false,
+       "primary": false,
+       "targetId": "5eaa-f0a-44fa-d1ae"
+      },
+      {
+       "name": "Faction: Adeptus Custodes",
+       "id": "5bfa-d79c-f97b-ca7f",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eea5-aeaf-bbf0-d5ee"
+      },
+      {
+       "name": "Infantry",
+       "id": "3025-e8b3-93af-8f88",
+       "hidden": false,
+       "primary": true,
+       "targetId": "cf47-a0d7-7207-29dc"
+      },
+      {
+       "name": "Imperium",
+       "id": "cbd9-cfa8-7a71-52fb",
+       "hidden": false,
+       "primary": false,
+       "targetId": "aff3-d6a3-2a95-9dc"
+      },
+      {
+       "name": "Trusted Sentinel",
+       "id": "37d7-842e-4b74-7d03",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9f85-13d9-aec7-f57b"
+      },
+      {
+       "name": "Emissaries",
+       "id": "dbeb-3a3a-10ab-3ec3",
+       "hidden": false,
+       "primary": false,
+       "targetId": "1070-413c-cf8f-338f"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "89e7-53a1-6e8a-fd2a",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "a5b2-a8ac-af8e-3f7f",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "e48a-2af8-9692-b3d7",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "d60f-e48a-0ea4-0546",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      },
+      {
+       "id": "2b45-0c8f-9779-7e1a",
+       "childId": "any",
+       "field": "f759-1bc4-cb3a-f0d2",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "message": "An Attached Unit can only take 1 Enhancement.",
+       "scope": "root-entry",
+       "shared": true,
+       "traverseAssociationGroup": true,
+       "type": "max",
+       "value": 1
+      },
+      {
+       "id": "6f47-6f06-65b0-c2f3",
+       "childId": "1556-9b56-fba6-4370",
+       "childName": "Leader",
+       "field": "associations",
+       "includeChildForces": false,
+       "scope": "self",
+       "shared": true,
+       "traverseAssociationGroup": false,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 200
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Crusade",
+       "id": "8069-a83e-b4ec-d339",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "dffe-91f2-f156-0566",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Vexilla",
+       "id": "baca-0215-ad38-ea03",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "59ef-1bf3-f681-c8ae",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Enhancements",
+       "id": "0ff3-6f4c-13a5-98a3",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "a43b-fe98-3d93-435d",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deep Strike",
+       "id": "9cee-efed-3e79-3469",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      },
+      {
+       "name": "Martial Ka'tah",
+       "id": "c3b2-e38d-3d68-248a",
+       "hidden": false,
+       "targetId": "e348-7090-3aff-ee2c",
+       "type": "rule"
+      },
+      {
+       "name": "Feel No Pain 5+*",
+       "id": "d20c-53ed-92b7-2b1d",
+       "hidden": false,
+       "targetId": "faec-8b1b-5a21-0087",
+       "type": "rule"
+      },
+      {
+       "name": "Aegis of the Emperor",
+       "id": "db1a-2a15-6b97-8b74",
+       "hidden": false,
+       "targetId": "a398-0a1d-ef92-162b",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "a5b2-a8ac-af8e-3f7f",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "e48a-2af8-9692-b3d7",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "d60f-e48a-0ea4-0546",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "set",
+       "value": 295,
+       "conditions": [
+        {
+         "childId": "model",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": true,
+         "percentValue": false,
+         "scope": "9610-b148-8433-93b8",
+         "shared": true,
+         "type": "greaterThan",
+         "value": 2
+        }
+       ]
+      },
+      {
+       "field": "89e7-53a1-6e8a-fd2a",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "increment",
+       "value": 30,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "localConditionGroups": [
+          {
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "repeats": 1,
+           "scope": "parent",
+           "type": "atLeast",
+           "value": 1,
+           "conditions": [
+            {
+             "childId": "any",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "before",
+             "value": 1
+            },
+            {
+             "childId": "9610-b148-8433-93b8",
+             "childName": "Custodian Wardens",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "error",
+       "type": "add",
+       "value": "All models must be equipped with the same weapon",
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "94b3-ef7f-f71f-c86e",
+           "childName": "Castellan Axe",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          },
+          {
+           "childId": "ab4a-1a4f-5898-70db",
+           "childName": "Guardian Spear",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "error",
+       "type": "add",
+       "value": "An Attached Unit can only take 1 Enhancement.",
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "3dd3-8e5d-36b1-b804",
+           "childName": "Celeritous Sentries",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "traverseAssociationGroup": true,
+           "type": "atLeast",
+           "value": 1
+          },
+          {
+           "childId": "b2be-907f-f3fd-a540",
+           "childName": "Auric Eagle",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "traverseAssociationGroup": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Living Fortress",
+       "id": "a696-cfc6-e27a-97ce",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "Attacks that target this unit have -1AP.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Custodian Warden",
+       "id": "4a80-c791-9d9f-30c6",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 4,
+       "type": "model",
+       "constraints": [
+        {
+         "id": "d343-aabb-ecd3-5944",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 2
+        },
+        {
+         "id": "ae76-c62d-73bf-73dc",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 3
+        }
+       ],
+       "costs": [
+        {
+         "name": "pts",
+         "typeId": "51b2-306e-1021-d207",
+         "value": 0
+        }
+       ],
+       "profiles": [
+        {
+         "name": "Custodian Warden",
+         "id": "41a1-a4d8-a138-c3b7",
+         "hidden": false,
+         "typeId": "c547-1836-d8a-ff4f",
+         "typeName": "Unit",
+         "characteristics": [
+          {
+           "name": "M",
+           "$text": "6\"",
+           "typeId": "e703-ecb6-5ce7-aec1"
+          },
+          {
+           "name": "T",
+           "$text": "6",
+           "typeId": "d29d-cf75-fc2d-34a4"
+          },
+          {
+           "name": "Sv",
+           "$text": "2+",
+           "typeId": "450-a17e-9d5e-29da"
+          },
+          {
+           "name": "W",
+           "$text": "3",
+           "typeId": "750a-a2ec-90d3-21fe"
+          },
+          {
+           "name": "LD",
+           "$text": "6+",
+           "typeId": "58d2-b879-49c7-43bc"
+          },
+          {
+           "name": "OC",
+           "$text": "2",
+           "typeId": "bef7-942a-1a23-59f8"
+          },
+          {
+           "name": "InSv",
+           "$text": "4+",
+           "typeId": "55a7-5b54-c60d-11dc"
+          },
+          {
+           "name": "Base",
+           "$text": "40mm",
+           "typeId": "nr-base-size"
+          }
+         ]
+        }
+       ],
+       "selectionEntryGroups": [
+        {
+         "name": "Unit weapons",
+         "id": "c718-d8ad-883f-8f27",
+         "hidden": false,
+         "constraints": [
+          {
+           "id": "0c50-dabe-e817-23c9-min",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "0c50-dabe-e817-23c9-max",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Guardian Spear",
+           "id": "cc71-5dfe-9f41-e702",
+           "collective": true,
+           "hidden": false,
+           "targetId": "ab4a-1a4f-5898-70db",
+           "type": "selectionEntry"
+          },
+          {
+           "name": "Castellan Axe",
+           "id": "d28f-652f-b203-3a33",
+           "hidden": false,
+           "import": true,
+           "targetId": "94b3-ef7f-f71f-c86e",
            "type": "selectionEntry"
           }
          ]
@@ -113705,6 +115224,1059 @@
      ]
     },
     {
+     "name": "Shield-Captain",
+     "id": "b61c-b815-65c0-b1cc",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "model",
+     "associations": [
+      {
+       "name": "Leading",
+       "id": "84ac-9cbb-4aa0-c57a",
+       "action": "group",
+       "childId": "unit",
+       "childName": "unit",
+       "includeChildSelections": true,
+       "label": "Leader",
+       "max": 1,
+       "min": 0,
+       "scope": "force",
+       "sortIndex": 4,
+       "conditionGroups": [
+        {
+         "type": "or",
+         "conditions": [
+          {
+           "childId": "c4f-4c5f-3507-e4bc",
+           "childName": "Custodian Guard",
+           "field": "selections",
+           "queryFromSelf": false,
+           "scope": "self",
+           "shared": true,
+           "sortIndex": 1,
+           "type": "instanceOf",
+           "value": 1
+          },
+          {
+           "childId": "5eaa-f0a-44fa-d1ae",
+           "childName": "Custodian Wardens",
+           "field": "selections",
+           "queryFromSelf": false,
+           "scope": "self",
+           "shared": true,
+           "sortIndex": 4,
+           "type": "instanceOf",
+           "value": 1
+          },
+          {
+           "childId": "48b1-935f-d394-5370",
+           "childName": "Sagittarum Custodians",
+           "field": "selections",
+           "queryFromSelf": false,
+           "scope": "self",
+           "shared": true,
+           "sortIndex": 5,
+           "type": "instanceOf",
+           "value": 1
+          },
+          {
+           "childId": "ac6c-9861-5dd8-f6f9",
+           "childName": "Custodian Guard Sodality with Adrasite Spears",
+           "field": "selections",
+           "queryFromSelf": false,
+           "scope": "self",
+           "shared": true,
+           "sortIndex": 2,
+           "type": "instanceOf",
+           "value": 1
+          },
+          {
+           "childId": "5b8c-706a-2e20-78d2",
+           "childName": "Custodian Guard Sodality with Pyrithite Spears",
+           "field": "selections",
+           "queryFromSelf": false,
+           "scope": "self",
+           "shared": true,
+           "sortIndex": 3,
+           "type": "instanceOf",
+           "value": 1
+          },
+          {
+           "childId": "ef86-875c-d111-78f6",
+           "childName": "Sentinel Guard Sodality",
+           "field": "selections",
+           "queryFromSelf": false,
+           "scope": "self",
+           "shared": true,
+           "sortIndex": 6,
+           "type": "instanceOf",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "categoryLinks": [
+      {
+       "name": "Shield-Captain",
+       "id": "992b-90f3-e218-aa9b",
+       "hidden": false,
+       "primary": false,
+       "targetId": "6bfb-3b18-fd53-9ff1"
+      },
+      {
+       "name": "Imperium",
+       "id": "dc2-5cb0-cd25-f362",
+       "hidden": false,
+       "primary": false,
+       "targetId": "aff3-d6a3-2a95-9dc"
+      },
+      {
+       "name": "Faction: Adeptus Custodes",
+       "id": "767d-4673-dc8e-90b7",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eea5-aeaf-bbf0-d5ee"
+      },
+      {
+       "name": "Character",
+       "id": "3a9c-96df-6f68-59c3",
+       "hidden": false,
+       "primary": true,
+       "targetId": "9cfd-1c32-585f-7d5c"
+      },
+      {
+       "name": "Infantry",
+       "id": "3410-c1c7-1a91-1c6c",
+       "hidden": false,
+       "primary": false,
+       "targetId": "cf47-a0d7-7207-29dc"
+      },
+      {
+       "name": "Leader",
+       "id": "5235-1008-93d2-8176",
+       "hidden": false,
+       "primary": false,
+       "targetId": "1556-9b56-fba6-4370"
+      },
+      {
+       "name": "Emissaries",
+       "id": "d617-6231-0b28-7b28",
+       "hidden": false,
+       "primary": false,
+       "targetId": "1070-413c-cf8f-338f"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "364f-6702-e79f-85c4",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "174e-b421-4990-f4d7",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 6
+      },
+      {
+       "id": "a475-eaa3-49c0-823d",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "bb38-12d8-5783-be46",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 180
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Warlord",
+       "id": "0de9-4ed5-1d01-30e4",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "0574-f558-2957-584f",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Enhancements",
+       "id": "f556-ba5a-094c-641c",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "a43b-fe98-3d93-435d",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Crusade",
+       "id": "1336-800b-47e0-8649",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "dffe-91f2-f156-0566",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deep Strike",
+       "id": "1465-a79f-d4fa-db80",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      },
+      {
+       "name": "Master of the Ka'tahs",
+       "id": "2463-1100-d024-b730",
+       "hidden": false,
+       "targetId": "e6a6-1d13-3027-3fce",
+       "type": "profile"
+      },
+      {
+       "name": "Leader",
+       "id": "3ae4-f5c7-9b91-7a4e",
+       "hidden": false,
+       "targetId": "b4dd-3e1f-41cb-218f",
+       "type": "rule"
+      },
+      {
+       "name": "Martial Ka'tah",
+       "id": "8785-0a8f-50b7-9504",
+       "hidden": false,
+       "targetId": "e348-7090-3aff-ee2c",
+       "type": "rule"
+      },
+      {
+       "name": "Aegis of the Emperor",
+       "id": "b719-ea91-98f7-3255",
+       "hidden": false,
+       "targetId": "a398-0a1d-ef92-162b",
+       "type": "rule"
+      },
+      {
+       "name": "Aquila Commander",
+       "id": "0ea1-6727-c812-fb76",
+       "hidden": false,
+       "targetId": "957d-bd08-23ed-70be",
+       "type": "rule"
+      },
+      {
+       "name": "Feel No Pain 5+*",
+       "id": "6e6d-aa69-4422-20e3",
+       "hidden": false,
+       "targetId": "faec-8b1b-5a21-0087",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "a475-eaa3-49c0-823d",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "bb38-12d8-5783-be46",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "364f-6702-e79f-85c4",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "increment",
+       "value": 20,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "localConditionGroups": [
+          {
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "repeats": 1,
+           "scope": "parent",
+           "type": "atLeast",
+           "value": 1,
+           "conditions": [
+            {
+             "childId": "any",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "before",
+             "value": 1
+            },
+            {
+             "childId": "b61c-b815-65c0-b1cc",
+             "childName": "Shield-Captain",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Shield-Captain",
+       "id": "f8f3-0f06-13d0-6eaa",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "8\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "7",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "2+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "8",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "5+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "2",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "4+",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "40mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Leader",
+       "id": "de62-c023-6540-2206",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Vengeful Surge",
+       "id": "5a38-d608-89c4-6377",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "(Once per battle, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Wargear",
+       "id": "d1cc-15d9-2b08-6dfb",
+       "collective": false,
+       "defaultSelectionEntryId": "661f-4fd-3300-5e9b",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 5,
+       "constraints": [
+        {
+         "id": "3754-b50a-84b6-89da",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 1
+        },
+        {
+         "id": "ce59-e7af-afdf-d143",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 1
+        }
+       ],
+       "entryLinks": [
+        {
+         "name": "Guardian Spear",
+         "id": "2197-b397-779f-0626",
+         "collective": false,
+         "hidden": false,
+         "sortIndex": 4,
+         "targetId": "53df-e02f-5f3e-6a1d",
+         "type": "selectionEntry"
+        },
+        {
+         "name": "Castellan Axe",
+         "id": "2a2a-3ef6-03d4-88d5",
+         "collective": false,
+         "hidden": false,
+         "sortIndex": 3,
+         "targetId": "540a-65ba-1752-f217",
+         "type": "selectionEntry"
+        }
+       ],
+       "selectionEntries": [
+        {
+         "name": "Paragon Blade & Praesidium Shield",
+         "id": "5267-88a7-c874-ba99",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "sortIndex": 2,
+         "type": "upgrade",
+         "categoryLinks": [
+          {
+           "name": "Melee Weapon",
+           "id": "12a5-800e-9e0a-f84a",
+           "hidden": false,
+           "primary": false,
+           "targetId": "ccdd-3987-11ed-90cd"
+          },
+          {
+           "name": "Ranged Weapon",
+           "id": "bd2f-044a-421f-926d",
+           "hidden": false,
+           "primary": false,
+           "targetId": "eeda-8544-a2f3-3fab"
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 25
+          },
+          {
+           "name": "Crusade Points",
+           "typeId": "b03b-c239-15a5-da55",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Battle Honours",
+           "typeId": "75bb-ded1-c86d-bdf0",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Experience",
+           "typeId": "a623-fe74-1d33-cddf",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Weapon Modifications",
+           "typeId": "716d-91b7-d55a-1022",
+           "value": 0
+          },
+          {
+           "name": "Blackstone Fragments",
+           "typeId": "ac6b-ced3-9b5e-9a6e",
+           "value": 0
+          },
+          {
+           "name": "Detachment Points",
+           "typeId": "82ae-1066-5107-6ae0",
+           "value": 0
+          },
+          {
+           "name": "Enhancements",
+           "typeId": "f759-1bc4-cb3a-f0d2",
+           "value": 0
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Praesidium Shield",
+           "id": "30f2-3709-371e-f6a3",
+           "hidden": false,
+           "targetId": "2184-10e8-fe1e-9731",
+           "type": "profile"
+          },
+          {
+           "name": "Precision",
+           "id": "7a69-5a72-0792-a43f",
+           "hidden": false,
+           "targetId": "9143-31ae-e0a6-6007",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Eternity-pattern Paragon Blade",
+           "id": "b59a-290f-02af-2e5a",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "6",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "2+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "10",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-3",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "3",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Precision",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          }
+         ],
+         "selectionEntryGroups": [
+          {
+           "name": "Weapon Upgrades",
+           "id": "26b9-2de8-1eba-4dd6",
+           "flatten": true,
+           "hidden": false,
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "934c-94de-f7cd-ba40",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            },
+            {
+             "name": "Crusade Relic Upgrades",
+             "id": "5fd8-5b26-c8be-b58c",
+             "hidden": false,
+             "import": true,
+             "targetId": "b678-4a99-210e-931f",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Pyrithite Spear & Praesidium shield",
+         "id": "661f-4fd-3300-5e9b",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "sortIndex": 1,
+         "type": "upgrade",
+         "categoryLinks": [
+          {
+           "name": "Melee Weapon",
+           "id": "48e2-ac7a-b164-aab0",
+           "hidden": false,
+           "primary": false,
+           "targetId": "ccdd-3987-11ed-90cd"
+          },
+          {
+           "name": "Ranged Weapon",
+           "id": "34bd-c821-5a11-6ab5",
+           "hidden": false,
+           "primary": false,
+           "targetId": "eeda-8544-a2f3-3fab"
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 25
+          },
+          {
+           "name": "Crusade Points",
+           "typeId": "b03b-c239-15a5-da55",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Battle Honours",
+           "typeId": "75bb-ded1-c86d-bdf0",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Experience",
+           "typeId": "a623-fe74-1d33-cddf",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Weapon Modifications",
+           "typeId": "716d-91b7-d55a-1022",
+           "value": 0
+          },
+          {
+           "name": "Blackstone Fragments",
+           "typeId": "ac6b-ced3-9b5e-9a6e",
+           "value": 0
+          },
+          {
+           "name": "Detachment Points",
+           "typeId": "82ae-1066-5107-6ae0",
+           "value": 0
+          },
+          {
+           "name": "Enhancements",
+           "typeId": "f759-1bc4-cb3a-f0d2",
+           "value": 0
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Praesidium Shield",
+           "id": "1ad6-8491-14ff-f98b",
+           "hidden": false,
+           "targetId": "2184-10e8-fe1e-9731",
+           "type": "profile"
+          },
+          {
+           "name": "Melta",
+           "id": "5b94-1bcb-e2b0-f3cf",
+           "hidden": false,
+           "targetId": "7cdb-fb99-44a9-8849",
+           "type": "rule"
+          },
+          {
+           "name": "Cleave",
+           "id": "2f56-0cb3-6a2f-d80d",
+           "hidden": false,
+           "targetId": "bf16-5d16-4725-f912",
+           "type": "rule"
+          },
+          {
+           "name": "Assault",
+           "id": "e2c1-e86a-f078-cf3e",
+           "hidden": false,
+           "targetId": "fc8a-8c24-bae9-cc1c",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Pyrithite Spear",
+           "id": "490a-487d-7889-e4c9",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "8",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "2+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "8",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-2",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "2",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Cleave 1",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          },
+          {
+           "name": "Pyrithite Spear",
+           "id": "adbb-f824-93e6-4c81",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "12\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "1",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "2+",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "10",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-3",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "D3+2",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Assault, Melta 2",
+             "typeId": "7f1b-8591-2fcf-d01c"
+            }
+           ]
+          }
+         ],
+         "selectionEntryGroups": [
+          {
+           "name": "Weapon Upgrades",
+           "id": "2702-2689-c340-2b22",
+           "flatten": true,
+           "hidden": false,
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "d2c5-c86d-eec6-3c1e",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            },
+            {
+             "name": "Crusade Relic Upgrades",
+             "id": "8896-bbba-989f-c513",
+             "hidden": false,
+             "import": true,
+             "targetId": "b678-4a99-210e-931f",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "Trajann Valoris",
      "id": "7d7c-c212-47a3-38e4",
      "collective": false,
@@ -114294,6 +116866,803 @@
          "import": true,
          "targetId": "f842-6e90-bc5a-80f1",
          "type": "selectionEntryGroup"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Vertus Praetors",
+     "id": "918b-c9ed-7af7-74df",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Fly",
+       "id": "a6eb-1ec5-16eb-7103",
+       "hidden": false,
+       "primary": false,
+       "targetId": "c619-2086-bbcf-69c9"
+      },
+      {
+       "name": "Mounted",
+       "id": "d679-12c7-77ef-1786",
+       "hidden": false,
+       "primary": true,
+       "targetId": "14a0-40c9-2748-ae6e"
+      },
+      {
+       "name": "Imperium",
+       "id": "226f-98ab-90e9-4bd2",
+       "hidden": false,
+       "primary": false,
+       "targetId": "aff3-d6a3-2a95-9dc"
+      },
+      {
+       "name": "Faction: Adeptus Custodes",
+       "id": "590d-436f-a969-4da2",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eea5-aeaf-bbf0-d5ee"
+      },
+      {
+       "name": "Vertus Praetors",
+       "id": "22db-ed2a-c437-a159",
+       "hidden": false,
+       "primary": false,
+       "targetId": "a3cb-da28-b5f9-d295"
+      },
+      {
+       "name": "Emissaries",
+       "id": "0c7c-c8ed-0e3b-5b06",
+       "hidden": false,
+       "primary": false,
+       "targetId": "1070-413c-cf8f-338f"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "5b4f-7787-5db9-f334",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "a37f-562b-6e6a-8221",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "e597-3ef0-7af5-8f50",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "495d-2b24-e389-3690",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      },
+      {
+       "id": "80c6-345c-69a3-04d9",
+       "childId": "any",
+       "field": "f759-1bc4-cb3a-f0d2",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "message": "An Attached Unit can only take 1 Enhancement.",
+       "scope": "root-entry",
+       "shared": true,
+       "traverseAssociationGroup": true,
+       "type": "max",
+       "value": 1
+      },
+      {
+       "id": "56ba-dd60-6eab-358b",
+       "childId": "1556-9b56-fba6-4370",
+       "childName": "Leader",
+       "field": "associations",
+       "includeChildForces": false,
+       "scope": "self",
+       "shared": true,
+       "traverseAssociationGroup": false,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 220
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Crusade",
+       "id": "ce3a-8174-b065-21e5",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "dffe-91f2-f156-0566",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Martial Ka'tah",
+       "id": "7d64-0475-cdc7-7ee2",
+       "hidden": false,
+       "targetId": "e348-7090-3aff-ee2c",
+       "type": "rule"
+      },
+      {
+       "name": "Aegis of the Emperor",
+       "id": "8cb0-159a-6cf6-55a4",
+       "hidden": false,
+       "targetId": "a398-0a1d-ef92-162b",
+       "type": "rule"
+      },
+      {
+       "name": "Feel No Pain 5+*",
+       "id": "62af-c14d-6321-a0c6",
+       "hidden": false,
+       "targetId": "faec-8b1b-5a21-0087",
+       "type": "rule"
+      },
+      {
+       "name": "Deep Strike",
+       "id": "11f1-6315-fc2c-d4f6",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "modifiers": [
+        {
+         "field": "51b2-306e-1021-d207",
+         "type": "set",
+         "value": 330,
+         "conditions": [
+          {
+           "childId": "model",
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "918b-c9ed-7af7-74df",
+           "shared": true,
+           "type": "atLeast",
+           "value": 3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "a37f-562b-6e6a-8221",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "e597-3ef0-7af5-8f50",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "495d-2b24-e389-3690",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "5b4f-7787-5db9-f334",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "increment",
+       "value": 20,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "localConditionGroups": [
+          {
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "repeats": 1,
+           "scope": "parent",
+           "type": "atLeast",
+           "value": 1,
+           "conditions": [
+            {
+             "childId": "any",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "before",
+             "value": 1
+            },
+            {
+             "childId": "a3cb-da28-b5f9-d295",
+             "childName": "Vertus Praetors",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "error",
+       "type": "add",
+       "value": "All models must be equipped with the same weapon",
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "58c3-4e14-bc1a-318b",
+           "childName": "Hurricane bolter",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          },
+          {
+           "childId": "1576-174e-e5d6-82ea",
+           "childName": "Salvo launcher",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Quicksilver Execution",
+       "id": "9896-b356-2ad8-2fb9",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "If this unit made a **charge move** this turn, this unit's melee attacks have [SUSTAINED HITS 1]",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "2-3 Vertus Praetors",
+       "id": "69df-7851-7194-4fc0",
+       "collective": false,
+       "defaultSelectionEntryId": "6e14-a825-faf0-b220",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "constraints": [
+        {
+         "id": "1a1e-b432-be95-44c4",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 2
+        },
+        {
+         "id": "6cac-f25c-5daa-9ed1",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 3
+        }
+       ],
+       "selectionEntries": [
+        {
+         "name": "Vertus Praetor",
+         "id": "5bd5-bca3-6228-ef17",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "model",
+         "constraints": [
+          {
+           "id": "e1ea-e87b-3059-b20b",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 3
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Vertus Praetors",
+           "id": "12c0-1695-05c0-d219",
+           "hidden": false,
+           "typeId": "c547-1836-d8a-ff4f",
+           "typeName": "Unit",
+           "characteristics": [
+            {
+             "name": "M",
+             "$text": "12\"",
+             "typeId": "e703-ecb6-5ce7-aec1"
+            },
+            {
+             "name": "T",
+             "$text": "8",
+             "typeId": "d29d-cf75-fc2d-34a4"
+            },
+            {
+             "name": "Sv",
+             "$text": "2+",
+             "typeId": "450-a17e-9d5e-29da"
+            },
+            {
+             "name": "W",
+             "$text": "7",
+             "typeId": "750a-a2ec-90d3-21fe"
+            },
+            {
+             "name": "LD",
+             "$text": "5+",
+             "typeId": "58d2-b879-49c7-43bc"
+            },
+            {
+             "name": "OC",
+             "$text": "2",
+             "typeId": "bef7-942a-1a23-59f8"
+            },
+            {
+             "name": "InSv",
+             "$text": "4+",
+             "typeId": "55a7-5b54-c60d-11dc"
+            },
+            {
+             "name": "Base",
+             "$text": "75x42mm Oval",
+             "typeId": "nr-base-size"
+            }
+           ]
+          }
+         ],
+         "selectionEntries": [
+          {
+           "name": "Interceptor lance",
+           "id": "5d80-129-8ba7-4730",
+           "collective": true,
+           "hidden": false,
+           "import": true,
+           "type": "upgrade",
+           "constraints": [
+            {
+             "id": "c463-54ed-a2b2-160d",
+             "field": "selections",
+             "scope": "parent",
+             "shared": true,
+             "type": "min",
+             "value": 1
+            },
+            {
+             "id": "f1d8-2106-bd78-b91",
+             "field": "selections",
+             "scope": "parent",
+             "shared": true,
+             "type": "max",
+             "value": 1
+            }
+           ],
+           "infoLinks": [
+            {
+             "name": "Lance",
+             "id": "b0-2fa8-16ec-f597",
+             "hidden": false,
+             "targetId": "2ebc-abdf-8129-6c57",
+             "type": "rule"
+            }
+           ],
+           "profiles": [
+            {
+             "name": "Interceptor lance",
+             "id": "e2f-fbab-14cc-dc6f",
+             "hidden": false,
+             "typeId": "8a40-4aaa-c780-9046",
+             "typeName": "Melee Weapons",
+             "characteristics": [
+              {
+               "name": "Range",
+               "$text": "Melee",
+               "typeId": "914c-b413-91e3-a132"
+              },
+              {
+               "name": "A",
+               "$text": "6",
+               "typeId": "2337-daa1-6682-b110"
+              },
+              {
+               "name": "WS",
+               "$text": "2+",
+               "typeId": "95d1-95f-45b4-11d6"
+              },
+              {
+               "name": "S",
+               "$text": "8",
+               "typeId": "ab33-d393-96ce-ccba"
+              },
+              {
+               "name": "AP",
+               "$text": "-2",
+               "typeId": "41a0-1301-112a-e2f2"
+              },
+              {
+               "name": "D",
+               "$text": "2",
+               "typeId": "3254-9fe6-d824-513e"
+              },
+              {
+               "name": "Keywords",
+               "$text": "Lance",
+               "typeId": "893f-9000-ccf7-648e"
+              }
+             ]
+            }
+           ],
+           "selectionEntryGroups": [
+            {
+             "name": "Weapon Upgrades",
+             "id": "20ff-7f0e-5779-4d10",
+             "flatten": true,
+             "hidden": false,
+             "entryLinks": [
+              {
+               "name": "Weapon Modifications",
+               "id": "f783-85c0-d475-2802",
+               "hidden": false,
+               "import": true,
+               "targetId": "f9da-852a-d7f0-92e9",
+               "type": "selectionEntryGroup"
+              },
+              {
+               "name": "Crusade Relic Upgrades",
+               "id": "8985-c79d-692f-1beb",
+               "hidden": false,
+               "import": true,
+               "targetId": "b678-4a99-210e-931f",
+               "type": "selectionEntryGroup"
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "selectionEntryGroups": [
+          {
+           "name": "Unit weapons",
+           "id": "f1f0-042e-18c0-4e39",
+           "defaultSelectionEntryId": "d5b1-b243-92cb-e4fe",
+           "hidden": false,
+           "constraints": [
+            {
+             "id": "0c0b-55c4-f6ea-7305-min",
+             "field": "selections",
+             "includeChildSelections": false,
+             "scope": "parent",
+             "shared": true,
+             "type": "min",
+             "value": 1
+            },
+            {
+             "id": "0c0b-55c4-f6ea-7305-max",
+             "field": "selections",
+             "includeChildSelections": false,
+             "scope": "parent",
+             "shared": true,
+             "type": "max",
+             "value": 1
+            }
+           ],
+           "entryLinks": [
+            {
+             "name": "Hurricane bolter",
+             "id": "1d99-4473-2f61-80e7",
+             "hidden": false,
+             "import": true,
+             "sortIndex": 2,
+             "targetId": "58c3-4e14-bc1a-318b",
+             "type": "selectionEntry"
+            },
+            {
+             "name": "Salvo launcher",
+             "id": "d5b1-b243-92cb-e4fe",
+             "hidden": false,
+             "import": true,
+             "sortIndex": 1,
+             "targetId": "1576-174e-e5d6-82ea",
+             "type": "selectionEntry"
+            }
+           ]
+          }
+         ]
         }
        ]
       }
@@ -119349,6 +122718,1357 @@
          "name": "Keywords",
          "$text": "Anti-PSYKER 4+, Assault, Blast 1, Torrent",
          "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Castellan Axe",
+     "id": "540a-65ba-1752-f217",
+     "collective": false,
+     "comment": "Shield-Captain",
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "categoryLinks": [
+      {
+       "name": "Melee Weapon",
+       "id": "a43d-7269-8fba-c6dd",
+       "hidden": false,
+       "primary": false,
+       "targetId": "ccdd-3987-11ed-90cd"
+      },
+      {
+       "name": "Ranged Weapon",
+       "id": "d906-0156-27ae-a852",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eeda-8544-a2f3-3fab"
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Assault",
+       "id": "e217-3a9c-efb2-198a",
+       "hidden": false,
+       "targetId": "fc8a-8c24-bae9-cc1c",
+       "type": "rule"
+      },
+      {
+       "name": "Rapid Fire",
+       "id": "5db6-4e1a-fa76-1ff2",
+       "hidden": false,
+       "targetId": "c5c8-8b58-b8b6-7786",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Castellan Axe",
+       "id": "c7b9-b35c-6882-d243",
+       "hidden": false,
+       "typeId": "8a40-4aaa-c780-9046",
+       "typeName": "Melee Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "Melee",
+         "typeId": "914c-b413-91e3-a132"
+        },
+        {
+         "name": "A",
+         "$text": "5",
+         "typeId": "2337-daa1-6682-b110"
+        },
+        {
+         "name": "WS",
+         "$text": "2+",
+         "typeId": "95d1-95f-45b4-11d6"
+        },
+        {
+         "name": "S",
+         "$text": "10",
+         "typeId": "ab33-d393-96ce-ccba"
+        },
+        {
+         "name": "AP",
+         "$text": "-2",
+         "typeId": "41a0-1301-112a-e2f2"
+        },
+        {
+         "name": "D",
+         "$text": "4",
+         "typeId": "3254-9fe6-d824-513e"
+        },
+        {
+         "name": "Keywords",
+         "$text": "",
+         "typeId": "893f-9000-ccf7-648e"
+        }
+       ]
+      },
+      {
+       "name": "Castellan Axe",
+       "id": "94dc-9286-27c4-3bcc",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "24\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "2",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "2+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "5",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-1",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "2",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Assault, Rapid Fire 2",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Weapon Upgrades",
+       "id": "77ea-d2b7-c53d-889a",
+       "flatten": true,
+       "hidden": false,
+       "entryLinks": [
+        {
+         "name": "Weapon Modifications",
+         "id": "cf47-e0dd-0df9-2dda",
+         "hidden": false,
+         "import": true,
+         "targetId": "f9da-852a-d7f0-92e9",
+         "type": "selectionEntryGroup"
+        },
+        {
+         "name": "Crusade Relic Upgrades",
+         "id": "bfe7-064c-1df9-de62",
+         "hidden": false,
+         "import": true,
+         "targetId": "b678-4a99-210e-931f",
+         "type": "selectionEntryGroup"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Guardian Spear",
+     "id": "53df-e02f-5f3e-6a1d",
+     "collective": false,
+     "comment": "Shield-Captain",
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "categoryLinks": [
+      {
+       "name": "Melee Weapon",
+       "id": "5529-7b90-b7fd-6bcb",
+       "hidden": false,
+       "primary": false,
+       "targetId": "ccdd-3987-11ed-90cd"
+      },
+      {
+       "name": "Ranged Weapon",
+       "id": "b8c0-9b21-22f1-9ffd",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eeda-8544-a2f3-3fab"
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Assault",
+       "id": "2af2-4d6d-c1b4-468f",
+       "hidden": false,
+       "targetId": "fc8a-8c24-bae9-cc1c",
+       "type": "rule"
+      },
+      {
+       "name": "Cleave",
+       "id": "5893-7ee2-7bca-bc9a",
+       "hidden": false,
+       "targetId": "bf16-5d16-4725-f912",
+       "type": "rule"
+      },
+      {
+       "name": "Rapid Fire",
+       "id": "b9e3-2556-1240-62e8",
+       "hidden": false,
+       "targetId": "c5c8-8b58-b8b6-7786",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Guardian Spear",
+       "id": "151d-a8bc-c7e8-eb36",
+       "hidden": false,
+       "typeId": "8a40-4aaa-c780-9046",
+       "typeName": "Melee Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "Melee",
+         "typeId": "914c-b413-91e3-a132"
+        },
+        {
+         "name": "A",
+         "$text": "8",
+         "typeId": "2337-daa1-6682-b110"
+        },
+        {
+         "name": "WS",
+         "$text": "2+",
+         "typeId": "95d1-95f-45b4-11d6"
+        },
+        {
+         "name": "S",
+         "$text": "8",
+         "typeId": "ab33-d393-96ce-ccba"
+        },
+        {
+         "name": "AP",
+         "$text": "-2",
+         "typeId": "41a0-1301-112a-e2f2"
+        },
+        {
+         "name": "D",
+         "$text": "2",
+         "typeId": "3254-9fe6-d824-513e"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Cleave 1",
+         "typeId": "893f-9000-ccf7-648e"
+        }
+       ]
+      },
+      {
+       "name": "Guardian Spear",
+       "id": "e75a-06ce-2b28-2462",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "24\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "2",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "2+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "5",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-1",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "2",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Assault, Rapid Fire 2",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Weapon Upgrades",
+       "id": "e071-e745-ad3a-7570",
+       "flatten": true,
+       "hidden": false,
+       "entryLinks": [
+        {
+         "name": "Weapon Modifications",
+         "id": "c3a4-0f2c-b927-ccdc",
+         "hidden": false,
+         "import": true,
+         "targetId": "f9da-852a-d7f0-92e9",
+         "type": "selectionEntryGroup"
+        },
+        {
+         "name": "Crusade Relic Upgrades",
+         "id": "4ffe-0474-1543-921c",
+         "hidden": false,
+         "import": true,
+         "targetId": "b678-4a99-210e-931f",
+         "type": "selectionEntryGroup"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Salvo launcher",
+     "id": "1576-174e-e5d6-82ea",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "categoryLinks": [
+      {
+       "name": "Ranged Weapon",
+       "id": "b839-e32c-a362-85a7",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eeda-8544-a2f3-3fab"
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Salvo launcher",
+       "id": "aad1-aeb6-5e6a-e90f",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "24\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "2",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "2+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "10",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-2",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "D3+2",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "\n",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Weapon Upgrades",
+       "id": "bcf9-5fdd-8ae4-6032",
+       "flatten": true,
+       "hidden": false,
+       "entryLinks": [
+        {
+         "name": "Weapon Modifications",
+         "id": "3d4a-e1cf-e792-007f",
+         "hidden": false,
+         "import": true,
+         "targetId": "f9da-852a-d7f0-92e9",
+         "type": "selectionEntryGroup"
+        },
+        {
+         "name": "Crusade Relic Upgrades",
+         "id": "a0c7-d629-857f-2ee3",
+         "hidden": false,
+         "import": true,
+         "targetId": "b678-4a99-210e-931f",
+         "type": "selectionEntryGroup"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Hurricane bolter",
+     "id": "58c3-4e14-bc1a-318b",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "categoryLinks": [
+      {
+       "name": "Ranged Weapon",
+       "id": "b504-caba-3e14-4d2b",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eeda-8544-a2f3-3fab"
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Rapid Fire",
+       "id": "fcb1-1cca-f94-e465",
+       "hidden": false,
+       "targetId": "c5c8-8b58-b8b6-7786",
+       "type": "rule"
+      },
+      {
+       "name": "Twin-linked",
+       "id": "c4b0-f816-9aa-4520",
+       "hidden": false,
+       "targetId": "cf93-ad4d-2f08-a79d",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Hurricane bolter",
+       "id": "b286-b80e-6daf-d1ae",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "18\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "3",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "2+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "5",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-1",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "2",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Rapid Fire 3, Twin-linked",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Weapon Upgrades",
+       "id": "9c3a-b7e2-a186-ce16",
+       "flatten": true,
+       "hidden": false,
+       "entryLinks": [
+        {
+         "name": "Weapon Modifications",
+         "id": "13af-1a7c-4a69-25a9",
+         "hidden": false,
+         "import": true,
+         "targetId": "f9da-852a-d7f0-92e9",
+         "type": "selectionEntryGroup"
+        },
+        {
+         "name": "Crusade Relic Upgrades",
+         "id": "1c7f-eb05-c8c6-f971",
+         "hidden": false,
+         "import": true,
+         "targetId": "b678-4a99-210e-931f",
+         "type": "selectionEntryGroup"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Sentinel Guard Sodality",
+     "id": "df80-bbdc-bd0a-3428",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Infantry",
+       "id": "fcc1-b575-4cd1-125e",
+       "hidden": false,
+       "primary": false,
+       "targetId": "cf47-a0d7-7207-29dc"
+      },
+      {
+       "name": "Battleline",
+       "id": "51e2-048a-55e1-ba78",
+       "hidden": false,
+       "primary": true,
+       "targetId": "e338-111e-d0c6-b687"
+      },
+      {
+       "name": "Imperium",
+       "id": "d793-69e6-b28c-4aa0",
+       "hidden": false,
+       "primary": false,
+       "targetId": "aff3-d6a3-2a95-9dc"
+      },
+      {
+       "name": "Faction: Adeptus Custodes",
+       "id": "96b4-7c82-2dab-2c5a",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eea5-aeaf-bbf0-d5ee"
+      },
+      {
+       "name": "Trusted Sentinel",
+       "id": "46bd-c9ed-b6e1-4826",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9f85-13d9-aec7-f57b"
+      },
+      {
+       "name": "Sentinel Guard Sodality",
+       "id": "a135-5c27-fc2c-da8f",
+       "hidden": false,
+       "primary": false,
+       "targetId": "ef86-875c-d111-78f6"
+      },
+      {
+       "name": "Emissaries",
+       "id": "a780-37a3-2fb8-cd61",
+       "hidden": false,
+       "primary": false,
+       "targetId": "1070-413c-cf8f-338f"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "aff5-677d-641d-1690",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 6
+      },
+      {
+       "id": "1b5f-ec58-ab69-37ad",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "e93a-3d0f-769e-700b",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "7af5-dc98-9803-c6a3",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      },
+      {
+       "id": "08e5-eefe-1c6f-ef2d",
+       "childId": "any",
+       "field": "f759-1bc4-cb3a-f0d2",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "message": "An Attached Unit can only take 1 Enhancement.",
+       "scope": "root-entry",
+       "shared": true,
+       "traverseAssociationGroup": true,
+       "type": "max",
+       "value": 1
+      },
+      {
+       "id": "1927-64b0-fc7b-d574",
+       "childId": "1556-9b56-fba6-4370",
+       "childName": "Leader",
+       "field": "associations",
+       "includeChildForces": false,
+       "scope": "self",
+       "shared": true,
+       "traverseAssociationGroup": false,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 240
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Crusade",
+       "id": "388f-12ec-a0ec-ad00",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "dffe-91f2-f156-0566",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Vexilla",
+       "id": "3ca9-a180-f450-6a4b",
+       "hidden": false,
+       "sortIndex": 3,
+       "targetId": "59ef-1bf3-f681-c8ae",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Enhancements",
+       "id": "0b56-4001-62d3-daac",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "a43b-fe98-3d93-435d",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deep Strike",
+       "id": "774f-3caf-41e3-6e61",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      },
+      {
+       "name": "Martial Ka'tah",
+       "id": "2ba3-34e5-a604-79aa",
+       "hidden": false,
+       "targetId": "e348-7090-3aff-ee2c",
+       "type": "rule"
+      },
+      {
+       "name": "Aegis of the Emperor",
+       "id": "e686-4530-4a07-191f",
+       "hidden": false,
+       "targetId": "a398-0a1d-ef92-162b",
+       "type": "rule"
+      },
+      {
+       "name": "Feel No Pain 5+*",
+       "id": "da91-4a1d-7a45-f056",
+       "hidden": false,
+       "targetId": "faec-8b1b-5a21-0087",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "1b5f-ec58-ab69-37ad",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "e93a-3d0f-769e-700b",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "7af5-dc98-9803-c6a3",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "aff5-677d-641d-1690",
+       "type": "set",
+       "value": 4,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "increment",
+       "value": 30,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "localConditionGroups": [
+          {
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "repeats": 1,
+           "scope": "parent",
+           "type": "atLeast",
+           "value": 3,
+           "conditions": [
+            {
+             "childId": "any",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "before",
+             "value": 1
+            },
+            {
+             "childId": "df80-bbdc-bd0a-3428",
+             "childName": "Custodian Guard",
+             "field": "selections",
+             "scope": "self",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "error",
+       "type": "add",
+       "value": "An Attached Unit can only take 1 Enhancement.",
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "3dd3-8e5d-36b1-b804",
+           "childName": "Celeritous Sentries",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "traverseAssociationGroup": true,
+           "type": "atLeast",
+           "value": 1
+          },
+          {
+           "childId": "b2be-907f-f3fd-a540",
+           "childName": "Auric Eagle",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "scope": "unit-self",
+           "shared": true,
+           "traverseAssociationGroup": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Stand Vigil",
+       "id": "0b0e-07cd-2469-831b",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply:\n- This unit is within range of an objective.\n- The target of those attacks is within range of an objective.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Sentinel Guard",
+       "id": "0697-d230-d5e6-675c",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 4,
+       "type": "model",
+       "constraints": [
+        {
+         "id": "0358-5b1a-72bd-faf2-min",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 3
+        },
+        {
+         "id": "0358-5b1a-72bd-faf2-max",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 3
+        }
+       ],
+       "costs": [
+        {
+         "name": "pts",
+         "typeId": "51b2-306e-1021-d207",
+         "value": 0
+        }
+       ],
+       "profiles": [
+        {
+         "name": "Sentinel Guard",
+         "id": "aea1-fdc6-3c87-38ca",
+         "hidden": false,
+         "typeId": "c547-1836-d8a-ff4f",
+         "typeName": "Unit",
+         "characteristics": [
+          {
+           "name": "M",
+           "$text": "8\"",
+           "typeId": "e703-ecb6-5ce7-aec1"
+          },
+          {
+           "name": "T",
+           "$text": "7",
+           "typeId": "d29d-cf75-fc2d-34a4"
+          },
+          {
+           "name": "Sv",
+           "$text": "2+",
+           "typeId": "450-a17e-9d5e-29da"
+          },
+          {
+           "name": "W",
+           "$text": "5",
+           "typeId": "750a-a2ec-90d3-21fe"
+          },
+          {
+           "name": "LD",
+           "$text": "5+",
+           "typeId": "58d2-b879-49c7-43bc"
+          },
+          {
+           "name": "OC",
+           "$text": "2",
+           "typeId": "bef7-942a-1a23-59f8"
+          },
+          {
+           "name": "InSv",
+           "$text": "4+",
+           "typeId": "55a7-5b54-c60d-11dc"
+          },
+          {
+           "name": "Base",
+           "$text": "40mm",
+           "typeId": "nr-base-size"
+          }
+         ]
+        }
+       ],
+       "selectionEntries": [
+        {
+         "name": "Sentinel blade",
+         "id": "beb2-89f6-847c-52bf",
+         "collective": true,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "30e9-a581-c36d-3159",
+           "field": "selections",
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "820e-438f-f3ec-23d1",
+           "field": "selections",
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "faf8-97e6-7a56-76a8",
+           "flatten": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Assault",
+           "id": "aa30-eadf-b96d-8c8e",
+           "hidden": false,
+           "targetId": "fc8a-8c24-bae9-cc1c",
+           "type": "rule"
+          },
+          {
+           "name": "Close-quarters",
+           "id": "8f8e-88b8-7cf1-6755",
+           "hidden": false,
+           "targetId": "5238-5ad4-52f7-6eb4",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Sentinel Blade",
+           "id": "86f5-61c9-40ff-d0ca",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "5",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "2+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "6",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-2",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "2",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          },
+          {
+           "name": "Sentinel Blade",
+           "id": "32b4-0cc7-4dd6-36c5",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "12\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "4",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "2+",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "5",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-1",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "2",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Assault, Close-quarters",
+             "typeId": "7f1b-8591-2fcf-d01c"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Praesidium Shield",
+         "id": "dcfe-758c-4a16-1c85",
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "f3a1-8bd8-b739-104d-min",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "f3a1-8bd8-b739-104d-max",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Praesidium Shield",
+           "id": "1379-e3ee-3ca1-af23",
+           "hidden": false,
+           "typeId": "9cc3-6d83-4dd3-9b64",
+           "typeName": "Abilities",
+           "characteristics": [
+            {
+             "name": "Description",
+             "$text": "Attacks that target this unit with a S greater than this unit's T have -1 to **wound rolls**.",
+             "typeId": "9b8f-694b-e5e-b573"
+            }
+           ]
+          }
+         ]
         }
        ]
       }
@@ -124545,6 +129265,20 @@
    ],
    "sharedProfiles": [
     {
+     "name": "Praesidium Shield",
+     "id": "2184-10e8-fe1e-9731",
+     "hidden": false,
+     "typeId": "9cc3-6d83-4dd3-9b64",
+     "typeName": "Abilities",
+     "characteristics": [
+      {
+       "name": "Description",
+       "$text": "Attacks allocated to this model have -1 **D**.",
+       "typeId": "9b8f-694b-e5e-b573"
+      }
+     ]
+    },
+    {
      "name": "Creeping Dread (Aura)",
      "id": "6e51-21f7-1753-cc65",
      "comment": "Unit",
@@ -124575,6 +129309,20 @@
          "value": 1
         }
        ]
+      }
+     ]
+    },
+    {
+     "name": "Master of the Ka'tahs",
+     "id": "e6a6-1d13-3027-3fce",
+     "hidden": false,
+     "typeId": "9cc3-6d83-4dd3-9b64",
+     "typeName": "Abilities",
+     "characteristics": [
+      {
+       "name": "Description",
+       "$text": "(Once per battle round, per unit)\nIf this unit is not **readied**, you can use this ability. If you do, this unit is **readied**.",
+       "typeId": "9b8f-694b-e5e-b573"
       }
      ]
     },
@@ -124649,13 +129397,33 @@
      "hidden": false
     },
     {
+     "name": "Custodian Guard Sodality",
+     "id": "c4f-4c5f-3507-e4bc",
+     "hidden": false
+    },
+    {
+     "name": "Custodian Wardens",
+     "id": "5eaa-f0a-44fa-d1ae",
+     "hidden": false
+    },
+    {
      "name": "Prosecutor Squad",
      "id": "2b2e-7f16-71e7-7241",
      "hidden": false
     },
     {
+     "name": "Shield-Captain",
+     "id": "6bfb-3b18-fd53-9ff1",
+     "hidden": false
+    },
+    {
      "name": "Trajann Valoris",
      "id": "ddeb-4b17-98d-5d25",
+     "hidden": false
+    },
+    {
+     "name": "Vertus Praetors",
+     "id": "a3cb-da28-b5f9-d295",
      "hidden": false
     },
     {
@@ -124681,6 +129449,16 @@
     {
      "name": "Telemon Heavy Dreadnought",
      "id": "1667-41fe-52be-6171",
+     "hidden": false
+    },
+    {
+     "name": "Trusted Sentinel",
+     "id": "9f85-13d9-aec7-f57b",
+     "hidden": false
+    },
+    {
+     "name": "Sentinel Guard Sodality",
+     "id": "ef86-875c-d111-78f6",
      "hidden": false
     },
     {

@@ -707,9 +707,12 @@ function buildUnit(army, u, um, cat, force, issues) {
       }
     }
     if (!msel) { fail('models', u.models[i], '', `no BSData model entry "${want}" in ${roots.map((r) => r.node.name).join(' / ')}`); return; }
-    const items = [...(gear[i] || [])]; if (extra) items.push(extra);
+    const items = [...(gear[i] || [])]; const nGear = items.length;
+    // the models line's wargear ("Praesidium Shield, Vexilla"): one item, or, when BSData offers no item of that whole name, each
+    // item of the list
+    if (extra) items.push(...(extra.includes(',') && !gearCandidates(msel.node, extra).length && !(unitRoot && gearCandidates(unitRoot.node, extra).length) ? extra.split(/\s*,\s*/) : [extra]));
     // wargear of the model first; what is not there may be a unit-level option (hellfyre missile rack, icon)
-    const own = items.map((g) => ({ g, name: ((um.gear || {})[g]) || g }));
+    const own = items.map((g, k) => ({ g, name: ((um.gear || {})[g]) || g, line: k >= nGear }));
     for (const it of own) { it.cands = gearCandidates(msel.node, it.name); it.parent = msel; it.cnt = msel.count; }
     if (unitRoot) for (const it of own) if (!it.cands.length) { it.cands = gearCandidates(unitRoot.node, it.name); it.parent = unitRoot; it.cnt = ln.count; }
     // BSData gives the Two-Busta model its launcha as one selection of 2 (min = max = 2);
@@ -732,6 +735,9 @@ function buildUnit(army, u, um, cat, force, issues) {
     const times = new Map();
     own.forEach((it, j) => {
       if (picks[j] || !it.cands.length) return;
+      // the models line names the bundle whose weapon the gear names (the Shield-Captain's "Paragon Blade & Praesidium Shield",
+      // which holds its Eternity-pattern Paragon Blade): the place the weapon took is that bundle's one selection
+      if (it.line && own.some((x, i) => i !== j && picks[i] && picks[i] !== 'same' && x.parent === it.parent && it.cands.some((q) => pathKey(q) === pathKey(picks[i])))) { picks[j] = 'same'; return; }
       const k = own.findIndex((x, i) => i < j && picks[i] && x.name === it.name && x.parent === it.parent);
       if (k < 0) return;
       const n = (times.get(k) || 1) + 1, leaf = picks[k][picks[k].length - 1];
