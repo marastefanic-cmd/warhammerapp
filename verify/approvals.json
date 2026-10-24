@@ -1877,6 +1877,12 @@
   "at": "2026-10-16",
   "why": "\"TARGET: One THOUSAND SONS PSYKER unit ... not been selected to shoot\"."
  },
+ "2535bd6e7d6dcdc6": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The area is re-evaluated \"at the start of any phase\", and Manifestation and Terror apply to battle-shock rolls and tests whenever they happen, so all five phases is right. The added line is a word-for-word quote of the Faction Pack 1.2 FAQ (pack text: 'Q: Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? A: Yes, it is considered to have made a successful battle-shock roll.'). texts.js checks it as packfaq: a mutated question or answer fails. It is an italic note line, so derive.js ignores it for timing."
+ },
  "25625aa24f7450c2": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -3508,6 +3514,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets”. Matches GW word for word; 1CP (Battle Tactic)."
+ },
+ "445f3e559354fb4e": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "rulesOf, detRows and onceRules now go through detRules(d) (rule, then moreRules), each row with src d.name. The Detachments row still links the detachment name to its first rule. The rendered Overview lists Murdercall then Blood Tainted ('Blood Legion · Any phase') after the army rules. Every other list's Overview is unchanged (snapshots identical apart from the list picker showing the new lists)."
  },
  "4472ae2c5333a268": {
   "verdict": "ok",
@@ -5657,6 +5669,12 @@
   "at": "2026-10-21",
   "why": "Tested with gcRound in node. A side that goes second sees its round-N command pick in round N+1’s first turn, marked as picked in round N, and from its own turn of N+1 the new round’s slot. A side that goes first always sees the current round. This matches “until the start of your next Command phase”. Battle Protocols with no pick shows Aegis Protocol (from the start of the battle), per “At the start of the battle, … that unit enters Aegis Protocols”, and after a pick the last one made."
  },
+ "714d532bff0d10b0": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "\"At the end of each phase …\" is every phase of both players' turns, so all five phases / either. The new derive.js any-phase reading gives the same."
+ },
  "7173745124f5cf5b": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -6022,6 +6040,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
+ },
+ "799223ddd1aedeaf": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "\"a LEGIONES DAEMONICA KHORNE unit from your army\" → all [Faction: Legiones Daemonica, Khorne]. This is the same convention as Murdercall's needs, and its Applies to list is the list's Khorne daemons."
  },
  "79a78a7f6d2e1dcc": {
   "verdict": "ok",
@@ -7511,6 +7535,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
  },
+ "97cd1b8841a1503a": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "\"At the start of any phase\" and the battle-shock effects apply in both players' turns: either. The FAQ line does not change this."
+ },
  "980ff948d3a100d1": {
   "verdict": "ok",
   "by": "review:gists",
@@ -8710,6 +8740,12 @@
   "by": "review:oioioi (its fix)",
   "at": "2026-10-16",
   "why": "Warpflamer [IGNORES COVER, TORRENT] and warpflame pistol [IGNORES COVER, PISTOL, TORRENT] have it natively (BSData/datasheet); only Malefic Curse and the soulreaper cannon get it from \"Ranged weapons ... (excluding CHARACTERS) have the [IGNORES COVER] ability\". As written, losing the Icon bearer would wrongly strip it from the flamers."
+ },
+ "aeaac06c75e1870c": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "Your unit can destroy an enemy unit in either player's turn (fights and Overwatch in the opponent's turn), and the control check is \"at the end of a phase\": either."
  },
  "aee2ee09c2b84801": {
   "verdict": "ok",
@@ -11399,6 +11435,12 @@
   "at": "2026-10-16",
   "why": "\"In the Fight phase, when this model is destroyed…\": the Fight phase in either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "e69bd0af81023451": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The text matches GW's Faction Pack (Chaos Daemons 1.2, Blood Legion page, after MURDERCALL) and Wahapedia word for word. \"At the end of a phase in which … destroyed an enemy unit\" can trigger at the end of any phase, because units are destroyed in every phase (Daemonic Terror mortal wounds in Command, Desperate Escape in Movement, shooting, fighting). All five phases is right."
+ },
  "e6d64d1d268860ef": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -11915,6 +11957,12 @@
   "at": "2026-10-16",
   "why": "Only army rule with needs is Bondsman (any:[Armiger]); purge-freeblade has no ARMIGER, and the rule (\"select one friendly ARMIGER model within 12\"\") then does nothing."
  },
+ "f18c7c9908ae5730": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The text opens \"Once per battle, at the start of any phase, this model can use this ability\". The tag 'Once per battle' is exactly what it says, and other lists tag their untagged once-per-battle abilities the same way (Chainbreaker, Euphoric Strikes, Possessed Lord, Resilient Organism). Its ph (all five) / either also match \"at the start of any phase\"."
+ },
  "f1a2a571f32f233a": {
   "verdict": "ok",
   "by": "review:oioioi (its fix)",
@@ -12280,6 +12328,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR Categories: \"Explosives*, Meganobz*, *from combined unit\"; the only other unit is the led Meganobz (Wahapedia Meganobz keywords \"INFANTRY; EXPLOSIVES; MEGA ARMOUR\"; Nazdreg has no EXPLOSIVES)."
+ },
+ "fafd5a91fc06a885": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The only change is the guard loop. A unit's own guard is now skipped unless the guard has selfWhen or selfAlways (before, it was always skipped, src !== u), and the line uses selfWhen on its own sheet. Only Prince of Darkness has either key (the guard list in data.js: Shroudpsalm, Omnissiah's Blessing, Necromechanic, Emanatus Forcefield, Daughters of the Abyss have neither), so every other list behaves exactly as before. The rendered Daemon Prince sheet shows 'Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)', and the other units show 'Within 6\" of the Daemon Prince of Chaos: …'. Dedupe still compares the full line. No other list's snapshot changed."
  },
  "fafffd8bb3be1965": {
   "verdict": "ok",
