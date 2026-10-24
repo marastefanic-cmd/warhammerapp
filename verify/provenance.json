@@ -62,6 +62,12 @@
    "sha256": "1adb1ccfde5c11b2e521a6cbe740095ecf3340954c8b1fbfd19f09876afa2357"
   },
   {
+   "id": "pack:ultramarines",
+   "label": "GW Printed Product Updates Space Marines",
+   "file": "verify/.cache/gw/eng_14-10_wh40k_printed_product_updates_space_marines_updates-91hillwcff-wzs8qnozam.pdf",
+   "sha256": "98c2b114e4e4b33ea385c7115bb9acba83c32ae4e17f753a3d73ef20c7d45d1f"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -116,6 +122,12 @@
    "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
   },
   {
+   "id": "waha:ultramarines",
+   "label": "Wahapedia ultramarines (text)",
+   "file": "verify/.cache/waha/ultramarines.txt",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -168,6 +180,12 @@
    "label": "Wahapedia adeptus-custodes",
    "file": "verify/.cache/waha/adeptus-custodes.html",
    "sha256": "87fc3c5c0b21e5246f0df8f0c20825ee2ae071661edf1b69b7e7cff437697fef"
+  },
+  {
+   "id": "wahahtml:ultramarines",
+   "label": "Wahapedia ultramarines",
+   "file": "verify/.cache/waha/ultramarines.html",
+   "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
   },
   {
    "id": "wahahtml:core",
@@ -6701,6 +6719,328 @@
    "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
   },
   {
+   "item": "ultramarines / detachment:assault-brethren",
+   "field": "name",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/rule",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/enhancement:Imperium’s Sword",
+   "field": "pts",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/enhancement:Imperium’s Sword",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/enhancement:Furious Assault",
+   "field": "pts",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/enhancement:Furious Assault",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:armour-of-contempt",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (ARMOUR OF CONTEMPT)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:armour-of-contempt",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (ARMOUR OF CONTEMPT)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:armour-of-contempt",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (ARMOUR OF CONTEMPT)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:gene-wrought-might",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (GENE-WROUGHT MIGHT)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:gene-wrought-might",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (GENE-WROUGHT MIGHT)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:gene-wrought-might",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (GENE-WROUGHT MIGHT)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:duty-in-death",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (DUTY IN DEATH)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:duty-in-death",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (DUTY IN DEATH)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:assault-brethren/stratagem:duty-in-death",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Assault Brethren 1DP (DUTY IN DEATH)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support",
+   "field": "name",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/rule",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/enhancement:Beacon Angelis",
+   "field": "pts",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/enhancement:Beacon Angelis",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:kraken-rounds",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (KRAKEN ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:kraken-rounds",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (KRAKEN ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:kraken-rounds",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (KRAKEN ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:dragonfire-rounds",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (DRAGONFIRE ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:dragonfire-rounds",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (DRAGONFIRE ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:dragonfire-rounds",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (DRAGONFIRE ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:hellfire-rounds",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (HELLFIRE ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:hellfire-rounds",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (HELLFIRE ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:hellfire-rounds",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (HELLFIRE ROUNDS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:blackstar-extraction",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (BLACKSTAR EXTRACTION)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:blackstar-extraction",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (BLACKSTAR EXTRACTION)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:deathwatch-support/stratagem:blackstar-extraction",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Deathwatch Support 1DP (BLACKSTAR EXTRACTION)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force",
+   "field": "name",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/rule",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/enhancement:Champion of the First Company",
+   "field": "pts",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/enhancement:Champion of the First Company",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/enhancement:Corporeum Reliquary",
+   "field": "pts",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/enhancement:Corporeum Reliquary",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:tactical-dreadnought-fortitude",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (TACTICAL DREADNOUGHT FORTITUDE)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:tactical-dreadnought-fortitude",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (TACTICAL DREADNOUGHT FORTITUDE)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:tactical-dreadnought-fortitude",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (TACTICAL DREADNOUGHT FORTITUDE)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:merciless-veterans",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (MERCILESS VETERANS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:merciless-veterans",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (MERCILESS VETERANS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:merciless-veterans",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (MERCILESS VETERANS)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:gunship-extraction",
+   "field": "when",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (GUNSHIP EXTRACTION)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:gunship-extraction",
+   "field": "target",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (GUNSHIP EXTRACTION)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / detachment:terminator-storm-force/stratagem:gunship-extraction",
+   "field": "effect",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Terminator Storm Force 1DP (GUNSHIP EXTRACTION)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -7142,6 +7482,41 @@
    "sha256": "bdebc23ba5eba1cde44a7cb90fe1d909ef7089fc9d1cbf98d284f288ce7399c3"
   },
   {
+   "item": "ultramarines / armyRule:Combat Doctrines",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Army Rules (Combat Doctrines)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / armyRule:Transhuman Strategist",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Army Rules (Transhuman Strategist)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / armyRule:Librarius",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Army Rules (Librarius)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / armyRule:Space Marine Chapters",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Army Rules (Space Marine Chapters)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
+   "item": "ultramarines / armyRule:Special Move Types",
+   "field": "text",
+   "doc": "waha:ultramarines",
+   "where": "Wahapedia ultramarines § Army Rules (Special Move Types)",
+   "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -7468,6 +7843,13 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Augury Uplink (Might of the Moritoi) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nerf-when / marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad / ability:Furious Assault",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Furious Assault (Assault Brethren) (whose source is recorded under that item)",
    "sha256": null
   },
   {
@@ -8193,6 +8575,14 @@
   },
   {
    "item": "purge-goes-the-foe / thulia-ghuld / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "nerf-when / roboute-guilliman / ability:Supreme Commander",
    "field": "note",
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
