@@ -6,6 +6,7 @@ Ritual of Regeneration · Warpmeld Pact
 Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
+Phase checklist
 Bases & proxies
 66
 Units
@@ -22,6 +23,91 @@ Rules
 Damage calculator
 
 New Recruit, exported 23 Oct 2026
+
+######## checklist · MUCHO MUTANTES Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Unearthly Power · Magnus the Red
+Command · Your turn
+nothing
+
+Nothing in this list.
+
+Command · Their turn
+nothing
+
+Nothing in this list.
+
+Movement · Your turn
+1 active
+
+ACTIVE NOW
+
+Time Flux (Unearthly Power) · Magnus the Red
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+1 to do · 4 active
+
+TO DO NOW
+
+Cabal of Sorcerers · Thousand Sons army rule
+
+ACTIVE NOW
+
+Destiny’s Ruin · option of Cabal of Sorcerers
+Temporal Surge · option of Cabal of Sorcerers
+Doombolt · option of Cabal of Sorcerers
+Twist of Fate · option of Cabal of Sorcerers
+Shooting · Their turn
+1 to do · 1 active
+
+TO DO NOW
+
+Treason of Tzeentch (Unearthly Power) · Magnus the Red
+
+ACTIVE NOW
+
+Impossible Form (Unearthly Power) · Magnus the Red
+Charge · Your turn
+1 active
+
+ACTIVE NOW
+
+Temporal Surge · option of Cabal of Sorcerers
+Charge · Their turn
+nothing
+
+Nothing in this list.
+
+Fight · Your turn
+1 active
+
+ACTIVE NOW
+
+Impossible Form (Unearthly Power) · Magnus the Red
+Fight · Their turn
+1 active
+
+ACTIVE NOW
+
+Impossible Form (Unearthly Power) · Magnus the Red
+End of your opponent’s turn
+1 to do
+
+TO DO NOW
+
+Ambushing Hunters · Tzaangors
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · MUCHO MUTANTES Overview
 YOUR LIST
@@ -3509,6 +3595,17 @@ UNITDaemon Prince of Tzeentch with wings
 
 Ask about this ability
 
+######## popup ability:mucho-mutantes|Ambushing Hunters|At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into **Strategic Reserves**. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · END OF YOUR OPPONENT’S TURN
+
+Ambushing Hunters
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+UNITTzaangors
+
+Ask about this ability
+
 ######## popup ability:mucho-mutantes|Bestial Prophet|While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**. · MUCHO MUTANTES Mucho Mutantes
 ABILITY
 
@@ -3594,6 +3691,17 @@ Scryer of Fates
 If your army includes this model, after both players have deployed their armies, you can select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.
 
 UNITAhriman + Tzaangor Enlightened with Fatecaster greatbows
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Time Flux|While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · AURA, PSYCHIC · MOVEMENT · YOUR TURN
+
+Time Flux
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+UNITMagnus the Red
 
 Ask about this ability
 

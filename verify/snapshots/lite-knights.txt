@@ -6,6 +6,7 @@ Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
 Dispositions: Priority Assets · Take and Hold (chosen) · Reconnaissance
 
 Overview
+Phase checklist
 Bases & proxies
 25
 Units
@@ -22,6 +23,101 @@ Rules
 Damage calculator
 
 New Recruit, exported 23 Oct 2026
+
+######## checklist · LITE KNIGHTS Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Aquila Commander · Adeptus Custodes army rule
+Command · Your turn
+2 to do · 1 once per battle
+
+TO DO NOW
+
+Martial Ka’tah · Adeptus Custodes army rule
+Conservai · option of Martial Ka’tah
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Movement · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Movement · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Shooting · Your turn
+1 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+Purity of Execution · Prosecutor Squad
+
+ACTIVE NOW
+
+Conservai · option of Martial Ka’tah
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Shooting · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Charge · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Charge · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Fight · Your turn
+2 to do · 1 once per battle
+
+TO DO NOW
+
+Dacatarai · option of Martial Ka’tah
+Kaptaris · option of Martial Ka’tah
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+Fight · Their turn
+2 to do · 1 once per battle
+
+TO DO NOW
+
+Dacatarai · option of Martial Ka’tah
+Kaptaris · option of Martial Ka’tah
+
+ONCE PER BATTLE
+
+Moment Shackle · Trajann Valoris per army
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · LITE KNIGHTS Overview
 YOUR LIST
@@ -3304,6 +3400,20 @@ UNITTrajann Valoris + Allarus Custodians
 
 Ask about this ability
 
+######## popup ability:lite-knights|Purity of Execution|In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**:
+- While a unit is **detected**, that unit has +3" **detection range**. · LITE KNIGHTS Lite Knights
+ABILITY · SHOOTING · YOUR TURN
+
+Purity of Execution
+
+In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That unit is detected:
+
+While a unit is detected, that unit has +3" detection range.
+
+UNITProsecutor Squad
+
+Ask about this ability
+
 ######## popup ability:lite-knights|Slayer of Tyrants|This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**. · LITE KNIGHTS Lite Knights
 ABILITY
 
@@ -3785,6 +3895,89 @@ IN THIS ARMYTrajann Valoris, Caladius Annihilator Grav-tank, Contemptor-Achillus
 Ask about this rule
 
 ######## popup rule:Martial Ka'tah · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Martial Ka’tah
+
+At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.
+
+Each ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.
+
+We recommend placing a token next to each readied unit, removing it when that unit is no longer readied.
+
+Favoured Ka’tah
+
+All detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.
+
+Example: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2" M in addition to the normal effect of Calistus.
+
+Conservai
+
+KA’TAH ABILITY
+
+WHEN: Your Command phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Until the end of the turn:
+
+Being engaged/battle-shocked does not prevent your unit from being eligible to start an action.
+Starting an action does not prevent your unit from being eligible to shoot.
+Calistus
+
+KA’TAH ABILITY
+
+WHEN: Your Movement phase, when a friendly readied unit is selected to move.
+
+TARGET: That readied unit.
+
+EFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.
+
+Salvus
+
+KA’TAH ABILITY
+
+WHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.
+
+TARGET: That readied unit.
+
+EFFECT: Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls and wound rolls.
+Dacatarai
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.
+
+Kaptaris
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Melee attacks that target your unit have -1 to hit rolls.
+
+Rendax
+
+KA’TAH ABILITY
+
+WHEN: Fight phase, when a friendly readied unit is selected to fight.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle].
+
+Ask about this rule
+
+######## popup rule:Martial Ka’tah · LITE KNIGHTS Lite Knights
 ADEPTUS CUSTODES ARMY RULE
 
 Martial Ka’tah

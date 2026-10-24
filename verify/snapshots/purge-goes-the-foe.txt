@@ -6,6 +6,7 @@ Cohort Cybernetica · Eradication Cohort
 Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
+Phase checklist
 Bases & proxies
 37
 Units
@@ -22,6 +23,147 @@ Rules
 Damage calculator
 
 New Recruit, exported 20 Oct 2026
+
+######## checklist · PURGE GOES THE FOE Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Doctrina Imperatives · Adeptus Mechanicus army rule
+Command · Your turn
+7 to do · 5 active
+
+TO DO NOW
+
+Canticles of the Omnissiah · Belisarius Cawl
+Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
+Self-repair Mechanisms · Belisarius Cawl
+Rod of the War Forge · Thulia Ghuld
+Omnissiah’s Blessing · Tech-Priest Enginseer
+Battle Protocols · Cybernetica Datasmith
+Objective Scouted · Skitarii Rangers
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Command · Their turn
+5 active
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Movement · Your turn
+5 active
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Movement · Their turn
+5 active
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Shooting · Your turn
+1 to do · 9 active
+
+TO DO NOW
+
+Secutor of Olympus · Thulia Ghuld
+
+ACTIVE NOW
+
+Protector Imperative · option of Doctrina Imperatives
+Conqueror Imperative · option of Doctrina Imperatives
+Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Protector Protocol · option of Battle Protocols · Cybernetica Datasmith
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Shooting · Their turn
+6 active
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Omnissiah’s Blessing · Tech-Priest Enginseer
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Charge · Your turn
+5 active
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Charge · Their turn
+5 active
+
+ACTIVE NOW
+
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Fight · Your turn
+10 active
+
+ACTIVE NOW
+
+Protector Imperative · option of Doctrina Imperatives
+Conqueror Imperative · option of Doctrina Imperatives
+Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Omnissiah’s Blessing · Tech-Priest Enginseer
+Conqueror Protocol · option of Battle Protocols · Cybernetica Datasmith
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+Fight · Their turn
+10 active
+
+ACTIVE NOW
+
+Protector Imperative · option of Doctrina Imperatives
+Conqueror Imperative · option of Doctrina Imperatives
+Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
+Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
+Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
+Icon of War (Rod of the War Forge) · Thulia Ghuld
+Omnissiah’s Blessing · Tech-Priest Enginseer
+Conqueror Protocol · option of Battle Protocols · Cybernetica Datasmith
+Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · PURGE GOES THE FOE Overview
 YOUR LIST
@@ -3551,6 +3693,25 @@ UNITTech-Priest Enginseer · Necromechanic
 
 Ask about this ability
 
+######## popup ability:purge-goes-the-foe|Icon of War|**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
+**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit. · PURGE GOES THE FOE Purge goes the Foe
+ABILITY · YOUR COMMAND / THEIR MOVEMENT / SHOOTING (EITHER TURN) / YOUR CHARGE / FIGHT (EITHER TURN)
+
+Icon of War
+
+Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
+
+Adaptive Tactics: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+
+The Fires of Mars: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.
+
+FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”
+
+UNITThulia Ghuld
+
+Ask about this ability
+
 ######## popup ability:purge-goes-the-foe|Mechanicus Bodyguard|While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
 
@@ -3559,6 +3720,17 @@ Mechanicus Bodyguard
 While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.
 
 UNITBelisarius Cawl, Thulia Ghuld
+
+Ask about this ability
+
+######## popup ability:purge-goes-the-foe|Objective Scouted|At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. · PURGE GOES THE FOE Purge goes the Foe
+ABILITY · COMMAND · YOUR TURN
+
+Objective Scouted
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+UNITSkitarii Rangers
 
 Ask about this ability
 
@@ -3595,6 +3767,51 @@ Robotic Bodyguard
 While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.
 
 UNITCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
+
+Ask about this ability
+
+######## popup ability:purge-goes-the-foe|Rod of the War Forge|In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability. · PURGE GOES THE FOE Purge goes the Foe
+ABILITY · COMMAND · YOUR TURN
+
+Rod of the War Forge
+
+In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
+
+TO PICK FROM: ICON OF WAR
+
+Icon of War
+
+Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
+
+Adaptive Tactics: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+
+The Fires of Mars: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.
+
+FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”
+
+UNITThulia Ghuld
+
+Ask about this ability
+
+######## popup ability:purge-goes-the-foe|Secutor of Olympus|At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**. · PURGE GOES THE FOE Purge goes the Foe
+ABILITY · SHOOTING · YOUR TURN
+
+Secutor of Olympus
+
+At the start of your Shooting phase, select one enemy VEHICLE unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds.
+
+UNITThulia Ghuld
+
+Ask about this ability
+
+######## popup ability:purge-goes-the-foe|Self-repair Mechanisms|At the start of your Command phase, this model regains up to D3 lost wounds. · PURGE GOES THE FOE Purge goes the Foe
+ABILITY · COMMAND · YOUR TURN
+
+Self-repair Mechanisms
+
+At the start of your Command phase, this model regains up to D3 lost wounds.
+
+UNITBelisarius Cawl
 
 Ask about this ability
 
