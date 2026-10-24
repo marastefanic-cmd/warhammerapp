@@ -102,6 +102,10 @@ const resolveArmies = new Function(RESOLVER + '\nreturn resolveArmies;')();
 // ------------------------------------------------------------------------------------------------------------------
 const stable = v => JSON.stringify(v, (k, x) => x instanceof RegExp ? String(x) : x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map(y => [y, x[y]])) : x);
 const eq = (a, b) => stable(a) === stable(b);
+// the lists as the app sees them are the same: equal, but for the fingerprints of AI-written columns, which the table form hides
+// and the old form (every unit in full, --expand) keeps on its rows
+const noFp = v => JSON.parse(JSON.stringify(v, (k, x) => FP_KEYS.includes(k) ? undefined : x));
+const sameLists = (a, b) => eq(noFp(a), noFp(b));
 const slug = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const baseName = n => String(n).replace(/ ×\d+$/, '');
 const rowKey = (kind, n) => kind === 'stats' ? baseName(n) : n;
@@ -716,7 +720,7 @@ if(require.main === module){
     if(stamp){ const s1 = stampConstants(src, evaluate(src), restamp); src = s1.src; n += s1.n; }
     const t = tableForm(src, stamp ? { stampRows:A => { n += stampRows(restamp)(A); } } : {});
     const before = evaluate(src), after = evaluate(t.text);
-    if(!eq(before.armies, after.armies)){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    if(!sameLists(before.armies, after.armies)){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
     fs.writeFileSync(DATA, t.text);
     fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
     console.log('tables: data.js written: ' + Object.keys(t.B.sheets).length + ' datasheets, ' + t.B.conflicts.length + ' conflicts kept per list (verify/out/tables.md)' + (stamp ? '; ' + n + ' fingerprints written' : '') + '; ' + Buffer.byteLength(src) + ' → ' + Buffer.byteLength(t.text) + ' bytes');
@@ -730,7 +734,11 @@ if(require.main === module){
     fails.push('data.js is not in table form as node verify/tables.js --write writes it (first difference at line ' + (i + 1) + ': ' + JSON.stringify((a[i] || '').slice(0, 100)) + ' → ' + JSON.stringify((b[i] || '').slice(0, 100)) + '): a list added in the old form, a datasheet edited, or RULE_OPTIONS / GRANTS out of date; run node verify/tables.js --write and read the diff');
   }
   const D0 = evaluate(src);
-  if(!eq(D0.armies, evaluate(t.text).armies)) fails.push('the lists resolve otherwise than --write would write them');
+  if(!sameLists(D0.armies, evaluate(t.text).armies)) fails.push('the lists resolve otherwise than --write would write them');
+  // the old form round-trips: --expand then --write gives this data.js again, and the same lists
+  { const old = oldForm(src), back = tableForm(old).text;
+    if(back !== src) fails.push('node verify/tables.js --expand then --write does not give this data.js back');
+    if(!sameLists(evaluate(old).armies, D0.armies)) fails.push('data.js in the old form (--expand) resolves to other lists'); }
   for(const u of unregistered(src)) fails.push('not in verify/columns.json: ' + u + ' (say where its values come from)');
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);

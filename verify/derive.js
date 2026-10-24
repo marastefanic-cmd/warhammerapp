@@ -789,6 +789,16 @@ function ruleSources(D){
   }
   return out;
 }
+// a grant: "has / have / gain(s) the X keyword / ability" said of units, with no negation in its clause, not inside a condition
+// ("if this unit has the BATTLELINE keyword": it depends on it) or a relative clause ("units that have the X ability": who it is
+// for), not of a detachment ("This detachment has the WAR DOGS tag"), and not the rule's own name
+const GRANT_RE = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/g;
+const notAGrant = (sent, m, rule, name) => {
+  const clause = sent.slice(0, m.index).split(/[,;:]/).pop();
+  return /^\s*(?:-\s*)?(?:if|unless|whether|each time|every time|when|whenever)\b/i.test(clause) || /\b(?:that|which|who|with)\s*$/i.test(clause) ||
+    /\b(?:not|cannot|never|no longer)\b/i.test(clause) || /\bdetachment\b/i.test(clause) || /^\s+tag\b/i.test(sent.slice(m.index + m[0].length)) ||
+    norm(name).toLowerCase() === norm(String(rule).split(' · ').pop()).toLowerCase();
+};
 function ruleTables(D){
   const V = vocab(D), options = [], grants = [], reasons = [];
   for(const s of ruleSources(D)){
@@ -819,9 +829,12 @@ function ruleTables(D){
   }
   function grantRows(rule, option, text, whileOpt){
     for(const sent of sentences(norm(text))){
-      const m = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/.exec(sent);
+      let m, name;
+      for(const x of sent.matchAll(GRANT_RE)){
+        const n = (x[3] || x[4] || (x[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
+        if(!notAGrant(sent, x, rule, n)){ m = x; name = n; break; }
+      }
       if(!m) continue;
-      const name = (m[3] || m[4] || (m[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
       if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
       const before = sent.slice(0, m.index);
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
