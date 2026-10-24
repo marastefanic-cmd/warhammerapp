@@ -983,5 +983,42 @@
   "where": "verify/sources/nr/lite-knights.txt p5",
   "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 132 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "abilities[Flare Shields]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/lite-knights.txt p6",
+  "reason": "Flare Shields is the Grav-Assault Force detachment rule, in GW's words \"Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.\"; the Caladius datasheet has no such ability. New Recruit (BSData) prints it on the unit as an ability in its own words (\"This unit has a 4+ InSv against ranged attacks.\"). The app has the detachment rule, which applies to the Caladius as a GRAV-ASSAULT unit (its When targeted line and its InSv's from mark name it), and no ability of that name on the unit.",
+  "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 525-526 (Grav-Assault Force, Detachment Rules: \"Flare Shields / Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.\"); verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html (ABILITIES: Advanced Firepower only); verify/sources/nr/lite-knights.txt lines 164 and 371 (\"Flare Shields  This unit has a 4+ InSv against ranged attacks.\"; glossary \"Friendly Grav-Assault units have 4+ InSv against ranged attacks.\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "kw",
+  "app": [
+   "Caladius",
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "source": [
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p6",
+  "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/lite-knights.txt line 167 (Categories: \"Caladius Annihilator Grav-tank, Faction: Adeptus Custodes, Fly, Frame, Grav-assault, Imperium, Vehicle\")."
  }
 ]

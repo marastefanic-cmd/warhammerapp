@@ -1444,7 +1444,8 @@ function ruleFor(label){
   return null;
 }
 const ruleKey = label => (ruleFor(label) || {}).key;
-const mentions = (text, key) => new RegExp('\\b' + key.replace(/[-]/g, '.') + '\\b', 'i').test(text);
+// (not the end of a hyphenated word: "GRAV-ASSAULT" does not mention Assault; "ANTI-PSYKER" does mention Anti)
+const mentions = (text, key) => new RegExp('(?<![\\w-])' + key.replace(/[-]/g, '.') + '\\b', 'i').test(text);
 // the units in this army a core rule applies to: unit rules, weapon keywords, ability text
 const CONCEPT = new Set(D.concepts || []);   // general terms (charge, destroyed…) that every unit "uses"
 function ruleUsers(key){

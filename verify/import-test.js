@@ -34,7 +34,7 @@ const EXPORT_DIFFERS = {
   // and data.js has them; their older PDFs' differences are declared in verify/deviations-nr.json ("superseded")
 };
 // exports of lists the app does not have: the import must fail, saying this first
-const NO_LIST = { 'lite-knights.json':'faction Adeptus Custodes not recognized' };
+const NO_LIST = {};
 
 function diff(a, b, p, out){
   if(JSON.stringify(a) === JSON.stringify(b)) return out;
