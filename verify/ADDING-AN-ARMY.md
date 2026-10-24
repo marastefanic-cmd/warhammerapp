@@ -42,8 +42,11 @@ from the page, declared), a missing core ability from Wahapedia's core rules, la
 stratagem's gist) is read from `verify/sources/hand/<id>.json`, marked by whom; everything else it lists in
 `verify/out/from-json-<id>.md`. A list without a PDF is checked by `verify/nr.js` against its export (base sizes).
 
-Then the hand pass (section 3: footnotes, auras, When targeted lines, stratagem `mod`/`def`, Damage-tab `calcMods`),
-`node verify/tables.js --stamp` for the AI-written columns, and `node verify/tables.js --expand` then `--write`.
+The hand pass (section 3) goes into the same file, so a re-run gives the same data.js: `gists` (a stratagem's `gist`, `def` with
+their fingerprints `gistOf` / `defOf`, and `mod`), `rules` (a detachment rule's `calcMods`) and `units` (per unit entry: `defs` for
+its abilities, `mods`, `aura`, and `stats` values a rule of the list gives that the export does not show). A new AI-written
+line gets its fingerprint from `node verify/tables.js --stamp` (after checking it against its text), copied into the file.
+The run ends with `verify/tables.js --write`, `--expand` and `--write` again.
 
 ## 2. A new faction or detachment
 

@@ -120,6 +120,8 @@ const USED_MODIFIERS = [
     why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn (its attacks are not in the Shooting phase)' },
   { id:'overwatch', why:'an always-on ranged effect (no trigger in the text) is also used when the unit shoots with a Core stratagem whose EFFECT is "Your unit shoots" (Fire Overwatch: its WHEN, your opponent\'s Movement phase); when it protects against ranged attacks, the same moment in the other turn (the enemy\'s Fire Overwatch)' },
   { id:'trigger-phase', why:'an effect used in the phase it is triggered in has the trigger\'s turn ("In your opponent\'s Movement phase, … this unit can make a Normal move": the opponent\'s Movement phase only)' },
+  { id:'opening-phase', re:/^in (?:the|your|your opponent's) (?:command|movement|shooting|charge|fight) phase,/i,
+    why:'the text opens with its phase ("In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, …") and says no duration: every effect is used in that phase only (Bladeguard\'s -1 to hit rolls for attacks that target it is not used in the Shooting phase)' },
   { id:'same-phase', re:/\buntil the end of the phase\b/i,
     why:'triggered in a phase with an effect "until the end of the phase": used in that phase only (Destiny\'s Ruin: manifested at the start of your Shooting phase, so its attacks are that phase\'s)' },
   { id:'same-turn', re:/\buntil the end of the turn\b|\bthis turn\b/i,
@@ -221,6 +223,12 @@ function usedIn(text, ctx, trig){
   }
   // an effect used in the phase it is triggered in is used in that turn ("In your opponent's Movement phase, … make a Normal move")
   if(trig) for(const p of Object.keys(out)) if(trig.ph[p]) out[p] = trig.ph[p];
+  // the text opens with its phase and has no duration ("In the Fight phase, …, you can select one of the following"): that phase only
+  const opening = USED_MODIFIERS.find(r => r.id === 'opening-phase').re.exec(t);
+  if(trig && opening && !/\buntil\b|\bthis turn\b/i.test(t) && Object.keys(out).some(p => !trig.ph[p])){
+    for(const p of Object.keys(out)) if(!trig.ph[p]) delete out[p];
+    reasons.push({ rule:'opening-phase', match:opening[0] });
+  }
   // triggered in a phase, "until the end of the phase": that phase only
   const samePh = USED_MODIFIERS.find(r => r.id === 'same-phase').re.exec(t);
   if(trig && samePh && Object.keys(out).length && Object.keys(out).some(p => !trig.ph[p])){

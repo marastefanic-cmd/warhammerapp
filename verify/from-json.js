@@ -260,7 +260,11 @@ const detIds = detNames.map(n => {
     else want('detachment ' + n, 'dispositions', 'not found in BSData or on the Wahapedia page');
   }
   det.dp = W.dp;
-  det.rule = { name: typo(W.rule.name), text: balanced(W.rule.lines).join('\n') };
+  det.rule = { name: typo(W.rule.name) };
+  // a Damage-tab reading written by hand (verify/sources/hand/<army>.json rules)
+  const hr = (HAND.rules || {})[id];
+  if (hr && hr.calcMods) { det.rule.calcMods = hr.calcMods; handDone.push({ what: 'calcMods of ' + W.rule.name + ' (' + n + ')', by: hr.by, text: hr.calcMods.map(m => m.from + ': ' + m.note).join('; ') }); }
+  det.rule.text = balanced(W.rule.lines).join('\n');
   det.enhancements = W.enh.map(e => {
     // "Memento Moritoi (one per army)": GW's name with its limit; BSData and New Recruit name it without (nr: their spelling)
     const lim = /^(.*?) \((one per army)\)$/i.exec(e.name);
@@ -271,11 +275,17 @@ const detIds = detNames.map(n => {
     return o;
   });
   det.stratagems = W.strats.map(s => {
-    const o = { id: slug(s.name), gist: null, name: titleCase(s.name), cp: s.cp };
+    const o = { id: slug(s.name) };
+    // the hand file's columns for it (verify/sources/hand/<army>.json gists): its footnote (mod, hand) and When targeted line (def,
+    // AI-written, with the fingerprint of the text it was written from), then its gist
+    const h0 = (HAND.gists || {})[id + '/' + o.id] || {};
+    if (h0.mod) { const m = Object.assign({}, h0.mod); delete m.by; o.mod = m; handDone.push({ what: 'footnote of ' + titleCase(s.name) + ' (' + n + ')', by: h0.mod.by, text: m.note }); }
+    if (h0.def) { o.def = h0.def; if (h0.defOf) o.defOf = h0.defOf; handDone.push({ what: 'When targeted line of ' + titleCase(s.name) + ' (' + n + ')', by: h0.by, text: h0.def }); }
+    Object.assign(o, { gist: null, name: titleCase(s.name), cp: s.cp });
     for (const f of ['when', 'target', 'effect', 'restrictions']) if (s.fields[f]) o[f] = balanced(s.fields[f]).join('\n');
     // the gist is the app's own words: from verify/sources/hand/<army>.json, written by hand (AI-assisted, marked there)
     const h = (HAND.gists || {})[id + '/' + o.id];
-    if (h) { o.gist = h.gist; handDone.push({ what: 'gist of ' + o.name + ' (' + n + ')', by: h.by, text: h.gist }); }
+    if (h) { o.gist = h.gist; if (h.gistOf) { const rest = Object.fromEntries(Object.entries(o).filter(([k]) => k !== 'id' && k !== 'gist')); Object.keys(rest).forEach(k => delete o[k]); o.gistOf = h.gistOf; Object.assign(o, rest); } handDone.push({ what: 'gist of ' + o.name + ' (' + n + ')', by: h.by, text: h.gist }); }
     else want('stratagem ' + o.name + ' (' + n + ')', 'gist', 'a one-line summary is the app’s own words: write it in verify/sources/hand/' + armyId + '.json (gists), marked by whom');
     return o;
   });
@@ -284,6 +294,13 @@ const detIds = detNames.map(n => {
   return id;
 });
 
+// (a detachment data.js already has, from an earlier run: its dispositions from Wahapedia are declared again)
+for (const id of detIds) {
+  const det = F && F.detachments[id];
+  if (!det || dispOf(det.name) || !(det.dispositions || []).length || dispDevs.some(x => x.detachment === det.name)) continue;
+  const wd = wahaDispositions(det.name);
+  if (JSON.stringify(wd) === JSON.stringify(det.dispositions)) dispDevs.push({ detachment: det.name, app: wd });
+}
 // ---------------------------------------------------------------- units
 const enhAll = () => Object.values(Object.assign({}, F ? F.detachments : {}, facSrc.detachments)).flatMap(d => d.enhancements || []);
 // (BSData names an UPGRADE enhancement with its kind: "Furious Assault (Upgrade)")
@@ -810,6 +827,26 @@ if (flag('--compare')) {
 // (done after the rows are in data.js, so derive.js reads them as the app will; see writeLabels below)
 
 // ---------------------------------------------------------------- source for data.js
+// ---------------------------------------------------------------- the hand file's unit columns (verify/sources/hand/<army>.json units)
+// an ability's When targeted line (def, AI-written, with its fingerprint), the unit's weapon footnotes (mods) and auras, and a stats
+// value a rule of the list gives that the export does not show (the Impulsor's Shield Dome 5+ InSv)
+for (const [uid, h] of Object.entries(HAND.units || {})) {
+  const u = units.find(x => x.id === uid);
+  if (!u) { want(uid, 'hand file', 'verify/sources/hand/' + armyId + '.json names a unit the list does not have'); continue; }
+  for (const [an, d] of Object.entries(h.defs || {})) {
+    const ab = u.abilities.find(a => a.name === an);
+    if (!ab) { want(uid + ' · ' + an, 'hand file def', 'no ability of this name'); continue; }
+    const t = ab.text; delete ab.text; ab.def = d.def; ab.text = t; if (d.defOf) ab.defOf = d.defOf;
+    handDone.push({ what: 'When targeted line of ' + u.name + ' · ' + an, by: d.by, text: d.def });
+  }
+  for (const [rn, vals] of Object.entries(h.stats || {})) {
+    const r = u.stats.find(x => x.name.replace(/ ×\d+$/, '') === rn);
+    if (!r) { want(uid + ' · ' + rn, 'hand file stats', 'no stats row of this name'); continue; }
+    Object.assign(r, vals); handDone.push({ what: 'stats ' + u.name + ' · ' + rn + ': ' + JSON.stringify(vals), by: 'hand (Claude)', text: h.why || '' });
+  }
+  if (h.mods) { u.mods = h.mods; handDone.push({ what: 'footnotes of ' + u.name, by: 'hand (Claude)', text: h.mods.map(m => m.from + ': ' + m.note).join('; ') }); }
+  if (h.aura) { u.aura = h.aura; handDone.push({ what: 'aura of ' + u.name, by: 'hand (Claude)', text: h.aura.map(m => m.from + ': ' + m.note).join('; ') }); }
+}
 const abOrder = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];
 for (const u of units) { for (const ab of u.abilities) { delete ab._bs; delete ab._e; delete ab._part; } delete u._parts; }
 const armySrc = () => '{\n' + ['id', 'name', 'faction', 'points', 'pointsUsed'].map(k => k + ':' + lit(army[k])).join(', ').replace(/^/, '  ') + ',\n' +
@@ -907,7 +944,8 @@ for (const it of labels) {
     const ai = d.indexOf("{ name:" + lit(abName), us);
     const after = d.indexOf(', ', ai + 8 + lit(abName).length) ;
     // after name (and who, tag): insert the labels before text
-    const ti = d.indexOf(" text:'", ai);
+    // (before its When targeted line when it has one: data.js's order is ph, turn, turns, def, text)
+    const ti0 = d.indexOf(" text:'", ai), di = d.indexOf(" def:'", ai), ti = di >= 0 && di < ti0 ? di : ti0;
     d = d.slice(0, ti) + ' ' + litKV(o) + ',' + d.slice(ti);
     filled.push({ what: 'label ' + it.where + ': ' + JSON.stringify(o), from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') });
   } else if (it.kind === 'ability-tag') {
@@ -1025,6 +1063,8 @@ for (const args of [['verify/import-ids.js', '--write'], ['verify/bsdata.js', '-
 {
   const t = spawnSync(process.execPath, [path.join(ROOT, 'verify/tables.js'), '--write'], { cwd: ROOT, encoding: 'utf8' });
   filled.push({ what: 'table form: ' + (t.stdout || t.stderr).trim().split('\n')[0], from: 'verify/tables.js --write' });
+  // (and once more through the old form: the key order of the lists' objects, TABLE_ORDER, is then the one --expand/--write keeps)
+  for (const a of ['--expand', '--write']) spawnSync(process.execPath, [path.join(ROOT, 'verify/tables.js'), a], { cwd: ROOT, encoding: 'utf8' });
 }
 fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.md'), report());
 fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.json'), JSON.stringify({ todo, filled, devs, modified: bsChecked.modified, datasheets: [...dsWant] }, null, 1) + '\n');

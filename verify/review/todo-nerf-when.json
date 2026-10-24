@@ -306,19 +306,15 @@
   "where": "nerf-when · Marneus Calgar · Bladeguard",
   "judgement": {
    "ph": [
-    "shooting",
     "fight"
    ],
-   "turn": "either",
-   "turns": {
-    "shooting": "opp"
-   }
+   "turn": "either"
   },
   "source": {
    "ability": "Bladeguard",
    "text": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**."
   },
-  "key": "0c8503029238d84a"
+  "key": "090e1adb2d526076"
  },
  {
   "army": "nerf-when",
