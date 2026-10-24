@@ -122,6 +122,51 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       if(!open) fail('link-resolves', a.id, l, 'the link opens nothing');
     }
 
+    // ---- the datasheet's "When targeted" fold ----
+    // - targeted-fold: a fold (a summary, the browser's button with its expanded state), closed at first, its line saying how many
+    //   lines it has; a tap opens it and shows them, the open fold is kept for the session (the screen drawn again: still open), a
+    //   second tap closes it and forgets it
+    // - targeted-items: opened, a line per item of defenceItems (as the datasheet takes them), shown, each with every word of the
+    //   item's own text in order (only split and styled: no word left out), the model of an attached unit as its label
+    const tg = await page.evaluate(async armyId => {
+      const out = [], A = WH_DATA.armies.find(x => x.id === armyId), tick = () => new Promise(r => setTimeout(r, 0));
+      const words = t => t.replace(/[“”"’'():;,.·]/g, ' ').split(/\s+/).filter(Boolean);
+      const shown = el => el.getClientRects().length > 0 && !!el.innerText.trim();
+      hideSheet(); go({ s:'army', army:armyId });
+      for(const u of A.units){
+        for(const k of [...openStrats]) if(k.startsWith('tg|')) openStrats.delete(k);
+        go({ s:'unit', army:armyId, unit:u.id }); navAt = -1e9;   // (a tap just after a screen is drawn is let through)
+        const items = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));
+        const fold = () => document.querySelector('#view details.tgt');
+        if(!items.length){ if(fold()) out.push(['targeted-fold', u.id, 'a When targeted fold with nothing in it']); continue; }
+        let d = fold();
+        if(!d){ out.push(['targeted-fold', u.id, 'no When targeted fold for ' + items.length + ' items']); continue; }
+        const sum = d.querySelector(':scope > summary');
+        if(!sum || !/^when targeted$/i.test((sum.querySelector('.il') || {}).textContent || '')) out.push(['targeted-fold', u.id, 'its line does not say When targeted']);
+        const n = sum && sum.querySelector('.x');
+        if(!n || n.textContent.trim() !== String(items.length)) out.push(['targeted-fold', u.id, 'its count says ' + (n ? n.textContent : 'nothing') + ' for ' + items.length + ' items']);
+        if(d.open || d.querySelector('.tgls').innerText.trim()) out.push(['targeted-fold', u.id, 'open before a tap']);   // (closed: its lines not drawn, no text)
+        sum.click(); await tick();
+        if(!d.open || ![...d.querySelectorAll('.tgl')].every(l => l.innerText.trim())) out.push(['targeted-fold', u.id, 'a tap does not open it']);
+        go({ s:'unit', army:armyId, unit:u.id }); navAt = -1e9; d = fold();
+        if(!d || !d.open) out.push(['targeted-fold', u.id, 'not kept open when the screen is drawn again']);
+        const lines = [...d.querySelectorAll('.tgl')];
+        if(lines.length !== items.length) out.push(['targeted-items', u.id, lines.length + ' lines for ' + items.length + ' items']);
+        items.forEach((x, i) => { const l = lines[i];
+          if(!l || !shown(l)){ out.push(['targeted-items', u.id, 'not shown: ' + x.t.slice(0, 60)]); return; }
+          const lab = l.querySelector(':scope > .sc'), text = l.innerText.replace(/\s+/g, ' ');
+          if(lab && !(x.who && lab.textContent === x.who)) out.push(['targeted-items', u.id, 'a label that is not its model: ' + lab.textContent]);
+          const have = words(lab ? text.slice(lab.innerText.length) : text), want = words(x.t);
+          let j = 0; for(const w of have) if(j < want.length && w === want[j]) j++;
+          if(j < want.length) out.push(['targeted-items', u.id, '“' + want.slice(j, j + 4).join(' ') + '” missing from “' + text.slice(0, 80) + '”']);
+          if(!l.querySelector('[data-rule],[data-strat],[data-ability],[data-unit]')) out.push(['targeted-items', u.id, 'a line that opens nothing: ' + text.slice(0, 60)]);
+        });
+        d.querySelector(':scope > summary').click(); await tick();
+        if(d.open || openStrats.has('tg|' + armyId + '|' + u.id)) out.push(['targeted-fold', u.id, 'a second tap does not close it']);
+      }
+      return out; }, a.id);
+    for(const [c, w, d] of tg) fail(c, a.id, w, d);
+
     // ---- screen-level checks ----
     const res = await page.evaluate(armyId => {
       const out = [], A = WH_DATA.armies.find(x => x.id === armyId);
@@ -152,11 +197,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         // - Waaagh!'s [ASSAULT] while riled up, on a unit with Waaagh! some of whose ranged weapons lack [ASSAULT]
         // - what another unit of the list gives it when it is attacked (guard), under When targeted
         // - every keyword once, a keyword only some models have under those models (kwOnly)
-        const lines = [...document.querySelectorAll('#view .def, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));
+        const lines = [...document.querySelectorAll('#view .tgl, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));   // (When targeted: a line each)
         if(u.abilities.some(ab => ab.riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
         if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)')))
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
-        const when = (document.querySelector('#view .def') || {}).innerText || '';
+        const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
         for(const src of A.units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !when.includes('(' + g.from + ')')) out.push(['guard-shown', u.id, g.from + ' (' + src.name + ') is not under When targeted']);
         const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
         if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
