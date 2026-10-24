@@ -1163,6 +1163,19 @@ function perBattle(x, armyWide){
   return { n:{ once:1, twice:2, 'three times':3 }[m[1].toLowerCase()],
     army:!!armyWide || /per battle\b(?! round)[^.)]*\bper army\b/i.test(t) || /\bone (model|unit) from your army with this ability\b/i.test(t) };
 }
+// "You can only select each of these abilities once per battle" (Kindred Sorcery), "You can only select each combat doctrine once per
+// battle" (Combat Doctrines): a limit on each option, not on the rule, so a box for each option ([name, uses]): its table's rows, else the
+// options verify/derive.js reads from its text (CHECKLIST o), with the uses another rule of the list adds to one by name ("You can select
+// the assault doctrine one additional time per battle", Assault Mastery); null for any other rule
+const EACH_ONCE = /\bselect each\b[^.;]*?\bonce per battle\b(?! round)/i;
+function eachOnce(r){
+  const plainT = x => String((x && x.text) || '').replace(/\*\*|~~/g, '');
+  if(!EACH_ONCE.test(plainT(r))) return null;
+  const names = r.table ? r.table.map(o => String(o[0])) : (((D.checklist || {})['r|' + army().faction + '|' + r.name] || {}).o || []).map(o => o.n);
+  if(!names.length) return null;
+  const more = faction().armyRules.concat(detachments().flatMap(detRules)).flatMap(x => [...plainT(x).matchAll(/\bselect the ([^.;]+?) (one|two) additional times? per battle\b/gi)].map(m => [m[1].toLowerCase(), m[2].toLowerCase() === 'one' ? 1 : 2]));
+  return names.map(n => [n, 1 + more.filter(([k]) => k === n.toLowerCase()).reduce((t, [, k]) => t + k, 0)]);
+}
 // what: the rule's name, for screen readers ("Bomb Squig used, 1 of 2")
 const ticks = (key, n, label, what) => { const used = usedSet();
   return '<span class="ticks">' + (label ? '<i>' + esc(label) + '</i>' : '') + Array.from({ length:n }, (_, i) => { const k = key + '#' + i, on = used.has(k);
@@ -1337,12 +1350,20 @@ const twinFirst = u => (twinOf(u) || { first:1 }).first;
 const twinLabel = u => { const t = twinOf(u); return !t ? '' : (t.lead ? ' + ' + t.lead : '') + (t.n > 1 ? ' (' + t.i + ' of ' + t.n + ')' : ''); };
 const shortName = u => (u.short || u.name) + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '') + twinLabel(u);   // an enhancement on another character (enhOn) is not this name's
 const unitCount = a => a.units.reduce((t, u) => t + (u.copies || 1), 0);
-// "Big Mek ×2, Killa Kans": unit names for a one-line summary
-function unitNames(units){
-  const n = new Map();
-  for(const u of units){ const k = u.short || u.name; n.set(k, (n.get(k) || 0) + 1); }
-  return [...n].map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ');
+// whose an ability is: in an attached unit, the part its datasheet gives it to (ab.who: Hunters from the Warp is the Flesh Hounds',
+// not Karanak's), else the unit
+const abOwner = (u, ab) => { const own = ab && (u.leads || (u.also || []).length) && u.abilities.find(x => x.name === ab.name && x.text === ab.text);
+  return own && own.who && own.who !== u.name ? own.who : u.short || u.name; };
+// the names and counts of a summary: with ab, each unit as the part that has it (abOwner); copies: each copy of a ×N unit counted
+const nameCounts = (units, ab, copies) => { const n = new Map();
+  for(const u of units){ const k = ab ? abOwner(u, ab) : u.short || u.name; n.set(k, (n.get(k) || 0) + (copies ? u.copies || 1 : 1)); }
+  return [...n]; };
+// "Big Mek ×2, Killa Kans": unit names for a one-line summary (ab: the ability it names them for, abOwner)
+function unitNames(units, ab){
+  return nameCounts(units, ab).map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ');
 }
+// the same as HTML, every copy of a ×N unit counted, the count as its pill ("Rendmaster on Blood Throne ×2": the Phase checklist)
+const unitNamesX = (units, ab) => nameCounts(units, ab, true).map(([k, c]) => esc(k) + (c > 1 ? '<span class="x">×' + c + '</span>' : '')).join(', ');
 // detachment rules that apply to a unit (by keyword)
 // a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted after Murdercall)
 const detRules = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];
@@ -3880,7 +3901,7 @@ function searchIndex(){
     const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, 'ability', ab.text, ab.tag, ab.who, ab.def, u.name), act:{ ability:key } };
     abilityIndex.set(key, e); add(e);
   }
-  for(const e of abilityIndex.values()) e.sub = unitNames(e.units) + (e.ab.tag ? ' · ' + e.ab.tag : '') + (e.ab.ph ? ' · ' + whenTag(e.ab) : '') + (e.ab.na ? ' · ' + e.ab.na : '');
+  for(const e of abilityIndex.values()) e.sub = unitNames(e.units, e.ab) + (e.ab.tag ? ' · ' + e.ab.tag : '') + (e.ab.ph ? ' · ' + whenTag(e.ab) : '') + (e.ab.na ? ' · ' + e.ab.na : '');
   for(const s of allStratagems(a)){
     add({ kind:'Stratagems', title:s.name, sub:s.cp + 'CP · ' + (s.src === 'Core' ? 'Core' : s.src) + ' · ' + stratWhenLine(s) + (eligible(s, a).length ? '' : ' · no unit in this list can use it'),
       hay:hay(s.name, 'stratagem', s.when, s.target, s.effect, s.limit, s.restrictions, s.src, s.src === 'Core' ? 'core' : 'detachment', s.phases.map(p => PHASE_NAME[p]).join(' '), TURN_NAME[s.turn], s.turn === 'opp' ? 'opponent' : ''), act:{ strat:s.id } });
@@ -4650,7 +4671,7 @@ function screenPregame(){
   const sec = (title, body) => body ? '<div class="sec-h"><h2>' + title + '</h2></div><div class="pg">' + body + '</div>' : '';
   // the same ability on several units is one line: "Singular Purpose · Assimilator (280), Norn Emissary ×2"
   const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };
-  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units)) + '</span>';
+  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units, g.ab)) + '</span>';
   const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))
     .concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name })))) : [];
   const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
@@ -4724,8 +4745,10 @@ function screenPregame(){
     .concat(detachments().flatMap(d => detRules(d).filter(ruleOnce).map(r => ({ r, src:d.name }))));
   const tl = (boxes, text) => '<div class="tl">' + boxes + '<span>' + text + '</span></div>';
   const ruleTicks = x => { const r = x.r, pb = perBattle(r, true);
-    // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option
-    if(/\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table) return '<div class="tl"><span>' + ruleLine(x) + ':</span></div>' + r.table.map(o => tl(ticks('r:' + r.name + ':' + o[0], 1, '', o[0]), esc(o[0]))).join('');
+    // "You can only select each of these abilities once per battle" (Kindred Sorcery), "… each combat doctrine once per battle": a box
+    // per option, and one more for each use another rule adds (eachOnce)
+    const each = eachOnce(r);
+    if(each) return '<div class="tl"><span>' + ruleLine(x) + ':</span></div>' + each.map(([o, n]) => tl(ticks('r:' + r.name + ':' + o, n, '', o), esc(o))).join('');
     return tl(ticks('r:' + r.name, pb.n, '', r.name), ruleLine(x)); };
   const onceAbs = group(allAbs.filter(([u, ab]) => perBattle(ab)));
   const abTicks = g => perBattle(g.ab).army ? tl(abilityTicks(g.ab, g.units[0]), abLine(g) + ' <span class="tg once">per army</span>')
@@ -4765,8 +4788,10 @@ const ckDone = () => new Set(Array.isArray(store.get(ckKey())) ? store.get(ckKey
 // an ability's entry: a hash of its name and text (verify/derive.js ckHash), so an imported list's copy of a unit finds it too
 const ckHash = s => { let h = 0x811c9dc5; for(let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); };
 const ckMap = s => Object.fromEntries(String(s || '').split(',').filter(Boolean).map(x => x.split(':')));
-const ckTick = (k, what) => { const on = ckDone().has(k);
-  return '<span class="ticks"><button class="tick' + (on ? ' on' : '') + '" data-ctick="' + esc(k) + '" aria-pressed="' + on + '" aria-label="' + esc(what + ' done') + '">' + (on ? '✓' : '') + '</button></span>'; };
+// n: a box for each copy of a ×N unit on the line (each Rendmaster on Blood Throne selects its own enemy unit), "Unit 1", "Unit 2" as on the Overview
+const ckTick = (k, what, n) => { const done = ckDone(), c = n > 1 ? n : 1;
+  return '<span class="ticks">' + Array.from({ length:c }, (_, i) => { const kk = c > 1 ? k + '#' + i : k, on = done.has(kk);
+    return '<button class="tick' + (on ? ' on' : '') + '" data-ctick="' + esc(kk) + '" aria-pressed="' + on + '" aria-label="' + esc(what + (c > 1 ? ', Unit ' + (i + 1) : '') + ' done') + '">' + (on ? '✓' : '') + '</button>'; }).join('') + '</span>'; };
 // keywords as the rules print them ("BLOOD LEGIONS", "NORN EMISSARY or NORN ASSIMILATOR")
 const kwWords = n => [(n.all || []).join(' '), (n.any || []).join(' or ')].filter(Boolean).join(' ').replace(/Faction: /g, '').toUpperCase();
 // an option's phases: its own trigger, or (none named) its rule's when its effect names no phase of its own; via: the rule's
@@ -4820,16 +4845,16 @@ function screenChecklist(){
   const tl = (boxes, text) => '<div class="tl">' + boxes + '<span>' + text + '</span></div>';
   // several uses as one (phase:your|opp|either; your and opp of one phase: either)
   const ckUnion = us => { const m = {}; for(const u of us) for(const [p, t] of Object.entries(ckMap(u))) m[p] = m[p] && m[p] !== t ? 'either' : t; return Object.entries(m).map(([p, t]) => p + ':' + t).join(','); };
-  const items = [];   // { id, kind, e: its entry, line, what, once: its once-per-battle lines [boxes, text] }
+  const items = [];   // { id, kind, e: its entry, line, what, once: its once-per-battle lines [boxes, text], n: its boxes, one per copy (ckTick) }
   // what a triggered rule or ability puts in force from a rule defined elsewhere (CHECKLIST f): "Riled up (War Cry) · Waaagh!", opening
   // that rule, Active now in the phases the trigger's duration covers (When unclear when the duration cannot be read)
   const forced = (fs, src, kind, id) => { for(const x of fs || []) if(rules.some(y => y.r.name === x.r)) items.push({ id:'f:' + id + ':' + x.r, kind, e:x.x ? { x:1 } : { u:x.u },
     what:x.n, line:linkTo('rule', x.r, x.n.charAt(0).toUpperCase() + x.n.slice(1) + ' (' + src + ')') + from(esc(x.r)), once:null }); };
   for(const x of rules){
     const r = x.r, e = ckStored(entry('r|' + a.faction + '|' + r.name), r), na = inertRule(r.name) ? 'no unit in this list it applies to' : '';
-    // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option, as on the Overview
-    const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
-    // ("You can only select each combat doctrine once per battle", Combat Doctrines: a limit on its options, not a once-per-battle rule)
+    // "You can only select each of these abilities once per battle" (Kindred Sorcery), "… each combat doctrine once per battle"
+    // (Combat Doctrines): a limit on its options, not a once-per-battle rule; a box per option, as on the Overview (eachOnce)
+    const each = eachOnce(r);
     const pb = !na && !each && !CK_EACH_ONCE.test(r.text || '') && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
     // which battle rounds, quoted, when its words name some ("at the start of the first, third and fifth battle rounds")
     const rounds = /\bat the start of the ((?:(?:first|second|third|fourth|fifth)(?:, | and | or ))*(?:first|second|third|fourth|fifth)) battle rounds\b/i.exec(String(r.text || '').replace(/\*\*|~~/g, ''));
@@ -4841,11 +4866,13 @@ function screenChecklist(){
     // (what a once-per-battle use puts in force is not listed: its box is)
     if(trig){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null }); if(!pb) forced(e.f, r.name, 'rules', 'r:' + r.name); }
     for(const o of e.o || []){
-      if(!ckOptListed(o, trig)) continue;   // an option of a rule not listed, or one that is a unit activation
+      // its boxes when each option is once per battle (eachOnce: the row of its table, else the option itself), where the rule is chosen
+      const row = each && !na && each.find(([n]) => n === (r.table ? o.row : o.n));
+      // an option of a rule not listed, or one that is a unit activation (unless it has its own boxes: Assault Doctrine)
+      if(!ckOptListed(o, trig) && !(row && trig)) continue;
       if(units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;   // an ability it gives units (Protean Purpose): listed as theirs
-      const row = each && !na && (r.table.find(t => t[0] === o.row) || [])[0];
       const ol = linkTo('rule', r.name, o.n) + from('option of ' + esc(r.name) + given(o.n)) + naTag(na);
-      items.push({ id:'o:' + r.name + ':' + o.n, kind:'rules', e:ckOption(o, e), line:ol, what:o.n, once:row ? [[ticks('r:' + r.name + ':' + row, 1, '', row), ol]] : null });
+      items.push({ id:'o:' + r.name + ':' + o.n, kind:'rules', e:ckOption(o, e), line:ol, what:o.n, once:row ? [[ticks('r:' + r.name + ':' + row[0], row[1], '', row[0]), ol]] : null });
       forced(o.f, o.n, 'rules', 'o:' + r.name + ':' + o.n);
     }
   }
@@ -4862,13 +4889,15 @@ function screenChecklist(){
     const dn = ab.name + (selBy.has(ab) ? ' (' + selBy.get(ab) + ')' : '');
     const aid = 'a:' + ab.name + '|' + ckHash(ab.text) + (na ? '|na' : '');   // (a copy the list cannot use: its own boxes, as its own line)
     if(!trig && !(e.o || []).some(o => o.s)) continue;   // on its datasheet
-    const line = linkTo('ability', key, dn) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
-    if(!trig){ items.push({ id:aid, kind:'abs', e, line, what:ab.name, once:null }); continue; }   // listed only through its options: itself, once
+    const line = linkTo('ability', key, dn) + from(unitNamesX(us, ab) + given(ab.name)) + naTag(na);
+    // a box for each copy when a unit on the line is ×N (each copy uses it on its own: ckTick)
+    const n = us.some(u => u.copies > 1) ? us.reduce((t, u) => t + (u.copies || 1), 0) : 1;
+    if(!trig){ items.push({ id:aid, kind:'abs', e, line, what:ab.name, once:null, n }); continue; }   // listed only through its options: itself, once
     // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)
     const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class="tg once">per army</span>']]
       : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
         linkTo('ability', key, dn) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
-    items.push({ id:aid, kind:'abs', e, line, what:ab.name, once });
+    items.push({ id:aid, kind:'abs', e, line, what:ab.name, once, n });
     if(!pb){ forced(e.f, ab.name, 'abs', aid);
       // the ability it selects (pickOptions: Wrathful Presence's, Icon of War from Rod of the War Forge): Active now where that ability is
       // used, within the duration its words give (pk), unless it is listed itself or its own trigger is a unit activation (a)
@@ -4879,24 +4908,24 @@ function screenChecklist(){
         // its rule's (ckOption); the selector's duration not read (pk.x): When unclear
         const oU = !eP.u && (eP.o || []).length && eP.o.every(o => o.u) ? eP.o.map(o => o.u) : null, use = eP.u || (oU && ckUnion(oU));
         items.push({ id:'pk:' + aid + ':' + P.name, kind:'abs', e:e.pk.x ? { x:1 } : use ? ckWithin(use, e.pk.u) : { u:e.pk.u }, what:P.name,
-          line:linkTo('ability', abilityKey(P), P.name + ' (' + ab.name + ')') + from(esc(unitNames(us))), once:null }); } }
+          line:linkTo('ability', abilityKey(P), P.name + ' (' + ab.name + ')') + from(unitNamesX(us, ab)), once:null, n }); } }
     for(const o of e.o || []) if(ckOptListed(o, true)){ items.push({ id:'ao' + aid.slice(1) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
-      line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null }); forced(o.f, o.n, 'abs', 'ao' + aid.slice(1) + ':' + o.n); }
+      line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + unitNamesX(us, ab)) + naTag(na), once:null, n }); forced(o.f, o.n, 'abs', 'ao' + aid.slice(1) + ':' + o.n); }
   }
   // each to its sections: a moment, or a phase in one player's turn ("command|your")
   const sec = {}, put = (s, g, html) => { const x = sec[s] = sec[s] || {}; (x[g] = x[g] || []).push(html); };
   const turns = t => t === 'either' ? ['your', 'opp'] : [t];
   for(const it of items){
     const e = it.e;
-    if((e.x || !(e.t || e.u || e.at || e.none || e.ends)) && !(it.once && e.via && (e.via.t || e.via.at))){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
-    if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what), it.line)); continue; }
-    if(e.ends && !e.t && !e.at && !e.u){ for(const s of e.ends) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line)); continue; }
+    if((e.x || !(e.t || e.u || e.at || e.none || e.ends)) && !(it.once && e.via && (e.via.t || e.via.at))){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what, it.n), it.line)); continue; }
+    if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what, it.n), it.line)); continue; }
+    if(e.ends && !e.t && !e.at && !e.u){ for(const s of e.ends) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what, it.n), it.line)); continue; }
     const secs = x => [...new Set(ckAt(x.at).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)), x.ae ? [x.ae] : []))];
     const trig = secs(e), act = Object.entries(ckMap(e.u)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)).filter(s => !trig.includes(s));
     // once per battle: where it is used from (its trigger, its rule's, or else where its effect is used)
     if(it.once){ const via = e.via ? secs(e.via) : []; for(const s of trig.length ? trig : via.length ? via : act) for(const [b, l] of it.once) put(s, 'once', tl(b, l)); continue; }
-    for(const s of trig) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line));
-    for(const s of act) put(s, 'active', tl(ckTick(s + '|' + it.id, it.what), it.line));
+    for(const s of trig) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what, it.n), it.line));
+    for(const s of act) put(s, 'active', tl(ckTick(s + '|' + it.id, it.what, it.n), it.line));
   }
   const GROUPS = [['todo', 'To do now', 'to do'], ['active', 'Active now', 'active'], ['once', 'Once per battle', 'once per battle'], ['rules', 'Rules', 'rules'], ['abs', 'Abilities', 'abilities']];
   const phaseSecs = PHASES.flatMap(([p]) => [p + '|your', p + '|opp']);
