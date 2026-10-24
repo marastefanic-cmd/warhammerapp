@@ -2224,7 +2224,11 @@ War Dog Brigand
 7+
 6
 5+*
-WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+3
+5+ invulnerable save against ranged attacks only
+1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
+1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
 -1 TO HIT ROLLS (AND -3 OC)
 ALL ATTACKS
@@ -2341,7 +2345,11 @@ War Dog Brigand
 7+
 6
 5+*
-WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+3
+5+ invulnerable save against ranged attacks only
+1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
+1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
 -1 TO HIT ROLLS (AND -3 OC)
 ALL ATTACKS
@@ -2451,7 +2459,11 @@ War Dog Brigand
 7+
 6
 5+*
-WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+3
+5+ invulnerable save against ranged attacks only
+1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
+1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
 -1 TO HIT ROLLS (AND -3 OC)
 ALL ATTACKS
@@ -2559,7 +2571,11 @@ War Dog Executioner
 7+
 6
 5+*
-WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+3
+5+ invulnerable save against ranged attacks only
+1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
+1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
 -1 TO HIT ROLLS (AND -3 OC)
 ALL ATTACKS
@@ -2666,7 +2682,12 @@ War Dog Karnivore
 7+
 6
 5+*
-WHEN TARGETED5+ invulnerable save against ranged attacks only · worsen the AP of each attack that targets it by 1 · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+4
+5+ invulnerable save against ranged attacks only
+worsen the AP of each attack that targets it by 1
+1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
+1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
 -1 TO HIT ROLLS (AND -3 OC)
 ALL ATTACKS
@@ -2775,7 +2796,11 @@ War Dog Karnivore
 7+
 6
 5+*
-WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+3
+5+ invulnerable save against ranged attacks only
+1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
+1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
 -1 TO HIT ROLLS (AND -3 OC)
 ALL ATTACKS

@@ -2463,7 +2463,13 @@ Allarus Custodian×2
 5+
 3
 4+
-WHEN TARGETEDTrajann Valoris · Feel No Pain 5+ · Feel No Pain 5+ against mortal wounds · Trajann Valoris · Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+5
+TRAJANN VALORIS Feel No Pain 5+
+Feel No Pain 5+ against mortal wounds
+TRAJANN VALORIS Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase
+1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
@@ -2615,7 +2621,9 @@ Prosecutor×4
 6+
 2
 –
-WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+WHEN TARGETED
+1
+Feel No Pain 3+ against psychic attacks
 RANGED WEAPONS
 Range
 A
@@ -2696,7 +2704,9 @@ Witchseeker×4
 6+
 1
 –
-WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+WHEN TARGETED
+1
+Feel No Pain 3+ against psychic attacks
 RANGED WEAPONS
 Range
 A
@@ -2776,7 +2786,9 @@ Witchseeker×5
 6+
 1
 –
-WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+WHEN TARGETED
+1
+Feel No Pain 3+ against psychic attacks
 RANGED WEAPONS
 Range
 A
@@ -2855,7 +2867,12 @@ Caladius Annihilator Grav-tank
 5+
 4
 5+, 4+*
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · 4+ InSv against ranged attacks · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+4
+Feel No Pain 5+ against mortal wounds
+4+ InSv against ranged attacks
+1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -2958,7 +2975,12 @@ Contemptor-Achillus Dreadnought
 5+
 3
 5+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+4
+Feel No Pain 5+ against mortal wounds
+-1 to wound rolls for attacks with S greater than its T
+1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -3058,7 +3080,12 @@ Contemptor-Galatus Dreadnought
 5+
 3
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+4
+Feel No Pain 5+ against mortal wounds
+-1 to wound rolls for attacks with S greater than its T
+1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -3157,7 +3184,13 @@ Telemon Heavy Dreadnought
 5+
 4
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · Feel No Pain 5+ · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+5
+Feel No Pain 5+ against mortal wounds
+Ranged attacks that target it have -1 D
+Feel No Pain 5+
+1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -3262,7 +3295,12 @@ Telemon Heavy Dreadnought
 5+
 4
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+4
+Feel No Pain 5+ against mortal wounds
+Ranged attacks that target it have -1 D
+1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)

@@ -2367,7 +2367,11 @@ Chaos Cerastus Knight Atrapos
 6+
 10
 5+
-WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+WHEN TARGETED
+3
+Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
+1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 DAMAGED 1-10 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2509,7 +2513,11 @@ Chaos Cerastus Knight Lancer
 6+
 10
 4+
-WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+WHEN TARGETED
+3
+Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
+1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 DAMAGED 1-10 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2624,7 +2632,12 @@ Knight Despoiler
 6+
 10
 5+*
-WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 5+ invulnerable save against ranged attacks only · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+WHEN TARGETED
+4
+Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
+5+ invulnerable save against ranged attacks only
+1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2761,7 +2774,12 @@ Knight Ruinator
 6+
 10
 5+*
-WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 5+ invulnerable save against ranged attacks only · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+WHEN TARGETED
+4
+Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
+5+ invulnerable save against ranged attacks only
+1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2889,7 +2907,12 @@ Knight Ruinator
 6+
 10
 5+*
-WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 5+ invulnerable save against ranged attacks only · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+WHEN TARGETED
+4
+Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
+5+ invulnerable save against ranged attacks only
+1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -3009,7 +3032,9 @@ Nurglings
 8+
 0
 5+
-WHEN TARGETEDFight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase
+WHEN TARGETED
+1
+Fight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase
 MELEE WEAPONS
 A
 WS

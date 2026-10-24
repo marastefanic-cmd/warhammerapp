@@ -2773,7 +2773,10 @@ Wazdakka Gutsmek
 6+
 3
 4+
-WHEN TARGETEDAfter a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · Riled up: 5+ INV
+WHEN TARGETED
+2
+After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn
+Riled up: 5+ INV
 ALL ATTACKS
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 RANGED WEAPONS
@@ -2907,7 +2910,11 @@ Big Mek Dakkarig
 7+
 3
 5+
-WHEN TARGETEDLone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
+WHEN TARGETED
+3
+Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
+Riled up: 5+ INV
 ALL ATTACKS
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder for its own unit: re-roll hit rolls of 1 this turn
@@ -3022,7 +3029,10 @@ Big Mek Dakkarig
 7+
 3
 5+
-WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
+WHEN TARGETED
+2
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
+Riled up: 5+ INV
 ALL ATTACKS
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
@@ -3135,7 +3145,9 @@ Big Mek in Mega Armour
 7+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3251,7 +3263,9 @@ Warboss
 6+
 1
 5+
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3388,7 +3402,9 @@ Tankbusta×5
 7+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3567,7 +3583,9 @@ Flash Gitz
 7+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3719,7 +3737,9 @@ Gretchin×10
 8+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3808,7 +3828,9 @@ Deffkoptas×3
 7+
 2
 6+
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3924,7 +3946,10 @@ Killa Kan×6
 8+
 2
 6+
-WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
+WHEN TARGETED
+2
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
+Riled up: 5+ INV
 ALL ATTACKS
 vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)

@@ -2367,7 +2367,11 @@ Skarbrand
 6+
 5
 4+
-WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+3
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 DAMAGED 1-7 W
 +2 A
 RANGED WEAPONS
@@ -2486,7 +2490,13 @@ Flesh Hounds×5
 7+
 1
 5+
-WHEN TARGETEDKaranak · Brass Collar of Bloody Vengeance: Feel No Pain 3+ against Psychic Attacks and mortal wounds · Flesh Hounds · Collar of Khorne: Feel No Pain 3+ against Psychic Attacks · 1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+5
+KARANAK Brass Collar of Bloody Vengeance: Feel No Pain 3+ against Psychic Attacks and mortal wounds
+FLESH HOUNDS Collar of Khorne: Feel No Pain 3+ against Psychic Attacks
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 ALL ATTACKS · WHOLE UNIT
 Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
 RANGED WEAPONS
@@ -2643,7 +2653,12 @@ Bloodletters×10
 6+
 2
 5+
-WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · 1CP Incorporeal Entities: their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+4
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+1CP Incorporeal Entities: their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 MELEE WEAPONS
 A
 WS
@@ -2767,7 +2782,11 @@ Bloodthirster
 6+
 5
 4+
-WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+3
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 RANGED WEAPONS
@@ -2883,7 +2902,13 @@ Daemon Prince of Chaos
 6+
 3
 4+
-WHEN TARGETEDUnholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase · Lone Operative while within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit · 1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+5
+Unholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase
+Lone Operative while within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 RANGED WEAPONS
 Range
 A
@@ -3004,7 +3029,11 @@ Rendmaster on Blood Throne
 7+
 3
 4+
-WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+3
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 MELEE WEAPONS
 A
 WS
@@ -3111,7 +3140,12 @@ Bloodletters×10
 6+
 2
 5+
-WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · 1CP Incorporeal Entities: their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+4
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+1CP Incorporeal Entities: their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 MELEE WEAPONS
 A
 WS
@@ -3247,7 +3281,11 @@ Bloodcrushers×3
 6+
 2
 5+
-WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+3
+1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
+1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 MELEE WEAPONS
 A
 WS
@@ -3387,7 +3425,9 @@ Beast of Nurgle
 7+
 3
 5+
-WHEN TARGETEDWithin 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+WHEN TARGETED
+1
+Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 MELEE WEAPONS
 A
 WS

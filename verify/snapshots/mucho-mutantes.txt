@@ -2444,7 +2444,9 @@ Magnus the Red
 5+
 6
 4+
-WHEN TARGETEDImpossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
+WHEN TARGETED
+1
+Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2595,7 +2597,10 @@ Tzaangor Enlightened with Fatecaster greatbows
 7+
 2
 5+
-WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+WHEN TARGETED
+2
+Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
+1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
 RANGED WEAPONS
@@ -2861,7 +2866,11 @@ Tzaangor Enlightened with Fatecaster greatbows
 7+
 2
 5+
-WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch: only by a ranged attack whose attacking model is within 18" · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+WHEN TARGETED
+3
+Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
+EXALTED SORCERER ON DISC OF TZEENTCH Illusions of Tzeentch: only by a ranged attack whose attacking model is within 18"
+1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
 RANGED WEAPONS
@@ -3021,7 +3030,10 @@ Tzaangor Enlightened
 7+
 2
 5+
-WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+WHEN TARGETED
+2
+Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
+1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
@@ -3164,7 +3176,11 @@ Tzaangor Enlightened
 7+
 2
 5+
-WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · Tzaangor Shaman · Diamond of Distortion: -1 to hit rolls against it (while the bearer leads it) · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+WHEN TARGETED
+3
+Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
+TZAANGOR SHAMAN Diamond of Distortion: -1 to hit rolls against it (while the bearer leads it)
+1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
@@ -3306,7 +3322,11 @@ Tzaangor Enlightened
 7+
 2
 5+
-WHEN TARGETEDTzaangor Shaman · Feel No Pain 4+ · Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+WHEN TARGETED
+3
+TZAANGOR SHAMAN Feel No Pain 4+
+Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
+1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
@@ -3439,7 +3459,10 @@ Tzaangors
 
 OC +1 for each TZAANGOR model unless Battle-shocked, not in the OC above (Warpmeld Sacrifice)
 
-WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Warped Vicissitude: their Shooting phase or the Fight phase: 4+ invulnerable save (until the end of the phase)
+WHEN TARGETED
+2
+Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
+1CP Warped Vicissitude: their Shooting phase or the Fight phase: 4+ invulnerable save (until the end of the phase)
 MELEE WEAPONS
 A
 WS

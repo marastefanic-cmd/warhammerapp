@@ -2504,7 +2504,10 @@ Norn Assimilator
 
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
-WHEN TARGETEDIf its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
+WHEN TARGETED
+2
+If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
+1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -2642,7 +2645,10 @@ Norn Assimilator
 
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
-WHEN TARGETEDIf its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
+WHEN TARGETED
+2
+If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
+1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -2779,7 +2785,10 @@ Norn Emissary
 
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
-WHEN TARGETEDIf its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
+WHEN TARGETED
+2
+If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
+Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 -1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2928,7 +2937,10 @@ Norn Emissary
 
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
-WHEN TARGETEDIf its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
+WHEN TARGETED
+2
+If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
+Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 -1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -3070,7 +3082,9 @@ Tyrannofex
 
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
-WHEN TARGETEDOnce per battle: change the Damage of an attack allocated to it to 0
+WHEN TARGETED
+1
+Once per battle: change the Damage of an attack allocated to it to 0
 DAMAGED 1-5 W
 -1 TO HIT ROLLS
 ALL ATTACKS

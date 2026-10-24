@@ -2392,7 +2392,10 @@ Ghazghkull Thraka
 6+
 4
 4+
-WHEN TARGETEDLone Operative while within 3" of another friendly ORKS INFANTRY unit · Riled up: 5+ INV
+WHEN TARGETED
+2
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -2517,7 +2520,12 @@ Mozrog Skragbad
 6+
 3
 4+
-WHEN TARGETEDFeel No Pain 5+ · Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER) · Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends · Riled up: 5+ INV
+WHEN TARGETED
+4
+Feel No Pain 5+
+Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)
+Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -2643,7 +2651,10 @@ Meganob×5
 7+
 1
 –
-WHEN TARGETEDMeganobz · Arrogant Invulnerability: Attacks that target this unit have -1 AP · Riled up: 5+ INV
+WHEN TARGETED
+2
+MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -2802,7 +2813,11 @@ Beastboss on Squigosaur
 6+
 3
 5+
-WHEN TARGETEDFeel No Pain 5+ · Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER) · Riled up: 5+ INV
+WHEN TARGETED
+3
+Feel No Pain 5+
+Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -2961,7 +2976,9 @@ Nob×10
 7+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3163,7 +3180,11 @@ Meganob×5
 7+
 1
 4+*
-WHEN TARGETEDBig Mek in Mega Armour · Kustom Force Field: 4+ InSv against ranged attacks · Meganobz · Arrogant Invulnerability: Attacks that target this unit have -1 AP · Riled up: 5+ INV
+WHEN TARGETED
+3
+BIG MEK IN MEGA ARMOUR Kustom Force Field: 4+ InSv against ranged attacks
+MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3301,7 +3322,9 @@ Gretchin×10
 8+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3390,7 +3413,9 @@ Deffkoptas×3
 7+
 2
 6+
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -3529,7 +3554,9 @@ Squighog Boyz×3
 7+
 2
 6+
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A

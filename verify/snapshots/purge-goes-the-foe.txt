@@ -2520,7 +2520,9 @@ Belisarius Cawl
 6+
 3
 4+
-WHEN TARGETEDLone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
+WHEN TARGETED
+1
+Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
 ALL ATTACKS
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2650,7 +2652,10 @@ Thulia Ghuld
 6+
 3
 4+
-WHEN TARGETEDLone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+WHEN TARGETED
+2
+Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
 ALL ATTACKS
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2786,7 +2791,10 @@ Tech-Priest Enginseer
 7+
 1
 5+
-WHEN TARGETEDLone Operative while within 3" of a friendly ADEPTUS MECHANICUS VEHICLE unit, unless it is leading a unit · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+WHEN TARGETED
+2
+Lone Operative while within 3" of a friendly ADEPTUS MECHANICUS VEHICLE unit, unless it is leading a unit
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
 ALL ATTACKS
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2914,7 +2922,15 @@ Kastelan Robot×4
 
 OC +1 for each model unless Battle-shocked, not in the OC above (Cyber-psalm Programming)
 
-WHEN TARGETEDCybernetica Datasmith · Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected) · Kastelan Robots · Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit · Kastelan Robots · Ranged attacks: each unmodified 6 on its save rolls, 1 mortal wound to the attacking unit after it has shot · 1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
+WHEN TARGETED
+7
+CYBERNETICA DATASMITH Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)
+KASTELAN ROBOTS Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit
+KASTELAN ROBOTS Ranged attacks: each unmodified 6 on its save rolls, 1 mortal wound to the attacking unit after it has shot
+1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing)
+Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 ALL ATTACKS · WHOLE UNIT
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
@@ -3079,7 +3095,10 @@ Skitarii Rangers×10
 7+
 2
 5+
-WHEN TARGETEDWithin 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Wholly within 6" of the Onager Dunecrawler: 4+ InSv against ranged attacks (Emanatus Forcefield)
+WHEN TARGETED
+2
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+Wholly within 6" of the Onager Dunecrawler: 4+ InSv against ranged attacks (Emanatus Forcefield)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
@@ -3214,7 +3233,12 @@ Ironstrider Ballistarii×3
 7+
 2
 5+
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
+WHEN TARGETED
+4
+1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing)
+Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
@@ -3315,7 +3339,12 @@ Ironstrider Ballistarii×3
 7+
 2
 5+
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
+WHEN TARGETED
+4
+1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing)
+Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
@@ -3415,7 +3444,12 @@ Onager Dunecrawler
 7+
 3
 4+
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
+WHEN TARGETED
+4
+1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing)
+Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -3530,7 +3564,12 @@ Hull
 7+
 3
 –
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
+WHEN TARGETED
+4
+1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
+Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing)
+Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS

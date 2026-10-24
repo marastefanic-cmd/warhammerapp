@@ -2230,7 +2230,9 @@ Angron
 5+
 6
 4+
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+WHEN TARGETED
+1
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 MELEE WEAPONS
@@ -2357,7 +2359,10 @@ Chaos Terminators
 6+
 1
 4+
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+2
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
 RANGED WEAPONS
 Range
 A
@@ -2491,7 +2496,10 @@ Chaos Terminators
 6+
 1
 4+
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+2
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
 RANGED WEAPONS
 Range
 A
@@ -2617,7 +2625,9 @@ Eightbound
 6+
 1
 5+
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+WHEN TARGETED
+1
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
 MELEE WEAPONS
 A
 WS
@@ -2692,7 +2702,9 @@ Goremongers
 7+
 1
 –
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+WHEN TARGETED
+1
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
 RANGED WEAPONS
 Range
 A
@@ -2801,7 +2813,9 @@ Dishonoured w/ paired manglers
 7+
 1
 –
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+WHEN TARGETED
+1
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
 RANGED WEAPONS
 Range
 A
@@ -2894,7 +2908,9 @@ Forgefiend
 6+
 3
 5+
-WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+WHEN TARGETED
+1
+2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 RANGED WEAPONS

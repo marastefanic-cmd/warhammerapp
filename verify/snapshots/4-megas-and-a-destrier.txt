@@ -2233,7 +2233,11 @@ Sir Hekhtur
 5+
 1
 –
-WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+3
+Feel No Pain 6+
+5+ invulnerable save against ranged attacks only
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2384,7 +2388,10 @@ Cerastus Knight Atrapos
 6+
 10
 5+
-WHEN TARGETEDFeel No Pain 6+ · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+2
+Feel No Pain 6+
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-10 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2525,7 +2532,10 @@ Cerastus Knight Lancer
 6+
 10
 4+
-WHEN TARGETEDFeel No Pain 6+ · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+2
+Feel No Pain 6+
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-10 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2630,7 +2640,11 @@ Knight Crusader
 6+
 10
 5+*
-WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+3
+Feel No Pain 6+
+5+ invulnerable save against ranged attacks only
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
@@ -2781,7 +2795,12 @@ Knight Destrier
 6+
 8
 5+
-WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · Sanctuary: 5+ invulnerable save · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+4
+Feel No Pain 6+
+5+ invulnerable save against ranged attacks only
+Sanctuary: 5+ invulnerable save
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-6 W
 -1 TO HIT ROLLS (AND -4 OC)
 ALL ATTACKS

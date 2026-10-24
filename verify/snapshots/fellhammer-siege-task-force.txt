@@ -2690,7 +2690,11 @@ Vashtorr the Arkifane
 6+
 3
 4+
-WHEN TARGETEDan enemy unit within 18" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase · Lone Operative while within 3" of a friendly DAEMON VEHICLE unit · 1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+3
+an enemy unit within 18" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase
+Lone Operative while within 3" of a friendly DAEMON VEHICLE unit
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -2799,7 +2803,9 @@ Lord Discordant on Helstalker
 6+
 4
 4+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 ALL ATTACKS
 Every attack: a Critical Hit on an unmodified hit roll of 5+ (Mark of the Soul Forges)
 STRATAGEMS · CULT OF THE ARKIFANE
@@ -2931,7 +2937,9 @@ Warpsmith
 6+
 1
 –
-WHEN TARGETEDLone Operative while within 3" of a friendly HERETIC ASTARTES VEHICLE unit
+WHEN TARGETED
+1
+Lone Operative while within 3" of a friendly HERETIC ASTARTES VEHICLE unit
 RANGED WEAPONS
 Flamer tendril, Melta tendril, Plasma pistol · all pistols
 Range
@@ -3104,7 +3112,9 @@ Nemesis Claw×5
 6+
 1
 5+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 ALL ATTACKS · WHOLE UNIT
 Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Visions of Suffering)
 STRATAGEMS · CULT OF THE ARKIFANE
@@ -3479,7 +3489,9 @@ Havocs×4
 6+
 1
 –
-WHEN TARGETED1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+1
+1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 RANGED WEAPONS
 Range
 A
@@ -3586,7 +3598,9 @@ Obliterators×2
 6+
 2
 5+
-WHEN TARGETED1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+WHEN TARGETED
+1
+1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 RANGED WEAPONS
 Range
 A
@@ -3689,7 +3703,9 @@ Hull
 6+
 3
 5+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -3806,7 +3822,9 @@ Hull
 6+
 3
 5+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -3924,7 +3942,9 @@ Hull
 6+
 3
 5+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -4034,7 +4054,9 @@ Forgefiend
 6+
 3
 5+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -4127,7 +4149,9 @@ Maulerfiend
 6+
 3
 5+
-WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+WHEN TARGETED
+1
+1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 MELEE WEAPONS

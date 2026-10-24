@@ -2430,7 +2430,11 @@ Magnus the Red
 5+
 6
 4+
-WHEN TARGETEDImpossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks · 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+WHEN TARGETED
+3
+Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2570,7 +2574,10 @@ Daemon Prince of Tzeentch with wings
 6+
 3
 4+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+WHEN TARGETED
+2
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS
 vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
 vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
@@ -2722,7 +2729,10 @@ Aspiring Sorcerer
 6+
 2
 4+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+WHEN TARGETED
+2
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS · WHOLE UNIT
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 RANGED WEAPONS
@@ -2949,7 +2959,11 @@ Scarab Occult Terminator×9
 7+
 1
 4+
-WHEN TARGETEDScarab Occult Terminators · Rites of Coalescence: -1 to wound rolls against this unit while it contains a PSYKER model · 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+WHEN TARGETED
+3
+SCARAB OCCULT TERMINATORS Rites of Coalescence: -1 to wound rolls against this unit while it contains a PSYKER model
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS · WHOLE UNIT
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 RANGED WEAPONS
@@ -3132,7 +3146,9 @@ Tzaangors
 7+
 1
 6+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+WHEN TARGETED
+1
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 MELEE WEAPONS
 A
 WS
@@ -3210,7 +3226,9 @@ Tzaangor Enlightened with Fatecaster greatbows
 7+
 2
 5+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+WHEN TARGETED
+1
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 RANGED WEAPONS
 Range
 A
@@ -3290,7 +3308,9 @@ Defiler
 6+
 5
 5+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+WHEN TARGETED
+1
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 RANGED WEAPONS
@@ -3405,7 +3425,9 @@ Sekhetar Robots×2
 7+
 1
 5+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+WHEN TARGETED
+1
+1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 RANGED WEAPONS
 Range
 A

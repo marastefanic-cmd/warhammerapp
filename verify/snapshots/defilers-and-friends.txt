@@ -2301,7 +2301,11 @@ Flawless Blades
 6+
 1
 5+
-WHEN TARGETEDFeel No Pain 5+ · 1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+3
+Feel No Pain 5+
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 ALL ATTACKS · WHOLE UNIT
 vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll (A Challenge Worthy of Skill)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
@@ -2426,7 +2430,11 @@ Daemon Prince of Slaanesh with Wings
 6+
 3
 4+
-WHEN TARGETED-1 D to each attack allocated to this model · 1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+3
+-1 D to each attack allocated to this model
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 ALL ATTACKS
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
@@ -2541,7 +2549,10 @@ Infractors
 6+
 2
 –
-WHEN TARGETED1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 ALL ATTACKS · WHOLE UNIT
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
@@ -2731,7 +2742,10 @@ Tormentors
 6+
 2
 –
-WHEN TARGETED1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 ALL ATTACKS
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
@@ -2857,7 +2871,10 @@ Hull
 6+
 2
 –
-WHEN TARGETED1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 ALL ATTACKS
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
@@ -2958,7 +2975,10 @@ Defiler
 6+
 5
 5+
-WHEN TARGETED1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -3077,7 +3097,10 @@ Defiler
 6+
 5
 5+
-WHEN TARGETED1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 ALL ATTACKS
@@ -3195,7 +3218,10 @@ Maulerfiend
 6+
 3
 5+
-WHEN TARGETED1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase) · 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS

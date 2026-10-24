@@ -2408,7 +2408,10 @@ Angron
 5+
 6
 4+
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+WHEN TARGETED
+2
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 MELEE WEAPONS
@@ -2523,7 +2526,10 @@ Skarbrand
 6+
 5
 4+
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save
+WHEN TARGETED
+2
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+Boon of Blood active (4BTP): 4+ invulnerable save
 DAMAGED 1-7 W
 +2 A
 RANGED WEAPONS
@@ -2623,7 +2629,10 @@ Bloodthirster
 6+
 5
 4+
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save
+WHEN TARGETED
+2
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+Boon of Blood active (4BTP): 4+ invulnerable save
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 RANGED WEAPONS
@@ -2728,7 +2737,12 @@ Daemon Prince of Khorne
 6+
 3
 4+
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+WHEN TARGETED
+4
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit
+1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 RANGED WEAPONS
 Range
 A
@@ -2846,7 +2860,11 @@ Master of Executions
 6+
 1
 –
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+WHEN TARGETED
+3
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 RANGED WEAPONS
 Range
 A
@@ -2970,7 +2988,12 @@ Khorne Berzerker×20
 6+
 2
 –
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+WHEN TARGETED
+4
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+Boon of Blood active (4BTP): 4+ invulnerable save
+1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 RANGED WEAPONS
 Plasma pistol ×6, Bolt pistol ×15 · all pistols
 Range
@@ -3172,7 +3195,10 @@ Goremongers
 7+
 1
 –
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+WHEN TARGETED
+2
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 RANGED WEAPONS
 Range
 A
@@ -3279,7 +3305,10 @@ Dishonoured w/ paired manglers
 7+
 1
 –
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
+WHEN TARGETED
+2
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 RANGED WEAPONS
 Range
 A
@@ -3372,7 +3401,11 @@ Flesh Hounds
 7+
 1
 5+
-WHEN TARGETEDEnraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds · Boon of Blood active (4BTP): 4+ invulnerable save · Feel No Pain 3+ against Psychic Attacks
+WHEN TARGETED
+3
+Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
+Boon of Blood active (4BTP): 4+ invulnerable save
+Feel No Pain 3+ against Psychic Attacks
 RANGED WEAPONS
 Range
 A

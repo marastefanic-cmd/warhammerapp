@@ -2609,7 +2609,12 @@ Roboute Guilliman
 5+
 4
 4+
-WHEN TARGETEDFeel No Pain 5+ · Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+WHEN TARGETED
+4
+Feel No Pain 5+
+Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -2822,7 +2827,12 @@ Bladeguard Veteran×5
 6+
 1
 4+
-WHEN TARGETEDBladeguard Veteran Squad · Bladeguard (once per turn, in the Fight phase, when an enemy unit targets it, instead of +1 to hit for its own melee attacks): attacks that target it have -1 to hit rolls · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase · 2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+4
+BLADEGUARD VETERAN SQUAD Bladeguard (once per turn, in the Fight phase, when an enemy unit targets it, instead of +1 to hit for its own melee attacks): attacks that target it have -1 to hit rolls
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
 ALL ATTACKS · WHOLE UNIT
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -3083,7 +3093,12 @@ Librarian in Phobos Armor
 6+
 1
 –
-WHEN TARGETEDShrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase · Feel No Pain 4+ against psychic attacks · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+WHEN TARGETED
+4
+Shrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase
+Feel No Pain 4+ against psychic attacks
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -3226,7 +3241,11 @@ Heavy intercessor Squad×4
 6+
 2
 –
-WHEN TARGETED+1 to save rolls while it is controlling an objective · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+WHEN TARGETED
+3
++1 to save rolls while it is controlling an objective
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -3328,7 +3347,10 @@ Impulsor
 6+
 2
 5+
-WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+WHEN TARGETED
+2
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -3445,7 +3467,10 @@ Eradicator Sergeant
 6+
 1
 –
-WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+WHEN TARGETED
+2
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -3579,7 +3604,10 @@ Reiver Squad×4
 6+
 1
 –
-WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+WHEN TARGETED
+2
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
@@ -3705,7 +3733,11 @@ Deathwatch Terminator×3
 6+
 1
 4+
-WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase · 2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
+WHEN TARGETED
+3
+1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
+1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
 ALL ATTACKS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS

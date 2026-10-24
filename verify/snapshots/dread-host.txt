@@ -2372,7 +2372,14 @@ Allarus Custodian×3
 5+
 3
 4+
-WHEN TARGETEDTrajann Valoris · Feel No Pain 5+ · Feel No Pain 5+ against mortal wounds · Trajann Valoris · Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase · 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks · 2CP Vigil Unending: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+6
+TRAJANN VALORIS Feel No Pain 5+
+Feel No Pain 5+ against mortal wounds
+TRAJANN VALORIS Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase
+2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
+2CP Vigil Unending: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
 RANGED WEAPONS
@@ -2540,7 +2547,13 @@ Sentinel Guard×3
 5+
 4
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · Shield-Captain · Praesidium Shield: Attacks allocated to this model (the Shield-Captain) have -1 D · Sentinel Guard Sodality · Praesidium Shield: -1 to wound rolls for attacks with S greater than its T · 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+5
+Feel No Pain 5+ against mortal wounds
+SHIELD-CAPTAIN Praesidium Shield: Attacks allocated to this model (the Shield-Captain) have -1 D
+SENTINEL GUARD SODALITY Praesidium Shield: -1 to wound rolls for attacks with S greater than its T
+2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
 This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [LETHAL HITS] (Stand Vigil)
 Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
@@ -2682,7 +2695,11 @@ Custodian Guard×3
 5+
 4
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+3
+Feel No Pain 5+ against mortal wounds
+2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [SUSTAINED HITS 1] (Impenetrable Defence)
 Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
@@ -2777,7 +2794,12 @@ Allarus Custodian×2
 5+
 3
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks · 2CP Vigil Unending: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+4
+Feel No Pain 5+ against mortal wounds
+2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
+2CP Vigil Unending: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
 RANGED WEAPONS
@@ -2874,7 +2896,12 @@ Custodian Warden×2
 5+
 3
 4+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · -1 AP to attacks that target it · 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+4
+Feel No Pain 5+ against mortal wounds
+-1 AP to attacks that target it
+2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
 Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
@@ -2963,7 +2990,9 @@ Prosecutor×4
 6+
 2
 –
-WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+WHEN TARGETED
+1
+Feel No Pain 3+ against psychic attacks
 RANGED WEAPONS
 Range
 A
@@ -3043,7 +3072,9 @@ Witchseeker×5
 6+
 1
 –
-WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+WHEN TARGETED
+1
+Feel No Pain 3+ against psychic attacks
 RANGED WEAPONS
 Range
 A
@@ -3122,7 +3153,11 @@ Caladius Annihilator Grav-tank
 5+
 4
 5+
-WHEN TARGETEDFeel No Pain 5+ against mortal wounds · 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETED
+3
+Feel No Pain 5+ against mortal wounds
+2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
+Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 RANGED WEAPONS

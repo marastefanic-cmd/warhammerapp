@@ -2408,7 +2408,11 @@ Ghazghkull Thraka
 6+
 4
 4+
-WHEN TARGETEDLone Operative while within 3" of another friendly ORKS INFANTRY unit · 1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.” · Riled up: 5+ INV
+WHEN TARGETED
+3
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
@@ -2549,7 +2553,13 @@ Meganob×5
 7+
 1
 –
-WHEN TARGETEDMeganobz · Arrogant Invulnerability: Attacks that target this unit have -1 AP · 1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase) · 1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack) · 1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.” · Riled up: 5+ INV
+WHEN TARGETED
+5
+MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
+1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase)
+1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)
+1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
+Riled up: 5+ INV
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
@@ -2741,7 +2751,10 @@ Gretchin×20
 8+
 1
 –
-WHEN TARGETEDGretchin · Extra Sneaky: -3" detection range · Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ INV
+WHEN TARGETED
+2
+GRETCHIN Extra Sneaky: -3" detection range
+Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ INV
 RANGED WEAPONS
 Squigstoppa, Slugga, Grot Blasta ×20 · all pistols
 Range
@@ -2926,7 +2939,12 @@ Nob×10
 7+
 1
 –
-WHEN TARGETED1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase) · 1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack) · 1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.” · Riled up: 5+ INV
+WHEN TARGETED
+4
+1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase)
+1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)
+1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
+Riled up: 5+ INV
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
@@ -3141,7 +3159,13 @@ Meganob×5
 7+
 1
 –
-WHEN TARGETEDMeganobz · Arrogant Invulnerability: Attacks that target this unit have -1 AP · 1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase) · 1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack) · 1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.” · Riled up: 5+ INV
+WHEN TARGETED
+5
+MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
+1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase)
+1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)
+1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
+Riled up: 5+ INV
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
@@ -3321,7 +3345,9 @@ Gretchin×10
 8+
 1
 –
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETED
+1
+Riled up: 5+ INV
 RANGED WEAPONS
 Range
 A
