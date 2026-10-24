@@ -469,13 +469,38 @@ function stratNeeds(V, s){
   if(/\battached\b/i.test(plain(s.when + ' ' + s.target))){ n.attached = true; reasons.push({ rule:'attached', match:(/[^.]*\battached\b[^.]*/i.exec(plain(s.when + ' ' + s.target)) || [''])[0].trim().slice(0, 80) }); }
   return { how:'explicit', needs:n, reasons };
 }
+// the sentences after the first unit's that open with a friendly unit phrase of keywords ("X units from your army …"), as needs
+function ruleSubjects(V, text, first){
+  const out = [], firstS = sentences(text).findIndex(x => prepBold(x).includes(first.matched));
+  sentences(text).forEach((sen, i) => {
+    if(i <= firstS) return;
+    const u = friendlyUnit(V, sen, { keyword:true });
+    if(!u || u.at > 2 || !/^\s*'?\s*from your army\b/i.test(u.after)) return;
+    const n = needsOf(V, u, []);
+    if(!n.bad) out.push({ unit:u, n });
+  });
+  return out;
+}
 function ruleNeeds(V, r){
   const reasons = [];
   const unit = friendlyUnit(V, rulesText(r.text), { keyword:true });
   if(unit){
     reasons.push({ rule:'first-unit', match:clip(plain(unit.matched), 80) });
-    const n = needsOf(V, unit, reasons);
+    let n = needsOf(V, unit, reasons);
     if(n.bad) return { how:'none', reasons:[{ rule:'unparsed', match:n.bad }] };
+    // every other sentence whose subject is a friendly unit phrase ("**SOUL FORGE** units from your army have a 5+ invulnerable
+    // save."): the rule reaches those units too, so its needs are the "or" of them all (Soul Forge Boons: three sentences)
+    const more = ruleSubjects(V, rulesText(r.text), unit);
+    if(more.length){
+      const alts = [n].concat(more.map(x => x.n));
+      // (one alternative per keyword of an "any": HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE)
+      const sets = []; for(const a of alts) for(const k of (a.any.length ? a.any : [null])){ const x = a.all.concat(k ? [k] : []); if(!sets.some(y => y.join('|') === x.join('|'))) sets.push(x); }
+      const c = sets.length > 1 ? combineAlts(sets) : { all:sets[0], any:[], rules:[] };
+      if(!c.bad && alts.every(a => !a.none.length && !a.rule)){
+        n = { all:c.all, any:c.any, none:[] };
+        reasons.push(...more.map(x => ({ rule:'more-subjects', match:clip(plain(x.unit.matched), 80) })), { rule:c.rules.join('+') || 'kw-all', match:sets.map(x => x.join(' ')).join(' | ') });
+      }
+    }
     if(/\battached\b/i.test(plain(r.text))) { n.attached = true; reasons.push({ rule:'attached', match:'attached' }); }
     return { how:'explicit', needs:n, reasons };
   }

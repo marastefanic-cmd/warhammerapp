@@ -1637,8 +1637,13 @@
   "judgement": {
    "needs": {
     "all": [
-     "Faction: Heretic Astartes",
-     "Vehicle"
+     "Faction: Heretic Astartes"
+    ],
+    "any": [
+     "Vehicle",
+     "Lord Discordant",
+     "Vashtorr the Arkifane",
+     "Soul Forge"
     ]
    }
   },
@@ -1646,7 +1651,7 @@
    "rule": "Soul Forge Boons",
    "text": "**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save."
   },
-  "key": "19570440b19f052a"
+  "key": "0ebce068d4f70074"
  },
  {
   "army": "fellhammer-siege-task-force",
