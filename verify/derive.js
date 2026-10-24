@@ -183,7 +183,7 @@ function usedIn(text, ctx, trig){
           const m = /\b(?:uses its|as a result of the) ([A-Z][^,.]*?)(?: ability| detachment rule)\b/.exec(s);
           const other = m && ctx && ctx.named && ctx.named(m[1]);
           if(other){
-            const w = timing(other, { core:ctx.core });
+            const w = timing(other, { core:ctx.core, noStrat:ctx.noStrat });
             if(w.ph && Object.keys(w.ph).length){ add(w.ph, r); reasons.push({ rule:r.id, match:m[0] + ' → ' + w.reasons.map(x => x.match).join(', ') }); }
           }
           continue;
@@ -199,9 +199,10 @@ function usedIn(text, ctx, trig){
         }
         const m = r.re.exec(s);
         if(!m) continue;
-        if(r.blocker){ if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }
+        if(r.blocker){ if(ctx && ctx.noStrat) continue; if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }
         if(r.none){ none = none || { rule:r.id, match:m[0] }; continue; }
         if(r.id === 'any-stratagem' && reasons.some(x => x.rule === 'named-core-stratagem')) continue;
+        if(r.id === 'any-stratagem' && ctx && ctx.noStrat) continue;   // (the checklist: no phase reached through a stratagem)
         if(r.id === 'move-own' && /\benemy unit\b/i.test(s) && ACTIVITY_RULES.find(x => x.id === 'move-enemy').re.test(s)) continue;
         if(r.shoots && !(afterCharge && r.id === 'any-attack')) shoots = true;
         add(r.ph, r);
@@ -660,13 +661,26 @@ function pickCover(text, e){
 // triggered, when it has options; null when none is read
 function optCover(text, own, table, e){
   if(!optionsOf(rulesText(text), table).length) return null;
-  const t = plain(own), d = DURATIONS.map(x => ({ id:x.id, i:t.search(x.re) })).filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  // the first "until …" duration in its own words (a bare "this turn", Cabal of Sorcerers' "not yet attempted a Ritual this turn", is not one)
+  const t = plain(own), d = DURATIONS.map(x => ({ id:x.id, i:[...t.matchAll(new RegExp(x.re.source, 'gi'))].filter(m => /^until\b/i.test(m[0])).map(m => m.index)[0] }))
+    .filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
   if(!d) return null; const c = coverOf(d.id, e); return c.u ? c : null;
 }
 // a protection against mortal wounds (a Feel No Pain or a save "against … mortal wounds", Enraged Abjuration) is used whenever mortal
 // wounds are suffered: every phase of both turns
 const MORTAL_GUARD = /\b(?:feel no pain|invulnerable save|saving throws?|save)\b[^.]*\bmortal wounds\b/i;
 const EVERY_PHASE = PH.map(p => p + ':either').join(',');
+// … within a duration the same words give: the first "until …" duration, from where it is triggered (coverOf); none: every phase;
+// one read that covers no phase: null (its use as table 1 reads it)
+function mortalUse(text, e){
+  const t = plain(rulesText(text)), d = DURATIONS.map(x => ({ id:x.id, i:[...t.matchAll(new RegExp(x.re.source, 'gi'))].filter(m => /^until\b/i.test(m[0])).map(m => m.index)[0] }))
+    .filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  if(!d) return EVERY_PHASE;
+  const c = coverOf(d.id, e); return c.u || null;
+}
+// the checklist reads where an effect is used without the stratagems (the checklist has none): no phase reached through Fire Overwatch,
+// a core stratagem the text names, or "targeted with a Stratagem" (ckCtx)
+const ckCtx = c => Object.assign({}, c, { core:[], noStrat:true });
 // the end moments a text names as when something is checked or done ("This Deed is completed at the end of a turn"): ends
 const endsOf = text => { const t = plain(rulesText(text)).replace(/\buntil the (?:start|end) of [^,.;]*/gi, ' '), out = new Set();
   for(const m of t.matchAll(/\bat the end of (a|your|your opponent['’]s|the) (turn|battle round)\b/gi)){
@@ -695,7 +709,7 @@ function ckEntry(d, text){
   let up = d.usedPh;
   if(phStr(tp) && !d.at && !/\buntil\b|\bthis turn\b|\bnext\b|\bfor the rest of\b/i.test(plain(text || '')))
     up = Object.fromEntries(Object.entries(up || {}).filter(([p]) => tp[p]).map(([p, o]) => [p, o === 'either' ? tp[p] : tp[p] === 'either' || tp[p] === o ? o : null]).filter(([, o]) => o));
-  if(MORTAL_GUARD.test(pt)) up = Object.fromEntries(PH.map(p => [p, 'either']));
+  if(MORTAL_GUARD.test(pt)){ const mu = mortalUse(text, e); if(mu) up = Object.fromEntries(mu.split(',').map(x => x.split(':'))); }
   if(phStr(up)) e.u = phStr(up);
   return Object.keys(e).length ? e : { none:1 };
 }
@@ -826,7 +840,7 @@ function derive(D){
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments });
-      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ctx), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
+      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ckCtx(ctx)), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -865,7 +879,7 @@ function derive(D){
           return r ? r.text : null;
         } };
         timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
-        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, actx), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; { const oc = optCover(ab.text, own, null, ce); if(oc) ce.oc = oc; } ckPut(abilityCk(ab), ce); }
+        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, ckCtx(actx)), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; { const oc = optCover(ab.text, own, null, ce); if(oc) ce.oc = oc; } ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -1017,11 +1031,12 @@ function ruleTables(D){
         const e = { n:o.name };
         if(o.row) e.row = o.row;
         if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
-        if(phStr(used.ph)) e.u = phStr(used.ph);
-        if(MORTAL_GUARD.test(plain(o.text))) e.u = EVERY_PHASE;
-        { const en = endsOf(o.text); if(en.length) e.ends = en; }
-        if(!Object.keys(ph).length && !(own && own.at)) e.x = 1;
+        const usedCk = usedIn(o.text, ckCtx({}), trig), phCk = Object.assign({}, trig ? trig.ph : {}); for(const [p, v] of Object.entries(usedCk.ph)) addPh(phCk, p, v);
+        if(phStr(usedCk.ph)) e.u = phStr(usedCk.ph);
         const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
+        if(MORTAL_GUARD.test(plain(o.text))){ const mu = mortalUse(o.text, { t:phStr(tp), at:tr && tr.at }); if(mu) e.u = mu; }
+        { const en = endsOf(o.text); if(en.length) e.ends = en; }
+        if(!Object.keys(phCk).length && !(own && own.at)) e.x = 1;
         const fo = inForce(o.text, D.factions[s.fk], o.name, { t:phStr(tp), at:tr && tr.at });
         if(fo.length) e.f = fo;
         // a: an option whose own WHEN is a unit activation (Calistus: "WHEN: Your Movement phase, when a friendly readied unit is

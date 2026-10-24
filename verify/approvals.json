@@ -815,6 +815,12 @@
   "at": "2026-10-17",
   "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied."
  },
+ "117dd1379380c102": {
+  "verdict": "ok",
+  "by": "review:checklist-4",
+  "at": "2026-10-24",
+  "why": "Applied to Icon of Khorne and The Blood God’s Favour, the only 'Each time you make a X roll' texts. Both are To do now at the Start of the battle round. In super-terminators The Blood God’s Favour is also in Fight · both turns. Entries listed by their own moment (s) are left alone. A rolled entry clears x, so the stored path doesn't run, and the pk branch skips it (listed itself). The Blood God’s Favour no longer appears as '(Wrathful Presence)' Active now, which matches render.js's `rolled(eP, P)` skip. Note: the app looks up `named` (the list's unit abilities and rules), while render.js reads the text directly. They agree today because The Blood God’s Favour is on Angron's datasheet."
+ },
  "11a13125ad9f100e": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1246,6 +1252,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "EFFECT “Your unit has Feel No Pain 5+.” in the Fight phase; the text gives no duration and the def adds none."
+ },
+ "1be02e905479a217": {
+  "verdict": "ok",
+  "by": "review:checklist-4",
+  "at": "2026-10-24",
+  "why": "`e.rolled` was added to s, stored and once. It matches render.js, which skips a rolled selected ability, and wants the rolled entry at its moments. Rolled entries on screen: The Blood God’s Favour in 3 lists, and Icon of Khorne in princes, standard and big-demons-baby. Nothing else is newly listed."
  },
  "1c0a9e192798899b": {
   "verdict": "ok",
@@ -6941,6 +6953,12 @@
   "at": "2026-10-22",
   "why": "“In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge.”"
  },
+ "9ab139ad856595d6": {
+  "verdict": "ok",
+  "by": "review:checklist-4",
+  "at": "2026-10-24",
+  "why": "Checked against Code Chivalric's table (data.js, the same on Wahapedia imperial-knights). Deed 1–2, 'completed at the end of a turn', gives End of your turn and End of your opponent’s turn. Deed 3–4, 'at the end of your opponent’s turn', gives End of your opponent’s turn. Deed 5–6, 'at the end of the battle round', gives End of the battle round. The alternation backtracks correctly from 'your' to 'your opponent’s'. 'until the end of …' is stripped, and phase ends do not match. Code Chivalric's options are the only ones in data.js with ends (scanned). The rule shows once in each of the three sections, To do now, in 6-bigs and 4-megas-and-a-destrier, and its Qualities are not listed (the owner: one line)."
+ },
  "9afba01052e3c1e4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -7552,6 +7570,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).” Same."
+ },
+ "a7b2b575e982eb74": {
+  "verdict": "ok",
+  "by": "review:checklist-4",
+  "at": "2026-10-24",
+  "why": "Scanned all texts. The only named rolls a listed rule makes are Blessings of Khorne ('at the start of the battle round, you can make a Blessings of Khorne roll': at Start of the battle round) and Adamantine Avalanche ('At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll': fight:either). Sentences with 'each time you make' (Icon of Khorne, The Blood God’s Favour) are skipped as intended, and `**` is stripped before matching. Only listed entries (s or stored) count. Minor: the first `at` found wins. Two rules making the same roll at different moments would keep one. No list has that."
  },
  "a7b64f37579c67aa": {
   "verdict": "ok",
@@ -8645,6 +8669,12 @@
   "at": "2026-10-16",
   "why": "\"at the start of the Fight phase\" with no turn restriction = Fight, either turn."
  },
+ "c25adae73c0bd607": {
+  "verdict": "ok",
+  "by": "review:checklist-4 (its fix)",
+  "at": "2026-10-24",
+  "why": "It takes the first DURATIONS match anywhere in the rule's own words, and DURATIONS' 'turn' includes a bare 'this turn'. Cabal of Sorcerers' own words, 'select one model … that has not yet attempted a Ritual this turn', give data.js `oc:{u:'shooting:your,charge:your,fight:your'}`. That says its Rituals are in force in Charge and Fight of your turn, but the rule gives its options no duration (Destiny’s Ruin and Twist of Fate each say 'Until the end of the phase'). It does not show today, because every Cabal option has its own u. But if any option were left without a u, it would be placed by a guessed duration, against 'never guessed'. The third review already said to limit this to 'until …' durations. The fix counts only matches that begin with 'until'. Tested in a scratch copy with derive --write: only Cabal's oc disappears. Harbingers, Blood Tithe, Kindred Sorcery, Malefic Surge, Doctrina Imperatives, Blessings of Khorne, Canticles and Battle Protocols keep theirs. Every list's checklist is unchanged, and render.js passes."
+ },
  "c2661910b178dd44": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -8788,6 +8818,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "EFFECT: “You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).” The gist keeps both. The roll list it repeats is the WHEN’s, complete."
+ },
+ "c5e5aaceba81df35": {
+  "verdict": "ok",
+  "by": "review:checklist-4",
+  "at": "2026-10-24",
+  "why": "An option with x but its own u now takes that u, since `o.x` is no longer checked first. One with neither takes the rule's oc or pk, with via. Checked on screen against the texts. Harbingers ('Any Dread abilities that have been selected are active until the end of the battle') puts Deathly Terror, Despair, Darkness, Delirium and Dominion in every phase. Doom keeps its own u, and Dismay its Command · Their turn. Canticles ('Until the start of your next Command phase') puts Mantra of Discipline, Binharic Courage and Shroudpsalm in every phase, from your Command phase. Battle Protocols ('it remains in that protocol until it enters a different one') puts Aegis Protocol in every phase. Protector Protocol and Conqueror Protocol keep their own u. Blood Tithe ('until the end of the battle') puts Might of Khorne in every phase. Kindred Sorcery's once-per-battle options stay as boxes in Command · Your turn only (via). No option in data.js has x with u or t (scanned). render.js differs only in that unreached case (x with u: render takes oc), so nothing renders differently today."
  },
  "c5f8cf3ad171957b": {
   "verdict": "ok",

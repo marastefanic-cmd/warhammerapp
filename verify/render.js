@@ -271,12 +271,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         if(inA && !onceA && e0.pk) for(const P of pickOptions(ab, A.units.find(u => u.abilities.includes(ab))).list){
           const eP = CK['a|' + ckHash(P.name + '\n' + P.text)] || { x:1 };
           if(eP.a || listed(eP, P, !naReason(P) && !!perBattle(P)) || rolled(eP, P)) continue;
-          // where it is used: its own use, or its options' when every one is read; none: When unclear
+          // where it is used: its own use, or its options' when every one is read; none read: the selector's whole duration
           const oU = !eP.u && (eP.o || []).length && eP.o.every(o => o.u) ? eP.o.map(o => o.u) : null;
           const uni = us => { const m = {}; for(const x of us) for(const [p, t] of Object.entries(ckMap(x))) m[p] = m[p] && m[p] !== t ? 'either' : t; return Object.entries(m).map(([p, t]) => p + ':' + t).join(','); };
           const use = eP.u || (oU && uni(oU));
           const within = (a, b) => { const B = ckMap(b); return Object.entries(ckMap(a)).map(([p, t]) => [p, !B[p] ? null : t === 'either' ? B[p] : B[p] === 'either' || B[p] === t ? t : null]).filter(([, t]) => t).map(([p, t]) => p + ':' + t).join(','); };
-          const u2 = e0.pk.x || !use ? '' : within(use, e0.pk.u), N = P.name + ' (' + ab.name + ') · ';
+          const u2 = e0.pk.x ? '' : use ? within(use, e0.pk.u) : e0.pk.u, N = P.name + ' (' + ab.name + ') · ';
           const pw = u2 ? usedOf({ u:u2 }).map(z => [T(z), 'Active now']) : [['When unclear', 'Abilities']];
           for(const [sec, grp] of pw) if(!lineIn(sec, grp, l => l.textContent.startsWith(N))) out.push(['checklist-sections', armyId, N + 'is not under ' + sec + ' · ' + grp]); }
         for(const o of e0.o || []) if(o.s || (inA && !o.a)) forcedIn(o.f, o.n, 'Abilities'); }
@@ -284,7 +284,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const u of A.units) for(const ab of u.abilities){
         const e = CK['a|' + ckHash(ab.name + '\n' + ab.text)], key = abilityKey(ab);
         if(!e) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + ': no CHECKLIST entry under the app’s key (node verify/derive.js --write)']);
-        const hit = l => [...l.querySelectorAll('[data-ability]')].some(x => x.dataset.ability === key) && l.textContent.startsWith(ab.name + ' ·');
+        // (an ability a listed one selects names its selector: "The Blood God’s Favour (Wrathful Presence) · Angron")
+        const hit = l => [...l.querySelectorAll('[data-ability]')].some(x => x.dataset.ability === key) && (l.textContent.startsWith(ab.name + ' ·') || l.textContent.startsWith(ab.name + ' (')) &&
+          !/\|pk:/.test((l.querySelector('[data-ctick]') || { dataset:{} }).dataset.ctick || '');   // (not its line as the ability another selects: pk)
         const R = e && rolled(e, firstOf(ab));
         const w = R ? want(R, !naReason(ab) && !!perBattle(ab), 'Abilities', firstOf(ab), true) : want(e, !naReason(ab) && !!perBattle(ab), 'Abilities', firstOf(ab), !!e && !listed(e, firstOf(ab), !naReason(ab) && !!perBattle(ab)) && (e.o || []).some(o => o.s));
         const listedA = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)));

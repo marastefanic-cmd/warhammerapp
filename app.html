@@ -4798,26 +4798,33 @@ function screenChecklist(){
   // abilities: the same ability on several units is one line, as on the Overview
   const groups = new Map();
   for(const u of units) for(const ab of u.abilities){ const k = ab.name + '|' + ab.text + '|' + (naReason(ab) ? 'na' : ''); if(!groups.has(k)) groups.set(k, { ab, units:[] }); groups.get(k).units.push(u); }
+  // an ability a listed one selects (pickOptions) names its selector on its own line too, as "Riled up (War Cry)" does: "The Blood God’s
+  // Favour (Wrathful Presence) · Angron"
+  const selBy = new Map();
+  for(const { ab, units:us } of groups.values()){ const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), pb = !naReason(ab) && perBattle(ab);
+    if(e.pk && !pb && ckListed(e, pb)) for(const P of pickOptions(ab, us[0]).list) selBy.set(P, (selBy.has(P) ? selBy.get(P) + ', ' : '') + ab.name); }
   for(const { ab, units:us } of groups.values()){
     const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab), trig = ckListed(e, pb);
+    const dn = ab.name + (selBy.has(ab) ? ' (' + selBy.get(ab) + ')' : '');
     const aid = 'a:' + ab.name + '|' + ckHash(ab.text) + (na ? '|na' : '');   // (a copy the list cannot use: its own boxes, as its own line)
     if(!trig && !(e.o || []).some(o => o.s)) continue;   // on its datasheet
-    const line = linkTo('ability', key, ab.name) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
+    const line = linkTo('ability', key, dn) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
     if(!trig){ items.push({ id:aid, kind:'abs', e, line, what:ab.name, once:null }); continue; }   // listed only through its options: itself, once
     // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)
     const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class="tg once">per army</span>']]
       : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
-        linkTo('ability', key, ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
+        linkTo('ability', key, dn) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
     items.push({ id:aid, kind:'abs', e, line, what:ab.name, once });
     if(!pb){ forced(e.f, ab.name, 'abs', aid);
       // the ability it selects (pickOptions: Wrathful Presence's, Icon of War from Rod of the War Forge): Active now where that ability is
       // used, within the duration its words give (pk), unless it is listed itself or its own trigger is a unit activation (a)
       if(e.pk) for(const P of pickOptions(ab, us[0]).list){ const eP = ckStored(entry('a|' + ckHash(P.name + '\n' + P.text)), P);
         if(eP.a || ckListed(eP, !naReason(P) && perBattle(P))) continue;
-        // where it is used: its own use, or, for one made only of options (Icon of War), theirs when every one is read; none read: When unclear
-        // (The Blood God’s Favour, x), not the selector's whole duration
+        // where it is used: its own use, or, for one made only of options, theirs when every one is read, within the selector's duration;
+        // not read (Icon of War: The Fires of Mars is x): the selector's whole duration (pk), as an option of which nothing is read takes
+        // its rule's (ckOption); the selector's duration not read (pk.x): When unclear
         const oU = !eP.u && (eP.o || []).length && eP.o.every(o => o.u) ? eP.o.map(o => o.u) : null, use = eP.u || (oU && ckUnion(oU));
-        items.push({ id:'pk:' + aid + ':' + P.name, kind:'abs', e:e.pk.x || !use ? { x:1 } : ckWithin(use, e.pk.u), what:P.name,
+        items.push({ id:'pk:' + aid + ':' + P.name, kind:'abs', e:e.pk.x ? { x:1 } : use ? ckWithin(use, e.pk.u) : { u:e.pk.u }, what:P.name,
           line:linkTo('ability', abilityKey(P), P.name + ' (' + ab.name + ')') + from(esc(unitNames(us))), once:null }); } }
     for(const o of e.o || []) if(ckOptListed(o, true)){ items.push({ id:'ao' + aid.slice(1) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
       line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null }); forced(o.f, o.n, 'abs', 'ao' + aid.slice(1) + ':' + o.n); }
