@@ -45,6 +45,15 @@
   "evidence": "verify/.cache/waha/tyranids.txt lines 122-123 (Crusher Stampede enhancements): \"- Monstrous Nemesis 25 pts / **TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.\"; New Recruit: verify/sources/nr/nidzillas.txt p3 (\"Monstrous Nemesis Tyranids Monster only. …\")."
  },
  {
+  "army": "nidzillas",
+  "unit": "hive-tyrant",
+  "field": "stats[Hive Tyrant].base",
+  "app": "60mm",
+  "source": "50mm",
+  "reason": "New Recruit’s export (20 Oct 2026) gives the base as 50mm, from BSData before 19b7762 (\"Fixes #2787\", 24 Oct 2026), which changes the Hive Tyrant’s base to 60mm; GW’s base size guide (Event Companion) has 60mm. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3820 (TYRANIDS): \"Hive Tyrant  60mm\"; BSData b4dc3f4 Tyranids.json, Hive Tyrant Base 60mm; verify/sources/nr/nidzillas.txt p3 and verify/sources/nr-json/nidzillas.json: Base 50mm."
+ },
+ {
   "army": "6-bigs",
   "unit": "knight-errant",
   "field": "rules",
@@ -961,8 +970,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/lite-knights.txt p3",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 84 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/lite-knights.txt line 84 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
  },
  {
   "army": "lite-knights",
@@ -971,8 +980,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/lite-knights.txt p4",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 108 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/lite-knights.txt line 108 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
  },
  {
   "army": "lite-knights",
@@ -981,8 +990,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/lite-knights.txt p5",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 132 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/lite-knights.txt line 132 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
  },
  {
   "army": "lite-knights",
@@ -1343,8 +1352,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/emperors-chosen.txt p6",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/emperors-chosen.txt line 190 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/emperors-chosen.txt line 190 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
   "by": "hand (Claude)"
  },
  {
@@ -1365,8 +1374,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/emperors-chosen.txt p7",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/emperors-chosen.txt line 190 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/emperors-chosen.txt line 190 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
   "by": "hand (Claude)"
  },
  {
@@ -1593,8 +1602,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/dread-host.txt p7",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/dread-host.txt line 217 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/dread-host.txt line 217 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
   "by": "hand (Claude)"
  },
  {
@@ -1615,8 +1624,8 @@
   "app": "2",
   "source": "3",
   "where": "verify/sources/nr/dread-host.txt p8",
-  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/dread-host.txt line 241 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin b4dc3f4, 24 Oct 2026, as the earlier 173d0ef and fd7dfae) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock 77b6-41ee-7952-e94d at b4dc3f4: A 3, WS 3+ (173d0ef had WS 2+); verify/sources/nr/dread-host.txt line 241 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
   "by": "hand (Claude)"
  },
  {

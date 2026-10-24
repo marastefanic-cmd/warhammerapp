@@ -6,8 +6,10 @@ cd "$(dirname "$0")"; mkdir -p .cache/gw .cache/waha
 # the Wahapedia text extraction (waha-extract.py) needs BeautifulSoup
 python3 -I -c 'import bs4' 2>/dev/null || python3 -m pip install -q beautifulsoup4 2>/dev/null || python3 -m pip install -q --break-system-packages beautifulsoup4
 # BSData: the data New Recruit is built from, pinned
-BSDATA_COMMIT=173d0ef
+BSDATA_COMMIT=b4dc3f4
 [ -d .cache/bsdata ] || git clone -q https://github.com/BSData/wh40k-11e .cache/bsdata
+# an existing clone made before the pin moved does not have the new commit yet
+git -C .cache/bsdata cat-file -e "$BSDATA_COMMIT^{commit}" 2>/dev/null || git -C .cache/bsdata fetch -q origin
 git -C .cache/bsdata checkout -q $BSDATA_COMMIT
 # the factions of the lists (sources/factions.json): "<faction> <wahapedia page> <faction pack file or ->"
 # (a fourth column: the Wahapedia faction of its datasheet pages, when it is not the faction page: the Ultramarines' are space-marines)

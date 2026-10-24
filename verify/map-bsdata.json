@@ -4,18 +4,11 @@
  "battleSize": {
   "Strike Force": "2. Strike Force (2000 Point limit)"
  },
- "detachments": {
-  "deathwatch-support": "Deathwatch Support (ITS NOT READY)"
- },
+ "detachments": {},
  "units": {
   "nerf-when/marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad": {
    "entryId": {
     "Marneus Calgar": "a136-76f7-34d1-8035"
-   }
-  },
-  "nerf-when/deathwatch-terminator-squad": {
-   "catalogue": {
-    "Deathwatch Terminator Squad": "Imperium - Adeptus Astartes - Deathwatch"
    }
   }
  }
