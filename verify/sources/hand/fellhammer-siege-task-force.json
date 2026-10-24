@@ -170,7 +170,7 @@
      }
     },
     {
-     "kind": "all",
+     "kind": "ranged",
      "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start",
      "note": "re-roll wound rolls of 1",
      "from": "Spirit Thief",
@@ -180,7 +180,27 @@
       ]
      }
     }
-   ]
+   ],
+   "aura": [
+    {
+     "kind": "ranged",
+     "needs": {
+      "all": [
+       "Faction: Heretic Astartes"
+      ]
+     },
+     "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start",
+     "note": "re-roll wound rolls of 1",
+     "from": "Spirit Thief",
+     "vs": {
+      "any": [
+       "Vehicle"
+      ]
+     },
+     "notSelf": true
+    }
+   ],
+   "why": "Spirit Thief: every friendly HERETIC ASTARTES model’s attacks against the VEHICLE unit picked at the start of your Shooting phase, until the end of the phase (a picked-target effect, recorded as approved lists record Clever Know-wotz and Omnissiah’s Blessing; not an (Aura)); his own in his footnotes."
   },
   "warpsmith": {
    "defs": {
@@ -189,7 +209,27 @@
      "def": "Lone Operative while within 3\" of a friendly HERETIC ASTARTES VEHICLE unit",
      "defOf": "1e3bf5fe"
     }
-   }
+   },
+   "aura": [
+    {
+     "kind": "all",
+     "needs": {
+      "all": [
+       "Faction: Heretic Astartes",
+       "Vehicle"
+      ]
+     },
+     "when": "Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3\")",
+     "note": "that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase",
+     "from": "Master of Mechanisms",
+     "calc": {
+      "hit": 1
+     },
+     "oneModel": true,
+     "lasts": "round"
+    }
+   ],
+   "why": "Master of Mechanisms: one friendly HERETIC ASTARTES VEHICLE model within 3\", picked in your Command phase (a picked-target effect, recorded as Clever Know-wotz is; not an (Aura))."
   },
   "dark-apostle-master-of-executions-nemesis-claw": {
    "mods": [
@@ -235,10 +275,16 @@
    ],
    "stats": {
     "Master of Executions": {
-     "InSv": "5+"
+     "InSv": "5+",
+     "from": {
+      "InSv": "Soul Forge Boons"
+     }
     },
     "Nemesis Claw": {
-     "InSv": "5+"
+     "InSv": "5+",
+     "from": {
+      "InSv": "Soul Forge Boons"
+     }
     }
    },
    "why": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”).",
@@ -263,7 +309,14 @@
      "note": "[INDIRECT FIRE]",
      "from": "Warp Rift Firepower"
     }
-   ]
+   ],
+   "texts": {
+    "Warp Rift Firepower": {
+     "from": "In your shooting phase",
+     "to": "In your Shooting phase",
+     "why": "GW Faction Pack Chaos Space Marines p38, Rules Updates, Obliterators, Warp Rift Firepower Ability: “Warp Rift Firepower (Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, …” (Wahapedia writes “shooting”)"
+    }
+   }
   },
   "chaos-predator-annihilator": {
    "mods": [

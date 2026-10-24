@@ -1481,7 +1481,7 @@ const FACTIONS = {
       // Cult of the Arkifane: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'cult-of-the-arkifane': {
         name:'Cult of the Arkifane', dispositions:['Priority Assets'], dp:2,
-        rule:{ name:'Soul Forge Boons', needs:{ all:['Faction: Heretic Astartes'], any:['Vehicle','Lord Discordant','Vashtorr the Arkifane','Soul Forge'] }, ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save.' },
+        rule:{ name:'Soul Forge Boons', needs:{ all:['Faction: Heretic Astartes'], any:['Vehicle','Lord Discordant','Vashtorr the Arkifane','Soul Forge'] }, text:'**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save.' },
         enhancements:[
           { name:'Wyredjinn', pts:25, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.' },
           { name:'Cybinfernal Font', pts:20, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.' },
@@ -1500,7 +1500,7 @@ const FACTIONS = {
       // Devotees of Destruction: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'devotees-of-destruction': {
         name:'Devotees of Destruction', dispositions:['Priority Assets'], dp:1,
-        rule:{ name:'Rain of Ruin', needs:{ any:['Havocs','Obliterators'] }, ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**.' },
+        rule:{ name:'Rain of Ruin', needs:{ any:['Havocs','Obliterators'] }, ph:['shooting'], turn:'your', text:'Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**.' },
         enhancements:[
           { name:'Pact of Destruction', pts:15, text:'**WARPSMITH** model only.\n- When this unit uses its **Dark Pacts** ability, this unit can re-roll **Leadership rolls**.\n- In your Shooting phase, when this unit has shot, if this unit used its **Dark Pacts** ability and if those attacks **destroyed** an enemy model, this unit **heals** 3 wounds.' },
           { name:'Eye of Oblivion', pts:20, text:'**WARPSMITH** model only. When this unit is **selected to shoot**, select one enemy unit within 24" of this unit. That enemy unit has +6" **detection range** until this unit has shot.' }
@@ -2556,7 +2556,8 @@ const ARMIES = [
       partialRules:{ 'Cabal of Sorcerers':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
       // Wahapedia's Scarab Occult Terminators: "SCARAB OCCULT SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Scarab Occult Sorcerer
       // only)"; BSData has both on the Scarab Occult Sorcerer model; the Sorcerer in Terminator Armour has both on his own datasheet
-      kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' }
+      kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
+      why:{ rules:{ 'Deep Strike':'Umbralefic Crystal' } }
     },
     {
       id:'tzaangors', ds:'thousand-sons/tzaangors', pts:75,
@@ -3017,7 +3018,8 @@ const ARMIES = [
       ],
       rules:['Waaagh!','Leader','Support'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Runtherd','Zodgrod Wortsnagga','Battleline','Gretchin','Grots'],
-      kwNote:'Battleline, Gretchin, Grots come from the combined unit.'
+      kwNote:'Battleline, Gretchin, Grots come from the combined unit.',
+      why:{ kw:{ Battleline:'Sneaky Little Gitz' } }
     },
     {
       id:'big-mek-painboy-nobz', ds:['orks/big-mek','orks/painboy','orks/nobz'], role:'Character', pts:385, copies:2, ptsNote:'100 + Painboy 45 + Nobz 240',
@@ -3100,7 +3102,8 @@ const ARMIES = [
       ],
       rules:['Waaagh!','Leader','Supa-hazardous'],
       kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
-      kwNote:'Meganobz comes from the led Meganobz.'
+      kwNote:'Meganobz comes from the led Meganobz.',
+      why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' } }
     },
     {
       id:'gretchin', ds:'orks/gretchin', role:'Battleline', pts:45, copies:3,
@@ -3326,7 +3329,8 @@ const ARMIES = [
       ],
       rules:['Support','Doctrina Imperatives','Feel No Pain 4+','Devastating Wounds','Pistol','Deadly Demise 1','Twin-linked','Ignores Cover','Torrent'],
       kw:['Character','Cybernetica Datasmith','Faction: Adeptus Mechanicus','Imperium','Legio Cybernetica','Skitarii','Tech-Priest','Vehicle','Kastelan Robots','Walker'],
-      kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.'
+      kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.',
+      why:{ kw:{ Skitarii:'Martial Signatum Amplificator' } }
     },
     {
       id:'skitarii-rangers', ds:'adeptus-mechanicus/skitarii-rangers', pts:85, copies:2,
@@ -3441,7 +3445,8 @@ const ARMIES = [
       ],
       rules:['Leader','Thrill Seekers','Feel No Pain 5+','Lone Operative','Precision','Sustained Hits','Pistol'],
       kw:['Chaos','Character','Epic Hero','Faction: Emperor\'s Children','Infantry','Lucius the Eternal','Slaanesh','Warlord','Flawless Blades','Grenades'],
-      kwNote:'Flawless Blades, Grenades come from the led Flawless Blades.'
+      kwNote:'Flawless Blades, Grenades come from the led Flawless Blades.',
+      why:{ kw:{ Warlord:'Warlord' } }
     },
     {
       id:'daemon-prince-of-slaanesh-with-wings', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:205,
@@ -4168,7 +4173,8 @@ const ARMIES = [
       partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman', 'Feel No Pain 4+':'Tzaangor Shaman' },
       // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
       // no Cabal of Sorcerers (BSData the same)
-      kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' }
+      kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
+      why:{ rules:{ 'Feel No Pain 4+':'Flowing Flesh' } }
     },
     {
       id:'tzaangors', ds:'thousand-sons/tzaangors', role:'Battleline', pts:75, copies:2,
@@ -4243,7 +4249,8 @@ const ARMIES = [
       kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
-      partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' }
+      partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
+      why:{ kw:{ Warlord:'Warlord' } }
     },
     {
       id:'prosecutor-squad', ds:'adeptus-custodes/prosecutor-squad', pts:45, copies:2,
@@ -4583,7 +4590,10 @@ const ARMIES = [
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
         { kind:'all', when:'Every attack', note:'a Critical Hit on an unmodified hit roll of 5+', from:'Mark of the Soul Forges', always:true, calc:{ critHit:5 } },
-        { kind:'all', when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] } }
+        { kind:'ranged', when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] } }
+      ],
+      aura:[
+        { kind:'ranged', needs:{ all:['Faction: Heretic Astartes'] }, when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] }, notSelf:true }
       ],
       kw:['Chaos','Character','Daemon','Faction: Heretic Astartes','Lord Discordant','Mounted','Soul Forge'],
       why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
@@ -4597,6 +4607,9 @@ const ARMIES = [
         { name:'Master of Mechanisms' },
         { name:'Enrage Machine Spirits' },
         { name:'Wyredjinn', tag:'Enhancement', ph:['command'], turn:'your', text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Heretic Astartes','Vehicle'] }, when:'Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3")', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase', from:'Master of Mechanisms', calc:{ hit:1 }, oneModel:true, lasts:'round' }
       ]
     },
     {
@@ -4610,8 +4623,8 @@ const ARMIES = [
       stats:[
         { name:'Dark Apostle' },
         { name:'Dark Disciple ×2' },
-        { name:'Master of Executions' },
-        { name:'Nemesis Claw ×5' }
+        { name:'Master of Executions', InSv:'5+', from:{ InSv:'Soul Forge Boons' } },
+        { name:'Nemesis Claw ×5', InSv:'5+', from:{ InSv:'Soul Forge Boons' } }
       ],
       ranged:[
         { name:'Bolt pistol', who:'Dark Apostle' },
@@ -4652,7 +4665,8 @@ const ARMIES = [
       kw:['Chaos','Character','Dark Apostle','Faction: Heretic Astartes','Grenades','Infantry','Soul Forge','Master of Executions','Nemesis Claw','Psyker'],
       kwNote:'Master of Executions, Nemesis Claw, Psyker come from the combined unit.',
       partialRules:{ Stealth:'Nemesis Claw' },
-      kwOnly:{ Character:'Dark Apostle', 'Dark Apostle':'Dark Apostle' }
+      kwOnly:{ Character:'Dark Apostle and Master of Executions', 'Dark Apostle':'Dark Apostle' },
+      why:{ kw:{ 'Soul Forge':'Cybinfernal Font' } }
     },
     {
       id:'cultist-mob', ds:'chaos-space-marines/cultist-mob', pts:50,
@@ -4782,7 +4796,7 @@ const ARMIES = [
         { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Forgefiend','Soul Forge','Vehicle','Walker'],
-      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+      why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
     },
     {
       id:'maulerfiend', ds:'chaos-space-marines/maulerfiend', pts:125,
@@ -4793,7 +4807,7 @@ const ARMIES = [
         { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Maulerfiend','Soul Forge','Vehicle','Walker'],
-      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+      why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
     }
   ]
 },
@@ -7078,7 +7092,7 @@ const DATASHEETS = {
 'chaos-space-marines/master-of-executions':{
   name:'Master of Executions', faction:'chaos-space-marines', bsId:'da34-7071-8658-a453',
   stats:[
-    { name:'Master of Executions', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
+    { name:'Master of Executions', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', base:'40mm', InSv:'–' }
   ],
   ranged:[
     { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
@@ -7095,7 +7109,7 @@ const DATASHEETS = {
   name:'Nemesis Claw', faction:'chaos-space-marines', bsId:'f666-1f5d-0c20-06c1',
   stats:[
     { name:'Dark Disciple', M:'6"', T:'5', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'4+', base:'25mm' },
-    { name:'Nemesis Claw', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'1', InSv:'5+', base:'32mm' }
+    { name:'Nemesis Claw', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'1', base:'32mm', InSv:'–' }
   ],
   ranged:[
     { name:'standard', group:'Plasma pistol', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
@@ -7151,7 +7165,7 @@ const DATASHEETS = {
     { name:'Close combat weapon', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Stabilisation Talons', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon.' }
+    { name:'Stabilisation Talons', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon.' }
   ],
   rules:['Dark Pacts','Hazardous','Rapid Fire'],
   kw:['Chaos','Faction: Heretic Astartes','Havocs','Infantry']
@@ -7170,7 +7184,7 @@ const DATASHEETS = {
     { name:'Crushing fists', range:'Melee', A:'4', WS:'3+', S:'9', AP:'-2', D:'2', kw:[] }
   ],
   abilities:[
-    { name:'Warp Rift Firepower', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit\'s ranged attacks have **[INDIRECT FIRE]**.' }
+    { name:'Warp Rift Firepower', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit\'s ranged attacks have **[INDIRECT FIRE]**.' }
   ],
   rules:['Dark Pacts','Deep Strike','Melta','Blast','Sustained Hits'],
   kw:['Chaos','Daemon','Faction: Heretic Astartes','Infantry','Obliterators']
@@ -7253,7 +7267,7 @@ const DATASHEETS = {
     { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
   ],
   rules:['Deadly Demise D3','Dark Pacts','Blast'],
-  kw:['Chaos','Faction: Heretic Astartes','Forgefiend','Vehicle','Walker']
+  kw:['Chaos','Daemon','Faction: Heretic Astartes','Forgefiend','Vehicle','Walker']
 },
 'chaos-space-marines/maulerfiend':{
   name:'Maulerfiend', faction:'chaos-space-marines', bsId:'d37d-7e8f-341b-c67c', role:'Vehicle',
@@ -7269,7 +7283,7 @@ const DATASHEETS = {
     { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
   ],
   rules:['Deadly Demise D3','Dark Pacts'],
-  kw:['Chaos','Faction: Heretic Astartes','Maulerfiend','Vehicle','Walker']
+  kw:['Chaos','Daemon','Faction: Heretic Astartes','Maulerfiend','Vehicle','Walker']
 }
 };
 // ---- end of DATASHEETS ----

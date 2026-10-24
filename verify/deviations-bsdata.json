@@ -1235,9 +1235,29 @@
  {
   "army": "fellhammer-siege-task-force",
   "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "stats.from",
+  "app": "Master of Executions: InSv ← Soul Forge Boons",
+  "source": "(not changed by a rule)",
+  "reason": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”). BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not give it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
   "field": "stats.InSv",
   "app": "Nemesis Claw ×5: 5+",
   "source": "Nemesis Claw: ",
+  "reason": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”). BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not give it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "stats.from",
+  "app": "Nemesis Claw ×5: InSv ← Soul Forge Boons",
+  "source": "(not changed by a rule)",
   "reason": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”). BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not give it. GW wins.",
   "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\".",
   "by": "verify/from-json.js"
@@ -1276,7 +1296,7 @@
   "army": "fellhammer-siege-task-force",
   "unit": "obliterators",
   "field": "ability.text",
-  "app": "Warp Rift Firepower: In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
+  "app": "Warp Rift Firepower: In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
   "source": "(Once per battle, per unit): In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"(Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, you can use this ability. If y…\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-space-marines_Obliterators.html: \"In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].\".",

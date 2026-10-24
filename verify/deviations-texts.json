@@ -104,7 +104,7 @@
   "field": "effect",
   "app": "Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.",
   "source": "matches the less authoritative Wahapedia text, not the Faction Pack: Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit. | differs at \"… the phase, add 1 to the tough[ness characteristic of models in your un…]\" vs source \"… the phase, add 1 to the tough[enss characteristic of models in your un…]\"",
-  "reason": "A misprint in GW's Faction Pack: it prints \"Toughenss\" for the Toughness characteristic; Wahapedia (the codex) prints \"Toughness\", and every other word is the Faction Pack's. The app keeps the characteristic's name. PROPOSED: the owner decides whether the app quotes the misprint.",
+  "reason": "A misprint in GW's Faction Pack: it prints \"Toughenss\" for the Toughness characteristic; Wahapedia (the codex) prints \"Toughness\", and every other word is the Faction Pack's. The owner chose \"Toughness\" (24 Oct 2026): the app keeps the characteristic's name.",
   "evidence": "GW Faction Pack Chaos Space Marines PDF p8, Unholy Fortitude, EFFECT: \"Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.\"; verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane, UNHOLY FORTITUDE: \"Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.\""
  }
 ]

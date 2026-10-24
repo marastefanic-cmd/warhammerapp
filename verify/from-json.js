@@ -640,7 +640,10 @@ for (const u of units) {
       if (W.ds.keywords.some(x => gwKw(x) === gwKw(k))) continue;
       const have = u.kw.find(x => gwKw(x) === gwKw(k)); if (!have) continue;
       const pn = x => lc(x).replace(/rn/g, 'm'), row = u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) === pn(mn));
-      u.kwOnly = Object.assign(u.kwOnly || {}, { [have]: row ? row.name.replace(/ ×\d+$/, '') : mn });
+      // (and every other part of the attached unit whose datasheet gives all its models the keyword: the Master of Executions'
+      // CHARACTER next to the Dark Apostle's, "Dark Apostle and Master of Executions", as Wahapedia names each model that has it)
+      const also = u._parts.filter(p2 => p2 !== p).filter(p2 => { const W2 = wahaDs(nm(p2.name)); return W2 && W2.ds && W2.ds.keywords.some(x => gwKw(x) === gwKw(k)); }).map(p2 => typo(nm(p2.name)));
+      u.kwOnly = Object.assign(u.kwOnly || {}, { [have]: [row ? row.name.replace(/ ×\d+$/, '') : mn].concat(also).join(' and ') });
       if (u.kwNote) { const ex = u.kwNote.replace(/ comes? from .*$/, '').split(', ').filter(x => x !== have), tail = / from .*$/.exec(u.kwNote)[0]; u.kwNote = ex.length ? ex.join(', ') + (ex.length > 1 ? ' come' : ' comes') + tail : undefined; if (!u.kwNote) delete u.kwNote; }
       filled.push({ what: 'kwOnly ' + u.name + ': ' + have + ' (' + u.kwOnly[have] + ')', from: 'verify/.cache/waha/ds/' + W.file + ' ("' + mn + ': ' + k + '")' });
     }
@@ -893,19 +896,28 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     const t = ab.text; delete ab.text; ab.def = d.def; ab.text = t; if (d.defOf) ab.defOf = d.defOf;
     handDone.push({ what: 'When targeted line of ' + u.name + ' · ' + an, by: d.by, text: d.def });
   }
+  // GW's words where Wahapedia's transcription of an ability differs (texts: { <ability>: { from, to, why } }), exactly once
+  for (const [an, fx] of Object.entries(h.texts || {})) {
+    const ab = u.abilities.find(a => a.name === an);
+    if (!ab || String(ab.text).split(fx.from).length !== 2) { want(uid + ' · ' + an, 'hand file text', 'its words "' + fx.from + '" are not there exactly once'); continue; }
+    ab.text = ab.text.replace(fx.from, fx.to); handDone.push({ what: 'GW’s words in ' + u.name + ' · ' + an + ': "' + fx.to + '"', by: 'hand (Claude)', text: fx.why });
+  }
   for (const [an, note] of Object.entries(h.notes || {})) {
     const ab = u.abilities.find(a => a.name === an);
     if (!ab) { want(uid + ' · ' + an, 'hand file note', 'no ability of this name'); continue; }
     const t = ab.text; delete ab.text; ab.note = note; ab.text = t;
     handDone.push({ what: 'note on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: note });
   }
-  for (const [rn, vals] of Object.entries(h.stats || {})) {
+  for (const [rn, vals0] of Object.entries(h.stats || {})) {
     const r = u.stats.find(x => x.name.replace(/ ×\d+$/, '') === rn);
     if (!r) { want(uid + ' · ' + rn, 'hand file stats', 'no stats row of this name'); continue; }
+    // (its reason, `from`: the rule that gives the value, shown on the screen as for a "+" mark; { InSv: 'Soul Forge Boons' })
+    const vals = Object.assign({}, vals0); delete vals.from;
+    if (vals0.from) r.from = Object.assign(r.from || {}, vals0.from);
     for (const k of Object.keys(vals)) if (r[k] !== undefined && r[k] !== vals[k] && !(r.own && k in r.own)) r.own = Object.assign(r.own || {}, { [k]: r[k] });
     Object.assign(r, vals); handDone.push({ what: 'stats ' + u.name + ' · ' + rn + ': ' + JSON.stringify(vals), by: 'hand (Claude)', text: h.why || '' });
     // (a value BSData's modifiers do not give either: declared with the hand file's evidence, statsEvidence)
-    if (h.statsEvidence) for (const [k, v] of Object.entries(vals)) handStats.push({ unit: uid, row: rn, field: k, value: v, why: h.why, evidence: h.statsEvidence });
+    if (h.statsEvidence) for (const [k, v] of Object.entries(vals)) handStats.push({ unit: uid, row: rn, field: k, value: v, from: (vals0.from || {})[k], why: h.why, evidence: h.statsEvidence });
   }
   // keywords a rule of the list gives that BSData's entry and the export lack (the Forgefiend's SOUL FORGE: Soul Forge Boons)
   for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); u.kw.sort(); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
@@ -1035,6 +1047,10 @@ for (const it of labels) {
     if (it.kind === 'strat-timing') { const o = it.derived; const ins = ' phases:' + lit(o.ph) + ', turn:' + lit(o.turn) + (o.turns ? ', turns:' + lit(o.turns) : '') + ','; const ci = d.indexOf(',', d.indexOf('cp:', si)); d = d.slice(0, ci + 1) + ins + d.slice(ci + 1); }
     else { const ci = d.indexOf(" when:'", si); d = d.slice(0, ci) + ' needs:' + lit(it.derived) + ',' + d.slice(ci); }
     filled.push({ what: 'label ' + it.where + ' ' + it.kind + ': ' + JSON.stringify(it.derived), from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') });
+  } else if (it.kind === 'rule-timing' && (it.reasons || []).length && it.reasons.every(r => r.part === 'used' && ['targeted', 'targeted-ranged', 'targeted-melee', 'lone-operative', 'overwatch'].includes(r.rule))) {
+    // an always-on rule that protects units and names no phase (Soul Forge Boons: keywords and a 5+ invulnerable save): no timing
+    // label, as for such abilities (the signed-off lists store none: Aegis of the Emperor)
+    filled.push({ what: 'no timing label ' + it.where, from: 'an always-on defensive rule naming no phase (verify/derive.js: ' + it.reasons.map(r => r.rule).join(', ') + ')' });
   } else if (it.kind === 'rule-timing' || it.kind === 'rule-needs') {
     const rName = it.where.split(' · ').pop().replace(/^.* rule · /, '');
     const ri = d.indexOf("{ name:" + lit(rName) + ",", d.indexOf("const FACTIONS = {"));
@@ -1082,7 +1098,8 @@ for (const f of fails) {
         : pinS + ' has ' + f.source + '; ' + (fact.src || 'GW’s datasheet (the new codex, as Wahapedia transcribes it)') + ' has ' + fact.gw + (gwN(fact.nr) === gwN(fact.gw) ? ', as ' + expS + ' does' : '; ' + expS + ' has ' + fact.nr) + '. GW wins.';
       evidence = (fact.src ? fact.file : fact.file + ': ' + name + ' ' + m[2] + ' ' + fact.gw) + '; ' + EXP + ': ' + fact.nr + '.';
     }
-    const hs = !fact && m[1] === 'stats' && handStats.find(x => x.unit === f.unit && x.row === name && x.field === m[2] && gwN(x.value) === gwN(val));
+    // (and its reason, "InSv ← Soul Forge Boons", which BSData's modifiers do not give either)
+    const hs = !fact && m[1] === 'stats' && handStats.find(x => x.unit === f.unit && x.row === name && (m[2] === 'from' ? x.from && val === x.field + ' ← ' + x.from : x.field === m[2] && gwN(x.value) === gwN(val)));
     if (hs) { reason = hs.why + ' ' + pinS + ' and ' + expS + ' do not give it. GW wins.'; evidence = hs.evidence; }
   } else if (f.field === 'ability.text' || f.field === 'ability') {
     const name = f.field === 'ability' ? (f.app || f.source) : f.app.slice(0, f.app.indexOf(': '));

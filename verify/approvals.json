@@ -17,6 +17,12 @@
   "at": "2026-10-16",
   "why": "\"ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.\""
  },
+ "00be46ddd3c40784": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” {shooting:your}."
+ },
  "010c6d18cd36bebf": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -70,6 +76,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "TARGET \"That MONSTER/VEHICLE unit\": any:[Monster,Vehicle]; picks every Monster/Vehicle in the five lists (all Knights, Rhino, Forgefiend, Defiler, Kans, Dakkarigs, Tyranid monsters…)."
+ },
+ "0186be77147590cb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW Faction Pack adds Indentured Daemon Engines: \"While this model is within 3\\\" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.\" The def keeps the condition; same shape as the approved Dreadherder/Warpsmith-style Lone Operative defs."
  },
  "019519d5608843a1": {
   "verdict": "ok",
@@ -251,6 +263,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Your Shooting phase, when a friendly unengaged BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit has shot” = “After shooting, if unengaged”. EFFECT “Your unit can make a normal move of up to 6\", and must end that move within range of an objective” and “Your unit is not eligible to declare a charge until the end of the turn” = “can make a normal move of up to 6\", ending within range of an objective; not eligible to declare a charge this turn”. Nothing added or lost."
  },
+ "053205d01e3006f6": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” {all:[Faction: Heretic Astartes], none:[Damned]} is the TARGET."
+ },
  "05338311a17d7e9b": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -382,6 +400,12 @@
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
+ },
+ "06e5099a8eecdb00": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” {any:[Havocs, Obliterators]}."
  },
  "07146dcc83a16530": {
   "verdict": "ok",
@@ -527,6 +551,12 @@
   "at": "2026-10-16",
   "why": "Rituals are only attempted \"at the start of your Shooting phase\" (Cabal of Sorcerers), so your Shooting phase."
  },
+ "09aa8dfadf2d0bd9": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” Shooting."
+ },
  "09bbb8e510391694": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -538,6 +568,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The Disc's own ability (“after this model has shot … made with Arcane Fire”); Arcane Fire is his."
+ },
+ "09ee89c8fc904e4a": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "The only (Aura)-tagged ability in the list. Needs all DAEMON + VEHICLE (GW: \"friendly DAEMON VEHICLE unit\"), within 6\", +2 S (parsed by the Damage tab). Vashtorr is a MONSTER, not a VEHICLE, so no selfAlways is right (22.01 only puts him in range of his own aura, and he does not qualify). Reaches the Predators/Vindicator (DAEMON via Soul Forge Boons), Forgefiend and Maulerfiend; the snapshot shows the line on them."
  },
  "09f889140f55da33": {
   "verdict": "ok",
@@ -791,11 +827,23 @@
   "at": "2026-10-23",
   "why": "“End of any phase”: all five phases."
  },
+ "0ebce068d4f70074": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Sentence 1: HERETIC ASTARTES VEHICLE. Sentence 2: HERETIC ASTARTES VEHICLE, LORD DISCORDANT, VASHTORR THE ARKIFANE. Sentence 3: SOUL FORGE. The union is {all:[Faction: Heretic Astartes], any:[Vehicle, Lord Discordant, Vashtorr the Arkifane, Soul Forge]}, exactly as required. “Faction: Heretic Astartes” on Lord Discordant, Vashtorr and SOUL FORGE units is a narrowing the text does not state. In this faction they are all HERETIC ASTARTES, and “from your army” in a CSM army makes it hold. I re-ran derive on the branch data with main’s and the branch’s derive.js: only this item’s derived needs change. With main’s data the two derive.js give identical output (1291 items)."
+ },
  "0f40e847dc09e472": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”"
+ },
+ "0f41fa2a8e263075": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Dark Apostle datasheet ability (needs Dark Disciples, which are the Dark Apostle's own models)."
  },
  "0f607c076cfd1a4b": {
   "verdict": "ok",
@@ -887,6 +935,12 @@
   "at": "2026-10-16",
   "why": "NR: Sorcerer 100 + (5) Rubric Marines 115 = 215 on the card."
  },
+ "11b56249fff71aee": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Nemesis Claw datasheet ability."
+ },
  "11c3a37840e9ca1a": {
   "verdict": "ok",
   "by": "review:defilers-and-friends (its fix)",
@@ -953,11 +1007,23 @@
   "at": "2026-10-21",
   "why": "The rule's own words: \"At the start of the first battle round, select one of the following\" (NR nidzillas p6 prints the same)."
  },
+ "1372c45944297afe": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW: \"Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\" Single-model unit, so every attack; always + calc critHit 5 are right."
+ },
  "1374a4eee5f03036": {
   "verdict": "ok",
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Matches \"each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\"."
+ },
+ "137fe53f0dd53afc": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"Each time a model in this unit makes an attack\": same label as approved every-attack abilities (their Movement/overwatch, your Shooting, Fight)."
  },
  "13946ae60cb6e488": {
   "verdict": "ok",
@@ -1067,6 +1133,12 @@
   "at": "2026-10-21",
   "why": "TARGET: “That SICARIAN unit”: Sicarian, which no unit here has (the app shows “needs SICARIAN”)."
  },
+ "160c051fe38eb2a3": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Your turn."
+ },
  "168f3f8f3f5ca671": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1145,6 +1217,12 @@
   "at": "2026-10-16",
   "why": "Red \"Opponent's turn\" card."
  },
+ "18716ea36a2f64fc": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units (its fix)",
+  "at": "2026-10-24",
+  "why": "Wahapedia Dark Apostle: \"KEYWORDS – ALL MODELS: INFANTRY; GRENADES; CHAOS / DARK APOSTLE ONLY: CHARACTER; DARK APOSTLE\" — right for the Dark Apostle's own unit. But in this combined unit the Master of Executions also has CHARACTER (Wahapedia MoE: \"INFANTRY; CHARACTER; GRENADES; CHAOS; MASTER OF EXECUTIONS\"; export MoE categories include Character). The unit screen now prints \"Dark Apostle only: CHARACTER\", which is false for the MoE. Approved convention names every model that has it (Thousand Sons: \"Exalted Sorcerer and Aspiring Sorcerer\")."
+ },
  "1886ad6e55d31ac0": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -1180,6 +1258,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Friendly WORLD EATERS units\"."
+ },
+ "1928bc7934deb95e": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” Shooting."
  },
  "193b99e557fe69c2": {
   "verdict": "ok",
@@ -1228,6 +1312,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "New Recruit: \"1x Skarbrand  Bellow of endless fury, Slaughter and Carnage\"; Slaughter and Carnage has strike and sweep profiles (New Recruit, Wahapedia)."
+ },
+ "19fbae67146837c2": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Faithful."
  },
  "1a26079f75de4fea": {
   "verdict": "ok",
@@ -1312,6 +1402,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "EFFECT “Your unit has Feel No Pain 5+.” in the Fight phase; the text gives no duration and the def adds none."
+ },
+ "1bf7c88b1e6b3a19": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: Vashtorr's claw; Vashtorr's hammer (strike/sweep). Profiles match GW Faction Pack (strike 6 2+ 14 -3 3; sweep 12 2+ 8 -1 2; claw 12\" D6 S5 AP-2 D1 [ANTI-VEHICLE 4+, TORRENT]). Curly apostrophe matches approved convention (Hekhtur’s pistol)."
  },
  "1c0a9e192798899b": {
   "verdict": "ok",
@@ -1463,6 +1559,18 @@
   "at": "2026-10-23",
   "why": "Fire Overwatch is shooting by a selected-to-shoot unit. Its EFFECT is \"Your unit shoots using snap shooting\", and snap shooting is a shooting type (15.09: \"Your unit shoots as described in Making Attacks (04)\"). Shooting types are what a unit that is \"selected to shoot\" resolves. Making Attacks (04) has \"the active player\" resolve every shot, and in the opponent's turn only 01.03 makes the overwatching player active: \"Each time a unit is selected to shoot or selected to fight, that unit’s controlling player is the active player until those attacks are resolved.\" Warpmeld Sacrifice names no phase, so it is not phase-locked (07.02.01). It therefore triggers in Fire Overwatch: the own-attacks part in the opponent's Movement phase, and the targeted part when the enemy overwatches in your Movement phase. ph ['movement','shooting','fight'] with turn 'either' is correct. The Core Rules never say outright that a Fire Overwatch unit is \"selected to shoot\", but the active-player rule only works if it is. This matches result-knights-nids.json."
  },
+ "1f44b2f453dbb3b6": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” The opponent’s."
+ },
+ "1f48d86a4e788be1": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"At the start of the Fight phase\": Fight, either turn."
+ },
  "1f60647795b8073c": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1577,6 +1685,12 @@
   "at": "2026-10-24",
   "why": "Note “re-roll wound rolls of 1, [IGNORES COVER]” = the EFFECT; dmEffects reads it as {rrWound:'1s', ignoresCover:true}."
  },
+ "216ce3ee8b1ae4dc": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: 2 ectoplasma cannons (replacing the Hades autocannons, 2×5 pts) + \"Ectoplasma cannon and limbs\" (replacing the jaws, 5 pts): 3 ectoplasma cannons + armoured limbs; 155 + 15 = 170. CSM profiles (BS3+, no [RAPID FIRE], armoured limbs 2 3+ 6 0 2) differ from the World Eaters Forgefiend, so a separate row is right."
+ },
  "217d30d04b7b74e9": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1588,6 +1702,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Matches \"just after a saving throw is failed for a THOUSAND SONS PSYKER model ... Change the Damage characteristic of that attack to 0\"."
+ },
+ "21a298e0b0ed4e38": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. Overwatch is at the end of your opponent’s Movement phase, and the FAQ says that is a Dark Pact. A unit is selected to shoot only in your own Shooting phase. Fight is either, the default."
  },
  "21be80a6648299f4": {
   "verdict": "ok",
@@ -1636,6 +1756,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "TARGET: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army”: same keyword set as Auto-divinatory Targeting."
+ },
+ "226c3ce0aa6d267b": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” Right, nothing added. “Toughness” is the owner’s decision, recorded in deviations-texts.json (see the report: its reason still reads PROPOSED)."
  },
  "22720814e9220887": {
   "verdict": "ok",
@@ -1793,6 +1919,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Fight phase\", with no player named, so either turn."
  },
+ "258e300333abbaeb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” {all:[Faction: Heretic Astartes]}. Unlike the other strats, nothing excludes DAMNED."
+ },
  "25adb36a13cd57fc": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1895,6 +2027,12 @@
   "at": "2026-10-21",
   "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
  },
+ "27a869932bfcd52f": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. Selected to shoot: your Shooting phase, and Fire Overwatch in the opponent’s Movement phase. The Faction Pack FAQ says so: “When I target a unit with the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.” Selected to fight: the Fight phase. So Movement, Shooting and Fight."
+ },
  "27aa9969039b1408": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -1984,6 +2122,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase ... an unmodified Wound roll of 3+ scores a Critical Wound\": attacks in that Fight phase are melee; \"a model in this unit\" covers the attached unit (19.04 FAQ: \"’this/that unit’ ... applies to all models in an attached unit\"). The cost (one model destroyed if nothing is killed) stays in the ability text."
+ },
+ "287f8bb74ac4fe5d": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Melee attacks while leading: Fight, either turn. A Support unit \"leads\" its bodyguard unit (Core 19.01: \"Both of these abilities allow such units to lead other friendly units\"), so the wording holds after the Leader→Support change."
  },
  "28a1b1bc72f1cf1c": {
   "verdict": "ok",
@@ -2237,6 +2381,12 @@
   "at": "2026-10-21",
   "why": "Code Chivalric’s rows “Deed 1–2 · …” / “Quality 1–2 · …” become two groups (Deed, Quality) by D6 result, as the rule has “one Deed and one Quality … by rolling a D6 and consulting the relevant table”. Doctrina’s and Blessings’ rows are one option each (“Unbridled Bloodlust · double 1+”)."
  },
+ "2de8c492d6d92314": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units (its fix)",
+  "at": "2026-10-24",
+  "why": "Stabilisation Talons is for ranged attacks only (\"makes an attack with a ranged weapon\"), so the Fight phase does not belong in its label: the snapshot reads \"Their Move · Your Shoot · Fight\". Approved ranged-only abilities (Total Obliteration, and here Annihilator/Destructor/Siege Shield) are {ph:[movement, shooting], turn:opp, turns:{shooting:your}} (overwatch + your Shooting)."
+ },
  "2de8d5d794d854fd": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2350,6 +2500,12 @@
   "by": "review:r11-misc",
   "at": "2026-10-21",
   "why": "WHEN \"Fight phase\". EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The line is the signed-off Crazed Rampage line plus \"D6, +1 if riled up\", which is in the text (Wahapedia gives the same words). It adds nothing."
+ },
+ "3119d9f672bc8ad0": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” {all:[Soul Forge]} is the TARGET."
  },
  "312089044e90c9c7": {
   "verdict": "ok",
@@ -2519,6 +2675,12 @@
   "at": "2026-10-21",
   "why": "EFFECT: \"Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.\" The gist is the same, shorter; \"full wounds\" is left out, and starting strength comes close."
  },
+ "348e4cf06ae78de8": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” {all:[Havocs]}. Unengaged is a condition in play, not a keyword."
+ },
  "34c69ad196993fa0": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -2573,6 +2735,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.71); BSData profile is on the Meganobz unit. Models match NR."
  },
+ "3644cdda4e1f2d45": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: 2 Obliterators, fleshmetal guns (3 profiles) + crushing fists; names follow NR (\"Fleshmetal guns - focused malice\" etc.). Profiles match Wahapedia. 160 pts."
+ },
  "365988ef4ec55eb7": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -2585,6 +2753,12 @@
   "at": "2026-10-16",
   "why": "\"Each time this unit makes a Charge move\": your Charge phase, and theirs via Heroic Intervention (MOUNTED unit is eligible)."
  },
+ "36a12a1284646acb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "+1 AP vs INFANTRY (parsed), ranged, always while vs holds."
+ },
  "36c88aaba95b1356": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2596,6 +2770,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ "36f3f0eef598ab10": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” {all:[Soul Forge]}."
  },
  "370d78758068d9b9": {
   "verdict": "ok",
@@ -2933,6 +3113,12 @@
   "at": "2026-10-18",
   "why": "`n.attached && !u.leads` keeps only units with a leader or support character attached. The Leader/Support text in data.js: 'for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it'. So a unit with only a support character (Mek + Tankbustas) is an attached unit, as the code comment says. Attaching happens only 'Before the battle, in the Muster Armies step', so the list's `leads` covers every unit that can be attached. Breakin' Heads needs {all:[Faction: Orks, Infantry], attached:true}, which is the WHEN 'a friendly attached ORKS INFANTRY unit' with nothing added. Harness result: offered to Nazdreg + Meganobz, Bigboss + Warboss + Breaka Boyz, and Warboss in Mega Armour + Meganobz; Ghazghkull and the Beastboss (not attached) are left out. Two characters need no special case. Not judged here: whether a mixed attached unit counts as INFANTRY. That rests on the union `kw` in data.js, not on this function, and the core text on unit keywords isn't in the item."
  },
+ "3cf55122e2c20e53": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” The target, the condition, the duration and the +1 AP are all there. Nothing is added."
+ },
  "3d098f7e7305160c": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -3041,6 +3227,12 @@
   "at": "2026-10-21",
   "why": "TARGET: “One SKITARII VEHICLE unit from your army”: Skitarii + Vehicle picks the Ironstriders, the Onager, the Skorpius and the Datasmith + Kastelans, and not the Rangers."
  },
+ "3f5758aac63171fb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Cult of the Arkifane enhancement (Wahapedia 20 pts; export Enhancements=1), so tag Enhancement."
+ },
  "3fa10f6d7466f8be": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -3118,6 +3310,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "Datasheet (Wahapedia the same): \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" vs none Monster/Vehicle is the exclusion word for word; the only other condition is the phase and whose turn, which the matchup gives (and the app drops the pre-tick under Fire Overwatch), so always is right."
+ },
+ "40d27e41a0c6fd07": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW: +1 to hit vs a unit below Starting Strength, also +1 to wound if Below Half-strength; any attack (kind all); the whole attached unit (19.04: a bodyguard ability applies to every model). Pick shape as approved."
  },
  "40d91964a94e1872": {
   "verdict": "ok",
@@ -3281,11 +3479,29 @@
   "at": "2026-10-24",
   "why": "Text (Wahapedia Ultramarines, Army Rules, word for word in data.js): selected “At the start of your Command phase”; the doctrines are an advance move that does not prevent a charge (Movement, Charge), [ASSAULT] on ranged attacks (Shooting), a fall-back move that does not prevent shooting or a charge (Movement, Shooting, Charge). All of it is your turn: advance and fall-back moves are made in your Movement phase (09.02), declaring a charge is your Charge phase, and [ASSAULT] only matters for shooting after an advance. Nothing is used in the opponent’s turn, so 'your' (no turns map needed)."
  },
+ "434fe837aee895df": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” “Your Command phase”: your turn."
+ },
  "435c34643eb505d9": {
   "verdict": "ok",
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"That unit's ranged attacks have [ASSAULT]\": true."
+ },
+ "438f31c63d56fa7c": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” kind all (every attack). The when keeps the phases and the duration. The note “+1 AP” is the app’s form of “improve AP by 1”, and dmEffects reads it as ap+1."
+ },
+ "4396219b07999ee7": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"At the start of your Command phase\": Command, your turn."
  },
  "43c9d0aaf25d19fe": {
   "verdict": "ok",
@@ -3328,6 +3544,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The text opens “(Once per turn, per unit)”."
+ },
+ "443804bc77453fac": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” The when-targeted line keeps the moment, +1 T and the duration."
  },
  "4472ae2c5333a268": {
   "verdict": "ok",
@@ -3527,6 +3749,12 @@
   "at": "2026-10-22",
   "why": "The opp parameter and the “Their unit” chips (gcTargets on the opponent’s list) are removed; everything else is as before: the rule and its source, when (c.when) and how long in the rule’s words (For the battle / Until another is picked / Until the start of your next Command phase / Battle round N, with “from the start of the battle” or “picked in battle round N”), options with “used” for once-per-battle ones picked in another round, Rolled, the state, the quoted text of each pick, earlier rounds’ picks, and the app note for a step the Event Companion lacks."
  },
+ "4942ee35902ec75f": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Command phase pick, +1 to hit until your next Command phase: Command (your), Shooting (your), Fight (either). Matches the approved persisting-buff convention (Clever Know-wotz: no overwatch phase)."
+ },
  "49596c6cbbb185be": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3556,6 +3784,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“One TZEENTCH MUTANT unit from your army”."
+ },
+ "49c4b473ec9a4578": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” Needs {any:[Havocs, Obliterators]} are the two named units. Like Wahapedia, the text does not restrict it to HERETIC ASTARTES."
  },
  "49d2820a1a78b12d": {
   "verdict": "ok",
@@ -3749,6 +3983,12 @@
   "at": "2026-10-21",
   "why": "Wahapedia tags it \"Prophet of da Great Waaagh! (Aura)\" (data.js tag Aura) and Core Rules 22.01 says \"While a model with an aura ability is on the battlefield, it is always within range of its own aura ability\"; Ghazghkull is a friendly ORKS unit and the effect (\"that unit’s melee attacks have +1 to hit rolls, +1 to wound rolls\") has no other condition, so selfAlways is right."
  },
+ "4de252d2ceb1c6a8": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "verify/.cache/waha/ds/chaos-space-marines_Vashtorr-The-Arkifane.html prints \"Unholy Mechanisms (Aura):\"; the export has \"Unholy Mechanisms (Aura)\"; GW Faction Pack p. Rules Updates rewords it and keeps it an aura. GW tags it, so tag Aura is right (22.01)."
+ },
  "4de6f1f3c2ad0147": {
   "verdict": "ok",
   "by": "review:r5-text",
@@ -3838,6 +4078,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "WHEN: “a friendly attached ORKS INFANTRY unit”. TARGET: “That ORKS INFANTRY unit”. Orks + Infantry + attached are copied from these. The trigger “becomes battle-shocked” is not a keyword filter. text: same as Wahapedia word for word."
+ },
+ "4f229dbb60f0eec6": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules (its fix)",
+  "at": "2026-10-24",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” [HEAVY] (Core Rules 24.16) works only “In your Shooting phase”. That makes it phase-locked (07.02.01: “any other rule that explicitly states the phase in which that rule applies” cannot be used with out-of-phase rules such as Fire Overwatch). So Overwatch in the opponent’s Movement phase gets nothing from Rain of Ruin. derive.js adds Overwatch for every always-on ranged keyword, and that is wrong for [HEAVY]. Fix: ph [shooting], turn your, no turns."
  },
  "4f3d801cb7199fcd": {
   "verdict": "ok",
@@ -3970,6 +4216,12 @@
   "by": "review:r23-army (its fix)",
   "at": "2026-10-22",
   "why": "The text has two triggers. “Each time you make a Blessings of Khorne roll” is at the start of the battle round (Blessings of Khorne: “at the start of the battle round, you can make a Blessings of Khorne roll”) or via Skulls for the Skull Throne! (Fight phase): the new at:“Start of the battle round” (gStep → round: shown in the round’s first Command phase only, not under Command abilities 08.04) plus fight cover it, and that is what the play test (g5 F13) asked for. But “each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit, and the Lord’s unit (plasma pistols, bolt pistols, GRENADES for Explosives; not TITANIC, so Fire Overwatch at the end of your opponent’s Movement phase) can destroy units in your Shooting phase and their Movement phase too. Dropping those two phases drops where that sentence triggers, against the app’s convention for attack-triggered abilities (Hunter of Souls: movement opp, shooting your, fight either; the fixlist keeps Fire Overwatch “opp movement” tags as deliberate) and against the earlier sign-off of exactly these tags for this text (result-literal 52c3668253df7eb6). Keep the at (it alone fixes the Command placement; in the other phases place() gives “during”) and restore the phases."
+ },
+ "530787891908c7bc": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” The opponent’s."
  },
  "5350277d096742d2": {
   "verdict": "ok",
@@ -4217,6 +4469,12 @@
   "at": "2026-10-24",
   "why": "The Fight phase is either player's, so 'either', as for the approved always-on attack rules (Magna Imperator, Primarch of the XIII). The bold headings change nothing in the words that set the turn."
  },
+ "581818851f806a90": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"at the start of any phase\": every phase, either turn."
+ },
  "5834a3f7790a87ec": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -4373,6 +4631,12 @@
   "at": "2026-10-21",
   "why": "\"each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll\": the note is now only \"+1 to hit\" (calc {hit:1}), with vs none Monster/Vehicle. Beacons of Rage is tagged \"(Aura)\", so 22.01 puts the Eightbound within their own aura and selfAlways is right; no table condition is left on this mark."
  },
+ "5a7a8c8df970f9ff": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” “Your Shooting phase or the Fight phase” gives turn either, with Shooting overridden to your (like Strength from Exile and Armed to da Teef)."
+ },
  "5aafc3612d85d83b": {
   "verdict": "ok",
   "by": "review:tables",
@@ -4408,6 +4672,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "NR: \"Malign Presence (Aura)\"."
+ },
+ "5c3118406321679f": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” Movement."
  },
  "5c66bad42301351a": {
   "verdict": "ok",
@@ -4456,6 +4726,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Charge phase”: your turn."
+ },
+ "5d04cd60d4777216": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Move characteristic (your Movement) and Advance/Charge rolls: same as approved Brayhorn."
  },
  "5d16956003a085ed": {
   "verdict": "ok",
@@ -4516,6 +4792,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Movement phase, when this unit is selected to move … this unit can make a pulse jet move.” The text names your Movement phase. (For the owner: the lasting effects, “Until the end of the turn … not eligible to declare a charge” and “Until the start of your next turn, attacks that target your unit have -1 to hit rolls”, are in the Pulse Jet Move rule, not in this ability’s words, so the tag doesn’t carry them.)"
+ },
+ "5edf51648a65df64": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Cult of the Arkifane enhancement Wyredjinn (25 pts): tag Enhancement. 65 + 25 = 90 pts as the list shows."
  },
  "5eeb00ce6a6bd4f7": {
   "verdict": "ok",
@@ -4745,6 +5027,12 @@
   "at": "2026-10-21",
   "why": "“unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit”; New Recruit prints OC 1 (Datasmith) and 2 (Kastelan Robot), the same as Wahapedia's base OC 1 and 2, so the +1 is not in them (its M 8\" does include the +2\")."
  },
+ "62d3d4be59b6eea3": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Optional (\"it can use this ability\"): not always; [DEVASTATING WOUNDS] and [HAZARDOUS] parse."
+ },
  "6300d931facc5642": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -4895,6 +5183,12 @@
   "at": "2026-10-21",
   "why": "Battle Protocols gives Protector / Conqueror / Aegis Protocol from “- **…:**”. Singular Purpose gives “Select one enemy unit” / “Select one objective marker”, i.e. its own bullets named by their first words."
  },
+ "66a2fc4bc05afdeb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Default GW loadout (Wahapedia: bolt pistol; Helstalker autocannon; techno-virus injector; bladed limbs; impaler chainglaive) = export. Profiles match GW Faction Pack (chainglaive 5 2+ 8 -3 3 [LANCE]); bolt pistol BS2+ S5 AP-1."
+ },
  "66b0e6394d2e86b2": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -4985,6 +5279,12 @@
   "at": "2026-10-16",
   "why": "\"normal\", \"Normal\", \"normal move\", \"Normal Move\"; every bare \"normal\" sits in \"normal, advance or fall-back move\" (Super-Heavy Walker, Crusher Stampede)."
  },
+ "68f3ecb6dbc72cc2": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” The when-targeted line keeps the phase, the S>T condition and -1 to wound. Like the text, it gives no duration."
+ },
  "6905526cfad6e2fa": {
   "verdict": "ok",
   "by": "review:m1-units",
@@ -5021,6 +5321,12 @@
   "at": "2026-10-22",
   "why": "Each label states exactly its table row: '1–2: +1 A', '3–4: +2 S', '5–6: +1 AP'; the pair labels join two rows' effects ('This unit's attacks have the relevant rule(s)'), matching each pick's existing note. The six picks cover every outcome of 'roll either one D6 or two D6 (keep re-rolling duplicate results)': under the recorded owner reading (a duplicate result = the same table row, so two D6 always land on two different rows) the three pairs are all C(3,2) combinations; even if read as duplicate numbers, two D6 landing in one band (e.g. 1 and 2) give only that row's one rule, which the single picks already cover. Names (the calc keys), notes, when and the mod note are unchanged; label is display-only (app dmPickLabel falls back to name). Versus 8ef74cb, this entry's only change is the added label fields and their comment."
  },
+ "698dbcd54a530bcf": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"At the start of your Shooting phase\": Shooting, your turn."
+ },
  "69927a84f146fea4": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -5032,6 +5338,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Doom · 2: “Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.” = kind all, +1 to wound rolls. Whether Doom is active and the target Battle-shocked are the player's ticks (“Doom active (Harbingers of Dread), the target Battle-shocked”); lasts 'battle' = “Any Dread abilities that have been selected are active until the end of the battle.” Nothing added."
+ },
+ "69b56852834dd4ce": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"Each time this model is selected to shoot\": their Movement (overwatch) + your Shooting."
  },
  "69eb9442c2c155d8": {
   "verdict": "ok",
@@ -5086,6 +5398,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "EFFECT: \"each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.\" vs any Monster/Vehicle matches (those keywords are on every model of such a unit); a stratagem, so no always."
+ },
+ "6bbec732e73b47fb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Borne by the Dark Apostle (export: under the Dark Apostle model)."
  },
  "6c01bc8bce6ada5b": {
   "verdict": "ok",
@@ -5200,6 +5518,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"More Dakka - Big Mek in Mega Armour\"."
+ },
+ "6de648290f715c44": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW: re-roll the Hit roll vs a unit below Starting Strength; also the Wound roll if Below Half-strength; melee only, \"you can\". The pick keeps the condition and the choice; pick notes parse (\"re-roll hit rolls and wound rolls\"). Same pick shape as the approved Visions-type entry (data.js line ~869)."
  },
  "6e00976af6f2b75f": {
   "verdict": "ok",
@@ -5381,6 +5705,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting phase\"."
  },
+ "71c9a581300f0fac": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Ranged attacks: their Movement + your Shooting, as approved Total Obliteration."
+ },
  "7216fa448a775e9a": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -5404,6 +5734,18 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "New Recruit: Ahriman 105, Tzaangor Enlightened with Fatecaster greatbows 110; unit 215."
+ },
+ "728d1f6352e9325f": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: demolisher cannon, armoured tracks, combi-bolter, Havoc launcher. 180 pts."
+ },
+ "730222f6b64fa49c": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Dark Apostle datasheet ability (Wahapedia Dark Apostle sheet)."
  },
  "7310496e3520a5bf": {
   "verdict": "ok",
@@ -5597,6 +5939,12 @@
   "at": "2026-10-23",
   "why": "Readied “At the start of your Command phase”; ka’tah WHENs: Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”, Dacatarai/Kaptaris “Start of the Fight phase”, Rendax “Fight phase”. No ka’tah is in the Charge phase, so command, movement, shooting, fight."
  },
+ "76ba10b0097c3940": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” “Any phase” covers all five phases (the convention)."
+ },
  "76c5e19cbb491d29": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -5729,6 +6077,12 @@
   "at": "2026-10-21",
   "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
  },
+ "797ded3561923cd9": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: Champion bolt pistol (autopistol replaced, a Wahapedia option) + brutal assault weapon; 9 Cultists autopistol + BAW. Counts right; Cultist bolt pistol stays S4 AP0 (not in the Faction Pack bolt pistol list). 10 models 50 pts."
+ },
  "79be6437c1fd2ce8": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -5837,6 +6191,12 @@
   "at": "2026-10-16",
   "why": "NR: Lord on Juggernaut 125 + (20) Khorne Berzerkers 330 = 455."
  },
+ "7ac8d6c1ecfaa2d9": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW wording kept; the Damage tab parses it to ignoreHitMods; always is right (passive)."
+ },
  "7ad51defea1e3045": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5872,6 +6232,12 @@
   "by": "review:literal (its fix)",
   "at": "2026-10-17",
   "why": "Text: “In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is selected to attack, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results).” The footnote’s when, “Optional D6”, drops the timing. Mod footnotes show on the weapon tables, which are not limited to a phase, so the bonus would also seem to apply to e.g. Fire Overwatch at the end of the opponent’s Movement phase. The Deff from Above footnote was fixed for the same reason. The note itself is literal."
+ },
+ "7c229db5caf9265c": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Melee attacks while leading: Fight, either turn (approved convention for leader melee buffs)."
  },
  "7c2a8777b1cf5335": {
   "verdict": "ok",
@@ -6179,6 +6545,12 @@
   "at": "2026-10-16",
   "why": "Khârn's unit models (champion, 7 bolt pistol/chainblade, 2 eviscerator/plasma) carry no Icon of Khorne, so \"If the bearer’s unit contains one or more Icons of Khorne\" cannot trigger for this unit; the Lord's unit has the only Icon."
  },
+ "823cf3fb0ae4dd65": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"At the end of your Movement phase\": Movement, your turn."
+ },
  "826876bb17200d2c": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -6425,6 +6797,12 @@
   "at": "2026-10-23",
   "why": "“Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” The target is within its own aura (22.01), so its own attacks re-roll 1s: kind all, note literal. No duration is printed; 01.02.02 “If a rule or effect is given to a unit and it does not specify how long it is active for, it is only active for the phase in which it was given”, so no lasts is right. (Other Custodes units in the aura get no mark: see the report.)"
  },
+ "878744a6a70c34e2": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: Maulerfiend fists + lasher tendrils (default). 125 pts."
+ },
  "87acdc950cb3d834": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -6527,6 +6905,12 @@
   "at": "2026-10-23",
   "why": "WHEN (ended an advance move) and both bullets (“[Assault] until the end of the turn”, “That move does not prevent your unit from being eligible to declare a charge”) kept."
  },
+ "89c0927b9753e6dc": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” “Any phase”: either turn."
+ },
  "89eea4364122be6d": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -6599,6 +6983,12 @@
   "at": "2026-10-22",
   "why": "WHEN: \"Any phase\" = all five."
  },
+ "8aefa2c44752b4ac": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” Shooting and Fight."
+ },
  "8affdd8227855ef7": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -6635,6 +7025,12 @@
   "at": "2026-10-23",
   "why": "EFFECT literal: the aura, friendly ADEPTUS CUSTODES units within 6\", re-roll hit rolls of 1."
  },
+ "8b5d0bebf256e163": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "MASTER OF EXECUTIONS (MoE), NEMESIS CLAW and PSYKER (Nemesis Claw: \"INFANTRY; PSYKER; CHAOS; GRENADES; NEMESIS CLAW\") are not on the Dark Apostle sheet; the others (CHAOS, CHARACTER, GRENADES, INFANTRY) are. SOUL FORGE is the list’s (Cybinfernal Font), not \"from the combined unit\", so it is rightly left out of the note."
+ },
  "8b6b2f8033eabb14": {
   "verdict": "ok",
   "by": "review:import",
@@ -6646,6 +7042,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1 / Re-roll wound rolls of 1”: needs Faction: Adeptus Custodes, none Monster/Vehicle (so not the Prosecutors/Witchseekers, who have only Faction: Anathema Psykana, and not the Caladius or the Dreadnoughts). It is tagged Aura, so 22.01 (“it is always within range of its own aura ability”) puts Trajann’s own attached unit in it: selfAlways true, selfWhen “Own aura”. Other units’ within 6\" is a tick."
+ },
+ "8b79f9264cf24046": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia: \"equipped with: flamer tendril; melta tendril; plasma pistol; forge weapon\" = export. Profiles match Wahapedia (Melta tendril [MELTA 2] per GW, BSData MELTA 1 declared)."
  },
  "8b7b173abe53714f": {
   "verdict": "ok",
@@ -6683,6 +7085,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting is the opponent’s only: {shooting:'opp'}."
  },
+ "8c4e974c3c36bbec": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. Fight is in either turn and Overwatch is in the opponent’s turn, so the default is “either”, with turns overriding Movement and Shooting."
+ },
  "8c4f84275cbd4977": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -6706,6 +7114,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds”: the When targeted line keeps both values and the duration."
+ },
+ "8c8ddbe32d792fe4": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” {shooting:your}: “Your Shooting phase”."
  },
  "8c97250de7a88ad5": {
   "verdict": "ok",
@@ -6845,6 +7259,12 @@
   "at": "2026-10-24",
   "why": "The use the text names is \"When you target this unit with the Rapid Ingress stratagem\". Core Rapid Ingress: \"WHEN: End of your opponent’s Movement phase\". So Movement, their turn (derive.js identical). The pre-battle token set-up is not a phase."
  },
+ "8f1a4d42041913ad": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Ranged attacks: their Movement (overwatch) + your Shooting, as approved Total Obliteration."
+ },
  "8f35934d70da634a": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -6856,6 +7276,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Magnus W 16 (NR stats row); \"While this model has 1-6 wounds remaining\" = band 1-6."
+ },
+ "8f7a8042028783e6": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” The opponent’s."
  },
  "90121398a09da076": {
   "verdict": "ok",
@@ -6922,6 +7348,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"Once per battle round ... when a friendly TYRANIDS unit within 12\" ... is targeted with a Stratagem\": any phase, either turn."
+ },
+ "9141ce3953fc81b2": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Stealth is on the Nemesis Claw sheet only (\"CORE ABILITIES | Stealth\"); the Dark Apostle and MoE do not have it."
  },
  "914418c97bf72ecb": {
   "verdict": "ok",
@@ -7001,6 +7433,12 @@
   "at": "2026-10-16",
   "why": "Labels: CLEAVE 1/2, [CLEAVE X], [CLEAVE 1]; all 24.06."
  },
+ "9307e40eab51e623": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Ranged attacks: their Movement + your Shooting."
+ },
  "93438fec8dafc616": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -7024,6 +7462,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Red \"Opponent's turn\" card."
+ },
+ "93de54cbfacf23a0": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” Command."
  },
  "93ea47c5d0cce132": {
   "verdict": "ok",
@@ -7091,6 +7535,12 @@
   "at": "2026-10-16",
   "why": "\"destroyed\" and \"fight on death\" (05.04.05 is included in that text)."
  },
+ "95d67d33bc7d67b2": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "The judged code is identical to the live import.js resolveRoster (diffed). The change: the limit check runs only when the export has costLimits, and army.points falls back to T.limits[battleSize]. An over-limit list cannot get through. Two checks still hold: total (R.costs) > T.limits[battleSize] is refused, and the units’ app points must equal that total. T.limits has an entry for every battle size in T.battleSizes (import-ids.js throws otherwise), so the check never compares against undefined. Run against the Fellhammer export (no costLimits): as is → OK, 2000/1995. Extra Havocs with costs updated → “points total 2130 … over the Strike Force limit of 2000 pts”. Extra Havocs with costs not updated → “the units add up to 2130”. No costs → refused (0 ≠ 1995). costLimits [] → OK. costLimits 3000 → refused. Non-pts costLimits → refused. null → malformed. node verify/import-test.js: 19/19 identical, 45 changed exports refused, 144 checks, 0 failures. The implements text still holds (a limit the export names must be BSData’s). Suggestion, not a blocker: import-test has no negative case for “no costLimits and over the limit”."
+ },
  "95f9e7cbd229f319": {
   "verdict": "ok",
   "by": "review:literal",
@@ -7102,6 +7552,12 @@
   "by": "review:r14-picks",
   "at": "2026-10-21",
   "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
+ },
+ "9613375029f7cc82": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"At the start of your Shooting phase\" (GW Faction Pack wording): Shooting, your turn."
  },
  "96432cbd07f9aedb": {
   "verdict": "ok",
@@ -7180,6 +7636,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase”: shooting and fight."
+ },
+ "984f18bb80704834": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Both parts of Siege Shield kept, condition (no other friendly unit in Engagement Range) kept. Passive, so always is acceptable; note it is not counted by the calculator (listed only)."
  },
  "9852395df715d9a1": {
   "verdict": "ok",
@@ -7312,6 +7774,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge.”"
+ },
+ "9aac32d76501d2d8": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” {all:[Soul Forge]} is the TARGET. In this list it matches Vashtorr, the Lord Discordant, the Dark Apostle unit (Cybinfernal Font) and the five vehicles, whose kw carries Soul Forge."
  },
  "9afba01052e3c1e4": {
   "verdict": "ok",
@@ -7451,6 +7919,12 @@
   "at": "2026-10-21",
   "why": "It finds exactly the rules that ask for a pick and say how long it lasts: Code Chivalric; Doctrina Imperatives; Blessings of Khorne (up to two); Kindred Sorcery (each once per battle); Singular Purpose (one per Norn unit copy); Wrathful Presence; Unearthly Power; Full Throttle; Canticles; Rod of the War Forge; Battle Protocols. Rolled only for Code Chivalric (“randomly select”), Honoured from “your army becomes Honoured”. The options themselves (Wrathful Presence’s abilities) are not choices."
  },
+ "9db18882d8b297f3": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Master of Executions datasheet ability; always-on, no timing label."
+ },
  "9dbd9fcc381fd424": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -7462,6 +7936,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "The EFFECT as printed: \"Select one friendly WORLD EATERS unit within 6\" of your unit. Until the end of the turn, melee weapons ... have the [LANCE] ability. If the Daemonic Rage ability is active ... until the end of the phase ... [TWIN-LINKED]\". The WHEN is in the phase/turn, the TARGET has no condition beyond BLOOD LEGIONS. No footnote is fair: the app puts a stratagem's footnote on the units its TARGET names (eligible), which here are the BLOOD LEGIONS units, while the [LANCE] goes to another unit; a footnote would give [LANCE] to the wrong units (see the report on the missing helper line for WORLD EATERS units)."
+ },
+ "9dd05bb660b62a09": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia \"Visions of Suffering (Psychic):\", export \"Visions of Suffering (Psychic)\": tag Psychic."
  },
  "9de51d19f675b1ce": {
   "verdict": "ok",
@@ -7504,6 +7984,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "NR: \"1x Knight Crusader  Hunter's Eye, Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Rapid-fire battlecannon and Questoris heavy stubber\". All 7 weapons are on the one model line."
+ },
+ "9e9f9fdd1693af6f": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: twin lascannon, armoured tracks, 2 lascannons, combi-bolter, Havoc launcher (all Wahapedia options, no extra cost). Combi-bolter S5 AP-1 per Faction Pack. 140 pts."
  },
  "9ec3263fdd7638ad": {
   "verdict": "ok",
@@ -7595,6 +8081,12 @@
   "at": "2026-10-21",
   "why": "\"This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.\" maxT:6 = no target model above T6, exactly that; nothing else conditions it, so always is right."
  },
+ "a03218d5f5ca6b25": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Matches GW (Faction Pack Vashtorr update, Wahapedia): an enemy unit within 18\" that targets him gets -1 to the Hit roll and [HAZARDOUS] on its ranged weapons until the end of the phase. Nothing added; \"him\" is Vashtorr."
+ },
  "a033ad085e8c5fa8": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -7607,6 +8099,12 @@
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Keep Huntin'! (Once per battle round, per army)\". [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "a0a78423e2b63527": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Nemesis Claw wargear ability (one Legionary’s voice eater, export)."
+ },
  "a0a9921caaa031d3": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -7618,6 +8116,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"Fight phase\" with no \"your\": either."
+ },
+ "a0cc9407fb165477": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia/export: \"DAMAGED: 1-4 WOUNDS REMAINING\", W 14 on the datasheet and the export. No timing label (Damaged band), as required."
  },
  "a0d2b594aafc28a2": {
   "verdict": "ok",
@@ -7877,6 +8381,12 @@
   "at": "2026-10-23",
   "why": "'Once per battle round' is right (the text opens with it; the app's onceTag adds ', per army' from 'one model from your army with this ability'). 'Aura' is not: GW does not tag this ability Aura (Wahapedia datasheet world-eaters_Daemon-Prince-of-Khorne: 'Direct the Slaughter: Once per battle round, …', no tag, while the same card tags its real auras), and 22.01 says aura abilities 'are tagged with the word Aura'. The 12\" is the trigger condition for a CP discount on a Stratagem, not an effect on units within range. The deviations-nr.json entries for Direct the Slaughter (princes x2, big-demons-baby) argue only from New Recruit wording and leave out that GW's own card has no tag."
  },
+ "a62ee0cc4f90f54e": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” The phases come from the WHEN (convention): Movement."
+ },
  "a63ab251c342c33b": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -7906,6 +8416,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "TARGET: \"ORKS WALKER unit (excluding TITANIC units)\": both Dakkarigs and the Killa Kans."
+ },
+ "a68e9f13ea70ff5e": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units (its fix)",
+  "at": "2026-10-24",
+  "why": "Spirit Thief lasts only \"Until the end of the phase\" that starts at \"the start of your Shooting phase\"; only ranged attacks are made in the Shooting phase, but kind \"all\" shows the line under ALL ATTACKS (snapshot), i.e. also for his melee weapons and the Fight-phase Damage tab. It should be kind ranged (as the approved \"Your Shooting phase, vs non-MONSTER/VEHICLE targets\" mod). Note: the rule reaches every friendly HERETIC ASTARTES model, not only him; approved lists carry such picked-target effects as aura entries (Omnissiah’s Blessing, Clever Know-wotz, Dreadherder) — see report."
  },
  "a699203cf3fce509": {
   "verdict": "ok",
@@ -8014,6 +8530,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
+ },
+ "a9aa41aeb7dd564c": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Shooting."
  },
  "a9e89bbe276b851b": {
   "verdict": "ok",
@@ -8441,6 +8963,12 @@
   "at": "2026-10-22",
   "why": "Ruinator: Wahapedia and NR give W 26 and “DAMAGED: 1-9 WOUNDS REMAINING”. Fleshmetal Fusion changes T, not W. The Despoiler (W 26, “1-9 wounds remaining”) has the identical item. The band and the W match."
  },
+ "b312c12e8af0c53c": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” “Your Shooting phase or the Fight phase” gives either."
+ },
  "b32f67f8d86c1706": {
   "verdict": "ok",
   "by": "review:oioioi (its fix)",
@@ -8494,6 +9022,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"TARGET: That BLOOD LEGIONS or WORLD EATERS unit\": any of the two."
+ },
+ "b3f14315ceb24f6c": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW: \"While this model is within 3\\\" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.\" Faithful."
  },
  "b43ebd69f2ae39b4": {
   "verdict": "ok",
@@ -8609,6 +9143,12 @@
   "at": "2026-10-20",
   "why": "The NR name line (l.174-176) is \"Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour\". The tag copies it, and the single Grot Oiler token agrees. This is the same as the approved shooty item 38fe81af906fb4ee."
  },
+ "b6f11545957dc8ca": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” {all:[Faction: Heretic Astartes], none:[Damned]} is the TARGET."
+ },
  "b751dae7b6ab061b": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -8644,6 +9184,12 @@
   "by": "review:pubstomper",
   "at": "2026-10-23",
   "why": "Wahapedia's Exalted Sorcerer datasheet and NR both print \"Arcane Shield (Psychic)\"."
+ },
+ "b87623059425ee83": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Dark Pacts (Wahapedia CSM Army Rules, word for word in data.js): “each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact … select one of the following abilities for that unit’s weapons to gain until the end of the phase: [LETHAL HITS] / [SUSTAINED HITS 1]”. kind “all” matches “that unit’s weapons”. The when keeps the trigger, the Leadership test, the D3 mortal wounds on a failed test and the duration. The pick offers either ability. Both is marked both:true, so it counts only with what makes it possible. Each note parses in dmEffects. Nothing is added: the Dark Pact is optional (“can”), and the pick shows that."
  },
  "b87fb18756a65a5f": {
   "verdict": "ok",
@@ -8729,6 +9275,12 @@
   "at": "2026-10-16",
   "why": "Verbatim Wahapedia FAQ under section 15; agrees with 01.07 \"Its controlling player cannot target that unit with stratagems\"."
  },
+ "b9c3dc2b86455805": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” Faithful."
+ },
  "b9ec4a286394af8d": {
   "verdict": "ok",
   "by": "review:r5-text",
@@ -8758,6 +9310,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.” Same."
+ },
+ "ba1d0f9e7aa26376": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Master of Executions datasheet ability (Wahapedia MoE sheet; export)."
  },
  "ba887dc64dca2f10": {
   "verdict": "ok",
@@ -9077,11 +9635,23 @@
   "at": "2026-10-23",
   "why": "Deep Strike: \"if every model in this unit has this ability\" (New Recruit's rule text, 24.09). Disciple of Khorne gives it to \"The bearer\" only (19.04: an enhancement applies only to that model), so it is the Lord's only and the attached unit cannot use it; partialRules names the Lord, as Canis Rex's Lone Operative."
  },
+ "c137c821155a2589": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Nemesis Claw datasheet box \"ATTACHED UNIT\"; the text matches GW."
+ },
  "c1566df972fc3159": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.”: the gist says exactly that (the Starting Strength limit is TARGET text, not EFFECT text)."
+ },
+ "c1b3e6b05dd45fd1": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” The trigger, the duration and both cases are kept. “In a turn in which it Advanced” follows from the trigger."
  },
  "c21a15604f383269": {
   "verdict": "ok",
@@ -9130,6 +9700,12 @@
   "by": "review:m1-units",
   "at": "2026-10-18",
   "why": "Source: \"If this unit made a charge move this turn, this model’s melee attacks have +1 AP.\" kind melee, when \"Made a charge move this turn\", note \"+1 AP\". Exact. The Beastboss is a one-model unit (\"1x Beastboss on Squigosaur\"), so \"this model\" needs no who. (It belongs only to the 155-pt Beastboss that took it, NR l.290.)"
+ },
+ "c330c8b423249df0": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” kind ranged (“ranged attacks”). The when keeps the trigger and the Dark Pacts condition. dmEffects reads the note as lethal plus sustained 1."
  },
  "c33708b801df52fd": {
   "verdict": "ok",
@@ -9245,6 +9821,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: “You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).” The gist keeps both. The roll list it repeats is the WHEN’s, complete."
  },
+ "c5f7f625026e1437": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Dark Apostle 70 (Wahapedia, export) + Cybinfernal Font 20 = 90; MoE 75; Nemesis Claw 5 models 105. 270 total; list total 1995 checks out."
+ },
  "c5f8cf3ad171957b": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -9292,6 +9874,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "An always-on attack modifier (\"This unit’s ranged attacks can re-roll damage rolls\"): their Movement (Fire Overwatch) and your Shooting. Same label as the approved Even More Dakka (\"this unit’s ranged attacks have …\")."
+ },
+ "c6f96e3ab6567f53": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” kind all. vs {any:[Character, Monster, Vehicle]} is the targets the EFFECT names. The note “re-roll the wound roll” reads in dmEffects as rrWound all. The when keeps the phases, the duration and the targets."
  },
  "c7186ee01822ed24": {
   "verdict": "ok",
@@ -9442,6 +10030,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "An always-on attack modifier (\"that unit’s attacks can: re-roll hit rolls of 1 / wound rolls of 1\"). It is labelled with the phases its attacks are made in: their Movement (Fire Overwatch), your Shooting, and the Fight phase in either turn. This is the approved convention for attack-side always-on abilities (Killa Kans’ Spiteful Power Trip has the same label) and is identical to derive.js."
+ },
+ "c9e4401915328efb": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules (its fix)",
+  "at": "2026-10-24",
+  "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” [HEAVY] (Core Rules 24.16) works only “In your Shooting phase”. That makes it phase-locked (07.02.01: “any other rule that explicitly states the phase in which that rule applies” cannot be used with out-of-phase rules such as Fire Overwatch). So Overwatch in the opponent’s Movement phase gets nothing from Rain of Ruin. derive.js adds Overwatch for every always-on ranged keyword, and that is wrong for [HEAVY]. Fix: ph [shooting], turn your, no turns."
  },
  "ca1a81c9c364bcef": {
   "verdict": "ok",
@@ -9653,6 +10247,12 @@
   "at": "2026-10-22",
   "why": "8\" is the Pack 1.2 Rules Update (“Harrying Hounds Stratagem, Target Section: Change 9\" to 8\".”), which Wahapedia's text also has. The WHEN (“just after an enemy unit ends a Normal, Advance or Fall Back move”), the TARGET (“within 8\" of that enemy unit”) and the EFFECT (“Your unit can make a Normal move of up to 6\".”) are all kept."
  },
+ "cde6ffc16feaefa2": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” The text shortened, with nothing added or dropped."
+ },
  "ce8b0b4c278746d4": {
   "verdict": "ok",
   "by": "review:knights-nids (its fix)",
@@ -9664,6 +10264,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "The only change is gLink(L, …) → linkTo(…), the same output for the list on screen (gLink returned linkTo when L.id === cur.army). The quoted sentence (G_CP on lines not starting with *, so no FAQ/errata lines), army rules not inert, detachment rules, usable unit abilities grouped once with their units: unchanged."
+ },
+ "ce9462d5e344066a": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"At the end of your Command phase\": Command, your turn."
  },
  "ceaaa881bbacc022": {
   "verdict": "ok",
@@ -9767,11 +10373,23 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Finderz Keeperz - Flash Gitz”; model lines as NR."
  },
+ "d0b4035f30bd248a": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Undying Hatred (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.” {any:[Havocs, Obliterators]}."
+ },
  "d0bd4bfb7890327c": {
   "verdict": "ok",
   "by": "review:r23-army (its fix)",
   "at": "2026-10-22",
   "why": "WHEN “when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)”. The gist names the unit it protects by its keywords (“targets an ORKS INFANTRY unit”) but drops the exclusion, and that unit is not the one using it, so the users column does not carry it. In ooga-booga, Zodgrod Wortsnagga + Gretchin and Gretchin are ORKS INFANTRY (keywords “Faction: Orks, Infantry, … Gretchin”), so the gist reads as if one Gretchin unit could shield the other. The stratagem’s own shield data already has protects none:[Gretchin]. The rest is literal: TARGET “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit”; EFFECT “When a hit roll for that enemy unit’s ranged attacks that target that ORKS unit results in a hit, if a model in your GRETCHIN unit is on the battlefield, end the attack sequence for that attack and your GRETCHIN unit suffers 1 mortal wound.”"
+ },
+ "d0dc66d71af201b1": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Models and gear match the export and the Wahapedia options: Visionary bolt pistol→plasma pistol + Nostraman chainblade; four Legionaries with boltgun swapped for accursed weapon / Nostraman chainglaive / paired accursed weapons / voice eater + Astartes chainsword, each keeping bolt pistol and CCW; 2 Dark Disciples CCW. Counts ×4 bolt pistols, ×4 CCW right. Profiles match GW after Faction Pack (chainblade S5, chainsword S5, Nemesis Claw CCW S4 unchanged since only Bikers/Havocs/Legionaries/Raptors get S5)."
  },
  "d0ff3d4da31577c7": {
   "verdict": "ok",
@@ -9874,6 +10492,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Each time this model ends a Charge move\": your Charge phase, and theirs via Heroic Intervention (15.11 TARGET \"One friendly unengaged unit ... You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit\"; the Daemon Prince is a MONSTER)."
+ },
+ "d29b57f95b6fbbd9": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Touch of the Arkifane is the only rule that lets the player “select both abilities for that unit’s weapons to gain”: “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities…” (GW Faction Pack p8, Wahapedia). Ruination’s Bounty does not let you pick both. It gives [LETHAL HITS] and [SUSTAINED HITS 1] itself, and has its own mod for that, so it rightly stays out of this list."
  },
  "d29d5831b02a3573": {
   "verdict": "ok",
@@ -10019,6 +10643,18 @@
   "at": "2026-10-17",
   "why": "“Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” “against” = “that target”; same exclusion and number."
  },
+ "d5ea9f974fa17c37": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” Shooting and Fight are what the WHEN names."
+ },
+ "d670be3723cdd038": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "\"Each time the bearer makes an attack\": same label as approved every-attack abilities (Hunter of Souls, Spiteful Power Trip): their Movement (overwatch), your Shooting, Fight."
+ },
  "d68adf2412074978": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -10114,6 +10750,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have [DEVASTATING WOUNDS]\" = charged this turn: DW until end of turn."
+ },
+ "d8c6138b9b5f852a": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Dark Apostle datasheet ability."
  },
  "d8e5051e5c113aa7": {
   "verdict": "ok",
@@ -10433,6 +11075,12 @@
   "at": "2026-10-16",
   "why": "Adds to the Move characteristic, which only sets the distance of your Movement-phase moves (Normal/Advance/Fall Back); Temporal Surge and Malign Trickery moves are \"up to D6\"\", not M."
  },
+ "dfaf09176ad99f17": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Forge-Fire Surge (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.”; TARGET “That HERETIC ASTARTES unit.”; EFFECT “Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, … eligible to shoot and declare a charge in a turn in which it Advanced instead.” Your turn."
+ },
  "dfb83d7cda17de38": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -10516,6 +11164,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"TARGET: One BLOOD LEGIONS unit from your army\": the TARGET only (the WORLD EATERS unit is selected in the EFFECT). The Lord + Berzerkers unit is a BLOOD LEGIONS unit (02.05.01), so it is a target too."
+ },
+ "e13e4e446ddbee89": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Cult of the Arkifane enhancement (20 pts); export Cybinfernal Font Enhancements=1."
  },
  "e13f23b385f429e0": {
   "verdict": "ok",
@@ -10895,6 +11549,18 @@
   "at": "2026-10-22",
   "why": "“One CHAOS KNIGHTS unit from your army that was selected as the target …”."
  },
+ "e8f8a886ea29a056": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Biomechanoid Regeneration (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Command phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units).”; EFFECT “One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” D3, and 3 with SOUL FORGE, on one model: right."
+ },
+ "e8ff7e822cf29d57": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW: while leading and containing a DARK APOSTLE model, melee attacks of that unit +1 to wound; kind melee, the whole attached unit (19.04). always: the DA leads in this list (approved leader-buff convention)."
+ },
  "e905ba0e1f1b4857": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -11081,6 +11747,18 @@
   "at": "2026-10-16",
   "why": "The rule says \"another friendly ORKS INFANTRY unit\". The app drops \"friendly\", so in an Ork mirror an enemy Infantry unit could wrongly be counted. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "ebd42db6df992477": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: Champion power fist + plasma gun (both Wahapedia options), 4 Havocs with lascannon + CCW. Havocs W3 (Faction Pack), CCW S5 (Faction Pack), power fist 3 3+ 8 -2 2. 135 pts each (1st–2nd unit)."
+ },
+ "ebe0fa8eed0b3ab4": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” Faithful, with unengaged kept."
+ },
  "ebef5b1486218daa": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -11237,6 +11915,12 @@
   "at": "2026-10-23",
   "why": "Fight phase of either turn; shooting is limited by turns."
  },
+ "f001afb95531221a": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "Export: Predator autocannon, armoured tracks (WS 4+ per Faction Pack), 2 heavy bolters, combi-bolter, Havoc launcher. 145 pts."
+ },
  "f08cdc20457d51c8": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -11296,6 +11980,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"Honoured\" is defined only in Code Chivalric (\"your army becomes Honoured\"). The pattern is anchored and Imperial Knights only, so World Eaters’ \"Dishonoured\" cannot match. No other IK rule in the app starts with \"Honoured\" (\"Honoured to Serve\" is a Throne-Bonded stratagem the app does not carry)."
+ },
+ "f20a637fee5da414": {
+  "verdict": "ok",
+  "by": "review:fellhammer-rules",
+  "at": "2026-10-24",
+  "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” Everything is kept: the target, the “not selected to shoot or fight this phase” condition, the duration, and both abilities on a Dark Pact. Writing “makes a Dark Pact” for “is selected to make a Dark Pact” is a shortening and changes nothing."
  },
  "f232cab76c600583": {
   "verdict": "ok",
@@ -11782,6 +12472,12 @@
   "by": "review:r15-v2",
   "at": "2026-10-21",
   "why": "“Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” lasts 'turn' is exactly that; Dark Blessing is this model’s ranged weapon (24\", PSYCHIC)."
+ },
+ "fe120c3b8fad0846": {
+  "verdict": "ok",
+  "by": "review:fellhammer-units",
+  "at": "2026-10-24",
+  "why": "GW Faction Pack wording; vs MONSTER/VEHICLE, always while vs holds."
  },
  "fe4e20b85edf76f4": {
   "verdict": "ok",
