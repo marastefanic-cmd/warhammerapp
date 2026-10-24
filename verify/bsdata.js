@@ -754,7 +754,9 @@ function buildUnit(army, u, um, cat, force, issues) {
     const host = (u.enhOn && roots.find((r) => nn(r.node.name) === nn(u.enhOn))) || lead;
     if (u.enhOn && host === lead && nn(lead.node.name) !== nn(u.enhOn)) fail('enhOn', u.enhOn, roots.map((r) => r.node.name).join(' / '), 'no part of the unit is named as enhOn');
     const spelt = enhSpelling(army, u.enhancement);
-    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.enhancement) || (spelt && nn(k.name) === nn(spelt))))[0];
+    // (on the unit's character model when BSData offers it there: the Dark Apostle's, not the unit's with its Dark Disciples)
+    const isIt = (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.enhancement) || (spelt && nn(k.name) === nn(spelt)));
+    const p = searchBelow(host.node, isIt)[0] || searchBelow(host.node, isIt, { intoModels: true })[0];
     if (!p) fail('enhancement', u.enhancement, '', `no enhancement "${u.enhancement}" for ${host.node.name}`);
     else {
       const last = p[p.length - 1];

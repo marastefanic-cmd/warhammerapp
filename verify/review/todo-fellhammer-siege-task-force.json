@@ -1,0 +1,2375 @@
+[
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Unholy Mechanisms",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Unholy Mechanisms",
+   "text": "While a friendly **DAEMON VEHICLE** unit is within 6\" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit."
+  },
+  "key": "4de252d2ceb1c6a8"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-def",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Reorder Reality",
+  "judgement": {
+   "def": "an enemy unit within 18\" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase"
+  },
+  "source": {
+   "ability": "Reorder Reality",
+   "text": "Each time an enemy unit within 18\" of this model targets this model, subtract 1 from the **Hit roll** and, until the end of the phase, that enemy unit’s ranged weapons have the **[HAZARDOUS]** ability."
+  },
+  "key": "a03218d5f5ca6b25"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-def",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Indentured Daemon Engines",
+  "judgement": {
+   "def": "Lone Operative while within 3\" of a friendly DAEMON VEHICLE unit"
+  },
+  "source": {
+   "ability": "Indentured Daemon Engines",
+   "text": "While this model is within 3\" of one or more friendly **DAEMON VEHICLE** units, this model has the **Lone Operative** ability."
+  },
+  "key": "0186be77147590cb"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-damaged",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane · Damaged: 1-4 wounds remaining",
+  "judgement": {
+   "damaged": "1-4",
+   "W": "14"
+  },
+  "source": {
+   "ability": "Damaged: 1-4 wounds remaining",
+   "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "a0cc9407fb165477"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-aura",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Daemon",
+     "Vehicle"
+    ]
+   },
+   "when": "Within 6\" of Vashtorr the Arkifane",
+   "note": "+2 S",
+   "from": "Unholy Mechanisms"
+  },
+  "source": {
+   "ability": "Unholy Mechanisms",
+   "text": "While a friendly **DAEMON VEHICLE** unit is within 6\" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit."
+  },
+  "key": "09ee89c8fc904e4a"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Vashtorr the Arkifane",
+  "judgement": {
+   "gear": [
+    [
+     "Vashtorr’s claw",
+     "Vashtorr’s hammer"
+    ]
+   ],
+   "weapons": [
+    "Vashtorr’s claw",
+    "Vashtorr’s hammer · strike",
+    "Vashtorr’s hammer · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Vashtorr the Arkifane"
+   ],
+   "leads": null
+  },
+  "key": "1bf7c88b1e6b3a19"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Corrupt Machine Spirits",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Corrupt Machine Spirits",
+   "text": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 **mortal wounds**; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+  },
+  "key": "9613375029f7cc82"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Spirit Thief",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Spirit Thief",
+   "text": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "698dbcd54a530bcf"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Mark of the Soul Forges",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Mark of the Soul Forges",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "d670be3723cdd038"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker · Mark of the Soul Forges",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Mark of the Soul Forges",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "3f5758aac63171fb"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "judgement": {
+   "kind": "all",
+   "when": "Every attack",
+   "note": "a Critical Hit on an unmodified hit roll of 5+",
+   "from": "Mark of the Soul Forges",
+   "always": true,
+   "calc": {
+    "critHit": 5
+   }
+  },
+  "source": {
+   "ability": "Mark of the Soul Forges",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "1372c45944297afe"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "judgement": {
+   "kind": "all",
+   "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start",
+   "note": "re-roll wound rolls of 1",
+   "from": "Spirit Thief",
+   "vs": {
+    "any": [
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Spirit Thief",
+   "text": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "877b855f44fa96c9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "judgement": {
+   "gear": [
+    [
+     "Bladed limbs",
+     "Bolt pistol",
+     "Impaler chainglaive",
+     "Helstalker autocannon",
+     "Techno-virus injector"
+    ]
+   ],
+   "weapons": [
+    "Bolt pistol",
+    "Helstalker autocannon",
+    "Bladed limbs",
+    "Impaler chainglaive",
+    "Techno-virus injector"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Lord Discordant on Helstalker"
+   ],
+   "leads": null
+  },
+  "key": "66a2fc4bc05afdeb"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-def",
+  "where": "fellhammer-siege-task-force · Warpsmith · Warpsmith",
+  "judgement": {
+   "def": "Lone Operative while within 3\" of a friendly HERETIC ASTARTES VEHICLE unit"
+  },
+  "source": {
+   "ability": "Warpsmith",
+   "text": "While this model is within 3\" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability."
+  },
+  "key": "b3f14315ceb24f6c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Warpsmith · Master of Mechanisms",
+  "judgement": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "either"
+   }
+  },
+  "source": {
+   "ability": "Master of Mechanisms",
+   "text": "In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3\" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase."
+  },
+  "key": "4942ee35902ec75f"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Warpsmith · Enrage Machine Spirits",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Enrage Machine Spirits",
+   "text": "At the end of your Movement phase, select one enemy **VEHICLE** unit within 12\" of this model. That unit must take a **Battle-shock test**."
+  },
+  "key": "823cf3fb0ae4dd65"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Warpsmith · Wyredjinn",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Wyredjinn",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP."
+  },
+  "key": "4396219b07999ee7"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Warpsmith · Wyredjinn",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Wyredjinn",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP."
+  },
+  "key": "5edf51648a65df64"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Warpsmith",
+  "judgement": {
+   "gear": [
+    [
+     "Flamer tendril",
+     "Forge weapon",
+     "Melta tendril",
+     "Plasma pistol"
+    ]
+   ],
+   "weapons": [
+    "Flamer tendril",
+    "Melta tendril",
+    "Plasma pistol · standard",
+    "Plasma pistol · supercharge",
+    "Forge weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Warpsmith"
+   ],
+   "leads": null
+  },
+  "key": "8b79f9264cf24046"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Dark Zealotry",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Dark Zealotry",
+   "text": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**."
+  },
+  "key": "7c229db5caf9265c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Dark Zealotry",
+  "judgement": {
+   "who": "Dark Apostle",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Dark Zealotry",
+   "text": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**."
+  },
+  "key": "730222f6b64fa49c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Demagogue",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Demagogue",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12\" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked."
+  },
+  "key": "581818851f806a90"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Demagogue",
+  "judgement": {
+   "who": "Dark Apostle",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Demagogue",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12\" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked."
+  },
+  "key": "d8c6138b9b5f852a"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Malign Sacrifice",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Malign Sacrifice",
+   "text": "At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within **Engagement Range** of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed."
+  },
+  "key": "1f48d86a4e788be1"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Malign Sacrifice",
+  "judgement": {
+   "who": "Dark Apostle",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Malign Sacrifice",
+   "text": "At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within **Engagement Range** of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed."
+  },
+  "key": "0f41fa2a8e263075"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Cybinfernal Font",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword."
+  },
+  "key": "e13e4e446ddbee89"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font",
+  "judgement": {
+   "who": "Dark Apostle",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Cybinfernal Font",
+   "text": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword."
+  },
+  "key": "6bbec732e73b47fb"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Warp-sighted Butcher",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Warp-sighted Butcher",
+   "text": "While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "287f8bb74ac4fe5d"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Warp-sighted Butcher",
+  "judgement": {
+   "who": "Master of Executions",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Warp-sighted Butcher",
+   "text": "While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "ba1d0f9e7aa26376"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Trophy Taker",
+  "judgement": {
+   "who": "Master of Executions",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Trophy Taker",
+   "text": "Each time this model destroys an enemy **CHARACTER** model, you gain 1CP."
+  },
+  "key": "9db18882d8b297f3"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "137fe53f0dd53afc"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "9dd05bb660b62a09"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "judgement": {
+   "who": "Nemesis Claw",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "11b56249fff71aee"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Attached Unit",
+  "judgement": {
+   "who": "Nemesis Claw",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Attached Unit",
+   "text": "If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead."
+  },
+  "key": "c137c821155a2589"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-who",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Voice eater",
+  "judgement": {
+   "who": "Nemesis Claw",
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ]
+  },
+  "source": {
+   "ability": "Voice eater",
+   "text": "Enemy units (excluding **MONSTERS** and **VEHICLES**) cannot be targeted with Stratagems while they are within **Engagement Range** of the bearer’s unit."
+  },
+  "key": "a0a78423e2b63527"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "kind": "melee",
+   "when": "While the Dark Apostle leads this unit and it contains its DARK APOSTLE model",
+   "note": "+1 to wound rolls",
+   "from": "Dark Zealotry",
+   "always": true
+  },
+  "source": {
+   "ability": "Dark Zealotry",
+   "text": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**."
+  },
+  "key": "e8ff7e822cf29d57"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "kind": "melee",
+   "when": "While the Master of Executions leads this unit, target below its Starting Strength",
+   "note": "re-roll the hit roll; also the wound roll if Below Half-strength",
+   "from": "Warp-sighted Butcher",
+   "pick": [
+    {
+     "name": "Below Starting Strength",
+     "note": "re-roll hit rolls"
+    },
+    {
+     "name": "Below Half-strength",
+     "note": "re-roll hit rolls and wound rolls"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Warp-sighted Butcher",
+   "text": "While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "6de648290f715c44"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "kind": "all",
+   "when": "Target below its Starting Strength",
+   "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+   "from": "Visions of Suffering",
+   "pick": [
+    {
+     "name": "Below Starting Strength",
+     "note": "+1 to hit rolls"
+    },
+    {
+     "name": "Below Half-strength",
+     "note": "+1 to hit rolls, +1 to wound rolls"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "40d27e41a0c6fd07"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-kwNote",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "kwNote": "Master of Executions, Nemesis Claw, Psyker come from the combined unit."
+  },
+  "source": {
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ],
+   "stats": [
+    "Dark Apostle W4 OC1",
+    "Dark Disciple ×2 W1 OC1",
+    "Master of Executions W4 OC1",
+    "Nemesis Claw ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Accursed crozius 5 -1 2",
+    "Close combat weapon 1 0 1",
+    "Axe of dismemberment 5 -2 2 DEVASTATING WOUNDS, PRECISION",
+    "Nostraman chainblade 5 -1 1 SUSTAINED HITS 1",
+    "Accursed weapon 4 -2 1",
+    "Close combat weapon 3 0 1",
+    "Nostraman chainglaive 4 -2 1 SUSTAINED HITS 1",
+    "Paired accursed weapons 4 -2 1 TWIN-LINKED",
+    "Astartes chainsword 4 -1 1"
+   ]
+  },
+  "key": "8b5d0bebf256e163"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-ptsNote",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "ptsNote": "90 + Master of Executions 75 + Nemesis Claw 105"
+  },
+  "source": {
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ],
+   "stats": [
+    "Dark Apostle W4 OC1",
+    "Dark Disciple ×2 W1 OC1",
+    "Master of Executions W4 OC1",
+    "Nemesis Claw ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Accursed crozius 5 -1 2",
+    "Close combat weapon 1 0 1",
+    "Axe of dismemberment 5 -2 2 DEVASTATING WOUNDS, PRECISION",
+    "Nostraman chainblade 5 -1 1 SUSTAINED HITS 1",
+    "Accursed weapon 4 -2 1",
+    "Close combat weapon 3 0 1",
+    "Nostraman chainglaive 4 -2 1 SUSTAINED HITS 1",
+    "Paired accursed weapons 4 -2 1 TWIN-LINKED",
+    "Astartes chainsword 4 -1 1"
+   ]
+  },
+  "key": "c5f7f625026e1437"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-partialRules",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "partialRules": {
+    "Stealth": "Nemesis Claw"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ],
+   "rules": [
+    "Dark Pacts",
+    "Leader",
+    "Pistol",
+    "Support",
+    "Devastating Wounds",
+    "Precision",
+    "Stealth",
+    "Sustained Hits",
+    "Hazardous",
+    "Twin-linked"
+   ],
+   "abilities": [
+    "Dark Apostle · Dark Zealotry: While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.",
+    "Dark Apostle · Demagogue: Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12\" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked.",
+    "Dark Apostle · Malign Sacrifice: At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within **Engagement Range** of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.",
+    "Dark Apostle · Cybinfernal Font: **HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.",
+    "Master of Executions · Warp-sighted Butcher: While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.",
+    "Master of Executions · Trophy Taker: Each time this model destroys an enemy **CHARACTER** model, you gain 1CP.",
+    "Nemesis Claw · Visions of Suffering: Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well.",
+    "Nemesis Claw · Attached Unit: If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead.",
+    "Nemesis Claw · Voice eater: Enemy units (excluding **MONSTERS** and **VEHICLES**) cannot be targeted with Stratagems while they are within **Engagement Range** of the bearer’s unit."
+   ]
+  },
+  "key": "9141ce3953fc81b2"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-kwOnly",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "kwOnly": {
+    "Character": "Dark Apostle",
+    "Dark Apostle": "Dark Apostle"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ],
+   "kw": [
+    "Chaos",
+    "Character",
+    "Dark Apostle",
+    "Faction: Heretic Astartes",
+    "Grenades",
+    "Infantry",
+    "Soul Forge",
+    "Master of Executions",
+    "Nemesis Claw",
+    "Psyker"
+   ],
+   "kwNote": "Master of Executions, Nemesis Claw, Psyker come from the combined unit."
+  },
+  "key": "e32f89f5240ca97c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "judgement": {
+   "gear": [
+    [
+     "Accursed crozius",
+     "Bolt pistol"
+    ],
+    [
+     "Close combat weapon"
+    ],
+    [
+     "Axe of dismemberment",
+     "Bolt pistol"
+    ],
+    [
+     "Nostraman chainblade",
+     "Plasma pistol"
+    ],
+    [
+     "Accursed weapon",
+     "Bolt pistol",
+     "Close combat weapon"
+    ],
+    [
+     "Bolt pistol",
+     "Close combat weapon",
+     "Nostraman chainglaive"
+    ],
+    [
+     "Bolt pistol",
+     "Close combat weapon",
+     "Paired accursed weapons"
+    ],
+    [
+     "Astartes chainsword",
+     "Bolt pistol",
+     "Close combat weapon"
+    ]
+   ],
+   "weapons": [
+    "Dark Apostle · Bolt pistol",
+    "Master of Executions · Bolt pistol",
+    "Nemesis Claw · Plasma pistol · standard",
+    "Nemesis Claw · Plasma pistol · supercharge",
+    "Nemesis Claw · ×4 · Bolt pistol",
+    "Dark Apostle · Accursed crozius",
+    "Dark Apostle · ×2 · Close combat weapon",
+    "Master of Executions · Axe of dismemberment",
+    "Nemesis Claw · Nostraman chainblade",
+    "Nemesis Claw · Accursed weapon",
+    "Nemesis Claw · ×4 · Close combat weapon",
+    "Nemesis Claw · Nostraman chainglaive",
+    "Nemesis Claw · Paired accursed weapons",
+    "Nemesis Claw · Astartes chainsword"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Dark Apostle",
+    "2× Dark Disciple",
+    "1× Master of Executions",
+    "1× Visionary",
+    "1× Legionary w/ accursed weapon",
+    "1× Legionary w/ Nostraman chainglaive",
+    "1× Legionary w/ paired accursed weapons",
+    "1× Legionary w/ voice eater (Voice eater)"
+   ],
+   "leads": "Nemesis Claw"
+  },
+  "key": "d0dc66d71af201b1"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Cultist Mob · For the Dark Gods",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "For the Dark Gods",
+   "text": "At the end of your Command phase, if this unit is within range of an **objective** marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "ce9462d5e344066a"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Cultist Mob",
+  "judgement": {
+   "gear": [
+    [
+     "Brutal assault weapon",
+     "Bolt pistol"
+    ],
+    [
+     "Autopistol",
+     "Brutal assault weapon"
+    ]
+   ],
+   "weapons": [
+    "Bolt pistol",
+    "×9 · Autopistol",
+    "×10 · Brutal assault weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Cultist Champion",
+    "9× Cultist w/ autopistol and brutal assault weapon"
+   ],
+   "leads": null
+  },
+  "key": "797ded3561923cd9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Havocs · Stabilisation Talons",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Stabilisation Talons",
+   "text": "Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon."
+  },
+  "key": "56f29e3b35a4b967"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Havocs",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "can ignore any or all modifiers to BS and any or all modifiers to the hit roll",
+   "from": "Stabilisation Talons",
+   "always": true
+  },
+  "source": {
+   "ability": "Stabilisation Talons",
+   "text": "Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon."
+  },
+  "key": "7ac8d6c1ecfaa2d9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Havocs",
+  "judgement": {
+   "gear": [
+    [
+     "Power fist",
+     "Plasma gun"
+    ],
+    [
+     "Close combat weapon",
+     "Havoc lascannon"
+    ]
+   ],
+   "weapons": [
+    "Plasma gun · standard",
+    "Plasma gun · supercharge",
+    "×4 · Havoc lascannon",
+    "Power fist",
+    "×4 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Havoc Champion",
+    "4× Havoc w/ lascannon"
+   ],
+   "leads": null
+  },
+  "key": "ebd42db6df992477"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Warp Rift Firepower",
+   "text": "In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**."
+  },
+  "key": "e751aabfa08bd6c9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Warp Rift Firepower",
+   "text": "In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**."
+  },
+  "key": "36b804912d8ea4a4"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Obliterators",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Once per battle, your Shooting phase, when selected to shoot",
+   "note": "[INDIRECT FIRE]",
+   "from": "Warp Rift Firepower"
+  },
+  "source": {
+   "ability": "Warp Rift Firepower",
+   "text": "In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**."
+  },
+  "key": "543d07a51016a9ba"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Obliterators",
+  "judgement": {
+   "gear": [
+    [
+     "Crushing fists",
+     "Fleshmetal guns"
+    ]
+   ],
+   "weapons": [
+    "×2 · Fleshmetal guns · focused malice",
+    "×2 · Fleshmetal guns · ruinous salvo",
+    "×2 · Fleshmetal guns · warp hail",
+    "×2 · Crushing fists"
+   ]
+  },
+  "source": {
+   "models": [
+    "2× Obliterator"
+   ],
+   "leads": null
+  },
+  "key": "3644cdda4e1f2d45"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator · Annihilator",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Annihilator",
+   "text": "Each time a ranged attack made by this model is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "8f1a4d42041913ad"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Allocated to a MONSTER or VEHICLE model",
+   "note": "can re-roll the damage roll",
+   "from": "Annihilator",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Annihilator",
+   "text": "Each time a ranged attack made by this model is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "fe120c3b8fad0846"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator",
+  "judgement": {
+   "gear": [
+    [
+     "Armoured tracks",
+     "Havoc launcher",
+     "Predator twin lascannon",
+     "Combi-bolter",
+     "Lascannon",
+     "Lascannon"
+    ]
+   ],
+   "weapons": [
+    "Havoc launcher",
+    "Predator twin lascannon",
+    "Combi-bolter",
+    "×2 · Lascannon",
+    "Armoured tracks"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Chaos Predator Annihilator"
+   ],
+   "leads": null
+  },
+  "key": "9e9f9fdd1693af6f"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor · Destructor",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Destructor",
+   "text": "Each time a ranged attack made by this model targets an enemy **INFANTRY** unit, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "71c9a581300f0fac"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs INFANTRY units",
+   "note": "+1 AP",
+   "from": "Destructor",
+   "always": true,
+   "vs": {
+    "any": [
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Destructor",
+   "text": "Each time a ranged attack made by this model targets an enemy **INFANTRY** unit, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "36a12a1284646acb"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor",
+  "judgement": {
+   "gear": [
+    [
+     "Armoured tracks",
+     "Havoc launcher",
+     "Predator autocannon",
+     "Combi-bolter",
+     "Heavy bolter",
+     "Heavy bolter"
+    ]
+   ],
+   "weapons": [
+    "Havoc launcher",
+    "Predator autocannon",
+    "Combi-bolter",
+    "×2 · Heavy bolter",
+    "Armoured tracks"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Chaos Predator Destructor"
+   ],
+   "leads": null
+  },
+  "key": "f001afb95531221a"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator · Siege Shield",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Siege Shield",
+   "text": "When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units."
+  },
+  "key": "9307e40eab51e623"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Within Engagement Range of one or more enemy units",
+   "note": "no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit)",
+   "from": "Siege Shield",
+   "always": true
+  },
+  "source": {
+   "ability": "Siege Shield",
+   "text": "When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units."
+  },
+  "key": "984f18bb80704834"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator",
+  "judgement": {
+   "gear": [
+    [
+     "Armoured tracks",
+     "Demolisher cannon",
+     "Havoc launcher",
+     "Combi-bolter"
+    ]
+   ],
+   "weapons": [
+    "Demolisher cannon",
+    "Havoc launcher",
+    "Combi-bolter",
+    "Armoured tracks"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Chaos Vindicator"
+   ],
+   "leads": null
+  },
+  "key": "728d1f6352e9325f"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Forgefiend · Daemonic Ordnance",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Daemonic Ordnance",
+   "text": "Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities."
+  },
+  "key": "69b56852834dd4ce"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-footnote",
+  "where": "fellhammer-siege-task-force · Forgefiend",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Selected to shoot, if it uses this ability (until the end of the phase)",
+   "note": "[DEVASTATING WOUNDS] and [HAZARDOUS]",
+   "from": "Daemonic Ordnance"
+  },
+  "source": {
+   "ability": "Daemonic Ordnance",
+   "text": "Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities."
+  },
+  "key": "62d3d4be59b6eea3"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Forgefiend",
+  "judgement": {
+   "gear": [
+    [
+     "Ectoplasma cannon",
+     "Ectoplasma cannon",
+     "Ectoplasma cannon",
+     "Armoured limbs"
+    ]
+   ],
+   "weapons": [
+    "×3 · Ectoplasma cannon",
+    "Armoured limbs"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Forgefiend"
+   ],
+   "leads": null
+  },
+  "key": "216ce3ee8b1ae4dc"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing",
+  "where": "fellhammer-siege-task-force · Maulerfiend · Siege Crawler",
+  "judgement": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "source": {
+   "ability": "Siege Crawler",
+   "text": "You can ignore any or all modifiers to this model’s Move characteristic and to **Advance** and **Charge rolls** made for it."
+  },
+  "key": "5d04cd60d4777216"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "unit-weapons",
+  "where": "fellhammer-siege-task-force · Maulerfiend",
+  "judgement": {
+   "gear": [
+    [
+     "Maulerfiend fists",
+     "Lasher tendrils"
+    ]
+   ],
+   "weapons": [
+    "Maulerfiend fists",
+    "Lasher tendrils"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Maulerfiend"
+   ],
+   "leads": null
+  },
+  "key": "878744a6a70c34e2"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-ph",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "27a869932bfcd52f"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turn",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "8c4e974c3c36bbec"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turns",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "21a298e0b0ed4e38"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-calcMods",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Dark Pacts",
+     "when": "A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase",
+     "note": "[LETHAL HITS] or [SUSTAINED HITS 1]",
+     "pick": [
+      {
+       "name": "[LETHAL HITS]",
+       "note": "[LETHAL HITS]"
+      },
+      {
+       "name": "[SUSTAINED HITS 1]",
+       "note": "[SUSTAINED HITS 1]"
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "note": "[LETHAL HITS], [SUSTAINED HITS 1]"
+      }
+     ]
+    }
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "b87623059425ee83"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-both",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "both": [
+    {
+     "strat": "touch-of-the-arkifane"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "d29b57f95b6fbbd9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-ph",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Soul Forge Boons",
+   "text": "**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save."
+  },
+  "key": "7293f4be7c72cfaa"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turn",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Soul Forge Boons",
+   "text": "**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save."
+  },
+  "key": "95b9482fc7e94ee0"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turns",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "judgement": {
+   "turns": {
+    "movement": "your",
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "rule": "Soul Forge Boons",
+   "text": "**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save."
+  },
+  "key": "85c7c0f27199a869"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-needs",
+  "where": "Cult of the Arkifane rule · Soul Forge Boons",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Heretic Astartes",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Soul Forge Boons",
+   "text": "**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save."
+  },
+  "key": "19570440b19f052a"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Touch of the Arkifane",
+   "text": "WHEN: Any phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, if your unit is selected to make a **Dark Pact**, you can select both abilities for that unit’s weapons to gain."
+  },
+  "key": "76ba10b0097c3940"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Touch of the Arkifane",
+   "text": "WHEN: Any phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, if your unit is selected to make a **Dark Pact**, you can select both abilities for that unit’s weapons to gain."
+  },
+  "key": "89c0927b9753e6dc"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Heretic Astartes"
+    ],
+    "none": [
+     "Damned"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Touch of the Arkifane",
+   "text": "WHEN: Any phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, if your unit is selected to make a **Dark Pact**, you can select both abilities for that unit’s weapons to gain."
+  },
+  "key": "b6f11545957dc8ca"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Cult of the Arkifane · Touch of the Arkifane",
+  "judgement": {
+   "gist": "Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain."
+  },
+  "source": {
+   "stratagem": "Touch of the Arkifane",
+   "text": "WHEN: Any phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, if your unit is selected to make a **Dark Pact**, you can select both abilities for that unit’s weapons to gain."
+  },
+  "key": "f20a637fee5da414"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Balefire Boon",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "d5ea9f974fa17c37"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Balefire Boon",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "5a7a8c8df970f9ff"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turns",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Balefire Boon",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "8c8ddbe32d792fe4"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Soul Forge"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Balefire Boon",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "9aac32d76501d2d8"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-mod",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, until the end of the phase",
+    "note": "+1 AP"
+   }
+  },
+  "source": {
+   "stratagem": "Balefire Boon",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "438f31c63d56fa7c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Cult of the Arkifane · Balefire Boon",
+  "judgement": {
+   "gist": "Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP."
+  },
+  "source": {
+   "stratagem": "Balefire Boon",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "3cf55122e2c20e53"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Soul-Tally Offering",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**."
+  },
+  "key": "8aefa2c44752b4ac"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Soul-Tally Offering",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**."
+  },
+  "key": "b312c12e8af0c53c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turns",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Soul-Tally Offering",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**."
+  },
+  "key": "00be46ddd3c40784"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Soul Forge"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Soul-Tally Offering",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**."
+  },
+  "key": "3119d9f672bc8ad0"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-mod",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units",
+    "note": "re-roll the wound roll",
+    "vs": {
+     "any": [
+      "Character",
+      "Monster",
+      "Vehicle"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Soul-Tally Offering",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**."
+  },
+  "key": "c6f96e3ab6567f53"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Cult of the Arkifane · Soul-Tally Offering",
+  "judgement": {
+   "gist": "Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll."
+  },
+  "source": {
+   "stratagem": "Soul-Tally Offering",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**."
+  },
+  "key": "cde6ffc16feaefa2"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Biomechanoid Regeneration",
+   "text": "WHEN: Your Command phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).\nEFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead."
+  },
+  "key": "93de54cbfacf23a0"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Biomechanoid Regeneration",
+   "text": "WHEN: Your Command phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).\nEFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead."
+  },
+  "key": "434fe837aee895df"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Heretic Astartes"
+    ],
+    "none": [
+     "Damned"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Biomechanoid Regeneration",
+   "text": "WHEN: Your Command phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).\nEFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead."
+  },
+  "key": "053205d01e3006f6"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Cult of the Arkifane · Biomechanoid Regeneration",
+  "judgement": {
+   "gist": "Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword."
+  },
+  "source": {
+   "stratagem": "Biomechanoid Regeneration",
+   "text": "WHEN: Your Command phase.\nTARGET: One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).\nEFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead."
+  },
+  "key": "e8f8a886ea29a056"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Forge-Fire Surge",
+   "text": "WHEN: Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.\nTARGET: That **HERETIC ASTARTES** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead."
+  },
+  "key": "a62ee0cc4f90f54e"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Forge-Fire Surge",
+   "text": "WHEN: Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.\nTARGET: That **HERETIC ASTARTES** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead."
+  },
+  "key": "dfaf09176ad99f17"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Heretic Astartes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Forge-Fire Surge",
+   "text": "WHEN: Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.\nTARGET: That **HERETIC ASTARTES** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead."
+  },
+  "key": "258e300333abbaeb"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Cult of the Arkifane · Forge-Fire Surge",
+  "judgement": {
+   "gist": "Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge."
+  },
+  "source": {
+   "stratagem": "Forge-Fire Surge",
+   "text": "WHEN: Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.\nTARGET: That **HERETIC ASTARTES** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead."
+  },
+  "key": "c1b3e6b05dd45fd1"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Unholy Fortitude",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit."
+  },
+  "key": "1928bc7934deb95e"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Unholy Fortitude",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit."
+  },
+  "key": "8f7a8042028783e6"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Soul Forge"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unholy Fortitude",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit."
+  },
+  "key": "36f3f0eef598ab10"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-def",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "judgement": {
+   "def": "their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase"
+  },
+  "source": {
+   "stratagem": "Unholy Fortitude",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit."
+  },
+  "key": "443804bc77453fac"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Cult of the Arkifane · Unholy Fortitude",
+  "judgement": {
+   "gist": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase."
+  },
+  "source": {
+   "stratagem": "Unholy Fortitude",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit."
+  },
+  "key": "226c3ce0aa6d267b"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-ph",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ]
+  },
+  "source": {
+   "rule": "Rain of Ruin",
+   "text": "Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**."
+  },
+  "key": "df456f7975ef4940"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turn",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "rule": "Rain of Ruin",
+   "text": "Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**."
+  },
+  "key": "4a672e33f795e8c8"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turns",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Rain of Ruin",
+   "text": "Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**."
+  },
+  "key": "03747248abcdc46e"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-needs",
+  "where": "Devotees of Destruction rule · Rain of Ruin",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Havocs",
+     "Obliterators"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Rain of Ruin",
+   "text": "Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**."
+  },
+  "key": "49c4b473ec9a4578"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Ruination’s Bounty",
+   "text": "WHEN: Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**."
+  },
+  "key": "a9aa41aeb7dd564c"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Ruination’s Bounty",
+   "text": "WHEN: Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**."
+  },
+  "key": "160c051fe38eb2a3"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Havocs",
+     "Obliterators"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Ruination’s Bounty",
+   "text": "WHEN: Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**."
+  },
+  "key": "06e5099a8eecdb00"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-mod",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability",
+    "note": "[LETHAL HITS] and [SUSTAINED HITS 1]"
+   }
+  },
+  "source": {
+   "stratagem": "Ruination’s Bounty",
+   "text": "WHEN: Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**."
+  },
+  "key": "c330c8b423249df0"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Devotees of Destruction · Ruination’s Bounty",
+  "judgement": {
+   "gist": "Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1]."
+  },
+  "source": {
+   "stratagem": "Ruination’s Bounty",
+   "text": "WHEN: Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**."
+  },
+  "key": "19fbae67146837c2"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Snare of Fire",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged HAVOCS** unit.\nTARGET: That **HAVOCS** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "5c3118406321679f"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Snare of Fire",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged HAVOCS** unit.\nTARGET: That **HAVOCS** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "530787891908c7bc"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Havocs"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Snare of Fire",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged HAVOCS** unit.\nTARGET: That **HAVOCS** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "348e4cf06ae78de8"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Devotees of Destruction · Snare of Fire",
+  "judgement": {
+   "gist": "Your opponent’s Movement phase, an enemy unit ends a move within 8\" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3\"."
+  },
+  "source": {
+   "stratagem": "Snare of Fire",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged HAVOCS** unit.\nTARGET: That **HAVOCS** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "ebe0fa8eed0b3ab4"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-phases",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Undying Hatred",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "09aa8dfadf2d0bd9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-turn",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Undying Hatred",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "1f44b2f453dbb3b6"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-needs",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Havocs",
+     "Obliterators"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Undying Hatred",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "d0b4035f30bd248a"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-def",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "judgement": {
+   "def": "their Shooting phase: -1 to wound when the attack’s S is greater than its T"
+  },
+  "source": {
+   "stratagem": "Undying Hatred",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "68f3ecb6dbc72cc2"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "strat-gist",
+  "where": "Devotees of Destruction · Undying Hatred",
+  "judgement": {
+   "gist": "Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll."
+  },
+  "source": {
+   "stratagem": "Undying Hatred",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "b9c3dc2b86455805"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resolveRoster",
+  "judgement": {
+   "code": "function resolveRoster(j, D, opt){\n  const errors = [], err = m => { if(!errors.includes(m)) errors.push(m); };\n  const fail = () => ({ ok:false, errors });\n  if(!D.bsIds){ err('this version of the app cannot import lists'); return fail(); }\n  // the tables without a prototype: an export's id such as \"constructor\" or \"toString\" is no key of them\n  const T = {}; for(const k of Object.keys(D.bsIds)) T[k] = Object.assign(Object.create(null), D.bsIds[k]);\n  const R = j.roster;\n  if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }\n  const F = R.forces[0];\n  const sels = F.selections || [];\n  const fac = T.factions[F.catalogueId];\n  const top = sels.filter(s => s.type === 'upgrade'), roots = sels.filter(s => s.type !== 'upgrade');\n  if(!fac){\n    // nothing of an unknown faction can resolve: name it, and what adding it would take\n    err('faction ' + String(F.catalogueName || F.catalogueId || '?').split(' - ').pop() + ' not recognized');\n    for(const t of top) for(const c of t.selections || []) if(t.name === 'Detachment' || c.group === 'Detachment') err('detachment ' + nn(c.name) + ' not recognized');\n    for(const s of roots) err('unit ' + nn(s.name) + ' not recognized');\n    return fail();\n  }\n  const FAC = D.factions[fac];\n\n  /* the list: one battle size, one detachment selection, one Force Disposition, config; every top-level selection is one of\n     these or holds no list content (Show/Hide Options and rules references, whose own choices must be known ones too) */\n  let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};\n  const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };\n  for(const t of top){\n    const id = lastId(t.entryId), kids = t.selections || [];\n    if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }\n    if(T.info[id]){\n      for(const c of kids) if(!T.infoKids[lastId(c.entryId)] || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');\n      continue;\n    }\n    if(T.config[id]){\n      const key = T.config[id];\n      if(key in config){ err('selection ' + nn(t.name) + ' twice not recognized'); continue; }\n      const odd = kids.filter(c => T.configKids[lastId(c.entryId)] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1);\n      for(const c of odd) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');\n      if(!odd.length && kids.length) config[key] = kids.map(c => typo(nn(c.name))).join(', ');\n      continue;\n    }\n    const kind = T.roots[id];\n    if(!kind){ err('selection ' + nn(t.name) + ' not recognized'); continue; }\n    if(seen[kind]){ err(KIND[kind] + ' selection ' + nn(t.name) + ' twice not recognized'); continue; }\n    seen[kind] = true;\n    for(const c of kids){\n      const cid = lastId(c.entryId), nm = nn(c.name);\n      const once = Number(c.number) === 1 && !(c.selections || []).length;\n      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }\n      if(kind === 'disposition' && T.dispositions[cid] === nm && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }\n      const d = kind === 'detachment' && T.detachments[cid], dk = d && d.split('/');\n      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }\n      err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');\n    }\n  }\n  if(!battleSize && !errors.some(e => /^battle size/.test(e))) err('battle size not recognized (the export names none)');\n  if(!dets.length && !errors.some(e => /^detachment/.test(e))) err('detachment not recognized (the export names none)');\n  // the points limit is the battle size's (BSData), not the export's word for it (an export can name none: no costLimits)\n  const limit = pts(R.costLimits), total = pts(R.costs);\n  if(battleSize && (R.costLimits || []).length && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');\n  if(battleSize && total > T.limits[battleSize]) err('points total ' + total + ' not recognized: over the ' + battleSize + ' limit of ' + T.limits[battleSize] + ' pts');\n  if(disposition && dets.length){\n    const allowed = new Set(dets.flatMap(k => FAC.detachments[k].dispositions || []));\n    if(!allowed.has(disposition)) err('disposition ' + disposition + ' not recognized for ' + and(dets.map(k => FAC.detachments[k].name)));\n  }\n  if(!disposition && !errors.some(e => /^disposition/.test(e))) err('disposition not recognized (the export names none)');\n\n  /* units: each bodyguard with the characters attached to it (New Recruit's Leading / Supporting) */\n  const byId = new Map(roots.map(s => [s.id, s]));\n  const leadsTo = new Map();\n  for(const s of roots) for(const a of s.associations || []) if(a.type === 'outgoing' && a.action === 'group'){\n    if(!byId.has(a.to)){ err('leader attachment of ' + nn(s.name) + ' not recognized (what it ' + (a.name === 'Supporting' ? 'supports' : 'leads') + ' is not a unit of the list)'); continue; }\n    if(leadsTo.has(s)){ err('leader attachment of ' + nn(s.name) + ' to two units not recognized'); continue; }\n    leadsTo.set(s, byId.get(a.to));\n  }\n  const groups = [], groupOf = new Map();\n  for(const s of roots){\n    if(leadsTo.has(s)) continue;\n    const g = { parts:[s], body:s }; groups.push(g); groupOf.set(s, g);\n  }\n  for(const [s, b] of leadsTo){ const g = groupOf.get(b); if(!g || leadsTo.has(b)){ err('leader attachment of ' + nn(s.name) + ' to ' + nn(b.name) + ' not recognized'); continue; } g.parts.unshift(s); }\n  for(const g of groups) g.at = Math.min(...g.parts.map(p => roots.indexOf(p)));\n  groups.sort((a, b) => a.at - b.at);\n\n  // the lists of this faction; a unit is taken only from one with the same detachments, config and battle size\n  const ctxKey = (d, c, b) => d.slice().sort().join('+') + '|' + JSON.stringify(Object.keys(c).sort().map(k => [k, c[k]])) + '|' + b;\n  const mine = ctxKey(dets, config, battleSize);\n  const facArmies = D.armies.filter(a => a.faction === fac && !a.imported && T.units[a.id + '/' + (a.units[0] || {}).id]);\n  const pool = facArmies.filter(a => ctxKey(a.detachments, a.config || {}, a.battleSize) === mine);\n  const instances = facArmies.flatMap(a => a.units.map(u => ({ a, u, sigs:(T.units[a.id + '/' + u.id] || []).slice().sort() })));\n  const partSigs = instances.flatMap(x => x.sigs);\n  if(!errors.length && !pool.length) err('detachment' + (dets.length > 1 ? 's ' : ' ') + and(dets.map(k => FAC.detachments[k].name)) + (Object.keys(config).length ? ' with ' + Object.entries(config).map(([k, v]) => k + ' ' + v).join(', ') : '') +\n    ' not recognized: the app’s ' + FAC.name + ' lists have ' + and([...new Set(facArmies.map(a => a.detachments.map(k => FAC.detachments[k].name).join(' + ') + (a.config ? ' (' + Object.entries(a.config).map(([k, v]) => k + ' ' + v).join(', ') + ')' : '')))]));\n\n  const label = g => g.parts.map(p => nn(p.name)).join(' + ');\n  const costOf = s => pts(s.costs) + (s.selections || []).reduce((t, c) => t + costOf(c), 0);\n  // the names an export's selections carry must be BSData's (an entry renamed in the export is not that entry)\n  const namesOk = (s, unit) => {\n    let ok = true;\n    const walk = (x, isRoot) => {\n      const id = lastId(x.entryId);\n      if(T.names[id] !== undefined && T.names[id] !== nn(x.name)){ ok = false; err(isRoot ? 'unit ' + nn(x.name) + ' not recognized' : (/^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + (isRoot ? '' : ' on unit ' + unit) + ' not recognized'); }\n      for(const c of x.selections || []) walk(c, false);\n    };\n    walk(s, true); return ok;\n  };\n  // why one part matches nothing: what it has that the closest part of the same datasheet the app has does not\n  const explainPart = (p, unit, pool) => {\n    const rid = lastId(p.entryId), sig = sigOf(p);\n    const same = [...new Set((pool || partSigs).filter(s => s.startsWith(rid + '|')))];\n    if(!same.length || T.names[rid] !== nn(p.name)){ err('unit ' + nn(p.name) + ' not recognized'); return; }\n    const mineE = entries(sig);\n    const best = same.map(s => { const e = entries(s); return { e, d:mineE.filter(x => !e.includes(x)).length + e.filter(x => !mineE.includes(x)).length }; }).sort((a, b) => a.d - b.d)[0];\n    const byPath = new Map(); const walk = (x, path) => { for(const c of x.selections || []){ const k = (path ? path + '/' : '') + lastId(c.entryId); byPath.set(k, c); walk(c, k); } }; walk(p, '');\n    const extra = mineE.filter(x => !best.e.includes(x));\n    for(const x of extra){\n      const n = x.slice(0, x.indexOf('×')), path = x.slice(x.indexOf('×') + 1), c = byPath.get(path) || {};\n      const nm = nn(c.name || T.names[path.split('/').pop()] || path);\n      if(nm === 'Warlord') err(n !== '1' ? 'warlord ×' + n + ' on unit ' + unit + ' not recognized' : 'warlord ' + unit + ' not recognized (the app has no such unit as Warlord in this faction)');\n      else if(/^Enhancements/.test(c.group || '')) err('enhancement ' + nm + ' not recognized (on ' + unit + ')');\n      else err('option ' + (n !== '1' || c.type === 'model' ? n + '× ' : '') + nm + ' on unit ' + unit + ' not recognized');\n    }\n    // what the app's has that the export does not (an item whose count differs is named above)\n    const pathOf = x => x.slice(x.indexOf('×') + 1), extraPaths = new Set(extra.map(pathOf));\n    const miss = best.e.filter(x => !mineE.includes(x) && !extraPaths.has(pathOf(x))).map(x => T.names[pathOf(x).split('/').pop()] || pathOf(x));\n    if(miss.length) err('unit ' + unit + ' without ' + and([...new Set(miss)]) + ' not recognized');\n  };\n\n  // match every group; the list most of them come from is preferred, then data.js order\n  const want = groups.map(g => g.parts.map(sigOf).sort());\n  const sameSigs = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);\n  const cands = want.map(w => instances.filter(x => sameSigs(x.sigs, w)));\n  const score = new Map(pool.map(a => [a, cands.filter(c => c.some(x => x.a === a)).length]));\n  const order = pool.slice().sort((a, b) => score.get(b) - score.get(a) || D.armies.indexOf(a) - D.armies.indexOf(b));\n  const used = new Map(), picks = [];\n  groups.forEach((g, i) => {\n    const unit = label(g);\n    if(!g.parts.every(p => namesOk(p, nn(p.name)))) return;\n    for(const p of g.parts) if(Number(p.number) !== 1) err('unit ' + nn(p.name) + ' ×' + p.number + ' not recognized');\n    // an option holding models (\"8 chainblades\") is taken once: its models carry the count\n    const holders = x => { for(const c of x.selections || []){ if(c.type !== 'model' && (c.selections || []).some(y => y.type === 'model') && Number(c.number) !== 1) err('option ' + c.number + '× ' + nn(c.name) + ' on unit ' + unit + ' not recognized'); holders(c); } };\n    g.parts.forEach(holders);\n    const before = errors.length;\n    const c = cands[i];\n    if(!c.length){\n      // the closest unit of the same datasheets (the same leader on the same bodyguard): what differs from it\n      const rids = g.parts.map(p => lastId(p.entryId)).sort().join(' ');\n      const like = instances.filter(x => x.sigs.map(s => s.slice(0, s.indexOf('|'))).sort().join(' ') === rids);\n      if(like.length){\n        const mineS = want[i], diff = x => mineS.filter(s => !x.sigs.includes(s)).length;\n        const best = like.slice().sort((x, y) => (pool.includes(y.a) - pool.includes(x.a)) || diff(x) - diff(y))[0];   // a usable list's first\n        g.parts.forEach(p => { if(!best.sigs.includes(sigOf(p))) explainPart(p, nn(p.name), best.sigs); });\n        if(errors.length === before) err('leader attachment ' + unit + ' not recognized (the app has these parts, but not together like this)');\n        return;\n      }\n      const known = g.parts.map(p => partSigs.includes(sigOf(p)));\n      if(known.every(Boolean)) err(g.parts.length > 1 ? 'leader attachment ' + unit + ' not recognized (the app has them, but not attached like this)' : 'unit ' + unit + ' on its own not recognized (the app has it only in an attached unit)');\n      else g.parts.forEach((p, k) => { if(!known[k]) explainPart(p, nn(p.name)); });\n      return;\n    }\n    const inPool = c.filter(x => pool.includes(x.a)).sort((x, y) => order.indexOf(x.a) - order.indexOf(y.a) || x.a.units.indexOf(x.u) - y.a.units.indexOf(y.u));\n    if(!inPool.length){\n      if(pool.length) err('unit ' + unit + ' not recognized with ' + and(dets.map(k => FAC.detachments[k].name)) + ': the app has it only in ' + and([...new Set(c.map(x => x.a.name))]) + ' (' + and([...new Set(c.map(x => x.a.detachments.map(k => FAC.detachments[k].name).join(' + ')))]) + ')');\n      return;\n    }\n    const cost = g.parts.reduce((t, p) => t + costOf(p), 0);\n    const priced = inPool.filter(x => x.u.pts === cost);\n    if(!priced.length){ err('points of unit ' + unit + ' not recognized: ' + cost + ' pts in the export, ' + inPool[0].u.pts + ' in the app'); return; }\n    const pick = priced.find(x => (used.get(x.u) || 0) < (x.u.copies || 1)) || priced[0];\n    used.set(pick.u, (used.get(pick.u) || 0) + 1);\n    picks.push(Object.assign({}, pick));\n  });\n  // the list as a whole: at most one Warlord, and each entry no more often than BSData allows per list (an enhancement once, an\n  // Epic Hero once); a unit the app has may be taken more often than a list of the app takes it, as long as these hold\n  if(!errors.length){\n    const wl = picks.filter(x => x.u.warlord);\n    // (none only as a list of the app has none: the owner's 4 megas and a destrier, as New Recruit printed it)\n    if(wl.length > 1 || (!wl.length && !pool.some(a => !a.units.some(u => u.warlord)))) err('warlord not recognized: ' + (wl.length ? wl.length + ' units are the Warlord (' + and(wl.map(x => x.u.name)) + ')' : 'no unit is the Warlord'));\n    // how many of each entry the list takes, against BSData's max per list (an enhancement once, an Epic Hero once)\n    const n = new Map(), walk = (x, isRoot) => { const id = lastId(x.entryId); n.set(id, { x, n:((n.get(id) || {}).n || 0) + Number(x.number), isRoot }); for(const c of x.selections || []) walk(c, false); };\n    roots.forEach(r => walk(r, true));\n    for(const [id, { x, n:k, isRoot }] of n) if(T.maxPerList[id] !== undefined && k > T.maxPerList[id])\n      err((isRoot ? 'unit ' : /^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + ' ×' + k + ' not recognized (BSData allows ' + T.maxPerList[id] + ' per list)');\n  }\n  if(!errors.length){\n    const sum = picks.reduce((t, x) => t + x.u.pts, 0);\n    if(sum !== total) err('points total ' + total + ' not recognized: the units add up to ' + sum);\n  }\n  if(errors.length) return fail();\n\n  /* the list: each unit as data.js has it, a unit taken more than once as its copies */\n  // in the order verify/import-nr.js gives a list: role, then units without a leader, then the roster's order\n  const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];\n  const roleAt = r => ROLES.includes(r) ? ROLES.indexOf(r) : ROLES.length;\n  picks.forEach((x, k) => { x.k = k; });\n  picks.sort((a, b) => (roleAt(a.u.role) - roleAt(b.u.role)) || ((a.u.leads ? 1 : 0) - (b.u.leads ? 1 : 0)) || (a.k - b.k));\n  // (the same unit of two of the app's lists, field for field, is one unit with its copies)\n  const units = [], seenIds = new Set(), made = new Map(), same = u => JSON.stringify(Object.assign({}, u, { copies:undefined }));\n  for(const x of picks){\n    const key = same(x.u);\n    if(made.has(key)){ const u = made.get(key); u.copies = (u.copies || 1) + 1; continue; }\n    const u = clone(x.u); delete u.copies;\n    let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++;\n    u.id = id; seenIds.add(id); made.set(key, u); units.push(u);\n  }\n  const name = typo(nn(R.name)) || 'Imported list';\n  const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,\n    points:limit || (battleSize && T.limits[battleSize]) || null, pointsUsed:total, battleSize, disposition, detachments:dets };\n  if(Object.keys(config).length) army.config = config;\n  army.source = 'New Recruit, imported ' + (opt.date || new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }));\n  army.units = units;\n  army.imported = true;\n  return { ok:true, army };\n}"
+  },
+  "source": {
+   "implements": "the list import (import.js): a New Recruit JSON export becomes a list only when its faction, its one battle size (its points limit BSData's for it, and the total within it), its one detachment selection (each detachment once), its one Force Disposition (one its detachments allow), its config (Code Chivalric, known choices) and every other top-level selection (Show/Hide Options, rules references, with known choices only) are what data.js has, and every unit, with the characters attached to it (New Recruit's Leading/Supporting), has the BSData signature (signature) of a unit of a data.js list with the same faction, detachments, config and battle size, the same BSData names and the same points (BS_IDS, written by verify/import-ids.js); an option holding models is taken once; then the list as a whole: at most one Warlord (none only as a list of the app has none), each entry no more often than BSData's max per list that no modifier changes (an enhancement once, an Epic Hero once), the units adding up to the total; then the units are copied as data.js has them (a unit taken again as its copies; import-nr.js's order: role, units without a leader, the roster's order); otherwise nothing is imported and every item not recognized is listed (and a group the closest unit explains no difference of is still refused)"
+  },
+  "key": "95d67d33bc7d67b2"
+ }
+]

@@ -1090,5 +1090,45 @@
   "reason": "New Recruit’s export (catalogue revision 8) gives the base as ~40mm; GW’s base size guide (Event Companion) has 40mm. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3590: \"Eradicator Squad  40mm\"; verify/sources/nr-json/nerf-when.json: Base ~40mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "lord-discordant-on-helstalker",
+  "field": "stats[Lord Discordant on Helstalker].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 28) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3051: \"Lord Discordant on Helstalker  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "warpsmith",
+  "field": "stats[Warpsmith].base",
+  "app": "60×35.5mm Oval",
+  "source": "60x35.5mm",
+  "reason": "New Recruit’s export (catalogue revision 28) gives the base as 60x35.5mm; GW’s base size guide (Event Companion) has 60×35.5mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3080: \"Warpsmith  60x35.5mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Base 60x35.5mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "forgefiend",
+  "field": "stats[Forgefiend].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 28) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3040: \"Forgefiend  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "maulerfiend",
+  "field": "stats[Maulerfiend].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 28) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3063: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
  }
 ]

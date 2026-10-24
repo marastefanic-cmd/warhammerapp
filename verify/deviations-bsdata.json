@@ -1151,5 +1151,165 @@
   "reason": "BSData at the pin has no Force Disposition for Deathwatch Support (its entry is the unfinished \"Deathwatch Support (ITS NOT READY)\", with no disposition marker); the Wahapedia faction page (the codex) marks the detachment Disruption, as New Recruit’s export does (its category \"Disruption\"). GW wins.",
   "evidence": "verify/.cache/waha/ultramarines.html, Deathwatch Support: \"Force Disposition: Disruption\"; verify/sources/nr-json/nerf-when.json: Detachment › Deathwatch Support categories.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "lord-discordant-on-helstalker",
+  "field": "stats.base",
+  "app": "Lord Discordant on Helstalker: 120×92mm Oval",
+  "source": "Lord Discordant on Helstalker: 120x92mm",
+  "reason": "BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has Lord Discordant on Helstalker: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3051: \"Lord Discordant on Helstalker  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "lord-discordant-on-helstalker",
+  "field": "ability.text",
+  "app": "Corrupt Machine Spirits: At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 **mortal wounds**; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+  "source": "At the start of your Shooting phase, select one visible enemy ^^**Vehicle^^** unit within 12\" of this model and roll one D6: on a 2‑3, that enemy unit suffers D3 mortal wounds; on a 4‑5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.’",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of your Shooting phase, select one visible enemy Vehicle unit within 12\" of this model and roll one D6: on …\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Lord-Discordant-On-Helstalker.html: \"At the start of your Shooting phase, select one visible enemy VEHICLE unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy u…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "lord-discordant-on-helstalker",
+  "field": "ability.text",
+  "app": "Mark of the Soul Forges: **HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
+  "source": "Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+  "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\"). GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt: \"HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "warpsmith",
+  "field": "stats.base",
+  "app": "Warpsmith: 60×35.5mm Oval",
+  "source": "Warpsmith: 60x35.5mm",
+  "reason": "BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has Warpsmith: 60x35.5mm; GW’s base size guide (Event Companion) has 60×35.5mm Oval; New Recruit’s export (catalogue revision 28) has 60×35.5mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3080: \"Warpsmith  60x35.5mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: 60×35.5mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "warpsmith",
+  "field": "ranged.kw",
+  "app": "Melta tendril: MELTA 2, PISTOL",
+  "source": "MELTA 1, PISTOL",
+  "reason": "BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has MELTA 1, PISTOL; GW’s datasheet (the new codex, as Wahapedia transcribes it) has PISTOL, MELTA 2; New Recruit’s export (catalogue revision 28) has MELTA 1, PISTOL. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Warpsmith.html: Melta tendril kw PISTOL, MELTA 2; verify/sources/nr-json/fellhammer-siege-task-force.json: MELTA 1, PISTOL.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "warpsmith",
+  "field": "ability.text",
+  "app": "Wyredjinn: **HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
+  "source": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
+  "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bear…\"). GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt: \"HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, y…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "warpsmith",
+  "field": "kw",
+  "app": "Grenades",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword GRENADES; BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Warpsmith.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "stats.InSv",
+  "app": "Master of Executions: 5+",
+  "source": "Master of Executions: ",
+  "reason": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”). BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not give it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "stats.InSv",
+  "app": "Nemesis Claw ×5: 5+",
+  "source": "Nemesis Claw: ",
+  "reason": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”). BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not give it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "ability.text",
+  "app": "Cybinfernal Font: **HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.",
+  "source": "Models in the bearer’s unit have the ^^**Soul Forge**^^ keyword.",
+  "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"Models in the bearer's unit have the Soul Forge keyword.\"). GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt: \"HERETIC ASTARTES model only (excluding DAMNED models). Models in the bearer's unit have the SOUL FORGE keyword.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "ability.text",
+  "app": "Attached Unit: If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead.",
+  "source": "If a CHARACTER UNIT unit from your army with the Leader ability (excluding EPIC HEROES) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"If a CHARACTER UNIT unit from your army with the Leader ability (excluding EPIC HEROES) can be attached to a LEGIONARIES…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Nemesis-Claw.html: \"If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "cultist-mob",
+  "field": "ability.text",
+  "app": "For the Dark Gods: At the end of your Command phase, if this unit is within range of an **objective** marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+  "source": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of Control over that objective marker is greater than yours at the start or end of any phase.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Cultist-Mob.html: \"At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at t…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "obliterators",
+  "field": "ability.text",
+  "app": "Warp Rift Firepower: In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
+  "source": "(Once per battle, per unit): In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has its own wording; New Recruit’s export (catalogue revision 28) has \"(Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, you can use this ability. If y…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Obliterators.html: \"In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "forgefiend",
+  "field": "stats.base",
+  "app": "Forgefiend: 120×92mm Oval",
+  "source": "Forgefiend: 120x92mm",
+  "reason": "BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has Forgefiend: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3040: \"Forgefiend  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "forgefiend",
+  "field": "kw",
+  "app": "Soul Forge",
+  "source": "",
+  "reason": "Soul Forge Boons (Cult of the Arkifane): “HERETIC ASTARTES VEHICLE … units from your army gain the SOUL FORGE keyword.” The Forgefiend is a HERETIC ASTARTES VEHICLE (GW's datasheet: KEYWORDS VEHICLE, WALKER, …; FACTION KEYWORDS HERETIC ASTARTES); BSData's Forgefiend lacks the hidden \"Heretic Astartes Vehicle\" category every other CSM vehicle entry has, so its modifier does not reach it. BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) and New Recruit’s export (catalogue revision 28) do not give it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane, Soul Forge Boons: \"HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (the same words); verify/.cache/waha/ds/chaos-space-marines_Forgefiend.html: KEYWORDS VEHICLE; WALKER; CHAOS; DAEMON; FORGEFIEND, FACTION KEYWORDS HERETIC ASTARTES; verify/sources/nr-json/fellhammer-siege-task-force.json: Forgefiend categories without \"Heretic Astartes Vehicle\" and \"Soul Forge\" (the Maulerfiend and the Vindicator have both).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "maulerfiend",
+  "field": "stats.base",
+  "app": "Maulerfiend: 120×92mm Oval",
+  "source": "Maulerfiend: 120x92mm",
+  "reason": "BSData at the pin (Chaos - Chaos Space Marines catalogue revision 26) has Maulerfiend: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3063: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: 120×92mm.",
+  "by": "verify/from-json.js"
  }
 ]

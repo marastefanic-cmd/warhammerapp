@@ -500,7 +500,8 @@ function parseStrats(lines, headerAt, stopAt) {
   for (const s of out) for (const k of Object.keys(s.fields)) s.fields[k] = s.fields[k].filter(Boolean);
   return out;
 }
-const stopPdf = t => !/STRATAGEM$/.test(t) && (/^\d+$/.test(t) || /^\+?\d?CP$/.test(t) || /^\+\+/.test(t) || /^(ENHANCEMENTS|DETACHMENT RULES?|STRATAGEMS)$/.test(t) || isCaps(t));
+// (a bullet line in capitals, "▪ [SUSTAINED HITS 1].", is part of the field)
+const stopPdf = t => !/STRATAGEM$/.test(t) && !/^[▪■•]/.test(t) && (/^\d+$/.test(t) || /^\+?\d?CP$/.test(t) || /^\+\+/.test(t) || /^(ENHANCEMENTS|DETACHMENT RULES?|STRATAGEMS)$/.test(t) || isCaps(t));
 // GW Core Rules section 15: "COMMAND RE-ROLL 15.02 1CP"
 const coreHeader = (L, i) => {
   const m = /^([A-Z][A-Z’'\- !?]+?) (1[56]\.\d\d)(?: (\d)CP)?$/.exec(L[i].text);
@@ -1249,6 +1250,8 @@ for (const a of D.armies) {
       else if (/abilities section$/.test(t) && /^Add new ability:/.test(e.instr)) { const m = /^([^:]+):\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an) { hit = true; part = m[2]; } }
       if (!hit) continue;
       const I = u.id, F = 'ability:' + ab.name + (ab.who ? ' (' + ab.who + ')' : '');
+      // a new text that opens with the ability's own name and tag ("Warp Rift Firepower (Once per battle, per unit): In your …"): its text
+      if (part == null && /^Change to:/.test(e.instr)) { const m = /^([^:(]+?)(?:\s*\(([^)]*)\))?:\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an && (!m[2] || norm(m[2]) === norm(ab.tag || ''))) part = m[3]; }
       if (/^Change to:|^Add new ability:/.test(e.instr)) checkUpdate('packUpdate', a.id, I, F, ab.text, e, part);
       else if (!checkChangeValue('packUpdate', a.id, I, F, ab.text, e)) fail('packUpdate', a.id, I, F, ab.text, 'Rules Updates entry not checked mechanically: ' + e.instr, e.where);
     }
@@ -1258,7 +1261,9 @@ for (const a of D.armies) {
 // in its unit's rules list (Adeptus Mechanicus: Doctrina Imperatives on Belisarius Cawl, Cybernetica Datasmith, …)
 for (const a of D.armies) {
   for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /abilities section$/.test(titleN(x)))) {
-    const m = /^Add ['‘]([^'’]+)['’]\.?$/.exec(e.instr); if (!m) continue;
+    // (or "Remove 'Leader', add 'Support'.": it has the one added and not the one removed)
+    const rm = /^Remove ['‘]([^'’]+)['’], add ['‘]([^'’]+)['’]\.?$/i.exec(e.instr);
+    const m = rm ? [null, rm[2]] : /^Add ['‘]([^'’]+)['’]\.?$/.exec(e.instr); if (!m) continue;
     const t = titleN(e);
     for (const u of a.units) {
       const names = [...new Set([u.name, ...(u.abilities || []).filter(ab => ab.who && !/: pick one$/.test(ab.who)).map(ab => ab.who)])];
@@ -1267,6 +1272,8 @@ for (const a of D.armies) {
         usedUpdates.add(e); count('packUpdate');
         prov.push({ item: a.id + ' / ' + u.id + ' / rules', field: 'rules', doc: e.d.label, file: e.d.file, sha256: e.d.sha256, where: e.where });
         if (!(u.rules || []).some(r => norm(r) === norm(m[1]))) fail('packUpdate', a.id, u.id, 'rules (' + n + ')', (u.rules || []).join(', '), 'Rules Updates: "' + e.instr + '"', e.where);
+        // (the removed one: not on that datasheet, unless another part of the unit has it itself)
+        if (rm && (u.partialRules || {})[rm[1]] === n) fail('packUpdate', a.id, u.id, 'rules (' + n + ')', (u.rules || []).join(', '), 'Rules Updates: "' + e.instr + '"', e.where);
       }
     }
   }

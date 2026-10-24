@@ -1471,6 +1471,48 @@ const FACTIONS = {
       }
     }
   },
+  'chaos-space-marines': {
+    name: 'Chaos Space Marines',
+    // army rules: Wahapedia, Chaos Space Marines, Army Rules (the ones the list’s units name), written by verify/from-json.js
+    armyRules: [
+      { name:'Dark Pacts', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**', calcMods:[{ kind:'all', from:'Dark Pacts', when:'A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase', note:'[LETHAL HITS] or [SUSTAINED HITS 1]', pick:[{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS 1]', note:'[SUSTAINED HITS 1]' },{ name:'Both', both:true, note:'[LETHAL HITS], [SUSTAINED HITS 1]' }] }], both:[{ strat:'touch-of-the-arkifane' }] }
+    ],
+    detachments: {
+      // Cult of the Arkifane: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'cult-of-the-arkifane': {
+        name:'Cult of the Arkifane', dispositions:['Priority Assets'], dp:2,
+        rule:{ name:'Soul Forge Boons', needs:{ all:['Faction: Heretic Astartes','Vehicle'] }, ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n**SOUL FORGE** units from your army have a 5+ invulnerable save.' },
+        enhancements:[
+          { name:'Wyredjinn', pts:25, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.' },
+          { name:'Cybinfernal Font', pts:20, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.' },
+          { name:'Mark of the Soul Forges', pts:20, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
+          { name:'Crown of Worms', pts:15, text:'**WARPSMITH** model only. Add 3" to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.' }
+        ],
+        stratagems:[
+          { id:'touch-of-the-arkifane', gist:'Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.', gistOf:'09483c24', name:'Touch of the Arkifane', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Heretic Astartes'], none:['Damned'] }, when:'Any phase.', target:'One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, if your unit is selected to make a **Dark Pact**, you can select both abilities for that unit’s weapons to gain.' },
+          { id:'balefire-boon', gist:'Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.', gistOf:'212a3924', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, until the end of the phase', note:'+1 AP' }, name:'Balefire Boon', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Soul Forge'] }, when:'Your Shooting phase or the Fight phase.', target:'One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.' },
+          { id:'soul-tally-offering', gist:'Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.', gistOf:'80282bdc', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units', note:'re-roll the wound roll', vs:{ any:['Character','Monster','Vehicle'] } }, name:'Soul-Tally Offering', cp:2, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Soul Forge'] }, when:'Your Shooting phase or the Fight phase.', target:'One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**.' },
+          { id:'biomechanoid-regeneration', gist:'Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword.', gistOf:'dd9a9f1d', name:'Biomechanoid Regeneration', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Heretic Astartes'], none:['Damned'] }, when:'Your Command phase.', target:'One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).', effect:'One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead.' },
+          { id:'forge-fire-surge', gist:'Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge.', gistOf:'8cf08ab2', name:'Forge-Fire Surge', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Heretic Astartes'] }, when:'Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.', target:'That **HERETIC ASTARTES** unit.', effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.' },
+          { id:'unholy-fortitude', gist:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.', gistOf:'21eb4840', def:'their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase', defOf:'21eb4840', name:'Unholy Fortitude', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Soul Forge'] }, when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.', target:'One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.' }
+        ]
+      },
+      // Devotees of Destruction: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'devotees-of-destruction': {
+        name:'Devotees of Destruction', dispositions:['Priority Assets'], dp:1,
+        rule:{ name:'Rain of Ruin', needs:{ any:['Havocs','Obliterators'] }, ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**.' },
+        enhancements:[
+          { name:'Pact of Destruction', pts:15, text:'**WARPSMITH** model only.\n- When this unit uses its **Dark Pacts** ability, this unit can re-roll **Leadership rolls**.\n- In your Shooting phase, when this unit has shot, if this unit used its **Dark Pacts** ability and if those attacks **destroyed** an enemy model, this unit **heals** 3 wounds.' },
+          { name:'Eye of Oblivion', pts:20, text:'**WARPSMITH** model only. When this unit is **selected to shoot**, select one enemy unit within 24" of this unit. That enemy unit has +6" **detection range** until this unit has shot.' }
+        ],
+        stratagems:[
+          { id:'ruinations-bounty', gist:'Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'872a02da', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, name:'Ruination’s Bounty', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Havocs','Obliterators'] }, when:'Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**.' },
+          { id:'snare-of-fire', gist:'Your opponent’s Movement phase, an enemy unit ends a move within 8" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3".', gistOf:'388b5e8e', name:'Snare of Fire', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Havocs'] }, when:'Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly **unengaged HAVOCS** unit.', target:'That **HAVOCS** unit.', effect:'Your unit can make a **normal move** of up to D3+3".' },
+          { id:'undying-hatred', gist:'Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.', gistOf:'7e2a015e', def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T', defOf:'7e2a015e', name:'Undying Hatred', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Havocs','Obliterators'] }, when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------
@@ -4509,6 +4551,252 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'fellhammer-siege-task-force', name:'Fellhammer Siege Task Force', faction:'chaos-space-marines', points:2000, pointsUsed:1995,
+  battleSize:'Strike Force', disposition:'Priority Assets',
+  detachments:['cult-of-the-arkifane','devotees-of-destruction'],
+  source:'New Recruit, exported 24 Oct 2026 (JSON)',
+  units:[
+    {
+      id:'vashtorr-the-arkifane', ds:'chaos-space-marines/vashtorr-the-arkifane', pts:220, warlord:true,
+      models:['1× Vashtorr the Arkifane'],
+      gear:[['Vashtorr’s claw','Vashtorr’s hammer']],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Daemon','Vehicle'] }, when:'Within 6" of Vashtorr the Arkifane', note:'+2 S', from:'Unholy Mechanisms' }
+      ],
+      kw:['Chaos','Character','Daemon','Epic Hero','Faction: Heretic Astartes','Fly','Monster','Soul Forge','Vashtorr the Arkifane','Warlord'],
+      why:{ kw:{ Warlord:'Warlord', 'Soul Forge':'Soul Forge Boons' } }
+    },
+    {
+      id:'lord-discordant-on-helstalker', ds:'chaos-space-marines/lord-discordant-on-helstalker', pts:175, enhancement:'Mark of the Soul Forges',
+      models:['1× Lord Discordant on Helstalker'],
+      gear:[['Bladed limbs','Bolt pistol','Impaler chainglaive','Helstalker autocannon','Techno-virus injector']],
+      abilities:[
+        { name:'Corrupt Machine Spirits' },
+        { name:'Spirit Thief' },
+        { name:'Mark of the Soul Forges', tag:'Enhancement', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Every attack', note:'a Critical Hit on an unmodified hit roll of 5+', from:'Mark of the Soul Forges', always:true, calc:{ critHit:5 } },
+        { kind:'all', when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] } }
+      ],
+      kw:['Chaos','Character','Daemon','Faction: Heretic Astartes','Lord Discordant','Mounted','Soul Forge'],
+      why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
+    },
+    {
+      id:'warpsmith', ds:'chaos-space-marines/warpsmith', pts:90, enhancement:'Wyredjinn',
+      models:['1× Warpsmith'],
+      gear:[['Flamer tendril','Forge weapon','Melta tendril','Plasma pistol']],
+      abilities:[
+        { name:'Warpsmith' },
+        { name:'Master of Mechanisms' },
+        { name:'Enrage Machine Spirits' },
+        { name:'Wyredjinn', tag:'Enhancement', ph:['command'], turn:'your', text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.' }
+      ]
+    },
+    {
+      id:'dark-apostle-master-of-executions-nemesis-claw', ds:['chaos-space-marines/dark-apostle','chaos-space-marines/master-of-executions','chaos-space-marines/nemesis-claw'], role:'Character', pts:270, ptsNote:'90 + Master of Executions 75 + Nemesis Claw 105', enhancement:'Cybinfernal Font',
+      leads:'Nemesis Claw',
+      also:[
+        { name:'Master of Executions', support:true }
+      ],
+      models:['1× Dark Apostle','2× Dark Disciple','1× Master of Executions','1× Visionary','1× Legionary w/ accursed weapon','1× Legionary w/ Nostraman chainglaive','1× Legionary w/ paired accursed weapons','1× Legionary w/ voice eater (Voice eater)'],
+      gear:[['Accursed crozius','Bolt pistol'],['Close combat weapon'],['Axe of dismemberment','Bolt pistol'],['Nostraman chainblade','Plasma pistol'],['Accursed weapon','Bolt pistol','Close combat weapon'],['Bolt pistol','Close combat weapon','Nostraman chainglaive'],['Bolt pistol','Close combat weapon','Paired accursed weapons'],['Astartes chainsword','Bolt pistol','Close combat weapon']],
+      stats:[
+        { name:'Dark Apostle' },
+        { name:'Dark Disciple ×2' },
+        { name:'Master of Executions' },
+        { name:'Nemesis Claw ×5' }
+      ],
+      ranged:[
+        { name:'Bolt pistol', who:'Dark Apostle' },
+        { name:'Bolt pistol', who:'Master of Executions' },
+        { name:'standard', who:'Nemesis Claw' },
+        { name:'supercharge', who:'Nemesis Claw' },
+        { name:'Bolt pistol', who:'Nemesis Claw', n:4 }
+      ],
+      melee:[
+        { name:'Accursed crozius', who:'Dark Apostle' },
+        { name:'Close combat weapon', who:'Dark Apostle', n:2 },
+        { name:'Axe of dismemberment', who:'Master of Executions' },
+        { name:'Nostraman chainblade', who:'Nemesis Claw' },
+        { name:'Accursed weapon', who:'Nemesis Claw' },
+        { name:'Close combat weapon', who:'Nemesis Claw', n:4 },
+        { name:'Nostraman chainglaive', who:'Nemesis Claw' },
+        { name:'Paired accursed weapons', who:'Nemesis Claw' },
+        { name:'Astartes chainsword', who:'Nemesis Claw' }
+      ],
+      abilities:[
+        { name:'Dark Zealotry', who:'Dark Apostle' },
+        { name:'Demagogue', who:'Dark Apostle' },
+        { name:'Malign Sacrifice', who:'Dark Apostle' },
+        { name:'Cybinfernal Font', who:'Dark Apostle', tag:'Enhancement', text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.' },
+        { name:'Warp-sighted Butcher', who:'Master of Executions' },
+        { name:'Trophy Taker', who:'Master of Executions' },
+        { name:'Visions of Suffering', who:'Nemesis Claw' },
+        { name:'Attached Unit', who:'Nemesis Claw' },
+        { name:'Voice eater', who:'Nemesis Claw' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'While the Dark Apostle leads this unit and it contains its DARK APOSTLE model', note:'+1 to wound rolls', from:'Dark Zealotry', always:true },
+        { kind:'melee', when:'While the Master of Executions leads this unit, target below its Starting Strength', note:'re-roll the hit roll; also the wound roll if Below Half-strength', from:'Warp-sighted Butcher', pick:[{ name:'Below Starting Strength', note:'re-roll hit rolls' },{ name:'Below Half-strength', note:'re-roll hit rolls and wound rolls' }] },
+        { kind:'all', when:'Target below its Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength', from:'Visions of Suffering', pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' },{ name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }] }
+      ],
+      rules:['Dark Pacts','Leader','Pistol','Support','Devastating Wounds','Precision','Stealth','Sustained Hits','Hazardous','Twin-linked'],
+      kw:['Chaos','Character','Dark Apostle','Faction: Heretic Astartes','Grenades','Infantry','Soul Forge','Master of Executions','Nemesis Claw','Psyker'],
+      kwNote:'Master of Executions, Nemesis Claw, Psyker come from the combined unit.',
+      partialRules:{ Stealth:'Nemesis Claw' },
+      kwOnly:{ Character:'Dark Apostle', 'Dark Apostle':'Dark Apostle' }
+    },
+    {
+      id:'cultist-mob', ds:'chaos-space-marines/cultist-mob', pts:50,
+      models:['1× Cultist Champion','9× Cultist w/ autopistol and brutal assault weapon'],
+      gear:[['Brutal assault weapon','Bolt pistol'],['Autopistol','Brutal assault weapon']],
+      stats:[
+        { name:'Cultist Mob ×9' },
+        { name:'Cultist Champion' }
+      ],
+      ranged:[
+        { name:'Bolt pistol' },
+        { name:'Autopistol', n:9 }
+      ],
+      melee:[
+        { name:'Brutal assault weapon', n:10 }
+      ]
+    },
+    {
+      id:'havocs', ds:'chaos-space-marines/havocs', pts:135, copies:2,
+      models:['1× Havoc Champion','4× Havoc w/ lascannon'],
+      gear:[['Power fist','Plasma gun'],['Close combat weapon','Havoc lascannon']],
+      stats:[
+        { name:'Havoc Champion' },
+        { name:'Havocs ×4' }
+      ],
+      ranged:[
+        { name:'standard', kw:['RAPID FIRE 1','HEAVY'], from:{ HEAVY:'Rain of Ruin' } },
+        { name:'supercharge', kw:['HAZARDOUS','RAPID FIRE 1','HEAVY'], from:{ HEAVY:'Rain of Ruin' } },
+        { name:'Havoc lascannon', n:4, kw:['HEAVY'], from:{ HEAVY:'Rain of Ruin' } }
+      ],
+      melee:[
+        { name:'Power fist' },
+        { name:'Close combat weapon', n:4 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Every ranged attack', note:'can ignore any or all modifiers to BS and any or all modifiers to the hit roll', from:'Stabilisation Talons', always:true }
+      ]
+    },
+    {
+      id:'obliterators', ds:'chaos-space-marines/obliterators', pts:160,
+      models:['2× Obliterator'],
+      gear:[['Crushing fists','Fleshmetal guns']],
+      stats:[
+        { name:'Obliterators ×2' }
+      ],
+      ranged:[
+        { name:'focused malice', n:2, kw:['MELTA 2','HEAVY'], from:{ HEAVY:'Rain of Ruin' } },
+        { name:'ruinous salvo', n:2, kw:['BLAST','HEAVY'], from:{ HEAVY:'Rain of Ruin' } },
+        { name:'warp hail', n:2, kw:['SUSTAINED HITS 1','HEAVY'], from:{ HEAVY:'Rain of Ruin' } }
+      ],
+      melee:[
+        { name:'Crushing fists', n:2 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Once per battle, your Shooting phase, when selected to shoot', note:'[INDIRECT FIRE]', from:'Warp Rift Firepower' }
+      ]
+    },
+    {
+      id:'chaos-predator-annihilator', ds:'chaos-space-marines/chaos-predator-annihilator', pts:140,
+      models:['1× Chaos Predator Annihilator'],
+      gear:[['Armoured tracks','Havoc launcher','Predator twin lascannon','Combi-bolter','Lascannon','Lascannon']],
+      stats:[
+        { name:'Chaos Predator Annihilator', InSv:'5+', from:{ InSv:'Soul Forge Boons' } }
+      ],
+      ranged:[
+        { name:'Havoc launcher' },
+        { name:'Predator twin lascannon' },
+        { name:'Combi-bolter' },
+        { name:'Lascannon', n:2 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Allocated to a MONSTER or VEHICLE model', note:'can re-roll the damage roll', from:'Annihilator', always:true, vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
+      ],
+      kw:['Chaos','Daemon','Faction: Heretic Astartes','Frame','Predator Annihilator','Smoke','Soul Forge','Vehicle'],
+      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+    },
+    {
+      id:'chaos-predator-destructor', ds:'chaos-space-marines/chaos-predator-destructor', pts:145,
+      models:['1× Chaos Predator Destructor'],
+      gear:[['Armoured tracks','Havoc launcher','Predator autocannon','Combi-bolter','Heavy bolter','Heavy bolter']],
+      stats:[
+        { name:'Chaos Predator Destructor', InSv:'5+', from:{ InSv:'Soul Forge Boons' } }
+      ],
+      ranged:[
+        { name:'Havoc launcher' },
+        { name:'Predator autocannon' },
+        { name:'Combi-bolter' },
+        { name:'Heavy bolter', n:2 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'vs INFANTRY units', note:'+1 AP', from:'Destructor', always:true, vs:{ any:['Infantry'] } },
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
+      ],
+      kw:['Chaos','Daemon','Faction: Heretic Astartes','Frame','Predator Destructor','Smoke','Soul Forge','Vehicle'],
+      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+    },
+    {
+      id:'chaos-vindicator', ds:'chaos-space-marines/chaos-vindicator', pts:180,
+      models:['1× Chaos Vindicator'],
+      gear:[['Armoured tracks','Demolisher cannon','Havoc launcher','Combi-bolter']],
+      stats:[
+        { name:'Chaos Vindicator', InSv:'5+', from:{ InSv:'Soul Forge Boons' } }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Within Engagement Range of one or more enemy units', note:'no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit)', from:'Siege Shield', always:true },
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
+      ],
+      kw:['Chaos','Daemon','Faction: Heretic Astartes','Frame','Smoke','Soul Forge','Vehicle','Vindicator'],
+      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+    },
+    {
+      id:'forgefiend', ds:'chaos-space-marines/forgefiend', pts:170,
+      models:['1× Forgefiend'],
+      gear:[['Ectoplasma cannon','Ectoplasma cannon','Ectoplasma cannon','Armoured limbs']],
+      ranged:[
+        { name:'Ectoplasma cannon', n:3 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Selected to shoot, if it uses this ability (until the end of the phase)', note:'[DEVASTATING WOUNDS] and [HAZARDOUS]', from:'Daemonic Ordnance' },
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
+      ],
+      kw:['Chaos','Daemon','Faction: Heretic Astartes','Forgefiend','Soul Forge','Vehicle','Walker'],
+      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+    },
+    {
+      id:'maulerfiend', ds:'chaos-space-marines/maulerfiend', pts:125,
+      models:['1× Maulerfiend'],
+      gear:[['Maulerfiend fists','Lasher tendrils']],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
+      ],
+      kw:['Chaos','Daemon','Faction: Heretic Astartes','Maulerfiend','Soul Forge','Vehicle','Walker'],
+      why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -6704,6 +6992,284 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Combat Doctrines','Devastating Wounds','Hazardous','Blast'],
   kw:['Allies: Deathwatch','Deathwatch Terminator Squad','Faction: Adeptus Astartes','Faction: Deathwatch','Imperium','Infantry','Kill Team','Terminator']
+},
+'chaos-space-marines/vashtorr-the-arkifane':{
+  name:'Vashtorr the Arkifane', faction:'chaos-space-marines', bsId:'dcc0-b70c-9779-e6c9', role:'Epic Hero',
+  stats:[
+    { name:'Vashtorr the Arkifane', M:'12"', T:'10', Sv:'2+', W:'14', Ld:'6+', OC:'3', InSv:'4+', base:'80mm' }
+  ],
+  ranged:[
+    { name:'Vashtorr’s claw', range:'12"', A:'D6', BS:'–', S:'5', AP:'-2', D:'1', kw:['ANTI-VEHICLE 4+','TORRENT'] }
+  ],
+  melee:[
+    { name:'strike', group:'Vashtorr’s hammer', range:'Melee', A:'6', WS:'2+', S:'14', AP:'-3', D:'3', kw:['ANTI-VEHICLE 4+','DEVASTATING WOUNDS'] },
+    { name:'sweep', group:'Vashtorr’s hammer', range:'Melee', A:'12', WS:'2+', S:'8', AP:'-1', D:'2', kw:['ANTI-VEHICLE 4+','DEVASTATING WOUNDS'] }
+  ],
+  abilities:[
+    { name:'Unholy Mechanisms', tag:'Aura', text:'While a friendly **DAEMON VEHICLE** unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.' },
+    { name:'Reorder Reality', def:'an enemy unit within 18" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase', text:'Each time an enemy unit within 18" of this model targets this model, subtract 1 from the **Hit roll** and, until the end of the phase, that enemy unit’s ranged weapons have the **[HAZARDOUS]** ability.', defOf:'9eb7b966' },
+    { name:'Indentured Daemon Engines', def:'Lone Operative while within 3" of a friendly DAEMON VEHICLE unit', text:'While this model is within 3" of one or more friendly **DAEMON VEHICLE** units, this model has the **Lone Operative** ability.', defOf:'7e81e6e7' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Dark Pacts','Deadly Demise D3','Deep Strike','Torrent','Anti','Devastating Wounds'],
+  kw:['Chaos','Character','Daemon','Epic Hero','Faction: Heretic Astartes','Fly','Monster','Vashtorr the Arkifane']
+},
+'chaos-space-marines/lord-discordant-on-helstalker':{
+  name:'Lord Discordant on Helstalker', faction:'chaos-space-marines', bsId:'46e1-2159-7c26-9105', role:'Character',
+  stats:[
+    { name:'Lord Discordant on Helstalker', M:'14"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'4', InSv:'4+', base:'120×92mm Oval' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'2+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] },
+    { name:'Helstalker autocannon', range:'48"', A:'3', BS:'2+', S:'9', AP:'-1', D:'3', kw:[] }
+  ],
+  melee:[
+    { name:'Bladed limbs', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS'] },
+    { name:'Impaler chainglaive', range:'Melee', A:'5', WS:'2+', S:'8', AP:'-3', D:'3', kw:['LANCE'] },
+    { name:'Techno-virus injector', range:'Melee', A:'1', WS:'3+', S:'3', AP:'-3', D:'2', kw:['ANTI-VEHICLE 2+','EXTRA ATTACKS'] }
+  ],
+  abilities:[
+    { name:'Corrupt Machine Spirits', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 **mortal wounds**; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.' },
+    { name:'Spirit Thief', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1.' }
+  ],
+  rules:['Dark Pacts','Extra Attacks','Pistol','Lance','Anti'],
+  kw:['Chaos','Character','Daemon','Faction: Heretic Astartes','Lord Discordant','Mounted']
+},
+'chaos-space-marines/warpsmith':{
+  name:'Warpsmith', faction:'chaos-space-marines', bsId:'440-a22a-eac1-b107', role:'Character',
+  stats:[
+    { name:'Warpsmith', M:'6"', T:'5', Sv:'2+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'60×35.5mm Oval' }
+  ],
+  ranged:[
+    { name:'Flamer tendril', range:'12"', A:'D6', BS:'–', S:'3', AP:'0', D:'1', kw:['IGNORES COVER','PISTOL','TORRENT'] },
+    { name:'Melta tendril', range:'6"', A:'1', BS:'2+', S:'8', AP:'-4', D:'D3', kw:['PISTOL','MELTA 2'] },
+    { name:'standard', group:'Plasma pistol', range:'12"', A:'1', BS:'2+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
+    { name:'supercharge', group:'Plasma pistol', range:'12"', A:'1', BS:'2+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL'] }
+  ],
+  melee:[
+    { name:'Forge weapon', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-2', D:'2', kw:['ANTI-VEHICLE 4+'] }
+  ],
+  abilities:[
+    { name:'Warpsmith', def:'Lone Operative while within 3" of a friendly HERETIC ASTARTES VEHICLE unit', text:'While this model is within 3" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability.', defOf:'1e3bf5fe' },
+    { name:'Master of Mechanisms', ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' }, text:'In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase.' },
+    { name:'Enrage Machine Spirits', ph:['movement'], turn:'your', text:'At the end of your Movement phase, select one enemy **VEHICLE** unit within 12" of this model. That unit must take a **Battle-shock test**.' }
+  ],
+  rules:['Dark Pacts','Leader','Ignores Cover','Pistol','Torrent','Anti','Melta','Hazardous'],
+  kw:['Chaos','Character','Faction: Heretic Astartes','Grenades','Infantry','Warpsmith']
+},
+'chaos-space-marines/dark-apostle':{
+  name:'Dark Apostle', faction:'chaos-space-marines', bsId:'d2b8-454a-d061-b592',
+  stats:[
+    { name:'Dark Apostle', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'5+', OC:'1', InSv:'4+', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Accursed crozius', range:'Melee', A:'5', WS:'2+', S:'6', AP:'-1', D:'2', kw:[] },
+    { name:'Close combat weapon', range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Dark Zealotry', ph:['fight'], turn:'either', text:'While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.' },
+    { name:'Demagogue', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked.' },
+    { name:'Malign Sacrifice', ph:['fight'], turn:'either', text:'At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within **Engagement Range** of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.' }
+  ]
+},
+'chaos-space-marines/master-of-executions':{
+  name:'Master of Executions', faction:'chaos-space-marines', bsId:'da34-7071-8658-a453',
+  stats:[
+    { name:'Master of Executions', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Axe of dismemberment', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS','PRECISION'] }
+  ],
+  abilities:[
+    { name:'Warp-sighted Butcher', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.' },
+    { name:'Trophy Taker', text:'Each time this model destroys an enemy **CHARACTER** model, you gain 1CP.' }
+  ]
+},
+'chaos-space-marines/nemesis-claw':{
+  name:'Nemesis Claw', faction:'chaos-space-marines', bsId:'f666-1f5d-0c20-06c1',
+  stats:[
+    { name:'Dark Disciple', M:'6"', T:'5', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'4+', base:'25mm' },
+    { name:'Nemesis Claw', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'1', InSv:'5+', base:'32mm' }
+  ],
+  ranged:[
+    { name:'standard', group:'Plasma pistol', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
+    { name:'supercharge', group:'Plasma pistol', range:'12"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL'] },
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Nostraman chainblade', range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:['SUSTAINED HITS 1'] },
+    { name:'Accursed weapon', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'1', kw:[] },
+    { name:'Close combat weapon', range:'Melee', A:'3', WS:'3+', S:'4', AP:'0', D:'1', kw:[] },
+    { name:'Nostraman chainglaive', range:'Melee', A:'4', WS:'3+', S:'8', AP:'-2', D:'1', kw:['SUSTAINED HITS 1'] },
+    { name:'Paired accursed weapons', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'1', kw:['TWIN-LINKED'] },
+    { name:'Astartes chainsword', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Visions of Suffering', tag:'Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well.' },
+    { name:'Attached Unit', text:'If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead.' },
+    { name:'Voice eater', text:'Enemy units (excluding **MONSTERS** and **VEHICLES**) cannot be targeted with Stratagems while they are within **Engagement Range** of the bearer’s unit.' }
+  ]
+},
+'chaos-space-marines/cultist-mob':{
+  name:'Cultist Mob', faction:'chaos-space-marines', bsId:'1267-78f1-7774-859', role:'Battleline',
+  stats:[
+    { name:'Cultist Mob', M:'6"', T:'3', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'25mm' },
+    { name:'Cultist Champion', M:'6"', T:'3', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'25mm' }
+  ],
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'4+', S:'4', AP:'0', D:'1', kw:['PISTOL'] },
+    { name:'Autopistol', range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Brutal assault weapon', range:'Melee', A:'2', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'For the Dark Gods', ph:['command'], turn:'your', text:'At the end of your Command phase, if this unit is within range of an **objective** marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' }
+  ],
+  rules:['Dark Pacts','Pistol'],
+  kw:['Battleline','Chaos','Cultist Mob','Damned','Faction: Heretic Astartes','Grenades','Infantry']
+},
+'chaos-space-marines/havocs':{
+  name:'Havocs', faction:'chaos-space-marines', bsId:'946c-d784-c8be-f21', role:'Infantry',
+  stats:[
+    { name:'Havoc Champion', M:'5"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' },
+    { name:'Havocs', M:'5"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+  ],
+  ranged:[
+    { name:'standard', group:'Plasma gun', range:'24"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1' },
+    { name:'supercharge', group:'Plasma gun', range:'24"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2' },
+    { name:'Havoc lascannon', range:'48"', A:'1', BS:'3+', S:'12', AP:'-3', D:'D6+1' }
+  ],
+  melee:[
+    { name:'Power fist', range:'Melee', A:'3', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] },
+    { name:'Close combat weapon', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Stabilisation Talons', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon.' }
+  ],
+  rules:['Dark Pacts','Hazardous','Rapid Fire'],
+  kw:['Chaos','Faction: Heretic Astartes','Havocs','Infantry']
+},
+'chaos-space-marines/obliterators':{
+  name:'Obliterators', faction:'chaos-space-marines', bsId:'2311-fa63-364-22a3', role:'Infantry',
+  stats:[
+    { name:'Obliterators', M:'4"', T:'7', Sv:'2+', W:'5', Ld:'6+', OC:'2', InSv:'5+', base:'50mm' }
+  ],
+  ranged:[
+    { name:'focused malice', group:'Fleshmetal guns', range:'18"', A:'D3', BS:'3+', S:'12', AP:'-3', D:'4' },
+    { name:'ruinous salvo', group:'Fleshmetal guns', range:'24"', A:'D6', BS:'3+', S:'8', AP:'-2', D:'2' },
+    { name:'warp hail', group:'Fleshmetal guns', range:'24"', A:'D6+3', BS:'3+', S:'5', AP:'-1', D:'1' }
+  ],
+  melee:[
+    { name:'Crushing fists', range:'Melee', A:'4', WS:'3+', S:'9', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Warp Rift Firepower', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit\'s ranged attacks have **[INDIRECT FIRE]**.' }
+  ],
+  rules:['Dark Pacts','Deep Strike','Melta','Blast','Sustained Hits'],
+  kw:['Chaos','Daemon','Faction: Heretic Astartes','Infantry','Obliterators']
+},
+'chaos-space-marines/chaos-predator-annihilator':{
+  name:'Chaos Predator Annihilator', faction:'chaos-space-marines', bsId:'279e-62d4-bff1-141', role:'Vehicle',
+  stats:[
+    { name:'Chaos Predator Annihilator', M:'10"', T:'10', Sv:'3+', W:'11', Ld:'6+', OC:'3', base:'Hull', InSv:'–' }
+  ],
+  ranged:[
+    { name:'Havoc launcher', range:'48"', A:'D6', BS:'3+', S:'5', AP:'0', D:'1', kw:['BLAST'] },
+    { name:'Predator twin lascannon', range:'48"', A:'1', BS:'3+', S:'14', AP:'-3', D:'D6+1', kw:['TWIN-LINKED'] },
+    { name:'Combi-bolter', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 2'] },
+    { name:'Lascannon', range:'48"', A:'1', BS:'3+', S:'12', AP:'-3', D:'D6+1', kw:[] }
+  ],
+  melee:[
+    { name:'Armoured tracks', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Annihilator', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time a ranged attack made by this model is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Deadly Demise D3','Dark Pacts','Blast','Twin-linked','Rapid Fire'],
+  kw:['Chaos','Faction: Heretic Astartes','Frame','Predator Annihilator','Smoke','Vehicle']
+},
+'chaos-space-marines/chaos-predator-destructor':{
+  name:'Chaos Predator Destructor', faction:'chaos-space-marines', bsId:'3dfb-3b2a-94b-2fbe', role:'Vehicle',
+  stats:[
+    { name:'Chaos Predator Destructor', M:'10"', T:'10', Sv:'3+', W:'11', Ld:'6+', OC:'3', base:'Hull', InSv:'–' }
+  ],
+  ranged:[
+    { name:'Havoc launcher', range:'48"', A:'D6', BS:'3+', S:'5', AP:'0', D:'1', kw:['BLAST'] },
+    { name:'Predator autocannon', range:'48"', A:'4', BS:'3+', S:'9', AP:'-1', D:'3', kw:['RAPID FIRE 2'] },
+    { name:'Combi-bolter', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 2'] },
+    { name:'Heavy bolter', range:'36"', A:'3', BS:'3+', S:'5', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'] }
+  ],
+  melee:[
+    { name:'Armoured tracks', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Destructor', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time a ranged attack made by this model targets an enemy **INFANTRY** unit, improve the Armour Penetration characteristic of that attack by 1.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Deadly Demise D3','Dark Pacts','Blast','Rapid Fire','Sustained Hits'],
+  kw:['Chaos','Faction: Heretic Astartes','Frame','Predator Destructor','Smoke','Vehicle']
+},
+'chaos-space-marines/chaos-vindicator':{
+  name:'Chaos Vindicator', faction:'chaos-space-marines', bsId:'e687-6d7a-bb28-dcaa', role:'Vehicle',
+  stats:[
+    { name:'Chaos Vindicator', M:'9"', T:'11', Sv:'2+', W:'11', Ld:'6+', OC:'3', base:'Hull', InSv:'–' }
+  ],
+  ranged:[
+    { name:'Demolisher cannon', range:'24"', A:'D6+3', BS:'3+', S:'14', AP:'-3', D:'D6', kw:['BLAST'] },
+    { name:'Havoc launcher', range:'48"', A:'D6', BS:'3+', S:'5', AP:'0', D:'1', kw:['BLAST'] },
+    { name:'Combi-bolter', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 2'] }
+  ],
+  melee:[
+    { name:'Armoured tracks', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Siege Shield', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Deadly Demise D3','Dark Pacts','Blast','Rapid Fire'],
+  kw:['Chaos','Faction: Heretic Astartes','Frame','Smoke','Vehicle','Vindicator']
+},
+'chaos-space-marines/forgefiend':{
+  name:'Forgefiend', faction:'chaos-space-marines', bsId:'45b-19f6-38d2-703f', role:'Vehicle',
+  stats:[
+    { name:'Forgefiend', M:'8"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
+  ],
+  ranged:[
+    { name:'Ectoplasma cannon', range:'36"', A:'D3', BS:'3+', S:'10', AP:'-3', D:'3', kw:['BLAST'] }
+  ],
+  melee:[
+    { name:'Armoured limbs', range:'Melee', A:'2', WS:'3+', S:'6', AP:'0', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Daemonic Ordnance', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Deadly Demise D3','Dark Pacts','Blast'],
+  kw:['Chaos','Faction: Heretic Astartes','Forgefiend','Vehicle','Walker']
+},
+'chaos-space-marines/maulerfiend':{
+  name:'Maulerfiend', faction:'chaos-space-marines', bsId:'d37d-7e8f-341b-c67c', role:'Vehicle',
+  stats:[
+    { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
+  ],
+  melee:[
+    { name:'Maulerfiend fists', range:'Melee', A:'6', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:[] },
+    { name:'Lasher tendrils', range:'Melee', A:'6', WS:'3+', S:'7', AP:'-1', D:'1', kw:['EXTRA ATTACKS'] }
+  ],
+  abilities:[
+    { name:'Siege Crawler', ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'You can ignore any or all modifiers to this model’s Move characteristic and to **Advance** and **Charge rolls** made for it.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Deadly Demise D3','Dark Pacts'],
+  kw:['Chaos','Faction: Heretic Astartes','Maulerfiend','Vehicle','Walker']
 }
 };
 // ---- end of DATASHEETS ----
@@ -6723,6 +7289,7 @@ const BS_IDS = {
     "77b9-2f66-3f9b-5cf3":"adeptus-mechanicus",
     "a55f-b7b3-6c65-a05f":"orks",
     "b984-7317-81cc-20f":"tyranids",
+    "c8da-e875-58f7-f6d6":"chaos-space-marines",
     "df9a-59b2-f464-59ad":"world-eaters"
   },
   roots:{
@@ -6739,7 +7306,8 @@ const BS_IDS = {
     "a435-b94a-eb7b-7c0c":"detachment",
     "a6ad-d379-46ee-2c24":"detachment",
     "bac9-a18e-5a8a-48d1":"detachment",
-    "c82f-1b42-946-9c9a":"detachment"
+    "c82f-1b42-946-9c9a":"detachment",
+    "e296-4a38-d9a5-289c":"detachment"
   },
   battleSizes:{
     "baf8-997f-e323-a090":"Strike Force"
@@ -6769,6 +7337,7 @@ const BS_IDS = {
     "5be7-3aa8-5d64-cbaf":"thousand-sons/warpmeld-pact",
     "5d30-981f-43b8-81be":"chaos-knights/hunting-warpack",
     "5eb6-4ed2-6aca-c7f1":"ultramarines/deathwatch-support",
+    "5f38-038e-a1e9-a457":"chaos-space-marines/cult-of-the-arkifane",
     "6cb5-45cf-c626-fa86":"chaos-knights/houndpack-lance",
     "6d06-9e26-0d3c-5317":"adeptus-mechanicus/eradication-cohort",
     "70d9-0c7a-6b46-65fa":"world-eaters/vessels-of-wrath",
@@ -6779,6 +7348,7 @@ const BS_IDS = {
     "8d8b-a030-83d5-f4e6":"tyranids/talons-of-the-norn-queen",
     "9aba-cb08-cd38-9e01":"thousand-sons/grand-coven",
     "9db8-cf55-983f-9671":"emperors-children/coterie-of-the-conceited",
+    "c6ca-bde2-8304-c97c":"chaos-space-marines/devotees-of-destruction",
     "ccb7-6823-6a97-7c19":"adeptus-custodes/grav-assault-force",
     "f67d-6f59-21b8-e1f9":"adeptus-mechanicus/cohort-cybernetica",
     "f782-e3f1-c132-fe52":"orks/wreckas",
@@ -6844,6 +7414,18 @@ const BS_IDS = {
     "defilers-and-friends/lucius-the-eternal-flawless-blades":["e390-b58b-db9-816|1×23e2-6d93-5012-304d,1×c7a7-3164-12bc-3462,1×cd60-e6ca-4de4-bf07","183e-f3bb-3ce6-7b55|3×0567-0f45-90e8-d3f4,3×0567-0f45-90e8-d3f4/3469-166f-44f3-51b8,3×0567-0f45-90e8-d3f4/f048-127d-0e0b-2279"],
     "defilers-and-friends/maulerfiend":["656c-8b78-8e59-0591|1×167f-5eee-fb7b-a9a9,1×9ef8-1cb6-2f19-cc1b,2×9ef8-1cb6-2f19-cc1b/bd33-fe8e-fe90-2bb7"],
     "defilers-and-friends/tormentors":["4494-dd7d-69f7-306c|1×2a06-5c5b-c129-27d7,1×2a06-5c5b-c129-27d7/e13a-503d-72dc-f4ed,1×2a06-5c5b-c129-27d7/ea86-f483-33bb-182b,1×c1d2-2cf5-b6bd-17fc,1×c6a8-0dbc-ab1b-38b5,1×c6a8-0dbc-ab1b-38b5/ab80-e71b-5a84-2852,1×c6a8-0dbc-ab1b-38b5/b717-8754-263b-3a20,3×d813-7c6b-1dfe-e99a,3×d813-7c6b-1dfe-e99a/8ff6-03ed-5125-9b6d,3×d813-7c6b-1dfe-e99a/ab80-e71b-5a84-2852"],
+    "fellhammer-siege-task-force/chaos-predator-annihilator":["279e-62d4-bff1-141|1×1e2b-bdd2-116e-1f83,1×4bfd-ad0f-5e78-ccf9,1×aaaa-9466-3887-3cdd,1×c627-5d3-1420-c7f1,1×d24a-9b6a-e48b-2fcb,2×d24a-9b6a-e48b-2fcb/7c36-bbb0-278-5c42"],
+    "fellhammer-siege-task-force/chaos-predator-destructor":["3dfb-3b2a-94b-2fbe|1×18ee-2abf-8522-1b75,2×18ee-2abf-8522-1b75/5474-b6fb-2b8c-ec67,1×4bfd-ad0f-5e78-ccf9,1×aaaa-9466-3887-3cdd,1×b08d-6108-969a-9a95,1×c627-5d3-1420-c7f1"],
+    "fellhammer-siege-task-force/chaos-vindicator":["e687-6d7a-bb28-dcaa|1×4bfd-ad0f-5e78-ccf9,1×7f72-9cd7-e0a6-39fa,1×aaaa-9466-3887-3cdd,1×c627-5d3-1420-c7f1"],
+    "fellhammer-siege-task-force/cultist-mob":["1267-78f1-7774-859|9×8331-d762-2987-76a,9×8331-d762-2987-76a/5103-4dd1-a06a-fff,9×8331-d762-2987-76a/a21c-f1bf-d56e-580b,1×dffe-86b3-59a8-fd3d,1×dffe-86b3-59a8-fd3d/18e2-a849-ff3e-fe3,1×dffe-86b3-59a8-fd3d/3add-49b6-5cd3-586f"],
+    "fellhammer-siege-task-force/dark-apostle-master-of-executions-nemesis-claw":["d2b8-454a-d061-b592|1×43e-3bc2-f47f-f614,1×43e-3bc2-f47f-f614/2f57-9703-18b2-6390,1×43e-3bc2-f47f-f614/952c-7df4-87e1-6303,1×43e-3bc2-f47f-f614/ce4a-6df3-3c24-621b,2×f88c-344d-d603-5622,2×f88c-344d-d603-5622/38c3-d575-5d7b-6ba9","da34-7071-8658-a453|1×233b-1a09-2b02-7c73,1×ce4a-6df3-3c24-621b","f666-1f5d-0c20-06c1|1×4eac-1303-a0d6-2827,1×4eac-1303-a0d6-2827/5541-daf-9f4a-ce3d,1×4eac-1303-a0d6-2827/9d6f-4785-aaf0-5076,1×4eac-1303-a0d6-2827/b12c-308b-9920-b09a,1×5390-4445-c0f4-654b,1×5390-4445-c0f4-654b/5541-daf-9f4a-ce3d,1×5390-4445-c0f4-654b/98ba-1a51-57f5-38fc,1×5390-4445-c0f4-654b/b12c-308b-9920-b09a,1×5390-4445-c0f4-654b/c297-6f9c-b046-f2ad,1×6cd8-62e0-c6e4-74b3,1×6cd8-62e0-c6e4-74b3/14a5-4b2-415a-c1d,1×6cd8-62e0-c6e4-74b3/ecbb-dff6-492a-16f6,1×7848-a1bb-5e54-a383,1×7848-a1bb-5e54-a383/5541-daf-9f4a-ce3d,1×7848-a1bb-5e54-a383/b12c-308b-9920-b09a,1×7848-a1bb-5e54-a383/db97-9aa4-717e-6766,1×afb2-86ce-eb1a-b453,1×afb2-86ce-eb1a-b453/4f12-4c0a-d156-4cf0,1×afb2-86ce-eb1a-b453/5541-daf-9f4a-ce3d,1×afb2-86ce-eb1a-b453/b12c-308b-9920-b09a"],
+    "fellhammer-siege-task-force/forgefiend":["45b-19f6-38d2-703f|1×6f51-9d72-19b7-25bb,1×6f51-9d72-19b7-25bb/5f0c-f31c-26ba-4f2a,1×6f51-9d72-19b7-25bb/a1e-5683-1daf-e7aa,1×cf57-33c7-551b-fa36,2×cf57-33c7-551b-fa36/a1e-5683-1daf-e7aa"],
+    "fellhammer-siege-task-force/havocs":["946c-d784-c8be-f21|1×7664-c6bb-fce5-f057,1×7664-c6bb-fce5-f057/cb16-d239-4f7a-91be,1×7664-c6bb-fce5-f057/dc0b-cdb9-4123-782,4×77aa-7131-9a3e-2e7b,4×77aa-7131-9a3e-2e7b/3854-44a6-5746-d602,4×77aa-7131-9a3e-2e7b/72b0-d52e-422e-1a82"],
+    "fellhammer-siege-task-force/lord-discordant-on-helstalker":["46e1-2159-7c26-9105|1×116c-7dd8-92e5-f085,1×2c61-621f-9a2e-f681,1×62ab-b83f-26b-b699,1×7793-9fa8-84f7-3454,1×9c89-2141-493-1a45,1×a12a-4a92-aef-2ccc"],
+    "fellhammer-siege-task-force/maulerfiend":["d37d-7e8f-341b-c67c|1×762a-30ef-ed85-945e,1×c282-992e-9d74-f62a"],
+    "fellhammer-siege-task-force/obliterators":["2311-fa63-364-22a3|2×1db9-89c3-c7cb-2041,2×1db9-89c3-c7cb-2041/2e47-9a3-ad3e-ae4c,2×1db9-89c3-c7cb-2041/649f-d2b6-c43b-f9be"],
+    "fellhammer-siege-task-force/vashtorr-the-arkifane":["dcc0-b70c-9779-e6c9|1×1a34-f1cc-ec01-ca32,1×3667-92c8-a7e5-1ccd,1×e02b-6f8f-cbee-fa79"],
+    "fellhammer-siege-task-force/warpsmith":["440-a22a-eac1-b107|1×244-694c-22c-74fb,1×5762-3c1f-658e-368,1×9e5d-6700-e6d9-5719,1×d0ac-5a84-221a-3dd7,1×e806-3c87-d3d5-e71d"],
     "infernal-lance/chaos-cerastus-knight-atrapos":["8b1d-9029-f9e1-42d9|1×4676-0c32-b62c-debd,1×7546-5742-581c-9e8b,1×f57d-be6e-77e4-bfe3"],
     "infernal-lance/chaos-cerastus-knight-lancer":["4175-82c6-8e96-bef8|1×545a-eead-e216-5939,1×c799-77ce-c706-3079"],
     "infernal-lance/knight-despoiler":["0119-8c04-435e-c782|1×005c-b2d1-4432-415a,1×3bee-8c85-68f7-e54b,1×3f41-4b71-a07b-506a,1×4268-2d76-f972-d7f5,1×4268-2d76-f972-d7f5/89c4-132e-6ad6-2a08,1×4268-2d76-f972-d7f5/f4a1-7f17-ec57-6c69,1×48a2-a603-9607-4df8,1×48a2-a603-9607-4df8/89c4-132e-6ad6-2a08,1×48a2-a603-9607-4df8/f4a1-7f17-ec57-6c69,1×4ff3-7dce-5a52-94e9,1×dfe8-cea0-8d16-db95"],
@@ -6981,13 +7563,16 @@ const BS_IDS = {
     "10f6-ffca-ae38-250e":"Paired accursed weapons",
     "10f9-eb42-632e-3a6f":"Supa-glowy Fing",
     "1150-7501-d526-d373":"Incandeum",
+    "116c-7dd8-92e5-f085":"Mark of the Soul Forges",
     "1187-f3db-ea97-bada":"Reaper chainsword",
     "1189-dcd8-e3ed-7837":"Spiculus bolt launcher",
+    "1267-78f1-7774-859":"Cultist Mob",
     "131b-ff57-84bb-e87a":"Monstrous Nemesis",
     "137c-2add-1a51-ee96":"Librarian in Phobos Armour",
     "13cd-5399-07f2-6d79":"Flesh Hound",
     "13f7-1a3-eff-7393":"The Swarmlord",
     "140d-7163-8a11-81c5":"Grot Blasta",
+    "14a5-4b2-415a-c1d":"Plasma pistol",
     "1673-a61f-d5a2-b17c":"Bladed horn",
     "167f-5eee-fb7b-a9a9":"Maulerfiend fists",
     "1703-3edd-5eb3-fcef":"Tzaangor Enlightened",
@@ -6995,18 +7580,23 @@ const BS_IDS = {
     "1724-8c9c-c385-16c6":"Exalted Sorcerer on Disc of Tzeentch",
     "183e-f3bb-3ce6-7b55":"Flawless Blades",
     "18b0-8c2-173f-5":"Bolt pistol",
+    "18e2-a849-ff3e-fe3":"Brutal assault weapon",
+    "18ee-2abf-8522-1b75":"2 heavy bolters",
     "190d-7321-6e85-5251":"Diamond of Distortion",
     "1911-226b-90f1-d420":"Disruptor missile launcher",
     "197b-3dd4-bc46-2ef7":"Astropathic Blast",
+    "1a34-f1cc-ec01-ca32":"Warlord",
     "1a98-844f-f54b-f76c":"Baleful Devolution",
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
     "1c66-4903-10ca-2a27":"Ironhail Heavy Stubber",
     "1d21-9b32-c427-398e":"Kustom Mega-slugga",
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
+    "1db9-89c3-c7cb-2041":"Obliterator",
     "1de9-b138-28a1-9c4b":"Flash Gitz",
     "1e16-0387-abcf-0e9a":"Phoenix power spear",
     "1e27-a6de-3840-a050":"Knight Crusader",
+    "1e2b-bdd2-116e-1f83":"Predator twin lascannon",
     "1e68-75a-f434-7977":"Brayhorn",
     "1f1e-2989-4762-cf88":"Belisarius Cawl",
     "1fbe-32e7-bd69-93b5":"Force Stave",
@@ -7016,16 +7606,20 @@ const BS_IDS = {
     "217d-4d10-bad0-1d6e":"Supa-snazz Dakka",
     "22b3-9c84-0982-8627":"Skitarii Ranger w/ transuranic arquebus",
     "2307-58f3-bfa0-52a1":"Chainblades",
+    "2311-fa63-364-22a3":"Obliterators",
     "2313-45a2-28ff-c81a":"Infernal cannon",
+    "233b-1a09-2b02-7c73":"Axe of dismemberment",
     "238d-d584-47ee-856d":"Solar atomiser",
     "23a5-d6be-b617-1565":"Close combat weapon",
     "23ce-dba1-8242-532d":"Two excruciator cannons",
     "23e2-6d93-5012-304d":"Lash of Torment",
+    "244-694c-22c-74fb":"Plasma pistol",
     "252b-cdba-84bd-3ed3":"Nob w/ Kustom Shoota and Kustom Krumpa",
     "255b-146d-ca61-55fb":"Twistbray",
     "2575-9440-a8cf-1c50":"Spinnin' Blades",
     "259f-d98e-e052-ec64":"Deathwatch Terminator w/ Heavy Weapon",
     "273-38fa-249e-3aa4":"Stormspear rocket pod",
+    "279e-62d4-bff1-141":"Chaos Predator Annihilator",
     "27b4-53af-ee1b-688a":"Fleshmetal Fusion",
     "288c-1cbc-8340-9c0a":"Titanic feet",
     "2a06-5c5b-c129-27d7":"Obsessionist",
@@ -7039,14 +7633,17 @@ const BS_IDS = {
     "2ba4-635b-fffd-0f59":"Bolt pistol",
     "2bb4-99f4-3659-5eda":"Gauntlets of Ultramar",
     "2c4c-5aac-b510-28ef":"Berzerker Glaive",
+    "2c61-621f-9a2e-f681":"Helstalker autocannon",
     "2ca0-73ea-2725-79c7":"Ectoplasma destructor",
     "2ce1-75b2-4291-586e":"Incendine combustor",
     "2d4d-9623-1cea-b73a":"Combi-bolter",
     "2d5d-40b5-4ac8-cedc":"Ironstrider Ballistarius (Twin cognis autocannon)",
     "2d6e-aa3b-c28c-5ef0":"Deffkoptas",
+    "2e47-9a3-ad3e-ae4c":"Fleshmetal guns",
     "2e4b-dfab-27ef-87d9":"Warpflame pistol",
     "2efc-c4b3-2ecc-5a37":"Warboss",
     "2f1a-2fc7-2843-549d":"Close combat weapon",
+    "2f57-9703-18b2-6390":"Cybinfernal Font",
     "2f59-b41c-83be-4efe":"Arc scourge",
     "2fec-7b95-a5df-f688":"Gutrippa",
     "307d-0ce0-fcf0-9100":"Dishonoured w/ paired manglers",
@@ -7056,16 +7653,20 @@ const BS_IDS = {
     "3449-7dac-6ac8-5d51":"Khârn the Betrayer",
     "3469-166f-44f3-51b8":"Bolt pistol",
     "34b5-f449-28f6-b365":"Heavy reaper autocannon",
+    "3667-92c8-a7e5-1ccd":"Vashtorr's hammer",
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
     "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
     "37a7-d156-1e4c-8fe1":"Cerastus Knight Atrapos",
     "3811-a215-d4a1-d197":"Umbralefic Crystal",
+    "3854-44a6-5746-d602":"Close combat weapon",
+    "38c3-d575-5d7b-6ba9":"Close combat weapon",
     "38fb-1df5-8eb6-fdf6":"Khorne Berzerker Champion",
     "390e-706b-a059-378b":"Deathwatch Terminator Squad",
     "3924-3f8-745d-7097":"Dreadherder",
     "392a-657c-8bfe-a1e6":"Kustom Krumpa",
     "3a22-1796-8a64-6d3b":"Goremonger w/ chainblade",
     "3a9a-05a5-41e6-7e70":"Ceramite Fists",
+    "3add-49b6-5cd3-586f":"Bolt pistol",
     "3b2-8c11-616a-1005":"Mek",
     "3b8f-1cb7-3c6e-4455":"Heavy Bolt Pistol",
     "3bee-8c85-68f7-e54b":"Warlord",
@@ -7074,6 +7675,7 @@ const BS_IDS = {
     "3d5c-4127-b923-d579":"Boltgun",
     "3d89-dec1-eaa9-47f3":"Galvanic rifle",
     "3ded-7df8-ef3e-913a":"Chastiser gatling cannon",
+    "3dfb-3b2a-94b-2fbe":"Chaos Predator Destructor",
     "3e4b-1a3a-8473-578c":"Hellforged weapons",
     "3e96-8098-3401-77af":"Hive Tyrant",
     "3ea6-60b4-5fb0-b40f":"Kan Blasta",
@@ -7097,14 +7699,18 @@ const BS_IDS = {
     "4325-5811-1915-3c15":"Mork's Roar",
     "43a9-66c5-ec02-baa9":"Questoris multi-laser",
     "43dd-f974-3fc8-8abc":"Gretchin",
+    "43e-3bc2-f47f-f614":"Dark Apostle",
+    "440-a22a-eac1-b107":"Warpsmith",
     "441c-a2a8-59a4-85a4":"Meltagun",
     "4494-dd7d-69f7-306c":"Tormentors",
     "44b0-1947-ea4a-3005":"Chainblade",
     "44f2-27ca-fad5-70ad":"Curse of Life",
     "4595-7ad2-617a-c07d":"Deathwatch Terminator Sergeant",
+    "45b-19f6-38d2-703f":"Forgefiend",
     "45f6-8429-a1d9-2a51":"Chaos Terminators",
     "45fa-9a7-8352-362e":"Deathwatch Terminator",
     "4676-0c32-b62c-debd":"Knight Diabolus",
+    "46e1-2159-7c26-9105":"Lord Discordant on Helstalker",
     "47af-ef6b-9d50-2c4a":"Jakhal Pack Leader",
     "47e1-9e86-8a80-66e1":"Plasma pistol",
     "47f0-7e05-a4aa-2cef":"Multi-busta Launcha",
@@ -7122,24 +7728,32 @@ const BS_IDS = {
     "4b2a-4860-aed5-56b6":"Forgefiend claws",
     "4b4d-ba83-4eba-ba61":"Veteran Sergeant Metaurus",
     "4ba8-dbf3-05f9-f868":"Sekhetar Robot w/ pyreflux meltagun",
+    "4bfd-ad0f-5e78-ccf9":"Havoc launcher",
     "4bff-1982-fbf1-7a8f":"Multi-melta",
     "4c53-6d36-742f-85ca":"The Emperor's Sword",
     "4dcd-5d7f-65c2-245b":"Squigosaur's jaws",
     "4ea0-6b70-c17c-bc00":"Ghazghkull Thraka",
+    "4eac-1303-a0d6-2827":"Legionary w/ paired accursed weapons",
+    "4f12-4c0a-d156-4cf0":"Accursed weapon",
     "4fc1-2679-a110-3cd":"Avenger gatling cannon",
     "4ff3-7dce-5a52-94e9":"Bestial Aspect",
     "503b-f7be-eeeb-9e31":"Witchseeker Squad",
     "5059-e78f-c558-c8e8":"Ferrumite cannon",
     "5069-49f-6f54-5039":"Reivers",
     "50f3-6a18-bc71-2a59":"Toxinjecter harpoon",
+    "5103-4dd1-a06a-fff":"Autopistol",
+    "5390-4445-c0f4-654b":"Legionary w/ voice eater",
     "5447-603b-27a0-7240":"Psyko-gatler",
     "545a-eead-e216-5939":"Cerastus shock lance",
+    "5474-b6fb-2b8c-ec67":"Heavy bolter",
     "54ca-fec8-f0c6-2c77":"Ectoplasma cannon and claws",
     "5514-3810-cf3e-3b23":"Memento Moritoi",
+    "5541-daf-9f4a-ce3d":"Bolt pistol",
     "55fb-9c91-1a4f-3037":"Canis Rex",
     "5622-c756-d3e8-85ae":"Watcher's Axe",
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
     "5720-2873-8c2c-edc3":"Norn Emissary",
+    "5762-3c1f-658e-368":"Melta tendril",
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
     "59ef-1bf3-f681-c8ae":"Vexilla",
@@ -7153,6 +7767,7 @@ const BS_IDS = {
     "5e02-c4ce-b7e6-d59":"Stinger salvoes",
     "5e8b-2f7f-6ef5-42e3":"Alpha combat weapon",
     "5efb-f61f-fdb6-a7d7":"Stikka",
+    "5f0c-f31c-26ba-4f2a":"Armoured limbs",
     "5f1f-f3bb-d6dd-6714":"Heavy weapon",
     "5f80-3d00-6e4d-cfaf":"Heavy Intercessor Sergeant",
     "6084-9fb5-76d2-8487":"Beastchoppa",
@@ -7161,10 +7776,12 @@ const BS_IDS = {
     "6155-c404-a228-cb72":"Bolt Rifle",
     "626e-72e0-7869-82c1":"Skitarii Ranger w/ omnispex",
     "62a1-1fa7-70b7-614d":"Twin Lastrum Bolt Cannon",
+    "62ab-b83f-26b-b699":"Techno-virus injector",
     "636b-f3ef-1a09-d692":"Shearing claws",
     "6445-6811-f628-9750":"Adrathic Desolator",
     "646c-5f7f-cd1c-d5c9":"Questoris heavy stubber",
     "6483-eb5-46a4-ff63":"Galvanic rifle",
+    "649f-d2b6-c43b-f9be":"Crushing fists",
     "656c-8b78-8e59-0591":"Maulerfiend",
     "65c-aa48-f306-465a":"Flash Gitz",
     "65d0-a5c5-919a-6444":"Chitinous claws and teeth",
@@ -7187,9 +7804,11 @@ const BS_IDS = {
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
     "6b9e-c6ae-2626-45c9":"Kustom Force Field",
     "6cc8-d237-eec9-d038":"Aviarch",
+    "6cd8-62e0-c6e4-74b3":"Visionary",
     "6d28-ca9d-79a5-063a":"Disciple of Khorne",
     "6dc0-a9d5-a111-daf2":"Power Weapon",
     "6f2c-fc26-53bc-34bd":"Eightbound Champion",
+    "6f51-9d72-19b7-25bb":"Ectoplasma cannon and limbs",
     "6f81-4538-a414-251e":"Jakhals",
     "6fd1-efa4-7787-db82":"Plasma pistol",
     "6feb-277f-7f31-504a":"Stompy Feet",
@@ -7205,6 +7824,7 @@ const BS_IDS = {
     "7212-7cc9-ec49-72b8":"Nurgling Swarm",
     "7213-a7b3-4c8e-96bc":"Eldritch Vortex of E'taph",
     "723d-aaaa-3268-09e3":"Terminator Champion",
+    "72b0-d52e-422e-1a82":"Havoc lascannon",
     "72c5-8bd0-19f5-f246":"Caestus Fist",
     "731f-2f2-7ca0-23ed":"Meganob w/ Twin Killsaw",
     "7324-e591-939b-b675":"Heavy Intercessor Squad",
@@ -7215,13 +7835,18 @@ const BS_IDS = {
     "753d-4e02-eda3-4809":"War Dog Brigand",
     "7546-5742-581c-9e8b":"Graviton singularity cannon",
     "75ce-5ce7-0a6e-a876":"Blade of Endless Bloodshed",
+    "762a-30ef-ed85-945e":"Lasher tendrils",
+    "7664-c6bb-fce5-f057":"Havoc Champion",
     "7669-1442-2c0b-e0c9":"Painboy",
     "7685-1ab3-8d12-fac7":"Shield Dome",
     "7695-54a2-f38b-a89c":"Havoc launcher",
+    "7793-9fa8-84f7-3454":"Bladed limbs",
+    "77aa-7131-9a3e-2e7b":"Havoc w/ lascannon",
     "77b6-41ee-7952-e94d":"Gun Stock",
     "7819-56c3-cf02-6cdb":"Busta Rokkit Launcha",
     "782c-e91c-5a17-27c4":"Soulreaper cannon",
     "782f-6bfe-7238-960a":"Combi-bolter, power fist",
+    "7848-a1bb-5e54-a383":"Legionary w/ Nostraman chainglaive",
     "78a7-cf35-aa8d-c420":"Big Mek Dakkarig",
     "78be-1bfa-16ca-f674":"Ectoplasma destructor",
     "78e7-69eb-d93a-2b00":"Slaughter and Carnage",
@@ -7230,6 +7855,7 @@ const BS_IDS = {
     "7b41-35aa-3265-14d7":"Augury Uplink",
     "7b4c-dfe0-6a0a-304a":"Lord Exultant",
     "7b4e-03d3-6b3f-6c48":"Divining spear",
+    "7c36-bbb0-278-5c42":"Lascannon",
     "7d0f-67d3-25b-f6fe":"Kaptin",
     "7d49-39ac-d17e-63bf":"Rokkit Launcha",
     "7d7c-c212-47a3-38e4":"Trajann Valoris",
@@ -7239,6 +7865,7 @@ const BS_IDS = {
     "7efb-de37-79c4-cccb":"Ironstrider Ballistarii",
     "7efe-d1b8-35d1-f9c1":"Plasma cannon",
     "7f5-23ea-19ab-176":"Adamantine 'Eadbutt",
+    "7f72-9cd7-e0a6-39fa":"Demolisher cannon",
     "8097-77df-1ed5-1e1a":"Fatecaster greatbow",
     "80c4-14b2-d02d-d289":"Nazdreg",
     "811f-e844-83ab-78a4":"Rokkit Pistol",
@@ -7248,6 +7875,7 @@ const BS_IDS = {
     "81fb-325e-49fd-9a6f":"Servo arm",
     "82ba-6095-1f1f-202d":"Close combat weapon",
     "82cc-4b0b-8e55-bf48":"Tellyport Blasta",
+    "8331-d762-2987-76a":"Cultist w/ autopistol and brutal assault weapon",
     "836c-fa5c-db9d-7566":"Storm Bolters",
     "83a1-feb8-d495-aa28":"Heavy Bolt Pistol",
     "8441-8356-5e7c-69ee":"Knight Paladin",
@@ -7292,20 +7920,26 @@ const BS_IDS = {
     "93c8-9c05-8892-b481":"Black Staff of Ahriman",
     "9415-965c-37e9-d374":"Archeotech Laspistol",
     "9435-1f44-7e5b-d510":"Eightbound",
+    "946c-d784-c8be-f21":"Havocs",
     "94b3-ef7f-f71f-c86e":"Castellan Axe",
+    "952c-7df4-87e1-6303":"Accursed crozius",
     "954d-5938-64d8-597c":"Squighog Boy",
     "95e9-6da3-5e75-2566":"Big Mek in Mega Armour",
     "96d6-846e-edd3-332f":"'Urty syringe",
     "9707-82cf-9501-fb43":"Gitstikka",
     "9754-481c-c292-a1f9":"Warlord",
+    "98ba-1a51-57f5-38fc":"Voice eater",
     "9916-8701-bbbd-780e":"Blade of Magnus",
     "9932-3d2b-1e47-d53b":"Exalted Eightbound",
     "996-bd56-400b-a51e":"Divining spear Enlightened",
     "99c8-e37d-ae6d-a8ba":"Nob on Smasha Squig",
     "9a9f-3dab-02c0-8be7":"Paired Krumpas",
     "9ad3-083a-577b-56b0":"Hellforged weapons",
+    "9c89-2141-493-1a45":"Impaler chainglaive",
     "9cc3-1188-9678-0ee1":"Combi-bolter",
     "9cea-2e7-8711-11bf":"Hellfyre missile rack",
+    "9d6f-4785-aaf0-5076":"Paired accursed weapons",
+    "9e5d-6700-e6d9-5719":"Forge weapon",
     "9e94-b7d4-ec7f-9163":"Terrorpulse missiles",
     "9ec7-baa9-ba0c-6a7":"Soulreaper cannon",
     "9ee-e289-bc6c-d943":"Cerastus Knight Lancer",
@@ -7317,9 +7951,12 @@ const BS_IDS = {
     "a05e-db63-84ad-4c5e":"Rapid-fire battlecannon and Questoris heavy stubber",
     "a085-ae61-1810-46d0":"Lacerator and daemonic claw",
     "a0d5-2805-f05a-29e1":"Gore Hound",
+    "a12a-4a92-aef-2ccc":"Bolt pistol",
     "a136-76f7-34d1-8035":"Marneus Calgar",
     "a18e-7629-e4fd-53c6":"Reiver Sergeant",
     "a1b4-80b4-e85e-96ec":"Power fist",
+    "a1e-5683-1daf-e7aa":"Ectoplasma cannon",
+    "a21c-f1bf-d56e-580b":"Brutal assault weapon",
     "a287-990-9f34-9836":"Warblade",
     "a289-aacb-7152-e243":"Astral Blast",
     "a30-4bad-cef5-5e55":"Synaptic Pulse",
@@ -7344,6 +7981,7 @@ const BS_IDS = {
     "a93b-d0d4-9bfe-40c3":"8 chainblades",
     "a998-39ce-f312-129":"Neurogaunt",
     "aa3c-6662-6bf0-6a7e":"Runtherd's Toolz",
+    "aaaa-9466-3887-3cdd":"Armoured tracks",
     "aac1-5b0f-4802-1628":"Arcane Fire",
     "ab61-e814-8c4d-1cb":"Eradicator",
     "ab80-e71b-5a84-2852":"Close combat weapon",
@@ -7353,12 +7991,15 @@ const BS_IDS = {
     "ae78-f3d8-6cf0-6a89":"Hellfyre missile rack",
     "aecd-6ba5-5558-fee2":"Big Choppa",
     "af48-0e3e-56f5-f5b1":"Close combat weapon",
+    "afb2-86ce-eb1a-b453":"Legionary w/ accursed weapon",
     "b005-ca60-ce5b-89c7":"Rubric Marine w/ warpflamer",
     "b02a-a6e2-3eb4-4872":"Houndpack Lance Character",
     "b037-0e67-adac-8eb4":"Rod of the War Forge",
     "b069-6851-b6a8-3026":"Heavy reaper autocannon",
+    "b08d-6108-969a-9a95":"Predator autocannon",
     "b0b9-9511-44c1-b272":"Combi-bolter, chainfist",
     "b114-2c55-f1b6-6f98":"Tzeentch's Firestorm",
+    "b12c-308b-9920-b09a":"Close combat weapon",
     "b16a-7132-3f8a-abe5":"Nobz",
     "b1cf-c5-5121-92a4":"Scarab Occult Terminators",
     "b1eb-9d70-dfc2-208b":"Dreadspear",
@@ -7398,10 +8039,13 @@ const BS_IDS = {
     "c214-c491-ef49-04ec":"Burning roar",
     "c251-bd54-441-4799":"Tzaangor Shaman",
     "c26c-fe9c-e557-e706":"Grabba Dragga",
+    "c282-992e-9d74-f62a":"Maulerfiend fists",
+    "c297-6f9c-b046-f2ad":"Astartes chainsword",
     "c3a6-8fab-45f0-2d45":"Exalted Sorcerer",
     "c41d-61c0-3e59-01b5":"Bolt pistol",
     "c570-c6ba-c9dc-5a44":"Eradicator Squad with Melta Rifles",
     "c609-c87e-f9dd-5006":"Knight Warden",
+    "c627-5d3-1420-c7f1":"Combi-bolter",
     "c62a-bc9c-37fb-2b36":"Titanic feet",
     "c6a8-0dbc-ab1b-38b5":"Tormentor w/ meltagun",
     "c6d1-e73b-9d26-5d8b":"Sorcerer in Terminator Armour",
@@ -7418,6 +8062,7 @@ const BS_IDS = {
     "ca9c-de3c-61e1-31":"Hellforged weapons",
     "ca9e-52d-14-a439":"Bladeguard Veteran Sergeant",
     "caa-f869-3cbd-b48e":"Warlord",
+    "cb16-d239-4f7a-91be":"Power fist",
     "cb31-e496-08de-77d4":"Sanctuary",
     "cc2c-abb5-1cb7-d195":"Dainal Kornelius",
     "cc5a-e1bc-3dd8-f367":"Bringer of Justice",
@@ -7428,16 +8073,22 @@ const BS_IDS = {
     "ce11-db3f-1373-27f7":"Prosperine khopesh",
     "ce35-c6e4-d9cc-799c":"Pyreflux meltagun",
     "ce45-db08-3795-18a9":"Zodgrod Wortsnagga",
+    "ce4a-6df3-3c24-621b":"Bolt pistol",
     "ce61-585b-aea7-18fc":"Kombi-weapon",
     "ceab-62d9-31bf-7c61":"Warlord",
+    "cf57-33c7-551b-fa36":"2 ectoplasma cannons",
     "cff4-311e-b386-0879":"Nob w/ Kustom Krumpa and Paired Krumpas",
     "d009-9bd9-59a1-9119":"Exalted Eightbound Champion",
     "d034-cadd-41e5-dc21":"Kustom Choppa",
+    "d0ac-5a84-221a-3dd7":"Wyredjinn",
     "d0cf-a582-5166-fbba":"Monstrous scything talons",
     "d137-294e-49d2-53a9":"Kustom Mega-blasta",
     "d231-f7e4-f722-d987":"Slugga",
+    "d24a-9b6a-e48b-2fcb":"2 lascannons",
     "d2a3-be7e-4ec8-f9f6":"Chainfist",
+    "d2b8-454a-d061-b592":"Dark Apostle",
     "d379-7bdd-e3f9-9183":"Gaze of Magnus",
+    "d37d-7e8f-341b-c67c":"Maulerfiend",
     "d40a-c9a6-74d5-288d":"Synaptoprescience",
     "d59d-ef1-9ef8-4f44":"Cybernetica Datasmith",
     "d5fe-026f-1f46-e9c5":"Close combat weapon",
@@ -7452,17 +8103,23 @@ const BS_IDS = {
     "d9a6-8dbd-2c01-862b":"Lastrum storm bolter",
     "d9ca-c6b0-ba9c-b6c8":"Arachnus Blaze Carronade",
     "d9f5-2270-b9b2-8060":"Icon of Flame",
+    "da34-7071-8658-a453":"Master of Executions",
     "dadc-d370-ef10-853c":"Tankbustas",
     "db3b-02cd-87a2-3b52":"Contemptor-Achillus Dreadnought",
+    "db97-9aa4-717e-6766":"Nostraman chainglaive",
     "dbf0-5211-463c-40ec":"Caladius Annihilator Grav-tank",
+    "dc0b-cdb9-4123-782":"Plasma gun",
     "dc69-1094-613-6daf":"Monstrous scything talons",
     "dca3-638e-52a2-b1b8":"Armoured hull",
+    "dcc0-b70c-9779-e6c9":"Vashtorr the Arkifane",
     "dd8d-1bc7-029f-3674":"Gore-drenched fangs",
     "de59-f65c-181a-8509":"Skitarii Rangers",
     "de8f-24f9-c543-92b7":"Gretchin",
     "deb4-6018-b8cf-1d66":"Heavy Intercessors",
     "df3a-0414-6edc-005a":"Kustom mega-blasta",
     "dfe8-cea0-8d16-db95":"Diabolus heavy stubber",
+    "dffe-86b3-59a8-fd3d":"Cultist Champion",
+    "e02b-6f8f-cbee-fa79":"Vashtorr's claw",
     "e083-787f-1fff-4170":"Dok's Toolz",
     "e0c6-58cd-a822-8b84":"Kustom Mega-blasta",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
@@ -7475,7 +8132,9 @@ const BS_IDS = {
     "e4b2-478b-a217-f999":"Skitarii Ranger Alpha",
     "e4da-4f2d-19c3-416b":"Martial Signatum Amplificator",
     "e584-f803-7858-05bc":"Hunter's Eye",
+    "e687-6d7a-bb28-dcaa":"Chaos Vindicator",
     "e7d8-1c73-7d03-8b62":"Telemon Heavy Dreadnought",
+    "e806-3c87-d3d5-e71d":"Flamer tendril",
     "e849-ce40-ee43-7623":"Chaos Rhino",
     "e8b4-ffab-1b5c-d2a0":"Hekhtur's pistol",
     "e92-e1d4-babd-22b2":"Inferno combi-bolter",
@@ -7488,6 +8147,7 @@ const BS_IDS = {
     "ebda-08ed-994a-b579":"Master-crafted power weapon",
     "ebfb-d2a4-5280-a6e6":"Gore-stained Veterans",
     "ec72-f024-4283-0558":"Lord on Juggernaut",
+    "ecbb-dff6-492a-16f6":"Nostraman chainblade",
     "ed0c-e9cb-399f-a5a2":"Follow Me Ladz",
     "eddd-9b27-00c2-b0ce":"Blood-forged Armour",
     "ee6b-763b-5885-19da":"Gorechild",
@@ -7521,10 +8181,12 @@ const BS_IDS = {
     "f60b-c058-268e-5e87":"Blood Herald",
     "f64-8faa-ac54-73ff":"Acid spray",
     "f65e-dc30-e7c0-7e47":"Power Klaw",
+    "f666-1f5d-0c20-06c1":"Nemesis Claw",
     "f6b2-238a-4613-a59f":"Malefic Curse",
     "f70d-d0cb-5cb8-3be9":"Autopistol",
     "f76c-0f51-ad33-c118":"Armoured tracks",
     "f831-6dfb-6b1b-8112":"Thunder Hammer & Storm Shield",
+    "f88c-344d-d603-5622":"Dark Disciple",
     "f8bc-c08c-22f0-8ebb":"Chainblades",
     "f909-00c7-8ba4-018a":"Khorne Berzerkers",
     "fa30-43a8-57eb-a82e":"Squig Jaws",
@@ -7538,6 +8200,7 @@ const BS_IDS = {
   maxPerList:{
     "10f9-eb42-632e-3a6f":1,
     "1150-7501-d526-d373":1,
+    "116c-7dd8-92e5-f085":1,
     "131b-ff57-84bb-e87a":1,
     "13f7-1a3-eff-7393":1,
     "190d-7321-6e85-5251":1,
@@ -7546,6 +8209,7 @@ const BS_IDS = {
     "27b4-53af-ee1b-688a":1,
     "2ab7-ab71-0af4-5d39":1,
     "2c4c-5aac-b510-28ef":1,
+    "2f57-9703-18b2-6390":1,
     "33e2-4ee8-2e10-3e47":1,
     "3449-7dac-6ac8-5d51":1,
     "3811-a215-d4a1-d197":1,
@@ -7585,7 +8249,9 @@ const BS_IDS = {
     "cb31-e496-08de-77d4":1,
     "cc5a-e1bc-3dd8-f367":1,
     "ce45-db08-3795-18a9":1,
+    "d0ac-5a84-221a-3dd7":1,
     "d40a-c9a6-74d5-288d":3,
+    "dcc0-b70c-9779-e6c9":1,
     "e201-253f-1f52-e389":1,
     "e390-b58b-db9-816":1,
     "e4da-4f2d-19c3-416b":1,
@@ -7693,6 +8359,8 @@ const GRANTS = [
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Furor Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Malleus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Purgatus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
+  { rule:'Chaos Space Marines · Cult of the Arkifane rule · Soul Forge Boons', grants:'DAEMON', type:'keyword or weapon ability', to:{ all:['Faction: Heretic Astartes','Vehicle'] }, while:null, text:'**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.' },
+  { rule:'Chaos Space Marines · Cult of the Arkifane rule · Soul Forge Boons', grants:'SOUL FORGE', type:'keyword or weapon ability', to:{ all:['Faction: Heretic Astartes'], any:['Vehicle','Lord Discordant','Vashtorr the Arkifane'] }, while:null, text:'**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.' },
   { rule:'shooty · Big Mek Dakkarig · Dreadherder', grants:'Lone Operative', type:'ability', to:'this unit / model', while:null, text:'- This model has **Lone Operative**.' },
   { rule:'melee · Ghazghkull Thraka · Da Grand Warlord’s Ladz', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
   { rule:'melee · Mozrog Skragbad · Beast Snagga Following', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
@@ -7720,13 +8388,16 @@ const GRANTS = [
   { rule:'nerf-when · Roboute Guilliman · Leader of Astartes', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit', text:'While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.' },
   { rule:'nerf-when · Marneus Calgar · Thunderhawk Insertion', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'That unit has **Deep Strike**.' },
   { rule:'nerf-when · Librarian in Phobos Armour · Psychic Hood', grants:'Feel No Pain 4+', type:'ability', to:'this unit / model', while:null, text:'This unit has **Feel No Pain 4+** against **psychic attacks**.' },
-  { rule:'nerf-when · Librarian in Phobos Armour · Librarian', grants:'psychic abilities', type:'ability', to:'this unit / model', while:null, text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' }
+  { rule:'nerf-when · Librarian in Phobos Armour · Librarian', grants:'psychic abilities', type:'ability', to:'this unit / model', while:null, text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' },
+  { rule:'fellhammer-siege-task-force · Vashtorr the Arkifane · Indentured Daemon Engines', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly DAEMON VEHICLE units', text:'While this model is within 3" of one or more friendly **DAEMON VEHICLE** units, this model has the **Lone Operative** ability.' },
+  { rule:'fellhammer-siege-task-force · Warpsmith · Warpsmith', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units', text:'While this model is within 3" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability.' },
+  { rule:'fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font', grants:'SOUL FORGE', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Models in the bearer\'s unit have the **SOUL FORGE** keyword.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','leads','support','also','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from'],

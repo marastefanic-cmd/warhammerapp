@@ -1,0 +1,364 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for fellhammer-siege-task-force, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). armyRules: Dark Pacts' Damage-tab reading (calcMods, the player's pick; both: what lets a unit take both abilities). fixes: GW's Faction Pack words where Wahapedia's transcription differs. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01), stats values a rule of the list gives that New Recruit's export does not show, and keywords a rule of the list gives that BSData's entry and the export lack. Each is a judgement verify/helpers.js lists for sign-off.",
+ "armyRules": {
+  "Dark Pacts": {
+   "by": "hand (Claude)",
+   "why": "the Damage tab: a Dark Pact is the player's choice each time the unit is selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), and which ability it gains is theirs to pick; Touch of the Arkifane lets it select both",
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Dark Pacts",
+     "when": "A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase",
+     "note": "[LETHAL HITS] or [SUSTAINED HITS 1]",
+     "pick": [
+      {
+       "name": "[LETHAL HITS]",
+       "note": "[LETHAL HITS]"
+      },
+      {
+       "name": "[SUSTAINED HITS 1]",
+       "note": "[SUSTAINED HITS 1]"
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "note": "[LETHAL HITS], [SUSTAINED HITS 1]"
+      }
+     ]
+    }
+   ],
+   "both": [
+    {
+     "strat": "touch-of-the-arkifane"
+    }
+   ]
+  }
+ },
+ "fixes": [
+  {
+   "at": "devotees-of-destruction/enhancement/Pact of Destruction",
+   "field": "text",
+   "from": "this unit **heals** 3 wounds",
+   "to": "this unit **heals** 3 wounds.",
+   "why": "GW Faction Pack Chaos Space Marines p3, Pact of Destruction: \"… if those attacks destroyed an enemy model, this unit heals 3 wounds.\" (Wahapedia's transcription drops the full stop)"
+  }
+ ],
+ "gists": {
+  "cult-of-the-arkifane/touch-of-the-arkifane": {
+   "by": "AI (Claude)",
+   "gist": "Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.",
+   "gistOf": "09483c24"
+  },
+  "cult-of-the-arkifane/balefire-boon": {
+   "by": "AI (Claude)",
+   "gist": "Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.",
+   "gistOf": "212a3924",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, until the end of the phase",
+    "note": "+1 AP"
+   }
+  },
+  "cult-of-the-arkifane/soul-tally-offering": {
+   "by": "AI (Claude)",
+   "gist": "Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.",
+   "gistOf": "80282bdc",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units",
+    "note": "re-roll the wound roll",
+    "vs": {
+     "any": [
+      "Character",
+      "Monster",
+      "Vehicle"
+     ]
+    }
+   }
+  },
+  "cult-of-the-arkifane/biomechanoid-regeneration": {
+   "by": "AI (Claude)",
+   "gist": "Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword.",
+   "gistOf": "dd9a9f1d"
+  },
+  "cult-of-the-arkifane/forge-fire-surge": {
+   "by": "AI (Claude)",
+   "gist": "Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge.",
+   "gistOf": "8cf08ab2"
+  },
+  "cult-of-the-arkifane/unholy-fortitude": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.",
+   "gistOf": "21eb4840",
+   "def": "their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase",
+   "defOf": "21eb4840"
+  },
+  "devotees-of-destruction/ruinations-bounty": {
+   "by": "AI (Claude)",
+   "gist": "Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].",
+   "gistOf": "872a02da",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "ranged",
+    "when": "Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability",
+    "note": "[LETHAL HITS] and [SUSTAINED HITS 1]"
+   }
+  },
+  "devotees-of-destruction/snare-of-fire": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Movement phase, an enemy unit ends a move within 8\" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3\".",
+   "gistOf": "388b5e8e"
+  },
+  "devotees-of-destruction/undying-hatred": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.",
+   "gistOf": "7e2a015e",
+   "def": "their Shooting phase: -1 to wound when the attack’s S is greater than its T",
+   "defOf": "7e2a015e"
+  }
+ },
+ "units": {
+  "vashtorr-the-arkifane": {
+   "defs": {
+    "Reorder Reality": {
+     "by": "AI (Claude)",
+     "def": "an enemy unit within 18\" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase",
+     "defOf": "9eb7b966"
+    },
+    "Indentured Daemon Engines": {
+     "by": "AI (Claude)",
+     "def": "Lone Operative while within 3\" of a friendly DAEMON VEHICLE unit",
+     "defOf": "7e81e6e7"
+    }
+   },
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Damaged (1-4 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-4 wounds remaining"
+    }
+   ],
+   "aura": [
+    {
+     "kind": "all",
+     "needs": {
+      "all": [
+       "Daemon",
+       "Vehicle"
+      ]
+     },
+     "when": "Within 6\" of Vashtorr the Arkifane",
+     "note": "+2 S",
+     "from": "Unholy Mechanisms"
+    }
+   ],
+   "why": "Unholy Mechanisms (Aura): a friendly DAEMON VEHICLE unit within 6\" (Vashtorr is a MONSTER, not a VEHICLE: not his own)."
+  },
+  "lord-discordant-on-helstalker": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Every attack",
+     "note": "a Critical Hit on an unmodified hit roll of 5+",
+     "from": "Mark of the Soul Forges",
+     "always": true,
+     "calc": {
+      "critHit": 5
+     }
+    },
+    {
+     "kind": "all",
+     "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start",
+     "note": "re-roll wound rolls of 1",
+     "from": "Spirit Thief",
+     "vs": {
+      "any": [
+       "Vehicle"
+      ]
+     }
+    }
+   ]
+  },
+  "warpsmith": {
+   "defs": {
+    "Warpsmith": {
+     "by": "AI (Claude)",
+     "def": "Lone Operative while within 3\" of a friendly HERETIC ASTARTES VEHICLE unit",
+     "defOf": "1e3bf5fe"
+    }
+   }
+  },
+  "dark-apostle-master-of-executions-nemesis-claw": {
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "While the Dark Apostle leads this unit and it contains its DARK APOSTLE model",
+     "note": "+1 to wound rolls",
+     "from": "Dark Zealotry",
+     "always": true
+    },
+    {
+     "kind": "melee",
+     "when": "While the Master of Executions leads this unit, target below its Starting Strength",
+     "note": "re-roll the hit roll; also the wound roll if Below Half-strength",
+     "from": "Warp-sighted Butcher",
+     "pick": [
+      {
+       "name": "Below Starting Strength",
+       "note": "re-roll hit rolls"
+      },
+      {
+       "name": "Below Half-strength",
+       "note": "re-roll hit rolls and wound rolls"
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "when": "Target below its Starting Strength",
+     "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+     "from": "Visions of Suffering",
+     "pick": [
+      {
+       "name": "Below Starting Strength",
+       "note": "+1 to hit rolls"
+      },
+      {
+       "name": "Below Half-strength",
+       "note": "+1 to hit rolls, +1 to wound rolls"
+      }
+     ]
+    }
+   ],
+   "stats": {
+    "Master of Executions": {
+     "InSv": "5+"
+    },
+    "Nemesis Claw": {
+     "InSv": "5+"
+    }
+   },
+   "why": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”).",
+   "statsEvidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\"."
+  },
+  "havocs": {
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Every ranged attack",
+     "note": "can ignore any or all modifiers to BS and any or all modifiers to the hit roll",
+     "from": "Stabilisation Talons",
+     "always": true
+    }
+   ]
+  },
+  "obliterators": {
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Once per battle, your Shooting phase, when selected to shoot",
+     "note": "[INDIRECT FIRE]",
+     "from": "Warp Rift Firepower"
+    }
+   ]
+  },
+  "chaos-predator-annihilator": {
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Allocated to a MONSTER or VEHICLE model",
+     "note": "can re-roll the damage roll",
+     "from": "Annihilator",
+     "always": true,
+     "vs": {
+      "any": [
+       "Monster",
+       "Vehicle"
+      ]
+     }
+    },
+    {
+     "kind": "all",
+     "when": "Damaged (1-4 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-4 wounds remaining"
+    }
+   ]
+  },
+  "chaos-predator-destructor": {
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "vs INFANTRY units",
+     "note": "+1 AP",
+     "from": "Destructor",
+     "always": true,
+     "vs": {
+      "any": [
+       "Infantry"
+      ]
+     }
+    },
+    {
+     "kind": "all",
+     "when": "Damaged (1-4 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-4 wounds remaining"
+    }
+   ]
+  },
+  "chaos-vindicator": {
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Within Engagement Range of one or more enemy units",
+     "note": "no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit)",
+     "from": "Siege Shield",
+     "always": true
+    },
+    {
+     "kind": "all",
+     "when": "Damaged (1-4 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-4 wounds remaining"
+    }
+   ]
+  },
+  "forgefiend": {
+   "kw": {
+    "add": [
+     "Soul Forge"
+    ],
+    "why": "Soul Forge Boons (Cult of the Arkifane): “HERETIC ASTARTES VEHICLE … units from your army gain the SOUL FORGE keyword.” The Forgefiend is a HERETIC ASTARTES VEHICLE (GW's datasheet: KEYWORDS VEHICLE, WALKER, …; FACTION KEYWORDS HERETIC ASTARTES); BSData's Forgefiend lacks the hidden \"Heretic Astartes Vehicle\" category every other CSM vehicle entry has, so its modifier does not reach it.",
+    "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane, Soul Forge Boons: \"HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (the same words); verify/.cache/waha/ds/chaos-space-marines_Forgefiend.html: KEYWORDS VEHICLE; WALKER; CHAOS; DAEMON; FORGEFIEND, FACTION KEYWORDS HERETIC ASTARTES; verify/sources/nr-json/fellhammer-siege-task-force.json: Forgefiend categories without \"Heretic Astartes Vehicle\" and \"Soul Forge\" (the Maulerfiend and the Vindicator have both)."
+   },
+   "mods": [
+    {
+     "kind": "ranged",
+     "when": "Selected to shoot, if it uses this ability (until the end of the phase)",
+     "note": "[DEVASTATING WOUNDS] and [HAZARDOUS]",
+     "from": "Daemonic Ordnance"
+    },
+    {
+     "kind": "all",
+     "when": "Damaged (1-4 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-4 wounds remaining"
+    }
+   ]
+  },
+  "maulerfiend": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Damaged (1-4 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-4 wounds remaining"
+    }
+   ]
+  }
+ }
+}
