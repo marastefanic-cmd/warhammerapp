@@ -617,6 +617,53 @@ function ckEntry(d){
   if(phStr(d.usedPh)) e.u = phStr(d.usedPh);
   return Object.keys(e).length ? e : { none:1 };
 }
+// what a triggered text puts in force from a rule defined elsewhere (f): a bold term of its text that is one of its faction's army
+// or detachment rules, by name or by the faction's aliases ("**riled up**" is Waaagh!), and that the text makes a state of units:
+// "is / are / be / become(s) **X**" in a clause with no "if", "while", "unless" or "when" before it (War Cry: "If you do, friendly
+// ORKS units … are **riled up** until the end of the next turn"; not Krumpin' Time's "if this unit is **riled up**"). Its phases are
+// those the duration in the same sentence covers from where the text is triggered (t, at), in the order of a turn and the next:
+// "until the end of the phase" that phase; "of the turn" / "this turn" the rest of that turn; "of the next turn" the rest of that
+// turn and the whole next one; "until the start of your next turn / Command phase" the rest of that turn, and the opponent's turn
+// after one of yours; "until the end of the battle" every phase; "of the battle round" every phase only from the start of the
+// battle round. Any other duration, or none, or no trigger: x (When unclear), nothing guessed
+const DURATIONS = [
+  { id:'phase', re:/\buntil the end of the phase\b/i }, { id:'next', re:/\buntil the end of the next turn\b/i },
+  { id:'turn', re:/\buntil the end of (?:the|this|that) turn\b|\bthis turn\b/i }, { id:'yournext', re:/\buntil the start of your next (?:turn|command phase)\b/i },
+  { id:'battle', re:/\buntil the end of the battle\b(?! round)/i }, { id:'round', re:/\buntil the end of the battle round\b/i },
+];
+function inForce(text, f, self, e){
+  const out = [], seen = new Set(), t = rulesText(text);
+  const rules = f.armyRules.concat(Object.values(f.detachments).map(d => d.rule).filter(Boolean));
+  const named = term => { const lc = plain(term).toLowerCase(); const r = rules.find(x => norm(x.name).toLowerCase() === lc); if(r) return r.name;
+    const al = (f.aliases || []).find(([re]) => re.test(plain(term))); return al && rules.some(x => x.name === al[1]) ? al[1] : null; };
+  for(const sent of sentences(t)) for(const m of sent.matchAll(/\b(?:is|are|be|becomes?)\s+\*\*([^*]+)\*\*/gi)){
+    const r = named(m[1]);
+    if(!r || r === self || seen.has(r)) continue;
+    const clause = sent.slice(0, m.index).split(/[,;:.]/).pop();
+    if(/\b(?:if|while|unless|when)\b/i.test(clause)) continue;
+    seen.add(r);
+    const d = DURATIONS.find(x => x.re.test(plain(sent)));
+    out.push(Object.assign({ n:plain(m[1]), r }, coverOf(d && d.id, e)));
+  }
+  return out;
+}
+// the phases a duration covers from the trigger (phase:your|opp|either), or x
+function coverOf(dur, e){
+  const T = ['your', 'opp'], seq = T.flatMap(w => PH.map(p => p + '|' + w)), cov = new Set();
+  const trig = Object.entries(Object.fromEntries(String(e.t || '').split(',').filter(Boolean).map(x => x.split(':')))).flatMap(([p, w]) => (w === 'either' ? T : [w]).map(x => p + '|' + x));
+  const startRound = /^start of the (?:first )?battle round$/i.test(e.at || ''), endOpp = /^end of your opponent.s turn$/i.test(e.at || '');
+  if(startRound) trig.push('command|your', 'command|opp');
+  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound)) return { x:1 };
+  const from = s => { const [p, w] = s.split('|'), i = PH.indexOf(p); return PH.slice(i).map(x => x + '|' + w); };
+  const all = w => PH.map(x => x + '|' + w), other = w => w === 'your' ? 'opp' : 'your';
+  for(const s of trig){ const w = s.split('|')[1];
+    const add = dur === 'phase' ? [s] : dur === 'turn' ? from(s) : dur === 'next' ? from(s).concat(all(other(w))) : dur === 'yournext' ? from(s).concat(w === 'your' ? all('opp') : []) : seq;
+    add.forEach(x => cov.add(x)); }
+  if(endOpp){ if(dur === 'next' || dur === 'battle') all('your').forEach(x => cov.add(x)); else if(dur !== 'yournext') return { x:1 }; }
+  if(!cov.size) return { x:1 };
+  const m = {}; for(const x of cov){ const [p, w] = x.split('|'); m[p] = m[p] && m[p] !== w ? 'either' : w; }
+  return { u:phStr(m) };
+}
 // an ability's key: a hash of its name and text (the app's ckHash, the same for an imported list's copy of the unit)
 const ckHash = s => { let h = 0x811c9dc5; for(let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); };
 const abilityCk = ab => 'a|' + ckHash(ab.name + '\n' + ab.text);
@@ -690,7 +737,7 @@ function derive(D){
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments });
-      ckPut('r|' + fk + '|' + r.name, ckEntry(timing(withoutOptions(r.text, r.table), ctx)));
+      { const ce = ckEntry(timing(withoutOptions(r.text, r.table), ctx)), fo = inForce(withoutOptions(r.text, r.table), f, r.name, ce); if(fo.length) ce.f = fo; ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -729,7 +776,7 @@ function derive(D){
           return r ? r.text : null;
         } };
         timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
-        ckPut(abilityCk(ab), ckEntry(timing(withoutOptions(ab.text, null), actx)));
+        { const ce = ckEntry(timing(withoutOptions(ab.text, null), actx)), fo = inForce(withoutOptions(ab.text, null), f, ab.name, ce); if(fo.length) ce.f = fo; ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -814,6 +861,9 @@ function derive(D){
         if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
         if(phStr(used.ph)) e.u = phStr(used.ph);
         if(!Object.keys(ph).length && !(own && own.at)) e.x = 1;
+        const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
+        const fo = inForce(o.text, D.factions[fk], o.name, { t:phStr(tp), at:tr && tr.at });
+        if(fo.length) e.f = fo;
         sink.opts.push(e);
       }
       grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self, sink, o.name);

@@ -223,6 +223,18 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           for(const [sec, grp] of ow) if(!lineIn(sec, grp, oh)) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + ' is not under ' + sec + ' · ' + grp]);
         }
       }
+      // what a listed rule or ability puts in force from a rule of the list (CHECKLIST f): "Riled up (War Cry) · Waaagh!" under Active
+      // now in each phase its entry names, or When unclear
+      const forcedIn = (fs, src, kind) => { for(const x of fs || []){ if(!ckRules.some(y => y.name === x.r)) continue;
+        const N = x.n.charAt(0).toUpperCase() + x.n.slice(1) + ' (' + src + ') · ' + x.r, fh = l => l.textContent.startsWith(N);
+        const fw = x.x ? [['When unclear', kind]] : usedOf({ u:x.u }).map(s => [T(s), 'Active now']);
+        for(const [sec, grp] of fw) if(!lineIn(sec, grp, fh)) out.push(['checklist-sections', armyId, N + ' is not under ' + sec + ' · ' + grp]); } };
+      for(const r of ckRules){ const e0 = CK['r|' + A.faction + '|' + r.name]; if(!e0) continue; const e = ckStored(e0, r);
+        if(triggered(e, r)) forcedIn(e0.f, r.name, 'Rules');
+        for(const o of e0.o || []) if((triggered(e, r) || o.t || o.at) && !A.units.some(u => u.abilities.some(ab => ab.name === o.n))) forcedIn(o.f, o.n, 'Rules'); }
+      for(const ab of new Set(A.units.flatMap(u => u.abilities))){ const e0 = CK['a|' + ckHash(ab.name + '\n' + ab.text)]; if(!e0) continue; const e = ckStored(e0, ab);
+        if(triggered(e, ab)) forcedIn(e0.f, ab.name, 'Abilities');
+        for(const o of e0.o || []) if(triggered(e, ab) || o.t || o.at) forcedIn(o.f, o.n, 'Abilities'); }
       const firstOf = ab => A.units.flatMap(u => u.abilities).find(x => x.name === ab.name && x.text === ab.text && !naReason(x) === !naReason(ab));
       for(const u of A.units) for(const ab of u.abilities){
         const e = CK['a|' + ckHash(ab.name + '\n' + ab.text)], key = abilityKey(ab);
