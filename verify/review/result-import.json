@@ -1,0 +1,42 @@
+[
+ {
+  "key": "8b6b2f8033eabb14",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "The only change appends importedFoot(a) when a.imported; built-in lists are unchanged, and render.js checks an imported list's screens show the same text as the built-in one apart from the source line and the On this phone footer."
+ },
+ {
+  "key": "b69da263ad391f97",
+  "where": "resolve (import.js)",
+  "verdict": "fix",
+  "why": "Each unit is matched exactly, but several things are never checked against data.js, so a list data.js does not have still imports (tested against HEAD with WH_DATA loaded as import-test.js loads it). (1) Copies past what data.js has: `priced.find(x => used < copies) || priced[0]` reuses the instance, so 6 bigs with its Warlord Knight Warden twice imports as knight-warden x2 with warlord:true. (2) The warlord across the list is not checked. standard + princes' Daemon Prince imports with two warlords (Angron and the Daemon Prince). princes without its Daemon Prince imports with no warlord. (3) Enhancements across the list are not checked: Berzerker Glaive on two characters (standard + princes' Daemon Prince) imports. (4) The points limit is not checked: roster.costLimits = 123456 imports as points:123456, and lists of 2230 to 2365 pts over a 2000 limit import (pointsUsed only has to equal the export's own roster.costs, which the same file sets). battleSize is taken from the export and never compared with the pool lists' battleSize. (5) A later item silently overrides an earlier one: Force Disposition [Disruption (not allowed for Freeblade Company), Purge the Foe] imports with Disruption ignored, and the same goes for a second battle size. (6) The children of a T.info selection (Show/Hide Options) are not checked: a made-up model placed under it imports, ignored. (7) Malformed input throws instead of failing: selections [null] throws 'reading type', and selections:'abc' throws 'sels.filter is not a function'. (8) In the no-candidates branch with `like` instances, if every part's signature is in best.sigs (duplicate parts), no error is pushed and the group is dropped. Only the total check, against the export's own roster.costs, catches it.",
+  "fix": "In resolve: (a) Pick only from `priced.filter(x => (used.get(x.u)||0) < (x.u.copies||1))`; when none is left, err('unit ' + unit + ' ×' + n + ' not recognized (the app has it ' + copies + ' times)'). At minimum, refuse a second copy of any unit with warlord, enhancement or role 'Epic Hero'. (b) After matching, refuse unless exactly one picked unit has warlord, or the count equals what a pool list has (err 'warlord … not recognized'), and refuse any enhancement name held by two picked units. (c) Require `limit` to equal the battle size's limit (the pool lists' a.points for that battleSize) and total <= limit, and add a.battleSize to ctxKey or compare it. (d) Make each top-level group take exactly one known child: err when battleSize or disposition is already set ('battle size … not recognized', 'disposition … not recognized'). (e) For T.info selections, err on any child whose id is not in T.names, or not a known child of that entry. (f) Wrap the body in try/catch, or validate shapes (Array.isArray(selections), objects only), and return fail() with 'not a New Recruit JSON export'. (g) In the `like` branch, if no error was added for the group, err('leader attachment ' + unit + ' not recognized'). Add each of these as NEGATIVE cases in verify/import-test.js."
+ },
+ {
+  "key": "52fb8a004ef05691",
+  "where": "signature (import.js)",
+  "verdict": "fix",
+  "why": "`if(!s.kids.length || s.model) … else m.set(k, 1)` drops the count of any non-model option that has children, and also overwrites a repeat of the same path. So an option's number can be changed with no error. Tested against HEAD: 4 megas' 'Rapid-fire battlecannon and Questoris heavy stubber' set from 1 to 2 imports, and defilers-and-friends' 'Two excruciator cannons' set from 1 to 2 imports. Those options cost 0 pts, so the points check does not catch it either. That breaks the 'every option resolves exactly' rule.",
+  "fix": "Record the count for non-leaf, non-model selections too: `m.set(k, (m.get(k) || 0) + s.n)` for every selection, or keep 1 only for the specific 'group holding models' entries and state that explicitly. Then rerun `node verify/import-ids.js --write` so BS_IDS uses the same signature, and add a NEGATIVE case: an option with children whose number changes."
+ },
+ {
+  "key": "df6794cef8b69bdf",
+  "where": "runImport (app.html), with the startup loop over importedKept()",
+  "verdict": "fix",
+  "why": "The flow is right: refused → every message listed, nothing kept; accepted → slim export kept, a free id, opens, and a toast if storage failed. store.set/get are try/catch'd, and importedKept() filters bad entries. Two problems remain. (1) WH_IMPORT.resolve can throw on malformed JSON, e.g. {roster:{forces:[{catalogueId:<known>,selections:[null]}]}}. In runImport that is an uncaught error in the click handler, so the sheet shows nothing. (2) The startup loop `for(const x of importedKept()){ const r = WH_IMPORT.resolve(...) }` has no try/catch either. One kept entry that makes resolve throw (corrupted or hand-edited storage, or a future data.js/import.js change that resolve does not guard) stops the whole app script, permanently, until storage is cleared. The case where a data.js update no longer resolves a list is handled correctly (importStale row, with its errors and Remove).",
+  "fix": "In app.html, wrap each startup resolve: `let r; try { r = WH_IMPORT.resolve(x.json, D, { id:x.id, date:x.date }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }`. Do the same in runImport: `let r; try { r = WH_IMPORT.resolve(json || text, D, { date }); } catch(e){ r = { ok:false, errors:['not a New Recruit JSON export (it could not be read)'] }; }`. Also make resolve itself never throw (see resolve fix f)."
+ },
+ {
+  "key": "1a4d9707461a5bd9",
+  "where": "importedFoot (app.html)",
+  "verdict": "ok",
+  "why": "It shows the date from the kept entry (escaped) and a Remove button that confirms on the page, not in a browser dialog. render.js checks that both confirm buttons are in sight, that Keep it keeps the list, and that Remove removes it. Nit: when the phone could not keep the list (store.set failed), the footer still says 'Kept on this phone only'. It could say 'not kept: gone after a reload' when importedKept() has no entry for a.id."
+ },
+ {
+  "key": "e314ba7f60fdd394",
+  "where": "removeImported (app.html)",
+  "verdict": "ok",
+  "why": "It removes the kept entry, removes only the D.armies entry marked imported (a built-in list with the same id cannot be removed), clears the importStale row, recomputes ONLY, hides any sheet (the stale sheet included) and goes home. Nit: the list's per-battle ticks (localStorage 'wh-used-' + id) stay. Importing the same export again gives the same id (import-<name>), so the old ticks come back.",
+  "fix": "Optional: add `try { localStorage.removeItem('wh-used-' + id); } catch(e){}` in removeImported."
+ }
+]

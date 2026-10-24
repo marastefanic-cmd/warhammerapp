@@ -648,9 +648,9 @@ Fight · Either turn
 If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
 
 Icon of Khorne
-No Icon of Khorne in this unit
+Start of the battle round
 
-No Icon of Khorne in this unit
+Start of the battle round
 
 If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
 
@@ -672,7 +672,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -700,7 +700,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -736,7 +736,7 @@ Enhancement
 Once per battle, per army
 Your Command
 
-Enhancement · Command · Your turn
+Enhancement · Once per battle, per army · Command · Your turn
 
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
@@ -756,9 +756,6 @@ Fight · Either turn
 If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
 
 Icon of Khorne
-Start of the battle round
-
-Start of the battle round
 
 If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
 
@@ -777,7 +774,7 @@ Possessed Lord
 Once per battle
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
@@ -1003,7 +1000,7 @@ Khârn the Betrayer
 1× 40mm
 Khârn the Betrayer
 1× 32mm
-Champion · Plasma pistol
+Champion · Plasma pistol · Icon of Khorne
 7× 32mm
 standard Bolt pistol, Chainblade
 2× 32mm
@@ -1066,7 +1063,7 @@ MODELS LEFT · ALL 11
 Khârn the Betrayer
 0
 1
-Khorne Berzerker Champion
+Khorne Berzerker Champion (Icon of Khorne)
 0
 1
 Khorne Berzerker
@@ -1395,7 +1392,7 @@ MODELS LEFT · ALL 11
 Khârn the Betrayer
 0
 1
-Khorne Berzerker Champion
+Khorne Berzerker Champion (Icon of Khorne)
 0
 1
 Khorne Berzerker
@@ -1664,7 +1661,7 @@ MODELS LEFT · ALL 11
 Khârn the Betrayer
 0
 1
-Khorne Berzerker Champion
+Khorne Berzerker Champion (Icon of Khorne)
 0
 1
 Khorne Berzerker
@@ -2569,7 +2566,7 @@ Options
 1× Khârn the Betrayer
 Gorechild, Plasma pistol
 Leading Khorne Berzerkers
-1× Khorne Berzerker Champion
+1× Khorne Berzerker Champion (Icon of Khorne)
 Chainblade, Plasma pistol
 7× Khorne Berzerker
 Bolt pistol, Chainblade
@@ -2728,9 +2725,9 @@ If this unit made a charge move this turn, this unit’s melee attacks have +1 S
 
 Icon of Khorne
 - Khorne Berzerkers
-No Icon of Khorne in this unit
+Start of the battle round
 
-No Icon of Khorne in this unit
+Start of the battle round
 
 If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
 
@@ -2845,7 +2842,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -2964,7 +2961,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -3162,7 +3159,7 @@ Enhancement
 Once per battle, per army
 Your Command
 
-Enhancement · Command · Your turn
+Enhancement · Once per battle, per army · Command · Your turn
 
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
@@ -3184,9 +3181,6 @@ If this unit made a charge move this turn, this unit’s melee attacks have +1 S
 
 Icon of Khorne
 - Khorne Berzerkers
-Start of the battle round
-
-Start of the battle round
 
 If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
 
@@ -3302,7 +3296,7 @@ Possessed Lord
 Once per battle
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
@@ -3725,7 +3719,7 @@ Ask about this unit
 Chaos Rhino ›
 
 ######## popup ability:princes|Archslaughterer|**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn. · FORGEFIEND Princes
-ABILITY · ENHANCEMENT · COMMAND · YOUR TURN
+ABILITY · ENHANCEMENT · ONCE PER BATTLE, PER ARMY · COMMAND · YOUR TURN
 
 Archslaughterer
 
@@ -3846,7 +3840,7 @@ UNITKhârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut + Khorne Berzerk
 Ask about this ability
 
 ######## popup ability:princes|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability. · PRINCES Princes
-ABILITY · FIGHT · EITHER TURN
+ABILITY · ONCE PER BATTLE · FIGHT · EITHER TURN
 
 Possessed Lord
 

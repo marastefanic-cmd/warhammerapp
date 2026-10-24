@@ -631,6 +631,200 @@
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 541-544: \"Sekhetar Robots, Prophetic Sentinels Ability. Change to: 'Once per turn, when you target this unit with the Fire Overwatch/ [line break] Heroic Intervention stratagem, that use is -1 CP.\"; verify/.cache/waha/ds/thousand-sons_Sekhetar-Robots.html: \"Once per turn, when you target this unit with the <b>Fire Overwatch</b>/<b>Heroic Intervention</b> stratagem, that use is -1 CP.\"; New Recruit: verify/sources/nr/mucho-mutantes.txt line 426 (p11)"
  },
  {
+  "army": "woof-woof",
+  "unit": "war-dog-brigand-final-howl-aura",
+  "field": "abilities[Final Howl (Aura)].tag",
+  "app": "Aura",
+  "source": null,
+  "reason": "The app adds the Aura tag New Recruit does not print: verify/derive.js derives it from the ability's own text (tag-aura-name on \"(Aura)\"), the same wording as abilities New Recruit does tag Aura (Malign Presence, Overwhelming Wrath); approved by the owner on 2026-10-23 with the derive report's \"would change on screen\" list.",
+  "evidence": "Ability text in data.js (checked word for word by verify/texts.js); verify/out/derive.md, Abilities: tag; New Recruit: verify/sources/nr/woof-woof.txt p2"
+ },
+ {
+  "army": "shooty",
+  "unit": "mek-tankbustas",
+  "field": "gear[1x Nob]",
+  "app": [
+   "choppa",
+   "rokkit pistol"
+  ],
+  "source": [
+   "choppa",
+   "rokkit pistol",
+   "smash hammer"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/shooty.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Tankbustas Nob has two Rokkit Pistols and no Smash Hammer; the PDF (17 Oct 2026) is the older version.",
+  "evidence": "verify/sources/nr-json/shooty.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/shooty.json"
+ },
+ {
+  "army": "shooty",
+  "unit": "mek-tankbustas",
+  "field": "ranged[Rokkit pistol | Tankbustas].n",
+  "app": 2,
+  "source": 1,
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/shooty.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Tankbustas Nob has two Rokkit Pistols and no Smash Hammer; the PDF (17 Oct 2026) is the older version.",
+  "evidence": "verify/sources/nr-json/shooty.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/shooty.json"
+ },
+ {
+  "army": "shooty",
+  "unit": "mek-tankbustas",
+  "field": "melee (rows)",
+  "app": [
+   "Mek's Toolz | Mek",
+   "Choppa | Tankbustas",
+   "Gitstikka | Tankbustas"
+  ],
+  "source": [
+   "Mek's Toolz | Mek",
+   "Choppa | Tankbustas",
+   "Smash Hammer - Hunter | Tankbustas",
+   "Smash Hammer - Standard | Tankbustas",
+   "Gitstikka | Tankbustas"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/shooty.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Tankbustas Nob has two Rokkit Pistols and no Smash Hammer; the PDF (17 Oct 2026) is the older version.",
+  "evidence": "verify/sources/nr-json/shooty.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/shooty.json"
+ },
+ {
+  "army": "princes",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "models",
+  "app": [
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion (Icon of Khorne)",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "source": [
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/princes.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/princes.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/princes.json"
+ },
+ {
+  "army": "princes",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion]",
+  "app": null,
+  "source": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/princes.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/princes.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/princes.json"
+ },
+ {
+  "army": "princes",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
+  "app": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "source": null,
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/princes.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/princes.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/princes.json"
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "models",
+  "app": [
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion (Icon of Khorne)",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "source": [
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/standard.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/standard.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/standard.json"
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion]",
+  "app": null,
+  "source": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/standard.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/standard.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/standard.json"
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
+  "app": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "source": null,
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/standard.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/standard.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/standard.json"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "models",
+  "app": [
+   "1x Lord on Juggernaut",
+   "1x Khorne Berzerker Champion (Icon of Khorne)",
+   "15x Khorne Berzerker",
+   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "source": [
+   "1x Lord on Juggernaut",
+   "1x Khorne Berzerker Champion",
+   "15x Khorne Berzerker",
+   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/big-demons-baby.json"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion]",
+  "app": null,
+  "source": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/big-demons-baby.json"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
+  "app": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "source": null,
+  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
+  "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
+  "superseded": "verify/sources/nr-json/big-demons-baby.json"
+ },
+ {
   "army": "lite-knights",
   "unit": "witchseeker-squad",
   "field": "abilities[Sanctified Flames].text",

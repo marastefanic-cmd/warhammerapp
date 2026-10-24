@@ -823,7 +823,7 @@ Prophetic Sentinels
 Once per turn
 Their Move/Charge
 
-Movement / Charge · Their turn
+Once per turn · Movement / Charge · Their turn
 
 Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.
 
@@ -3469,7 +3469,7 @@ Prophetic Sentinels
 Once per turn
 Their Move/Charge
 
-Movement / Charge · Their turn
+Once per turn · Movement / Charge · Their turn
 
 Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.
 

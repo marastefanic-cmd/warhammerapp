@@ -1,17 +1,17 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "be1090cf07",
- "data": "2026-10-23.9",
+ "build": "2c30b28d45",
+ "data": "2026-10-23.10",
  "date": "23 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11473 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11458 facts)."
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (10100 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (10080 facts)."
   },
   {
    "label": "Granted values:",
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1376 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1388 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "1959 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "1967 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -45,7 +45,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop:",
-   "detail": "warhammer40k new40k core rules; wh40k -faction pack adeptus-mechanicus; wh40k event companion; wh40k faction pack tyranids; wh40k faction pack emperors children; wh40k faction pack thousand sons; wh40k faction pack world eaters; wh40k coreandkey universal rules updates; wh40k faction pack chaos knights; wh40k faction pack imperial knights."
+   "detail": "warhammer40k new40k core rules; wh40k -faction pack adeptus-mechanicus; wh40k event companion; wh40k faction pack tyranids; wh40k printed product updates adeptus custodes updates; wh40k faction pack emperors children; wh40k faction pack thousand sons; wh40k faction pack world eaters; wh40k coreandkey universal rules updates; wh40k faction pack chaos knights; wh40k faction pack imperial knights."
   },
   {
    "label": "Wahapedia:",

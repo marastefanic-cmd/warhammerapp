@@ -557,6 +557,21 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .ri span{font:600 12px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 .rres{min-height:1px; position:absolute; width:1px; overflow:hidden; clip:rect(0 0 0 0)}
 .racts{display:grid; gap:8px; margin-top:14px}
+/* the list import (New Recruit's JSON export): its row on the home screen, its sheet, and Remove on an imported list's Overview */
+.imprt{margin-top:18px}
+.impf{position:relative; display:flex; align-items:center; justify-content:center; width:100%; margin:2px 0 10px; cursor:pointer}
+.impf:focus-within{outline:2px solid var(--accent); outline-offset:2px}
+.impf input{position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer}
+.impt{display:block; width:100%; min-height:88px; resize:vertical; padding:9px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--fg); font:15px/1.35 var(--f-body)}
+.impgo{display:block; width:100%; margin-top:10px}
+.impno{margin-top:12px; padding:10px 12px 12px; border-radius:10px; box-shadow:inset 0 0 0 1px var(--line)}
+.impno .qh{margin:0 0 6px; color:var(--dm-bad)}
+.impno .lead{margin:4px 0 0}
+.impl{margin:4px 0 0; padding-left:18px; font-size:14.5px; line-height:1.4; overflow-wrap:anywhere}
+.impl li + li{margin-top:4px}
+.imprm{margin-top:10px}
+.imprm > .btn2{width:100%}
+.imprm .lead{margin:0}
 .btn{min-height:48px; padding:0 14px; text-align:center; border-radius:8px; background:var(--accent); color:var(--accent-ink); font:700 16px/1.1 var(--f-head); letter-spacing:.04em}
 .btn2{min-height:44px; padding:0 14px; text-align:center; border-radius:8px; box-shadow:inset 0 0 0 1px var(--line); color:var(--fg); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
 .btn:active, .btn2:active{opacity:.75}
@@ -966,7 +981,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear and the dice are from Lucide, https://lucide.dev
+    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear, the dice and import are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -977,6 +992,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-swords" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 19 6-6" /> <path d="M14.5 17.5 3.586 6.586A2 2 0 013 5.172V3h2.172a2 2 0 011.414.586L17.5 14.5" /> <path d="m14.828 6.172 2.586-2.586A2 2 0 0118.828 3H21v2.172a2 2 0 01-.586 1.414l-2.586 2.586" /> <path d="m16 16 4 4" /> <path d="m19 21 2-2" /> <path d="m5 14 4 4" /> <path d="m5 21-2-2" /> <path d="M7.5 16.5 4 20" /></g></symbol>
     <symbol id="i-ask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></g></symbol>
     <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /> <circle cx="12" cy="12" r="3" /></g></symbol>
+    <symbol id="i-import" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /> <path d="m8 11 4 4 4-4" /> <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" /></g></symbol>
     <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
   </defs>
 </svg>
@@ -1002,10 +1018,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 <script src="verified.js"></script>
 <script src="data.js"></script>
 <script src="calc.js"></script>
+<script src="import.js"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
-const ONLY = D.armies.length === 1 ? D.armies[0] : null;   // one list: the app opens straight into it
 const BUILD = window.WH_BUILD || '';      // set by build.js on the installable copy
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -1015,6 +1031,18 @@ const keep = area => ({
   set(k, v){ try { window[area].setItem(k, JSON.stringify(v)); } catch(e){} }
 });
 const store = keep('localStorage'), session = keep('sessionStorage');
+// lists imported from New Recruit on this phone (import.js): kept as the export and made again from this data.js at every start, so an
+// imported list shows exactly what the app's own lists show; one this data.js no longer has everything for is listed on the home screen
+const IMPORT_KEY = 'wh-imported';
+const importedKept = () => { const v = store.get(IMPORT_KEY, []); return Array.isArray(v) ? v.filter(x => x && typeof x === 'object' && typeof x.id === 'string' && x.json) : []; };
+const importStale = [];
+if(window.WH_IMPORT) for(const x of importedKept()){
+  // (a kept export that cannot be read at all is listed as out of date, with Remove: it never stops the app)
+  let r; try { r = WH_IMPORT.resolve(x.json, D, { id:x.id, date:x.date }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }
+  if(r.ok && !D.armies.some(a => a.id === r.army.id)) D.armies.push(r.army);
+  else importStale.push({ id:x.id, name:String(x.name || 'Imported list'), date:x.date, errors:r.ok ? ['a list with this id is already in the app'] : r.errors });
+}
+let ONLY = D.armies.length === 1 ? D.armies[0] : null;   // one list: the app opens straight into it
 try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier version
 
 /* ---------- colour schemes ----------
@@ -1510,7 +1538,7 @@ function screenHome(){
     (shown.length > 1 ? '<button class="rnd" data-roll><svg class="ic" aria-hidden="true"><use href="#i-dice"/></svg>Random</button>' : '') + '</div>' +
     (shown.length ? '<div class="armies">' + armyGroups(shown) + '</div>'
       : '<p class="note">No army has all of these. <button class="link" data-hfclear>Clear the filters</button></p>') +
-    verifiedLine() + (INSTALLED ? '' : '<p class="note">' + installText() + '</p>');
+    importRow() + verifiedLine() + (INSTALLED ? '' : '<p class="note">' + installText() + '</p>');
 }
 
 // home filters: one faction, one detachment, one disposition at a time, kept on this phone
@@ -1560,10 +1588,79 @@ function rollArmy(){
   strip.addEventListener('transitionend', done, { once:true });
 }
 
+/* ---------- import a list from New Recruit ----------
+   New Recruit's JSON export, from a file or pasted: import.js takes it only when every unit, option, enhancement and detachment in
+   it is one the app's own lists have, exactly; otherwise nothing is added and each item it does not recognize is listed, one per
+   line. An imported list is kept on this phone (the export, made again from this data.js at every start) and removed from its Overview. */
+const importRow = () => '<div class="list imprt"><button class="row" data-import><svg class="ic" aria-hidden="true"><use href="#i-import"/></svg><span class="rb"><b>Import a list from New Recruit</b>' +
+    '<span>Its JSON export</span></span>' + arrow + '</button>' +
+  importStale.map(x => '<button class="row" data-impstale="' + esc(x.id) + '"><span class="rb"><b>' + esc(x.name) + '</b><span>Imported list: this version of the app no longer has all of it</span></span>' + arrow + '</button>').join('') + '</div>';
+const today = () => new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+const firstUp = t => String(t).charAt(0).toUpperCase() + String(t).slice(1);
+const impList = errors => '<ul class="impl">' + errors.map(e => '<li>' + esc(firstUp(e)) + '</li>').join('') + '</ul>';
+function showImport(){
+  openSheet('New Recruit', 'Import a list',
+    '<p class="lead">In New Recruit, open the list, then Export and JSON. Choose that file here, or paste its text.</p>' +
+    '<label class="btn2 impf"><input type="file" id="impFile" accept=".json,application/json">Choose the .json file</label>' +
+    '<textarea id="impText" class="impt" rows="4" placeholder="…or paste the export here" aria-label="The New Recruit JSON export" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>' +
+    '<button class="btn impgo" data-impgo>Import</button><div id="impOut" aria-live="polite"></div>' +
+    '<p class="note">The list is taken only when every unit, option, enhancement and detachment in it is one that the app’s own checked lists have, exactly. Otherwise nothing is added, and each item the app does not recognize is listed. An imported list is kept on this phone.</p>');
+}
+function runImport(text){
+  const out = $('#impOut');
+  if(!out || !window.WH_IMPORT) return;
+  if(!String(text || '').trim()){ out.innerHTML = '<div class="impno"><p class="qh">Nothing to import</p><p class="lead">Choose the .json file, or paste the export first.</p></div>'; return; }
+  let json = null; try { json = JSON.parse(text); } catch(e){}
+  const taken = new Set(D.armies.map(a => a.id).concat(importedKept().map(x => x.id)));
+  const date = today();
+  let r; try { r = WH_IMPORT.resolve(json || text, D, { date }); } catch(e){ r = { ok:false, errors:['not a New Recruit JSON export (it could not be read)'] }; }
+  if(!r.ok){
+    out.innerHTML = '<div class="impno"><p class="qh">Not imported · ' + r.errors.length + (r.errors.length === 1 ? ' item' : ' items') + ' not recognized</p>' + impList(r.errors) +
+      '<p class="note">Nothing was added. The app takes a list only when it already has every part of it.</p></div>';
+    out.scrollIntoView({ block:'nearest' });
+    return;
+  }
+  const A = r.army; let id = A.id, k = 2; while(taken.has(id)) id = A.id + '-' + k++;
+  A.id = id;
+  try { store.set(IMPORT_KEY, importedKept().concat([{ id, name:A.name, date, json:WH_IMPORT.slim(json) }])); } catch(e){}
+  const saved = importedKept().some(x => x.id === id);
+  D.armies.push(A); ONLY = D.armies.length === 1 ? D.armies[0] : null;
+  hideSheet(); go({ s:'army', army:id }, 'sheet');
+  toast(saved ? 'Imported ' + A.name : 'Imported ' + A.name + ' for now: this phone could not keep it');
+}
+// an imported list's Overview ends with where it came from and its Remove (a confirm on the page, not a browser dialog)
+const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);
+  return '<div class="sec-h"><h2>On this phone</h2></div><p class="note">Imported from New Recruit' + (x && x.date ? ' on ' + esc(x.date) : '') + ', made of units the app’s own lists have. ' +
+    (x ? 'Kept on this phone only.' : 'This phone could not keep it: it is gone when the app next starts.') + '</p>' +
+    '<div class="imprm" id="impRm">' + impRmBtn(a.id) + '</div>'; };
+const impRmBtn = id => '<button class="btn2" data-imprm="' + esc(id) + '">Remove this list</button>';
+function askRemove(id){
+  const host = $('#impRm'), x = importedKept().find(y => y.id === id) || {}, a = armyById(id) || x;
+  if(!host) return;
+  host.innerHTML = '<p class="lead">Remove ' + esc(a.name || 'this list') + ' from this phone? You can import it again.</p><div class="racts"><button class="btn" data-imprmyes="' + esc(id) + '">Remove</button><button class="btn2" data-imprmno="' + esc(id) + '">Keep it</button></div>';
+  const b = host.querySelector('[data-imprmno]'); if(b) b.focus({ preventScroll:true });
+  host.scrollIntoView({ block:'center' });   // both buttons in sight, above the tab bar
+}
+function removeImported(id){
+  const a = armyById(id), x = importedKept().find(y => y.id === id), name = (a || x || {}).name || 'the list';
+  store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));
+  const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);
+  const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);
+  try { localStorage.removeItem('wh-used-' + id); } catch(e){}   // its per-battle ticks
+  ONLY = D.armies.length === 1 ? D.armies[0] : null;
+  hideSheet(); go({ s:'home' }, 'replace');
+  toast('Removed ' + name);
+}
+function showStale(id){
+  const x = importStale.find(y => y.id === id); if(!x) return;
+  openSheet('Imported list', x.name, '<p class="lead">This version of the app no longer has every part of this list, so it is not shown:</p>' + impList(x.errors) +
+    '<p class="note">Import its newest New Recruit export again, or remove it.</p><div class="imprm" id="impRm">' + impRmBtn(id) + '</div>');
+}
+
 /* ---------- screen: settings ---------- */
 const awakeRow = () => 'wakeLock' in navigator ? '<button class="row" data-awake aria-pressed="' + awake.on + '"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span class="rb"><b>Keep screen on</b></span><span class="c' + (awake.on ? ' on' : '') + '">' + (awake.on ? 'On' : 'Off') + '</span></button>' : '';
 function screenSettings(){
-  return themePicker() +
+  return themePicker() + (ONLY ? '<div class="sec-h"><h2>Lists</h2></div>' + importRow() : '') +
     (awakeRow() ? '<div class="sec-h"><h2>At the table</h2></div><div class="list">' + awakeRow() + '</div>' : '') +
     askSettings() +
     '<div class="sec-h"><h2>This app</h2></div><p class="note">' + installText() + '</p><p class="note">Data ' + esc(D.version) + '</p>';
@@ -4184,8 +4281,9 @@ function shortWhen(x){
 // "Once per battle", "Once per battle round, per army": a limited use is part of the row, not hidden in it
 // (from the tag, a "(Once per …)" in the text, or a text that starts "Once per …,")
 const onceTag = ab => {
-  if(/^(once|twice) per /i.test(ab.tag || '')) return ab.tag.replace(/ · .*$/, '');   // as BSData prints it
   const t = ab.text || '', army = /\bone (model|unit) from your army with this ability\b/i.test(t);
+  // as BSData prints it; ", per army" as below when the tag does not say per what ("Once per battle round": Direct the Slaughter)
+  if(/^(once|twice) per /i.test(ab.tag || '')){ const tg = ab.tag.replace(/ · .*$/, ''); return tg + (army && !/\bper (army|unit)\b/i.test(tg) ? ', per army' : ''); }
   // an enhancement's text starts with its restriction ("**TECH-PRIEST** model only. Once per battle round, …")
   const t1 = t.replace(/^\*\*[^*]+\*\* model only( \([^)]*\))?\. /i, '');
   for(const src of [ab.tag || '', (/\((once per [^)]+)\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t1) || [])[0] || '']){
@@ -4210,11 +4308,13 @@ const abilityNote = ab => ab.note ? '<p class="note it">' + esc(ab.note) + '</p>
 const STAT_KEYS = new Set(['M','T','Sv','W','Ld','OC','InSv','range','A','BS','WS','S','AP','D']);
 const alreadyIn = (ab, u) => !u ? '' : [...new Set([...u.stats, ...(u.ranged || []), ...(u.melee || [])].flatMap(x => Object.entries(x.from || {})
   .filter(([k, v]) => STAT_KEYS.has(k) && [].concat(v).includes(ab.name)).map(([k]) => k === 'range' ? 'Range' : k)))].join(', ');
+// an enhancement's row has the Enhancement chip: its tag is "Enhancement" or has it as one part ("Enhancement · Aura")
+const isEnhancement = ab => /(^|, | · )Enhancement(, | · |$)/.test(ab.tag || '');
 function abilityList(abs, u, suffix){
   return '<div class="abl">' + abs.map(ab => {
     const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab), inv = alreadyIn(ab, u);
     return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (suffix && ab.who ? '<span class="awho">- ' + esc(ab.who) + '</span>' : '') +
-      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (inv ? '<span class="tg m">Already in ' + esc(inv) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
+      (isEnhancement(ab) ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (inv ? '<span class="tg m">Already in ' + esc(inv) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
       (ab.ph && !na ? '<span class="aw">' + shortWhen(ab).split(' · ').map(x => '<span class="nw">' + esc(x) + '</span>').join(' · ') + '</span>' : '') + chev + '</summary><div class="body">' +
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + abilityNote(ab) + '</div></details>';
   }).join('') + '</div>';
@@ -4577,7 +4677,7 @@ function screenPregame(){
     row('Abilities', onceAbs.map(abTicks).join('')) +
     row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n, '', s.name), linkTo('strat', s.id, s.cp + 'CP ' + s.name))).join('')));
   if(onceRules.length || onceAbs.length || onceStrats.length) h = h.replace(/(<div class="sec-h"><h2>Uses per battle<\/h2>)/, '$1<button class="textbtn" data-newgame>New game</button>');
-  return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';
+  return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>' + (a.imported ? importedFoot(a) : '');
 }
 
 /* ---------- screen: rules & keywords ---------- */
@@ -4882,6 +4982,12 @@ document.addEventListener('click', e => {
   if(ds.army){ const next = { s:'army', army:ds.army };
     if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next); return; }   // an army opens on Find: search, Overview and every list
   if(el.hasAttribute('data-settings')){ go({ s:'settings' }); return; }
+  if(el.hasAttribute('data-import')){ showImport(); return; }
+  if(el.hasAttribute('data-impgo')){ runImport(($('#impText') || {}).value); return; }
+  if(ds.impstale){ showStale(ds.impstale); return; }
+  if(ds.imprm){ askRemove(ds.imprm); return; }
+  if(ds.imprmyes){ removeImported(ds.imprmyes); return; }
+  if(ds.imprmno){ const h = $('#impRm'); if(h){ h.innerHTML = impRmBtn(ds.imprmno); h.querySelector('button').focus({ preventScroll:true }); } return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
   if(ds.hf){ const i = ds.hf.indexOf('|'), k = ds.hf.slice(0, i), v = ds.hf.slice(i + 1), f = homeFilter();
     if(v) f[k] = v; else delete f[k];
@@ -5004,6 +5110,12 @@ document.addEventListener('toggle', e => {
   }
 }, true);
 $('#sheetBack').addEventListener('click', closeSheet);
+// the import sheet's file: read and imported at once
+document.addEventListener('change', e => {
+  if(e.target.id !== 'impFile' || !e.target.files || !e.target.files[0]) return;
+  const f = e.target.files[0];
+  f.text().then(t => { const box = $('#impText'); if(box) box.value = ''; runImport(t); }, () => { const out = $('#impOut'); if(out) out.innerHTML = '<div class="impno"><p class="qh">Not imported</p><p class="lead">The file could not be read.</p></div>'; });
+});
 addEventListener('keydown', e => {
   const t = e.target;
   if(t.id === 'askQ' && e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); askSend(); return; }

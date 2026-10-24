@@ -686,7 +686,7 @@ Necromechanic
 Enhancement
 Once per battle round
 
-Enhancement
+Enhancement · Once per battle round
 
 TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.
 
@@ -2705,7 +2705,7 @@ Necromechanic
 Enhancement
 Once per battle round
 
-Enhancement
+Enhancement · Once per battle round
 
 TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.
 
