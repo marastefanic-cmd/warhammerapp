@@ -613,7 +613,7 @@ const phStr = m => m ? PH.filter(p => m[p]).map(p => p + ':' + m[p]).join(',') :
 // ("In your Movement phase, you can select …"). Unit activation (remembered from that unit's datasheet): "selected to …", "each time /
 // when this (or a) unit or model …", "this unit's move / attacks", "makes an attack / a charge / a move", "is targeted", "targets this",
 // "destroys", "is destroyed", "the first time". An option without such a sentence is listed with its rule (what the rule puts in
-// force) unless its own words are a unit activation (a: Calistus, "WHEN: … selected to move"). Once-per-battle uses are listed too
+// force: a Blessing of Khorne) unless its own WHEN line is a unit activation (a: Calistus, "WHEN: … selected to move"). Once-per-battle uses are listed too
 // (the app's perBattle), and an item derive cannot place with a moment data.js stores (at: Icon of Khorne).
 const SEQ = {
   moment:/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i,
@@ -700,14 +700,16 @@ function ckBlock(T){
   return CK_START + '\n' +
     '// The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
     '// tables of verify/derive.js give it: s listed (a fixed moment of the sequence, seqTrigger), t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
-    '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own; a its own words a unit activation),\n' +
+    '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own; a its own WHEN line a unit activation),\n' +
     '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition)\n' +
     'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
 }
 
 function derive(D){
   const V = vocab(D);
-  const src = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
+  // the comments next to an item: data.js in the old form (each unit in full, as the lists were written), where each comment
+  // is on every unit it is about (verify/tables.js)
+  const src = require('./tables').oldForm(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
   const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   // the app's own matches(), so "selects the same units" means what the app does
   const matches = new Function('hasKw', appFunctions(html).matches + '\nreturn matches;')((u, k) => u.kw.some(x => norm(x).toLowerCase() === norm(k).toLowerCase()));
@@ -843,76 +845,33 @@ function derive(D){
     for(const g of u.guard || []) if(g.from === ab.name) out.push((g.note || '') + ' ' + JSON.stringify(g.calc || {}).replace(/"fnp":/, 'feel no pain '));
     return out.length ? ' | elsewhere: ' + out.join(' | ') : '';
   }
-  // ---- rule options and grants (coverage only) ----
-  for(const [fk, f] of Object.entries(D.factions)){
-    const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
-      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
-    for(const { r, where } of rules) optionsAndGrants(where, r, r.text, r.table, storedOptionsOfRule(r), fk, null, sinkOf('r|' + fk + '|' + r.name));
-  }
-  { const seen = new Set();
-    for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
-      const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
-      optionsAndGrants(a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, null, storedOptionsOfAbility(u, ab), a.faction, u, sinkOf(abilityCk(ab)));
-    } }
-  function storedOptionsOfRule(r){
-    const out = [];
-    for(const m of r.calcMods || []) out.push({ name:m.from, what:'calcMods (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name) });
-    for(const p of r.parts || []) out.push({ name:p.name, what:'parts' + (p.mod ? ' mod (' + p.mod.kind + ')' : p.def ? ' def' : p.grants ? ' grants ' + p.grants : ''), kind:p.mod ? p.mod.kind : p.def ? 'def' : null, grants:p.grants, needs:p.needs, when:p.when });
-    if(r.mod) out.push({ name:null, what:'mod (' + r.mod.kind + ')', kind:r.mod.kind, picks:(r.mod.pick || []).map(p => p.name), note:r.mod.note });
-    return out;
-  }
-  function storedOptionsOfAbility(u, ab){
-    return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
-  }
-  function optionsAndGrants(where, x, text, table, stored, fk, self, sink){
-    const t = rulesText(text);
-    const opts = optionsOf(t, table);
-    // the rule's own trigger: its text without its options
-    const parentTrig = explicitTiming(opts.reduce((s2, o) => s2.replace(o.text, ''), t));
-    for(const o of opts){
-      const own = explicitTiming(o.text), trig = own || parentTrig;
-      const used = usedIn(o.text, { core:D.coreStratagems }, trig);
-      const ph = Object.assign({}, trig ? trig.ph : {}); for(const [p, v] of Object.entries(used.ph)) addPh(ph, p, v);
-      const mine = stored.filter(sx => sx.name && norm(sx.name).toLowerCase().startsWith(norm(o.name).toLowerCase()) || (sx.picks || []).some(n => norm(o.name).toLowerCase().startsWith(norm(n).toLowerCase()) || norm(n).toLowerCase().startsWith(norm(o.name).split(' ')[0].toLowerCase())));
+  // ---- rule options and grants (coverage only): the rows of data.js's RULE_OPTIONS and GRANTS (verify/tables.js --write writes
+  // them from ruleTables below, which reads them from the words), each against what the rule's footnotes and the unit sheets store ----
+  const fresh = ruleTables(D);
+  for(const [k, v] of Object.entries(fresh.sinks)) CKO[k] = v;   // the checklist's options and grants (ruleTables)
+  const TB = { options:D.ruleOptions || [], grants:D.grants || [] };
+  Object.defineProperty(items, 'tablesStale', { value:JSON.stringify(TB) !== JSON.stringify({ options:fresh.options, grants:fresh.grants }) });
+  const whyOf = new Map(); fresh.options.forEach((o, i) => { const k = o.rule + '\n' + o.option; if(!whyOf.has(k)) whyOf.set(k, fresh.reasons[i]); });
+  for(const s of ruleSources(D)) optionsAndGrants(s.where, s.stored, s.fk, s.self);
+  function optionsAndGrants(where, stored, fk, self){
+    for(const o of TB.options.filter(x => x.rule === where)){
+      const phs = o.phases && o.phases.ph ? o.phases.ph : [];
+      const mine = stored.filter(sx => sx.name && norm(sx.name).toLowerCase().startsWith(norm(o.option).toLowerCase()) || (sx.picks || []).some(n => norm(o.option).toLowerCase().startsWith(norm(n).toLowerCase()) || norm(n).toLowerCase().startsWith(norm(o.option).split(' ')[0].toLowerCase())));
       const storedPh = new Set(mine.flatMap(sx => sx.kind === 'melee' ? ['fight'] : sx.kind === 'ranged' ? ['shooting'] : sx.kind === 'all' ? ['shooting', 'fight'] : sx.kind === 'def' ? ['shooting', 'fight'] : []));
-      const inDerived = [...storedPh].every(p => ph[p]);
-      const status = !Object.keys(ph).length ? 'not-derivable' : !mine.length ? 'different' : inDerived ? 'identical' : 'different';
-      add({ kind:'rule-option', coverage:true, where:where + ' · ' + o.name, stored:mine.length ? mine.map(sx => sx.what + (sx.picks && sx.picks.length ? ' picks ' + sx.picks.join('/') : '')).join('; ') : null,
-        derived:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null, trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null,
-        how:own ? 'explicit' : 'activity', status, noPerOption:!mine.length || undefined, optionFrom:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''),
-        reasons:(trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))), text:o.text });
-      // the checklist: an option's own trigger, or none (the rule's is listed with the rule), and where it is used
-      if(sink){
-        const e = { n:o.name };
-        if(o.row) e.row = o.row;
-        if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
-        if(phStr(used.ph)) e.u = phStr(used.ph);
-        if(!Object.keys(ph).length && !(own && own.at)) e.x = 1;
-        const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
-        const fo = inForce(o.text, D.factions[fk], o.name, { t:phStr(tp), at:tr && tr.at });
-        if(fo.length) e.f = fo;
-        if(seqTrigger(o.text)) e.s = 1; else if(SEQ.activation.test(plain(rulesText(o.text)))) e.a = 1;
-        sink.opts.push(e);
-      }
-      grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self, sink, o.name);
+      const inDerived = [...storedPh].every(p => phs.includes(p));
+      const status = !phs.length ? 'not-derivable' : !mine.length ? 'different' : inDerived ? 'identical' : 'different';
+      add({ kind:'rule-option', coverage:true, where:where + ' · ' + o.option, stored:mine.length ? mine.map(sx => sx.what + (sx.picks && sx.picks.length ? ' picks ' + sx.picks.join('/') : '')).join('; ') : null,
+        derived:phs.length ? o.phases : null, trigger:o.trigger, used:o.used,
+        how:o.explicit ? 'explicit' : 'activity', status, noPerOption:!mine.length || undefined, optionFrom:o.found,
+        reasons:whyOf.get(o.rule + '\n' + o.option) || [], text:o.text });
+      grantItems(where, o.option, stored, fk, self);
     }
-    grantsIn(where, opts.reduce((s2, o) => s2.replace(o.text, ''), t), stored, fk, null, self, sink, null);
+    grantItems(where, undefined, stored, fk, self);
   }
   // "BLOOD LEGIONS units from your army gain the Blessings of Khorne ability", "Friendly X units have the following ability:"
-  function grantsIn(where, text, stored, fk, whileOpt, self, sink, optName){
-    for(const sent of sentences(norm(text))){
-      const m = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/.exec(sent);
-      if(!m) continue;
-      const name = (m[3] || m[4] || (m[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
-      if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
-      const before = sent.slice(0, m.index);
-      const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
-      const rs = [];
-      const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
-      const cond = (/^(while|if|when|until) [^,]+/i.exec(plain(sent)) || [])[0];
-      const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
-      const grantName = name.replace(/ ability$/i, '');
-      const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
+  function grantItems(where, option, stored, fk, self){
+    for(const g of TB.grants.filter(x => x.rule === where && x.option === option)){
+      const { grants:grantName, type, to, text:sent } = g, wh = g.while;
       const inParts = stored.find(sx => sx.grants && norm(sx.grants).toLowerCase() === norm(grantName).toLowerCase());
       const holds = u => (u.rules || []).concat(u.abilities.map(y => y.name), u.kw || []).some(r => norm(r).toLowerCase() === norm(grantName).toLowerCase() || norm(r).toLowerCase().startsWith(norm(grantName).toLowerCase() + ' '));
       // who should hold it: this unit (an ability's own grant) or the units it is for
@@ -920,9 +879,7 @@ function derive(D){
       const onSheets = forUnits.filter(holds).map(u => u.name);
       const storedG = inParts ? { grants:inParts.grants, to:inParts.needs || null, while:inParts.when || null } : onSheets.length ? 'on the datasheet' + (onSheets.length > 1 ? 's' : '') + ' (Rules line, abilities or keywords): ' + [...new Set(onSheets)].slice(0, 5).join(', ') + (new Set(onSheets).size > 5 ? '…' : '') + (onSheets.length < forUnits.length ? ' (' + onSheets.length + ' of ' + forUnits.length + ' units it is for)' : '') : null;
       const same = inParts ? JSON.stringify(canonNeeds(inParts.needs)) === JSON.stringify(canonNeeds(typeof to === 'object' ? to : null)) : !!onSheets.length;
-      // the checklist: an ability it gives to units by keyword (Might of Khorne: Blessings of Khorne to BLOOD LEGIONS units)
-      if(sink && type === 'ability' && to && typeof to === 'object') sink.grants.push(Object.assign({ name:grantName, to }, optName ? { opt:optName } : {}, wh ? { while:wh } : {}));
-      add({ kind:'rule-grant', coverage:true, where:where + ' → ' + grantName, derived:{ grants:grantName, type, to, while:wh }, stored:storedG,
+      add({ kind:'rule-grant', coverage:true, where:where + (option !== undefined ? ' · ' + option : '') + ' → ' + grantName, derived:{ grants:grantName, type, to, while:wh }, stored:storedG,
         how:'explicit', status:same ? 'identical' : 'different', noPerOption:!storedG || undefined, reasons:[{ rule:'grant', match:clip(plain(sent), 120) }], text:sent });
     }
   }
@@ -936,6 +893,107 @@ function derive(D){
       reasons:got.map(b => ({ rule:b.id, match:(b.re.exec(text) || [''])[0] })), missing:missing.length ? missing : undefined, extra:extra.length ? extra : undefined, text:src, dedupe });
   }
   return items;
+}
+
+// ---------------------------------------------------------------------------------------------
+// RULE_OPTIONS and GRANTS: the options inside a rule or ability, and the abilities a rule gives units, read from the words.
+// verify/tables.js --write writes them into data.js; derive() reads them there and fails the gate when the words say otherwise.
+// ---------------------------------------------------------------------------------------------
+// what the rule's footnotes and the unit sheets store for its options (compared, not part of the tables)
+function storedOptionsOfRule(r){
+  const out = [];
+  for(const m of r.calcMods || []) out.push({ name:m.from, what:'calcMods (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name) });
+  for(const p of r.parts || []) out.push({ name:p.name, what:'parts' + (p.mod ? ' mod (' + p.mod.kind + ')' : p.def ? ' def' : p.grants ? ' grants ' + p.grants : ''), kind:p.mod ? p.mod.kind : p.def ? 'def' : null, grants:p.grants, needs:p.needs, when:p.when });
+  if(r.mod) out.push({ name:null, what:'mod (' + r.mod.kind + ')', kind:r.mod.kind, picks:(r.mod.pick || []).map(p => p.name), note:r.mod.note });
+  return out;
+}
+function storedOptionsOfAbility(u, ab){
+  return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
+}
+// the rules and abilities read for options and grants: every army and detachment rule, then every ability of every list (once per words)
+function ruleSources(D){
+  const out = [];
+  for(const [fk, f] of Object.entries(D.factions)){
+    const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
+      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
+    for(const { r, where } of rules) out.push({ where, text:r.text, table:r.table, stored:storedOptionsOfRule(r), fk, ck:'r|' + fk + '|' + r.name });
+  }
+  const seen = new Set();
+  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
+    const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
+    out.push({ where:a.id + ' · ' + u.name + ' · ' + ab.name, text:ab.text, table:null, stored:storedOptionsOfAbility(u, ab), fk:a.faction, self:u, ck:abilityCk(ab) });
+  }
+  return out;
+}
+// a grant: "has / have / gain(s) the X keyword / ability" said of units, with no negation in its clause, not inside a condition
+// ("if this unit has the BATTLELINE keyword": it depends on it) or a relative clause ("units that have the X ability": who it is
+// for), not of a detachment ("This detachment has the WAR DOGS tag"), and not the rule's own name
+const GRANT_RE = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/g;
+const notAGrant = (sent, m, rule, name) => {
+  const clause = sent.slice(0, m.index).split(/[,;:]/).pop();
+  return /^\s*(?:-\s*)?(?:if|unless|whether|each time|every time|when|whenever)\b/i.test(clause) || /\b(?:that|which|who|with)\s*$/i.test(clause) ||
+    /\b(?:not|cannot|never|no longer)\b/i.test(clause) || /\bdetachment\b/i.test(clause) || /^\s+tag\b/i.test(sent.slice(m.index + m[0].length)) ||
+    norm(name).toLowerCase() === norm(String(rule).split(' · ').pop()).toLowerCase();
+};
+function ruleTables(D){
+  const V = vocab(D), options = [], grants = [], reasons = [], sinks = {};   // sinks: the checklist's options and grants per CHECKLIST key
+  let ck;
+  const grantSink = g => { if(g.type === 'ability' && g.to && typeof g.to === 'object') ck.grants.push(Object.assign({ name:g.grants, to:g.to }, g.option !== undefined ? { opt:g.option } : {}, g.while ? { while:g.while } : {})); };
+  for(const s of ruleSources(D)){
+    const t = rulesText(s.text);
+    const opts = optionsOf(t, s.table);
+    ck = sinks[s.ck] || (sinks[s.ck] = { opts:[], grants:[] });
+    // the rule's own trigger: its text without its options
+    const parentTrig = explicitTiming(opts.reduce((s2, o) => s2.replace(o.text, ''), t));
+    for(const o of opts){
+      const own = explicitTiming(o.text), trig = own || parentTrig;
+      const used = usedIn(o.text, { core:D.coreStratagems }, trig);
+      const ph = Object.assign({}, trig ? trig.ph : {}); for(const [p, v] of Object.entries(used.ph)) addPh(ph, p, v);
+      options.push({ rule:s.where, option:o.name, text:o.text, found:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''), explicit:!!own,
+        trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null, phases:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null });
+      reasons.push((trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))));
+      // the checklist: an option's own trigger, or none (the rule's is listed with the rule), and where it is used
+      {
+        const e = { n:o.name };
+        if(o.row) e.row = o.row;
+        if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
+        if(phStr(used.ph)) e.u = phStr(used.ph);
+        if(!Object.keys(ph).length && !(own && own.at)) e.x = 1;
+        const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
+        const fo = inForce(o.text, D.factions[s.fk], o.name, { t:phStr(tp), at:tr && tr.at });
+        if(fo.length) e.f = fo;
+        // a: an option whose own WHEN is a unit activation (Calistus: "WHEN: Your Movement phase, when a friendly readied unit is
+        // selected to move"); an option's other words are its effect ("Each time a model in this unit makes a melee attack…"), listed
+        const when = /^\W*WHEN:\W*(.*)$/im.exec(plain(rulesText(o.text)));
+        if(seqTrigger(o.text)) e.s = 1; else if(when && SEQ.activation.test(when[1])) e.a = 1;
+        ck.opts.push(e);
+      }
+      grantRows(s.where, o.name, o.text, o.name + ' active');
+    }
+    grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null);
+  }
+  function grantRows(rule, option, text, whileOpt){
+    for(const sent of sentences(norm(text))){
+      let m, name;
+      for(const x of sent.matchAll(GRANT_RE)){
+        const n = (x[3] || x[4] || (x[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
+        if(!notAGrant(sent, x, rule, n)){ m = x; name = n; break; }
+      }
+      if(!m) continue;
+      if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
+      const before = sent.slice(0, m.index);
+      const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
+      const rs = [];
+      const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+      const cond = (/^(while|if|when|until) [^,]+/i.exec(plain(sent)) || [])[0];
+      const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
+      const grantName = name.replace(/ ability$/i, '');
+      const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
+      const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:grantName, type, to, while:wh, text:sent });
+      grants.push(g); grantSink(g);   // (the checklist: an ability it gives to units by keyword, Might of Khorne's Blessings of Khorne)
+    }
+  }
+  return { options, grants, reasons, sinks };
 }
 
 // =============================================================================================
@@ -1121,8 +1179,10 @@ if(require.main === module){
     const i = src.indexOf(CK_START), j = src.indexOf(CK_END), have = i >= 0 && j > i ? src.slice(i, j + CK_END.length) : null;
     if(process.argv.includes('--write')){
       let out = have ? src.slice(0, i) + want + src.slice(j + CK_END.length) : null;
-      if(!out){ const at = src.indexOf('\nreturn { version:VERSION'); if(at < 0) throw new Error('data.js: return line not found'); out = src.slice(0, at) + '\n' + want + '\n' + src.slice(at); }
-      if(!/checklist:CHECKLIST/.test(out)) out = out.replace(/ \};\n\}\)\(\);/, ', checklist:CHECKLIST };\n})();');
+      // (after BS_IDS, where verify/tables.js --write keeps it: among the parts of data.js outside its tables)
+      if(!out){ const bs = src.indexOf('// ---- end of BS_IDS ----'), at = bs >= 0 ? src.indexOf('\n', bs) + 1 : src.indexOf('\nreturn { version:VERSION') + 1;
+        if(at <= 0) throw new Error('data.js: return line not found'); out = src.slice(0, at) + '\n' + want + '\n' + src.slice(at); }
+      if(!/checklist:CHECKLIST/.test(out)) out = /bsIds:BS_IDS/.test(out) ? out.replace(/bsIds:BS_IDS/, 'bsIds:BS_IDS, checklist:CHECKLIST') : out.replace(/ \};\n\}\)\(\);/, ', checklist:CHECKLIST };\n})();');
       fs.writeFileSync(file, out);
       console.log('derive: wrote CHECKLIST into data.js (' + Object.keys(items.checklist).length + ' entries)');
     } else if(have !== want){ ckStale = true; console.log('derive: data.js CHECKLIST ' + (have ? 'differs from' : 'is missing;') + ' what the rules text gives. Run: node verify/derive.js --write'); }
@@ -1142,6 +1202,7 @@ if(require.main === module){
   console.log('derive: ' + Object.keys(agreed).length + ' agreed labels hold' + (drift.length ? ' except ' + drift.length : '') + '; ' + total('different') + ' differ, ' + total('not-derivable') + ' not derivable (not failing; verify/out/derive.md)' + (stale.length ? '; ' + stale.length + ' agreed items no longer exist' : ''));
   console.log('  identical/different/not derivable: ' + KINDS.map(k => k + ' ' + L(k)).join(' · '));
   for(const d of drift) console.log('  DRIFT ' + d);
-  process.exit(drift.length || ckStale ? 1 : 0);
+  if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
+  process.exit(drift.length || items.tablesStale || ckStale ? 1 : 0);
 }
-module.exports = { derive, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ruleTables, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };

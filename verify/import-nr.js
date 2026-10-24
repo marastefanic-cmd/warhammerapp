@@ -529,6 +529,9 @@ if (flag('--write')) {
     spawnSync(process.execPath, [path.join(ROOT, 'verify/bsdata.js')], { cwd: ROOT, encoding: 'utf8' });
     const g = spawnSync(process.execPath, [path.join(ROOT, 'verify/write-grants.js')], { cwd: ROOT, encoding: 'utf8' });
     console.log((g.stdout || g.stderr).trim());
+    // the list was written in full (the old form): its units become references to their datasheets (DATASHEETS)
+    const t = spawnSync(process.execPath, [path.join(ROOT, 'verify/tables.js'), '--write'], { cwd: ROOT, encoding: 'utf8' });
+    console.log((t.stdout || t.stderr).trim());
   }
 } else {
   const out = path.resolve(opt('--out', path.join(ROOT, 'verify/out/import-' + armyId + '.js')));

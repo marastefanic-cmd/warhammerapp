@@ -34,7 +34,7 @@ are in the git history, and `import-nr.js --reuse` can take their signed-off not
 
 | File | What it is |
 |---|---|
-| `data.js` | the armies, plus the faction and core rules they use |
+| `data.js` | the armies, plus the faction and core rules they use, as tables (`docs/tables.md`): each list's unit entries hold what the list chose and name their datasheet in `DATASHEETS`; `verify/columns.json` says where every column comes from |
 | `ask.js`, `ask-style.md`, `vendor/` | the rules-question chat, how its answers should look, and the Anthropic SDK it uses |
 | `rules/core-rules.md` | a text copy of the Core Rules with errata and FAQs as Wahapedia publishes them, for the chat (`python3 -I verify/rules-text.py verify/.cache/waha/core.html rules/core-rules.md` refreshes it) |
 | `calc.js` | the damage calculator's engine (the attack sequence, section 05 of the Core Rules), checked by the gate like the app |
@@ -42,6 +42,7 @@ are in the git history, and `import-nr.js --reuse` can take their signed-off not
 | `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `import.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |
 | `verify/` | the gate: every fact checked against its source before a build (see below) |
+| `verify/tables.js` | the tables: `--write` converts lists written in full (the import's form, or from another branch) into references to `DATASHEETS` and writes `RULE_OPTIONS` / `GRANTS`; the gate checks data.js is in that form, every column has a source, and every AI-written gist / def matches the text it was written from (`docs/tables.md`) |
 | `index.html` | generated: `app.html` wrapped as a full page with the home-screen tags |
 | `sw.js`, `manifest.webmanifest`, `icon-*.png`, `fonts/` | home-screen install and offline support (Atkinson Hyperlegible Next for text and Barlow Condensed for headings and numbers, both OFL) |
 | logo | the riveted KK plate: `icon-*.png` for the home screen, and drawn in `app.html` for the home header (in the picked colour scheme) |
@@ -64,9 +65,13 @@ The facts come from New Recruit, never typed by hand:
    A datasheet that another list (or an older data.js, `--reuse <file>`) already has lends its signed-off
    phase tags and footnotes where the words are the same. Units with two characters attached (a
    Warboss leading and a Bigboss supporting the same Breaka Boyz) are one unit. With `--write` it also
-   writes the "+" marks from BSData. It lists what it cannot know in `verify/out/import-<id>.md`.
+   writes the "+" marks from BSData, and makes the list's units references to their datasheets (`verify/tables.js
+   --write`: a datasheet another list has is shared). It lists what it cannot know in `verify/out/import-<id>.md`.
 4. Write those parts: phase tags, weapon footnotes (`mods`) and auras, a missing detachment or
-   rule (from Wahapedia/GW), stratagem gists. That is the only part that needs judgement.
+   rule (from Wahapedia/GW), stratagem gists. That is the only part that needs judgement. An ability's tags and
+   "When targeted" line go on its datasheet's row in `DATASHEETS`; footnotes and auras on the list's entry (or edit
+   the old form: `node verify/tables.js --expand`, then `--write`). A new gist or def: `node verify/tables.js --stamp`
+   records the fingerprint of the text it was written from.
 5. `node verify/run.js` until it passes. It checks the list against the PDF, BSData and GW's texts;
    renders every screen at 390 and 320px; shows any screen change (accept with `--accept` after
    reading the diff); and lists every judgement the app adds that has no sign-off yet. Those are

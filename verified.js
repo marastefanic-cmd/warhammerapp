@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "a2ef662588",
- "data": "2026-10-24.1",
+ "build": "dc2b55976d",
+ "data": "2026-10-24.2",
  "date": "24 Oct 2026",
  "checks": [
   {
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1486 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1484 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "2090 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "2093 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [

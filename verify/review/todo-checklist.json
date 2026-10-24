@@ -31,9 +31,9 @@
    "code": "const ckOptListed = (o, parentIn) => !!(o.s || (parentIn && !o.a));"
   },
   "source": {
-   "implements": "an option of a rule or ability on the Phase checklist: listed when its own words are a fixed moment (s), or when its rule is listed and its own words are not a unit activation (a: Calistus, Salvus, Rendax)"
+   "implements": "an option of a rule or ability on the Phase checklist: listed when its own words are a fixed moment (s), or when its rule is listed and its own WHEN line, if it has one, is not a unit activation (a: Calistus, Salvus, Rendax; a Blessing of Khorne's effect, \"each time a model … makes a melee attack\", is what its rule puts in force: listed)"
   },
-  "key": "b049936966c5c986"
+  "key": "3b422f640e96ebe4"
  },
  {
   "army": "code",
@@ -43,9 +43,9 @@
    "code": "const ckListed = (e, once) => !!(e.s || e.stored || once);"
   },
   "source": {
-   "implements": "which rules, abilities and options the Phase checklist lists (ckListed, ckOptListed): an entry derive marks s (seqTrigger), one data.js gives a moment that derive cannot place (ckStored), or a once-per-battle use (perBattle); an option when its own words are s, or its rule is listed and its own words are not a unit activation (a)"
+   "implements": "which rules, abilities and options the Phase checklist lists (ckListed, ckOptListed): an entry derive marks s (seqTrigger), one data.js gives a moment that derive cannot place (ckStored), or a once-per-battle use (perBattle); an option when its own words are s, or its rule is listed and its own WHEN line is not a unit activation (a)"
   },
-  "key": "6f8cb0ec473740f8"
+  "key": "5b36caccb172a270"
  },
  {
   "army": "code",
@@ -67,9 +67,9 @@
    "code": "function ckEntry(d, text){\n  if(d.how === 'none') return { x:1 };\n  const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];\n  const e = {};\n  if(d.at) e.at = d.at;\n  if(phStr(tp)) e.t = phStr(tp);\n  // triggered in named phases and lasting no longer (\"In your Shooting phase, when … selected to shoot, that unit's attacks can\n  // re-roll\"): used only there, in the trigger's turn, not in every phase its words could be read for (no \"until\", \"this turn\", \"next\")\n  let up = d.usedPh;\n  if(phStr(tp) && !d.at && !/\\buntil\\b|\\bthis turn\\b|\\bnext\\b|\\bfor the rest of\\b/i.test(plain(text || '')))\n    up = Object.fromEntries(Object.entries(up || {}).filter(([p]) => tp[p]).map(([p, o]) => [p, o === 'either' ? tp[p] : tp[p] === 'either' || tp[p] === o ? o : null]).filter(([, o]) => o));\n  if(phStr(up)) e.u = phStr(up);\n  return Object.keys(e).length ? e : { none:1 };\n}"
   },
   "source": {
-   "implements": "data.js CHECKLIST (verify/derive.js --write), the Phase checklist table: per rule and ability, from its own words (withoutOptions): s listed (seqTrigger: a sentence naming the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice, with no unit activation: selected to…, each time / when this or a unit or model…, this unit's move or attacks, makes an attack / charge / move, is targeted, targets this, destroys, is destroyed, the first time); t the phases its text names (table 1's trigger) less those only its opening moment gives, at that moment, u where its effect is used (table 1's used-in), limited to the trigger's phases and turn when the text names them and states no duration (no until, this turn, next, for the rest of); none: positively no phase; x: not derivable; per option (optionsOf) s, a (its own words a unit activation), its own trigger only when it names one, where it is used, x when it has neither and no trigger of its rule; g: an ability it gives units by keyword; f: what it puts in force (inForce); the same words on several units must give one entry, else x"
+   "implements": "data.js CHECKLIST (verify/derive.js --write), the Phase checklist table: per rule and ability, from its own words (withoutOptions): s listed (seqTrigger: a sentence naming the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice, with no unit activation: selected to…, each time / when this or a unit or model…, this unit's move or attacks, makes an attack / charge / move, is targeted, targets this, destroys, is destroyed, the first time); t the phases its text names (table 1's trigger) less those only its opening moment gives, at that moment, u where its effect is used (table 1's used-in), limited to the trigger's phases and turn when the text names them and states no duration (no until, this turn, next, for the rest of); none: positively no phase; x: not derivable; per option (optionsOf) s, a (its own WHEN line a unit activation), its own trigger only when it names one, where it is used, x when it has neither and no trigger of its rule; g: an ability it gives units by keyword; f: what it puts in force (inForce); the same words on several units must give one entry, else x"
   },
-  "key": "71623d81696054d3"
+  "key": "ca5c3a26b07d7c18"
  },
  {
   "army": "code",

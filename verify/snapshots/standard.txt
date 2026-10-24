@@ -4486,6 +4486,20 @@ IN THIS ARMYLord on Juggernaut, Slaughterbound · Berzerker Glaive (in Berzerker
 
 Ask about this rule
 
+######## popup rule:Engagement Range · STANDARD Standard
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
 ######## popup rule:Feel No Pain 4+ · STANDARD Standard
 CORE RULE
 
@@ -4622,6 +4636,23 @@ INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
 Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
 
 App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+Ask about this rule
+
+######## popup rule:Normal move · STANDARD Standard
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
 Ask about this rule
 

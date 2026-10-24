@@ -3,11 +3,15 @@
    modifiers (verify/out/bsdata.json "grants") into data.js, on weapon and stats rows that have
    none yet. For a new list: node verify/bsdata.js; node verify/write-grants.js; then
    node verify/bsdata.js and node verify/nr.js must pass (both check the marks).
-   Usage: node verify/write-grants.js [repo dir] */
+   Usage: node verify/write-grants.js [repo dir]
+   data.js in table form (DATASHEETS) is written in the old form first (every unit in full, verify/tables.js), the marks
+   go on its rows there, and verify/tables.js puts it back in table form (a mark is the list's own: on the list's row). */
 const fs = require('fs'), path = require('path');
+const T = require('./tables');
 const dir = path.resolve(process.argv[2] || path.join(__dirname, '..'));
 const file = path.join(dir, 'data.js');
-const lines = fs.readFileSync(file, 'utf8').split('\n');
+const src0 = fs.readFileSync(file, 'utf8'), tabled = /\nconst DATASHEETS = /.test(src0);
+const lines = (tabled ? T.oldForm(src0) : src0).split('\n');
 const grants = require(path.join(dir, 'verify/out/bsdata.json')).grants;
 global.window = {}; require(file); const D = window.WH_DATA;
 const q = s => "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'") + "'";
@@ -42,5 +46,5 @@ for (const [k, gs] of rows) {
   lines[li] = line.slice(0, m.index) + ', ' + lit + ' }' + m[1];
   done++;
 }
-fs.writeFileSync(file, lines.join('\n'));
+fs.writeFileSync(file, tabled ? T.tableForm(lines.join('\n')).text : lines.join('\n'));
 console.log('marked ' + done + ' rows (' + kept + ' already marked); BSData changes ' + grants.length + ' values');

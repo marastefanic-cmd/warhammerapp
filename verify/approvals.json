@@ -35,6 +35,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"That NORN ASSIMILATOR unit.\""
  },
+ "011fdf31644d27da": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "“Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” needs all Faction: Adeptus Custodes, none Monster/Vehicle (so not the Anathema Psykana squads, whose only faction keyword is ANATHEMA PSYKANA, nor the Caladius/Dreadnoughts); tagged Aura, so 22.01 “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability” puts his own unit in it (selfAlways, Own aura). Note literal; the change is only the from’s and text’s punctuation."
+ },
  "0136d9f91fceaafb": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -64,6 +70,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"At the end of your Command phase\"."
+ },
+ "01d8e526de862696": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“When a friendly ADEPTUS CUSTODES unit is selected to attack”: needs Faction: Adeptus Custodes; the ANATHEMA PSYKANA units (Faction: Anathema Psykana only; the Anathema Psykana army rule: “they do not have the ADEPTUS CUSTODES faction keyword”) are rightly left out."
  },
  "020223b8548f40bb": {
   "verdict": "ok",
@@ -233,6 +245,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back.”"
  },
+ "0552feb28e72a019": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “Memento Moritoi, Warblade”; Wahapedia: “1 Warblade”, with a ranged and a melee profile."
+ },
  "05678125bce077a4": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -256,6 +274,12 @@
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "For a rule with no ph tags, the phase and turn come from its first words: “At the start of your turn” → your Command phase, “At the end of your opponent’s turn” → their Fight phase (the end of that turn)."
+ },
+ "05ef13c63a41f5b3": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your unit’s ranged attacks have [Assault] until the end of the turn” after its advance move: kind ranged, the when keeps the advance and “until the end of the turn”."
  },
  "05f24cbd21cedac7": {
   "verdict": "ok",
@@ -305,6 +329,12 @@
   "at": "2026-10-16",
   "why": "Labels: LANCE, [LANCE]; 24.21."
  },
+ "0694175f1315c442": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”: your; fight left as either (Dacatarai, Kaptaris, Rendax name no player)."
+ },
  "06944418fc40b340": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -328,6 +358,12 @@
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
+ },
+ "07146dcc83a16530": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "WHEN “End of any phase”, TARGET “not readied”, EFFECT “Your unit is readied”, RESTRICTIONS “not … more than once per battle round”: all kept."
  },
  "0777707a104d6463": {
   "verdict": "ok",
@@ -406,6 +442,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "EFFECT “Your unit makes an ingress move” plus RESTRICTIONS “You cannot use this stratagem during the first battle round.” Same; “in strategic reserves” is from the TARGET."
+ },
+ "08df86c119fd6e0a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“End of your Movement phase”: movement."
  },
  "09018edd67259b09": {
   "verdict": "ok",
@@ -545,6 +587,12 @@
   "at": "2026-10-16",
   "why": "True; the \"(Once per battle, per army)\" limit is shown from the text (rendered chip \"Once per battle, per army\")."
  },
+ "0b465384adf7d3c1": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks”: needs Grav-assault (only the Caladius in this list)."
+ },
  "0b8a49825e1a49d4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -683,11 +731,35 @@
   "at": "2026-10-17",
   "why": "“When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6 …” names no phase, so it is listed in all five."
  },
+ "0eaf090d296936fb": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“End of any phase”: all five phases."
+ },
  "0f40e847dc09e472": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”"
+ },
+ "0f607c076cfd1a4b": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Captain-General is under ABILITIES on Trajann Valoris’s datasheet (Wahapedia), not the Allarus Custodians’ (theirs: Slayer of Tyrants, Vexilla); “within 6\" of this model” = Trajann. Models are NR’s three lines. Only the text’s punctuation changed since the first sign-off."
+ },
+ "0f621935ba5ce60a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“select one of the following … until the end of the phase: … This model has 3+ InSv.” The line keeps once per battle, start of any phase, “one of its two effects” (the other is the Watcher’s Axe +3 A, so the player chooses) and “until the end of the phase”; defenceItems shows it as “Trajann Valoris · Moment Shackle …”, i.e. his model only, as “This model” says."
+ },
+ "0fbdbdeb8df67f57": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR prints “Slayers of Tyrants - Allarus Custodians”; it is the Allarus datasheet’s ability (Wahapedia “Slayer of Tyrants”). “This unit’s melee attacks” then applies to the whole attached unit (19.04: bodyguard unit ability applies to every model while a bodyguard model lives)."
  },
  "0ff21a306632496e": {
   "verdict": "ok",
@@ -863,6 +935,12 @@
   "at": "2026-10-22",
   "why": "The aura is for WAR DOG units, within 6\" of the Atrapos, vs TITANIC or TOWERING, and gives “you can re-roll the Hit roll”. It is literal. It applies to no unit here (no WAR DOG), which is consistent with the na mark."
  },
+ "14abab85c345e201": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your unit’s ranged attacks have [Assault]”: kind ranged, when the WHEN; [ASSAULT] changes no numbers, so the Damage tab marks it not counted."
+ },
  "14b552e2180cb5fb": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -952,6 +1030,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR roster: \"Big Mek in Mega Armour Character 115\" and \"(5) Meganobz Infantry 175 Big Mek in Mega Armour\"; header \"290 PTS\". 115 + 175 = 290."
+ },
+ "177d3443fc3f5686": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR prints “Moment Shackle - Trajann Valoris”; Trajann’s datasheet ability, and both effects name “This model”, so it is his alone (19.04: an ability affecting a single specified model applies only to that model)."
  },
  "17b184e71d966a00": {
   "verdict": "ok",
@@ -1133,6 +1217,12 @@
   "at": "2026-10-21",
   "why": "Quotes are in the right steps. Step 7 has 20.01 (“…cannot exceed 50% of your points limit for your battle size”) with each list’s 50% as an app note and its Deep Strike units. Step 8 has the TITANIC sentence and Infiltrators (24.20 “During deployment”). Step 10 has the first-turn pick (“Roll off: the winner takes the first turn.”). Step 11 has Scouts (24.31 “In the Resolve Pre-battle Abilities step”). The header names the Event Companion 1.3, which is the cached version."
  },
+ "1bcf20bb0734645a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks”: shooting, your turn."
+ },
  "1bd5f94b32f3218c": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -1252,6 +1342,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR, Wahapedia and BSData: W 11, and “While this model has 1-4 wounds remaining…”."
+ },
+ "1e75c9b64778131a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “1x Trajann Valoris — Eagle’s Scream, Watcher’s Axe”, two Allarus Custodians each “Balistus grenade launcher, Castellan Axe” (one with Vexilla, which is no weapon). Gear per line and weapons rows (ranged then melee, ×2 for the Allarus) match; Wahapedia allows the Guardian Spear → Castellan Axe swap."
  },
  "1eba3c91e07867de": {
   "verdict": "ok",
@@ -1397,6 +1493,12 @@
   "at": "2026-10-21",
   "why": "Each mark matches its Blessing. Martial Excellence (“Melee weapons … have the [SUSTAINED HITS 1] ability”) and Warp Blades ([LETHAL HITS]) are melee. Decapitating Strikes (“each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability”) is melee vs any Infantry. Total Carnage is onDeath roll 4 (“on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed”). lasts 'round' follows “applies to all units from your army with this ability until the end of the battle round”, and only units with the rule get them (dmArmyOf). Unbridled Bloodlust and Rage-fuelled Invigoration change no attack numbers."
  },
+ "21e665eb7ee4cf2e": {
+  "verdict": "ok",
+  "by": "review:tables",
+  "at": "2026-10-24",
+  "why": "It only removes items with a:'rule' whose v is one of the open list's army rules. In defenceItems those are the army rules' own def lines and Waaagh!'s ‘Riled up: 5+ INV’ (Orks have no RULE_OPTIONS). A unit ability is a:'ability', so an ability that happens to share an option's name can't be hidden. FNP lines from the Rules line have v:'Feel No Pain N+', which is never an army-rule name, and detachment rules are named ‘… · X rule · …’. I checked all 17 lists: the only line it hides is Martial Ka’tah's def ‘Kaptaris (start of the Fight phase…)’, on the five lite-knights unit screens. Those are exactly the snapshot changes, plus the curly-apostrophe Martial Ka’tah popup that only that chip opened. The Rules line still opens the rule. It's only used on screenUnit. One small thing, outside this function: RULE_OPTIONS also lists ‘Example’ as an option of Martial Ka’tah (it comes from the rule's ‘Example: If you selected the Solar Watch detachment…’ paragraph), so a Custodes army-rule def that started with ‘Example ’ would also be hidden. No def does that today."
+ },
  "21e9935f6273d7e5": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1414,6 +1516,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target\": the Errant is TITANIC, and Fire Overwatch targets \"One friendly unengaged unit (excluding TITANIC units)\", so its only ranged attacks are in your Shooting phase."
+ },
+ "2263d87656a62028": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Only change: n.rule now uses hasRule (lowercase, ’ and ‘ → '), a superset of the previous lowercase compare, so no previous match is lost. Throwaway test (rev-lite2/t.js): {rule:['Martial Ka’tah']} vs rules [\"Martial Ka'tah\"] → true; 'super-heavy walker' vs 'Super-Heavy Walker' → true; 'Martial Katah' → false; no rules → false; 'Feel No Pain 5+' vs 'Feel No Pain 5+*' → false (exact name). hasRule is a const defined later in the script but only called at render time (snapshots render). No failing input found."
  },
  "226aab386f053c88": {
   "verdict": "ok",
@@ -1468,6 +1576,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "NR/datasheet: \"Lord of the Planet of the Sorcerers (Psychic)\"."
+ },
+ "2385abd2c8787023": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia: “Augury Uplink (one per army) UPGRADE 30 pts”: tag Upgrade."
  },
  "23b512819636bff8": {
   "verdict": "ok",
@@ -1625,11 +1739,23 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll\" (Wahapedia has the same): the target being both the closest eligible target and within 18\" is the whole condition, so cond closest18 is right. Its implication closest18 → closest is sound, and \"closest\" on its own does not tick this rule."
  },
+ "2701ca620ee7bea8": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia army rule (and the Witchseeker/Prosecutor datasheets): “Daughters of the Abyss … Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.” Who: ADEPTUS CUSTODES units — needs all Faction: Adeptus Custodes, which excludes the Prosecutors/Witchseekers (FACTION KEYWORDS: ANATHEMA PSYKANA; the Anathema Psykana rule: “even though they do not have the ADEPTUS CUSTODES faction keyword”) and has no MONSTER/VEHICLE exclusion, so the Caladius and Dreadnoughts get it too (rendered so). Range 6\" of the Anathema unit, against psychic attacks only, FNP 5+: all in the when/note. It is GW-tagged (Aura) (22.01). The Anathema units’ own protection is the first bullet (FNP 3+ vs psychic, the rule def), so they need no guard line; kind all fits (psychic attacks can be ranged or melee). Three sources collapse into one line (defenceItems)."
+ },
  "273b23f711ae4fc7": {
   "verdict": "ok",
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls\": all attacks, exact."
+ },
+ "276c29a6048cc4b3": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Run on this list (defenceItems with shields): Trajann “Trajann Valoris · Feel No Pain 5+”, “Feel No Pain 5+ against mortal wounds”, Moment Shackle’s 3+ InSv, In Auramite Clad; Prosecutors/Witchseekers only “Feel No Pain 3+ against psychic attacks”; Caladius Aegis + Flare Shields’ 4+ InSv; Telemon with Augury Uplink a single plain FNP 5+. The starred NR FNP is dropped only when an army rule of the unit’s rules line gives that FNP with its condition; partialWho now does not let “Feel No Pain 5+*” borrow Trajann’s “Feel No Pain 5+” entry. Matches Aegis of the Emperor, Daughters of the Abyss and the 19.04 FAQ (a Feel No Pain of one model applies only to that model)."
  },
  "278ccf961ee233b8": {
   "verdict": "ok",
@@ -1672,6 +1798,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "x.at is returned as whenTag does, and each at repeats the rule's opening words (\"At the start of the battle round\", \"At the end of your opponent's turn\"). \"Any phase\" now needs one turn for all five phases, so Icon of War shows \"Your Command · Their Move · Shoot · Your Charge · Fight\" (its turns; either turn unprefixed, per 07.02.02). Latent: a five-phase rule with one fixed turn (your/opp) would show a bare \"Any phase\" and drop the turn, but no list has one (all are turn:'either')."
+ },
+ "27e3b985f28735d8": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Shooting phase”: your."
  },
  "27eef46c006c0cf2": {
   "verdict": "ok",
@@ -2063,6 +2195,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” The needs filter is now copied from the text (Faction: Orks + Walker). It adds no BIG MEK or own-unit exclusion: the “(excluding BIG MEK units)” is in the lead-in condition for the Big Mek, not in the pick. “this turn” = “until the end of the turn”, and kind all = “attacks”. Dropping the text’s “can” is a shorter way of saying the same thing; a re-roll in a footnote is still optional."
  },
+ "30c46afb2eab8a29": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your opponent’s Shooting phase”: shooting opp; fight either."
+ },
  "30f10384bb5f6a68": {
   "verdict": "ok",
   "by": "review:r11-misc",
@@ -2099,6 +2237,12 @@
   "at": "2026-10-22",
   "why": "\"Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks\": shortened only; the moment (\"Start of the Fight phase\") is the row's tag and INFANTRY is in who can use it."
  },
+ "318a69a3070fccbb": {
+  "verdict": "ok",
+  "by": "review:lite-knights (its fix)",
+  "at": "2026-10-23",
+  "why": "EFFECT: “Select one objective that: Your unit was controlling when it was destroyed. Has no enemy units (excluding AIRCRAFT units) within range of it. That objective is secured.” The gist’s “an objective it was controlling” drops “when it was destroyed”, which fixes the moment of control (not any earlier time). Rest literal."
+ },
  "31c8f68f1e0927a4": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -2110,6 +2254,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In your Shooting phase or the Fight phase\"."
+ },
+ "3268b663ea586f06": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Movement phase”: your."
  },
  "329af067dc5867be": {
   "verdict": "ok",
@@ -2159,6 +2309,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One TYRANIDS MONSTER unit from your army that was selected as the target...\"."
  },
+ "335302779dae8b79": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“your Movement phase”: your."
+ },
  "3380d8a0b71b1fef": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -2207,6 +2363,12 @@
   "at": "2026-10-21",
   "why": "EFFECT: \"Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.\" The gist is the same, shorter; \"full wounds\" is left out, and starting strength comes close."
  },
+ "34c69ad196993fa0": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "New Recruit spells “Martial Ka'tah” with a straight apostrophe, Wahapedia “Martial Ka’tah”: the alias opens the army rule. (It opens it only; the Damage tab’s dmArmyOf does not use it: see item calcMods.)"
+ },
  "34f2fbbb1f9ce13f": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -2224,6 +2386,12 @@
   "by": "review:r11-purge-units (its fix)",
   "at": "2026-10-21",
   "why": "The FAQ in Faction Pack v1.4 says the unit is picked “When you have selected the Icon of War ability”. That happens “In your Command phase” (Rod of the War Forge), so the tag must include Your Command. The Fires of Mars lasts “until the start of your next Command phase”, so the Imperatives also work in the opponent’s turn: in their Shooting phase (Analytic Reprisals in this list: a SKITARII INFANTRY unit “can shoot as if it were your Shooting phase”), and at the end of their Movement phase (Fire Overwatch, where Conqueror’s AP +1 still applies to snap shots), as well as in either Fight phase. The fix follows the signed-off Kindred Sorcery and Clever Know-wotz tags: {ph:['command','movement','shooting','charge','fight'], turn:'either', turns:{command:'your', movement:'opp', charge:'your'}}. If the owner wants only the moment of use, as Canticles and Rod of the War Forge have it, the tag would be {ph:['command'], turn:'your'} instead."
+ },
+ "353a64316ed79924": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
  },
  "354ce16c190984b5": {
   "verdict": "ok",
@@ -2333,6 +2501,12 @@
   "at": "2026-10-21",
   "why": "\"While this model has 1-10 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
  },
+ "38658844e5eb6636": {
+  "verdict": "ok",
+  "by": "review:tables",
+  "at": "2026-10-24",
+  "why": "I diffed main 24781aa's data.js against this branch's resolved lists for all 17 lists. Every field is the same apart from the five declared corrections and key order. The key-order changes are in 64 objects: weapon rows now have name before who/n, abilities have who before tag, and partialRules, kwOnly, mods and aura have moved within units. No datasheet in use has two rows of one name in a kind, and no RegExp values, so first-match lookup and the JSON copy are both safe. Hidden fields (ds, over, of, why, faction, bsId, gistOf, defOf) don't reach units or rows. A unit without ds is passed through unchanged, so in the old form its defOf/why aren't hidden. That's why `--expand` then `--write` is refused (see the report); it isn't a fault in the resolution itself."
+ },
  "3888f74cfb047c1b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2404,6 +2578,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "“each time a WAR DOG model from your army makes an attack”."
+ },
+ "39fe97ca8ce81031": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “That ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
  },
  "39fff212d6fde57a": {
   "verdict": "ok",
@@ -2632,6 +2812,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"improve the Armour Penetration characteristic of melee weapons ... by 1\" until end of phase, unit \"made a charge move this turn\"."
+ },
+ "3e100adca590d6b3": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Command/Movement/Shooting are “your”, the Fight phase ka’tahs (“Start of the Fight phase”, “Fight phase”) are either player’s: turn either."
  },
  "3e2fa51f1861fa0a": {
   "verdict": "ok",
@@ -2927,6 +3113,12 @@
   "at": "2026-10-16",
   "why": "Matches NR: 10× Grot Blasta, 10× Scavenged Shivs."
  },
+ "4414a51b9c3313b1": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Read with rendering (verify/out/snapshots/lite-knights.txt). armyDefs: army rules with a def on the unit’s Rules line, via hasRule so NR’s straight-apostrophe “Martial Ka'tah” matches “Martial Ka’tah” (Trajann/Dreadnoughts show Kaptaris; Caladius, lacking the rule, does not). defPh honoured (ph 'fight' only for Kaptaris; with no ph, the datasheet, it shows). Starred FNP suppressed only when an army-rule def says that same FNP (Prosecutors’ “Feel No Pain 3+*” → “Feel No Pain 3+ against psychic attacks”; Aegis’ 5+* → “against mortal wounds”), plain ones kept (Trajann’s, Telemon’s Augury Uplink 5+). Guard dedupe keys on the rendered text, so the three Anathema squads’ identical Psychic Null is one line linking to the first; a different guard text still shows. No other list has an army-rule def, so nothing else changes except partialWho’s who on a plain FNP (the mucho-mutantes line, a correction). defences() is unused. No failing input found."
+ },
  "4427fde92e0ac639": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -2998,6 +3190,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"targets a MONSTER or VEHICLE unit ... improve the Damage characteristic of that attack by 1\"; a bodyguard ability applies to the whole attached unit (Core 19.04)."
+ },
+ "46b53281649bbf35": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Attacks are made in either player’s turn (Fight phase of both, Fire Overwatch in the opponent’s): either."
  },
  "46c43037fb5d8758": {
   "verdict": "ok",
@@ -3101,6 +3299,12 @@
   "at": "2026-10-22",
   "why": "“Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll.” = kind all, +1 to hit rolls, under a target fact the player ticks. The Battle-shock part changes no attack numbers and stays in the ability text."
  },
+ "4925fe816af1b538": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “Dreadspear, 2x Lastrum storm bolter”; Wahapedia: “1 Dreadspear; 2 Lastrum Storm Bolter”; the Dreadspear has a ranged and a melee profile, so it is listed twice."
+ },
  "4931def1187f5a8f": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -3166,6 +3370,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "WHEN says neither “your” nor “your opponent’s”, and Wahapedia colours it str11ColorEither: either turn. The once-per-turn restriction is in the gist."
+ },
+ "4a833940db5de0dc": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia Trajann Valoris: “CORE ABILITIES Deep Strike, Feel No Pain 5+, Leader”; Allarus Custodians: “CORE ABILITIES Deep Strike” only. The starred “Feel No Pain 5+*” is Aegis of the Emperor (“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds”), on both datasheets. So the plain Feel No Pain 5+ is Trajann’s alone: partialRules names him, and the new partialWho clause keeps the starred one from matching it (rendered: “Trajann Valoris · Feel No Pain 5+ · … · Feel No Pain 5+ against mortal wounds”)."
  },
  "4a9cfd28162134d2": {
   "verdict": "ok",
@@ -3323,6 +3533,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the phase, if your unit Advances, do not make an Advance roll … add 6\" to the Move characteristic … or 9\" instead if your unit is an ARMIGER or DESTRIER unit.” Same."
  },
+ "4e14d49884b44431": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "The line keeps “against ranged attacks”. The Caladius profile’s two-value InSv “5+, 4+*” (its own 5+; the 4+ from Flare Shields, marked from) matches: the 4+ only against ranged attacks."
+ },
  "4e1d96de622d09b1": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3346,6 +3562,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“Each time an enemy unit … within Engagement Range of one or more units with this ability is selected to fight”. That is the Fight phase, in either player's turn."
+ },
+ "4e4a370749b23e24": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“At the start of any phase, you can select one of the following to take effect until the end of the phase”: every phase of either player’s turn, so all five phases and turn either."
  },
  "4e4e83101df4a99b": {
   "verdict": "ok",
@@ -3467,6 +3689,18 @@
   "at": "2026-10-21",
   "why": "The Protector ranged pick is “[HEAVY] … Improve the Ballistic Skill characteristic … by 1” = heavy + skill 1. Conqueror ranged is “[ASSAULT]”, no number. Conqueror melee is “Improve the Weapon Skill characteristic of melee weapons … by 1” = skill 1. The Conqueror part “improve the Armour Penetration characteristic of that attack by 1” (any attack, if BATTLELINE and/or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) = ap 1 on both kinds, under that fact (a BATTLELINE unit meets it by itself). lasts 'round' is “Until the end of the battle round”, and only units with the ability get it (“units … that have the Doctrina Imperatives ability”)."
  },
+ "51fd68c0bdc98cad": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "WHEN “Your Shooting phase or the Fight phase”: shooting and fight."
+ },
+ "5205e5c60865dd26": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia Might of the Moritoi: “HONOURED INTERRED 1CP WHEN: Your Shooting phase or the Fight phase. TARGET: One friendly ADEPTUS CUSTODES DREADNOUGHT unit. EFFECT: Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” Benefits: friendly ADEPTUS CUSTODES units (to: Faction: Adeptus Custodes, no exclusion — Trajann, Caladius, other Dreadnoughts; not the Anathema squads); by: the ADEPTUS CUSTODES DREADNOUGHT target; range 6\" of it (via). The target itself is in its own aura (22.01) and gets the stratagem’s own mod; helpedBy excludes x === u. The when is the stratagem’s WHEN; no duration is printed, so the phase (01.02.02), and none is added. Note literal."
+ },
  "5228f78f1af4b85b": {
   "verdict": "ok",
   "by": "review:gists",
@@ -3538,6 +3772,12 @@
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "It matches the words that ask for a pick: “select one” (Doctrina, Code Chivalric’s “select one Deed”, Kindred Sorcery, Singular Purpose, Wrathful Presence, Unearthly Power, Full Throttle, Canticles, Rod of the War Forge, Battle Protocols) and Blessings of Khorne’s “activate up to two”. Unit-only picks it also matches (Omnissiah’s Blessing, Dreadherder, …) are dropped later by gcLasts/gcOptions."
+ },
+ "53a18db43776ed8a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Shooting phase”: shooting."
  },
  "53b14315bcfc2b0d": {
   "verdict": "ok",
@@ -3635,6 +3875,12 @@
   "at": "2026-10-16",
   "why": "Labels: PSYCHIC, [PSYCHIC], unit rule \"Psychic\"; anchored, so \"Psychic test\" (Cabal of Sorcerers) and \"psychic attacks\" are not captured."
  },
+ "55455a699ef2303f": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, no weapon (every melee weapon of the attached unit, Trajann’s included, 19.04), the target condition kept as the when and left as a tick (no always), as the Damage tab’s target is set by hand."
+ },
  "557f02809436890e": {
   "verdict": "ok",
   "by": "review:cooking (its fix)",
@@ -3694,6 +3940,12 @@
   "by": "review:code2",
   "at": "2026-10-17",
   "why": "I ran onceTag over every ability in all 6 lists. Branch 1 copies a BSData tag that starts \"Once/Twice per\" and drops the \" · …\" suffix, e.g. Bomb Squig \"Once per turn, twice per battle, per unit\", Supreme Kunnin’ \"Once per phase, per army\", Twisted Sorceries \"Once per battle · Psychic\" → \"Once per battle\". Branch 2 copies the text’s own words: a leading \"Once per turn\" (Harpoon Barbs, Malign Presence) or a parenthesised \"(Once per battle, per army)\" (Archslaughterer, Umbralefic Crystal). It adds \", per army\" only when the text says \"one model from your army with this ability\" (Will of the Hive Mind → \"Once per battle round, per army\"; BSData tags the same wording on Direct the Slaughter \"Once per battle round, per army\"). No limit is invented. Latent gaps, and they leave text out rather than add to it, so this stays ok: an unparenthesised \"Once per battle\" after a \"… model only.\" sentence gets no tag (enhancements Incandaeum and Null Nodules, neither in any list), and a tag-less text \"Once per turn, twice per battle, …\" would be cut to \"Once per turn\". Bomb Squig has its tag, so it is not affected."
+ },
+ "56b52f826fe1acb4": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "The opponent’s Shooting phase and the Fight phase of either turn: either."
  },
  "56cbe32ed8294e4c": {
   "verdict": "ok",
@@ -3785,6 +4037,12 @@
   "at": "2026-10-16",
   "why": "Labels: BLAST, BLAST 1/2, [BLAST X], unit rule \"Blast\". Weapon names like \"Blasta\" are never passed to ruleFor (only keywords, unit rules and bold terms are)."
  },
+ "590402ea61d5f6ed": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia, Might of the Moritoi enhancements: “Memento Moritoi (one per army) UPGRADE 30 pts”: tag Upgrade."
+ },
  "59193c3f5a1d1469": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -3869,6 +4127,12 @@
   "at": "2026-10-21",
   "why": "\"each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll\": the note is now only \"+1 to hit\" (calc {hit:1}), with vs none Monster/Vehicle. Beacons of Rage is tagged \"(Aura)\", so 22.01 puts the Eightbound within their own aura and selfAlways is right; no table condition is left on this mark."
  },
+ "5aafc3612d85d83b": {
+  "verdict": "ok",
+  "by": "review:tables",
+  "at": "2026-10-24",
+  "why": "“In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit … this unit can make a Normal move of up to D6\"”: movement, their turn, and nothing else. Same judgement as the other two lists that have the Goremongers datasheet (standard, super-terminators). The text is now Wahapedia's (bold Engagement Range and Normal move) in all three lists. Wahapedia, the GW faction pack and BSData all print a straight apostrophe in “opponent's”. The curly one is the house style the other lists' texts use, so it is not a source correction, but it doesn't change the timing."
+ },
  "5ac1fd5e9c594823": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -3941,6 +4205,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Charge phase”: your turn."
  },
+ "5d16956003a085ed": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.” Kind all, when “Selected to attack”; the Damage tab marks it not counted (one re-roll). The Favoured Ka’tah (Rendax) additional effect is mortal wounds on an engaged enemy MONSTER/VEHICLE, not a change to the attacks, so it has no footnote."
+ },
  "5df7ecf601b79724": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -3971,6 +4241,12 @@
   "at": "2026-10-22",
   "why": "WHEN condition (“an enemy unit targets a friendly WAR DOG unit within range of an objective”) and EFFECT word for word; the opponent's Shooting phase is the timing tag."
  },
+ "5eb9a1e967923752": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “1 Fist and 1 Projectors (Adrathic Desolator, Caestus Fist, Twin Neutronium Cascade Projectors)”; Wahapedia option “1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors”."
+ },
  "5ed6689ef3c39cad": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -3982,6 +4258,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "The ability is selected “In your Command phase” and lasts “until the start of your next Command phase”. Its effects act on Psychic weapons: Range, “add 1 to the Wound roll”, [DEVASTATING WOUNDS]. Those weapons are used in Fire Overwatch (Movement), Shooting, and the Fight phase (Magnus, the Daemon Prince and both Sorcerers have Psychic melee weapons). No unit makes attacks in the Charge phase."
+ },
+ "5f02fcbd81c9d429": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR prints “Vexilla - Allarus Custodians”; Wahapedia: “1 model can be equipped with 1 Vexilla” on the Allarus datasheet. “This unit has +1 OC” reaches the attached unit (19.04 wargear of a specific model: until that model is destroyed), matching the OC 3 (2 +1) marked from Vexilla on both profiles."
  },
  "5f0911009f47fb0f": {
   "verdict": "ok",
@@ -4229,6 +4511,12 @@
   "at": "2026-10-23",
   "why": "New Recruit: Lord on Juggernaut 110 (95 + Disciple of Khorne 15), (20) Khorne Berzerkers 330, card 440 PTS. Same form as the other attached units' ptsNote."
  },
+ "649eba0fd02c5533": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“This unit’s ranged attacks that target a MONSTER/VEHICLE unit can: Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll.” Kind ranged, vs any Monster/Vehicle (the target’s keyword), always true otherwise (no other condition), as approved for Da Bigger Dey Iz… / Rend and Tear. The Damage tab marks it not counted (one re-roll each)."
+ },
  "64a8871fca1a85af": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -4307,6 +4595,12 @@
   "at": "2026-10-17",
   "why": "“you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” No exclusion is added: there is no notSelf, so the Big Mek’s own WALKER unit can be picked, as the text allows. The needs filter leaves out ORKS, but every unit in the Cooking list has Faction: Orks (a list fact), and Try Dat Button! and Crazed Rampage use the same filter. “this turn” = “until the end of the turn”."
  },
+ "65d677763a1c70ab": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your unit can ignore modifiers to your unit’s: BS. Hit rolls.” ignoreHitMods is exactly that (BS and hit roll modifiers)."
+ },
  "65e531d47160c21a": {
   "verdict": "ok",
   "by": "review:r18-game",
@@ -4319,17 +4613,35 @@
   "at": "2026-10-21",
   "why": "\"Friendly MEGANOBZ/NOBZ units\": any of the two keywords. Attached units have their bodyguard's keywords (19.03), so Nazdreg + Meganobz, Big Mek in Mega Armour + Meganobz and both Big Mek + Nobz units qualify. No footnote re-adds the [SUSTAINED HITS 1] NR already prints."
  },
+ "66ffc7e01cdba942": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Ranged attacks that target this unit have -1 D.” Literal."
+ },
  "67247f752582f9c8": {
   "verdict": "ok",
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“This unit’s ranged attacks have: … If this unit is riled up, [SUSTAINED HITS 1].” Same condition, same effect, ranged only."
  },
+ "6731038055618c21": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Friendly ANATHEMA PSYKANA units with this ability have Feel No Pain 3+ against psychic attacks.” The line keeps “against psychic attacks”; it is on the Prosecutors’ and Witchseekers’ datasheets (ARMY RULES Daughters of the Abyss), and replaces NR’s starred “Feel No Pain 3+*”."
+ },
  "673790405b00d4e1": {
   "verdict": "ok",
   "by": "review:pubstomper",
   "at": "2026-10-23",
   "why": "NR \"Icon of Flame - Rubric Marines\"; the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\" and NR name no bearer, so who names the unit (as approved before). Its IGNORES COVER marks are on Malefic Curse and Soulreaper cannon only (native on the warpflamers; the CHARACTER Exalted Sorcerer's weapons excluded, the Aspiring Sorcerer is not a CHARACTER)."
+ },
+ "673e37f192acf9f8": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia Contemptor-Galatus CORE ABILITIES “Damaged 4”; 24.39 as above: 4 or fewer wounds remaining, -1 to hit rolls."
  },
  "674d173afb1f9e49": {
   "verdict": "ok",
@@ -4391,11 +4703,23 @@
   "at": "2026-10-18",
   "why": "Source: \"When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.\" Core 09.02: the active player makes fall-back moves in their Movement phase. Core 09.07: \"Until the end of the turn … your unit is not eligible to shoot, declare a charge\". The effect therefore acts in your Movement phase (the move), your Shooting phase and your Charge phase. The restriction ends with your turn, so nothing in the opponent's turn is affected. This matches the signed-off Turbo Engine (movement + charge, your)."
  },
+ "691de4c8f967b4df": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “4x Witchseeker — Flamer, Gun Stock”; Wahapedia: “Every model is equipped with: 1 Flamer; 1 Gun Stock.”"
+ },
  "6925b84bf0c5736c": {
   "verdict": "ok",
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit: “Categories … Tankbustas*, *from combined unit”, and the Mek is “Supporting: Tankbustas”."
+ },
+ "6934ce1df7eda25f": {
+  "verdict": "ok",
+  "by": "review:lite-knights (its fix)",
+  "at": "2026-10-23",
+  "why": "With the Movement phase added (Fire Overwatch, the opponent’s Movement phase) its turn is opp; shooting stays your (your Shooting phase is where your units are selected to shoot), fight either — as Spiteful Power Trip / Hunter of Souls."
  },
  "6963d9f43a348593": {
   "verdict": "ok",
@@ -4492,6 +4816,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The Exalted Sorcerer on Disc's own ability (“While this model is leading a unit”)."
+ },
+ "6c6442cf5b023f31": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “Spiculus bolt launcher, Dual Fists and 2 Projectors (Dual Caestus Fists, 2x Twin Neutronium Cascade Projectors)”; Wahapedia default: “1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors”."
  },
  "6c93107162208ccd": {
   "verdict": "ok",
@@ -4607,6 +4937,12 @@
   "at": "2026-10-16",
   "why": "\"Your Shooting phase\": shooting is your turn only."
  },
+ "6f044aaa078d6580": {
+  "verdict": "ok",
+  "by": "review:lite-knights (its fix)",
+  "at": "2026-10-23",
+  "why": "“When a friendly ADEPTUS CUSTODES unit is selected to attack”; 04.01.05: “If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.” Fire Overwatch (“End of your opponent’s Movement phase … Your unit shoots using snap shooting”) makes attacks in the opponent’s Movement phase, and snap shooting forbids only re-rolling hit rolls, so the wound-roll re-roll still works there. The app lists such rules with movement (Warpmeld Sacrifice: “Fire Overwatch, at the end of the opponent’s Movement phase, included”; Spiteful Power Trip, Hunter of Souls)."
+ },
  "6f07a7c83a4f541b": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -4648,6 +4984,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "65 + Flowing Flesh 10 = 75, Tzaangor Enlightened 90: 165."
+ },
+ "6fc94ed89a54ac2f": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “1x Caladius Annihilator Grav-tank — Arachnus Blaze Carronade, Twin Lastrum Bolt Cannon, Armoured hull”; Wahapedia default loadout is the same (the Twin Lastrum Bolt Cannon not swapped)."
  },
  "70046468e20fa613": {
   "verdict": "ok",
@@ -4763,11 +5105,23 @@
   "at": "2026-10-23",
   "why": "Your Movement phase."
  },
+ "733c3c059ea1612f": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
+ },
  "733e2fe1b139e22c": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "Khorne Berzerkers wargear ability (New Recruit \"Icon of Khorne - Khorne Berzerkers\")."
+ },
+ "734861921ce91a6e": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Any phase of either turn: either."
  },
  "737ce6747e17b50f": {
   "verdict": "ok",
@@ -4907,6 +5261,12 @@
   "at": "2026-10-23",
   "why": "\"In your Command phase\": Command, your turn."
  },
+ "76a73133dbb46638": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Readied “At the start of your Command phase”; ka’tah WHENs: Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”, Dacatarai/Kaptaris “Start of the Fight phase”, Rendax “Fight phase”. No ka’tah is in the Charge phase, so command, movement, shooting, fight."
+ },
  "76c5e19cbb491d29": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -4943,11 +5303,23 @@
   "at": "2026-10-22",
   "why": "TARGET “wholly within 12\" of one or more battlefield edges and not within Engagement Range of one or more enemy units” and EFFECT “Remove your unit from the battlefield and place it into Strategic Reserves.” are both kept, “wholly” included."
  },
+ "77afe33b4fcd0028": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.” The line keeps “against mortal wounds”; NR’s starred “Feel No Pain 5+*” is this rule and is no longer said without its condition (checked: Caladius/Dreadnoughts show only this line; Trajann this plus his own FNP 5+)."
+ },
  "77b4378e2c4371f7": {
   "verdict": "ok",
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. NR l.136 has the same words."
+ },
+ "77c4ef47c43f8925": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "The start of every battle round, so either player’s turn (same convention as Da Boss / Doctrina Imperatives)."
  },
  "77f2ded0bfcaf2bf": {
   "verdict": "ok",
@@ -4966,6 +5338,12 @@
   "by": "review:r21-gevery",
   "at": "2026-10-21",
   "why": "Still counts a unit only “if every model in this unit has this ability” (24.09 Deep Strike, 24.31 Scouts, 24.20 Infiltrators). partialRules is now a map in all three places in data.js (label → model: Slaughterbound ×2 'Scouts 6\"', Canis Rex 'Lone Operative'), and none is left as an array, so Object.keys gives the labels the tests match. The old (…|| []).some would throw on a map. Run over data.js in node: Slaughterbound + Exalted Eightbound (princes, standard) keep Deep Strike (every model has it) and drop Scouts 6\" (Slaughterbound only). Canis Rex has no Deep Strike/Scouts/Infiltrators, so it is never listed, and its Lone Operative entry doesn’t touch these tests. The 20 other units with these rules have no partialRules and are counted. The logic is the same as the Overview’s everyModel (app.html ~4927)."
+ },
+ "784cc5ad34633d53": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia: “Moment Shackle (Once per battle, per army)”; NR: “(Once per battle, per army)”. The tag is those words."
  },
  "78b093d9bd9f8239": {
   "verdict": "ok",
@@ -5032,6 +5410,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.” The When targeted line keeps “while the bearer leads it”."
+ },
+ "79ddfff58c9d553d": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "EFFECT literal (“ignore modifiers to your unit’s BS, Hit rolls”), selected-to-shoot trigger left to the phase tag as in the approved shooting gists."
  },
  "79fdce8af16ef045": {
   "verdict": "ok",
@@ -5152,6 +5536,12 @@
   "by": "review:r13-calc-marks",
   "at": "2026-10-21",
   "why": "\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.\" The note is now only that unconditional part, calc {rrWound:'1s'} says it exactly, and always is right. It is the Rubric Marines’ (bodyguard) ability, so it covers the Sorcerer’s attacks too (19.04)."
+ },
+ "7c86803ae6394099": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, the target condition as the when, the note literal, from the codex name “Slayer of Tyrants” (Wahapedia). No always, so it stays a tick. Nothing added."
  },
  "7c9381e98775052b": {
   "verdict": "ok",
@@ -5453,6 +5843,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Catch Dat Red Bit (Once per battle, per unit) - Painboy' (l.137-139); BSData profile is on the Painboy model. Models match NR."
  },
+ "82ffb09003531615": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Movement/Charge phase”: movement and charge."
+ },
  "832442c0a6f09d1d": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -5633,6 +6029,12 @@
   "at": "2026-10-18",
   "why": "EFFECT: “Your unit’s melee attacks have: - [CLEAVE 1]. - Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE]”. The gist has the same two options joined by “or”, and it does not say who chooses. 94 chars. text: case only, Wahapedia “[Cleave 1]” in the first bullet."
  },
+ "86b25361d29e7621": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia: Trajann Valoris CORE ABILITIES “Deep Strike, Feel No Pain 5+, Leader”; Allarus Custodians CORE ABILITIES “Deep Strike” only. The core FAQ to 19.04: “a rule that grants a model Feel No Pain … only apply to that model”. The starred “Feel No Pain 5+*” is Aegis of the Emperor (all of them), so only the plain Feel No Pain 5+ is Trajann’s; partialRules names him."
+ },
  "86d3964b947a7f9b": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5650,6 +6052,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "\"At the start of the battle round, select one Wrathful Presence ability\": the ability carries at:'Start of the battle round' and is listed under Command in either turn, the app's settled convention for that timing (as for Blessings of Khorne and Reborn in Blood)."
+ },
+ "877bc4d0766d9e3e": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” The target is within its own aura (22.01), so its own attacks re-roll 1s: kind all, note literal. No duration is printed; 01.02.02 “If a rule or effect is given to a unit and it does not specify how long it is active for, it is only active for the phase in which it was given”, so no lasts is right. (Other Custodes units in the aura get no mark: see the report.)"
  },
  "87acdc950cb3d834": {
   "verdict": "ok",
@@ -5740,6 +6148,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "TARGET: “That WAR DOG unit.”"
+ },
+ "89b5116d60d62722": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "WHEN (ended an advance move) and both bullets (“[Assault] until the end of the turn”, “That move does not prevent your unit from being eligible to declare a charge”) kept."
  },
  "89eea4364122be6d": {
   "verdict": "ok",
@@ -5837,17 +6251,35 @@
   "at": "2026-10-23",
   "why": "Wahapedia Shaman: “INFANTRY; MOUNTED; … PSYKER”; Tzaangor Enlightened: “MOUNTED; FLY; CHAOS; TZEENTCH; MUTANT; TZAANGOR ENLIGHTENED”."
  },
+ "8b574b43f3bb7eb3": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "EFFECT literal: the aura, friendly ADEPTUS CUSTODES units within 6\", re-roll hit rolls of 1."
+ },
  "8b6b2f8033eabb14": {
   "verdict": "ok",
   "by": "review:import",
   "at": "2026-10-23",
   "why": "The only change appends importedFoot(a) when a.imported; built-in lists are unchanged, and render.js checks an imported list's screens show the same text as the built-in one apart from the source line and the On this phone footer."
  },
+ "8b737277a9fff988": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1 / Re-roll wound rolls of 1”: needs Faction: Adeptus Custodes, none Monster/Vehicle (so not the Prosecutors/Witchseekers, who have only Faction: Anathema Psykana, and not the Caladius or the Dreadnoughts). It is tagged Aura, so 22.01 (“it is always within range of its own aura ability”) puts Trajann’s own attached unit in it: selfAlways true, selfWhen “Own aura”. Other units’ within 6\" is a tick."
+ },
  "8b7b173abe53714f": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: SUSTAINED HITS 1/3/D3, [SUSTAINED HITS X]; all 24.36."
+ },
+ "8b8c7f5e314712a4": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Shooting phase, when … selected to shoot”: shooting."
  },
  "8bdb8f3b66a68e4e": {
   "verdict": "ok",
@@ -6071,6 +6503,12 @@
   "at": "2026-10-16",
   "why": "Red \"Opponent's turn\" card."
  },
+ "90e869074fec6562": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia datasheet (new codex): “Captain-General (Aura): Friendly ADEPTUS CUSTODES units … within 6\" of this model can …”; New Recruit prints “Captain-General (Aura)”. GW tags it Aura (22.01), so tag Aura is right."
+ },
  "9108deafb0cbff00": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -6209,6 +6647,12 @@
   "at": "2026-10-16",
   "why": "Steps Command→Movement→Shooting→Charge→Fight, and after Fight flips your/their (07.02: the same player always goes first, so turns strictly alternate across rounds too); with turn \"all\" it keeps \"all\"; no button on \"all phases\". Snapshots read \"Next: Your Fight\" → \"Next: Their Command\" → … → \"Next: Your Command\"."
  },
+ "945ccc84b6770171": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Shooting phase”: your."
+ },
  "9472ec65e5156c9a": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -6250,6 +6694,12 @@
   "by": "review:r14-picks",
   "at": "2026-10-21",
   "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
+ },
+ "96432cbd07f9aedb": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "EFFECT “Select one objective your unit is controlling. That objective is secured.” Literal; the timing is the phase tag, the exclusion in needs."
  },
  "96d6d2a8873f7635": {
   "verdict": "ok",
@@ -6310,6 +6760,18 @@
   "by": "review:r13-calc-marks",
   "at": "2026-10-21",
   "why": "\"If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.\" The when and calc {rrWound:'all'} match; it depends on the table (objective markers), so having no always (an unticked box) is right."
+ },
+ "9832e689f96d71d5": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase”: shooting and fight."
+ },
+ "9852395df715d9a1": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “One friendly ADEPTUS CUSTODES unit that is not readied”: Faction: Adeptus Custodes; Anathema Psykana units excluded by the words."
  },
  "986b552780eebf8b": {
   "verdict": "ok",
@@ -6575,6 +7037,12 @@
   "at": "2026-10-23",
   "why": "The EFFECT as printed: \"Select one friendly WORLD EATERS unit within 6\" of your unit. Until the end of the turn, melee weapons ... have the [LANCE] ability. If the Daemonic Rage ability is active ... until the end of the phase ... [TWIN-LINKED]\". The WHEN is in the phase/turn, the TARGET has no condition beyond BLOOD LEGIONS. No footnote is fair: the app puts a stratagem's footnote on the units its TARGET names (eligible), which here are the BLOOD LEGIONS units, while the [LANCE] goes to another unit; a footnote would give [LANCE] to the wrong units (see the report on the missing helper line for WORLD EATERS units)."
  },
+ "9de51d19f675b1ce": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “One friendly ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
+ },
  "9de67b108f809d1e": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -6586,6 +7054,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Part 1: “subtract 1 from the Wound roll” for attacks targeting the unit, with the D3 mortal wounds and “until the end of the phase”. Part 2: “each time a model in that unit makes an attack, add 1 to the Wound roll”: no who, so every model including the non-MUTANT leaders. Keywords part: needs TZAANGORS (only the two Tzaangors units; the Enlightened are not TZAANGORS), +1 OC only for “TZAANGOR models” while not Battle-shocked, and New Recruit's OC 1 does not include it. The Rules Update's “Change to” quotes only the two sacrifice paragraphs; Wahapedia (errata applied) and BSData keep the BATTLELINE/OC paragraph, and New Recruit gives the Tzaangors BATTLELINE, so keeping it is right."
+ },
+ "9df4349f85161f85": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Bullets 2-3: below starting strength “re-roll hit rolls of 1”; below half-strength “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” A unit below half-strength is also below starting strength, so the two picks are the two states (01.02.01: for a one-model unit, remaining wounds less than W / less than half W), each the player’s tick; the +2 OC at starting strength is no attack, rightly left out."
  },
  "9e153af78c2c0928": {
   "verdict": "ok",
@@ -6628,6 +7102,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"TARGET: One THOUSAND SONS PSYKER unit\"."
+ },
+ "9f3efe1dbebf9a4c": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “4x Prosecutor — Boltgun, Gun Stock”; Wahapedia: “Every model is equipped with: 1 Boltgun; 1 Gun Stock.”"
  },
  "9f3f0c4e6d27f958": {
   "verdict": "ok",
@@ -6911,6 +7391,12 @@
   "at": "2026-10-16",
   "why": "Matches the NR models and options, with Nazdreg's weapons on Nazdreg, Kombi-weapon ×5 and Killsaw ×3 / Power Klaw ×2 on the Meganobz."
  },
+ "a5a287161527b4ba": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia Trajann Valoris datasheet (new codex): “Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” GW tags it (Aura), so tag Aura is right (22.01). The stored text is that wording with the full stops (NR prints the bullets without them); the 14 Oct Printed Product Updates touch only Superior Creation and the Dawneagle Shield-Captain."
+ },
  "a5a3d6120cbb558f": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -6928,6 +7414,12 @@
   "by": "review:derive-2",
   "at": "2026-10-23",
   "why": "data.js text: “**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt …”. BSData (Incandeum): “Once per battle, when selecting a Ritual for the bearer to attempt …”; NR the same; Wahapedia Thousand Sons (and its Errata “Change to:”): “EXALTED SORCERER model only. Once per battle, when selecting a Ritual …”. The text says “Once per battle” and nowhere “per army” or “one model from your army with this ability” (its “a model from your army” is about who already attempted Doombolt, not the limit), so no “, per army” is right, as on Necromechanic (“Once per battle round, …” → “Enhancement · Once per battle round”)."
+ },
+ "a5d9cc0a61fc2d2f": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Any phase of either turn: either."
  },
  "a60588c563fe9ec9": {
   "verdict": "ok",
@@ -7090,6 +7582,12 @@
   "by": "review:derive (its fix)",
   "at": "2026-10-23",
   "why": "'Once per battle round' is exact (Tyranids Faction Pack 14-10 change text). 'Aura' is not on GW's card: Wahapedia tyranids_Hive-Tyrant prints 'Will of the Hive Mind:' with no tag next to 'Onslaught (Aura, Psychic)', and the pack's new text has none either. It is a CP discount when a unit within 12\" is targeted with a Stratagem, the same as Direct the Slaughter. The deviations-nr.json entry (hive-tyrant) is wrong for the same reason."
+ },
+ "aa296d5ad5b7825f": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "WHEN “selected to move or declares a charge”, EFFECT “Your unit has MOBILE”: kept (no duration printed: 01.02.02, the phase)."
  },
  "aa391c48d5ea17c6": {
   "verdict": "ok",
@@ -7349,6 +7847,18 @@
   "at": "2026-10-16",
   "why": "\"In the Fight phase, if this unit is riled up…\": either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "b04cbb09d3e9856b": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Attacks that target your unit have -1 AP until that enemy unit has attacked”, in “Your opponent’s Shooting phase or the Fight phase”: the line keeps both phases and the duration."
+ },
+ "b061dc7bd1e5391d": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
+ },
  "b062118bf46a1a97": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -7433,6 +7943,12 @@
   "at": "2026-10-21",
   "why": "NR Categories: \"Meganobz*, *from combined unit\"; the Big Mek in Mega Armour already has EXPLOSIVES (Wahapedia \"INFANTRY; BIG MEK; CHARACTER; EXPLOSIVES; MEGA ARMOUR\")."
  },
+ "b1d9e68ec5885587": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Any phase, when a friendly GRAV-ASSAULT unit … is destroyed”: all five phases."
+ },
  "b1fbe33091c45ecf": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -7487,6 +8003,12 @@
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot.” Shooting."
  },
+ "b397aab21657df9a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“In your Shooting phase, you can select one visible enemy unit within 18\" …”: shooting, your turn."
+ },
  "b3b6ce7379f94e8b": {
   "verdict": "ok",
   "by": "review:literal",
@@ -7516,6 +8038,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"TARGET: That BLOOD LEGIONS or WORLD EATERS unit\": any of the two."
+ },
+ "b43ebd69f2ae39b4": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Movement/Charge phase”: your."
  },
  "b4467ac786a00744": {
   "verdict": "ok",
@@ -7600,6 +8128,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Your turn."
+ },
+ "b674fae6fc22f084": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia Allarus Custodians datasheet: “ABILITIES Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.” The new codex’s name is singular (NR’s “Slayers of Tyrants” is the deviation); it is the Allarus datasheet’s, so who Allarus Custodians, and “This unit’s” reaches the attached unit (19.04)."
  },
  "b67b8ee603e5076d": {
   "verdict": "ok",
@@ -7985,6 +8519,12 @@
   "at": "2026-10-21",
   "why": "\"Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability\" (Wahapedia the same). defCalc {fnp:5} matches; the pick and position are the table’s, so it is unticked (no defAlways). The OC 15 is in the words only, which is fine because it changes no attack numbers."
  },
+ "bfbf7b899d822668": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "The units’ rules lines say “Damaged 4” / “Damaged 5” (Wahapedia CORE ABILITIES the same); the core rule (24.39, “This ability always takes the form Damaged X …”) is the one these name. The regex takes only a number, so the older “Damaged: 1-4 wounds remaining” rules are untouched."
+ },
  "bffec4d6d92e83f7": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -8002,6 +8542,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "TARGET: “One SKITARII unit from your army that has not been selected to shoot this phase”: SKITARII (Rangers, Ironstriders, Onager, Skorpius, Datasmith + Kastelans via Martial Signatum Amplificator)."
+ },
+ "c046c2e490b089ba": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia: “KAPTARIS KA’TAH ABILITY WHEN: Start of the Fight phase. TARGET: One friendly readied unit. EFFECT: Melee attacks that target your unit have -1 to hit rolls.” The def keeps the name (one of the ka’tah abilities the player can select), the WHEN, the readied condition and the effect word for word; no duration is printed and none is added (01.02.02: the phase). “Start of the Fight phase” names no player, and readied lasts from your Command phase until a ka’tah is used, so defPh fight (either turn) is right. Martial Ka’tah applies to “friendly ADEPTUS CUSTODES units with this ability”: rendered on Trajann, the Dreadnoughts, not on the Caladius (no Martial Ka’tah on its datasheet) nor the Anathema squads."
  },
  "c05b371f66dc040d": {
   "verdict": "ok",
@@ -8063,6 +8609,12 @@
   "at": "2026-10-21",
   "why": "NR roster: Zodgrod 50, Runtherd 10, \"(20) Gretchin 90\"; header \"150 PTS\". The 90 is NR's printed figure: 80 for 20 models (Wahapedia) plus Extra Sneaky 10. The upgrade is counted in the bodyguard's points, like Supa-glowy Fing in the Big Mek in Mega Armour's 115."
  },
+ "c295271ab6e55029": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.” The line keeps the S > T condition."
+ },
  "c2b8906217fee897": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -8093,11 +8645,23 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when … selected to shoot, if any of the following apply, that unit’s attacks can re-roll hit rolls of 1: That unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same alternative conditions, the same effect. Attacks made when selected to shoot are its ranged attacks."
  },
+ "c3acfee6233606e5": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR Categories: “… Allarus Custodians*, Terminator*, *from combined unit”; Wahapedia: Allarus KEYWORDS “INFANTRY; IMPERIUM; TERMINATOR”, Trajann has no TERMINATOR. The note says exactly that."
+ },
  "c3e3a17402ec325e": {
   "verdict": "ok",
   "by": "review:defilers-and-friends (its fix)",
   "at": "2026-10-22",
   "why": "TARGET: \"One EMPEROR’S CHILDREN unit from your army that has not been selected to fight this phase\". The gist drops this condition, which decides when it can be used (before the unit is selected to fight, not after). Written as the signed-off Hack and Slash gist does."
+ },
+ "c3f4a81388c5ebdf": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “That ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
  },
  "c3f53360419b4a9e": {
   "verdict": "ok",
@@ -8471,6 +9035,12 @@
   "at": "2026-10-17",
   "why": "Matches the New Recruit PDF model lines (Mek: Kustom Mega-slugga, Mek's Toolz; Kaptin and 9x Flash Gitz: Choppa, Snazzgun) and weapon rows with NR’s counts (Snazzgun Cutta/Dakka/Kill Shot x10, Choppa x10)."
  },
+ "ccd7646698c9a313": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "New Recruit prints “Captain-General (Aura) - Trajann Valoris”; it is on Trajann’s datasheet (Wahapedia), not the Allarus Custodians’. Model lines are NR’s (1x Trajann Valoris, 1x Allarus Custodian, 1x Allarus Custodian with Vexilla)."
+ },
  "cd03d796c86d8aee": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -8494,6 +9064,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "NR: \"Marked by Fate (Psychic)\"."
+ },
+ "cd227c0f9d666444": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "EFFECT literal (“Attacks that target your unit have -1 AP until that enemy unit has attacked”); the WHEN trigger “when an enemy unit targets” kept, the phases are on the row’s phase tags and the Custodian Wardens exclusion in needs, as the approved Warped Vicissitude / Armour of Abhorrence gists."
  },
  "cd232dd833dcc49d": {
   "verdict": "ok",
@@ -8789,6 +9365,12 @@
   "at": "2026-10-21",
   "why": "NR prints no tag, but Wahapedia Runt Swarm lists \"Extra SneakyUPGRADE 10 pts\"; same tag as the other Upgrades (Supa-snazz Dakka, Gore-stained Veterans). Core Rules FAQ: \"Upgrades are a type of enhancement\"."
  },
+ "d3e819f790eb7ac0": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Your Shooting phase and either Fight phase: either."
+ },
  "d474d22b48703968": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -9053,6 +9635,12 @@
   "at": "2026-10-17",
   "why": "“a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit”: any of the three, copied (the text has no ORKS keyword)."
  },
+ "dbd7f8aa8556362e": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “One friendly ADEPTUS CUSTODES unit (excluding ~~MONSTER~~/VEHICLE units)”: Wahapedia’s strike-through marks a keyword absent from the faction, the exclusion is still printed; none Monster/Vehicle is the words."
+ },
  "dbe829747230249f": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -9070,6 +9658,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "“Your opponent’s Movement phase”: opp."
+ },
+ "dc43c1b2910ae1c6": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Shooting phase”: your; fight either."
  },
  "dc6af6247ab2f48e": {
   "verdict": "ok",
@@ -9118,6 +9712,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"At the start of the battle round ... you must pledge\" (listed under Command, the convention for that timing, as Blessings of Khorne) and the bonuses \"Each time a model in this unit makes an attack\" (Shooting, Fight)."
+ },
+ "dcdac8d8d772cd9a": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP”: at “Start of the battle round”, listed under command, as Da Boss, Doctrina Imperatives and Harbingers of Dread are."
  },
  "dcea0c4de8648e46": {
   "verdict": "ok",
@@ -9335,6 +9935,12 @@
   "at": "2026-10-22",
   "why": "NR Categories: \"... Warlord, Flawless Blades*, Grenades*, *from combined unit\"."
  },
+ "e1a7879361d7820b": {
+  "verdict": "ok",
+  "by": "review:lite-knights (its fix)",
+  "at": "2026-10-23",
+  "why": "Words right: Salvus “Your unit can ignore modifiers to your unit’s: BS. Hit rolls and wound rolls” (ignoreHitMods, the hit part counted, as approved for Unshakeable Opponents), Dacatarai “melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1” (vs none), Rendax “[Lethal Hits: Monster/Vehicle]” (vs any); each a tick, readied and which ka’tah being the player’s. But run in verify/damage-node.js (Telemon, Fight phase) the three share from:\"Martial Ka’tah\", so dmCalc keys them all \"m:Martial Ka’tah|Martial Ka’tah|ar\" and the seen-set drops every one after the first of a kind: Rendax never appears (only Dacatarai in the fight). Each ka’tah needs its own from, as the Blessings of Khorne calcMods have (Martial Excellence, Warp Blades …); with that, Salvus / Dacatarai / Rendax all show (checked). NOTE outside this item: none of the three reaches any unit today, because dmArmyOf tests u.rules.includes('Martial Ka’tah') and every unit’s rules line has New Recruit’s straight-apostrophe \"Martial Ka'tah\" (the alias only opens the rule); that must be fixed in data.js (units’ rules) or dmArmyOf (compare by ruleKey)."
+ },
  "e1ddb3de9c725e13": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -9389,6 +9995,12 @@
   "at": "2026-10-17",
   "why": "The new summary, “Every model can shoot with one or more of its guns”, is 04.01 (“You can select one or more ranged weapons that model has”). It is used only when every per-model sentence is the plain ‘Can shoot with one or both / one or more of these’ form. The rest is list facts: which models line carries which weapons, the one-model carrier names, ×N counts, and leader vs bodyguard lines (19.04). The one rule problem sits in useSentence (see that item)."
  },
+ "e376866f9bb28fcf": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“This model’s Watcher’s Axe weapon has +3 A” is one of the two choices, “until the end of the phase”: footnote on the Watcher’s Axe only, the when keeps once per battle, start of any phase, one of its two effects and the duration; no always, so it is the player’s tick."
+ },
  "e3851faea72b012e": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -9436,6 +10048,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Matches Wahapedia's current EFFECT: \"all attacks made against your unit with Psychic weapons have the [HAZARDOUS] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks\"; shown when targeted, as the WHEN (\"just after an enemy unit has selected its targets\") is."
+ },
+ "e472a10ce5ba6af8": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.” Unconditional FNP 5+; the Telemon is a one-model unit. The unit’s plain “Feel No Pain 5+” rule is not said twice (defenceItems skips a rule FNP an ability def already has)."
  },
  "e4c004b9b108f7b0": {
   "verdict": "ok",
@@ -9551,6 +10169,18 @@
   "at": "2026-10-21",
   "why": "“At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section” (Faction Pack v1.4 Rules Update, Wahapedia, NR): the only phase the words name. The picked abilities run on with no phase named (an aura, a keyword, Stealth). The Invocation re-roll is the aura footnote on every weapon table (item 9b7d35e0f2326573)."
  },
+ "e72b9680562c9b12": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“While a friendly ADEPTUS CUSTODES DREADNOUGHT unit …”: all Faction: Adeptus Custodes and Dreadnought (Achillus, Galatus, both Telemons; not the Caladius, which has no DREADNOUGHT)."
+ },
+ "e74b6194b5f8ccbf": {
+  "verdict": "ok",
+  "by": "review:lite-knights-2",
+  "at": "2026-10-23",
+  "why": "Wahapedia Prosecutor Squad: “Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected”: shooting, your turn. Only the stored text’s punctuation changed."
+ },
  "e77d5f7498438cbf": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -9592,6 +10222,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Used by the app's own use-line verb; \"select/choosing weapon(s)\" can only mean 04.01."
+ },
+ "e81706fd5640e6bf": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "TARGET “That ADEPTUS CUSTODES unit”, WHEN “a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units)”: all Faction: Adeptus Custodes, none Custodian Wardens; the Anathema Psykana units are not ADEPTUS CUSTODES and are not eligible."
  },
  "e8237bc497607d17": {
   "verdict": "ok",
@@ -9646,6 +10282,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches NR: Toxinjecter Harpoon (ranged, HARPOONED), Monstrous scything talons, Toxinjecter Harpoon (melee, EXTRA ATTACKS)."
+ },
+ "e947904565862a18": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "“Your Movement phase, when … ends an advance move”: movement."
  },
  "e96341584e050020": {
   "verdict": "ok",
@@ -10265,6 +10907,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.” Same."
  },
+ "fa5aad39673f48bf": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "EFFECT literal; the “selected to shoot” trigger is left to the row’s phase, as in the approved Kustom Dakka / Never Enough Dakka gists."
+ },
  "fa9f667dcf2d6501": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -10318,6 +10966,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ "fb66ae254646a250": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "Wahapedia CORE ABILITIES “Damaged 5”; 24.39: “While a model’s remaining wounds are equal to or less than X … that model’s attacks have -1 to hit rolls.” “5 or fewer wounds remaining” is that; the attacker’s state is a tick."
  },
  "fb72e7866950640e": {
   "verdict": "ok",
@@ -10409,11 +11063,23 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.” The footnote keeps the condition (used, your Shooting phase, when selected to shoot) and adds no duration or scope of its own."
  },
+ "fd359b630340efb6": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “Trajann Valoris … 265”, “(2) Allarus Custodians … 180”, 445 PTS on the sheet; Wahapedia: Trajann 1 model 265, Allarus 2 models 180."
+ },
  "fd477bbee10d5064": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model”: who is the Shaman; when keeps “your Shooting phase and the Fight phase”, the Bodyguard model destroyed and “until the end of the phase”."
+ },
+ "fd5d37a2a95f8b2b": {
+  "verdict": "ok",
+  "by": "review:lite-knights",
+  "at": "2026-10-23",
+  "why": "NR: “5x Witchseeker — Flamer, Gun Stock”; same datasheet loadout."
  },
  "fd6306bbd10419f0": {
   "verdict": "ok",
@@ -10528,653 +11194,5 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "GW IK Faction Pack \"VERSION 1.2\" prints \"FACTION: Code Chivalric, Super-heavy Walker\" on its datasheets. The Codex text (Wahapedia, Codex: Imperial Knights army rules) differs from 24.35 (\"excluding TITANIC models\" vs \"including MONSTER/VEHICLE ... MOBILE keyword\"). Neither 22.02 (\"faction abilities (also known as army rules)\") nor the Universal Rules Updates 1.1 settles which applies, so \"the sources don't say which applies\" is a both-readings note that picks neither."
- },
- "011fdf31644d27da": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "“Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” needs all Faction: Adeptus Custodes, none Monster/Vehicle (so not the Anathema Psykana squads, whose only faction keyword is ANATHEMA PSYKANA, nor the Caladius/Dreadnoughts); tagged Aura, so 22.01 “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability” puts his own unit in it (selfAlways, Own aura). Note literal; the change is only the from’s and text’s punctuation."
- },
- "01d8e526de862696": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“When a friendly ADEPTUS CUSTODES unit is selected to attack”: needs Faction: Adeptus Custodes; the ANATHEMA PSYKANA units (Faction: Anathema Psykana only; the Anathema Psykana army rule: “they do not have the ADEPTUS CUSTODES faction keyword”) are rightly left out."
- },
- "0552feb28e72a019": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “Memento Moritoi, Warblade”; Wahapedia: “1 Warblade”, with a ranged and a melee profile."
- },
- "05ef13c63a41f5b3": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your unit’s ranged attacks have [Assault] until the end of the turn” after its advance move: kind ranged, the when keeps the advance and “until the end of the turn”."
- },
- "0694175f1315c442": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”: your; fight left as either (Dacatarai, Kaptaris, Rendax name no player)."
- },
- "07146dcc83a16530": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "WHEN “End of any phase”, TARGET “not readied”, EFFECT “Your unit is readied”, RESTRICTIONS “not … more than once per battle round”: all kept."
- },
- "08df86c119fd6e0a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“End of your Movement phase”: movement."
- },
- "0b465384adf7d3c1": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks”: needs Grav-assault (only the Caladius in this list)."
- },
- "0eaf090d296936fb": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“End of any phase”: all five phases."
- },
- "0f607c076cfd1a4b": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Captain-General is under ABILITIES on Trajann Valoris’s datasheet (Wahapedia), not the Allarus Custodians’ (theirs: Slayer of Tyrants, Vexilla); “within 6\" of this model” = Trajann. Models are NR’s three lines. Only the text’s punctuation changed since the first sign-off."
- },
- "0f621935ba5ce60a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“select one of the following … until the end of the phase: … This model has 3+ InSv.” The line keeps once per battle, start of any phase, “one of its two effects” (the other is the Watcher’s Axe +3 A, so the player chooses) and “until the end of the phase”; defenceItems shows it as “Trajann Valoris · Moment Shackle …”, i.e. his model only, as “This model” says."
- },
- "0fbdbdeb8df67f57": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR prints “Slayers of Tyrants - Allarus Custodians”; it is the Allarus datasheet’s ability (Wahapedia “Slayer of Tyrants”). “This unit’s melee attacks” then applies to the whole attached unit (19.04: bodyguard unit ability applies to every model while a bodyguard model lives)."
- },
- "14abab85c345e201": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your unit’s ranged attacks have [Assault]”: kind ranged, when the WHEN; [ASSAULT] changes no numbers, so the Damage tab marks it not counted."
- },
- "177d3443fc3f5686": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR prints “Moment Shackle - Trajann Valoris”; Trajann’s datasheet ability, and both effects name “This model”, so it is his alone (19.04: an ability affecting a single specified model applies only to that model)."
- },
- "1bcf20bb0734645a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks”: shooting, your turn."
- },
- "1e75c9b64778131a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “1x Trajann Valoris — Eagle’s Scream, Watcher’s Axe”, two Allarus Custodians each “Balistus grenade launcher, Castellan Axe” (one with Vexilla, which is no weapon). Gear per line and weapons rows (ranged then melee, ×2 for the Allarus) match; Wahapedia allows the Guardian Spear → Castellan Axe swap."
- },
- "2263d87656a62028": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Only change: n.rule now uses hasRule (lowercase, ’ and ‘ → '), a superset of the previous lowercase compare, so no previous match is lost. Throwaway test (rev-lite2/t.js): {rule:['Martial Ka’tah']} vs rules [\"Martial Ka'tah\"] → true; 'super-heavy walker' vs 'Super-Heavy Walker' → true; 'Martial Katah' → false; no rules → false; 'Feel No Pain 5+' vs 'Feel No Pain 5+*' → false (exact name). hasRule is a const defined later in the script but only called at render time (snapshots render). No failing input found."
- },
- "2385abd2c8787023": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia: “Augury Uplink (one per army) UPGRADE 30 pts”: tag Upgrade."
- },
- "2701ca620ee7bea8": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia army rule (and the Witchseeker/Prosecutor datasheets): “Daughters of the Abyss … Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.” Who: ADEPTUS CUSTODES units — needs all Faction: Adeptus Custodes, which excludes the Prosecutors/Witchseekers (FACTION KEYWORDS: ANATHEMA PSYKANA; the Anathema Psykana rule: “even though they do not have the ADEPTUS CUSTODES faction keyword”) and has no MONSTER/VEHICLE exclusion, so the Caladius and Dreadnoughts get it too (rendered so). Range 6\" of the Anathema unit, against psychic attacks only, FNP 5+: all in the when/note. It is GW-tagged (Aura) (22.01). The Anathema units’ own protection is the first bullet (FNP 3+ vs psychic, the rule def), so they need no guard line; kind all fits (psychic attacks can be ranged or melee). Three sources collapse into one line (defenceItems)."
- },
- "276c29a6048cc4b3": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Run on this list (defenceItems with shields): Trajann “Trajann Valoris · Feel No Pain 5+”, “Feel No Pain 5+ against mortal wounds”, Moment Shackle’s 3+ InSv, In Auramite Clad; Prosecutors/Witchseekers only “Feel No Pain 3+ against psychic attacks”; Caladius Aegis + Flare Shields’ 4+ InSv; Telemon with Augury Uplink a single plain FNP 5+. The starred NR FNP is dropped only when an army rule of the unit’s rules line gives that FNP with its condition; partialWho now does not let “Feel No Pain 5+*” borrow Trajann’s “Feel No Pain 5+” entry. Matches Aegis of the Emperor, Daughters of the Abyss and the 19.04 FAQ (a Feel No Pain of one model applies only to that model)."
- },
- "27e3b985f28735d8": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Shooting phase”: your."
- },
- "30c46afb2eab8a29": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your opponent’s Shooting phase”: shooting opp; fight either."
- },
- "318a69a3070fccbb": {
-  "verdict": "ok",
-  "by": "review:lite-knights (its fix)",
-  "at": "2026-10-23",
-  "why": "EFFECT: “Select one objective that: Your unit was controlling when it was destroyed. Has no enemy units (excluding AIRCRAFT units) within range of it. That objective is secured.” The gist’s “an objective it was controlling” drops “when it was destroyed”, which fixes the moment of control (not any earlier time). Rest literal."
- },
- "3268b663ea586f06": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Movement phase”: your."
- },
- "335302779dae8b79": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“your Movement phase”: your."
- },
- "34c69ad196993fa0": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "New Recruit spells “Martial Ka'tah” with a straight apostrophe, Wahapedia “Martial Ka’tah”: the alias opens the army rule. (It opens it only; the Damage tab’s dmArmyOf does not use it: see item calcMods.)"
- },
- "353a64316ed79924": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
- },
- "39fe97ca8ce81031": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “That ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
- },
- "3e100adca590d6b3": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Command/Movement/Shooting are “your”, the Fight phase ka’tahs (“Start of the Fight phase”, “Fight phase”) are either player’s: turn either."
- },
- "4414a51b9c3313b1": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Read with rendering (verify/out/snapshots/lite-knights.txt). armyDefs: army rules with a def on the unit’s Rules line, via hasRule so NR’s straight-apostrophe “Martial Ka'tah” matches “Martial Ka’tah” (Trajann/Dreadnoughts show Kaptaris; Caladius, lacking the rule, does not). defPh honoured (ph 'fight' only for Kaptaris; with no ph, the datasheet, it shows). Starred FNP suppressed only when an army-rule def says that same FNP (Prosecutors’ “Feel No Pain 3+*” → “Feel No Pain 3+ against psychic attacks”; Aegis’ 5+* → “against mortal wounds”), plain ones kept (Trajann’s, Telemon’s Augury Uplink 5+). Guard dedupe keys on the rendered text, so the three Anathema squads’ identical Psychic Null is one line linking to the first; a different guard text still shows. No other list has an army-rule def, so nothing else changes except partialWho’s who on a plain FNP (the mucho-mutantes line, a correction). defences() is unused. No failing input found."
- },
- "46b53281649bbf35": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Attacks are made in either player’s turn (Fight phase of both, Fire Overwatch in the opponent’s): either."
- },
- "4925fe816af1b538": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “Dreadspear, 2x Lastrum storm bolter”; Wahapedia: “1 Dreadspear; 2 Lastrum Storm Bolter”; the Dreadspear has a ranged and a melee profile, so it is listed twice."
- },
- "4a833940db5de0dc": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia Trajann Valoris: “CORE ABILITIES Deep Strike, Feel No Pain 5+, Leader”; Allarus Custodians: “CORE ABILITIES Deep Strike” only. The starred “Feel No Pain 5+*” is Aegis of the Emperor (“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds”), on both datasheets. So the plain Feel No Pain 5+ is Trajann’s alone: partialRules names him, and the new partialWho clause keeps the starred one from matching it (rendered: “Trajann Valoris · Feel No Pain 5+ · … · Feel No Pain 5+ against mortal wounds”)."
- },
- "4e14d49884b44431": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "The line keeps “against ranged attacks”. The Caladius profile’s two-value InSv “5+, 4+*” (its own 5+; the 4+ from Flare Shields, marked from) matches: the 4+ only against ranged attacks."
- },
- "4e4a370749b23e24": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“At the start of any phase, you can select one of the following to take effect until the end of the phase”: every phase of either player’s turn, so all five phases and turn either."
- },
- "51fd68c0bdc98cad": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "WHEN “Your Shooting phase or the Fight phase”: shooting and fight."
- },
- "5205e5c60865dd26": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia Might of the Moritoi: “HONOURED INTERRED 1CP WHEN: Your Shooting phase or the Fight phase. TARGET: One friendly ADEPTUS CUSTODES DREADNOUGHT unit. EFFECT: Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” Benefits: friendly ADEPTUS CUSTODES units (to: Faction: Adeptus Custodes, no exclusion — Trajann, Caladius, other Dreadnoughts; not the Anathema squads); by: the ADEPTUS CUSTODES DREADNOUGHT target; range 6\" of it (via). The target itself is in its own aura (22.01) and gets the stratagem’s own mod; helpedBy excludes x === u. The when is the stratagem’s WHEN; no duration is printed, so the phase (01.02.02), and none is added. Note literal."
- },
- "53a18db43776ed8a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Shooting phase”: shooting."
- },
- "55455a699ef2303f": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, no weapon (every melee weapon of the attached unit, Trajann’s included, 19.04), the target condition kept as the when and left as a tick (no always), as the Damage tab’s target is set by hand."
- },
- "56b52f826fe1acb4": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "The opponent’s Shooting phase and the Fight phase of either turn: either."
- },
- "590402ea61d5f6ed": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia, Might of the Moritoi enhancements: “Memento Moritoi (one per army) UPGRADE 30 pts”: tag Upgrade."
- },
- "5d16956003a085ed": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.” Kind all, when “Selected to attack”; the Damage tab marks it not counted (one re-roll). The Favoured Ka’tah (Rendax) additional effect is mortal wounds on an engaged enemy MONSTER/VEHICLE, not a change to the attacks, so it has no footnote."
- },
- "5eb9a1e967923752": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “1 Fist and 1 Projectors (Adrathic Desolator, Caestus Fist, Twin Neutronium Cascade Projectors)”; Wahapedia option “1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors”."
- },
- "5f02fcbd81c9d429": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR prints “Vexilla - Allarus Custodians”; Wahapedia: “1 model can be equipped with 1 Vexilla” on the Allarus datasheet. “This unit has +1 OC” reaches the attached unit (19.04 wargear of a specific model: until that model is destroyed), matching the OC 3 (2 +1) marked from Vexilla on both profiles."
- },
- "649eba0fd02c5533": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“This unit’s ranged attacks that target a MONSTER/VEHICLE unit can: Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll.” Kind ranged, vs any Monster/Vehicle (the target’s keyword), always true otherwise (no other condition), as approved for Da Bigger Dey Iz… / Rend and Tear. The Damage tab marks it not counted (one re-roll each)."
- },
- "65d677763a1c70ab": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your unit can ignore modifiers to your unit’s: BS. Hit rolls.” ignoreHitMods is exactly that (BS and hit roll modifiers)."
- },
- "66ffc7e01cdba942": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Ranged attacks that target this unit have -1 D.” Literal."
- },
- "6731038055618c21": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Friendly ANATHEMA PSYKANA units with this ability have Feel No Pain 3+ against psychic attacks.” The line keeps “against psychic attacks”; it is on the Prosecutors’ and Witchseekers’ datasheets (ARMY RULES Daughters of the Abyss), and replaces NR’s starred “Feel No Pain 3+*”."
- },
- "673e37f192acf9f8": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia Contemptor-Galatus CORE ABILITIES “Damaged 4”; 24.39 as above: 4 or fewer wounds remaining, -1 to hit rolls."
- },
- "691de4c8f967b4df": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “4x Witchseeker — Flamer, Gun Stock”; Wahapedia: “Every model is equipped with: 1 Flamer; 1 Gun Stock.”"
- },
- "6934ce1df7eda25f": {
-  "verdict": "ok",
-  "by": "review:lite-knights (its fix)",
-  "at": "2026-10-23",
-  "why": "With the Movement phase added (Fire Overwatch, the opponent’s Movement phase) its turn is opp; shooting stays your (your Shooting phase is where your units are selected to shoot), fight either — as Spiteful Power Trip / Hunter of Souls."
- },
- "6c6442cf5b023f31": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “Spiculus bolt launcher, Dual Fists and 2 Projectors (Dual Caestus Fists, 2x Twin Neutronium Cascade Projectors)”; Wahapedia default: “1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors”."
- },
- "6f044aaa078d6580": {
-  "verdict": "ok",
-  "by": "review:lite-knights (its fix)",
-  "at": "2026-10-23",
-  "why": "“When a friendly ADEPTUS CUSTODES unit is selected to attack”; 04.01.05: “If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.” Fire Overwatch (“End of your opponent’s Movement phase … Your unit shoots using snap shooting”) makes attacks in the opponent’s Movement phase, and snap shooting forbids only re-rolling hit rolls, so the wound-roll re-roll still works there. The app lists such rules with movement (Warpmeld Sacrifice: “Fire Overwatch, at the end of the opponent’s Movement phase, included”; Spiteful Power Trip, Hunter of Souls)."
- },
- "6fc94ed89a54ac2f": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “1x Caladius Annihilator Grav-tank — Arachnus Blaze Carronade, Twin Lastrum Bolt Cannon, Armoured hull”; Wahapedia default loadout is the same (the Twin Lastrum Bolt Cannon not swapped)."
- },
- "733c3c059ea1612f": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
- },
- "734861921ce91a6e": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Any phase of either turn: either."
- },
- "76a73133dbb46638": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Readied “At the start of your Command phase”; ka’tah WHENs: Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”, Dacatarai/Kaptaris “Start of the Fight phase”, Rendax “Fight phase”. No ka’tah is in the Charge phase, so command, movement, shooting, fight."
- },
- "77afe33b4fcd0028": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.” The line keeps “against mortal wounds”; NR’s starred “Feel No Pain 5+*” is this rule and is no longer said without its condition (checked: Caladius/Dreadnoughts show only this line; Trajann this plus his own FNP 5+)."
- },
- "77c4ef47c43f8925": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "The start of every battle round, so either player’s turn (same convention as Da Boss / Doctrina Imperatives)."
- },
- "784cc5ad34633d53": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia: “Moment Shackle (Once per battle, per army)”; NR: “(Once per battle, per army)”. The tag is those words."
- },
- "79ddfff58c9d553d": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "EFFECT literal (“ignore modifiers to your unit’s BS, Hit rolls”), selected-to-shoot trigger left to the phase tag as in the approved shooting gists."
- },
- "7c86803ae6394099": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, the target condition as the when, the note literal, from the codex name “Slayer of Tyrants” (Wahapedia). No always, so it stays a tick. Nothing added."
- },
- "82ffb09003531615": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Movement/Charge phase”: movement and charge."
- },
- "86b25361d29e7621": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia: Trajann Valoris CORE ABILITIES “Deep Strike, Feel No Pain 5+, Leader”; Allarus Custodians CORE ABILITIES “Deep Strike” only. The core FAQ to 19.04: “a rule that grants a model Feel No Pain … only apply to that model”. The starred “Feel No Pain 5+*” is Aegis of the Emperor (all of them), so only the plain Feel No Pain 5+ is Trajann’s; partialRules names him."
- },
- "877bc4d0766d9e3e": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” The target is within its own aura (22.01), so its own attacks re-roll 1s: kind all, note literal. No duration is printed; 01.02.02 “If a rule or effect is given to a unit and it does not specify how long it is active for, it is only active for the phase in which it was given”, so no lasts is right. (Other Custodes units in the aura get no mark: see the report.)"
- },
- "89b5116d60d62722": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "WHEN (ended an advance move) and both bullets (“[Assault] until the end of the turn”, “That move does not prevent your unit from being eligible to declare a charge”) kept."
- },
- "8b574b43f3bb7eb3": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "EFFECT literal: the aura, friendly ADEPTUS CUSTODES units within 6\", re-roll hit rolls of 1."
- },
- "8b737277a9fff988": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1 / Re-roll wound rolls of 1”: needs Faction: Adeptus Custodes, none Monster/Vehicle (so not the Prosecutors/Witchseekers, who have only Faction: Anathema Psykana, and not the Caladius or the Dreadnoughts). It is tagged Aura, so 22.01 (“it is always within range of its own aura ability”) puts Trajann’s own attached unit in it: selfAlways true, selfWhen “Own aura”. Other units’ within 6\" is a tick."
- },
- "8b8c7f5e314712a4": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Shooting phase, when … selected to shoot”: shooting."
- },
- "90e869074fec6562": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia datasheet (new codex): “Captain-General (Aura): Friendly ADEPTUS CUSTODES units … within 6\" of this model can …”; New Recruit prints “Captain-General (Aura)”. GW tags it Aura (22.01), so tag Aura is right."
- },
- "945ccc84b6770171": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Shooting phase”: your."
- },
- "96432cbd07f9aedb": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "EFFECT “Select one objective your unit is controlling. That objective is secured.” Literal; the timing is the phase tag, the exclusion in needs."
- },
- "9832e689f96d71d5": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase”: shooting and fight."
- },
- "9852395df715d9a1": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “One friendly ADEPTUS CUSTODES unit that is not readied”: Faction: Adeptus Custodes; Anathema Psykana units excluded by the words."
- },
- "9de51d19f675b1ce": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “One friendly ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
- },
- "9df4349f85161f85": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Bullets 2-3: below starting strength “re-roll hit rolls of 1”; below half-strength “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” A unit below half-strength is also below starting strength, so the two picks are the two states (01.02.01: for a one-model unit, remaining wounds less than W / less than half W), each the player’s tick; the +2 OC at starting strength is no attack, rightly left out."
- },
- "9f3efe1dbebf9a4c": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “4x Prosecutor — Boltgun, Gun Stock”; Wahapedia: “Every model is equipped with: 1 Boltgun; 1 Gun Stock.”"
- },
- "a5a287161527b4ba": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia Trajann Valoris datasheet (new codex): “Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” GW tags it (Aura), so tag Aura is right (22.01). The stored text is that wording with the full stops (NR prints the bullets without them); the 14 Oct Printed Product Updates touch only Superior Creation and the Dawneagle Shield-Captain."
- },
- "a5d9cc0a61fc2d2f": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Any phase of either turn: either."
- },
- "aa296d5ad5b7825f": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "WHEN “selected to move or declares a charge”, EFFECT “Your unit has MOBILE”: kept (no duration printed: 01.02.02, the phase)."
- },
- "b04cbb09d3e9856b": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Attacks that target your unit have -1 AP until that enemy unit has attacked”, in “Your opponent’s Shooting phase or the Fight phase”: the line keeps both phases and the duration."
- },
- "b061dc7bd1e5391d": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
- },
- "b1d9e68ec5885587": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Any phase, when a friendly GRAV-ASSAULT unit … is destroyed”: all five phases."
- },
- "b397aab21657df9a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“In your Shooting phase, you can select one visible enemy unit within 18\" …”: shooting, your turn."
- },
- "b43ebd69f2ae39b4": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Movement/Charge phase”: your."
- },
- "b674fae6fc22f084": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia Allarus Custodians datasheet: “ABILITIES Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.” The new codex’s name is singular (NR’s “Slayers of Tyrants” is the deviation); it is the Allarus datasheet’s, so who Allarus Custodians, and “This unit’s” reaches the attached unit (19.04)."
- },
- "bfbf7b899d822668": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "The units’ rules lines say “Damaged 4” / “Damaged 5” (Wahapedia CORE ABILITIES the same); the core rule (24.39, “This ability always takes the form Damaged X …”) is the one these name. The regex takes only a number, so the older “Damaged: 1-4 wounds remaining” rules are untouched."
- },
- "c046c2e490b089ba": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia: “KAPTARIS KA’TAH ABILITY WHEN: Start of the Fight phase. TARGET: One friendly readied unit. EFFECT: Melee attacks that target your unit have -1 to hit rolls.” The def keeps the name (one of the ka’tah abilities the player can select), the WHEN, the readied condition and the effect word for word; no duration is printed and none is added (01.02.02: the phase). “Start of the Fight phase” names no player, and readied lasts from your Command phase until a ka’tah is used, so defPh fight (either turn) is right. Martial Ka’tah applies to “friendly ADEPTUS CUSTODES units with this ability”: rendered on Trajann, the Dreadnoughts, not on the Caladius (no Martial Ka’tah on its datasheet) nor the Anathema squads."
- },
- "c295271ab6e55029": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.” The line keeps the S > T condition."
- },
- "c3acfee6233606e5": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR Categories: “… Allarus Custodians*, Terminator*, *from combined unit”; Wahapedia: Allarus KEYWORDS “INFANTRY; IMPERIUM; TERMINATOR”, Trajann has no TERMINATOR. The note says exactly that."
- },
- "c3f4a81388c5ebdf": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “That ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
- },
- "ccd7646698c9a313": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "New Recruit prints “Captain-General (Aura) - Trajann Valoris”; it is on Trajann’s datasheet (Wahapedia), not the Allarus Custodians’. Model lines are NR’s (1x Trajann Valoris, 1x Allarus Custodian, 1x Allarus Custodian with Vexilla)."
- },
- "cd227c0f9d666444": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "EFFECT literal (“Attacks that target your unit have -1 AP until that enemy unit has attacked”); the WHEN trigger “when an enemy unit targets” kept, the phases are on the row’s phase tags and the Custodian Wardens exclusion in needs, as the approved Warped Vicissitude / Armour of Abhorrence gists."
- },
- "d3e819f790eb7ac0": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Your Shooting phase and either Fight phase: either."
- },
- "dbd7f8aa8556362e": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “One friendly ADEPTUS CUSTODES unit (excluding ~~MONSTER~~/VEHICLE units)”: Wahapedia’s strike-through marks a keyword absent from the faction, the exclusion is still printed; none Monster/Vehicle is the words."
- },
- "dc43c1b2910ae1c6": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Shooting phase”: your; fight either."
- },
- "dcdac8d8d772cd9a": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP”: at “Start of the battle round”, listed under command, as Da Boss, Doctrina Imperatives and Harbingers of Dread are."
- },
- "e1a7879361d7820b": {
-  "verdict": "ok",
-  "by": "review:lite-knights (its fix)",
-  "at": "2026-10-23",
-  "why": "Words right: Salvus “Your unit can ignore modifiers to your unit’s: BS. Hit rolls and wound rolls” (ignoreHitMods, the hit part counted, as approved for Unshakeable Opponents), Dacatarai “melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1” (vs none), Rendax “[Lethal Hits: Monster/Vehicle]” (vs any); each a tick, readied and which ka’tah being the player’s. But run in verify/damage-node.js (Telemon, Fight phase) the three share from:\"Martial Ka’tah\", so dmCalc keys them all \"m:Martial Ka’tah|Martial Ka’tah|ar\" and the seen-set drops every one after the first of a kind: Rendax never appears (only Dacatarai in the fight). Each ka’tah needs its own from, as the Blessings of Khorne calcMods have (Martial Excellence, Warp Blades …); with that, Salvus / Dacatarai / Rendax all show (checked). NOTE outside this item: none of the three reaches any unit today, because dmArmyOf tests u.rules.includes('Martial Ka’tah') and every unit’s rules line has New Recruit’s straight-apostrophe \"Martial Ka'tah\" (the alias only opens the rule); that must be fixed in data.js (units’ rules) or dmArmyOf (compare by ruleKey)."
- },
- "e376866f9bb28fcf": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“This model’s Watcher’s Axe weapon has +3 A” is one of the two choices, “until the end of the phase”: footnote on the Watcher’s Axe only, the when keeps once per battle, start of any phase, one of its two effects and the duration; no always, so it is the player’s tick."
- },
- "e472a10ce5ba6af8": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.” Unconditional FNP 5+; the Telemon is a one-model unit. The unit’s plain “Feel No Pain 5+” rule is not said twice (defenceItems skips a rule FNP an ability def already has)."
- },
- "e72b9680562c9b12": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“While a friendly ADEPTUS CUSTODES DREADNOUGHT unit …”: all Faction: Adeptus Custodes and Dreadnought (Achillus, Galatus, both Telemons; not the Caladius, which has no DREADNOUGHT)."
- },
- "e74b6194b5f8ccbf": {
-  "verdict": "ok",
-  "by": "review:lite-knights-2",
-  "at": "2026-10-23",
-  "why": "Wahapedia Prosecutor Squad: “Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected”: shooting, your turn. Only the stored text’s punctuation changed."
- },
- "e81706fd5640e6bf": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "TARGET “That ADEPTUS CUSTODES unit”, WHEN “a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units)”: all Faction: Adeptus Custodes, none Custodian Wardens; the Anathema Psykana units are not ADEPTUS CUSTODES and are not eligible."
- },
- "e947904565862a18": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "“Your Movement phase, when … ends an advance move”: movement."
- },
- "fa5aad39673f48bf": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "EFFECT literal; the “selected to shoot” trigger is left to the row’s phase, as in the approved Kustom Dakka / Never Enough Dakka gists."
- },
- "fb66ae254646a250": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "Wahapedia CORE ABILITIES “Damaged 5”; 24.39: “While a model’s remaining wounds are equal to or less than X … that model’s attacks have -1 to hit rolls.” “5 or fewer wounds remaining” is that; the attacker’s state is a tick."
- },
- "fd359b630340efb6": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “Trajann Valoris … 265”, “(2) Allarus Custodians … 180”, 445 PTS on the sheet; Wahapedia: Trajann 1 model 265, Allarus 2 models 180."
- },
- "fd5d37a2a95f8b2b": {
-  "verdict": "ok",
-  "by": "review:lite-knights",
-  "at": "2026-10-23",
-  "why": "NR: “5x Witchseeker — Flamer, Gun Stock”; same datasheet loadout."
  }
 }

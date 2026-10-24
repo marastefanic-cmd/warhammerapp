@@ -3510,6 +3510,20 @@ IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
 Ask about this rule
 
+######## popup rule:Engagement Range · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
 ######## popup rule:Fights First · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -3566,6 +3580,23 @@ Lance
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYGoremongers
+
+Ask about this rule
+
+######## popup rule:Normal move · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
 Ask about this rule
 
