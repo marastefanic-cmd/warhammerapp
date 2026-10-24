@@ -1,0 +1,6011 @@
+######## army · THE EXILED LEGION Fellhammer Siege Task Force
+Chaos Space Marines · 1995 / 2000 pts · Strike Force
+
+Cult of the Arkifane · Devotees of Destruction
+
+Dispositions: Priority Assets (chosen)
+
+Overview
+Phase checklist
+Bases & proxies
+39
+Units
+13
+Stratagems
+19
+Ranged weapons
+27
+Melee weapons
+24
+Abilities
+33
+Rules
+Damage calculator
+
+New Recruit, exported 24 Oct 2026 (JSON)
+
+######## checklist · FELLHAMMER SIEGE TASK FORCE Phase checklist
+PHASE BY PHASE
+RESET
+Command · Your turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+Master of Mechanisms · Warpsmith
+Wyredjinn · Warpsmith
+For the Dark Gods · Cultist Mob
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Movement · Your turn
+1 to do · 1 once per battle
+
+TO DO NOW
+
+Enrage Machine Spirits · Warpsmith
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Movement · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Shooting · Your turn
+2 to do · 1 active · 2 once per battle
+
+TO DO NOW
+
+Corrupt Machine Spirits · Lord Discordant on Helstalker
+Spirit Thief · Lord Discordant on Helstalker
+
+ACTIVE NOW
+
+Master of Mechanisms · Warpsmith
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Warp Rift Firepower · Obliterators
+Shooting · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Charge · Your turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Charge · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Fight · Your turn
+1 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+Malign Sacrifice · Dark Apostle
+
+ACTIVE NOW
+
+Master of Mechanisms · Warpsmith
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Fight · Their turn
+1 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+Malign Sacrifice · Dark Apostle
+
+ACTIVE NOW
+
+Master of Mechanisms · Warpsmith
+
+ONCE PER BATTLE
+
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## pregame · FELLHAMMER SIEGE TASK FORCE Overview
+YOUR LIST
+WARLORD
+Vashtorr the Arkifane
+ENHANCE­MENTS
+Mark of the Soul Forges 20 pts on Lord Discordant on Helstalker
+Wyredjinn 25 pts on Warpsmith
+Cybinfernal Font 20 pts on Dark Apostle
+ATTACHED
+Dark Apostle leads Nemesis Claw
+Master of Executions supports Nemesis Claw
+DETACH­MENTS
+Cult of the Arkifane (2 DP), Devotees of Destruction (1 DP)
+DISPOSI­TIONS
+Priority Assets (chosen)
+POINTS
+1995 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Dark Pacts
+Their Move · Your Shoot · Fight
+
+If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:
+
+[LETHAL HITS]
+[SUSTAINED HITS 1]
+
+Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.
+
+Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.
+
+Soul Forge Boons
+Cult of the Arkifane
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+APPLIES TOVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Rain of Ruin
+Devotees of Destruction · Your Shooting
+
+Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
+
+APPLIES TOHavocs, Obliterators
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Vashtorr the Arkifane 220 pts
+Obliterators 160 pts
+All of them: 380 pts
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
+Warp Rift Firepower · Obliterators
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+1
+Vashtorr the Arkifane
+Warlord
+12"
+10
+2+
+14
+6+
+3
+4+
+220
+CHARACTERS
+3
+Lord Discordant on Helstalker
+Mark of the Soul Forges
+14"
+9
+2+
+10
+6+
+4
+4+
+175
+Warpsmith
+Wyredjinn
+6"
+5
+2+
+4
+6+
+1
+–
+90
+Dark Apostle
++ Master of Executions + Nemesis Claw
+Cybinfernal Font
+270
+Dark Apostle
+6"
+5
+3+
+4
+5+
+1
+4+
+Dark Disciple×2
+6"
+5
+6+
+1
+7+
+1
+4+
+Master of Executions
+6"
+5
+3+
+4
+6+
+1
+5+
+Nemesis Claw×5
+6"
+5
+3+
+2
+6+
+1
+5+
+BATTLELINE
+1
+Cultist Mob
+50
+Cultist Mob×9
+6"
+3
+6+
+1
+7+
+1
+–
+Cultist Champion
+6"
+3
+6+
+1
+7+
+1
+–
+INFANTRY
+3
+Havocs
+2×135
+Havoc Champion
+5"
+5
+3+
+3
+6+
+1
+–
+Havocs×4
+5"
+5
+3+
+3
+6+
+1
+–
+Obliterators
+×2
+4"
+7
+2+
+5
+6+
+2
+5+
+160
+VEHICLES
+5
+Chaos Predator Annihilator
+10"
+10
+3+
+11
+6+
+3
+5+
+140
+Chaos Predator Destructor
+10"
+10
+3+
+11
+6+
+3
+5+
+145
+Chaos Vindicator
+9"
+11
+2+
+11
+6+
+3
+5+
+180
+Forgefiend
+8"
+10
+3+
+12
+6+
+3
+5+
+170
+Maulerfiend
+10"
+10
+3+
+12
+6+
+3
+5+
+125
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Vashtorr the Arkifane
+Warlord
+Vashtorr’s claw
+12"
+D6
+–
+5
+-2
+1
+ANTI-VEHICLE 4+, TORRENT
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Lord Discordant on Helstalker
+Mark of the Soul Forges
+Helstalker autocannon
+48"
+3
+2+
+9
+-1
+3
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol
+12"
+1
+2+
+5
+-1
+1
+PISTOL
+Every attack: a Critical Hit on an unmodified hit roll of 5+ (Mark of the Soul Forges)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start: re-roll wound rolls of 1 (Spirit Thief)
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Warpsmith
+Wyredjinn
+Flamer tendril
+12"
+D6
+–
+3
+0
+1
+IGNORES COVER, PISTOL, TORRENT
+Melta tendril
+6"
+1
+2+
+8
+-4
+D3
+PISTOL, MELTA 2
+Plasma pistol
+➤standard
+12"
+1
+2+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+2+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+Dark Apostle
+Cybinfernal Font
++ Master of Executions + Nemesis Claw
+DARK APOSTLE
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+MASTER OF EXECUTIONS
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+NEMESIS CLAW
+Bolt pistol×4
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+Plasma pistolVISIONARY
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Visions of Suffering)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Cultist Mob
+Bolt pistolCULTIST CHAMPION
+12"
+1
+4+
+4
+0
+1
+PISTOL
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+Havocs
+×2 units
+Plasma gunHAVOC CHAMPION
+➤standard
+24"
+1
+3+
+7
+-2
+1
+RAPID FIRE 1, HEAVY
+➤supercharge
+24"
+1
+3+
+8
+-3
+2
+HAZARDOUS, RAPID FIRE 1, HEAVY
+Havoc lascannon×4
+48"
+1
+3+
+12
+-3
+D6+1
+HEAVY
+Every ranged attack: can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Stabilisation Talons)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
+1CP Ruination’s Bounty: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot, when your unit uses the Dark Pacts ability
+Obliterators
+Fleshmetal guns×2
+➤focused malice
+18"
+D3
+3+
+12
+-3
+4
+MELTA 2, HEAVY
+➤ruinous salvo
+24"
+D6
+3+
+8
+-2
+2
+BLAST, HEAVY
+➤warp hail
+24"
+D6+3
+3+
+5
+-1
+1
+SUSTAINED HITS 1, HEAVY
+Once per battle, your Shooting phase, when selected to shoot: [INDIRECT FIRE] (Warp Rift Firepower)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
+1CP Ruination’s Bounty: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot, when your unit uses the Dark Pacts ability
+Chaos Predator Annihilator
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
+Predator twin lascannon
+48"
+1
+3+
+14
+-3
+D6+1
+TWIN-LINKED
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Lascannon×2
+48"
+1
+3+
+12
+-3
+D6+1
+Allocated to a MONSTER or VEHICLE model: can re-roll the damage roll (Annihilator)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Chaos Predator Destructor
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
+Predator autocannon
+48"
+4
+3+
+9
+-1
+3
+RAPID FIRE 2
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Heavy bolter×2
+36"
+3
+3+
+5
+-1
+2
+SUSTAINED HITS 1
+vs INFANTRY units: +1 AP (Destructor)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Chaos Vindicator
+Demolisher cannon
+24"
+D6+3
+3+
+14
+-3
+D6
+BLAST
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Within Engagement Range of one or more enemy units: no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit) (Siege Shield)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Forgefiend
+Ectoplasma cannon×3
+36"
+D3
+3+
+10
+-3
+3
+BLAST
+Selected to shoot, if it uses this ability (until the end of the phase): [DEVASTATING WOUNDS] and [HAZARDOUS] (Daemonic Ordnance)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Vashtorr the Arkifane
+Warlord
+Vashtorr’s hammer
+➤strike
+6
+2+
+14
+-3
+3
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+➤sweep
+12
+2+
+8
+-1
+2
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Lord Discordant on Helstalker
+Mark of the Soul Forges
+Impaler chainglaive
+5
+2+
+8
+-3
+3
+LANCE
++
+Bladed limbs
+4
+3+
+6
+-1
+2
+EXTRA ATTACKS
++
+Techno-virus injector
+1
+3+
+3
+-3
+2
+ANTI-VEHICLE 2+, EXTRA ATTACKS
+Every attack: a Critical Hit on an unmodified hit roll of 5+ (Mark of the Soul Forges)
+Made a charge move this turn: Impaler chainglaive +1 to wound (Lance)
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Warpsmith
+Wyredjinn
+Forge weapon
+4
+3+
+6
+-2
+2
+ANTI-VEHICLE 4+
+Dark Apostle
+Cybinfernal Font
++ Master of Executions + Nemesis Claw
+DARK APOSTLE
+Accursed crozius
+5
+2+
+6
+-1
+2
+Close combat weapon×2
+1
+4+
+3
+0
+1
+MASTER OF EXECUTIONS
+Axe of dismemberment
+5
+2+
+7
+-2
+2
+DEVASTATING WOUNDS, PRECISION
+NEMESIS CLAW
+
+Legionary w/ accursed weapon picks one to fight with: Accursed weapon or Close combat weapon.
+
+Legionary w/ Nostraman chainglaive picks one to fight with: Close combat weapon or Nostraman chainglaive.
+
+Legionary w/ paired accursed weapons picks one to fight with: Close combat weapon or Paired accursed weapons.
+
+Legionary w/ voice eater (Voice eater) picks one to fight with: Close combat weapon or Astartes chainsword.
+
+The others: one each (×N = how many the unit has).
+
+Master of Executions: none of these.
+
+Nostraman chainbladeVISIONARY
+5
+3+
+5
+-1
+1
+SUSTAINED HITS 1
+Accursed weaponLEGIONARY
+4
+3+
+5
+-2
+1
+Close combat weapon×4
+3
+3+
+4
+0
+1
+Nostraman chainglaiveLEGIONARY
+4
+3+
+8
+-2
+1
+SUSTAINED HITS 1
+Paired accursed weaponsLEGIONARY
+4
+3+
+5
+-2
+1
+TWIN-LINKED
+Astartes chainswordLEGIONARY
+4
+3+
+5
+-1
+1
+While the Dark Apostle leads this unit and it contains its DARK APOSTLE model: +1 to wound rolls (Dark Zealotry)
+While the Master of Executions leads this unit, target below its Starting Strength: re-roll the hit roll; also the wound roll if Below Half-strength (Warp-sighted Butcher)
+Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Visions of Suffering)
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Cultist Mob
+Brutal assault weapon×10
+2
+4+
+3
+0
+1
+Havocs
+×2 units
+Power fistHAVOC CHAMPION
+3
+3+
+8
+-2
+2
+Close combat weapon×4
+3
+3+
+5
+0
+1
+Obliterators
+Crushing fists×2
+4
+3+
+9
+-2
+2
+Chaos Predator Annihilator
+Armoured tracks
+3
+4+
+6
+0
+1
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Chaos Predator Destructor
+Armoured tracks
+3
+4+
+6
+0
+1
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Chaos Vindicator
+Armoured tracks
+3
+4+
+6
+0
+1
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Forgefiend
+Armoured limbs
+2
+3+
+6
+0
+2
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+Maulerfiend
+Maulerfiend fists
+6
+3+
+14
+-2
+D6+1
++
+Lasher tendrils
+6
+3+
+7
+-1
+1
+EXTRA ATTACKS
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+
+######## abilities · MELEE Abilities
+Vashtorr the Arkifane
+Warlord
+Unholy Mechanisms
+
+Aura
+
+While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.
+
+Reorder Reality
+
+Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.
+
+Indentured Daemon Engines
+
+While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Lord Discordant on Helstalker
+Mark of the Soul Forges
+Corrupt Machine Spirits
+Your Shooting
+
+Shooting · Your turn
+
+At the start of your Shooting phase, select one visible enemy VEHICLE unit within 12" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
+
+Spirit Thief
+Your Shooting
+
+Shooting · Your turn
+
+At the start of your Shooting phase, select one visible enemy VEHICLE unit. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.
+
+Mark of the Soul Forges
+Enhancement
+Their Move · Your Shoot · Fight
+
+Enhancement · Their Movement / Your Shooting / Fight (either turn)
+
+HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+Warpsmith
+Wyredjinn
+Warpsmith
+
+While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.
+
+Master of Mechanisms
+Your Command/Shoot · Fight
+
+Your Command / Your Shooting / Fight (either turn)
+
+In your Command phase, select one friendly HERETIC ASTARTES VEHICLE model within 3" of this model. That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per Command phase.
+
+Enrage Machine Spirits
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, select one enemy VEHICLE unit within 12" of this model. That unit must take a Battle-shock test.
+
+Wyredjinn
+Enhancement
+Your Command
+
+Enhancement · Command · Your turn
+
+HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.
+
+Dark Apostle
+Cybinfernal Font
++ Master of Executions + Nemesis Claw
+DARK APOSTLE
+Dark Zealotry
+Fight
+
+Fight · Either turn
+
+While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.
+
+Demagogue
+Once per battle
+Any phase
+
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly HERETIC ASTARTES unit that is Battle-shocked and within 12" of this unit’s DARK APOSTLE model. That unit is no longer Battle-shocked.
+
+Malign Sacrifice
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within Engagement Range of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.
+
+Cybinfernal Font
+Enhancement
+
+Enhancement
+
+HERETIC ASTARTES model only (excluding DAMNED models). Models in the bearer’s unit have the SOUL FORGE keyword.
+
+MASTER OF EXECUTIONS
+Warp-sighted Butcher
+Fight
+
+Fight · Either turn
+
+While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that unit is Below Half-strength, you can re-roll the Wound roll as well.
+
+Trophy Taker
+
+Each time this model destroys an enemy CHARACTER model, you gain 1CP.
+
+NEMESIS CLAW
+Visions of Suffering
+Their Move · Your Shoot · Fight
+
+Psychic · Their Movement / Your Shooting / Fight (either turn)
+
+Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.
+
+Attached Unit
+
+If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
+
+Voice eater
+
+Enemy units (excluding MONSTERS and VEHICLES) cannot be targeted with Stratagems while they are within Engagement Range of the bearer’s unit.
+
+Cultist Mob
+For the Dark Gods
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Havocs
+×2 units
+Stabilisation Talons
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and any or all modifiers to the Ballistic Skill characteristic of that weapon.
+
+Obliterators
+Warp Rift Firepower
+Once per battle, per unit
+Your Shooting
+
+Once per battle, per unit · Shooting · Your turn
+
+In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].
+
+Chaos Predator Annihilator
+Annihilator
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Chaos Predator Destructor
+Destructor
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Chaos Vindicator
+Siege Shield
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Forgefiend
+Daemonic Ordnance
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Maulerfiend
+Siege Crawler
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+You can ignore any or all modifiers to this model’s Move characteristic and to Advance and Charge rolls made for it.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+######## rules · ABILITIES Rules
+Chaos Space Marines · Priority Assets
+ARMY RULES
+Dark Pacts
+Their Move · Your Shoot · Fight
+
+If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:
+
+[LETHAL HITS]
+[SUSTAINED HITS 1]
+
+Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.
+
+Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.
+
+DETACHMENTS
+CULT OF THE ARKIFANE
+Soul Forge Boons
+Detachment rule
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+APPLIES TOVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Wyredjinn
+Enhancement · 25 pts · on Warpsmith
+
+HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.
+
+ONWarpsmith
+
+Cybinfernal Font
+Enhancement · 20 pts · on Dark Apostle + Master of Executions + Nemesis Claw
+
+HERETIC ASTARTES model only (excluding DAMNED models). Models in the bearer’s unit have the SOUL FORGE keyword.
+
+ONDark Apostle + Master of Executions + Nemesis Claw
+
+Mark of the Soul Forges
+Enhancement · 20 pts · on Lord Discordant on Helstalker
+
+HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+ONLord Discordant on Helstalker
+
+Other enhancements
+1 not in this list
+Crown of Worms 15 pts
+
+WARPSMITH model only. Add 3" to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.
+
+STRATAGEMSBiomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+DEVOTEES OF DESTRUCTION
+Rain of Ruin
+Detachment rule · Your Shooting
+
+Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
+
+APPLIES TOHavocs, Obliterators
+
+Other enhancements
+2 not in this list
+Pact of Destruction 15 pts
+
+WARPSMITH model only.
+
+When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls.
+In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.
+Eye of Oblivion 20 pts
+
+WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24" of this unit. That enemy unit has +6" detection range until this unit has shot.
+
+STRATAGEMSSnare of Fire, Ruination’s Bounty, Undying Hatred
+
+UNIT RULES
+Deadly Demise
+Vashtorr the Arkifane D3
+Chaos Predator Annihilator D3
+Chaos Predator Destructor D3
+Chaos Vindicator D3
+Forgefiend D3
+Maulerfiend D3
+Deep Strike
+Vashtorr the Arkifane
+Obliterators
+Leader
+Warpsmith · Wyredjinn
+Dark Apostle leads Nemesis Claw
+Attached Unit: If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
+Lone Operative
+Vashtorr the Arkifane
+Indentured Daemon Engines: While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.
+Warpsmith · Wyredjinn
+Warpsmith: While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.
+Stealth
+Dark Apostle + Master of Executions + Nemesis Claw: Nemesis Claw only
+Support
+Master of Executions supports Nemesis Claw
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+12× 25mm
+17× 40mm
+2× 50mm
+1× 60×35.5mm Oval
+1× 80mm
+3× 120×92mm Oval
+
+WHAT TO WRITE ON EACH BASE
+
+Vashtorr the Arkifane
+1× 80mm
+Vashtorr the Arkifane · Warlord
+Lord Discordant on Helstalker · Mark of the Soul Forges
+1× 120×92mm Oval
+Lord Discordant on Helstalker · Mark of the Soul Forges
+Warpsmith · Wyredjinn
+1× 60×35.5mm Oval
+Warpsmith · Wyredjinn
+Dark Apostle · Cybinfernal Font
++ Master of Executions + Nemesis Claw
+1× 40mm
+Dark Apostle · Cybinfernal Font
+2× 25mm
+Dark Disciple
+1× 40mm
+standard Axe of dismemberment, Bolt pistol
+1× 40mm
+Visionary · Nostraman chainblade + Plasma pistol
+1× 40mm
+Legionary · Accursed weapon + Close combat weapon
+1× 40mm
+Legionary · Close combat weapon + Nostraman chainglaive
+1× 40mm
+Legionary · Close combat weapon + Paired accursed weapons
+1× 40mm
+Legionary · Astartes chainsword + Close combat weapon · Voice eater
+Cultist Mob
+1× 25mm
+Champion · Bolt pistol
+9× 25mm
+standard Autopistol, Brutal assault weapon
+Havocs
+2 units: mark them apart (1, 2)
+1× 40mm
+Champion · Power fist + Plasma gun
+4× 40mm
+standard Close combat weapon, Havoc lascannon
+Obliterators
+2× 50mm
+standard Crushing fists, Fleshmetal guns
+Chaos Predator Annihilator
+1× no base
+Chaos Predator Annihilator
+Chaos Predator Destructor
+1× no base
+Chaos Predator Destructor
+Chaos Vindicator
+1× no base
+Chaos Vindicator
+Forgefiend
+1× 120×92mm Oval
+Forgefiend
+Maulerfiend
+1× 120×92mm Oval
+Maulerfiend
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Vashtorr the Arkifane
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+0.5
+of 5 destroyed
+1.6 wounds lost · wiped in <1% of games
+Nothing ticked: the datasheets as printed
+2 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Vashtorr the Arkifane
+Vashtorr’s claw
+RNG
+12"
+A
+D6
+BS
+–
+S
+5
+AP
+-2
+D
+1
+ANTI-VEHICLE 4+, TORRENT
+−0.5
+MODELS IF UNTICKED
+AGAINST THIS TARGET
+[ANTI-VEHICLE 4+]
+0
+SITUATION AND RULES
+Spirit Thief (Lord Discordant on Helstalker)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+if it applies
++0.1
+MODELS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Damaged (1-4 wounds left)
+-1 to hit rolls
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Dark Pacts
+A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+[LETHAL HITS]
+0
+[SUSTAINED HITS 1]
+0
+Both
+with Touch of the Arkifane (1CP)
+0
+STRATAGEMS
+with their CP
+2CP Soul-Tally Offering
+Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+if used
+BEST · MOST MODELS
++0.2
+MODELS
+1CP Balefire Boon
+Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
+if used
++0.2
+MODELS
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (2)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Touch of the Arkifane
+Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Vashtorr the Arkifane
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.3
+of 5 destroyed
+8.6 wounds lost · wiped in 60% of games
+Vashtorr’s hammer: sweep
+Charged this turn
+×
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Vashtorr the Arkifane
+Vashtorr’s hammer
+A
+12
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+−60% wiped
+−4.3
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+3.6
+A
+6
+WS
+2+
+S
+14
+AP
+-3
+D
+3
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+sweep
+4.3
+BEST
+A
+12
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+AGAINST THIS TARGET
+[ANTI-VEHICLE 4+]
++0.5
+models
+SITUATION AND RULES
+Dark Pacts
+A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
+if it applies
+≈0
+MODELS
+[LETHAL HITS]
+≈0
+[SUSTAINED HITS 1]
++0.3
+Both
+with Touch of the Arkifane (1CP)
++0.3
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Damaged (1-4 wounds left)
+-1 to hit rolls
+if it applies
+−24% wiped
+−0.6
+MODELS
+STRATAGEMS
+with their CP
+1CP Balefire Boon
+Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
+if used
+BEST · MOST MODELS+21% wiped
++0.4
+MODELS
+2CP Soul-Tally Offering
+Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+if used
++18% wiped
++0.3
+MODELS
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Touch of the Arkifane
+Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Vashtorr the Arkifane
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.5
+of 5 destroyed
+9.0 wounds lost · wiped in 71% of games
+
+Shoot 0.5 · Fight 4.0 · the charge is taken to succeed
+
+Vashtorr’s hammer: sweep
+Charged this turn
+×
+6 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Vashtorr the Arkifane
+Vashtorr’s claw
+RNG
+12"
+A
+D6
+BS
+–
+S
+5
+AP
+-2
+D
+1
+ANTI-VEHICLE 4+, TORRENT
+−10% wiped
+−0.2
+MODELS IF UNTICKED
+AGAINST THIS TARGET
+[ANTI-VEHICLE 4+]
+0
+SITUATION AND RULES
+Spirit Thief (Lord Discordant on Helstalker)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Damaged (1-4 wounds left)
+-1 to hit rolls
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Dark Pacts
+A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+[LETHAL HITS]
+0
+[SUSTAINED HITS 1]
+0
+Both
+with Touch of the Arkifane (1CP)
+0
+STRATAGEMS
+with their CP
+2CP Soul-Tally Offering
+Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+if used
++4% wiped
++0.1
+MODELS
+1CP Balefire Boon
+Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
+if used
++3% wiped
++0.1
+MODELS
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (2)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Touch of the Arkifane
+Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Vashtorr the Arkifane
+
+Against what the shooting left of the target, in each game.
+
+Vashtorr’s hammer
+A
+12
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+−71% wiped
+−4
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+3.9
+A
+6
+WS
+2+
+S
+14
+AP
+-3
+D
+3
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+sweep
+4.5
+BEST
+A
+12
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+AGAINST THIS TARGET
+[ANTI-VEHICLE 4+]
++0.4
+models
+SITUATION AND RULES
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Dark Pacts
+A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
+if it applies
+≈0
+MODELS
+[LETHAL HITS]
+≈0
+[SUSTAINED HITS 1]
++0.2
+Both
+with Touch of the Arkifane (1CP)
++0.2
+Damaged (1-4 wounds left)
+-1 to hit rolls
+if it applies
+−22% wiped
+−0.5
+MODELS
+STRATAGEMS
+with their CP
+1CP Balefire Boon
+Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
+if used
+BEST · MOST MODELS+17% wiped
++0.3
+MODELS
+2CP Soul-Tally Offering
+Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+if used
++14% wiped
++0.3
+MODELS
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Touch of the Arkifane
+Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+CULT OF THE ARKIFANE
+6
+1
+CP
+Biomechanoid Regeneration
+Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword.
+Your Command All but Cultist Mob
+1
+CP
+Forge-Fire Surge
+Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge.
+Your Movement Any unit
+1
+CP
+Balefire Boon
+Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.
+Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+2
+CP
+Soul-Tally Offering
+Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.
+Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+1
+CP
+Unholy Fortitude
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.
+Their Shooting Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+1
+CP
+Touch of the Arkifane
+Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
+Any phase All but Cultist Mob
+DEVOTEES OF DESTRUCTION
+3
+1
+CP
+Snare of Fire
+Your opponent’s Movement phase, an enemy unit ends a move within 8" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3".
+Their Movement Havocs ×2
+1
+CP
+Ruination’s Bounty
+Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].
+Your Shooting Havocs ×2, Obliterators
+1
+CP
+Undying Hatred
+Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.
+Their Shooting Havocs ×2, Obliterators
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement All but Maulerfiend
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Vashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob, Havocs ×2, Obliterators, Forgefiend, Maulerfiend
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+CULT OF THE ARKIFANE
+6
+1
+CP
+Biomechanoid Regeneration
+Your Command All but Cultist Mob
+WHEN
+
+Your Command phase.
+
+TARGETOne HERETIC ASTARTES unit from your army (excluding DAMNED units).
+
+EFFECT
+
+One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Havocs, Obliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+1
+CP
+Forge-Fire Surge
+Your Movement Any unit
+WHEN
+
+Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.
+
+TARGETThat HERETIC ASTARTES unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.
+
+USED BYany unit
+
+1
+CP
+Balefire Boon
+Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+2
+CP
+Soul-Tally Offering
+Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+1
+CP
+Unholy Fortitude
+Their Shooting Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+1
+CP
+Touch of the Arkifane
+Any phase All but Cultist Mob
+WHEN
+
+Any phase.
+
+TARGETOne HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Havocs, Obliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+DEVOTEES OF DESTRUCTION
+3
+1
+CP
+Snare of Fire
+Their Movement Havocs ×2
+WHEN
+
+Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly unengaged HAVOCS unit.
+
+TARGETThat HAVOCS unit.
+
+EFFECT
+
+Your unit can make a normal move of up to D3+3".
+
+USED BYHavocs
+
+1
+CP
+Ruination’s Bounty
+Your Shooting Havocs ×2, Obliterators
+WHEN
+
+Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.
+
+TARGETThat HAVOCS/OBLITERATORS unit.
+
+EFFECT
+
+When your unit uses the Dark Pacts ability, your unit’s ranged attacks have:
+
+[LETHAL HITS].
+[SUSTAINED HITS 1].
+
+USED BYHavocs, Obliterators
+
+1
+CP
+Undying Hatred
+Their Shooting Havocs ×2, Obliterators
+WHEN
+
+Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.
+
+TARGETThat HAVOCS/OBLITERATORS unit.
+
+EFFECT
+
+Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.
+
+USED BYHavocs, Obliterators
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement All but Maulerfiend
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Cultist Mob, Havocs, Obliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend
+
+1
+CP
+Explosives
+Your Shooting Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYWarpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Cultist Mob
+
+1
+CP
+Smokescreen
+Start of their Shooting Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYChaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
+
+1
+CP
+Crushing Impact
+Your Charge Vashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYVashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob, Havocs ×2, Obliterators, Forgefiend, Maulerfiend
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Cultist Mob, Havocs, Obliterators, Forgefiend, Maulerfiend
+
+1
+CP
+Epic Challenge
+Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit vashtorr-the-arkifane · STRATAGEMS Fellhammer Siege Task Force
+VASHTORR THE ARKIFANE
+220 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Vashtorr the Arkifane
+Vashtorr’s claw, Vashtorr’s hammer
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Vashtorr the Arkifane
+80mm
+12"
+10
+2+
+14
+6+
+3
+4+
+WHEN TARGETEDan enemy unit within 18" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase · Lone Operative while within 3" of a friendly DAEMON VEHICLE unit · 1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Vashtorr’s claw
+12"
+D6
+–
+5
+-2
+1
+ANTI-VEHICLE 4+, TORRENT
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Vashtorr’s hammer
+➤strike
+6
+2+
+14
+-3
+3
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+➤sweep
+12
+2+
+8
+-1
+2
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS
+ABILITIES
+Unholy Mechanisms
+
+Aura
+
+While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.
+
+Reorder Reality
+
+Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.
+
+Indentured Daemon Engines
+
+While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.
+
+Rules
+Dark Pacts, Deadly Demise D3, Deep Strike, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: HERETIC ASTARTES
+FLY
+MONSTER
+SOUL FORGE
+VASHTORR THE ARKIFANE
+WARLORD
+Ask about this unit
+Lord Discordant on Helstalker · Mark of the Soul Forges ›
+
+######## unit lord-discordant-on-helstalker · VASHTORR THE ARKIFANE Fellhammer Siege Task Force
+LORD DISCORDANT ON HELSTALKER
+175 PTS
+Character
+Mark of the Soul Forges
+Models
+Options
+1× Lord Discordant on Helstalker
+Bladed limbs, Bolt pistol, Impaler chainglaive, Helstalker autocannon, Techno-virus injector
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Lord Discordant on Helstalker
+120×92mm Oval
+14"
+9
+2+
+10
+6+
+4
+4+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+ALL ATTACKS
+Every attack: a Critical Hit on an unmodified hit roll of 5+ (Mark of the Soul Forges)
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Helstalker autocannon
+48"
+3
+2+
+9
+-1
+3
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol
+12"
+1
+2+
+5
+-1
+1
+PISTOL
+Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start: re-roll wound rolls of 1 (Spirit Thief)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Impaler chainglaive
+5
+2+
+8
+-3
+3
+LANCE
++
+Bladed limbs
+4
+3+
+6
+-1
+2
+EXTRA ATTACKS
++
+Techno-virus injector
+1
+3+
+3
+-3
+2
+ANTI-VEHICLE 2+, EXTRA ATTACKS
+Made a charge move this turn: Impaler chainglaive +1 to wound (Lance)
+ABILITIES
+Corrupt Machine Spirits
+Your Shooting
+
+Shooting · Your turn
+
+At the start of your Shooting phase, select one visible enemy VEHICLE unit within 12" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
+
+Spirit Thief
+Your Shooting
+
+Shooting · Your turn
+
+At the start of your Shooting phase, select one visible enemy VEHICLE unit. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.
+
+Mark of the Soul Forges
+Enhancement
+Their Move · Your Shoot · Fight
+
+Enhancement · Their Movement / Your Shooting / Fight (either turn)
+
+HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+Rules
+Dark Pacts, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: HERETIC ASTARTES
+LORD DISCORDANT
+MOUNTED
+SOUL FORGE
+Ask about this unit
+‹ Vashtorr the Arkifane
+Warpsmith · Wyredjinn ›
+
+######## unit warpsmith · LORD DISCORDANT ON HELSTALKER Fellhammer Siege Task Force
+WARPSMITH
+90 PTS
+Character
+Wyredjinn
+Models
+Options
+1× Warpsmith
+Flamer tendril, Forge weapon, Melta tendril, Plasma pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Warpsmith
+60×35.5mm Oval
+6"
+5
+2+
+4
+6+
+1
+–
+WHEN TARGETEDLone Operative while within 3" of a friendly HERETIC ASTARTES VEHICLE unit
+RANGED WEAPONS
+Flamer tendril, Melta tendril, Plasma pistol · all pistols
+Range
+A
+BS
+S
+AP
+D
+Flamer tendril
+12"
+D6
+–
+3
+0
+1
+IGNORES COVER, PISTOL, TORRENT
+Melta tendril
+6"
+1
+2+
+8
+-4
+D3
+PISTOL, MELTA 2
+Plasma pistol
+➤standard
+12"
+1
+2+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+2+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Forge weapon
+4
+3+
+6
+-2
+2
+ANTI-VEHICLE 4+
+ABILITIES
+Warpsmith
+
+While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.
+
+Master of Mechanisms
+Your Command/Shoot · Fight
+
+Your Command / Your Shooting / Fight (either turn)
+
+In your Command phase, select one friendly HERETIC ASTARTES VEHICLE model within 3" of this model. That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per Command phase.
+
+Enrage Machine Spirits
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, select one enemy VEHICLE unit within 12" of this model. That unit must take a Battle-shock test.
+
+Wyredjinn
+Enhancement
+Your Command
+
+Enhancement · Command · Your turn
+
+HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.
+
+Rules
+Dark Pacts, Leader
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: HERETIC ASTARTES
+GRENADES
+INFANTRY
+WARPSMITH
+Ask about this unit
+‹ Lord Discordant on Helstalker · Mark of the Soul Forges
+Dark Apostle · Cybinfernal Font ›
+
+######## unit dark-apostle-master-of-executions-nemesis-claw · WARPSMITH Fellhammer Siege Task Force
+DARK APOSTLE + MASTER OF EXECUTIONS + NEMESIS CLAW
+270 PTS
+Character · 90 + Master of Executions 75 + Nemesis Claw 105
+Cybinfernal Font
+Models
+Options
+1× Dark Apostle
+Accursed crozius, Bolt pistol
+Leading Nemesis Claw
+2× Dark Disciple
+Close combat weapon
+1× Master of Executions
+Axe of dismemberment, Bolt pistol
+Supporting Nemesis Claw
+1× Visionary
+Nostraman chainblade, Plasma pistol
+1× Legionary w/ accursed weapon
+Accursed weapon, Bolt pistol, Close combat weapon
+1× Legionary w/ Nostraman chainglaive
+Bolt pistol, Close combat weapon, Nostraman chainglaive
+1× Legionary w/ paired accursed weapons
+Bolt pistol, Close combat weapon, Paired accursed weapons
+1× Legionary w/ voice eater (Voice eater)
+Astartes chainsword, Bolt pistol, Close combat weapon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Dark Apostle
+40mm
+6"
+5
+3+
+4
+5+
+1
+4+
+Dark Disciple×2
+25mm
+6"
+5
+6+
+1
+7+
+1
+4+
+Master of Executions
+40mm
+6"
+5
+3+
+4
+6+
+1
+5+
+Nemesis Claw×5
+32mm
+6"
+5
+3+
+2
+6+
+1
+5+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+ALL ATTACKS · WHOLE UNIT
+Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Visions of Suffering)
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Bolt pistol ×6, Plasma pistol · all pistols
+Range
+A
+BS
+S
+AP
+D
+DARK APOSTLE
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+MASTER OF EXECUTIONS
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+NEMESIS CLAW
+Bolt pistol×4
+12"
+1
+3+
+5
+-1
+1
+PISTOL
+Plasma pistolVISIONARY
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+WHOLE UNIT
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+DARK APOSTLE
+Accursed crozius
+5
+2+
+6
+-1
+2
+Close combat weapon×2
+1
+4+
+3
+0
+1
+MASTER OF EXECUTIONS
+Axe of dismemberment
+5
+2+
+7
+-2
+2
+DEVASTATING WOUNDS, PRECISION
+NEMESIS CLAW
+
+Legionary w/ accursed weapon picks one to fight with: Accursed weapon or Close combat weapon.
+
+Legionary w/ Nostraman chainglaive picks one to fight with: Close combat weapon or Nostraman chainglaive.
+
+Legionary w/ paired accursed weapons picks one to fight with: Close combat weapon or Paired accursed weapons.
+
+Legionary w/ voice eater (Voice eater) picks one to fight with: Close combat weapon or Astartes chainsword.
+
+The others: one each (×N = how many the unit has).
+
+Master of Executions: none of these.
+
+Nostraman chainbladeVISIONARY
+5
+3+
+5
+-1
+1
+SUSTAINED HITS 1
+Accursed weaponLEGIONARY
+4
+3+
+5
+-2
+1
+Close combat weapon×4
+3
+3+
+4
+0
+1
+Nostraman chainglaiveLEGIONARY
+4
+3+
+8
+-2
+1
+SUSTAINED HITS 1
+Paired accursed weaponsLEGIONARY
+4
+3+
+5
+-2
+1
+TWIN-LINKED
+Astartes chainswordLEGIONARY
+4
+3+
+5
+-1
+1
+WHOLE UNIT
+While the Dark Apostle leads this unit and it contains its DARK APOSTLE model: +1 to wound rolls (Dark Zealotry)
+While the Master of Executions leads this unit, target below its Starting Strength: re-roll the hit roll; also the wound roll if Below Half-strength (Warp-sighted Butcher)
+ABILITIES
+Dark Zealotry
+- Dark Apostle
+Fight
+
+Fight · Either turn
+
+While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.
+
+Demagogue
+- Dark Apostle
+Once per battle
+Any phase
+
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly HERETIC ASTARTES unit that is Battle-shocked and within 12" of this unit’s DARK APOSTLE model. That unit is no longer Battle-shocked.
+
+Malign Sacrifice
+- Dark Apostle
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within Engagement Range of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.
+
+Cybinfernal Font
+- Dark Apostle
+Enhancement
+
+Enhancement
+
+HERETIC ASTARTES model only (excluding DAMNED models). Models in the bearer’s unit have the SOUL FORGE keyword.
+
+Warp-sighted Butcher
+- Master of Executions
+Fight
+
+Fight · Either turn
+
+While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that unit is Below Half-strength, you can re-roll the Wound roll as well.
+
+Trophy Taker
+- Master of Executions
+
+Each time this model destroys an enemy CHARACTER model, you gain 1CP.
+
+Visions of Suffering
+- Nemesis Claw
+Their Move · Your Shoot · Fight
+
+Psychic · Their Movement / Your Shooting / Fight (either turn)
+
+Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.
+
+Attached Unit
+- Nemesis Claw
+
+If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
+
+Voice eater
+- Nemesis Claw
+
+Enemy units (excluding MONSTERS and VEHICLES) cannot be targeted with Stratagems while they are within Engagement Range of the bearer’s unit.
+
+Rules
+Dark Pacts, Leader, Support, Stealth (Nemesis Claw), Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+FACTION: HERETIC ASTARTES
+GRENADES
+INFANTRY
+SOUL FORGE
+MASTER OF EXECUTIONS*
+NEMESIS CLAW*
+PSYKER*
+Dark Apostle and Master of Executions only:
+CHARACTER
+Dark Apostle only:
+DARK APOSTLE
+*from the combined unit
+Ask about this unit
+‹ Warpsmith · Wyredjinn
+Cultist Mob ›
+
+######## unit cultist-mob · DARK APOSTLE Fellhammer Siege Task Force
+CULTIST MOB
+50 PTS
+Battleline
+Models
+Options
+1× Cultist Champion
+Brutal assault weapon, Bolt pistol
+9× Cultist w/ autopistol and brutal assault weapon
+Autopistol, Brutal assault weapon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Cultist Mob×9
+25mm
+6"
+3
+6+
+1
+7+
+1
+–
+Cultist Champion
+25mm
+6"
+3
+6+
+1
+7+
+1
+–
+RANGED WEAPONS
+Bolt pistol, Autopistol ×9 · all pistols
+Range
+A
+BS
+S
+AP
+D
+Bolt pistolCULTIST CHAMPION
+12"
+1
+4+
+4
+0
+1
+PISTOL
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Brutal assault weapon×10
+2
+4+
+3
+0
+1
+ABILITIES
+For the Dark Gods
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Rules
+Dark Pacts
+Stratagems
+
+CULT OF THE ARKIFANE Forge-Fire Surge
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+BATTLELINE
+CHAOS
+CULTIST MOB
+DAMNED
+FACTION: HERETIC ASTARTES
+GRENADES
+INFANTRY
+Ask about this unit
+‹ Dark Apostle · Cybinfernal Font
+Havocs ›
+
+######## unit havocs · CULTIST MOB Fellhammer Siege Task Force
+HAVOCS
+135 PTS EACH
+Infantry · ×2 in list
+Models
+Options
+1× Havoc Champion
+Power fist, Plasma gun
+4× Havoc w/ lascannon
+Close combat weapon, Havoc lascannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Havoc Champion
+40mm
+5"
+5
+3+
+3
+6+
+1
+–
+Havocs×4
+40mm
+5"
+5
+3+
+3
+6+
+1
+–
+WHEN TARGETED1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Plasma gunHAVOC CHAMPION
+➤standard
+24"
+1
+3+
+7
+-2
+1
+RAPID FIRE 1, HEAVY
+➤supercharge
+24"
+1
+3+
+8
+-3
+2
+HAZARDOUS, RAPID FIRE 1, HEAVY
+Havoc lascannon×4
+48"
+1
+3+
+12
+-3
+D6+1
+HEAVY
+Every ranged attack: can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Stabilisation Talons)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
+1CP Ruination’s Bounty: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot, when your unit uses the Dark Pacts ability
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Power fistHAVOC CHAMPION
+3
+3+
+8
+-2
+2
+Close combat weapon×4
+3
+3+
+5
+0
+1
+ABILITIES
+Stabilisation Talons
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and any or all modifiers to the Ballistic Skill characteristic of that weapon.
+
+Rules
+Dark Pacts, Rain of Ruin
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Touch of the Arkifane
+
+DEVOTEES OF DESTRUCTION Snare of Fire, Ruination’s Bounty, Undying Hatred
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: HERETIC ASTARTES
+HAVOCS
+INFANTRY
+Ask about this unit
+‹ Cultist Mob
+Obliterators ›
+
+######## unit obliterators · HAVOCS Fellhammer Siege Task Force
+OBLITERATORS
+160 PTS
+Infantry
+Models
+Options
+2× Obliterator
+Crushing fists, Fleshmetal guns
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Obliterators×2
+50mm
+4"
+7
+2+
+5
+6+
+2
+5+
+WHEN TARGETED1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Fleshmetal guns×2
+➤focused malice
+18"
+D3
+3+
+12
+-3
+4
+MELTA 2, HEAVY
+➤ruinous salvo
+24"
+D6
+3+
+8
+-2
+2
+BLAST, HEAVY
+➤warp hail
+24"
+D6+3
+3+
+5
+-1
+1
+SUSTAINED HITS 1, HEAVY
+Once per battle, your Shooting phase, when selected to shoot: [INDIRECT FIRE] (Warp Rift Firepower)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
+1CP Ruination’s Bounty: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot, when your unit uses the Dark Pacts ability
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Crushing fists×2
+4
+3+
+9
+-2
+2
+ABILITIES
+Warp Rift Firepower
+Once per battle, per unit
+Your Shooting
+
+Once per battle, per unit · Shooting · Your turn
+
+In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].
+
+Rules
+Dark Pacts, Deep Strike, Rain of Ruin
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Touch of the Arkifane
+
+DEVOTEES OF DESTRUCTION Ruination’s Bounty, Undying Hatred
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+DAEMON
+FACTION: HERETIC ASTARTES
+INFANTRY
+OBLITERATORS
+Ask about this unit
+‹ Havocs
+Chaos Predator Annihilator ›
+
+######## unit chaos-predator-annihilator · OBLITERATORS Fellhammer Siege Task Force
+CHAOS PREDATOR ANNIHILATOR
+140 PTS
+Vehicle
+Models
+Options
+1× Chaos Predator Annihilator
+Armoured tracks, Havoc launcher, Predator twin lascannon, Combi-bolter, 2× Lascannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Predator Annihilator
+Hull
+10"
+10
+3+
+11
+6+
+3
+5+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
+Predator twin lascannon
+48"
+1
+3+
+14
+-3
+D6+1
+TWIN-LINKED
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Lascannon×2
+48"
+1
+3+
+12
+-3
+D6+1
+Allocated to a MONSTER or VEHICLE model: can re-roll the damage roll (Annihilator)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured tracks
+3
+4+
+6
+0
+1
+ABILITIES
+Annihilator
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.
+
+Rules
+Deadly Demise D3, Dark Pacts, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: HERETIC ASTARTES
+FRAME
+PREDATOR ANNIHILATOR
+SMOKE
+SOUL FORGE
+VEHICLE
+Ask about this unit
+‹ Obliterators
+Chaos Predator Destructor ›
+
+######## unit chaos-predator-destructor · CHAOS PREDATOR ANNIHILATOR Fellhammer Siege Task Force
+CHAOS PREDATOR DESTRUCTOR
+145 PTS
+Vehicle
+Models
+Options
+1× Chaos Predator Destructor
+Armoured tracks, Havoc launcher, Predator autocannon, Combi-bolter, 2× Heavy bolter
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Predator Destructor
+Hull
+10"
+10
+3+
+11
+6+
+3
+5+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
+Predator autocannon
+48"
+4
+3+
+9
+-1
+3
+RAPID FIRE 2
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Heavy bolter×2
+36"
+3
+3+
+5
+-1
+2
+SUSTAINED HITS 1
+vs INFANTRY units: +1 AP (Destructor)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured tracks
+3
+4+
+6
+0
+1
+ABILITIES
+Destructor
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.
+
+Rules
+Deadly Demise D3, Dark Pacts, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: HERETIC ASTARTES
+FRAME
+PREDATOR DESTRUCTOR
+SMOKE
+SOUL FORGE
+VEHICLE
+Ask about this unit
+‹ Chaos Predator Annihilator
+Chaos Vindicator ›
+
+######## unit chaos-vindicator · CHAOS PREDATOR DESTRUCTOR Fellhammer Siege Task Force
+CHAOS VINDICATOR
+180 PTS
+Vehicle
+Models
+Options
+1× Chaos Vindicator
+Armoured tracks, Demolisher cannon, Havoc launcher, Combi-bolter
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Vindicator
+Hull
+9"
+11
+2+
+11
+6+
+3
+5+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Demolisher cannon
+24"
+D6+3
+3+
+14
+-3
+D6
+BLAST
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Within Engagement Range of one or more enemy units: no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit) (Siege Shield)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured tracks
+3
+4+
+6
+0
+1
+ABILITIES
+Siege Shield
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.
+
+Rules
+Deadly Demise D3, Dark Pacts, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: HERETIC ASTARTES
+FRAME
+SMOKE
+SOUL FORGE
+VEHICLE
+VINDICATOR
+Ask about this unit
+‹ Chaos Predator Destructor
+Forgefiend ›
+
+######## unit forgefiend · CHAOS VINDICATOR Fellhammer Siege Task Force
+FORGEFIEND
+170 PTS
+Vehicle
+Models
+Options
+1× Forgefiend
+3× Ectoplasma cannon, Armoured limbs
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Forgefiend
+120×92mm Oval
+8"
+10
+3+
+12
+6+
+3
+5+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Ectoplasma cannon×3
+36"
+D3
+3+
+10
+-3
+3
+BLAST
+Selected to shoot, if it uses this ability (until the end of the phase): [DEVASTATING WOUNDS] and [HAZARDOUS] (Daemonic Ordnance)
+Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured limbs
+2
+3+
+6
+0
+2
+ABILITIES
+Daemonic Ordnance
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.
+
+Rules
+Deadly Demise D3, Dark Pacts, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: HERETIC ASTARTES
+FORGEFIEND
+SOUL FORGE
+VEHICLE
+WALKER
+Ask about this unit
+‹ Chaos Vindicator
+Maulerfiend ›
+
+######## unit maulerfiend · FORGEFIEND Fellhammer Siege Task Force
+MAULERFIEND
+125 PTS
+Vehicle
+Models
+Options
+1× Maulerfiend
+Maulerfiend fists, Lasher tendrils
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Maulerfiend
+120×92mm Oval
+10"
+10
+3+
+12
+6+
+3
+5+
+WHEN TARGETED1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Maulerfiend fists
+6
+3+
+14
+-2
+D6+1
++
+Lasher tendrils
+6
+3+
+7
+-1
+1
+EXTRA ATTACKS
+Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
+Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
+STRATAGEMS · CULT OF THE ARKIFANE
+1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
+2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
+ABILITIES
+Siege Crawler
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+You can ignore any or all modifiers to this model’s Move characteristic and to Advance and Charge rolls made for it.
+
+Rules
+Deadly Demise D3, Dark Pacts, Soul Forge Boons
+Stratagems
+
+CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Devotees of Destruction.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: HERETIC ASTARTES
+MAULERFIEND
+SOUL FORGE
+VEHICLE
+WALKER
+Ask about this unit
+‹ Forgefiend
+
+######## popup ability:fellhammer-siege-task-force|Annihilator|Each time a ranged attack made by this model is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll. · MAULERFIEND Fellhammer Siege Task Force
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Annihilator
+
+Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.
+
+UNITChaos Predator Annihilator
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Attached Unit|If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY
+
+Attached Unit
+
+If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
+
+UNITDark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Corrupt Machine Spirits|At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 **mortal wounds**; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · SHOOTING · YOUR TURN
+
+Corrupt Machine Spirits
+
+At the start of your Shooting phase, select one visible enemy VEHICLE unit within 12" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
+
+UNITLord Discordant on Helstalker · Mark of the Soul Forges
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Daemonic Ordnance|Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Daemonic Ordnance
+
+Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.
+
+UNITForgefiend
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITVashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Dark Zealotry|While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · FIGHT · EITHER TURN
+
+Dark Zealotry
+
+While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.
+
+UNITDark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Demagogue|Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · ONCE PER BATTLE · ANY PHASE · EITHER TURN
+
+Demagogue
+
+Once per battle, at the start of any phase, you can select one friendly HERETIC ASTARTES unit that is Battle-shocked and within 12" of this unit’s DARK APOSTLE model. That unit is no longer Battle-shocked.
+
+UNITDark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Destructor|Each time a ranged attack made by this model targets an enemy **INFANTRY** unit, improve the Armour Penetration characteristic of that attack by 1. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Destructor
+
+Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.
+
+UNITChaos Predator Destructor
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Enrage Machine Spirits|At the end of your Movement phase, select one enemy **VEHICLE** unit within 12" of this model. That unit must take a **Battle-shock test**. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · MOVEMENT · YOUR TURN
+
+Enrage Machine Spirits
+
+At the end of your Movement phase, select one enemy VEHICLE unit within 12" of this model. That unit must take a Battle-shock test.
+
+UNITWarpsmith · Wyredjinn
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|For the Dark Gods|At the end of your Command phase, if this unit is within range of an **objective** marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · COMMAND · YOUR TURN
+
+For the Dark Gods
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+UNITCultist Mob
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Indentured Daemon Engines|While this model is within 3" of one or more friendly **DAEMON VEHICLE** units, this model has the **Lone Operative** ability. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY
+
+Indentured Daemon Engines
+
+While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.
+
+UNITVashtorr the Arkifane
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Malign Sacrifice|At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within **Engagement Range** of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · FIGHT · EITHER TURN
+
+Malign Sacrifice
+
+At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within Engagement Range of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.
+
+UNITDark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Mark of the Soul Forges|**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · ENHANCEMENT · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Mark of the Soul Forges
+
+HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+UNITLord Discordant on Helstalker · Mark of the Soul Forges
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Master of Mechanisms|In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · YOUR COMMAND / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Master of Mechanisms
+
+In your Command phase, select one friendly HERETIC ASTARTES VEHICLE model within 3" of this model. That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per Command phase.
+
+UNITWarpsmith · Wyredjinn
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Reorder Reality|Each time an enemy unit within 18" of this model targets this model, subtract 1 from the **Hit roll** and, until the end of the phase, that enemy unit’s ranged weapons have the **[HAZARDOUS]** ability. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY
+
+Reorder Reality
+
+Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.
+
+UNITVashtorr the Arkifane
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Siege Shield|When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Siege Shield
+
+When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.
+
+UNITChaos Vindicator
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Spirit Thief|At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · SHOOTING · YOUR TURN
+
+Spirit Thief
+
+At the start of your Shooting phase, select one visible enemy VEHICLE unit. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.
+
+UNITLord Discordant on Helstalker · Mark of the Soul Forges
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Stabilisation Talons|Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Stabilisation Talons
+
+Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and any or all modifiers to the Ballistic Skill characteristic of that weapon.
+
+UNITHavocs
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Visions of Suffering|Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · PSYCHIC · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Visions of Suffering
+
+Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.
+
+UNITDark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Warp Rift Firepower|In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · ONCE PER BATTLE, PER UNIT · SHOOTING · YOUR TURN
+
+Warp Rift Firepower
+
+In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].
+
+UNITObliterators
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Warp-sighted Butcher|While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · FIGHT · EITHER TURN
+
+Warp-sighted Butcher
+
+While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that unit is Below Half-strength, you can re-roll the Wound roll as well.
+
+UNITDark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Warpsmith|While this model is within 3" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY
+
+Warpsmith
+
+While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.
+
+UNITWarpsmith · Wyredjinn
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Wyredjinn|**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · ENHANCEMENT · COMMAND · YOUR TURN
+
+Wyredjinn
+
+HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.
+
+UNITWarpsmith · Wyredjinn
+
+Ask about this ability
+
+######## popup enh:cult-of-the-arkifane|Cybinfernal Font · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ENHANCEMENT · CULT OF THE ARKIFANE · 20 PTS
+
+Cybinfernal Font
+
+HERETIC ASTARTES model only (excluding DAMNED models). Models in the bearer’s unit have the SOUL FORGE keyword.
+
+ONDark Apostle + Master of Executions + Nemesis Claw
+
+Ask about this enhancement
+
+######## popup enh:cult-of-the-arkifane|Mark of the Soul Forges · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ENHANCEMENT · CULT OF THE ARKIFANE · 20 PTS
+
+Mark of the Soul Forges
+
+HERETIC ASTARTES model only (excluding DAMNED models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+ONLord Discordant on Helstalker
+
+Ask about this enhancement
+
+######## popup enh:cult-of-the-arkifane|Wyredjinn · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ENHANCEMENT · CULT OF THE ARKIFANE · 25 PTS
+
+Wyredjinn
+
+HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.
+
+ONWarpsmith
+
+Ask about this enhancement
+
+######## popup grant:["Rain of Ruin","havocs","HEAVY","HEAVY"] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+HEAVY · GRANTED BY
+
+Rain of Ruin
+
+Devotees of Destruction detachment rule
+
+Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+HEAVY Core rule
+
+In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit:
+
+That unit is unengaged.
+That unit was not set up on the battlefield this turn.
+No model in that unit has moved more than 3" this turn.
+
+######## popup grant:["Rain of Ruin","obliterators","HEAVY","HEAVY"] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+HEAVY · GRANTED BY
+
+Rain of Ruin
+
+Devotees of Destruction detachment rule
+
+Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+HEAVY Core rule
+
+In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit:
+
+That unit is unengaged.
+That unit was not set up on the battlefield this turn.
+No model in that unit has moved more than 3" this turn.
+
+######## popup grant:["Soul Forge Boons","chaos-predator-annihilator","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+INV 5+ · GRANTED BY
+
+Soul Forge Boons
+
+Cult of the Arkifane detachment rule
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Soul Forge Boons","chaos-predator-destructor","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+INV 5+ · GRANTED BY
+
+Soul Forge Boons
+
+Cult of the Arkifane detachment rule
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Soul Forge Boons","chaos-vindicator","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+INV 5+ · GRANTED BY
+
+Soul Forge Boons
+
+Cult of the Arkifane detachment rule
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Soul Forge Boons","dark-apostle-master-of-executions-nemesis-claw","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+INV 5+ · GRANTED BY
+
+Soul Forge Boons
+
+Cult of the Arkifane detachment rule
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANTI-VEHICLE 2+ · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+ANTI-VEHICLE 2+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn
+
+Ask about this rule
+
+######## popup rule:ANTI-VEHICLE 4+ · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+ANTI-VEHICLE 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn
+
+Ask about this rule
+
+######## popup rule:Advance · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance roll · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:BLAST · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYObliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend
+
+Ask about this rule
+
+######## popup rule:Battle-shock test · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Below Half-strength · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:Charge roll · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Close-quarters · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYLord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle · Cybinfernal Font, Cultist Mob
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYVashtorr the Arkifane, Dark Apostle · Cybinfernal Font, Forgefiend (in Daemonic Ordnance)
+
+Ask about this rule
+
+######## popup rule:Dark Pacts · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CHAOS SPACE MARINES ARMY RULE
+
+Dark Pacts
+
+If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:
+
+[LETHAL HITS]
+[SUSTAINED HITS 1]
+
+Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.
+
+Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYVashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYVashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this rule
+
+######## popup rule:Deep Strike · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYVashtorr the Arkifane, Obliterators
+
+Ask about this rule
+
+######## popup rule:EXTRA ATTACKS · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYLord Discordant on Helstalker · Mark of the Soul Forges, Maulerfiend
+
+Ask about this rule
+
+######## popup rule:Engagement Range · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Fights First · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:HAZARDOUS · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYVashtorr the Arkifane (in Reorder Reality), Warpsmith · Wyredjinn, Dark Apostle · Cybinfernal Font, Havocs, Forgefiend (in Daemonic Ordnance)
+
+Ask about this rule
+
+######## popup rule:Hazard roll · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYWarpsmith · Wyredjinn
+
+Ask about this rule
+
+######## popup rule:LANCE · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord Discordant on Helstalker · Mark of the Soul Forges
+
+Ask about this rule
+
+######## popup rule:Lance · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord Discordant on Helstalker · Mark of the Soul Forges
+
+Ask about this rule
+
+######## popup rule:Leader · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYWarpsmith · Wyredjinn, Dark Apostle · Cybinfernal Font
+
+Ask about this rule
+
+######## popup rule:Leadership rolls · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Leadership test · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Lone Operative · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYVashtorr the Arkifane (in Indentured Daemon Engines), Warpsmith · Wyredjinn (in Warpsmith)
+
+Ask about this rule
+
+######## popup rule:MELTA 2 · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYWarpsmith · Wyredjinn, Obliterators
+
+Ask about this rule
+
+######## popup rule:PISTOL · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYLord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle · Cybinfernal Font, Cultist Mob
+
+Ask about this rule
+
+######## popup rule:PRECISION · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYDark Apostle · Cybinfernal Font
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 1 · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYHavocs, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 2 · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYHavocs, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
+
+Ask about this rule
+
+######## popup rule:Rain of Ruin · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+DEVOTEES OF DESTRUCTION DETACHMENT RULE
+
+Rain of Ruin
+
+Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
+
+IN THIS ARMYHavocs, Obliterators
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDark Apostle · Cybinfernal Font, Obliterators, Chaos Predator Destructor
+
+Ask about this rule
+
+######## popup rule:Select Weapons · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Ask about this rule
+
+######## popup rule:Soul Forge Boons · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CULT OF THE ARKIFANE DETACHMENT RULE
+
+Soul Forge Boons
+
+HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.
+
+HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.
+
+SOUL FORGE units from your army have a 5+ invulnerable save.
+
+IN THIS ARMYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this rule
+
+######## popup rule:Stealth · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYDark Apostle · Cybinfernal Font (Nemesis Claw only)
+
+Ask about this rule
+
+######## popup rule:Support · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Support
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYDark Apostle · Cybinfernal Font
+
+Ask about this rule
+
+######## popup rule:TORRENT · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYVashtorr the Arkifane, Warpsmith · Wyredjinn
+
+Ask about this rule
+
+######## popup rule:TWIN-LINKED · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYDark Apostle · Cybinfernal Font, Chaos Predator Annihilator
+
+Ask about this rule
+
+######## popup rule:[DEVASTATING WOUNDS] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYVashtorr the Arkifane, Dark Apostle · Cybinfernal Font, Forgefiend (in Daemonic Ordnance)
+
+Ask about this rule
+
+######## popup rule:[HAZARDOUS] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYVashtorr the Arkifane (in Reorder Reality), Warpsmith · Wyredjinn, Dark Apostle · Cybinfernal Font, Havocs, Forgefiend (in Daemonic Ordnance)
+
+Ask about this rule
+
+######## popup rule:[HEAVY] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+HEAVY
+
+In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit:
+
+That unit is unengaged.
+That unit was not set up on the battlefield this turn.
+No model in that unit has moved more than 3" this turn.
+
+IN THIS ARMYHavocs, Obliterators
+
+Ask about this rule
+
+######## popup rule:[LETHAL HITS] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYDark Apostle · Cybinfernal Font
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDark Apostle · Cybinfernal Font, Obliterators, Chaos Predator Destructor
+
+Ask about this rule
+
+######## popup rule:advance move · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:attached · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+attached
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+Ask about this rule
+
+######## popup rule:battle-shock roll · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:destroyed · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:engaged · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:ingress move · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:normal move · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:snap shooting · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:balefire-boon · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Balefire Boon
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this stratagem
+
+######## popup strat:biomechanoid-regeneration · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · COMMAND · YOUR TURN
+
+Biomechanoid Regeneration
+WHEN
+
+Your Command phase.
+
+TARGETOne HERETIC ASTARTES unit from your army (excluding DAMNED units).
+
+EFFECT
+
+One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Havocs, Obliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYVashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font
+
+Ask about this stratagem
+
+######## popup strat:explosives · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYWarpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Cultist Mob
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Cultist Mob, Havocs, Obliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend
+
+Ask about this stratagem
+
+######## popup strat:forge-fire-surge · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · MOVEMENT · YOUR TURN
+
+Forge-Fire Surge
+WHEN
+
+Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances.
+
+TARGETThat HERETIC ASTARTES unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the SOUL FORGE keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Cultist Mob, Havocs, Obliterators, Forgefiend, Maulerfiend
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:ruinations-bounty · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · SHOOTING · YOUR TURN
+
+Ruination’s Bounty
+WHEN
+
+Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.
+
+TARGETThat HAVOCS/OBLITERATORS unit.
+
+EFFECT
+
+When your unit uses the Dark Pacts ability, your unit’s ranged attacks have:
+
+[LETHAL HITS].
+[SUSTAINED HITS 1].
+
+USED BYHavocs, Obliterators
+
+Ask about this stratagem
+
+######## popup strat:smokescreen · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · SHOOTING · THEIR TURN
+
+Smokescreen
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYChaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
+
+Ask about this stratagem
+
+######## popup strat:snare-of-fire · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · MOVEMENT · THEIR TURN
+
+Snare of Fire
+WHEN
+
+Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly unengaged HAVOCS unit.
+
+TARGETThat HAVOCS unit.
+
+EFFECT
+
+Your unit can make a normal move of up to D3+3".
+
+USED BYHavocs
+
+Ask about this stratagem
+
+######## popup strat:soul-tally-offering · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+2CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Soul-Tally Offering
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this stratagem
+
+######## popup strat:touch-of-the-arkifane · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · ANY PHASE · EITHER TURN
+
+Touch of the Arkifane
+WHEN
+
+Any phase.
+
+TARGETOne HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Warpsmith · Wyredjinn, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Havocs, Obliterators, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this stratagem
+
+######## popup strat:undying-hatred · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · SHOOTING · THEIR TURN
+
+Undying Hatred
+WHEN
+
+Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.
+
+TARGETThat HAVOCS/OBLITERATORS unit.
+
+EFFECT
+
+Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.
+
+USED BYHavocs, Obliterators
+
+Ask about this stratagem
+
+######## popup strat:unholy-fortitude · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+1CP · SHOOTING · THEIR TURN
+
+Unholy Fortitude
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.
+
+USED BYVashtorr the Arkifane, Lord Discordant on Helstalker · Mark of the Soul Forges, Dark Apostle + Master of Executions + Nemesis Claw · Cybinfernal Font, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
+
+Ask about this stratagem
