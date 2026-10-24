@@ -1090,5 +1090,483 @@
   "reason": "New Recruit’s export (catalogue revision 8) gives the base as ~40mm; GW’s base size guide (Event Companion) has 40mm. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3590: \"Eradicator Squad  40mm\"; verify/sources/nr-json/nerf-when.json: Base ~40mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Supreme Commander | Trajann Valoris]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/lite-knights.txt p2",
+  "reason": "GW's datasheet for Trajann Valoris has the SUPREME COMMANDER box (\"If this model is in your army, it must be your WARLORD.\"); New Recruit (BSData) does not print it. The owner: read GW's datasheet completely, header boxes included.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html: \"SUPREME COMMANDER | If this model is in your army, it must be your WARLORD.\" (after the melee weapons, before CORE ABILITIES); verify/sources/nr/lite-knights.txt lines 50, 55 (Trajann's abilities: no Supreme Commander).",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Captain-General (Aura) | Trajann Valoris].text",
+  "app": "Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.",
+  "source": "Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1 Re-roll wound rolls of 1",
+  "where": "verify/sources/nr/emperors-chosen.txt p2",
+  "reason": "Punctuation only: the new codex ends each of the two bullets with a full stop; New Recruit (BSData) prints them without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html, ABILITIES: \"Captain-General (Aura): … within 6\\\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\"; verify/sources/nr/emperors-chosen.txt lines 56, 57, 58.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Slayers of Tyrants | Allarus Custodians]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/emperors-chosen.txt p2",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/emperors-chosen.txt line 64.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Supreme Commander | Trajann Valoris]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/emperors-chosen.txt p2",
+  "reason": "GW's datasheet for Trajann Valoris has the SUPREME COMMANDER box (\"If this model is in your army, it must be your WARLORD.\"); New Recruit (BSData) does not print it. The owner: read GW's datasheet completely, header boxes included.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html: \"SUPREME COMMANDER | If this model is in your army, it must be your WARLORD.\" (after the melee weapons, before CORE ABILITIES); verify/sources/nr/emperors-chosen.txt lines 55, 60 (Trajann's abilities: no Supreme Commander).",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Slayer of Tyrants | Allarus Custodians]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/emperors-chosen.txt p2",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/emperors-chosen.txt line 64.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "gear[1x Shield-Captain (Paragon Blade & Praesidium Shield)]",
+  "app": [
+   "eternity-pattern paragon blade"
+  ],
+  "source": [],
+  "where": "verify/sources/nr/emperors-chosen.txt p3",
+  "reason": "New Recruit names the Shield-Captain's wargear option \"Paragon Blade & Praesidium Shield\" (BSData's selection, a weapon and the shield together) and prints its weapon as \"Eternity-pattern Paragon Blade\" in the unit's weapon table; the app names that weapon on the Shield-Captain's models line, so the weapon table and the models line agree. GW's datasheet: \"This model’s Pyrithite Spear can be replaced with 1 Eternity-pattern Paragon Blade.\"",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, WARGEAR OPTIONS; verify/sources/nr/emperors-chosen.txt lines 86, 97.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Leader | Shield-Captain].text",
+  "app": "This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+  "source": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS",
+  "where": "verify/sources/nr/emperors-chosen.txt p3",
+  "reason": "GW's datasheet (the new codex) lets the Shield-Captain lead CUSTODIAN GUARD SODALITY, … SENTINEL GUARD SODALITY; New Recruit (BSData) prints the previous codex's list, which has no SENTINEL GUARD (New Recruit itself has the Shield-Captain leading the Sentinel Guard Sodality). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, LEADER: \"This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY\"; verify/sources/nr/emperors-chosen.txt lines 88, 101.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Vengeful Surge | Shield-Captain].text",
+  "app": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+  "source": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"",
+  "where": "verify/sources/nr/emperors-chosen.txt p3",
+  "reason": "Punctuation only: the new codex ends Vengeful Surge with a full stop (\"… up to D6+2\\\".\"); New Recruit (BSData) prints it without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Vengeful Surge (Once per battle, per unit): … this unit can make a surge move of up to D6+2\\\".\"; verify/sources/nr/emperors-chosen.txt lines 104, 106.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Master of the Ka'tahs | Shield-Captain]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/emperors-chosen.txt p3",
+  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/emperors-chosen.txt line 107.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Stand Vigil | Sentinel Guard Sodality].text",
+  "app": "This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "source": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "where": "verify/sources/nr/emperors-chosen.txt p3",
+  "reason": "New Recruit (BSData) prints Stand Vigil with a stray \"**\" inside the weapon ability (\"[**LETHAL HITS\"); the app has the datasheet's words. Otherwise the same words.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Sentinel-Guard-Sodality.html, ABILITIES: \"Stand Vigil: This unit’s attacks have [Lethal Hits: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/emperors-chosen.txt line 112.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Master of Ka'tahs | Shield-Captain]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/emperors-chosen.txt p3",
+  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/emperors-chosen.txt line 107.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "custodian-guard-sodality",
+  "field": "abilities[Impenetrable Defence].text",
+  "app": "This unit's attacks have [SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "source": "This unit's attacks have [**SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "where": "verify/sources/nr/emperors-chosen.txt p4",
+  "reason": "New Recruit (BSData) prints Impenetrable Defence with a stray \"**\" inside the weapon ability (\"[**SUSTAINED HITS 1\"); the app has the datasheet's words. Otherwise the same words.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Custodian-Guard-Sodality.html, ABILITIES: \"Impenetrable Defence: This unit’s attacks have [sustained Hits 1: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/emperors-chosen.txt line 112.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "custodian-wardens",
+  "field": "abilities[Living Fortress].text",
+  "app": "Attacks that target this unit have -1 AP.",
+  "source": "Attacks that target this unit have -1AP.",
+  "where": "verify/sources/nr/emperors-chosen.txt p5",
+  "reason": "New Recruit (BSData) prints \"-1AP\" without the space; the datasheet has \"-1 AP\". The same words otherwise.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Custodian-Wardens.html, ABILITIES: \"Living Fortress: Attacks that target this unit have -1 AP.\"; verify/sources/nr/emperors-chosen.txt line 169.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "prosecutor-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/emperors-chosen.txt p6",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/emperors-chosen.txt line 190 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "prosecutor-squad",
+  "field": "abilities[Purity of Execution].text",
+  "app": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected: While a unit is detected, that unit has +3\" detection range.",
+  "source": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected. While a unit is detected, that unit has +3\" detection range.",
+  "where": "verify/sources/nr/emperors-chosen.txt p6",
+  "reason": "Punctuation only: the new codex has \"That unit is detected:\" before its bullet; New Recruit (BSData) prints \"That unit is detected.\". The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, ABILITIES: \"Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\\\" of this unit. That unit is detected: While a unit is detected, that unit has +3\\\" detection range.\"; verify/sources/nr/emperors-chosen.txt lines 192, 196.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "witchseeker-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/emperors-chosen.txt p7",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/emperors-chosen.txt line 190 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "witchseeker-squad",
+  "field": "abilities[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..",
+  "where": "verify/sources/nr/emperors-chosen.txt p7",
+  "reason": "New Recruit (from BSData) prints Sanctified Flames without \"you can\", with stray asterisks (\"*battle-shock roll\", \"battle-shock roll*\") and a double full stop; the app has the datasheet's wording, as Wahapedia prints it (\"when this unit has shot, you can select one enemy unit … makes a battle-shock roll, with -1 …\"), which leaves the selection to the player.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"Sanctified Flames: In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\"; verify/sources/nr/emperors-chosen.txt lines 216, 220.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "vertus-praetors",
+  "field": "abilities[Quicksilver Execution].text",
+  "app": "If this unit made a charge move this turn, this unit's melee attacks have [SUSTAINED HITS 1].",
+  "source": "If this unit made a charge move this turn, this unit's melee attacks have [SUSTAINED HITS 1]",
+  "where": "verify/sources/nr/emperors-chosen.txt p8",
+  "reason": "Punctuation only: the new codex ends Quicksilver Execution with a full stop; New Recruit (BSData) prints it without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vertus-Praetors.html, ABILITIES: \"Quicksilver Execution: If this unit made a charge move this turn, this unit’s melee attacks have [Sustained Hits 1].\"; verify/sources/nr/emperors-chosen.txt lines 240, 241.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "stats[Caladius Annihilator Grav-tank].base",
+  "app": "170x109mm Oval",
+  "source": "150x95mm Oval",
+  "where": "verify/sources/nr/emperors-chosen.txt p9",
+  "reason": "GW's Base Size Guide gives the Caladius Grav-tank a 170x109mm oval base; BSData gives the Caladius Annihilator Grav-tank 150x95mm oval and New Recruit prints it. The owner, 2026-10-23: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2508-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2625 (\"Caladius Grav-tank 170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Custodes.json (Base 150x95mm Oval); verify/sources/nr/emperors-chosen.txt line 255.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "kw",
+  "app": [
+   "Caladius",
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "source": [
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "where": "verify/sources/nr/emperors-chosen.txt p9",
+  "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/emperors-chosen.txt line 269.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Captain-General (Aura) | Trajann Valoris].text",
+  "app": "Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.",
+  "source": "Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1 Re-roll wound rolls of 1",
+  "where": "verify/sources/nr/dread-host.txt p2",
+  "reason": "Punctuation only: the new codex ends each of the two bullets with a full stop; New Recruit (BSData) prints them without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html, ABILITIES: \"Captain-General (Aura): … within 6\\\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\"; verify/sources/nr/dread-host.txt lines 57, 58, 59.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Slayers of Tyrants | Allarus Custodians]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/dread-host.txt p2",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Supreme Commander | Trajann Valoris]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/dread-host.txt p2",
+  "reason": "GW's datasheet for Trajann Valoris has the SUPREME COMMANDER box (\"If this model is in your army, it must be your WARLORD.\"); New Recruit (BSData) does not print it. The owner: read GW's datasheet completely, header boxes included.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html: \"SUPREME COMMANDER | If this model is in your army, it must be your WARLORD.\" (after the melee weapons, before CORE ABILITIES); verify/sources/nr/dread-host.txt lines 56, 61 (Trajann's abilities: no Supreme Commander).",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "abilities[Slayer of Tyrants | Allarus Custodians]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/dread-host.txt p2",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "gear[1x Shield-Captain (Paragon Blade & Praesidium Shield)]",
+  "app": [
+   "eternity-pattern paragon blade"
+  ],
+  "source": [],
+  "where": "verify/sources/nr/dread-host.txt p3",
+  "reason": "New Recruit names the Shield-Captain's wargear option \"Paragon Blade & Praesidium Shield\" (BSData's selection, a weapon and the shield together) and prints its weapon as \"Eternity-pattern Paragon Blade\" in the unit's weapon table; the app names that weapon on the Shield-Captain's models line, so the weapon table and the models line agree. GW's datasheet: \"This model’s Pyrithite Spear can be replaced with 1 Eternity-pattern Paragon Blade.\"",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, WARGEAR OPTIONS; verify/sources/nr/dread-host.txt lines 87, 98.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Leader | Shield-Captain].text",
+  "app": "This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+  "source": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS",
+  "where": "verify/sources/nr/dread-host.txt p3",
+  "reason": "GW's datasheet (the new codex) lets the Shield-Captain lead CUSTODIAN GUARD SODALITY, … SENTINEL GUARD SODALITY; New Recruit (BSData) prints the previous codex's list, which has no SENTINEL GUARD (New Recruit itself has the Shield-Captain leading the Sentinel Guard Sodality). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, LEADER: \"This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY\"; verify/sources/nr/dread-host.txt lines 89, 102.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Vengeful Surge | Shield-Captain].text",
+  "app": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+  "source": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"",
+  "where": "verify/sources/nr/dread-host.txt p3",
+  "reason": "Punctuation only: the new codex ends Vengeful Surge with a full stop (\"… up to D6+2\\\".\"); New Recruit (BSData) prints it without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Vengeful Surge (Once per battle, per unit): … this unit can make a surge move of up to D6+2\\\".\"; verify/sources/nr/dread-host.txt lines 105, 107.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Master of the Ka'tahs | Shield-Captain]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/dread-host.txt p3",
+  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/dread-host.txt line 108.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Stand Vigil | Sentinel Guard Sodality].text",
+  "app": "This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "source": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "where": "verify/sources/nr/dread-host.txt p3",
+  "reason": "New Recruit (BSData) prints Stand Vigil with a stray \"**\" inside the weapon ability (\"[**LETHAL HITS\"); the app has the datasheet's words. Otherwise the same words.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Sentinel-Guard-Sodality.html, ABILITIES: \"Stand Vigil: This unit’s attacks have [Lethal Hits: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/dread-host.txt line 113.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "shield-captain-sentinel-guard-sodality",
+  "field": "abilities[Master of Ka'tahs | Shield-Captain]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/dread-host.txt p3",
+  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/dread-host.txt line 108.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "custodian-guard-sodality",
+  "field": "abilities[Impenetrable Defence].text",
+  "app": "This unit's attacks have [SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "source": "This unit's attacks have [**SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
+  "where": "verify/sources/nr/dread-host.txt p4",
+  "reason": "New Recruit (BSData) prints Impenetrable Defence with a stray \"**\" inside the weapon ability (\"[**SUSTAINED HITS 1\"); the app has the datasheet's words. Otherwise the same words.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Custodian-Guard-Sodality.html, ABILITIES: \"Impenetrable Defence: This unit’s attacks have [sustained Hits 1: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/dread-host.txt line 113.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "allarus-custodians",
+  "field": "abilities[Slayers of Tyrants]",
+  "app": null,
+  "source": "present",
+  "where": "verify/sources/nr/dread-host.txt p5",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65 (and the second Allarus Custodians unit, line 66).",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "allarus-custodians",
+  "field": "abilities[Slayer of Tyrants]",
+  "app": "present",
+  "source": null,
+  "where": "verify/sources/nr/dread-host.txt p5",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65 (and the second Allarus Custodians unit, line 66).",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "custodian-wardens",
+  "field": "abilities[Living Fortress].text",
+  "app": "Attacks that target this unit have -1 AP.",
+  "source": "Attacks that target this unit have -1AP.",
+  "where": "verify/sources/nr/dread-host.txt p6",
+  "reason": "New Recruit (BSData) prints \"-1AP\" without the space; the datasheet has \"-1 AP\". The same words otherwise.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Custodian-Wardens.html, ABILITIES: \"Living Fortress: Attacks that target this unit have -1 AP.\"; verify/sources/nr/dread-host.txt line 196.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "prosecutor-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/dread-host.txt p7",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/dread-host.txt line 217 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "prosecutor-squad",
+  "field": "abilities[Purity of Execution].text",
+  "app": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected: While a unit is detected, that unit has +3\" detection range.",
+  "source": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected. While a unit is detected, that unit has +3\" detection range.",
+  "where": "verify/sources/nr/dread-host.txt p7",
+  "reason": "Punctuation only: the new codex has \"That unit is detected:\" before its bullet; New Recruit (BSData) prints \"That unit is detected.\". The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, ABILITIES: \"Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\\\" of this unit. That unit is detected: While a unit is detected, that unit has +3\\\" detection range.\"; verify/sources/nr/dread-host.txt lines 219, 223.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "witchseeker-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/dread-host.txt p8",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/dread-host.txt line 241 (\"Gun Stock … Melee 3 3+ 3 0 1\").",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "witchseeker-squad",
+  "field": "abilities[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..",
+  "where": "verify/sources/nr/dread-host.txt p8",
+  "reason": "New Recruit (from BSData) prints Sanctified Flames without \"you can\", with stray asterisks (\"*battle-shock roll\", \"battle-shock roll*\") and a double full stop; the app has the datasheet's wording, as Wahapedia prints it (\"when this unit has shot, you can select one enemy unit … makes a battle-shock roll, with -1 …\"), which leaves the selection to the player.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"Sanctified Flames: In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\"; verify/sources/nr/dread-host.txt lines 243, 247.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "stats[Caladius Annihilator Grav-tank].base",
+  "app": "170x109mm Oval",
+  "source": "150x95mm Oval",
+  "where": "verify/sources/nr/dread-host.txt p9",
+  "reason": "GW's Base Size Guide gives the Caladius Grav-tank a 170x109mm oval base; BSData gives the Caladius Annihilator Grav-tank 150x95mm oval and New Recruit prints it. The owner, 2026-10-23: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2508-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2625 (\"Caladius Grav-tank 170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Custodes.json (Base 150x95mm Oval); verify/sources/nr/dread-host.txt line 261.",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "dread-host",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "kw",
+  "app": [
+   "Caladius",
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "source": [
+   "Caladius Annihilator Grav-tank",
+   "Faction: Adeptus Custodes",
+   "Fly",
+   "Frame",
+   "Grav-assault",
+   "Imperium",
+   "Vehicle"
+  ],
+  "where": "verify/sources/nr/dread-host.txt p9",
+  "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/dread-host.txt line 275.",
+  "by": "hand (Claude)"
  }
 ]

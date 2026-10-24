@@ -1,0 +1,1668 @@
+[
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**."
+  },
+  "key": "8ccf606fbfe3d2a6"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-note",
+  "where": "lite-knights · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ],
+   "listRules": [
+    "Martial Ka’tah",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Daughters of the Abyss",
+    "Anathema Psykana",
+    "Magna Imperator",
+    "Flare Shields",
+    "Moritoi Ancients"
+   ]
+  },
+  "key": "4f1e9d95be85a3a6"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-partialRules",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Aquila Commander",
+    "Aegis of the Emperor",
+    "Martial Ka'tah",
+    "Leader",
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Supreme Commander: If this model is in your army, it must be your **WARLORD**.",
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Trajann Valoris · Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Allarus Custodians · Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "dd21cf0a01f29cbd"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Leader",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Leader",
+   "text": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY"
+  },
+  "key": "3867bf3f2a78d8ba"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**."
+  },
+  "key": "a11bd415529d55d1"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "ability-note",
+  "where": "emperors-chosen · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Leader: This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+    "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ],
+   "listRules": [
+    "Martial Ka’tah",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Daughters of the Abyss",
+    "Anathema Psykana",
+    "Magna Imperator",
+    "Companion’s Watch",
+    "On Gilded Wings"
+   ]
+  },
+  "key": "441a2c840044dbd2"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Captain-General",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Captain-General",
+   "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "69507f23ff788422"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "d587d9bedfb7d0d1"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Slayer of Tyrants",
+  "judgement": {
+   "who": "Allarus Custodians",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Slayer of Tyrants",
+   "text": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "be00a44eee99c703"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Vexilla",
+  "judgement": {
+   "who": "Allarus Custodians",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Vexilla",
+   "text": "- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+  },
+  "key": "baecade978ae2f87"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-kwNote",
+  "where": "dread-host · Trajann Valoris",
+  "judgement": {
+   "kwNote": "Allarus Custodians, Terminator come from the led Allarus Custodians."
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "stats": [
+    "Trajann Valoris W10 OC3",
+    "Allarus Custodian ×3 W6 OC3"
+   ],
+   "weapons": [
+    "Eagle’s Scream 2 -2 2 ASSAULT, RAPID FIRE 2",
+    "Balistus grenade launcher 3 -1 1 ASSAULT, BLAST 1",
+    "Castellan axe 2 -1 2 ASSAULT, RAPID FIRE 2",
+    "Watcher’s Axe 6 -3 4 CLEAVE 1",
+    "Castellan axe 3 -2 4"
+   ]
+  },
+  "key": "de5ed27db3726ca0"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-ptsNote",
+  "where": "dread-host · Trajann Valoris",
+  "judgement": {
+   "ptsNote": "265 + Allarus Custodians 270"
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "stats": [
+    "Trajann Valoris W10 OC3",
+    "Allarus Custodian ×3 W6 OC3"
+   ],
+   "weapons": [
+    "Eagle’s Scream 2 -2 2 ASSAULT, RAPID FIRE 2",
+    "Balistus grenade launcher 3 -1 1 ASSAULT, BLAST 1",
+    "Castellan axe 2 -1 2 ASSAULT, RAPID FIRE 2",
+    "Watcher’s Axe 6 -3 4 CLEAVE 1",
+    "Castellan axe 3 -2 4"
+   ]
+  },
+  "key": "e4859893613e72e7"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-partialRules",
+  "where": "dread-host · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Aquila Commander",
+    "Aegis of the Emperor",
+    "Martial Ka'tah",
+    "Leader",
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Leader: This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+    "Trajann Valoris · Supreme Commander: If this model is in your army, it must be your **WARLORD**.",
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Trajann Valoris · Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Allarus Custodians · Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "de800c55a093d64f"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-weapons",
+  "where": "dread-host · Trajann Valoris",
+  "judgement": {
+   "gear": [
+    [
+     "Eagle’s Scream",
+     "Watcher’s Axe"
+    ],
+    [
+     "Balistus grenade launcher",
+     "Castellan axe"
+    ],
+    [
+     "Balistus grenade launcher",
+     "Castellan axe"
+    ]
+   ],
+   "weapons": [
+    "Trajann Valoris · Eagle’s Scream",
+    "Allarus Custodians · ×3 · Balistus grenade launcher",
+    "Allarus Custodians · ×3 · Castellan axe",
+    "Trajann Valoris · Watcher’s Axe",
+    "Allarus Custodians · ×3 · Castellan axe"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "leads": "Allarus Custodians"
+  },
+  "key": "a32a7cb99d1c7d85"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Leader",
+  "judgement": {
+   "who": "Shield-Captain",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Leader",
+   "text": "This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY"
+  },
+  "key": "d07f0b91ea4d46ac"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-timing",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Vengeful Surge",
+   "text": "(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+  },
+  "key": "74312787820e5df0"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-tag",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Vengeful Surge",
+   "text": "(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+  },
+  "key": "40e7a6fb30af770c"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "judgement": {
+   "who": "Shield-Captain",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Vengeful Surge",
+   "text": "(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+  },
+  "key": "c4c9092c178fed09"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-tag",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "judgement": {
+   "tag": "Once per battle round, per unit"
+  },
+  "source": {
+   "ability": "Master of Ka’tahs",
+   "text": "(Once per battle round, per unit) If this unit is not **readied**, you can use this ability. If you do, this unit is **readied**."
+  },
+  "key": "1b6859cc9bb993b8"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "judgement": {
+   "who": "Shield-Captain",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Master of Ka’tahs",
+   "text": "(Once per battle round, per unit) If this unit is not **readied**, you can use this ability. If you do, this unit is **readied**."
+  },
+  "key": "74c8036a651088a2"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "judgement": {
+   "who": "Shield-Captain",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Praesidium Shield",
+   "text": "Attacks allocated to this model have -1 **D**."
+  },
+  "key": "895dd696c7d54cb1"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-def",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "judgement": {
+   "def": "Attacks allocated to this model (the Shield-Captain) have -1 D"
+  },
+  "source": {
+   "ability": "Praesidium Shield",
+   "text": "Attacks allocated to this model have -1 **D**."
+  },
+  "key": "a7b3e71584c4debf"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Stand Vigil",
+  "judgement": {
+   "who": "Sentinel Guard Sodality",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Stand Vigil",
+   "text": "This unit’s attacks have **[LETHAL HITS: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
+  },
+  "key": "30748dba43821db2"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Vexilla",
+  "judgement": {
+   "who": "Sentinel Guard Sodality",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Vexilla",
+   "text": "- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+  },
+  "key": "a732f6466a8685d1"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "judgement": {
+   "who": "Sentinel Guard Sodality",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Praesidium Shield",
+   "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "6f82f1f696f2f252"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-def",
+  "where": "dread-host · Shield-Captain · Praesidium Shield",
+  "judgement": {
+   "def": "-1 to wound rolls for attacks with S greater than its T"
+  },
+  "source": {
+   "ability": "Praesidium Shield",
+   "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "d0687964cd8e6bd2"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-footnote",
+  "where": "dread-host · Shield-Captain",
+  "judgement": {
+   "kind": "all",
+   "when": "This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets",
+   "cond": "objective",
+   "note": "[LETHAL HITS]",
+   "from": "Stand Vigil",
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Stand Vigil",
+   "text": "This unit’s attacks have **[LETHAL HITS: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
+  },
+  "key": "240d4660ba0c3c6c"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-kwNote",
+  "where": "dread-host · Shield-Captain",
+  "judgement": {
+   "kwNote": "Battleline, Sentinel Guard Sodality, Trusted Sentinel come from the led Sentinel Guard Sodality."
+  },
+  "source": {
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ],
+   "stats": [
+    "Shield-Captain W8 OC3",
+    "Sentinel Guard ×3 W5 OC4"
+   ],
+   "weapons": [
+    "Sentinel Blade 4 -1 2 ASSAULT, CLOSE-QUARTERS",
+    "Eternity-pattern Paragon Blade 6 -3 3 PRECISION",
+    "Sentinel Blade 5 -2 2"
+   ]
+  },
+  "key": "7cdcf12b4c4c5519"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-ptsNote",
+  "where": "dread-host · Shield-Captain",
+  "judgement": {
+   "ptsNote": "205 + Sentinel Guard Sodality 240"
+  },
+  "source": {
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ],
+   "stats": [
+    "Shield-Captain W8 OC3",
+    "Sentinel Guard ×3 W5 OC4"
+   ],
+   "weapons": [
+    "Sentinel Blade 4 -1 2 ASSAULT, CLOSE-QUARTERS",
+    "Eternity-pattern Paragon Blade 6 -3 3 PRECISION",
+    "Sentinel Blade 5 -2 2"
+   ]
+  },
+  "key": "bf30d07404212c80"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-weapons",
+  "where": "dread-host · Shield-Captain",
+  "judgement": {
+   "gear": [
+    [
+     "Eternity-pattern Paragon Blade"
+    ],
+    [
+     "Sentinel Blade"
+    ],
+    [
+     "Sentinel Blade"
+    ]
+   ],
+   "weapons": [
+    "Sentinel Guard Sodality · ×3 · Sentinel Blade",
+    "Shield-Captain · Eternity-pattern Paragon Blade",
+    "Sentinel Guard Sodality · ×3 · Sentinel Blade"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ],
+   "leads": "Sentinel Guard Sodality"
+  },
+  "key": "6787c37b62061f56"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-footnote",
+  "where": "dread-host · Custodian Guard Sodality",
+  "judgement": {
+   "kind": "all",
+   "when": "This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets",
+   "cond": "objective",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "Impenetrable Defence",
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Impenetrable Defence",
+   "text": "This unit’s attacks have **[SUSTAINED HITS 1: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
+  },
+  "key": "7c4307c3c42cfbaf"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-weapons",
+  "where": "dread-host · Custodian Guard Sodality",
+  "judgement": {
+   "gear": [
+    [
+     "Guardian Spear"
+    ],
+    [
+     "Guardian Spear"
+    ]
+   ],
+   "weapons": [
+    "×3 · Guardian Spear",
+    "×3 · Guardian Spear"
+   ]
+  },
+  "source": {
+   "models": [
+    "2× Custodian Guard",
+    "1× Custodian Guard (Vexilla)"
+   ],
+   "leads": null
+  },
+  "key": "a3c4207a8f68dfb6"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-def",
+  "where": "dread-host · Custodian Wardens · Living Fortress",
+  "judgement": {
+   "def": "-1 AP to attacks that target it"
+  },
+  "source": {
+   "ability": "Living Fortress",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "aa68eaf31bdfc477"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "unit-weapons",
+  "where": "emperors-chosen · Custodian Wardens",
+  "judgement": {
+   "gear": [
+    [
+     "Guardian Spear"
+    ],
+    [
+     "Guardian Spear"
+    ]
+   ],
+   "weapons": [
+    "×2 · Guardian Spear",
+    "×2 · Guardian Spear"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Custodian Warden",
+    "1× Custodian Warden (Vexilla)"
+   ],
+   "leads": null
+  },
+  "key": "d162e18158962b1a"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "unit-weapons",
+  "where": "emperors-chosen · Prosecutor Squad",
+  "judgement": {
+   "gear": [
+    [
+     "Boltgun",
+     "Gun Stock"
+    ]
+   ],
+   "weapons": [
+    "×5 · Boltgun",
+    "×5 · Gun Stock"
+   ]
+  },
+  "source": {
+   "models": [
+    "5× Prosecutor"
+   ],
+   "leads": null
+  },
+  "key": "973bebc37d63d6a3"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "ability-timing",
+  "where": "emperors-chosen · Vertus Praetors · Quicksilver Execution",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Quicksilver Execution",
+   "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "1ae73b19a118d888"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "unit-footnote",
+  "where": "emperors-chosen · Vertus Praetors",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "Quicksilver Execution"
+  },
+  "source": {
+   "ability": "Quicksilver Execution",
+   "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "bf8f72027464478c"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "unit-weapons",
+  "where": "emperors-chosen · Vertus Praetors",
+  "judgement": {
+   "gear": [
+    [
+     "Interceptor lance",
+     "Salvo launcher"
+    ]
+   ],
+   "weapons": [
+    "×2 · Salvo launcher",
+    "×2 · Interceptor lance"
+   ]
+  },
+  "source": {
+   "models": [
+    "2× Vertus Praetor"
+   ],
+   "leads": null
+  },
+  "key": "d827575ed4f389ce"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-ph",
+  "where": "Honoured Companions rule · Companion’s Watch",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Companion’s Watch",
+   "text": "While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, that unit’s attacks can re-roll **wound rolls** of 1."
+  },
+  "key": "834a30f81a0ad367"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-turn",
+  "where": "Honoured Companions rule · Companion’s Watch",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Companion’s Watch",
+   "text": "While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, that unit’s attacks can re-roll **wound rolls** of 1."
+  },
+  "key": "5104d2eb43d76309"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-turns",
+  "where": "Honoured Companions rule · Companion’s Watch",
+  "judgement": {
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Companion’s Watch",
+   "text": "While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, that unit’s attacks can re-roll **wound rolls** of 1."
+  },
+  "key": "5d40d366f2de81ee"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-needs",
+  "where": "Honoured Companions rule · Companion’s Watch",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Trusted Sentinel"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Companion’s Watch",
+   "text": "While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, that unit’s attacks can re-roll **wound rolls** of 1."
+  },
+  "key": "244977472ae6210a"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-mod",
+  "where": "Honoured Companions rule · Companion’s Watch",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Within range of an objective",
+    "note": "re-roll wound rolls of 1"
+   }
+  },
+  "source": {
+   "rule": "Companion’s Watch",
+   "text": "While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, that unit’s attacks can re-roll **wound rolls** of 1."
+  },
+  "key": "31f1b569011d84d6"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Honoured Companions · Emperor’s Domain",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Emperor’s Domain",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit is selected to make a **consolidation move**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: You can select the **objective consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving restrictions.\n*This means your unit can move out of **engagement range** with enemy units, provided it meets the conditions of the **objective consolidation mode**.*"
+  },
+  "key": "9d870c5ac696af05"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Honoured Companions · Emperor’s Domain",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Emperor’s Domain",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit is selected to make a **consolidation move**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: You can select the **objective consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving restrictions.\n*This means your unit can move out of **engagement range** with enemy units, provided it meets the conditions of the **objective consolidation mode**.*"
+  },
+  "key": "a4131ae669135c57"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Honoured Companions · Emperor’s Domain",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Trusted Sentinel"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Emperor’s Domain",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit is selected to make a **consolidation move**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: You can select the **objective consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving restrictions.\n*This means your unit can move out of **engagement range** with enemy units, provided it meets the conditions of the **objective consolidation mode**.*"
+  },
+  "key": "63f34627918d7e4b"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Honoured Companions · Emperor’s Domain",
+  "judgement": {
+   "gist": "Your unit is selected to make a consolidation move: you can select the objective consolidation mode, regardless of that move’s Before Moving restrictions."
+  },
+  "source": {
+   "stratagem": "Emperor’s Domain",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit is selected to make a **consolidation move**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: You can select the **objective consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving restrictions.\n*This means your unit can move out of **engagement range** with enemy units, provided it meets the conditions of the **objective consolidation mode**.*"
+  },
+  "key": "c362671247e8d7d6"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Honoured Companions · Avenge the Fallen",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Avenge the Fallen",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit that is **below starting strength** is **selected to fight**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit’s melee attacks (excluding those made by **CHARACTER** models) have +2 **A**."
+  },
+  "key": "9786e8e04aca6067"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Honoured Companions · Avenge the Fallen",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Avenge the Fallen",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit that is **below starting strength** is **selected to fight**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit’s melee attacks (excluding those made by **CHARACTER** models) have +2 **A**."
+  },
+  "key": "203744a761df1f72"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Honoured Companions · Avenge the Fallen",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Trusted Sentinel"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Avenge the Fallen",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit that is **below starting strength** is **selected to fight**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit’s melee attacks (excluding those made by **CHARACTER** models) have +2 **A**."
+  },
+  "key": "9797e35f78b82468"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-mod",
+  "where": "Honoured Companions · Avenge the Fallen",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Fight phase, selected to fight, below starting strength",
+    "note": "+2 A (not the attacks of CHARACTER models)"
+   }
+  },
+  "source": {
+   "stratagem": "Avenge the Fallen",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit that is **below starting strength** is **selected to fight**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit’s melee attacks (excluding those made by **CHARACTER** models) have +2 **A**."
+  },
+  "key": "ef897a9349cdd0d4"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Honoured Companions · Avenge the Fallen",
+  "judgement": {
+   "gist": "Your unit below starting strength is selected to fight: its melee attacks (not those of CHARACTER models) have +2 A."
+  },
+  "source": {
+   "stratagem": "Avenge the Fallen",
+   "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit that is **below starting strength** is **selected to fight**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit’s melee attacks (excluding those made by **CHARACTER** models) have +2 **A**."
+  },
+  "key": "b0fcbc7632690b08"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Honoured Companions · Swift as the Eagle",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Swift as the Eagle",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged TRUSTED SENTINEL** unit.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "8b528b2587553581"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Honoured Companions · Swift as the Eagle",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Swift as the Eagle",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged TRUSTED SENTINEL** unit.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "bd098545a20734cb"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Honoured Companions · Swift as the Eagle",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Trusted Sentinel"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Swift as the Eagle",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged TRUSTED SENTINEL** unit.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "90bccea45a0af3fd"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Honoured Companions · Swift as the Eagle",
+  "judgement": {
+   "gist": "An enemy unit ends a move within 8\" of your unengaged unit: your unit can make a normal move of up to D3+3\"."
+  },
+  "source": {
+   "stratagem": "Swift as the Eagle",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged TRUSTED SENTINEL** unit.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: Your unit can make a **normal move** of up to D3+3\"."
+  },
+  "key": "331ddfdaf60aa799"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-ph",
+  "where": "Lions of the Emperor rule · On Gilded Wings",
+  "judgement": {
+   "ph": [
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "On Gilded Wings",
+   "text": "At the end of your opponent’s Fight phase, if a friendly **ADEPTUS CUSTODES TERMINATOR** unit is **unengaged**, you can place that unit in **strategic reserves**."
+  },
+  "key": "123dd68e6cd7f46e"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-turn",
+  "where": "Lions of the Emperor rule · On Gilded Wings",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "rule": "On Gilded Wings",
+   "text": "At the end of your opponent’s Fight phase, if a friendly **ADEPTUS CUSTODES TERMINATOR** unit is **unengaged**, you can place that unit in **strategic reserves**."
+  },
+  "key": "0b6dbb69e142b1ba"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-needs",
+  "where": "Lions of the Emperor rule · On Gilded Wings",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Terminator"
+    ]
+   }
+  },
+  "source": {
+   "rule": "On Gilded Wings",
+   "text": "At the end of your opponent’s Fight phase, if a friendly **ADEPTUS CUSTODES TERMINATOR** unit is **unengaged**, you can place that unit in **strategic reserves**."
+  },
+  "key": "2a1bcd98b5b9c1d8"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Lions of the Emperor · Vigil Unending",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Vigil Unending",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES TERMINATOR** unit.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "224e8afdc47f82ce"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Lions of the Emperor · Vigil Unending",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Vigil Unending",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES TERMINATOR** unit.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "7061e81c670c37e0"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turns",
+  "where": "Lions of the Emperor · Vigil Unending",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Vigil Unending",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES TERMINATOR** unit.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "4bf42da02de84158"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Lions of the Emperor · Vigil Unending",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Terminator"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Vigil Unending",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES TERMINATOR** unit.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "a567de1409021a1a"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-def",
+  "where": "Lions of the Emperor · Vigil Unending",
+  "judgement": {
+   "def": "their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)"
+  },
+  "source": {
+   "stratagem": "Vigil Unending",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES TERMINATOR** unit.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "31f1eb595c703efd"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Lions of the Emperor · Vigil Unending",
+  "judgement": {
+   "gist": "An enemy unit targets your unit: attacks that target your unit have -1 D until that enemy unit has attacked."
+  },
+  "source": {
+   "stratagem": "Vigil Unending",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES TERMINATOR** unit.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "50e05621ad8bc857"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Lions of the Emperor · Unleash the Lions",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Unleash the Lions",
+   "text": "WHEN: Your Command phase.\nTARGET: One friendly **ADEPTUS CUSTODES TERMINATOR** unit that has 2+ models.\nEFFECT: Your unit is split into separate units, each containing one model. These new units each have a **starting strength** of 1."
+  },
+  "key": "9fd2f3e4a73f4cfd"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Lions of the Emperor · Unleash the Lions",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Unleash the Lions",
+   "text": "WHEN: Your Command phase.\nTARGET: One friendly **ADEPTUS CUSTODES TERMINATOR** unit that has 2+ models.\nEFFECT: Your unit is split into separate units, each containing one model. These new units each have a **starting strength** of 1."
+  },
+  "key": "f9eb187ebda3ddac"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Lions of the Emperor · Unleash the Lions",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Terminator"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unleash the Lions",
+   "text": "WHEN: Your Command phase.\nTARGET: One friendly **ADEPTUS CUSTODES TERMINATOR** unit that has 2+ models.\nEFFECT: Your unit is split into separate units, each containing one model. These new units each have a **starting strength** of 1."
+  },
+  "key": "0142096fcb539e29"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Lions of the Emperor · Unleash the Lions",
+  "judgement": {
+   "gist": "Your unit of 2+ models is split into separate units of one model each, each with a starting strength of 1."
+  },
+  "source": {
+   "stratagem": "Unleash the Lions",
+   "text": "WHEN: Your Command phase.\nTARGET: One friendly **ADEPTUS CUSTODES TERMINATOR** unit that has 2+ models.\nEFFECT: Your unit is split into separate units, each containing one model. These new units each have a **starting strength** of 1."
+  },
+  "key": "34412297cb59fe1b"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Lions of the Emperor · Fury of the Emperor",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Fury of the Emperor",
+   "text": "WHEN: Your Charge phase, when a friendly **ADEPTUS CUSTODES TERMINATOR** unit that made an **ingress move** this turn is selected to **declare a charge**.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Your unit has +2 to **charge rolls**."
+  },
+  "key": "b802abe8d4064c44"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Lions of the Emperor · Fury of the Emperor",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Fury of the Emperor",
+   "text": "WHEN: Your Charge phase, when a friendly **ADEPTUS CUSTODES TERMINATOR** unit that made an **ingress move** this turn is selected to **declare a charge**.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Your unit has +2 to **charge rolls**."
+  },
+  "key": "a576573d691ea89b"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Lions of the Emperor · Fury of the Emperor",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Terminator"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Fury of the Emperor",
+   "text": "WHEN: Your Charge phase, when a friendly **ADEPTUS CUSTODES TERMINATOR** unit that made an **ingress move** this turn is selected to **declare a charge**.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Your unit has +2 to **charge rolls**."
+  },
+  "key": "d25fff2c1d962b64"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Lions of the Emperor · Fury of the Emperor",
+  "judgement": {
+   "gist": "Your unit that made an ingress move this turn declares a charge: it has +2 to charge rolls."
+  },
+  "source": {
+   "stratagem": "Fury of the Emperor",
+   "text": "WHEN: Your Charge phase, when a friendly **ADEPTUS CUSTODES TERMINATOR** unit that made an **ingress move** this turn is selected to **declare a charge**.\nTARGET: That **ADEPTUS CUSTODES TERMINATOR** unit.\nEFFECT: Your unit has +2 to **charge rolls**."
+  },
+  "key": "025d833559a88c73"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-note",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Leader: This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+    "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Moment Shackle: (Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ],
+   "listRules": [
+    "Martial Ka’tah",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Daughters of the Abyss",
+    "Anathema Psykana",
+    "Instruments of the Emperor’s Wrath",
+    "Companion’s Watch",
+    "On Gilded Wings"
+   ]
+  },
+  "key": "3939cc8629508920"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-weapons",
+  "where": "dread-host · Allarus Custodians",
+  "judgement": {
+   "gear": [
+    [
+     "Balistus grenade launcher",
+     "Guardian Spear"
+    ],
+    [
+     "Balistus grenade launcher",
+     "Guardian Spear"
+    ]
+   ],
+   "weapons": [
+    "×2 · Balistus grenade launcher",
+    "×2 · Guardian Spear",
+    "×2 · Guardian Spear"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "leads": null
+  },
+  "key": "c90ba8137bd2ca50"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-weapons",
+  "where": "dread-host · Custodian Wardens",
+  "judgement": {
+   "gear": [
+    [
+     "Castellan axe"
+    ],
+    [
+     "Castellan axe"
+    ]
+   ],
+   "weapons": [
+    "×2 · Castellan axe",
+    "×2 · Castellan axe"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Custodian Warden",
+    "1× Custodian Warden (Vexilla)"
+   ],
+   "leads": null
+  },
+  "key": "f5d6fe23f028e1c6"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-ph",
+  "where": "Dread Host rule · Instruments of the Emperor’s Wrath",
+  "judgement": {
+   "ph": [
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Instruments of the Emperor’s Wrath",
+   "text": "Friendly **ADEPTUS CUSTODES** units can re-roll **charge rolls**.\n**Favoured ka’tah: DACATARAI**\n**Additional Effect:** When an enemy unit **engaged** with your unit makes a **pile-in**/**consolidation move**, -2\" from that **pile-in**/**consolidation move**."
+  },
+  "key": "89376fce25bc235b"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-turn",
+  "where": "Dread Host rule · Instruments of the Emperor’s Wrath",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Instruments of the Emperor’s Wrath",
+   "text": "Friendly **ADEPTUS CUSTODES** units can re-roll **charge rolls**.\n**Favoured ka’tah: DACATARAI**\n**Additional Effect:** When an enemy unit **engaged** with your unit makes a **pile-in**/**consolidation move**, -2\" from that **pile-in**/**consolidation move**."
+  },
+  "key": "68dacdf0aeb2c33e"
+ },
+ {
+  "army": "dread-host",
+  "kind": "rule-needs",
+  "where": "Dread Host rule · Instruments of the Emperor’s Wrath",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Instruments of the Emperor’s Wrath",
+   "text": "Friendly **ADEPTUS CUSTODES** units can re-roll **charge rolls**.\n**Favoured ka’tah: DACATARAI**\n**Additional Effect:** When an enemy unit **engaged** with your unit makes a **pile-in**/**consolidation move**, -2\" from that **pile-in**/**consolidation move**."
+  },
+  "key": "94f49a7eefd3a249"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Dread Host · Lightning Wrath",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Lightning Wrath",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **pile-in move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When making that **pile-in move**, your unit can move up to D3+3\"."
+  },
+  "key": "ad913e3a384cf2cf"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Dread Host · Lightning Wrath",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Lightning Wrath",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **pile-in move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When making that **pile-in move**, your unit can move up to D3+3\"."
+  },
+  "key": "3ec05fa8aad994f0"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Dread Host · Lightning Wrath",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Lightning Wrath",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **pile-in move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When making that **pile-in move**, your unit can move up to D3+3\"."
+  },
+  "key": "98d2f70c1662129d"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Dread Host · Lightning Wrath",
+  "judgement": {
+   "gist": "Your unit is selected to make a pile-in move: it can move up to D3+3\"."
+  },
+  "source": {
+   "stratagem": "Lightning Wrath",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **pile-in move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When making that **pile-in move**, your unit can move up to D3+3\"."
+  },
+  "key": "33d48e086be9d624"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Dread Host · Golden Light of the Moiraides",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Golden Light of the Moiraides",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks."
+  },
+  "key": "9d6ceb45b3b7b3e2"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Dread Host · Golden Light of the Moiraides",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Golden Light of the Moiraides",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks."
+  },
+  "key": "51d77e7b195fb8b5"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Dread Host · Golden Light of the Moiraides",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Golden Light of the Moiraides",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks."
+  },
+  "key": "77639f82388c69ea"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-def",
+  "where": "Dread Host · Golden Light of the Moiraides",
+  "judgement": {
+   "def": "until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks"
+  },
+  "source": {
+   "stratagem": "Golden Light of the Moiraides",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks."
+  },
+  "key": "2a35b89d8730d383"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Dread Host · Golden Light of the Moiraides",
+  "judgement": {
+   "gist": "Your unit is selected to make an ingress move: until the start of your next turn, attacks that target it have -1 to hit rolls and enemy units cannot target it with snap shooting attacks."
+  },
+  "source": {
+   "stratagem": "Golden Light of the Moiraides",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks."
+  },
+  "key": "62ee5bc7806906e4"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-phases",
+  "where": "Dread Host · Preternatural Rapidity",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Preternatural Rapidity",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "ae4ba2712c859010"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-turn",
+  "where": "Dread Host · Preternatural Rapidity",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Preternatural Rapidity",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "fdc6dffb1e91d281"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-needs",
+  "where": "Dread Host · Preternatural Rapidity",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Preternatural Rapidity",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "c859a17a3a686c98"
+ },
+ {
+  "army": "dread-host",
+  "kind": "strat-gist",
+  "where": "Dread Host · Preternatural Rapidity",
+  "judgement": {
+   "gist": "Your unit ends an advance move: that move does not prevent it from declaring a charge."
+  },
+  "source": {
+   "stratagem": "Preternatural Rapidity",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "a2c158a43915108b"
+ }
+]

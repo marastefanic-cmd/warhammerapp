@@ -473,6 +473,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dv p{margin:0} .dv p + p{margin-top:2px}
 .dv .sln{font:600 11.5px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:4px}
 .dv .link{white-space:nowrap}
+/* (on the narrowest phones a rule name longer than the line, "Instruments of the Emperor’s Wrath" at 320px, wraps instead of
+   widening the page) */
+@media (max-width:359px){ .dv .link{white-space:normal} }
 .pills{display:flex; flex-wrap:wrap; gap:5px; padding:2px 0}
 .pill{display:inline-block; padding:4px 9px 3px; border-radius:999px; background:var(--surface2); box-shadow:inset 0 0 0 1px var(--pill-line); font:600 12px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2)}
 .kwn{display:block; margin-top:4px; font-size:12px; line-height:1.35; color:var(--muted)}
