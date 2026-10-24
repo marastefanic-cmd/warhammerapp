@@ -1,0 +1,26 @@
+[
+ {
+  "key": "417a86fe32d30419",
+  "where": "nidzillas · Hive Tyrant",
+  "verdict": "ok",
+  "why": "Right entry: GW Event Companion TYRANIDS line 3820 \"Hive Tyrant 60mm\" is the on-foot datasheet. The winged version is a separate row (line 3861 \"Winged Hive Tyrant 60mm\") and a separate BSData entry (706e-86ff-ae9f-c65f). Nidzillas uses tyranids/hive-tyrant, bsId 3e96-8098-3401-77af, with M 8\" (the on-foot profile). Wahapedia's Hive Tyrant datasheet also prints ⌀60mm. In BSData, 19b7762 changes only that profile's Base from 50mm to 60mm (b4dc3f4: 60mm; 173d0ef: 50mm). New Recruit's 20 Oct export printing 50mm is correctly declared in deviations-nr.json. The gate run with b4dc3f4 shows the snapshot change only in nidzillas.txt, in exactly 3 hunks: Bases to print (1×50mm + 1×60mm becomes 2×60mm), the Hive Tyrant's own line, and the stats table."
+ },
+ {
+  "key": "b8f736f2ba6edd15",
+  "where": "nerf-when · Impulsor · InSv",
+  "verdict": "ok",
+  "why": "GW's datasheet (waha ds/ultramarines_Impulsor.html) says \"Shield Dome: This unit has 5+ InSv.\" Both list Impulsors take Shield Dome (the NR json has Shield Dome as a direct child of each Impulsor). Raw BSData check: profile 2dc8-b989-a231-bb82 has the InSv 5+ modifier conditioned on 7685-1ab3-8d12-fac7 with scope parent. includeChildSelections is false at b4dc3f4 and true at 173d0ef. 8aac786 is in 173d0ef..b4dc3f4. New Recruit's export (after that change) shows InSv empty, so BSData/NR really drop the 5+. Keeping 5+ ← Shield Dome as a declared deviation is right. Both copies are covered by the one unit id (copies:2)."
+ },
+ {
+  "key": "c657563e2f707338",
+  "where": "fellhammer-siege-task-force · Dark Apostle + Master of Executions + Nemesis Claw · InSv",
+  "verdict": "ok",
+  "why": "The list runs the Cult of the Arkifane detachment. The GW CSM Faction Pack (p7, txt lines 334-356) and Wahapedia (chaos-space-marines.txt 927-935) agree. Soul Forge Boons: \"SOUL FORGE units from your army have a 5+ invulnerable save.\" Cybinfernal Font: \"Models in the bearer's unit have the SOUL FORGE keyword.\" The save therefore comes from Soul Forge Boons. The app already credits the keyword to Cybinfernal Font (data.js why.kw) and the save to Soul Forge Boons, as it does for the Predators and Vindicator. BSData puts the InSv set 5+ on Cybinfernal Font 2f57-9703-18b2-6390, so declaring the attribution as a deviation is right. Minor provenance nuance, not a fix: 173d0ef already had an InSv 5+ modifier on Cybinfernal Font, with affects self.entries.group.recursive.profiles.Unit, which did not reach the attached unit. 0286f5c changed it to self.entries.recursive.associations.profiles.Unit, and that is what makes BSData give the bodyguard 5+. So \"since 0286f5c\" is accurate for the effect but not for the modifier's existence."
+ },
+ {
+  "key": "3224258a244c7ddf",
+  "where": "nerf-when · Deathwatch Support / Deathwatch Terminator Squad",
+  "verdict": "ok",
+  "why": "At b4dc3f4, Imperium - Space Marines.json has detachment \"Deathwatch Support\" 5eb6-4ed2-6aca-c7f1 with the Disruption category link. 173d0ef had \"Deathwatch Support (ITS NOT READY)\". The Ultramarines html (data-det-name=\"Deathwatch Support\", title \"Force Disposition: Disruption\") matches the app's dispositions ['Disruption']. Deathwatch Terminator Squad link 206e-3133-dac8-8d40 (target 390e-706b-a059-378b) is in Imperium - Space Marines.json, which the Ultramarines catalogue imports; it is not literally in the Ultramarines file. The nerf-when NR export uses that link id. Imperium - Deathwatch.json is now only a catalogueLink to Space Marines, so the old catalogue override would point at an empty catalogue: dropping both mappings is required. --explain on the Terminators against b4dc3f4 evaluates the full unit, with categories including Allies: Deathwatch, and gives 0 failures. The 3 removed deviations (role, kw, dispositions) are truly stale."
+ }
+]
