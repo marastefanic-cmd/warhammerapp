@@ -184,7 +184,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         if(said !== n) out.push(['checklist-folds', armyId, d.querySelector('summary b').textContent + ': the line says “' + said + '”, the fold has ' + n]); }
       const lineIn = (sec, grp, test) => ((ck[sec] || {})[grp] || []).some(test);
       const T = s => s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
-      const secsOf = e => (e.at ? [e.at] : []).concat(Object.entries(ckMap(e.t)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w)), e.ae ? [e.ae] : []);
+      const secsOf = e => [...new Set(ckAt(e.at).concat(Object.entries(ckMap(e.t)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w)), e.ae ? [e.ae] : []))];
       const usedOf = e => Object.entries(ckMap(e.u)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w));
       // each place an entry should be: [section heading, group]
       const want = (e, once, kind, x, force) => {
@@ -232,7 +232,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         if(!e0) out.push(['checklist-sections', armyId, r.name + ': no CHECKLIST entry (node verify/derive.js --write)']);
         const hit = l => [...l.querySelectorAll('[data-rule]')].some(x => x.dataset.rule === r.name) && l.textContent.startsWith(r.name + ' · ');
         const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
-        const onceR = !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''), inR = listed(e0, r, onceR);
+        const onceR = !inertRule(r.name) && !each && !CK_EACH_ONCE.test(r.text || '') && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''), inR = listed(e0, r, onceR);
         // listed only through options with moments of their own: the rule, once, without its options
         const collapse = !inR && ((e0 && e0.o) || []).some(o => o.s && !A.units.some(u => u.abilities.some(ab => ab.name === o.n)));
         // (at the end moments its options name, Code Chivalric's Deeds; none: as its entry says)
@@ -253,13 +253,13 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }
       // what a listed rule or ability puts in force from a rule of the list (CHECKLIST f): "Riled up (War Cry) · Waaagh!" under Active
       // now in each phase its entry names, or When unclear
-      const onceR0 = r => { const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table; return !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''); };
+      const onceR0 = r => { const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table; return !inertRule(r.name) && !each && !CK_EACH_ONCE.test(r.text || '') && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''); };
       const forcedIn = (fs, src, kind) => { for(const x of fs || []){ if(!ckRules.some(y => y.name === x.r)) continue;
         const N = x.n.charAt(0).toUpperCase() + x.n.slice(1) + ' (' + src + ') · ' + x.r, fh = l => l.textContent.startsWith(N);
         const fw = x.x ? [['When unclear', kind]] : usedOf({ u:x.u }).map(s => [T(s), 'Active now']);
         for(const [sec, grp] of fw) if(!lineIn(sec, grp, fh)) out.push(['checklist-sections', armyId, N + ' is not under ' + sec + ' · ' + grp]); } };
       for(const r of ckRules){ const e0 = CK['r|' + A.faction + '|' + r.name]; if(!e0) continue;
-        const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table, inR = listed(e0, r, !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''));
+        const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table, inR = listed(e0, r, !inertRule(r.name) && !each && !CK_EACH_ONCE.test(r.text || '') && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''));
         if(inR && !onceR0(r)) forcedIn(e0.f, r.name, 'Rules');   // (what a once-per-battle use puts in force: its box only)
         const collapse = !inR && (e0.o || []).some(o => o.s && !A.units.some(u => u.abilities.some(ab => ab.name === o.n)));
         for(const o of e0.o || []) if(!collapse && (o.s || (inR && !o.a)) && !A.units.some(u => u.abilities.some(ab => ab.name === o.n))) forcedIn(o.f, o.n, 'Rules'); }

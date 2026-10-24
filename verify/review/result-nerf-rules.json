@@ -1,0 +1,386 @@
+[
+{
+"key": "5c7b3499e1ab38f9",
+"where": "ultramarines army rule · Combat Doctrines",
+"verdict": "ok",
+"why": "Text (Wahapedia Ultramarines, Army Rules, word for word in data.js): selected “At the start of your Command phase”; the doctrines are an advance move that does not prevent a charge (Movement, Charge), [ASSAULT] on ranged attacks (Shooting), a fall-back move that does not prevent shooting or a charge (Movement, Shooting, Charge). Command + Movement + Shooting + Charge is every phase the words name; no Fight-phase effect. The other approved choice rule, Martial Ka’tah, also stores at:'Start of your Command phase'; this one has no at (not part of this judgement, see the report)."
+},
+{
+"key": "4331ad19f8eb4deb",
+"where": "ultramarines army rule · Combat Doctrines",
+"verdict": "ok",
+"why": "Text (Wahapedia Ultramarines, Army Rules, word for word in data.js): selected “At the start of your Command phase”; the doctrines are an advance move that does not prevent a charge (Movement, Charge), [ASSAULT] on ranged attacks (Shooting), a fall-back move that does not prevent shooting or a charge (Movement, Shooting, Charge). All of it is your turn: advance and fall-back moves are made in your Movement phase (09.02), declaring a charge is your Charge phase, and [ASSAULT] only matters for shooting after an advance. Nothing is used in the opponent’s turn, so 'your' (no turns map needed)."
+},
+{
+"key": "17309237e40aa4f9",
+"where": "ultramarines army rule · Transhuman Strategist",
+"verdict": "ok",
+"why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” Filed under Command with at:'Start of the battle round', the settled convention (Doctrina Imperatives, Harbingers of Dread, derive.js start-battle-round)."
+},
+{
+"key": "0904693ef699aff2",
+"where": "ultramarines army rule · Transhuman Strategist",
+"verdict": "ok",
+"why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” The start of the battle round comes before either player’s turn (07.01): 'either', as for Doctrina Imperatives."
+},
+{
+"key": "1349107b6a372350",
+"where": "ultramarines army rule · Special Move Types",
+"verdict": "ok",
+"why": "Shock and Assault Disembark Moves (18.07, 18.06) are move types; Core Rules 18.03: a unit disembarks “In the active player’s Movement phase” by making a disembark move, and 09.02 lists move types as what a unit selected to move does. Shock disembark’s AFTER MOVING: “not eligible to declare a charge until the end of the turn”. Movement + Charge (the charge restriction) is what the words name. The text in data.js is Wahapedia’s word for word, including its order (Shock before Assault)."
+},
+{
+"key": "dac73165ac0ea8dc",
+"where": "ultramarines army rule · Special Move Types",
+"verdict": "ok",
+"why": "Shock and Assault Disembark Moves (18.07, 18.06) are move types; Core Rules 18.03: a unit disembarks “In the active player’s Movement phase” by making a disembark move, and 09.02 lists move types as what a unit selected to move does. Shock disembark’s AFTER MOVING: “not eligible to declare a charge until the end of the turn”. Both are the active player’s, i.e. your turn: 'your'."
+},
+{
+"key": "8841f790ef10b9c2",
+"where": "Assault Brethren · Armour of Contempt",
+"verdict": "ok",
+"why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Shooting + Fight."
+},
+{
+"key": "c7c6e3fe943d491e",
+"where": "Assault Brethren · Armour of Contempt",
+"verdict": "ok",
+"why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” The Fight phase of either turn plus the opponent’s Shooting phase: 'either'."
+},
+{
+"key": "d16e739b6391ffe4",
+"where": "Assault Brethren · Armour of Contempt",
+"verdict": "ok",
+"why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Shooting is the opponent’s only (turns {shooting:'opp'}); Fight stays either."
+},
+{
+"key": "6cceab9ffaaa1b4b",
+"where": "Assault Brethren · Armour of Contempt",
+"verdict": "ok",
+"why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes, same form as the approved 'Faction: World Eaters' needs."
+},
+{
+"key": "f25cea45a74e0325",
+"where": "Assault Brethren · Armour of Contempt",
+"verdict": "ok",
+"why": "EFFECT: “Attacks that target your unit have -1 AP until that enemy unit has attacked.” The def “their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)” says exactly that, in the approved form of the other AoC-style defs (“their Shooting phase or the Fight phase: worsen the AP … (until that enemy unit has attacked)”). Nothing added."
+},
+{
+"key": "e5e5671e6020b94b",
+"where": "Assault Brethren · Armour of Contempt",
+"verdict": "ok",
+"why": "Gist repeats WHEN/TARGET (“Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit”) and EFFECT nearly word for word (“attacks that target your unit have -1 AP until that enemy unit has attacked”). Nothing added, nothing left out."
+},
+{
+"key": "e3d7716aca76d96b",
+"where": "Assault Brethren · Gene-Wrought Might",
+"verdict": "ok",
+"why": "WHEN: “Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.” Fight only."
+},
+{
+"key": "7ac5d515c07c8a74",
+"where": "Assault Brethren · Gene-Wrought Might",
+"verdict": "ok",
+"why": "WHEN: “Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.” “Fight phase” with no owner: either player’s (phase-either)."
+},
+{
+"key": "a299b4e3405368d4",
+"where": "Assault Brethren · Gene-Wrought Might",
+"verdict": "ok",
+"why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes."
+},
+{
+"key": "453652530610e0da",
+"where": "Assault Brethren · Gene-Wrought Might",
+"verdict": "ok",
+"why": "EFFECT: “Your unit’s melee attacks have: [Lance]. Or: If the assault doctrine is active for your unit, [Lance] and +1 AP.” kind melee, when “Fight phase, selected to fight”, note “[LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)”: both branches and their condition are kept, nothing added. I ran index.html’s dmEffects on the note: it returns null (the condition words are left over), so the Damage tab lists it as not counted and never adds +1 AP without the doctrine. That is honest; a pick ([LANCE] / [LANCE] and +1 AP, the player says which) would let it count, an option for later, not an error."
+},
+{
+"key": "d3d33f2b306a1c60",
+"where": "Assault Brethren · Gene-Wrought Might",
+"verdict": "ok",
+"why": "“Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.” Same as the EFFECT, both branches and the condition kept. ‘[Lance]’ capitalised as the app’s gists do."
+},
+{
+"key": "412b958c21267cc6",
+"where": "Assault Brethren · Duty in Death",
+"verdict": "ok",
+"why": "WHEN: “Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Fight only."
+},
+{
+"key": "c7f0202546d49470",
+"where": "Assault Brethren · Duty in Death",
+"verdict": "ok",
+"why": "WHEN: “Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Bare “Fight phase”: either."
+},
+{
+"key": "2c72703136054ad2",
+"where": "Assault Brethren · Duty in Death",
+"verdict": "ok",
+"why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes."
+},
+{
+"key": "df42fa0678206190",
+"where": "Assault Brethren · Duty in Death",
+"verdict": "ok",
+"why": "EFFECT: a destroyed model, if the unit has not been selected to fight this phase, D6 with +1 if the assault doctrine is active; on a 4+ it is not removed until the unit has fought or the end of the phase, whichever comes first. The def “Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase” keeps the condition, the roll, the modifier and both end points (“until X or Y” = the first of them). Same shape as the approved Hatred Eternal / Total Carnage defs."
+},
+{
+"key": "61172defd03cddda",
+"where": "Assault Brethren · Duty in Death",
+"verdict": "ok",
+"why": "Gist keeps WHEN (Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit), the condition (not yet selected to fight), the D6 with +1 for the assault doctrine, and the 4+ result with both removal points. “removed only when your unit has fought or at the end of the phase” = the text’s “whichever comes first”. Nothing added."
+},
+{
+"key": "4fe8fcf1b5bfbdd6",
+"where": "Deathwatch Support rule · Mission Tactics",
+"verdict": "ok",
+"why": "Text (Wahapedia Deathwatch Support, word for word): Furor/Malleus give the unit’s attacks [SUSTAINED HITS 1]/[LETHAL HITS] while the devastator/tactical doctrine is active; Purgatus gives [PRECISION] to attacks against an enemy within 9\" with the assault doctrine; DEATHWATCH ALLIES is mustering. “attacks” (ranged and melee, no trigger): your Shooting phase, the Fight phase, and the Movement phase for Fire Overwatch (derive.js any-attack + overwatch). The same label as the approved Magna Imperator, Spiteful Power Trip and Hunter of Souls."
+},
+{
+"key": "5a2f2a6d2bb63bbf",
+"where": "Deathwatch Support rule · Mission Tactics",
+"verdict": "ok",
+"why": "Text (Wahapedia Deathwatch Support, word for word): Furor/Malleus give the unit’s attacks [SUSTAINED HITS 1]/[LETHAL HITS] while the devastator/tactical doctrine is active; Purgatus gives [PRECISION] to attacks against an enemy within 9\" with the assault doctrine; DEATHWATCH ALLIES is mustering. Fight phase of either turn, so 'either', as for the approved always-on attack rules."
+},
+{
+"key": "4ccd0a7f4bff3f2a",
+"where": "Deathwatch Support rule · Mission Tactics",
+"verdict": "ok",
+"why": "Text (Wahapedia Deathwatch Support, word for word): Furor/Malleus give the unit’s attacks [SUSTAINED HITS 1]/[LETHAL HITS] while the devastator/tactical doctrine is active; Purgatus gives [PRECISION] to attacks against an enemy within 9\" with the assault doctrine; DEATHWATCH ALLIES is mustering. Shooting your (its own Shooting phase), Movement the opponent’s (Fire Overwatch, 15.08, WHEN in your opponent’s Movement phase). Same turns as Magna Imperator / Primarch of the XIII."
+},
+{
+"key": "e5e95fb946f50bf7",
+"where": "Deathwatch Support rule · Mission Tactics",
+"verdict": "ok",
+"why": "“Friendly KILL TEAM units with this ability”: needs {all:['Kill Team']}. The Deathwatch Terminator Squad has the Kill Team keyword (DATASHEETS kw)."
+},
+{
+"key": "09e7bb6b12bca24a",
+"where": "Deathwatch Support rule · Mission Tactics",
+"verdict": "ok",
+"why": "Furor: kind all, “Furor Tactics (the devastator doctrine is active for your unit)”, [SUSTAINED HITS 1]; Malleus: kind all, “(the tactical doctrine is active for your unit)”, [LETHAL HITS]. Both quote the condition and give it to the player’s tick, nothing added. Two boxes, not one pick, is right here: only one doctrine is normally active (“Unless otherwise stated”), but this list has rules that make a second one active (Author of the Codex, Codex Adept), so both can hold at once. Purgatus is left out. The calculator can allocate [PRECISION] to a picked CHARACTER (calc.js ctx.precision), but index.html never passes that, so for the app it really changes no numbers. That matches the approved Ka’tah convention of leaving out what changes no numbers. I checked dmEffects: “[SUSTAINED HITS 1]” → sus 1, “[LETHAL HITS]” → lethal."
+},
+{
+"key": "1d9ab0107c51d47c",
+"where": "Deathwatch Support · Kraken Rounds",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
+},
+{
+"key": "ef328771d9d937ec",
+"where": "Deathwatch Support · Kraken Rounds",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
+},
+{
+"key": "95ab8a26242ab12f",
+"where": "Deathwatch Support · Kraken Rounds",
+"verdict": "ok",
+"why": "TARGET: “That KILL TEAM unit.” = {all:['Kill Team']} (the Deathwatch Terminators carry KILL TEAM)."
+},
+{
+"key": "bb87958ebbf30455",
+"where": "Deathwatch Support · Kraken Rounds",
+"verdict": "ok",
+"why": "EFFECT: “Your unit’s ranged attacks have: Have +6\" R. Have +1 S.” The note “+6\" range and +1 S” says the same. dmEffects reads it as {range:6, s:1}, which is what the EFFECT gives."
+},
+{
+"key": "0258f182c9b79fa0",
+"where": "Deathwatch Support · Kraken Rounds",
+"verdict": "ok",
+"why": "“Your KILL TEAM unit is selected to shoot: its ranged attacks have +6\" range and +1 S.” = the EFFECT. Leaving the phase out of the gist is how the app’s approved gists read (the card shows the phase)."
+},
+{
+"key": "5da06918f9f834c9",
+"where": "Deathwatch Support · Dragonfire Rounds",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
+},
+{
+"key": "6a8c69c292be75d3",
+"where": "Deathwatch Support · Dragonfire Rounds",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
+},
+{
+"key": "2cd0dde0d05c311d",
+"where": "Deathwatch Support · Dragonfire Rounds",
+"verdict": "ok",
+"why": "TARGET: “That KILL TEAM unit.” = {all:['Kill Team']} (the Deathwatch Terminators carry KILL TEAM)."
+},
+{
+"key": "216b67336cafb3a1",
+"where": "Deathwatch Support · Dragonfire Rounds",
+"verdict": "ok",
+"why": "Note “re-roll wound rolls of 1, [IGNORES COVER]” = the EFFECT; dmEffects reads it as {rrWound:'1s', ignoresCover:true}."
+},
+{
+"key": "9441ed7a73340d03",
+"where": "Deathwatch Support · Dragonfire Rounds",
+"verdict": "ok",
+"why": "“its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER]” = the EFFECT. Nothing added."
+},
+{
+"key": "315113e94fa82c96",
+"where": "Deathwatch Support · Hellfire Rounds",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
+},
+{
+"key": "97a157926c270ace",
+"where": "Deathwatch Support · Hellfire Rounds",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
+},
+{
+"key": "4c2830aaf678c12b",
+"where": "Deathwatch Support · Hellfire Rounds",
+"verdict": "ok",
+"why": "TARGET: “That KILL TEAM unit.” = {all:['Kill Team']} (the Deathwatch Terminators carry KILL TEAM)."
+},
+{
+"key": "8b058ec31b3d13ed",
+"where": "Deathwatch Support · Hellfire Rounds",
+"verdict": "ok",
+"why": "Note “[ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks)” keeps the exclusion. dmEffects returns null for it (the exclusion words are left over), so the Damage tab lists it as not counted. It does not wrongly read “[DEVASTATING WOUNDS]” as a gain, so there is no miscount."
+},
+{
+"key": "a1ae4e24d304e423",
+"where": "Deathwatch Support · Hellfire Rounds",
+"verdict": "ok",
+"why": "“its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+]”: the EFFECT with its exclusion. Nothing added."
+},
+{
+"key": "83cc0a1e8a9b3098",
+"where": "Deathwatch Support · Blackstar Extraction",
+"verdict": "ok",
+"why": "WHEN: “End of your opponent’s Fight phase.” Filed under Fight (the end of the phase), as derive.js and the approved end-of-phase stratagems do."
+},
+{
+"key": "5eba8634959d8c12",
+"where": "Deathwatch Support · Blackstar Extraction",
+"verdict": "ok",
+"why": "WHEN: “End of your opponent’s Fight phase.” “your opponent’s”: 'opp'."
+},
+{
+"key": "49d2820a1a78b12d",
+"where": "Deathwatch Support · Blackstar Extraction",
+"verdict": "ok",
+"why": "TARGET: “One friendly unengaged KILL TEAM unit.” = {all:['Kill Team']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
+},
+{
+"key": "04ec2d13effc83a2",
+"where": "Deathwatch Support · Blackstar Extraction",
+"verdict": "ok",
+"why": "“End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.” = WHEN + TARGET + EFFECT, word for word."
+},
+{
+"key": "422813e5128e080f",
+"where": "Terminator Storm Force rule · Death Blow",
+"verdict": "ok",
+"why": "“Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.” Charge rolls: Charge phase (derive.js charge-move)."
+},
+{
+"key": "421d8b86e03aa2e2",
+"where": "Terminator Storm Force rule · Death Blow",
+"verdict": "ok",
+"why": "Charge rolls are also made in the opponent’s Charge phase: Heroic Intervention (15.11, “End of your opponent’s Charge phase … Resolve a charge … before making the charge roll”). So 'either' is right; the same as the approved Unbridled Bloodlust (+1 to charge rolls)."
+},
+{
+"key": "3011fcbea1efc630",
+"where": "Terminator Storm Force rule · Death Blow",
+"verdict": "ok",
+"why": "“Friendly ADEPTUS ASTARTES TERMINATOR units”: {all:['Faction: Adeptus Astartes','Terminator']}."
+},
+{
+"key": "7a7833219556d107",
+"where": "Terminator Storm Force · Tactical Dreadnought Fortitude",
+"verdict": "ok",
+"why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting + Fight."
+},
+{
+"key": "73bb789eb21a9247",
+"where": "Terminator Storm Force · Tactical Dreadnought Fortitude",
+"verdict": "ok",
+"why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) 'either' (the Fight phase of both turns)."
+},
+{
+"key": "8c447361aeaf5d14",
+"where": "Terminator Storm Force · Tactical Dreadnought Fortitude",
+"verdict": "ok",
+"why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting is the opponent’s only: {shooting:'opp'}."
+},
+{
+"key": "01338a760bf739b4",
+"where": "Terminator Storm Force · Tactical Dreadnought Fortitude",
+"verdict": "ok",
+"why": "TARGET: “That ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}."
+},
+{
+"key": "584f7d7af5785e53",
+"where": "Terminator Storm Force · Tactical Dreadnought Fortitude",
+"verdict": "ok",
+"why": "EFFECT: “Attacks that target your unit have -1 D until that enemy unit has attacked.” The def “their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)” is the same, in the AoC form. Nothing added (no minimum-1 clause, since the text has none)."
+},
+{
+"key": "cfd5c44c13bc1214",
+"where": "Terminator Storm Force · Tactical Dreadnought Fortitude",
+"verdict": "ok",
+"why": "Gist = WHEN/TARGET/EFFECT nearly word for word (“attacks that target your unit have -1 D until that enemy unit has attacked”)."
+},
+{
+"key": "db69153a5c63331d",
+"where": "Terminator Storm Force · Merciless Veterans",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.” Shooting."
+},
+{
+"key": "98ddb53f04b721d4",
+"where": "Terminator Storm Force · Merciless Veterans",
+"verdict": "ok",
+"why": "WHEN: “Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.” 'your'."
+},
+{
+"key": "3c9286dd62d38623",
+"where": "Terminator Storm Force · Merciless Veterans",
+"verdict": "ok",
+"why": "TARGET: “That ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}."
+},
+{
+"key": "e52acaad25316ad4",
+"where": "Terminator Storm Force · Merciless Veterans",
+"verdict": "ok",
+"why": "EFFECT: ranged attacks have [Lethal Hits] and [Sustained Hits 1]. The note “[LETHAL HITS] and [SUSTAINED HITS 1]” is read by dmEffects as {lethal:true, sus:'1'}, so it is counted correctly."
+},
+{
+"key": "3278f57c7017697c",
+"where": "Terminator Storm Force · Merciless Veterans",
+"verdict": "ok",
+"why": "“its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1]” = the EFFECT. Nothing added."
+},
+{
+"key": "fddfbbd452fa700f",
+"where": "Terminator Storm Force · Gunship Extraction",
+"verdict": "ok",
+"why": "WHEN: “End of your opponent’s Fight phase.” Filed under Fight (the end of the phase), as derive.js and the approved end-of-phase stratagems do."
+},
+{
+"key": "cb7a322291178fcc",
+"where": "Terminator Storm Force · Gunship Extraction",
+"verdict": "ok",
+"why": "WHEN: “End of your opponent’s Fight phase.” “your opponent’s”: 'opp'."
+},
+{
+"key": "0cbaae2772ed3657",
+"where": "Terminator Storm Force · Gunship Extraction",
+"verdict": "ok",
+"why": "TARGET: “One friendly unengaged ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
+},
+{
+"key": "2493ada64abaf73d",
+"where": "Terminator Storm Force · Gunship Extraction",
+"verdict": "ok",
+"why": "“End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.” = WHEN + TARGET + EFFECT, word for word."
+}
+]

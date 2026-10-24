@@ -3962,11 +3962,24 @@ function rowCounts(u){
   const chars = new Set(charsOf(u).map(c => c.name)), stem = x => x.toLowerCase().replace(/ w\/.*$/, '').replace(/ \(.*\)$/, '').replace(/s$/, '');
   const rows = u.stats.map(s => ({ s, name:stem(s.name.replace(/ ×\d+$/, '')), fixed:/ ×\d+$/.test(s.name), n:+((/ ×(\d+)$/.exec(s.name) || [])[1] || 0) }));
   const longest = list => list.sort((x, y) => y.name.length - x.name.length)[0];
-  for(const line of u.models){
-    const k = parseInt(line, 10) || 1, nm = stem(line.replace(/^\d+× /, ''));
-    const hit = rows.find(r => r.name === nm) || longest(rows.filter(r => nm.startsWith(r.name))) || longest(rows.filter(r => r.name.startsWith(nm)))
+  // first the lines a row has the name of (a "×N" row of that count before one without: "3× Deathwatch Terminator w/ Heavy Weapon" is
+  // the "Deathwatch Terminator ×3" row, "1× Deathwatch Terminator (Storm Shield)" the other); the models the "×N" rows already count
+  // are not given to another row ("Heavy intercessor Squad ×4" counts the four lines without a row of their own)
+  const lines = u.models.map(line => ({ k:parseInt(line, 10) || 1, nm:stem(line.replace(/^\d+× /, '')) }));
+  const total = lines.reduce((t, l) => t + l.k, 0), fixedN = rows.filter(r => r.fixed).reduce((t, r) => t + r.n, 0);
+  let placed = fixedN;
+  const rest = [];
+  for(const l of lines){
+    const same = rows.filter(r => r.name === l.nm), hit = same.find(r => r.fixed && r.n === l.k && !r.used) || same.find(r => !r.fixed) || same.find(r => r.fixed);
+    if(hit && hit.fixed){ hit.used = true; continue; }
+    if(hit){ hit.n += l.k; placed += l.k; continue; }
+    rest.push(l);
+  }
+  for(const l of rest){
+    if(placed >= total) break;
+    const hit = longest(rows.filter(r => l.nm.startsWith(r.name))) || longest(rows.filter(r => r.name.startsWith(l.nm)))
       || rows.filter(r => !r.fixed && !chars.has(r.s.name)).slice(-1)[0];
-    if(hit && !hit.fixed) hit.n += k;
+    if(hit && !hit.fixed){ hit.n += l.k; placed += l.k; }
   }
   return new Map(rows.map(r => [r.s, r.n]));
 }
@@ -4705,6 +4718,11 @@ function screenPregame(){
 // sequence with no unit activation (start or end of a battle round, turn or phase; a Command phase; another phase with a choice), a
 // once-per-battle use (perBattle), and an item derive cannot place that data.js gives a moment (at); the options of a listed rule,
 // unless their own WHEN line is a unit activation (a). The rest is remembered from the unit's datasheet
+// a moment that is the start or end of a phase ("Start of your Command phase", Combat Doctrines) is that phase's section; the others
+// (the start of the battle round, the end of your opponent's turn) are sections of their own
+const ckAt = at => { if(!at) return []; const m = /^(?:start|end) of (your|your opponent['’]s|the|each|either player['’]s) (command|movement|shooting|charge|fight) phase$/i.exec(at);
+  if(!m) return [at]; const p = m[2].toLowerCase(), w = m[1].toLowerCase(); return w === 'your' ? [p + '|your'] : /opponent/.test(w) ? [p + '|opp'] : [p + '|your', p + '|opp']; };
+const CK_EACH_ONCE = /\beach\b[^.;]*\bonce per battle\b/i;
 const ckListed = (e, once) => !!(e.s || e.stored || e.rolled || once);
 const ckOptListed = (o, parentIn) => !!(o.s || (parentIn && !o.a));
 const ckKey = () => 'wh-check-' + (cur.army || '');
@@ -4776,7 +4794,8 @@ function screenChecklist(){
     const r = x.r, e = ckStored(entry('r|' + a.faction + '|' + r.name), r), na = inertRule(r.name) ? 'no unit in this list it applies to' : '';
     // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option, as on the Overview
     const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
-    const pb = !na && !each && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
+    // ("You can only select each combat doctrine once per battle", Combat Doctrines: a limit on its options, not a once-per-battle rule)
+    const pb = !na && !each && !CK_EACH_ONCE.test(r.text || '') && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
     // which battle rounds, quoted, when its words name some ("at the start of the first, third and fifth battle rounds")
     const rounds = /\bat the start of the ((?:(?:first|second|third|fourth|fifth)(?:, | and | or ))*(?:first|second|third|fourth|fifth)) battle rounds\b/i.exec(String(r.text || '').replace(/\*\*|~~/g, ''));
     const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name) + (rounds ? ' (' + esc(rounds[1]) + ' battle rounds)' : '')) + naTag(na), trig = ckListed(e, pb);
@@ -4837,7 +4856,7 @@ function screenChecklist(){
     if((e.x || !(e.t || e.u || e.at || e.none || e.ends)) && !(it.once && e.via && (e.via.t || e.via.at))){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
     if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what), it.line)); continue; }
     if(e.ends && !e.t && !e.at && !e.u){ for(const s of e.ends) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line)); continue; }
-    const secs = x => (x.at ? [x.at] : []).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)), x.ae ? [x.ae] : []);
+    const secs = x => [...new Set(ckAt(x.at).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)), x.ae ? [x.ae] : []))];
     const trig = secs(e), act = Object.entries(ckMap(e.u)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)).filter(s => !trig.includes(s));
     // once per battle: where it is used from (its trigger, its rule's, or else where its effect is used)
     if(it.once){ const via = e.via ? secs(e.via) : []; for(const s of trig.length ? trig : via.length ? via : act) for(const [b, l] of it.once) put(s, 'once', tl(b, l)); continue; }

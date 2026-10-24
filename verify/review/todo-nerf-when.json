@@ -1,0 +1,173 @@
+[
+ {
+  "army": "nerf-when",
+  "kind": "ability-note",
+  "where": "nerf-when · Roboute Guilliman · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Author of the Codex: In your Movement phase, you can select one **visible** friendly **ADEPTUS ASTARTES** unit within 12\" of this model, and select one **combat doctrine**. That **combat doctrine** is active for that unit in addition to any other **combat doctrines** that are active for that unit until the start of your next Command phase.",
+    "Leader of Astartes: While this unit is within 3\" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**.",
+    "Primarch of the XIII: While a friendly **ADEPTUS ASTARTES** unit is within 6\" of this unit, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.",
+    "Codex Adept: The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit."
+   ],
+   "listRules": [
+    "Combat Doctrines",
+    "Transhuman Strategist",
+    "Librarius",
+    "Space Marine Chapters",
+    "Special Move Types",
+    "Assault Mastery",
+    "Mission Tactics",
+    "Death Blow"
+   ]
+  },
+  "key": "d9bdf07bceebd359"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "unit-kwOnly",
+  "where": "nerf-when · Marneus Calgar",
+  "judgement": {
+   "kwOnly": {
+    "Psyker": "Dainal Kornelius"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Marneus Calgar",
+    "1× Aemelia Minervas",
+    "1× Ancient Gadriel",
+    "1× Dainal Kornelius",
+    "1× Gaius Silva",
+    "1× Lucia Vestha",
+    "1× Veteran Sergeant Metaurus",
+    "1× Bladeguard Veteran Sergeant",
+    "5× Bladeguard Veterans"
+   ],
+   "kw": [
+    "Chapter Master",
+    "Character",
+    "Epic Hero",
+    "Faction: Adeptus Astartes",
+    "Faction: Ultramarines",
+    "Imperium",
+    "Infantry",
+    "Marneus Calgar",
+    "Terminator",
+    "Explosives",
+    "Psyker",
+    "Tacticus",
+    "Wardens of Ultramar",
+    "Bladeguard Veteran Squad"
+   ],
+   "kwNote": "Explosives, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit."
+  },
+  "key": "bf473018d2a96268"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "rule-ph",
+  "where": "Deathwatch Support rule · Mission Tactics",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Mission Tactics",
+   "text": "Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules."
+  },
+  "key": "b9f3e5dca758f990"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "rule-turn",
+  "where": "Deathwatch Support rule · Mission Tactics",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Mission Tactics",
+   "text": "Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules."
+  },
+  "key": "5817d3d1cf14223f"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "rule-turns",
+  "where": "Deathwatch Support rule · Mission Tactics",
+  "judgement": {
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Mission Tactics",
+   "text": "Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules."
+  },
+  "key": "7c4ca3120689bf18"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "rule-needs",
+  "where": "Deathwatch Support rule · Mission Tactics",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Kill Team"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Mission Tactics",
+   "text": "Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules."
+  },
+  "key": "102ca050b2ea0b07"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "rule-calcMods",
+  "where": "Deathwatch Support rule · Mission Tactics",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Furor Tactics",
+     "when": "Furor Tactics (the devastator doctrine is active for your unit)",
+     "note": "[SUSTAINED HITS 1]"
+    },
+    {
+     "kind": "all",
+     "from": "Malleus Tactics",
+     "when": "Malleus Tactics (the tactical doctrine is active for your unit)",
+     "note": "[LETHAL HITS]"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Mission Tactics",
+   "text": "Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules."
+  },
+  "key": "278e1adc90fb788c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resolveArmies",
+  "judgement": {
+   "code": "function resolveArmies(armies, sheets, order, opts){\n  opts = opts || {};\n  var ROWS = ['stats', 'ranged', 'melee', 'abilities'];\n  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat([\"gistOf\",\"defOf\"]).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });\n  function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }\n  function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values\n  function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }\n  function rowOf(part, kind, name){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name) return j; return -1; }\n  function find(parts, kind, r){\n    var name = kind === 'stats' ? String(r.name).replace(/ ×\\d+$/, '') : r.name, i, j;\n    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name) };\n    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };\n    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };\n    return { p:-1, j:-1 };\n  }\n  return armies.map(function(a){\n    return Object.assign({}, a, { units:a.units.map(function(u){\n      if(!u.ds) return u;\n      var ids = [].concat(u.ds), parts = ids.map(function(id){ if(!sheets[id]) throw new Error('data.js: ' + a.id + '/' + u.id + ' names no datasheet ' + id); return sheets[id]; });\n      var out = {}, k, rest = {};\n      for(k in parts[0]) if(ROWS.indexOf(k) < 0 && HIDE.indexOf(k) < 0) out[k] = copy(parts[0][k]);\n      for(k in u) if(ROWS.indexOf(k) < 0) rest[k] = u[k];\n      put(out, rest); if(u.over) put(out, u.over);\n      ROWS.forEach(function(kind){\n        var list;\n        if(kind in u){ if(u[kind] === null){ delete out[kind]; return; } list = u[kind]; }\n        else if(parts.length === 1 && parts[0][kind]) list = parts[0][kind].map(function(r){ return { name:r.name }; });\n        else return;\n        out[kind] = list.map(function(r, n){\n          var at = find(parts, kind, r);\n          if(at.j < 0){ if(opts.trace) opts.trace(a, u, kind, n, null, -1); return put({}, r); }\n          if(opts.trace) opts.trace(a, u, kind, n, ids[at.p], at.j);\n          var ds = parts[at.p][kind][at.j], row = put({}, copy(ds)); put(row, r); if(r.over) put(row, r.over);\n          // (for --expand: the datasheet's own value of a stat a rule of the list changed, own, so --write gives it back)\n          if(kind === 'stats' && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }\n          return sorted(row, order[kind] || []);\n        });\n      });\n      return sorted(out, order.unit || []);\n    }) });\n  });\n}"
+  },
+  "source": {
+   "implements": "the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet's columns, then the entry's own (null: none); each row the datasheet's row of that name (a stats row without its \"×N\"; for an attached unit the part its who or of names, else the first part that has it) with the entry row's fields on top, a row the datasheet does not have as the list's own; an entry without a kind of rows takes all of its datasheet's; over (a fact two lists have differently) on top of all; ds, over, of, faction, bsId and fingerprints hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet's values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was"
+  },
+  "key": "225510c7f65187ce"
+ }
+]

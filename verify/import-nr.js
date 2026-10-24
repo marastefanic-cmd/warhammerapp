@@ -51,21 +51,9 @@ const todo = [];           // what a person (or Claude) still writes; each is th
 const note = (unit, what) => todo.push({ unit, what });
 const label = u => [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).join(' + ');
 const wantPages = new Set();   // "<faction> <Wahapedia-Name>" lines for verify/sources/waha-datasheets.txt
-// a datasheet's Wahapedia address, as the faction page links it ("Kh-rn-The-Betrayer", "Lord-on-Juggernaut": no one rule
-// makes them); a name the page does not link gets each word capitalised
-let wahaLinks = null;
-function wahaAddress(n) {
-  if (!wahaLinks) {
-    const f = path.join(ROOT, 'verify/.cache/waha', factionId + '.html');
-    const html = fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '';
-    wahaLinks = [...new Set([...html.matchAll(/href="\/wh40k11ed\/factions\/[^/"]+\/([^"#/?]+)"/g)].map(m => m[1]))];
-  }
-  const keys = s => { const t = String(s).replace(/['’]/g, '').toLowerCase();
-    return [t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, ''), t.replace(/[^a-z0-9]/g, '')]; };   // "Khârn": kharn, khrn
-  const want = keys(n), hit = wahaLinks.find(l => keys(l).some(k => want.includes(k)));
-  return hit || nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-');
-}
-
+// the Wahapedia datasheet wording and the data.js writer: verify/waha-words.js (shared with verify/from-json.js)
+let WW = null; const ww = () => WW || (WW = require('./waha-words')(ROOT, factionId));
+const wahaAddress = n => ww().wahaAddress(n);
 // ---------------------------------------------------------------- faction and detachments
 const nr0 = NR.parseNR(path.resolve(srcFile), []);
 const catalogues = Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'))).filter(([k, v]) => k[0] !== '_' && v.bsdata).map(([k, v]) => [k, v.bsdata]));
@@ -89,115 +77,8 @@ const detIds = nrDetachments(nr.bullets['Detachment']).map(n => {
 if (F) for (const id of detIds) for (const s of ((F.detachments[id] || {}).stratagems || [])) if (!s.gist) note(null, 'stratagem ' + s.name + ' has no gist');
 
 // ---------------------------------------------------------------- the Wahapedia datasheet, as marked-up text
-// tokens: text runs with bold/italic, and line breaks / bullets
-function wahaTokens(html) {
-  html = html.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style|noscript)\b[\s\S]*?<\/\1>/gi, '');
-  const ENT = { amp: '&', lt: '<', gt: '>', quot: '"', apos: '’', nbsp: ' ', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', ndash: '–', mdash: '—', hellip: '…', times: '×', bull: '•', shy: '' };
-  const dec = s => s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => e[0] === '#' ? String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10)) : (ENT[e.toLowerCase()] ?? m));
-  const out = [], stack = [];
-  let bold = 0, ital = 0, kwd = 0;
-  const re = /<(\/?)([a-zA-Z0-9]+)([^>]*)>|([^<]+)/g;
-  let m;
-  while ((m = re.exec(html))) {
-    if (m[4] !== undefined) { let t = dec(m[4]).replace(/\s+/g, ' '); if (kwd) t = t.toUpperCase(); if (t) out.push({ t, b: bold > 0, i: ital > 0 }); continue; }   // a keyword span: capitals, as the app writes keywords
-    const close = m[1] === '/', name = m[2].toLowerCase(), attrs = m[3] || '';
-    const kw = name === 'span' && /class="kwb\b/.test(attrs);
-    if (!close) {
-      if (name === 'br' || name === 'p' || name === 'div' || name === 'ul' || name === 'tr') out.push({ nl: true });
-      if (name === 'li') out.push({ li: true });
-      if (/^(br|img|hr|input|meta|link|wbr)$/.test(name) || /\/\s*$/.test(attrs)) continue;
-      stack.push({ name, kw });
-      if (name === 'b' || name === 'strong' || kw) bold++;
-      if (kw) kwd++;
-      if (name === 'i' || name === 'em') ital++;
-    } else {
-      let k = stack.length - 1; while (k >= 0 && stack[k].name !== name) k--;
-      if (k < 0) continue;
-      while (stack.length > k) { const t = stack.pop(); if (t.name === 'b' || t.name === 'strong' || t.kw) bold--; if (t.kw) kwd--; if (t.name === 'i' || t.name === 'em') ital--; }
-      if (/^(div|p|ul|li|tr|td)$/.test(name)) out.push({ nl: true });
-    }
-  }
-  // "ORKS VEHICLE", "MONSTER/VEHICLE": one bold run across a space or slash between bold words
-  for (let i = 1; i < out.length - 1; i++) if (out[i].t && /^[ /]+$/.test(out[i].t) && !out[i].b && out[i - 1].b && out[i + 1].b) out[i].b = true;
-  return out;
-}
-// the plain text of the tokens (for finding New Recruit's words), and for each character its token
-function plainOf(tokens) {
-  let s = ''; const at = [];
-  tokens.forEach((t, k) => { const x = t.t !== undefined ? t.t : ' '; for (let j = 0; j < x.length; j++) { s += x[j]; at.push([k, j]); } });
-  // normalised as nm() does, one character at a time, keeping the map
-  let n = '', map = [];
-  for (let i = 0; i < s.length; i++) {
-    const c = NR.q(s[i]);
-    if (/\s/.test(c)) { if (n.length && n[n.length - 1] !== ' ') { n += ' '; map.push(i); } continue; }
-    n += c; map.push(i);
-  }
-  return { s, at, n, map };
-}
-// tokens -> app markup, from plain character a to b (inclusive)
-function markup(tokens, P, a, b) {
-  const [k0, j0] = P.at[a], [k1, j1] = P.at[b];
-  let out = '', B = false, I = false;
-  const set = (b2, i2) => { if (I && !i2) { out += '*'; I = false; } if (B !== b2) { out += '**'; B = b2; } if (!I && i2) { out += '*'; I = true; } };
-  for (let k = k0; k <= k1; k++) {
-    const t = tokens[k];
-    if (t.t === undefined) { set(false, false); out = out.replace(/ +$/, ''); if (t.li) out += '\n- '; else if (!/\n$/.test(out) && !/\n- $/.test(out)) out += '\n'; continue; }
-    let x = t.t.slice(k === k0 ? j0 : 0, k === k1 ? j1 + 1 : undefined);
-    if (/\n(- )?$/.test(out) || out === '') x = x.replace(/^ +/, '');
-    if (!x) continue;
-    // keep spaces outside the markers: "**heals** D3", not "**heals **D3"
-    const lead = /^ +/.exec(x), trail = / +$/.exec(x);
-    if (lead && (t.b !== B || t.i !== I)) { set(false, false); out += ' '; x = x.slice(lead[0].length); }
-    set(t.b, t.i);
-    if (trail && x.length > trail[0].length) { out += x.slice(0, -trail[0].length); set(false, false); out += ' '; }
-    else out += x;
-  }
-  set(false, false);
-  return out.replace(/\n{2,}/g, '\n').replace(/ +\n/g, '\n').replace(/\*\*\*\*/g, '').trim();
-}
-const wahaCache = new Map();
-function wahaPage(unitName, fac = factionId) {
-  const dir = path.join(ROOT, 'verify/.cache/waha/ds');
-  const want = (fac + '_' + wahaAddress(unitName)).toLowerCase();
-  if (wahaCache.has(want)) return wahaCache.get(want);
-  const f = fs.existsSync(dir) && fs.readdirSync(dir).find(x => x.toLowerCase() === want + '.html');
-  let r = null;
-  if (f) { const tokens = wahaTokens(fs.readFileSync(path.join(dir, f), 'utf8')); r = { file: f, tokens, P: plainOf(tokens) }; }
-  wahaCache.set(want, r);
-  return r;
-}
-// the marked-up wording of New Recruit's plain `text`, from the datasheet pages of the unit's parts.
-// Found by its words; a full stop where the datasheet has a colon (". This unit is" / ":") takes
-// New Recruit's mark, so the result always reads exactly as New Recruit prints it.
-const PUNCT = /[.:;]/g;
-function wording(text, pages) {
-  const N = nm(text);
-  for (const p of pages.filter(Boolean)) {
-    const hay = [p.P.n, p.P.n.toLowerCase(), p.P.n.replace(PUNCT, '.'), p.P.n.toLowerCase().replace(PUNCT, '.')];
-    const ndl = [N, N.toLowerCase(), N.replace(PUNCT, '.'), N.toLowerCase().replace(PUNCT, '.')];
-    let i = -1; for (let k = 0; k < 4 && i < 0; k++) i = hay[k].indexOf(ndl[k]);
-    if (i < 0) continue;
-    let md = markup(p.tokens, p.P, p.P.map[i], p.P.map[i + N.length - 1]);
-    md = withMarks(md, N);
-    if (md && textEq(md, text)) return { text: md, from: 'Wahapedia ' + p.file };
-  }
-  return null;
-}
-// put New Recruit's punctuation into the marked-up text, character for character
-function withMarks(md, N) {
-  let out = '', j = 0, lineStart = true;
-  for (let i = 0; i < md.length; i++) {
-    const c = md[i];
-    if (c === '*') { out += c; continue; }
-    if (c === '\n') { out += c; lineStart = true; if (N[j] === ' ') j++; continue; }
-    if (lineStart && c === '-' && md[i + 1] === ' ') { out += '- '; i++; lineStart = false; continue; }
-    lineStart = false;
-    if (/[.:;]/.test(c) && /[.:;]/.test(N[j] || '')) { out += N[j]; j++; continue; }
-    out += c; j++;
-  }
-  return out;
-}
-
+const wahaPage = (n, fac) => ww().wahaPage(n, fac);
+const wording = (text, pages) => ww().wording(text, pages);
 // ---------------------------------------------------------------- units
 const sig = u => JSON.stringify(Object.assign({}, u, { page: null, copies: null })).replace(/\[\d+\]/g, '');
 const nrUnits = [];
@@ -476,27 +357,7 @@ const army = { id: armyId, name: typo(nr.name), faction: factionId, points: +bs[
 // the other selections printed under the army name, as printed ("Code Chivalric: Deed, Quality")
 army.config = Object.fromEntries(Object.entries(nr.bullets).filter(([k, v]) => typeof v === 'string' && !['Battle Size', 'Detachment', 'Force Disposition', 'Show/Hide Options'].includes(k)).map(([k, v]) => [typo(k), typo(v)]));
 
-const lit = v => {
-  if (Array.isArray(v)) return '[' + v.map(lit).join(',') + ']';
-  if (v && typeof v === 'object') return '{ ' + Object.entries(v).map(([k, x]) => (/^[A-Za-z_$][\w$]*$/.test(k) ? k : lit(k)) + ':' + lit(x)).join(', ') + ' }';
-  if (typeof v === 'string') return "'" + v.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n') + "'";
-  if (v instanceof RegExp) return String(v);
-  return JSON.stringify(v);
-};
-const block = (key, rows) => rows && rows.length ? '      ' + key + ':[\n' + rows.map(r => '        ' + lit(r)).join(',\n') + '\n      ],\n' : '';
-function unitSrc(u) {
-  const head = ['id', 'name', 'short', 'role', 'pts', 'copies', 'ptsNote', 'enhancement', 'enhOn', 'upgrade', 'warlord', 'warlordOn'].filter(k => u[k] !== undefined).map(k => k + ':' + lit(u[k])).join(', ');
-  let s = '    {\n      ' + head + ',\n';
-  if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + (u.also ? ', also:' + lit(u.also) : '') + ',\n';
-  s += '      models:' + lit(u.models) + ',\n' + (u.unplaced ? '      unplaced:' + lit(u.unplaced) + ',\n' : '') + '      gear:' + lit(u.gear) + ',\n';
-  const AB = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
-  const abs = u.abilities.map(a => Object.fromEntries(Object.keys(a).sort((x, y) => (AB.indexOf(x) + 1 || 99) - (AB.indexOf(y) + 1 || 99)).map(k => [k, a[k]])));
-  s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
-  if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
-  s += block('aura', u.aura);
-  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + '\n    }';
-  return s;
-}
+const { lit, block, unitSrc } = require('./waha-words').writer;
 const src = '{\n' + ['id', 'name', 'faction', 'points', 'pointsUsed'].map(k => k + ':' + lit(army[k])).join(', ').replace(/^/, '  ') + ',\n' +
   '  battleSize:' + lit(army.battleSize) + ', disposition:' + lit(army.disposition) + ',\n' +
   '  detachments:' + lit(army.detachments) + ',\n' + (Object.keys(army.config).length ? '  config:' + lit(army.config) + ',\n' : '') + '  source:' + lit(army.source) + ',\n  units:[\n' + units.map(u => { delete u._page; delete u._applied; return unitSrc(u); }).join(',\n') + '\n  ]\n},\n';

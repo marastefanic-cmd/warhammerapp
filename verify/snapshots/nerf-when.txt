@@ -1,0 +1,5609 @@
+######## army · LITE KNIGHTS Nerf when
+Ultramarines · 2000 / 2000 pts · Strike Force
+
+Assault Brethren · Deathwatch Support · Terminator Storm Force
+
+Dispositions: Disruption · Priority Assets · Take and Hold (chosen)
+
+Overview
+Bases & proxies
+48
+Units
+12
+Stratagems
+20
+Ranged weapons
+21
+Melee weapons
+16
+Abilities
+26
+Rules
+Damage calculator
+
+New Recruit, exported 24 Oct 2026 (JSON)
+
+######## pregame · NERF WHEN Overview
+YOUR LIST
+WARLORD
+Roboute Guilliman
+ENHANCE­MENTS
+Furious Assault (upgrade) 10 pts on Bladeguard Veteran Squad
+ATTACHED
+Marneus Calgar leads Bladeguard Veteran Squad
+Wardens of Ultramar supports Bladeguard Veteran Squad
+DETACH­MENTS
+Assault Brethren (1 DP), Deathwatch Support (1 DP), Terminator Storm Force (1 DP)
+DISPOSI­TIONS
+Disruption · Priority Assets · Take and Hold (chosen)
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Combat Doctrines
+Start of your Command phase
+
+At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase.
+
+ASSAULT DOCTRINE
+
+When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.
+
+DEVASTATOR DOCTRINE
+
+This unit’s ranged attacks have [ASSAULT].
+
+TACTICAL DOCTRINE
+
+When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.
+
+Unless otherwise stated:
+
+You can only select each combat doctrine once per battle.
+Only one combat doctrine can be active for each unit. If a rule makes a combat doctrine active for a unit, any combat doctrine previously active for that unit is no longer active for that unit.
+Transhuman Strategist
+Start of the battle round
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Librarius
+
+ADEPTUS ASTARTES PSYKER units with this ability have a psyker level of 1 or higher, specified in that unit’s abilities. Each psychic ability has a psychic level of 1 or higher, specified in that ability’s name.
+
+In a battle round, a friendly ADEPTUS ASTARTES PSYKER unit can use a number of psychic abilities whose total psychic level does not exceed that PSYKER unit’s psyker level.
+
+Example: In a battle round, a psyker level 3 PSYKER unit could use three psychic level 1 abilities, or one psychic level 1 ability and one psychic level 2 ability, or one psychic level 3 ability.
+
+Space Marine Chapters
+
+If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Marneus Calgar has both the ADEPTUS ASTARTES and ULTRAMARINES Faction keywords,and is therefore from the Ultramarines Chapter.
+
+You cannot include units from more than one Chapter in your army.
+
+Special Move Types
+Your Move/Charge
+
+The following are special move types that certain or all of your units are eligible to make.
+
+SHOCK DISEMBARK MOVE18.07
+
+SET-UP DISTANCE: 3"
+
+ELIGIBLE IF:
+
+Embarked within a TRANSPORT on the battlefield
+Did not embark within that TRANSPORT this phase
+
+EFFECT: Set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up each model wholly within the set-up distance of that TRANSPORT.
+
+AFTER MOVING: Your unit is not eligible to declare a charge until the end of the turn.
+
+ASSAULT DISEMBARK MOVE18.06
+
+SET-UP DISTANCE: 3"
+
+ELIGIBLE IF:
+
+Embarked within a TRANSPORT on the battlefield
+Did not embark within that TRANSPORT this phase
+That TRANSPORT has not made an advance/fall-back move this phase
+
+EFFECT: Set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up each model wholly within the set-up distance of that TRANSPORT.
+
+Assault Mastery
+Assault Brethren
+
+You can select the assault doctrine one additional time per battle.
+
+APPLIES TORoboute Guilliman, Marneus Calgar, Librarian in Phobos Armour, Heavy Intercessor Squad, Impulsor, Eradicator Squad with Melta Rifles, Reiver Squad, Deathwatch Terminator Squad
+
+Mission Tactics
+Deathwatch Support · Their Move · Your Shoot · Fight
+
+Friendly KILL TEAM units with this ability have the following abilities:
+
+Furor Tactics
+
+If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1].
+
+Malleus Tactics
+
+If the tactical doctrine is active for your unit, your unit’s attacks have [LETHAL HITS].
+
+Purgatus Tactics
+
+If the assault doctrine is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have [PRECISION].
+
+DEATHWATCH ALLIES
+
+You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.
+
+When mustering your army, unless otherwise stated, you cannot select a DEATHWATCH model to be your WARLORD. In addition KILL TEAM units can only contain enhancements taken from this detachment.
+
+This an exception to the Space Marine Chapters Army Rules.
+
+APPLIES TODeathwatch Terminator Squad
+
+Death Blow
+Terminator Storm Force · Charge
+
+Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.
+
+APPLIES TOMarneus Calgar, Deathwatch Terminator Squad
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Librarian in Phobos Armour 75 pts
+Deathwatch Terminator Squad 200 pts each, ×2
+All of them: 475 pts
+TRANSPORTS
+Impulsor: This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS AND INFILTRATORS
+Librarian in Phobos Armour Scouts 6", Infiltrators
+Reiver Squad Scouts 6"
+ABILITIES
+Thunderhawk Insertion · Marneus Calgar
+Strategium Command · Marneus Calgar
+START OF THE BATTLE AND THE BATTLE ROUNDS
+START OF THE BATTLE
+Teleport Homer · Deathwatch Terminator Squad
+EVERY ROUND
+Transhuman Strategist · Ultramarines army rule
+USES PER BATTLE
+NEW GAME
+RULES
+Combat Doctrines · Ultramarines army rule
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+2
+Roboute Guilliman
+Warlord
+8"
+10
+2+
+16
+5+
+4
+4+
+415
+Marneus Calgar
++ Wardens of Ultramar + Bladeguard Veteran Squad
+Furious Assault
+485
+Marneus Calgar
+6"
+6
+2+
+6
+6+
+1
+4+
+Aemelia Minervas
+6"
+3
+4+
+3
+6+
+1
+–
+Ancient Gadriel
+6"
+5
+3+
+4
+6+
+2
+–
+Dainal Kornelius
+6"
+3
+4+
+3
+6+
+1
+–
+Gaius Silva
+6"
+3
+4+
+3
+6+
+1
+5+
+Lucia Vestha
+6"
+3
+4+
+3
+6+
+1
+–
+Veteran Sergeant Metaurus
+6"
+5
+3+
+4
+6+
+1
+4+
+Bladeguard Veteran Sergeant
+6"
+5
+3+
+3
+6+
+1
+4+
+Bladeguard Veteran×5
+6"
+5
+3+
+3
+6+
+1
+4+
+CHARACTERS
+1
+Librarian in Phobos Armour
+8"
+4
+3+
+4
+6+
+1
+–
+75
+BATTLELINE
+1
+Heavy Intercessor Squad
+115
+Heavy Intercessor Sergeant
+5"
+6
+3+
+3
+6+
+2
+–
+Heavy intercessor Squad×4
+5"
+6
+3+
+3
+6+
+2
+–
+INFANTRY
+4
+Eradicator Squad with Melta Rifles
+2×100
+Eradicator Squad×2
+5"
+6
+3+
+3
+6+
+1
+–
+Eradicator Sergeant
+5"
+6
+3+
+3
+6+
+1
+–
+Reiver Squad
+2×85
+Reiver Sergeant
+8"
+4
+3+
+2
+6+
+1
+–
+Reiver Squad×4
+8"
+4
+3+
+2
+6+
+1
+–
+DEDICATED TRANSPORTS
+2
+Impulsor
+12"
+9
+3+
+11
+6+
+2
+5+
+2×70
+ALLIES
+2
+Deathwatch Terminator Squad
+2×200
+Deathwatch Terminator Sergeant
+5"
+6
+2+
+4
+6+
+1
+4+
+Deathwatch Terminator
+5"
+6
+2+
+4
+6+
+1
+4+
+Deathwatch Terminator×3
+5"
+6
+2+
+3
+6+
+1
+4+
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Roboute Guilliman
+Warlord
+Hand of Dominion
+36"
+4
+2+
+6
+-2
+2
+RAPID FIRE 2, SUSTAINED HITS 1
+Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Marneus Calgar
++ Wardens of Ultramar + Bladeguard Veteran Squad
+Furious Assault
+MARNEUS CALGAR
+Gauntlets of Ultramar
+18"
+4
+2+
+5
+-2
+2
+CLOSE-QUARTERS, TWIN-LINKED
+WARDENS OF ULTRAMAR
+Bolt Rifle
+➤Focused Fire
+24"
+1
+3+
+6
+-1
+2
+HEAVY, RAPID FIRE 1
+➤Saturation
+24"
+2
+3+
+5
+-1
+1
+ASSAULT, RAPID FIRE 1
+Astropathic Blast
+12"
+3
+3+
+4
+-1
+1
+BLAST 1, PSYCHIC
+Archeotech Laspistol×3
+12"
+1
+3+
+4
+-1
+1
+CLOSE-QUARTERS
+Heavy Bolt Pistol
+18"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+BLADEGUARD VETERAN SQUAD
+Heavy Bolt Pistol×5
+18"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
+12"
+1
+3+
+5
+0
+2
+DEVASTATING WOUNDS, CLOSE-QUARTERS
+Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
+1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+Librarian in Phobos Armour
+Smite
+➤Witchfire
+24"
+D6
+3+
+6
+-1
+2
+PSYCHIC
+➤Focused Witchfire
+24"
+D3+3
+3+
+6
+-2
+2
+DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Heavy Intercessor Squad
+Heavy Bolt Rifle×4
+30"
+2
+3+
+5
+-1
+2
+HEAVY, RAPID FIRE 1
+Heavy BolterHEAVY INTERCESSOR
+36"
+3
+3+
+5
+-1
+2
+HEAVY, RAPID FIRE 2, SUSTAINED HITS 1
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol×5
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Impulsor
+×2 units
+Ironhail Heavy Stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3
+Storm Bolters
+24"
+4
+3+
+5
+-1
+1
+RAPID FIRE 4
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Eradicator Squad with Melta Rifles
+×2 units
+Melta rifle×2
+➤Melta Rifle HUNTER:Monster/VehicleMON/VEH ONLY
+18"
+1
+2+
+12
+-3
+D3+2
+MELTA 2
+➤Melta Rifle
+18"
+1
+3+
+10
+-3
+D3+2
+MELTA 2
+Multi-meltaERADICATOR WITH MULTI-MELTA
+➤Multi-melta
+18"
+2
+3+
+10
+-3
+D3+2
+MELTA 3
+➤Multi-melta HUNTER:Monster/VehicleMON/VEH ONLY
+18"
+2
+2+
+12
+-3
+D3+2
+MELTA 3
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol×3
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Every ranged attack: can re-roll damage rolls (Total Obliteration)
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Reiver Squad
+×2 units
+Bolt Carbine×5
+18"
+3
+3+
+5
+-1
+1
+ASSAULT, PRECISION
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Special-issue Bolt Pistol×5
+12"
+1
+3+
+5
+-2
+1
+CLOSE-QUARTERS, PRECISION
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Deathwatch Terminator Squad
+×2 units
+Plasma cannon×3
+➤standard
+36"
+3
+3+
+9
+-2
+2
+BLAST 1
+➤supercharge
+36"
+3
+3+
+10
+-3
+3
+BLAST 1, HAZARDOUS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
+1CP Kraken Rounds: +6" range and +1 S, selected to shoot
+1CP Dragonfire Rounds: re-roll wound rolls of 1, [IGNORES COVER], selected to shoot
+1CP Hellfire Rounds: [ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks), selected to shoot
+STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
+1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Roboute Guilliman
+Warlord
+Hand of Dominion
+7
+2+
+14
+-4
+4
+LETHAL HITS
+OR
+The Emperor’s Sword
+10
+2+
+10
+-3
+2
+CLEAVE 2, DEVASTATING WOUNDS
+Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Marneus Calgar
++ Wardens of Ultramar + Bladeguard Veteran Squad
+Furious Assault
+MARNEUS CALGAR
+Gauntlets of Ultramar
+➤Gauntlets of Ultramar
+6
+2+
+10
+-3
+3
+TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+➤Gauntlets of Ultramar (Overhead Smash)
+1
+2+
+14
+-3
+D3+3
+EXTRA ATTACKS, TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+WARDENS OF ULTRAMAR
+Power Weapon×2
+4
+2+
+4
+-2
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Ceramite Fists
+4
+3+
+5
+0
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Force Stave
+1
+2+
+5
+-2
+2
+PSYCHIC, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Ultramarian Combat Weapons
+4
+3+
+4
+0
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Master-crafted power weapon
+5
+2+
+5
+-2
+2
+PRECISION, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+BLADEGUARD VETERAN SQUAD
+Master-crafted power weapon×6
+4
+3+
+5
+-2
+2
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it): +1 to hit rolls
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Librarian in Phobos Armour
+Force weapon [Psychic]
+4
+3+
+6
+-2
+2
+PSYCHIC
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Heavy Intercessor Squad
+Ceramite Fists×5
+3
+3+
+5
+0
+1
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Impulsor
+×2 units
+Armoured Hull
+3
+4+
+6
+0
+1
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Eradicator Squad with Melta Rifles
+×2 units
+Ceramite Fists×3
+3
+3+
+5
+0
+1
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Reiver Squad
+×2 units
+Monomolecular Combat Knife×5
+4
+3+
+5
+-1
+1
+PRECISION
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+Deathwatch Terminator Squad
+×2 units
+Thunder Hammer×2
+3
+3+
+8
+-2
+3
+DEVASTATING WOUNDS
+Chainfist×3
+➤Standard
+2
+4+
+8
+-2
+2
+➤Hunter: Monster/VehicleMON/VEH ONLY
+3
+3+
+12
+-2
+3
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+
+######## abilities · MELEE Abilities
+Roboute Guilliman
+Warlord
+Author of the Codex
+Your Movement
+
+Movement · Your turn
+
+In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.
+
+Leader of Astartes
+
+While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.
+
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
+Primarch of the XIII
+Their Move · Your Shoot · Fight
+
+Aura · Their Movement / Your Shooting / Fight (either turn)
+
+While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+Marneus Calgar
++ Wardens of Ultramar + Bladeguard Veteran Squad
+Furious Assault
+MARNEUS CALGAR
+Master Tactician
+Your Movement
+
+Movement · Your turn
+
+In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 9" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase.
+
+Thunderhawk Insertion
+
+In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.
+
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+WARDENS OF ULTRAMAR
+Raise the Banner
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+Strategium Command
+
+When both players have deployed their armies, you can redeploy up to three friendly ADEPTUS ASTARTES units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.
+
+BLADEGUARD VETERAN SQUAD
+Bladeguard
+Once per turn, per unit
+Fight
+
+Once per turn, per unit · Fight · Either turn
+
+In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:
+
+This unit’s melee attacks have +1 to hit rolls.
+Or: Attacks that target this unit have -1 to hit rolls.
+Furious Assault
+Fight
+
+Upgrade · Fight · Either turn
+
+ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
+
+Librarian in Phobos Armour
+Shrouding
+
+psychic level 1
+
+When an enemy unit targets this unit, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+
+On a 1, this unit is battle-shocked.
+Attacks that target this unit have -1 to hit rolls until the end of the phase.
+Soul Sight
+Your Shooting
+
+psychic level 1 · Shooting · Your turn
+
+In your Shooting phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+
+On a 1, this unit is battle-shocked.
+Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].
+Psychic Hood
+
+Psychic
+
+This unit has Feel No Pain 4+ against psychic attacks.
+
+Librarian
+
+psyker level 1
+
+This model has the psychic abilities listed in the Psychic Abilities section.
+
+Heavy Intercessor Squad
+Unyielding in the Face of the Foe
+
+While this unit is controlling an objective, this unit has +1 to save rolls.
+
+Impulsor
+×2 units
+Transport
+
+This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
+
+Rapid Disembarkation
+Your Movement
+
+Movement · Your turn
+
+In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move.
+
+Shield Dome
+Already in InSv
+
+This unit has 5+ InSv.
+
+Eradicator Squad with Melta Rifles
+×2 units
+Total Obliteration
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+This unit’s ranged attacks can re-roll damage rolls.
+
+Reiver Squad
+×2 units
+Fearsome Assault
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, each enemy unit engaged with a unit with this ability makes a battle-shock roll, with -1 to that battle-shock roll.
+
+Terror Troops
+
+Aura
+
+While an enemy model is within 3" of this unit, that enemy model has -1 OC.
+
+Deathwatch Terminator Squad
+×2 units
+Terminatus Assault
+Charge
+
+Charge · Either turn
+
+This unit can re-roll charge rolls.
+After this unit ends a charge move, each enemy unit engaged with this unit makes a battle-shock roll, with -1 to that battle-shock roll if it’s a non-IMPERIUM/CHAOS unit.
+Teleport Homer
+Their Movement
+
+Movement · Their turn
+
+At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:
+
+When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3" of that Teleport Homer token and not within 8" of an enemy unit. That Teleport Homer token is then removed from the battlefield.
+If an enemy unit ends a move within 1" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.
+Storm Shield
+Already in W
+
+This model has +1 W.
+
+######## rules · ABILITIES Rules
+Ultramarines · Take and Hold
+ARMY RULES
+Combat Doctrines
+Start of your Command phase
+
+At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase.
+
+ASSAULT DOCTRINE
+
+When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.
+
+DEVASTATOR DOCTRINE
+
+This unit’s ranged attacks have [ASSAULT].
+
+TACTICAL DOCTRINE
+
+When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.
+
+Unless otherwise stated:
+
+You can only select each combat doctrine once per battle.
+Only one combat doctrine can be active for each unit. If a rule makes a combat doctrine active for a unit, any combat doctrine previously active for that unit is no longer active for that unit.
+Transhuman Strategist
+Start of the battle round
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Librarius
+
+ADEPTUS ASTARTES PSYKER units with this ability have a psyker level of 1 or higher, specified in that unit’s abilities. Each psychic ability has a psychic level of 1 or higher, specified in that ability’s name.
+
+In a battle round, a friendly ADEPTUS ASTARTES PSYKER unit can use a number of psychic abilities whose total psychic level does not exceed that PSYKER unit’s psyker level.
+
+Example: In a battle round, a psyker level 3 PSYKER unit could use three psychic level 1 abilities, or one psychic level 1 ability and one psychic level 2 ability, or one psychic level 3 ability.
+
+Space Marine Chapters
+
+If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Marneus Calgar has both the ADEPTUS ASTARTES and ULTRAMARINES Faction keywords,and is therefore from the Ultramarines Chapter.
+
+You cannot include units from more than one Chapter in your army.
+
+Special Move Types
+Your Move/Charge
+
+The following are special move types that certain or all of your units are eligible to make.
+
+SHOCK DISEMBARK MOVE18.07
+
+SET-UP DISTANCE: 3"
+
+ELIGIBLE IF:
+
+Embarked within a TRANSPORT on the battlefield
+Did not embark within that TRANSPORT this phase
+
+EFFECT: Set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up each model wholly within the set-up distance of that TRANSPORT.
+
+AFTER MOVING: Your unit is not eligible to declare a charge until the end of the turn.
+
+ASSAULT DISEMBARK MOVE18.06
+
+SET-UP DISTANCE: 3"
+
+ELIGIBLE IF:
+
+Embarked within a TRANSPORT on the battlefield
+Did not embark within that TRANSPORT this phase
+That TRANSPORT has not made an advance/fall-back move this phase
+
+EFFECT: Set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up each model wholly within the set-up distance of that TRANSPORT.
+
+DETACHMENTS
+ASSAULT BRETHREN
+Assault Mastery
+Detachment rule
+
+You can select the assault doctrine one additional time per battle.
+
+APPLIES TORoboute Guilliman, Marneus Calgar, Librarian in Phobos Armour, Heavy Intercessor Squad, Impulsor, Eradicator Squad with Melta Rifles, Reiver Squad, Deathwatch Terminator Squad
+
+Furious Assault
+Upgrade · 10 pts · on Bladeguard Veteran Squad (Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad)
+
+ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
+
+ONBladeguard Veteran Squad (Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad)
+
+Other enhancements
+1 not in this list
+Imperium’s Sword 20 pts
+
+ADEPTUS ASTARTES model only. This model has the following weapon:
+
+Imperium’s Sword: Melee A6 WS2+ S7 AP-3 D3 []
+
+STRATAGEMSArmour of Contempt, Gene-Wrought Might, Duty in Death
+
+DEATHWATCH SUPPORT
+Mission Tactics
+Detachment rule · Their Move · Your Shoot · Fight
+
+Friendly KILL TEAM units with this ability have the following abilities:
+
+Furor Tactics
+
+If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1].
+
+Malleus Tactics
+
+If the tactical doctrine is active for your unit, your unit’s attacks have [LETHAL HITS].
+
+Purgatus Tactics
+
+If the assault doctrine is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have [PRECISION].
+
+DEATHWATCH ALLIES
+
+You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.
+
+When mustering your army, unless otherwise stated, you cannot select a DEATHWATCH model to be your WARLORD. In addition KILL TEAM units can only contain enhancements taken from this detachment.
+
+This an exception to the Space Marine Chapters Army Rules.
+
+APPLIES TODeathwatch Terminator Squad
+
+Other enhancements
+1 not in this list
+Beacon Angelis 25 pts
+
+ADEPTUS ASTARTES model only. If this unit is a KILL TEAM unit, this unit has:
+
+Deep Strike.
+When you target this unit with the Rapid Ingress Stratagem, that use is -1CP.
+
+STRATAGEMSKraken Rounds, Dragonfire Rounds, Hellfire Rounds, Blackstar Extraction
+
+TERMINATOR STORM FORCE
+Death Blow
+Detachment rule · Charge
+
+Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.
+
+APPLIES TOMarneus Calgar, Deathwatch Terminator Squad
+
+Other enhancements
+2 not in this list
+Champion of the First Company 20 pts
+
+ADEPTUS ASTARTES TERMINATOR model only. This unit’s melee attacks have [Lethal Hits].
+
+Corporeum Reliquary 25 pts
+
+ADEPTUS ASTARTES TERMINATOR model only. In your first Movement phase, this unit can make an ingress move.
+
+STRATAGEMSTactical Dreadnought Fortitude, Merciless Veterans, Gunship Extraction
+
+UNIT RULES
+Deadly Demise
+Impulsor D3
+Deep Strike
+Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad: Marneus Calgar only
+Thunderhawk Insertion: In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.
+Librarian in Phobos Armour
+Deathwatch Terminator Squad
+Feel No Pain
+Roboute Guilliman 5+
+Librarian in Phobos Armour
+Psychic Hood: This unit has Feel No Pain 4+ against psychic attacks.
+Firing Deck
+Impulsor 7
+Ignores Cover
+Librarian in Phobos Armour
+Soul Sight: In your Shooting phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+On a 1, this unit is battle-shocked.
+Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].
+Infiltrators
+Librarian in Phobos Armour
+Leader
+Marneus Calgar leads Bladeguard Veteran Squad
+Librarian in Phobos Armour
+Lone Operative
+Roboute Guilliman
+Leader of Astartes: While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.
+Scouts
+Librarian in Phobos Armour 6"
+Reiver Squad 6"
+Stealth
+Librarian in Phobos Armour
+Support
+Wardens of Ultramar supports Bladeguard Veteran Squad
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+4× 28.5mm
+10× 32mm
+30× 40mm
+1× 50mm
+1× 60mm
+2× 100mm
+
+WHAT TO WRITE ON EACH BASE
+
+Roboute Guilliman
+1× 60mm
+Roboute Guilliman · Warlord
+Marneus Calgar
++ Wardens of Ultramar + Bladeguard Veteran Squad
+1× 50mm
+Marneus Calgar
+1× 28.5mm
+Aemelia Minervas
+1× 40mm
+Ancient Gadriel · Bolt Rifle + Ceramite Fists
+1× 28.5mm
+Dainal Kornelius · Astropathic Blast + Force Stave
+1× 28.5mm
+Gaius Silva · Archeotech Laspistol + Power Weapon
+1× 28.5mm
+Lucia Vestha · Archeotech Laspistol + Ultramarian Combat Weapons
+1× 40mm
+Veteran Sergeant Metaurus
+1× 40mm
+Bladeguard Veteran Sergeant · Neo-volkite Pistol
+5× 40mm
+standard Heavy Bolt Pistol, Master-crafted power weapon
+Librarian in Phobos Armour
+1× 40mm
+Librarian in Phobos Armour
+Heavy Intercessor Squad
+1× 40mm
+Heavy Intercessor Sergeant
+1× 40mm
+Heavy Intercessor · Heavy Bolter
+3× 40mm
+standard Bolt pistol, Ceramite Fists, Heavy Bolt Rifle
+Eradicator Squad with Melta Rifles
+2 units: mark them apart (1, 2)
+1× 40mm
+standard Bolt pistol, Ceramite Fists, Melta rifle
+1× 40mm
+Sergeant
+1× 40mm
+with Multi-melta · Multi-melta
+Reiver Squad
+2 units: mark them apart (1, 2)
+1× 32mm
+Reiver Sergeant
+4× 32mm
+standard Bolt Carbine, Monomolecular Combat Knife, Special-issue Bolt Pistol
+Impulsor
+2 units: mark them apart (1, 2)
+1× 100mm
+Impulsor
+Deathwatch Terminator Squad
+2 units: mark them apart (1, 2)
+1× 40mm
+Sergeant · Thunder Hammer · Storm Shield
+1× 40mm
+Thunder Hammer · no Plasma cannon, no Chainfist · Storm Shield
+3× 40mm
+standard Plasma cannon, Chainfist
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Roboute Guilliman
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+2.4
+of 5 destroyed
+4.8 wounds lost · wiped in 3% of games
+Primarch of the XIII
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Roboute Guilliman
+Hand of Dominion
+RNG
+36"
+A
+4
+BS
+2+
+S
+6
+AP
+-2
+D
+2
+RAPID FIRE 2, SUSTAINED HITS 1
+−3% wiped
+−2.4
+MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18"
+bonus for Hand of Dominion
++23% wiped
++1.1
+SITUATION AND RULES
+Primarch of the XIII
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: −0.6 models · −2% wiped
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: already hits on 2+
+0
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−1% wiped
+−0.4
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−1% wiped
+−0.4
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−1% wiped
+−0.4
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+−3% wiped
+−2.1
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Codex Adept
+Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+1CP Gene-Wrought Might
+Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
+COUNT IT BY HAND: AP +1
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Roboute Guilliman
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in >99% of games
+Charged this turn
+×
+Primarch of the XIII
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+Nothing here changes this: the target is destroyed in every game anyway.
+
+MELEE WEAPONS
+Roboute Guilliman
+Hand of Dominion
+A
+7
+WS
+2+
+S
+14
+AP
+-4
+D
+4
+LETHAL HITS
+one of the weapons its models pick between
+−100% wiped
+−5
+MODELS IF UNTICKED
+The Emperor’s Sword
+A
+10
+WS
+2+
+S
+10
+AP
+-3
+D
+2
+CLEAVE 2, DEVASTATING WOUNDS
+one of the weapons its models pick between
+0
+SITUATION AND RULES
+Primarch of the XIII
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: −0.4 models · −31% wiped
+Charged this turn
+said to hold
+0
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Gene-Wrought Might
+Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
+COUNT IT BY HAND: AP +1
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Roboute Guilliman
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in >99% of games
+
+Shoot 2.41 · Fight 2.59 · the charge is taken to succeed
+
+Primarch of the XIII
+Charged this turn
+×
+Primarch of the XIII (fight)
+7 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+Nothing here changes this: the target is destroyed in every game anyway.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Roboute Guilliman
+Hand of Dominion
+RNG
+36"
+A
+4
+BS
+2+
+S
+6
+AP
+-2
+D
+2
+RAPID FIRE 2, SUSTAINED HITS 1
+0
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18"
+bonus for Hand of Dominion
+0
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+0
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+0
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+0
+Primarch of the XIII
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: no change
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Codex Adept
+Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+1CP Gene-Wrought Might
+Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
+COUNT IT BY HAND: AP +1
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Roboute Guilliman
+
+Against what the shooting left of the target, in each game.
+
+Hand of Dominion
+A
+7
+WS
+2+
+S
+14
+AP
+-4
+D
+4
+LETHAL HITS
+one of the weapons its models pick between
+−97% wiped
+−2.6
+MODELS IF UNTICKED
+The Emperor’s Sword
+A
+10
+WS
+2+
+S
+10
+AP
+-3
+D
+2
+CLEAVE 2, DEVASTATING WOUNDS
+one of the weapons its models pick between
+0
+SITUATION AND RULES
+Primarch of the XIII
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: ≈0 models · −3% wiped
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+0
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Gene-Wrought Might
+Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
+COUNT IT BY HAND: AP +1
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+ASSAULT BRETHREN
+3
+1
+CP
+Armour of Contempt
+Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
+Their Shoot · Fight Any unit
+1
+CP
+Gene-Wrought Might
+Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.
+Fight Any unit
+1
+CP
+Duty in Death
+Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase.
+Fight Any unit
+DEATHWATCH SUPPORT
+4
+1
+CP
+Kraken Rounds
+Your KILL TEAM unit is selected to shoot: its ranged attacks have +6" range and +1 S.
+Your Shooting Deathwatch Terminator Squad ×2
+1
+CP
+Dragonfire Rounds
+Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].
+Your Shooting Deathwatch Terminator Squad ×2
+1
+CP
+Hellfire Rounds
+Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].
+Your Shooting Deathwatch Terminator Squad ×2
+1
+CP
+Blackstar Extraction
+End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.
+End of their Fight Deathwatch Terminator Squad ×2
+TERMINATOR STORM FORCE
+3
+2
+CP
+Tactical Dreadnought Fortitude
+Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked.
+Their Shoot · Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
+1
+CP
+Merciless Veterans
+Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].
+Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
+1
+CP
+Gunship Extraction
+End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.
+End of their Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles ×2, Reiver Squad ×2
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting Reiver Squad ×2
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Roboute Guilliman, Impulsor ×2
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP All but Impulsor ×2
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Roboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+ASSAULT BRETHREN
+3
+1
+CP
+Armour of Contempt
+Their Shoot · Fight Any unit
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.
+
+TARGETThat ADEPTUS ASTARTES unit.
+
+EFFECT
+
+Attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYany unit
+
+1
+CP
+Gene-Wrought Might
+Fight Any unit
+WHEN
+
+Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.
+
+TARGETThat ADEPTUS ASTARTES unit.
+
+EFFECT
+
+Your unit’s melee attacks have:
+
+[Lance].
+Or: If the assault doctrine is active for your unit, [Lance] and +1 AP.
+
+USED BYany unit
+
+1
+CP
+Duty in Death
+Fight Any unit
+WHEN
+
+Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.
+
+TARGETThat ADEPTUS ASTARTES unit.
+
+EFFECT
+
+When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if the assault doctrine is active for your unit:
+
+On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+
+USED BYany unit
+
+DEATHWATCH SUPPORT
+4
+1
+CP
+Kraken Rounds
+Your Shooting Deathwatch Terminator Squad ×2
+WHEN
+
+Your Shooting phase when a KILL TEAM unit is selected to shoot.
+
+TARGETThat KILL TEAM unit.
+
+EFFECT
+
+Your unit’s ranged attacks have:
+
+Have +6" R.
+Have +1 S.
+
+USED BYDeathwatch Terminator Squad
+
+1
+CP
+Dragonfire Rounds
+Your Shooting Deathwatch Terminator Squad ×2
+WHEN
+
+Your Shooting phase when a KILL TEAM unit is selected to shoot.
+
+TARGETThat KILL TEAM unit.
+
+EFFECT
+
+Your unit’s ranged attacks:
+
+Can re-roll wound rolls of 1.
+Have [IGNORES COVER].
+
+USED BYDeathwatch Terminator Squad
+
+1
+CP
+Hellfire Rounds
+Your Shooting Deathwatch Terminator Squad ×2
+WHEN
+
+Your Shooting phase when a KILL TEAM unit is selected to shoot.
+
+TARGETThat KILL TEAM unit.
+
+EFFECT
+
+Your unit’s ranged attacks (excluding [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].
+
+USED BYDeathwatch Terminator Squad
+
+1
+CP
+Blackstar Extraction
+End of their Fight Deathwatch Terminator Squad ×2
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne friendly unengaged KILL TEAM unit.
+
+EFFECT
+
+Place your unit in strategic reserves.
+
+USED BYDeathwatch Terminator Squad
+
+TERMINATOR STORM FORCE
+3
+2
+CP
+Tactical Dreadnought Fortitude
+Their Shoot · Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.
+
+TARGETThat ADEPTUS ASTARTES TERMINATOR unit.
+
+EFFECT
+
+Attacks that target your unit have -1 D until that enemy unit has attacked.
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad
+
+1
+CP
+Merciless Veterans
+Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
+WHEN
+
+Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.
+
+TARGETThat ADEPTUS ASTARTES TERMINATOR unit.
+
+EFFECT
+
+Your unit’s ranged attacks have:
+
+[Lethal Hits].
+[Sustained Hits 1].
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad
+
+1
+CP
+Gunship Extraction
+End of their Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne friendly unengaged ADEPTUS ASTARTES TERMINATOR unit.
+
+EFFECT
+
+Place your unit in strategic reserves.
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles ×2, Reiver Squad ×2
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad
+
+1
+CP
+Smokescreen
+Start of their Shooting Reiver Squad ×2
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYReiver Squad
+
+1
+CP
+Crushing Impact
+Your Charge Roboute Guilliman, Impulsor ×2
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYRoboute Guilliman, Impulsor
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP All but Impulsor ×2
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad, Deathwatch Terminator Squad
+
+1
+CP
+Epic Challenge
+Fight Roboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit roboute-guilliman · STRATAGEMS Nerf when
+ROBOUTE GUILLIMAN
+415 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Roboute Guilliman
+Hand of Dominion, The Emperor’s Sword
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Roboute Guilliman
+60mm
+8"
+10
+2+
+16
+5+
+4
+4+
+WHEN TARGETEDFeel No Pain 5+ · Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+ALL ATTACKS
+Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Hand of Dominion
+36"
+4
+2+
+6
+-2
+2
+RAPID FIRE 2, SUSTAINED HITS 1
+Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hand of Dominion
+7
+2+
+14
+-4
+4
+LETHAL HITS
+OR
+The Emperor’s Sword
+10
+2+
+10
+-3
+2
+CLEAVE 2, DEVASTATING WOUNDS
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Author of the Codex
+Your Movement
+
+Movement · Your turn
+
+In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.
+
+Leader of Astartes
+
+While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.
+
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
+Primarch of the XIII
+Their Move · Your Shoot · Fight
+
+Aura · Their Movement / Your Shooting / Fight (either turn)
+
+While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+Rules
+Combat Doctrines, Feel No Pain 5+, Transhuman Strategist
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support or Terminator Storm Force.
+
+Keywords
+CHARACTER
+EPIC HERO
+FACTION: ADEPTUS ASTARTES
+FACTION: ULTRAMARINES
+IMPERIUM
+MOBILE
+MONSTER
+PRIMARCH
+ROBOUTE GUILLIMAN
+WARLORD
+Ask about this unit
+Marneus Calgar ›
+
+######## unit marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad · ROBOUTE GUILLIMAN Nerf when
+MARNEUS CALGAR + WARDENS OF ULTRAMAR + BLADEGUARD VETERAN SQUAD
+485 PTS
+Epic Hero · 180 + Wardens of Ultramar 115 + Bladeguard Veteran Squad 190
+Furious Assault
+Models
+Options
+1× Marneus Calgar
+Gauntlets of Ultramar
+Leading Bladeguard Veteran Squad
+1× Aemelia Minervas
+Archeotech Laspistol, Power Weapon
+Supporting Bladeguard Veteran Squad
+1× Ancient Gadriel
+Bolt Rifle, Ceramite Fists
+1× Dainal Kornelius
+Astropathic Blast, Force Stave
+1× Gaius Silva
+Archeotech Laspistol, Power Weapon
+1× Lucia Vestha
+Archeotech Laspistol, Ultramarian Combat Weapons
+1× Veteran Sergeant Metaurus
+Heavy Bolt Pistol, Master-crafted power weapon
+1× Bladeguard Veteran Sergeant
+Master-crafted power weapon, Neo-volkite Pistol
+5× Bladeguard Veterans
+Heavy Bolt Pistol, Master-crafted power weapon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Marneus Calgar
+50mm
+6"
+6
+2+
+6
+6+
+1
+4+
+Aemelia Minervas
+28.5mm
+6"
+3
+4+
+3
+6+
+1
+–
+Ancient Gadriel
+40mm
+6"
+5
+3+
+4
+6+
+2
+–
+Dainal Kornelius
+28.5mm
+6"
+3
+4+
+3
+6+
+1
+–
+Gaius Silva
+28.5mm
+6"
+3
+4+
+3
+6+
+1
+5+
+Lucia Vestha
+28.5mm
+6"
+3
+4+
+3
+6+
+1
+–
+Veteran Sergeant Metaurus
+40mm
+6"
+5
+3+
+4
+6+
+1
+4+
+Bladeguard Veteran Sergeant
+40mm
+6"
+5
+3+
+3
+6+
+1
+4+
+Bladeguard Veteran×5
+40mm
+6"
+5
+3+
+3
+6+
+1
+4+
+WHEN TARGETEDBladeguard Veteran Squad · Bladeguard (once per turn, in the Fight phase, when an enemy unit targets it, instead of +1 to hit for its own melee attacks): attacks that target it have -1 to hit rolls · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase · 2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
+ALL ATTACKS · WHOLE UNIT
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+MARNEUS CALGAR
+Gauntlets of Ultramar
+18"
+4
+2+
+5
+-2
+2
+CLOSE-QUARTERS, TWIN-LINKED
+WARDENS OF ULTRAMAR
+Bolt Rifle
+➤Focused Fire
+24"
+1
+3+
+6
+-1
+2
+HEAVY, RAPID FIRE 1
+➤Saturation
+24"
+2
+3+
+5
+-1
+1
+ASSAULT, RAPID FIRE 1
+Astropathic Blast
+12"
+3
+3+
+4
+-1
+1
+BLAST 1, PSYCHIC
+Archeotech Laspistol×3
+12"
+1
+3+
+4
+-1
+1
+CLOSE-QUARTERS
+Heavy Bolt Pistol
+18"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+BLADEGUARD VETERAN SQUAD
+Heavy Bolt Pistol×5
+18"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
+12"
+1
+3+
+5
+0
+2
+DEVASTATING WOUNDS, CLOSE-QUARTERS
+WHOLE UNIT
+Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
+1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+MARNEUS CALGAR
+Gauntlets of Ultramar
+➤Gauntlets of Ultramar
+6
+2+
+10
+-3
+3
+TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+➤Gauntlets of Ultramar (Overhead Smash)
+1
+2+
+14
+-3
+D3+3
+EXTRA ATTACKS, TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+WARDENS OF ULTRAMAR
+Power Weapon×2
+4
+2+
+4
+-2
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Ceramite Fists
+4
+3+
+5
+0
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Force Stave
+1
+2+
+5
+-2
+2
+PSYCHIC, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Ultramarian Combat Weapons
+4
+3+
+4
+0
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Master-crafted power weapon
+5
+2+
+5
+-2
+2
+PRECISION, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+BLADEGUARD VETERAN SQUAD
+Master-crafted power weapon×6
+4
+3+
+5
+-2
+2
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+WHOLE UNIT
+Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it): +1 to hit rolls
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Master Tactician
+- Marneus Calgar
+Your Movement
+
+Movement · Your turn
+
+In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 9" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase.
+
+Thunderhawk Insertion
+- Marneus Calgar
+
+In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.
+
+Codex Adept
+- Marneus Calgar
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+Raise the Banner
+- Wardens of Ultramar
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+Strategium Command
+- Wardens of Ultramar
+
+When both players have deployed their armies, you can redeploy up to three friendly ADEPTUS ASTARTES units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.
+
+Bladeguard
+- Bladeguard Veteran Squad
+Once per turn, per unit
+Fight
+
+Once per turn, per unit · Fight · Either turn
+
+In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:
+
+This unit’s melee attacks have +1 to hit rolls.
+Or: Attacks that target this unit have -1 to hit rolls.
+Furious Assault
+- Bladeguard Veteran Squad
+Fight
+
+Upgrade · Fight · Either turn
+
+ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
+
+Rules
+Deep Strike (Marneus Calgar), Combat Doctrines, Leader, Transhuman Strategist, Support, Death Blow
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+TERMINATOR STORM FORCE Tactical Dreadnought Fortitude, Merciless Veterans, Gunship Extraction
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support.
+
+Keywords
+CHAPTER MASTER
+CHARACTER
+EPIC HERO
+FACTION: ADEPTUS ASTARTES
+FACTION: ULTRAMARINES
+IMPERIUM
+INFANTRY
+MARNEUS CALGAR
+TERMINATOR
+EXPLOSIVES*
+TACTICUS*
+WARDENS OF ULTRAMAR*
+BLADEGUARD VETERAN SQUAD*
+Dainal Kornelius only:
+PSYKER
+*from the combined unit
+Ask about this unit
+‹ Roboute Guilliman
+Librarian in Phobos Armour ›
+
+######## unit librarian-in-phobos-armour · MARNEUS CALGAR Nerf when
+LIBRARIAN IN PHOBOS ARMOUR
+75 PTS
+Character
+Models
+Options
+1× Librarian in Phobos Armour
+Bolt pistol, Force weapon [Psychic], Smite
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Librarian in Phobos Armor
+40mm
+8"
+4
+3+
+4
+6+
+1
+–
+WHEN TARGETEDShrouding (psychic level 1, when an enemy unit targets it and it is not battle-shocked): roll one D6; on a 1 it is battle-shocked; attacks that target it have -1 to hit rolls until the end of the phase · Feel No Pain 4+ against psychic attacks · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+ALL ATTACKS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Smite
+➤Witchfire
+24"
+D6
+3+
+6
+-1
+2
+PSYCHIC
+➤Focused Witchfire
+24"
+D3+3
+3+
+6
+-2
+2
+DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Force weapon [Psychic]
+4
+3+
+6
+-2
+2
+PSYCHIC
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Shrouding
+
+psychic level 1
+
+When an enemy unit targets this unit, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+
+On a 1, this unit is battle-shocked.
+Attacks that target this unit have -1 to hit rolls until the end of the phase.
+Soul Sight
+Your Shooting
+
+psychic level 1 · Shooting · Your turn
+
+In your Shooting phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+
+On a 1, this unit is battle-shocked.
+Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].
+Psychic Hood
+
+Psychic
+
+This unit has Feel No Pain 4+ against psychic attacks.
+
+Librarian
+
+psyker level 1
+
+This model has the psychic abilities listed in the Psychic Abilities section.
+
+Rules
+Leader, Deep Strike, Combat Doctrines, Scouts 6", Librarius, Stealth, Infiltrators
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support or Terminator Storm Force.
+
+Keywords
+CHARACTER
+EXPLOSIVES
+FACTION: ADEPTUS ASTARTES
+IMPERIUM
+INFANTRY
+LIBRARIAN
+PHOBOS
+PSYKER
+Ask about this unit
+‹ Marneus Calgar
+Heavy Intercessor Squad ›
+
+######## unit heavy-intercessor-squad · LIBRARIAN IN PHOBOS ARMOUR Nerf when
+HEAVY INTERCESSOR SQUAD
+115 PTS
+Battleline
+Models
+Options
+1× Heavy Intercessor Sergeant
+Bolt pistol, Ceramite Fists, Heavy Bolt Rifle
+1× Heavy Intercessor w/Heavy Bolter
+Bolt pistol, Ceramite Fists, Heavy Bolter
+3× Heavy Intercessors
+Bolt pistol, Ceramite Fists, Heavy Bolt Rifle
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Heavy Intercessor Sergeant
+40mm
+5"
+6
+3+
+3
+6+
+2
+–
+Heavy intercessor Squad×4
+40mm
+5"
+6
+3+
+3
+6+
+2
+–
+WHEN TARGETED+1 to save rolls while it is controlling an objective · 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+ALL ATTACKS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Heavy Bolt Rifle×4
+30"
+2
+3+
+5
+-1
+2
+HEAVY, RAPID FIRE 1
+Heavy BolterHEAVY INTERCESSOR
+36"
+3
+3+
+5
+-1
+2
+HEAVY, RAPID FIRE 2, SUSTAINED HITS 1
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol×5
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Ceramite Fists×5
+3
+3+
+5
+0
+1
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Unyielding in the Face of the Foe
+
+While this unit is controlling an objective, this unit has +1 to save rolls.
+
+Rules
+Combat Doctrines
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support or Terminator Storm Force.
+
+Keywords
+BATTLELINE
+EXPLOSIVES
+FACTION: ADEPTUS ASTARTES
+GRAVIS
+HEAVY INTERCESSOR SQUAD
+IMPERIUM
+INFANTRY
+Ask about this unit
+‹ Librarian in Phobos Armour
+Eradicator Squad with Melta Rifles ›
+
+######## unit impulsor · HEAVY INTERCESSOR SQUAD Nerf when
+IMPULSOR
+70 PTS EACH
+Dedicated Transport · ×2 in list
+Models
+Options
+1× Impulsor (Shield Dome)
+Armoured Hull, Ironhail Heavy Stubber, Storm Bolters
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Impulsor
+100mm
+12"
+9
+3+
+11
+6+
+2
+5+
+WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+ALL ATTACKS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Ironhail Heavy Stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3
+Storm Bolters
+24"
+4
+3+
+5
+-1
+1
+RAPID FIRE 4
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured Hull
+3
+4+
+6
+0
+1
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Transport
+
+This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
+
+Rapid Disembarkation
+Your Movement
+
+Movement · Your turn
+
+In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move.
+
+Shield Dome
+Already in InSv
+
+This unit has 5+ InSv.
+
+Rules
+Deadly Demise D3, Firing Deck 7, Combat Doctrines
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support or Terminator Storm Force.
+
+Keywords
+DEDICATED TRANSPORT
+FACTION: ADEPTUS ASTARTES
+FRAME
+IMPERIUM
+IMPULSOR
+TRANSPORT
+VEHICLE
+Ask about this unit
+‹ Reiver Squad
+Deathwatch Terminator Squad ›
+
+######## unit eradicator-squad-with-melta-rifles · IMPULSOR Nerf when
+ERADICATOR SQUAD WITH MELTA RIFLES
+100 PTS EACH
+Infantry · ×2 in list
+Models
+Options
+1× Eradicator
+Bolt pistol, Ceramite Fists, Melta rifle
+1× Eradicator Sergeant
+Bolt pistol, Ceramite Fists, Melta rifle
+1× Eradicator with Multi-melta
+Bolt pistol, Ceramite Fists, Multi-melta
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Eradicator Squad×2
+40mm
+5"
+6
+3+
+3
+6+
+1
+–
+Eradicator Sergeant
+40mm
+5"
+6
+3+
+3
+6+
+1
+–
+WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+ALL ATTACKS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Melta rifle×2
+➤Melta Rifle HUNTER:Monster/VehicleMON/VEH ONLY
+18"
+1
+2+
+12
+-3
+D3+2
+MELTA 2
+➤Melta Rifle
+18"
+1
+3+
+10
+-3
+D3+2
+MELTA 2
+Multi-meltaERADICATOR WITH MULTI-MELTA
+➤Multi-melta
+18"
+2
+3+
+10
+-3
+D3+2
+MELTA 3
+➤Multi-melta HUNTER:Monster/VehicleMON/VEH ONLY
+18"
+2
+2+
+12
+-3
+D3+2
+MELTA 3
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol×3
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Every ranged attack: can re-roll damage rolls (Total Obliteration)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Ceramite Fists×3
+3
+3+
+5
+0
+1
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Total Obliteration
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+This unit’s ranged attacks can re-roll damage rolls.
+
+Rules
+Combat Doctrines
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support or Terminator Storm Force.
+
+Keywords
+ERADICATOR SQUAD WITH MELTA RIFLES
+EXPLOSIVES
+FACTION: ADEPTUS ASTARTES
+GRAVIS
+IMPERIUM
+INFANTRY
+Ask about this unit
+‹ Heavy Intercessor Squad
+Reiver Squad ›
+
+######## unit reiver-squad · ERADICATOR SQUAD WITH MELTA RIFLES Nerf when
+REIVER SQUAD
+85 PTS EACH
+Infantry · ×2 in list
+Models
+Options
+1× Reiver Sergeant
+Bolt Carbine, Monomolecular Combat Knife, Special-issue Bolt Pistol
+4× Reivers
+Bolt Carbine, Monomolecular Combat Knife, Special-issue Bolt Pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Reiver Sergeant
+32mm
+8"
+4
+3+
+2
+6+
+1
+–
+Reiver Squad×4
+32mm
+8"
+4
+3+
+2
+6+
+1
+–
+WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
+ALL ATTACKS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Bolt Carbine×5
+18"
+3
+3+
+5
+-1
+1
+ASSAULT, PRECISION
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Special-issue Bolt Pistol×5
+12"
+1
+3+
+5
+-2
+1
+CLOSE-QUARTERS, PRECISION
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Monomolecular Combat Knife×5
+4
+3+
+5
+-1
+1
+PRECISION
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Fearsome Assault
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, each enemy unit engaged with a unit with this ability makes a battle-shock roll, with -1 to that battle-shock roll.
+
+Terror Troops
+
+Aura
+
+While an enemy model is within 3" of this unit, that enemy model has -1 OC.
+
+Rules
+Scouts 6", Combat Doctrines
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Smokescreen, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Deathwatch Support or Terminator Storm Force.
+
+Keywords
+EXPLOSIVES
+FACTION: ADEPTUS ASTARTES
+IMPERIUM
+INFANTRY
+PHOBOS
+REIVER SQUAD
+SMOKE
+Ask about this unit
+‹ Eradicator Squad with Melta Rifles
+Impulsor ›
+
+######## unit deathwatch-terminator-squad · REIVER SQUAD Nerf when
+DEATHWATCH TERMINATOR SQUAD
+200 PTS EACH
+Allies: Deathwatch · ×2 in list
+Models
+Options
+1× Deathwatch Terminator Sergeant (Storm Shield)
+Thunder Hammer
+1× Deathwatch Terminator (Storm Shield)
+Thunder Hammer
+3× Deathwatch Terminator w/ Heavy Weapon
+Plasma cannon, Chainfist
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Deathwatch Terminator Sergeant
+40mm
+5"
+6
+2+
+4
+6+
+1
+4+
+Deathwatch Terminator
+40mm
+5"
+6
+2+
+4
+6+
+1
+4+
+Deathwatch Terminator×3
+40mm
+5"
+6
+2+
+3
+6+
+1
+4+
+WHEN TARGETED1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase · 2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
+ALL ATTACKS
+Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Plasma cannon×3
+➤standard
+36"
+3
+3+
+9
+-2
+2
+BLAST 1
+➤supercharge
+36"
+3
+3+
+10
+-3
+3
+BLAST 1, HAZARDOUS
+STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
+1CP Kraken Rounds: +6" range and +1 S, selected to shoot
+1CP Dragonfire Rounds: re-roll wound rolls of 1, [IGNORES COVER], selected to shoot
+1CP Hellfire Rounds: [ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks), selected to shoot
+STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
+1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Thunder Hammer×2
+3
+3+
+8
+-2
+3
+DEVASTATING WOUNDS
+Chainfist×3
+➤Standard
+2
+4+
+8
+-2
+2
+➤Hunter: Monster/VehicleMON/VEH ONLY
+3
+3+
+12
+-2
+3
+STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
+1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+ABILITIES
+Terminatus Assault
+Charge
+
+Charge · Either turn
+
+This unit can re-roll charge rolls.
+After this unit ends a charge move, each enemy unit engaged with this unit makes a battle-shock roll, with -1 to that battle-shock roll if it’s a non-IMPERIUM/CHAOS unit.
+Teleport Homer
+Their Movement
+
+Movement · Their turn
+
+At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:
+
+When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3" of that Teleport Homer token and not within 8" of an enemy unit. That Teleport Homer token is then removed from the battlefield.
+If an enemy unit ends a move within 1" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.
+Storm Shield
+Already in W
+
+This model has +1 W.
+
+Rules
+Deep Strike, Combat Doctrines, Mission Tactics, Death Blow
+Stratagems
+
+ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
+
+DEATHWATCH SUPPORT Kraken Rounds, Dragonfire Rounds, Hellfire Rounds, Blackstar Extraction
+
+TERMINATOR STORM FORCE Tactical Dreadnought Fortitude, Merciless Veterans, Gunship Extraction
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+ALLIES: DEATHWATCH
+DEATHWATCH TERMINATOR SQUAD
+FACTION: ADEPTUS ASTARTES
+FACTION: DEATHWATCH
+IMPERIUM
+INFANTRY
+KILL TEAM
+TERMINATOR
+Ask about this unit
+‹ Impulsor
+
+######## popup ability:nerf-when|Bladeguard|In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:
+- This unit’s melee attacks have +1 to **hit rolls**.
+- Or: Attacks that target this unit have -1 to **hit rolls**. · DEATHWATCH TERMINATOR SQUAD Nerf when
+ABILITY · ONCE PER TURN, PER UNIT · FIGHT · EITHER TURN
+
+Bladeguard
+
+In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:
+
+This unit’s melee attacks have +1 to hit rolls.
+Or: Attacks that target this unit have -1 to hit rolls.
+
+UNITMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad
+
+Ask about this ability
+
+######## popup ability:nerf-when|Codex Adept|The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit. · NERF WHEN Nerf when
+ABILITY
+
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+UNITRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad
+
+Ask about this ability
+
+######## popup ability:nerf-when|Leader of Astartes|While this unit is within 3" of a friendly **ADEPTUS ASTARTES INFANTRY** unit, this unit has **Lone Operative**. · NERF WHEN Nerf when
+ABILITY
+
+Leader of Astartes
+
+While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.
+
+UNITRoboute Guilliman
+
+Ask about this ability
+
+######## popup ability:nerf-when|Primarch of the XIII|While a friendly **ADEPTUS ASTARTES** unit is within 6" of this unit, that unit’s attacks can:
+- Re-roll **hit rolls** of 1.
+- Re-roll **wound rolls** of 1. · NERF WHEN Nerf when
+ABILITY · AURA · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Primarch of the XIII
+
+While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+UNITRoboute Guilliman
+
+Ask about this ability
+
+######## popup ability:nerf-when|Psychic Hood|This unit has **Feel No Pain 4+** against **psychic attacks**. · NERF WHEN Nerf when
+ABILITY · PSYCHIC
+
+Psychic Hood
+
+This unit has Feel No Pain 4+ against psychic attacks.
+
+UNITLibrarian in Phobos Armour
+
+Ask about this ability
+
+######## popup ability:nerf-when|Shrouding|When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a psychic roll for this unit by rolling one D6. If you do:
+- On a 1, this unit is **battle-shocked**.
+- Attacks that target this unit have -1 to **hit rolls** until the end of the phase. · NERF WHEN Nerf when
+ABILITY · PSYCHIC LEVEL 1
+
+Shrouding
+
+When an enemy unit targets this unit, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+
+On a 1, this unit is battle-shocked.
+Attacks that target this unit have -1 to hit rolls until the end of the phase.
+
+UNITLibrarian in Phobos Armour
+
+Ask about this ability
+
+######## popup ability:nerf-when|Soul Sight|In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:
+- On a 1, this unit is **battle-shocked**.
+- Select one **visible** enemy unit. Ranged attacks that target that enemy unit have **[IGNORES COVER]**. · NERF WHEN Nerf when
+ABILITY · PSYCHIC LEVEL 1 · SHOOTING · YOUR TURN
+
+Soul Sight
+
+In your Shooting phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:
+
+On a 1, this unit is battle-shocked.
+Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].
+
+UNITLibrarian in Phobos Armour
+
+Ask about this ability
+
+######## popup ability:nerf-when|Strategium Command|When both players have deployed their armies, you can redeploy up to three friendly **ADEPTUS ASTARTES** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**. · NERF WHEN Nerf when
+ABILITY
+
+Strategium Command
+
+When both players have deployed their armies, you can redeploy up to three friendly ADEPTUS ASTARTES units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.
+
+UNITMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad
+
+Ask about this ability
+
+######## popup ability:nerf-when|Teleport Homer|At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:
+- When you target this unit with the **Rapid Ingress stratagem**, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that **stratagem**, this unit must be set up within 3" of that Teleport Homer token and not within 8" of an enemy unit. That Teleport Homer token is then removed from the battlefield.
+- If an enemy unit ends a move within 1" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield. · NERF WHEN Nerf when
+ABILITY · MOVEMENT · THEIR TURN
+
+Teleport Homer
+
+At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:
+
+When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3" of that Teleport Homer token and not within 8" of an enemy unit. That Teleport Homer token is then removed from the battlefield.
+If an enemy unit ends a move within 1" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.
+
+UNITDeathwatch Terminator Squad
+
+Ask about this ability
+
+######## popup ability:nerf-when|Thunderhawk Insertion|In the Declare Battle Formations step, you can select one friendly **GRAVIS/PHOBOS/TACTICUS** unit. That unit has **Deep Strike**. · NERF WHEN Nerf when
+ABILITY
+
+Thunderhawk Insertion
+
+In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.
+
+UNITMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad
+
+Ask about this ability
+
+######## popup ability:nerf-when|Total Obliteration|This unit’s ranged attacks can re-roll **damage rolls**. · NERF WHEN Nerf when
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Total Obliteration
+
+This unit’s ranged attacks can re-roll damage rolls.
+
+UNITEradicator Squad with Melta Rifles
+
+Ask about this ability
+
+######## popup ability:nerf-when|Unyielding in the Face of the Foe|While this unit is controlling an **objective**, this unit has +1 to **save rolls**. · NERF WHEN Nerf when
+ABILITY
+
+Unyielding in the Face of the Foe
+
+While this unit is controlling an objective, this unit has +1 to save rolls.
+
+UNITHeavy Intercessor Squad
+
+Ask about this ability
+
+######## popup enh:assault-brethren|Furious Assault · NERF WHEN Nerf when
+UPGRADE · ASSAULT BRETHREN · 10 PTS
+
+Furious Assault
+
+ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
+
+ONBladeguard Veteran Squad (Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad)
+
+Ask about this upgrade
+
+######## popup grant:["Furious Assault","marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad","SUSTAINED HITS 1: non-Monster/Vehicle","SUSTAINED HITS 1: non-Monster/Vehicle"] · NERF WHEN Nerf when
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE · GRANTED BY
+
+Furious Assault
+
+Bladeguard Veteran Squad · Upgrade
+
+ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1: non-Monster/Vehicle Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Shield Dome","impulsor","INV 5+",null] · NERF WHEN Nerf when
+INV 5+ · GRANTED BY
+
+Shield Dome
+
+datasheet ability
+
+This unit has 5+ InSv.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Storm Shield","deathwatch-terminator-squad","W 4",null] · NERF WHEN Nerf when
+W 4 · GRANTED BY
+
+Storm Shield
+
+datasheet ability
+
+This model has +1 W.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ASSAULT · NERF WHEN Nerf when
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYRoboute Guilliman (in Codex Adept), Marneus Calgar, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:Advance roll · NERF WHEN Nerf when
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Assault Mastery · NERF WHEN Nerf when
+ASSAULT BRETHREN DETACHMENT RULE
+
+Assault Mastery
+
+You can select the assault doctrine one additional time per battle.
+
+Ask about this rule
+
+######## popup rule:BLAST 1 · NERF WHEN Nerf when
+CORE RULE
+
+BLAST 1
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYMarneus Calgar, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:CLEAVE 2 · NERF WHEN Nerf when
+CORE RULE
+
+CLEAVE 2
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYRoboute Guilliman
+
+Ask about this rule
+
+######## popup rule:CLOSE-QUARTERS · NERF WHEN Nerf when
+CORE RULE
+
+CLOSE-QUARTERS
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYMarneus Calgar, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:Charge roll · NERF WHEN Nerf when
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Close-quarters · NERF WHEN Nerf when
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYMarneus Calgar, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:Combat Doctrines · NERF WHEN Nerf when
+ULTRAMARINES ARMY RULE
+
+Combat Doctrines
+
+At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase.
+
+ASSAULT DOCTRINE
+
+When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.
+
+DEVASTATOR DOCTRINE
+
+This unit’s ranged attacks have [ASSAULT].
+
+TACTICAL DOCTRINE
+
+When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.
+
+Unless otherwise stated:
+
+You can only select each combat doctrine once per battle.
+Only one combat doctrine can be active for each unit. If a rule makes a combat doctrine active for a unit, any combat doctrine previously active for that unit is no longer active for that unit.
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · NERF WHEN Nerf when
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Librarian in Phobos Armour, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · NERF WHEN Nerf when
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYImpulsor
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · NERF WHEN Nerf when
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYImpulsor
+
+Ask about this rule
+
+######## popup rule:Death Blow · NERF WHEN Nerf when
+TERMINATOR STORM FORCE DETACHMENT RULE
+
+Death Blow
+
+Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.
+
+IN THIS ARMYMarneus Calgar, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:Deep Strike · NERF WHEN Nerf when
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYMarneus Calgar (Marneus Calgar only), Librarian in Phobos Armour, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:EXTRA ATTACKS · NERF WHEN Nerf when
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYMarneus Calgar
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · NERF WHEN Nerf when
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYRoboute Guilliman, Librarian in Phobos Armour (in Psychic Hood)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 4+ · NERF WHEN Nerf when
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYRoboute Guilliman, Librarian in Phobos Armour (in Psychic Hood)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · NERF WHEN Nerf when
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYRoboute Guilliman, Librarian in Phobos Armour (in Psychic Hood)
+
+Ask about this rule
+
+######## popup rule:Fights First · NERF WHEN Nerf when
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:Firing Deck · NERF WHEN Nerf when
+CORE RULE
+
+Firing Deck
+
+This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
+2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
+4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+IN THIS ARMYImpulsor
+
+Ask about this rule
+
+######## popup rule:Firing Deck 7 · NERF WHEN Nerf when
+CORE RULE
+
+Firing Deck 7
+
+This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
+2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
+4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+IN THIS ARMYImpulsor
+
+Ask about this rule
+
+######## popup rule:HAZARDOUS · NERF WHEN Nerf when
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYLibrarian in Phobos Armour, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:HEAVY · NERF WHEN Nerf when
+CORE RULE
+
+HEAVY
+
+In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit:
+
+That unit is unengaged.
+That unit was not set up on the battlefield this turn.
+No model in that unit has moved more than 3" this turn.
+
+IN THIS ARMYMarneus Calgar, Heavy Intercessor Squad
+
+Ask about this rule
+
+######## popup rule:Hazard roll · NERF WHEN Nerf when
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:Hunter · NERF WHEN Nerf when
+CORE RULE
+
+Hunter
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Some of these profiles are known as Hunter profiles. Hunter profiles can only target units with the specified keywords.
+
+Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
+
+App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
+
+IN THIS ARMYEradicator Squad with Melta Rifles, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:Ignores Cover · NERF WHEN Nerf when
+CORE RULE
+
+Ignores Cover
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYLibrarian in Phobos Armour (in Soul Sight)
+
+Ask about this rule
+
+######## popup rule:Infiltrators · NERF WHEN Nerf when
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYLibrarian in Phobos Armour
+
+Ask about this rule
+
+######## popup rule:LETHAL HITS · NERF WHEN Nerf when
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYRoboute Guilliman
+
+Ask about this rule
+
+######## popup rule:Leader · NERF WHEN Nerf when
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYMarneus Calgar, Librarian in Phobos Armour
+
+Ask about this rule
+
+######## popup rule:Librarius · NERF WHEN Nerf when
+ULTRAMARINES ARMY RULE
+
+Librarius
+
+ADEPTUS ASTARTES PSYKER units with this ability have a psyker level of 1 or higher, specified in that unit’s abilities. Each psychic ability has a psychic level of 1 or higher, specified in that ability’s name.
+
+In a battle round, a friendly ADEPTUS ASTARTES PSYKER unit can use a number of psychic abilities whose total psychic level does not exceed that PSYKER unit’s psyker level.
+
+Example: In a battle round, a psyker level 3 PSYKER unit could use three psychic level 1 abilities, or one psychic level 1 ability and one psychic level 2 ability, or one psychic level 3 ability.
+
+Ask about this rule
+
+######## popup rule:Lone Operative · NERF WHEN Nerf when
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYRoboute Guilliman (in Leader of Astartes)
+
+Ask about this rule
+
+######## popup rule:MELTA 2 · NERF WHEN Nerf when
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYEradicator Squad with Melta Rifles
+
+Ask about this rule
+
+######## popup rule:MELTA 3 · NERF WHEN Nerf when
+CORE RULE
+
+MELTA 3
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYEradicator Squad with Melta Rifles
+
+Ask about this rule
+
+######## popup rule:Mission Tactics · NERF WHEN Nerf when
+DEATHWATCH SUPPORT DETACHMENT RULE
+
+Mission Tactics
+
+Friendly KILL TEAM units with this ability have the following abilities:
+
+Furor Tactics
+
+If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1].
+
+Malleus Tactics
+
+If the tactical doctrine is active for your unit, your unit’s attacks have [LETHAL HITS].
+
+Purgatus Tactics
+
+If the assault doctrine is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have [PRECISION].
+
+DEATHWATCH ALLIES
+
+You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.
+
+When mustering your army, unless otherwise stated, you cannot select a DEATHWATCH model to be your WARLORD. In addition KILL TEAM units can only contain enhancements taken from this detachment.
+
+This an exception to the Space Marine Chapters Army Rules.
+
+IN THIS ARMYDeathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:PRECISION · NERF WHEN Nerf when
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYMarneus Calgar, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:PSYCHIC · NERF WHEN Nerf when
+CORE RULE
+
+PSYCHIC
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYMarneus Calgar, Librarian in Phobos Armour
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 1 · NERF WHEN Nerf when
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad, Impulsor
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 2 · NERF WHEN Nerf when
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad, Impulsor
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 3 · NERF WHEN Nerf when
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad, Impulsor
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 4 · NERF WHEN Nerf when
+CORE RULE
+
+RAPID FIRE 4
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad, Impulsor
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · NERF WHEN Nerf when
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · NERF WHEN Nerf when
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad
+
+Ask about this rule
+
+######## popup rule:Scouts · NERF WHEN Nerf when
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYLibrarian in Phobos Armour, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:Scouts 6" · NERF WHEN Nerf when
+CORE RULE
+
+Scouts 6"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYLibrarian in Phobos Armour, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:Select Weapons · NERF WHEN Nerf when
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Ask about this rule
+
+######## popup rule:Stealth · NERF WHEN Nerf when
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYLibrarian in Phobos Armour
+
+Ask about this rule
+
+######## popup rule:Support · NERF WHEN Nerf when
+CORE RULE
+
+Support
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYMarneus Calgar
+
+Ask about this rule
+
+######## popup rule:TWIN-LINKED · NERF WHEN Nerf when
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYMarneus Calgar
+
+Ask about this rule
+
+######## popup rule:Transhuman Strategist · NERF WHEN Nerf when
+ULTRAMARINES ARMY RULE
+
+Transhuman Strategist
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Ask about this rule
+
+######## popup rule:[ANTI-non-VEHICLE 4+] · NERF WHEN Nerf when
+CORE RULE
+
+ANTI-non-VEHICLE 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+Ask about this rule
+
+######## popup rule:[ASSAULT] · NERF WHEN Nerf when
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYRoboute Guilliman (in Codex Adept), Marneus Calgar, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:[DEVASTATING WOUNDS] · NERF WHEN Nerf when
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Librarian in Phobos Armour, Deathwatch Terminator Squad
+
+Ask about this rule
+
+######## popup rule:[IGNORES COVER] · NERF WHEN Nerf when
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYLibrarian in Phobos Armour (in Soul Sight)
+
+Ask about this rule
+
+######## popup rule:[LETHAL HITS] · NERF WHEN Nerf when
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYRoboute Guilliman
+
+Ask about this rule
+
+######## popup rule:[Lance] · NERF WHEN Nerf when
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+Ask about this rule
+
+######## popup rule:[Lethal Hits] · NERF WHEN Nerf when
+CORE RULE
+
+Lethal Hits
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYRoboute Guilliman
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · NERF WHEN Nerf when
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYMarneus Calgar, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · NERF WHEN Nerf when
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad
+
+Ask about this rule
+
+######## popup rule:[Sustained Hits 1: non-Monster/Vehicle] · NERF WHEN Nerf when
+CORE RULE
+
+Sustained Hits 1: non-Monster/Vehicle
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad
+
+Ask about this rule
+
+######## popup rule:[Sustained Hits 1] · NERF WHEN Nerf when
+CORE RULE
+
+Sustained Hits 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYRoboute Guilliman, Marneus Calgar, Heavy Intercessor Squad
+
+Ask about this rule
+
+######## popup rule:advance · NERF WHEN Nerf when
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:advance move · NERF WHEN Nerf when
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:assault doctrine · NERF WHEN Nerf when
+CORE RULE
+
+assault doctrine
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYRoboute Guilliman (in Codex Adept), Marneus Calgar, Reiver Squad
+
+Ask about this rule
+
+######## popup rule:battle-shock roll · NERF WHEN Nerf when
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:battle-shocked · NERF WHEN Nerf when
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · NERF WHEN Nerf when
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · NERF WHEN Nerf when
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · NERF WHEN Nerf when
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · NERF WHEN Nerf when
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · NERF WHEN Nerf when
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:combat doctrines · NERF WHEN Nerf when
+ULTRAMARINES ARMY RULE
+
+Combat Doctrines
+
+At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase.
+
+ASSAULT DOCTRINE
+
+When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.
+
+DEVASTATOR DOCTRINE
+
+This unit’s ranged attacks have [ASSAULT].
+
+TACTICAL DOCTRINE
+
+When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.
+
+Unless otherwise stated:
+
+You can only select each combat doctrine once per battle.
+Only one combat doctrine can be active for each unit. If a rule makes a combat doctrine active for a unit, any combat doctrine previously active for that unit is no longer active for that unit.
+Ask about this rule
+
+######## popup rule:destroyed · NERF WHEN Nerf when
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:eligible to declare a charge · NERF WHEN Nerf when
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:engaged · NERF WHEN Nerf when
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:fall-back move · NERF WHEN Nerf when
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:ingress move · NERF WHEN Nerf when
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · NERF WHEN Nerf when
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · NERF WHEN Nerf when
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · NERF WHEN Nerf when
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · NERF WHEN Nerf when
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · NERF WHEN Nerf when
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:armour-of-contempt · NERF WHEN Nerf when
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Armour of Contempt
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.
+
+TARGETThat ADEPTUS ASTARTES unit.
+
+EFFECT
+
+Attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:blackstar-extraction · NERF WHEN Nerf when
+1CP · FIGHT · THEIR TURN
+
+Blackstar Extraction
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne friendly unengaged KILL TEAM unit.
+
+EFFECT
+
+Place your unit in strategic reserves.
+
+USED BYDeathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · NERF WHEN Nerf when
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · NERF WHEN Nerf when
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · NERF WHEN Nerf when
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYRoboute Guilliman, Impulsor
+
+Ask about this stratagem
+
+######## popup strat:dragonfire-rounds · NERF WHEN Nerf when
+1CP · SHOOTING · YOUR TURN
+
+Dragonfire Rounds
+WHEN
+
+Your Shooting phase when a KILL TEAM unit is selected to shoot.
+
+TARGETThat KILL TEAM unit.
+
+EFFECT
+
+Your unit’s ranged attacks:
+
+Can re-roll wound rolls of 1.
+Have [IGNORES COVER].
+
+USED BYDeathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:duty-in-death · NERF WHEN Nerf when
+1CP · FIGHT · EITHER TURN
+
+Duty in Death
+WHEN
+
+Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.
+
+TARGETThat ADEPTUS ASTARTES unit.
+
+EFFECT
+
+When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if the assault doctrine is active for your unit:
+
+On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · NERF WHEN Nerf when
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour
+
+Ask about this stratagem
+
+######## popup strat:explosives · NERF WHEN Nerf when
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · NERF WHEN Nerf when
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:gene-wrought-might · NERF WHEN Nerf when
+1CP · FIGHT · EITHER TURN
+
+Gene-Wrought Might
+WHEN
+
+Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.
+
+TARGETThat ADEPTUS ASTARTES unit.
+
+EFFECT
+
+Your unit’s melee attacks have:
+
+[Lance].
+Or: If the assault doctrine is active for your unit, [Lance] and +1 AP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:gunship-extraction · NERF WHEN Nerf when
+1CP · FIGHT · THEIR TURN
+
+Gunship Extraction
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne friendly unengaged ADEPTUS ASTARTES TERMINATOR unit.
+
+EFFECT
+
+Place your unit in strategic reserves.
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:hellfire-rounds · NERF WHEN Nerf when
+1CP · SHOOTING · YOUR TURN
+
+Hellfire Rounds
+WHEN
+
+Your Shooting phase when a KILL TEAM unit is selected to shoot.
+
+TARGETThat KILL TEAM unit.
+
+EFFECT
+
+Your unit’s ranged attacks (excluding [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].
+
+USED BYDeathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · NERF WHEN Nerf when
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad, Deathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · NERF WHEN Nerf when
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:kraken-rounds · NERF WHEN Nerf when
+1CP · SHOOTING · YOUR TURN
+
+Kraken Rounds
+WHEN
+
+Your Shooting phase when a KILL TEAM unit is selected to shoot.
+
+TARGETThat KILL TEAM unit.
+
+EFFECT
+
+Your unit’s ranged attacks have:
+
+Have +6" R.
+Have +1 S.
+
+USED BYDeathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:merciless-veterans · NERF WHEN Nerf when
+1CP · SHOOTING · YOUR TURN
+
+Merciless Veterans
+WHEN
+
+Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.
+
+TARGETThat ADEPTUS ASTARTES TERMINATOR unit.
+
+EFFECT
+
+Your unit’s ranged attacks have:
+
+[Lethal Hits].
+[Sustained Hits 1].
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · NERF WHEN Nerf when
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:smokescreen · NERF WHEN Nerf when
+1CP · SHOOTING · THEIR TURN
+
+Smokescreen
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYReiver Squad
+
+Ask about this stratagem
+
+######## popup strat:tactical-dreadnought-fortitude · NERF WHEN Nerf when
+2CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Tactical Dreadnought Fortitude
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.
+
+TARGETThat ADEPTUS ASTARTES TERMINATOR unit.
+
+EFFECT
+
+Attacks that target your unit have -1 D until that enemy unit has attacked.
+
+USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad
+
+Ask about this stratagem

@@ -126,14 +126,18 @@ if(run('python3', ['-I', '-c', 'import bs4']).status !== 0){
 const wdir = path.join(LATEST, 'waha');
 fs.mkdirSync(path.join(wdir, 'ds'), { recursive:true });
 let wahaOk = true;
-const pages = FACTIONS.map(slug).map(p => [p, 'https://wahapedia.ru/wh40k11ed/factions/' + p + '/']).concat([['core', 'https://wahapedia.ru/wh40k11ed/the-rules/core-rules/']]);
+// (the page name a faction has in sources/factions.json: Ultramarines are "space-marines/ultramarines"; else its name)
+const FJ0 = readJSON(path.join(V, 'sources/factions.json'), {});
+const wahaOfName = n => { const k = Object.keys(D.factions).find(x => D.factions[x].name === n); return (FJ0[k] || {}).waha || slug(n); };
+const pages = FACTIONS.map(n => [slug(n), 'https://wahapedia.ru/wh40k11ed/factions/' + wahaOfName(n) + '/']).concat([['core', 'https://wahapedia.ru/wh40k11ed/the-rules/core-rules/']]);
 for(const [p, url] of pages){
   if(curl(url, path.join(wdir, p + '.html')).status !== 0){ wahaOk = false; problems.push('Wahapedia page could not be read: ' + url); continue; }
   run('python3', ['-I', path.join(V, 'waha-extract.py'), path.join(wdir, p + '.html'), path.join(wdir, p + '.txt')]);
 }
 for(const line of fs.readFileSync(path.join(V, 'sources/waha-datasheets.txt'), 'utf8').split('\n').filter(Boolean)){
   const [fac, unit] = line.trim().split(/\s+/);
-  const page = (readJSON(path.join(V, 'sources/factions.json'), {})[fac] || {}).waha || fac;   // its Wahapedia page name (emperor-s-children)
+  const fj = readJSON(path.join(V, 'sources/factions.json'), {})[fac] || {};
+  const page = fj.wahaDs || fj.waha || fac;   // its Wahapedia page name (emperor-s-children; the Ultramarines' datasheets: space-marines)
   if(curl('https://wahapedia.ru/wh40k11ed/factions/' + page + '/' + unit, path.join(wdir, 'ds', fac + '_' + unit + '.html')).status !== 0){ wahaOk = false; problems.push('Wahapedia datasheet could not be read: ' + fac + '/' + unit); }
 }
 // the GW documents stay the pinned ones: texts.js reads GW from the same cache

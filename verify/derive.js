@@ -65,6 +65,8 @@ const MOMENT_RULES = [
     why:'the text opens with "At the start of the battle round": a moment before either player\'s Command phase (07.01)' },
   { id:'start-battle-round-later', re:/\b(?:at the )?start of the (?:first )?battle round\b/i, ph:{ command:'either' },
     why:'"the start of the battle round" later in the text: listed with the Command phase, no moment tag (the text does not open with it)' },
+  { id:'start-your-command', rulesOnly:true, re:/^at the start of your command phase\b/i, at:'Start of your Command phase', ph:{ command:'your' },
+    why:'an army or detachment rule whose text opens with "At the start of your Command phase": the moment its choice is made, before anything else in that phase (Martial Ka’tah, Combat Doctrines); not read on abilities or rule options' },
   { id:'end-opp-turn', re:/^at the end of your opponent's turn\b/i, at:'End of your opponent’s turn', ph:{ fight:'opp' },
     why:'"At the end of your opponent\'s turn": after their Fight phase, the last phase of the turn' },
 ];
@@ -120,6 +122,8 @@ const USED_MODIFIERS = [
     why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn (its attacks are not in the Shooting phase)' },
   { id:'overwatch', why:'an always-on ranged effect (no trigger in the text) is also used when the unit shoots with a Core stratagem whose EFFECT is "Your unit shoots" (Fire Overwatch: its WHEN, your opponent\'s Movement phase); when it protects against ranged attacks, the same moment in the other turn (the enemy\'s Fire Overwatch)' },
   { id:'trigger-phase', why:'an effect used in the phase it is triggered in has the trigger\'s turn ("In your opponent\'s Movement phase, … this unit can make a Normal move": the opponent\'s Movement phase only)' },
+  { id:'opening-phase', re:/^in (?:the|your|your opponent's) (?:command|movement|shooting|charge|fight) phase,/i,
+    why:'the text opens with its phase ("In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, …") and says no duration: every effect is used in that phase only (Bladeguard\'s -1 to hit rolls for attacks that target it is not used in the Shooting phase)' },
   { id:'same-phase', re:/\buntil the end of the phase\b/i,
     why:'triggered in a phase with an effect "until the end of the phase": used in that phase only (Destiny\'s Ruin: manifested at the start of your Shooting phase, so its attacks are that phase\'s)' },
   { id:'same-turn', re:/\buntil the end of the turn\b|\bthis turn\b/i,
@@ -135,6 +139,7 @@ function explicitTiming(text, opts){
   const reasons = [], out = {}, named = new Set();
   let at, atPh = [];
   for(const r of MOMENT_RULES){
+    if(r.rulesOnly && !(opts && opts.rule)) continue;
     const m = r.re.exec(t);
     if(!m) continue;
     if(r.id === 'start-battle-round-later' && at) continue;      // already the opening moment
@@ -223,6 +228,12 @@ function usedIn(text, ctx, trig){
   }
   // an effect used in the phase it is triggered in is used in that turn ("In your opponent's Movement phase, … make a Normal move")
   if(trig) for(const p of Object.keys(out)) if(trig.ph[p]) out[p] = trig.ph[p];
+  // the text opens with its phase and has no duration ("In the Fight phase, …, you can select one of the following"): that phase only
+  const opening = USED_MODIFIERS.find(r => r.id === 'opening-phase').re.exec(t);
+  if(trig && opening && !/\buntil\b|\bthis turn\b/i.test(t) && Object.keys(out).some(p => !trig.ph[p])){
+    for(const p of Object.keys(out)) if(!trig.ph[p]) delete out[p];
+    reasons.push({ rule:'opening-phase', match:opening[0] });
+  }
   // triggered in a phase, "until the end of the phase": that phase only
   const samePh = USED_MODIFIERS.find(r => r.id === 'same-phase').re.exec(t);
   if(trig && samePh && Object.keys(out).length && Object.keys(out).some(p => !trig.ph[p])){
@@ -241,7 +252,7 @@ function usedIn(text, ctx, trig){
   return { ph:out, reasons, none, blocked };
 }
 function timing(text, ctx){
-  const trig = explicitTiming(text);
+  const trig = explicitTiming(text, ctx && ctx.rule ? { rule:true } : undefined);
   const used = usedIn(text, ctx, trig);
   const ph = Object.assign({}, trig ? trig.ph : {});
   for(const [p, o] of Object.entries(used.ph)) addPh(ph, p, o);
@@ -598,6 +609,16 @@ function optionsOf(t, table){
     m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
     if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
   });
+  // a rule with no table whose options are headings of their own, each followed by its text: a bold line ("**Furor Tactics**",
+  // Wahapedia's sub-heading: Mission Tactics) or, when it has none, a line in capitals ("ASSAULT DOCTRINE": Combat Doctrines)
+  if(!opts.length && !(table || []).length){
+    const heads = (re, how) => { const out = [];
+      lines.forEach((l, i) => { const m = re.exec(l.trim()), nx = lines[i + 1];
+        if(m && nx && !re.test(nx.trim()) && !/^\s*- /.test(nx) && /[a-z]/.test(nx)) out.push({ name:m[1].trim(), text:nx, how }); });
+      return out; };
+    const bold = heads(/^\*\*([^*]{3,60})\*\*$/, 'heading "**Name**" and its line');
+    opts.push(...(bold.length ? bold : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line')));
+  }
   // army-building limits ("**Incursion:** Up to 500 pts") are not options, and nor is a worked example ("**Example:** …", Martial Ka'tah)
   for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text)) || /^examples?$/i.test(opts[i].name)) opts.splice(i, 1);
   return opts;
@@ -839,8 +860,8 @@ function derive(D){
       .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name, det:true })));
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
-      timingItem('rule-timing', where, r, r.text, { comments });
-      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ckCtx(ctx)), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
+      timingItem('rule-timing', where, r, r.text, { comments }, { core:D.coreStratagems, rule:true });
+      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ckCtx({ core:D.coreStratagems, rule:true })), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -1046,9 +1067,9 @@ function ruleTables(D){
       }
       grantRows(s.where, o.name, o.text, o.name + ' active');
     }
-    grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null);
+    grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null, opts.filter(o => /^heading/.test(o.how)));
   }
-  function grantRows(rule, option, text, whileOpt){
+  function grantRows(rule, option, text, whileOpt, headed){
     for(const sent of sentences(norm(text))){
       let m, name;
       for(const x of sent.matchAll(GRANT_RE)){
@@ -1056,6 +1077,13 @@ function ruleTables(D){
         if(!notAGrant(sent, x, rule, n)){ m = x; name = n; break; }
       }
       if(!m) continue;
+      // "… have the following abilities:" then headed options: it gives those (Mission Tactics: Furor, Malleus and Purgatus Tactics)
+      if(m[2] && headed && headed.length && /abilities/i.test(m[0])){
+        const before = sent.slice(0, m.index), subj = friendlyUnit(V, before + ' ', { any:true }), rs = [];
+        const to = subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+        for(const o of headed) grants.push(Object.assign({ rule }, { grants:o.name, type:'ability', to, while:null, text:sent }));
+        continue;
+      }
       if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
       const before = sent.slice(0, m.index);
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });

@@ -108,6 +108,9 @@ datasheets another list has are shared, new ones are added. Write the hand-writt
 `DATASHEETS` (phase tags, `def`, `tag` of an ability: they are the datasheet's) or on the list's entry (`mods`,
 `aura`, `na`, notes), or in the old form (`--expand`, edit, `--write`). Then the gate (`node verify/run.js`).
 
+From a New Recruit JSON export: `node verify/from-json.js <export.json> <id> --write` (`verify/ADDING-AN-ARMY.md`, 1b) writes
+the list in the old form, with any faction rows data.js lacks, and ends with `verify/tables.js --write`.
+
 ## A new column plus a template variable
 
 1. Put the values in the table: e.g. a datasheet column `leaders` (the units its Leader ability can lead) on the
