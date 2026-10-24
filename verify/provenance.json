@@ -62,10 +62,22 @@
    "sha256": "1adb1ccfde5c11b2e521a6cbe740095ecf3340954c8b1fbfd19f09876afa2357"
   },
   {
+   "id": "pack:chaos-space-marines",
+   "label": "GW Faction Pack Chaos Space Marines",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.pdf",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
    "id": "pack:ultramarines",
    "label": "GW Printed Product Updates Space Marines",
    "file": "verify/.cache/gw/eng_14-10_wh40k_printed_product_updates_space_marines_updates-91hillwcff-wzs8qnozam.pdf",
    "sha256": "98c2b114e4e4b33ea385c7115bb9acba83c32ae4e17f753a3d73ef20c7d45d1f"
+  },
+  {
+   "id": "pack:chaos-daemons",
+   "label": "GW Faction Pack Chaos Daemons",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.pdf",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
    "id": "waha:orks",
@@ -128,6 +140,18 @@
    "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
   },
   {
+   "id": "waha:chaos-daemons",
+   "label": "Wahapedia chaos-daemons (text)",
+   "file": "verify/.cache/waha/chaos-daemons.txt",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "id": "waha:chaos-space-marines",
+   "label": "Wahapedia chaos-space-marines (text)",
+   "file": "verify/.cache/waha/chaos-space-marines.txt",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -186,6 +210,18 @@
    "label": "Wahapedia ultramarines",
    "file": "verify/.cache/waha/ultramarines.html",
    "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
+  },
+  {
+   "id": "wahahtml:chaos-daemons",
+   "label": "Wahapedia chaos-daemons",
+   "file": "verify/.cache/waha/chaos-daemons.html",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
+   "id": "wahahtml:chaos-space-marines",
+   "label": "Wahapedia chaos-space-marines",
+   "file": "verify/.cache/waha/chaos-space-marines.html",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
    "id": "wahahtml:core",
@@ -7041,6 +7077,615 @@
    "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
   },
   {
+   "item": "chaos-daemons / detachment:blood-legion",
+   "field": "name",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/rule",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/rule:Blood Tainted",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Slaughterthirst (Aura)",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Slaughterthirst (Aura)",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Fury’s Cage",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Fury’s Cage",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Brazenmaw",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Brazenmaw",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Gateway Unto Damnation",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Blood Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/enhancement:Gateway Unto Damnation",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p123-124",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:wrath-undeniable",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (WRATH UNDENIABLE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:wrath-undeniable",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (WRATH UNDENIABLE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:wrath-undeniable",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (WRATH UNDENIABLE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:gore-hungry-onslaught",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (GORE‑HUNGRY ONSLAUGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:gore-hungry-onslaught",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (GORE‑HUNGRY ONSLAUGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:gore-hungry-onslaught",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (GORE‑HUNGRY ONSLAUGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:skulls-beget-blood",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SKULLS BEGET BLOOD)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:skulls-beget-blood",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SKULLS BEGET BLOOD)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:skulls-beget-blood",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SKULLS BEGET BLOOD)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:blood-begets-skulls",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (BLOOD BEGETS SKULLS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:blood-begets-skulls",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (BLOOD BEGETS SKULLS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:blood-begets-skulls",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (BLOOD BEGETS SKULLS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:fools-flight",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (FOOLS’ FLIGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:fools-flight",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (FOOLS’ FLIGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:fools-flight",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (FOOLS’ FLIGHT)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:sheathed-in-brass",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SHEATHED IN BRASS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:sheathed-in-brass",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SHEATHED IN BRASS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:blood-legion/stratagem:sheathed-in-brass",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p124 (SHEATHED IN BRASS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide",
+   "field": "name",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Warptide 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/rule",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Bane-Forged Weapons",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Warptide 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Bane-Forged Weapons",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Soul-Hungry Slaughterers",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Warptide 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/enhancement:Soul-Hungry Slaughterers",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:daemonic-infestation",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (DAEMONIC INFESTATION)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:daemonic-infestation",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (DAEMONIC INFESTATION)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:daemonic-infestation",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (DAEMONIC INFESTATION)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:soulseeing",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (SOULSEEING)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:soulseeing",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (SOULSEEING)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:soulseeing",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (SOULSEEING)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:incorporeal-entities",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (INCORPOREAL ENTITIES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:incorporeal-entities",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (INCORPOREAL ENTITIES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:warptide/stratagem:incorporeal-entities",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p122 (INCORPOREAL ENTITIES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane",
+   "field": "name",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Arkifane 2DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/rule",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p7-8",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Wyredjinn",
+   "field": "pts",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Arkifane 2DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Wyredjinn",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p7-8",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Cybinfernal Font",
+   "field": "pts",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Arkifane 2DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Cybinfernal Font",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p7-8",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Mark of the Soul Forges",
+   "field": "pts",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Arkifane 2DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Mark of the Soul Forges",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p7-8",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Crown of Worms",
+   "field": "pts",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Arkifane 2DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/enhancement:Crown of Worms",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p7-8",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:touch-of-the-arkifane",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (TOUCH OF THE ARKIFANE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:touch-of-the-arkifane",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (TOUCH OF THE ARKIFANE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:touch-of-the-arkifane",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (TOUCH OF THE ARKIFANE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:balefire-boon",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (BALEFIRE BOON)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:balefire-boon",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (BALEFIRE BOON)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:balefire-boon",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (BALEFIRE BOON)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:soul-tally-offering",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (SOUL‑TALLY OFFERING)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:soul-tally-offering",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (SOUL‑TALLY OFFERING)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:soul-tally-offering",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (SOUL‑TALLY OFFERING)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:biomechanoid-regeneration",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (BIOMECHANOID REGENERATION)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:biomechanoid-regeneration",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (BIOMECHANOID REGENERATION)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:biomechanoid-regeneration",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (BIOMECHANOID REGENERATION)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:forge-fire-surge",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (FORGE‑FIRE SURGE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:forge-fire-surge",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (FORGE‑FIRE SURGE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:forge-fire-surge",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (FORGE‑FIRE SURGE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:unholy-fortitude",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (UNHOLY FORTITUDE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:unholy-fortitude",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (UNHOLY FORTITUDE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:cult-of-the-arkifane/stratagem:unholy-fortitude",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p8 (UNHOLY FORTITUDE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction",
+   "field": "name",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Devotees of Destruction 1DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/rule",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/enhancement:Pact of Destruction",
+   "field": "pts",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Devotees of Destruction 1DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/enhancement:Pact of Destruction",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/enhancement:Eye of Oblivion",
+   "field": "pts",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Devotees of Destruction 1DP",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/enhancement:Eye of Oblivion",
+   "field": "text",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:ruinations-bounty",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (RUINATION’S BOUNTY)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:ruinations-bounty",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (RUINATION’S BOUNTY)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:ruinations-bounty",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (RUINATION’S BOUNTY)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:snare-of-fire",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (SNARE OF FIRE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:snare-of-fire",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (SNARE OF FIRE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:snare-of-fire",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (SNARE OF FIRE)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:undying-hatred",
+   "field": "when",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (UNDYING HATRED)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:undying-hatred",
+   "field": "target",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (UNDYING HATRED)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "chaos-space-marines / detachment:devotees-of-destruction/stratagem:undying-hatred",
+   "field": "effect",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p3 (UNDYING HATRED)",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -7517,6 +8162,84 @@
    "sha256": "76e9d5b5274438b26464e03bfdf999213a93d3de1f3db65b807fc6cafc43fab2"
   },
   {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos",
+   "field": "text",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Army Rules (The Shadow of Chaos)",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within",
+   "doc": "wahahtml:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Chaos Daemons",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within",
+   "doc": "wahahtml:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Chaos Daemons",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES D",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES D",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-space-marines / armyRule:Dark Pacts",
+   "field": "text",
+   "doc": "waha:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Army Rules (Dark Pacts)",
+   "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets ",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Chaos Space Marines",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
+   "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets ",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Chaos Space Marines",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
+   "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratag",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § FAQ",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
+   "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratag",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § FAQ",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -7853,6 +8576,62 @@
    "sha256": null
   },
   {
+   "item": "the-exiled-legion / skulltaker-bloodletters / ability:Bane-Forged Weapons",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bane-Forged Weapons (Warptide) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / bloodthirster / ability:Gateway Unto Damnation",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Gateway Unto Damnation (Blood Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Slaughterthirst (Aura)",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Slaughterthirst (Aura) (Blood Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / bloodmaster-bloodletters / ability:Bane-Forged Weapons",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bane-Forged Weapons (Warptide) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "the-exiled-legion / skullmaster-bloodcrushers / ability:Brazenmaw",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Brazenmaw (Blood Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "fellhammer-siege-task-force / lord-discordant-on-helstalker / ability:Mark of the Soul Forges",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Mark of the Soul Forges (Cult of the Arkifane) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "fellhammer-siege-task-force / warpsmith / ability:Wyredjinn",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Wyredjinn (Cult of the Arkifane) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "fellhammer-siege-task-force / dark-apostle-master-of-executions-nemesis-claw / ability:Cybinfernal Font",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Cybinfernal Font (Cult of the Arkifane) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
    "field": "ability:The Betrayer (Khârn the Betrayer)",
    "doc": "pack:world-eaters",
@@ -8161,6 +8940,20 @@
    "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
   },
   {
+   "item": "fellhammer-siege-task-force / obliterators / ability:Warp Rift Firepower",
+   "field": "ability:Warp Rift Firepower",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p38, Rules Updates: DATASHEETS / Obliterators, Warp Rift Firepower Ability",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "fellhammer-siege-task-force / chaos-predator-annihilator / ability:Annihilator",
+   "field": "ability:Annihilator",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p38, Rules Updates: DATASHEETS / Chaos Predator Annihilator, Annihilator Ability",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
    "item": "purge-goes-the-foe / belisarius-cawl / rules",
    "field": "rules",
    "doc": "pack:adeptus-mechanicus",
@@ -8187,6 +8980,13 @@
    "doc": "pack:adeptus-mechanicus",
    "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: DATASHEETS / Belisarius Cawl, Corpuscarii Electro-Priests, Cybernetica Datasmith, Fulgurite Electro-Priests, Kastelan Robots, Tech-Priest Dominus, Tech-Priest Enginseer, Tech-Priest Manipulus, Technoarcheologist – Faction Abilities section",
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "fellhammer-siege-task-force / dark-apostle-master-of-executions-nemesis-claw / rules",
+   "field": "rules",
+   "doc": "pack:chaos-space-marines",
+   "where": "GW Faction Pack Chaos Space Marines PDF p38, Rules Updates: DATASHEETS / Master of Executions, Core Abilities Section",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
   },
   {
    "item": "core / rule:Harpooned / text",

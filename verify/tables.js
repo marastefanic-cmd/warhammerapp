@@ -89,7 +89,7 @@ function resolveArmies(armies, sheets, order, opts){
           if(opts.trace) opts.trace(a, u, kind, n, ids[at.p], at.j);
           var ds = parts[at.p][kind][at.j], row = put({}, copy(ds)); put(row, r); if(r.over) put(row, r.over);
           // (for --expand: the datasheet's own value of a stat a rule of the list changed, own, so --write gives it back)
-          if(kind === 'stats' && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }
+          if((kind === 'stats' || kind === 'ranged' || kind === 'melee') && r.from && (opts.keep || []).indexOf('own') >= 0){ var own = {}, f; for(f in r.from) if(f in ds && ds[f] !== r[f]) own[f] = ds[f]; for(f in own){ row.own = own; break; } }
           return sorted(row, order[kind] || []);
         });
       });
@@ -260,7 +260,7 @@ function build(R){
     if(k === 'who') return o.kind !== 'abilities' || o.U.multi;
     if(k === 'na') return true;   // why it does nothing in this list
     if(o.kind === 'stats') return k === 'from' || k === 'printed' || k === 'own' || k in from;
-    if(o.kind === 'ranged' || o.kind === 'melee') return ['n', 'from', 'enh'].includes(k) || k in from || (k === 'kw' && Object.keys(from).some(x => !WEAPON_FIELDS.includes(x)));
+    if(o.kind === 'ranged' || o.kind === 'melee') return ['n', 'from', 'enh', 'own'].includes(k) || k in from || (k === 'kw' && Object.keys(from).some(x => !WEAPON_FIELDS.includes(x)));
     return false;
   };
   const conflicts = [];
@@ -280,6 +280,13 @@ function build(R){
   const matchNeeds = (to, u) => { const has = k => (u.kw || []).some(x => lc(x) === lc(k));
     if(!to || typeof to !== 'object' || Object.keys(to).some(k => !['all', 'any', 'none'].includes(k))) return !to;
     return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
+  // each BSData entry's own categories (verify/sources/bsdata-extract.json, by id), before any modifier of a rule
+  let BSC = null; const BSR = new Map();   // (and its own rules: core abilities BSData links to it, "Deep Strike")
+  const bsCats = () => { if(BSC) return BSC; BSC = new Map();
+    try { const x = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources/bsdata-extract.json'), 'utf8'));
+      const walk = o => { if(Array.isArray(o)){ o.forEach(walk); return; } if(!o || typeof o !== 'object') return; if(o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); if(o.id && (o.infoLinks || o.rules)) BSR.set(o.id, [].concat(o.infoLinks || [], o.rules || []).map(c => c.name)); for(const k in o) if(o[k] && typeof o[k] === 'object') walk(o[k]); };
+      walk(x.files); } catch(e) {}
+    return BSC; };
   const ownAbilities = u => (u.abilities || []).filter(x => /\b(Enhancement|Upgrade)\b/.test(x.tag || ''));
   // always the list's: the Warlord keyword, a keyword a rule in force gives (GRANTS), a rule an enhancement or upgrade gives
   const unitWhy = U => {
@@ -287,14 +294,30 @@ function build(R){
     const put = (f, k, r) => { (why[f] = why[f] || {})[k] = r; };
     const kwOf = k => (u.kw || []).find(x => lc(x) === lc(k));
     if(u.warlord && kwOf('Warlord')) put('kw', kwOf('Warlord'), 'Warlord');
+    // (a keyword a rule gives that a datasheet of the unit already has, its own BSData category: no reason, it is the datasheet's;
+    // the Forgefiend's DAEMON, which Soul Forge Boons also gives HERETIC ASTARTES VEHICLE units)
+    const nativeRule = r => U.ids.some(id => { const s = sheets.get(id); bsCats(); return s && [...s.bs.keys()].some(b => (BSR.get(b) || []).some(x => lc(x) === lc(r))); });
+    const native = k => U.ids.some(id => { const s = sheets.get(id); return s && [...s.bs.keys()].some(b => (bsCats().get(b) || []).some(x => lc(x) === lc(k))); });
     const inForce = [F.name + ' army rule · '].concat(a.detachments.map(d => F.name + ' · ' + ((F.detachments || {})[d] || {}).name + ' rule · '));
     for(const g of R.grants || []){
       if(!/keyword/.test(g.type) || g.to === 'this unit / model' || !inForce.some(p => g.rule.startsWith(p)) || !matchNeeds(g.to, u)) continue;
-      const k = kwOf(g.grants); if(k && !(why.kw && why.kw[k])) put('kw', k, g.option || g.rule.split(' · ').pop());
+      const k = kwOf(g.grants); if(k && !(why.kw && why.kw[k]) && !native(k)) put('kw', k, g.option || g.rule.split(' · ').pop());
+    }
+    // a keyword the unit's enhancement or upgrade gives by name ("Models in the bearer's unit have the **SOUL FORGE** keyword")
+    for(const ab of ownAbilities(u)){
+      for(const m of String(ab.text || '').matchAll(/\b(?:have|has|gains?) the \*\*([^*]+)\*\* keyword/gi)){ const k = kwOf(m[1]); if(k && !(why.kw && why.kw[k]) && !native(k)) put('kw', k, ab.name); }
+    }
+    // a keyword the list selected for the unit, as its models line names it ("1× Daemon Prince of Chaos (Khorne)"): the ability of the
+    // datasheet that names the keyword (Daemonic Allegiance), with the selection
+    for(const m of u.models || []) for(const x of (/\(([^()]*)\)$/.exec(m) || [, ''])[1].split(/,\s*/)){
+      const k = kwOf(x); if(!k || (why.kw && why.kw[k])) continue;
+      const ab = (u.abilities || []).find(y => (y.text || '').includes('**' + k.toUpperCase() + '**'));
+      put('kw', k, (ab ? ab.name + ': ' : 'its selection ') + x);
     }
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
     const own = ownAbilities(u);
     for(const r of u.rules || []){
+      if(nativeRule(r)) continue;   // (a rule the datasheet itself has: the Sorcerer in Terminator Armour's Deep Strike, not Umbralefic Crystal's)
       const esc = lc(r).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const ab = own.find(x => new RegExp('\\*\\*' + esc + '\\*\\*|\\[' + esc + '[\\]\\s-]').test(lc(x.text)));   // it gives the rule by name
       if(ab){ put('rules', r, ab.name); continue; }
@@ -305,7 +328,7 @@ function build(R){
     }
     return why;
   };
-  for(const U of units) U.why = U.multi ? {} : unitWhy(U);
+  for(const U of units) U.why = unitWhy(U);
   // the list's only where lists differ: a value an ability of the unit gives (Kustom Force Field: 4+* InSv), a weapon ability
   // on the Rules line from the wargear taken
   const rowWhy = (o, f) => {
@@ -340,10 +363,10 @@ function build(R){
       }
       // a stat every list has changed by a rule (the Deathwatch Terminator Sergeant's W 4 from its Storm Shield): the datasheet's own
       // value, from the lists' `own` (from-json.js: GW's datasheet), when they agree
-      if(kind === 'stats') for(const f of [...new Set(R.obs.flatMap(o => Object.keys(o.r.own || {})))]){
+      if(['stats', 'ranged', 'melee'].includes(kind)) for(const f of [...new Set(R.obs.flatMap(o => Object.keys(o.r.own || {})))]){
         if(f in R.ds || R.conflict.has(f)) continue;
         const vs = [...new Set(R.obs.filter(o => o.r.own && f in o.r.own).map(o => o.r.own[f]))];
-        if(vs.length === 1) R.ds[f] = vs[0]; else conflicts.push({ where:s.id + ' · stats · ' + R.key, field:'own.' + f, values:vs.map(v => ({ value:v })) });
+        if(vs.length === 1) R.ds[f] = vs[0]; else conflicts.push({ where:s.id + ' · ' + kind + ' · ' + R.key, field:'own.' + f, values:vs.map(v => ({ value:v })) });
       }
     }
     s.ds = { name:s.name, faction:s.faction };
@@ -627,6 +650,7 @@ function sites(D, armies){
     (f.armyRules || []).forEach((r, i) => rule([fk, 'armyRules', i], f.name + ' army rule · ' + r.name, r));
     for(const [dk, d] of Object.entries(f.detachments || {})){
       if(d.rule) rule([fk, 'detachments', dk, 'rule'], f.name + ' · ' + d.name + ' rule · ' + d.rule.name, d.rule);
+      (d.moreRules || []).forEach((r, i) => rule([fk, 'detachments', dk, 'moreRules', i], f.name + ' · ' + d.name + ' rule · ' + r.name, r));
       (d.stratagems || []).forEach((x, i) => each('FACTIONS', [fk, 'detachments', dk, 'stratagems', i], f.name + ' · ' + d.name + ' · ' + x.name, x, stratText(x)));
     }
   }
@@ -668,7 +692,7 @@ function columnsInData(src){
     add('FACTIONS', f);
     (f.armyRules || []).forEach(r => add('FACTIONS.armyRules', r));
     for(const d of Object.values(f.detachments || {})){
-      add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule);
+      add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule); (d.moreRules || []).forEach(r => add('FACTIONS.detachments.moreRules', r));
       (d.stratagems || []).forEach(x => add('FACTIONS.detachments.stratagems', x)); (d.enhancements || []).forEach(x => add('FACTIONS.detachments.enhancements', x));
     }
   }

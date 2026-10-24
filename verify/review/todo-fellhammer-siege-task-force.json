@@ -1,0 +1,113 @@
+[
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-tag",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Demagogue",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Demagogue",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12\" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked."
+  },
+  "key": "f14170abb5ad85cf"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-ph",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "3b8cd5020b450005"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turn",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "22c6bf17856662ed"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-turns",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "f10d931971814222"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-calcMods",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Dark Pacts",
+     "when": "A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase",
+     "note": "[LETHAL HITS] or [SUSTAINED HITS 1]",
+     "pick": [
+      {
+       "name": "[LETHAL HITS]",
+       "note": "[LETHAL HITS]"
+      },
+      {
+       "name": "[SUSTAINED HITS 1]",
+       "note": "[SUSTAINED HITS 1]"
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "note": "[LETHAL HITS], [SUSTAINED HITS 1]"
+      }
+     ]
+    }
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "802703d0e469d2c9"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "rule-both",
+  "where": "chaos-space-marines army rule · Dark Pacts",
+  "judgement": {
+   "both": [
+    {
+     "strat": "touch-of-the-arkifane"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Dark Pacts",
+   "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
+  },
+  "key": "1e53958ebb9107bc"
+ }
+]

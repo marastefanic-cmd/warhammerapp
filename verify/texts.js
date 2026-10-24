@@ -33,6 +33,7 @@
    Exit 1 when there is any failure not covered by verify/deviations-texts.json (a stale deviation is a failure). */
 'use strict';
 const fs = require('fs');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
@@ -396,6 +397,8 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
       docs = opts.packDocs || gwDocs; less = wahaDocs;
       const q = /^(.*?\?)\s+(.*)$/.exec(c.body);   // "<question>? <answer>": both word for word (the pack prints "Q: … A: …")
       parts = q ? [q[1], q[2]] : [c.body];
+      // and the answer is the one printed right after that question ("…? A: …"), not words found anywhere else in the pack
+      if (q && !locate(normApp(q[1] + ' A: ' + q[2]), docs)) fail(cat, army, unit, field, raw.trim(), 'the answer is not printed right after its question ("Q: … A: …") in ' + docsLabel(docs), '');
     }
     if ((c.kind === 'appsec' || c.kind === 'sec') && !c.inherited) {
       // the quoted section heading must exist as "Title NN.NN" or "NN.NN Title"
@@ -500,7 +503,8 @@ function parseStrats(lines, headerAt, stopAt) {
   for (const s of out) for (const k of Object.keys(s.fields)) s.fields[k] = s.fields[k].filter(Boolean);
   return out;
 }
-const stopPdf = t => !/STRATAGEM$/.test(t) && (/^\d+$/.test(t) || /^\+?\d?CP$/.test(t) || /^\+\+/.test(t) || /^(ENHANCEMENTS|DETACHMENT RULES?|STRATAGEMS)$/.test(t) || isCaps(t));
+// (a bullet line in capitals, "▪ [SUSTAINED HITS 1].", is part of the field)
+const stopPdf = t => !/STRATAGEM$/.test(t) && !/^[▪■•]/.test(t) && (/^\d+$/.test(t) || /^\+?\d?CP$/.test(t) || /^\+\+/.test(t) || /^(ENHANCEMENTS|DETACHMENT RULES?|STRATAGEMS)$/.test(t) || isCaps(t));
 // GW Core Rules section 15: "COMMAND RE-ROLL 15.02 1CP"
 const coreHeader = (L, i) => {
   const m = /^([A-Z][A-Z’'\- !?]+?) (1[56]\.\d\d)(?: (\d)CP)?$/.exec(L[i].text);
@@ -589,7 +593,8 @@ const FIELDS = ['when', 'target', 'effect', 'restrictions'];
 }
 
 /* ------------------------------------------------------------------ source parsers: detachments */
-const isHead = t => !/[a-z]/.test(t) && /[A-Z]{3}/.test(t) && !/^\d/.test(t) && !/\dCP$/.test(t) && !/[.,:;)\]]$/.test(t);
+// (a heading can end in GW's "(AURA)": the Chaos Daemons' enhancement SLAUGHTERTHIRST (AURA))
+const isHead = t => !/[a-z]/.test(t) && /[A-Z]{3}/.test(t) && !/^\d/.test(t) && !/\dCP$/.test(t) && (!/[.,:;)\]]$/.test(t) || /[A-Z]{3}.* \(AURA\)$/.test(t));
 const SEGHEAD = /^(Detachment Rules?|Enhancements|Stratagems)$/;
 const NOTEHEAD = /^(FAQ|Errata|FAQ \/ Errata)$/;
 function wahaSection(faction, title) {
@@ -597,16 +602,29 @@ function wahaSection(faction, title) {
   const pi = d.pages.findIndex(p => p.section && norm(p.section).replace(/ \d+dp$/, '') === norm(title));
   return pi < 0 ? null : { d, pi, page: d.pages[pi] };
 }
-// Wahapedia detachment: "Detachment Rule(s)" name + body, "Enhancements" "- Name N pts" + body, "Stratagems" blocks
+// the names of the detachments' rules, as the Wahapedia faction page's contents list them under "Detachment Rule" (Blood Legion:
+// Murdercall, Blood Tainted): a detachment can have more than one; a rule's heading starts the next and ends a spoiler before it
+const RULEHEADS = {};
+function wahaRuleHeads(faction) {
+  if (RULEHEADS[faction]) return RULEHEADS[faction];
+  const f = path.join(__dirname, '.cache/waha', faction + '.html'), out = new Set();
+  if (fs.existsSync(f)) for (const m of fs.readFileSync(f, 'utf8').matchAll(/class="cnClrInv">Detachment Rules?<\/a><\/div>((?:<div class="[^"]*\bi50\b[^"]*"[^>]*><a href="[^"]*" class="cnClrInv">[^<]+<\/a><\/div>)+)/g))
+    for (const x of m[1].matchAll(/class="cnClrInv">([^<]+)</g)) out.add(norm(x[1].replace(/&rsquo;|&#8217;/g, '’')));
+  return (RULEHEADS[faction] = out);
+}
+// Wahapedia detachment: "Detachment Rule(s)" name + body (each of its rules: rules), "Enhancements" "- Name N pts" + body, "Stratagems" blocks
 function wahaDetachment(faction, name) {
   const sec = wahaSection(faction, name); if (!sec) return null;
   const L = docLines(sec.d, sec.pi, sec.pi);
   const dp = /(\d+)DP$/.exec(sec.page.section);
-  const res = { dp: dp ? +dp[1] : null, where: sec.page.where, d: sec.d, rule: null, enh: [], strats: [] };
+  const res = { dp: dp ? +dp[1] : null, where: sec.page.where, d: sec.d, rule: null, rules: [], enh: [], strats: [] };
   let seg = null, cur = null, inNote = false;
+  const heads = wahaRuleHeads(faction);
   for (let i = 0; i < L.length; i++) {
     const t = L[i].text;
-    if (SEGHEAD.test(t)) { seg = /^Detachment/.test(t) ? 'rule' : t === 'Enhancements' ? 'enh' : 'strat'; cur = null; inNote = false; if (seg === 'rule') res.rule = { name: null, body: [] }; continue; }
+    if (SEGHEAD.test(t)) { seg = /^Detachment/.test(t) ? 'rule' : t === 'Enhancements' ? 'enh' : 'strat'; cur = null; inNote = false; if (seg === 'rule') { res.rule = { name: null, body: [] }; res.rules = [res.rule]; } continue; }
+    if (seg === 'rule' && res.rule.name && heads.has(norm(t)) && !res.rules.some(r => norm(r.name) === norm(t))) {   // (a table headed with the rule's own name is not another rule: Try Dat Button!)
+    res.rule = { name: t, body: [], at: L[i] }; res.rules.push(res.rule); inNote = false; continue; }
     if (NOTEHEAD.test(t)) { inNote = true; continue; }
     if (seg === 'rule') { if (inNote) continue; if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; } else res.rule.body.push(L[i]); }
     else if (seg === 'enh') {
@@ -619,6 +637,7 @@ function wahaDetachment(faction, name) {
     }
   }
   res.strats = parseStrats(L, wahaHeader, stopWaha);
+  res.rule = res.rules[0] || null;   // (its first rule)
   return res;
 }
 // Faction Pack: the contents page names the detachments it prints; each starts on the page whose first line is its name
@@ -644,15 +663,18 @@ function packDetachment(faction, name) {
   if (p0 < 0) return { error: 'detachment ' + name + ' is in the contents but no page starts with its name', d };
   const p1 = p0 + (toc[k + 1].page - toc[k].page) - 1;
   const L = docLines(d, p0, p1);
-  const res = { d, pages: [p0, p1], where: d.label + ' PDF p' + (p0 + 1) + (p1 > p0 ? '-' + (p1 + 1) : ''), rule: null, enh: [], strats: [] };
+  const res = { d, pages: [p0, p1], where: d.label + ' PDF p' + (p0 + 1) + (p1 > p0 ? '-' + (p1 + 1) : ''), rule: null, rules: [], enh: [], strats: [] };
   let seg = null, cur = null;
+  const heads = wahaRuleHeads(faction);
   for (let i = 0; i < L.length; i++) {
     const t = L[i].text;
-    if (/^DETACHMENT RULES?$/.test(t)) { seg = 'rule'; res.rule = { name: null, body: [] }; continue; }
+    if (/^DETACHMENT RULES?$/.test(t)) { seg = 'rule'; res.rule = { name: null, body: [] }; res.rules = [res.rule]; continue; }
     if (t === 'ENHANCEMENTS') { seg = 'enh'; cur = null; continue; }
     if (packHeader(L, i) || /STRATAGEM$/.test(t) || /^\d+$/.test(t) || /^\dCP$/.test(t)) { seg = null; continue; }
     if (seg === 'rule') {
       if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; continue; }
+      // (the detachment's next rule, a heading the Wahapedia page's contents name as one: BLOOD TAINTED after MURDERCALL)
+      if (isHead(t) && heads.has(norm(t)) && !res.rules.some(r => norm(r.name || '') === norm(t))) { res.rule = { name: t, body: [], at: L[i] }; res.rules.push(res.rule); continue; }
       if (isHead(t)) { seg = null; continue; }
       res.rule.body.push(L[i]);
     } else if (seg === 'enh') {
@@ -661,6 +683,7 @@ function packDetachment(faction, name) {
     }
   }
   res.strats = parseStrats(L, packHeader, stopPdf);
+  res.rule = res.rules[0] || null;   // (its first rule)
   // CP: on the name line ("SCORN THE WITCH 1CP"); else, when every CP badge on these pages is the same, that value
   const badges = [...new Set(L.filter(l => /^\dCP$/.test(l.text)).map(l => +l.text[0]))];
   for (const st of res.strats) if (st.cp == null && badges.length === 1) { st.cp = badges[0]; st.cpFrom = 'the CP badges on these pages (all ' + badges[0] + 'CP)'; }
@@ -844,51 +867,56 @@ for (const fk of FACTIONS) {
     if (det.dp != null && W.dp != null && det.dp !== W.dp) fail('detachment', army, U, 'dp', String(det.dp), W.dp + 'DP', W.where);
     const upd = UPD[fk].filter(e => e.section && norm(e.section) === norm(det.name + ' detachment'));
 
-    /* rule */
-    const R = det.rule || {};
-    const srcRule = pack ? pack.rule : W.rule;
+    /* rules: each of the detachment's rules (rule, then moreRules) against the source's, in order; one missing on either side fails */
+    const appRules = detRules_(det), srcRules = ((pack ? pack.rules : W.rules) || []).filter(r => r.name);
+    for (let ri = 0; ri < Math.max(appRules.length, srcRules.length, 1); ri++) {
+    const R = appRules[ri] || {};
+    const srcRule = srcRules[ri];
+    const Wr = (W.rules || [])[ri];
+    const UR = U + '/rule' + (ri ? ':' + (R.name || (srcRule && srcRule.name) || ri) : '');
     count('detachment');
-    if (!srcRule || !srcRule.name) fail('detachment', army, U + '/rule', 'name', R.name || '', 'no detachment rule found in the source', where);
-    else if (norm(R.name || '') !== norm(srcRule.name)) fail('detachment', army, U + '/rule', 'name', R.name || '', srcRule.name, where);
+    if (!srcRule || !srcRule.name) fail('detachment', army, UR, 'name', R.name || '', 'no detachment rule found in the source', where);
+    else if (norm(R.name || '') !== norm(srcRule.name)) fail('detachment', army, UR, 'name', R.name || '', srcRule.name, where);
     const ruleUpd = upd.find(e => titleN(e) === nameN(R.name + ' detachment rule'));
     // "Change Unnatural Fortitude to:": one named part of the rule ("- **Unnatural Fortitude:** …" and the bullets under it)
     const partOf = (text, name) => { const L = String(text).split('\n'), k = L.findIndex(l => nameN(l.replace(/^-\s+/, '').replace(/\*\*/g, '')).startsWith(nameN(name) + ':'));
       if (k < 0) return null; const out = [L[k].replace(/^-\s+/, '').replace(/^\*\*[^*]+:\*\*\s*|^[^:]+:\s*/, '')];
       for (let j = k + 1; j < L.length && /^-\s+(?!\*\*)/.test(L[j]); j++) out.push(L[j]); return out.join('\n'); };
     const ruleNamed = ruleUpd && /^Change (.+) to:$/.exec(ruleUpd.instr);
-    if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, U + '/rule', 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
+    if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, UR, 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
     else if (ruleUpd) {
       // a Rules Update of the rule changes its text, not the KEYWORDS section after it (Warpmeld Pact): that part is checked against
       // Wahapedia's KEYWORDS lines
       const kw = String(R.text).split('\n'), kAt = kw.findIndex(l => /^KEYWORDS$/.test(l.trim()));
-      checkUpdate('detachment', army, U + '/rule', 'text (Rules Updates)', kAt < 0 ? R.text : kw.slice(0, kAt).join('\n'), ruleUpd);
+      checkUpdate('detachment', army, UR, 'text (Rules Updates)', kAt < 0 ? R.text : kw.slice(0, kAt).join('\n'), ruleUpd);
       if (kAt >= 0) {
         count('detachment');
-        const wb = W.rule ? W.rule.body : [], wAt = wb.findIndex(l => /^KEYWORDS$/.test(l.text.trim()));
+        const wb = Wr ? Wr.body : [], wAt = wb.findIndex(l => /^KEYWORDS$/.test(l.text.trim()));
         const probs = wAt < 0 ? [{ app: 'KEYWORDS', msg: 'no KEYWORDS section in the source' }] : compareWahaBody(kw.slice(kAt).join('\n'), null, wb.slice(wAt), '');
-        prov.push({ item: army + ' / ' + U + '/rule', field: 'text (KEYWORDS)', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
-        for (const pr of probs) fail('detachment', army, U + '/rule', 'text (KEYWORDS)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
+        prov.push({ item: army + ' / ' + UR, field: 'text (KEYWORDS)', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
+        for (const pr of probs) fail('detachment', army, UR, 'text (KEYWORDS)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
       }
     }
     if (srcRule && srcRule.name) {
       count('detachment');
-      if (pack && W.rule && !suffixOf(W.rule.body.map(l => l.text).join('\n'), srcRule.body).ok)
-        info.push({ army, unit: U + '/rule', field: 'text', note: 'the Faction Pack and Wahapedia differ; the app is checked against the pack', wahapedia: joinNorm(W.rule.body.map(l => l.text)) });
+      if (pack && Wr && !suffixOf(Wr.body.map(l => l.text).join('\n'), srcRule.body).ok)
+        info.push({ army, unit: UR, field: 'text', note: 'the Faction Pack and Wahapedia differ; the app is checked against the pack', wahapedia: joinNorm(Wr.body.map(l => l.text)) });
       if (pack) {
         const r = suffixOf(R.text, srcRule.body);
-        provRow(army + ' / ' + U + '/rule', 'text', pack.d, null, { where: pack.where });
-        const ls = r.ok && lostStart(R.text, W.rule && W.rule.body, srcRule.body);
-        if (ls) fail('detachment', army, U + '/rule', 'text', R.text, ls, pack.where);
+        provRow(army + ' / ' + UR, 'text', pack.d, null, { where: pack.where });
+        const ls = r.ok && lostStart(R.text, Wr && Wr.body, srcRule.body);
+        if (ls) fail('detachment', army, UR, 'text', R.text, ls, pack.where);
         if (!r.ok) {
-          const w = compareWahaBody(R.text, R.table, W.rule ? W.rule.body : [], W.rule ? W.rule.name : '');
-          fail('detachment', army, U + '/rule', 'text', R.text, (w.length ? '' : 'matches the less authoritative Wahapedia text, not the Faction Pack: ') + r.msg, pack.where);
+          const w = compareWahaBody(R.text, R.table, Wr ? Wr.body : [], Wr ? Wr.name : '');
+          fail('detachment', army, UR, 'text', R.text, (w.length ? '' : 'matches the less authoritative Wahapedia text, not the Faction Pack: ') + r.msg, pack.where);
         }
       } else if (!ruleUpd) {
         const probs = compareWahaBody(R.text, R.table, srcRule.body, srcRule.name);
-        prov.push({ item: army + ' / ' + U + '/rule', field: 'text', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
-        for (const pr of probs) fail('detachment', army, U + '/rule', pr.app != null ? 'text' : 'text (missing)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
-        if (!sameStruck(R.text, srcRule.body)) fail('detachment', army, U + '/rule', 'text (struck through)', R.text, 'struck-through words differ from the source', W.where);
+        prov.push({ item: army + ' / ' + UR, field: 'text', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
+        for (const pr of probs) fail('detachment', army, UR, pr.app != null ? 'text' : 'text (missing)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
+        if (!sameStruck(R.text, srcRule.body)) fail('detachment', army, UR, 'text (struck through)', R.text, 'struck-through words differ from the source', W.where);
       }
+    }
     }
 
     /* enhancements: both ways */
@@ -1182,7 +1210,7 @@ function ruleText(a, label) {
   for (const [re, key] of f.aliases || []) if (re.test(clean)) { clean = key; break; }
   const lc = clean.toLowerCase();
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc); if (ar) return { text: ar.text, src: 'army rule ' + ar.name };
-  for (const d of a.detachments.map(x => f.detachments[x]).filter(Boolean)) if (d.rule && d.rule.name.toLowerCase() === lc) return { text: d.rule.text, src: 'detachment rule ' + d.rule.name };
+  for (const d of a.detachments.map(x => f.detachments[x]).filter(Boolean)) for (const r of detRules_(d)) if (r.name.toLowerCase() === lc) return { text: r.text, src: 'detachment rule ' + r.name };
   for (const [re, key] of D.ruleAliases) if (re.test(clean)) return { text: D.rules[key], src: ((D.ruleSrc || {})[key] || 'core rule') + ' ' + key };
   if (D.rules[clean]) return { text: D.rules[clean], src: 'core rule ' + clean };
   return null;
@@ -1193,7 +1221,7 @@ for (const a of D.armies) {
   const enhs = dets.flatMap(d => (d.enhancements || []).map(e => Object.assign({ det: d.name }, e)));
   // abilities a detachment rule gives to units: "**Protean Purpose:** (Once per battle, per unit) …"
   const given = [];
-  for (const d of dets) for (const l of String(d.rule && d.rule.text || '').split('\n')) { const m = /^\*\*([^*]+?):\*\*\s*(.*)$/.exec(l.trim()); if (m) given.push({ name: m[1], text: m[2], det: d.name }); }
+  for (const d of dets) for (const l of detRules_(d).map(r => r.text || '').join('\n').split('\n')) { const m = /^\*\*([^*]+?):\*\*\s*(.*)$/.exec(l.trim()); if (m) given.push({ name: m[1], text: m[2], det: d.name }); }
   for (const u of a.units) {
     // the enhancement the unit takes is one of its army's detachments' enhancements
     if (u.enhancement) {
@@ -1249,6 +1277,8 @@ for (const a of D.armies) {
       else if (/abilities section$/.test(t) && /^Add new ability:/.test(e.instr)) { const m = /^([^:]+):\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an) { hit = true; part = m[2]; } }
       if (!hit) continue;
       const I = u.id, F = 'ability:' + ab.name + (ab.who ? ' (' + ab.who + ')' : '');
+      // a new text that opens with the ability's own name and tag ("Warp Rift Firepower (Once per battle, per unit): In your …"): its text
+      if (part == null && /^Change to:/.test(e.instr)) { const m = /^([^:(]+?)(?:\s*\(([^)]*)\))?:\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an && (!m[2] || norm(m[2]) === norm(ab.tag || ''))) part = m[3]; }
       if (/^Change to:|^Add new ability:/.test(e.instr)) checkUpdate('packUpdate', a.id, I, F, ab.text, e, part);
       else if (!checkChangeValue('packUpdate', a.id, I, F, ab.text, e)) fail('packUpdate', a.id, I, F, ab.text, 'Rules Updates entry not checked mechanically: ' + e.instr, e.where);
     }
@@ -1258,7 +1288,9 @@ for (const a of D.armies) {
 // in its unit's rules list (Adeptus Mechanicus: Doctrina Imperatives on Belisarius Cawl, Cybernetica Datasmith, …)
 for (const a of D.armies) {
   for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /abilities section$/.test(titleN(x)))) {
-    const m = /^Add ['‘]([^'’]+)['’]\.?$/.exec(e.instr); if (!m) continue;
+    // (or "Remove 'Leader', add 'Support'.": it has the one added and not the one removed)
+    const rm = /^Remove ['‘]([^'’]+)['’], add ['‘]([^'’]+)['’]\.?$/i.exec(e.instr);
+    const m = rm ? [null, rm[2]] : /^Add ['‘]([^'’]+)['’]\.?$/.exec(e.instr); if (!m) continue;
     const t = titleN(e);
     for (const u of a.units) {
       const names = [...new Set([u.name, ...(u.abilities || []).filter(ab => ab.who && !/: pick one$/.test(ab.who)).map(ab => ab.who)])];
@@ -1267,6 +1299,8 @@ for (const a of D.armies) {
         usedUpdates.add(e); count('packUpdate');
         prov.push({ item: a.id + ' / ' + u.id + ' / rules', field: 'rules', doc: e.d.label, file: e.d.file, sha256: e.d.sha256, where: e.where });
         if (!(u.rules || []).some(r => norm(r) === norm(m[1]))) fail('packUpdate', a.id, u.id, 'rules (' + n + ')', (u.rules || []).join(', '), 'Rules Updates: "' + e.instr + '"', e.where);
+        // (the removed one: not on that datasheet, unless another part of the unit has it itself)
+        if (rm && (u.partialRules || {})[rm[1]] === n) fail('packUpdate', a.id, u.id, 'rules (' + n + ')', (u.rules || []).join(', '), 'Rules Updates: "' + e.instr + '"', e.where);
       }
     }
   }
@@ -1385,7 +1419,7 @@ for (const fk of FACTIONS) {
   const F = D.factions[fk];
   for (const r of F.armyRules) if (r.note) checkQuotes(fk, 'armyRule:' + r.name, r.note, [r.text].concat((r.table || []).map(t => t[1])));
   for (const [dk, d] of Object.entries(F.detachments || {})) {
-    if (d.rule && d.rule.note) checkQuotes(fk, 'detachment:' + dk + '/rule', d.rule.note, [d.rule.text]);
+    for (const r of detRules_(d)) if (r.note) checkQuotes(fk, 'detachment:' + dk + '/rule' + (r === d.rule ? '' : ':' + r.name), r.note, [r.text]);
     for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
     // the "When targeted" line a stratagem gives the units it protects (Grot Shields), with the FAQ it quotes
     for (const s of d.stratagems || []) if (s.shield && s.shield.def) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id + ' (shield)', s.shield.def, stratOwn(s));
@@ -1394,7 +1428,7 @@ for (const fk of FACTIONS) {
 for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities || []) if (ab.note) {
   const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
   // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
-  const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.filter(d => d.rule).map(d => d.rule.text));
+  const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.flatMap(d => detRules_(d).map(r => r.text)));
   checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own);
 }
 

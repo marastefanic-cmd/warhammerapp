@@ -611,6 +611,12 @@ function assignGear(items) {            // items: [{ name, cands: [path] }]
 // the list's New Recruit Show/Hide Options, "X are visible" -> X (verify/sources/nr/<army>.txt)
 function showOptions(armyId) {
   const f = path.join(HERE, 'sources', 'nr', armyId + '.txt');
+  // (a list from a New Recruit JSON export: its top-level "Show/Hide Options" selection, "Khorne Daemons are visible")
+  const j = path.join(HERE, 'sources', 'nr-json', armyId + '.json');
+  if (!fs.existsSync(f) && fs.existsSync(j)) {
+    const sh = ((JSON.parse(fs.readFileSync(j, 'utf8')).roster.forces || [])[0] || { selections: [] }).selections.find((s) => nn(s.name) === 'Show/Hide Options');
+    return sh ? (sh.selections || []).map((s) => nn(s.name).replace(/\s+are visible$/, '').trim()).filter(Boolean) : [];
+  }
   if (!fs.existsSync(f)) return [];
   const v = require('./nr').parseNR(f, []).bullets['Show/Hide Options'];
   return typeof v === 'string' ? v.split(/,\s*/).map((x) => x.replace(/\s+are visible$/, '').trim()).filter(Boolean) : [];
@@ -760,7 +766,9 @@ function buildUnit(army, u, um, cat, force, issues) {
     const host = (u.enhOn && roots.find((r) => nn(r.node.name) === nn(u.enhOn))) || lead;
     if (u.enhOn && host === lead && nn(lead.node.name) !== nn(u.enhOn)) fail('enhOn', u.enhOn, roots.map((r) => r.node.name).join(' / '), 'no part of the unit is named as enhOn');
     const spelt = enhSpelling(army, u.enhancement);
-    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.enhancement) || (spelt && nn(k.name) === nn(spelt))))[0];
+    // (on the unit's character model when BSData offers it there: the Dark Apostle's, not the unit's with its Dark Disciples)
+    const isIt = (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.enhancement) || (spelt && nn(k.name) === nn(spelt)));
+    const p = searchBelow(host.node, isIt)[0] || searchBelow(host.node, isIt, { intoModels: true })[0];
     if (!p) fail('enhancement', u.enhancement, '', `no enhancement "${u.enhancement}" for ${host.node.name}`);
     else {
       const last = p[p.length - 1];
@@ -772,7 +780,8 @@ function buildUnit(army, u, um, cat, force, issues) {
   if (u.upgrade) {
     const host = roots[roots.length - 1];
     // (BSData can name it with its kind: "Furious Assault (Upgrade)")
-    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.upgrade) || nn(k.name) === nn(u.upgrade + ' (Upgrade)')))[0];
+    const spelt = enhSpelling(army, u.upgrade);
+    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.upgrade) || nn(k.name) === nn(u.upgrade + ' (Upgrade)') || (spelt && nn(k.name) === nn(spelt))))[0];
     if (!p) fail('upgrade', u.upgrade, '', `no upgrade "${u.upgrade}" for ${host.node.name}`);
     else {
       const last = p[p.length - 1];
@@ -897,7 +906,7 @@ function grantNames(army) {
   const f = DATA.factions[army.faction];
   const dets = army.detachments.map((d) => f.detachments[d]).filter(Boolean);
   const m = new Map();
-  for (const d of dets) if (d.rule) { m.set(nn(d.rule.name), d.rule.name); m.set(nn(d.name), d.rule.name); }
+  for (const d of dets) if (d.rule) { m.set(nn(d.rule.name), d.rule.name); m.set(nn(d.name), d.rule.name); for (const r of d.moreRules || []) m.set(nn(r.name), r.name); }
   for (const r of f.armyRules || []) m.set(nn(r.name), r.name);
   return m;
 }
@@ -922,7 +931,10 @@ function grantsOf(army, u, prof, appKw) {
       }
       if (!names.size) {
         const says = (a) => isKw ? flat(a.text).toUpperCase().includes(`[${nk(key)}]`)
-          : (CHAR_WORDS[key] || /^$/).test(flat(a.text)) && (c.type !== 'set' || flat(a.text).includes(nn(c.after)));
+          : (CHAR_WORDS[key] || /^$/).test(flat(a.text)) && (c.type !== 'set' || flat(a.text).includes(nn(c.after)) || byWord(a));
+        // (a value BSData sets from an option the ability names: the Daemon Prince of Chaos's "Khorne" selection, and Daemonic
+        // Allegiance's "If this model has the KHORNE keyword, add 2 to the Strength characteristic")
+        const byWord = (a) => c.by.some((b) => b && new RegExp('\\b' + nn(b).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(flat(a.text)));
         const hits = (u.abilities || []).filter(says);
         if (hits.length === 1) names.add(hits[0].name);
         else if (hits.length > 1) names.add(`(ambiguous: ${hits.map((a) => a.name).join(' / ')})`);
@@ -1019,7 +1031,7 @@ function compareUnit(army, u, F, fail) {
     if (a.who && !whoRoot) pool = pool.filter((b) => nn(a.who).startsWith(nn(b.typeName)));
     const isEnh = /(^|, | · )Enhancement(, | · |$)/.test(a.tag || '');
     if (isEnh) pool = pool.filter((b) => b.enh);
-    const spelt = isEnh ? enhSpelling(army, a.name) : null;
+    const spelt = isEnh || /(^|, | · )Upgrade(, | · |$)/.test(a.tag || '') ? enhSpelling(army, a.name) : null;
     const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name) || (spelt && (x === nn(spelt) || splitAbilityName(x).base === nn(spelt))));
     let cands = pool.filter(nameOk);
     if (!cands.length && a.na) cands = F.roots.flatMap((r) => datasheetAbilities(r)).filter(nameOk);

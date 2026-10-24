@@ -6,6 +6,7 @@ Grand Coven
 Dispositions: Disruption · Priority Assets (chosen)
 
 Overview
+Phase checklist
 Bases & proxies
 35
 Units
@@ -22,6 +23,105 @@ Rules
 Damage calculator
 
 New Recruit, exported 23 Oct 2026
+
+######## checklist · PUBSTOMPER Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Unearthly Power · Magnus the Red
+Command · Your turn
+2 to do · 4 once per battle
+
+TO DO NOW
+
+Kindred Sorcery · Grand Coven
+Rebind Rubricae · Exalted Sorcerer
+
+ONCE PER BATTLE
+
+Imbued Manifestation · option of Kindred Sorcery
+Psychic Maelstrom · option of Kindred Sorcery
+Wrath of the Immaterium · option of Kindred Sorcery
+Umbralefic Crystal · Sorcerer in Terminator Armour per army
+Command · Their turn
+nothing
+
+Nothing in this list.
+
+Movement · Your turn
+1 active
+
+ACTIVE NOW
+
+Time Flux (Unearthly Power) · Magnus the Red
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+2 to do · 4 active · 1 once per battle
+
+TO DO NOW
+
+Cabal of Sorcerers · Thousand Sons army rule
+Marked by Fate · Sorcerer in Terminator Armour
+
+ACTIVE NOW
+
+Destiny’s Ruin · option of Cabal of Sorcerers
+Temporal Surge · option of Cabal of Sorcerers
+Doombolt · option of Cabal of Sorcerers
+Twist of Fate · option of Cabal of Sorcerers
+
+ONCE PER BATTLE
+
+Incandaeum · Exalted Sorcerer + Rubric Marines
+Shooting · Their turn
+1 to do · 1 active
+
+TO DO NOW
+
+Treason of Tzeentch (Unearthly Power) · Magnus the Red
+
+ACTIVE NOW
+
+Impossible Form (Unearthly Power) · Magnus the Red
+Charge · Your turn
+1 active
+
+ACTIVE NOW
+
+Temporal Surge · option of Cabal of Sorcerers
+Charge · Their turn
+nothing
+
+Nothing in this list.
+
+Fight · Your turn
+1 active
+
+ACTIVE NOW
+
+Impossible Form (Unearthly Power) · Magnus the Red
+Fight · Their turn
+1 active
+
+ACTIVE NOW
+
+Impossible Form (Unearthly Power) · Magnus the Red
+End of your opponent’s turn
+1 to do
+
+TO DO NOW
+
+Ambushing Hunters · Tzaangors
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
 ######## pregame · PUBSTOMPER Overview
 YOUR LIST
@@ -3393,6 +3493,17 @@ UNITDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
 
 Ask about this ability
 
+######## popup ability:pubstomper|Ambushing Hunters|At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into **Strategic Reserves**. · PUBSTOMPER Pubstomper
+ABILITY · END OF YOUR OPPONENT’S TURN
+
+Ambushing Hunters
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+UNITTzaangors
+
+Ask about this ability
+
 ######## popup ability:pubstomper|Bringers of Change|Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead. · PUBSTOMPER Pubstomper
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
@@ -3459,6 +3570,17 @@ UNITSorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crys
 
 Ask about this ability
 
+######## popup ability:pubstomper|Rebind Rubricae|In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 **mortal wounds**; on a 2-5, you can return 1 destroyed **Bodyguard** model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit. · PUBSTOMPER Pubstomper
+ABILITY · PSYCHIC · COMMAND · YOUR TURN
+
+Rebind Rubricae
+
+In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.
+
+UNITExalted Sorcerer + Rubric Marines · Incandaeum
+
+Ask about this ability
+
 ######## popup ability:pubstomper|Rites of Coalescence|While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**. · PUBSTOMPER Pubstomper
 ABILITY
 
@@ -3467,6 +3589,17 @@ Rites of Coalescence
 While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll.
 
 UNITSorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+
+Ask about this ability
+
+######## popup ability:pubstomper|Time Flux|While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit. · PUBSTOMPER Pubstomper
+ABILITY · AURA, PSYCHIC · MOVEMENT · YOUR TURN
+
+Time Flux
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+UNITMagnus the Red
 
 Ask about this ability
 

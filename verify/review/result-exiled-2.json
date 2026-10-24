@@ -1,0 +1,56 @@
+[
+ {
+  "key": "f18c7c9908ae5730",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+  "verdict": "ok",
+  "why": "The text opens \"Once per battle, at the start of any phase, this model can use this ability\". The tag 'Once per battle' is exactly what it says, and other lists tag their untagged once-per-battle abilities the same way (Chainbreaker, Euphoric Strikes, Possessed Lord, Resilient Organism). Its ph (all five) / either also match \"at the start of any phase\"."
+ },
+ {
+  "key": "714d532bff0d10b0",
+  "where": "the-exiled-legion · Beasts of Nurgle · Grotesque Regeneration",
+  "verdict": "ok",
+  "why": "\"At the end of each phase …\" is every phase of both players' turns, so all five phases / either. The new derive.js any-phase reading gives the same."
+ },
+ {
+  "key": "2535bd6e7d6dcdc6",
+  "where": "chaos-daemons army rule · The Shadow of Chaos (ph)",
+  "verdict": "ok",
+  "why": "The area is re-evaluated \"at the start of any phase\", and Manifestation and Terror apply to battle-shock rolls and tests whenever they happen, so all five phases is right. The added line is a word-for-word quote of the Faction Pack 1.2 FAQ (pack text: 'Q: Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? A: Yes, it is considered to have made a successful battle-shock roll.'). texts.js checks it as packfaq: a mutated question or answer fails. It is an italic note line, so derive.js ignores it for timing."
+ },
+ {
+  "key": "97cd1b8841a1503a",
+  "where": "chaos-daemons army rule · The Shadow of Chaos (turn)",
+  "verdict": "ok",
+  "why": "\"At the start of any phase\" and the battle-shock effects apply in both players' turns: either. The FAQ line does not change this."
+ },
+ {
+  "key": "e69bd0af81023451",
+  "where": "Blood Legion rule · Blood Tainted (ph)",
+  "verdict": "ok",
+  "why": "The text matches GW's Faction Pack (Chaos Daemons 1.2, Blood Legion page, after MURDERCALL) and Wahapedia word for word. \"At the end of a phase in which … destroyed an enemy unit\" can trigger at the end of any phase, because units are destroyed in every phase (Daemonic Terror mortal wounds in Command, Desperate Escape in Movement, shooting, fighting). All five phases is right."
+ },
+ {
+  "key": "aeaac06c75e1870c",
+  "where": "Blood Legion rule · Blood Tainted (turn)",
+  "verdict": "ok",
+  "why": "Your unit can destroy an enemy unit in either player's turn (fights and Overwatch in the opponent's turn), and the control check is \"at the end of a phase\": either."
+ },
+ {
+  "key": "799223ddd1aedeaf",
+  "where": "Blood Legion rule · Blood Tainted (needs)",
+  "verdict": "ok",
+  "why": "\"a LEGIONES DAEMONICA KHORNE unit from your army\" → all [Faction: Legiones Daemonica, Khorne]. This is the same convention as Murdercall's needs, and its Applies to list is the list's Khorne daemons."
+ },
+ {
+  "key": "fafd5a91fc06a885",
+  "where": "defenceItems",
+  "verdict": "ok",
+  "why": "The only change is the guard loop. A unit's own guard is now skipped unless the guard has selfWhen or selfAlways (before, it was always skipped, src !== u), and the line uses selfWhen on its own sheet. Only Prince of Darkness has either key (the guard list in data.js: Shroudpsalm, Omnissiah's Blessing, Necromechanic, Emanatus Forcefield, Daughters of the Abyss have neither), so every other list behaves exactly as before. The rendered Daemon Prince sheet shows 'Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)', and the other units show 'Within 6\" of the Daemon Prince of Chaos: …'. Dedupe still compares the full line. No other list's snapshot changed."
+ },
+ {
+  "key": "445f3e559354fb4e",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "rulesOf, detRows and onceRules now go through detRules(d) (rule, then moreRules), each row with src d.name. The Detachments row still links the detachment name to its first rule. The rendered Overview lists Murdercall then Blood Tainted ('Blood Legion · Any phase') after the army rules. Every other list's Overview is unchanged (snapshots identical apart from the list picker showing the new lists)."
+ }
+]

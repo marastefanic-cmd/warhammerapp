@@ -161,7 +161,7 @@ function unitSrc(u) {
   const abs = u.abilities.map(a => Object.fromEntries(Object.keys(a).sort((x, y) => (AB.indexOf(x) + 1 || 99) - (AB.indexOf(y) + 1 || 99)).map(k => [k, a[k]])));
   s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
   if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
-  s += block('aura', u.aura);
+  s += block('aura', u.aura) + block('guard', u.guard);
   s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + '\n    }';
   return s;
 }
@@ -249,10 +249,26 @@ function wahaDatasheet(html, chapter) {
   // "KEYWORDS – ALL MODELS: INFANTRY; … TACTICUS Dainal Komelius: PSYKER": every model's, then one model's (modelKeywords)
   const kw = /KEYWORDS(?: – ALL MODELS)?:([\s\S]*?)FACTION KEYWORDS:([\s\S]*?)(?:<\/table>|STRATAGEMS)/.exec(h);
   if (kw) {
-    const all = txt(kw[1]), m0 = /^(.*?)\s+([A-Z][a-z][^:;]*:[\s\S]*)$/.exec(all);
+    // a keyword Wahapedia shows only while a detachment is picked in its filter (class "clFl LDSH …": the Chaos Daemons' SHADOW
+    // LEGION, which the Shadow Legion detachment gives) is that detachment's, not the datasheet's: GW's datasheet does not print it
+    // (detachmentKeywords: { keyword: the detachment's name, as the page's filter names its code })
+    const clsOf = a => (/\bclass="([^"]*)"/.exec(a) || [])[1] || '';
+    const ldOnly = a => /(^|\s)clFl(\s|$)/.test(clsOf(a)) && /(^|\s)LD[A-Z0-9]{2}(\s|$)/.test(clsOf(a));
+    const detName = code => { const m = new RegExp('data-det-code="' + code + '" data-det-name="([^"]*)"').exec(html); return m ? dec(m[1]) : code; };
+    out.detachmentKeywords = {};
+    const dropLd = s => { let out2 = '', last = 0, m, skip = 0, from = 0, code = null; const re = /<(\/?)span\b([^>]*)>/g;
+      while ((m = re.exec(s))) {
+        if (skip) { skip += m[1] ? -1 : 1; if (!skip) { last = re.lastIndex; const k = txt(s.slice(from, m.index)).replace(/^,\s*/, ''); if (k) out.detachmentKeywords[k] = detName(code); } continue; }
+        if (!m[1] && ldOnly(m[2])) { out2 += s.slice(last, m.index); skip = 1; from = re.lastIndex; code = /(?:^|\s)LD([A-Z0-9]{2})(?:\s|$)/.exec(clsOf(m[2]))[1]; } }
+      return out2 + (skip ? '' : s.slice(last)); };
+    kw[1] = dropLd(kw[1]);
+    // (each model's own keywords follow a vertical line: "… CHAOS | DARK APOSTLE ONLY: CHARACTER; DARK APOSTLE", in capitals too)
+    const segs = kw[1].split(/<span class="dsVertLine"><\/span>/);
+    const all = txt(segs[0]), m0 = segs.length > 1 ? null : /^(.*?)\s+([A-Z][a-z][^:;]*:[\s\S]*)$/.exec(all);
     out.keywords = (m0 ? m0[1] : all).split(/\s*[;,]\s*/).filter(Boolean);
     out.modelKeywords = {};
     if (m0) for (const m of m0[2].matchAll(/([A-Z][a-z][^:;]*?):\s*([A-Z][A-Z ;,-]*[A-Z])/g)) out.modelKeywords[m[1].trim()] = m[2].split(/\s*[;,]\s*/).filter(Boolean);
+    for (const sg of segs.slice(1)) { const m = /^(.*?):\s*(.*)$/.exec(txt(sg)); if (m) out.modelKeywords[m[1].replace(/\s+ONLY$/i, '').trim()] = m[2].split(/\s*[;,]\s*/).filter(Boolean); }
     out.factionKeywords = txt(kw[2]).split(/\s*[;,]\s*/).filter(Boolean);
   }
   return out;

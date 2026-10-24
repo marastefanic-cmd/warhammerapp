@@ -10,6 +10,7 @@
 // An exception needs an entry in verify/allow-invariants.json: { check, where, reason }.
 const path = require('path');
 const { ROOT, loadData, readJSON, writeJSON } = require('./lib');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 
 const PH = ['command', 'movement', 'shooting', 'charge', 'fight'];
 const plain = s => String(s || '').replace(/\*\*|~~/g, '').replace(/[’‘]/g, '\'').toLowerCase();
@@ -96,7 +97,7 @@ function run(D){
     const f = D.factions[a.faction];
     const ar = f.armyRules.find(r => r.name === name);
     if(ar) return ar.text + JSON.stringify(ar.table || '');
-    for(const id of a.detachments){ const d = f.detachments[id]; if(d && d.rule && d.rule.name === name) return d.rule.text + JSON.stringify(d.rule.table || ''); }
+    for(const id of a.detachments){ for(const r of detRules_(f.detachments[id])) if(r.name === name) return r.text + JSON.stringify(r.table || ''); }
     if(D.rules[name]) return D.rules[name];
     // a core rule with its value in its name on the Rules line ("Damaged 5"): the glossary entry its alias names, and the name, whose
     // number is the X of "Damaged X"
@@ -119,7 +120,7 @@ function run(D){
     // the line a stratagem gives the units it protects (Grot Shields' shield.def)
     for(const s of strats) if(s.shield && s.shield.def) for(const n of nums(s.shield.def)) if(!has(s.when + s.target + s.effect, n)) F('number-cited', a.id + ' · ' + s.name + ' (shield)', '"' + n + '" in "' + s.shield.def + '" is not in its text');
     const f = D.factions[a.faction];
-    const rules = f.armyRules.concat(a.detachments.map(id => f.detachments[id].rule).filter(Boolean));
+    const rules = f.armyRules.concat(a.detachments.flatMap(id => detRules_(f.detachments[id])));
     for(const r of rules){
       const text = r.text + JSON.stringify(r.table || '');
       for(const k of ['def']) if(r[k]) for(const n of nums(r[k])) if(!has(text, n)) F('number-cited', a.id + ' · ' + r.name, '"' + n + '" in "' + r[k] + '" is not in its text');
@@ -145,8 +146,11 @@ function run(D){
       lineWhos.push(ws && ws.size ? cur : null); } }
     const lineWho = l => lineWhos[lines.indexOf(l)];
     const multiChar = new Set(chars.filter(c => c !== u.name && lines.filter(l => lineWho(l) === c).length > 1));
-    const body = lines.slice(Math.max(chars.length, 1)).filter(l => !multiChar.has(lineWho(l)));
-    const charLine = w => u.leads && w.who && w.who !== u.leads && body.every(l => l.name.replace(/ w\/.*$/, '') !== w.who) ? Math.max(chars.indexOf(w.who), 0) : -1;
+    // (the leader's own part of several models, the Dark Apostle and his Dark Disciples: its first lines, while their weapons are its)
+    let lead = 1; if(u.leads) while(lead < lines.length - 1 && lineWho(lines[lead]) === u.name) lead++;
+    if(lead > 1) multiChar.add(u.name);
+    const body = lines.slice(Math.max(chars.length + lead - 1, 1)).filter(l => !multiChar.has(lineWho(l)));
+    const charLine = w => u.leads && w.who && w.who !== u.leads && body.every(l => l.name.replace(/ w\/.*$/, '') !== w.who) ? Math.max(chars.indexOf(w.who) + (chars.indexOf(w.who) > 0 ? lead - 1 : 0), 0) : -1;
     for(const w of [...(u.ranged || []), ...(u.melee || [])]){
       const g = w.group || w.name; if(seen.has(g + '|' + w.who)) continue; seen.add(g + '|' + w.who);
       const mine = !u.leads ? lines : multiChar.has(w.who) ? lines.filter(l => lineWho(l) === w.who) : charLine(w) >= 0 ? [lines[charLine(w)]] : body;

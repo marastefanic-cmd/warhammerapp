@@ -1,0 +1,561 @@
+[
+ {
+  "key": "379fe01808b72849",
+  "where": "the-exiled-legion · Skarbrand · Rage Embodied",
+  "verdict": "ok",
+  "why": "“add 1 to the Attacks characteristic of melee weapons”: melee only, so the Fight phase in either turn. This is identical to the approved World Eaters Skarbrand (big-demons-baby)."
+ },
+ {
+  "key": "9a84f2010b340023",
+  "where": "the-exiled-legion · Skarbrand · Rage Embodied",
+  "verdict": "ok",
+  "why": "GW tags it. The Faction Pack Skarbrand card has “Rage Embodied (Aura):”, and Wahapedia prints the same."
+ },
+ {
+  "key": "24344e797926ae7e",
+  "where": "the-exiled-legion · Skarbrand · Murderlust",
+  "verdict": "fix",
+  "why": "The text (“This unit is eligible to declare a charge in a turn in which it Advanced”) names no phase. The approved World Eaters Skarbrand stores the same Murderlust text as {} (big-demons-baby; derive.md lists it as a difference), and Lancer’s Duty, with the same words, is also {}. For consistency the CD copy should be {} too. Otherwise the same datasheet ability gets two labels in two lists.",
+  "fix": {}
+ },
+ {
+  "key": "8bfdd6ac90cd6d7f",
+  "where": "the-exiled-legion · Bloodthirster · Greater Daemon of Khorne",
+  "verdict": "ok",
+  "why": "GW tags it. The Faction Pack Bloodthirster card has “Greater Daemon of Khorne (Aura):”. It affects units within a stated range (22.01). It changes no attack or defence numbers, so it rightly has no aura footnote or guard."
+ },
+ {
+  "key": "7ff9dd73921c7111",
+  "where": "the-exiled-legion · Skarbrand",
+  "verdict": "ok",
+  "why": "“friendly KHORNE LEGIONES DAEMONICA unit within 6\"” maps to needs all [Faction: Legiones Daemonica, Khorne]. It is melee, +1 A. selfAlways follows 22.01 (“always within range of its own aura ability”), and this is the same form as the approved WE Skarbrand and Guilliman auras. The snapshot shows it on every Khorne unit, the Daemon Prince included (Khorne by Daemonic Allegiance), and not on the Beasts of Nurgle."
+ },
+ {
+  "key": "01d719d2154dffa1",
+  "where": "the-exiled-legion · Karanak · Pack Leader",
+  "verdict": "ok",
+  "why": "Re-roll Advance rolls (your Movement) and Charge rolls (Charge, either turn: core Heroic Intervention also makes a charge roll). This is the same label as the approved Brayhorn and Aggressive Advance."
+ },
+ {
+  "key": "7b3c31fafeeafdc2",
+  "where": "the-exiled-legion · Karanak · Pack Leader",
+  "verdict": "ok",
+  "why": "It is on Karanak’s own datasheet (GW Faction Pack, Wahapedia)."
+ },
+ {
+  "key": "3afb13ce8c44b5c3",
+  "where": "the-exiled-legion · Karanak · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "“At the start of the first battle round” gives the Command step (at). The effect is “a melee attack that targets its prey”, which is the Fight phase in either turn. This is the same shape as the approved Singular Purpose and Methodical Destruction, without Shooting because only melee attacks are affected."
+ },
+ {
+  "key": "9b0ff1adf0134cb3",
+  "where": "the-exiled-legion · Karanak · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "It is on Karanak’s own datasheet."
+ },
+ {
+  "key": "0ce5aaac2733e78f",
+  "where": "the-exiled-legion · Karanak · Brass Collar of Bloody Vengeance",
+  "verdict": "ok",
+  "why": "GW lists it under WARGEAR ABILITIES on Karanak’s card, and Karanak is “equipped with … Brass Collar of Bloody Vengeance”."
+ },
+ {
+  "key": "f0893b35778e4225",
+  "where": "the-exiled-legion · Karanak · Brass Collar of Bloody Vengeance",
+  "verdict": "ok",
+  "why": "These are GW’s words with both conditions kept (Psychic Attacks and mortal wounds), as the owner’s Feel No Pain rule asks."
+ },
+ {
+  "key": "d23fb848b163d3d2",
+  "where": "the-exiled-legion · Karanak · Hunters from the Warp",
+  "verdict": "ok",
+  "why": "“At the end of your opponent’s turn” is the opponent’s turn, last phase, with at. It is identical to the approved WE Flesh Hounds and Ambushing Hunters."
+ },
+ {
+  "key": "91ee853ff38b414a",
+  "where": "the-exiled-legion · Karanak · Hunters from the Warp",
+  "verdict": "ok",
+  "why": "It is on the Flesh Hounds datasheet. “this unit” is the combined unit, and it is listed under the bodyguard as in approved lists."
+ },
+ {
+  "key": "0025f2aacb57ef95",
+  "where": "the-exiled-legion · Karanak · Collar of Khorne",
+  "verdict": "ok",
+  "why": "The Gore Hound and every Flesh Hound are “equipped with … collar of Khorne” (GW). Karanak has the Brass Collar instead."
+ },
+ {
+  "key": "b0b52529ba272f6f",
+  "where": "the-exiled-legion · Karanak · Collar of Khorne",
+  "verdict": "ok",
+  "why": "These are GW’s words with the condition kept. It is identical to the approved WE Flesh Hounds def."
+ },
+ {
+  "key": "13ffd3a9bb03f990",
+  "where": "the-exiled-legion · Karanak",
+  "verdict": "ok",
+  "why": "“Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll” applies to the whole unit and to melee only. It cannot carry vs or always, because the prey is a selection. It is a choice, like the approved Singular Purpose."
+ },
+ {
+  "key": "96ba54a80e67a2d9",
+  "where": "the-exiled-legion · Karanak",
+  "verdict": "ok",
+  "why": "Karanak (GW): BEAST, CHARACTER, EPIC HERO, CHAOS, DAEMON, KHORNE, KARANAK. Flesh Hounds: BEAST, CHAOS, DAEMON, KHORNE, FLESH HOUNDS. Only FLESH HOUNDS comes from the bodyguard. SHADOW LEGION is rightly absent: GW’s card has no such keyword, and only the Shadow Legion detachment gives it."
+ },
+ {
+  "key": "bb3b3de67a735a9f",
+  "where": "the-exiled-legion · Karanak",
+  "verdict": "ok",
+  "why": "Wahapedia and BSData: Karanak “1 model 70”, Flesh Hounds “5 models 80”. The export is 70 and 80."
+ },
+ {
+  "key": "afaebf71aabe60f8",
+  "where": "the-exiled-legion · Karanak",
+  "verdict": "ok",
+  "why": "These are the export’s loadouts. GW: Karanak has scalding roar and soul-rending fangs; the Gore Hound has burning roar and gore-drenched fangs; every Flesh Hound has gore-drenched fangs. So burning roar ×1 and fangs ×5. The profiles match GW: Scalding roar 12\" D6+3 S5 AP-1 D1 [IGNORES COVER, TORRENT]; Burning roar 12\" D6 S4 AP0 D1; Soul-rending fangs A6 WS2+ S6 AP-2 D2 [ANTI-CHARACTER 3+, PRECISION]; Gore-drenched fangs A3 WS3+ S5 AP-1 D1. “Scalding Roar” keeps New Recruit’s capital (owner’s rule)."
+ },
+ {
+  "key": "d758b413f5094e7c",
+  "where": "the-exiled-legion · Skulltaker · Lord of Decapitations",
+  "verdict": "ok",
+  "why": "“melee weapons … have [DEVASTATING WOUNDS]” is the Fight phase, either turn."
+ },
+ {
+  "key": "639d2eee856cee4b",
+  "where": "the-exiled-legion · Skulltaker · Lord of Decapitations",
+  "verdict": "ok",
+  "why": "It is on Skulltaker’s own datasheet."
+ },
+ {
+  "key": "d071fc92aa47eb99",
+  "where": "the-exiled-legion · Skulltaker · Skulls for Khorne",
+  "verdict": "fix",
+  "why": "Approved lists store {} for an always-on attack ability on a model or unit with no ranged weapons: Lucius the Eternal’s “A Challenge Worthy of Skill” (“Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll”). That is the same wording, and derive.js offered it the same [Their Move / Your Shoot / Fight] label, but it was stored {} (verify/out/derive.md). Revel in Desecration, Glutton for Punishment and Perfectionists were stored {} the same way. Every approved ability that carries the three-phase label (Spiteful Power Trip, Hunter of Souls, Primarch of the XIII, Clever Know-wotz) is on a unit with ranged weapons, so “their Movement (Fire Overwatch)” and “your Shooting” can happen. Skulltaker has only The Slayer Sword (melee), so this model can never make an attack in their Movement or your Shooting phase. The closest approved ability is stored {}. (If the owner prefers attack-side labels here, the right one is {ph:[fight], turn:either}, as for Lord of Decapitations, not the three-phase one.)",
+  "fix": {}
+ },
+ {
+  "key": "937a28aeda480f30",
+  "where": "the-exiled-legion · Skulltaker · Skulls for Khorne",
+  "verdict": "ok",
+  "why": "It is on Skulltaker’s own datasheet (“Each time this model makes an attack”)."
+ },
+ {
+  "key": "bf0e612b0f13c871",
+  "where": "the-exiled-legion · Bloodmaster · Bane of Cowards",
+  "verdict": "fix",
+  "why": "An enemy unit Falls Back in its own Movement phase, so the trigger is your opponent’s Movement phase, not yours. derive.js read “Falls Back” as this unit’s own move. The approved abilities with this trigger are all {ph:[movement], turn:opp}: Overwhelming Wrath (“Each time an enemy unit within 6\" … is selected to Fall Back”), Harpoon Barbs (“when an enemy unit within Engagement Range … is chosen to Fall Back”) and the WE stratagem Punish the Craven.",
+  "fix": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  }
+ },
+ {
+  "key": "b2113c86b5bb4302",
+  "where": "the-exiled-legion · Skulltaker · Bane of Cowards",
+  "verdict": "ok",
+  "why": "It is on the Bloodletters datasheet."
+ },
+ {
+  "key": "d7d42f1e370c4ad5",
+  "where": "the-exiled-legion · Bloodmaster · Bane-Forged Weapons",
+  "verdict": "fix",
+  "why": "Approved lists store {} for an always-on attack ability on a model or unit with no ranged weapons: Lucius the Eternal’s “A Challenge Worthy of Skill” (“Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll”). That is the same wording, and derive.js offered it the same [Their Move / Your Shoot / Fight] label, but it was stored {} (verify/out/derive.md). Revel in Desecration, Glutton for Punishment and Perfectionists were stored {} the same way. Every approved ability that carries the three-phase label (Spiteful Power Trip, Hunter of Souls, Primarch of the XIII, Clever Know-wotz) is on a unit with ranged weapons, so “their Movement (Fire Overwatch)” and “your Shooting” can happen. In this list the upgrade is on Bloodletters led by Skulltaker or the Bloodmaster. None of those models has a ranged weapon (GW: hellblade; The Slayer Sword; blade of blood), so “+1 S” can only apply in the Fight phase. The same {} reasoning applies. (If the owner prefers attack-side labels, the right one is {ph:[fight], turn:either}.) The “Already in S” chip and the S 6/7 values already show it.",
+  "fix": {}
+ },
+ {
+  "key": "fc821c0c405330ba",
+  "where": "the-exiled-legion · Bloodmaster · Bane-Forged Weapons",
+  "verdict": "ok",
+  "why": "Wahapedia Warptide: “Bane-Forged Weapons UPGRADE 15 pts”. The export has “Enhancements 0.5” with 15 pts, as an upgrade."
+ },
+ {
+  "key": "3ba458e3d4acca52",
+  "where": "the-exiled-legion · Skulltaker · Bane-Forged Weapons",
+  "verdict": "ok",
+  "why": "The export takes the upgrade on the Bloodletters unit (“Bane-forged weapons” under Bloodletters). Under 19.04 it covers the whole attached unit, so Skulltaker’s Slayer Sword S 7 is right, matching the approved Furious Assault on Calgar’s unit."
+ },
+ {
+  "key": "553d46368d2c02a8",
+  "where": "the-exiled-legion · Skulltaker · Daemonic Icon",
+  "verdict": "ok",
+  "why": "It is a Bloodletters wargear ability (GW WARGEAR ABILITIES), carried by one Bloodletter. The export takes both the Daemonic Icon and the Instrument of Chaos, which is legal: one each, on different models."
+ },
+ {
+  "key": "d429635f8f365c06",
+  "where": "the-exiled-legion · Skullmaster · Instrument of Chaos",
+  "verdict": "ok",
+  "why": "Charge rolls: Charge, either turn (core Heroic Intervention). This is the same as the approved Battle-lust and Terminatus Assault."
+ },
+ {
+  "key": "f8baf49339b1352e",
+  "where": "the-exiled-legion · Skulltaker · Instrument of Chaos",
+  "verdict": "ok",
+  "why": "It is a Bloodletters wargear ability."
+ },
+ {
+  "key": "e41dc755215440e7",
+  "where": "the-exiled-legion · Skulltaker",
+  "verdict": "fix",
+  "why": "The content is right: Skulltaker’s own attacks (who), all kinds, vs CHARACTER, and GW’s “can re-roll the Hit roll and … the Wound roll”. But this is an always-on, target-keyword ability, and approved footnotes of that kind carry always:true, so the Damage tab counts it when the target matches. Its exact twin, A Challenge Worthy of Skill (defilers-and-friends: “vs CHARACTER, MONSTER or WALKER units … can re-roll”), has always:true, and so do Hunter of Souls and Da Bigger Dey Iz… (“can re-roll wound rolls”, vs MONSTER/VEHICLE). Without the flag it shows as an unticked choice.",
+  "fix": {
+   "kind": "all",
+   "who": "Skulltaker",
+   "when": "Attacks that target a CHARACTER unit",
+   "note": "can re-roll the hit roll and the wound roll",
+   "from": "Skulls for Khorne",
+   "vs": {
+    "any": [
+     "Character"
+    ]
+   },
+   "always": true
+  }
+ },
+ {
+  "key": "e078d9d809463497",
+  "where": "the-exiled-legion · Skulltaker",
+  "verdict": "ok",
+  "why": "Skulltaker (GW): INFANTRY, CHARACTER, EPIC HERO, CHAOS, DAEMON, KHORNE, SKULLTAKER. Bloodletters: INFANTRY, BATTLELINE, CHAOS, DAEMON, KHORNE, BLOODLETTERS. Only BATTLELINE and BLOODLETTERS come from the bodyguard. SHADOW LEGION is rightly absent."
+ },
+ {
+  "key": "c87e613ffc3039cb",
+  "where": "the-exiled-legion · Skulltaker",
+  "verdict": "ok",
+  "why": "Skulltaker 85 (Wahapedia “1 model 85”, BSData 85). Bloodletters “10 models 110”, plus Bane-Forged Weapons 15, is 125, which is the export (110 + 15). The 15 sits on the Bloodletters, where the export takes it, as in the approved Calgar ptsNote."
+ },
+ {
+  "key": "56986b2754f822e1",
+  "where": "the-exiled-legion · Skulltaker",
+  "verdict": "ok",
+  "why": "Every model is “equipped with: hellblade” (GW), and Skulltaker has the Slayer Sword. The icon and instrument are unplaced: the export does not say which Bloodletter carries them, as with the approved Icon of Flame and Icon of Excess. The profiles match GW: Slayer Sword A6 WS2+ S6 AP-2 D3 [DEVASTATING WOUNDS, PRECISION]; Hellblade A2 WS3+ S5 AP-2 D2. Bane-Forged (S 7/6) and Lord of Decapitations (DW on the Hellblades) are marked as list values with their reasons."
+ },
+ {
+  "key": "d071bb330ac6fcb1",
+  "where": "the-exiled-legion · Bloodthirster · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "“each time a model in that unit makes a melee attack”: Fight, either turn. It is identical to the approved WE Bloodthirster."
+ },
+ {
+  "key": "b33442896682b908",
+  "where": "the-exiled-legion · Bloodthirster · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "GW tags it: “Daemon Lord of Khorne (Aura):” on the Faction Pack card."
+ },
+ {
+  "key": "e11b100354bf0af8",
+  "where": "the-exiled-legion · Bloodthirster · Relentless Carnage",
+  "verdict": "ok",
+  "why": "“At the end of the Fight phase”: either player’s Fight phase. It is identical to the approved WE Bloodthirster."
+ },
+ {
+  "key": "f1e33e2db2745c8c",
+  "where": "the-exiled-legion · Bloodthirster · Damaged: 1-6 wounds remaining",
+  "verdict": "fix",
+  "why": "Every Damaged ability in approved lists is stored with no timing ({}). That includes this exact text on the approved WE Bloodthirster (big-demons-baby), Angron, Magnus and both Defilers, and the Knights’ and War Dogs’ “-1 to hit” bands; derive.md says “the same words are stored as {} on 3 other lists”. The band is already shown by the damaged chip and by the “Damaged (1-6 wounds left)” weapon footnote. Skarbrand’s Damaged in this same list has no timing either.",
+  "fix": {}
+ },
+ {
+  "key": "79a78a7f6d2e1dcc",
+  "where": "the-exiled-legion · Bloodthirster · Gateway Unto Damnation",
+  "verdict": "ok",
+  "why": "It is a Blood Legion enhancement (Wahapedia: “Gateway Unto Damnation 10 pts”). The bearer is a LEGIONES DAEMONICA KHORNE MONSTER, which is legal."
+ },
+ {
+  "key": "06af03b4918ce371",
+  "where": "the-exiled-legion · Bloodthirster",
+  "verdict": "ok",
+  "why": "“friendly KHORNE LEGIONES DAEMONICA unit within 6\"” gives these needs, melee, “+1 to hit”. selfAlways follows 22.01. It is the same as the approved WE Bloodthirster aura. In the snapshot it is on every Khorne unit (including the Daemon Prince) and not on the Beasts of Nurgle."
+ },
+ {
+  "key": "b87ee21bffe98264",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Prince of Darkness",
+  "verdict": "ok",
+  "why": "GW tags it: “Prince of Darkness (Aura):” on the Faction Pack Daemon Prince of Chaos card."
+ },
+ {
+  "key": "f31226cde71228c6",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+  "verdict": "ok",
+  "why": "“at the start of any phase” gives all five phases, either turn. This is the approved convention for “Any phase” (Chainbreaker, “Once per battle, at the start of any phase”). It is a once-per-battle activation, not an always-on defensive ability, so the no-label rule does not apply."
+ },
+ {
+  "key": "5d18d7e970b79cb7",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+  "verdict": "ok",
+  "why": "It keeps every condition: once per battle, used at the start of a phase, 3+ invulnerable save until the end of the phase. The words are GW’s."
+ },
+ {
+  "key": "a0b217447531f4f3",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Daemonic Lord",
+  "verdict": "ok",
+  "why": "GW: “While this model is within 3\" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.” The def keeps the condition and has the same shape as the approved Mechanicus Bodyguard and Da Grand Warlord’s Ladz."
+ },
+ {
+  "key": "c14a8588fc37bbaf",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Slaughterthirst (Aura)",
+  "verdict": "ok",
+  "why": "“weapons … have the [LANCE] ability”. [LANCE] only counts after a charge move, so the Fight phase, either turn. This is the same as the approved Furious Assault label."
+ },
+ {
+  "key": "addcc6d1d3781e68",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Slaughterthirst (Aura)",
+  "verdict": "ok",
+  "why": "It is a Blood Legion enhancement (Wahapedia: “Slaughterthirst (Aura) 25 pts”), and GW names it “(Aura)”. This is the same tag as the approved Final Howl (Aura) (“Enhancement · Aura”)."
+ },
+ {
+  "key": "e5db358013c2f776",
+  "where": "the-exiled-legion · Daemon Prince of Chaos · Daemonic Allegiance",
+  "verdict": "fix",
+  "why": "Daemonic Allegiance is a list-building keyword choice (“When you select this model to include in your army, you must select one of the following keywords”), followed by four always-on characteristic changes. Its text names no phase. derive.js took “Movement” from “Move characteristic” in the Slaanesh option. That option does not even apply to this list’s Khorne prince, whose S change is already shown as “Already in S”. Stat changes are stored {} in approved lists, like the Damaged bands.",
+  "fix": {}
+ },
+ {
+  "key": "09044040e039b6fb",
+  "where": "the-exiled-legion · Daemon Prince of Chaos",
+  "verdict": "ok",
+  "why": "“friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS)” gives these needs, and “weapons equipped” covers all kinds, giving [LANCE]. There is no selfAlways, which is right: the bearer is a MONSTER and is excluded. The snapshot shows it on Karanak + Flesh Hounds, both Bloodletters units, the Rendmasters and the Skullmaster + Bloodcrushers. It is not on Skarbrand, the Bloodthirster, the Daemon Prince or the Beasts of Nurgle. The bearer is KHORNE through Daemonic Allegiance, so the “model only” requirement is met."
+ },
+ {
+  "key": "f58f146ecde499be",
+  "where": "the-exiled-legion · Daemon Prince of Chaos",
+  "verdict": "fix",
+  "why": "For every other LEGIONES DAEMONICA unit it is right: Stealth (24.33, the benefit of cover against ranged attacks), ranged, within 6\". But Prince of Darkness is a GW (Aura), and 22.01 says “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability”. The Daemon Prince is itself a friendly LEGIONES DAEMONICA unit, so it has Stealth too. Its WHEN TARGETED line in the snapshot leaves it out, because app.html (shields, line ~4359) skips the source unit (src !== u). The aura entries mark this with selfAlways and selfWhen: “Own aura”. The guard needs the same, and app.html must honour it (the other reviewer owns that code).",
+  "fix": {
+   "from": "Prince of Darkness",
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   },
+   "kind": "ranged",
+   "when": "Within 6\" of the Daemon Prince of Chaos",
+   "selfWhen": "Own aura",
+   "selfAlways": true,
+   "note": "Stealth: the benefit of cover against ranged attacks",
+   "calc": {
+    "stealth": true
+   }
+  }
+ },
+ {
+  "key": "1b0a15bdafbac5b6",
+  "where": "the-exiled-legion · Daemon Prince of Chaos",
+  "verdict": "ok",
+  "why": "GW: “equipped with: infernal cannon; hellforged weapons”. Wargear options: none. Infernal cannon 24\" A3 BS2+ S5 AP-1 D2. Hellforged strike is A6 WS2+ S8 AP-2 D3 and sweep is A14 WS2+ S6 AP0 D1; the app shows S 10/8, marked as from Daemonic Allegiance (Khorne +2, the list’s choice). The datasheet row keeps GW’s 8/6."
+ },
+ {
+  "key": "cd3d97ef10e4dec7",
+  "where": "the-exiled-legion · Rendmaster on Blood Throne · Blood Throne",
+  "verdict": "ok",
+  "why": "“At the start of the Fight phase … until the end of the phase”: Fight, either turn."
+ },
+ {
+  "key": "5689ce83b79d5934",
+  "where": "the-exiled-legion · Rendmaster on Blood Throne · Champion Slayer",
+  "verdict": "ok",
+  "why": "“makes a melee attack”: Fight, either turn."
+ },
+ {
+  "key": "3b81b6fadfc3bfdb",
+  "where": "the-exiled-legion · Rendmaster on Blood Throne",
+  "verdict": "ok",
+  "why": "On the Rendmaster’s own weapons this is GW’s effect (S, AP and D improved by 1), its timing (Fight phase, until the end of the phase) and its target (the selected unit). The Rendmaster is itself a friendly KHORNE LEGIONES DAEMONICA unit. Blood Throne is not tagged (Aura) (GW and Wahapedia: “Blood Throne:”), so under the owner’s rule it cannot be an aura entry. Whether it should also appear on the other Khorne units is the owner’s decision #1: the rule does affect them, but the app has no approved non-aura cross-unit footnote."
+ },
+ {
+  "key": "adaf66dfa80bec45",
+  "where": "the-exiled-legion · Rendmaster on Blood Throne",
+  "verdict": "fix",
+  "why": "The content is right: melee, vs CHARACTER or MONSTER, “can re-roll the wound roll”. But an always-on, target-keyword melee re-roll carries always:true in approved lists, so the Damage tab counts it when the target matches. Its twin Da Bigger Dey Iz… (“vs MONSTER/VEHICLE”, “can re-roll wound rolls”, melee) has always:true, and so does A Challenge Worthy of Skill.",
+  "fix": {
+   "kind": "melee",
+   "when": "Melee attacks that target a CHARACTER or MONSTER unit",
+   "note": "can re-roll the wound roll",
+   "from": "Champion Slayer",
+   "vs": {
+    "any": [
+     "Character",
+     "Monster"
+    ]
+   },
+   "always": true
+  }
+ },
+ {
+  "key": "9b4fda40f44ef60c",
+  "where": "the-exiled-legion · Rendmaster on Blood Throne",
+  "verdict": "ok",
+  "why": "GW: “equipped with: attendants’ hellblades; blade of blood”. Attendants’ hellblades A4 WS3+ S5 AP-2 D2 [EXTRA ATTACKS]; Blade of blood A5 WS2+ S6 AP-2 D3. “Attendant’s hellblades” is New Recruit’s spelling, kept per the owner’s rule. The points are 160 each, for the 1st and 2nd units (Wahapedia “YOUR 1ST TO 2ND UNITS COST 1 model 160”), ×2."
+ },
+ {
+  "key": "c2650af9306091ff",
+  "where": "the-exiled-legion · Bloodmaster · Bloodmaster",
+  "verdict": "fix",
+  "why": "Approved lists store {} for an always-on attack ability on a model or unit with no ranged weapons: Lucius the Eternal’s “A Challenge Worthy of Skill” (“Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll”). That is the same wording, and derive.js offered it the same [Their Move / Your Shoot / Fight] label, but it was stored {} (verify/out/derive.md). Revel in Desecration, Glutton for Punishment and Perfectionists were stored {} the same way. Every approved ability that carries the three-phase label (Spiteful Power Trip, Hunter of Souls, Primarch of the XIII, Clever Know-wotz) is on a unit with ranged weapons, so “their Movement (Fire Overwatch)” and “your Shooting” can happen. The Bloodmaster can only lead Bloodletters, and neither has a ranged weapon (GW: blade of blood; hellblade), so the +1 to wound can only happen in the Fight phase. (If the owner prefers attack-side labels, the right one is {ph:[fight], turn:either}, like Legendary Killer.) The weapon footnote already shows it.",
+  "fix": {}
+ },
+ {
+  "key": "9df8f618fb189c7b",
+  "where": "the-exiled-legion · Bloodmaster · Bloodmaster",
+  "verdict": "ok",
+  "why": "It is on the Bloodmaster’s own datasheet."
+ },
+ {
+  "key": "da752cdf7c44dd70",
+  "where": "the-exiled-legion · Bloodmaster · A Gory Path",
+  "verdict": "ok",
+  "why": "It is on the Bloodmaster’s own datasheet."
+ },
+ {
+  "key": "63a63fc0ba096e39",
+  "where": "the-exiled-legion · Bloodmaster · Bane of Cowards",
+  "verdict": "ok",
+  "why": "It is on the Bloodletters datasheet."
+ },
+ {
+  "key": "b557b4a13f3b4d5a",
+  "where": "the-exiled-legion · Bloodmaster · Bane-Forged Weapons",
+  "verdict": "ok",
+  "why": "The export takes it on the Bloodletters unit. Under 19.04 it covers the attached unit, so the Bloodmaster’s blade is at S 7."
+ },
+ {
+  "key": "56f4a7ce448fda53",
+  "where": "the-exiled-legion · Bloodmaster · Daemonic Icon",
+  "verdict": "ok",
+  "why": "It is a Bloodletters wargear ability."
+ },
+ {
+  "key": "9486f86b86bcbac2",
+  "where": "the-exiled-legion · Bloodmaster · Instrument of Chaos",
+  "verdict": "ok",
+  "why": "It is a Bloodletters wargear ability."
+ },
+ {
+  "key": "57327e691bf68e00",
+  "where": "the-exiled-legion · Bloodmaster",
+  "verdict": "ok",
+  "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll”: all attacks, always (he is leading in this list), and the Bloodmaster’s own attacks included. This is the same form as the approved Legendary Killer (“While Khârn leads this unit”, always:true)."
+ },
+ {
+  "key": "8ace96dfafb0ac6f",
+  "where": "the-exiled-legion · Bloodmaster",
+  "verdict": "ok",
+  "why": "Bloodmaster (GW): INFANTRY, CHARACTER, CHAOS, DAEMON, KHORNE, BLOODMASTER. BATTLELINE and BLOODLETTERS come from the bodyguard. SHADOW LEGION is rightly absent."
+ },
+ {
+  "key": "d4d8af2866a70223",
+  "where": "the-exiled-legion · Bloodmaster",
+  "verdict": "ok",
+  "why": "Bloodmaster 65 (Wahapedia “1 model 65”). Bloodletters 110 plus Bane-Forged 15 is 125, which is the export."
+ },
+ {
+  "key": "0195b059f4f06378",
+  "where": "the-exiled-legion · Bloodmaster",
+  "verdict": "ok",
+  "why": "Bloodmaster: blade of blood (A5 WS2+ S6 AP-2 D3). Every Bloodletter: hellblade. The icon and instrument are unplaced. There is rightly no DW here, because Lord of Decapitations is Skulltaker’s."
+ },
+ {
+  "key": "d0469e6a9f9a0df8",
+  "where": "the-exiled-legion · Skullmaster · Skullmaster’s Fury",
+  "verdict": "fix",
+  "why": "The trigger is “each time that unit ends a Charge move” (Charge, either turn), but the effect, [DEVASTATING WOUNDS] on the melee Juggernaut’s bladed horns “until the end of the turn”, is used in the Fight phase. derive.js takes the trigger plus where the effect is used. It missed the use only because the text names the horns rather than “melee weapons”. Lord of Decapitations (melee weapons have DW) gets Fight, and the approved Murderous Charge (“If this unit made a charge move this turn, this unit’s melee attacks have +1 S”) is Fight. So the label should be both.",
+  "fix": {
+   "ph": [
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  }
+ },
+ {
+  "key": "1f8830239b3e8688",
+  "where": "the-exiled-legion · Skullmaster · Skullmaster’s Fury",
+  "verdict": "ok",
+  "why": "It is on the Skullmaster’s own datasheet."
+ },
+ {
+  "key": "61378d551079e33e",
+  "where": "the-exiled-legion · Skullmaster · Devastating Charge",
+  "verdict": "ok",
+  "why": "“Each time this model’s unit ends a Charge move … Battle-shock test”: Charge, either turn. This is the same as the approved Terminatus Assault."
+ },
+ {
+  "key": "a9be15990ea33b7a",
+  "where": "the-exiled-legion · Skullmaster · Devastating Charge",
+  "verdict": "ok",
+  "why": "It is on the Skullmaster’s own datasheet."
+ },
+ {
+  "key": "0f88fd08240dca30",
+  "where": "the-exiled-legion · Skullmaster · Brazenmaw",
+  "verdict": "ok",
+  "why": "Charge rolls: Charge, either turn, the same as the approved Battle-lust."
+ },
+ {
+  "key": "f97ad3c04aec4300",
+  "where": "the-exiled-legion · Skullmaster · Brazenmaw",
+  "verdict": "ok",
+  "why": "It is a Blood Legion enhancement (Wahapedia: “Brazenmaw 15 pts”). The Skullmaster is KHORNE."
+ },
+ {
+  "key": "ad96e0941df54001",
+  "where": "the-exiled-legion · Skullmaster · Brazenmaw",
+  "verdict": "ok",
+  "why": "The bearer is the Skullmaster, which the export takes it on."
+ },
+ {
+  "key": "e2fc05a2997fd620",
+  "where": "the-exiled-legion · Skullmaster · Brass Stampede",
+  "verdict": "ok",
+  "why": "“Each time this unit ends a Charge move … mortal wounds”: Charge, either turn. This is the same as the approved Daemonic Destruction and Prophesied Doom."
+ },
+ {
+  "key": "3cc7381931368b98",
+  "where": "the-exiled-legion · Skullmaster · Brass Stampede",
+  "verdict": "ok",
+  "why": "It is on the Bloodcrushers datasheet."
+ },
+ {
+  "key": "11a2ceeba1254112",
+  "where": "the-exiled-legion · Skullmaster · Daemonic Icon",
+  "verdict": "ok",
+  "why": "It is a Bloodcrushers wargear ability (GW). The export takes both the icon and the instrument, which is legal."
+ },
+ {
+  "key": "c006b52e3e1a91af",
+  "where": "the-exiled-legion · Skullmaster · Instrument of Chaos",
+  "verdict": "ok",
+  "why": "It is a Bloodcrushers wargear ability."
+ },
+ {
+  "key": "f0bbaa2f1a316bc3",
+  "where": "the-exiled-legion · Skullmaster",
+  "verdict": "ok",
+  "why": "“Juggernaut’s bladed horns equipped by models in that unit have [DEVASTATING WOUNDS]” “until the end of the turn” after ending a Charge move: it is weapon-specific, melee, cond charged, and covers the Skullmaster’s horn and the Bloodcrushers’ horns. The words are GW’s."
+ },
+ {
+  "key": "6e3f860d9a216305",
+  "where": "the-exiled-legion · Skullmaster",
+  "verdict": "ok",
+  "why": "Skullmaster (GW): MOUNTED, CHARACTER, CHAOS, DAEMON, KHORNE, SKULLMASTER. Bloodcrushers: MOUNTED, CHAOS, DAEMON, KHORNE, BLOODCRUSHERS. Only BLOODCRUSHERS comes from the bodyguard."
+ },
+ {
+  "key": "6c3bef70c90b3187",
+  "where": "the-exiled-legion · Skullmaster",
+  "verdict": "ok",
+  "why": "Skullmaster 85 (Wahapedia “1 model 85”) plus Brazenmaw 15 is 100. Bloodcrushers “3 models 95” (1st to 2nd units). The export is 85+15 and 95."
+ },
+ {
+  "key": "7394baaba78e4d7c",
+  "where": "the-exiled-legion · Skullmaster",
+  "verdict": "ok",
+  "why": "GW: Skullmaster has blade of blood and Juggernaut’s bladed horn; every Bloodcrusher model has hellblade and Juggernaut’s bladed horn (Bloodhunter + 2). So Hellblade ×3 and horn ×3. The profiles match GW: Blade A5 WS2+ S6 AP-2 D3; horn A4 WS4+ S6 AP-1 D1 [EXTRA ATTACKS, LANCE]; Hellblade A2 WS3+ S5 AP-2 D2."
+ },
+ {
+  "key": "f3e91a470644e1ed",
+  "where": "the-exiled-legion · Beasts of Nurgle",
+  "verdict": "ok",
+  "why": "GW: “1-2 Beasts of Nurgle. Every model is equipped with: putrid appendages.” Putrid appendages A6 WS4+ S6 AP-1 D2 [DEVASTATING WOUNDS]. 1 model, 80 pts."
+ }
+]

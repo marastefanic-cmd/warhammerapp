@@ -57,8 +57,8 @@ const NOT_TIMING = [
 ];
 // moments that are not a phase
 const MOMENT_RULES = [
-  { id:'any-phase', re:/\b(?:(?:at the )?(?:start|end) of )?any phase\b/i, ph:Object.fromEntries(PH.map(p => [p, 'either'])),
-    why:'"any phase" / "the start of any phase": every phase of both turns' },
+  { id:'any-phase', re:/\b(?:(?:at the )?(?:start|end) of )?any phase\b|(?:^|[.!?]\s+)at the (?:start|end) of (?:a|each) phase\b/i, ph:Object.fromEntries(PH.map(p => [p, 'either'])),
+    why:'"any phase" / "the start of any phase" / a text opening "At the end of a phase" (Blood Tainted) or "At the end of each phase" (not "… until … at the end of a phase", a duration): every phase of both turns' },
   { id:'start-battle-round-first', re:/^(?:(?:once per battle|if your army faction is [^,]+), )?at the start of the first battle round\b/i, at:'Start of the first battle round', ph:{ command:'either' },
     why:'the text opens with "At the start of the first battle round": a moment before the first Command phase (07.01)' },
   { id:'start-battle-round', re:/^(?:(?:once per battle|if your army faction is [^,]+), )?at the start of the battle round\b/i, at:'Start of the battle round', ph:{ command:'either' },
@@ -105,14 +105,14 @@ const ACTIVITY_RULES = [
     why:'melee attacks / "selected to fight" / pile-in and consolidation moves: the Fight phase of either turn' },
   { id:'ranged', re:/(?<!against |target of a |with )\branged (?:attacks?|weapons?)\b|\bselected to shoot\b|\beligible to shoot\b|\bhas shot\b|\bshoots\b/i, ph:{ shooting:'your' }, shoots:true,
     why:'ranged attacks / "selected to shoot": your Shooting phase' },
-  { id:'any-attack', re:/\bmakes? an attack\b|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
+  { id:'any-attack', re:/\bmakes? an attack\b(?! with an? (?:ranged|melee) weapon)|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
     why:'"makes an attack" (ranged or melee): your Shooting phase and the Fight phase' },
   { id:'charge-move', re:/\bcharge (?:rolls?|moves?)\b|\bends a charge\b|\bmakes a charge\b/i, ph:{ charge:'either' },
     why:'charge rolls / charge moves: the Charge phase (either turn: a Heroic Intervention is a charge move too)' },
   { id:'declare-charge', re:/\bdeclares? a charge\b|\beligible to declare a charge\b/i, ph:{ charge:'your' },
     why:'"declare a charge": your Charge phase' },
-  { id:'move-enemy', re:/\benemy unit\b[^.]*\b(?:ends a (?:normal |advance |fall back )?move|(?:selected|chosen) to fall back|makes? a (?:normal|advance|fall back) move)\b/i, ph:{ movement:'opp' },
-    why:'an enemy unit moving / Falling Back: your opponent\'s Movement phase' },
+  { id:'move-enemy', re:/\benemy unit\b[^.]*\b(?:ends a (?:normal |advance |fall back )?move|(?:selected|chosen) to fall back|falls back|makes? a (?:normal|advance|fall back) move)\b/i, ph:{ movement:'opp' },
+    why:'an enemy unit moving / Falling Back ("each time an enemy unit … Falls Back"): your opponent\'s Movement phase' },
   { id:'move-own', re:/\b(?:normal|advance|fall[- ]back|pulse jet|ingress) moves?\b|\badvance (?:and charge )?rolls?\b|\bselected to (?:move|advance)\b|\bmove characteristic\b|\b(?:advanced|fell back|falls back|remains stationary)\b|\+\d+" m\b/i, ph:{ movement:'your' },
     why:'its own moves (Normal, Advance, Fall Back), advance rolls, its Move characteristic: your Movement phase' },
 ];
@@ -121,6 +121,8 @@ const USED_MODIFIERS = [
   { id:'after-charge', re:/\bmade a charge move this turn\b/i,
     why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn (its attacks are not in the Shooting phase)' },
   { id:'overwatch', why:'an always-on ranged effect (no trigger in the text) is also used when the unit shoots with a Core stratagem whose EFFECT is "Your unit shoots" (Fire Overwatch: its WHEN, your opponent\'s Movement phase); when it protects against ranged attacks, the same moment in the other turn (the enemy\'s Fire Overwatch)' },
+  { id:'phase-locked', re:/\[HEAVY\]/i,
+    why:'[HEAVY] works "In your Shooting phase" only (Core Rules 24.16), so it is phase-locked (07.02.01) and not used with Fire Overwatch: a clause that gives only [HEAVY] adds no Overwatch' },
   { id:'trigger-phase', why:'an effect used in the phase it is triggered in has the trigger\'s turn ("In your opponent\'s Movement phase, … this unit can make a Normal move": the opponent\'s Movement phase only)' },
   { id:'opening-phase', re:/^in (?:the|your|your opponent's) (?:command|movement|shooting|charge|fight) phase,/i,
     why:'the text opens with its phase ("In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, …") and says no duration: every effect is used in that phase only (Bladeguard\'s -1 to hit rolls for attacks that target it is not used in the Shooting phase)' },
@@ -136,15 +138,15 @@ const OTHER = { your:'opp', opp:'your', either:'either' };
 // phases named in the text (table 1, explicit part); null when it names none
 function explicitTiming(text, opts){
   let t = plain(rulesText(text));
-  const reasons = [], out = {};
-  let at;
+  const reasons = [], out = {}, named = new Set();
+  let at, atPh = [];
   for(const r of MOMENT_RULES){
     if(r.rulesOnly && !(opts && opts.rule)) continue;
     const m = r.re.exec(t);
     if(!m) continue;
     if(r.id === 'start-battle-round-later' && at) continue;      // already the opening moment
     if(r.id === 'start-battle-round' && at) continue;
-    if(r.at) at = r.at;
+    if(r.at){ at = r.at; atPh = Object.keys(r.ph); }
     for(const [p, o] of Object.entries(r.ph)) addPh(out, p, o);
     reasons.push({ rule:r.id, match:m[0] });
     if(r.id === 'any-phase') t = t.replace(r.re, ' ');
@@ -154,12 +156,14 @@ function explicitTiming(text, opts){
   PHASE_RE.lastIndex = 0;
   for(let m; (m = PHASE_RE.exec(t));){
     const own = OWNER_RULES.find(o => o.re.test(m[1] || ''));
-    for(const p of m[2].toLowerCase().split(/\s*\/\s*|\s*,\s*|\s+or\s+|\s+and\s+/)) addPh(out, p, own.turn);
+    for(const p of m[2].toLowerCase().split(/\s*\/\s*|\s*,\s*|\s+or\s+|\s+and\s+/)){ addPh(out, p, own.turn); named.add(p); }
     reasons.push({ rule:own.id, match:m[0] });
   }
-  return Object.keys(out).length ? { ph:out, at, reasons } : null;
+  // atOnly: the phases only the opening moment gives ("At the start of the battle round": listed with the Command phase)
+  return Object.keys(out).length ? { ph:out, at, reasons, atOnly:atPh.filter(p => !named.has(p)) } : null;
 }
 
+const PHASE_LOCKED = USED_MODIFIERS.find(r => r.id === 'phase-locked');
 // table 1 in full: where it is triggered (the phases and moments the text names) and where its effect is used
 function usedIn(text, ctx, trig){
   let t = plain(rulesText(text));
@@ -187,7 +191,7 @@ function usedIn(text, ctx, trig){
           const m = /\b(?:uses its|as a result of the) ([A-Z][^,.]*?)(?: ability| detachment rule)\b/.exec(s);
           const other = m && ctx && ctx.named && ctx.named(m[1]);
           if(other){
-            const w = timing(other, { core:ctx.core });
+            const w = timing(other, { core:ctx.core, noStrat:ctx.noStrat });
             if(w.ph && Object.keys(w.ph).length){ add(w.ph, r); reasons.push({ rule:r.id, match:m[0] + ' → ' + w.reasons.map(x => x.match).join(', ') }); }
           }
           continue;
@@ -203,19 +207,24 @@ function usedIn(text, ctx, trig){
         }
         const m = r.re.exec(s);
         if(!m) continue;
-        if(r.blocker){ if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }
+        if(r.blocker){ if(ctx && ctx.noStrat) continue; if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }
         if(r.none){ none = none || { rule:r.id, match:m[0] }; continue; }
         if(r.id === 'any-stratagem' && reasons.some(x => x.rule === 'named-core-stratagem')) continue;
+        if(r.id === 'any-stratagem' && ctx && ctx.noStrat) continue;   // (the checklist: no phase reached through a stratagem)
         if(r.id === 'move-own' && /\benemy unit\b/i.test(s) && ACTIVITY_RULES.find(x => x.id === 'move-enemy').re.test(s)) continue;
-        if(r.shoots && !(afterCharge && r.id === 'any-attack')) shoots = true;
+        // (a clause whose only weapon ability is [HEAVY]: phase-locked, no Overwatch from it)
+        const locked = PHASE_LOCKED.re.test(s) && !/\[(?!HEAVY\])/i.test(s) && !/\bBS\b|\bballistic skill\b|\bhit roll/i.test(s);
+        if(locked && !reasons.some(x => x.rule === 'phase-locked')) reasons.push({ rule:'phase-locked', match:'[HEAVY]' });
+        if(r.shoots && !locked && !(afterCharge && r.id === 'any-attack')) shoots = true;
         add(r.ph, r);
         reasons.push({ rule:r.id, match:m[0] });
       }
     }
   }
   if(afterCharge && reasons.some(r => r.rule === 'any-attack' || r.rule === 'weapons-have')) reasons.push({ rule:'after-charge', match:afterCharge[0] });
-  // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger)
-  if(!trig && (shoots || guarded)){
+  // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger; one that lasts "until the end of the turn" is
+  // triggered in that turn, even when derive.js reads no trigger in its words: Shudderblink's [ASSAULT] after an advance move)
+  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t)){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
       const w = explicitTiming(cs.when.split(/[.:]/)[0]);
@@ -256,7 +265,7 @@ function timing(text, ctx){
   for(const [p, o] of Object.entries(used.ph)) addPh(ph, p, o);
   const reasons = (trig ? trig.reasons.map(r => Object.assign({ part:'trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r)));
   const trigLabel = trig ? asLabel(trig.ph, trig.at) : null, usedLabel = Object.keys(used.ph).length ? asLabel(used.ph) : null;
-  if(Object.keys(ph).length || (trig && trig.at)) return { how:trig ? 'explicit' : 'activity', ph, at:trig && trig.at, reasons, trigger:trigLabel, used:usedLabel };
+  if(Object.keys(ph).length || (trig && trig.at)) return { how:trig ? 'explicit' : 'activity', ph, at:trig && trig.at, reasons, trigger:trigLabel, used:usedLabel, trigPh:trig && trig.ph, usedPh:used.ph, atOnly:trig ? trig.atOnly : [] };
   if(used.blocked) return { how:'none', blocked:true, reasons:[used.blocked] };
   if(used.none) return { how:'activity', ph:{}, reasons:[used.none], trigger:null, used:null };   // positively: no phase
   return { how:'none', reasons:[] };
@@ -469,13 +478,38 @@ function stratNeeds(V, s){
   if(/\battached\b/i.test(plain(s.when + ' ' + s.target))){ n.attached = true; reasons.push({ rule:'attached', match:(/[^.]*\battached\b[^.]*/i.exec(plain(s.when + ' ' + s.target)) || [''])[0].trim().slice(0, 80) }); }
   return { how:'explicit', needs:n, reasons };
 }
+// the sentences after the first unit's that open with a friendly unit phrase of keywords ("X units from your army …"), as needs
+function ruleSubjects(V, text, first){
+  const out = [], firstS = sentences(text).findIndex(x => prepBold(x).includes(first.matched));
+  sentences(text).forEach((sen, i) => {
+    if(i <= firstS) return;
+    const u = friendlyUnit(V, sen, { keyword:true });
+    if(!u || u.at > 2 || !/^\s*'?\s*from your army\b/i.test(u.after)) return;
+    const n = needsOf(V, u, []);
+    if(!n.bad) out.push({ unit:u, n });
+  });
+  return out;
+}
 function ruleNeeds(V, r){
   const reasons = [];
   const unit = friendlyUnit(V, rulesText(r.text), { keyword:true });
   if(unit){
     reasons.push({ rule:'first-unit', match:clip(plain(unit.matched), 80) });
-    const n = needsOf(V, unit, reasons);
+    let n = needsOf(V, unit, reasons);
     if(n.bad) return { how:'none', reasons:[{ rule:'unparsed', match:n.bad }] };
+    // every other sentence whose subject is a friendly unit phrase ("**SOUL FORGE** units from your army have a 5+ invulnerable
+    // save."): the rule reaches those units too, so its needs are the "or" of them all (Soul Forge Boons: three sentences)
+    const more = ruleSubjects(V, rulesText(r.text), unit);
+    if(more.length){
+      const alts = [n].concat(more.map(x => x.n));
+      // (one alternative per keyword of an "any": HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE)
+      const sets = []; for(const a of alts) for(const k of (a.any.length ? a.any : [null])){ const x = a.all.concat(k ? [k] : []); if(!sets.some(y => y.join('|') === x.join('|'))) sets.push(x); }
+      const c = sets.length > 1 ? combineAlts(sets) : { all:sets[0], any:[], rules:[] };
+      if(!c.bad && alts.every(a => !a.none.length && !a.rule)){
+        n = { all:c.all, any:c.any, none:[] };
+        reasons.push(...more.map(x => ({ rule:'more-subjects', match:clip(plain(x.unit.matched), 80) })), { rule:c.rules.join('+') || 'kw-all', match:sets.map(x => x.join(' ')).join(' | ') });
+      }
+    }
     if(/\battached\b/i.test(plain(r.text))) { n.attached = true; reasons.push({ rule:'attached', match:'attached' }); }
     return { how:'explicit', needs:n, reasons };
   }
@@ -595,6 +629,209 @@ function commentsNear(src, name){
   return out;
 }
 
+// the options inside a rule or ability: its table's rows, "**Name:** effect" lines, a bullet "**Name**" and the line under it
+// (t: the text without its italic notes, rulesText)
+function optionsOf(t, table){
+  const opts = [];
+  for(const row of table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row', row:row[0] });
+  const lines = t.split('\n');
+  lines.forEach((l, i) => {
+    let m = /^(?:- )?\*\*([^*]{3,60}?)(?::\*\*|\*\*:)\s*(.+)$/.exec(l);
+    if(m && !isUpperWord(m[1].replace(/[^A-Za-z]/g, '') || 'a')) { opts.push({ name:m[1].trim(), text:m[2], how:'"**Name:** effect"' }); return; }
+    m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
+    if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
+  });
+  // a rule with no table whose options are headings of their own, each followed by its text: a bold line ("**Furor Tactics**",
+  // Wahapedia's sub-heading: Mission Tactics) or, when it has none, a line in capitals ("ASSAULT DOCTRINE": Combat Doctrines)
+  if(!opts.length && !(table || []).length){
+    const heads = (re, how) => { const out = [];
+      lines.forEach((l, i) => { const m = re.exec(l.trim()), nx = lines[i + 1];
+        if(m && nx && !re.test(nx.trim()) && !/^\s*- /.test(nx) && /[a-z]/.test(nx)) out.push({ name:m[1].trim(), text:nx, how }); });
+      return out; };
+    const bold = heads(/^\*\*([^*]{3,60})\*\*$/, 'heading "**Name**" and its line');
+    opts.push(...(bold.length ? bold : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line')));
+  }
+  // army-building limits ("**Incursion:** Up to 500 pts") are not options, and nor is a worked example ("**Example:** …", Martial Ka'tah)
+  for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text)) || /^examples?$/i.test(opts[i].name)) opts.splice(i, 1);
+  return opts;
+}
+
+// ---- the checklist table (data.js CHECKLIST) ----
+// a rule's or ability's own text without its options (each option has its own entry)
+const withoutOptions = (text, table) => { const t = rulesText(text);
+  // an option that ends in a list ("select one of the following to apply …:", Unnatural Fortitude) takes the "- " lines under it
+  const cut = (s2, o) => { const i = s2.indexOf(o.text); if(i < 0) return s2; let j = i + o.text.length;
+    if(/:\s*$/.test(o.text)){ const m = /^(?:\n- (?!\*\*[^*\n]+?:?\*\*:?)[^\n]*)+/.exec(s2.slice(j)); if(m) j += m[0].length; }
+    return s2.slice(0, i) + s2.slice(j); };
+  return optionsOf(t, table).reduce(cut, t).replace(/^(?:- )?\*\*Examples?(?::\*\*|\*\*:).*$/gim, ''); };
+const phStr = m => m ? PH.filter(p => m[p]).map(p => p + ':' + m[p]).join(',') : '';
+// The checklist's scope, a fixed rule (s: listed): a rule, ability or option whose own words (without its options' words, durations
+// and italic notes) have, in one sentence with no unit activation in it, a fixed moment of the game sequence: the start or end of a
+// battle round, turn or phase ("At the start of the battle round", "At the end of your Command phase", "WHEN: Start of the Fight
+// phase"), or a Command phase ("In your Command phase, you can …", "WHEN: Your Command phase"), or another phase with a choice
+// ("In your Movement phase, you can select …"). Unit activation (remembered from that unit's datasheet): "selected to …", "each time /
+// when this (or a) unit or model …", "this unit's move / attacks", "makes an attack / a charge / a move", "is targeted", "targets this",
+// "destroys", "is destroyed", "the first time". An option without such a sentence is listed with its rule (what the rule puts in
+// force: a Blessing of Khorne) unless its own WHEN line is a unit activation (a: Calistus, "WHEN: … selected to move"). Once-per-battle uses are listed too
+// (the app's perBattle), and an item derive cannot place with a moment data.js stores (at: Icon of Khorne).
+const SEQ = {
+  moment:/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i,
+  command:/\b(?:your |your opponent['’]s |the |each |either player['’]s )command phase\b/i,
+  choice:/\b(?:your |your opponent['’]s |the |each |either player['’]s )?(?:movement|shooting|charge|fight) phase,?[^.]*?\b(?:you can|select|choose)\b/i,
+  activation:/\bselected to\b|\beach time (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b|\bwhen (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b[^.,]*?\b(?:is|are|makes?|ends?|has|have|was)\b|\b(?:this|that|the bearer['’]?s?) (?:unit|model)['’]s (?:move|attacks?)\b|\bmakes? an? (?:attack|charge|move)\b|\bis targeted\b|\btargets? (?:this|that|the bearer)\b|\bafter (?:this|that|the) (?:unit|model|bearer)\b[^.,]*?\bhas (?:shot|fought|moved|charged)\b|\bdestroys?\b|\bfirst time\b/i,
+};
+function seqTrigger(text){
+  // paragraph by paragraph: in one that opens with a unit activation ("Each time … is selected to shoot or fight", Warpmeld
+  // Sacrifice, Daemonic Patrons), a later moment is that activation's ("At the end of the phase, that unit suffers D3 mortal wounds")
+  // unless it is a choice of its own ("At the start of the Command phase, you can spend", Blood Tithe); sentence by sentence, with durations ("until the
+  // start of your next Command phase"), once-per-phase limits and a moment named only as a past reference ("a unit it was within
+  // Engagement Range of at the start of the turn", Thrill Seekers) left out
+  const PAST = /\b(?:was|were)\b[^.;:]*?\b(?:at the )?(?:start|end) of (?:the|that) (?:turn|phase|battle round)\b/gi;
+  return plain(rulesText(text)).split(/\n+/).some(par => {
+    const ss = sentences(par).map(x => NOT_TIMING.reduce((y, r) => y.replace(r.re, ' '), x).replace(PAST, ' '));
+    const opensAct = ss.length && SEQ.activation.test(ss[0]);
+    return ss.some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && !SEQ.activation.test(x) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(x)));
+  });
+}
+// a unit activation as the item's own trigger: its WHEN line; or a first sentence opening with "When" (Diabolic Power: "When this unit is
+// selected to shoot or fight"), or with a "when / each time / after … selected to …" clause in it (Pulse Jet: "In your Movement phase,
+// when this unit is selected to move"; Overwhelming Wrath: "Each time an enemy unit … is selected to Fall Back"). An effect's "Each
+// time a model in this unit makes …" (a Blessing of Khorne) is not its trigger
+function actOf(text){
+  const p = plain(rulesText(text)), when = /^\W*WHEN:\W*(.*)$/im.exec(p), first = sentences(p)[0] || '';
+  return when ? SEQ.activation.test(when[1]) : (/^\W*when\b/i.test(first) && SEQ.activation.test(first)) || /\b(?:when|whenever|each time|after)\b[^.]*?\bselected to\b/i.test(first);
+}
+// what a listed ability selects among ("select one of the abilities in the X section", "select one X ability": the app's pickOptions)
+// is in force for the duration its words give from where it is triggered (pk, coverOf), or x
+function pickCover(text, e){
+  const t = plain(rulesText(text));
+  if(!/\bselect one of the abilities in the .+? section\b|\bselect one [^.,;]+? ability\b/i.test(t)) return null;
+  // the first duration in its words (not the first in DURATIONS' order: "this turn" would win over a later-listed "until the start of your next Command phase")
+  const d = DURATIONS.map(x => ({ id:x.id, i:t.search(x.re) })).filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  return coverOf(d && d.id, e);
+}
+// the duration a rule's or ability's own words give its options (oc): coverOf on the first duration in its own words, from where it is
+// triggered, when it has options; null when none is read
+function optCover(text, own, table, e){
+  if(!optionsOf(rulesText(text), table).length) return null;
+  // the first "until …" duration in its own words (a bare "this turn", Cabal of Sorcerers' "not yet attempted a Ritual this turn", is not one)
+  const t = plain(own), d = DURATIONS.map(x => ({ id:x.id, i:[...t.matchAll(new RegExp(x.re.source, 'gi'))].filter(m => /^until\b/i.test(m[0])).map(m => m.index)[0] }))
+    .filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  if(!d) return null; const c = coverOf(d.id, e); return c.u ? c : null;
+}
+// a protection against mortal wounds (a Feel No Pain or a save "against … mortal wounds", Enraged Abjuration) is used whenever mortal
+// wounds are suffered: every phase of both turns
+const MORTAL_GUARD = /\b(?:feel no pain|invulnerable save|saving throws?|save)\b[^.]*\bmortal wounds\b/i;
+const EVERY_PHASE = PH.map(p => p + ':either').join(',');
+// … within a duration the same words give: the first "until …" duration, from where it is triggered (coverOf); none: every phase;
+// one read that covers no phase: null (its use as table 1 reads it)
+function mortalUse(text, e){
+  const t = plain(rulesText(text)), d = DURATIONS.map(x => ({ id:x.id, i:[...t.matchAll(new RegExp(x.re.source, 'gi'))].filter(m => /^until\b/i.test(m[0])).map(m => m.index)[0] }))
+    .filter(x => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  if(!d) return EVERY_PHASE;
+  const c = coverOf(d.id, e); return c.u || null;
+}
+// the checklist reads where an effect is used without the stratagems (the checklist has none): no phase reached through Fire Overwatch,
+// a core stratagem the text names, or "targeted with a Stratagem" (ckCtx)
+const ckCtx = c => Object.assign({}, c, { core:[], noStrat:true });
+// the end moments a text names as when something is checked or done ("This Deed is completed at the end of a turn"): ends
+const endsOf = text => { const t = plain(rulesText(text)).replace(/\buntil the (?:start|end) of [^,.;]*/gi, ' '), out = new Set();
+  for(const m of t.matchAll(/\bat the end of (a|your|your opponent['’]s|the) (turn|battle round)\b/gi)){
+    const w = m[1].toLowerCase();
+    if(m[2].toLowerCase() === 'battle round') out.add('End of the battle round');
+    else if(w === 'a' || w === 'the') { out.add('End of your turn'); out.add('End of your opponent’s turn'); }
+    else out.add(w === 'your' ? 'End of your turn' : 'End of your opponent’s turn'); }
+  return [...out]; };
+// t: where it is triggered (the phases the text names, less those only its opening moment gives), u: where its effect is used,
+// at: the moment it opens with; none: no phase (before the battle, what a unit carries); x: not derivable
+function ckEntry(d, text){
+  if(d.how === 'none') return { x:1 };
+  const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];
+  const e = {};
+  if(d.at) e.at = d.at;
+  // a phase named only as "your / the next X phase" is when the effect happens ("must make an ingress move in your next Movement
+  // phase", Umbralefic Crystal), not the trigger, when the text has a trigger besides
+  const pt = plain(text || ''), nexts = [...pt.matchAll(/\b(?:your|the) next (command|movement|shooting|charge|fight) phase\b/gi)].map(m => m[1].toLowerCase());
+  const rest = pt.replace(/\b(?:your|the) next (?:command|movement|shooting|charge|fight) phase\b/gi, ' ');
+  for(const p of new Set(nexts)) if(tp[p] && !new RegExp('\\b' + p + ' phase\\b', 'i').test(rest) && (d.at || Object.keys(tp).some(q => q !== p && !nexts.includes(q)))) delete tp[p];
+  if(phStr(tp)) e.t = phStr(tp);
+  // a sentence at the end of the battle round (Pledges to the Dark Prince's check): that moment too (ae)
+  if(/(?:^|[.\n]\s*)at the end of the battle round\b/i.test(pt)) e.ae = 'End of the battle round';
+  // triggered in named phases and lasting no longer ("In your Shooting phase, when … selected to shoot, that unit's attacks can
+  // re-roll"): used only there, in the trigger's turn, not in every phase its words could be read for (no "until", "this turn", "next")
+  let up = d.usedPh;
+  if(phStr(tp) && !d.at && !/\buntil\b|\bthis turn\b|\bnext\b|\bfor the rest of\b/i.test(plain(text || '')))
+    up = Object.fromEntries(Object.entries(up || {}).filter(([p]) => tp[p]).map(([p, o]) => [p, o === 'either' ? tp[p] : tp[p] === 'either' || tp[p] === o ? o : null]).filter(([, o]) => o));
+  if(MORTAL_GUARD.test(pt)){ const mu = mortalUse(text, e); if(mu) up = Object.fromEntries(mu.split(',').map(x => x.split(':'))); }
+  if(phStr(up)) e.u = phStr(up);
+  return Object.keys(e).length ? e : { none:1 };
+}
+// what a triggered text puts in force from a rule defined elsewhere (f): a bold term of its text that is one of its faction's army
+// or detachment rules, by name or by the faction's aliases ("**riled up**" is Waaagh!), and that the text makes a state of units:
+// "is / are / be / become(s) **X**" in a clause with no "if", "while", "unless" or "when" before it (War Cry: "If you do, friendly
+// ORKS units … are **riled up** until the end of the next turn"; not Krumpin' Time's "if this unit is **riled up**"). Its phases are
+// those the duration in the same sentence covers from where the text is triggered (t, at), in the order of a turn and the next:
+// "until the end of the phase" that phase; "of the turn" / "this turn" the rest of that turn; "of the next turn" the rest of that
+// turn and the whole next one; "until the start of your next turn / Command phase" the rest of that turn, and the opponent's turn
+// after one of yours; "until the end of the battle" every phase; "of the battle round" or "until the start of the next battle round" every phase only from the start of the
+// battle round. Any other duration, or none, or no trigger: x (When unclear), nothing guessed
+const DURATIONS = [
+  { id:'phase', re:/\buntil the end of the phase\b/i }, { id:'next', re:/\buntil the end of the next turn\b/i },
+  { id:'turn', re:/\buntil the end of (?:the|this|that) turn\b|\bthis turn\b/i }, { id:'yournext', re:/\buntil the start of your next (?:turn|command phase)\b/i },
+  { id:'battle', re:/\buntil the end of the battle\b(?! round)|\buntil (?:it|they) enters? a different one\b|\buntil (?:it is |they are )?changed\b/i }, { id:'round', re:/\buntil the end of the battle round\b|\buntil the start of the next battle round\b/i },
+];
+function inForce(text, f, self, e){
+  const out = [], seen = new Set(), t = rulesText(text);
+  const rules = f.armyRules.concat(Object.values(f.detachments).flatMap(detRules));
+  const named = term => { const lc = plain(term).toLowerCase(); const r = rules.find(x => norm(x.name).toLowerCase() === lc); if(r) return r.name;
+    const al = (f.aliases || []).find(([re]) => re.test(plain(term))); return al && rules.some(x => x.name === al[1]) ? al[1] : null; };
+  for(const sent of sentences(t)) for(const m of sent.matchAll(/\b(?:is|are|be|becomes?)\s+\*\*([^*]+)\*\*/gi)){
+    const r = named(m[1]);
+    if(!r || r === self || seen.has(r)) continue;
+    const clause = sent.slice(0, m.index).split(/[,;:.]/).pop();
+    if(/\b(?:if|while|unless|when)\b/i.test(clause)) continue;
+    seen.add(r);
+    const d = DURATIONS.find(x => x.re.test(plain(sent)));
+    out.push(Object.assign({ n:plain(m[1]), r }, coverOf(d && d.id, e)));
+  }
+  return out;
+}
+// the phases a duration covers from the trigger (phase:your|opp|either), or x
+function coverOf(dur, e){
+  const T = ['your', 'opp'], seq = T.flatMap(w => PH.map(p => p + '|' + w)), cov = new Set();
+  const trig = Object.entries(Object.fromEntries(String(e.t || '').split(',').filter(Boolean).map(x => x.split(':')))).flatMap(([p, w]) => (w === 'either' ? T : [w]).map(x => p + '|' + x));
+  const startRound = /^start of the (?:first )?battle round$/i.test(e.at || ''), endOpp = /^end of your opponent.s turn$/i.test(e.at || '');
+  if(startRound) trig.push('command|your', 'command|opp');
+  // "until the end of the phase" from the start of the battle round names no phase in progress: not read
+  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound) || (dur === 'phase' && startRound)) return { x:1 };
+  const from = s => { const [p, w] = s.split('|'), i = PH.indexOf(p); return PH.slice(i).map(x => x + '|' + w); };
+  const all = w => PH.map(x => x + '|' + w), other = w => w === 'your' ? 'opp' : 'your';
+  for(const s of trig){ const w = s.split('|')[1];
+    const add = dur === 'phase' ? [s] : dur === 'turn' ? from(s) : dur === 'next' ? from(s).concat(all(other(w))) : dur === 'yournext' ? from(s).concat(w === 'your' ? all('opp') : []) : seq;
+    add.forEach(x => cov.add(x)); }
+  // at the end of your opponent's turn: the next turn is yours; to the end of the battle is every phase after it, in both turns
+  if(endOpp){ if(dur === 'next') all('your').forEach(x => cov.add(x)); else if(dur === 'battle') seq.forEach(x => cov.add(x)); else if(dur !== 'yournext') return { x:1 }; }
+  if(!cov.size) return { x:1 };
+  const m = {}; for(const x of cov){ const [p, w] = x.split('|'); m[p] = m[p] && m[p] !== w ? 'either' : w; }
+  return { u:phStr(m) };
+}
+// an ability's key: a hash of its name and text (the app's ckHash, the same for an imported list's copy of the unit)
+const ckHash = s => { let h = 0x811c9dc5; for(let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); };
+const abilityCk = ab => 'a|' + ckHash(ab.name + '\n' + ab.text);
+const CK_START = '// ---- CHECKLIST: written by verify/derive.js --write from the rules text (do not edit) ----';
+const CK_END = '// ---- end of CHECKLIST ----';
+function ckBlock(T){
+  return CK_START + '\n' +
+    '// The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
+    '// tables of verify/derive.js give it: s listed (a fixed moment of the sequence, seqTrigger), t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
+    '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own; a its own WHEN line a unit activation),\n' +
+    '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition); f what it puts\n' +
+    '// in force from a rule (inForce); ae a sentence at the end of the battle round; a its own trigger a unit activation (actOf); pk where\n' +
+    '// the ability it selects is in force (pickCover); oc where its options are in force (optCover); an option\'s ends the end moments it\n' +
+    '// names (endsOf)\n' +
+    'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
+}
+
 function derive(D){
   const V = vocab(D);
   // the comments next to an item: data.js in the old form (each unit in full, as the lists were written), where each comment
@@ -606,6 +843,17 @@ function derive(D){
   const ctx = { core:D.coreStratagems };
   const items = [];
   const add = it => items.push(it);
+  // the checklist table (data.js CHECKLIST, the Phase checklist): per rule and ability, where it is triggered and where its
+  // effect is used, and the same for each of its options; the same words on several units must give the same entry
+  const CK = {}, CKO = {};
+  const ckPut = (k, v) => { if(!CK[k]) CK[k] = v; else if(JSON.stringify(CK[k]) !== JSON.stringify(v)) CK[k] = { x:1 }; };
+  const sinkOf = k => CKO[k] || (CKO[k] = { opts:[], grants:[] });
+  Object.defineProperty(items, 'checklist', { enumerable:false, get:() => Object.fromEntries(Object.keys(CK).sort().map(k => {
+    const e = Object.assign({}, CK[k]), o = CKO[k];
+    if(o && o.opts.length) e.o = o.opts;
+    if(o && o.grants.length) e.g = o.grants;
+    return [k, e];
+  })) });
   const unitsOf = fk => D.armies.filter(a => !fk || a.faction === fk).flatMap(a => a.units.map(u => ({ a, u })));
   // a keyword every unit of the faction's lists has ("ORKS" in an Orks list) selects nothing in the app's matches(): needs may
   // name it or leave it out (data.js does both: Kustom Dakka has Faction: Orks, Dread Power not), so it is not compared
@@ -641,10 +889,11 @@ function derive(D){
   // army rules and detachment rules
   for(const [fk, f] of Object.entries(D.factions)){
     const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name, det:false }))
-      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name, det:true })));
+      .concat(Object.values(f.detachments).flatMap(d => detRules(d).map(r => ({ r, where:f.name + ' · ' + d.name + ' rule · ' + r.name, det:true }))));
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments }, { core:D.coreStratagems, rule:true });
+      { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ckCtx({ core:D.coreStratagems, rule:true })), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -676,12 +925,14 @@ function derive(D){
         let where = a.id + ' · ' + uName + ' · ' + (ab.who ? ab.who + ' · ' : '') + ab.name;
         seen[where] = (seen[where] || 0) + 1; if(seen[where] > 1) where += ' #' + seen[where];
         const comments = commentsNear(src, ab.name);
-        timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, { core:D.coreStratagems, named:n => {
+        const actx = { core:D.coreStratagems, named:n => {
           const o = u.abilities.find(x => x !== ab && norm(x.name).toLowerCase() === norm(n).toLowerCase());
           if(o) return o.text;
-          const r = f.armyRules.concat(a.detachments.map(id => (f.detachments[id] || {}).rule).filter(Boolean)).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
+          const r = f.armyRules.concat(a.detachments.flatMap(id => detRules(f.detachments[id]))).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
           return r ? r.text : null;
-        } });
+        } };
+        timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
+        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, ckCtx(actx)), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; { const oc = optCover(ab.text, own, null, ce); if(oc) ce.oc = oc; } ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -724,6 +975,7 @@ function derive(D){
   // ---- rule options and grants (coverage only): the rows of data.js's RULE_OPTIONS and GRANTS (verify/tables.js --write writes
   // them from ruleTables below, which reads them from the words), each against what the rule's footnotes and the unit sheets store ----
   const fresh = ruleTables(D);
+  for(const [k, v] of Object.entries(fresh.sinks)) CKO[k] = v;   // the checklist's options and grants (ruleTables)
   const TB = { options:D.ruleOptions || [], grants:D.grants || [] };
   Object.defineProperty(items, 'tablesStale', { value:JSON.stringify(TB) !== JSON.stringify({ options:fresh.options, grants:fresh.grants }) });
   const whyOf = new Map(); fresh.options.forEach((o, i) => { const k = o.rule + '\n' + o.option; if(!whyOf.has(k)) whyOf.set(k, fresh.reasons[i]); });
@@ -786,17 +1038,19 @@ function storedOptionsOfAbility(u, ab){
   return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
 }
 // the rules and abilities read for options and grants: every army and detachment rule, then every ability of every list (once per words)
+// a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted)
+function detRules(d){ return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }
 function ruleSources(D){
   const out = [];
   for(const [fk, f] of Object.entries(D.factions)){
     const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
-      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
-    for(const { r, where } of rules) out.push({ where, text:r.text, table:r.table, stored:storedOptionsOfRule(r), fk });
+      .concat(Object.values(f.detachments).flatMap(d => detRules(d).map(r => ({ r, where:f.name + ' · ' + d.name + ' rule · ' + r.name }))));
+    for(const { r, where } of rules) out.push({ where, text:r.text, table:r.table, stored:storedOptionsOfRule(r), fk, ck:'r|' + fk + '|' + r.name });
   }
   const seen = new Set();
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
     const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
-    out.push({ where:a.id + ' · ' + u.name + ' · ' + ab.name, text:ab.text, table:null, stored:storedOptionsOfAbility(u, ab), fk:a.faction, self:u });
+    out.push({ where:a.id + ' · ' + u.name + ' · ' + ab.name, text:ab.text, table:null, stored:storedOptionsOfAbility(u, ab), fk:a.faction, self:u, ck:abilityCk(ab) });
   }
   return out;
 }
@@ -811,30 +1065,13 @@ const notAGrant = (sent, m, rule, name) => {
     norm(name).toLowerCase() === norm(String(rule).split(' · ').pop()).toLowerCase();
 };
 function ruleTables(D){
-  const V = vocab(D), options = [], grants = [], reasons = [];
+  const V = vocab(D), options = [], grants = [], reasons = [], sinks = {};   // sinks: the checklist's options and grants per CHECKLIST key
+  let ck;
+  const grantSink = g => { if(g.type === 'ability' && g.to && typeof g.to === 'object') ck.grants.push(Object.assign({ name:g.grants, to:g.to }, g.option !== undefined ? { opt:g.option } : {}, g.while ? { while:g.while } : {})); };
   for(const s of ruleSources(D)){
     const t = rulesText(s.text);
-    const opts = [];
-    for(const row of s.table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row' });
-    const lines = t.split('\n');
-    lines.forEach((l, i) => {
-      let m = /^(?:- )?\*\*([^*]{3,60}?)(?::\*\*|\*\*:)\s*(.+)$/.exec(l);
-      if(m && !isUpperWord(m[1].replace(/[^A-Za-z]/g, '') || 'a')) { opts.push({ name:m[1].trim(), text:m[2], how:'"**Name:** effect"' }); return; }
-      m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
-      if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
-    });
-    // a rule with no table whose options are headings of their own, each followed by its text: a bold line ("**Furor Tactics**",
-    // Wahapedia's sub-heading: Mission Tactics) or, when it has none, a line in capitals ("ASSAULT DOCTRINE": Combat Doctrines)
-    if(!opts.length && !(s.table || []).length){
-      const heads = (re, how) => { const out = [];
-        lines.forEach((l, i) => { const m = re.exec(l.trim()), nx = lines[i + 1];
-          if(m && nx && !re.test(nx.trim()) && !/^\s*- /.test(nx) && /[a-z]/.test(nx)) out.push({ name:m[1].trim(), text:nx, how }); });
-        return out; };
-      const bold = heads(/^\*\*([^*]{3,60})\*\*$/, 'heading "**Name**" and its line');
-      opts.push(...(bold.length ? bold : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line')));
-    }
-    // army-building limits ("**Incursion:** Up to 500 pts") are not options
-    for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text))) opts.splice(i, 1);
+    const opts = optionsOf(t, s.table);
+    ck = sinks[s.ck] || (sinks[s.ck] = { opts:[], grants:[] });
     // the rule's own trigger: its text without its options
     const parentTrig = explicitTiming(opts.reduce((s2, o) => s2.replace(o.text, ''), t));
     for(const o of opts){
@@ -844,6 +1081,24 @@ function ruleTables(D){
       options.push({ rule:s.where, option:o.name, text:o.text, found:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''), explicit:!!own,
         trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null, phases:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null });
       reasons.push((trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))));
+      // the checklist: an option's own trigger, or none (the rule's is listed with the rule), and where it is used
+      {
+        const e = { n:o.name };
+        if(o.row) e.row = o.row;
+        if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
+        const usedCk = usedIn(o.text, ckCtx({}), trig), phCk = Object.assign({}, trig ? trig.ph : {}); for(const [p, v] of Object.entries(usedCk.ph)) addPh(phCk, p, v);
+        if(phStr(usedCk.ph)) e.u = phStr(usedCk.ph);
+        const tr = own || parentTrig, tp = tr ? Object.assign({}, tr.ph) : {}; for(const p of (tr && tr.atOnly) || []) delete tp[p];
+        if(MORTAL_GUARD.test(plain(o.text))){ const mu = mortalUse(o.text, { t:phStr(tp), at:tr && tr.at }); if(mu) e.u = mu; }
+        { const en = endsOf(o.text); if(en.length) e.ends = en; }
+        if(!Object.keys(phCk).length && !(own && own.at)) e.x = 1;
+        const fo = inForce(o.text, D.factions[s.fk], o.name, { t:phStr(tp), at:tr && tr.at });
+        if(fo.length) e.f = fo;
+        // a: an option whose own WHEN is a unit activation (Calistus: "WHEN: Your Movement phase, when a friendly readied unit is
+        // selected to move"); an option's other words are its effect ("Each time a model in this unit makes a melee attack…"), listed
+        if(seqTrigger(o.text)) e.s = 1; else if(actOf(o.text)) e.a = 1;
+        ck.opts.push(e);
+      }
       grantRows(s.where, o.name, o.text, o.name + ' active');
     }
     grantRows(s.where, undefined, opts.reduce((s2, o) => s2.replace(o.text, ''), t), null, opts.filter(o => /^heading/.test(o.how)));
@@ -870,12 +1125,15 @@ function ruleTables(D){
       const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
       const cond = (/^(while|if|when|until) [^,]+/i.exec(plain(sent)) || [])[0];
       const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
-      const grantName = name.replace(/ ability$/i, '');
+      // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
+      const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;
+      const grantName = name.replace(/ ability$/i, '') + (against ? ' ' + against[1].replace(/\*\*/g, '') : '');
       const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
-      grants.push(Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:grantName, type, to, while:wh, text:sent }));
+      const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:grantName, type, to, while:wh, text:sent });
+      grants.push(g); grantSink(g);   // (the checklist: an ability it gives to units by keyword, Might of Khorne's Blessings of Khorne)
     }
   }
-  return { options, grants, reasons };
+  return { options, grants, reasons, sinks };
 }
 
 // =============================================================================================
@@ -1054,6 +1312,21 @@ if(require.main === module){
     writeJSON(AGREED, { note:'labels derived from the text (verify/derive.js) that equal data.js; the gate keeps them equal', items:Object.fromEntries(keys.map(k => [k.key, k.label])) });
     console.log('derive: recorded ' + keys.length + ' agreeing labels in verify/derive-agreed.json');
   }
+  // the checklist table in data.js must be what the rules give (--write puts it there)
+  let ckStale = false;
+  {
+    const file = path.join(ROOT, 'data.js'), src = fs.readFileSync(file, 'utf8'), want = ckBlock(items.checklist);
+    const i = src.indexOf(CK_START), j = src.indexOf(CK_END), have = i >= 0 && j > i ? src.slice(i, j + CK_END.length) : null;
+    if(process.argv.includes('--write')){
+      let out = have ? src.slice(0, i) + want + src.slice(j + CK_END.length) : null;
+      // (after BS_IDS, where verify/tables.js --write keeps it: among the parts of data.js outside its tables)
+      if(!out){ const bs = src.indexOf('// ---- end of BS_IDS ----'), at = bs >= 0 ? src.indexOf('\n', bs) + 1 : src.indexOf('\nreturn { version:VERSION') + 1;
+        if(at <= 0) throw new Error('data.js: return line not found'); out = src.slice(0, at) + '\n' + want + '\n' + src.slice(at); }
+      if(!/checklist:CHECKLIST/.test(out)) out = /bsIds:BS_IDS/.test(out) ? out.replace(/bsIds:BS_IDS/, 'bsIds:BS_IDS, checklist:CHECKLIST') : out.replace(/ \};\n\}\)\(\);/, ', checklist:CHECKLIST };\n})();');
+      fs.writeFileSync(file, out);
+      console.log('derive: wrote CHECKLIST into data.js (' + Object.keys(items.checklist).length + ' entries)');
+    } else if(have !== want){ ckStale = true; console.log('derive: data.js CHECKLIST ' + (have ? 'differs from' : 'is missing;') + ' what the rules text gives. Run: node verify/derive.js --write'); }
+  }
   // the gate: an item that agreed must still agree
   if(!fs.existsSync(AGREED)){ console.log('derive: verify/derive-agreed.json is missing (node verify/derive.js --agree records the labels that agree today)'); process.exit(1); }
   const agreed = (readJSON(AGREED, {}).items) || {};
@@ -1070,6 +1343,6 @@ if(require.main === module){
   console.log('  identical/different/not derivable: ' + KINDS.map(k => k + ' ' + L(k)).join(' · '));
   for(const d of drift) console.log('  DRIFT ' + d);
   if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
-  process.exit(drift.length || items.tablesStale ? 1 : 0);
+  process.exit(drift.length || items.tablesStale || ckStale ? 1 : 0);
 }
-module.exports = { derive, ruleTables, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ruleTables, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };

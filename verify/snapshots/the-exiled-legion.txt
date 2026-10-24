@@ -1,0 +1,5141 @@
+######## army · NERF WHEN The Exiled Legion
+Chaos Daemons · 1995 / 2000 pts · Strike Force
+
+Blood Legion · Warptide
+
+Dispositions: Purge the Foe (chosen) · Reconnaissance
+
+Overview
+Phase checklist
+Bases & proxies
+38
+Units
+10
+Stratagems
+19
+Ranged weapons
+5
+Melee weapons
+16
+Abilities
+40
+Rules
+Damage calculator
+
+New Recruit, exported 24 Oct 2026 (JSON)
+
+######## checklist · THE EXILED LEGION Phase checklist
+PHASE BY PHASE
+RESET
+Start of the first battle round
+1 to do
+
+TO DO NOW
+
+Prey of the Blood God · Karanak
+Command · Your turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Command · Their turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Movement · Your turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Movement · Their turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Shooting · Your turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Shooting · Their turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Charge · Your turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Charge · Their turn
+3 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Grotesque Regeneration · Beasts of Nurgle
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Fight · Your turn
+5 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Relentless Carnage · Bloodthirster
+Blood Throne · Rendmaster on Blood Throne
+Grotesque Regeneration · Beasts of Nurgle
+
+ACTIVE NOW
+
+Prey of the Blood God · Karanak
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+Fight · Their turn
+5 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Blood Tainted · Blood Legion
+Relentless Carnage · Bloodthirster
+Blood Throne · Rendmaster on Blood Throne
+Grotesque Regeneration · Beasts of Nurgle
+
+ACTIVE NOW
+
+Prey of the Blood God · Karanak
+
+ONCE PER BATTLE
+
+Unholy Vigour · Daemon Prince of Chaos
+End of your opponent’s turn
+1 to do
+
+TO DO NOW
+
+Hunters from the Warp · Karanak
+When unclear
+2 rules
+
+RULES
+
+DAEMONIC MANIFESTATION · option of The Shadow of Chaos
+DAEMONIC TERROR · option of The Shadow of Chaos
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## pregame · THE EXILED LEGION Overview
+YOUR LIST
+WARLORD
+Skarbrand
+ENHANCE­MENTS
+Bane-Forged Weapons (upgrade) 15 pts on Bloodletters
+Gateway Unto Damnation 10 pts on Bloodthirster
+Slaughterthirst (Aura) 25 pts on Daemon Prince of Chaos
+Bane-Forged Weapons (upgrade) 15 pts on Bloodletters
+Brazenmaw 15 pts on Skullmaster
+ATTACHED
+Karanak leads Flesh Hounds
+Skulltaker leads Bloodletters
+Bloodmaster leads Bloodletters
+Skullmaster leads Bloodcrushers
+DETACH­MENTS
+Blood Legion (2 DP), Warptide (1 DP)
+DISPOSI­TIONS
+Purge the Foe (chosen) · Reconnaissance
+POINTS
+1995 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+The Shadow of Chaos
+Any phase
+
+If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:
+
+Your deployment zone is always within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.
+
+DAEMONIC MANIFESTATION
+
+While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).
+
+DAEMONIC TERROR
+
+While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
+
+Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+
+FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
+
+Murdercall
+Blood Legion · Their Movement
+
+In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".
+
+APPLIES TOSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw
+
+Blood Tainted
+Blood Legion · Any phase
+
+At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+APPLIES TOSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw
+
+Shudderblink
+Warptide · Your Move/Shoot/Charge
+
+When a friendly LEGIONES DAEMONICA BATTLELINE unit is selected to make an advance move:
+
+That unit’s ranged attacks have [ASSAULT] until the end of the turn.
+That move does not prevent that unit from being eligible to declare a charge.
+
+APPLIES TOSkulltaker, Bloodmaster
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Skarbrand 330 pts
+Karanak + Flesh Hounds 150 pts
+Skulltaker + Bloodletters 210 pts
+Bloodthirster · Gateway Unto Damnation 330 pts
+Daemon Prince of Chaos · Slaughterthirst (Aura) 190 pts
+Rendmaster on Blood Throne 160 pts each, ×2
+Bloodmaster + Bloodletters 190 pts
+Skullmaster + Bloodcrushers 195 pts
+Beasts of Nurgle 80 pts
+All of them: 1995 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS
+Beasts of Nurgle Scouts 6"
+START OF THE BATTLE AND THE BATTLE ROUNDS
+FIRST ROUND
+Prey of the Blood God · Karanak
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Unholy Vigour · Daemon Prince of Chaos
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+3
+Skarbrand
+Warlord
+10"
+11
+3+
+20
+6+
+5
+4+
+330
+Karanak
++ Flesh Hounds
+150
+Karanak
+12"
+4
+7+
+5
+7+
+3
+4+
+Flesh Hounds×5
+12"
+4
+7+
+2
+7+
+1
+5+
+Skulltaker
++ Bloodletters
+Bane-Forged Weapons
+210
+Skulltaker
+8"
+4
+4+
+5
+6+
+1
+4+
+Bloodletters×10
+8"
+4
+7+
+1
+6+
+2
+5+
+CHARACTERS
+6
+Bloodthirster
+Gateway Unto Damnation
+12"
+11
+3+
+18
+6+
+5
+4+
+330
+Daemon Prince of Chaos
+Slaughterthirst (Aura)
+8"
+10
+2+
+10
+6+
+3
+4+
+190
+Rendmaster on Blood Throne
+8"
+9
+4+
+9
+7+
+3
+4+
+2×160
+Bloodmaster
++ Bloodletters
+Bane-Forged Weapons
+190
+Bloodmaster
+8"
+4
+5+
+4
+6+
+1
+4+
+Bloodletters×10
+8"
+4
+7+
+1
+6+
+2
+5+
+Skullmaster
++ Bloodcrushers
+Brazenmaw
+195
+Skullmaster
+10"
+7
+3+
+6
+6+
+2
+4+
+Bloodcrushers×3
+10"
+7
+3+
+4
+6+
+2
+5+
+BEASTS
+1
+Beasts of Nurgle
+6"
+9
+6+
+7
+7+
+3
+5+
+80
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Skarbrand
+Warlord
+Bellow of endless fury
+12"
+2D6
+–
+8
+-1
+1
+IGNORES COVER, TORRENT
+Karanak
++ Flesh Hounds
+KARANAK
+Scalding Roar
+12"
+D6+3
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+FLESH HOUNDS
+Burning roar
+12"
+D6
+–
+4
+0
+1
+IGNORES COVER, TORRENT
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Bloodthirster
+Gateway Unto Damnation
+Hellfire breath
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Daemon Prince of Chaos
+Slaughterthirst (Aura)
+Infernal cannon
+24"
+3
+2+
+5
+-1
+2
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Skarbrand
+Warlord
+Slaughter and Carnage
+➤strike
+8
+2+
+16
+-4
+6
+➤sweep
+16
+2+
+8
+-2
+2
+Damaged (1-7 wounds left): +2 A (Damaged: 1-7 wounds remaining)
+Own aura: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Karanak
++ Flesh Hounds
+KARANAK
+Soul-rending fangs
+6
+2+
+6
+-2
+2
+ANTI-CHARACTER 3+, PRECISION
+FLESH HOUNDS
+Gore-drenched fangs×5
+3
+3+
+5
+-1
+1
+Melee attacks that target Karanak’s prey: can re-roll the wound roll (Prey of the Blood God)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Skulltaker
++ Bloodletters
+Bane-Forged Weapons
+SKULLTAKER
+The Slayer Sword
+6
+2+
+7
+-2
+3
+DEVASTATING WOUNDS, PRECISION
+BLOODLETTERS
+Hellblade×10
+2
+3+
+6
+-2
+2
+DEVASTATING WOUNDS
+Attacks that target a CHARACTER unit: Skulltaker can re-roll the hit roll and the wound roll (Skulls for Khorne)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Bloodthirster
+Gateway Unto Damnation
+Great axe of Khorne
+➤strike
+7
+2+
+16
+-4
+D6+2
+➤sweep
+14
+2+
+10
+-2
+2
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Own aura: +1 to hit (Daemon Lord of Khorne)
+Daemon Prince of Chaos
+Slaughterthirst (Aura)
+Hellforged weapons
+➤strike
+6
+2+
+10
+-2
+3
+➤sweep
+14
+2+
+8
+0
+1
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Rendmaster on Blood Throne
+×2 units
+Blade of blood
+5
+2+
+6
+-2
+3
++
+Attendant’s hellblades
+4
+3+
+5
+-2
+2
+EXTRA ATTACKS
+Fight phase, attacks that target the enemy unit selected with Blood Throne: improve S, AP and D by 1
+Melee attacks that target a CHARACTER or MONSTER unit: can re-roll the wound roll (Champion Slayer)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Bloodmaster
++ Bloodletters
+Bane-Forged Weapons
+BLOODMASTER
+Blade of blood
+5
+2+
+7
+-2
+3
+BLOODLETTERS
+Hellblade×10
+2
+3+
+6
+-2
+2
+While the Bloodmaster is leading the unit: +1 to wound rolls
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Skullmaster
+Brazenmaw
++ Bloodcrushers
+SKULLMASTER
+Blade of blood
+5
+2+
+6
+-2
+3
++
+Juggernaut’s bladed horn
+4
+4+
+6
+-1
+1
+EXTRA ATTACKS, LANCE
+BLOODCRUSHERS
+Hellblade×3
+2
+3+
+5
+-2
+2
++
+Juggernaut’s bladed horn×3
+4
+4+
+6
+-1
+1
+EXTRA ATTACKS, LANCE
+Ended a Charge move this turn: [DEVASTATING WOUNDS] until the end of the turn (Skullmaster’s Fury)
+Made a charge move this turn: Juggernaut’s bladed horn +1 to wound (Lance)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Beasts of Nurgle
+Putrid appendages
+6
+4+
+6
+-1
+2
+DEVASTATING WOUNDS
+
+######## abilities · MELEE Abilities
+Skarbrand
+Warlord
+Rage Embodied
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.
+
+Murderlust
+
+This unit is eligible to declare a charge in a turn in which it Advanced.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
+
+Greater Daemon of Khorne
+
+Aura
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Karanak
++ Flesh Hounds
+KARANAK
+Pack Leader
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit.
+
+Prey of the Blood God
+Start of the first battle round
+
+Start of the first battle round
+
+At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey.
+
+Brass Collar of Bloody Vengeance
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.
+
+FLESH HOUNDS
+Hunters from the Warp
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+Collar of Khorne
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+Skulltaker
++ Bloodletters
+Bane-Forged Weapons
+SKULLTAKER
+Lord of Decapitations
+Fight
+
+Fight · Either turn
+
+While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
+
+Skulls for Khorne
+
+Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP.
+
+BLOODLETTERS
+Bane of Cowards
+Their Movement
+
+Movement · Their turn
+
+Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
+
+Bane-Forged Weapons
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Daemonic Icon
+Already in Ld
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Instrument of Chaos
+Charge
+
+Charge · Either turn
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+Bloodthirster
+Gateway Unto Damnation
+Daemon Lord of Khorne
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.
+
+Relentless Carnage
+Fight
+
+Fight · Either turn
+
+At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Greater Daemon of Khorne
+
+Aura
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Gateway Unto Damnation
+Enhancement
+
+Enhancement
+
+LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.
+
+Daemon Prince of Chaos
+Slaughterthirst (Aura)
+Prince of Darkness
+
+Aura
+
+While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.
+
+Unholy Vigour
+Once per battle
+Any phase
+
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.
+
+Daemonic Lord
+
+While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
+
+Slaughterthirst (Aura)
+Enhancement
+Fight
+
+Enhancement · Aura · Fight · Either turn
+
+LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
+
+Daemonic Allegiance
+Already in S
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Rendmaster on Blood Throne
+×2 units
+Blood Throne
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, select one enemy unit within 18" of and visible to this model. Until the end of the phase, each time a friendly KHORNE LEGIONES DAEMONICA unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1.
+
+Champion Slayer
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a CHARACTER or MONSTER unit, you can re-roll the Wound roll. Each time this model destroys an enemy CHARACTER or MONSTER unit, this model regains up to D6 lost wounds.
+
+Bloodmaster
++ Bloodletters
+Bane-Forged Weapons
+BLOODMASTER
+Bloodmaster
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll.
+
+A Gory Path
+
+Each time this model’s unit Consolidates, it can move up to 6" instead of up to 3".
+
+BLOODLETTERS
+Bane of Cowards
+Their Movement
+
+Movement · Their turn
+
+Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
+
+Bane-Forged Weapons
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Daemonic Icon
+Already in Ld
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Instrument of Chaos
+Charge
+
+Charge · Either turn
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+Skullmaster
+Brazenmaw
++ Bloodcrushers
+SKULLMASTER
+Skullmaster’s Fury
+Charge/Fight
+
+Charge / Fight · Either turn
+
+While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
+
+Devastating Charge
+Charge
+
+Charge · Either turn
+
+Each time this model’s unit ends a Charge move, each enemy unit within Engagement Range of that unit must take a Battle-shock test.
+
+Brazenmaw
+Enhancement
+Charge
+
+Enhancement · Charge · Either turn
+
+LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit.
+
+BLOODCRUSHERS
+Brass Stampede
+Charge
+
+Charge · Either turn
+
+Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds.
+
+Daemonic Icon
+Already in Ld
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Instrument of Chaos
+Charge
+
+Charge · Either turn
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+Beasts of Nurgle
+Grotesque Regeneration
+Any phase
+
+Any phase · Either turn
+
+At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.
+
+######## rules · ABILITIES Rules
+Chaos Daemons · Purge the Foe
+ARMY RULES
+The Shadow of Chaos
+Any phase
+
+If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:
+
+Your deployment zone is always within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.
+
+DAEMONIC MANIFESTATION
+
+While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).
+
+DAEMONIC TERROR
+
+While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
+
+Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+
+FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
+
+DETACHMENTS
+BLOOD LEGION
+Murdercall
+Detachment rule · Their Movement
+
+In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".
+
+APPLIES TOSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw
+
+Blood Tainted
+Detachment rule · Any phase
+
+At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+APPLIES TOSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw
+
+Slaughterthirst (Aura)
+Enhancement · 25 pts · on Daemon Prince of Chaos
+
+LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
+
+ONDaemon Prince of Chaos
+
+Brazenmaw
+Enhancement · 15 pts · on Skullmaster + Bloodcrushers
+
+LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit.
+
+ONSkullmaster + Bloodcrushers
+
+Gateway Unto Damnation
+Enhancement · 10 pts · on Bloodthirster
+
+LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.
+
+ONBloodthirster
+
+Other enhancements
+1 not in this list
+Fury’s Cage 20 pts
+
+LEGIONES DAEMONICA KHORNE MONSTER model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+STRATAGEMSGore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+WARPTIDE
+Shudderblink
+Detachment rule · Your Move/Shoot/Charge
+
+When a friendly LEGIONES DAEMONICA BATTLELINE unit is selected to make an advance move:
+
+That unit’s ranged attacks have [ASSAULT] until the end of the turn.
+That move does not prevent that unit from being eligible to declare a charge.
+
+APPLIES TOSkulltaker, Bloodmaster
+
+Bane-Forged Weapons
+Upgrade · 15 pts · on Bloodletters (Skulltaker + Bloodletters), Bloodletters (Bloodmaster + Bloodletters)
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+ONBloodletters (Skulltaker + Bloodletters), Bloodletters (Bloodmaster + Bloodletters)
+
+Other enhancements
+1 not in this list
+Soul-Hungry Slaughterers 10 pts
+
+LEGIONES DAEMONICA BATTLELINE unit only. When you target this unit with the Heroic Intervention/Fire Overwatch stratagem, that use is -1 CP.
+
+STRATAGEMSDaemonic Infestation, Soulseeing, Incorporeal Entities
+
+UNIT RULES
+Deadly Demise
+Skarbrand D6
+Bloodthirster · Gateway Unto Damnation D6
+Daemon Prince of Chaos · Slaughterthirst (Aura) D3
+Beasts of Nurgle 1
+Deep Strike
+Skarbrand
+Karanak + Flesh Hounds
+Skulltaker + Bloodletters
+Bloodthirster · Gateway Unto Damnation
+Daemon Prince of Chaos · Slaughterthirst (Aura)
+Rendmaster on Blood Throne
+Bloodmaster + Bloodletters
+Skullmaster + Bloodcrushers
+Beasts of Nurgle
+Feel No Pain
+Karanak + Flesh Hounds
+Brass Collar of Bloody Vengeance: The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.
+Collar of Khorne: The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+Leader
+Karanak leads Flesh Hounds
+Skulltaker leads Bloodletters
+Bloodmaster leads Bloodletters
+Skullmaster leads Bloodcrushers
+Lone Operative
+Daemon Prince of Chaos · Slaughterthirst (Aura)
+Daemonic Lord: While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
+Psychic
+Karanak + Flesh Hounds
+Brass Collar of Bloody Vengeance: The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.
+Collar of Khorne: The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+Scouts
+Beasts of Nurgle 6"
+Stealth
+Daemon Prince of Chaos · Slaughterthirst (Aura)
+Prince of Darkness: While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+20× 32mm
+2× 40mm
+5× 60×35.5mm Oval
+2× 60mm
+1× 75×42mm Oval
+4× 90×52.5mm Oval
+1× 100mm
+3× 120×92mm Oval
+
+WHAT TO WRITE ON EACH BASE
+
+Skarbrand
+1× 100mm
+Skarbrand · Warlord
+Karanak
++ Flesh Hounds
+1× 75×42mm Oval
+Karanak
+1× 60×35.5mm Oval
+Gore Hound · Burning roar · Collar of Khorne
+4× 60×35.5mm Oval
+standard Gore-drenched fangs
+Skulltaker
++ Bloodletters
+1× 40mm
+Skulltaker
+1× 32mm
+Bloodreaper
+9× 32mm
+standard Hellblade
+1× Daemonic Icon: New Recruit lists it for the Bloodletters, not which model carries it
+1× Instrument of Chaos: New Recruit lists it for the Bloodletters, not which model carries it
+Bloodthirster · Gateway Unto Damnation
+1× 120×92mm Oval
+Bloodthirster · Gateway Unto Damnation
+Daemon Prince of Chaos · Slaughterthirst (Aura)
+1× 60mm
+Daemon Prince of Chaos · Slaughterthirst (Aura)
+Rendmaster on Blood Throne
+2 units: mark them apart (1, 2)
+1× 120×92mm Oval
+Rendmaster on Blood Throne
+Bloodmaster
++ Bloodletters
+1× 40mm
+Bloodmaster
+1× 32mm
+Bloodreaper
+9× 32mm
+standard Hellblade
+1× Daemonic Icon: New Recruit lists it for the Bloodletters, not which model carries it
+1× Instrument of Chaos: New Recruit lists it for the Bloodletters, not which model carries it
+Skullmaster · Brazenmaw
++ Bloodcrushers
+1× 90×52.5mm Oval
+Skullmaster · Brazenmaw
+1× 90×52.5mm Oval
+Bloodhunter
+2× 90×52.5mm Oval
+standard Hellblade, Juggernaut’s bladed horn
+1× Daemonic Icon: New Recruit lists it for the Bloodcrushers, not which model carries it
+1× Instrument of Chaos: New Recruit lists it for the Bloodcrushers, not which model carries it
+Beasts of Nurgle
+1× 60mm
+Beast of Nurgle
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Skarbrand
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+1.2
+of 5 destroyed
+2.9 wounds lost · wiped in <1% of games
+Nothing ticked: the datasheets as printed
+1 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Skarbrand
+Bellow of endless fury
+RNG
+12"
+A
+2D6
+BS
+–
+S
+8
+AP
+-1
+D
+1
+IGNORES COVER, TORRENT
+−1.2
+MODELS IF UNTICKED
+SITUATION AND RULES
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (1)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Skarbrand
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.9
+of 5 destroyed
+9.9 wounds lost · wiped in 95% of games
+Slaughter and Carnage: sweep
+Charged this turn
+×
+Rage Embodied
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Skarbrand
+Slaughter and Carnage
+A
+16
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+−95% wiped
+−4.9
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+4.9
+A
+8
+WS
+2+
+S
+16
+AP
+-4
+D
+6
+sweep
+4.9
+BEST
+A
+16
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+SITUATION AND RULES
+Rage Embodied
+Own aura: +1 A
+always counted · you can leave it out
+if left out: ≈0 models · −3% wiped
+Damaged (1-7 wounds left)
++2 A
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Daemon Lord of Khorne (Bloodthirster)
+Within 6" of the Bloodthirster: +1 to hit
+if it applies
+no change: already hits on 2+
+0
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Skarbrand
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in 98% of games
+
+Shoot 1.19 · Fight 3.79 · the charge is taken to succeed
+
+Slaughter and Carnage: sweep
+Charged this turn
+×
+Rage Embodied
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Skarbrand
+Bellow of endless fury
+RNG
+12"
+A
+2D6
+BS
+–
+S
+8
+AP
+-1
+D
+1
+IGNORES COVER, TORRENT
+−3% wiped
+≈0
+MODELS IF UNTICKED
++1 MORE ▾
+SITUATION AND RULES
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (1)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Skarbrand
+
+Against what the shooting left of the target, in each game.
+
+Slaughter and Carnage
+A
+16
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+−98% wiped
+−3.8
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+5.0
+A
+8
+WS
+2+
+S
+16
+AP
+-4
+D
+6
+sweep
+5.0
+A
+16
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+SITUATION AND RULES
+Damaged (1-7 wounds left)
++2 A
+if it applies
++1% wiped
+≈0
+MODELS
+Rage Embodied
+Own aura: +1 A
+always counted · you can leave it out
+if left out: ≈0 models
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Daemon Lord of Khorne (Bloodthirster)
+Within 6" of the Bloodthirster: +1 to hit
+if it applies
+no change: already hits on 2+
+0
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+BLOOD LEGION
+6
+1
+CP
+Gore‑hungry Onslaught
+Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA KHORNE unit can move through terrain features.
+Your Move/Charge All but Beasts of Nurgle
+2
+CP
+Fools’ Flight
+Your opponent’s Movement phase, an enemy unit ends a fall-back move: your unengaged LEGIONES DAEMONICA KHORNE unit within 6" of it declares a charge, selecting only enemy units that fell back this phase and are within the maximum distance.
+Their Movement All but Beasts of Nurgle
+1
+CP
+Skulls Beget Blood
+Your Shooting phase, your unengaged LEGIONES DAEMONICA KHORNE INFANTRY or MOUNTED unit that did not Fall Back this turn: select an enemy unit within 8" of and visible to it, not within Engagement Range of your army; roll six D6, 1 mortal wound for each 4+.
+Your Shooting Skulltaker + Bloodletters, Rendmaster on Blood Throne ×2, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers
+1
+CP
+Sheathed in Brass
+Your opponent’s Shooting phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, its models have a Save characteristic of 3+.
+Their Shooting All but Beasts of Nurgle
+1
+CP
+Blood Begets Skulls
+Your Charge phase, your LEGIONES DAEMONICA KHORNE unit not yet selected to charge: until the end of the phase it can declare a charge in a turn in which it Advanced.
+Your Charge All but Beasts of Nurgle
+1
+CP
+Wrath Undeniable
+Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, each time a model in it is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed.
+Fight All but Beasts of Nurgle
+WARPTIDE
+3
+1
+CP
+Daemonic Infestation
+Your Command phase: your LEGIONES DAEMONICA BATTLELINE unit (not PINK HORRORS) heals 3 wounds.
+Your Command Skulltaker + Bloodletters, Bloodmaster + Bloodletters
+1
+CP
+Soulseeing
+Start of your Shooting phase, your LEGIONES DAEMONICA BATTLELINE unit: one visible enemy unit within 12" of it has +6" detection range.
+Start of your Shooting Skulltaker + Bloodletters, Bloodmaster + Bloodletters
+1
+CP
+Incorporeal Entities
+Your opponent’s Shooting phase, an enemy unit targets your LEGIONES DAEMONICA BATTLELINE unit: ranged attacks that target it with a S greater than its T have -1 to wound rolls.
+Their Shooting Skulltaker + Bloodletters, Bloodmaster + Bloodletters
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement Skarbrand, Karanak + Flesh Hounds, Bloodthirster, Daemon Prince of Chaos
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Skarbrand, Bloodthirster, Daemon Prince of Chaos
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight All but Beasts of Nurgle
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+BLOOD LEGION
+6
+1
+CP
+Gore‑hungry Onslaught
+Your Move/Charge All but Beasts of Nurgle
+WHEN
+
+Your Movement phase or your Charge phase.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+2
+CP
+Fools’ Flight
+Their Movement All but Beasts of Nurgle
+WHEN
+
+Your opponent’s Movement phase, when an enemy unit ends a fall-back move.
+
+TARGETOne friendly unengaged LEGIONES DAEMONICA KHORNE unit that is within 6" of that enemy unit.
+
+EFFECT
+
+Declare a charge with your unit. When selecting charge targets, you can only select enemy units that made a fall-back move this phase and are within the maximum distance.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+1
+CP
+Skulls Beget Blood
+Your Shooting Skulltaker + Bloodletters, Rendmaster on Blood Throne ×2, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers
+WHEN
+
+Your Shooting phase.
+
+TARGETOne LEGIONES DAEMONICA KHORNE INFANTRY or LEGIONES DAEMONICA KHORNE MOUNTED unit from your army (excluding units that Fell Back this turn) that is not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Select one enemy unit that is not within Engagement Range of one or more units from your army and is within 8" of and visible to your unit. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+USED BYSkulltaker + Bloodletters, Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+1
+CP
+Sheathed in Brass
+Their Shooting All but Beasts of Nurgle
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your unit have a Save characteristic of 3+.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+1
+CP
+Blood Begets Skulls
+Your Charge All but Beasts of Nurgle
+WHEN
+
+Your Charge phase.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army that has not been selected to charge this phase.
+
+EFFECT
+
+Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+1
+CP
+Wrath Undeniable
+Fight All but Beasts of Nurgle
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+WARPTIDE
+3
+1
+CP
+Daemonic Infestation
+Your Command Skulltaker + Bloodletters, Bloodmaster + Bloodletters
+WHEN
+
+Your Command phase.
+
+TARGETOne friendly LEGIONES DAEMONICA BATTLELINE unit (excluding PINK HORRORS units).
+
+EFFECT
+
+Your unit heals 3 wounds.
+
+USED BYSkulltaker + Bloodletters, Bloodmaster + Bloodletters
+
+1
+CP
+Soulseeing
+Start of your Shooting Skulltaker + Bloodletters, Bloodmaster + Bloodletters
+WHEN
+
+Start of your Shooting phase.
+
+TARGETOne friendly LEGIONES DAEMONICA BATTLELINE unit.
+
+EFFECT
+
+Select one visible enemy unit within 12" of your unit. That enemy unit has +6" detection range.
+
+USED BYSkulltaker + Bloodletters, Bloodmaster + Bloodletters
+
+1
+CP
+Incorporeal Entities
+Their Shooting Skulltaker + Bloodletters, Bloodmaster + Bloodletters
+WHEN
+
+Your opponent’s Shooting phase, when an enemy unit targets a friendly LEGIONES DAEMONICA BATTLELINE unit.
+
+TARGETThat LEGIONES DAEMONICA BATTLELINE unit.
+
+EFFECT
+
+Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.
+
+USED BYSkulltaker + Bloodletters, Bloodmaster + Bloodletters
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Skarbrand, Karanak + Flesh Hounds, Bloodthirster, Daemon Prince of Chaos
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura)
+
+1
+CP
+Crushing Impact
+Your Charge Skarbrand, Bloodthirster, Daemon Prince of Chaos
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYSkarbrand, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura)
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight All but Beasts of Nurgle
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit skarbrand · STRATAGEMS The Exiled Legion
+SKARBRAND
+330 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Skarbrand
+Bellow of endless fury, Slaughter and Carnage
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Skarbrand
+100mm
+10"
+11
+3+
+20
+6+
+5
+4+
+WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+DAMAGED 1-7 W
++2 A
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Bellow of endless fury
+12"
+2D6
+–
+8
+-1
+1
+IGNORES COVER, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Slaughter and Carnage
+➤strike
+8
+2+
+16
+-4
+6
+➤sweep
+16
+2+
+8
+-2
+2
+Own aura: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Rage Embodied
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.
+
+Murderlust
+
+This unit is eligible to declare a charge in a turn in which it Advanced.
+
+Greater Daemon of Khorne
+
+Aura
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Rules
+Deadly Demise D6, Deep Strike, The Shadow of Chaos, Murdercall, Blood Tainted
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Warptide.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: LEGIONES DAEMONICA
+KHORNE
+MONSTER
+SKARBRAND
+WARLORD
+Ask about this unit
+Karanak ›
+
+######## unit karanak-flesh-hounds · SKARBRAND The Exiled Legion
+KARANAK + FLESH HOUNDS
+150 PTS
+Epic Hero · 70 + Flesh Hounds 80
+Models
+Options
+1× Karanak (Brass Collar of Bloody Vengeance)
+Scalding Roar, Soul-rending fangs
+Leading Flesh Hounds
+1× Gore Hound (Collar of Khorne)
+Burning roar, Gore-drenched fangs
+4× Flesh Hound (Collar of Khorne)
+Gore-drenched fangs
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Karanak
+75×42mm Oval
+12"
+4
+7+
+5
+7+
+3
+4+
+Flesh Hounds×5
+60×35.5mm Oval
+12"
+4
+7+
+2
+7+
+1
+5+
+WHEN TARGETEDKaranak · Brass Collar of Bloody Vengeance: Feel No Pain 3+ against Psychic Attacks and mortal wounds · Flesh Hounds · Collar of Khorne: Feel No Pain 3+ against Psychic Attacks · 1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+ALL ATTACKS · WHOLE UNIT
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+KARANAK
+Scalding Roar
+12"
+D6+3
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+FLESH HOUNDS
+Burning roar
+12"
+D6
+–
+4
+0
+1
+IGNORES COVER, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+KARANAK
+Soul-rending fangs
+6
+2+
+6
+-2
+2
+ANTI-CHARACTER 3+, PRECISION
+FLESH HOUNDS
+Gore-drenched fangs×5
+3
+3+
+5
+-1
+1
+WHOLE UNIT
+Melee attacks that target Karanak’s prey: can re-roll the wound roll (Prey of the Blood God)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Pack Leader
+- Karanak
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit.
+
+Prey of the Blood God
+- Karanak
+Start of the first battle round
+
+Start of the first battle round
+
+At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey.
+
+Brass Collar of Bloody Vengeance
+- Karanak
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.
+
+Hunters from the Warp
+- Flesh Hounds
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+Collar of Khorne
+- Flesh Hounds
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+Rules
+Deep Strike, Leader, The Shadow of Chaos, Murdercall, Blood Tainted
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Warptide.
+
+Keywords
+BEAST
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: LEGIONES DAEMONICA
+KARANAK
+KHORNE
+FLESH HOUNDS*
+*from the led Flesh Hounds
+Ask about this unit
+‹ Skarbrand
+Skulltaker ›
+
+######## unit skulltaker-bloodletters · KARANAK The Exiled Legion
+SKULLTAKER + BLOODLETTERS
+210 PTS
+Epic Hero · 85 + Bloodletters 125
+Bane-Forged Weapons
+Models
+Options
+1× Skulltaker
+The Slayer Sword
+Leading Bloodletters
+1× Bloodreaper
+Hellblade
+9× Bloodletter
+Hellblade
+1× Daemonic Icon
+New Recruit lists it for the Bloodletters, not which model carries it
+1× Instrument of Chaos
+New Recruit lists it for the Bloodletters, not which model carries it
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Skulltaker
+40mm
+8"
+4
+4+
+5
+6+
+1
+4+
+Bloodletters×10
+32mm
+8"
+4
+7+
+1
+6+
+2
+5+
+WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · 1CP Incorporeal Entities: their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+SKULLTAKER
+The Slayer Sword
+6
+2+
+7
+-2
+3
+DEVASTATING WOUNDS, PRECISION
+BLOODLETTERS
+Hellblade×10
+2
+3+
+6
+-2
+2
+DEVASTATING WOUNDS
+WHOLE UNIT
+Attacks that target a CHARACTER unit: Skulltaker can re-roll the hit roll and the wound roll (Skulls for Khorne)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+ABILITIES
+Lord of Decapitations
+- Skulltaker
+Fight
+
+Fight · Either turn
+
+While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
+
+Skulls for Khorne
+- Skulltaker
+
+Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP.
+
+Bane of Cowards
+- Bloodletters
+Their Movement
+
+Movement · Their turn
+
+Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
+
+Bane-Forged Weapons
+- Bloodletters
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Daemonic Icon
+- Bloodletters
+Already in Ld
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Instrument of Chaos
+- Bloodletters
+Charge
+
+Charge · Either turn
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+Rules
+Deep Strike, The Shadow of Chaos, Leader, Murdercall, Blood Tainted, Shudderblink
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+WARPTIDE Daemonic Infestation, Soulseeing, Incorporeal Entities
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: LEGIONES DAEMONICA
+INFANTRY
+KHORNE
+SKULLTAKER
+BATTLELINE*
+BLOODLETTERS*
+*from the led Bloodletters
+Ask about this unit
+‹ Karanak
+Bloodthirster · Gateway Unto Damnation ›
+
+######## unit bloodthirster · SKULLTAKER The Exiled Legion
+BLOODTHIRSTER
+330 PTS
+Character
+Gateway Unto Damnation
+Models
+Options
+1× Bloodthirster
+Hellfire breath, Great axe of Khorne
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Bloodthirster
+120×92mm Oval
+12"
+11
+3+
+18
+6+
+5
+4+
+WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Hellfire breath
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Great axe of Khorne
+➤strike
+7
+2+
+16
+-4
+D6+2
+➤sweep
+14
+2+
+10
+-2
+2
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Own aura: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Daemon Lord of Khorne
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.
+
+Relentless Carnage
+Fight
+
+Fight · Either turn
+
+At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Greater Daemon of Khorne
+
+Aura
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Gateway Unto Damnation
+Enhancement
+
+Enhancement
+
+LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.
+
+Rules
+Deadly Demise D6, Deep Strike, The Shadow of Chaos, Murdercall, Blood Tainted
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Warptide.
+
+Keywords
+BLOODTHIRSTER
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+FLY
+KHORNE
+MONSTER
+Ask about this unit
+‹ Skulltaker
+Daemon Prince of Chaos · Slaughterthirst (Aura) ›
+
+######## unit daemon-prince-of-chaos · BLOODTHIRSTER The Exiled Legion
+DAEMON PRINCE OF CHAOS
+190 PTS
+Character
+Slaughterthirst (Aura)
+Models
+Options
+1× Daemon Prince of Chaos (Khorne)
+Hellforged weapons, Infernal cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Daemon Prince of Chaos
+60mm
+8"
+10
+2+
+10
+6+
+3
+4+
+WHEN TARGETEDUnholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase · Lone Operative while within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit · 1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Infernal cannon
+24"
+3
+2+
+5
+-1
+2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hellforged weapons
+➤strike
+6
+2+
+10
+-2
+3
+➤sweep
+14
+2+
+8
+0
+1
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+ABILITIES
+Prince of Darkness
+
+Aura
+
+While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.
+
+Unholy Vigour
+Once per battle
+Any phase
+
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.
+
+Daemonic Lord
+
+While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
+
+Slaughterthirst (Aura)
+Enhancement
+Fight
+
+Enhancement · Aura · Fight · Either turn
+
+LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
+
+Daemonic Allegiance
+Already in S
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Rules
+Deep Strike, The Shadow of Chaos, Deadly Demise D3, Murdercall, Blood Tainted
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Warptide.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+DAEMON PRINCE OF CHAOS
+FACTION: LEGIONES DAEMONICA
+KHORNE
+MONSTER
+Ask about this unit
+‹ Bloodthirster · Gateway Unto Damnation
+Rendmaster on Blood Throne ›
+
+######## unit rendmaster-on-blood-throne · DAEMON PRINCE OF CHAOS The Exiled Legion
+RENDMASTER ON BLOOD THRONE
+160 PTS EACH
+Character · ×2 in list
+Models
+Options
+1× Rendmaster on Blood Throne
+Attendant’s hellblades, Blade of blood
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Rendmaster on Blood Throne
+120×92mm Oval
+8"
+9
+4+
+9
+7+
+3
+4+
+WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Blade of blood
+5
+2+
+6
+-2
+3
++
+Attendant’s hellblades
+4
+3+
+5
+-2
+2
+EXTRA ATTACKS
+Fight phase, attacks that target the enemy unit selected with Blood Throne: improve S, AP and D by 1
+Melee attacks that target a CHARACTER or MONSTER unit: can re-roll the wound roll (Champion Slayer)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+ABILITIES
+Blood Throne
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, select one enemy unit within 18" of and visible to this model. Until the end of the phase, each time a friendly KHORNE LEGIONES DAEMONICA unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1.
+
+Champion Slayer
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a CHARACTER or MONSTER unit, you can re-roll the Wound roll. Each time this model destroys an enemy CHARACTER or MONSTER unit, this model regains up to D6 lost wounds.
+
+Rules
+Deep Strike, The Shadow of Chaos, Murdercall, Blood Tainted
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Warptide.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+KHORNE
+MOUNTED
+RENDMASTER ON BLOOD THRONE
+Ask about this unit
+‹ Daemon Prince of Chaos · Slaughterthirst (Aura)
+Bloodmaster ›
+
+######## unit bloodmaster-bloodletters · RENDMASTER ON BLOOD THRONE The Exiled Legion
+BLOODMASTER + BLOODLETTERS
+190 PTS
+Character · 65 + Bloodletters 125
+Bane-Forged Weapons
+Models
+Options
+1× Bloodmaster
+Blade of blood
+Leading Bloodletters
+1× Bloodreaper
+Hellblade
+9× Bloodletter
+Hellblade
+1× Daemonic Icon
+New Recruit lists it for the Bloodletters, not which model carries it
+1× Instrument of Chaos
+New Recruit lists it for the Bloodletters, not which model carries it
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Bloodmaster
+40mm
+8"
+4
+5+
+4
+6+
+1
+4+
+Bloodletters×10
+32mm
+8"
+4
+7+
+1
+6+
+2
+5+
+WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · 1CP Incorporeal Entities: their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+BLOODMASTER
+Blade of blood
+5
+2+
+7
+-2
+3
+BLOODLETTERS
+Hellblade×10
+2
+3+
+6
+-2
+2
+WHOLE UNIT
+While the Bloodmaster is leading the unit: +1 to wound rolls
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+ABILITIES
+Bloodmaster
+- Bloodmaster
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll.
+
+A Gory Path
+- Bloodmaster
+
+Each time this model’s unit Consolidates, it can move up to 6" instead of up to 3".
+
+Bane of Cowards
+- Bloodletters
+Their Movement
+
+Movement · Their turn
+
+Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
+
+Bane-Forged Weapons
+- Bloodletters
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Daemonic Icon
+- Bloodletters
+Already in Ld
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Instrument of Chaos
+- Bloodletters
+Charge
+
+Charge · Either turn
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+Rules
+Deep Strike, The Shadow of Chaos, Leader, Murdercall, Blood Tainted, Shudderblink
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+WARPTIDE Daemonic Infestation, Soulseeing, Incorporeal Entities
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BLOODMASTER
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+INFANTRY
+KHORNE
+BATTLELINE*
+BLOODLETTERS*
+*from the led Bloodletters
+Ask about this unit
+‹ Rendmaster on Blood Throne
+Skullmaster · Brazenmaw ›
+
+######## unit skullmaster-bloodcrushers · BLOODMASTER The Exiled Legion
+SKULLMASTER + BLOODCRUSHERS
+195 PTS
+Character · 100 + Bloodcrushers 95
+Brazenmaw
+Models
+Options
+1× Skullmaster
+Blade of blood, Juggernaut’s bladed horn
+Leading Bloodcrushers
+1× Bloodhunter
+Hellblade, Juggernaut’s bladed horn
+2× Bloodcrusher
+Hellblade, Juggernaut’s bladed horn
+1× Daemonic Icon
+New Recruit lists it for the Bloodcrushers, not which model carries it
+1× Instrument of Chaos
+New Recruit lists it for the Bloodcrushers, not which model carries it
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Skullmaster
+90×52.5mm Oval
+10"
+7
+3+
+6
+6+
+2
+4+
+Bloodcrushers×3
+90×52.5mm Oval
+10"
+7
+3+
+4
+6+
+2
+5+
+WHEN TARGETED1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed · 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase) · Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+SKULLMASTER
+Blade of blood
+5
+2+
+6
+-2
+3
++
+Juggernaut’s bladed horn
+4
+4+
+6
+-1
+1
+EXTRA ATTACKS, LANCE
+BLOODCRUSHERS
+Hellblade×3
+2
+3+
+5
+-2
+2
++
+Juggernaut’s bladed horn×3
+4
+4+
+6
+-1
+1
+EXTRA ATTACKS, LANCE
+WHOLE UNIT
+Made a charge move this turn: Juggernaut’s bladed horn +1 to wound (Lance)
+Within 6" of Skarbrand: +1 A (Rage Embodied)
+Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Ended a Charge move this turn: [DEVASTATING WOUNDS] until the end of the turn (Skullmaster’s Fury)
+ABILITIES
+Skullmaster’s Fury
+- Skullmaster
+Charge/Fight
+
+Charge / Fight · Either turn
+
+While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
+
+Devastating Charge
+- Skullmaster
+Charge
+
+Charge · Either turn
+
+Each time this model’s unit ends a Charge move, each enemy unit within Engagement Range of that unit must take a Battle-shock test.
+
+Brazenmaw
+- Skullmaster
+Enhancement
+Charge
+
+Enhancement · Charge · Either turn
+
+LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit.
+
+Brass Stampede
+- Bloodcrushers
+Charge
+
+Charge · Either turn
+
+Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds.
+
+Daemonic Icon
+- Bloodcrushers
+Already in Ld
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Instrument of Chaos
+- Bloodcrushers
+Charge
+
+Charge · Either turn
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+Rules
+Deep Strike, The Shadow of Chaos, Leader, Murdercall, Blood Tainted
+Stratagems
+
+BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Warptide.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+KHORNE
+MOUNTED
+SKULLMASTER
+BLOODCRUSHERS*
+*from the led Bloodcrushers
+Ask about this unit
+‹ Bloodmaster
+Beasts of Nurgle ›
+
+######## unit beasts-of-nurgle · SKULLMASTER The Exiled Legion
+BEASTS OF NURGLE
+80 PTS
+Beast
+Models
+Options
+1× Beast of Nurgle
+Putrid appendages
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Beast of Nurgle
+60mm
+6"
+9
+6+
+7
+7+
+3
+5+
+WHEN TARGETEDWithin 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Putrid appendages
+6
+4+
+6
+-1
+2
+DEVASTATING WOUNDS
+ABILITIES
+Grotesque Regeneration
+Any phase
+
+Any phase · Either turn
+
+At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.
+
+Rules
+Deep Strike, The Shadow of Chaos, Deadly Demise 1, Scouts 6"
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Blood Legion or Warptide.
+
+Keywords
+BEAST
+BEASTS OF NURGLE
+CHAOS
+DAEMON
+FACTION: LEGIONES DAEMONICA
+NURGLE
+Ask about this unit
+‹ Skullmaster · Brazenmaw
+
+######## popup ability:the-exiled-legion|Blood Throne|At the start of the Fight phase, select one enemy unit within 18" of and visible to this model. Until the end of the phase, each time a friendly **KHORNE LEGIONES DAEMONICA** unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1. · BEASTS OF NURGLE The Exiled Legion
+ABILITY · FIGHT · EITHER TURN
+
+Blood Throne
+
+At the start of the Fight phase, select one enemy unit within 18" of and visible to this model. Until the end of the phase, each time a friendly KHORNE LEGIONES DAEMONICA unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1.
+
+UNITRendmaster on Blood Throne
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Bloodmaster|While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Wound roll**. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Bloodmaster
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll.
+
+UNITBloodmaster + Bloodletters
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Brass Collar of Bloody Vengeance|The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks** and **mortal wounds**. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Brass Collar of Bloody Vengeance
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.
+
+UNITKaranak + Flesh Hounds
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Champion Slayer|Each time this model makes a melee attack that targets a **CHARACTER** or **MONSTER** unit, you can re-roll the **Wound roll**. Each time this model destroys an enemy **CHARACTER** or **MONSTER** unit, this model regains up to D6 lost wounds. · THE EXILED LEGION The Exiled Legion
+ABILITY · FIGHT · EITHER TURN
+
+Champion Slayer
+
+Each time this model makes a melee attack that targets a CHARACTER or MONSTER unit, you can re-roll the Wound roll. Each time this model destroys an enemy CHARACTER or MONSTER unit, this model regains up to D6 lost wounds.
+
+UNITRendmaster on Blood Throne
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Collar of Khorne|The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks**. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Collar of Khorne
+
+The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+
+UNITKaranak + Flesh Hounds
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Daemon Lord of Khorne|While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**. · THE EXILED LEGION The Exiled Legion
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Daemon Lord of Khorne
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.
+
+UNITBloodthirster · Gateway Unto Damnation
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Daemonic Lord|While this model is within 3" of one or more friendly **LEGIONES DAEMONICA INFANTRY** units, this model has the **Lone Operative** ability. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Daemonic Lord
+
+While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
+
+UNITDaemon Prince of Chaos · Slaughterthirst (Aura)
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITBloodthirster · Gateway Unto Damnation
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Damaged: 1-7 wounds remaining|While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
+
+UNITSkarbrand
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Grotesque Regeneration|At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds. · THE EXILED LEGION The Exiled Legion
+ABILITY · ANY PHASE · EITHER TURN
+
+Grotesque Regeneration
+
+At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.
+
+UNITBeasts of Nurgle
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Hunters from the Warp|At the end of your opponent’s turn, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**. · THE EXILED LEGION The Exiled Legion
+ABILITY · END OF YOUR OPPONENT’S TURN
+
+Hunters from the Warp
+
+At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+UNITKaranak + Flesh Hounds
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Prey of the Blood God|At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the **Wound roll**. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey. · THE EXILED LEGION The Exiled Legion
+ABILITY · START OF THE FIRST BATTLE ROUND
+
+Prey of the Blood God
+
+At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey.
+
+UNITKaranak + Flesh Hounds
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Prince of Darkness|While a friendly **LEGIONES DAEMONICA** unit is within 6" of this model, models in that unit have the **Stealth** ability. · THE EXILED LEGION The Exiled Legion
+ABILITY · AURA
+
+Prince of Darkness
+
+While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.
+
+UNITDaemon Prince of Chaos · Slaughterthirst (Aura)
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Rage Embodied|While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. · THE EXILED LEGION The Exiled Legion
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Rage Embodied
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.
+
+UNITSkarbrand
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Relentless Carnage|At the end of the Fight phase, you can select one enemy unit within **Engagement Range** of this model and roll eight D6: for each 4+, that enemy unit suffers 1 **mortal wound**. · THE EXILED LEGION The Exiled Legion
+ABILITY · FIGHT · EITHER TURN
+
+Relentless Carnage
+
+At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+UNITBloodthirster · Gateway Unto Damnation
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Skullmaster’s Fury|While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability. · THE EXILED LEGION The Exiled Legion
+ABILITY · CHARGE / FIGHT · EITHER TURN
+
+Skullmaster’s Fury
+
+While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
+
+UNITSkullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Skulls for Khorne|Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP. · THE EXILED LEGION The Exiled Legion
+ABILITY
+
+Skulls for Khorne
+
+Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP.
+
+UNITSkulltaker + Bloodletters
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Unholy Vigour|Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save. · THE EXILED LEGION The Exiled Legion
+ABILITY · ONCE PER BATTLE · ANY PHASE · EITHER TURN
+
+Unholy Vigour
+
+Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.
+
+UNITDaemon Prince of Chaos · Slaughterthirst (Aura)
+
+Ask about this ability
+
+######## popup enh:blood-legion|Brazenmaw · THE EXILED LEGION The Exiled Legion
+ENHANCEMENT · BLOOD LEGION · 15 PTS
+
+Brazenmaw
+
+LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit.
+
+ONSkullmaster + Bloodcrushers
+
+Ask about this enhancement
+
+######## popup enh:blood-legion|Gateway Unto Damnation · THE EXILED LEGION The Exiled Legion
+ENHANCEMENT · BLOOD LEGION · 10 PTS
+
+Gateway Unto Damnation
+
+LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.
+
+ONBloodthirster
+
+Ask about this enhancement
+
+######## popup enh:blood-legion|Slaughterthirst (Aura) · THE EXILED LEGION The Exiled Legion
+ENHANCEMENT · BLOOD LEGION · 25 PTS
+
+Slaughterthirst (Aura)
+
+LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
+
+ONDaemon Prince of Chaos
+
+Ask about this enhancement
+
+######## popup enh:warptide|Bane-Forged Weapons · THE EXILED LEGION The Exiled Legion
+UPGRADE · WARPTIDE · 15 PTS
+
+Bane-Forged Weapons
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+ONBloodletters (Skulltaker + Bloodletters), Bloodletters (Bloodmaster + Bloodletters)
+
+Ask about this upgrade
+
+######## popup grant:["Bane-Forged Weapons","bloodmaster-bloodletters","S 6",null] · THE EXILED LEGION The Exiled Legion
+S 6 · GRANTED BY
+
+Bane-Forged Weapons
+
+Bloodletters · Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Bane-Forged Weapons","bloodmaster-bloodletters","S 7",null] · THE EXILED LEGION The Exiled Legion
+S 7 · GRANTED BY
+
+Bane-Forged Weapons
+
+Bloodletters · Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Bane-Forged Weapons","skulltaker-bloodletters","S 6",null] · THE EXILED LEGION The Exiled Legion
+S 6 · GRANTED BY
+
+Bane-Forged Weapons
+
+Bloodletters · Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Bane-Forged Weapons","skulltaker-bloodletters","S 7",null] · THE EXILED LEGION The Exiled Legion
+S 7 · GRANTED BY
+
+Bane-Forged Weapons
+
+Bloodletters · Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Daemonic Allegiance","daemon-prince-of-chaos","S 10",null] · THE EXILED LEGION The Exiled Legion
+S 10 · GRANTED BY
+
+Daemonic Allegiance
+
+datasheet ability
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Daemonic Allegiance","daemon-prince-of-chaos","S 8",null] · THE EXILED LEGION The Exiled Legion
+S 8 · GRANTED BY
+
+Daemonic Allegiance
+
+datasheet ability
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Daemonic Icon","bloodmaster-bloodletters","LD 6+",null] · THE EXILED LEGION The Exiled Legion
+LD 6+ · GRANTED BY
+
+Daemonic Icon
+
+Bloodletters · datasheet ability
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Daemonic Icon","skullmaster-bloodcrushers","LD 6+",null] · THE EXILED LEGION The Exiled Legion
+LD 6+ · GRANTED BY
+
+Daemonic Icon
+
+Bloodcrushers · datasheet ability
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Daemonic Icon","skulltaker-bloodletters","LD 6+",null] · THE EXILED LEGION The Exiled Legion
+LD 6+ · GRANTED BY
+
+Daemonic Icon
+
+Bloodletters · datasheet ability
+
+Models in the bearer’s unit have a Leadership characteristic of 6+.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Lord of Decapitations","skulltaker-bloodletters","DEVASTATING WOUNDS","DEVASTATING WOUNDS"] · THE EXILED LEGION The Exiled Legion
+DEVASTATING WOUNDS · GRANTED BY
+
+Lord of Decapitations
+
+Skulltaker · datasheet ability
+
+While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+DEVASTATING WOUNDS Core rule
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+######## popup rule:ANTI-CHARACTER 3+ · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+ANTI-CHARACTER 3+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYKaranak
+
+Ask about this rule
+
+######## popup rule:Advance · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance roll · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Battle-shock test · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Blood Tainted · THE EXILED LEGION The Exiled Legion
+BLOOD LEGION DETACHMENT RULE
+
+Blood Tainted
+
+At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+IN THIS ARMYSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:Charge move · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:Charge roll · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYSkulltaker, Skullmaster · Brazenmaw (in Skullmaster’s Fury), Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYSkarbrand, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Deadly Demise 1 · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Deadly Demise 1
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYSkarbrand, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYSkarbrand, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6 · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYSkarbrand, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Deep Strike · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw, Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:EXTRA ATTACKS · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYRendmaster on Blood Throne, Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:Engagement Range · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYKaranak (in Brass Collar of Bloody Vengeance, Collar of Khorne)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 3+ · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Feel No Pain 3+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYKaranak (in Brass Collar of Bloody Vengeance, Collar of Khorne)
+
+Ask about this rule
+
+######## popup rule:Fights First · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:Hazard roll · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYSkarbrand, Karanak, Bloodthirster · Gateway Unto Damnation
+
+Ask about this rule
+
+######## popup rule:LANCE · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYDaemon Prince of Chaos · Slaughterthirst (Aura) (in Slaughterthirst (Aura)), Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:Lance · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYDaemon Prince of Chaos · Slaughterthirst (Aura) (in Slaughterthirst (Aura)), Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:Leader · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYKaranak, Skulltaker, Bloodmaster, Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:Lone Operative · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYDaemon Prince of Chaos · Slaughterthirst (Aura) (in Daemonic Lord)
+
+Ask about this rule
+
+######## popup rule:Murdercall · THE EXILED LEGION The Exiled Legion
+BLOOD LEGION DETACHMENT RULE
+
+Murdercall
+
+In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".
+
+IN THIS ARMYSkarbrand, Karanak, Skulltaker, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster, Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:PRECISION · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYKaranak, Skulltaker
+
+Ask about this rule
+
+######## popup rule:Psychic · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYKaranak (in Brass Collar of Bloody Vengeance, Collar of Khorne)
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Scouts · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYBeasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Scouts 6" · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Scouts 6"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYBeasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Shudderblink · THE EXILED LEGION The Exiled Legion
+WARPTIDE DETACHMENT RULE
+
+Shudderblink
+
+When a friendly LEGIONES DAEMONICA BATTLELINE unit is selected to make an advance move:
+
+That unit’s ranged attacks have [ASSAULT] until the end of the turn.
+That move does not prevent that unit from being eligible to declare a charge.
+
+IN THIS ARMYSkulltaker, Bloodmaster
+
+Ask about this rule
+
+######## popup rule:Stealth · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYDaemon Prince of Chaos · Slaughterthirst (Aura) (in Prince of Darkness)
+
+Ask about this rule
+
+######## popup rule:Strategic Reserves · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:TORRENT · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYSkarbrand, Karanak, Bloodthirster · Gateway Unto Damnation
+
+Ask about this rule
+
+######## popup rule:The Shadow of Chaos · THE EXILED LEGION The Exiled Legion
+CHAOS DAEMONS ARMY RULE
+
+The Shadow of Chaos
+
+If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:
+
+Your deployment zone is always within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.
+
+DAEMONIC MANIFESTATION
+
+While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).
+
+DAEMONIC TERROR
+
+While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
+
+Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+
+FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
+
+Ask about this rule
+
+######## popup rule:[ASSAULT] · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+Ask about this rule
+
+######## popup rule:[DEVASTATING WOUNDS] · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYSkulltaker, Skullmaster · Brazenmaw (in Skullmaster’s Fury), Beasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:[LANCE] · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYDaemon Prince of Chaos · Slaughterthirst (Aura) (in Slaughterthirst (Aura)), Skullmaster · Brazenmaw
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYKaranak, Skulltaker
+
+Ask about this rule
+
+######## popup rule:advance move · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:destroyed · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:eligible to declare a charge · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:engaged · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:fall-back move · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:ingress move · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:surge move · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Surge Move
+
+Some rules allow a unit to make a surge move, as described below.
+
+MAXIMUM DISTANCE: As stated in the rule allowing this move type.
+
+ELIGIBLE IF: All of the following apply:
+
+The rule allowing this move type has been triggered.
+Your unit is not battle-shocked.
+Your unit is unengaged.
+Your unit has not moved this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select the closest enemy unit to be the surge target.
+
+WHILE MOVING:
+
+Each model must end its move engaged with the surge target if possible.
+Each model that cannot end its move engaged with the surge target must end its move as close as possible to the surge target.
+
+AFTER MOVING:
+
+Your unit cannot be engaged with one or more enemy units that were not the surge target.
+Your unit cannot move again this phase.
+Ask about this rule
+
+######## popup rule:unengaged · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:blood-begets-skulls · THE EXILED LEGION The Exiled Legion
+1CP · CHARGE · YOUR TURN
+
+Blood Begets Skulls
+WHEN
+
+Your Charge phase.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army that has not been selected to charge this phase.
+
+EFFECT
+
+Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · THE EXILED LEGION The Exiled Legion
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · THE EXILED LEGION The Exiled Legion
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · THE EXILED LEGION The Exiled Legion
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYSkarbrand, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura)
+
+Ask about this stratagem
+
+######## popup strat:daemonic-infestation · THE EXILED LEGION The Exiled Legion
+1CP · COMMAND · YOUR TURN
+
+Daemonic Infestation
+WHEN
+
+Your Command phase.
+
+TARGETOne friendly LEGIONES DAEMONICA BATTLELINE unit (excluding PINK HORRORS units).
+
+EFFECT
+
+Your unit heals 3 wounds.
+
+USED BYSkulltaker + Bloodletters, Bloodmaster + Bloodletters
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · THE EXILED LEGION The Exiled Legion
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · THE EXILED LEGION The Exiled Legion
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura)
+
+Ask about this stratagem
+
+######## popup strat:fools-flight · THE EXILED LEGION The Exiled Legion
+2CP · MOVEMENT · THEIR TURN
+
+Fools’ Flight
+WHEN
+
+Your opponent’s Movement phase, when an enemy unit ends a fall-back move.
+
+TARGETOne friendly unengaged LEGIONES DAEMONICA KHORNE unit that is within 6" of that enemy unit.
+
+EFFECT
+
+Declare a charge with your unit. When selecting charge targets, you can only select enemy units that made a fall-back move this phase and are within the maximum distance.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem
+
+######## popup strat:gore-hungry-onslaught · THE EXILED LEGION The Exiled Legion
+1CP · MOVEMENT / CHARGE · YOUR TURN
+
+Gore‑hungry Onslaught
+WHEN
+
+Your Movement phase or your Charge phase.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · THE EXILED LEGION The Exiled Legion
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:incorporeal-entities · THE EXILED LEGION The Exiled Legion
+1CP · SHOOTING · THEIR TURN
+
+Incorporeal Entities
+WHEN
+
+Your opponent’s Shooting phase, when an enemy unit targets a friendly LEGIONES DAEMONICA BATTLELINE unit.
+
+TARGETThat LEGIONES DAEMONICA BATTLELINE unit.
+
+EFFECT
+
+Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.
+
+USED BYSkulltaker + Bloodletters, Bloodmaster + Bloodletters
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · THE EXILED LEGION The Exiled Legion
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · THE EXILED LEGION The Exiled Legion
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:sheathed-in-brass · THE EXILED LEGION The Exiled Legion
+1CP · SHOOTING · THEIR TURN
+
+Sheathed in Brass
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your unit have a Save characteristic of 3+.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem
+
+######## popup strat:skulls-beget-blood · THE EXILED LEGION The Exiled Legion
+1CP · SHOOTING · YOUR TURN
+
+Skulls Beget Blood
+WHEN
+
+Your Shooting phase.
+
+TARGETOne LEGIONES DAEMONICA KHORNE INFANTRY or LEGIONES DAEMONICA KHORNE MOUNTED unit from your army (excluding units that Fell Back this turn) that is not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Select one enemy unit that is not within Engagement Range of one or more units from your army and is within 8" of and visible to your unit. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+USED BYSkulltaker + Bloodletters, Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem
+
+######## popup strat:soulseeing · THE EXILED LEGION The Exiled Legion
+1CP · SHOOTING · YOUR TURN
+
+Soulseeing
+WHEN
+
+Start of your Shooting phase.
+
+TARGETOne friendly LEGIONES DAEMONICA BATTLELINE unit.
+
+EFFECT
+
+Select one visible enemy unit within 12" of your unit. That enemy unit has +6" detection range.
+
+USED BYSkulltaker + Bloodletters, Bloodmaster + Bloodletters
+
+Ask about this stratagem
+
+######## popup strat:wrath-undeniable · THE EXILED LEGION The Exiled Legion
+1CP · FIGHT · EITHER TURN
+
+Wrath Undeniable
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+USED BYSkarbrand, Karanak + Flesh Hounds, Skulltaker + Bloodletters, Bloodthirster · Gateway Unto Damnation, Daemon Prince of Chaos · Slaughterthirst (Aura), Rendmaster on Blood Throne, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this stratagem

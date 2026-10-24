@@ -1,0 +1,32 @@
+[
+ {
+  "key": "3efff1d8594ccecc",
+  "where": "fellhammer-siege-task-force · Lord Discordant on Helstalker",
+  "verdict": "ok",
+  "why": "Spirit Thief: the GW Faction Pack (CSM, Rules Updates, Lord Discordant on Helstalker) and the Wahapedia datasheet use the same words: \"At the start of your Shooting phase, select one visible enemy VEHICLE unit. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.\" The rule reaches every friendly HERETIC ASTARTES model, so it is a picked-target aura entry. Approved lists store these the same way: Clever Know-wotz and Dreadherder are aura entries, and Cawl's Canticles uses needs plus vs. needs {all:[Faction: Heretic Astartes]} is right. vs {any:[Vehicle]} is the picked VEHICLE target. kind ranged is right because the effect lasts only until the end of the Shooting phase, where the attacks are ranged; this matches the units review's fix to his own mod. The rule has no lasts entry because it lasts one phase, as Marked by Fate's phase-long mod has none. notSelf is right: his own effect is already in his mods, so the aura would show it twice. In the snapshot the line shows on every HA unit's ranged table and on none of the melee tables, and the Lord Discordant shows only his own mod."
+ },
+ {
+  "key": "10ac82460327eacd",
+  "where": "fellhammer-siege-task-force · Warpsmith",
+  "verdict": "ok",
+  "why": "Master of Mechanisms: the Wahapedia datasheet (the GW pack does not change it) says \"In your Command phase, select one friendly HERETIC ASTARTES VEHICLE model within 3\" of this model. That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll.\" The entry matches the approved Clever Know-wotz entry field for field: kind all, needs including Vehicle, the note 'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next …', calc {hit:1}, oneModel true and lasts round. The 'in your Command phase (within 3\")' wording is the approved Omnissiah’s Blessing guard's. No notSelf is needed because the Warpsmith is not a VEHICLE. In the snapshot the line shows only on the Predators, the Vindicator, the Forgefiend and the Maulerfiend, and not on Vashtorr or the Lord Discordant."
+ },
+ {
+  "key": "822f7cc159c91760",
+  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "The GW Faction Pack CSM erratum (Obliterators, Warp Rift Firepower Ability, 'Change to') says \"(Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, you can use this ability…\". Wahapedia repeats this erratum, while its datasheet line writes 'shooting' in lower case. The app's text now has GW's words. Both the trigger and the effect are in your Shooting phase, so ph [shooting] with turn your is right, and derive.js derives the same label (identical)."
+ },
+ {
+  "key": "c5356644338833da",
+  "where": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "GW's erratum and Wahapedia both say '(Once per battle, per unit)'. The tag is 'Once per battle, per unit', the same form as the approved Ammo Runts and Boss’ Ammo Runt tags. derive.js cannot derive it because the parenthesis is in the tag, not the text; the same is true of the approved items."
+ },
+ {
+  "key": "cd338dd29bccd0c3",
+  "where": "fellhammer-siege-task-force · Obliterators",
+  "verdict": "ok",
+  "why": "The footnote matches the rule. It is kind ranged because the rule says 'this unit's ranged attacks have [INDIRECT FIRE]'. Its when, 'Once per battle, your Shooting phase, when selected to shoot', is the rule's timing and limit. The note [INDIRECT FIRE] is the ability it gives, and from is Warp Rift Firepower. The approved Ammo Runts footnotes are worded '<ability> used (your Shooting phase, when selected to shoot)'. That is a small difference in wording, not an error."
+ }
+]
