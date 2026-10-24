@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '7f578c068c';</script>
+<script>window.WH_BUILD = '3a24df6f38';</script>
 </head>
 <body>
 <style>
@@ -256,6 +256,13 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .st > span.n{text-align:left; padding-left:8px; font:600 14px/1.15 var(--f-head); display:flex; align-items:center; letter-spacing:.01em}
 .def{margin-top:6px; border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13px; line-height:1.4}
 .def.dmg{border-left-color:var(--muted)}
+/* a datasheet's "When targeted": a fold (its label and count, the chevron at the end), a line per protection when open */
+.tgt > summary{display:flex; align-items:center; min-height:30px}
+.tgt > summary .x{margin-left:0; font-size:12px}
+.tgt > summary .chev{margin-left:auto}
+.tgls{display:grid; gap:4px; padding:0 0 4px}
+.tgl{line-height:1.35}
+.tgl .tw{color:var(--muted)} .tgl .tw .link{color:inherit}
 .dsl{margin-top:5px; font-size:12.5px; color:var(--muted); line-height:1.35}
 .dsec{margin-top:12px}
 .dsec > .lbl{padding-bottom:3px}
@@ -309,7 +316,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .use b{color:var(--accent); font-weight:600}
 .use b.m{color:var(--fg)}
 .uv{text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:3px}
-.mod .sc{font:600 10.5px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:5px}
+.mod .sc, .tgl .sc{font:600 10.5px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:5px}
 .wb{padding:4px 6px 3px; border-top:1px solid var(--line)}
 .wb:has(> .wr .x){padding:5px 6px 4px}   /* a row with a count pill gets room to breathe */
 .wr > span.n2{grid-column:span 2}
@@ -356,7 +363,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .gv::after{position:absolute; top:-3px; right:-7px}
 .kwl .gk.w, .gv.w{color:inherit}
 .kwl .gk::after, .gv::after{content:'+'; font:700 9px/1 var(--f-head); vertical-align:super; margin-left:1px; text-decoration:none; display:inline-block}
-.mod .cpb{display:inline-block; margin-right:3px; padding:0 5px; border-radius:4px; background:var(--surface2); font:700 12.5px/1.45 var(--f-head); letter-spacing:.03em; color:var(--fg)}
+.mod .cpb, .tgl .cpb{display:inline-block; margin-right:3px; padding:0 5px; border-radius:4px; background:var(--surface2); font:700 12.5px/1.45 var(--f-head); letter-spacing:.03em; color:var(--fg)}
 .msep{display:flex; align-items:center; gap:6px; margin:8px 0 3px; font:600 11.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 .msep::after{content:''; flex:1; border-top:1px solid var(--line)}
 .strat.none .sh b{color:var(--muted)}
@@ -1036,10 +1043,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=7f578c068c"></script>
-<script src="data.js?v=7f578c068c"></script>
-<script src="calc.js?v=7f578c068c"></script>
-<script src="import.js?v=7f578c068c"></script>
+<script src="verified.js?v=3a24df6f38"></script>
+<script src="data.js?v=3a24df6f38"></script>
+<script src="calc.js?v=3a24df6f38"></script>
+<script src="import.js?v=3a24df6f38"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -4395,15 +4402,26 @@ function defenceItems(u, ph, opts){
 const alwaysRiled = u => { const ab = u.abilities.find(x => x.riled && !naReason(x));
   return ab ? (ab.who && u.leads ? esc(ab.who) + ' · ' : '') + linkTo('ability', abilityKey(ab), ab.name) + ': always riled up' : ''; };
 const riledWhen = (html, u) => { const ar = /^Riled up\b/.test(html) && alwaysRiled(u); return ar ? html.replace(/^Riled up/, 'Riled up (' + ar + ')') : html; };
-// one "When targeted" line on the datasheet: its rule's name or its first words open the rule; an ability of one model of an
-// attached unit names that model first ("Meganobz · Arrogant Invulnerability: Attacks that target this unit have -1 AP")
+// one "When targeted" line on the datasheet, its own line in the fold: the string split and styled, not reworded. Its name in
+// bold (a stratagem with its CP), the one model of an attached unit it is on as a small label ("Trajann Valoris", unless its
+// words start with that model), the timing or condition before its ": " muted, then the effect; the name, or its first words
+// when it has none, opens the rule; a line with no name and no ": " is just its text
 function defLine(x, u){
   const i = x.t.indexOf(': ');
-  if(x.guard) return esc(x.t) + ' <span class="from">(' + linkTo(x.a, x.v, x.guard.from) + ')</span>';
-  if(x.riled){ const ar = alwaysRiled(u); return linkTo(x.a, x.v, 'Riled up') + (ar ? ' (' + ar + ')' : '') + esc(x.t.slice('Riled up'.length)); }
-  const who = x.who && u.leads && !(i > 0 && x.who.startsWith(x.t.slice(0, i))) ? esc(x.who) + ' · ' : '';
-  if(who && i < 0) return who + (x.name ? linkTo(x.a, x.v, x.name) + ': ' + esc(x.t) : linkTo(x.a, x.v, x.t));   // (a rule of one model: Trajann's Feel No Pain 5+)
-  return who + (i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t));
+  const when = h => '<span class="tw">' + h + ':</span> ';
+  // (head: what comes before the effect's ": "; a stratagem's WHEN or a guard's reach, never a quotation: Grot Shields' FAQ)
+  const split = t => { const j = t.indexOf(': '); return j > 0 && !/[“"]/.test(t.slice(0, j).replace(/\d"/g, '')) ? when(esc(t.slice(0, j))) + esc(t.slice(j + 2)) : esc(t); };
+  if(x.guard) return split(x.t) + ' <span class="from">(' + linkTo(x.a, x.v, x.guard.from) + ')</span>';
+  if(x.riled){ const ar = alwaysRiled(u); return '<b>' + linkTo(x.a, x.v, 'Riled up') + (ar ? '</b> <span class="tw">(' + ar + '):</span> ' : ':</b> ') + esc(x.t.slice('Riled up: '.length)); }
+  const s = x.a === 'strat' && allStratagems().find(y => y.id === x.v), sp = s && s.cp + 'CP ' + s.name + ': ';
+  if(sp && x.t.startsWith(sp)) return '<b class="cpb">' + esc(s.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, s.name) + ':</b> ' + split(x.t.slice(sp.length));
+  const who = x.who && u.leads && !(i > 0 && x.who.startsWith(x.t.slice(0, i))) ? '<i class="sc">' + esc(x.who) + '</i> ' : '';
+  if(i < 0) return who + (who && x.name ? '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + esc(x.t) : linkTo(x.a, x.v, x.t));   // (a rule of one model: Trajann's Feel No Pain 5+)
+  const head = x.t.slice(0, i), rest = esc(x.t.slice(i + 2)), name = x.name || (x.a === 'rule' ? x.v : '');
+  if(name && head === name) return who + '<b>' + linkTo(x.a, x.v, head) + ':</b> ' + rest;
+  // ("Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv …": the name, then its condition)
+  if(name && head.startsWith(name + ' (') && head.endsWith(')')) return who + '<b>' + linkTo(x.a, x.v, name) + '</b> ' + when(esc(head.slice(name.length + 1))) + rest;
+  return who + '<span class="tw">' + linkTo(x.a, x.v, head) + ':</span> ' + rest;   // (its first words are a condition: "After a pulse jet move")
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
 // a "When targeted" line that is one option of an army rule (Kaptaris, a ka’tah of Martial Ka’tah: its line starts with the
@@ -4434,6 +4452,7 @@ function screenUnit(){
   const strats = allStratagems().filter(s => eligible(s).includes(u))   // every one it can be the target of
     .concat(helpedBy(u).filter(s => !eligible(s).includes(u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
   const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
+  const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
@@ -4462,7 +4481,9 @@ function screenUnit(){
     // (a part of a detachment rule for some of its units can carry one too: Warpmeld Sacrifice's KEYWORDS, for TZAANGORS units)
     unitDetRules(u).filter(r => r.statNote).map(r => [r, r.statNote]).concat(unitDetParts(u).filter(x => x.part.statNote).map(x => [x.rule, x.part.statNote])).map(([r, sn]) => { const n = modelCount(u) === 1 && sn.single ? sn.single : sn.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
-    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => defLine(x, u)).join(' · ') + '</div>' : '') +
+    // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
+    (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
+      '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
       const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
@@ -5339,6 +5360,7 @@ document.addEventListener('toggle', e => {
     if(d.open) for(const w of d.querySelectorAll('.dwv[data-wh]')) w.scrollTop = +w.dataset.i * WH_ROW;   // (a wheel drawn folded takes its row once shown)
     return; }
   if(d.dataset.ckfold){ if(d.open) openStrats.add(d.dataset.ckfold); else openStrats.delete(d.dataset.ckfold); saveSession(); return; }   // a Phase checklist fold
+  if(d.dataset.tgfold){ if(d.open) openStrats.add(d.dataset.tgfold); else openStrats.delete(d.dataset.tgfold); saveSession(); return; }   // a datasheet's When targeted fold
   if(d.dataset.stratId){
     if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
     saveSession();
