@@ -94,3 +94,11 @@ thousand-sons Sekhetar-Robots
 thousand-sons Ahriman
 thousand-sons Exalted-Sorcerer-on-Disc-of-Tzeentch
 thousand-sons Tzaangor-Shaman
+adeptus-custodes Trajann-Valoris
+adeptus-custodes Allarus-Custodians
+adeptus-custodes Prosecutor-Squad
+adeptus-custodes Witchseeker-Squad
+adeptus-custodes Caladius-Annihilator-Grav-Tank
+adeptus-custodes Contemptor-Achillus-Dreadnought
+adeptus-custodes Contemptor-Galatus-Dreadnought
+adeptus-custodes Telemon-Heavy-Dreadnought

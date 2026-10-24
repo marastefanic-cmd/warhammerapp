@@ -1,0 +1,4991 @@
+######## army · MUCHO MUTANTES Lite Knights
+Adeptus Custodes · 2000 / 2000 pts · Strike Force
+
+Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
+
+Dispositions: Priority Assets · Take and Hold (chosen) · Reconnaissance
+
+Overview
+Bases & proxies
+25
+Units
+10
+Stratagems
+19
+Ranged weapons
+16
+Melee weapons
+10
+Abilities
+14
+Rules
+Damage calculator
+
+New Recruit, exported 23 Oct 2026
+
+######## pregame · LITE KNIGHTS Overview
+YOUR LIST
+WARLORD
+Trajann Valoris
+ENHANCE­MENTS
+Memento Moritoi (upgrade) 30 pts on Contemptor-Galatus Dreadnought
+Augury Uplink (upgrade) 30 pts on Telemon Heavy Dreadnought
+ATTACHED
+Trajann Valoris leads Allarus Custodians
+DETACH­MENTS
+Emperor’s Chosen (1 DP), Grav-Assault Force (1 DP), Might of the Moritoi (1 DP)
+DISPOSI­TIONS
+Priority Assets · Take and Hold (chosen) · Reconnaissance
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Martial Ka’tah
+Start of your Command phase
+
+At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.
+
+Each ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.
+
+We recommend placing a token next to each readied unit, removing it when that unit is no longer readied.
+
+Favoured Ka’tah
+
+All detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.
+
+Example: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2" M in addition to the normal effect of Calistus.
+
+Conservai
+
+KA’TAH ABILITY
+
+WHEN: Your Command phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Until the end of the turn:
+
+Being engaged/battle-shocked does not prevent your unit from being eligible to start an action.
+Starting an action does not prevent your unit from being eligible to shoot.
+Calistus
+
+KA’TAH ABILITY
+
+WHEN: Your Movement phase, when a friendly readied unit is selected to move.
+
+TARGET: That readied unit.
+
+EFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.
+
+Salvus
+
+KA’TAH ABILITY
+
+WHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.
+
+TARGET: That readied unit.
+
+EFFECT: Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls and wound rolls.
+Dacatarai
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.
+
+Kaptaris
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Melee attacks that target your unit have -1 to hit rolls.
+
+Rendax
+
+KA’TAH ABILITY
+
+WHEN: Fight phase, when a friendly readied unit is selected to fight.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle].
+
+Aegis of the Emperor
+
+Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.
+
+Aquila Commander
+Start of the battle round
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Daughters of the Abyss
+Friendly ANATHEMA PSYKANA units with this ability have Feel No Pain 3+ against psychic attacks.
+Friendly ANATHEMA PSYKANA units with this ability have the following ability:
+
+Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+
+Anathema Psykana
+
+You can include ANATHEMA PSYKANA units in your army, even though they do not have the ADEPTUS CUSTODES faction keyword.
+
+When mustering your army, unless otherwise stated:
+
+You cannot select ANATHEMA PSYKANA as your army faction.
+You cannot select an ANATHEMA PSYKANA model to be your WARLORD.
+Magna Imperator
+Emperor’s Chosen · Their Move · Your Shoot · Fight
+
+When a friendly ADEPTUS CUSTODES unit is selected to attack, that unit’s attacks can:
+
+Re-roll one hit roll.
+Re-roll one wound roll.
+
+Favoured ka’tah: RENDAX
+
+Additional Effect: You can select one enemy MONSTER/VEHICLE unit engaged with your unit and roll one D6:
+
+On a 1-2, that enemy unit suffers 1 mortal wound.
+On a 3-5, that enemy unit suffers D3 mortal wounds.
+On a 6, that enemy unit suffers 3 mortal wounds.
+
+APPLIES TOTrajann Valoris, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Flare Shields
+Grav-Assault Force
+
+Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.
+
+APPLIES TOCaladius Annihilator Grav-tank
+
+Moritoi Ancients
+Might of the Moritoi
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC.
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below starting strength, that unit’s attacks can re-roll hit rolls of 1.
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength, that unit’s attacks can:
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+APPLIES TOContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Trajann Valoris + Allarus Custodians 445 pts
+Caladius Annihilator Grav-tank 250 pts
+All of them: 695 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS
+Witchseeker Squad (1 of 2) Scouts 7"
+Witchseeker Squad (2 of 2) Scouts 7"
+START OF THE BATTLE AND THE BATTLE ROUNDS
+EVERY ROUND
+Aquila Commander · Adeptus Custodes army rule
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Moment Shackle · Trajann Valoris per army
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+1
+Trajann Valoris
++ Allarus Custodians
+Warlord
+445
+Trajann Valoris
+8"
+7
+2+
+10
+5+
+3
+4+
+Allarus Custodian×2
+7"
+8
+2+
+6
+5+
+3
+4+
+INFANTRY
+4
+Prosecutor Squad
+×4
+7"
+3
+3+
+1
+6+
+2
+–
+2×45
+Witchseeker Squad
+×4
+1 of 2
+Witchseeker
+7"
+3
+3+
+1
+6+
+1
+–
+55
+Witchseeker Squad
+×5
+2 of 2
+Witchseeker
+7"
+3
+3+
+1
+6+
+1
+–
+60
+VEHICLES
+5
+Caladius Annihilator Grav-tank
+10"
+11
+2+
+14
+5+
+4
+5+, 4+*
+250
+Contemptor-Achillus Dreadnought
+9"
+10
+2+
+12
+5+
+3
+5+
+230
+Contemptor-Galatus Dreadnought
+Memento Moritoi
+9"
+10
+2+
+12
+5+
+3
+4+
+250
+Telemon Heavy Dreadnought
+Augury Uplink
+10"
+11
+2+
+14
+5+
+4
+4+
+310
+Telemon Heavy Dreadnought
+10"
+11
+2+
+14
+5+
+4
+4+
+310
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Trajann Valoris
+Warlord
++ Allarus Custodians
+TRAJANN VALORIS
+Eagle’s Scream
+24"
+2
+2+
+6
+-2
+2
+ASSAULT, RAPID FIRE 2
+ALLARUS CUSTODIANS
+Balistus grenade launcher×2
+18"
+3
+2+
+5
+-1
+1
+ASSAULT, BLAST 1
+Castellan axe×2
+24"
+2
+2+
+5
+-1
+2
+ASSAULT, RAPID FIRE 2
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Prosecutor Squad
+×2 units
+Boltgun×4
+24"
+1
+3+
+5
+-1
+1
+ANTI-PSYKER 4+, ASSAULT, RAPID FIRE 1
+Witchseeker Squad
+1 of 2
+Flamer×4
+12"
+3
+–
+4
+-1
+1
+ANTI-PSYKER 4+, ASSAULT, BLAST 1, TORRENT
+Witchseeker Squad
+2 of 2
+Flamer×5
+12"
+3
+–
+4
+-1
+1
+ANTI-PSYKER 4+, ASSAULT, BLAST 1, TORRENT
+Caladius Annihilator Grav-tank
+Arachnus Blaze Carronade
+48"
+4
+2+
+12
+-3
+D6+2
+LETHAL HITS: MONSTER/VEHICLE
+Twin Lastrum Bolt Cannon
+36"
+3
+2+
+6
+-2
+2
+SUSTAINED HITS 1, TWIN-LINKED
+vs MONSTER/VEHICLE: re-roll one hit roll, one wound roll and one damage roll (Advanced Firepower)
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+STRATAGEMS · GRAV-ASSAULT FORCE · YOUR SHOOTING PHASE
+1CP Advanced Stabilisers: ranged attacks have [ASSAULT], selected to shoot
+1CP Inevitable Annihilation: can ignore modifiers to BS and hit rolls, selected to shoot
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Contemptor-Achillus Dreadnought
+Dreadspear
+18"
+2
+2+
+10
+-3
+D3+2
+Lastrum storm bolter×2
+24"
+3
+2+
+5
+-1
+1
+RAPID FIRE 3
+Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Contemptor-Galatus Dreadnought
+Memento Moritoi
+Warblade
+12"
+4
+–
+6
+-1
+2
+BLAST 2, TORRENT, TWIN-LINKED
+Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Telemon Heavy Dreadnought
+Augury Uplink
+Spiculus bolt launcher
+36"
+6
+2+
+5
+-1
+1
+BLAST 2
+Twin Neutronium Cascade Projectors×2
+12"
+3
+–
+7
+-2
+1
+BLAST 1, TORRENT, TWIN-LINKED
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Telemon Heavy Dreadnought
+Spiculus bolt launcher
+36"
+6
+2+
+5
+-1
+1
+BLAST 2
+Adrathic Desolator
+24"
+4
+2+
+10
+-2
+4
+Twin Neutronium Cascade Projectors
+12"
+3
+–
+7
+-2
+1
+BLAST 1, TORRENT, TWIN-LINKED
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Trajann Valoris
+Warlord
++ Allarus Custodians
+TRAJANN VALORIS
+Watcher’s Axe
+6
+2+
+12
+-3
+4
+CLEAVE 1
+ALLARUS CUSTODIANS
+Castellan axe×2
+3
+2+
+10
+-2
+4
+Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
+Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Prosecutor Squad
+×2 units
+Gun Stock×4
+2
+3+
+3
+0
+1
+Witchseeker Squad
+1 of 2
+Gun Stock×4
+2
+3+
+3
+0
+1
+Witchseeker Squad
+2 of 2
+Gun Stock×5
+2
+3+
+3
+0
+1
+Caladius Annihilator Grav-tank
+Armoured hull
+4
+4+
+6
+0
+1
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Contemptor-Achillus Dreadnought
+Dreadspear
+5
+2+
+12
+-3
+D3+3
+LANCE
+Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+Made a charge move this turn: Dreadspear +1 to wound (Lance)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Contemptor-Galatus Dreadnought
+Memento Moritoi
+Warblade
+9
+2+
+11
+-2
+4
+CLEAVE 1, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Telemon Heavy Dreadnought
+Augury Uplink
+Dual Caestus Fists
+7
+2+
+14
+-3
+4
+TWIN-LINKED
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+Telemon Heavy Dreadnought
+Caestus Fist
+5
+2+
+14
+-3
+4
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+
+######## abilities · MELEE Abilities
+Trajann Valoris
+Warlord
++ Allarus Custodians
+TRAJANN VALORIS
+Captain-General
+
+Aura
+
+Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of this model can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Moment Shackle
+Once per battle, per army
+Any phase
+
+Once per battle, per army · Any phase · Either turn
+
+(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+
+This model’s Watcher’s Axe weapon has +3 A.
+This model has 3+ InSv.
+ALLARUS CUSTODIANS
+Slayer of Tyrants
+
+This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.
+
+Vexilla
+Already in OC
+This unit has +1 OC.
+This unit can ignore modifiers to this unit’s Ld.
+Prosecutor Squad
+×2 units
+Purity of Execution
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That unit is detected:
+
+While a unit is detected, that unit has +3" detection range.
+Witchseeker Squad
+1 of 2
+Sanctified Flames
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
+
+Witchseeker Squad
+2 of 2
+Sanctified Flames
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
+
+Caladius Annihilator Grav-tank
+Advanced Firepower
+
+This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
+
+Re-roll one hit roll.
+Re-roll one wound roll.
+Re-roll one damage roll.
+Contemptor-Achillus Dreadnought
+Unyielding Ancient
+
+Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
+
+Contemptor-Galatus Dreadnought
+Memento Moritoi
+Unyielding Ancient
+
+Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
+
+Memento Moritoi
+Already in A, S, D
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+Telemon Heavy Dreadnought
+Augury Uplink
+Guardian Eternal
+
+Ranged attacks that target this unit have -1 D.
+
+Augury Uplink
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.
+
+Telemon Heavy Dreadnought
+Guardian Eternal
+
+Ranged attacks that target this unit have -1 D.
+
+######## rules · ABILITIES Rules
+Adeptus Custodes · Take and Hold
+ARMY RULES
+Martial Ka’tah
+Start of your Command phase
+
+At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.
+
+Each ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.
+
+We recommend placing a token next to each readied unit, removing it when that unit is no longer readied.
+
+Favoured Ka’tah
+
+All detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.
+
+Example: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2" M in addition to the normal effect of Calistus.
+
+Conservai
+
+KA’TAH ABILITY
+
+WHEN: Your Command phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Until the end of the turn:
+
+Being engaged/battle-shocked does not prevent your unit from being eligible to start an action.
+Starting an action does not prevent your unit from being eligible to shoot.
+Calistus
+
+KA’TAH ABILITY
+
+WHEN: Your Movement phase, when a friendly readied unit is selected to move.
+
+TARGET: That readied unit.
+
+EFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.
+
+Salvus
+
+KA’TAH ABILITY
+
+WHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.
+
+TARGET: That readied unit.
+
+EFFECT: Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls and wound rolls.
+Dacatarai
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.
+
+Kaptaris
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Melee attacks that target your unit have -1 to hit rolls.
+
+Rendax
+
+KA’TAH ABILITY
+
+WHEN: Fight phase, when a friendly readied unit is selected to fight.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle].
+
+Aegis of the Emperor
+
+Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.
+
+Aquila Commander
+Start of the battle round
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Daughters of the Abyss
+Friendly ANATHEMA PSYKANA units with this ability have Feel No Pain 3+ against psychic attacks.
+Friendly ANATHEMA PSYKANA units with this ability have the following ability:
+
+Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+
+Anathema Psykana
+
+You can include ANATHEMA PSYKANA units in your army, even though they do not have the ADEPTUS CUSTODES faction keyword.
+
+When mustering your army, unless otherwise stated:
+
+You cannot select ANATHEMA PSYKANA as your army faction.
+You cannot select an ANATHEMA PSYKANA model to be your WARLORD.
+DETACHMENTS
+EMPEROR’S CHOSEN
+Magna Imperator
+Detachment rule · Their Move · Your Shoot · Fight
+
+When a friendly ADEPTUS CUSTODES unit is selected to attack, that unit’s attacks can:
+
+Re-roll one hit roll.
+Re-roll one wound roll.
+
+Favoured ka’tah: RENDAX
+
+Additional Effect: You can select one enemy MONSTER/VEHICLE unit engaged with your unit and roll one D6:
+
+On a 1-2, that enemy unit suffers 1 mortal wound.
+On a 3-5, that enemy unit suffers D3 mortal wounds.
+On a 6, that enemy unit suffers 3 mortal wounds.
+
+APPLIES TOTrajann Valoris, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Other enhancements
+2 not in this list
+From the Hall of Armouries 15 pts
+
+ADEPTUS CUSTODES model only. This model’s melee attacks have [Devastating Wounds].
+
+Radiant Mantle 40 pts
+
+ADEPTUS CUSTODES INFANTRY model only. Attacks that target this unit have -1 to hit rolls.
+
+STRATAGEMSImpenetrable Bastion, In Auramite Clad, Superhuman Focus
+
+GRAV-ASSAULT FORCE
+Flare Shields
+Detachment rule
+
+Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.
+
+APPLIES TOCaladius Annihilator Grav-tank
+
+Other enhancements
+2 not in this list
+Anti-gravitic Mobility 15 pts
+
+GRAV-ASSAULT unit only. When this unit makes a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot.
+
+Combat Deployment 20 pts
+
+GRAV-ASSAULT TRANSPORT model only. When a friendly ADEPTUS CUSTODES unit is selected to make a disembark move from this unit, until the end of the turn:
+
+That unit can re-roll charge rolls.
+Enemy units cannot target that unit with snap shooting attacks.
+
+STRATAGEMSAdvanced Stabilisers, Inevitable Annihilation, Victory Before Death
+
+MIGHT OF THE MORITOI
+Moritoi Ancients
+Detachment rule
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC.
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below starting strength, that unit’s attacks can re-roll hit rolls of 1.
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength, that unit’s attacks can:
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+APPLIES TOContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Memento Moritoi
+Upgrade · 30 pts · on Contemptor-Galatus Dreadnought
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+ONContemptor-Galatus Dreadnought
+
+Augury Uplink
+Upgrade · 30 pts · on Telemon Heavy Dreadnought
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.
+
+ONTelemon Heavy Dreadnought
+
+STRATAGEMSUnceasing Onslaught, Unstoppable Momentum, Honoured Interred
+
+UNIT RULES
+Damaged
+Caladius Annihilator Grav-tank 5
+Contemptor-Achillus Dreadnought 4
+Contemptor-Galatus Dreadnought 4
+Telemon Heavy Dreadnought 5
+Telemon Heavy Dreadnought 5
+Deadly Demise
+Caladius Annihilator Grav-tank D3
+Contemptor-Achillus Dreadnought D3
+Contemptor-Galatus Dreadnought D3
+Telemon Heavy Dreadnought D3
+Telemon Heavy Dreadnought D3
+Deep Strike
+Trajann Valoris + Allarus Custodians
+Caladius Annihilator Grav-tank
+Feel No Pain
+Trajann Valoris + Allarus Custodians 5+* 5+: Trajann Valoris only
+Prosecutor Squad 3+*
+Witchseeker Squad (1 of 2) 3+*
+Witchseeker Squad (2 of 2) 3+*
+Caladius Annihilator Grav-tank 5+*
+Contemptor-Achillus Dreadnought 5+*
+Contemptor-Galatus Dreadnought 5+*
+Telemon Heavy Dreadnought 5+* 5+
+Telemon Heavy Dreadnought 5+*
+Leader
+Trajann Valoris leads Allarus Custodians
+Scouts
+Witchseeker Squad (1 of 2) 7"
+Witchseeker Squad (2 of 2) 7"
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+17× 32mm
+3× 40mm
+2× 60mm
+2× 100mm
+1× 170×109mm Oval
+
+WHAT TO WRITE ON EACH BASE
+
+Trajann Valoris
++ Allarus Custodians
+1× 40mm
+Trajann Valoris · Warlord
+1× 40mm
+standard Balistus grenade launcher, Castellan axe
+1× 40mm
+Vexilla
+Prosecutor Squad
+2 units: mark them apart (1, 2)
+4× 32mm
+standard Boltgun, Gun Stock
+Witchseeker Squad
+1 of 2
+4× 32mm
+standard Flamer, Gun Stock
+Witchseeker Squad
+2 of 2
+5× 32mm
+standard Flamer, Gun Stock
+Caladius Annihilator Grav-tank
+1× 170×109mm Oval
+Caladius Annihilator Grav-tank
+Contemptor-Achillus Dreadnought
+1× 60mm
+Contemptor-Achillus Dreadnought
+Contemptor-Galatus Dreadnought
+1× 60mm
+Contemptor-Galatus Dreadnought
+Telemon Heavy Dreadnought
+1× 100mm
+Telemon Heavy Dreadnought
+Telemon Heavy Dreadnought
+1× 100mm
+Telemon Heavy Dreadnought
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Trajann Valoris + Allarus Custodians
+SHOOT
+FIGHT
+BOTH
+MODELS LEFT · ALL 3
+Trajann Valoris
+0
+1
+Allarus Custodian
+0
+1
+Allarus Custodian (Vexilla)
+0
+1
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+3.6
+of 5 destroyed
+7.3 wounds lost · wiped in 29% of games
+Captain-General
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Trajann Valoris + Allarus Custodians
+Eagle’s Scream
+RNG
+24"
+A
+2
+BS
+2+
+S
+6
+AP
+-2
+D
+2
+ASSAULT, RAPID FIRE 2
+−22% wiped
+−0.9
+MODELS IF UNTICKED
+Balistus grenade launcher ×2 ALLARUS CUSTODIANS
+RNG
+18"
+A
+3
+BS
+2+
+S
+5
+AP
+-1
+D
+1
+ASSAULT, BLAST 1
+−25% wiped
+−1.1
+MODELS IF UNTICKED
+Castellan axe ×2 ALLARUS CUSTODIANS
+RNG
+24"
+A
+2
+BS
+2+
+S
+5
+AP
+-1
+D
+2
+ASSAULT, RAPID FIRE 2
+−28% wiped
+−1.4
+MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 12" (every weapon is taken to be in range)
+NOW
+Within 12"
+bonus for Eagle’s Scream and Castellan axe
++54% wiped
++1.1
+SITUATION AND RULES
+Captain-General
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: −1 models · −21% wiped
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: already hits on 2+
+0
+Salvus
+Salvus (your Shooting phase, a readied unit selected to shoot): can ignore modifiers to BS, hit rolls and wound rolls
+if it applies
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−28% wiped
+−1.6
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+−29% wiped
+−3.1
+MODELS
+STRATAGEMS
+with their CP
+1CP Honoured Interred
+Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll
+1CP Superhuman Focus
+End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Trajann Valoris + Allarus Custodians
+SHOOT
+FIGHT
+BOTH
+MODELS LEFT · ALL 3
+Trajann Valoris
+0
+1
+Allarus Custodian
+0
+1
+Allarus Custodian (Vexilla)
+0
+1
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in >99% of games
+Charged this turn
+×
+Captain-General
+5 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+Nothing here changes this: the target is destroyed in every game anyway.
+
+MELEE WEAPONS
+Trajann Valoris + Allarus Custodians
+Watcher’s Axe
+A
+6
+WS
+2+
+S
+12
+AP
+-3
+D
+4
+CLEAVE 1
+−72% wiped
+−1.3
+MODELS IF UNTICKED
+Castellan axe ×2 ALLARUS CUSTODIANS
+A
+3
+WS
+2+
+S
+10
+AP
+-2
+D
+4
+−18% wiped
+−0.2
+MODELS IF UNTICKED
+SITUATION AND RULES
+Captain-General
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: −0.1 models · −10% wiped
+Charged this turn
+said to hold
+0
+Moment Shackle
+Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A · for Watcher’s Axe
+if it applies
+0
+Slayer of Tyrants
+Target has a T greater than this unit’s T: +1 to wound rolls
+if it applies
+0
+Dacatarai
+Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets: re-roll hit rolls of 1
+if it applies
+0
+Rendax
+Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets: [LETHAL HITS]
+if it applies
+0
+STRATAGEMS
+with their CP
+1CP Honoured Interred
+Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
+if used
+0
+NOT COUNTED BY THE CALCULATOR (5)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll
+1CP Superhuman Focus
+End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Trajann Valoris + Allarus Custodians
+SHOOT
+FIGHT
+BOTH
+MODELS LEFT · ALL 3
+Trajann Valoris
+0
+1
+Allarus Custodian
+0
+1
+Allarus Custodian (Vexilla)
+0
+1
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in >99% of games
+
+Shoot 3.64 · Fight 1.36 · the charge is taken to succeed
+
+Captain-General
+Charged this turn
+×
+Captain-General (fight)
+8 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+Nothing here changes this: the target is destroyed in every game anyway.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Trajann Valoris + Allarus Custodians
+Eagle’s Scream
+RNG
+24"
+A
+2
+BS
+2+
+S
+6
+AP
+-2
+D
+2
+ASSAULT, RAPID FIRE 2
+0
+Balistus grenade launcher ×2 ALLARUS CUSTODIANS
+RNG
+18"
+A
+3
+BS
+2+
+S
+5
+AP
+-1
+D
+1
+ASSAULT, BLAST 1
+0
+Castellan axe ×2 ALLARUS CUSTODIANS
+RNG
+24"
+A
+2
+BS
+2+
+S
+5
+AP
+-1
+D
+2
+ASSAULT, RAPID FIRE 2
+0
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 12" (every weapon is taken to be in range)
+NOW
+Within 12"
+bonus for Eagle’s Scream and Castellan axe
+0
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+0
+Captain-General
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: no change
+Salvus
+Salvus (your Shooting phase, a readied unit selected to shoot): can ignore modifiers to BS, hit rolls and wound rolls
+if it applies
+0
+STRATAGEMS
+with their CP
+1CP Honoured Interred
+Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll
+1CP Superhuman Focus
+End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Trajann Valoris + Allarus Custodians
+
+Against what the shooting left of the target, in each game.
+
+Watcher’s Axe
+A
+6
+WS
+2+
+S
+12
+AP
+-3
+D
+4
+CLEAVE 1
+−5% wiped
+−0.1
+MODELS IF UNTICKED
+Castellan axe ×2 ALLARUS CUSTODIANS
+A
+3
+WS
+2+
+S
+10
+AP
+-2
+D
+4
+≈0
+MODELS IF UNTICKED
+SITUATION AND RULES
+Captain-General
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: ≈0 models
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+0
+Moment Shackle
+Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A · for Watcher’s Axe
+if it applies
+0
+Slayer of Tyrants
+Target has a T greater than this unit’s T: +1 to wound rolls
+if it applies
+0
+Dacatarai
+Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets: re-roll hit rolls of 1
+if it applies
+0
+Rendax
+Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets: [LETHAL HITS]
+if it applies
+0
+STRATAGEMS
+with their CP
+1CP Honoured Interred
+Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
+if used
+0
+NOT COUNTED BY THE CALCULATOR (5)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll
+1CP Superhuman Focus
+End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+EMPEROR’S CHOSEN
+3
+1
+CP
+Impenetrable Bastion
+Select one objective your unit is controlling: that objective is secured.
+End of your Movement Trajann Valoris + Allarus Custodians
+1
+CP
+In Auramite Clad
+An enemy unit targets your unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
+Their Shoot · Fight Trajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+1
+CP
+Superhuman Focus
+End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
+Any phase Trajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+GRAV-ASSAULT FORCE
+3
+1
+CP
+Advanced Stabilisers
+Your unit’s ranged attacks have [ASSAULT].
+Your Shooting Caladius Annihilator Grav-tank
+1
+CP
+Inevitable Annihilation
+Your unit can ignore modifiers to its BS and hit rolls.
+Your Shooting Caladius Annihilator Grav-tank
+1
+CP
+Victory Before Death
+Your unit within range of an objective is destroyed: select one objective it was controlling when it was destroyed, with no enemy units (excluding AIRCRAFT) within range of it: that objective is secured.
+Any phase Caladius Annihilator Grav-tank
+MIGHT OF THE MORITOI
+3
+1
+CP
+Unceasing Onslaught
+Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge.
+Your Movement Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+1
+CP
+Unstoppable Momentum
+Your unit selected to move or declaring a charge has MOBILE.
+Your Move/Charge Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+1
+CP
+Honoured Interred
+Your unit has the Honoured Interred aura: friendly ADEPTUS CUSTODES units within 6" can re-roll hit rolls of 1.
+Your Shoot · Fight Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement Any unit
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP All but Caladius Annihilator Grav-tank
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Trajann Valoris + Allarus Custodians
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+EMPEROR’S CHOSEN
+3
+1
+CP
+Impenetrable Bastion
+End of your Movement Trajann Valoris + Allarus Custodians
+WHEN
+
+End of your Movement phase.
+
+TARGETOne friendly ADEPTUS CUSTODES unit (excluding MONSTER/VEHICLE units).
+
+EFFECT
+
+Select one objective your unit is controlling. That objective is secured.
+
+USED BYTrajann Valoris + Allarus Custodians
+
+1
+CP
+In Auramite Clad
+Their Shoot · Fight Trajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units).
+
+TARGETThat ADEPTUS CUSTODES unit.
+
+EFFECT
+
+Attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYTrajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+1
+CP
+Superhuman Focus
+Any phase Trajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+WHEN
+
+End of any phase.
+
+TARGETOne friendly ADEPTUS CUSTODES unit that is not readied.
+
+EFFECT
+
+Your unit is readied.
+
+RESTRICTIONSYou cannot select the same unit as the target of this stratagem more than once per battle round.
+
+USED BYTrajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+GRAV-ASSAULT FORCE
+3
+1
+CP
+Advanced Stabilisers
+Your Shooting Caladius Annihilator Grav-tank
+WHEN
+
+Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot.
+
+TARGETThat GRAV-ASSAULT unit.
+
+EFFECT
+
+Your unit’s ranged attacks have [Assault].
+
+USED BYCaladius Annihilator Grav-tank
+
+1
+CP
+Inevitable Annihilation
+Your Shooting Caladius Annihilator Grav-tank
+WHEN
+
+Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot.
+
+TARGETThat GRAV-ASSAULT unit.
+
+EFFECT
+
+Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls.
+
+USED BYCaladius Annihilator Grav-tank
+
+1
+CP
+Victory Before Death
+Any phase Caladius Annihilator Grav-tank
+WHEN
+
+Any phase, when a friendly GRAV-ASSAULT unit within range of an objective is destroyed.
+
+TARGETThat GRAV-ASSAULT unit. You can target that unit with this stratagem even though it is destroyed.
+
+EFFECT
+
+Select one objective that:
+
+Your unit was controlling when it was destroyed.
+Has no enemy units (excluding AIRCRAFT units) within range of it.
+
+That objective is secured.
+
+USED BYCaladius Annihilator Grav-tank
+
+MIGHT OF THE MORITOI
+3
+1
+CP
+Unceasing Onslaught
+Your Movement Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+WHEN
+
+Your Movement phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit ends an advance move.
+
+TARGETThat ADEPTUS CUSTODES DREADNOUGHT unit.
+
+EFFECT
+Your unit’s ranged attacks have [Assault] until the end of the turn.
+That move does not prevent your unit from being eligible to declare a charge.
+
+USED BYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+1
+CP
+Unstoppable Momentum
+Your Move/Charge Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+WHEN
+
+Your Movement/Charge phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit is selected to move or declares a charge.
+
+TARGETThat ADEPTUS CUSTODES DREADNOUGHT unit.
+
+EFFECT
+
+Your unit has MOBILE.
+
+USED BYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+1
+CP
+Honoured Interred
+Your Shoot · Fight Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne friendly ADEPTUS CUSTODES DREADNOUGHT unit.
+
+EFFECT
+
+Your unit has the following ability:
+
+Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit can re-roll hit rolls of 1.
+
+USED BYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+1
+CP
+Crushing Impact
+Your Charge Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought ×2
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP All but Caladius Annihilator Grav-tank
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYTrajann Valoris + Allarus Custodians, Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+1
+CP
+Epic Challenge
+Fight Trajann Valoris + Allarus Custodians
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYTrajann Valoris + Allarus Custodians
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit trajann-valoris-allarus-custodians · STRATAGEMS Lite Knights
+TRAJANN VALORIS + ALLARUS CUSTODIANS
+445 PTS
+Epic Hero · 265 + Allarus Custodians 180
+Warlord
+Models
+Options
+1× Trajann Valoris
+Eagle’s Scream, Watcher’s Axe
+Leading Allarus Custodians
+1× Allarus Custodian
+Balistus grenade launcher, Castellan axe
+1× Allarus Custodian (Vexilla)
+Balistus grenade launcher, Castellan axe
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Trajann Valoris
+40mm
+8"
+7
+2+
+10
+5+
+3
+4+
+Allarus Custodian×2
+40mm
+7"
+8
+2+
+6
+5+
+3
+4+
+WHEN TARGETEDTrajann Valoris · Feel No Pain 5+ · Kaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · Trajann Valoris · Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+ALL ATTACKS · WHOLE UNIT
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+TRAJANN VALORIS
+Eagle’s Scream
+24"
+2
+2+
+6
+-2
+2
+ASSAULT, RAPID FIRE 2
+ALLARUS CUSTODIANS
+Balistus grenade launcher×2
+18"
+3
+2+
+5
+-1
+1
+ASSAULT, BLAST 1
+Castellan axe×2
+24"
+2
+2+
+5
+-1
+2
+ASSAULT, RAPID FIRE 2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+TRAJANN VALORIS
+Watcher’s Axe
+6
+2+
+12
+-3
+4
+CLEAVE 1
+ALLARUS CUSTODIANS
+Castellan axe×2
+3
+2+
+10
+-2
+4
+WHOLE UNIT
+Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
+Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
+ABILITIES
+Captain-General
+- Trajann Valoris
+
+Aura
+
+Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of this model can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Moment Shackle
+- Trajann Valoris
+Once per battle, per army
+Any phase
+
+Once per battle, per army · Any phase · Either turn
+
+(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+
+This model’s Watcher’s Axe weapon has +3 A.
+This model has 3+ InSv.
+Slayer of Tyrants
+- Allarus Custodians
+
+This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.
+
+Vexilla
+- Allarus Custodians
+Already in OC
+This unit has +1 OC.
+This unit can ignore modifiers to this unit’s Ld.
+Rules
+Aquila Commander, Aegis of the Emperor, Martial Ka'tah, Leader, Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Magna Imperator
+Stratagems
+
+EMPEROR’S CHOSEN Impenetrable Bastion, In Auramite Clad, Superhuman Focus
+
+MIGHT OF THE MORITOI Honoured Interred (its aura: within 6" of the ADEPTUS CUSTODES DREADNOUGHT unit with it)
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Grav-Assault Force.
+
+Keywords
+CHARACTER
+EPIC HERO
+FACTION: ADEPTUS CUSTODES
+IMPERIUM
+INFANTRY
+TRAJANN VALORIS
+WARLORD
+ALLARUS CUSTODIANS*
+TERMINATOR*
+*from the led Allarus Custodians
+Ask about this unit
+Prosecutor Squad ›
+
+######## unit prosecutor-squad · TRAJANN VALORIS Lite Knights
+PROSECUTOR SQUAD
+45 PTS EACH
+Infantry · ×2 in list
+Models
+Options
+4× Prosecutor
+Boltgun, Gun Stock
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Prosecutor×4
+32mm
+7"
+3
+3+
+1
+6+
+2
+–
+WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Boltgun×4
+24"
+1
+3+
+5
+-1
+1
+ANTI-PSYKER 4+, ASSAULT, RAPID FIRE 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Gun Stock×4
+2
+3+
+3
+0
+1
+ABILITIES
+Purity of Execution
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That unit is detected:
+
+While a unit is detected, that unit has +3" detection range.
+Rules
+Feel No Pain 3+*, Daughters of the Abyss
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Emperor’s Chosen, Grav-Assault Force or Might of the Moritoi.
+
+Keywords
+ANATHEMA PSYKANA
+FACTION: ANATHEMA PSYKANA
+IMPERIUM
+INFANTRY
+PROSECUTOR SQUAD
+Ask about this unit
+‹ Trajann Valoris
+Witchseeker Squad (1 of 2) ›
+
+######## unit witchseeker-squad · PROSECUTOR SQUAD Lite Knights
+WITCHSEEKER SQUAD
+55 PTS
+Infantry
+1 of 2
+Models
+Options
+4× Witchseeker
+Flamer, Gun Stock
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Witchseeker×4
+32mm
+7"
+3
+3+
+1
+6+
+1
+–
+WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Flamer×4
+12"
+3
+–
+4
+-1
+1
+ANTI-PSYKER 4+, ASSAULT, BLAST 1, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Gun Stock×4
+2
+3+
+3
+0
+1
+ABILITIES
+Sanctified Flames
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
+
+Rules
+Scouts 7", Feel No Pain 3+*, Daughters of the Abyss
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Emperor’s Chosen, Grav-Assault Force or Might of the Moritoi.
+
+Keywords
+ANATHEMA PSYKANA
+FACTION: ANATHEMA PSYKANA
+IMPERIUM
+INFANTRY
+WITCHSEEKER SQUAD
+Ask about this unit
+‹ Prosecutor Squad
+Witchseeker Squad (2 of 2) ›
+
+######## unit witchseeker-squad-2 · WITCHSEEKER SQUAD Lite Knights
+WITCHSEEKER SQUAD
+60 PTS
+Infantry
+2 of 2
+Models
+Options
+5× Witchseeker
+Flamer, Gun Stock
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Witchseeker×5
+32mm
+7"
+3
+3+
+1
+6+
+1
+–
+WHEN TARGETEDFeel No Pain 3+ against psychic attacks
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Flamer×5
+12"
+3
+–
+4
+-1
+1
+ANTI-PSYKER 4+, ASSAULT, BLAST 1, TORRENT
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Gun Stock×5
+2
+3+
+3
+0
+1
+ABILITIES
+Sanctified Flames
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
+
+Rules
+Scouts 7", Feel No Pain 3+*, Daughters of the Abyss
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Emperor’s Chosen, Grav-Assault Force or Might of the Moritoi.
+
+Keywords
+ANATHEMA PSYKANA
+FACTION: ANATHEMA PSYKANA
+IMPERIUM
+INFANTRY
+WITCHSEEKER SQUAD
+Ask about this unit
+‹ Witchseeker Squad (1 of 2)
+Caladius Annihilator Grav-tank ›
+
+######## unit caladius-annihilator-grav-tank · WITCHSEEKER SQUAD Lite Knights
+CALADIUS ANNIHILATOR GRAV-TANK
+250 PTS
+Vehicle
+Models
+Options
+1× Caladius Annihilator Grav-tank
+Arachnus Blaze Carronade, Twin Lastrum Bolt Cannon, Armoured hull
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Caladius Annihilator Grav-tank
+170×109mm Oval
+10"
+11
+2+
+14
+5+
+4
+5+, 4+*
+WHEN TARGETEDFeel No Pain 5+ against mortal wounds · 4+ InSv against ranged attacks · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+ALL ATTACKS
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Arachnus Blaze Carronade
+48"
+4
+2+
+12
+-3
+D6+2
+LETHAL HITS: MONSTER/VEHICLE
+Twin Lastrum Bolt Cannon
+36"
+3
+2+
+6
+-2
+2
+SUSTAINED HITS 1, TWIN-LINKED
+vs MONSTER/VEHICLE: re-roll one hit roll, one wound roll and one damage roll (Advanced Firepower)
+STRATAGEMS · GRAV-ASSAULT FORCE · YOUR SHOOTING PHASE
+1CP Advanced Stabilisers: ranged attacks have [ASSAULT], selected to shoot
+1CP Inevitable Annihilation: can ignore modifiers to BS and hit rolls, selected to shoot
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured hull
+4
+4+
+6
+0
+1
+ABILITIES
+Advanced Firepower
+
+This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
+
+Re-roll one hit roll.
+Re-roll one wound roll.
+Re-roll one damage roll.
+Rules
+Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 5, Deep Strike, Magna Imperator, Flare Shields
+Stratagems
+
+EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
+
+GRAV-ASSAULT FORCE Advanced Stabilisers, Inevitable Annihilation, Victory Before Death
+
+MIGHT OF THE MORITOI Honoured Interred (its aura: within 6" of the ADEPTUS CUSTODES DREADNOUGHT unit with it)
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffensive, Command Re-roll
+
+Keywords
+CALADIUS
+CALADIUS ANNIHILATOR GRAV-TANK
+FACTION: ADEPTUS CUSTODES
+FLY
+FRAME
+GRAV-ASSAULT
+IMPERIUM
+VEHICLE
+Ask about this unit
+‹ Witchseeker Squad (2 of 2)
+Contemptor-Achillus Dreadnought ›
+
+######## unit contemptor-achillus-dreadnought · CALADIUS ANNIHILATOR GRAV-TANK Lite Knights
+CONTEMPTOR-ACHILLUS DREADNOUGHT
+230 PTS
+Vehicle
+Models
+Options
+1× Contemptor-Achillus Dreadnought
+Dreadspear, 2× Lastrum storm bolter
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Contemptor-Achillus Dreadnought
+60mm
+9"
+10
+2+
+12
+5+
+3
+5+
+WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+ALL ATTACKS
+Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Dreadspear
+18"
+2
+2+
+10
+-3
+D3+2
+Lastrum storm bolter×2
+24"
+3
+2+
+5
+-1
+1
+RAPID FIRE 3
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Dreadspear
+5
+2+
+12
+-3
+D3+3
+LANCE
+Made a charge move this turn: Dreadspear +1 to wound (Lance)
+ABILITIES
+Unyielding Ancient
+
+Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
+
+Rules
+Martial Ka'tah, Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4, Magna Imperator, Moritoi Ancients
+Stratagems
+
+EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
+
+MIGHT OF THE MORITOI Unceasing Onslaught, Unstoppable Momentum, Honoured Interred
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Grav-Assault Force.
+
+Keywords
+CONTEMPTOR-ACHILLUS DREADNOUGHT
+DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
+IMPERIUM
+VEHICLE
+WALKER
+Ask about this unit
+‹ Caladius Annihilator Grav-tank
+Contemptor-Galatus Dreadnought ›
+
+######## unit contemptor-galatus-dreadnought · CONTEMPTOR-ACHILLUS DREADNOUGHT Lite Knights
+CONTEMPTOR-GALATUS DREADNOUGHT
+250 PTS
+Vehicle
+Memento Moritoi
+Models
+Options
+1× Contemptor-Galatus Dreadnought
+Warblade
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Contemptor-Galatus Dreadnought
+60mm
+9"
+10
+2+
+12
+5+
+3
+4+
+WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+ALL ATTACKS
+Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Warblade
+12"
+4
+–
+6
+-1
+2
+BLAST 2, TORRENT, TWIN-LINKED
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Warblade
+9
+2+
+11
+-2
+4
+CLEAVE 1, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+ABILITIES
+Unyielding Ancient
+
+Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
+
+Memento Moritoi
+Already in A, S, D
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+Rules
+Martial Ka'tah, Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4, Magna Imperator, Moritoi Ancients
+Stratagems
+
+EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
+
+MIGHT OF THE MORITOI Unceasing Onslaught, Unstoppable Momentum, Honoured Interred
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Grav-Assault Force.
+
+Keywords
+CONTEMPTOR-GALATUS DREADNOUGHT
+DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
+IMPERIUM
+VEHICLE
+WALKER
+Ask about this unit
+‹ Contemptor-Achillus Dreadnought
+Telemon Heavy Dreadnought ›
+
+######## unit telemon-heavy-dreadnought · CONTEMPTOR-GALATUS DREADNOUGHT Lite Knights
+TELEMON HEAVY DREADNOUGHT
+310 PTS
+Vehicle
+Augury Uplink
+Models
+Options
+1× Telemon Heavy Dreadnought
+Spiculus bolt launcher, Dual Caestus Fists, 2× Twin Neutronium Cascade Projectors
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Telemon Heavy Dreadnought
+100mm
+10"
+11
+2+
+14
+5+
+4
+4+
+WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · Feel No Pain 5+ · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+ALL ATTACKS
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Spiculus bolt launcher
+36"
+6
+2+
+5
+-1
+1
+BLAST 2
+Twin Neutronium Cascade Projectors×2
+12"
+3
+–
+7
+-2
+1
+BLAST 1, TORRENT, TWIN-LINKED
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Dual Caestus Fists
+7
+2+
+14
+-3
+4
+TWIN-LINKED
+ABILITIES
+Guardian Eternal
+
+Ranged attacks that target this unit have -1 D.
+
+Augury Uplink
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.
+
+Rules
+Martial Ka'tah, Deadly Demise D3, Damaged 5, Aegis of the Emperor, Feel No Pain 5+*, Feel No Pain 5+, Magna Imperator, Moritoi Ancients
+Stratagems
+
+EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
+
+MIGHT OF THE MORITOI Unceasing Onslaught, Unstoppable Momentum, Honoured Interred
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Grav-Assault Force.
+
+Keywords
+DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
+IMPERIUM
+TELEMON HEAVY DREADNOUGHT
+VEHICLE
+WALKER
+Ask about this unit
+‹ Contemptor-Galatus Dreadnought
+Telemon Heavy Dreadnought ›
+
+######## unit telemon-heavy-dreadnought-2 · TELEMON HEAVY DREADNOUGHT Lite Knights
+TELEMON HEAVY DREADNOUGHT
+310 PTS
+Vehicle
+Models
+Options
+1× Telemon Heavy Dreadnought
+Spiculus bolt launcher, Adrathic Desolator, Caestus Fist, Twin Neutronium Cascade Projectors
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Telemon Heavy Dreadnought
+100mm
+10"
+11
+2+
+14
+5+
+4
+4+
+WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+ALL ATTACKS
+Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Spiculus bolt launcher
+36"
+6
+2+
+5
+-1
+1
+BLAST 2
+Adrathic Desolator
+24"
+4
+2+
+10
+-2
+4
+Twin Neutronium Cascade Projectors
+12"
+3
+–
+7
+-2
+1
+BLAST 1, TORRENT, TWIN-LINKED
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Caestus Fist
+5
+2+
+14
+-3
+4
+ABILITIES
+Guardian Eternal
+
+Ranged attacks that target this unit have -1 D.
+
+Rules
+Martial Ka'tah, Deadly Demise D3, Damaged 5, Aegis of the Emperor, Feel No Pain 5+*, Magna Imperator, Moritoi Ancients
+Stratagems
+
+EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
+
+MIGHT OF THE MORITOI Unceasing Onslaught, Unstoppable Momentum, Honoured Interred
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Grav-Assault Force.
+
+Keywords
+DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
+IMPERIUM
+TELEMON HEAVY DREADNOUGHT
+VEHICLE
+WALKER
+Ask about this unit
+‹ Telemon Heavy Dreadnought
+
+######## popup ability:lite-knights|Advanced Firepower|This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:
+- Re-roll one **hit roll**.
+- Re-roll one **wound roll**.
+- Re-roll one **damage roll**. · TELEMON HEAVY DREADNOUGHT Lite Knights
+ABILITY
+
+Advanced Firepower
+
+This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
+
+Re-roll one hit roll.
+Re-roll one wound roll.
+Re-roll one damage roll.
+
+UNITCaladius Annihilator Grav-tank
+
+Ask about this ability
+
+######## popup ability:lite-knights|Augury Uplink|**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**. · LITE KNIGHTS Lite Knights
+ABILITY · UPGRADE
+
+Augury Uplink
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.
+
+UNITTelemon Heavy Dreadnought
+
+Ask about this ability
+
+######## popup ability:lite-knights|Captain-General|Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6" of this model can:
+- Re-roll hit rolls of 1.
+- Re-roll wound rolls of 1. · LITE KNIGHTS Lite Knights
+ABILITY · AURA
+
+Captain-General
+
+Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of this model can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+UNITTrajann Valoris + Allarus Custodians
+
+Ask about this ability
+
+######## popup ability:lite-knights|Guardian Eternal|Ranged attacks that target this unit have -1 **D**. · LITE KNIGHTS Lite Knights
+ABILITY
+
+Guardian Eternal
+
+Ranged attacks that target this unit have -1 D.
+
+UNITTelemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this ability
+
+######## popup ability:lite-knights|Moment Shackle|(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+- This model’s Watcher’s Axe weapon has +3 **A**.
+- This model has 3+ **InSv**. · LITE KNIGHTS Lite Knights
+ABILITY · ONCE PER BATTLE, PER ARMY · ANY PHASE · EITHER TURN
+
+Moment Shackle
+
+(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+
+This model’s Watcher’s Axe weapon has +3 A.
+This model has 3+ InSv.
+
+UNITTrajann Valoris + Allarus Custodians
+
+Ask about this ability
+
+######## popup ability:lite-knights|Slayer of Tyrants|This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**. · LITE KNIGHTS Lite Knights
+ABILITY
+
+Slayer of Tyrants
+
+This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.
+
+UNITTrajann Valoris + Allarus Custodians
+
+Ask about this ability
+
+######## popup ability:lite-knights|Unyielding Ancient|Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**. · LITE KNIGHTS Lite Knights
+ABILITY
+
+Unyielding Ancient
+
+Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
+
+UNITContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought
+
+Ask about this ability
+
+######## popup enh:might-of-the-moritoi|Augury Uplink · LITE KNIGHTS Lite Knights
+UPGRADE · MIGHT OF THE MORITOI · 30 PTS
+
+Augury Uplink
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.
+
+ONTelemon Heavy Dreadnought
+
+Ask about this upgrade
+
+######## popup enh:might-of-the-moritoi|Memento Moritoi · LITE KNIGHTS Lite Knights
+UPGRADE · MIGHT OF THE MORITOI · 30 PTS
+
+Memento Moritoi
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+ONContemptor-Galatus Dreadnought
+
+Ask about this upgrade
+
+######## popup grant:["Flare Shields","caladius-annihilator-grav-tank","INV 5+, 4+*",null] · LITE KNIGHTS Lite Knights
+INV 5+, 4+* · GRANTED BY
+
+Flare Shields
+
+Grav-Assault Force detachment rule
+
+Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Memento Moritoi","contemptor-galatus-dreadnought","A 9",null] · LITE KNIGHTS Lite Knights
+A 9 · GRANTED BY
+
+Memento Moritoi
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Memento Moritoi","contemptor-galatus-dreadnought","D 4",null] · LITE KNIGHTS Lite Knights
+D 4 · GRANTED BY
+
+Memento Moritoi
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Memento Moritoi","contemptor-galatus-dreadnought","S 11",null] · LITE KNIGHTS Lite Knights
+S 11 · GRANTED BY
+
+Memento Moritoi
+
+Upgrade
+
+ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Vexilla","trajann-valoris-allarus-custodians","OC 3",null] · LITE KNIGHTS Lite Knights
+OC 3 · GRANTED BY
+
+Vexilla
+
+Allarus Custodians · datasheet ability
+
+This unit has +1 OC.
+This unit can ignore modifiers to this unit’s Ld.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANATHEMA PSYKANA · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Anathema Psykana
+
+You can include ANATHEMA PSYKANA units in your army, even though they do not have the ADEPTUS CUSTODES faction keyword.
+
+When mustering your army, unless otherwise stated:
+
+You cannot select ANATHEMA PSYKANA as your army faction.
+You cannot select an ANATHEMA PSYKANA model to be your WARLORD.
+Ask about this rule
+
+######## popup rule:ANTI-PSYKER 4+ · LITE KNIGHTS Lite Knights
+CORE RULE
+
+ANTI-PSYKER 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYProsecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2)
+
+Ask about this rule
+
+######## popup rule:ASSAULT · LITE KNIGHTS Lite Knights
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYTrajann Valoris, Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Advance roll · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Aegis of the Emperor · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Aegis of the Emperor
+
+Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.
+
+Ask about this rule
+
+######## popup rule:Aquila Commander · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Aquila Commander
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Ask about this rule
+
+######## popup rule:BLAST 1 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+BLAST 1
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYTrajann Valoris, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:BLAST 2 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+BLAST 2
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYTrajann Valoris, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:CLEAVE 1 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+CLEAVE 1
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYTrajann Valoris, Contemptor-Galatus Dreadnought
+
+Ask about this rule
+
+######## popup rule:Charge roll · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Damaged · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Damaged
+
+Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Damaged 4 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Damaged 4
+
+Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Damaged 5 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Damaged 5
+
+Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Daughters of the Abyss · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Daughters of the Abyss
+Friendly ANATHEMA PSYKANA units with this ability have Feel No Pain 3+ against psychic attacks.
+Friendly ANATHEMA PSYKANA units with this ability have the following ability:
+
+Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Deep Strike · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYTrajann Valoris, Caladius Annihilator Grav-tank
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTrajann Valoris (Trajann Valoris only), Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 3+* · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Feel No Pain 3+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTrajann Valoris (Trajann Valoris only), Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTrajann Valoris (Trajann Valoris only), Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+* · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTrajann Valoris (Trajann Valoris only), Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Fights First · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:Flare Shields · LITE KNIGHTS Lite Knights
+GRAV-ASSAULT FORCE DETACHMENT RULE
+
+Flare Shields
+
+Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.
+
+IN THIS ARMYCaladius Annihilator Grav-tank
+
+Ask about this rule
+
+######## popup rule:Hazard roll · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:LANCE · LITE KNIGHTS Lite Knights
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYContemptor-Achillus Dreadnought
+
+Ask about this rule
+
+######## popup rule:LETHAL HITS: MONSTER/VEHICLE · LITE KNIGHTS Lite Knights
+CORE RULE
+
+LETHAL HITS: MONSTER/VEHICLE
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYCaladius Annihilator Grav-tank
+
+Ask about this rule
+
+######## popup rule:Lance · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYContemptor-Achillus Dreadnought
+
+Ask about this rule
+
+######## popup rule:Leader · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYTrajann Valoris
+
+Ask about this rule
+
+######## popup rule:MOBILE · LITE KNIGHTS Lite Knights
+CORE RULE
+
+MOBILE
+
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+Ask about this rule
+
+######## popup rule:Magna Imperator · LITE KNIGHTS Lite Knights
+EMPEROR’S CHOSEN DETACHMENT RULE
+
+Magna Imperator
+
+When a friendly ADEPTUS CUSTODES unit is selected to attack, that unit’s attacks can:
+
+Re-roll one hit roll.
+Re-roll one wound roll.
+
+Favoured ka’tah: RENDAX
+
+Additional Effect: You can select one enemy MONSTER/VEHICLE unit engaged with your unit and roll one D6:
+
+On a 1-2, that enemy unit suffers 1 mortal wound.
+On a 3-5, that enemy unit suffers D3 mortal wounds.
+On a 6, that enemy unit suffers 3 mortal wounds.
+
+IN THIS ARMYTrajann Valoris, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:Martial Ka'tah · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Martial Ka’tah
+
+At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.
+
+Each ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.
+
+We recommend placing a token next to each readied unit, removing it when that unit is no longer readied.
+
+Favoured Ka’tah
+
+All detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.
+
+Example: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2" M in addition to the normal effect of Calistus.
+
+Conservai
+
+KA’TAH ABILITY
+
+WHEN: Your Command phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Until the end of the turn:
+
+Being engaged/battle-shocked does not prevent your unit from being eligible to start an action.
+Starting an action does not prevent your unit from being eligible to shoot.
+Calistus
+
+KA’TAH ABILITY
+
+WHEN: Your Movement phase, when a friendly readied unit is selected to move.
+
+TARGET: That readied unit.
+
+EFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.
+
+Salvus
+
+KA’TAH ABILITY
+
+WHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.
+
+TARGET: That readied unit.
+
+EFFECT: Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls and wound rolls.
+Dacatarai
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.
+
+Kaptaris
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Melee attacks that target your unit have -1 to hit rolls.
+
+Rendax
+
+KA’TAH ABILITY
+
+WHEN: Fight phase, when a friendly readied unit is selected to fight.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle].
+
+Ask about this rule
+
+######## popup rule:Martial Ka’tah · LITE KNIGHTS Lite Knights
+ADEPTUS CUSTODES ARMY RULE
+
+Martial Ka’tah
+
+At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.
+
+Each ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.
+
+We recommend placing a token next to each readied unit, removing it when that unit is no longer readied.
+
+Favoured Ka’tah
+
+All detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.
+
+Example: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2" M in addition to the normal effect of Calistus.
+
+Conservai
+
+KA’TAH ABILITY
+
+WHEN: Your Command phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Until the end of the turn:
+
+Being engaged/battle-shocked does not prevent your unit from being eligible to start an action.
+Starting an action does not prevent your unit from being eligible to shoot.
+Calistus
+
+KA’TAH ABILITY
+
+WHEN: Your Movement phase, when a friendly readied unit is selected to move.
+
+TARGET: That readied unit.
+
+EFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.
+
+Salvus
+
+KA’TAH ABILITY
+
+WHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.
+
+TARGET: That readied unit.
+
+EFFECT: Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls and wound rolls.
+Dacatarai
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.
+
+Kaptaris
+
+KA’TAH ABILITY
+
+WHEN: Start of the Fight phase.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Melee attacks that target your unit have -1 to hit rolls.
+
+Rendax
+
+KA’TAH ABILITY
+
+WHEN: Fight phase, when a friendly readied unit is selected to fight.
+
+TARGET: One friendly readied unit.
+
+EFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle].
+
+Ask about this rule
+
+######## popup rule:Moritoi Ancients · LITE KNIGHTS Lite Knights
+MIGHT OF THE MORITOI DETACHMENT RULE
+
+Moritoi Ancients
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC.
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below starting strength, that unit’s attacks can re-roll hit rolls of 1.
+While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength, that unit’s attacks can:
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+IN THIS ARMYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 1 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYTrajann Valoris, Prosecutor Squad, Contemptor-Achillus Dreadnought
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 2 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYTrajann Valoris, Prosecutor Squad, Contemptor-Achillus Dreadnought
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 3 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYTrajann Valoris, Prosecutor Squad, Contemptor-Achillus Dreadnought
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · LITE KNIGHTS Lite Knights
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Galatus Dreadnought
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1: non-MONSTER/VEHICLE · LITE KNIGHTS Lite Knights
+CORE RULE
+
+SUSTAINED HITS 1: non-MONSTER/VEHICLE
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Galatus Dreadnought
+
+Ask about this rule
+
+######## popup rule:Scouts · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYWitchseeker Squad (1 of 2), Witchseeker Squad (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Scouts 7" · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Scouts 7"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYWitchseeker Squad (1 of 2), Witchseeker Squad (2 of 2)
+
+Ask about this rule
+
+######## popup rule:TORRENT · LITE KNIGHTS Lite Knights
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYWitchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:TWIN-LINKED · LITE KNIGHTS Lite Knights
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYCaladius Annihilator Grav-tank, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this rule
+
+######## popup rule:[Assault] · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Assault
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYTrajann Valoris, Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2)
+
+Ask about this rule
+
+######## popup rule:[Devastating Wounds] · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Devastating Wounds
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+Ask about this rule
+
+######## popup rule:[Lethal Hits: Monster/Vehicle] · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Lethal Hits: Monster/Vehicle
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYCaladius Annihilator Grav-tank
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · LITE KNIGHTS Lite Knights
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+Ask about this rule
+
+######## popup rule:advance move · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:battle-shocked · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:below half-strength · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:below starting strength · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:declares a charge · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:destroyed · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:eligible to declare a charge · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:engaged · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:fall-back move · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:ingress move · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:selected to attack · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Selected to Attack
+
+04.01.05 Selected to Attack (app): Some rules use the term selected to attack. If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.
+
+App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.
+
+Ask about this rule
+
+######## popup rule:snap shooting · LITE KNIGHTS Lite Knights
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:starting strength · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · LITE KNIGHTS Lite Knights
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:advanced-stabilisers · LITE KNIGHTS Lite Knights
+1CP · SHOOTING · YOUR TURN
+
+Advanced Stabilisers
+WHEN
+
+Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot.
+
+TARGETThat GRAV-ASSAULT unit.
+
+EFFECT
+
+Your unit’s ranged attacks have [Assault].
+
+USED BYCaladius Annihilator Grav-tank
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · LITE KNIGHTS Lite Knights
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · LITE KNIGHTS Lite Knights
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · LITE KNIGHTS Lite Knights
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYCaladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · LITE KNIGHTS Lite Knights
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYTrajann Valoris + Allarus Custodians
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · LITE KNIGHTS Lite Knights
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · LITE KNIGHTS Lite Knights
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYTrajann Valoris + Allarus Custodians, Prosecutor Squad, Witchseeker Squad (1 of 2), Witchseeker Squad (2 of 2), Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:honoured-interred · LITE KNIGHTS Lite Knights
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Honoured Interred
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne friendly ADEPTUS CUSTODES DREADNOUGHT unit.
+
+EFFECT
+
+Your unit has the following ability:
+
+Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit can re-roll hit rolls of 1.
+
+USED BYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:impenetrable-bastion · LITE KNIGHTS Lite Knights
+1CP · MOVEMENT · YOUR TURN
+
+Impenetrable Bastion
+WHEN
+
+End of your Movement phase.
+
+TARGETOne friendly ADEPTUS CUSTODES unit (excluding MONSTER/VEHICLE units).
+
+EFFECT
+
+Select one objective your unit is controlling. That objective is secured.
+
+USED BYTrajann Valoris + Allarus Custodians
+
+Ask about this stratagem
+
+######## popup strat:in-auramite-clad · LITE KNIGHTS Lite Knights
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+In Auramite Clad
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units).
+
+TARGETThat ADEPTUS CUSTODES unit.
+
+EFFECT
+
+Attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYTrajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:inevitable-annihilation · LITE KNIGHTS Lite Knights
+1CP · SHOOTING · YOUR TURN
+
+Inevitable Annihilation
+WHEN
+
+Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot.
+
+TARGETThat GRAV-ASSAULT unit.
+
+EFFECT
+
+Your unit can ignore modifiers to your unit’s:
+
+BS.
+Hit rolls.
+
+USED BYCaladius Annihilator Grav-tank
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · LITE KNIGHTS Lite Knights
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · LITE KNIGHTS Lite Knights
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:superhuman-focus · LITE KNIGHTS Lite Knights
+1CP · ANY PHASE · EITHER TURN
+
+Superhuman Focus
+WHEN
+
+End of any phase.
+
+TARGETOne friendly ADEPTUS CUSTODES unit that is not readied.
+
+EFFECT
+
+Your unit is readied.
+
+RESTRICTIONSYou cannot select the same unit as the target of this stratagem more than once per battle round.
+
+USED BYTrajann Valoris + Allarus Custodians, Caladius Annihilator Grav-tank, Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:unceasing-onslaught · LITE KNIGHTS Lite Knights
+1CP · MOVEMENT · YOUR TURN
+
+Unceasing Onslaught
+WHEN
+
+Your Movement phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit ends an advance move.
+
+TARGETThat ADEPTUS CUSTODES DREADNOUGHT unit.
+
+EFFECT
+Your unit’s ranged attacks have [Assault] until the end of the turn.
+That move does not prevent your unit from being eligible to declare a charge.
+
+USED BYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:unstoppable-momentum · LITE KNIGHTS Lite Knights
+1CP · MOVEMENT / CHARGE · YOUR TURN
+
+Unstoppable Momentum
+WHEN
+
+Your Movement/Charge phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit is selected to move or declares a charge.
+
+TARGETThat ADEPTUS CUSTODES DREADNOUGHT unit.
+
+EFFECT
+
+Your unit has MOBILE.
+
+USED BYContemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought, Telemon Heavy Dreadnought, Telemon Heavy Dreadnought
+
+Ask about this stratagem
+
+######## popup strat:victory-before-death · LITE KNIGHTS Lite Knights
+1CP · ANY PHASE · EITHER TURN
+
+Victory Before Death
+WHEN
+
+Any phase, when a friendly GRAV-ASSAULT unit within range of an objective is destroyed.
+
+TARGETThat GRAV-ASSAULT unit. You can target that unit with this stratagem even though it is destroyed.
+
+EFFECT
+
+Select one objective that:
+
+Your unit was controlling when it was destroyed.
+Has no enemy units (excluding AIRCRAFT units) within range of it.
+
+That objective is secured.
+
+USED BYCaladius Annihilator Grav-tank
+
+Ask about this stratagem

@@ -329,6 +329,10 @@ const app = [
   ['the target as set: a fresh one is 5 × T4 Sv 3+ W2', () => +(t => [t.n, t.T, t.Sv, t.W, t.InSv, t.fnp, +t.cover, +t.dm1].join() === '5,4,3,2,0,0,0,0')(dm.app.dmTypedVals({ typed:{} })), 1],
   ['the target as set: no Sv 1+, InSv 7+ or Models 0', () => +(t => [t.n, t.Sv, t.InSv, t.fnp].join() === '5,0,0,0')(dm.app.dmTypedVals({ typed:{ n:0, Sv:1, InSv:7, fnp:9 } })), 1],
   ['the target as set: no keywords', () => dm.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{} }).input.target.kw.length, 0, 0],
+  // an army rule's Damage marks reach the units whose Rules line names it, with either apostrophe (New Recruit prints "Martial
+  // Ka'tah", the army rule is "Martial Ka’tah"): a Telemon's fight has Dacatarai and Rendax, its shooting Salvus, each a box of its own
+  ['Martial Ka’tah: a Telemon’s fight has Dacatarai and Rendax', () => +['Dacatarai', 'Rendax'].every(f => !!box({ army:'lite-knights', ph:'fight', atk:'telemon-heavy-dreadnought', typed:{} }, f).m), 1],
+  ['Martial Ka’tah: a Telemon’s shooting has Salvus', () => +!!box({ army:'lite-knights', ph:'shooting', atk:'telemon-heavy-dreadnought', typed:{} }, 'Salvus').m, 1],
   // ---- a rule about the target's keywords is a box you tick; one about its T is read from the T set ----
   // Blitz Dem Gitz! (+6 A to the Blitzkannon "excluding MONSTER/VEHICLE units", always): unticked to start with; ticked at a Knight
   // Paladin set by hand: 8 + 6 = 14 attacks × 3/6 (BS 4+) × 2/6 (S7 vs T11: 5+) × 4/6 (AP -2: Sv 5+, as its InSv) × D2 × 5/6 = 2.59 (not

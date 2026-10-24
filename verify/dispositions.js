@@ -13,6 +13,8 @@ const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
 const MARKER = { 'ecf8-cf72-7d5b-1b5b':'Disruption', '0936-9767-1cc7-52ae':'Priority Assets', '6fe0-3dbe-f7e0-10bb':'Purge the Foe', '1cc1-f11a-4e8f-1bcc':'Take and Hold', 'b4a7-5083-fe94-4d24':'Reconnaissance' };
 const ORDER = Object.values(MARKER);
+// a detachment's name as a key: lower case, curly apostrophes straight (data.js "Emperor’s Chosen", BSData "Emperor's Chosen")
+const key = s => String(s || '').toLowerCase().replace(/[’‘]/g, "'");
 // { 'detachment name (lower case)': [dispositions] }, and byFaction { catalogue name: { detachment name: [...] } }
 function byDetachment(){
   const out = {}, byFaction = {}, dir = path.join(ROOT, 'verify/.cache/bsdata');
@@ -21,7 +23,7 @@ function byDetachment(){
     let cat; try { cat = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')); } catch(e){ continue; }
     const cname = ((cat.catalogue || cat.gameSystem || {}).name || file.replace(/\.json$/, '')), fac = cname.replace(/\s*-?\s*Library$/i, '').replace(/^Library - /, '').trim();
     const walk = o => { if(Array.isArray(o)) o.forEach(walk); else if(o && typeof o === 'object'){
-      if(o.name && o.categoryLinks){ const d = links(o.categoryLinks, new Set()); if(d.size){ const k = o.name.toLowerCase();
+      if(o.name && o.categoryLinks){ const d = links(o.categoryLinks, new Set()); if(d.size){ const k = key(o.name);
         out[k] = ORDER.filter(x => d.has(x) || (out[k] || []).includes(x)); (byFaction[fac] = byFaction[fac] || {})[o.name] = out[k]; } }
       Object.values(o).forEach(walk); } };
     walk(cat);
@@ -40,7 +42,7 @@ const fails = [];
 let n = 0;
 for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.entries(f.detachments || {})){
   n++;
-  const want = B[(d.name || '').toLowerCase()];
+  const want = B[key(d.name)];
   if(!want){ fails.push(fid + ' · ' + d.name + ': not found in BSData'); continue; }
   const have = d.dispositions || [];
   if(have.join('|') === want.join('|')) continue;
@@ -53,7 +55,7 @@ for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.e
   src = src.slice(0, end) + lit + src.slice(end + (next ? next[0].length : 0));
 }
 for(const a of D.armies){
-  const can = new Set((a.detachments || []).flatMap(id => (D.factions[a.faction].detachments[id] || {}).dispositions || B[((D.factions[a.faction].detachments[id] || {}).name || '').toLowerCase()] || []));
+  const can = new Set((a.detachments || []).flatMap(id => (D.factions[a.faction].detachments[id] || {}).dispositions || B[key((D.factions[a.faction].detachments[id] || {}).name)] || []));
   if(a.disposition && !can.has(a.disposition)) fails.push(a.id + ': its disposition ' + a.disposition + ' is not one its detachments allow (' + [...can].join(', ') + ')');
 }
 if(write){ fs.writeFileSync(file, src); console.log('dispositions: written for ' + n + ' detachments'); }

@@ -69,7 +69,10 @@ let fid = Object.keys(factions).find(k => k[0] !== '_' && factions[k].bsdata ===
 if (!fid) {
   fid = slug(short);
   const gw = fs.existsSync(path.join(V, 'sources', 'gw-downloads.json')) ? readJSON(path.join(V, 'sources', 'gw-downloads.json')) : [];
-  const pack = gw.find(d => (d.categories || []).includes('faction-packs') && slug(d.title.replace(/^Faction Pack:\s*/, '')) === fid);
+  // (GW files a faction's printed product updates under faction-packs too, with the faction's bare name as
+  // title: the one titled "Faction Pack: …" is the pack)
+  const packs = gw.filter(d => (d.categories || []).includes('faction-packs') && slug(d.title.replace(/^Faction Pack:\s*/, '')) === fid);
+  const pack = packs.find(d => /^Faction Pack:/.test(d.title)) || packs[0];
   factions[fid] = { waha: fid, bsdata: nr.faction, pack: pack ? { file: pack.file, label: 'GW Faction Pack ' + short } : null };
   console.log('   new faction ' + fid + ': Wahapedia ' + fid + ', BSData "' + nr.faction + '", ' + (pack ? 'Faction Pack ' + pack.file : 'no GW Faction Pack (Wahapedia is the source)'));
   if (!dry) writeJSON(FJ, factions);

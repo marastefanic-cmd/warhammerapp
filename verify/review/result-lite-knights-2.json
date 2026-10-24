@@ -1,0 +1,74 @@
+[
+{
+"key": "a5a287161527b4ba",
+"where": "lite-knights · Trajann Valoris · Captain-General",
+"verdict": "ok",
+"why": "Wahapedia Trajann Valoris datasheet (new codex): “Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” GW tags it (Aura), so tag Aura is right (22.01). The stored text is that wording with the full stops (NR prints the bullets without them); the 14 Oct Printed Product Updates touch only Superior Creation and the Dawneagle Shield-Captain."
+},
+{
+"key": "0f607c076cfd1a4b",
+"where": "lite-knights · Trajann Valoris · Captain-General",
+"verdict": "ok",
+"why": "Captain-General is under ABILITIES on Trajann Valoris’s datasheet (Wahapedia), not the Allarus Custodians’ (theirs: Slayer of Tyrants, Vexilla); “within 6\" of this model” = Trajann. Models are NR’s three lines. Only the text’s punctuation changed since the first sign-off."
+},
+{
+"key": "b674fae6fc22f084",
+"where": "lite-knights · Trajann Valoris · Slayer of Tyrants",
+"verdict": "ok",
+"why": "Wahapedia Allarus Custodians datasheet: “ABILITIES Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.” The new codex’s name is singular (NR’s “Slayers of Tyrants” is the deviation); it is the Allarus datasheet’s, so who Allarus Custodians, and “This unit’s” reaches the attached unit (19.04)."
+},
+{
+"key": "7c86803ae6394099",
+"where": "lite-knights · Trajann Valoris",
+"verdict": "ok",
+"why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, the target condition as the when, the note literal, from the codex name “Slayer of Tyrants” (Wahapedia). No always, so it stays a tick. Nothing added."
+},
+{
+"key": "011fdf31644d27da",
+"where": "lite-knights · Trajann Valoris",
+"verdict": "ok",
+"why": "“Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” needs all Faction: Adeptus Custodes, none Monster/Vehicle (so not the Anathema Psykana squads, whose only faction keyword is ANATHEMA PSYKANA, nor the Caladius/Dreadnoughts); tagged Aura, so 22.01 “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability” puts his own unit in it (selfAlways, Own aura). Note literal; the change is only the from’s and text’s punctuation."
+},
+{
+"key": "4a833940db5de0dc",
+"where": "lite-knights · Trajann Valoris",
+"verdict": "ok",
+"why": "Wahapedia Trajann Valoris: “CORE ABILITIES Deep Strike, Feel No Pain 5+, Leader”; Allarus Custodians: “CORE ABILITIES Deep Strike” only. The starred “Feel No Pain 5+*” is Aegis of the Emperor (“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds”), on both datasheets. So the plain Feel No Pain 5+ is Trajann’s alone: partialRules names him, and the new partialWho clause keeps the starred one from matching it (rendered: “Trajann Valoris · Feel No Pain 5+ · … · Feel No Pain 5+ against mortal wounds”)."
+},
+{
+"key": "e74b6194b5f8ccbf",
+"where": "lite-knights · Prosecutor Squad · Purity of Execution",
+"verdict": "ok",
+"why": "Wahapedia Prosecutor Squad: “Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected”: shooting, your turn. Only the stored text’s punctuation changed."
+},
+{
+"key": "2701ca620ee7bea8",
+"where": "lite-knights · Witchseeker Squad",
+"verdict": "ok",
+"why": "Wahapedia army rule (and the Witchseeker/Prosecutor datasheets): “Daughters of the Abyss … Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.” Who: ADEPTUS CUSTODES units — needs all Faction: Adeptus Custodes, which excludes the Prosecutors/Witchseekers (FACTION KEYWORDS: ANATHEMA PSYKANA; the Anathema Psykana rule: “even though they do not have the ADEPTUS CUSTODES faction keyword”) and has no MONSTER/VEHICLE exclusion, so the Caladius and Dreadnoughts get it too (rendered so). Range 6\" of the Anathema unit, against psychic attacks only, FNP 5+: all in the when/note. It is GW-tagged (Aura) (22.01). The Anathema units’ own protection is the first bullet (FNP 3+ vs psychic, the rule def), so they need no guard line; kind all fits (psychic attacks can be ranged or melee). Three sources collapse into one line (defenceItems)."
+},
+{
+"key": "c046c2e490b089ba",
+"where": "adeptus-custodes army rule · Martial Ka’tah",
+"verdict": "ok",
+"why": "Wahapedia: “KAPTARIS KA’TAH ABILITY WHEN: Start of the Fight phase. TARGET: One friendly readied unit. EFFECT: Melee attacks that target your unit have -1 to hit rolls.” The def keeps the name (one of the ka’tah abilities the player can select), the WHEN, the readied condition and the effect word for word; no duration is printed and none is added (01.02.02: the phase). “Start of the Fight phase” names no player, and readied lasts from your Command phase until a ka’tah is used, so defPh fight (either turn) is right. Martial Ka’tah applies to “friendly ADEPTUS CUSTODES units with this ability”: rendered on Trajann, the Dreadnoughts, not on the Caladius (no Martial Ka’tah on its datasheet) nor the Anathema squads."
+},
+{
+"key": "5205e5c60865dd26",
+"where": "Might of the Moritoi · Honoured Interred",
+"verdict": "ok",
+"why": "Wahapedia Might of the Moritoi: “HONOURED INTERRED 1CP WHEN: Your Shooting phase or the Fight phase. TARGET: One friendly ADEPTUS CUSTODES DREADNOUGHT unit. EFFECT: Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” Benefits: friendly ADEPTUS CUSTODES units (to: Faction: Adeptus Custodes, no exclusion — Trajann, Caladius, other Dreadnoughts; not the Anathema squads); by: the ADEPTUS CUSTODES DREADNOUGHT target; range 6\" of it (via). The target itself is in its own aura (22.01) and gets the stratagem’s own mod; helpedBy excludes x === u. The when is the stratagem’s WHEN; no duration is printed, so the phase (01.02.02), and none is added. Note literal."
+},
+{
+"key": "4414a51b9c3313b1",
+"where": "defenceItems",
+"verdict": "ok",
+"why": "Read with rendering (verify/out/snapshots/lite-knights.txt). armyDefs: army rules with a def on the unit’s Rules line, via hasRule so NR’s straight-apostrophe “Martial Ka'tah” matches “Martial Ka’tah” (Trajann/Dreadnoughts show Kaptaris; Caladius, lacking the rule, does not). defPh honoured (ph 'fight' only for Kaptaris; with no ph, the datasheet, it shows). Starred FNP suppressed only when an army-rule def says that same FNP (Prosecutors’ “Feel No Pain 3+*” → “Feel No Pain 3+ against psychic attacks”; Aegis’ 5+* → “against mortal wounds”), plain ones kept (Trajann’s, Telemon’s Augury Uplink 5+). Guard dedupe keys on the rendered text, so the three Anathema squads’ identical Psychic Null is one line linking to the first; a different guard text still shows. No other list has an army-rule def, so nothing else changes except partialWho’s who on a plain FNP (the mucho-mutantes line, a correction). defences() is unused. No failing input found."
+},
+{
+"key": "2263d87656a62028",
+"where": "matches",
+"verdict": "ok",
+"why": "Only change: n.rule now uses hasRule (lowercase, ’ and ‘ → '), a superset of the previous lowercase compare, so no previous match is lost. Throwaway test (rev-lite2/t.js): {rule:['Martial Ka’tah']} vs rules [\"Martial Ka'tah\"] → true; 'super-heavy walker' vs 'Super-Heavy Walker' → true; 'Martial Katah' → false; no rules → false; 'Feel No Pain 5+' vs 'Feel No Pain 5+*' → false (exact name). hasRule is a const defined later in the script but only called at render time (snapshots render). No failing input found."
+}
+]

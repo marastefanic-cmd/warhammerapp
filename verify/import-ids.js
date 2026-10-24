@@ -53,7 +53,8 @@ function table() {
     if (!cat) throw new Error('no catalogue for ' + fac);
     T.factions[cat.obj.id] = fac;
     // detachments: every one data.js has for the faction, below any of the catalogue's Detachment entries
-    const roots = X.rootNode(cat, 'Detachment');
+    // (the Adeptus Custodes catalogue holds them under a root entry "Detachments", the others under "Detachment")
+    const roots = X.rootNode(cat, 'Detachment').concat(X.rootNode(cat, 'Detachments'));
     for (const r of roots) T.roots[r.n.id] = 'detachment';
     for (const [k, d] of Object.entries(f.detachments)) {
       const p = roots.map((r) => X.searchBelow(r.n, (x) => x.type === 'upgrade' && B.nn(x.name) === B.nn(d.name))[0]).find(Boolean);
@@ -65,7 +66,7 @@ function table() {
     // (every link to them: the catalogue's own Show/Hide Options link holds its own options, Show Imperial Agents)
     for (const r of X.rootLinksOf(cat)) {
       const o = r.link ? X.SRC.get(r.link.targetId) : r.entry;
-      if (!o || !['Show/Hide Options', 'Rituals reference', 'Blessings of Khorne Reference'].includes(B.nn(o.name))) continue;
+      if (!o || !['Show/Hide Options', 'Rituals reference', 'Blessings of Khorne Reference', "Martial Ka'tah Reference"].includes(B.nn(o.name))) continue;
       const h = X.node(o, r.link || null);
       T.info[h.id] = B.nn(h.name);
       for (const p of X.searchBelow(h, (k) => k.type === 'upgrade')) { const k = p[p.length - 1]; T.infoKids[k.id] = B.nn(k.name); }
