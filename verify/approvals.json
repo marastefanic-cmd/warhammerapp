@@ -719,6 +719,12 @@
   "at": "2026-10-21",
   "why": "NR: “1x Belisarius Cawl — Arc scourge, Cawl's Omnissian axe, Mechadendrite hive, Solar atomiser, Warlord”. The weapons are its table rows (Solar atomiser; Arc Scourge, Cawl's Omnissian axe, Mechadendrite hive). Wahapedia: “equipped with: solar atomiser; arc scourge; Cawl’s Omnissian axe; mechadendrite hive”."
  },
+ "0de1764112195603": {
+  "verdict": "ok",
+  "by": "review:checklist-5",
+  "at": "2026-10-24",
+  "why": "Matches app.html word for word. It equals review 4's fix plus two additions: the selBy map (built under the same conditions as the pk branch: pk, not once per battle, listed) and dn, used on the line and on the once-per-battle lines. I rendered 93ed3d1 and HEAD in separate scratch copies and diffed every list's text. The only checklist changes are these. (1) Icon of War (Rod of the War Forge) · Thulia Ghuld (purge-goes-the-foe) moves from When unclear to Active now in all 10 phase sections. That is right for Rod's 'In your Command phase … Until the start of your next Command phase' (pk every phase), with The Fires of Mars unread. (2) Selector names: The Blood God’s Favour (Wrathful Presence) · Angron (standard, big-demons-baby, and super-terminators ×3), Treason of Tzeentch (Unearthly Power) · Magnus the Red (mucho-mutantes, pubstomper), and Shokk Attack Engine (Full Throttle) · Wazdakka Gutsmek (shooty). Each is checked against Wahapedia's datasheets: The Blood God’s Favour is under WRATHFUL PRESENCE, Treason of Tzeentch under CRIMSON KING (Unearthly Power: 'select one of the abilities in the Crimson King section'), and Shokk Attack Engine under THROTTLEROKKIT SHOKKA ENGINE ABILITIES (Full Throttle: 'select one Throttlerokkit Shokka Engine ability'). (3) Lines dropped by the no-stratagem rule: Doom (woof-woof, infernal-lance: Movement · Their turn), Impossible Form (Unearthly Power) (mucho-mutantes, pubstomper: Movement · Your turn), and Resilient Organism ×2 once-per-battle boxes (nidzillas: Movement · Your turn, now 'nothing'). Each was reached only through Fire Overwatch (the attacker's own, or the enemy's for protections), whose WHEN is the end of the opponent's Movement phase. Nothing else changed on any screen. render.js passes at 390 and 320px."
+ },
  "0e4da38b92e20cd4": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -2405,6 +2411,12 @@
   "at": "2026-10-22",
   "why": "“Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” The footnote covers all attacks with +1 to hit vs MONSTER/VEHICLE. Being always on, keyed to the hand-set target's keywords, is the owner's Damage-tab convention."
  },
+ "351ada26dc6b2ab2": {
+  "verdict": "ok",
+  "by": "review:checklist-5",
+  "at": "2026-10-24",
+  "why": "Matches derive.js word for word. The one change in the function is that the MORTAL_GUARD override now goes through mortalUse(text, e), where text is the entry's own words (withoutOptions) and e holds only at, t and ae, which is what coverOf needs. The no-stratagem rule is not inside ckEntry. It is applied at its two call sites through timing(own, ckCtx(ctx|actx)), and in ruleTables for options (usedIn(o.text, ckCtx({}), trig), with x now set from phCk). Regenerated CHECKLIST: 114 entries differ from 93ed3d1, and every one is accounted for. 91 lose only the Movement phase that Fire Overwatch gave (the overwatch modifier, the attacker's or the enemy's). 6 more go from movement:either to movement:your for the same reason (Thrill Seekers, Waaagh!, Kunnin’ But Brutal, Errant’s Duty, Elevated Strider, Bestial Aspect). 2 lose movement:either altogether (Repulsor Grid, Warpmeld Sacrifice). The options of Harbingers (Doom), Code Chivalric (Quality 1–2), Icon of War (Fanatical Devotion, Adaptive Tactics) and Daughters of the Abyss and Magna Imperator change the same way. 9 go to x because their only phase came from a stratagem: 'targeted with a Stratagem' (Direct the Slaughter, Will of the Hive Mind, Legendary Freeblade, Malign Presence, the data-tethers ×3), Fire Overwatch/Heroic Intervention named (Prophetic Sentinels) and Counteroffensive named (Destroyer of Futures). None of these 9 is listed, so no screen changes. Cabal of Sorcerers losing oc is review 4's optCover fix. mortalUse changes no entry today, because the 3 protections (Unnatural Resistance, Aegis of the Emperor, Enraged Abjuration) state no 'until'. The derive gate passes, so CHECKLIST is what the rules give. Note: the implements text still says only 'u … table 1's used-in'. The stratagem exclusion and the mortal-wound duration are described under ckCtx and MORTAL_GUARD/mortalUse, which is acceptable."
+ },
  "352c2bdffb6e1e0c": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -2848,6 +2860,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"improve the Armour Penetration characteristic of melee weapons ... by 1\" until end of phase, unit \"made a charge move this turn\"."
+ },
+ "3e016b5f886b1ca4": {
+  "verdict": "ok",
+  "by": "review:checklist-5",
+  "at": "2026-10-24",
+  "why": "core:[] removes the named-core-stratagem phases and the Fire Overwatch modifier, and noStrat skips the 'any-stratagem' rule. The blocker skip changes nothing: blocked only mattered when no phase was read, and then the result is how:'none', which is x either way. noStrat is also passed through the named-ability lookup. A phase that other words also give is kept, because the phases are a union, so only phases reached only through a stratagem are dropped. It is used only for the CHECKLIST entries (rules, abilities, and ruleTables' option u/x). The report's timingItem calls and RULE_OPTIONS' `used` still use the full context. verify/out/derive.json and derive.md, regenerated at 93ed3d1 and at HEAD, are byte-identical (537 agreed labels hold, 223 differ, 97 not derivable), derive-agreed.json is untouched, and data.js changed only inside CHECKLIST. Fire Overwatch's WHEN in data.js is 'End of your opponent’s Movement phase', consistent with Core Rules 07.02.01 on Wahapedia ('In your opponent’s Movement phase, you target … Fire Overwatch'). Note: the 9 entries whose only phase came from a stratagem become x (When unclear), not none. Either is defensible, and none of them is listed in any list."
  },
  "3e100adca590d6b3": {
   "verdict": "ok",
@@ -5074,6 +5092,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“In your Command phase” is your turn only. Surges made at other times come from Profane Symbiosis, which has its own timing."
+ },
+ "705bd5ad21b6f4e7": {
+  "verdict": "ok",
+  "by": "review:checklist-5",
+  "at": "2026-10-24",
+  "why": "Implements the rule: the first DURATIONS match that begins with 'until' in the protection's own words (a bare 'this turn' is skipped, the same filter as review 4's optCover), placed by coverOf from where the text is triggered (for an option, its own trigger or its rule's). No 'until' gives EVERY_PHASE. Index handling is sound: undefined indexes are filtered out, and 'battle' excludes ' round', so it never ties with 'round'. It changes nothing today, because no protection in checklist scope states a duration (verified: derive --write output is identical apart from the stratagem changes). Note, not a fix: when a stated duration cannot be placed (coverOf x, e.g. no named trigger), it returns null and the entry keeps table 1's targeted reading (Shooting · Their turn, Fight). That is the general handling of every other entry, as the description says. But When unclear (x) would follow 'never guessed' more strictly. No text reaches this case."
  },
  "70df0ecc9690d001": {
   "verdict": "ok",
@@ -9022,6 +9046,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"This unit has 4+ InSv against ranged attacks.\" The def is the same words, less \"This unit has\". It keeps the limit to ranged attacks and adds nothing. It is the leader's ability and says 'this unit', so under 19.04 it covers the Meganobz too, and the def is shown for the whole unit. NR prints InSv 4+* on both rows (l.163-164) and l.182 has the same text."
+ },
+ "cac188082a5ae9f5": {
+  "verdict": "ok",
+  "by": "review:checklist-5",
+  "at": "2026-10-24",
+  "why": "The regex is unchanged. Only the description changed, to 'every phase of its duration (mortalUse)', which is what ckEntry and ruleTables now do. I scanned every string in data.js. In checklist scope it matches only Enraged Abjuration (Blood Tithe option), Aegis of the Emperor and Unnatural Resistance ×2, and none of them has an 'until' in its own words. So all stay every phase, as before. The other matches are stratagems, gists and defs, which the checklist does not read."
  },
  "cad7d856012723c2": {
   "verdict": "ok",
