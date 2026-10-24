@@ -1,6 +1,6 @@
 {
- "hash": "5a96e0fa936df24a7c573f0d693ae4a35bedeaddefc2a89bc7a56e294a3b4af6",
- "at": "2026-10-24T16:17:24.973Z",
+ "hash": "5a9de548bb27ae50c0791d5d90ed94ebf0ddec3c90991e2fcdf4116408e9c92f",
+ "at": "2026-10-24T18:05:35.966Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,7 +9,7 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 141 unit entries in 18 lists over 110 datasheets, 69 rule options, 44 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 141 unit entries in 18 lists over 110 datasheets, 67 rule options, 44 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
@@ -53,11 +53,11 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 2231 screens and popups, 1356 helper texts, 0 failures"
+   "summary": "render at 390px: 2294 screens and popups, 1371 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 2231 screens and popups, 1356 helper texts, 0 failures"
+   "summary": "render at 320px: 2294 screens and popups, 1371 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -65,7 +65,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1597 judgements, 1597 approved, 0 to check, 383 stale approvals"
+   "summary": "helpers: 1619 judgements, 1619 approved, 0 to check, 387 stale approvals"
   }
  }
 }
