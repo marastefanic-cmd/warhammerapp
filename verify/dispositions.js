@@ -40,9 +40,15 @@ let src = fs.readFileSync(file, 'utf8');
 global.window = {}; require(file); const D = window.WH_DATA;
 const fails = [];
 let n = 0;
+// declared deviations (verify/deviations-bsdata.json, field "dispositions"): a detachment whose BSData entry at the pin has none (the
+// unfinished "Deathwatch Support (ITS NOT READY)"), the app's from GW's documents
+const DEVS = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-bsdata.json'), 'utf8')).filter(x => x.field === 'dispositions');
+const devUsed = new Set();
 for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.entries(f.detachments || {})){
   n++;
   const want = B[key(d.name)];
+  const dev = DEVS.find(x => x.faction === fid && key(x.detachment) === key(d.name));
+  if(dev && JSON.stringify(dev.app) === JSON.stringify(d.dispositions || []) && JSON.stringify(dev.source || null) === JSON.stringify(want || null)){ devUsed.add(dev); continue; }
   if(!want){ fails.push(fid + ' · ' + d.name + ': not found in BSData'); continue; }
   const have = d.dispositions || [];
   if(have.join('|') === want.join('|')) continue;
@@ -58,6 +64,7 @@ for(const a of D.armies){
   const can = new Set((a.detachments || []).flatMap(id => (D.factions[a.faction].detachments[id] || {}).dispositions || B[key((D.factions[a.faction].detachments[id] || {}).name)] || []));
   if(a.disposition && !can.has(a.disposition)) fails.push(a.id + ': its disposition ' + a.disposition + ' is not one its detachments allow (' + [...can].join(', ') + ')');
 }
+for(const x of DEVS) if(!devUsed.has(x)) fails.push('verify/deviations-bsdata.json: nothing matches the dispositions deviation of ' + x.faction + ' · ' + x.detachment);
 if(write){ fs.writeFileSync(file, src); console.log('dispositions: written for ' + n + ' detachments'); }
 if(fails.length){ console.log('FAIL dispositions: ' + fails.length + ' problem(s)\n' + fails.map(x => ' - ' + x).join('\n')); process.exit(1); }
-console.log('dispositions: ' + n + ' detachments match BSData; every list’s disposition is one its detachments allow');
+console.log('dispositions: ' + n + ' detachments match BSData' + (devUsed.size ? ' (' + devUsed.size + ' declared deviation' + (devUsed.size > 1 ? 's' : '') + ' used)' : '') + '; every list’s disposition is one its detachments allow');

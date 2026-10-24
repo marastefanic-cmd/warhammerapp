@@ -1,0 +1,88 @@
+#!/usr/bin/env node
+/* verify/base-guide.js: GW's base size guide (the Event Companion, verify/.cache/gw/*event_companion*.txt, `pdftotext -layout`),
+   read as { faction (as GW prints it, upper case): [{ name, base, line }] }, and the base size of a unit by its names.
+
+     const G = require('./base-guide');
+     G.guide()                               every faction's rows, and the file they come from
+     G.lookup('Adeptus Custodes', ['Caladius Annihilator Grav-tank'])
+        -> { base:'170×109mm Oval', printed:'170x109mm Oval Base', entry:'Caladius Grav-tank', line:2625, file, how } | null
+
+   A unit is found by the first of its names (datasheet name, then model names) that matches an entry:
+     exact          the same name (quotes, dashes and case alike)
+     plural/squad   the same once a trailing "s" and the word "Squad" are dropped ("Prosecutor Squad" = "Prosecutors")
+     words          every word of the entry is a word of the name, and no other entry of the faction does that with
+                    more words ("Caladius Grav-tank" in "Caladius Annihilator Grav-tank")
+   The app writes the base as GW prints it, with × for x and without the word "Base" ("170×109mm Oval").
+   node verify/base-guide.js "<faction>" "<unit name>" [...]   prints the lookup */
+'use strict';
+const fs = require('fs'), path = require('path');
+const DIR = path.join(__dirname, '.cache/gw');
+let CACHE = null;
+
+const norm = s => String(s || '').normalize('NFC').replace(/[’‘ʼ′`]/g, "'").replace(/[‐‑‒–—−]/g, '-').replace(/\s+/g, ' ').trim().toLowerCase();
+const words = s => norm(s).split(/[\s-]+/).filter(Boolean);
+const loose = s => words(s).filter(w => w !== 'squad').map(w => w.replace(/s$/, '')).join(' ');
+const appBase = s => String(s).replace(/\s+Base$/i, '').replace(/(\d)\s*x\s*(\d)/gi, '$1×$2').trim();
+
+// "Wardens of Ultramar: Ancient Gadriel, Veteran Sergeant Metaurus": the unit, and the models of it this row is for
+function modelsOf(name) {
+  const m = /^([^:]+):\s*(.*)$/.exec(name); if (!m) return null;
+  return { unit: m[1].trim(), models: m[2].split(/\s*,\s*/).map(x => x.trim()).filter(Boolean) };
+}
+function guide() {
+  if (CACHE) return CACHE;
+  const f = fs.existsSync(DIR) && fs.readdirSync(DIR).filter(x => /event_companion.*\.txt$/.test(x)).sort().pop();
+  if (!f) return (CACHE = { file: null, factions: {} });
+  const lines = fs.readFileSync(path.join(DIR, f), 'utf8').split('\n');
+  const start = lines.findIndex(l => /^\s*BASE SIZE GUIDE\s*$/.test(l));
+  const factions = {};
+  let cur = null;
+  for (let i = Math.max(0, start); i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^UNIT\s{2,}BASE SIZE$/.test(t)) {
+      // the faction's name is the line before the header (a page number there: the same faction goes on)
+      const prev = (lines[i - 1] || '').trim();
+      if (prev && !/^\d+$/.test(prev)) { cur = prev.toUpperCase(); factions[cur] = factions[cur] || []; }
+      continue;
+    }
+    if (!cur || !t) continue;
+    const m = /^(.+?)\s{2,}(\S.*)$/.exec(t);
+    // a line that goes on from the one before ("Wardens of Ultramar: Gaius Silva, …, Dainal Kornelius," / "Lucia Vestha")
+    const prevRow = factions[cur][factions[cur].length - 1];
+    if (!m && prevRow && prevRow.line === i && /,$/.test(prevRow.name)) { prevRow.name += ' ' + t; prevRow.models = modelsOf(prevRow.name); prevRow.line = i + 1; prevRow.lines = [prevRow.first, i + 1]; continue; }
+    if (!m || !/\d+mm|Hull|Base|Flying/i.test(m[2])) continue;
+    factions[cur].push({ name: m[1].trim(), printed: m[2].trim(), base: appBase(m[2].trim()), line: i + 1, first: i + 1, models: modelsOf(m[1].trim()) });
+  }
+  return (CACHE = { file: 'verify/.cache/gw/' + f, factions });
+}
+
+// faction: GW's section name, or a list of them (an Ultramarines list: SPACE MARINES, DEATHWATCH); unit: the datasheet's name, when
+// names[1] is one model of it (a row for some models of a unit: "Wardens of Ultramar: Gaius Silva, Aemelia Minervas, …")
+function lookup(faction, names, unit) {
+  const G = guide(), facs = [].concat(faction), rows = [];
+  for (const f of facs) { const key = Object.keys(G.factions).find(k => norm(k) === norm(f)); if (key) rows.push(...G.factions[key]); }
+  if (!rows.length) return null;
+  const hit = (e, how, n) => Object.assign({}, e, { entry: e.name, file: G.file, how, for: n, line: e.first || e.line });
+  if (unit) for (const n of names.filter(Boolean)) {
+    const e = rows.find(r => r.models && norm(r.models.unit) === norm(unit) && r.models.models.some(x => norm(x) === norm(n)));
+    if (e) return hit(e, 'model', n);
+  }
+  for (const n of names.filter(Boolean)) {
+    const e = rows.find(r => norm(r.name) === norm(n)); if (e) return hit(e, 'exact', n);
+  }
+  for (const n of names.filter(Boolean)) {
+    const e = rows.find(r => loose(r.name) === loose(n)); if (e) return hit(e, 'plural/squad', n);
+  }
+  for (const n of names.filter(Boolean)) {
+    const nw = new Set(words(n).map(w => w.replace(/s$/, '')));
+    const ok = rows.filter(r => !r.models && words(r.name).every(w => nw.has(w.replace(/s$/, '')))).sort((a, b) => words(b.name).length - words(a.name).length);
+    if (ok.length && (ok.length === 1 || words(ok[0].name).length > words(ok[1].name).length) && words(ok[0].name).length >= 2) return hit(ok[0], 'words', n);
+  }
+  return null;
+}
+
+module.exports = { guide, lookup, appBase };
+if (require.main === module) {
+  const [fac, ...names] = process.argv.slice(2);
+  console.log(JSON.stringify(lookup(fac.split(','), names, names[0]), null, 1));
+}

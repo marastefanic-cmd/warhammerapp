@@ -198,6 +198,24 @@ function build(R){
   const order = { unit:keyOrder(armies.flatMap(a => a.units.map(u => Object.keys(u).filter(k => k !== 'ds'))), R.order.unit) };
   for(const kind of ROWS) order[kind] = keyOrder(armies.flatMap(a => a.units.flatMap(u => (u[kind] || []).map(r => Object.keys(r)))), R.order[kind]);
   const sheets = new Map(), units = [], notes = [];
+  // a stats row that names no part of an attached unit: the bodyguard's, unless its models carry only weapons of one other part
+  // (the six models of the Wardens of Ultramar Marneus Calgar's unit is supported by: their models lines' gear is the Wardens')
+  // (models lines are in the parts' order: a line whose weapons more than one part has, Veteran Sergeant Metaurus's heavy bolt pistol and
+  // master-crafted power weapon, is the part of the line before it when that part has them)
+  const partByGear = (u, names, rowName) => {
+    const key = n => String(n).toLowerCase().replace(/\s*\(.*\)$/, '').replace(/s$/, '');
+    const weapons = [...(u.ranged || []), ...(u.melee || [])];
+    let cur = 0, hit = -1;
+    (u.models || []).forEach((m, i) => {
+      // the parts that have every weapon of the line
+      let whos = null;
+      for(const g of (u.gear || [])[i] || []){ const ws = new Set(weapons.filter(w => (w.group || w.name) === g && w.who).map(w => names.indexOf(w.who)).filter(p => p >= 0)); if(ws.size) whos = whos ? new Set([...whos].filter(p => ws.has(p))) : ws; }
+      const ps = [...(whos || [])].sort((x, y) => x - y);
+      if(ps.length === 1) cur = ps[0]; else if(ps.length && !whos.has(cur)) cur = ps.find(p => p > cur) ?? ps[0];
+      if(hit < 0 && key(String(m).replace(/^\d+×\s*/, '')) === key(rowName) && ps.length) hit = cur;
+    });
+    return hit > 0 && hit < names.length - 1 ? hit : names.length - 1;
+  };
   armies.forEach((a, ai) => a.units.forEach((u, ui) => {
     if(u.ds) throw new Error(a.id + '/' + u.id + ': not resolved');
     const names = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name];
@@ -220,7 +238,7 @@ function build(R){
         let part = 0;
         if(kind === 'abilities' && /\b(Enhancement|Upgrade)\b/.test(r.tag || '')) part = -1;   // the list's choice, not the datasheet's
         else if(U.multi){
-          if(kind === 'stats'){ const i = names.indexOf(baseName(r.name)); part = i >= 0 ? i : names.length - 1; }
+          if(kind === 'stats'){ const i = names.indexOf(baseName(r.name)); part = i >= 0 ? i : partByGear(u, names, baseName(r.name)); }
           else { part = names.indexOf(r.who); if(part < 0){ part = -1; notes.push(a.id + '/' + u.id + ' ' + kind + ' ' + r.name + ': its who (' + r.who + ') names no part of the unit; kept as the list\'s own row'); } }
         }
         const o = { U, kind, k, r, part };

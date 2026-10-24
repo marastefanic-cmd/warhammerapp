@@ -24,6 +24,27 @@ It leaves two lists:
 
 Running it again with a newer export of the same list rebuilds it and keeps everything unchanged.
 
+## 1b. From a New Recruit JSON export instead
+
+```
+node verify/from-json.js verify/sources/nr-json/<id>.json <id> --write     # without --write: verify/out/from-json-<id>.js
+node verify/from-json.js verify/sources/nr-json/<id>.json <id> --compare   # a list data.js has: what the reading differs in
+```
+
+Every unit from the export's selections (found by BSData id, each profile looked up in BSData at the pin, a unit from another
+faction's catalogue too: the Deathwatch's), checked against Wahapedia's datasheet (the codex; for a Space Marines Chapter, the
+Chapter's view of the page, `wahaChapter` in `verify/sources/factions.json`): where BSData differs, GW's value is written and declared
+in `verify/deviations-*.json` with the datasheet as evidence; base sizes come from GW's base size guide (`verify/base-guide.js`,
+the Event Companion; the sections `baseGuide` names, a row for some models of a unit too), Wahapedia's only where the guide has
+none. A missing faction or detachment comes from the Wahapedia faction page (a detachment's Force Dispositions from BSData, else
+from the page, declared), a missing core ability from Wahapedia's core rules, labels from `verify/derive.js`; then the "+" marks,
+`BS_IDS`, the BSData extract and `verify/tables.js --write` (the list as references to its datasheets). What it cannot fill (a
+stratagem's gist) is read from `verify/sources/hand/<id>.json`, marked by whom; everything else it lists in
+`verify/out/from-json-<id>.md`. A list without a PDF is checked by `verify/nr.js` against its export (base sizes).
+
+Then the hand pass (section 3: footnotes, auras, When targeted lines, stratagem `mod`/`def`, Damage-tab `calcMods`),
+`node verify/tables.js --stamp` for the AI-written columns, and `node verify/tables.js --expand` then `--write`.
+
 ## 2. A new faction or detachment
 
 Transcribe from the GW Faction Pack when the faction has one (its Rules Updates win over the codex text),
