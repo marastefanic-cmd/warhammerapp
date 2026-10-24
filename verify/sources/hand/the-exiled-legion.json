@@ -1,0 +1,279 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for the-exiled-legion, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), notes on its abilities, its auras (only what GW tags (Aura), Core Rules 22.01) and guard (an (Aura) that protects other units). No stratagem of Blood Legion or Warptide changes a weapon's numbers or keywords (no mod); no detachment rule changes an attack's numbers (no calcMods: Shudderblink's [ASSAULT] changes none, Murdercall is a surge move). labels: an ability's timing label where derive.js's reading is not the one the signed-off lists store ({}: none), from the reviews (verify/review/result-exiled-*.json). armyRules: a FAQ GW's Faction Pack prints on an army rule, quoted. Each is a judgement verify/helpers.js lists for sign-off.",
+ "gists": {
+  "blood-legion/wrath-undeniable": {
+   "by": "AI (Claude)",
+   "gist": "Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, each time a model in it is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed.",
+   "gistOf": "562b28e1",
+   "def": "Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed",
+   "defOf": "562b28e1"
+  },
+  "blood-legion/gore-hungry-onslaught": {
+   "by": "AI (Claude)",
+   "gist": "Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA KHORNE unit can move through terrain features.",
+   "gistOf": "a85a797e"
+  },
+  "blood-legion/skulls-beget-blood": {
+   "by": "AI (Claude)",
+   "gist": "Your Shooting phase, your unengaged LEGIONES DAEMONICA KHORNE INFANTRY or MOUNTED unit that did not Fall Back this turn: select an enemy unit within 8\" of and visible to it, not within Engagement Range of your army; roll six D6, 1 mortal wound for each 4+.",
+   "gistOf": "74a62074"
+  },
+  "blood-legion/blood-begets-skulls": {
+   "by": "AI (Claude)",
+   "gist": "Your Charge phase, your LEGIONES DAEMONICA KHORNE unit not yet selected to charge: until the end of the phase it can declare a charge in a turn in which it Advanced.",
+   "gistOf": "bd5f64bd"
+  },
+  "blood-legion/fools-flight": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Movement phase, an enemy unit ends a fall-back move: your unengaged LEGIONES DAEMONICA KHORNE unit within 6\" of it declares a charge, selecting only enemy units that fell back this phase and are within the maximum distance.",
+   "gistOf": "d80185f6"
+  },
+  "blood-legion/sheathed-in-brass": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, its models have a Save characteristic of 3+.",
+   "gistOf": "651c43f3",
+   "def": "their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)",
+   "defOf": "651c43f3"
+  },
+  "warptide/daemonic-infestation": {
+   "by": "AI (Claude)",
+   "gist": "Your Command phase: your LEGIONES DAEMONICA BATTLELINE unit (not PINK HORRORS) heals 3 wounds.",
+   "gistOf": "fe03cd19"
+  },
+  "warptide/soulseeing": {
+   "by": "AI (Claude)",
+   "gist": "Start of your Shooting phase, your LEGIONES DAEMONICA BATTLELINE unit: one visible enemy unit within 12\" of it has +6\" detection range.",
+   "gistOf": "35309a2a"
+  },
+  "warptide/incorporeal-entities": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase, an enemy unit targets your LEGIONES DAEMONICA BATTLELINE unit: ranged attacks that target it with a S greater than its T have -1 to wound rolls.",
+   "gistOf": "c0a88e05",
+   "def": "their Shooting phase: -1 to wound rolls for ranged attacks that target it with a S greater than its T",
+   "defOf": "c0a88e05"
+  }
+ },
+ "units": {
+  "skarbrand": {
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "Damaged (1-7 wounds left)",
+     "note": "+2 A",
+     "from": "Damaged: 1-7 wounds remaining"
+    }
+   ],
+   "aura": [
+    {
+     "kind": "melee",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Khorne"
+      ]
+     },
+     "when": "Within 6\" of Skarbrand",
+     "selfWhen": "Own aura",
+     "note": "+1 A",
+     "from": "Rage Embodied",
+     "selfAlways": true
+    }
+   ],
+   "why": "Rage Embodied (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", his own unit included (22.01). Greater Daemon of Khorne (Aura) puts units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard.",
+   "labels": {
+    "Murderlust": {}
+   }
+  },
+  "bloodthirster": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Damaged (1-6 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-6 wounds remaining"
+    }
+   ],
+   "aura": [
+    {
+     "kind": "melee",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Khorne"
+      ]
+     },
+     "when": "Within 6\" of the Bloodthirster",
+     "selfWhen": "Own aura",
+     "note": "+1 to hit",
+     "from": "Daemon Lord of Khorne",
+     "selfAlways": true
+    }
+   ],
+   "why": "Daemon Lord of Khorne (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", its own unit included (22.01)."
+  },
+  "karanak-flesh-hounds": {
+   "defs": {
+    "Brass Collar of Bloody Vengeance": {
+     "by": "AI (Claude)",
+     "def": "Feel No Pain 3+ against Psychic Attacks and mortal wounds",
+     "defOf": "af5afad5"
+    },
+    "Collar of Khorne": {
+     "by": "AI (Claude)",
+     "def": "Feel No Pain 3+ against Psychic Attacks",
+     "defOf": "5c6e1911"
+    }
+   },
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "Melee attacks that target Karanak’s prey",
+     "note": "can re-roll the wound roll",
+     "from": "Prey of the Blood God"
+    }
+   ]
+  },
+  "skulltaker-bloodletters": {
+   "mods": [
+    {
+     "kind": "all",
+     "who": "Skulltaker",
+     "when": "Attacks that target a CHARACTER unit",
+     "note": "can re-roll the hit roll and the wound roll",
+     "from": "Skulls for Khorne",
+     "vs": {
+      "any": [
+       "Character"
+      ]
+     },
+     "always": true
+    }
+   ],
+   "labels": {
+    "Skulls for Khorne": {},
+    "Bane-Forged Weapons": {}
+   }
+  },
+  "bloodmaster-bloodletters": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "While the Bloodmaster is leading the unit",
+     "note": "+1 to wound rolls",
+     "from": "Bloodmaster",
+     "always": true
+    }
+   ],
+   "labels": {
+    "Bane-Forged Weapons": {},
+    "Bloodmaster": {}
+   }
+  },
+  "rendmaster-on-blood-throne": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Fight phase, attacks that target the enemy unit selected with Blood Throne",
+     "note": "improve S, AP and D by 1",
+     "from": "Blood Throne"
+    },
+    {
+     "kind": "melee",
+     "when": "Melee attacks that target a CHARACTER or MONSTER unit",
+     "note": "can re-roll the wound roll",
+     "from": "Champion Slayer",
+     "vs": {
+      "any": [
+       "Character",
+       "Monster"
+      ]
+     },
+     "always": true
+    }
+   ],
+   "why": "Blood Throne gives every friendly KHORNE LEGIONES DAEMONICA unit the bonus against the selected unit, but GW does not tag it (Aura): shown on the Rendmaster’s own weapons only."
+  },
+  "skullmaster-bloodcrushers": {
+   "mods": [
+    {
+     "kind": "melee",
+     "weapon": "Juggernaut’s bladed horn",
+     "when": "Ended a Charge move this turn",
+     "cond": "charged",
+     "note": "[DEVASTATING WOUNDS] until the end of the turn",
+     "from": "Skullmaster’s Fury"
+    }
+   ],
+   "labels": {
+    "Skullmaster’s Fury": {
+     "ph": [
+      "charge",
+      "fight"
+     ],
+     "turn": "either"
+    }
+   }
+  },
+  "daemon-prince-of-chaos": {
+   "defs": {
+    "Unholy Vigour": {
+     "by": "AI (Claude)",
+     "def": "Unholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase",
+     "defOf": "bee73dc9"
+    },
+    "Daemonic Lord": {
+     "by": "AI (Claude)",
+     "def": "Lone Operative while within 3\" of a friendly LEGIONES DAEMONICA INFANTRY unit",
+     "defOf": "e269580e"
+    }
+   },
+   "aura": [
+    {
+     "kind": "all",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Khorne"
+      ],
+      "none": [
+       "Monster"
+      ]
+     },
+     "when": "Within 6\" of the Daemon Prince of Chaos",
+     "note": "[LANCE]",
+     "from": "Slaughterthirst (Aura)"
+    }
+   ],
+   "guard": [
+    {
+     "from": "Prince of Darkness",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     },
+     "kind": "ranged",
+     "when": "Within 6\" of the Daemon Prince of Chaos",
+     "selfWhen": "Own aura",
+     "selfAlways": true,
+     "note": "Stealth: the benefit of cover against ranged attacks",
+     "calc": {
+      "stealth": true
+     }
+    }
+   ],
+   "why": "Slaughterthirst (Aura): KHORNE LEGIONES DAEMONICA units within 6\" excluding MONSTERS, so not the Daemon Prince itself (22.01). Prince of Darkness (Aura): Stealth for LEGIONES DAEMONICA units within 6\". Daemonic Allegiance: this list chose KHORNE (New Recruit: “Daemon Prince of Chaos (Khorne)”); the KHORNE keyword and the hellforged weapons’ S 10 / 8 are the list’s values (verify/tables.js why), the datasheet keeps GW’s S 8 / 6.",
+   "labels": {
+    "Daemonic Allegiance": {}
+   }
+  }
+ },
+ "armyRules": {
+  "The Shadow of Chaos": {
+   "by": "hand (Claude), quoted from GW’s Faction Pack: Chaos Daemons 1.2, Rules Updates FAQ",
+   "faq": [
+    "*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*"
+   ]
+  }
+ }
+}

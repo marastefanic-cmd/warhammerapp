@@ -1090,5 +1090,65 @@
   "reason": "New Recruit’s export (catalogue revision 8) gives the base as ~40mm; GW’s base size guide (Event Companion) has 40mm. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3590: \"Eradicator Squad  40mm\"; verify/sources/nr-json/nerf-when.json: Base ~40mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "karanak-flesh-hounds",
+  "field": "stats[Karanak].base",
+  "app": "75×42mm Oval",
+  "source": "75x42mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2947: \"Karanak  75x42mm Oval Base\"; verify/sources/nr-json/the-exiled-legion.json: Base 75x42mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "karanak-flesh-hounds",
+  "field": "stats[Flesh Hounds].base",
+  "app": "60×35.5mm Oval",
+  "source": "60x35.5mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 60x35.5mm; GW’s base size guide (Event Companion) has 60×35.5mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2940: \"Flesh Hounds  60x35.5mm Oval Base\"; verify/sources/nr-json/the-exiled-legion.json: Base 60x35.5mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "bloodthirster",
+  "field": "stats[Bloodthirster].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2926: \"Bloodthirster  120x92mm Oval Base\"; verify/sources/nr-json/the-exiled-legion.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "rendmaster-on-blood-throne",
+  "field": "stats[Rendmaster on Blood Throne].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2955: \"Rendmaster on Blood Throne  120x92mm Oval Base\"; verify/sources/nr-json/the-exiled-legion.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "skullmaster-bloodcrushers",
+  "field": "stats[Skullmaster].base",
+  "app": "90×52.5mm Oval",
+  "source": "90x52.5mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 90x52.5mm; GW’s base size guide (Event Companion) has 90×52.5mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2968: \"Skullmaster  90x52.5mm Oval Base\"; verify/sources/nr-json/the-exiled-legion.json: Base 90x52.5mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "the-exiled-legion",
+  "unit": "skullmaster-bloodcrushers",
+  "field": "stats[Bloodcrushers].base",
+  "app": "90×52.5mm Oval",
+  "source": "90x52.5mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 90x52.5mm; GW’s base size guide (Event Companion) has 90×52.5mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2923: \"Bloodcrushers  90x52.5mm Oval Base\"; verify/sources/nr-json/the-exiled-legion.json: Base 90x52.5mm.",
+  "by": "verify/from-json.js"
  }
 ]

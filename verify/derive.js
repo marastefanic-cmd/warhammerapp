@@ -57,8 +57,8 @@ const NOT_TIMING = [
 ];
 // moments that are not a phase
 const MOMENT_RULES = [
-  { id:'any-phase', re:/\b(?:(?:at the )?(?:start|end) of )?any phase\b/i, ph:Object.fromEntries(PH.map(p => [p, 'either'])),
-    why:'"any phase" / "the start of any phase": every phase of both turns' },
+  { id:'any-phase', re:/\b(?:(?:at the )?(?:start|end) of )?any phase\b|(?:^|[.!?]\s+)at the (?:start|end) of (?:a|each) phase\b/i, ph:Object.fromEntries(PH.map(p => [p, 'either'])),
+    why:'"any phase" / "the start of any phase" / a text opening "At the end of a phase" (Blood Tainted) or "At the end of each phase" (not "… until … at the end of a phase", a duration): every phase of both turns' },
   { id:'start-battle-round-first', re:/^(?:(?:once per battle|if your army faction is [^,]+), )?at the start of the first battle round\b/i, at:'Start of the first battle round', ph:{ command:'either' },
     why:'the text opens with "At the start of the first battle round": a moment before the first Command phase (07.01)' },
   { id:'start-battle-round', re:/^(?:(?:once per battle|if your army faction is [^,]+), )?at the start of the battle round\b/i, at:'Start of the battle round', ph:{ command:'either' },
@@ -111,8 +111,8 @@ const ACTIVITY_RULES = [
     why:'charge rolls / charge moves: the Charge phase (either turn: a Heroic Intervention is a charge move too)' },
   { id:'declare-charge', re:/\bdeclares? a charge\b|\beligible to declare a charge\b/i, ph:{ charge:'your' },
     why:'"declare a charge": your Charge phase' },
-  { id:'move-enemy', re:/\benemy unit\b[^.]*\b(?:ends a (?:normal |advance |fall back )?move|(?:selected|chosen) to fall back|makes? a (?:normal|advance|fall back) move)\b/i, ph:{ movement:'opp' },
-    why:'an enemy unit moving / Falling Back: your opponent\'s Movement phase' },
+  { id:'move-enemy', re:/\benemy unit\b[^.]*\b(?:ends a (?:normal |advance |fall back )?move|(?:selected|chosen) to fall back|falls back|makes? a (?:normal|advance|fall back) move)\b/i, ph:{ movement:'opp' },
+    why:'an enemy unit moving / Falling Back ("each time an enemy unit … Falls Back"): your opponent\'s Movement phase' },
   { id:'move-own', re:/\b(?:normal|advance|fall[- ]back|pulse jet|ingress) moves?\b|\badvance (?:and charge )?rolls?\b|\bselected to (?:move|advance)\b|\bmove characteristic\b|\b(?:advanced|fell back|falls back|remains stationary)\b|\+\d+" m\b/i, ph:{ movement:'your' },
     why:'its own moves (Normal, Advance, Fall Back), advance rolls, its Move characteristic: your Movement phase' },
 ];
@@ -216,8 +216,9 @@ function usedIn(text, ctx, trig){
     }
   }
   if(afterCharge && reasons.some(r => r.rule === 'any-attack' || r.rule === 'weapons-have')) reasons.push({ rule:'after-charge', match:afterCharge[0] });
-  // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger)
-  if(!trig && (shoots || guarded)){
+  // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger; one that lasts "until the end of the turn" is
+  // triggered in that turn, even when derive.js reads no trigger in its words: Shudderblink's [ASSAULT] after an advance move)
+  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t)){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
       const w = explicitTiming(cs.when.split(/[.:]/)[0]);
@@ -750,7 +751,7 @@ const DURATIONS = [
 ];
 function inForce(text, f, self, e){
   const out = [], seen = new Set(), t = rulesText(text);
-  const rules = f.armyRules.concat(Object.values(f.detachments).map(d => d.rule).filter(Boolean));
+  const rules = f.armyRules.concat(Object.values(f.detachments).flatMap(detRules));
   const named = term => { const lc = plain(term).toLowerCase(); const r = rules.find(x => norm(x.name).toLowerCase() === lc); if(r) return r.name;
     const al = (f.aliases || []).find(([re]) => re.test(plain(term))); return al && rules.some(x => x.name === al[1]) ? al[1] : null; };
   for(const sent of sentences(t)) for(const m of sent.matchAll(/\b(?:is|are|be|becomes?)\s+\*\*([^*]+)\*\*/gi)){
@@ -857,7 +858,7 @@ function derive(D){
   // army rules and detachment rules
   for(const [fk, f] of Object.entries(D.factions)){
     const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name, det:false }))
-      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name, det:true })));
+      .concat(Object.values(f.detachments).flatMap(d => detRules(d).map(r => ({ r, where:f.name + ' · ' + d.name + ' rule · ' + r.name, det:true }))));
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments }, { core:D.coreStratagems, rule:true });
@@ -896,7 +897,7 @@ function derive(D){
         const actx = { core:D.coreStratagems, named:n => {
           const o = u.abilities.find(x => x !== ab && norm(x.name).toLowerCase() === norm(n).toLowerCase());
           if(o) return o.text;
-          const r = f.armyRules.concat(a.detachments.map(id => (f.detachments[id] || {}).rule).filter(Boolean)).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
+          const r = f.armyRules.concat(a.detachments.flatMap(id => detRules(f.detachments[id]))).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
           return r ? r.text : null;
         } };
         timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
@@ -1006,11 +1007,13 @@ function storedOptionsOfAbility(u, ab){
   return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
 }
 // the rules and abilities read for options and grants: every army and detachment rule, then every ability of every list (once per words)
+// a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted)
+function detRules(d){ return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }
 function ruleSources(D){
   const out = [];
   for(const [fk, f] of Object.entries(D.factions)){
     const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
-      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
+      .concat(Object.values(f.detachments).flatMap(d => detRules(d).map(r => ({ r, where:f.name + ' · ' + d.name + ' rule · ' + r.name }))));
     for(const { r, where } of rules) out.push({ where, text:r.text, table:r.table, stored:storedOptionsOfRule(r), fk, ck:'r|' + fk + '|' + r.name });
   }
   const seen = new Set();
@@ -1091,7 +1094,9 @@ function ruleTables(D){
       const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
       const cond = (/^(while|if|when|until) [^,]+/i.exec(plain(sent)) || [])[0];
       const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
-      const grantName = name.replace(/ ability$/i, '');
+      // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
+      const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;
+      const grantName = name.replace(/ ability$/i, '') + (against ? ' ' + against[1].replace(/\*\*/g, '') : '');
       const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
       const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:grantName, type, to, while:wh, text:sent });
       grants.push(g); grantSink(g);   // (the checklist: an ability it gives to units by keyword, Might of Khorne's Blessings of Khorne)

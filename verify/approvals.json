@@ -1,9 +1,21 @@
 {
+ "0025f2aacb57ef95": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "The Gore Hound and every Flesh Hound are “equipped with … collar of Khorne” (GW). Karanak has the Brass Collar instead."
+ },
  "005e560f0cdda686": {
   "verdict": "ok",
   "by": "review:m4-code",
   "at": "2026-10-18",
   "why": "Confirmed: the only difference from the m3 item I passed as ok (2a58d1080dd87dcc) is the deleted stale comment line, and the item matches the live app.html. Re-run in the harness, all six made-up cases give the same marks as before: Warlord on the 2nd character (warlordOn) gives 'Warboss · Warlord · Kunnin’ But Brutal'; with short 'Boss' on the 1st, the 2nd base still reads 'Warboss'; Warlord on the 1st with enhOn on the 2nd gives 'Bigboss · Warlord' and 'Warboss · Kunnin’ But Brutal'; warlordOn on the 2nd with the enhancement on the 1st gives 'Bigboss · Kunnin’ But Brutal' and 'Warboss · Warlord'. Nothing goes beyond the rules."
+ },
+ "005ec09ff99dfe82": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "TARGET LEGIONES DAEMONICA KHORNE."
  },
  "007aefad37a811eb": {
   "verdict": "ok",
@@ -22,6 +34,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Ammo Runts (Once per battle, per unit) - Nobz\"."
+ },
+ "010ea51f71907527": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "your."
  },
  "0110c9dc6e44cb7a": {
   "verdict": "ok",
@@ -71,11 +89,35 @@
   "at": "2026-10-16",
   "why": "TARGET \"That MONSTER/VEHICLE unit\": any:[Monster,Vehicle]; picks every Monster/Vehicle in the five lists (all Knights, Rhino, Forgefiend, Defiler, Kans, Dakkarigs, Tyranid monsters…)."
  },
+ "017d51a2c5b13890": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“one or more LEGIONES DAEMONICA KHORNE units from your army … one of those … units can make a surge move”: the Faction keyword and Khorne."
+ },
  "019519d5608843a1": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"At the end of your Command phase\"."
+ },
+ "0195b059f4f06378": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Bloodmaster: blade of blood (A5 WS2+ S6 AP-2 D3). Every Bloodletter: hellblade. The icon and instrument are unplaced. There is rightly no DW here, because Lord of Decapitations is Skulltaker’s."
+ },
+ "01b56e08893cc2e3": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "Your Shooting phase: your."
+ },
+ "01d719d2154dffa1": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Re-roll Advance rolls (your Movement) and Charge rolls (Charge, either turn: core Heroic Intervention also makes a charge roll). This is the same label as the approved Brayhorn and Aggressive Advance."
  },
  "01d8e526de862696": {
   "verdict": "ok",
@@ -371,6 +413,12 @@
   "at": "2026-10-23",
   "why": "The new 'Dispositions' row (row('Disposi&shy;tions', dispText(a))) lists every Force Disposition the list's detachments allow, in BSData's order, with the roster's chosen one marked '(chosen)'; the Detachments row no longer carries the old 'Disposition:' line, so nothing is duplicated. dispText escapes each name; row() hides the line if empty. Matches the rules: Core Rules (Select Detachments) says each detachment gives access to force dispositions, and the Event Companion (Muster Armies) says the player selects one Force Disposition card available to them and records it on the roster, so the union over all detachments (not only the highest-DP one) is right. Checked against data.js: e.g. Grand Coven list shows 'Disruption · Priority Assets (chosen)', Woof Woof 'Reconnaissance (chosen)', super-terminators 'Purge the Foe · Take and Hold (chosen)'."
  },
+ "06af03b4918ce371": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“friendly KHORNE LEGIONES DAEMONICA unit within 6\"” gives these needs, melee, “+1 to hit”. selfAlways follows 22.01. It is the same as the approved WE Bloodthirster aura. In the snapshot it is on every Khorne unit (including the Daemon Prince) and not on the Beasts of Nurgle."
+ },
  "06cb6b594fb2c2f6": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -388,6 +436,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "WHEN “End of any phase”, TARGET “not readied”, EFFECT “Your unit is readied”, RESTRICTIONS “not … more than once per battle round”: all kept."
+ },
+ "0754c41a7ab25cc5": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“a friendly LEGIONES DAEMONICA BATTLELINE unit”."
  },
  "0777707a104d6463": {
   "verdict": "ok",
@@ -478,6 +532,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Wahapedia: “Every model is equipped with: heavy warpflamer; hellfyre missile rack; pyreflux meltagun; close combat weapon.” New Recruit: 2× Sekhetar Robot with Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun. ×2 each."
+ },
+ "09044040e039b6fb": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS)” gives these needs, and “weapons equipped” covers all kinds, giving [LANCE]. There is no selfAlways, which is right: the bearer is a MONSTER and is excluded. The snapshot shows it on Karanak + Flesh Hounds, both Bloodletters units, the Rendmasters and the Skullmaster + Bloodcrushers. It is not on Skarbrand, the Bloodthirster, the Daemon Prince or the Beasts of Nurgle. The bearer is KHORNE through Daemonic Allegiance, so the “model only” requirement is met."
  },
  "0904693ef699aff2": {
   "verdict": "ok",
@@ -713,6 +773,12 @@
   "at": "2026-10-23",
   "why": "“WHEN: Fight phase”."
  },
+ "0ce5aaac2733e78f": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW lists it under WARGEAR ABILITIES on Karanak’s card, and Karanak is “equipped with … Brass Collar of Bloody Vengeance”."
+ },
  "0d16f5c226759018": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -821,6 +887,12 @@
   "at": "2026-10-23",
   "why": "“select one of the following … until the end of the phase: … This model has 3+ InSv.” The line keeps once per battle, start of any phase, “one of its two effects” (the other is the Watcher’s Axe +3 A, so the player chooses) and “until the end of the phase”; defenceItems shows it as “Trajann Valoris · Moment Shackle …”, i.e. his model only, as “This model” says."
  },
+ "0f88fd08240dca30": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Charge rolls: Charge, either turn, the same as the approved Battle-lust."
+ },
  "0fbc5bb898648525": {
   "verdict": "ok",
   "by": "review:checklist-3 (its fix)",
@@ -904,6 +976,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"in either player’s Command phase\" (Faction Pack v1.3 wording)."
+ },
+ "11a2ceeba1254112": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Bloodcrushers wargear ability (GW). The export takes both the icon and the instrument, which is legal."
  },
  "11b0f3d91992aae2": {
   "verdict": "ok",
@@ -1025,6 +1103,12 @@
   "at": "2026-10-23",
   "why": "NR \"Rebind Rubricae (Psychic) - Exalted Sorcerer\"; \"if this model is leading a unit\" = the Exalted Sorcerer's own ability. Model lines match NR."
  },
+ "13ffd3a9bb03f990": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll” applies to the whole unit and to melee only. It cannot carry vs or always, because the prey is a selection. It is a choice, like the approved Singular Purpose."
+ },
  "1465a561e896e637": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -1066,6 +1150,12 @@
   "by": "review:r20-damage",
   "at": "2026-10-21",
   "why": "“If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.” Taking the Imperative from the Doctrina pick (follow) is exactly “active for that unit”, with Both for a unit where both are active. It has no pick of its own, so it can’t disagree with Doctrina. It stays for SKITARII units, and is not optional, as the words say (“re-roll”)."
+ },
+ "15327a598475bfd7": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "The opponent’s Movement phase: opp."
  },
  "154a7b544ff9860a": {
   "verdict": "ok",
@@ -1138,6 +1228,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "NR prints “Moment Shackle - Trajann Valoris”; Trajann’s datasheet ability, and both effects name “This model”, so it is his alone (19.04: an ability affecting a single specified model applies only to that model)."
+ },
+ "1798200929c13cf2": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“Until the end of the phase, models in your unit have a Save characteristic of 3+”, in their Shooting phase once targeted: faithful."
  },
  "17b184e71d966a00": {
   "verdict": "ok",
@@ -1265,6 +1361,12 @@
   "at": "2026-10-21",
   "why": "Same Thundercharge condition (\"equipped with a thundershock spear and a bellatus reaper chainsword\"); this Destrier has \"Sanctuary, Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p6), so it does not apply."
  },
+ "1a6aa9e35c46220c": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "Faithful and complete."
+ },
  "1a80b2d2c0722982": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -1282,6 +1384,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Both bonuses apply (bullets with no \"Or\"): \"CHARACTER models' melee attacks have: +1 A. +2 S.\""
+ },
+ "1b0a15bdafbac5b6": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW: “equipped with: infernal cannon; hellforged weapons”. Wargear options: none. Infernal cannon 24\" A3 BS2+ S5 AP-1 D2. Hellforged strike is A6 WS2+ S8 AP-2 D3 and sweep is A14 WS2+ S6 AP0 D1; the app shows S 10/8, marked as from Daemonic Allegiance (Khorne +2, the list’s choice). The datasheet row keeps GW’s 8/6."
  },
  "1b13d688b61b3061": {
   "verdict": "ok",
@@ -1366,6 +1474,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "“eligible to shoot in a turn in which it Fell Back or Advanced” is your Shooting phase. “re-roll Desperate Escape tests” means the hazard rolls of a fall-back move (Core Rules 09.07.01), in your Movement phase."
+ },
+ "1c897ff53c1fce90": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Fight phase, just after an enemy unit has selected its targets”: Fight. Text matches GW p.124 word for word; 1CP."
  },
  "1c9aa96f4937e26d": {
   "verdict": "ok",
@@ -1505,11 +1619,23 @@
   "at": "2026-10-17",
   "why": "“IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability” has no phase limit. The regain part names “the start of your Command phase”. All five phases."
  },
+ "1f8830239b3e8688": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Skullmaster’s own datasheet."
+ },
  "1fbfb936512e352b": {
   "verdict": "ok",
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "EFFECT: \"Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.\" The gist says \"attacks against\" where the rule says \"attacks that target\". Same meaning, nothing added."
+ },
+ "1fe59d86fe263de4": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "Faithful and complete."
  },
  "203203e2c13a6697": {
   "verdict": "ok",
@@ -1655,6 +1781,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target\": the Errant is TITANIC, and Fire Overwatch targets \"One friendly unengaged unit (excluding TITANIC units)\", so its only ranged attacks are in your Shooting phase."
  },
+ "22461afa86e0db5d": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Start of your Shooting phase”. Matches GW word for word; 1CP. (The EFFECT names no duration, and the gist does not invent one.)"
+ },
  "225510c7f65187ce": {
   "verdict": "ok",
   "by": "review:nerf-3",
@@ -1793,6 +1925,18 @@
   "at": "2026-10-16",
   "why": "\"TARGET: One THOUSAND SONS PSYKER unit ... not been selected to shoot\"."
  },
+ "2535bd6e7d6dcdc6": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The area is re-evaluated \"at the start of any phase\", and Manifestation and Terror apply to battle-shock rolls and tests whenever they happen, so all five phases is right. The added line is a word-for-word quote of the Faction Pack 1.2 FAQ (pack text: 'Q: Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? A: Yes, it is considered to have made a successful battle-shock roll.'). texts.js checks it as packfaq: a mutated question or answer fails. It is an italic note line, so derive.js ignores it for timing."
+ },
+ "25420d666615aedc": {
+  "verdict": "ok",
+  "by": "review:exiled-3",
+  "at": "2026-10-24",
+  "why": "Compared with main, exactly one line differs: `f.armyRules.concat(Object.values(f.detachments).map(d => d.rule).filter(Boolean))` became `.flatMap(detRules)`. detRules is a hoisted function declaration in derive.js and reads only its first argument, so flatMap's index and array arguments do no harm. A detachment without a rule gives [], the same as the old filter(Boolean). Nothing else changed. The other derive.js changes on this branch (the any-phase regex for 'At the end of a/each phase', move-enemy 'falls back', the Overwatch same-turn guard, the Feel No Pain 'against …' grant) come from the wt-exiled side and are not in these two functions."
+ },
  "25625aa24f7450c2": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1835,6 +1979,12 @@
   "at": "2026-10-16",
   "why": "\"Once per turn, when your opponent targets a unit ... with a stratagem\": any phase, either turn."
  },
+ "25edac79bb1e98f7": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“In your opponent's movement phase …”: Movement. Matches GW p.123 (GW also has lowercase “movement phase”). Note that GW’s Blood Legion detachment rule has a second part, BLOOD TAINTED, which data.js leaves out (see the completeness entry). If it is added to this rule, the labels have to be redone."
+ },
  "25fbf0a8ce77471a": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1864,6 +2014,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "The rule is titled \"Support\" and its text is about \"each leader and support unit in your army\". Typing \"support unit(s)\" plainly names that rule."
+ },
+ "26b58f2284435e3a": {
+  "verdict": "ok",
+  "by": "review:exiled-3",
+  "at": "2026-10-24",
+  "why": "Extracted from app.html at c488612 and compared with main (cbc2b20). Exactly one line differs: `rules = f.armyRules … .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name })))` became `.concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name }))))`. detRules(d) is `d && d.rule ? [d.rule].concat(d.moreRules || []) : []`, so a detachment without a rule still adds nothing, as before, and Blood Legion now adds Murdercall and then Blood Tainted. Nothing else in the function changed. Rendered result for The Exiled Legion: Blood Tainted is under To do now in every phase of both turns, and Murdercall is left out (its CHECKLIST entry has no s). For the other 18 lists, verify/out/snapshots differ from main's only in shooty.txt (the home list gains the Exiled Legion card), plus the new the-exiled-legion.txt."
  },
  "26b637bcf7e0a936": {
   "verdict": "ok",
@@ -2429,6 +2585,12 @@
   "at": "2026-10-23",
   "why": "EFFECT: “Select one objective that: Your unit was controlling when it was destroyed. Has no enemy units (excluding AIRCRAFT units) within range of it. That objective is secured.” The gist’s “an objective it was controlling” drops “when it was destroyed”, which fixes the moment of control (not any earlier time). Rest literal."
  },
+ "31a1d78b49674f87": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "TARGET LEGIONES DAEMONICA KHORNE."
+ },
  "31c8f68f1e0927a4": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -2543,6 +2705,12 @@
   "at": "2026-10-21",
   "why": "\"Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls\" has no duration. Core 01.02.02 says such an effect \"is only active for the phase in which it was given\", which is the Fight phase where the unit was \"selected to fight\". There \"WHILE FIGHTING: You must select one melee weapon\" (04.01), so the only attacks it covers are melee. So \"melee\" says neither more nor less than \"attacks\", as signed off for Rampaging Monstrosities (\"Fight-phase attacks are melee\"). when \"vs MONSTER/VEHICLE targets\" and note \"+1 to wound rolls\" match."
  },
+ "342647f2f8e54e30": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“LEGIONES DAEMONICA BATTLELINE unit (excluding PINK HORRORS units)”: all, plus none Pink Horrors."
+ },
  "3433f137994f64b4": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2560,6 +2728,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.\" The gist is the same, shorter; \"full wounds\" is left out, and starting strength comes close."
+ },
+ "34c2a5f2dfceae77": {
+  "verdict": "ok",
+  "by": "review:exiled-rules (its fix)",
+  "at": "2026-10-24",
+  "why": "Same two slips as the def. “before it has fought” drops GW’s “if that model has not fought this phase”, and “fights after” turns GW’s “it can fight after the attacking unit has finished making its attacks” into a must. The rest is faithful: WHEN, TARGET “selected as the target of one or more of the attacking unit’s attacks”, 4+, removed afterwards."
  },
  "34c69ad196993fa0": {
   "verdict": "ok",
@@ -2596,6 +2770,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "TARGET “That GRAV-ASSAULT unit”: needs Grav-assault."
+ },
+ "353ce3d86aba23c0": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“Select one visible enemy unit within 12\" of your unit. That enemy unit has +6\" detection range.” Faithful; no duration is added."
  },
  "354ce16c190984b5": {
   "verdict": "ok",
@@ -2680,6 +2860,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Only the Knights' unit rule; 24.35."
+ },
+ "379fe01808b72849": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“add 1 to the Attacks characteristic of melee weapons”: melee only, so the Fight phase in either turn. This is identical to the approved World Eaters Skarbrand (big-demons-baby)."
  },
  "37d6a08dab358780": {
   "verdict": "ok",
@@ -2855,6 +3041,12 @@
   "at": "2026-10-21",
   "why": "“each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll”, until the end of the phase: ranged, the condition and the effect are kept."
  },
+ "3afb13ce8c44b5c3": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“At the start of the first battle round” gives the Command step (at). The effect is “a melee attack that targets its prey”, which is the Fight phase in either turn. This is the same shape as the approved Singular Purpose and Methodical Destruction, without Shooting because only melee attacks are affected."
+ },
  "3b3a4be93ae1f9c4": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -2884,6 +3076,18 @@
   "by": "review:m2-text",
   "at": "2026-10-18",
   "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +3 to the result if your unit has ~~DEFF DREAD~~: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” The gist has the same condition (“a model in your unit”, “not selected to fight this phase”), the same roll (“roll one D6”, “on a 4+”) and the same removal timing (“until A or B” means whichever comes first), so nothing is added or changed. It leaves out only “with +3 to the result if your unit has ~~DEFF DREAD~~”, which is allowed because the gist ends with “…”. Leaving it out also avoids deciding what the strikethrough means; the gist does not resolve it. The gist is 144 chars, over the ~110 aim, but every shorter cut would drop a condition or the removal timing. text: same words as Wahapedia; the only difference is markup, the app has ~~**DEFF DREAD**~~ where Wahapedia has ~~DEFF DREAD~~ (bold inside the strikethrough)."
+ },
+ "3b81b6fadfc3bfdb": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "On the Rendmaster’s own weapons this is GW’s effect (S, AP and D improved by 1), its timing (Fight phase, until the end of the phase) and its target (the selected unit). The Rendmaster is itself a friendly KHORNE LEGIONES DAEMONICA unit. Blood Throne is not tagged (Aura) (GW and Wahapedia: “Blood Throne:”), so under the owner’s rule it cannot be an aura entry. Whether it should also appear on the other Khorne units is the owner’s decision #1: the rule does affect them, but the app has no approved non-aura cross-unit footnote."
+ },
+ "3ba458e3d4acca52": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "The export takes the upgrade on the Bloodletters unit (“Bane-forged weapons” under Bloodletters). Under 19.04 it covers the whole attached unit, so Skulltaker’s Slayer Sword S 7 is right, matching the approved Furious Assault on Calgar’s unit."
  },
  "3bbc7460956c3720": {
   "verdict": "ok",
@@ -2980,6 +3184,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"your opponent’s Fight phase\": opponent's turn."
+ },
+ "3cc7381931368b98": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Bloodcrushers datasheet."
  },
  "3ceb60ac9ae9c89e": {
   "verdict": "ok",
@@ -3389,6 +3599,18 @@
   "at": "2026-10-23",
   "why": "The text opens “(Once per turn, per unit)”."
  },
+ "4444f7317c4d0b26": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets”. Matches GW word for word; 1CP (Battle Tactic)."
+ },
+ "445f3e559354fb4e": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "rulesOf, detRows and onceRules now go through detRules(d) (rule, then moreRules), each row with src d.name. The Detachments row still links the detachment name to its first rule. The rendered Overview lists Murdercall then Blood Tainted ('Blood Legion · Any phase') after the army rules. Every other list's Overview is unchanged (snapshots identical apart from the list picker showing the new lists)."
+ },
  "4472ae2c5333a268": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -3557,6 +3779,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll\" (Wahapedia has the same): the target being the closest eligible target (01.04.02: closest to the model using the rule) is the whole condition, so cond closest is right."
  },
+ "48d83d2c1c51ca2b": {
+  "verdict": "ok",
+  "by": "review:exiled-units (its fix)",
+  "at": "2026-10-24",
+  "why": "The trigger is “each time that unit ends a Charge move” (Charge, either turn), but the effect, [DEVASTATING WOUNDS] on the melee Juggernaut’s bladed horns “until the end of the turn”, is used in the Fight phase. derive.js takes the trigger plus where the effect is used. It missed the use only because the text names the horns rather than “melee weapons”. Lord of Decapitations (melee weapons have DW) gets Fight, and the approved Murderous Charge (“If this unit made a charge move this turn, this unit’s melee attacks have +1 S”) is Fight. So the label should be both."
+ },
  "48ed8b2b13847330": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -3616,6 +3844,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“One TZEENTCH MUTANT unit from your army”."
+ },
+ "49a32fb79585e04c": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "opp."
  },
  "49d2820a1a78b12d": {
   "verdict": "ok",
@@ -3905,6 +4139,12 @@
   "at": "2026-10-23",
   "why": "Enhancement: right. 'Aura': GW does not tag the enhancement (Wahapedia Cohort Cybernetica: 'Necromechanic 20 pts … TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly … model within 12\" of the bearer is failed, the bearer can use this Enhancement'). It is a once-per-round triggered use, not a standing effect over a range, so the deviations-nr.json entry (tech-priest-enginseer) is wrong. The text's limit 'Once per battle round' is missing from the tag: tag-once only looks at the opening, and here the text opens with the 'TECH-PRIEST model only.' restriction. The app's onceTag strips that restriction, so the chip shows the limit anyway, but the stored label should say it the way the other items now do."
  },
+ "4f40367d1741ea31": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "Every condition is kept: unengaged (“not within Engagement Range of one or more enemy units”), not Fell Back this turn, and an enemy unit within 8\" and visible that is not within Engagement Range of your army. Six D6, 1 mortal wound for each 4+. Nothing is added."
+ },
  "4f8046346a592244": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -4163,6 +4403,12 @@
   "at": "2026-10-21",
   "why": "\"subtract 4 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\" while it \"has 1-6 wounds remaining\": all attacks, -1 to hit, -4 OC."
  },
+ "553d46368d2c02a8": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Bloodletters wargear ability (GW WARGEAR ABILITIES), carried by one Bloodletter. The export takes both the Daemonic Icon and the Instrument of Chaos, which is legal: one each, on different models."
+ },
  "553e59d3f8c0ffff": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -4229,11 +4475,23 @@
   "at": "2026-10-23",
   "why": "New Recruit categories: “Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*, *from combined unit”; Wahapedia Ahriman has no MUTANT."
  },
+ "5689ce83b79d5934": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“makes a melee attack”: Fight, either turn."
+ },
  "568bc755fedfbd58": {
   "verdict": "ok",
   "by": "review:code2",
   "at": "2026-10-17",
   "why": "I ran onceTag over every ability in all 6 lists. Branch 1 copies a BSData tag that starts \"Once/Twice per\" and drops the \" · …\" suffix, e.g. Bomb Squig \"Once per turn, twice per battle, per unit\", Supreme Kunnin’ \"Once per phase, per army\", Twisted Sorceries \"Once per battle · Psychic\" → \"Once per battle\". Branch 2 copies the text’s own words: a leading \"Once per turn\" (Harpoon Barbs, Malign Presence) or a parenthesised \"(Once per battle, per army)\" (Archslaughterer, Umbralefic Crystal). It adds \", per army\" only when the text says \"one model from your army with this ability\" (Will of the Hive Mind → \"Once per battle round, per army\"; BSData tags the same wording on Direct the Slaughter \"Once per battle round, per army\"). No limit is invented. Latent gaps, and they leave text out rather than add to it, so this stays ok: an unparenthesised \"Once per battle\" after a \"… model only.\" sentence gets no tag (enhancements Incandaeum and Null Nodules, neither in any list), and a tag-less text \"Once per turn, twice per battle, …\" would be cut to \"Once per turn\". Bomb Squig has its tag, so it is not affected."
+ },
+ "56986b2754f822e1": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Every model is “equipped with: hellblade” (GW), and Skulltaker has the Slayer Sword. The icon and instrument are unplaced: the export does not say which Bloodletter carries them, as with the approved Icon of Flame and Icon of Excess. The profiles match GW: Slayer Sword A6 WS2+ S6 AP-2 D3 [DEVASTATING WOUNDS, PRECISION]; Hellblade A2 WS3+ S5 AP-2 D2. Bane-Forged (S 7/6) and Lord of Decapitations (DW on the Hellblades) are marked as list values with their reasons."
  },
  "56b52f826fe1acb4": {
   "verdict": "ok",
@@ -4247,11 +4505,23 @@
   "at": "2026-10-22",
   "why": "EFFECT shortened, nothing added: \"Until the end of the turn ... can ignore any or all modifiers to ... BS or WS ...; the Hit roll; the Wound roll\". WHEN is a bare \"Command phase\" (the row's tag) with no further condition."
  },
+ "56f4a7ce448fda53": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Bloodletters wargear ability."
+ },
  "571486b7f4a40f0a": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "Advancing and Falling Back happen in your Movement phase, so the shooting and charge it allows are in your turn."
+ },
+ "57327e691bf68e00": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll”: all attacks, always (he is leading in this list), and the Bloodmaster’s own attacks included. This is the same form as the approved Legendary Killer (“While Khârn leads this unit”, always:true)."
  },
  "5774666c9dddd1d1": {
   "verdict": "ok",
@@ -4529,6 +4799,18 @@
   "at": "2026-10-23",
   "why": "“that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.” Kind all, when “Selected to attack”; the Damage tab marks it not counted (one re-roll). The Favoured Ka’tah (Rendax) additional effect is mortal wounds on an engaged enemy MONSTER/VEHICLE, not a change to the attacks, so it has no footnote."
  },
+ "5d18d7e970b79cb7": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It keeps every condition: once per battle, used at the start of a phase, 3+ invulnerable save until the end of the phase. The words are GW’s."
+ },
+ "5d45b212a931ea6d": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "The opponent’s Movement phase only: opp."
+ },
  "5da06918f9f834c9": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -4582,6 +4864,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Movement phase, when this unit is selected to move … this unit can make a pulse jet move.” The text names your Movement phase. (For the owner: the lasting effects, “Until the end of the turn … not eligible to declare a charge” and “Until the start of your next turn, attacks that target your unit have -1 to hit rolls”, are in the Pulse Jet Move rule, not in this ability’s words, so the tag doesn’t carry them.)"
+ },
+ "5ee7d2c363d79e2a": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "The only change extends the --expand-only “own” branch (opts.keep has 'own'; own stays in HIDE, so the app’s load is unchanged) from stats to ranged and melee rows. A weapon row’s from-keys are fields (A, S, D …) or weapon-ability names (“SUSTAINED HITS 1”), and the `f in ds` guard skips the ability names. The array-valued kw is never a from-key, so the !== comparison only compares strings. Run with keep:['own'], it gives own only where a rule changed a value (Relentless Rage A, Bane-Forged S, Daemonic Allegiance S …). Every resolved list except the new one is identical to main 24f66fe’s (loadData, JSON-equal), and no ARMIES entry of an existing list changed in the diff."
  },
  "5eeb00ce6a6bd4f7": {
   "verdict": "ok",
@@ -4642,6 +4930,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Possessed Lord is the Slaughterbound's ability (\"this model\")."
+ },
+ "5fc49dce6ef14af2": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your Charge phase”. Matches GW word for word; 1CP."
  },
  "5fddcb4a9888632d": {
   "verdict": "ok",
@@ -4745,6 +5039,12 @@
   "at": "2026-10-21",
   "why": "“Each time a model in a SKITARII unit from your army makes an attack” (Faction Pack v1.4 p5): SKITARII picks the Rangers, the Ironstriders, the Onager, the Skorpius and the Datasmith + Kastelans (SKITARII from Martial Signatum Amplificator: “Models in the bearer's unit have the SKITARII keyword”)."
  },
+ "61378d551079e33e": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“Each time this model’s unit ends a Charge move … Battle-shock test”: Charge, either turn. This is the same as the approved Terminatus Assault."
+ },
  "6146e157774e55ce": {
   "verdict": "ok",
   "by": "review:r5-code",
@@ -4835,6 +5135,18 @@
   "at": "2026-10-23",
   "why": "Keeps “engaged” and the effect word for word (“Select one enemy unit engaged with your unit. Roll six D6: For each 4+ … 1 mortal wound”)."
  },
+ "639d2eee856cee4b": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on Skulltaker’s own datasheet."
+ },
+ "63a63fc0ba096e39": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Bloodletters datasheet."
+ },
  "64385370643e5b6e": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -4864,6 +5176,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "New Recruit: Lord on Juggernaut 110 (95 + Disciple of Khorne 15), (20) Khorne Berzerkers 330, card 440 PTS. Same form as the other attached units' ptsNote."
+ },
+ "649b4d63c23ec11b": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "opp."
  },
  "649eba0fd02c5533": {
   "verdict": "ok",
@@ -5177,6 +5495,12 @@
   "at": "2026-10-23",
   "why": "The Exalted Sorcerer on Disc's own ability (“While this model is leading a unit”)."
  },
+ "6c3bef70c90b3187": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Skullmaster 85 (Wahapedia “1 model 85”) plus Brazenmaw 15 is 100. Bloodcrushers “3 models 95” (1st to 2nd units). The export is 85+15 and 95."
+ },
  "6c6442cf5b023f31": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -5278,6 +5602,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "NR: “Titanic feet, Ruinspear rocket pod, Diabolus heavy stubber, 2x Gatling cannon and flamer (Despoiler gatling cannon, Heavy darkflamer)”. The weapons are therefore ×2 gatling cannon and ×2 heavy darkflamer. This is legal per Wahapedia's options: the reaper chainsword and the warpstrike claw can each be replaced with “1 despoiler gatling cannon and 1 heavy darkflamer”, the meltagun with a heavy stubber, and it can take a ruinspear rocket pod."
+ },
+ "6e3f860d9a216305": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Skullmaster (GW): MOUNTED, CHARACTER, CHAOS, DAEMON, KHORNE, SKULLMASTER. Bloodcrushers: MOUNTED, CHAOS, DAEMON, KHORNE, BLOODCRUSHERS. Only BLOODCRUSHERS comes from the bodyguard."
  },
  "6e4d9278440f0b7f": {
   "verdict": "ok",
@@ -5453,6 +5783,12 @@
   "at": "2026-10-21",
   "why": "Tested with gcRound in node. A side that goes second sees its round-N command pick in round N+1’s first turn, marked as picked in round N, and from its own turn of N+1 the new round’s slot. A side that goes first always sees the current round. This matches “until the start of your next Command phase”. Battle Protocols with no pick shows Aegis Protocol (from the start of the battle), per “At the start of the battle, … that unit enters Aegis Protocols”, and after a pick the last one made."
  },
+ "714d532bff0d10b0": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "\"At the end of each phase …\" is every phase of both players' turns, so all five phases / either. The new derive.js any-phase reading gives the same."
+ },
  "7173745124f5cf5b": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -5531,6 +5867,12 @@
   "at": "2026-10-21",
   "why": "“At the start of your Shooting phase, select one enemy VEHICLE unit within 12\" of this model…”"
  },
+ "7394baaba78e4d7c": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW: Skullmaster has blade of blood and Juggernaut’s bladed horn; every Bloodcrusher model has hellblade and Juggernaut’s bladed horn (Bloodhunter + 2). So Hellblade ×3 and horn ×3. The profiles match GW: Blade A5 WS2+ S6 AP-2 D3; horn A4 WS4+ S6 AP-1 D1 [EXTRA ATTACKS, LANCE]; Hellblade A2 WS3+ S5 AP-2 D2."
+ },
  "73bb789eb21a9247": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -5608,6 +5950,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": all attacks, phases stated."
+ },
+ "758c11eada2dd44a": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "Faithful. It keeps the trigger, unengaged, within 6\" of that enemy unit, and only units “that made a fall-back move this phase and are within the maximum distance”."
  },
  "758c82ad5b1ce2b7": {
   "verdict": "ok",
@@ -5807,6 +6155,18 @@
   "at": "2026-10-21",
   "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
  },
+ "799223ddd1aedeaf": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "\"a LEGIONES DAEMONICA KHORNE unit from your army\" → all [Faction: Legiones Daemonica, Khorne]. This is the same convention as Murdercall's needs, and its Applies to list is the list's Khorne daemons."
+ },
+ "79a78a7f6d2e1dcc": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Blood Legion enhancement (Wahapedia: “Gateway Unto Damnation 10 pts”). The bearer is a LEGIONES DAEMONICA KHORNE MONSTER, which is legal."
+ },
  "79be6437c1fd2ce8": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -5927,6 +6287,12 @@
   "at": "2026-10-23",
   "why": "It matches the item. 'On this phone' gives the source and date (esc) and says “Kept on this phone only.” when importedKept() has the entry. When it does not, it says “This phone could not keep it: it is gone when the app next starts.” (the earlier review's nit is fixed). The Remove this list button (impRmBtn, id escaped) leads to askRemove's on-page Remove / Keep it, and Keep it restores the button. It is used only for a.imported (screenPregame line 4667)."
  },
+ "7b3c31fafeeafdc2": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on Karanak’s own datasheet (GW Faction Pack, Wahapedia)."
+ },
  "7bc53c14d45dff9d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -5998,6 +6364,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR roster: Big Mek 100, Painboy 45, \"(10) Nobz 240 Big Mek, Painboy\"; header \"385 PTS\". 100 + 45 + 240 = 385."
+ },
+ "7d1cd073bd4fd6bf": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "An advance move (your Movement phase), [ASSAULT] on ranged attacks until the end of that turn (your Shooting phase), and eligible to declare a charge (your Charge phase). Text matches GW p.122 word for word."
  },
  "7d389b29f9e84bc2": {
   "verdict": "ok",
@@ -6142,6 +6514,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“when your unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound”: the gist says that, and “Until the end of the phase” is this Charge phase, the only one it can apply in."
+ },
+ "7ff9dd73921c7111": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“friendly KHORNE LEGIONES DAEMONICA unit within 6\"” maps to needs all [Faction: Legiones Daemonica, Khorne]. It is melee, +1 A. selfAlways follows 22.01 (“always within range of its own aura ability”), and this is the same form as the approved WE Skarbrand and Guilliman auras. The snapshot shows it on every Khorne unit, the Daemon Prince included (Khorne by Daemonic Allegiance), and not on the Beasts of Nurgle."
  },
  "8004c33d3ee7c24b": {
   "verdict": "ok",
@@ -6364,6 +6742,12 @@
   "by": "review:r22-shields",
   "at": "2026-10-21",
   "why": "The Pulse Jet Move (Orks army rule term), AFTER MOVING: “Until the start of your next turn, attacks that target your unit have -1 to hit rolls.” The def says exactly that, and “After a pulse jet move” is the only way to get it, since only this ability (picked with Full Throttle) allows that move. It is the line signed off as calcDef in r20, now also on Wazdakka’s When targeted line. Tapping it opens the Pulse Jet popup, whose “pulse jet move” opens the term."
+ },
+ "844fcb1b33b02613": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“LEGIONES DAEMONICA KHORNE INFANTRY or LEGIONES DAEMONICA KHORNE MOUNTED”: the shared keywords for all, plus Infantry or Mounted (kw-or-common). The Fell Back and unengaged conditions are states, not keywords."
  },
  "8453530fa9aad83e": {
   "verdict": "ok",
@@ -6689,6 +7073,12 @@
   "at": "2026-10-22",
   "why": "WHEN: \"Any phase\" = all five."
  },
+ "8ace96dfafb0ac6f": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Bloodmaster (GW): INFANTRY, CHARACTER, CHAOS, DAEMON, KHORNE, BLOODMASTER. BATTLELINE and BLOODLETTERS come from the bodyguard. SHADOW LEGION is rightly absent."
+ },
  "8affdd8227855ef7": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -6754,6 +7144,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.” The condition, scope and phase are the same."
+ },
+ "8bfdd6ac90cd6d7f": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW tags it. The Faction Pack Bloodthirster card has “Greater Daemon of Khorne (Aura):”. It affects units within a stated range (22.01). It changes no attack or defence numbers, so it rightly has no aura footnote or guard."
  },
  "8c0d55b05e7f3e5a": {
   "verdict": "ok",
@@ -7043,6 +7439,12 @@
   "at": "2026-10-21",
   "why": "It shows the granting rule's text and the note that the value includes it. With printed (only the Knight Destrier: from {InSv:'Sanctuary'}, printed {InSv:'5+*'}), and with what=\"INV 5+\" mapped to InSv, it says \"New Recruit and BSData print 5+* here\", which is true (BSData Unit profile \"InSv 5+*\", NR \"8 5+* 150x95mm\"). Sanctuary reads \"The bearer has a 5+ invulnerable save.\""
  },
+ "91ee853ff38b414a": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Flesh Hounds datasheet. “this unit” is the combined unit, and it is listed under the bodyguard as in approved lists."
+ },
  "91f5119feb4e480b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -7109,6 +7511,12 @@
   "at": "2026-10-16",
   "why": "TARGET \"…in strategic reserves (excluding AIRCRAFT)\": none:[Aircraft]. No AIRCRAFT or FORTIFICATION (20.01 excludes them from reserves) in the five lists, so every unit really can be a target."
  },
+ "937a28aeda480f30": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on Skulltaker’s own datasheet (“Each time this model makes an attack”)."
+ },
  "93dcd4f8af862830": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -7157,6 +7565,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that was selected as the target...\"."
  },
+ "9486f86b86bcbac2": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Bloodletters wargear ability."
+ },
  "94e27aa796426add": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -7198,6 +7612,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "EFFECT “Select one objective your unit is controlling. That objective is secured.” Literal; the timing is the phase tag, the exclusion in needs."
+ },
+ "96ba54a80e67a2d9": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Karanak (GW): BEAST, CHARACTER, EPIC HERO, CHAOS, DAEMON, KHORNE, KARANAK. Flesh Hounds: BEAST, CHAOS, DAEMON, KHORNE, FLESH HOUNDS. Only FLESH HOUNDS comes from the bodyguard. SHADOW LEGION is rightly absent: GW’s card has no such keyword, and only the Shadow Legion detachment gives it."
  },
  "96d6d2a8873f7635": {
   "verdict": "ok",
@@ -7246,6 +7666,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
+ },
+ "97cd1b8841a1503a": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "\"At the start of any phase\" and the battle-shock effects apply in both players' turns: either. The FAQ line does not change this."
  },
  "980ff948d3a100d1": {
   "verdict": "ok",
@@ -7367,6 +7793,12 @@
   "at": "2026-10-16",
   "why": "Crimson King section lists \"Time Flux (Aura, Psychic)\"."
  },
+ "9a29a9f64e4a33ad": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“One friendly LEGIONES DAEMONICA BATTLELINE unit”."
+ },
  "9a3319445718646e": {
   "verdict": "ok",
   "by": "review:core-code (its fix)",
@@ -7391,11 +7823,23 @@
   "at": "2026-10-20",
   "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. This is the same judgement as the approved shooty item 3ebc0bbf37c6d408; only the italics on the token line differ."
  },
+ "9a5ff8d65eae40d3": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“has not been selected to charge this phase” → “not yet selected to charge”, said in the Charge phase, and “is eligible to declare a charge in a turn in which it Advanced” → “can declare a charge …”. Faithful."
+ },
  "9a703450fd9425d4": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (standard p2) Categories: \"Battleline*, Berzerkers*, *from combined unit\", and the combined unit is Khârn leading Khorne Berzerkers."
+ },
+ "9a84f2010b340023": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW tags it. The Faction Pack Skarbrand card has “Rage Embodied (Aura):”, and Wahapedia prints the same."
  },
  "9aa383b8e2ace091": {
   "verdict": "ok",
@@ -7421,11 +7865,23 @@
   "at": "2026-10-23",
   "why": "\"WHEN: Fight phase, just after ... has fought\"."
  },
+ "9b0ff1adf0134cb3": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on Karanak’s own datasheet."
+ },
  "9b3cdc05e599bee4": {
   "verdict": "ok",
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Blood Surge is on the Khorne Berzerkers datasheet (NR: \"Blood Surge - Khorne Berzerkers\")."
+ },
+ "9b4fda40f44ef60c": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW: “equipped with: attendants’ hellblades; blade of blood”. Attendants’ hellblades A4 WS3+ S5 AP-2 D2 [EXTRA ATTACKS]; Blade of blood A5 WS2+ S6 AP-2 D3. “Attendant’s hellblades” is New Recruit’s spelling, kept per the owner’s rule. The points are 160 each, for the 1st and 2nd units (Wahapedia “YOUR 1ST TO 2ND UNITS COST 1 model 160”), ×2."
  },
  "9b5e8d28353199e5": {
   "verdict": "ok",
@@ -7589,6 +8045,12 @@
   "at": "2026-10-23",
   "why": "Bullets 2-3: below starting strength “re-roll hit rolls of 1”; below half-strength “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” A unit below half-strength is also below starting strength, so the two picks are the two states (01.02.01: for a one-model unit, remaining wounds less than W / less than half W), each the player’s tick; the +2 OC at starting strength is no attack, rightly left out."
  },
+ "9df8f618fb189c7b": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Bloodmaster’s own datasheet."
+ },
  "9e153af78c2c0928": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -7715,6 +8177,12 @@
   "at": "2026-10-16",
   "why": "Helm of Brazen Ire is a Berzerker Warband Enhancement."
  },
+ "a0b217447531f4f3": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW: “While this model is within 3\" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.” The def keeps the condition and has the same shape as the approved Mechanicus Bodyguard and Da Grand Warlord’s Ladz."
+ },
  "a0c98d5661f941f6": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -7757,6 +8225,12 @@
   "at": "2026-10-16",
   "why": "TARGET \"One friendly unengaged unit (excluding TITANIC units)\": none:[Titanic] is exact; all four Knights correctly excluded. (Units with no ranged weapon — Hive Tyrant, Neurogaunts, Tzaangors, Enlightened, Eightbound, Slaughterbound — are legal targets but cannot attack, 04.01.01; suits() already keeps it off their datasheets, the strat card still says \"any unit\".)"
  },
+ "a1a333c7d6e2c75e": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls”: faithful."
+ },
  "a1ae4e24d304e423": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -7781,6 +8255,12 @@
   "at": "2026-10-22",
   "why": "Wahapedia “Close-range Killers (Aura):”, NR “Close-range Killers (Aura)”, BSData “Close-range Killers (Aura)”."
  },
+ "a226f68b062541d8": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your opponent’s Shooting phase …”. Matches GW word for word; 1CP."
+ },
  "a25cf56c859a00e3": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -7804,6 +8284,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "TARGET: “That ADEPTUS ASTARTES unit.” = Faction: Adeptus Astartes."
+ },
+ "a2b106f2aef303ed": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "TARGET “friendly unengaged LEGIONES DAEMONICA KHORNE unit”: the Faction keyword and Khorne. Unengaged is a state."
  },
  "a2b31e149a65539e": {
   "verdict": "ok",
@@ -7925,6 +8411,12 @@
   "at": "2026-10-16",
   "why": "Quoted verbatim from the Wahapedia World Eaters FAQ; consistent with Core 19.04 (a bodyguard ability ends once the attacking unit has resolved its attacks)."
  },
+ "a54555e4333402f7": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your opponent’s Movement phase, when an enemy unit ends a fall-back move”. Text is the errata’d version and matches GW p.124 word for word; 2CP as GW prints it."
+ },
  "a55516593fe0aa19": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -7966,6 +8458,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Any phase of either turn: either."
+ },
+ "a5e9683a992beace": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "your."
  },
  "a60588c563fe9ec9": {
   "verdict": "ok",
@@ -8027,6 +8525,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'More Dakka - Big Mek in Mega Armour' (l.179); BSData links the shared More Dakka profile to the BMiMA model. Models match NR."
  },
+ "a716424933693854": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "An advance move is made in your Movement phase (09.06), and both effects last only that turn: your."
+ },
  "a7234b5c6f3b906b": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -8050,6 +8554,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "“While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.” Only the Datasmith gets it, and only while it leads, as the line says. Supporting counts as leading (Core Rules: support units “lead that bodyguard unit”)."
+ },
+ "a76b6720254a7b15": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "your."
  },
  "a783581542fe432f": {
   "verdict": "ok",
@@ -8122,6 +8632,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
+ },
+ "a9be15990ea33b7a": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Skullmaster’s own datasheet."
  },
  "a9e89bbe276b851b": {
   "verdict": "ok",
@@ -8309,6 +8825,12 @@
   "at": "2026-10-23",
   "why": "NR Categories: \"… Tzeentch, Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\" — the same four, the same note as approved for the previous build; it says where the keywords come from, it answers no rules question."
  },
+ "ad96e0941df54001": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "The bearer is the Skullmaster, which the export takes it on."
+ },
  "adbc1343c5ec5af2": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -8320,6 +8842,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "The NR name line (l.393-394) is \"Bomb Squig (Once per battle, per unit)\", and the Squighog Boyz' BSData infoLink is named \"Bomb Squig (Once per battle, per unit)\" (the Mek/Kommandos one is the twice-per-battle version). The tag copies it, and the text's single token (\"Place one Bomb Squig token … removing it after this ability is used\") agrees."
+ },
+ "addcc6d1d3781e68": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Blood Legion enhancement (Wahapedia: “Slaughterthirst (Aura) 25 pts”), and GW names it “(Aura)”. This is the same tag as the approved Final Howl (Aura) (“Enhancement · Aura”)."
  },
  "adfb8b0ae937df52": {
   "verdict": "ok",
@@ -8363,6 +8891,12 @@
   "at": "2026-10-16",
   "why": "Warpflamer [IGNORES COVER, TORRENT] and warpflame pistol [IGNORES COVER, PISTOL, TORRENT] have it natively (BSData/datasheet); only Malefic Curse and the soulreaper cannon get it from \"Ranged weapons ... (excluding CHARACTERS) have the [IGNORES COVER] ability\". As written, losing the Icon bearer would wrongly strip it from the flamers."
  },
+ "aeaac06c75e1870c": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "Your unit can destroy an enemy unit in either player's turn (fights and Overwatch in the opponent's turn), and the control check is \"at the end of a phase\": either."
+ },
  "aee2ee09c2b84801": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -8404,6 +8938,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Pack 1.2 WHEN: “Your Shooting phase, when a friendly WAR DOG unit has shot.”"
+ },
+ "afaebf71aabe60f8": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "These are the export’s loadouts. GW: Karanak has scalding roar and soul-rending fangs; the Gore Hound has burning roar and gore-drenched fangs; every Flesh Hound has gore-drenched fangs. So burning roar ×1 and fangs ×5. The profiles match GW: Scalding roar 12\" D6+3 S5 AP-1 D1 [IGNORES COVER, TORRENT]; Burning roar 12\" D6 S4 AP0 D1; Soul-rending fangs A6 WS2+ S6 AP-2 D2 [ANTI-CHARACTER 3+, PRECISION]; Gore-drenched fangs A3 WS3+ S5 AP-1 D1. “Scalding Roar” keeps New Recruit’s capital (owner’s rule)."
  },
  "afbdb042f0da43a9": {
   "verdict": "ok",
@@ -8447,6 +8987,12 @@
   "at": "2026-10-16",
   "why": "TARGET \"One friendly unengaged EXPLOSIVES/GRENADES unit\" (slash = or): any:[Explosives,Grenades]. Selects Ghazghkull, Nazdreg, Deffkoptas; Khârn, Lord on Juggernaut, Jakhals; Sorcerer+Rubrics. Unengaged/no-advance are table-time conditions shown in the TARGET text."
  },
+ "b0b52529ba272f6f": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "These are GW’s words with the condition kept. It is identical to the approved WE Flesh Hounds def."
+ },
  "b0c1dfbf69a2339f": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -8476,6 +9022,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.” The pick offers both options, kind all (all weapons), with the Empowered condition and the duration."
+ },
+ "b1094af632ee21c3": {
+  "verdict": "ok",
+  "by": "review:exiled-rules (its fix)",
+  "at": "2026-10-24",
+  "why": "EFFECT: “each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+ … it can fight after the attacking unit has finished making its attacks”. The def changes two things. (1) “before it has fought” drops “this phase”, so it reads as a model that has never fought. (2) “fights after” turns GW’s “can fight” into something it must do. The fix keeps the text’s condition and its “can”."
  },
  "b1239f6c266b0434": {
   "verdict": "ok",
@@ -8525,6 +9077,12 @@
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
  },
+ "b2113c86b5bb4302": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Bloodletters datasheet."
+ },
  "b28077c91ac3877e": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -8554,6 +9112,12 @@
   "by": "review:oioioi (its fix)",
   "at": "2026-10-16",
   "why": "No phase in the rule (\"Each time this model makes an attack that targets a CHARACTER unit\"); the Daemon Prince is offered Fire Overwatch (\"End of your opponent’s Movement phase ... Your unit shoots using snap shooting\"), where its wound re-rolls still apply (snap shooting only bans hit re-rolls). App-wide convention leaves Overwatch out; if kept, treat as ok."
+ },
+ "b33442896682b908": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW tags it: “Daemon Lord of Khorne (Aura):” on the Faction Pack card."
  },
  "b38e53acc097cb94": {
   "verdict": "ok",
@@ -8669,6 +9233,12 @@
   "at": "2026-10-23",
   "why": "Wahapedia and New Recruit both print “Scryer of Fates (Psychic)”."
  },
+ "b557b4a13f3b4d5a": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "The export takes it on the Bloodletters unit. Under 19.04 it covers the attached unit, so the Bloodmaster’s blade is at S 7."
+ },
  "b59592e3e5a8ea08": {
   "verdict": "ok",
   "by": "review:r7-text",
@@ -8723,6 +9293,12 @@
   "at": "2026-10-21",
   "why": "Wahapedia Runt Swarm FAQ: \"Q:When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’? A: No.\" The note quotes it exactly."
  },
+ "b79ada5a178bfa2e": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "EFFECT “Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features”: the gist is faithful and complete."
+ },
  "b7a6780d56fd885e": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -8753,6 +9329,12 @@
   "at": "2026-10-23",
   "why": "Wahapedia's Exalted Sorcerer datasheet and NR both print \"Arcane Shield (Psychic)\"."
  },
+ "b87ee21bffe98264": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW tags it: “Prince of Darkness (Aura):” on the Faction Pack Daemon Prince of Chaos card."
+ },
  "b87fb18756a65a5f": {
   "verdict": "ok",
   "by": "review:derive-2",
@@ -8764,6 +9346,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.\" No table condition; weapon Kustom Krumpa and the models line \"2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)\" limit it to those two Nobz’ Krumpas, so always is right."
+ },
+ "b8ba89ea3b4e6014": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "TARGET “One LEGIONES DAEMONICA KHORNE unit from your army”: Faction keyword and Khorne."
  },
  "b8c4662692012423": {
   "verdict": "ok",
@@ -8830,6 +9418,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF prints \"Prophet of Da Great Waaagh! (Aura)\". [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "b9bc61c052484217": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your Command phase”. Matches GW word for word; 1CP."
  },
  "b9c082ec329df476": {
   "verdict": "ok",
@@ -8909,6 +9503,12 @@
   "at": "2026-10-21",
   "why": "\"each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.\" {woundMinusSgt:1} is exactly that (S after modifiers against the unit’s T, as calc.js plan does). It is your opponent’s Shooting phase only."
  },
+ "bb3b3de67a735a9f": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia and BSData: Karanak “1 model 70”, Flesh Hounds “5 models 80”. The export is 70 and 80."
+ },
  "bb65b1a5937be342": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -8933,11 +9533,23 @@
   "at": "2026-10-24",
   "why": "EFFECT: “Your unit’s ranged attacks have: Have +6\" R. Have +1 S.” The note “+6\" range and +1 S” says the same. dmEffects reads it as {range:6, s:1}, which is what the EFFECT gives."
  },
+ "bb896513699eb7d8": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "“Your” Movement and Charge phases: your."
+ },
  "bbc956efd0611697": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "Drops a limit: the rule says \"set this model back up ... as close as possible to where it was destroyed and not within Engagement Range of any enemy units\"."
+ },
+ "bbd615f224a8b3af": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your Shooting phase”. Text matches GW word for word; 1CP."
  },
  "bbd6a0e7329629e6": {
   "verdict": "ok",
@@ -9131,6 +9743,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Lancer's Duty (Bondsman)\" and the GW datasheet \"Lancer's Duty (Bondsman)\"."
  },
+ "c006b52e3e1a91af": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Bloodcrushers wargear ability."
+ },
  "c008409bb914f191": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -9161,6 +9779,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “Fight phase, when an enemy unit targets a friendly ORKS unit”. It does not say “your”, and in the Fight phase “Both players’ units make attacks with their melee weapons”, so either turn. text: same as Wahapedia word for word."
  },
+ "c07ed511b2a7806a": {
+  "verdict": "ok",
+  "by": "review:exiled-units (its fix)",
+  "at": "2026-10-24",
+  "why": "The content is right: melee, vs CHARACTER or MONSTER, “can re-roll the wound roll”. But an always-on, target-keyword melee re-roll carries always:true in approved lists, so the Damage tab counts it when the target matches. Its twin Da Bigger Dey Iz… (“vs MONSTER/VEHICLE”, “can re-roll wound rolls”, melee) has always:true, and so does A Challenge Worthy of Skill."
+ },
  "c0b3b3b1fc276e52": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -9184,6 +9808,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "Deep Strike: \"if every model in this unit has this ability\" (New Recruit's rule text, 24.09). Disciple of Khorne gives it to \"The bearer\" only (19.04: an enhancement applies only to that model), so it is the Lord's only and the attached unit cannot use it; partialRules names the Lord, as Canis Rex's Lone Operative."
+ },
+ "c14a8588fc37bbaf": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“weapons … have the [LANCE] ability”. [LANCE] only counts after a charge move, so the Fight phase, either turn. This is the same as the approved Furious Assault label."
  },
  "c1566df972fc3159": {
   "verdict": "ok",
@@ -9359,6 +9989,12 @@
   "at": "2026-10-21",
   "why": "opts.shields adds a stratagem with a shield def for a unit its protects matches, when another unit of the list matches its by (a GRETCHIN unit; the stratagem is the list’s own). Only the datasheet passes it (app.html ~4659). The Damage tab calls defenceItems without it (dmFnpOf ~1966, the target’s lines ~2254) and keeps its own shield path, so nothing is counted twice; defences() is unused. With ph null the phase filter is skipped, as for the other datasheet lines."
  },
+ "c5cb11a5572e00ca": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "WHEN “Your Movement phase or your Charge phase”. Text matches GW word for word; 1CP (GW’s 1CP sits beside this stratagem’s TARGET line, and the 2CP belongs to Fools’ Flight)."
+ },
  "c5df75e1d0100700": {
   "verdict": "ok",
   "by": "review:gists",
@@ -9514,6 +10150,18 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"Your opponent’s Shooting phase\"."
+ },
+ "c87e613ffc3039cb": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Skulltaker 85 (Wahapedia “1 model 85”, BSData 85). Bloodletters “10 models 110”, plus Bane-Forged Weapons 15, is 125, which is the export (110 + 15). The 15 sits on the Bloodletters, where the export takes it, as in the approved Calgar ptsNote."
+ },
+ "c8b6ad9ba94de105": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "Faithful."
  },
  "c8b902372952abaf": {
   "verdict": "ok",
@@ -9755,6 +10403,12 @@
   "at": "2026-10-21",
   "why": "NR (princes p4) Categories: \"Exalted Eightbound*, *from combined unit\", and the Slaughterbound is \"Leading: Exalted Eightbound\"."
  },
+ "cd3d97ef10e4dec7": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“At the start of the Fight phase … until the end of the phase”: Fight, either turn."
+ },
  "cd599e8a5745cd2b": {
   "verdict": "ok",
   "by": "review:r14-calc",
@@ -9766,6 +10420,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Super Runts - Zodgrod Wortsnagga\" (Wahapedia: Zodgrod's datasheet ability)."
+ },
+ "cd844d7cb47f2619": {
+  "verdict": "ok",
+  "by": "review:exiled-units (its fix)",
+  "at": "2026-10-24",
+  "why": "The content is right: Skulltaker’s own attacks (who), all kinds, vs CHARACTER, and GW’s “can re-roll the Hit roll and … the Wound roll”. But this is an always-on, target-keyword ability, and approved footnotes of that kind carry always:true, so the Damage tab counts it when the target matches. Its exact twin, A Challenge Worthy of Skill (defilers-and-friends: “vs CHARACTER, MONSTER or WALKER units … can re-roll”), has always:true, and so do Hunter of Souls and Da Bigger Dey Iz… (“can re-roll wound rolls”, vs MONSTER/VEHICLE). Without the flag it shows as an unticked choice."
  },
  "cd97ae30f8ee4fc6": {
   "verdict": "ok",
@@ -9784,6 +10444,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "8\" is the Pack 1.2 Rules Update (“Harrying Hounds Stratagem, Target Section: Change 9\" to 8\".”), which Wahapedia's text also has. The WHEN (“just after an enemy unit ends a Normal, Advance or Fall Back move”), the TARGET (“within 8\" of that enemy unit”) and the EFFECT (“Your unit can make a Normal move of up to 6\".”) are all kept."
+ },
+ "ce6578deba6e0b05": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "The Fight phase of either turn (the enemy unit fights in either player’s Fight phase): either."
  },
  "ce8b0b4c278746d4": {
   "verdict": "ok",
@@ -9893,6 +10559,12 @@
   "at": "2026-10-16",
   "why": "Opponent’s Fight phase."
  },
+ "d071bb330ac6fcb1": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“each time a model in that unit makes a melee attack”: Fight, either turn. It is identical to the approved WE Bloodthirster."
+ },
  "d0a621623d627290": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -9995,6 +10667,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP. This unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same two alternative conditions, the same effect."
  },
+ "d23fb848b163d3d2": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“At the end of your opponent’s turn” is the opponent’s turn, last phase, with at. It is identical to the approved WE Flesh Hounds and Ambushing Hunters."
+ },
  "d268c4fdf0b8daf2": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -10067,6 +10745,12 @@
   "at": "2026-10-23",
   "why": "Your Shooting phase and either Fight phase: either."
  },
+ "d429635f8f365c06": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Charge rolls: Charge, either turn (core Heroic Intervention). This is the same as the approved Battle-lust and Terminatus Assault."
+ },
  "d474d22b48703968": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -10090,6 +10774,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "Bondsman affects only \"one friendly Armiger model\", hence needs ARMIGER; \"each time that model makes a ranged attack, add 1 to the Hit roll\" means ranged attacks get +1 to hit. No ARMIGER is in this list. Hunter's Eye is not repeated in any Crusader footnote."
+ },
+ "d4d8af2866a70223": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Bloodmaster 65 (Wahapedia “1 model 65”). Bloodletters 110 plus Bane-Forged 15 is 125, which is the export."
  },
  "d4e6a256331925ee": {
   "verdict": "ok",
@@ -10151,6 +10841,12 @@
   "at": "2026-10-17",
   "why": "“Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” “against” = “that target”; same exclusion and number."
  },
+ "d6802c7690a786d0": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "The unit WHEN names, and TARGET: LEGIONES DAEMONICA BATTLELINE."
+ },
  "d68adf2412074978": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -10192,6 +10888,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: Lone Operative, Lone Operative X\"; 24.24."
+ },
+ "d758b413f5094e7c": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“melee weapons … have [DEVASTATING WOUNDS]” is the Fight phase, either turn."
  },
  "d75c6c43165f4f82": {
   "verdict": "ok",
@@ -10294,6 +10996,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "da752cdf7c44dd70": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is on the Bloodmaster’s own datasheet."
  },
  "da8ad22e88c5b068": {
   "verdict": "ok",
@@ -10613,6 +11321,12 @@
   "at": "2026-10-22",
   "why": "TARGET “One IMPERIAL KNIGHTS unit from your army that was just destroyed” = “Your unit just destroyed”; EFFECT “Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6” = the rest. “Any phase” is the row’s tag."
  },
+ "e078d9d809463497": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Skulltaker (GW): INFANTRY, CHARACTER, EPIC HERO, CHAOS, DAEMON, KHORNE, SKULLTAKER. Bloodletters: INFANTRY, BATTLELINE, CHAOS, DAEMON, KHORNE, BLOODLETTERS. Only BATTLELINE and BLOODLETTERS come from the bodyguard. SHADOW LEGION is rightly absent."
+ },
  "e0869998b53fc89e": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -10648,6 +11362,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"TARGET: One BLOOD LEGIONS unit from your army\": the TARGET only (the WORLD EATERS unit is selected in the EFFECT). The Lord + Berzerkers unit is a BLOOD LEGIONS unit (02.05.01), so it is a target too."
+ },
+ "e11b100354bf0af8": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“At the end of the Fight phase”: either player’s Fight phase. It is identical to the approved WE Bloodthirster."
  },
  "e13f23b385f429e0": {
   "verdict": "ok",
@@ -10691,11 +11411,23 @@
   "at": "2026-10-21",
   "why": "“In your Command phase, select one friendly ADEPTUS MECHANICUS model within 3\" of this model.”"
  },
+ "e2a3f1b5187a9bf8": {
+  "verdict": "ok",
+  "by": "review:exiled-units (its fix)",
+  "at": "2026-10-24",
+  "why": "For every other LEGIONES DAEMONICA unit it is right: Stealth (24.33, the benefit of cover against ranged attacks), ranged, within 6\". But Prince of Darkness is a GW (Aura), and 22.01 says “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability”. The Daemon Prince is itself a friendly LEGIONES DAEMONICA unit, so it has Stealth too. Its WHEN TARGETED line in the snapshot leaves it out, because app.html (shields, line ~4359) skips the source unit (src !== u). The aura entries mark this with selfAlways and selfWhen: “Own aura”. The guard needs the same, and app.html must honour it (the other reviewer owns that code)."
+ },
  "e2e4e12454597fc1": {
   "verdict": "ok",
   "by": "review:m1-code",
   "at": "2026-10-18",
   "why": "The new `who` filter keeps only the models lines whoOfLine gives to that part (a character's name for lines 0..n-1, else u.leads). So a part's 'per model' / 'every model' / 'none of these' claims cover just that part, and its sentences follow Select Weapons ('You can select one or more ranged weapons that model has'; 'You must select one melee weapon that model has'). Run in a harness against the live app.html. One character (Mek + Tankbustas): the Mek line is left out, giving 'Tankbusta w/ Two Busta Rokkit Launchas can shoot with one or both' and 'Nob picks one to fight with: Choppa or Smash Hammer. The others: one each'. Two characters (Bigboss + Warboss + Breaka Boyz): Bigboss and Warboss are each judged alone, and the bodyguard line is 'Nob picks one…' without the Warboss's Power Klaw. Made-up case, both characters with two melee weapons: each gets its own 'Pick one to fight with'. An enhancement on the 2nd character doesn't reach this function. When only one part has weapons of a kind, weaponRows passes who=null, and the other parts' lines are listed as 'none of these', which is true. Nothing goes beyond the rules. Latent, with no such unit in either list: (a) whoOfLine gives each character exactly one models line, but 19.04 speaks of 'The last model in that leader/support unit', so the 2nd line of a multi-model leader unit would be judged as bodyguard; (b) the part's sentence still gets the whole unit `u`, whose kw is the union, so useSentence's test for Close-quarters 'for each model in that unit (excluding MONSTER/VEHICLE models)' would give a MONSTER character's keyword to non-MONSTER bodyguard models; (c) a weapon `who` that isn't exactly u.name, also[].name or u.leads leaves `mine` empty, and the line silently disappears (check.js doesn't test this)."
+ },
+ "e2fc05a2997fd620": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“Each time this unit ends a Charge move … mortal wounds”: Charge, either turn. This is the same as the approved Daemonic Destruction and Prophesied Doom."
  },
  "e30cfd61e3274af3": {
   "verdict": "ok",
@@ -10900,6 +11632,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In the Fight phase, when this model is destroyed…\": the Fight phase in either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "e69bd0af81023451": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The text matches GW's Faction Pack (Chaos Daemons 1.2, Blood Legion page, after MURDERCALL) and Wahapedia word for word. \"At the end of a phase in which … destroyed an enemy unit\" can trigger at the end of any phase, because units are destroyed in every phase (Daemonic Terror mortal wounds in Command, Desperate Escape in Movement, shooting, fighting). All five phases is right."
  },
  "e6d64d1d268860ef": {
   "verdict": "ok",
@@ -11375,6 +12113,12 @@
   "at": "2026-10-23",
   "why": "Fight phase of either turn; shooting is limited by turns."
  },
+ "f0893b35778e4225": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "These are GW’s words with both conditions kept (Psychic Attacks and mortal wounds), as the owner’s Feel No Pain rule asks."
+ },
  "f08cdc20457d51c8": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -11386,6 +12130,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR \"Perfectionists - Lord Exultant\"; \"While this model is leading a unit\" = the Lord Exultant. Model lines match NR (1 Lord Exultant, 1 Obsessionist, 3 Infractor, 1 Infractor with Icon of Excess)."
+ },
+ "f0bbaa2f1a316bc3": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“Juggernaut’s bladed horns equipped by models in that unit have [DEVASTATING WOUNDS]” “until the end of the turn” after ending a Charge move: it is weapon-specific, melee, cond charged, and covers the Skullmaster’s horn and the Bloodcrushers’ horns. The words are GW’s."
  },
  "f0e70350dee90f05": {
   "verdict": "ok",
@@ -11404,6 +12154,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Only army rule with needs is Bondsman (any:[Armiger]); purge-freeblade has no ARMIGER, and the rule (\"select one friendly ARMIGER model within 12\"\") then does nothing."
+ },
+ "f18c7c9908ae5730": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The text opens \"Once per battle, at the start of any phase, this model can use this ability\". The tag 'Once per battle' is exactly what it says, and other lists tag their untagged once-per-battle abilities the same way (Chainbreaker, Euphoric Strikes, Possessed Lord, Resilient Organism). Its ph (all five) / either also match \"at the start of any phase\"."
  },
  "f1a2a571f32f233a": {
   "verdict": "ok",
@@ -11483,6 +12239,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"That NORN ASSIMILATOR/NORN EMISSARY unit\": either keyword."
  },
+ "f31226cde71228c6": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "“at the start of any phase” gives all five phases, either turn. This is the approved convention for “Any phase” (Chainbreaker, “Once per battle, at the start of any phase”). It is a once-per-battle activation, not an always-on defensive ability, so the no-label rule does not apply."
+ },
  "f329d722ca6129d0": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -11506,6 +12268,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"Your unit can make a normal move of: Up to D6\". Or: Up to 6\" instead if your unit is an attached unit.\" The gist is the same."
+ },
+ "f3e91a470644e1ed": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "GW: “1-2 Beasts of Nurgle. Every model is equipped with: putrid appendages.” Putrid appendages A6 WS4+ S6 AP-1 D2 [DEVASTATING WOUNDS]. 1 model, 80 pts."
  },
  "f40fcf70ed93b105": {
   "verdict": "ok",
@@ -11669,6 +12437,12 @@
   "at": "2026-10-17",
   "why": "Source: \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" Footnote copies the change (+6 A), the condition (non-MONSTER/VEHICLE targets) and the timing (your Shooting phase). Nothing added or dropped."
  },
+ "f8baf49339b1352e": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Bloodletters wargear ability."
+ },
  "f8c54369f7043c1b": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -11704,6 +12478,12 @@
   "by": "review:import-2",
   "at": "2026-10-23",
   "why": "It matches the item. Each selection's path of entry ids from the part, with its count: s.n, the same path summed (m.get(k)+…), and 1 for a non-model option that holds models. import-ids.js writes BS_IDS with this same function, and import-test's table check passes. The earlier review's “a bundle ×2 imports” is gone: 4 megas' 'Rapid-fire battlecannon and Questoris heavy stubber' ×2 and 'Two excruciator cannons' ×2 are refused (resolve also refuses a holder whose number is not 1). Ids containing ',', '/' or '×' could make two different trees give one string. But the import then copies data.js's unit at data.js's points, and the names and total checks still apply, so no list data.js lacks can come in that way: not a defect."
+ },
+ "f97ad3c04aec4300": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "It is a Blood Legion enhancement (Wahapedia: “Brazenmaw 15 pts”). The Skullmaster is KHORNE."
  },
  "f9b5ec8830e2c3e2": {
   "verdict": "ok",
@@ -11759,6 +12539,12 @@
   "at": "2026-10-21",
   "why": "NR Categories: \"Explosives*, Meganobz*, *from combined unit\"; the only other unit is the led Meganobz (Wahapedia Meganobz keywords \"INFANTRY; EXPLOSIVES; MEGA ARMOUR\"; Nazdreg has no EXPLOSIVES)."
  },
+ "fafd5a91fc06a885": {
+  "verdict": "ok",
+  "by": "review:exiled-2",
+  "at": "2026-10-24",
+  "why": "The only change is the guard loop. A unit's own guard is now skipped unless the guard has selfWhen or selfAlways (before, it was always skipped, src !== u), and the line uses selfWhen on its own sheet. Only Prince of Darkness has either key (the guard list in data.js: Shroudpsalm, Omnissiah's Blessing, Necromechanic, Emanatus Forcefield, Daughters of the Abyss have neither), so every other list behaves exactly as before. The rendered Daemon Prince sheet shows 'Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)', and the other units show 'Within 6\" of the Daemon Prince of Chaos: …'. Dedupe still compares the full line. No other list's snapshot changed."
+ },
  "fafffd8bb3be1965": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -11788,6 +12574,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ "fb3e7312b711cc8e": {
+  "verdict": "ok",
+  "by": "review:exiled-rules",
+  "at": "2026-10-24",
+  "why": "TARGET “One LEGIONES DAEMONICA KHORNE unit from your army”."
  },
  "fb66ae254646a250": {
   "verdict": "ok",
@@ -11861,6 +12653,12 @@
   "at": "2026-10-21",
   "why": "\"In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to shoot, if any of the following apply … That unit is within range of an objective. The target of that attack is within range of an objective\": as with Finderz Keeperz, the situation is \"this unit or the target on an objective\". The other needs are \"your Shooting phase\" (in the when; overwatch is excluded by the code) and the unit keywords (needs)."
  },
+ "fc821c0c405330ba": {
+  "verdict": "ok",
+  "by": "review:exiled-units",
+  "at": "2026-10-24",
+  "why": "Wahapedia Warptide: “Bane-Forged Weapons UPGRADE 15 pts”. The export has “Enhancements 0.5” with 15 pts, as an upgrade."
+ },
  "fcbd10f0da0aab8e": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -11926,6 +12724,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Counts match the models lines: plasma pistol 1+2=3, bolt pistol 7, chainblade 1+7=8, eviscerator 2; Khârn has Gorechild and plasma pistol."
+ },
+ "fdc1f20fe64b611d": {
+  "verdict": "ok",
+  "by": "review:exiled-units (its fix)",
+  "at": "2026-10-24",
+  "why": "An enemy unit Falls Back in its own Movement phase, so the trigger is your opponent’s Movement phase, not yours. derive.js read “Falls Back” as this unit’s own move. The approved abilities with this trigger are all {ph:[movement], turn:opp}: Overwhelming Wrath (“Each time an enemy unit within 6\" … is selected to Fall Back”), Harpoon Barbs (“when an enemy unit within Engagement Range … is chosen to Fall Back”) and the WE stratagem Punish the Craven."
  },
  "fddfbbd452fa700f": {
   "verdict": "ok",

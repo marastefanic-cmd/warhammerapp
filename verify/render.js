@@ -168,7 +168,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       // the Overview lists the detachment rules with the army rules
       go({ s:'pregame', army:armyId });
       const ov = [...document.querySelectorAll('#view .rr > summary b')].map(b => b.textContent);
-      for(const d of detachmentsOf(A)) if(d.rule && !ov.includes(d.rule.name)) out.push(['overview-rules', armyId, d.rule.name + ' is not in the Overview’s rules']);
+      for(const d of detachmentsOf(A)) for(const r of (d.rule ? [d.rule].concat(d.moreRules || []) : [])) if(!ov.includes(r.name)) out.push(['overview-rules', armyId, r.name + ' is not in the Overview’s rules']);
       // the Phase checklist: every army and detachment rule, option and ability of the list it lists (listed: a fixed moment of the
       // sequence, a once-per-battle use, a stored moment) is on it, and no other, each in the sections its CHECKLIST entry names (To do now where it is triggered, or at the moment it opens with; Active
       // now where its effect is used and it is not triggered; Once per battle, from where it is triggered, for an ability with uses per
@@ -216,7 +216,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             !ACT.test(z) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(z))); }); };
       const listed = (e, x, once) => !!(seqOwn(x, e) || (e && e.x && x.at) || once);
       if(document.querySelector('#view [data-strat]')) out.push(['checklist-sections', armyId, 'a stratagem is listed']);
-      const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).filter(d => d.rule).map(d => d.rule));
+      const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).flatMap(d => d.rule ? [d.rule].concat(d.moreRules || []) : []));
       // "Each time you make a X roll": where the list's listed rules and abilities make that roll (written out again, not ckRollMoments)
       const plainT = t => String(t || '').replace(/\*\*|~~/g, ''), rollM = {};
       for(const [x, e0] of ckRules.map(r => [r, CK['r|' + A.faction + '|' + r.name]]).concat(A.units.flatMap(u => u.abilities.map(ab => [ab, CK['a|' + ckHash(ab.name + '\n' + ab.text)]])))){

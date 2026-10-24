@@ -11,6 +11,7 @@
 // approvals live in verify/approvals.json: { key: { verdict:'ok', by, at, why } }
 const fs = require('fs'), path = require('path');
 const { ROOT, key, loadData, readJSON, writeJSON } = require('./lib');
+const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
 const FP_KEYS = Object.values(require('./tables').FINGERPRINT);
 
 function items(D, appSource){
@@ -23,7 +24,7 @@ function items(D, appSource){
     const a = D.armies.find(x => x.id === army), f = fr(a.faction);
     const ar = f.armyRules.find(r => r.name === name);
     if(ar) return ar.text + (ar.table ? '\n' + ar.table.map(r => r.join(': ')).join('\n') : '');
-    for(const d of a.detachments.map(id => f.detachments[id])) if(d && d.rule && d.rule.name === name) return d.rule.text;
+    for(const d of a.detachments.map(id => f.detachments[id])) for(const r of detRules_(d)) if(r.name === name) return r.text;
     if(D.rules[name]) return D.rules[name];
     // a core rule with its value in its name ("Damaged 5"): the glossary entry its alias names, with the name (the X of "Damaged X")
     const k = (D.ruleAliases.find(([re]) => re.test(name)) || [])[1];
@@ -60,7 +61,7 @@ function items(D, appSource){
         // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
         // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
         if(ab.note) add(a.id, 'ability-note', w + ' · ' + ab.name, { note:ab.note }, { ability:ab.name, text:ab.text,
-          others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.map(id => (fr(a.faction).detachments[id].rule || {}).name).filter(Boolean)) });
+          others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.flatMap(id => detRules_(fr(a.faction).detachments[id]).map(r => r.name))) });
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
         if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
         // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
@@ -97,7 +98,7 @@ function items(D, appSource){
     for(const r of f.armyRules) rulesMeta(a.faction + ' army rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
     for(const id of a.detachments){
       const d = f.detachments[id];
-      if(d.rule) rulesMeta(d.name + ' rule', d.rule, d.rule.text + (d.rule.table ? '\n' + d.rule.table.map(t => t.join(': ')).join('\n') : ''));
+      for(const r of detRules_(d)) rulesMeta(d.name + ' rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
       for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask', 'shield', 'help', 'react', 'weaponKw'])
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }

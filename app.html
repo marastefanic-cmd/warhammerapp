@@ -1334,7 +1334,9 @@ function unitNames(units){
   return [...n].map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ');
 }
 // detachment rules that apply to a unit (by keyword)
-const unitDetRules = u => detachments().filter(d => d.rule && d.rule.needs && matches(d.rule.needs, u)).map(d => d.rule);
+// a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted after Murdercall)
+const detRules = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];
+const unitDetRules = u => detachments().flatMap(d => detRules(d).filter(r => r.needs && matches(r.needs, u)));
 // the parts of a detachment rule that are for some of its units only (parts: Blood Tithe's Daemonic Rage and Boon of Blood are for
 // BLOOD LEGIONS units), each with the rule it is part of
 const unitDetParts = u => unitDetRules(u).flatMap(r => (r.parts || []).filter(p => matches(p.needs, u)).map(p => ({ rule:r, part:p })));
@@ -1440,7 +1442,7 @@ function ruleFor(label){
   // an army rule with a core ability's name (coreTwin: Imperial Knights' Super-heavy Walker) opens with that core ability
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc && !r.coreTwin);
   if(ar) return { name:ar.name, key:ar.name, text:ar.text, table:ar.table, tableAt:ar.tableAt, missing:ar.missing, note:ar.note, src:f.name + ' army rule' };
-  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, tableAt:d.rule.tableAt, needs:d.rule.needs, note:d.rule.note, src:d.name + ' detachment rule' };
+  for(const d of detachments()) for(const r of detRules(d)) if(r.name.toLowerCase() === lc) return { name:r.name, key:r.name, text:r.text, table:r.table, tableAt:r.tableAt, needs:r.needs, note:r.note, src:d.name + ' detachment rule' };
   const src = key => (D.ruleSrc || {})[key] || 'Core rule';   // the Orks terms say where they come from
   for(const [re, key] of D.ruleAliases) if(re.test(clean)) return { name:clean, key, text:D.rules[key], src:src(key) };
   if(D.rules[clean]) return { name:clean, key:clean, text:D.rules[clean], src:src(clean) };
@@ -3528,7 +3530,7 @@ function armyText(a, who){
     const f = factionOf(a);
     return ['# ' + who + ': ' + a.name + ' (' + f.name + ', ' + a.pointsUsed + ' pts, disposition ' + a.disposition + ')',
       '## Army rules', ...f.armyRules.map(r => '### ' + r.name + (r.tag ? ' (' + r.tag + ')' : '') + '\n' + r.text + (r.table ? '\n' + r.table.map(x => x.join(': ')).join('\n') : '')),
-      ...detachmentsOf(a).map(d => ['## Detachment: ' + d.name, d.rule ? '### ' + d.rule.name + '\n' + d.rule.text : '',
+      ...detachmentsOf(a).map(d => ['## Detachment: ' + d.name, detRules(d).map(r => '### ' + r.name + '\n' + r.text).join('\n'),
         '### Enhancements\n' + (d.enhancements || []).map(e => '- ' + e.name + ' (' + e.pts + ' pts): ' + e.text.replace(/\n/g, ' ')).join('\n'),
         '### Stratagems\n' + (d.stratagems || []).map(s => '- ' + s.name + ' (' + s.cp + 'CP). WHEN: ' + s.when + ' TARGET: ' + s.target + ' EFFECT: ' + s.effect.replace(/\n/g, ' ')).join('\n')].filter(Boolean).join('\n')),
       '## Units', ...a.units.map(unitText)].join('\n\n');
@@ -3877,7 +3879,7 @@ function searchIndex(){
   const tableText = t => (t || []).map(r => r.join(' ')).join(' ');
   for(const r of f.armyRules) add({ kind:'Rules', title:r.name, sub:f.name + ' army rule' + (r.tag ? ' · ' + r.tag : ''), hay:hay(r.name, r.text, tableText(r.table), r.tag, 'army rule', (f.aliases || []).map(x => x[0].source).join(' ')), act:{ rule:r.name } });
   for(const d of detachmentsOf(a)){
-    if(d.rule) add({ kind:'Rules', title:d.rule.name, sub:d.name + ' detachment rule', hay:hay(d.rule.name, d.rule.text, tableText(d.rule.table), d.name, 'detachment rule'), act:{ rule:d.rule.name } });
+    for(const r of detRules(d)) add({ kind:'Rules', title:r.name, sub:d.name + ' detachment rule', hay:hay(r.name, r.text, tableText(r.table), d.name, 'detachment rule'), act:{ rule:r.name } });
     for(const e of d.enhancements){
       const hs = holders(a, e.name);
       add({ kind:'Rules', title:e.name, sub:(e.upgrade ? 'Upgrade' : 'Enhancement') + ' · ' + d.name + (e.pts ? ' · ' + e.pts + ' pts' : '') + (hs.length ? ' · on ' + hs.map(u => holderName(u, e.name)).join(', ') : ' · not in this list'), hay:hay(e.name, e.text, d.name, 'enhancement', e.upgrade ? 'upgrade' : ''), act:{ enh:d.id + '|' + e.name } });
@@ -4360,8 +4362,13 @@ function defenceItems(u, ph, opts){
   // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,
   // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit
   // (one line for the same help from several units: the three Anathema Psykana units' Psychic Null)
-  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !out.some(x => x.guard && x.t === g.when + ': ' + g.note))
-    out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });
+  // (a guard GW tags (Aura) covers its own unit too, as an aura does (22.01): selfWhen / selfAlways, said with selfWhen: Prince of Darkness)
+  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []){
+    const self = src === u;
+    if((self && !(g.selfWhen || g.selfAlways)) || !matches(g.needs, u)) continue;
+    const t = (self && g.selfWhen ? g.selfWhen : g.when) + ': ' + g.note;
+    if(!out.some(x => x.guard && x.t === t)) out.push({ t, a:'unit', v:src.id, guard:g });
+  }
   if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });
   return out;
 }
@@ -4617,7 +4624,7 @@ function screenPregame(){
   const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };
   const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units)) + '</span>';
   const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))
-    .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];
+    .concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name })))) : [];
   const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
   const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it
   // a unit's short name, or its full one when another unit of the list has that short name too (Big Mek Dakkarig, Big Mek in Mega Armour)
@@ -4645,8 +4652,8 @@ function screenPregame(){
     Object.entries(a.config || {}).filter(([k, v]) => !ruleParts(f, k, v)).map(([k, v]) => row(esc(k), esc(v))).join('') +
     row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
   // the army rules and the detachment rules, folded: each opens to its text (the detachment's row as on the Rules tab)
-  const detRows = detachments().filter(d => d.rule).map(d => ruleRow(d.rule.name, metaLine(esc(d.name), d.rule.ph ? esc(shortWhen(d.rule)) : ''),
-    (d.rule.note ? '<p class="note it">' + esc(d.rule.note) + '</p>' : '') + textWithTable(d.rule) + usedBy('Applies to', units.filter(u => matches(d.rule.needs, u))))).join('');
+  const detRows = detachments().flatMap(d => detRules(d).map(r => ruleRow(r.name, metaLine(esc(d.name), r.ph ? esc(shortWhen(r)) : ''),
+    (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + textWithTable(r) + usedBy('Applies to', units.filter(u => matches(r.needs, u)))))).join('');
   h += f.armyRules.length || detRows ? '<div class="sec-h"><h2>' + (detRows ? 'Army and detachment rules' : 'Army rules') + '</h2></div><div class="abl">' + armyRuleRows(f) + detRows + '</div>' : '';
 
   const earlyAbs = group(allAbs.filter(([u, ab]) => /read mission objectives/i.test(ab.text)));
@@ -4686,7 +4693,7 @@ function screenPregame(){
   // a rule that gives units a "(Once per battle, per unit)" ability (Higher Imperatives) is ticked on those units, not here
   const ruleOnce = r => perBattle(r) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
   const onceRules = f.armyRules.filter(r => !inertRule(r.name) && ruleOnce(r)).map(r => ({ r, src:f.name + ' army rule' }))
-    .concat(detachments().filter(d => d.rule && ruleOnce(d.rule)).map(d => ({ r:d.rule, src:d.name })));
+    .concat(detachments().flatMap(d => detRules(d).filter(ruleOnce).map(r => ({ r, src:d.name }))));
   const tl = (boxes, text) => '<div class="tl">' + boxes + '<span>' + text + '</span></div>';
   const ruleTicks = x => { const r = x.r, pb = perBattle(r, true);
     // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option
@@ -4772,7 +4779,7 @@ const ckRolled = (e, x, rm) => { const k = (CK_EACH_ROLL.exec(String(x.text || '
 function screenChecklist(){
   const a = army(), f = faction(), units = a.units;
   const entry0 = k => (D.checklist || {})[k] || { x:1 };
-  const rules = f.armyRules.map(r => ({ r, src:f.name + ' army rule' })).concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name })));
+  const rules = f.armyRules.map(r => ({ r, src:f.name + ' army rule' })).concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name }))));
   // the moments the list's listed rules and abilities make a named roll (ckRollMoments), then each entry with them (ckRolled)
   const rm = ckRollMoments(rules.map(x => [x.r, ckStored(entry0('r|' + a.faction + '|' + x.r.name), x.r)]).concat(units.flatMap(u => u.abilities.map(ab => [ab, ckStored(entry0('a|' + ckHash(ab.name + '\n' + ab.text)), ab)])))
     .filter(([x, e]) => e.s || e.stored));
@@ -4925,8 +4932,8 @@ function screenRules(){
     // in the Stratagems tab's order: phase order, the ones no unit can use last
     const strats = (d.stratagems || []).map((x, i) => [x, i]).sort((x, y) => (eligible(x[0]).length ? 0 : 1) - (eligible(y[0]).length ? 0 : 1) || first(x[0]) - first(y[0]) || x[1] - y[1]).map(x => x[0]);
     h += '<h3 class="who">' + esc(d.name) + '</h3><div class="abl">' +
-      (d.rule ? ruleRow(d.rule.name, metaLine('Detachment rule', when(d.rule)),
-        note(d.rule) + textWithTable(d.rule) + usedBy('Applies to', a.units.filter(u => matches(d.rule.needs, u)))) : '') +
+      detRules(d).map(r => ruleRow(r.name, metaLine('Detachment rule', when(r)),
+        note(r) + textWithTable(r) + usedBy('Applies to', a.units.filter(u => matches(r.needs, u))))).join('') +
       mine.map(e => { const hs = holders(a, e.name); return ruleRow(e.name, metaLine('<span class="tg">' + (e.upgrade ? 'Upgrade' : 'Enhancement') + '</span>', e.pts ? esc(e.pts) + ' pts' : '', 'on ' + esc(hs.map(u => holderName(u, e.name)).join(', '))),
         rt(e.text) + '<p class="usedby"><span class="il">On</span>' + hs.map(u => linkTo('unit', u.id, holderName(u, e.name))).join(', ') + '</p>'); }).join('') +
       (other.length ? ruleRow('Other enhancements', metaLine(other.length + ' not in this list'),
