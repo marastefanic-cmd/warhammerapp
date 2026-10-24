@@ -624,7 +624,7 @@ const CK_START = '// ---- CHECKLIST: written by verify/derive.js --write from th
 const CK_END = '// ---- end of CHECKLIST ----';
 function ckBlock(T){
   return CK_START + '\n' +
-    '// The Clever Know-wotz screen: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
+    '// The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
     '// tables of verify/derive.js give it: t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
     '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own),\n' +
     '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition)\n' +
@@ -640,7 +640,7 @@ function derive(D){
   const ctx = { core:D.coreStratagems };
   const items = [];
   const add = it => items.push(it);
-  // the checklist table (data.js CHECKLIST, the Clever Know-wotz screen): per rule and ability, where it is triggered and where its
+  // the checklist table (data.js CHECKLIST, the Phase checklist): per rule and ability, where it is triggered and where its
   // effect is used, and the same for each of its options; the same words on several units must give the same entry
   const CK = {}, CKO = {};
   const ckPut = (k, v) => { if(!CK[k]) CK[k] = v; else if(JSON.stringify(CK[k]) !== JSON.stringify(v)) CK[k] = { x:1 }; };

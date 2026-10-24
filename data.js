@@ -5851,7 +5851,7 @@ const BS_IDS = {
 // ---- end of BS_IDS ----
 
 // ---- CHECKLIST: written by verify/derive.js --write from the rules text (do not edit) ----
-// The Clever Know-wotz screen: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule
+// The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule
 // tables of verify/derive.js give it: t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it
 // opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own),
 // g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition)

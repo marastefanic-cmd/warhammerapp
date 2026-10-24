@@ -9,7 +9,7 @@ rolls one of the lists shown). The gear opens Settings: colour schemes, Keep scr
 Each list opens on Find, and each tab remembers where it was, per list.
 
 Tabs: **Find** (search; Overview: warlord, enhancements, detachments, the army rules, units that can
-Deep Strike, uses per battle, Bases & proxies; Clever Know-wotz: the list's rules, their options and abilities phase by phase,
+Deep Strike, uses per battle, Bases & proxies; Phase checklist: the list's triggered rules, their options and abilities phase by phase (each folded),
 your turn and your opponent's, to do, active and once per battle, as `verify/derive.js` reads them from the rules text, with tick boxes
 and Reset; the Ranged, Melee and Abilities overviews) · **Units** (the
 roster, stats on each unit's line; one datasheet per unit, laid out like New Recruit's: models, stats with
@@ -71,7 +71,7 @@ The facts come from New Recruit, never typed by hand:
    renders every screen at 390 and 320px; shows any screen change (accept with `--accept` after
    reading the diff); and lists every judgement the app adds that has no sign-off yet. Those are
    reviewed (`verify/review/`, then `node verify/approve.js verify/review/result-<name>.json`).
-6. `node verify/import-ids.js --write` (the BSData ids the in-app import resolves exports by) and `node verify/derive.js --write` (the Clever Know-wotz table, CHECKLIST: the gate fails while it is out of date). Bump `VERSION` in `data.js`, `node build.js`, commit and push; republish the artifact.
+6. `node verify/import-ids.js --write` (the BSData ids the in-app import resolves exports by) and `node verify/derive.js --write` (the Phase checklist table, CHECKLIST: the gate fails while it is out of date). Bump `VERSION` in `data.js`, `node build.js`, commit and push; republish the artifact.
 
 The New Recruit PDF (not the copy-paste text export) is the input on purpose: it names every models line
 with its wargear, and it is New Recruit's own calculation from BSData, which the gate compares with its

@@ -125,7 +125,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .pgv{font-size:14.5px; line-height:1.55; min-width:0}
 .pgv .from{color:var(--muted)}
 .pgv .from .link, .pgk .link{color:inherit}
-.ckl .pgv .tg.m{white-space:normal}   /* Clever Know-wotz: a long "not usable here" reason wraps on a small phone */
+.ckl .tl > .ticks{min-width:0}   /* Phase checklist: the box right beside its line */
+.ckl .tl .tg.m{white-space:normal}   /* and a long "not usable here" reason wraps on a small phone */
 
 /* ---------- top bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg); border-bottom:1px solid var(--line);
@@ -1109,8 +1110,8 @@ const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battl
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other' };
 // a unit's group in the Units list: its role, an allied unit's under Allies (New Recruit's role "Allies: Legiones Daemonica")
 const roleGroup = u => ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
-const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Clever Know-wotz' };
-const BACK_TITLE = { pregame:'Overview', checklist:'Know-wotz', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Phase checklist' };
+const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 // a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
@@ -1647,7 +1648,7 @@ function removeImported(id){
   store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));
   const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);
   const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);
-  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}   // its per-battle ticks and its Clever Know-wotz boxes
+  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}   // its per-battle ticks and its Phase checklist boxes
   ONLY = D.armies.length === 1 ? D.armies[0] : null;
   hideSheet(); go({ s:'home' }, 'replace');
   toast('Removed ' + name);
@@ -1702,7 +1703,7 @@ function screenArmy(){
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
-      row('checklist', 'i-checks', 'Clever Know-wotz', '') +
+      row('checklist', 'i-checks', 'Phase checklist', '') +
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
@@ -4673,14 +4674,26 @@ function screenPregame(){
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>' + (a.imported ? importedFoot(a) : '');
 }
 
-/* ---------- screen: Clever Know-wotz ----------
-   The list's rules and abilities phase by phase, each phase in your turn and in your opponent's, as data.js CHECKLIST has them
+/* ---------- screen: Phase checklist ----------
+   The list's triggered rules and abilities (ckTriggered) phase by phase, each phase in your turn and in your opponent's, each folded
+   (the fold kept open for the session, like a stratagem card), as data.js CHECKLIST has them
    (the rule tables of verify/derive.js, read from each text): "To do now" where its text says it is triggered (or the moment
    before a phase it opens with), "Active now" where its effect is used, and the once-per-battle ones on their own, with the
    Overview's boxes. Each option of a rule (a Blessing of Khorne) has its own phases; one that names no trigger of its own is
    triggered with its rule. A rule or ability another rule gives to units by keyword says so (Might of Khorne: Blessings of Khorne
    to BLOOD LEGIONS units). What the tables cannot place is under When unclear, what has no phase under No phase. No stratagems:
    the Stratagems tab has them. The boxes are kept on the phone per list; Reset clears them, not the once-per-battle ones. */
+// "triggered", the only rules and abilities listed (always-on ones are on the datasheets), by these rules alone: its CHECKLIST entry
+// names when (t: a phase its words name, at: the moment it opens with), or its words (or tag) limit its uses ("once/twice per
+// battle / battle round / turn / phase"), have the player act ("you can use this ability", "can use it", "you can select/choose",
+// "select one…", "when …, you can …" other than a re-roll, "can make a" named move or action: a Warpmeld Sacrifice), or roll dice or have a unit take a test as something happens ("roll one
+// D6", "take a Leadership test"). An option of a triggered rule is what it puts in force: listed; one of another rule, only with a
+// trigger of its own
+const CK_LIMIT = /\b(?:once|twice|three times) per (?:battle round|battle|turn|phase)\b/i;
+const CK_ACT = /\byou can (?:use this|select|choose)\b|\bcan use (?:it|this ability|this enhancement|this part)\b|\b(?:select|choose)s? (?:one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i;
+const CK_MAKE = /\bcan make an? [A-Z]/;
+const CK_ROLL = /(?<!-)\broll (?:one|two|a|an|\d+|up to)\b|\btakes? an? [a-z-]+ test\b/i;
+const ckTriggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\*\*|~~/g, ''); return CK_LIMIT.test(p) || CK_ACT.test(p) || CK_MAKE.test(p) || CK_ROLL.test(p); });
 const ckKey = () => 'wh-check-' + (cur.army || '');
 const ckDone = () => new Set(Array.isArray(store.get(ckKey())) ? store.get(ckKey()) : []);
 // an ability's entry: a hash of its name and text (verify/derive.js ckHash), so an imported list's copy of a unit finds it too
@@ -4715,9 +4728,10 @@ function screenChecklist(){
     // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option, as on the Overview
     const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
     const pb = !na && !each && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
-    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na);
-    items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null });
+    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na), trig = ckTriggered(e, r);
+    if(trig) items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null });
     for(const o of e.o || []){
+      if(!trig && !o.t && !o.at) continue;   // an option of an always-on rule, with no trigger of its own
       if(units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;   // an ability it gives units (Protean Purpose): listed as theirs
       const row = each && !na && (r.table.find(t => t[0] === o.row) || [])[0];
       const ol = linkTo('rule', r.name, o.n) + from('option of ' + esc(r.name) + given(o.n)) + naTag(na);
@@ -4728,14 +4742,15 @@ function screenChecklist(){
   const groups = new Map();
   for(const u of units) for(const ab of u.abilities){ const k = ab.name + '|' + ab.text + '|' + (naReason(ab) ? 'na' : ''); if(!groups.has(k)) groups.set(k, { ab, units:[] }); groups.get(k).units.push(u); }
   for(const { ab, units:us } of groups.values()){
-    const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab);
+    const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab), trig = ckTriggered(e, ab);
+    if(!trig && !(e.o || []).some(o => o.t || o.at)) continue;   // always on: on its datasheet
     const line = linkTo('ability', key, ab.name) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
     // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)
     const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class="tg once">per army</span>']]
       : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
         linkTo('ability', key, ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
-    items.push({ id:'a:' + ab.name + '|' + ckHash(ab.text), kind:'abs', e, line, what:ab.name, once });
-    for(const o of e.o || []) items.push({ id:'ao:' + ab.name + '|' + ckHash(ab.text) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
+    if(trig) items.push({ id:'a:' + ab.name + '|' + ckHash(ab.text), kind:'abs', e, line, what:ab.name, once });
+    for(const o of e.o || []) if(trig || o.t || o.at) items.push({ id:'ao:' + ab.name + '|' + ckHash(ab.text) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
       line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null });
   }
   // each to its sections: a moment, or a phase in one player's turn ("command|your")
@@ -4752,14 +4767,17 @@ function screenChecklist(){
     for(const s of trig) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line));
     for(const s of act) put(s, 'active', tl(ckTick(s + '|' + it.id, it.what), it.line));
   }
-  const row = (k, v) => '<div class="pgr"><span class="pgk">' + k + '</span><span class="pgv">' + v + '</span></div>';
-  const GROUPS = [['todo', 'To do now'], ['active', 'Active now'], ['once', 'Once per battle'], ['rules', 'Rules'], ['abs', 'Abilities']];
+  const GROUPS = [['todo', 'To do now', 'to do'], ['active', 'Active now', 'active'], ['once', 'Once per battle', 'once per battle'], ['rules', 'Rules', 'rules'], ['abs', 'Abilities', 'abilities']];
   const phaseSecs = PHASES.flatMap(([p]) => [p + '|your', p + '|opp']);
   const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, Object.keys(sec).filter(s => s.includes(' ') && !/^Start of the/.test(s)), ['unclear', 'none'].filter(s => sec[s]));
   const title = s => s === 'unclear' ? 'When unclear' : s === 'none' ? 'No phase' : s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
-  return '<div class="ckl">' + order.map((s, i) => '<div class="sec-h"><h2>' + esc(title(s)) + '</h2>' + (i ? '' : '<button class="textbtn" data-ckreset>Reset</button>') + '</div>' +
-    (sec[s] ? '<div class="pg">' + GROUPS.filter(([g]) => sec[s][g]).map(([g, l]) => row(l, sec[s][g].join(''))).join('') + '</div>' : '<p class="note">Nothing in this list.</p>')).join('') +
-    '<p class="note">Each rule and ability is listed where its words say it is triggered (To do now) and where its effect is used (Active now), read from its text by fixed rules; each option of a rule by its own words. When unclear: its words name no phase those rules can read. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
+  // each section a fold, as the Overview's rules: its name, and on the line under it how many lines each part has
+  const fold = s => { const g = sec[s] || {}, parts = GROUPS.filter(([k]) => g[k]), k = 'ck|' + a.id + '|' + s;
+    return '<details class="ab rr" data-ckfold="' + esc(k) + '"' + (openStrats.has(k) ? ' open' : '') + '><summary><span class="an"><b>' + esc(title(s)) + '</b><span class="rs">' +
+      (parts.length ? metaLine(...parts.map(([x, , w]) => g[x].length + ' ' + w)) : 'nothing') + '</span></span>' + chev + '</summary><div class="body">' +
+      (parts.length ? parts.map(([x, l]) => '<div class="ckg"><p class="qh">' + l + '</p>' + g[x].join('') + '</div>').join('') : '<p class="note">Nothing in this list.</p>') + '</div></details>'; };
+  return '<div class="ckl"><div class="sec-h"><h2>Phase by phase</h2><button class="textbtn" data-ckreset>Reset</button></div><div class="abl">' + order.map(fold).join('') + '</div>' +
+    '<p class="note">Listed: the rules and abilities with a trigger (their words name a phase or a moment, limit their uses, have you use, select, choose or make something, or roll dice or take a test when something happens), To do now where they are triggered, and Active now where what they put in force is used; always-on abilities are on the datasheets. When unclear: triggered, but its words name no phase those rules can read. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
 }
 
 /* ---------- screen: rules & keywords ---------- */
@@ -5160,7 +5178,7 @@ document.addEventListener('click', e => {
     openTab(next); return;
   }
   if(ds.flip){ go({ s:'unit', army:army().id, unit:ds.flip, from:cur.from }, 'replace'); return; }
-  // a box on the Clever Know-wotz screen (kept per list); Reset clears them, not the once-per-battle ones (the Overview's)
+  // a box on the Phase checklist (kept per list); Reset clears them, not the once-per-battle ones (the Overview's)
   if(ds.ctick){
     const u = ckDone(), k = ds.ctick, on = !u.has(k);
     on ? u.add(k) : u.delete(k); store.set(ckKey(), [...u]);
@@ -5194,6 +5212,7 @@ document.addEventListener('toggle', e => {
   if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession();   // the Damage tab's folds stay as left
     if(d.open) for(const w of d.querySelectorAll('.dwv[data-wh]')) w.scrollTop = +w.dataset.i * WH_ROW;   // (a wheel drawn folded takes its row once shown)
     return; }
+  if(d.dataset.ckfold){ if(d.open) openStrats.add(d.dataset.ckfold); else openStrats.delete(d.dataset.ckfold); saveSession(); return; }   // a Phase checklist fold
   if(d.dataset.stratId){
     if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
     saveSession();

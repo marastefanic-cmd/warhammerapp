@@ -92,7 +92,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
-    // (the Clever Know-wotz from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
+    // (the Phase checklist from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
     for(const s of ['army','checklist','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
     // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons
     // shooting (Shoot), its first unit with melee weapons fighting, charged (Fight), and its first unit with both shooting, charging
@@ -169,21 +169,26 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       go({ s:'pregame', army:armyId });
       const ov = [...document.querySelectorAll('#view .rr > summary b')].map(b => b.textContent);
       for(const d of detachmentsOf(A)) if(d.rule && !ov.includes(d.rule.name)) out.push(['overview-rules', armyId, d.rule.name + ' is not in the Overview’s rules']);
-      // the Clever Know-wotz: every army and detachment rule, option and ability of the list is on it, each in the sections its CHECKLIST
-      // entry names (To do now where it is triggered, or at the moment it opens with; Active now where its effect is used and it is not
-      // triggered; Once per battle, from where it is triggered, for an ability with uses per battle); what the entry cannot place under
-      // When unclear (unless data.js has its phase tag) or No phase; no stratagem; a box ticked is kept, Reset clears it and not a
-      // once-per-battle box
+      // the Phase checklist: every triggered (ckTriggered) army and detachment rule, option and ability of the list is on it, and no
+      // other, each in the sections its CHECKLIST entry names (To do now where it is triggered, or at the moment it opens with; Active
+      // now where its effect is used and it is not triggered; Once per battle, from where it is triggered, for an ability with uses per
+      // battle); what the entry cannot place under When unclear (unless data.js has its phase tag) or No phase; no stratagem; each
+      // section a fold, closed at first, its line counting each part; a box ticked is kept, Reset clears it and not a once-per-battle box
+      for(const k of [...openStrats]) if(k.startsWith('ck|')) openStrats.delete(k);
       go({ s:'checklist', army:armyId });
       const ck = {};
-      for(const h of document.querySelectorAll('#view .sec-h h2')){ const pg = h.parentElement.nextElementSibling, g = ck[h.textContent] = {};
-        if(pg && pg.classList.contains('pg')) for(const r of pg.querySelectorAll('.pgr')) g[r.querySelector('.pgk').textContent] = [...r.querySelectorAll('.tl')]; }
+      if(document.querySelector('#view [data-ckfold][open]')) out.push(['checklist-folds', armyId, 'a section starts open']);
+      for(const d of document.querySelectorAll('#view [data-ckfold]')){ const g = ck[d.querySelector('summary b').textContent] = {};
+        for(const x of d.querySelectorAll('.ckg')) g[x.querySelector('.qh').textContent] = [...x.querySelectorAll('.tl')];
+        const said = d.querySelector('summary .rs').textContent, n = Object.entries(g).map(([k, ls]) => ls.length + ' ' + (k === 'To do now' ? 'to do' : k === 'Active now' ? 'active' : k.toLowerCase())).join(' · ') || 'nothing';
+        if(said !== n) out.push(['checklist-folds', armyId, d.querySelector('summary b').textContent + ': the line says “' + said + '”, the fold has ' + n]); }
       const lineIn = (sec, grp, test) => ((ck[sec] || {})[grp] || []).some(test);
       const T = s => s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
       const secsOf = e => (e.at ? [e.at] : []).concat(Object.entries(ckMap(e.t)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w)));
       const usedOf = e => Object.entries(ckMap(e.u)).flatMap(([p, t]) => (t === 'either' ? ['your', 'opp'] : [t]).map(w => p + '|' + w));
       // each place an entry should be: [section heading, group]
       const want = (e, once, kind, x) => {
+        if(!triggered(e && x ? ckStored(e, x) : e || { x:1 }, x || {})) return [];   // always on: not listed
         if(!e || e.x) return x && (phasesOf(x).length || x.at) ? null : [['When unclear', kind]];
         if(e.none) return [['No phase', kind]];
         const tr = secsOf(e), act = usedOf(e).filter(s => !tr.includes(s));
@@ -191,6 +196,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         return tr.map(s => [T(s), 'To do now']).concat(act.map(s => [T(s), 'Active now']));
       };
       const CK = WH_DATA.checklist || {};
+      // "triggered", as the screen's note documents it, written out again here (not the app's ckTriggered): when named (t, at), a
+      // limit on its uses, the player acting, a named move or action, dice rolled or a test taken as something happens
+      const triggered = (e, x) => !!(e.t || e.at) || [x.text, x.tag].some(t => { const p = String(t || '').replace(/\*\*|~~/g, '');
+        return /\b(once|twice|three times) per (battle|battle round|turn|phase)\b/i.test(p) || /\bcan make an? [A-Z]/.test(p) ||
+          /\byou can (use this|select|choose)\b|\bcan use (it|this ability|this enhancement|this part)\b|\b(select|choose)s? (one|up to|a|an)\b|\bwhen\b[^.]*?\byou can (?!re-roll)/i.test(p) ||
+          /(?<!-)\broll (one|two|a|an|\d+|up to)\b|\btakes? an? [a-z-]+ test\b/i.test(p); });
       if(document.querySelector('#view [data-strat]')) out.push(['checklist-sections', armyId, 'a stratagem is listed']);
       const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).filter(d => d.rule).map(d => d.rule));
       for(const r of ckRules){
@@ -199,10 +210,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         const hit = l => [...l.querySelectorAll('[data-rule]')].some(x => x.dataset.rule === r.name) && l.textContent.startsWith(r.name + ' · ');
         const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
         const w = want(e0, !inertRule(r.name) && !each && !!perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || ''), 'Rules', r);
-        if(!Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)))) out.push(['checklist-sections', armyId, r.name + ' is not listed']);
+        const listedR = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)));
+        if(listedR !== !!(w && w.length || !w)) out.push(['checklist-sections', armyId, r.name + (listedR ? ' is listed, and is always on' : ' is not listed')]);
         else if(w) for(const [sec, grp] of w) if(!lineIn(sec, grp, hit)) out.push(['checklist-sections', armyId, r.name + ' is not under ' + sec + ' · ' + grp]);
         for(const o of (e && e.o) || []){
           if(A.units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;
+          const oIn = !!(triggered(e, r) || o.t || o.at), oListed = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(l => l.textContent.startsWith(o.n + ' · option of ' + r.name))));
+          if(oIn !== oListed) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + (oListed ? ' is listed, an option of an always-on rule' : ' is not listed')]);
+          if(!oIn) continue;
           const oe = o.x ? { x:1 } : o.t || o.at ? o : o.u ? { u:o.u } : { t:e.t, at:e.at }, oh = l => l.textContent.startsWith(o.n + ' · option of ' + r.name);
           const ow = each && !inertRule(r.name) && !o.x ? (o.t || o.at ? secsOf(o) : secsOf(e)).map(s => [T(s), 'Once per battle']) : want(oe, false, 'Rules');
           for(const [sec, grp] of ow) if(!lineIn(sec, grp, oh)) out.push(['checklist-sections', armyId, r.name + ' · ' + o.n + ' is not under ' + sec + ' · ' + grp]);
@@ -212,9 +227,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const u of A.units) for(const ab of u.abilities){
         const e = CK['a|' + ckHash(ab.name + '\n' + ab.text)], key = abilityKey(ab);
         if(!e) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + ': no CHECKLIST entry under the app’s key (node verify/derive.js --write)']);
-        const hit = l => [...l.querySelectorAll('[data-ability]')].some(x => x.dataset.ability === key);
+        const hit = l => [...l.querySelectorAll('[data-ability]')].some(x => x.dataset.ability === key) && l.textContent.startsWith(ab.name + ' ·');
         const w = want(e, !naReason(ab) && !!perBattle(ab), 'Abilities', firstOf(ab));
-        if(!Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)))) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + ' is not listed']);
+        const listedA = Object.values(ck).some(g => Object.values(g).some(ls => ls.some(hit)));
+        if(listedA !== !!(w && w.length || !w)) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + (listedA ? ' is listed, and is always on' : ' is not listed')]);
         else if(w) for(const [sec, grp] of w) if(!lineIn(sec, grp, hit)) out.push(['checklist-sections', armyId, u.id + ' · ' + ab.name + ' is not under ' + sec + ' · ' + grp]);
       }
       { navAt = -1e9;
@@ -301,6 +317,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       return out;
     }, a.id);
     for(const [check, where, detail] of res) fail(check, a.id, where, detail);
+    // a Phase checklist fold opened stays open when the screen is drawn again (for the session, like a stratagem card)
+    const kept = await page.evaluate(async armyId => { hideSheet(); for(const k of [...openStrats]) if(k.startsWith('ck|')) openStrats.delete(k);
+      go({ s:'checklist', army:armyId }); const d = document.querySelectorAll('#view [data-ckfold]')[1]; if(!d) return 'no folds';
+      const k = d.dataset.ckfold; d.open = true; await new Promise(r => setTimeout(r, 50)); go({ s:'checklist', army:armyId });
+      const again = document.querySelector('#view [data-ckfold="' + CSS.escape(k) + '"]'), n = document.querySelectorAll('#view [data-ckfold][open]').length;
+      openStrats.delete(k); saveSession(); go({ s:'army', army:armyId });   // (back on Find, where the checks above leave each list)
+      return again && again.open && n === 1 ? '' : 'opened ' + k + ', drawn again: ' + (again && again.open) + ', ' + n + ' open'; }, a.id);
+    if(kept) fail('checklist-folds', a.id, 'kept open', kept);
 
     if(main) fs.writeFileSync(path.join(ROOT, 'verify/out/snapshots', a.id + '.txt'), snap.join('\n\n') + '\n');
     counts[a.id] = { screens:snap.length, links:links.size };
@@ -626,7 +650,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('[data-imprmno]'); await page.waitForTimeout(200);
     const kept = await page.evaluate(id => !!armyById(id) && !!document.querySelector('[data-imprm]'), id);
     if(!kept) fail('import-remove', L, 'Keep it', 'the list or its Remove is gone');
-    // (with a per-battle tick and a Clever Know-wotz box kept for it: Remove clears both)
+    // (with a per-battle tick and a Phase checklist box kept for it: Remove clears both)
     await page.evaluate(id => { localStorage.setItem('wh-used-' + id, '["x"]'); localStorage.setItem('wh-check-' + id, '["x"]'); }, id);
     await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400);
     const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, ticks:[localStorage.getItem('wh-used-' + id), localStorage.getItem('wh-check-' + id)] }), id);
