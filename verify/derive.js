@@ -604,7 +604,12 @@ function optionsOf(t, table){
 
 // ---- the checklist table (data.js CHECKLIST) ----
 // a rule's or ability's own text without its options (each option has its own entry)
-const withoutOptions = (text, table) => { const t = rulesText(text); return optionsOf(t, table).reduce((s2, o) => s2.replace(o.text, ''), t).replace(/^(?:- )?\*\*Examples?(?::\*\*|\*\*:).*$/gim, ''); };
+const withoutOptions = (text, table) => { const t = rulesText(text);
+  // an option that ends in a list ("select one of the following to apply …:", Unnatural Fortitude) takes the "- " lines under it
+  const cut = (s2, o) => { const i = s2.indexOf(o.text); if(i < 0) return s2; let j = i + o.text.length;
+    if(/:\s*$/.test(o.text)){ const m = /^(?:\n- (?!\*\*[^*\n]+?:?\*\*:?)[^\n]*)+/.exec(s2.slice(j)); if(m) j += m[0].length; }
+    return s2.slice(0, i) + s2.slice(j); };
+  return optionsOf(t, table).reduce(cut, t).replace(/^(?:- )?\*\*Examples?(?::\*\*|\*\*:).*$/gim, ''); };
 const phStr = m => m ? PH.filter(p => m[p]).map(p => p + ':' + m[p]).join(',') : '';
 // The checklist's scope, a fixed rule (s: listed): a rule, ability or option whose own words (without its options' words, durations
 // and italic notes) have, in one sentence with no unit activation in it, a fixed moment of the game sequence: the start or end of a
@@ -619,12 +624,36 @@ const SEQ = {
   moment:/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i,
   command:/\b(?:your |your opponent['’]s |the |each |either player['’]s )command phase\b/i,
   choice:/\b(?:your |your opponent['’]s |the |each |either player['’]s )?(?:movement|shooting|charge|fight) phase,?[^.]*?\b(?:you can|select|choose)\b/i,
-  activation:/\bselected to\b|\beach time (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b|\bwhen (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b[^.,]*?\b(?:is|are|makes?|ends?|has|have|was)\b|\b(?:this|that|the bearer['’]?s?) (?:unit|model)['’]s (?:move|attacks?)\b|\bmakes? an? (?:attack|charge|move)\b|\bis targeted\b|\btargets? (?:this|that|the bearer)\b|\bdestroys?\b|\b(?:is|are) destroyed\b|\bfirst time\b/i,
+  activation:/\bselected to\b|\beach time (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b|\bwhen (?:this|that|the|a|an|your) [^.,]*?\b(?:unit|model|bearer)\b[^.,]*?\b(?:is|are|makes?|ends?|has|have|was)\b|\b(?:this|that|the bearer['’]?s?) (?:unit|model)['’]s (?:move|attacks?)\b|\bmakes? an? (?:attack|charge|move)\b|\bis targeted\b|\btargets? (?:this|that|the bearer)\b|\bafter (?:this|that|the) (?:unit|model|bearer)\b[^.,]*?\bhas (?:shot|fought|moved|charged)\b|\bdestroys?\b|\bfirst time\b/i,
 };
 function seqTrigger(text){
-  // sentence by sentence; in each, "until the start of your next Command phase", "once per Command phase" are not a moment
-  return sentences(plain(rulesText(text))).map(x => NOT_TIMING.reduce((y, r) => y.replace(r.re, ' '), x))
-    .some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && !SEQ.activation.test(x));
+  // paragraph by paragraph: in one that opens with a unit activation ("Each time … is selected to shoot or fight", Warpmeld
+  // Sacrifice, Daemonic Patrons), a later moment is that activation's ("At the end of the phase, that unit suffers D3 mortal wounds")
+  // unless it is a choice of its own ("At the start of the Command phase, you can spend", Blood Tithe); sentence by sentence, with durations ("until the
+  // start of your next Command phase"), once-per-phase limits and a moment named only as a past reference ("a unit it was within
+  // Engagement Range of at the start of the turn", Thrill Seekers) left out
+  const PAST = /\b(?:was|were)\b[^.;:]*?\b(?:at the )?(?:start|end) of (?:the|that) (?:turn|phase|battle round)\b/gi;
+  return plain(rulesText(text)).split(/\n+/).some(par => {
+    const ss = sentences(par).map(x => NOT_TIMING.reduce((y, r) => y.replace(r.re, ' '), x).replace(PAST, ' '));
+    const opensAct = ss.length && SEQ.activation.test(ss[0]);
+    return ss.some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && !SEQ.activation.test(x) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(x)));
+  });
+}
+// a unit activation as the item's own trigger: its WHEN line; or a first sentence opening with "When" (Diabolic Power: "When this unit is
+// selected to shoot or fight"), or with a "when / each time / after … selected to …" clause in it (Pulse Jet: "In your Movement phase,
+// when this unit is selected to move"; Overwhelming Wrath: "Each time an enemy unit … is selected to Fall Back"). An effect's "Each
+// time a model in this unit makes …" (a Blessing of Khorne) is not its trigger
+function actOf(text){
+  const p = plain(rulesText(text)), when = /^\W*WHEN:\W*(.*)$/im.exec(p), first = sentences(p)[0] || '';
+  return when ? SEQ.activation.test(when[1]) : (/^\W*when\b/i.test(first) && SEQ.activation.test(first)) || /\b(?:when|whenever|each time|after)\b[^.]*?\bselected to\b/i.test(first);
+}
+// what a listed ability selects among ("select one of the abilities in the X section", "select one X ability": the app's pickOptions)
+// is in force for the duration its words give from where it is triggered (pk, coverOf), or x
+function pickCover(text, e){
+  const t = plain(rulesText(text));
+  if(!/\bselect one of the abilities in the .+? section\b|\bselect one [^.,;]+? ability\b/i.test(t)) return null;
+  const d = DURATIONS.find(x => x.re.test(t));
+  return coverOf(d && d.id, e);
 }
 // t: where it is triggered (the phases the text names, less those only its opening moment gives), u: where its effect is used,
 // at: the moment it opens with; none: no phase (before the battle, what a unit carries); x: not derivable
@@ -633,7 +662,14 @@ function ckEntry(d, text){
   const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];
   const e = {};
   if(d.at) e.at = d.at;
+  // a phase named only as "your / the next X phase" is when the effect happens ("must make an ingress move in your next Movement
+  // phase", Umbralefic Crystal), not the trigger, when the text has a trigger besides
+  const pt = plain(text || ''), nexts = [...pt.matchAll(/\b(?:your|the) next (command|movement|shooting|charge|fight) phase\b/gi)].map(m => m[1].toLowerCase());
+  const rest = pt.replace(/\b(?:your|the) next (?:command|movement|shooting|charge|fight) phase\b/gi, ' ');
+  for(const p of new Set(nexts)) if(tp[p] && !new RegExp('\\b' + p + ' phase\\b', 'i').test(rest) && (d.at || Object.keys(tp).some(q => q !== p && !nexts.includes(q)))) delete tp[p];
   if(phStr(tp)) e.t = phStr(tp);
+  // a sentence at the end of the battle round (Pledges to the Dark Prince's check): that moment too (ae)
+  if(/(?:^|[.\n]\s*)at the end of the battle round\b/i.test(pt)) e.ae = 'End of the battle round';
   // triggered in named phases and lasting no longer ("In your Shooting phase, when … selected to shoot, that unit's attacks can
   // re-roll"): used only there, in the trigger's turn, not in every phase its words could be read for (no "until", "this turn", "next")
   let up = d.usedPh;
@@ -649,12 +685,12 @@ function ckEntry(d, text){
 // those the duration in the same sentence covers from where the text is triggered (t, at), in the order of a turn and the next:
 // "until the end of the phase" that phase; "of the turn" / "this turn" the rest of that turn; "of the next turn" the rest of that
 // turn and the whole next one; "until the start of your next turn / Command phase" the rest of that turn, and the opponent's turn
-// after one of yours; "until the end of the battle" every phase; "of the battle round" every phase only from the start of the
+// after one of yours; "until the end of the battle" every phase; "of the battle round" or "until the start of the next battle round" every phase only from the start of the
 // battle round. Any other duration, or none, or no trigger: x (When unclear), nothing guessed
 const DURATIONS = [
   { id:'phase', re:/\buntil the end of the phase\b/i }, { id:'next', re:/\buntil the end of the next turn\b/i },
   { id:'turn', re:/\buntil the end of (?:the|this|that) turn\b|\bthis turn\b/i }, { id:'yournext', re:/\buntil the start of your next (?:turn|command phase)\b/i },
-  { id:'battle', re:/\buntil the end of the battle\b(?! round)/i }, { id:'round', re:/\buntil the end of the battle round\b/i },
+  { id:'battle', re:/\buntil the end of the battle\b(?! round)/i }, { id:'round', re:/\buntil the end of the battle round\b|\buntil the start of the next battle round\b/i },
 ];
 function inForce(text, f, self, e){
   const out = [], seen = new Set(), t = rulesText(text);
@@ -701,7 +737,9 @@ function ckBlock(T){
     '// The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
     '// tables of verify/derive.js give it: s listed (a fixed moment of the sequence, seqTrigger), t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
     '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own; a its own WHEN line a unit activation),\n' +
-    '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition)\n' +
+    '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition); f what it puts\n' +
+    '// in force from a rule (inForce); ae a sentence at the end of the battle round; a its own trigger a unit activation (actOf); pk where\n' +
+    '// the ability it selects is in force (pickCover)\n' +
     'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
 }
 
@@ -805,7 +843,7 @@ function derive(D){
           return r ? r.text : null;
         } };
         timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
-        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, actx), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; ckPut(abilityCk(ab), ce); }
+        { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, actx), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -964,8 +1002,7 @@ function ruleTables(D){
         if(fo.length) e.f = fo;
         // a: an option whose own WHEN is a unit activation (Calistus: "WHEN: Your Movement phase, when a friendly readied unit is
         // selected to move"); an option's other words are its effect ("Each time a model in this unit makes a melee attack…"), listed
-        const when = /^\W*WHEN:\W*(.*)$/im.exec(plain(rulesText(o.text)));
-        if(seqTrigger(o.text)) e.s = 1; else if(when && SEQ.activation.test(when[1])) e.a = 1;
+        if(seqTrigger(o.text)) e.s = 1; else if(actOf(o.text)) e.a = 1;
         ck.opts.push(e);
       }
       grantRows(s.where, o.name, o.text, o.name + ' active');

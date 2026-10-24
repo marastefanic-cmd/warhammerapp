@@ -4722,8 +4722,13 @@ function ckOption(o, rule){
   if(o.x) return { x:1 };
   if(o.t || o.at) return { t:o.t, at:o.at, u:o.u };
   if(o.u) return { u:o.u, via:{ t:rule.t, at:rule.at } };
-  return rule.t || rule.at ? { t:rule.t, at:rule.at } : { x:1 };
+  // none of its own and no use read: not guessed from its rule's trigger (When unclear); via keeps a once-per-battle one
+  // (Kindred Sorcery's) where it is chosen
+  return rule.t || rule.at ? { x:1, via:{ t:rule.t, at:rule.at } } : { x:1 };
 }
+// phases where both say (phase:your|opp|either): where a selected ability is used, within its selector's duration
+const ckWithin = (a, b) => { const B = ckMap(b), m = Object.entries(ckMap(a)).map(([p, t]) => [p, !B[p] ? null : t === 'either' ? B[p] : B[p] === 'either' || B[p] === t ? t : null]).filter(([, t]) => t);
+  return m.length ? { u:m.map(([p, t]) => p + ':' + t).join(',') } : { x:1 }; };
 // a rule or ability the tables cannot place but data.js gives a moment (at): that moment only, not its display phase tags
 const ckStored = (e, x) => e.x && x.at ? Object.assign({}, e, { x:0, at:x.at, stored:1 }) : e;
 function screenChecklist(){
@@ -4746,7 +4751,10 @@ function screenChecklist(){
     const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
     const pb = !na && !each && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
     const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na), trig = ckListed(e, pb);
-    if(trig){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null }); forced(e.f, r.name, 'rules', 'r:' + r.name); }
+    // a rule listed only through options with moments of their own (Code Chivalric's Deeds): the rule, once; its options are in its text
+    if(!trig && (e.o || []).some(o => o.s && !units.some(u => u.abilities.some(ab => ab.name === o.n)))){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:null }); continue; }
+    // (what a once-per-battle use puts in force is not listed: its box is)
+    if(trig){ items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null }); if(!pb) forced(e.f, r.name, 'rules', 'r:' + r.name); }
     for(const o of e.o || []){
       if(!ckOptListed(o, trig)) continue;   // an option of a rule not listed, or one that is a unit activation
       if(units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;   // an ability it gives units (Protean Purpose): listed as theirs
@@ -4764,12 +4772,20 @@ function screenChecklist(){
     const aid = 'a:' + ab.name + '|' + ckHash(ab.text) + (na ? '|na' : '');   // (a copy the list cannot use: its own boxes, as its own line)
     if(!trig && !(e.o || []).some(o => o.s)) continue;   // on its datasheet
     const line = linkTo('ability', key, ab.name) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
+    if(!trig){ items.push({ id:aid, kind:'abs', e, line, what:ab.name, once:null }); continue; }   // listed only through its options: itself, once
     // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)
     const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class="tg once">per army</span>']]
       : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
         linkTo('ability', key, ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
-    if(trig){ items.push({ id:aid, kind:'abs', e, line, what:ab.name, once }); forced(e.f, ab.name, 'abs', aid); }
-    for(const o of e.o || []) if(ckOptListed(o, trig)){ items.push({ id:'ao' + aid.slice(1) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
+    items.push({ id:aid, kind:'abs', e, line, what:ab.name, once });
+    if(!pb){ forced(e.f, ab.name, 'abs', aid);
+      // the ability it selects (pickOptions: Wrathful Presence's, Icon of War from Rod of the War Forge): Active now where that ability is
+      // used, within the duration its words give (pk), unless it is listed itself or its own trigger is a unit activation (a)
+      if(e.pk) for(const P of pickOptions(ab, us[0]).list){ const eP = ckStored(entry('a|' + ckHash(P.name + '\n' + P.text)), P);
+        if(eP.a || ckListed(eP, !naReason(P) && perBattle(P))) continue;
+        items.push({ id:'pk:' + aid + ':' + P.name, kind:'abs', e:e.pk.x ? { x:1 } : eP.u ? ckWithin(eP.u, e.pk.u) : { u:e.pk.u }, what:P.name,
+          line:linkTo('ability', abilityKey(P), P.name + ' (' + ab.name + ')') + from(esc(unitNames(us))), once:null }); } }
+    for(const o of e.o || []) if(ckOptListed(o, true)){ items.push({ id:'ao' + aid.slice(1) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
       line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null }); forced(o.f, o.n, 'abs', 'ao' + aid.slice(1) + ':' + o.n); }
   }
   // each to its sections: a moment, or a phase in one player's turn ("command|your")
@@ -4777,9 +4793,9 @@ function screenChecklist(){
   const turns = t => t === 'either' ? ['your', 'opp'] : [t];
   for(const it of items){
     const e = it.e;
-    if(e.x || !(e.t || e.u || e.at || e.none)){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
+    if((e.x || !(e.t || e.u || e.at || e.none)) && !(it.once && e.via && (e.via.t || e.via.at))){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
     if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what), it.line)); continue; }
-    const secs = x => (x.at ? [x.at] : []).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)));
+    const secs = x => (x.at ? [x.at] : []).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)), x.ae ? [x.ae] : []);
     const trig = secs(e), act = Object.entries(ckMap(e.u)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)).filter(s => !trig.includes(s));
     // once per battle: where it is used from (its trigger, its rule's, or else where its effect is used)
     if(it.once){ const via = e.via ? secs(e.via) : []; for(const s of trig.length ? trig : via.length ? via : act) for(const [b, l] of it.once) put(s, 'once', tl(b, l)); continue; }
@@ -4788,7 +4804,8 @@ function screenChecklist(){
   }
   const GROUPS = [['todo', 'To do now', 'to do'], ['active', 'Active now', 'active'], ['once', 'Once per battle', 'once per battle'], ['rules', 'Rules', 'rules'], ['abs', 'Abilities', 'abilities']];
   const phaseSecs = PHASES.flatMap(([p]) => [p + '|your', p + '|opp']);
-  const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, Object.keys(sec).filter(s => s.includes(' ') && !/^Start of the/.test(s)), ['unclear', 'none'].filter(s => sec[s]));
+  // the moments in the order of the game: before the phases, after Fight · Their turn (the end of your opponent's turn, then of the round)
+  const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, ['End of your opponent’s turn', 'End of the battle round', 'unclear', 'none'].filter(s => sec[s]));
   const title = s => s === 'unclear' ? 'When unclear' : s === 'none' ? 'No phase' : s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
   // each section a fold, as the Overview's rules: its name, and on the line under it how many lines each part has
   const fold = s => { const g = sec[s] || {}, parts = GROUPS.filter(([k]) => g[k]), k = 'ck|' + a.id + '|' + s;
@@ -4796,7 +4813,7 @@ function screenChecklist(){
       (parts.length ? metaLine(...parts.map(([x, , w]) => g[x].length + ' ' + w)) : 'nothing') + '</span></span>' + chev + '</summary><div class="body">' +
       (parts.length ? parts.map(([x, l]) => '<div class="ckg"><p class="qh">' + l + '</p>' + g[x].join('') + '</div>').join('') : '<p class="note">Nothing in this list.</p>') + '</div></details>'; };
   return '<div class="ckl"><div class="sec-h"><h2>Phase by phase</h2><button class="textbtn" data-ckreset>Reset</button></div><div class="abl">' + order.map(fold).join('') + '</div>' +
-    '<p class="note">Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there), and once-per-battle uses (Once per battle). Active now: what those put in force, where it is used and for as long as their words say: their options, and a rule they name in bold as a state units are in (Riled up). What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
+    '<p class="note">Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
 }
 
 /* ---------- screen: rules & keywords ---------- */

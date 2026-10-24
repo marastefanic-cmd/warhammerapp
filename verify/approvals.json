@@ -2255,6 +2255,12 @@
   "at": "2026-10-16",
   "why": "\"In your Shooting phase or the Fight phase\"."
  },
+ "3223efe1f97788a4": {
+  "verdict": "ok",
+  "by": "review:checklist",
+  "at": "2026-10-24",
+  "why": "In order: an option's own trigger; else where it is used, with via (its rule's trigger), so a once-per-battle option is filed where it is chosen; else its rule's trigger; x goes to When unclear. Checked against the rule texts. Blood Tithe: Might of Khorne goes under TO DO NOW in both Command phases ('At the start of the Command phase, you can spend …'); Enraged Abjuration, Daemonic Rage and Boon of Blood go under ACTIVE NOW where used ('until the end of the battle'). Blessings of Khorne's options: Unbridled Bloodlust is active in both Charge phases, the other five in both Fight phases ('until the end of the battle round'). Martial Ka’tah's options: Calistus in Movement · Your turn, Salvus in Shooting · Your turn, and Dacatarai, Kaptaris and Rendax in both Fight phases ('Start of the Fight phase' / 'Fight phase' have no 'your', so either turn). Harbingers of Dread: Dismay is in Command · Their turn ('In the Battle-shock step of your opponent’s Command phase')."
+ },
  "3268b663ea586f06": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -10702,6 +10708,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"Your unit can make a normal move of: Up to D6\". Or: Up to 6\" instead if your unit is an attached unit.\" The gist is the same."
+ },
+ "f40fcf70ed93b105": {
+  "verdict": "ok",
+  "by": "review:checklist",
+  "at": "2026-10-24",
+  "why": "It now also removes 'wh-check-' + id, the same key ckKey() writes for that list ('wh-check-' + cur.army), next to 'wh-used-' + id. render.js sets both keys before Remove and checks that both are null afterwards. The fold-open keys ('ck|id|…' in openStrats) live only for the session, so they need no clearing. Imported lists get an id no other list has, so a later import cannot inherit old boxes."
  },
  "f41d55a2bb7a839a": {
   "verdict": "ok",
