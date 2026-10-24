@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = 'a2ef662588';</script>
+<script>window.WH_BUILD = 'dc2b55976d';</script>
 </head>
 <body>
 <style>
@@ -1030,10 +1030,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=a2ef662588"></script>
-<script src="data.js?v=a2ef662588"></script>
-<script src="calc.js?v=a2ef662588"></script>
-<script src="import.js?v=a2ef662588"></script>
+<script src="verified.js?v=dc2b55976d"></script>
+<script src="data.js?v=dc2b55976d"></script>
+<script src="calc.js?v=dc2b55976d"></script>
+<script src="import.js?v=dc2b55976d"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -4379,6 +4379,13 @@ function defLine(x, u){
   return who + (i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t));
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
+// a "When targeted" line that is one option of an army rule (Kaptaris, a ka’tah of Martial Ka’tah: its line starts with the
+// option's name, RULE_OPTIONS lists the options): the datasheet leaves it out, its Rules line opens the whole rule
+function armyRuleOption(x){
+  const fac = factionOf(army()) || {};
+  if(x.a !== 'rule' || !(fac.armyRules || []).some(r => r.name === x.v)) return false;
+  return (D.ruleOptions || []).some(o => o.rule === fac.name + ' army rule · ' + x.v && x.t.startsWith(o.option) && /^[\s:(]/.test(x.t.slice(o.option.length)));
+}
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
 // every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
 // only repeat it where it matters. The one exception: a Damaged profile is its band under the stats.
@@ -4399,7 +4406,7 @@ function screenUnit(){
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
   const strats = allStratagems().filter(s => eligible(s).includes(u))   // every one it can be the target of
     .concat(helpedBy(u).filter(s => !eligible(s).includes(u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
-  const def = defenceItems(u, null, { shields:true });
+  const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
   const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
