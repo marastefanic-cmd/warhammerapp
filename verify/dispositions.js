@@ -40,8 +40,8 @@ let src = fs.readFileSync(file, 'utf8');
 global.window = {}; require(file); const D = window.WH_DATA;
 const fails = [];
 let n = 0;
-// declared deviations (verify/deviations-bsdata.json, field "dispositions"): a detachment whose BSData entry at the pin has none (the
-// unfinished "Deathwatch Support (ITS NOT READY)"), the app's from GW's documents
+// declared deviations (verify/deviations-bsdata.json, field "dispositions"): a detachment whose BSData entry at the pin has none (as the
+// unfinished "Deathwatch Support (ITS NOT READY)" had before BSData b4dc3f4), the app's from GW's documents
 const DEVS = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-bsdata.json'), 'utf8')).filter(x => x.field === 'dispositions');
 const devUsed = new Set();
 for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.entries(f.detachments || {})){

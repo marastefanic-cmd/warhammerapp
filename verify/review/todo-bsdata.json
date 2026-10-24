@@ -1,0 +1,62 @@
+[
+ {
+  "army": "nidzillas",
+  "kind": "stats-base",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "base": "60mm",
+   "was": "50mm",
+   "change": "data fix: the app now shows 60mm (stats table, Bases to print: 2× 60mm, Hive Tyrant · Warlord · Monstrous Nemesis 1× 60mm)",
+   "deviation": "verify/deviations-nr.json nidzillas · hive-tyrant · stats[Hive Tyrant].base (New Recruit export 50mm)"
+  },
+  "source": {
+   "gw": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3820 (TYRANIDS): \"Hive Tyrant  60mm\"",
+   "bsdata": "b4dc3f4 Tyranids.json Hive Tyrant Base 60mm (19b7762 \"Fixes #2787\", 24 Oct 2026; 173d0ef had 50mm)",
+   "nr": "verify/sources/nr/nidzillas.txt p3: 50mm (export 20 Oct 2026)"
+  },
+  "key": "417a86fe32d30419"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "deviation-bsdata",
+  "where": "nerf-when · Impulsor · InSv",
+  "judgement": {
+   "app": "Impulsor: 5+, InSv ← Shield Dome",
+   "keep": "app unchanged; declared as a BSData deviation (stats.InSv, stats.from)"
+  },
+  "source": {
+   "gw": "verify/.cache/waha/ds/ultramarines_Impulsor.html: \"Shield Dome: This unit has 5+ InSv.\"",
+   "bsdata": "b4dc3f4 Imperium - Space Marines.json, Impulsor profile 2dc8-b989-a231-bb82: set InSv 5+ when Shield Dome 7685-1ab3-8d12-fac7 atLeast 1, scope parent, includeChildSelections false (since 8aac786, 17 Oct 2026; true at 173d0ef): never applies to a root Impulsor",
+   "nr": "verify/sources/nr-json/nerf-when.json: both Impulsors take Shield Dome; profile InSv empty"
+  },
+  "key": "b8f736f2ba6edd15"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "deviation-bsdata",
+  "where": "fellhammer-siege-task-force · Dark Apostle + Master of Executions + Nemesis Claw · InSv",
+  "judgement": {
+   "app": "Master of Executions: 5+ InSv ← Soul Forge Boons; Nemesis Claw ×5: 5+ InSv ← Soul Forge Boons",
+   "keep": "app unchanged (value now agrees with BSData; old InSv deviations removed); the attribution Soul Forge Boons declared as a BSData deviation (stats.from), BSData names Cybinfernal Font"
+  },
+  "source": {
+   "gw": "verify/.cache/waha/chaos-space-marines.txt lines 927-935: Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" (GW Faction Pack Chaos Space Marines p7, the same words)",
+   "bsdata": "b4dc3f4 Chaos - Chaos Space Marines.json, Cybinfernal Font 2f57-9703-18b2-6390: modifier set InSv 5+ (0286f5c, 19 Oct 2026)"
+  },
+  "key": "c657563e2f707338"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "map-bsdata",
+  "where": "nerf-when · Deathwatch Support / Deathwatch Terminator Squad",
+  "judgement": {
+   "map": "verify/map-bsdata.json: dropped detachments[deathwatch-support] = \"Deathwatch Support (ITS NOT READY)\" and units[nerf-when/deathwatch-terminator-squad].catalogue = Deathwatch",
+   "result": "the detachment is matched by its own name; the Terminators come from the Ultramarines catalogue (link 206e-3133-dac8-8d40, the one New Recruit’s export uses); 3 deviations (role and kw Allies: Deathwatch, dispositions Disruption) now stale and removed"
+  },
+  "source": {
+   "bsdata": "b4dc3f4 Imperium - Space Marines.json: Deathwatch Support 5eb6-4ed2-6aca-c7f1 with category Disruption; Deathwatch Terminator Squad link 206e-3133-dac8-8d40; Imperium - Deathwatch.json now only imports Space Marines (cdc2667 \"Deathwatch Support\", 21 Oct 2026)",
+   "gw": "verify/.cache/waha/ultramarines.html, Deathwatch Support: \"Force Disposition: Disruption\""
+  },
+  "key": "3224258a244c7ddf"
+ }
+]

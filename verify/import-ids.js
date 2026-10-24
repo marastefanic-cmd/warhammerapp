@@ -57,7 +57,7 @@ function table() {
     const roots = X.rootNode(cat, 'Detachment').concat(X.rootNode(cat, 'Detachments'));
     for (const r of roots) T.roots[r.n.id] = 'detachment';
     for (const [k, d] of Object.entries(f.detachments)) {
-      // (BSData's name where map-bsdata.json gives one: "Deathwatch Support (ITS NOT READY)" at the pin)
+      // (BSData's name where map-bsdata.json gives one, as "Deathwatch Support (ITS NOT READY)" before BSData b4dc3f4)
       const bsName = (X.MAP.detachments || {})[k] || d.name;
       const p = roots.map((r) => X.searchBelow(r.n, (x) => x.type === 'upgrade' && B.nn(x.name) === B.nn(bsName))[0]).find(Boolean);
       if (!p) throw new Error('no BSData detachment ' + d.name + ' (' + fac + ')');
