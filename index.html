@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = 'dc2b55976d';</script>
+<script>window.WH_BUILD = '5a96e0fa93';</script>
 </head>
 <body>
 <style>
@@ -1030,10 +1030,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=dc2b55976d"></script>
-<script src="data.js?v=dc2b55976d"></script>
-<script src="calc.js?v=dc2b55976d"></script>
-<script src="import.js?v=dc2b55976d"></script>
+<script src="verified.js?v=5a96e0fa93"></script>
+<script src="data.js?v=5a96e0fa93"></script>
+<script src="calc.js?v=5a96e0fa93"></script>
+<script src="import.js?v=5a96e0fa93"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -3973,11 +3973,24 @@ function rowCounts(u){
   const chars = new Set(charsOf(u).map(c => c.name)), stem = x => x.toLowerCase().replace(/ w\/.*$/, '').replace(/ \(.*\)$/, '').replace(/s$/, '');
   const rows = u.stats.map(s => ({ s, name:stem(s.name.replace(/ ×\d+$/, '')), fixed:/ ×\d+$/.test(s.name), n:+((/ ×(\d+)$/.exec(s.name) || [])[1] || 0) }));
   const longest = list => list.sort((x, y) => y.name.length - x.name.length)[0];
-  for(const line of u.models){
-    const k = parseInt(line, 10) || 1, nm = stem(line.replace(/^\d+× /, ''));
-    const hit = rows.find(r => r.name === nm) || longest(rows.filter(r => nm.startsWith(r.name))) || longest(rows.filter(r => r.name.startsWith(nm)))
+  // first the lines a row has the name of (a "×N" row of that count before one without: "3× Deathwatch Terminator w/ Heavy Weapon" is
+  // the "Deathwatch Terminator ×3" row, "1× Deathwatch Terminator (Storm Shield)" the other); the models the "×N" rows already count
+  // are not given to another row ("Heavy intercessor Squad ×4" counts the four lines without a row of their own)
+  const lines = u.models.map(line => ({ k:parseInt(line, 10) || 1, nm:stem(line.replace(/^\d+× /, '')) }));
+  const total = lines.reduce((t, l) => t + l.k, 0), fixedN = rows.filter(r => r.fixed).reduce((t, r) => t + r.n, 0);
+  let placed = fixedN;
+  const rest = [];
+  for(const l of lines){
+    const same = rows.filter(r => r.name === l.nm), hit = same.find(r => r.fixed && r.n === l.k && !r.used) || same.find(r => !r.fixed) || same.find(r => r.fixed);
+    if(hit && hit.fixed){ hit.used = true; continue; }
+    if(hit){ hit.n += l.k; placed += l.k; continue; }
+    rest.push(l);
+  }
+  for(const l of rest){
+    if(placed >= total) break;
+    const hit = longest(rows.filter(r => l.nm.startsWith(r.name))) || longest(rows.filter(r => r.name.startsWith(l.nm)))
       || rows.filter(r => !r.fixed && !chars.has(r.s.name)).slice(-1)[0];
-    if(hit && !hit.fixed) hit.n += k;
+    if(hit && !hit.fixed){ hit.n += l.k; placed += l.k; }
   }
   return new Map(rows.map(r => [r.s, r.n]));
 }

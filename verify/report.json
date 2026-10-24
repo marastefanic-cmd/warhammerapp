@@ -1,6 +1,6 @@
 {
- "hash": "dc2b55976ddb85aa31146ad19b31cfc3e86a4153a95ea3a8838af4263daa5940",
- "at": "2026-10-24T11:06:25.445Z",
+ "hash": "5a96e0fa936df24a7c573f0d693ae4a35bedeaddefc2a89bc7a56e294a3b4af6",
+ "at": "2026-10-24T16:17:24.973Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,11 +9,11 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 133 unit entries in 17 lists over 100 datasheets, 62 rule options, 37 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 141 unit entries in 18 lists over 110 datasheets, 69 rule options, 44 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 185 of 185 AI-written values (gist, def) match the text they were written from"
+   "summary": "fingerprints: 203 of 203 AI-written values (gist, def) match the text they were written from"
   },
   "invariants": {
    "ok": true,
@@ -21,27 +21,27 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 537 agreed labels hold; 223 differ, 97 not derivable (not failing; verify/out/derive.md)"
+   "summary": "derive: 537 agreed labels hold; 228 differ, 114 not derivable (not failing; verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
-   "summary": "choice: 48 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
+   "summary": "choice: 55 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 10650 facts checked against BSData 173d0ef (clone) {\"gear\":762,\"stats\":1545,\"weapons\":5140,\"abilities\":970,\"keywords\":1165,\"rules\":634,\"grants\":240,\"points\":193,\"extract\":1}; 83 deviations used; 0 failures"
+   "summary": "bsdata: 11569 facts checked against BSData 173d0ef (clone) {\"gear\":838,\"stats\":1734,\"weapons\":5580,\"abilities\":1028,\"keywords\":1241,\"rules\":690,\"grants\":251,\"points\":206,\"extract\":1}; 117 deviations used; 0 failures"
   },
   "dispositions": {
    "ok": true,
-   "summary": "dispositions: 25 detachments match BSData; every list’s disposition is one its detachments allow"
+   "summary": "dispositions: 28 detachments match BSData (1 declared deviation used); every list’s disposition is one its detachments allow"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 12186 facts checked (army 187, units 133, roster 565, pts 266, copies 133, models 133, enhancement 266, warlord 266, leads 399, gear 233, stats 1510, ranged 2554, from 171, melee 2338, abilities 1293, kw 186, rules 1267, glossary 286); 94 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 12208 facts checked (army 188, units 133, roster 565, pts 266, copies 133, models 133, enhancement 266, warlord 266, leads 399, gear 233, stats 1531, ranged 2554, from 171, melee 2338, abilities 1293, kw 186, rules 1267, glossary 286); 101 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 3088 checked facts, 11 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 3307 checked facts, 11 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "calc": {
    "ok": true,
@@ -49,15 +49,15 @@
   },
   "import": {
    "ok": true,
-   "summary": "import: 17 of 17 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 45 changed exports refused; 134 checks, 0 failures"
+   "summary": "import: 18 of 18 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 45 changed exports refused; 139 checks, 0 failures"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 2093 screens and popups, 1252 helper texts, 0 failures"
+   "summary": "render at 390px: 2231 screens and popups, 1356 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 2093 screens and popups, 1252 helper texts, 0 failures"
+   "summary": "render at 320px: 2231 screens and popups, 1356 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -65,7 +65,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1484 judgements, 1484 approved, 0 to check, 382 stale approvals"
+   "summary": "helpers: 1597 judgements, 1597 approved, 0 to check, 383 stale approvals"
   }
  }
 }

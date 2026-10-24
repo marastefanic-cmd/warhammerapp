@@ -143,6 +143,15 @@ Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
+ULTRAMARINES
+1
+Nerf when
+2000 pts
+Assault Brethren · Deathwatch Support · Terminator Storm Force
+DISRUPTION
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
 WORLD EATERS
 4
 Princes
