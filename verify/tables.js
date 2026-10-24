@@ -51,13 +51,14 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 // (stats, ranged, melee, abilities) name a row of the datasheet (a stats row by its model's name, without "×N"): the
 // datasheet's row, then the entry row's own fields. An entry without its rows takes all of the datasheet's; a row the
 // datasheet does not have (an enhancement's ability) is the list's own. over: a datasheet fact this list has otherwise
-// than another list (verify/out/tables.md), kept per list until it is decided. of: which datasheet of an attached unit a
+// than another list (verify/out/tables.md), kept per list until it is decided. why: the reason a value of the entry (or
+// its row) is not the datasheet's: the rule, Warlord, enhancement or wargear that gives it (the value is the list's). of: which datasheet of an attached unit a
 // row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction and bsId, and the
 // fingerprints (gistOf, defOf) of AI-written columns.
 function resolveArmies(armies, sheets, order, opts){
   opts = opts || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'];
-  var HIDE = ['ds', 'over', 'of', 'faction', 'bsId'].concat(${JSON.stringify(Object.values(FINGERPRINT))}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'faction', 'bsId'].concat(${JSON.stringify(Object.values(FINGERPRINT))}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -161,7 +162,11 @@ function read(src){
       }
     }));
   }
-  return { src, A, S, O, armies, comments:C, order, bsIds:B ? B.value : {} };
+  // the rules in force and what they give units (GRANTS, as verify/derive.js reads them from the words): the reasons a list's unit
+  // has a keyword its datasheet does not
+  const D = evaluate(src);
+  let G = null;
+  return { src, A, S, O, armies, comments:C, order, bsIds:B ? B.value : {}, factions:D.factions, get grants(){ return G || (G = require('./derive').ruleTables(D).grants); } };
 }
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -227,7 +232,7 @@ function build(R){
   // which fields of a row are the list's (for this place): the key, a part's who, counts, the values a rule of the list changed
   const listLevel = (o, k) => {
     const r = o.r, from = r.from || {};
-    if(k === 'name') return true;
+    if(k === 'name' || (o.why && k in o.why)) return true;
     if(k === 'who') return o.kind !== 'abilities' || o.U.multi;
     if(k === 'na') return true;   // why it does nothing in this list
     if(o.kind === 'stats') return k === 'from' || k === 'printed' || k in from;
@@ -236,21 +241,77 @@ function build(R){
   };
   const conflicts = [];
   // a datasheet's value of a fact: what every place that has it as a datasheet fact agrees on; else a conflict
-  const decide = (obs, val, has, voting, where, field) => {
+  const decide = (obs, val, has, voting, where, field, quiet) => {
     const votes = obs.filter(o => voting(o) && !(FP_KEYS.includes(field) && !has(o)));
     if(!votes.length) return { none:true };
     const vs = votes.map(o => has(o) ? stable(val(o)) : '\0absent');
     if(vs.every(v => v === vs[0])) return vs[0] === '\0absent' ? { none:true } : { value:val(votes[0]) };
+    if(quiet) return { conflict:true };
     const by = new Map(); votes.forEach((o, i) => { if(!by.has(vs[i])) by.set(vs[i], []); by.get(vs[i]).push(o); });
     conflicts.push({ where, field, values:[...by.values()].map(os => ({ value:has(os[0]) ? val(os[0]) : null, lists:os.map(o => (o.U || o).a.id + '/' + (o.U || o).u.id) })) });
     return { conflict:true };
   };
+  // ---- why a list's value is not its datasheet's (the list's fact, with its reason) ----
+  const lc = x => String(x).toLowerCase();
+  const matchNeeds = (to, u) => { const has = k => (u.kw || []).some(x => lc(x) === lc(k));
+    if(!to || typeof to !== 'object' || Object.keys(to).some(k => !['all', 'any', 'none'].includes(k))) return !to;
+    return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
+  const ownAbilities = u => (u.abilities || []).filter(x => /\b(Enhancement|Upgrade)\b/.test(x.tag || ''));
+  // always the list's: the Warlord keyword, a keyword a rule in force gives (GRANTS), a rule an enhancement or upgrade gives
+  const unitWhy = U => {
+    const u = U.u, a = U.a, F = (R.factions || {})[a.faction] || {}, why = {};
+    const put = (f, k, r) => { (why[f] = why[f] || {})[k] = r; };
+    const kwOf = k => (u.kw || []).find(x => lc(x) === lc(k));
+    if(u.warlord && kwOf('Warlord')) put('kw', kwOf('Warlord'), 'Warlord');
+    const inForce = [F.name + ' army rule · '].concat(a.detachments.map(d => F.name + ' · ' + ((F.detachments || {})[d] || {}).name + ' rule · '));
+    for(const g of R.grants || []){
+      if(!/keyword/.test(g.type) || g.to === 'this unit / model' || !inForce.some(p => g.rule.startsWith(p)) || !matchNeeds(g.to, u)) continue;
+      const k = kwOf(g.grants); if(k && !(why.kw && why.kw[k])) put('kw', k, g.option || g.rule.split(' · ').pop());
+    }
+    if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
+    const own = ownAbilities(u);
+    for(const r of u.rules || []){
+      const esc = lc(r).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const ab = own.find(x => new RegExp('\\*\\*' + esc + '\\*\\*|\\[' + esc + '[\\]\\s-]').test(lc(x.text)));   // it gives the rule by name
+      if(ab){ put('rules', r, ab.name); continue; }
+      for(const w of [].concat(u.ranged || [], u.melee || [])) for(const k of w.kw || []){
+        const by = w.from && w.from[k] && [].concat(w.from[k]).find(n => own.some(x => x.name === n));
+        if(by && lc(k).startsWith(lc(r)) && !(why.rules && why.rules[r])) put('rules', r, by);
+      }
+    }
+    return why;
+  };
+  for(const U of units) U.why = U.multi ? {} : unitWhy(U);
+  // the list's only where lists differ: a value an ability of the unit gives (Kustom Force Field: 4+* InSv), a weapon ability
+  // on the Rules line from the wargear taken
+  const rowWhy = (o, f) => {
+    if(o.kind !== 'stats' || f !== 'InSv') return null;
+    const v = String(o.r[f] || '').replace('*', '');
+    if(!/^\d\+$/.test(v)) return null;
+    const re = new RegExp('(^|\\W)' + v.replace('+', '\\+') + ' \\*\\*InSv\\*\\*');
+    const ab = (o.U.u.abilities || []).find(x => re.test(x.text));
+    return ab ? ab.name : null;
+  };
+  const wargearWhy = U => {
+    const out = {}, kws = [].concat(U.u.ranged || [], U.u.melee || []).flatMap(w => (w.kw || []).map(k => [k, w.name]));
+    for(const r of U.u.rules || []){ if(U.why.rules && U.why.rules[r]) continue; const hit = kws.find(([k]) => lc(k).startsWith(lc(r))); if(hit) out[r] = 'its wargear (' + hit[1] + ')'; }
+    return out;
+  };
+  const strip = (U, f) => { const w = (U.why || {})[f]; return w && Array.isArray(U.u[f]) ? U.u[f].filter(x => !(x in w)) : U.u[f]; };
   for(const s of sheets.values()){
     for(const kind of ROWS) for(const R of s.rows[kind].values()){
       R.ds = { name:R.key }; R.conflict = new Set();
       const fields = []; for(const o of R.obs) for(const k of Object.keys(o.r)) if(!listLevel(o, k) && !fields.includes(k)) fields.push(k);
       for(const f of keyOrder([fields], order[kind]).filter(f => fields.includes(f))){
-        const d = decide(R.obs, o => o.r[f], o => f in o.r, o => !listLevel(o, f), s.id + ' · ' + kind + ' · ' + R.key, f);
+        const args = [R.obs, o => o.r[f], o => f in o.r, o => !listLevel(o, f), s.id + ' · ' + kind + ' · ' + R.key, f];
+        if(decide(...args, true).conflict){
+          const ex = R.obs.map(o => !listLevel(o, f) && rowWhy(o, f));
+          if(ex.some(Boolean)){
+            R.obs.forEach((o, i) => { if(ex[i]) (o.why = o.why || {})[f] = ex[i]; });
+            if(decide(...args, true).conflict) R.obs.forEach((o, i) => { if(ex[i]) delete o.why[f]; });
+          }
+        }
+        const d = decide(...args);
         if(d.conflict) R.conflict.add(f); else if(!d.none) R.ds[f] = d.value;
       }
     }
@@ -259,7 +320,14 @@ function build(R){
     else if(s.bs.size > 1) conflicts.push({ where:s.id, field:'bsId', values:[...s.bs.entries()].map(([v, l]) => ({ value:v, lists:l })) });
     s.uconf = new Set();
     for(const f of DS_UNIT.slice(1)){
-      const d = decide(s.unitObs, U => U.u[f], U => f in U.u, () => true, s.id, f);
+      const args = [s.unitObs, U => strip(U, f), U => f in U.u, U => !(f === 'role' && U.why.role), s.id, f];
+      if(f === 'rules' && decide(...args, true).conflict){
+        const add = s.unitObs.map(wargearWhy);
+        const keep = s.unitObs.map(U => U.why.rules);
+        s.unitObs.forEach((U, i) => { if(Object.keys(add[i]).length) U.why.rules = Object.assign({}, U.why.rules, add[i]); });
+        if(decide(...args, true).conflict) s.unitObs.forEach((U, i) => { if(keep[i]) U.why.rules = keep[i]; else delete U.why.rules; });
+      }
+      const d = decide(...args);
       if(d.conflict) s.uconf.add(f); else if(!d.none) s.ds[f] = d.value;
     }
   }
@@ -307,6 +375,7 @@ function build(R){
     for(const k of Object.keys(R.ds)) if(k !== 'name' && !(k in o.r) && !FP_KEYS.includes(k)) e[k] = null;
     for(const k of R.conflict) if(!(k in o.r) && !listLevel(o, k) && !FP_KEYS.includes(k)) over[k] = null;
     if(findPart(o.U, o.kind, e) !== o.part) e.of = o.part;
+    if(o.why) e.why = o.why;
     if(Object.keys(over).length) e.over = over;
     return { e, plain:Object.keys(e).length === 1 && e.name === R.key };
   };
@@ -316,7 +385,7 @@ function build(R){
       if(!(k in u) || k === 'id' || k === 'name') continue;
       if(ROWS.includes(k)) continue;
       if(DS_UNIT.includes(k)){
-        if(!U.multi){ if(s0.uconf.has(k)) over[k] = u[k]; }
+        if(!U.multi){ if(s0.uconf.has(k)) over[k] = u[k]; else if(U.why[k] && !eq(u[k], s0.ds[k])) e[k] = u[k]; }
         else if(!eq(u[k], s0.ds[k])) e[k] = u[k];
       } else e[k] = u[k];
     }
@@ -333,11 +402,14 @@ function build(R){
       const same = !U.multi && !U.forced.has(kind) && rs.length === s0.rows[kind].size && rs.every(x => x.plain) && [...s0.rows[kind].keys()].every((k, i) => rs[i].e.name === k);
       if(!same) e[kind] = rs.map(x => x.e);
     }
+    const why = Object.fromEntries(Object.entries(U.why).filter(([k]) => k in e));
+    if(Object.keys(why).length) e.why = why;
     if(Object.keys(over).length) e.over = over;
     // the entry's keys: id, ds, then as resolved units list them, over last
     const out = { id:e.id, ds:e.ds };
     for(const k of order.unit.concat(ROWS)) if(k in e && !(k in out)) out[k] = e[k];
-    for(const k of Object.keys(e)) if(!(k in out) && k !== 'over') out[k] = e[k];
+    for(const k of Object.keys(e)) if(!(k in out) && k !== 'over' && k !== 'why') out[k] = e[k];
+    if(e.why) out.why = e.why;
     if(e.over) out.over = e.over;
     U.entry = out;
     return out;
@@ -610,6 +682,13 @@ function report(t){
     lines.push('- **' + c.where + '** · `' + c.field + '`');
     for(const v of c.values) lines.push('  - ' + show(v.value) + ': ' + v.lists.join(', '));
   }
+  const whys = [];
+  for(const a of B.armies) for(const u of a.units){
+    for(const [f, m] of Object.entries(u.why || {})) for(const [v, r] of Object.entries(m)) whys.push('- ' + a.id + '/' + u.id + ' · `' + f + '` ' + show(v) + ': ' + r);
+    for(const k of ROWS) for(const r of Array.isArray(u[k]) ? u[k] : []) for(const [f, why] of Object.entries(r.why || {})) whys.push('- ' + a.id + '/' + u.id + ' · ' + k + ' · ' + r.name + ' · `' + f + '` ' + show(r[f]) + ': ' + why);
+  }
+  lines.push('', '## The lists\' own values, with their reason (' + whys.length + ')', '', 'Values a list has that its datasheet does not, because of the list: the Warlord, a rule in force (GRANTS), an enhancement or',
+    'upgrade, an ability its wargear gives, the weapons it took. On the entry as the list\'s value; `why` names the reason (written by --write).', '', ...whys);
   if(B.notes.length) lines.push('', '## Notes', '', ...B.notes.map(n => '- ' + n));
   return lines.join('\n') + '\n';
 }

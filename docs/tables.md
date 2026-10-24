@@ -18,7 +18,7 @@ the gate fails on a column that is not there.
 | `GRANTS` | a rule (or option) giving units an ability or keyword, to whom, while what | `rule` + `option` + `grants` |
 | `BS_IDS` | the BSData ids the in-app import resolves an export by | — |
 
-A unit entry: `{ id, ds:'orks/warboss', pts, models, gear, enhancement, warlord, copies, leads, also, mods, aura, … }`.
+A unit entry: `{ id, ds:'orks/warboss', pts, models, gear, enhancement, warlord, copies, leads, also, mods, aura, why, … }`.
 An attached unit names each part: `ds:['orks/big-mek','orks/painboy','orks/nobz']` (leader, other characters,
 bodyguard). Its rows (`stats`, `ranged`, `melee`, `abilities`) name a datasheet row and add the list's own fields:
 `{ name:'Kustom Shoota', who:'Nobz', n:8, kw:[…], from:{ 'IGNORES COVER':'More Dakka' } }` (a stats row by its
@@ -30,9 +30,15 @@ an attached unit a row is from, when its `who` does not say.
 each unit exactly as before (the gate's `tables` step checks that `--write` gives the same lists). `WH_DATA.datasheets`,
 `.ruleOptions` and `.grants` are there for templates too.
 
-**Conflicts.** Where two lists' copies of one datasheet differ in a datasheet fact, nothing is picked: the datasheet
-leaves the fact out and each list keeps its value in `over` (on its entry, or its row). `verify/out/tables.md` lists
-them. To decide one: put the value in `DATASHEETS`, delete the `over`s, `node verify/tables.js --write`, run the gate.
+**One datasheet, one truth.** A datasheet fact has one value, on `DATASHEETS`. Where a list has another value because of
+the list, the entry (or its row) holds the list's value and `why` names the reason, as `from` does for a value a rule
+changed: `why:{ kw:{ Warlord:'Warlord', Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }`. `--write` derives
+the reasons: the Warlord keyword; a keyword a rule in force gives (`GRANTS`: Sneaky Little Gitz, Warpmeld Sacrifice, Marked
+Prey); a rule an enhancement or upgrade names (Augury Uplink's Feel No Pain 5+, Destabilising Predation's [ANTI-…] as
+Anti); and, only where lists differ, a value an ability of the unit's wargear gives (Kustom Force Field's 4+* InSv) or a
+weapon ability of the weapons it took. A difference with no reason is a conflict: the datasheet leaves the fact out, each
+list keeps its value in `over`, and `verify/out/tables.md` lists it, until it is fixed at the source (GW's wording,
+Wahapedia's bold). There are none today.
 
 ## Columns and their sources
 

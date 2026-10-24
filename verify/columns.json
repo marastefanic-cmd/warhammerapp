@@ -277,6 +277,10 @@
     "missing": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "defPh": {
+     "source": "derived",
+     "note": "the phases its \"When targeted\" line (def) is for, from its words; signed off with the def (approvals.json, ability-def / rule-def)"
     }
    }
   },
@@ -403,6 +407,10 @@
     "missing": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "defPh": {
+     "source": "derived",
+     "note": "the phases its \"When targeted\" line (def) is for, from its words; signed off with the def (approvals.json, ability-def / rule-def)"
     }
    }
   },
@@ -541,6 +549,10 @@
     "nr": {
      "source": "newrecruit",
      "note": "New Recruit's spelling of the name where it differs (verify/nr.js)"
+    },
+    "limit": {
+     "source": "wahapedia",
+     "note": "\"(one per army)\" as Wahapedia prints it after the name"
     }
    }
   },
@@ -726,11 +738,15 @@
     },
     "over": {
      "source": "hand",
-     "note": "a datasheet fact this list has otherwise than another list (verify/out/tables.md): the list's own value, kept until decided; source as the column it replaces"
+     "note": "a datasheet fact this list has otherwise than another list with no reason found (verify/out/tables.md): kept until decided; none today"
     },
     "note": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+    },
+    "why": {
+     "source": "derived",
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
     }
    }
   },
@@ -788,6 +804,10 @@
     "of": {
      "source": "derived",
      "note": "which part of an attached unit the row is from, when who does not say (verify/tables.js)"
+    },
+    "why": {
+     "source": "derived",
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
     }
    }
   },
@@ -853,6 +873,10 @@
     "of": {
      "source": "derived",
      "note": "which part of an attached unit the row is from (verify/tables.js)"
+    },
+    "why": {
+     "source": "derived",
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
     }
    }
   },
@@ -918,6 +942,10 @@
     "of": {
      "source": "derived",
      "note": "which part of an attached unit the row is from (verify/tables.js)"
+    },
+    "why": {
+     "source": "derived",
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
     }
    }
   },
@@ -1019,6 +1047,14 @@
     "calcNote": {
      "source": "hand",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defPh": {
+     "source": "derived",
+     "note": "the phases of its def"
+    },
+    "why": {
+     "source": "derived",
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
     }
    }
   },
@@ -1575,6 +1611,10 @@
     "calcNote": {
      "source": "hand",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+    },
+    "defPh": {
+     "source": "derived",
+     "note": "the phases of its def"
     }
    }
   },

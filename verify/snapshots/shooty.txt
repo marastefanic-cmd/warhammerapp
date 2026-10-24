@@ -3976,7 +3976,7 @@ UNITMek + Flash Gitz
 Ask about this ability
 
 ######## popup ability:shooty|Fix Dat Armour Up|In your Command phase, this unit **heals** 3 wounds.
-Place a Grot Oiler token next to the unit, removing it when this ability is used. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+*Place a Grot Oiler token next to the unit, removing it when this ability is used.* · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · ONCE PER BATTLE, PER UNIT · COMMAND · YOUR TURN
 
 Fix Dat Armour Up

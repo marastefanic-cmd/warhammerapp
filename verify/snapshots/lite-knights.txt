@@ -2361,7 +2361,7 @@ Allarus Custodian×2
 5+
 3
 4+
-WHEN TARGETEDTrajann Valoris · Feel No Pain 5+ · Kaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · Trajann Valoris · Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETEDTrajann Valoris · Feel No Pain 5+ · Feel No Pain 5+ against mortal wounds · Trajann Valoris · Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
@@ -2849,7 +2849,7 @@ Contemptor-Achillus Dreadnought
 5+
 3
 5+
-WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETEDFeel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -2949,7 +2949,7 @@ Contemptor-Galatus Dreadnought
 5+
 3
 4+
-WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETEDFeel No Pain 5+ against mortal wounds · -1 to wound rolls for attacks with S greater than its T · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -3048,7 +3048,7 @@ Telemon Heavy Dreadnought
 5+
 4
 4+
-WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · Feel No Pain 5+ · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETEDFeel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · Feel No Pain 5+ · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -3153,7 +3153,7 @@ Telemon Heavy Dreadnought
 5+
 4
 4+
-WHEN TARGETEDKaptaris (start of the Fight phase, a readied unit): melee attacks that target it have -1 to hit rolls · Feel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+WHEN TARGETEDFeel No Pain 5+ against mortal wounds · Ranged attacks that target it have -1 D · 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked) · Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
@@ -3785,89 +3785,6 @@ IN THIS ARMYTrajann Valoris, Caladius Annihilator Grav-tank, Contemptor-Achillus
 Ask about this rule
 
 ######## popup rule:Martial Ka'tah · LITE KNIGHTS Lite Knights
-ADEPTUS CUSTODES ARMY RULE
-
-Martial Ka’tah
-
-At the start of your Command phase, friendly ADEPTUS CUSTODES units with this ability are readied. While a friendly unit is readied, you can select one of the ka’tah abilities presented below for that unit to use. If you do, that unit is no longer readied.
-
-Each ka’tah ability will tell you when that ka’tah ability can be used, and the effects that ka’tah ability has on the unit using it.
-
-We recommend placing a token next to each readied unit, removing it when that unit is no longer readied.
-
-Favoured Ka’tah
-
-All detachments tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these detachments, the ka’tah ability that is the Favoured Ka’tah of that detachment grants the additional effect listed in that detachment.
-
-Example: If you selected the Solar Watch detachment, when you select the Calistus ka’tah ability for a readied unit, that unit has +2" M in addition to the normal effect of Calistus.
-
-Conservai
-
-KA’TAH ABILITY
-
-WHEN: Your Command phase.
-
-TARGET: One friendly readied unit.
-
-EFFECT: Until the end of the turn:
-
-Being engaged/battle-shocked does not prevent your unit from being eligible to start an action.
-Starting an action does not prevent your unit from being eligible to shoot.
-Calistus
-
-KA’TAH ABILITY
-
-WHEN: Your Movement phase, when a friendly readied unit is selected to move.
-
-TARGET: That readied unit.
-
-EFFECT: When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.
-
-Salvus
-
-KA’TAH ABILITY
-
-WHEN: Your Shooting phase, when a friendly readied unit is selected to shoot.
-
-TARGET: That readied unit.
-
-EFFECT: Your unit can ignore modifiers to your unit’s:
-
-BS.
-Hit rolls and wound rolls.
-Dacatarai
-
-KA’TAH ABILITY
-
-WHEN: Start of the Fight phase.
-
-TARGET: One friendly readied unit.
-
-EFFECT: Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.
-
-Kaptaris
-
-KA’TAH ABILITY
-
-WHEN: Start of the Fight phase.
-
-TARGET: One friendly readied unit.
-
-EFFECT: Melee attacks that target your unit have -1 to hit rolls.
-
-Rendax
-
-KA’TAH ABILITY
-
-WHEN: Fight phase, when a friendly readied unit is selected to fight.
-
-TARGET: One friendly readied unit.
-
-EFFECT: Your unit’s melee attacks have [Lethal Hits: Monster/Vehicle].
-
-Ask about this rule
-
-######## popup rule:Martial Ka’tah · LITE KNIGHTS Lite Knights
 ADEPTUS CUSTODES ARMY RULE
 
 Martial Ka’tah
