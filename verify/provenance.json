@@ -230,6 +230,12 @@
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
+   "id": "wahahtml:imperial-agents",
+   "label": "Wahapedia imperial-agents",
+   "file": "verify/.cache/waha/imperial-agents.html",
+   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+  },
+  {
    "id": "packet",
    "label": "Packet core stratagems (Wahapedia print, 10/3/26)",
    "file": "verify/sources/packet/core-stratagems.txt",
@@ -492,6 +498,110 @@
    "doc": "pack:tyranids",
    "where": "PDF p20",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "If every model from your army has the **CHAOS KNIGHTS** or **HERETIC ASTARTES** ",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p3",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- Incursion: Up to 250 pts",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Dark Gods",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- Strike Force: Up to 500 pts",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Dark Gods",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- Onslaught: Up to 750 pts",
+   "doc": "wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § Cult of the Dark Gods",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "None of these models can be your **WARLORD**, and they cannot be given Enhanceme",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p3",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "In addition, for each of the following keywords, the number of non-**BATTLELINE*",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p3",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- **KHORNE**",
+   "doc": "pack:world-eaters",
+   "where": "PDF p1",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- **TZEENTCH**",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p2",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- **NURGLE**",
+   "doc": "pack:chaos-space-marines",
+   "where": "PDF p39",
+   "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "core / rule:Daemonic Pact / text",
+   "field": "text",
+   "text": "- **SLAANESH**",
+   "doc": "pack:emperors-children",
+   "where": "PDF p3",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "core / rule:Assigned Agents / text",
+   "field": "text",
+   "text": "If your Army Faction is **AGENTS OF THE IMPERIUM**, then in the Select Detachmen",
+   "doc": "wahahtml:imperial-agents",
+   "where": "Wahapedia imperial-agents § Assigned Agents",
+   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+  },
+  {
+   "item": "core / rule:Assigned Agents / text",
+   "field": "text",
+   "text": "If your Army Faction is not **AGENTS OF THE IMPERIUM**, but every model in your ",
+   "doc": "wahahtml:imperial-agents",
+   "where": "Wahapedia imperial-agents § Assigned Agents",
+   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+  },
+  {
+   "item": "core / rule:Assigned Agents / text",
+   "field": "text",
+   "text": "Note that you can include **AGENTS OF THE IMPERIUM DEDICATED TRANSPORT** units i",
+   "doc": "wahahtml:imperial-agents",
+   "where": "Wahapedia imperial-agents § Assigned Agents",
+   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
   },
   {
    "item": "core / rule:Hazardous / text",
@@ -8947,6 +9057,27 @@
    "sha256": null
   },
   {
+   "item": "navigator-sounds-op-ngl / cerastus-knight-atrapos / ability:Bringer of Justice",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bringer of Justice (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-crusader / ability:Hunter’s Eye",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Hunter’s Eye (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-errant / ability:Mysterious Guardian",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Mysterious Guardian (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
    "field": "ability:The Betrayer (Khârn the Betrayer)",
    "doc": "pack:world-eaters",
@@ -9269,6 +9400,27 @@
    "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
   },
   {
+   "item": "navigator-sounds-op-ngl / knight-crusader / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-defender / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-errant / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
    "item": "purge-goes-the-foe / belisarius-cawl / rules",
    "field": "rules",
    "doc": "pack:adeptus-mechanicus",
@@ -9463,6 +9615,34 @@
    "doc": "pack:emperors-children",
    "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
    "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Thundercharge",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Ram Jets",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Saturation Fire",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
    "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
