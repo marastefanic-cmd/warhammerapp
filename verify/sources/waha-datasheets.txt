@@ -143,3 +143,5 @@ chaos-space-marines Chaos-Predator-Destructor
 chaos-space-marines Chaos-Vindicator
 chaos-space-marines Forgefiend
 chaos-space-marines Maulerfiend
+imperial-knights Knight-Defender
+imperial-agents Navigator

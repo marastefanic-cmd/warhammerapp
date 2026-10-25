@@ -106,5 +106,14 @@
   "source": "matches the less authoritative Wahapedia text, not the Faction Pack: Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit. | differs at \"… the phase, add 1 to the tough[ness characteristic of models in your un…]\" vs source \"… the phase, add 1 to the tough[enss characteristic of models in your un…]\"",
   "reason": "A misprint in GW's Faction Pack: it prints \"Toughenss\" for the Toughness characteristic; Wahapedia (the codex) prints \"Toughness\", and every other word is the Faction Pack's. The owner chose \"Toughness\" (24 Oct 2026): the app keeps the characteristic's name.",
   "evidence": "GW Faction Pack Chaos Space Marines PDF p8, Unholy Fortitude, EFFECT: \"Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.\"; verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane, UNHOLY FORTITUDE: \"Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.\""
+ },
+ {
+  "army": "core",
+  "unit": "rule:Conversion",
+  "field": "text",
+  "app": "Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit.",
+  "source": "…matches up to \"his weapon, if the target is more than 1\" then source has: \"2\" from the bearer, an unmodified successful hit roll of 4+ scores a critical hit. graviton pulsar [anti-vehicle 2+, bla\" | sentences not found: [\"each time an attack is made with this weapon, if the target is more than 18\\\" away from the bearer, an unmodified successful hit roll of 4+ scores a critical hit.\"]",
+  "reason": "[CONVERSION] is a weapon ability GW's datasheets define per weapon, each with its own range (the Faction Pack's Armiger Moirax conversion beam cannon: \"more than 12\"\"; its Knight Castellan/Valiant profile: \"more than 24\"\"). The app's lists have one such weapon, the Knight Defender's conversion beam obliterator, so the glossary entry is that datasheet's wording (RULE_SRC names it). GW's Faction Pack does not reprint the Knight Defender datasheet; the Wahapedia Knight Defender datasheet (the codex) is the only source of these words, which texts.js does not search for glossary entries.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html, under the weapons: \"Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.\"; GW Faction Pack Imperial Knights lines 369 and 785 (other weapons' Conversion, 24\" and 12\")."
  }
 ]

@@ -1627,5 +1627,65 @@
   "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/dread-host.txt line 275.",
   "by": "hand (Claude)"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "stats.base",
+  "app": "Knight Defender: 170×109mm Oval",
+  "source": "Knight Defender: 170x109mm",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has Knight Defender: 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval; New Recruit’s export (catalogue revision 2) has 170×109mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3351: \"Knight Defender  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: 170×109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "ability",
+  "app": "Defender’s Duty",
+  "source": "",
+  "reason": "GW names the ability Defender’s Duty, BSData at the pin (Imperium - Imperial Knights catalogue revision 2) Warden’s Duty. GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html: \"Defender’s Duty\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "ability",
+  "app": "",
+  "source": "Warden's Duty (Bondsman)",
+  "reason": "GW names the ability Defender’s Duty, BSData at the pin (Imperium - Imperial Knights catalogue revision 2) Warden’s Duty. GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html: \"Defender’s Duty\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-errant",
+  "field": "rules",
+  "app": "",
+  "source": "Assault",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) gives the unit Assault; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Errant.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D6, Code Chivalric, Super-heavy Walker\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "navigator",
+  "field": "ability.text",
+  "app": "Third Eye: At the start of your Shooting phase, select one enemy unit within 12\" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**.",
+  "source": "At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit; if the test is failed, that enemy unit suffers 3 mortal wounds.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: \"At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suf…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "navigator",
+  "field": "rules",
+  "app": "",
+  "source": "Assigned Agents",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) gives the unit Assigned Agents, the army rule of its own faction (Imperial Agents; GW’s datasheet prints it under ARMY RULES); the unit is an ally in a Imperial Knights army, and the owner’s ruling is that a unit taken as an ally or agent does not get its own faction’s army rule (as the Nurglings in Chaos Knights lists have no Shadow of Chaos).",
+  "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: ARMY RULES \"Assigned Agents\".",
+  "by": "verify/from-json.js"
  }
 ]

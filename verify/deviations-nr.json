@@ -1677,5 +1677,15 @@
   "reason": "The datasheet's keywords include CALADIUS (\"KEYWORDS: VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"); New Recruit (BSData) has no CALADIUS category for the unit, only its name \"Caladius Annihilator Grav-tank\". The app adds CALADIUS, as GW prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html, KEYWORDS: \"VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM\"; verify/sources/nr/dread-host.txt line 275.",
   "by": "hand (Claude)"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "stats[Knight Defender].base",
+  "app": "170×109mm Oval",
+  "source": "170x109mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3351: \"Knight Defender  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 170x109mm.",
+  "by": "verify/from-json.js"
  }
 ]

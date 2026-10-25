@@ -657,7 +657,10 @@ function buildRoster(army, MAP, issues) {
   const shRoot = shown.length ? rootNode(cat, 'Show/Hide Options')[0] : null;
   if (shRoot) {
     const top = new Sel(shRoot.n, 1, force);
-    const opts = kids(shRoot.n);
+    // (every catalogue the faction's imports links the same Show/Hide Options entry, each link adding its own options inside itself:
+    // the Imperial Knights catalogue's "Show Imperial Agents", which the Agents of the Imperium catalogue's link does not have)
+    const links = rootLinksOf(cat).filter((r) => r.link && nn(r.link.name) === nn('Show/Hide Options') && r.link.targetId === (shRoot.n.link || {}).targetId);
+    const opts = kids(shRoot.n).concat(links.flatMap((r) => (r.link.entryLinks || []).map((l) => { const t = SRC.get(l.targetId); return t ? node(t, l) : null; }).filter(Boolean)));
     for (const o of shown) { const k = opts.find((x) => x.type === 'upgrade' && nn(x.name) === nn('Show ' + o)); if (k) addChain(top, [k], 1); }
   }
   // units, every copy
