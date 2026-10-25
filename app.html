@@ -4602,8 +4602,10 @@ function screenStrats(){
 const modelCount = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
 const lineParts = m => { const x = /^(\d+)× (.+?)(?: \(([^)]+)\))?$/.exec(m) || [, '1', m]; return { n:+x[1], name:x[2], extra:x[3] || '' }; };
 const baseName = name => name.replace(/ w\/.*$/, '');
+// a model of a profile that carries wargear GW gives its own base is on that base (baseWith: the Skitarii Rangers' transuranic arquebus)
+const withGear = (s, u, line) => { const g = ((u.gear || [])[line] || []).map(norm), k = Object.keys(s.baseWith || {}).find(x => g.includes(norm(x))); return k ? s.baseWith[k] : s.base; };
 function baseOf(u, name, line){
-  if(u.stats.length === 1) return u.stats[0].base;
+  if(u.stats.length === 1) return withGear(u.stats[0], u, line);
   let rows = u.stats.map(s => ({ s, n:norm(s.name.replace(/ ×\d+$/, '')) }));
   const nm = norm(baseName(name));
   // in an attached unit the first models lines are the characters; the others are bodyguard models
@@ -4611,7 +4613,7 @@ function baseOf(u, name, line){
   if(u.leads && line >= nc && !rows.some(r => r.n === nm)) rows = rows.filter(r => !u.models.slice(0, nc).some(m => r.n === norm(baseName(lineParts(m).name))));
   const pre = (a, b) => { let i = 0; while(i < a.length && a[i] === b[i]) i++; return i; };
   const hit = rows.find(r => r.n === nm) || rows.find(r => nm.startsWith(r.n) || r.n.startsWith(nm)) || rows.slice().sort((x, y) => pre(y.n, nm) - pre(x.n, nm))[0];
-  return hit.s.base;
+  return withGear(hit.s, u, line);
 }
 function proxyLines(u){
   const lines = u.models.map((m, i) => Object.assign(lineParts(m), { gear:(u.gear || [])[i] || [], base:baseOf(u, lineParts(m).name, i) }));

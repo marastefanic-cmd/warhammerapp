@@ -5603,7 +5603,7 @@ const DATASHEETS = {
 'orks/tankbustas':{
   name:'Tankbustas', faction:'orks', bsId:'dadc-d370-ef10-853c',
   stats:[
-    { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
+    { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
     { name:'Tankbusta', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
   ],
   ranged:[
@@ -6914,7 +6914,9 @@ const DATASHEETS = {
   name:'Skitarii Rangers', faction:'adeptus-mechanicus', bsId:'de59-f65c-181a-8509', role:'Battleline',
   stats:[
     // New Recruit prints "Skitarii Rangers (x2)"; the unit's 10 models all have this profile (BSData ×10) (deviations-nr.json)
-    { name:'Skitarii Rangers', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm' }
+    // baseWith: a model of this profile with that wargear is on its own base (GW's base size guide, line 2666: "Skitarii
+    // Rangers/Skitarii Vanguard: Transuranic Arquebus 60x35.5mm Oval Base"); Bases & proxies counts it (verify/bases.js checks it)
+    { name:'Skitarii Rangers', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm', baseWith:{ 'Transuranic arquebus':'60×35.5mm Oval' } }
   ],
   ranged:[
     { name:'Galvanic rifle', range:'30"', A:'2', BS:'4+', S:'4', AP:'0', D:'1' },
@@ -9915,7 +9917,7 @@ const GRANTS = [
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
   unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
-  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','own'],
+  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from','own'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
   abilities:['name','who','at','tag','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']

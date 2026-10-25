@@ -11,6 +11,9 @@
      model          a row for some models of the unit ("Neurogaunts: Nodebeasts"): the unit's name as for plural/squad, and
                     a model name the same, the same as for plural/squad, or all of its words in the row's name
                     ("Jakhals: Dishonoured" for "Dishonoured w/ paired manglers", "Nodebeasts" for "Neurogaunt Nodebeast")
+                    a model name of which the model's name is part ("Nob" of "Tankbustas: Boss Nob"), when only one
+                    row has it and it names no variant ("(Armageddon)"); a model's name sharing a word with a model row of
+                    its unit and matching none gives no answer (null: declare it), never the unit's own row
      exact          the same name (quotes, dashes and case alike), a model's own name first ("Sir Hekhtur" before
                     "Canis Rex", the datasheet he is on)
      model of       a model's own name, in the one row of another unit that names it ("Dark Apostle: Dark Disciple" for the
@@ -33,7 +36,8 @@ const appBase = s => String(s).replace(/\s+Base$/i, '').replace(/(\d)\s*x\s*(\d)
 // "Wardens of Ultramar: Ancient Gadriel, Veteran Sergeant Metaurus": the unit, and the models of it this row is for
 function modelsOf(name) {
   const m = /^([^:]+):\s*(.*)$/.exec(name); if (!m) return null;
-  return { unit: m[1].trim(), models: m[2].split(/\s*,\s*/).map(x => x.trim()).filter(Boolean) };
+  // (a row for two units: "Skitarii Rangers/Skitarii Vanguard: Transuranic Arquebus"; models apart: "Servitor Underseer / Gun Servitors")
+  return { unit: m[1].trim(), units: m[1].split('/').map(x => x.trim()).filter(Boolean), models: m[2].split(/\s*,\s*|\s+\/\s+/).map(x => x.trim()).filter(Boolean) };
 }
 function guide() {
   if (CACHE) return CACHE;
@@ -73,9 +77,22 @@ function lookup(faction, names, unit) {
   // a model of a row for some models: the same, the same as for plural/squad, or all of its words in the name
   const wset = n => new Set(words(n).map(w => w.replace(/s$/, '')));
   const modelIs = [(x, n) => norm(x) === norm(n), (x, n) => loose(x) === loose(n), (x, n) => { const nw = wset(n); return words(x).every(w => nw.has(w.replace(/s$/, ''))); }];
+  const ofUnit = r => r.models && r.models.units.some(x => loose(x) === loose(unit));
   if (unit) for (const is of modelIs) for (const n of all) {
-    const e = rows.find(r => r.models && loose(r.models.unit) === loose(unit) && r.models.models.some(x => is(x, n)));
+    const e = rows.find(r => ofUnit(r) && r.models.models.some(x => is(x, n)));
     if (e) return hit(e, 'model', n);
+  }
+  // a model's name that is part of a model row's ("Nob" of "Tankbustas: Boss Nob"): that row, when it is the only one and names
+  // no variant the name does not ("Boyz: Boss Nob (Armageddon)"); a model's name that shares a word with a model row of its unit
+  // and matches none: no answer (the gate asks for a declaration), never the unit's own row
+  if (unit) for (const n of all.filter(n => loose(n) !== loose(unit))) {
+    const nw = wset(n);
+    const part = rows.filter(r => ofUnit(r) && r.models.models.some(x => { const xw = wset(x); return [...nw].every(w => xw.has(w)); }));
+    if (part.length === 1) {
+      const x = part[0].models.models.find(x => { const xw = wset(x); return [...nw].every(w => xw.has(w)); });
+      if (!/\(/.test(x) || /\(/.test(n)) return hit(part[0], 'model (part of its name)', n);
+    }
+    if (part.length || rows.some(r => ofUnit(r) && r.models.models.some(x => words(x).some(w => nw.has(w.replace(/s$/, '')))))) return null;
   }
   for (const n of own) {
     const e = rows.find(r => norm(r.name) === norm(n)); if (e) return hit(e, 'exact', n);
@@ -105,11 +122,12 @@ function declared(sid, model) {
   const d = D.find(x => x.datasheet === sid && norm(x.row) === norm(model)); if (!d) return null;
   const G = guide(), e = d.guide ? (G.factions[d.guide.section] || []).find(r => r.name === d.guide.entry) : null;
   const where = 'verify/deviations-bases.json (' + sid + ' · ' + d.row + ')';
+  if (d.guide && !e) throw new Error(where + ' names the guide’s row "' + d.guide.entry + '" (' + d.guide.section + '), which ' + (G.file || 'the guide (not cached)') + ' does not have');
   if (e && !d.gwError) return Object.assign({}, e, { entry: e.name, file: G.file, how: 'declared', line: e.first || e.line, declaredIn: where });
   return { base: d.app, printed: d.app, entry: e ? e.name : null, file: G.file, how: e ? 'declared: GW error' : 'declared: not in the guide', line: e ? e.first || e.line : null, declaredIn: where, waha: d.waha || null };
 }
 
-module.exports = { guide, lookup, appBase, declared };
+module.exports = { guide, lookup, appBase, declared, norm, words, loose };
 if (require.main === module) {
   const [fac, ...names] = process.argv.slice(2);
   console.log(JSON.stringify(lookup(fac.split(','), names, names[0]), null, 1));

@@ -1947,5 +1947,15 @@
   "where": "Flesh Hounds",
   "reason": "GW’s base size guide prints the base as an oval, \"60x35.5mm Oval Base\"; BSData (Flesh Hounds) gives 60x35.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3904 (\"Flesh Hounds  60x35.5mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Daemons Library.json line 5571 (Flesh Hounds, Base 60x35.5mm)."
+ },
+ {
+  "army": "shooty",
+  "unit": "mek-tankbustas",
+  "field": "stats.base",
+  "app": "Nob: 40mm",
+  "source": "Nob: 32mm",
+  "where": "Tankbustas › Nob",
+  "reason": "GW’s base size guide gives the Tankbustas’ Boss Nob (the app’s and New Recruit’s \"Nob\") a 40mm base; BSData (the Nob profile the Tankbustas link to) gives 32mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3532 (\"Tankbustas: Boss Nob  40mm\"); verify/.cache/bsdata/Orks.json line 589 (the shared Nob profile bd7a-2297-edcb-9729, which the Tankbustas entry links at line 20096: Base 32mm); verify/.cache/waha/ds/orks_Tankbustas.html: the Nob \"(⌀40mm)\" (the Tankbustas ⌀32mm)."
  }
 ]
