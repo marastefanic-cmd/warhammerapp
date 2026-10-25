@@ -5505,7 +5505,7 @@ const DATASHEETS = {
 'orks/wazdakka-gutsmek':{
   name:'Wazdakka Gutsmek', faction:'orks', bsId:'2ab7-ab71-0af4-5d39', role:'Epic Hero',
   stats:[
-    { name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120mm' }
+    { name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
   ranged:[
     { name:'Grabba Dragga', range:'12"', A:'1', BS:'2+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','PRECISION'] },
@@ -5568,7 +5568,7 @@ const DATASHEETS = {
 'orks/warboss':{
   name:'Warboss', faction:'orks', bsId:'2efc-c4b3-2ecc-5a37', role:'Character',
   stats:[
-    { name:'Warboss', M:'6"', T:'6', Sv:'4+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
+    { name:'Warboss', M:'6"', T:'6', Sv:'4+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
   ranged:[
     { name:'Kustom Shoota', range:'18"', A:'4', BS:'5+', S:'4', AP:'0', D:'1' }

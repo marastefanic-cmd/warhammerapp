@@ -97,7 +97,19 @@ function lookup(faction, names, unit) {
   return null;
 }
 
-module.exports = { guide, lookup, appBase };
+// a model's base as verify/deviations-bases.json declares it (the gate's `bases` step checks the declarations), by its
+// datasheet's id in DATASHEETS ("orks/warboss") and the model's name: the guide's row it names (Warboss (Armageddon)), or the
+// declared base where the guide has none or its row is taken to be GW's error (Wazdakka Gutsmek); null when none is declared
+function declared(sid, model) {
+  let D; try { D = JSON.parse(fs.readFileSync(path.join(__dirname, 'deviations-bases.json'), 'utf8')); } catch (e) { return null; }
+  const d = D.find(x => x.datasheet === sid && norm(x.row) === norm(model)); if (!d) return null;
+  const G = guide(), e = d.guide ? (G.factions[d.guide.section] || []).find(r => r.name === d.guide.entry) : null;
+  const where = 'verify/deviations-bases.json (' + sid + ' · ' + d.row + ')';
+  if (e && !d.gwError) return Object.assign({}, e, { entry: e.name, file: G.file, how: 'declared', line: e.first || e.line, declaredIn: where });
+  return { base: d.app, printed: d.app, entry: e ? e.name : null, file: G.file, how: e ? 'declared: GW error' : 'declared: not in the guide', line: e ? e.first || e.line : null, declaredIn: where, waha: d.waha || null };
+}
+
+module.exports = { guide, lookup, appBase, declared };
 if (require.main === module) {
   const [fac, ...names] = process.argv.slice(2);
   console.log(JSON.stringify(lookup(fac.split(','), names, names[0]), null, 1));

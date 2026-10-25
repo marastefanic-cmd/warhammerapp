@@ -5,7 +5,9 @@
    datasheet's faction name) by its datasheet's name and the model's, and must equal it as the app writes it: GW's wording
    ("Oval", "Hull"), × for GW's x, the mm as GW prints it, without the word "Base" ("170×109mm Oval").
    A row the guide has under another name or section, or not at all, is declared in verify/deviations-bases.json:
-     guide: { section, entry }   the guide's row for it (compared as any other)
+     guide: { section, entry }   the guide's row for it (compared as any other; another row than the lookup's when the
+                                 model is a variant: "Warboss (Armageddon)")
+     + gwError: { printed }      that row is taken to be GW's error: the app has `app`, and the row must still print `printed`
      guide: null                 the guide has none: the app's base (app) is Wahapedia's datasheet's (waha: the cached page,
                                  compared), and the guide must still have no row for it
    with its reason and evidence. Fails on any difference, an undeclared missing row, or a declaration nothing uses.
@@ -49,7 +51,17 @@ for (const a of D.armies) for (const u of a.units) (u.stats || []).forEach((row,
     if (dev.guide) {
       const e = (guide.factions[dev.guide.section] || []).find(r => r.name === dev.guide.entry);
       if (!e) { fail(where, DEVF + ' names the guide’s row "' + dev.guide.entry + '" (' + dev.guide.section + '), which the guide does not have'); return; }
-      if (L) fail(where, DEVF + ' names the guide’s row "' + dev.guide.entry + '", but the guide’s lookup now finds "' + L.entry + '" (line ' + L.line + '): drop the declaration');
+      // a declaration the lookup makes unneeded: it names the row the lookup finds, and takes that row's base
+      if (L && L.entry === e.name && L.line === e.line && !dev.gwError) fail(where, DEVF + ' names the guide’s row "' + e.name + '", which the guide’s lookup finds by itself (line ' + L.line + '): drop the declaration');
+      if (dev.gwError) {
+        // the guide's row taken to be a GW error: it must still print what the declaration quotes (else GW changed it: look again),
+        // and the app has the declared base, written as the guide writes its bases
+        Object.assign(rec, { gw: e.base, line: e.line, entry: e.name, how: 'declared: GW error' });
+        if (e.printed !== dev.gwError.printed) fail(where, DEVF + ' declares GW’s "' + dev.gwError.printed + '" an error, but line ' + e.line + ' now prints "' + e.printed + '": look again');
+        if (app !== dev.app) fail(where, 'app ' + app + ', declared (' + DEVF + ') ' + dev.app);
+        if (!FORM.test(String(app || ''))) fail(where, 'base "' + app + '" is not in a form GW’s guide prints (e.g. "40mm", "170×109mm Oval", "Hull")');
+        return;
+      }
       Object.assign(rec, { gw: e.base, line: e.line, entry: e.name, how: 'declared' });
       if (app !== e.base) fail(where, 'app ' + app + ', GW ' + e.base + ' (' + guide.file + ' line ' + e.line + ': "' + e.name + '  ' + e.printed + '", declared in ' + DEVF + ')');
     } else {
@@ -73,4 +85,4 @@ fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/bases.json'), JSON.stringify({ guide: guide.file, checked: rows.length, failures: fails, rows }, null, 1) + '\n');
 if (fails.length) { console.log('FAIL bases: ' + fails.length + ' of ' + rows.length + ' model rows\n' + fails.map(x => ' - ' + x).join('\n')); process.exit(1); }
 const nDecl = rows.filter(r => /^declared/.test(r.how)).length;
-console.log('bases: ' + rows.length + ' model rows in ' + D.armies.length + ' lists have GW’s base as its guide prints it (' + guide.file.replace(/^.*\//, '') + '; ' + nDecl + ' by a declaration in ' + DEVF + ', ' + rows.filter(r => r.how === 'declared: not in the guide').length + ' of them Wahapedia’s where the guide has none)');
+console.log('bases: ' + rows.length + ' model rows in ' + D.armies.length + ' lists have GW’s base as its guide prints it (' + guide.file.replace(/^.*\//, '') + '; ' + nDecl + ' by a declaration in ' + DEVF + ', ' + rows.filter(r => r.how === 'declared: not in the guide').length + ' of them Wahapedia’s where the guide has none, ' + rows.filter(r => r.how === 'declared: GW error').length + ' where the guide’s row is taken to be GW’s error)');

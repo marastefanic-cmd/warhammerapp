@@ -1682,21 +1682,11 @@
   "army": "shooty",
   "unit": "wazdakka",
   "field": "stats[Wazdakka Gutsmek].base",
-  "app": "120mm",
+  "app": "120x92mm Oval",
   "source": "120x92mm",
   "where": "verify/sources/nr/shooty.txt p5",
-  "reason": "GW’s base size guide gives Wazdakka Gutsmek a 120mm base; New Recruit (BSData) gives 120x92mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3539 (\"Wazdakka Gutsmek  120mm\"); verify/sources/nr/shooty.txt line 221 (Base 120x92mm)."
- },
- {
-  "army": "shooty",
-  "unit": "warboss",
-  "field": "stats[Warboss].base",
-  "app": "40mm",
-  "source": "50mm",
-  "where": "verify/sources/nr/shooty.txt p9",
-  "reason": "GW’s base size guide gives Warboss a 40mm base; New Recruit (BSData) gives 50mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3535 (\"Warboss  40mm\"); verify/sources/nr/shooty.txt line 353 (Base 50mm)."
+  "reason": "GW’s base size guide prints \"Wazdakka Gutsmek 120mm\", taken to be GW’s error (declared in verify/deviations-bases.json: the guide’s only 120mm round base; every other oval is \"…x…mm Oval Base\"; the owner, 2026-10-25: the base is definitely oval); New Recruit (BSData) gives 120x92mm without \"Oval\". The app writes it in GW’s oval wording. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3539 (\"Wazdakka Gutsmek  120mm\"), 3885 (\"Forgefiend  120x92mm Oval Base\"); verify/sources/nr/shooty.txt line 221 (Base 120x92mm)."
  },
  {
   "army": "shooty",

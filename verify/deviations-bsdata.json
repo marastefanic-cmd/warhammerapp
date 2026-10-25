@@ -1632,21 +1632,11 @@
   "army": "shooty",
   "unit": "wazdakka",
   "field": "stats.base",
-  "app": "Wazdakka Gutsmek: 120mm",
+  "app": "Wazdakka Gutsmek: 120×92mm Oval",
   "source": "Wazdakka Gutsmek: 120x92mm",
   "where": "Wazdakka Gutsmek",
-  "reason": "GW’s base size guide gives Wazdakka Gutsmek a 120mm base; BSData (Wazdakka Gutsmek) gives 120x92mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3539 (\"Wazdakka Gutsmek  120mm\"); verify/.cache/bsdata/Orks.json line 33403 (Wazdakka Gutsmek, Base 120x92mm)."
- },
- {
-  "army": "shooty",
-  "unit": "warboss",
-  "field": "stats.base",
-  "app": "Warboss: 40mm",
-  "source": "Warboss: 50mm",
-  "where": "Warboss",
-  "reason": "GW’s base size guide gives Warboss a 40mm base; BSData (Warboss) gives 50mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3535 (\"Warboss  40mm\"); verify/.cache/bsdata/Orks.json line 21535 (Warboss, Base 50mm)."
+  "reason": "GW’s base size guide prints \"Wazdakka Gutsmek 120mm\", taken to be GW’s error (declared in verify/deviations-bases.json: the guide’s only 120mm round base; every other oval is \"…x…mm Oval Base\"; the owner, 2026-10-25: the base is definitely oval); BSData (Wazdakka Gutsmek) gives 120x92mm without \"Oval\". The app writes it in GW’s oval wording. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3539 (\"Wazdakka Gutsmek  120mm\"), 3885 (\"Forgefiend  120x92mm Oval Base\"); verify/.cache/bsdata/Orks.json line 33403 (Wazdakka Gutsmek, Base 120x92mm)."
  },
  {
   "army": "shooty",
