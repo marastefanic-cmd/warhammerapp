@@ -1059,17 +1059,18 @@ Cybernetica Datasmith supports Kastelan Robots
 ######## bases · RULES Bases & proxies
 BASES TO PRINT
 
-20× 25mm
+18× 25mm
 2× 32mm
 4× 60mm
+2× 60×35.5mm Oval
 1× 80mm
-7× 105×70mm
+7× 105×70mm Oval
 1× 130mm
 
 WHAT TO WRITE ON EACH BASE
 
 Belisarius Cawl
-1× 105×70mm
+1× 105×70mm Oval
 Belisarius Cawl · Warlord
 Thulia Ghuld
 1× 80mm
@@ -1091,7 +1092,7 @@ Alpha · Alpha combat weapon
 Arc rifle · no Galvanic rifle
 1× 25mm
 Plasma caliver · no Galvanic rifle
-1× 25mm
+1× 60×35.5mm Oval
 Transuranic arquebus · no Galvanic rifle
 1× 25mm
 Omnispex
@@ -1099,11 +1100,11 @@ Omnispex
 standard Close combat weapon, Galvanic rifle
 Ironstrider Ballistarii
 1 of 2
-3× 105×70mm
+3× 105×70mm Oval
 standard Ironstrider feet, Twin cognis lascannon
 Ironstrider Ballistarii
 2 of 2
-3× 105×70mm
+3× 105×70mm Oval
 standard Ironstrider feet, Twin cognis autocannon
 Onager Dunecrawler
 1× 130mm
@@ -1113,7 +1114,7 @@ Skorpius Disintegrator
 1× no base
 Skorpius Disintegrator
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2512,7 +2513,7 @@ LD
 OC
 InSv
 Belisarius Cawl
-105×70mm
+105×70mm Oval
 8"
 8
 2+
@@ -3087,7 +3088,7 @@ LD
 OC
 InSv
 Skitarii Rangers×10
-25mm
+25mm · 60×35.5mm Oval w/ Transuranic arquebus
 6"
 3
 4+
@@ -3225,7 +3226,7 @@ LD
 OC
 InSv
 Ironstrider Ballistarii×3
-105×70mm
+105×70mm Oval
 10"
 7
 3+
@@ -3331,7 +3332,7 @@ LD
 OC
 InSv
 Ironstrider Ballistarii×3
-105×70mm
+105×70mm Oval
 10"
 7
 3+

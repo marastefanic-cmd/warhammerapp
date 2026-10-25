@@ -1118,7 +1118,7 @@ Sekhetar Robots
 2× 40mm
 standard Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR

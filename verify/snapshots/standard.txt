@@ -1058,9 +1058,9 @@ BASES TO PRINT
 18× 32mm
 15× 40mm
 2× 50mm
-1× 90×52.5mm
+1× 90×52.5mm Oval
 1× 100mm
-2× 120×92mm
+2× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
@@ -1078,7 +1078,7 @@ standard Bolt pistol, Chainblade
 2× 32mm
 Khornate eviscerator + Plasma pistol · no Bolt pistol, no Chainblade
 Lord on Juggernaut
-1× 90×52.5mm
+1× 90×52.5mm Oval
 Lord on Juggernaut
 Slaughterbound
 1× 50mm
@@ -1117,13 +1117,13 @@ Dishonoured · Paired manglers
 standard Autopistol, Chainblades
 Forgefiend
 2 units: mark them apart (1, 2)
-1× 120×92mm
+1× 120×92mm Oval
 Forgefiend
 Chaos Rhino
 1× no base
 Chaos Rhino
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2971,7 +2971,7 @@ LD
 OC
 InSv
 Lord on Juggernaut
-90×52.5mm
+90×52.5mm Oval
 10"
 6
 3+
@@ -3788,7 +3788,7 @@ LD
 OC
 InSv
 Forgefiend
-120×92mm
+120×92mm Oval
 10"
 10
 3+

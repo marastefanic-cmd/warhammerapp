@@ -1428,18 +1428,18 @@ Mek supports Flash Gitz
 BASES TO PRINT
 
 30× 25mm
-15× 32mm
-11× 40mm
+13× 32mm
+13× 40mm
 1× 50mm
 6× 60mm
-3× 75×42mm
+3× 75×42mm Oval
 2× 90mm
-1× 120×92mm
+1× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
 Wazdakka Gutsmek
-1× 120×92mm
+1× 120×92mm Oval
 Wazdakka Gutsmek
 Big Mek Dakkarig · Dreadherder
 1× 90mm
@@ -1458,7 +1458,7 @@ Mek
 2 units: mark them apart (1, 2)
 1× 32mm
 Mek
-1× 32mm
+1× 40mm
 Nob · Choppa + 2× Rokkit pistol
 1× 32mm
 2× Busta Rokkit Launcha
@@ -1477,13 +1477,13 @@ Gretchin
 10× 25mm
 standard Grot Blasta, Scavenged Shivs
 Deffkoptas
-3× 75×42mm
+3× 75×42mm Oval
 standard Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
 Killa Kans
 6× 60mm
 standard Kan Blasta, Kan Klaw
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2765,7 +2765,7 @@ LD
 OC
 InSv
 Wazdakka Gutsmek
-120×92mm
+120×92mm Oval
 14"
 8
 3+
@@ -3385,7 +3385,7 @@ Mek
 1
 –
 Nob
-32mm
+40mm
 6"
 5
 4+
@@ -3820,7 +3820,7 @@ LD
 OC
 InSv
 Deffkoptas×3
-75×42mm
+75×42mm Oval
 12"
 6
 4+

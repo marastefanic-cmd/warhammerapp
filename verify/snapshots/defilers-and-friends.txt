@@ -932,7 +932,7 @@ BASES TO PRINT
 5× 40mm
 1× 50mm
 1× 60mm
-2× 120×92mm
+2× 120×92mm Oval
 2× 160mm
 
 WHAT TO WRITE ON EACH BASE
@@ -976,13 +976,13 @@ Defiler
 Defiler
 Maulerfiend
 2 units: mark them apart (1, 2)
-1× 120×92mm
+1× 120×92mm Oval
 Maulerfiend
 Chaos Rhino
 1× no base
 Chaos Rhino
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -3210,7 +3210,7 @@ LD
 OC
 InSv
 Maulerfiend
-120×92mm
+120×92mm Oval
 10"
 10
 3+

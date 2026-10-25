@@ -1116,9 +1116,9 @@ BASES TO PRINT
 11× 40mm
 1× 50mm
 1× 60mm
-6× 75×42mm
+6× 75×42mm Oval
 3× 80mm
-1× 90×52.5mm
+1× 90×52.5mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
@@ -1158,17 +1158,17 @@ Gretchin
 10× 25mm
 standard Grot Blasta, Scavenged Shivs
 Deffkoptas
-2× 75×42mm
+2× 75×42mm Oval
 standard Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
-1× 75×42mm
+1× 75×42mm Oval
 Kustom Mega-blasta · no Rokkit Launcha
 Squighog Boyz
-1× 90×52.5mm
+1× 90×52.5mm Oval
 Nob on Smasha Squig · Big Choppa + Slugga
-3× 75×42mm
+3× 75×42mm Oval
 standard Saddlegit’s Shiv, Squig Jaws, Stikka
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -3405,7 +3405,7 @@ LD
 OC
 InSv
 Deffkoptas×3
-75×42mm
+75×42mm Oval
 12"
 6
 4+
@@ -3537,7 +3537,7 @@ LD
 OC
 InSv
 Nob on Smasha Squig
-90×52.5mm
+90×52.5mm Oval
 10"
 6
 4+
@@ -3546,7 +3546,7 @@ Nob on Smasha Squig
 2
 6+
 Squighog Boyz×3
-75×42mm
+75×42mm Oval
 10"
 6
 4+

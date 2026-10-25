@@ -1028,7 +1028,7 @@ Caladius Annihilator Grav-tank
 1× 170×109mm Oval
 Caladius Annihilator Grav-tank
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR

@@ -1061,7 +1061,7 @@ Gretchin
 10× 25mm
 standard Grot Blasta, Scavenged Shivs
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
