@@ -1,6 +1,6 @@
 {
- "hash": "0f54123d7d0ef624a6568fcc684685a36fd414d62a31215e15eebe16f03162e8",
- "at": "2026-10-25T07:34:20.569Z",
+ "hash": "592f87a2f0a72341d8951a353f0eebbd4d2a2dab4e62368a672ae5710636c742",
+ "at": "2026-10-25T22:35:17.032Z",
  "ok": true,
  "steps": {
   "data": {
@@ -29,15 +29,19 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 14308 facts checked against BSData b4dc3f4 (clone) {\"gear\":1039,\"stats\":2187,\"weapons\":6820,\"abilities\":1276,\"keywords\":1540,\"rules\":902,\"grants\":288,\"points\":255,\"extract\":1}; 164 deviations used; 0 failures"
+   "summary": "bsdata: 14308 facts checked against BSData b4dc3f4 (clone) {\"gear\":1039,\"stats\":2187,\"weapons\":6820,\"abilities\":1276,\"keywords\":1540,\"rules\":902,\"grants\":288,\"points\":255,\"extract\":1}; 197 deviations used; 0 failures"
   },
   "dispositions": {
    "ok": true,
    "summary": "dispositions: 35 detachments match BSData; every list’s disposition is one its detachments allow"
   },
+  "bases": {
+   "ok": true,
+   "summary": "bases: 243 model rows in 22 lists have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 10 by a declaration in verify/deviations-bases.json, 4 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
+  },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 13570 facts checked (army 212, units 149, roster 633, pts 298, copies 149, models 149, enhancement 298, warlord 298, leads 447, gear 262, stats 1737, ranged 2777, from 171, melee 2534, abilities 1414, kw 212, rules 1493, glossary 337); 152 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 13570 facts checked (army 212, units 149, roster 633, pts 298, copies 149, models 149, enhancement 298, warlord 298, leads 447, gear 262, stats 1737, ranged 2777, from 171, melee 2534, abilities 1414, kw 212, rules 1493, glossary 337); 185 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
