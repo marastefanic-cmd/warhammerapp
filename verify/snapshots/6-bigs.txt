@@ -648,27 +648,27 @@ Warden’s Duty (No ARMIGER models in this list): While a model is affected by t
 ######## bases · RULES Bases & proxies
 BASES TO PRINT
 
-2× 150×95mm
-4× 170×109mm
+2× 150×95mm Oval
+4× 170×109mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
 Knight Destrier
 2 units: mark them apart (1, 2)
-1× 150×95mm
+1× 150×95mm Oval
 Knight Destrier
 Knight Errant
-1× 170×109mm
+1× 170×109mm Oval
 Knight Errant
 Knight Paladin
 2 units: mark them apart (1, 2)
-1× 170×109mm
+1× 170×109mm Oval
 Knight Paladin
 Knight Warden
-1× 170×109mm
+1× 170×109mm Oval
 Knight Warden · Warlord
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -1926,7 +1926,7 @@ LD
 OC
 InSv
 Knight Destrier
-150×95mm
+150×95mm Oval
 12"
 10
 3+
@@ -2053,7 +2053,7 @@ LD
 OC
 InSv
 Knight Errant
-170×109mm
+170×109mm Oval
 10"
 11
 3+
@@ -2182,7 +2182,7 @@ LD
 OC
 InSv
 Knight Paladin
-170×109mm
+170×109mm Oval
 10"
 11
 3+
@@ -2320,7 +2320,7 @@ LD
 OC
 InSv
 Knight Warden
-170×109mm
+170×109mm Oval
 10"
 11
 3+

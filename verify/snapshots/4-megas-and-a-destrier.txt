@@ -797,30 +797,30 @@ Knight Destrier · Sanctuary
 BASES TO PRINT
 
 1× 25mm
-1× 150×95mm
-4× 170×109mm
+1× 150×95mm Oval
+4× 170×109mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
 Canis Rex
-1× 170×109mm
+1× 170×109mm Oval
 standard Freedom’s Hand, Las-impulsor, Questoris multi-laser
 1× 25mm
 Sir Hekhtur · Close combat weapon + Hekhtur’s pistol
 Cerastus Knight Atrapos · Bringer of Justice
-1× 170×109mm
+1× 170×109mm Oval
 Cerastus Knight Atrapos · Bringer of Justice
 Cerastus Knight Lancer
-1× 170×109mm
+1× 170×109mm Oval
 Cerastus Knight Lancer
 Knight Crusader · Hunter’s Eye
-1× 170×109mm
+1× 170×109mm Oval
 Knight Crusader · Hunter’s Eye
 Knight Destrier · Sanctuary
-1× 150×95mm
+1× 150×95mm Oval
 Knight Destrier · Sanctuary
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2216,7 +2216,7 @@ LD
 OC
 InSv
 Canis Rex
-170×109mm
+170×109mm Oval
 10"
 11
 3+
@@ -2380,7 +2380,7 @@ LD
 OC
 InSv
 Cerastus Knight Atrapos
-170×109mm
+170×109mm Oval
 12"
 11
 3+
@@ -2524,7 +2524,7 @@ LD
 OC
 InSv
 Cerastus Knight Lancer
-170×109mm
+170×109mm Oval
 14"
 11
 3+
@@ -2632,7 +2632,7 @@ LD
 OC
 InSv
 Knight Crusader
-170×109mm
+170×109mm Oval
 10"
 11
 3+
@@ -2787,7 +2787,7 @@ LD
 OC
 InSv
 Knight Destrier
-150×95mm
+150×95mm Oval
 12"
 10
 3+

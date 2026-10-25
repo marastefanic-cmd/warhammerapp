@@ -763,7 +763,7 @@ BASES TO PRINT
 8× 32mm
 34× 40mm
 1× 100mm
-2× 120×92mm
+2× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
@@ -813,10 +813,10 @@ Dishonoured · Paired manglers
 standard Autopistol, Chainblades
 Forgefiend
 2 units: mark them apart (1, 2)
-1× 120×92mm
+1× 120×92mm Oval
 Forgefiend
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2900,7 +2900,7 @@ LD
 OC
 InSv
 Forgefiend
-120×92mm
+120×92mm Oval
 10"
 10
 3+

@@ -1,0 +1,592 @@
+[
+ {
+  "key": "881a668e4b5a7cf2",
+  "where": "orks/wazdakka-gutsmek · Wazdakka Gutsmek",
+  "verdict": "ok",
+  "why": "Line 3539 is \"Wazdakka Gutsmek  120mm\", the guide's only Wazdakka row. The app keeps the size, 120×92mm, and adds GW's oval wording, as the owner decided (\"definitely oval\") and as the declared GW error states (see the base-exception item). Wahapedia, BSData and New Recruit all give 120x92mm."
+ },
+ {
+  "key": "3dfba33877f46cf2",
+  "where": "orks/deffkoptas · Deffkoptas",
+  "verdict": "ok",
+  "why": "I checked line 3498 by hand: \"Deffkoptas 75x42mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 75×42mm → 75×42mm Oval only adds GW's \"Oval\"; data.js now has 75×42mm Oval."
+ },
+ {
+  "key": "7aff03fd9b7f4eb4",
+  "where": "orks/squighog-boyz · Nob on Smasha Squig",
+  "verdict": "ok",
+  "why": "I checked line 3528 by hand: \"Squighog Boyz: Nob on Smasha Squig 90x52.5mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 90×52.5mm → 90×52.5mm Oval only adds GW's \"Oval\"; data.js now has 90×52.5mm Oval."
+ },
+ {
+  "key": "0ee7257c99960634",
+  "where": "orks/squighog-boyz · Squighog Boyz",
+  "verdict": "ok",
+  "why": "I checked line 3527 by hand: \"Squighog Boyz 75x42mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 75×42mm → 75×42mm Oval only adds GW's \"Oval\"; data.js now has 75×42mm Oval."
+ },
+ {
+  "key": "bda4bd4c137e2e87",
+  "where": "world-eaters/lord-on-juggernaut · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "I checked line 3895 by hand: \"Lord on Juggernaut 90x52.5mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 90×52.5mm → 90×52.5mm Oval only adds GW's \"Oval\"; data.js now has 90×52.5mm Oval."
+ },
+ {
+  "key": "99a388062cb85a01",
+  "where": "world-eaters/forgefiend · Forgefiend",
+  "verdict": "ok",
+  "why": "I checked line 3885 by hand: \"Forgefiend 120x92mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 120×92mm → 120×92mm Oval only adds GW's \"Oval\"; data.js now has 120×92mm Oval."
+ },
+ {
+  "key": "95b65a8359b768d7",
+  "where": "tyranids/tyrannofex · Tyrannofex",
+  "verdict": "ok",
+  "why": "I checked line 3857 by hand: \"Tyrannofex 120x92mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 120×92mm → 120×92mm Oval only adds GW's \"Oval\"; data.js now has 120×92mm Oval."
+ },
+ {
+  "key": "b74bbb3b2f0eefcc",
+  "where": "imperial-knights/knight-destrier · Knight Destrier",
+  "verdict": "ok",
+  "why": "I checked line 3352 by hand: \"Knight Destrier 150x95mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 150×95mm → 150×95mm Oval only adds GW's \"Oval\"; data.js now has 150×95mm Oval."
+ },
+ {
+  "key": "e679088424fc7a55",
+  "where": "imperial-knights/knight-errant · Knight Errant",
+  "verdict": "ok",
+  "why": "I checked line 3353 by hand: \"Knight Errant 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "137d72fb1b49d728",
+  "where": "imperial-knights/knight-paladin · Knight Paladin",
+  "verdict": "ok",
+  "why": "I checked line 3355 by hand: \"Knight Paladin 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "7b10ec650f0ff389",
+  "where": "imperial-knights/knight-warden · Knight Warden",
+  "verdict": "ok",
+  "why": "I checked line 3358 by hand: \"Knight Warden 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "9dffb283c9b3140b",
+  "where": "imperial-knights/canis-rex · Canis Rex",
+  "verdict": "ok",
+  "why": "I checked line 3347 by hand: \"Canis Rex 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "f42a770d9779415f",
+  "where": "imperial-knights/cerastus-knight-atrapos · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "I checked line 3364 by hand: \"Cerastus Knight Atrapos 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "822863ead2c125a3",
+  "where": "imperial-knights/cerastus-knight-lancer · Cerastus Knight Lancer",
+  "verdict": "ok",
+  "why": "I checked line 3366 by hand: \"Cerastus Knight Lancer 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "650602ba459554bd",
+  "where": "imperial-knights/knight-crusader · Knight Crusader",
+  "verdict": "ok",
+  "why": "I checked line 3350 by hand: \"Knight Crusader 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "120bef49b4ecf7d1",
+  "where": "adeptus-mechanicus/belisarius-cawl · Belisarius Cawl",
+  "verdict": "ok",
+  "why": "I checked line 2645 by hand: \"Belisarius Cawl 105x70mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 105×70mm → 105×70mm Oval only adds GW's \"Oval\"; data.js now has 105×70mm Oval."
+ },
+ {
+  "key": "4d93c7927f7fbcc2",
+  "where": "adeptus-mechanicus/ironstrider-ballistarii · Ironstrider Ballistarii",
+  "verdict": "ok",
+  "why": "I checked line 2651 by hand: \"Ironstrider Ballistarii 105x70mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 105×70mm → 105×70mm Oval only adds GW's \"Oval\"; data.js now has 105×70mm Oval."
+ },
+ {
+  "key": "14f1a47e039d7248",
+  "where": "emperors-children/maulerfiend · Maulerfiend",
+  "verdict": "ok",
+  "why": "I checked line 3219 by hand: \"Maulerfiend 120x92mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 120×92mm → 120×92mm Oval only adds GW's \"Oval\"; data.js now has 120×92mm Oval."
+ },
+ {
+  "key": "76f91e46942d2a0e",
+  "where": "chaos-knights/chaos-cerastus-knight-atrapos · Chaos Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "I checked line 3001 by hand: \"Chaos Cerastus Knight Atrapos 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "7b5120c8b9a39225",
+  "where": "chaos-knights/chaos-cerastus-knight-lancer · Chaos Cerastus Knight Lancer",
+  "verdict": "ok",
+  "why": "I checked line 3003 by hand: \"Chaos Cerastus Knight Lancer 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "edc9d511b20c1334",
+  "where": "chaos-knights/knight-despoiler · Knight Despoiler",
+  "verdict": "ok",
+  "why": "I checked line 2988 by hand: \"Knight Despoiler 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "7ef3646f405a50cf",
+  "where": "chaos-knights/knight-ruinator · Knight Ruinator",
+  "verdict": "ok",
+  "why": "I checked line 2990 by hand: \"Knight Ruinator 170x109mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 170×109mm → 170×109mm Oval only adds GW's \"Oval\"; data.js now has 170×109mm Oval."
+ },
+ {
+  "key": "e89e59ca5867ac6d",
+  "where": "world-eaters/bloodthirster · Bloodthirster",
+  "verdict": "ok",
+  "why": "I checked line 3903 by hand: \"Bloodthirster 120x92mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 120×92mm → 120×92mm Oval only adds GW's \"Oval\"; data.js now has 120×92mm Oval."
+ },
+ {
+  "key": "2649465c77be1a19",
+  "where": "world-eaters/flesh-hounds · Flesh Hounds",
+  "verdict": "ok",
+  "why": "I checked line 3904 by hand: \"Flesh Hounds 60x35.5mm Oval Base\". It is the unit's own row (exact name in the right faction section, not a similar unit), and the size matches. 60×35.5mm → 60×35.5mm Oval only adds GW's \"Oval\"; data.js now has 60×35.5mm Oval."
+ },
+ {
+  "key": "41c7a5ee003ebc3a",
+  "where": "world-eaters/chaos-terminators · Chaos Terminators",
+  "verdict": "ok",
+  "why": "Right row: the WORLD EATERS section has no \"Chaos Terminators\"; its only Terminator row is line 3899 \"Terminator Squad 40mm\" (CSM has \"Chaos Terminator Squad\", EC \"Chaos Terminators\", all 40mm). Wahapedia world-eaters_Chaos-Terminators ⌀40mm agrees. App 40mm. The lookup cannot match these names, so the declaration is needed and the gate compares the base."
+ },
+ {
+  "key": "a4a3d08684c1f9b5",
+  "where": "chaos-knights/nurglings · Nurglings",
+  "verdict": "ok",
+  "why": "Right row: CHAOS KNIGHTS has no Nurglings. CHAOS DAEMONS line 2950 \"Nurglings 40mm\" (and DEATH GUARD line 3144, also 40mm); Wahapedia chaos-daemons_Nurglings ⌀40mm. App 40mm."
+ },
+ {
+  "key": "84029c15360a242c",
+  "where": "ultramarines/marneus-calgar · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Right row: line 3627 \"Marneus Calgar in Armour of Antilochus 50mm\" is the guide's only Calgar row. In the 11th-edition datasheet he is a single model (Wahapedia ultramarines_Marneus-Calgar shows just \"Marneus Calgar (⌀50mm)\"; the Victrix Honour Guard have their own row), so no other base is missing. App 50mm."
+ },
+ {
+  "key": "0d2cd28fd05600c0",
+  "where": "orks/warboss · Warboss",
+  "verdict": "ok",
+  "why": "The guide has \"Warboss 40mm\" (line 3535) and \"Warboss (Armageddon) 50mm\" (line 3536). The owner says this model is the Armageddon Warboss on 50mm. New Recruit shooty.txt line 353, BSData and Wahapedia all give 50mm. The declaration only covers orks/warboss, which is used only in the shooty list. The gate fails if the lookup ever finds that row by itself."
+ },
+ {
+  "key": "8038da369c763b52",
+  "where": "orks/wazdakka-gutsmek · Wazdakka Gutsmek",
+  "verdict": "ok",
+  "why": "Line 3539 does print \"Wazdakka Gutsmek 120mm\". It is the only round 120mm in the guide, and \"120x92mm Oval Base\" appears on 65 lines (I counted them). Wahapedia (⌀120 x 92mm), BSData Orks.json line 33403 and New Recruit shooty.txt line 221 all give 120x92mm. The owner decided it is oval. The gate re-checks that GW still prints \"120mm\". The reasoning holds."
+ },
+ {
+  "key": "bd65a011c3fe5b61",
+  "where": "orks/nazdreg · Nazdreg",
+  "verdict": "ok",
+  "why": "\"Nazdreg\" appears nowhere in the guide (ORKS section 3475-3546 checked by hand). Wahapedia orks_Nazdreg gives ⌀60mm, and New Recruit melee.txt line 37 and ooga-booga.txt line 41 give 60mm. App 60mm. The gate fails if the guide ever adds a row."
+ },
+ {
+  "key": "91c238ba66a7c050",
+  "where": "adeptus-custodes/sentinel-guard-sodality · Sentinel Guard",
+  "verdict": "ok",
+  "why": "No \"Sentinel\" in the ADEPTUS CUSTODES section (lines 2603-2634). The guide's only Sentinel rows are the Astra Militarum Armoured/Scout Sentinels. \"Custodian Guard with Adrasite and Pyrithite Spears\" is a different Forge World unit. Wahapedia gives ⌀40mm, and New Recruit emperors-chosen.txt line 93 and dread-host.txt line 94 give 40mm. App 40mm."
+ },
+ {
+  "key": "1fe50244445f83d2",
+  "where": "verify/bases.js",
+  "verdict": "fix",
+  "why": "Typos in an app base string are caught: the gate compares it exactly with GW's value and checks the declared ones against FORM. Unused declarations fail, and so do stale ones (a guide:null row that now exists in the guide, a declaration the lookup makes unnecessary, gwError text that changed). But two kinds of wrong base pass. (1) If a model row's name does not match the guide's \"Unit: Model\" row, the check falls back to the unit's own row without warning. So the Tankbustas \"Nob\" passes at 32mm against \"Tankbustas 32mm\" (line 3531), although GW line 3532 says \"Tankbustas: Boss Nob 40mm\" (Wahapedia also gives Nob ⌀40mm). (2) Only stats rows are checked, so a model merged into a stats row is never compared. The Skitarii Ranger with a transuranic arquebus (purge-goes-the-foe, 1 per unit, 2 units) needs 60×35.5mm Oval (line 2666, and Wahapedia \"60 x 35mm if equipped with transuranic arquebus\"), but it is counted as 25mm.",
+  "fix": "Fail when a unit's guide section has a \"<unit>: <model>\" row (or \"<unit>/…: <model>\") that no stats row of the unit matched and no declaration covers. Also check the unit's `models` entries (gear such as a transuranic arquebus) against such rows. Then fix data.js: orks/tankbustas \"Nob\" base '40mm' (GW line 3532 \"Tankbustas: Boss Nob\"; shooty, 2 units), with NR/BSData deviations for their 32mm. Skitarii Rangers: give the arquebus model its own base, 60×35.5mm Oval (GW line 2666; purge-goes-the-foe, 2 units: Bases to print 18× 25mm + 2× 60×35.5mm Oval instead of 20× 25mm)."
+ },
+ {
+  "key": "6c9921d83e0c4b7e",
+  "where": "verify/base-guide.js",
+  "verdict": "fix",
+  "why": "The five fixed lookups are right; I checked each by hand: Sir Hekhtur at line 3348 is 25mm, Jakhals: Dishonoured at 3890 is 40mm, Neurogaunts: Nodebeasts at 3828 is 28.5mm, Dark Apostle: Dark Disciple at 3033 is 25mm, and Gretchin: Runtherd at 3504 is 32mm. The parser also handles the wrapped \"Wardens of Ultramar\" and \"Masters of the Maelstrom\" rows. But the \"model\" step only matches when every word of the guide's model name is in the app's model name. So the app's \"Nob\" does not match \"Tankbustas: Boss Nob\", and the lookup returns \"Tankbustas 32mm\" (line 3531) as an exact match. GW gives 40mm. The same would happen for \"Boyz: Boss Nob (Armageddon)\" and \"Breaka Boyz: Boss Nob\".",
+  "fix": "lookup: when the unit has \"<unit>: <model>\" rows, a model row whose name is a proper subset of the guide model's words (Nob ⊂ Boss Nob) must match that row (or return null so the gate asks for a declaration). It must not fall through to the unit's own row. Result for Tankbustas/Nob: \"Tankbustas: Boss Nob\" 40mm, line 3532."
+ },
+ {
+  "key": "bb1e949dd3a680ac",
+  "where": "verify/from-json.js · base size",
+  "verdict": "ok",
+  "why": "from-json.js checks declared() before lookup, with the same datasheet id (faction/slug) and model, so a re-import keeps the Warboss at 50mm (Armageddon row), Wazdakka at the declared 120×92mm Oval, and Nazdreg and Sentinel Guard from Wahapedia. The source note names the declaration. Small issue: if a declared guide row vanished, declared() would return base undefined and the row would be silently left alone, but the bases gate would then fail on the missing row. It shares lookup's Tankbustas Boss Nob problem (see the base-guide.js item), and a re-import would keep 32mm until that is fixed."
+ },
+ {
+  "key": "362565f3137cf36b",
+  "where": "verify/deviations-bsdata.json · wazdakka · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Orks.json line 33403) has the same size without \"Oval\" (Wazdakka Gutsmek: 120x92mm → Wazdakka Gutsmek: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "b100d3144fa3a7ef",
+  "where": "verify/deviations-bsdata.json · deffkoptas · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Orks.json line 427) has the same size without \"Oval\" (Deffkoptas: 75x42mm → Deffkoptas ×3: 75×42mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "b100d3144fa3a7ef",
+  "where": "verify/deviations-bsdata.json · deffkoptas · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Orks.json line 427) has the same size without \"Oval\" (Deffkoptas: 75x42mm → Deffkoptas ×3: 75×42mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "cbf3f584de459b31",
+  "where": "verify/deviations-bsdata.json · squighog-boyz · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Orks.json line 18394) has the same size without \"Oval\" (Nob on Smasha Squig: 90x52.5mm → Nob on Smasha Squig: 90×52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "2be63befffa16cd7",
+  "where": "verify/deviations-bsdata.json · squighog-boyz · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Orks.json line 18483) has the same size without \"Oval\" (Squighog Boyz: 75x42mm → Squighog Boyz ×3: 75×42mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "184758e3f4e22399",
+  "where": "verify/deviations-bsdata.json · lord-on-juggernaut-khorne-berzerkers · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - World Eaters.json line 7156) has the same size without \"Oval\" (Lord on Juggernaut: 90x52.5mm → Lord on Juggernaut: 90×52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "aae15b86f9d0bb2a",
+  "where": "verify/deviations-bsdata.json · forgefiend · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Space Marines.json line 36341) has the same size without \"Oval\" (Forgefiend: 120x92mm → Forgefiend: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "184758e3f4e22399",
+  "where": "verify/deviations-bsdata.json · lord-on-juggernaut · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - World Eaters.json line 7156) has the same size without \"Oval\" (Lord on Juggernaut: 90x52.5mm → Lord on Juggernaut: 90×52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "aae15b86f9d0bb2a",
+  "where": "verify/deviations-bsdata.json · forgefiend · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Space Marines.json line 36341) has the same size without \"Oval\" (Forgefiend: 120x92mm → Forgefiend: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "0432eff31a88a947",
+  "where": "verify/deviations-bsdata.json · tyrannofex · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Tyranids.json line 10824) has the same size without \"Oval\" (Tyrannofex: 120x92mm → Tyrannofex: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "877d31436906acfb",
+  "where": "verify/deviations-bsdata.json · knight-destrier · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 11862) has the same size without \"Oval\" (Knight Destrier: 150x95mm → Knight Destrier: 150×95mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "51058e2d088d9720",
+  "where": "verify/deviations-bsdata.json · knight-errant · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 2404) has the same size without \"Oval\" (Knight Errant: 170x109mm → Knight Errant: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "e6d72bafdf00cb46",
+  "where": "verify/deviations-bsdata.json · knight-paladin · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 1971) has the same size without \"Oval\" (Knight Paladin: 170x109mm → Knight Paladin: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "ecec7337cb102e0f",
+  "where": "verify/deviations-bsdata.json · knight-warden · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 3221) has the same size without \"Oval\" (Knight Warden: 170x109mm → Knight Warden: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "7ab1867132c1ab6f",
+  "where": "verify/deviations-bsdata.json · canis-rex · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 288) has the same size without \"Oval\" (Canis Rex: 170x109mm → Canis Rex: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "a660b553f6ef5171",
+  "where": "verify/deviations-bsdata.json · cerastus-knight-atrapos · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 8533) has the same size without \"Oval\" (Cerastus Knight Atrapos: 170x109mm → Cerastus Knight Atrapos: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "49e5d857c9465575",
+  "where": "verify/deviations-bsdata.json · cerastus-knight-lancer · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 7081) has the same size without \"Oval\" (Cerastus Knight Lancer: 170x109mm → Cerastus Knight Lancer: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "36c505abefc9b7e3",
+  "where": "verify/deviations-bsdata.json · knight-crusader · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 3605) has the same size without \"Oval\" (Knight Crusader: 170x109mm → Knight Crusader: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "877d31436906acfb",
+  "where": "verify/deviations-bsdata.json · knight-destrier · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Imperial Knights - Library.json line 11862) has the same size without \"Oval\" (Knight Destrier: 150x95mm → Knight Destrier: 150×95mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "aae15b86f9d0bb2a",
+  "where": "verify/deviations-bsdata.json · forgefiend · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Space Marines.json line 36341) has the same size without \"Oval\" (Forgefiend: 120x92mm → Forgefiend: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "35d40a93e797c249",
+  "where": "verify/deviations-bsdata.json · belisarius-cawl · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Adeptus Mechanicus.json line 1792) has the same size without \"Oval\" (Belisarius Cawl: 105x70mm → Belisarius Cawl: 105×70mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "96fa6903bbb93639",
+  "where": "verify/deviations-bsdata.json · ironstrider-ballistarii · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Adeptus Mechanicus.json line 528) has the same size without \"Oval\" (Ironstrider Ballistarii: 105x70mm → Ironstrider Ballistarii ×3: 105×70mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "96fa6903bbb93639",
+  "where": "verify/deviations-bsdata.json · ironstrider-ballistarii-2 · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Imperium - Adeptus Mechanicus.json line 528) has the same size without \"Oval\" (Ironstrider Ballistarii: 105x70mm → Ironstrider Ballistarii ×3: 105×70mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "3276a0659c7e8538",
+  "where": "verify/deviations-bsdata.json · maulerfiend · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Space Marines.json line 38366) has the same size without \"Oval\" (Maulerfiend: 120x92mm → Maulerfiend: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "442cf62ddb35bfe7",
+  "where": "verify/deviations-bsdata.json · chaos-cerastus-knight-atrapos · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Knights Library.json line 11198) has the same size without \"Oval\" (Chaos Cerastus Knight Atrapos: 170x109mm → Chaos Cerastus Knight Atrapos: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "e9137a056138bdc6",
+  "where": "verify/deviations-bsdata.json · chaos-cerastus-knight-lancer · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Knights Library.json line 9711) has the same size without \"Oval\" (Chaos Cerastus Knight Lancer: 170x109mm → Chaos Cerastus Knight Lancer: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "22c71aad0e61abda",
+  "where": "verify/deviations-bsdata.json · knight-despoiler · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Knights Library.json line 3898) has the same size without \"Oval\" (Knight Despoiler: 170x109mm → Knight Despoiler: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "e76fd101f487178a",
+  "where": "verify/deviations-bsdata.json · knight-ruinator-fleshmetal-fusion · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Knights Library.json line 13745) has the same size without \"Oval\" (Knight Ruinator: 170x109mm → Knight Ruinator: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "e76fd101f487178a",
+  "where": "verify/deviations-bsdata.json · knight-ruinator · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Knights Library.json line 13745) has the same size without \"Oval\" (Knight Ruinator: 170x109mm → Knight Ruinator: 170×109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "645cef30c2f3b3b9",
+  "where": "verify/deviations-bsdata.json · bloodthirster · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Daemons Library.json line 2120) has the same size without \"Oval\" (Bloodthirster: 120x92mm → Bloodthirster: 120×92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "184758e3f4e22399",
+  "where": "verify/deviations-bsdata.json · lord-on-juggernaut-khorne-berzerkers · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - World Eaters.json line 7156) has the same size without \"Oval\" (Lord on Juggernaut: 90x52.5mm → Lord on Juggernaut: 90×52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "9bd61e97250aaade",
+  "where": "verify/deviations-bsdata.json · flesh-hounds · stats.base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. BSData (Chaos - Chaos Daemons Library.json line 5571) has the same size without \"Oval\" (Flesh Hounds: 60x35.5mm → Flesh Hounds: 60×35.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "336449d142d7b1f8",
+  "where": "verify/deviations-nr.json · wazdakka · stats[Wazdakka Gutsmek].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (shooty.txt line 221) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "f7e9fe496dc47748",
+  "where": "verify/deviations-nr.json · deffkoptas · stats[Deffkoptas].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (shooty.txt line 410) has the same size without \"Oval\" (75x42mm → 75x42mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "8dc7ab38186f2bcf",
+  "where": "verify/deviations-nr.json · deffkoptas · stats[Deffkoptas].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (melee.txt line 342) has the same size without \"Oval\" (75x42mm → 75x42mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "c8c63234191d30ae",
+  "where": "verify/deviations-nr.json · squighog-boyz · stats[Nob on Smasha Squig].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (melee.txt line 376) has the same size without \"Oval\" (90x52.5mm → 90x52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "7302ce098a52a46f",
+  "where": "verify/deviations-nr.json · squighog-boyz · stats[Squighog Boyz].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (melee.txt line 377) has the same size without \"Oval\" (75x42mm → 75x42mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "a55aaa260bc7741b",
+  "where": "verify/deviations-nr.json · lord-on-juggernaut-khorne-berzerkers · stats[Lord on Juggernaut].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (princes.txt line 96) has the same size without \"Oval\" (90x52.5mm → 90x52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "20fa2ae782ce1283",
+  "where": "verify/deviations-nr.json · forgefiend · stats[Forgefiend].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (princes.txt line 304) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "793e0f1d4225d8b2",
+  "where": "verify/deviations-nr.json · lord-on-juggernaut · stats[Lord on Juggernaut].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (standard.txt line 180) has the same size without \"Oval\" (90x52.5mm → 90x52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "da2e138ca4636557",
+  "where": "verify/deviations-nr.json · forgefiend · stats[Forgefiend].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (standard.txt line 334) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "b96ce91258c665e4",
+  "where": "verify/deviations-nr.json · tyrannofex · stats[Tyrannofex].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (nidzillas.txt line 262) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "6f5f1388d0753963",
+  "where": "verify/deviations-nr.json · knight-destrier · stats[Knight Destrier].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (6-bigs.txt line 28) has the same size without \"Oval\" (150x95mm → 150x95mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "69d2d4475c1eff7d",
+  "where": "verify/deviations-nr.json · knight-errant · stats[Knight Errant].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (6-bigs.txt line 67) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "a1179dc5f4cdbf13",
+  "where": "verify/deviations-nr.json · knight-paladin · stats[Knight Paladin].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (6-bigs.txt line 105) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "06f158f3a345af89",
+  "where": "verify/deviations-nr.json · knight-warden · stats[Knight Warden].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (6-bigs.txt line 147) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "743705d62c9d9a10",
+  "where": "verify/deviations-nr.json · canis-rex · stats[Canis Rex].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (4-megas-and-a-destrier.txt line 28) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "768b2b3ca312569c",
+  "where": "verify/deviations-nr.json · cerastus-knight-atrapos · stats[Cerastus Knight Atrapos].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (4-megas-and-a-destrier.txt line 72) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "93ed0aa5c5434761",
+  "where": "verify/deviations-nr.json · cerastus-knight-lancer · stats[Cerastus Knight Lancer].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (4-megas-and-a-destrier.txt line 120) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "226e017d2f6178e1",
+  "where": "verify/deviations-nr.json · knight-crusader · stats[Knight Crusader].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (4-megas-and-a-destrier.txt line 155) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "9e38efe981f69047",
+  "where": "verify/deviations-nr.json · knight-destrier · stats[Knight Destrier].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (4-megas-and-a-destrier.txt line 197) has the same size without \"Oval\" (150x95mm → 150x95mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "a5ca7ed12fa3e2d6",
+  "where": "verify/deviations-nr.json · forgefiend · stats[Forgefiend].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (super-terminators.txt line 219) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "d39ac2738b10113a",
+  "where": "verify/deviations-nr.json · belisarius-cawl · stats[Belisarius Cawl].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (purge-goes-the-foe.txt line 87) has the same size without \"Oval\" (105x70mm → 105x70mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "3846057c66fb2905",
+  "where": "verify/deviations-nr.json · ironstrider-ballistarii · stats[Ironstrider Ballistarii].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (purge-goes-the-foe.txt line 241) has the same size without \"Oval\" (105x70mm → 105x70mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "56f4823e88377311",
+  "where": "verify/deviations-nr.json · ironstrider-ballistarii-2 · stats[Ironstrider Ballistarii].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (purge-goes-the-foe.txt line 265) has the same size without \"Oval\" (105x70mm → 105x70mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "42b510994376db25",
+  "where": "verify/deviations-nr.json · maulerfiend · stats[Maulerfiend].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (defilers-and-friends.txt line 314) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "b09430bb452b5cf5",
+  "where": "verify/deviations-nr.json · chaos-cerastus-knight-atrapos · stats[Chaos Cerastus Knight Atrapos].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (infernal-lance.txt line 26) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "72ab68ffbdef75b7",
+  "where": "verify/deviations-nr.json · chaos-cerastus-knight-lancer · stats[Chaos Cerastus Knight Lancer].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (infernal-lance.txt line 68) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "3d6f459d5c640531",
+  "where": "verify/deviations-nr.json · knight-despoiler · stats[Knight Despoiler].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (infernal-lance.txt line 103) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "2ff9d70356e3ad27",
+  "where": "verify/deviations-nr.json · knight-ruinator-fleshmetal-fusion · stats[Knight Ruinator].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (infernal-lance.txt line 140) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "bb27160e9753965b",
+  "where": "verify/deviations-nr.json · knight-ruinator · stats[Knight Ruinator].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (infernal-lance.txt line 176) has the same size without \"Oval\" (170x109mm → 170x109mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "acd1d37694330cfe",
+  "where": "verify/deviations-nr.json · lord-on-juggernaut-khorne-berzerkers · stats[Lord on Juggernaut].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (big-demons-baby.txt line 39) has the same size without \"Oval\" (90x52.5mm → 90x52.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "3bda1527da3e10f3",
+  "where": "verify/deviations-nr.json · bloodthirster · stats[Bloodthirster].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (big-demons-baby.txt line 165) has the same size without \"Oval\" (120x92mm → 120x92mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ },
+ {
+  "key": "08edc497293a44d4",
+  "where": "verify/deviations-nr.json · flesh-hounds · stats[Flesh Hounds].base",
+  "verdict": "ok",
+  "why": "I opened the cited guide line and it matches. New Recruit (big-demons-baby.txt line 313) has the same size without \"Oval\" (60x35.5mm → 60x35.5mm Oval), so the deviation only records GW's wording. The gate passes with it in use (bsdata 196 / nr 184 deviations used, 0 failures)."
+ }
+]

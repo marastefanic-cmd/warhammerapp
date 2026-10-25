@@ -1,0 +1,67 @@
+[
+ {
+  "key": "f6a6aad7f9879002",
+  "where": "orks/tankbustas · Nob",
+  "verdict": "ok",
+  "why": "GW guide line 3532 prints \"Tankbustas: Boss Nob  40mm\" (guide headed LAST UPDATED: OCTOBER 2026); Wahapedia's Tankbustas datasheet also has Nob (⌀40mm), Tankbusta (⌀32mm). data.js line 5606 now 40mm; lookup finds it as 'model (part of its name)'. Snapshot: shooty's Mek+Tankbustas (2 copies) Nob line 32mm→40mm, totals 15×32/11×40 → 13×32/13×40, stat block Nob 40mm. Mutation test (Nob back to 32mm) makes the bases step fail on exactly this row."
+ },
+ {
+  "key": "96f36332f1f4f624",
+  "where": "adeptus-mechanicus/skitarii-rangers · Skitarii Rangers",
+  "verdict": "ok",
+  "why": "GW guide line 2666: \"Skitarii Rangers/Skitarii Vanguard: Transuranic Arquebus  60x35.5mm Oval Base\" → 60×35.5mm Oval in the app's form; Wahapedia agrees in substance (\"25mm, 60 x 35mm if equipped with transuranic arquebus\"; GW's 35.5 wins). Datasheet allows 1 arquebus per unit; purge-goes-the-foe has 1 per unit × copies:2 → snapshot Bases to print 20×25mm → 18×25mm + 2×60×35.5mm Oval, and the per-unit line 'Transuranic arquebus · no Galvanic rifle' is on 60×35.5mm Oval. Mutation tests: removing baseWith, a wrong base, or baseWith on other wargear each fail the gate. Note (not a blocker): the unit screen's stat block still reads 'Skitarii Rangers ×10 · 25mm' — see report."
+ },
+ {
+  "key": "f15a0bf935d1fd85",
+  "where": "orks/gretchin · absent: Gretchin: Runtherd",
+  "verdict": "fix",
+  "why": "The judgement is right: Wahapedia's Gretchin UNIT COMPOSITION is '10-20 Gretchin models' (no Runtherd), New Recruit prints '10x Gretchin' at shooty.txt 384, melee.txt 315, ooga-booga.txt 399, and the Runtherd is its own datasheet (ooga-booga.txt line 100 '1x Runtherd', '• Supporting: Gretchin'), whose stats row in the Zodgrod+Runtherd+Gretchin unit matches this row (32mm). But the reason says the Runtherd 'leads' Gretchin and the evidence says Wahapedia line 1551 is 'led by RUNTHERD': that page says Gretchin are led by ZODGROD WORTSNAGGA and 'can be supported by the following unit: RUNTHERD' (line 1551), and New Recruit says 'Supporting' (the app has also:[{ name:'Runtherd', support:true }]). Correct the wording of the declaration in verify/deviations-bases.json.",
+  "fix": {
+   "absent": { "section": "ORKS", "entry": "Gretchin: Runtherd" },
+   "reason": "GW's guide gives the Runtherd of a Gretchin unit a 32mm base. In these lists the Gretchin units have no Runtherd model (New Recruit: \"10x Gretchin\"): the Runtherd is a datasheet of its own that supports Gretchin (ooga-booga's Zodgrod Wortsnagga + Runtherd + Gretchin unit, on 32mm, matched to this row).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3504 (ORKS): \"Gretchin: Runtherd  32mm\"; verify/sources/nr/shooty.txt line 384, verify/sources/nr/melee.txt line 315, verify/sources/nr/ooga-booga.txt line 399 (\"10x Gretchin\"); verify/sources/nr/ooga-booga.txt line 100 (\"1x Runtherd\", its own unit, \"Supporting: Gretchin\"); verify/.cache/waha/ds/orks_Gretchin.html lines 1530 (\"10-20 Gretchin models\") and 1551 (supported by RUNTHERD)."
+  }
+ },
+ {
+  "key": "e7525f7ad2ee23af",
+  "where": "orks/ghazghkull-thraka · absent: Ghazghkull Thraka: Makari",
+  "verdict": "ok",
+  "why": "Checked against verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html: UNIT COMPOSITION '1 Ghazghkull Thraka model' (⌀80mm), 'YOUR UNIT COSTS 1 model 290'; ability 'Makari, Hoist Dat Banner! (Once per battle, per army) … Place one Makari token next to the unit, removing it after this ability is used.' So Makari is a token, not a model, in 11th. New Recruit: '1x Ghazghkull Thraka' at melee.txt 199 and ooga-booga.txt 361; token text at melee.txt 221-223. GW line 3501 still prints 'Ghazghkull Thraka: Makari  25mm' (a holdover of the old model). Removing the declaration makes the gate fail for both Ghazghkull units (melee, ooga-booga)."
+ },
+ {
+  "key": "ed3db86553be0d08",
+  "where": "verify/bases.js",
+  "verdict": "ok",
+  "why": "Runs clean (243 rows, 1 models line by baseWith, 2 declared absent). It requires every GW 'Unit: Model' row of each datasheet in a unit (stats row on that guide line, a models line by name or wargear on GW's base, or an absent declaration), checks every baseWith against a GW wargear row with the same base, and flags unused declarations; mutation tests confirm each path. Minor limits, not blocking: (1) an `absent` declaration covers every unit of that datasheet, not one unit; (2) a models line's baseWith is looked up across all the unit's stats rows, not only the row baseOf() picks; (3) a line counts as a match when all the words of the row's model are in its name, so a wargear name inside a model name also counts. With today's lists none of these changes a result."
+ },
+ {
+  "key": "568f8c712aa6c8aa",
+  "where": "verify/base-guide.js",
+  "verdict": "ok",
+  "why": "The new step returns 'Tankbustas: Boss Nob' for Nob (the only row whose model contains it, no variant). It returns null instead of the unit's own row when a model name shares a word with a model row of its unit, or when the only row is a variant: Boyz/Nob gives null rather than '(Armageddon)'. Breaka Boyz/Nob gives 'Breaka Boyz: Boss Nob'. 'A/B: Model' rows are split for both units, and models are split on ' / '. declared() now throws on a missing guide row. Absent entries (no `row`) can't be matched by declared() by mistake (norm(undefined) is ''). Over all 243 rows my own matching against the guide agrees with every base: 207 exact, 12 model, 1 part-of-name, 7 plural, 4 words, 2 model-of, 10 declared."
+ },
+ {
+  "key": "f79be21b43497fd1",
+  "where": "verify/from-json.js · base size",
+  "verdict": "ok",
+  "why": "Unchanged in 8cc6829. It uses the same declared()/lookup() calls with the same names as bases.js. A new null from lookup falls back to Wahapedia's base and is listed with want(), so the gate still asks for a declaration. It writes no baseWith (that lives on DATASHEETS, not the list), and a list that needs one fails verify/bases.js. The import step passes 20/20."
+ },
+ {
+  "key": "3957c5e3d24cc97a",
+  "where": "app.html · withGear, baseOf",
+  "verdict": "ok",
+  "why": "withGear only replaces the base when the line's own gear (u.gear[line]) has a baseWith key, compared with app.html's norm(). Both baseOf paths (one stats row, or several) go through it, and screenBases multiplies by copies. Result: purge-goes-the-foe 18× 25mm + 2× 60×35.5mm Oval; no other list changes. This covers Bases & proxies only. The unit screen's stat block (app.html ~4484) still prints s.base alone, so it reads 'Skitarii Rangers ×10 · 25mm'. See report."
+ },
+ {
+  "key": "b84f98c85f23ec83",
+  "where": "verify/deviations-bsdata.json · mek-tankbustas · stats.base",
+  "verdict": "ok",
+  "why": "Evidence checks out: Orks.json line 576 profile 'Nob' id bd7a-2297-edcb-9729, line 589 Base 32mm, linked from the Tankbustas entry at line 20096 (targetId bd7a-2297-edcb-9729). GW line 3532 gives 40mm and Wahapedia Nob ⌀40mm (line 1563). The bsdata step passes using it."
+ },
+ {
+  "key": "9619920d84396718",
+  "where": "verify/deviations-nr.json · mek-tankbustas · stats[Nob].base",
+  "verdict": "ok",
+  "why": "shooty.txt line 43: 'Nob - Tankbustas … 32mm' (NR p2). The app's 40mm is GW's (line 3532). The nr step passes using it."
+ }
+]

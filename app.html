@@ -4481,7 +4481,7 @@ function screenUnit(){
   const statCols = innerWidth < 360 ? 'minmax(0,1fr) repeat(7, 26px)' : 'minmax(0,1fr) repeat(7, 31px)';
   const stats = '<section class="dsx statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
       '<span class="h n">Unit</span>' + ['M','T','Sv','W','LD','OC','InSv'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc(s.base) + '</small></span>' +
+      u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc([s.base].concat(Object.entries(s.baseWith || {}).map(([g, b]) => b + ' w/ ' + g)).join(' · ')) + '</small></span>' +
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
     // (a part of a detachment rule for some of its units can carry one too: Warpmeld Sacrifice's KEYWORDS, for TZAANGORS units)
@@ -4602,8 +4602,10 @@ function screenStrats(){
 const modelCount = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
 const lineParts = m => { const x = /^(\d+)× (.+?)(?: \(([^)]+)\))?$/.exec(m) || [, '1', m]; return { n:+x[1], name:x[2], extra:x[3] || '' }; };
 const baseName = name => name.replace(/ w\/.*$/, '');
+// a model of a profile that carries wargear GW gives its own base is on that base (baseWith: the Skitarii Rangers' transuranic arquebus)
+const withGear = (s, u, line) => { const g = ((u.gear || [])[line] || []).map(norm), k = Object.keys(s.baseWith || {}).find(x => g.includes(norm(x))); return k ? s.baseWith[k] : s.base; };
 function baseOf(u, name, line){
-  if(u.stats.length === 1) return u.stats[0].base;
+  if(u.stats.length === 1) return withGear(u.stats[0], u, line);
   let rows = u.stats.map(s => ({ s, n:norm(s.name.replace(/ ×\d+$/, '')) }));
   const nm = norm(baseName(name));
   // in an attached unit the first models lines are the characters; the others are bodyguard models
@@ -4611,7 +4613,7 @@ function baseOf(u, name, line){
   if(u.leads && line >= nc && !rows.some(r => r.n === nm)) rows = rows.filter(r => !u.models.slice(0, nc).some(m => r.n === norm(baseName(lineParts(m).name))));
   const pre = (a, b) => { let i = 0; while(i < a.length && a[i] === b[i]) i++; return i; };
   const hit = rows.find(r => r.n === nm) || rows.find(r => nm.startsWith(r.n) || r.n.startsWith(nm)) || rows.slice().sort((x, y) => pre(y.n, nm) - pre(x.n, nm))[0];
-  return hit.s.base;
+  return withGear(hit.s, u, line);
 }
 function proxyLines(u){
   const lines = u.models.map((m, i) => Object.assign(lineParts(m), { gear:(u.gear || [])[i] || [], base:baseOf(u, lineParts(m).name, i) }));
@@ -4653,7 +4655,7 @@ function screenBases(){
   const sizes = [...total].sort((x, y) => (parseFloat(x[0]) || 999) - (parseFloat(y[0]) || 999));
   return '<p class="lbl grp-h">Bases to print</p><p class="pxt">' + sizes.map(([b, n]) => '<span><b>' + n + '×</b> ' + esc(b) + '</span>').join('') + '</p>' +
     '<p class="lbl grp-h">What to write on each base</p><div class="list">' + cards.join('') + '</div>' +
-    '<p class="note">From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.</p>';
+    '<p class="note">From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).</p>';
 }
 
 /* ---------- screen: before the battle ----------

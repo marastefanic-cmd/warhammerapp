@@ -1,0 +1,445 @@
+[
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Bringer of Justice",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Bringer of Justice",
+   "text": "**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "6f8ee02bfec3744e"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing",
+  "where": "navigator-sounds-op-ngl · Knight Crusader · Hunter’s Eye",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter’s Eye",
+   "text": "**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability."
+  },
+  "key": "8d8e1e595ae6f385"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-def",
+  "where": "navigator-sounds-op-ngl · Knight Defender · Invulnerable Save (4+*)",
+  "judgement": {
+   "def": "4+ invulnerable save against ranged attacks only"
+  },
+  "source": {
+   "ability": "Invulnerable Save (4+*)",
+   "text": "This model has a 4+ invulnerable save against ranged attacks."
+  },
+  "key": "671338c32e1af0f8"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-tag",
+  "where": "navigator-sounds-op-ngl · Knight Defender · Defender’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Defender’s Duty",
+   "text": "While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "1108a15bf556ea39"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "unit-footnote",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Conversion beam obliterator",
+   "when": "Target more than 18\" away",
+   "note": "an unmodified successful hit roll of 4+ scores a Critical Hit",
+   "from": "Conversion",
+   "calc": {
+    "critHit": 4
+   }
+  },
+  "source": {
+   "rule": "Conversion",
+   "text": "Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit."
+  },
+  "key": "f578c2012500c303"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "unit-guard",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "judgement": {
+   "from": "Selfless Protector",
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   },
+   "kind": "ranged",
+   "when": "Not fully visible to every model in the attacking unit because of the Knight Defender",
+   "note": "the Benefit of Cover and a 4+ invulnerable save against that attack",
+   "calc": {
+    "cover": true,
+    "insv": 4
+   }
+  },
+  "source": {
+   "ability": "Selfless Protector",
+   "text": "Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack."
+  },
+  "key": "026d270f49b9419c"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "unit-weapons",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "judgement": {
+   "gear": [
+    [
+     "Conversion beam obliterator",
+     "Phosphor blaster",
+     "Plasma executor",
+     "Titanic feet",
+     "Twin incendine combustor"
+    ]
+   ],
+   "weapons": [
+    "Conversion beam obliterator",
+    "Phosphor blaster",
+    "Plasma executor · standard",
+    "Plasma executor · supercharge",
+    "Twin incendine combustor",
+    "Titanic feet"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Knight Defender"
+   ],
+   "leads": null
+  },
+  "key": "70a106ada2bff7f1"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-na",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Thundercharge",
+  "judgement": {
+   "na": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout",
+   "armyUnits": [
+    "Cerastus Knight Atrapos [Cerastus, Character, Faction: Imperial Knights, Imperium, Knight Atrapos, Titanic, Towering, Vehicle, Walker, Warlord]",
+    "Knight Crusader [Character, Faction: Imperial Knights, Imperium, Knight Crusader, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Defender [Character, Faction: Imperial Knights, Imperium, Knight Defender, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Destrier [Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker]",
+    "Knight Errant [Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Navigator [Allies: Imperial Agents, Character, Faction: Agents of the Imperium, Imperium, Infantry, Navigator, Psyker, Voidfarers]"
+   ]
+  },
+  "source": {
+   "ability": "Thundercharge",
+   "text": "If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model."
+  },
+  "key": "eb4465fedd8412be"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Mysterious Guardian",
+   "text": "**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "375ec0e239c4cb66"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-tag",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Mysterious Guardian",
+   "text": "**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "9d088f7e149c2660"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing",
+  "where": "navigator-sounds-op-ngl · Navigator · Third Eye",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Third Eye",
+   "text": "At the start of your Shooting phase, select one enemy unit within 12\" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "ad23b1721d7efa47"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-tag",
+  "where": "navigator-sounds-op-ngl · Navigator · Third Eye",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Third Eye",
+   "text": "At the start of your Shooting phase, select one enemy unit within 12\" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "7eea82cee798485a"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-tag",
+  "where": "navigator-sounds-op-ngl · Navigator · Gaze into the Empyrean",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Gaze into the Empyrean",
+   "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+  },
+  "key": "5fc15df4e8462531"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "unit-weapons",
+  "where": "navigator-sounds-op-ngl · Navigator",
+  "judgement": {
+   "gear": [
+    [
+     "Force-orb cane",
+     "Laspistol"
+    ]
+   ],
+   "weapons": [
+    "Laspistol",
+    "Force-orb cane"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Navigator"
+   ],
+   "leads": null
+  },
+  "key": "b197dbca7a04ae00"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^conversion$/i",
+  "judgement": {
+   "opens": "Conversion"
+  },
+  "source": {
+   "rule": "Conversion",
+   "text": "Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit."
+  },
+  "key": "b6aa3d0d44b5ba42"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "base-exception",
+  "where": "imperial-knights/navigator · guide: IMPERIAL AGENTS / Navigator",
+  "judgement": {
+   "guide": {
+    "section": "IMPERIAL AGENTS",
+    "entry": "Navigator"
+   }
+  },
+  "source": {
+   "reason": "The Navigator in the navigator-sounds-op-ngl list is an Agents of the Imperium unit taken by an Imperial Knights army (New Recruit's “Allies: Imperial Agents”); GW's base size guide has it under IMPERIAL AGENTS, not IMPERIAL KNIGHTS.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3325 (IMPERIAL AGENTS, from line 3301): \"Navigator  32mm\"; verify/.cache/waha/ds/imperial-agents_Navigator.html: \"(⌀32mm)\"."
+  },
+  "key": "d3898e18a2940ff9"
+ },
+ {
+  "army": "core",
+  "kind": "texts-deviation",
+  "where": "RULES · Conversion (glossary entry, RULE_SRC Knight Defender datasheet)",
+  "judgement": {
+   "app": "Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit."
+  },
+  "source": {
+   "reason": "[CONVERSION] is a weapon ability GW's datasheets define per weapon, each with its own range (the Faction Pack's Armiger Moirax conversion beam cannon: \"more than 12\"\"; its Knight Castellan/Valiant profile: \"more than 24\"\"). The app's lists have one such weapon, the Knight Defender's conversion beam obliterator, so the glossary entry is that datasheet's wording (RULE_SRC names it). GW's Faction Pack does not reprint the Knight Defender datasheet; the Wahapedia Knight Defender datasheet (the codex) is the only source of these words, which texts.js does not search for glossary entries.",
+   "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html, under the weapons: \"Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.\"; GW Faction Pack Imperial Knights lines 369 and 785 (other weapons' Conversion, 24\" and 12\")."
+  },
+  "key": "dc07623d62c2792f"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "deviation",
+  "where": "knight-defender · ability",
+  "judgement": {
+   "app": "Defender’s Duty",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW names the ability Defender’s Duty, BSData at the pin (Imperium - Imperial Knights catalogue revision 2) Warden’s Duty. GW wins.",
+   "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html: \"Defender’s Duty\"."
+  },
+  "key": "be388f6483a84f27"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "deviation",
+  "where": "knight-defender · ability",
+  "judgement": {
+   "app": "",
+   "source": "Warden's Duty (Bondsman)"
+  },
+  "source": {
+   "reason": "GW names the ability Defender’s Duty, BSData at the pin (Imperium - Imperial Knights catalogue revision 2) Warden’s Duty. GW wins.",
+   "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html: \"Defender’s Duty\"."
+  },
+  "key": "b54170d98e8e143b"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "deviation",
+  "where": "navigator · rules",
+  "judgement": {
+   "app": "",
+   "source": "Assigned Agents"
+  },
+  "source": {
+   "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) gives the unit Assigned Agents, the army rule of its own faction (Imperial Agents; GW’s datasheet prints it under ARMY RULES); the unit is an ally in a Imperial Knights army, and the owner’s ruling is that a unit taken as an ally or agent does not get its own faction’s army rule (as the Nurglings in Chaos Knights lists have no Shadow of Chaos).",
+   "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: ARMY RULES \"Assigned Agents\"."
+  },
+  "key": "224cd99a6d86b40f"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "export-edit",
+  "where": "verify/sources/nr-json/navigator-sounds-op-ngl.json · Cerastus Knight Atrapos · Warlord",
+  "judgement": {
+   "added": {
+    "name": "Warlord",
+    "entryId": "fb98-f509-dbe3-8a3b::ddee-b14f-2f5f-b710::ad65-d3cb-c677-7cb3",
+    "categories": [
+     "Warlord 5c0e-4c31-d51b-e470"
+    ],
+    "type": "upgrade",
+    "from": "entry"
+   }
+  },
+  "source": {
+   "reason": "The owner forgot to pick a Warlord in New Recruit; the owner says the Warlord is the Cerastus Knight Atrapos (owner's instruction, relayed 25 Oct 2026). Selection written as New Recruit writes one (6-bigs.json, Knight Warden).",
+   "evidence": "verify/sources/hand/navigator-sounds-op-ngl.json _export; BSData Imperium - Imperial Knights - Library at b4dc3f4: entry 37a7-d156-1e4c-8fe1 (Cerastus Knight Atrapos) › entryLink ddee-b14f-2f5f-b710 Warlord → ad65-d3cb-c677-7cb3"
+  },
+  "key": "4a458d93c678e2bb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · allied units",
+  "judgement": {
+   "change": "An allied unit (primary category \"Allies: X\", factions.json <faction>.allies) takes its Wahapedia datasheet and base-guide section from its own faction, and is written without its own faction's army rules (the owner's ruling; the Navigator without Assigned Agents), each declared with that reason."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/from-json.js"
+  },
+  "key": "6ae77d785ee23c0c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · datasheet rows other lists have",
+  "judgement": {
+   "change": "A unit whose DATASHEETS row another list already has takes the row's stats, weapon values, abilities (words, tags, labels, defs) and Rules line; a value a rule of the list changes stays the list's (own), a rule only the list brings is appended; every difference is listed in the report (\"Kept from the datasheet row\"); derive.js labels are not re-written on those abilities."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/from-json.js"
+  },
+  "key": "5edb9b334ea8f9a9"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · InSv box abilities",
+  "judgement": {
+   "change": "BSData's \"Invulnerable Save (X+*)\" is kept (BSData's words) when GW's datasheet prints the INSV* X+* box with a condition footnote, instead of being dropped as an ability GW does not print."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/from-json.js"
+  },
+  "key": "4a1f1935582598ea"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · tag-named army rule",
+  "judgement": {
+   "change": "A faction army rule that one of the unit's abilities is tagged with (\"Defender's Duty (Bondsman)\") stays on the Rules line though the datasheet's ARMY RULES box does not list it."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/from-json.js"
+  },
+  "key": "22367e1f649e88de"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · small fixes",
+  "judgement": {
+   "change": "Damaged-band label skip is case-insensitive (\"Damaged: 1-9 Wounds Remaining\"); an ability renamed by GW is matched with either apostrophe; hand file `na`."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/from-json.js"
+  },
+  "key": "afe7d1211748504d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/waha-words.js · wahaDatasheet",
+  "judgement": {
+   "change": "\"INSV* 4+ * against ranged attacks only\" is every model's 4+* (a condition, not model names); each weapon keyword span is read to its own matching close (Wahapedia's \"conversion\" has no tooltip span; also fixes the Norn Assimilator's HARPOONED, read by no gate step)."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/waha-words.js"
+  },
+  "key": "c796c7f892f187f7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/bsdata.js · Show/Hide Options",
+  "judgement": {
+   "change": "The options inside every catalogue link to the Show/Hide Options entry are offered (the Imperial Knights catalogue's \"Show Imperial Agents\"; rootNode kept only the Agents of the Imperium catalogue's link)."
+  },
+  "source": {
+   "diff": "git diff 57086f9 -- verify/bsdata.js"
+  },
+  "key": "53b3b145eb777e83"
+ }
+]

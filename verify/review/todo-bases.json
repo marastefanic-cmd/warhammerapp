@@ -1,0 +1,42 @@
+[
+ {
+  "army": "bases",
+  "kind": "base-exception",
+  "where": "orks/gretchin · absent: Gretchin: Runtherd",
+  "judgement": {
+   "absent": {
+    "section": "ORKS",
+    "entry": "Gretchin: Runtherd"
+   }
+  },
+  "source": {
+   "reason": "GW's guide gives the Runtherd of a Gretchin unit a 32mm base. In these lists the Gretchin units have no Runtherd model (New Recruit: \"10x Gretchin\"): the Runtherd is a datasheet of its own that supports Gretchin (ooga-booga's Zodgrod Wortsnagga + Runtherd + Gretchin unit, on 32mm, matched to this row).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3504 (ORKS): \"Gretchin: Runtherd  32mm\"; verify/sources/nr/shooty.txt line 384, verify/sources/nr/melee.txt line 315, verify/sources/nr/ooga-booga.txt line 399 (\"10x Gretchin\"); verify/sources/nr/ooga-booga.txt line 100 (\"1x Runtherd\", its own unit, \"Supporting: Gretchin\"); verify/.cache/waha/ds/orks_Gretchin.html lines 1530 (\"10-20 Gretchin models\") and 1551 (supported by RUNTHERD)."
+  },
+  "key": "ba1dbc422b050972"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · unit stat block, base line",
+  "judgement": {
+   "code": "u.stats.map(s => '<span class=\"n\"><b>' + esc(s.name).replace(/ ×(\\d+)$/, '<span class=\"x\">×$1</span>') + '</b><small>' + esc([s.base].concat(Object.entries(s.baseWith || {}).map(([g, b]) => b + ' w/ ' + g)).join(' · ')) + '</small></span>' +"
+  },
+  "source": {
+   "implements": "the unit’s stat block shows each stats row’s base, then each baseWith as \"<base> w/ <wargear>\" (\"25mm · 60×35.5mm Oval w/ Transuranic arquebus\"): the owner’s rule, show everything"
+  },
+  "key": "db2508890225ea88"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · Bases & proxies footer",
+  "judgement": {
+   "code": "'<p class=\"note\">From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).</p>';"
+  },
+  "source": {
+   "implements": "where Bases & proxies’ base sizes come from: GW’s base size guide (Event Companion), Wahapedia’s datasheet where the guide has none (verify/deviations-bases.json)"
+  },
+  "key": "d0f1f36a9ca4d3e8"
+ }
+]

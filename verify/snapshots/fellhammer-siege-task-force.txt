@@ -1336,7 +1336,7 @@ Maulerfiend
 1× 120×92mm Oval
 Maulerfiend
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR

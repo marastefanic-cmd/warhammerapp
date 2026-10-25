@@ -1061,10 +1061,10 @@ BASES TO PRINT
 28× 32mm
 2× 40mm
 1× 60mm
-10× 60×35.5mm
-1× 90×52.5mm
+10× 60×35.5mm Oval
+1× 90×52.5mm Oval
 2× 100mm
-1× 120×92mm
+1× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
@@ -1075,7 +1075,7 @@ Skarbrand
 1× 100mm
 Skarbrand
 Bloodthirster
-1× 120×92mm
+1× 120×92mm Oval
 Bloodthirster
 Daemon Prince of Khorne · Blade of Endless Bloodshed
 1× 60mm
@@ -1085,7 +1085,7 @@ Master of Executions · Blood-forged Armour
 Master of Executions · Blood-forged Armour
 Lord on Juggernaut · Disciple of Khorne
 + Khorne Berzerkers
-1× 90×52.5mm
+1× 90×52.5mm Oval
 Lord on Juggernaut · Disciple of Khorne
 1× 32mm
 Champion · Plasma pistol · Icon of Khorne
@@ -1107,12 +1107,12 @@ Dishonoured · Paired manglers
 standard Autopistol, Chainblades
 Flesh Hounds
 2 units: mark them apart (1, 2)
-1× 60×35.5mm
+1× 60×35.5mm Oval
 Gore Hound · Burning roar · Collar of Khorne
-4× 60×35.5mm
+4× 60×35.5mm Oval
 standard Gore-drenched fangs
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2621,7 +2621,7 @@ LD
 OC
 InSv
 Bloodthirster
-120×92mm
+120×92mm Oval
 12"
 11
 3+
@@ -2971,7 +2971,7 @@ LD
 OC
 InSv
 Lord on Juggernaut
-90×52.5mm
+90×52.5mm Oval
 10"
 6
 3+
@@ -3393,7 +3393,7 @@ LD
 OC
 InSv
 Flesh Hounds
-60×35.5mm
+60×35.5mm Oval
 12"
 4
 7+

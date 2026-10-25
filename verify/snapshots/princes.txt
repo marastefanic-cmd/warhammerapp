@@ -1087,8 +1087,8 @@ BASES TO PRINT
 8× 40mm
 1× 50mm
 2× 60mm
-1× 90×52.5mm
-2× 120×92mm
+1× 90×52.5mm Oval
+2× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
@@ -1110,7 +1110,7 @@ Daemon Prince of Khorne · Berzerker Glaive
 Daemon Prince of Khorne · Berzerker Glaive
 Lord on Juggernaut · Archslaughterer
 + Khorne Berzerkers
-1× 90×52.5mm
+1× 90×52.5mm Oval
 Lord on Juggernaut · Archslaughterer
 1× 32mm
 Champion · Plasma pistol
@@ -1142,13 +1142,13 @@ Dishonoured · Paired manglers
 standard Autopistol, Chainblades
 Forgefiend
 2 units: mark them apart (1, 2)
-1× 120×92mm
+1× 120×92mm Oval
 Forgefiend
 Chaos Rhino
 1× no base
 Chaos Rhino
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -3131,7 +3131,7 @@ LD
 OC
 InSv
 Lord on Juggernaut
-90×52.5mm
+90×52.5mm Oval
 10"
 6
 3+
@@ -3761,7 +3761,7 @@ LD
 OC
 InSv
 Forgefiend
-120×92mm
+120×92mm Oval
 10"
 10
 3+

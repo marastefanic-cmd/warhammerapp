@@ -36,7 +36,8 @@ faction's catalogue too: the Deathwatch's), checked against Wahapedia's datashee
 Chapter's view of the page, `wahaChapter` in `verify/sources/factions.json`): where BSData differs, GW's value is written and declared
 in `verify/deviations-*.json` with the datasheet as evidence; base sizes come from GW's base size guide (`verify/base-guide.js`,
 the Event Companion; the sections `baseGuide` names, a row for some models of a unit too), Wahapedia's only where the guide has
-none. A missing faction or detachment comes from the Wahapedia faction page (a detachment's Force Dispositions from BSData, else
+none (the gate's `bases` step, `verify/bases.js`, checks every base against the guide; a unit the guide names
+otherwise or lacks is declared in `verify/deviations-bases.json`). A missing faction or detachment comes from the Wahapedia faction page (a detachment's Force Dispositions from BSData, else
 from the page, declared), a missing core ability from Wahapedia's core rules, labels from `verify/derive.js`; then the "+" marks,
 `BS_IDS`, the BSData extract and `verify/tables.js --write` (the list as references to its datasheets). What it cannot fill (a
 stratagem's gist) is read from `verify/sources/hand/<id>.json`, marked by whom; everything else it lists in

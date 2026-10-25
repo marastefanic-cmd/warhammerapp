@@ -1,0 +1,102 @@
+[
+ {
+  "datasheet": "world-eaters/chaos-terminators",
+  "row": "Chaos Terminators",
+  "guide": {
+   "section": "WORLD EATERS",
+   "entry": "Terminator Squad"
+  },
+  "reason": "GW's base size guide names the World Eaters' Chaos Terminators datasheet \"Terminator Squad\" (the only Terminator row of the World Eaters section); the names share no rule verify/base-guide.js can match by, so the row is named here and its base compared.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3899 (WORLD EATERS): \"Terminator Squad  40mm\"; verify/.cache/waha/ds/world-eaters_Chaos-Terminators.html: \"(⌀40mm)\"."
+ },
+ {
+  "datasheet": "chaos-knights/nurglings",
+  "row": "Nurglings",
+  "guide": {
+   "section": "CHAOS DAEMONS",
+   "entry": "Nurglings"
+  },
+  "reason": "The Nurglings in the Infernal Lance list are a Chaos Daemons unit taken by a Chaos Knights army; GW's base size guide has them under CHAOS DAEMONS (and DEATH GUARD, the same 40mm), not CHAOS KNIGHTS.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2950 (CHAOS DAEMONS): \"Nurglings  40mm\", line 3144 (DEATH GUARD): \"Nurglings  40mm\"; verify/.cache/waha/ds/chaos-daemons_Nurglings.html: \"(⌀40mm)\"."
+ },
+ {
+  "datasheet": "imperial-knights/navigator",
+  "row": "Navigator",
+  "guide": {
+   "section": "IMPERIAL AGENTS",
+   "entry": "Navigator"
+  },
+  "reason": "The Navigator in the navigator-sounds-op-ngl list is an Agents of the Imperium unit taken by an Imperial Knights army (New Recruit's “Allies: Imperial Agents”); GW's base size guide has it under IMPERIAL AGENTS, not IMPERIAL KNIGHTS.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3325 (IMPERIAL AGENTS, from line 3301): \"Navigator  32mm\"; verify/.cache/waha/ds/imperial-agents_Navigator.html: \"(⌀32mm)\"."
+ },
+ {
+  "datasheet": "ultramarines/marneus-calgar",
+  "row": "Marneus Calgar",
+  "guide": {
+   "section": "SPACE MARINES",
+   "entry": "Marneus Calgar in Armour of Antilochus"
+  },
+  "reason": "GW's base size guide names the Marneus Calgar datasheet by its model, \"Marneus Calgar in Armour of Antilochus\" (the guide's only Marneus Calgar row; the datasheet's weapons are the Gauntlets of Ultramar of that model, its Victrix Honour Guard a row of their own).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3627 (SPACE MARINES): \"Marneus Calgar in Armour of Antilochus  50mm\", line 3661: \"Victrix Honour Guard  40mm\"; verify/.cache/waha/ds/ultramarines_Marneus-Calgar.html: \"(⌀50mm)\"."
+ },
+ {
+  "datasheet": "orks/warboss",
+  "row": "Warboss",
+  "guide": {
+   "section": "ORKS",
+   "entry": "Warboss (Armageddon)"
+  },
+  "reason": "GW's base size guide has two Warboss rows: \"Warboss 40mm\" and \"Warboss (Armageddon) 50mm\". The owner's Warboss (the Me shooty yer' booty list) is the Armageddon Warboss, on 50mm (the owner, 2026-10-25), so it is compared with that row, not the 40mm one the lookup finds by name.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3535 (ORKS): \"Warboss  40mm\", line 3536: \"Warboss (Armageddon)  50mm\"; verify/sources/nr/shooty.txt line 353 (Base 50mm); verify/.cache/bsdata/Orks.json line 21535 (Warboss, Base 50mm); verify/.cache/waha/ds/orks_Warboss.html: \"(⌀50mm)\"."
+ },
+ {
+  "datasheet": "orks/wazdakka-gutsmek",
+  "row": "Wazdakka Gutsmek",
+  "guide": {
+   "section": "ORKS",
+   "entry": "Wazdakka Gutsmek"
+  },
+  "gwError": {
+   "printed": "120mm"
+  },
+  "app": "120×92mm Oval",
+  "reason": "GW's base size guide prints \"Wazdakka Gutsmek 120mm\", taken to be GW's error: it is the guide's only 120mm round base, every other oval in the guide is written \"…x…mm Oval Base\" (65 of them \"120x92mm Oval Base\"), and Wazdakka's datasheet (Wahapedia), BSData and New Recruit all give 120x92mm; the owner (2026-10-25): the base is definitely oval. The app writes it in GW's oval wording, \"120×92mm Oval\". The gate fails if GW's row ever prints something else, to look again.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3539 (ORKS): \"Wazdakka Gutsmek  120mm\" (no other \"120mm\" row in the guide; \"120x92mm Oval Base\" on 65 lines, e.g. line 3885 \"Forgefiend  120x92mm Oval Base\"); verify/.cache/waha/ds/orks_Wazdakka-Gutsmek.html: \"(⌀120 x 92mm)\"; verify/.cache/bsdata/Orks.json line 33403 (Wazdakka Gutsmek, Base 120x92mm); verify/sources/nr/shooty.txt line 221 (Base 120x92mm)."
+ },
+ {
+  "datasheet": "orks/nazdreg",
+  "row": "Nazdreg",
+  "guide": null,
+  "app": "60mm",
+  "waha": "verify/.cache/waha/ds/orks_Nazdreg.html",
+  "reason": "GW's base size guide has no row for Nazdreg (ORKS section, lines 3475-3546; no \"Nazdreg\" anywhere in it); the app has Wahapedia's datasheet base, as for every unit the guide lacks.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt: no line with \"Nazdreg\"; verify/.cache/waha/ds/orks_Nazdreg.html: \"(⌀60mm)\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/sentinel-guard-sodality",
+  "row": "Sentinel Guard",
+  "guide": null,
+  "app": "40mm",
+  "waha": "verify/.cache/waha/ds/adeptus-custodes_Sentinel-Guard-Sodality.html",
+  "reason": "GW's base size guide has no row for the Sentinel Guard (ADEPTUS CUSTODES section, lines 2603-2634; no \"Sentinel\" in it); the app has Wahapedia's datasheet base, as for every unit the guide lacks.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt: no ADEPTUS CUSTODES line with \"Sentinel\" (the Custodian Guard, line 2607, is a different datasheet); verify/.cache/waha/ds/adeptus-custodes_Sentinel-Guard-Sodality.html: \"(⌀40mm)\"."
+ },
+ {
+  "datasheet": "orks/gretchin",
+  "absent": {
+   "section": "ORKS",
+   "entry": "Gretchin: Runtherd"
+  },
+  "reason": "GW's guide gives the Runtherd of a Gretchin unit a 32mm base. In these lists the Gretchin units have no Runtherd model (New Recruit: \"10x Gretchin\"): the Runtherd is a datasheet of its own that supports Gretchin (ooga-booga's Zodgrod Wortsnagga + Runtherd + Gretchin unit, on 32mm, matched to this row).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3504 (ORKS): \"Gretchin: Runtherd  32mm\"; verify/sources/nr/shooty.txt line 384, verify/sources/nr/melee.txt line 315, verify/sources/nr/ooga-booga.txt line 399 (\"10x Gretchin\"); verify/sources/nr/ooga-booga.txt line 100 (\"1x Runtherd\", its own unit, \"Supporting: Gretchin\"); verify/.cache/waha/ds/orks_Gretchin.html lines 1530 (\"10-20 Gretchin models\") and 1551 (supported by RUNTHERD)."
+ },
+ {
+  "datasheet": "orks/ghazghkull-thraka",
+  "absent": {
+   "section": "ORKS",
+   "entry": "Ghazghkull Thraka: Makari"
+  },
+  "reason": "GW's guide gives Ghazghkull Thraka's Makari a 25mm base. In 11th edition Makari is no model of the unit: the datasheet's ability \"Makari, Hoist Dat Banner!\" places a Makari token, and New Recruit lists the unit as \"1x Ghazghkull Thraka\". (A Makari model used as that token would stand on 25mm.)",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3501 (ORKS): \"Ghazghkull Thraka: Makari  25mm\"; verify/sources/nr/melee.txt line 199 and verify/sources/nr/ooga-booga.txt line 361 (\"1x Ghazghkull Thraka\"); verify/sources/nr/melee.txt lines 221-223 (\"Makari, Hoist Dat Banner!\" … \"Place one Makari token next to the unit\"); verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html (\"Makari token\")."
+ }
+]

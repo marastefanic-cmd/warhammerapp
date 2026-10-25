@@ -622,13 +622,16 @@ for (const u of units) {
       }
       // the base size: New Recruit's (BSData has none) against the datasheet's
       // the base size: GW's base size guide (verify/base-guide.js, the Event Companion), else the Wahapedia datasheet's
-      const ally = allyByName.get(nm(p.name)), BG = baseGuide.lookup(ally ? (FJ[ALLIES[ally]] || {}).baseGuide || ally : (FJ[factionId] || {}).baseGuide || facName, [nm(p.name), row._base], nm(p.name));
+      // (a model verify/deviations-bases.json declares: its declared row or base, as the gate's bases step checks it; an allied unit: its
+      // own faction's section of the guide)
+      const ally = allyByName.get(nm(p.name));
+      const BG = baseGuide.declared(factionId + '/' + slug(nm(p.name)), nm(row._base)) || baseGuide.lookup(ally ? (FJ[ALLIES[ally]] || {}).baseGuide || ally : (FJ[factionId] || {}).baseGuide || facName, [nm(p.name), row._base], nm(p.name));
       const wb = wp.base || ds.base;
       const gb = BG ? BG.base : wb ? wb.replace(/\s*x\s*/g, '×') : null;
-      const bWhere = BG ? BG.file + ' line ' + BG.line + ': "' + BG.entry + '  ' + BG.printed + '"' : where + ': "(⌀' + wb + ')"';
+      const bWhere = BG && BG.declaredIn ? BG.declaredIn + (BG.line ? '; ' + BG.file + ' line ' + BG.line + ': "' + BG.entry + '  ' + (BG.how === 'declared' ? BG.printed : '…') + '"' : '') : BG ? BG.file + ' line ' + BG.line + ': "' + BG.entry + '  ' + BG.printed + '"' : where + ': "(⌀' + wb + ')"';
       if (!BG) want(u.name + ' · ' + row.name, 'base size', 'not in GW’s base size guide' + (wb ? ': Wahapedia’s datasheet used' : ''));
       if (gb && gwN(gb) !== gwN(row.base)) {
-        gwFacts.set(u.id + '|stats|' + nm(row._base) + '|base', { gw: gb, pin: null, nr: row.base, file: bWhere, src: BG ? 'GW’s base size guide (Event Companion)' : 'Wahapedia’s datasheet' });
+        gwFacts.set(u.id + '|stats|' + nm(row._base) + '|base', { gw: gb, pin: null, nr: row.base, file: bWhere, src: BG && BG.declaredIn ? 'verify/deviations-bases.json (' + BG.how + ')' : BG ? 'GW’s base size guide (Event Companion)' : 'Wahapedia’s datasheet' });
         gwDevs.push({ unit: u.id, kind: 'base', row: row.name, field: 'base', app: gb, bsdata: row.base, file: bWhere });
         row.base = gb;
       }

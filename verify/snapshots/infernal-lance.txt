@@ -841,30 +841,30 @@ Knight Ruinator
 BASES TO PRINT
 
 3× 40mm
-5× 170×109mm
+5× 170×109mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
 Chaos Cerastus Knight Atrapos · Knight Diabolus
-1× 170×109mm
+1× 170×109mm Oval
 Chaos Cerastus Knight Atrapos · Knight Diabolus
 Chaos Cerastus Knight Lancer · Blasphemous Engine
-1× 170×109mm
+1× 170×109mm Oval
 Chaos Cerastus Knight Lancer · Blasphemous Engine
 Knight Despoiler · Bestial Aspect
-1× 170×109mm
+1× 170×109mm Oval
 Knight Despoiler · Warlord · Bestial Aspect
 Knight Ruinator · Fleshmetal Fusion
-1× 170×109mm
+1× 170×109mm Oval
 Knight Ruinator · Fleshmetal Fusion
 Knight Ruinator
-1× 170×109mm
+1× 170×109mm Oval
 Knight Ruinator
 Nurglings
 3× 40mm
 standard Diseased claws and teeth
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -2359,7 +2359,7 @@ LD
 OC
 InSv
 Chaos Cerastus Knight Atrapos
-170×109mm
+170×109mm Oval
 12"
 11
 3+
@@ -2505,7 +2505,7 @@ LD
 OC
 InSv
 Chaos Cerastus Knight Lancer
-170×109mm
+170×109mm Oval
 14"
 11
 3+
@@ -2624,7 +2624,7 @@ LD
 OC
 InSv
 Knight Despoiler
-170×109mm
+170×109mm Oval
 10"
 11
 3+
@@ -2766,7 +2766,7 @@ LD
 OC
 InSv
 Knight Ruinator
-170×109mm
+170×109mm Oval
 10"
 12
 3+
@@ -2899,7 +2899,7 @@ LD
 OC
 InSv
 Knight Ruinator
-170×109mm
+170×109mm Oval
 10"
 11
 3+

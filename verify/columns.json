@@ -1521,6 +1521,10 @@
     "base": {
      "source": "newrecruit",
      "note": "as the New Recruit PDF prints it (the owner's rule, 18 Oct 2026)"
+    },
+    "baseWith": {
+     "source": "gw",
+     "note": "wargear → base: a model of this profile with that wargear is on its own base, as GW's base size guide gives it (a \"Unit: Wargear\" row); checked by verify/bases.js against the models lines"
     }
    }
   },

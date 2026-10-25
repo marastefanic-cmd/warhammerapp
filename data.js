@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-25.1';
+const VERSION = '2026-10-25.2';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -5621,7 +5621,7 @@ const DATASHEETS = {
 'orks/wazdakka-gutsmek':{
   name:'Wazdakka Gutsmek', faction:'orks', bsId:'2ab7-ab71-0af4-5d39', role:'Epic Hero',
   stats:[
-    { name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120×92mm' }
+    { name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
   ranged:[
     { name:'Grabba Dragga', range:'12"', A:'1', BS:'2+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','PRECISION'] },
@@ -5719,7 +5719,7 @@ const DATASHEETS = {
 'orks/tankbustas':{
   name:'Tankbustas', faction:'orks', bsId:'dadc-d370-ef10-853c',
   stats:[
-    { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
+    { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
     { name:'Tankbusta', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
   ],
   ranged:[
@@ -5774,7 +5774,7 @@ const DATASHEETS = {
 'orks/deffkoptas':{
   name:'Deffkoptas', faction:'orks', bsId:'2d6e-aa3b-c28c-5ef0', role:'Mounted',
   stats:[
-    { name:'Deffkoptas', M:'12"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm' }
+    { name:'Deffkoptas', M:'12"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm Oval' }
   ],
   ranged:[
     { name:'Busta', group:'Rokkit Launcha', range:'24"', A:'2', BS:'5+', S:'10', AP:'-2', D:'3', kw:['LETHAL HITS'] },
@@ -5968,8 +5968,8 @@ const DATASHEETS = {
 'orks/squighog-boyz':{
   name:'Squighog Boyz', faction:'orks', bsId:'6a83-8e1f-63ef-50c3', role:'Mounted',
   stats:[
-    { name:'Nob on Smasha Squig', M:'10"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'90×52.5mm' },
-    { name:'Squighog Boyz', M:'10"', T:'6', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm' }
+    { name:'Nob on Smasha Squig', M:'10"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'90×52.5mm Oval' },
+    { name:'Squighog Boyz', M:'10"', T:'6', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm Oval' }
   ],
   ranged:[
     { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] },
@@ -6081,7 +6081,7 @@ const DATASHEETS = {
 'world-eaters/lord-on-juggernaut':{
   name:'Lord on Juggernaut', faction:'world-eaters', bsId:'ec72-f024-4283-0558', role:'Character',
   stats:[
-    { name:'Lord on Juggernaut', M:'10"', T:'6', Sv:'3+', W:'7', Ld:'6+', OC:'2', InSv:'4+', base:'90×52.5mm' }
+    { name:'Lord on Juggernaut', M:'10"', T:'6', Sv:'3+', W:'7', Ld:'6+', OC:'2', InSv:'4+', base:'90×52.5mm Oval' }
   ],
   ranged:[
     { name:'standard', group:'Plasma pistol', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
@@ -6182,7 +6182,7 @@ const DATASHEETS = {
 'world-eaters/forgefiend':{
   name:'Forgefiend', faction:'world-eaters', bsId:'81e1-b212-69c1-308f', role:'Vehicle',
   stats:[
-    { name:'Forgefiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm' }
+    { name:'Forgefiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
   ranged:[
     { name:'Hades autocannon', range:'36"', A:'6', BS:'4+', S:'8', AP:'-1', D:'2', kw:['RAPID FIRE 4'] },
@@ -6283,7 +6283,7 @@ const DATASHEETS = {
 'world-eaters/bloodthirster':{
   name:'Bloodthirster', faction:'world-eaters', bsId:'4ad2-bd20-6dfe-776b', role:'Character',
   stats:[
-    { name:'Bloodthirster', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'120×92mm' }
+    { name:'Bloodthirster', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'120×92mm Oval' }
   ],
   ranged:[
     { name:'Hellfire breath', range:'12"', A:'D6', BS:'–', S:'5', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
@@ -6321,7 +6321,7 @@ const DATASHEETS = {
 'world-eaters/flesh-hounds':{
   name:'Flesh Hounds', faction:'world-eaters', bsId:'b657-1743-6e3a-0838', role:'Beast',
   stats:[
-    { name:'Flesh Hounds', M:'12"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm' }
+    { name:'Flesh Hounds', M:'12"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm Oval' }
   ],
   ranged:[
     { name:'Burning roar', range:'12"', A:'D6', BS:'–', S:'4', AP:'0', D:'1', kw:['IGNORES COVER','TORRENT'] }
@@ -6693,7 +6693,7 @@ const DATASHEETS = {
 'tyranids/tyrannofex':{
   name:'Tyrannofex', faction:'tyranids', bsId:'1705-379b-330d-36d4', role:'Monster',
   stats:[
-    { name:'Tyrannofex', M:'9"', T:'12', Sv:'2+', W:'16', Ld:'8+', OC:'5', InSv:'–', base:'120×92mm' }
+    { name:'Tyrannofex', M:'9"', T:'12', Sv:'2+', W:'16', Ld:'8+', OC:'5', InSv:'–', base:'120×92mm Oval' }
   ],
   ranged:[
     { name:'Stinger salvoes', range:'24"', A:'8', BS:'3+', S:'5', AP:'0', D:'1', kw:[] },
@@ -6716,7 +6716,7 @@ const DATASHEETS = {
 'imperial-knights/knight-destrier':{
   name:'Knight Destrier', faction:'imperial-knights', bsId:'10d8-d702-f556-5d3c', role:'Character',
   stats:[
-    { name:'Knight Destrier', M:'12"', T:'10', Sv:'3+', W:'18', Ld:'6+', OC:'8', InSv:'5+*', base:'150×95mm' }
+    { name:'Knight Destrier', M:'12"', T:'10', Sv:'3+', W:'18', Ld:'6+', OC:'8', InSv:'5+*', base:'150×95mm Oval' }
   ],
   ranged:[
     { name:'Questoris heavy stubber', range:'36"', A:'6', BS:'3+', S:'4', AP:'-1', D:'1', kw:['ASSAULT','RAPID FIRE 3'] },
@@ -6739,7 +6739,7 @@ const DATASHEETS = {
 'imperial-knights/knight-errant':{
   name:'Knight Errant', faction:'imperial-knights', bsId:'9efd-ec72-353f-4b23', role:'Character',
   stats:[
-    { name:'Knight Errant', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+    { name:'Knight Errant', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Thermal cannon', range:'24"', A:'2D3', BS:'3+', S:'12', AP:'-4', D:'D6', kw:['BLAST','MELTA 6'] },
@@ -6763,7 +6763,7 @@ const DATASHEETS = {
 'imperial-knights/knight-paladin':{
   name:'Knight Paladin', faction:'imperial-knights', bsId:'8441-8356-5e7c-69ee', role:'Character',
   stats:[
-    { name:'Knight Paladin', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+    { name:'Knight Paladin', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Questoris heavy stubber', range:'36"', A:'3', BS:'3+', S:'4', AP:'-1', D:'1', kw:['RAPID FIRE 3'] },
@@ -6788,7 +6788,7 @@ const DATASHEETS = {
 'imperial-knights/knight-warden':{
   name:'Knight Warden', faction:'imperial-knights', bsId:'c609-c87e-f9dd-5006', role:'Character',
   stats:[
-    { name:'Knight Warden', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+    { name:'Knight Warden', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Avenger gatling cannon', range:'36"', A:'18', BS:'3+', S:'6', AP:'-2', D:'2', kw:[] },
@@ -6813,7 +6813,7 @@ const DATASHEETS = {
 'imperial-knights/canis-rex':{
   name:'Canis Rex', faction:'imperial-knights', bsId:'55fb-9c91-1a4f-3037', role:'Epic Hero',
   stats:[
-    { name:'Canis Rex', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' },
+    { name:'Canis Rex', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' },
     { name:'Sir Hekhtur', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'5+', OC:'1', InSv:'–', base:'25mm' }
   ],
   ranged:[
@@ -6851,7 +6851,7 @@ const DATASHEETS = {
 'imperial-knights/cerastus-knight-atrapos':{
   name:'Cerastus Knight Atrapos', faction:'imperial-knights', bsId:'37a7-d156-1e4c-8fe1', role:'Character',
   stats:[
-    { name:'Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm' }
+    { name:'Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'high intensity', group:'Atrapos lascutter', range:'24"', A:'D6', BS:'3+', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'] },
@@ -6874,7 +6874,7 @@ const DATASHEETS = {
 'imperial-knights/cerastus-knight-lancer':{
   name:'Cerastus Knight Lancer', faction:'imperial-knights', bsId:'9ee-e289-bc6c-d943', role:'Character',
   stats:[
-    { name:'Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm' }
+    { name:'Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Cerastus shock lance', range:'12"', A:'6', BS:'3+', S:'6', AP:'0', D:'2', kw:['ASSAULT','SUSTAINED HITS 2'] }
@@ -6894,7 +6894,7 @@ const DATASHEETS = {
 'imperial-knights/knight-crusader':{
   name:'Knight Crusader', faction:'imperial-knights', bsId:'1e27-a6de-3840-a050', role:'Character',
   stats:[
-    { name:'Knight Crusader', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+    { name:'Knight Crusader', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Avenger gatling cannon', range:'36"', A:'18', BS:'3+', S:'6', AP:'-2', D:'2' },
@@ -6961,7 +6961,7 @@ const DATASHEETS = {
 'adeptus-mechanicus/belisarius-cawl':{
   name:'Belisarius Cawl', faction:'adeptus-mechanicus', bsId:'1f1e-2989-4762-cf88', role:'Epic Hero',
   stats:[
-    { name:'Belisarius Cawl', M:'8"', T:'8', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'105×70mm' }
+    { name:'Belisarius Cawl', M:'8"', T:'8', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'105×70mm Oval' }
   ],
   ranged:[
     { name:'Solar atomiser', range:'18"', A:'3', BS:'2+', S:'14', AP:'-4', D:'D6', kw:['MELTA 3'] }
@@ -7072,7 +7072,9 @@ const DATASHEETS = {
   name:'Skitarii Rangers', faction:'adeptus-mechanicus', bsId:'de59-f65c-181a-8509', role:'Battleline',
   stats:[
     // New Recruit prints "Skitarii Rangers (x2)"; the unit's 10 models all have this profile (BSData ×10) (deviations-nr.json)
-    { name:'Skitarii Rangers', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm' }
+    // baseWith: a model of this profile with that wargear is on its own base (GW's base size guide, line 2666: "Skitarii
+    // Rangers/Skitarii Vanguard: Transuranic Arquebus 60x35.5mm Oval Base"); Bases & proxies counts it (verify/bases.js checks it)
+    { name:'Skitarii Rangers', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm', baseWith:{ 'Transuranic arquebus':'60×35.5mm Oval' } }
   ],
   ranged:[
     { name:'Galvanic rifle', range:'30"', A:'2', BS:'4+', S:'4', AP:'0', D:'1' },
@@ -7099,7 +7101,7 @@ const DATASHEETS = {
 'adeptus-mechanicus/ironstrider-ballistarii':{
   name:'Ironstrider Ballistarii', faction:'adeptus-mechanicus', bsId:'7efb-de37-79c4-cccb', role:'Vehicle',
   stats:[
-    { name:'Ironstrider Ballistarii', M:'10"', T:'7', Sv:'3+', W:'7', Ld:'7+', OC:'2', InSv:'5+', base:'105×70mm' }
+    { name:'Ironstrider Ballistarii', M:'10"', T:'7', Sv:'3+', W:'7', Ld:'7+', OC:'2', InSv:'5+', base:'105×70mm Oval' }
   ],
   ranged:[
     { name:'Twin cognis lascannon', range:'48"', A:'2', BS:'4+', S:'12', AP:'-3', D:'D6+1', kw:['SUSTAINED HITS 1','TWIN-LINKED'] },
@@ -7310,7 +7312,7 @@ const DATASHEETS = {
 'emperors-children/maulerfiend':{
   name:'Maulerfiend', faction:'emperors-children', bsId:'656c-8b78-8e59-0591', role:'Vehicle',
   stats:[
-    { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm' }
+    { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
   ranged:[
     { name:'Magma cutter', range:'6"', A:'2', BS:'3+', S:'9', AP:'-4', D:'D6', kw:['MELTA 2'] }
@@ -7328,7 +7330,7 @@ const DATASHEETS = {
 'chaos-knights/chaos-cerastus-knight-atrapos':{
   name:'Chaos Cerastus Knight Atrapos', faction:'chaos-knights', bsId:'8b1d-9029-f9e1-42d9', role:'Character',
   stats:[
-    { name:'Chaos Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm' }
+    { name:'Chaos Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'low intensity', group:'Atrapos lascutter', range:'36"', A:'2D6', BS:'3+', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'] },
@@ -7351,7 +7353,7 @@ const DATASHEETS = {
 'chaos-knights/chaos-cerastus-knight-lancer':{
   name:'Chaos Cerastus Knight Lancer', faction:'chaos-knights', bsId:'4175-82c6-8e96-bef8', role:'Character',
   stats:[
-    { name:'Chaos Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm' }
+    { name:'Chaos Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Cerastus shock lance', range:'12"', A:'6', BS:'3+', S:'6', AP:'0', D:'2', kw:['ASSAULT','SUSTAINED HITS 2'] }
@@ -7371,7 +7373,7 @@ const DATASHEETS = {
 'chaos-knights/knight-despoiler':{
   name:'Knight Despoiler', faction:'chaos-knights', bsId:'0119-8c04-435e-c782', role:'Character',
   stats:[
-    { name:'Knight Despoiler', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+    { name:'Knight Despoiler', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
   ranged:[
     { name:'Ruinspear rocket pod', range:'48"', A:'3', BS:'3+', S:'8', AP:'-2', D:'D6' },
@@ -7394,7 +7396,7 @@ const DATASHEETS = {
 'chaos-knights/knight-ruinator':{
   name:'Knight Ruinator', faction:'chaos-knights', bsId:'c0a2-eb65-6d34-5bc6', role:'Character',
   stats:[
-    { name:'Knight Ruinator', M:'10"', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm', T:'11' }
+    { name:'Knight Ruinator', M:'10"', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval', T:'11' }
   ],
   ranged:[
     { name:'Darkflame lance', range:'18"', A:'D6+6', BS:'–', S:'8', AP:'-1', D:'2', kw:['IGNORES COVER','TORRENT'] },
@@ -10097,7 +10099,7 @@ const GRANTS = [
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
   unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
-  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','own'],
+  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from','own'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
   abilities:['name','who','tag','at','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']

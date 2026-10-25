@@ -924,7 +924,7 @@ BASES TO PRINT
 2× 28.5mm
 2× 60mm
 4× 100mm
-2× 120×92mm
+2× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
@@ -956,10 +956,10 @@ Norn Emissary
 Norn Emissary
 Tyrannofex
 2 units: mark them apart (1, 2)
-1× 120×92mm
+1× 120×92mm Oval
 Tyrannofex
 
-From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
@@ -3071,7 +3071,7 @@ LD
 OC
 InSv
 Tyrannofex
-120×92mm
+120×92mm Oval
 9"
 12
 2+
