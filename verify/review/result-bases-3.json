@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ba1dbc422b050972",
+  "where": "orks/gretchin · absent: Gretchin: Runtherd",
+  "verdict": "ok",
+  "why": "Every evidence line checks out. verify/.cache/waha/ds/orks_Gretchin.html line 1530 is the UNIT COMPOSITION: '10-20 Gretchin models … YOUR UNIT COSTS 10 models 45 / 20 models 80'. Line 1551 is the RUNTHERD item under 'SUPPORTED BY: This unit can be supported by the following unit:'. The 'LED BY' block just above it names ZODGROD WORTSNAGGA, so the new 'supports' / 'supported by' wording is correct. GW guide line 3504 reads 'Gretchin: Runtherd  32mm'. shooty.txt 384, melee.txt 315 and ooga-booga.txt 399 read '10x Gretchin'. ooga-booga.txt line 100 reads '1x Runtherd', with '• Supporting: Gretchin[4]' on line 101, and its stats row is 'Runtherd - Runtherd … 32mm'. The diff changes only the reason and evidence text. The bases step passes with 2 declared absent."
+ },
+ {
+  "key": "db2508890225ea88",
+  "where": "app.html · unit stat block, base line",
+  "verdict": "ok",
+  "why": "The code is general: it takes every entry of s.baseWith in order and renders it as '<base> w/ <wargear>' after s.base, joined with ' · '. A unit with no baseWith gives [s.base].join(' · ') === s.base, the same string as before. A missing base gives '' both before and after, because join turns undefined into ''. The whole joined string goes through esc(), so the wargear names (object keys) and the base values are escaped as well. The only baseWith in data.js is the Skitarii Rangers' (line 6919). Snapshots against a render of 8cc6829 show one changed stat line, '25mm' → '25mm · 60×35.5mm Oval w/ Transuranic arquebus'. Screenshots at 390px and 320px wrap cleanly inside the name column with no overflow and the stat columns stay aligned; at 320px '60×35.5mm' and 'Oval' land on separate lines, which is cosmetic only. The screens and small-phone render steps pass with 0 failures."
+ },
+ {
+  "key": "d0f1f36a9ca4d3e8",
+  "where": "app.html · Bases & proxies footer",
+  "verdict": "ok",
+  "why": "The footer is true. verify/bases.js holds every one of the 243 model rows to GW's guide row, either by lookup or by a declaration. The only rows that use Wahapedia are the 'guide: null' declarations, Nazdreg (60mm) and Sentinel Guard (40mm). The gate counts 4 such rows because they appear in 4 lists (melee, ooga-booga, dread-host, emperors-chosen), and it checks each app value against the cached Wahapedia ⌀. The other declarations (Terminator Squad, Nurglings, Calgar, Warboss (Armageddon)) only map rows to GW guide rows, and the Rangers' baseWith comes from GW line 2666. One nuance does not make it false: Wazdakka is GW's row with GW's suspected misprint corrected. The 120 is GW's figure, but the oval shape comes from the datasheet, BSData and NR, confirmed by the owner. The snapshot change is this line, once in each of the 22 lists."
+ }
+]
