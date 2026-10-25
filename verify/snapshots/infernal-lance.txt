@@ -32,7 +32,7 @@ Start of the first battle round
 
 TO DO NOW
 
-Methodical Destruction · Knight Ruinator ×2
+Methodical Destruction · Knight Ruinator×2
 Start of the battle round
 1 to do
 
@@ -98,7 +98,7 @@ Doom · option of Harbingers of Dread
 Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
-Methodical Destruction · Knight Ruinator ×2
+Methodical Destruction · Knight Ruinator×2
 Shooting · Their turn
 5 active
 
@@ -140,7 +140,7 @@ Doom · option of Harbingers of Dread
 Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
-Methodical Destruction · Knight Ruinator ×2
+Methodical Destruction · Knight Ruinator×2
 Fight · Their turn
 7 active
 
@@ -152,7 +152,7 @@ Doom · option of Harbingers of Dread
 Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
-Methodical Destruction · Knight Ruinator ×2
+Methodical Destruction · Knight Ruinator×2
 
 Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 

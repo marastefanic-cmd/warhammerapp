@@ -36,7 +36,7 @@ Blessings of Khorne · World Eaters army rule
 Reborn in Blood · Angron
 Wrathful Presence · Angron
 The Blood God’s Favour (Wrathful Presence) · Angron
-Icon of Khorne · Khârn the Betrayer
+Icon of Khorne · Khorne Berzerkers
 Command · Your turn
 3 to do
 
@@ -44,7 +44,7 @@ TO DO NOW
 
 Rage Eternal · Slaughterbound Not leading a unit in this list
 Rage Eternal · Slaughterbound
-Objective Ravaged · Jakhals
+Objective Ravaged · Jakhals×2
 Command · Their turn
 nothing
 

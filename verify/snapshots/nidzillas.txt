@@ -32,7 +32,7 @@ Start of the first battle round
 
 TO DO NOW
 
-Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+Singular Purpose · Norn Assimilator×2, Norn Emissary×2
 Command · Your turn
 1 to do · 5 once per battle
 
@@ -68,13 +68,13 @@ Shooting · Your turn
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+Singular Purpose · Norn Assimilator×2, Norn Emissary×2
 Shooting · Their turn
 1 active · 2 once per battle
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+Singular Purpose · Norn Assimilator×2, Norn Emissary×2
 
 ONCE PER BATTLE
 
@@ -95,7 +95,7 @@ Fight · Your turn
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+Singular Purpose · Norn Assimilator×2, Norn Emissary×2
 
 ONCE PER BATTLE
 
@@ -106,7 +106,7 @@ Fight · Their turn
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+Singular Purpose · Norn Assimilator×2, Norn Emissary×2
 
 ONCE PER BATTLE
 
