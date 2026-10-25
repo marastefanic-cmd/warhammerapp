@@ -180,6 +180,10 @@
     "detachments": {
      "source": "gw",
      "note": "see FACTIONS.detachments"
+    },
+    "allies": {
+     "source": "hand",
+     "note": "an allied unit's reason to be in a list: New Recruit's ally name (role \"Allies: X\") -> the rule that lets X's units into this faction's army (Assigned Agents, Daemonic Pact, the Deathwatch Support detachment's Mission Tactics); its words are a RULES entry or the faction's own rule"
     }
    }
   },

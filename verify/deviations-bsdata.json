@@ -2030,16 +2030,6 @@
  },
  {
   "army": "navigator-sounds-op-ngl",
-  "unit": "knight-errant",
-  "field": "rules",
-  "app": "",
-  "source": "Assault",
-  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) gives the unit Assault; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
-  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Errant.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D6, Code Chivalric, Super-heavy Walker\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "navigator-sounds-op-ngl",
   "unit": "navigator",
   "field": "ability.text",
   "app": "Third Eye: At the start of your Shooting phase, select one enemy unit within 12\" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**.",

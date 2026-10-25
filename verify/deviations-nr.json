@@ -2009,6 +2009,16 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3532 (\"Tankbustas: Boss Nob  40mm\"); verify/sources/nr/shooty.txt line 43 (Base 32mm); verify/.cache/waha/ds/orks_Tankbustas.html: the Nob \"(⌀40mm)\" (the Tankbustas ⌀32mm)."
  },
  {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-crusader",
+  "field": "from[ranged Heavy flamer]",
+  "app": null,
+  "source": "New Recruit marks \"(Hunter's Eye)\" as applied",
+  "reason": "The heavy flamer has [IGNORES COVER] on GW's datasheet already; Hunter’s Eye (\"Ranged weapons equipped by the bearer have the [IGNORES COVER] ability\") gives it nothing it lacks. New Recruit prints the weapon as changed by Hunter’s Eye and its keywords as \"Ignores Cover, Torrent, Ignores Cover\"; the app shows each weapon ability once, as GW prints it, with no mark (verify/nr.js and verify/bsdata.js read a keyword repeated by a rule as one).",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Crusader.html: Heavy flamer [IGNORES COVER, TORRENT]; verify/sources/nr/4-megas-and-a-destrier.txt, line 158, the Knight Crusader's Heavy flamer (Hunter's Eye): \"Ignores Cover, Torrent, Ignores Cover\".",
+  "by": "hand (Claude)"
+ },
+ {
   "army": "navigator-sounds-op-ngl",
   "unit": "cerastus-knight-atrapos",
   "field": "stats[Cerastus Knight Atrapos].base",

@@ -78,7 +78,9 @@ const nn = (s) => String(s == null ? '' : s).normalize('NFC')
 const nv = (s, base) => { let v = nn(s); if (v === '' || v === '-' || v === 'N/A') v = '-'; if (base) v = v.replace(/x/g, '×'); return v; };
 const nk = (s) => nn(s).toUpperCase();
 const nt = (s) => nn(String(s == null ? '' : s).replace(/<\/?[a-z]+>/g, '').replace(/\*\*|\^\^|\*/g, '').replace(/\n/g, ' ')).toLowerCase();
-const kwList = (s) => nn(s) && nn(s) !== '-' ? nn(s).split(/\s*,\s*/).filter(Boolean).map(nk) : [];
+// (each keyword once, as GW's datasheet prints it: a modifier that appends one the weapon has already, Hunter's Eye's "Ignores Cover" on a
+// heavy flamer that has it, changes nothing and is no grant)
+const kwList = (s) => nn(s) && nn(s) !== '-' ? [...new Set(nn(s).split(/\s*,\s*/).filter(Boolean).map(nk))] : [];
 const sameSet = (a, b) => JSON.stringify([...a].sort()) === JSON.stringify([...b].sort());
 const str = (v) => (v == null ? '' : typeof v === 'string' ? v : JSON.stringify(v));
 
@@ -922,8 +924,7 @@ function grantsOf(army, u, prof, appKw) {
   for (const c of prof.changes || []) {
     const isKw = c.char === 'Keywords';
     let keys;
-    // the keywords the change adds, counted: a keyword the weapon already has, appended again
-    // (Hunter's Eye's "Ignores Cover" on a heavy flamer that has it), is added too
+    // the keywords the change adds (one the weapon already has is not added: kwList)
     if (isKw) { const left = kwList(c.before); keys = kwList(c.after).filter((k) => { const i = left.indexOf(k); if (i < 0) return true; left.splice(i, 1); return false; }).map((k) => (appKw || []).find((x) => nk(x) === k) || k); }
     else { if (nn(c.after).replace(/\+0$/, '') === nn(c.before)) continue; keys = [CHAR_KEY[c.char] || c.char]; }
     for (const key of keys) {
@@ -1077,7 +1078,10 @@ function compareUnit(army, u, F, fail) {
     const fromMods = (u.mods || []).some((m) => nn(m.from) === nn(a.name));
     const aur = (u.aura || []).filter((m) => nn(m.from) === nn(a.name));
     if (fromMods) return true;
-    // an aura whose keywords leave out the unit itself (a Knight's Bondsman ability, for ARMIGER models only)
+    // an ability GW tags (Bondsman): it affects another model, the ARMIGER the Bondsman rule selects, never its own (Bondsman: "select
+    // one friendly ARMIGER model … that ARMIGER model is affected by that Bondsman ability"); not an aura, GW tags it no (Aura)
+    if ((a.tag || '').split(' · ').includes('Bondsman')) return false;
+    // an aura whose keywords leave out the unit itself
     const hasK = (k) => (u.kw || []).some((x) => nn(x).toLowerCase() === nn(k).toLowerCase());
     const fits = (n) => !n || ((!n.all || n.all.every(hasK)) && (!n.any || n.any.some(hasK)) && (!n.none || !n.none.some(hasK)));
     if (aur.length && aur.every((m) => m.notSelf || !fits(m.needs))) return false;

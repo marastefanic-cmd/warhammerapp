@@ -498,7 +498,9 @@ function buildGroup(g, k) {
           if (w.group) o.name = typo(w.name);
           if (w.hunter) o.hunter = true;
           o.range = cellV(ch.Range); o.A = cellV(ch.A); o[kind === 'ranged' ? 'BS' : 'WS'] = cellV(ch.BS || ch.WS); o.S = cellV(ch.S); o.AP = cellV(ch.AP); o.D = cellV(ch.D);
-          o.kw = splitItems(ch.Keywords || '').map(nm).filter(Boolean).map(x => x.replace(/^[^:]+/, y => y.toUpperCase()));
+          // (each weapon ability once, as GW's datasheet prints it: New Recruit repeats one a rule of the list gives a weapon that has it
+          // already, Hunter’s Eye's IGNORES COVER on the heavy flamer: "Ignores Cover, Torrent, Ignores Cover")
+          o.kw = uniq(splitItems(ch.Keywords || '').map(nm).filter(Boolean).map(x => x.replace(/^[^:]+/, y => y.toUpperCase())));
           if (isEnh(s)) o.enh = true;
           const key = kind + '|' + JSON.stringify(o);
           if (seen.has(key)) seen.get(key).n += n; else { const r = { kind, o, n, pid: prof.id }; seen.set(key, r); }

@@ -111,9 +111,36 @@
   "army": "core",
   "unit": "rule:Conversion",
   "field": "text",
-  "app": "Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit.",
-  "source": "…matches up to \"his weapon, if the target is more than 1\" then source has: \"2\" from the bearer, an unmodified successful hit roll of 4+ scores a critical hit. graviton pulsar [anti-vehicle 2+, bla\" | sentences not found: [\"each time an attack is made with this weapon, if the target is more than 18\\\" away from the bearer, an unmodified successful hit roll of 4+ scores a critical hit.\"]",
-  "reason": "[CONVERSION] is a weapon ability GW's datasheets define per weapon, each with its own range (the Faction Pack's Armiger Moirax conversion beam cannon: \"more than 12\"\"; its Knight Castellan/Valiant profile: \"more than 24\"\"). The app's lists have one such weapon, the Knight Defender's conversion beam obliterator, so the glossary entry is that datasheet's wording (RULE_SRC names it). GW's Faction Pack does not reprint the Knight Defender datasheet; the Wahapedia Knight Defender datasheet (the codex) is the only source of these words, which texts.js does not search for glossary entries.",
+  "app": "**Conversion beam obliterator** (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit.",
+  "source": "…matches up to \"conversion beam \" then source has: \"cannon [conversion, twin-linked, sustained hits d3] 48\" 3 3+ 16 -2 6 conversion: each time an attack is made with this w\" | sentences not found: [\"conversion beam obliterator (knight defender): each time an attack is made with this weapon, if the target is more than 18\\\" away from the bearer, an unmodified successful hit roll of 4+ scores a critical hit.\"]",
+  "reason": "[CONVERSION] has no core-rules or glossary definition (GW's Core Rules, the Universal Rules Updates and Wahapedia's core rules have none): GW's datasheets define it per weapon, each with its own range (the Faction Pack's Armiger Moirax conversion beam cannon: \"more than 12\"\"; its Knight Castellan/Valiant profile: \"more than 24\"\"). So the glossary entry gives each weapon's own words, named by the weapon (\"Conversion beam obliterator (Knight Defender):\", the app's label); the lists have one such weapon. GW's Faction Pack does not reprint the Knight Defender datasheet; the Wahapedia Knight Defender datasheet (the codex) is the only source of these words, which texts.js does not search for glossary entries.",
   "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html, under the weapons: \"Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.\"; GW Faction Pack Imperial Knights lines 369 and 785 (other weapons' Conversion, 24\" and 12\")."
+ },
+ {
+  "army": "core",
+  "unit": "rule:Assigned Agents",
+  "field": "text",
+  "app": "- Incursion: **RETINUE** units 1, **CHARACTER** units 1, **REQUISITIONED** units 1",
+  "source": "(no part of it found) | sentences not found: [\"incursion: retinue units 1, character units 1, requisitioned units 1\"]",
+  "reason": "A table written as lines: Wahapedia prints Assigned Agents' limits as a table (BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS, a row per battle size); the app writes each row as one line, the battle size, then each column's heading and its number. No number or heading changed.",
+  "evidence": "verify/.cache/waha/imperial-agents.html, Army Rules, Assigned Agents (text: verify/.cache/waha/imperial-agents.txt lines 22-25: \"BATTLE SIZE RETINUE UNITS CHARACTER UNITS REQUISITIONED UNITS / Incursion 1 1 1 / Strike Force 2 2 1 / Onslaught 3 3 2\"). GW's Imperial Agents Faction Pack does not reprint the army rule."
+ },
+ {
+  "army": "core",
+  "unit": "rule:Assigned Agents",
+  "field": "text",
+  "app": "- Strike Force: **RETINUE** units 2, **CHARACTER** units 2, **REQUISITIONED** units 1",
+  "source": "…matches up to \"strike force: \" then source has: \"2 units onslaught: 3 units until the start of your next command phase, those units gain the halo override keyword. then,\" | sentences not found: [\"strike force: retinue units 2, character units 2, requisitioned units 1\"]",
+  "reason": "A table written as lines: Wahapedia prints Assigned Agents' limits as a table (BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS, a row per battle size); the app writes each row as one line, the battle size, then each column's heading and its number. No number or heading changed.",
+  "evidence": "verify/.cache/waha/imperial-agents.html, Army Rules, Assigned Agents (text: verify/.cache/waha/imperial-agents.txt lines 22-25: \"BATTLE SIZE RETINUE UNITS CHARACTER UNITS REQUISITIONED UNITS / Incursion 1 1 1 / Strike Force 2 2 1 / Onslaught 3 3 2\"). GW's Imperial Agents Faction Pack does not reprint the army rule."
+ },
+ {
+  "army": "core",
+  "unit": "rule:Assigned Agents",
+  "field": "text",
+  "app": "- Onslaught: **RETINUE** units 3, **CHARACTER** units 3, **REQUISITIONED** units 2",
+  "source": "(no part of it found) | sentences not found: [\"onslaught: retinue units 3, character units 3, requisitioned units 2\"]",
+  "reason": "A table written as lines: Wahapedia prints Assigned Agents' limits as a table (BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS, a row per battle size); the app writes each row as one line, the battle size, then each column's heading and its number. No number or heading changed.",
+  "evidence": "verify/.cache/waha/imperial-agents.html, Army Rules, Assigned Agents (text: verify/.cache/waha/imperial-agents.txt lines 22-25: \"BATTLE SIZE RETINUE UNITS CHARACTER UNITS REQUISITIONED UNITS / Incursion 1 1 1 / Strike Force 2 2 1 / Onslaught 3 3 2\"). GW's Imperial Agents Faction Pack does not reprint the army rule."
  }
 ]
