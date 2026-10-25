@@ -39,6 +39,14 @@ const RULES = {
   'Devastating Wounds': 'Each time an attack made with a **[DEVASTATING WOUNDS]** weapon results in a **critical wound**, the attack sequence for that attack ends and the target unit suffers a number of **mortal wounds** equal to the **D** characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n**Mortal wounds** inflicted by **[DEVASTATING WOUNDS]** weapons can damage a maximum of one model for each **critical wound**; any remaining **mortal wounds** inflicted by that attack are lost.',
   'Extra Attacks': 'Each time a unit containing one or more models with an **[EXTRA ATTACKS]** weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n- All of that model’s **[EXTRA ATTACKS]** weapons.\n- One of that model’s other melee weapons, if possible.',
   'Harpooned': 'When this unit **declares a charge**, if an enemy **MONSTER/VEHICLE** unit is within 12" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to **charge rolls** until the end of the phase.\n- This unit must end that **charge move engaged** with that **MONSTER/VEHICLE** unit.',
+  // the rules that bring an allied unit into a list (FACTIONS[…].allies names the one for each ally; RULE_SRC says where): Daemonic Pact
+  // (GW's Faction Pack: Chaos Daemons, Army Rules), Assigned Agents (Wahapedia, Imperial Agents, Army Rules; its table as lines)
+  'Daemonic Pact': 'If every model from your army has the **CHAOS KNIGHTS** or **HERETIC ASTARTES** keyword, you can include **LEGIONES DAEMONICA** units in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points cost of such units you can include depends on your battle size, as shown below.\n- Incursion: Up to 250 pts\n- Strike Force: Up to 500 pts\n- Onslaught: Up to 750 pts\nNone of these models can be your **WARLORD**, and they cannot be given Enhancements.\nIn addition, for each of the following keywords, the number of non-**BATTLELINE** units with that keyword you include in this way cannot be greater than the number of **BATTLELINE** units with that keyword you include in this way:\n- **KHORNE**\n- **TZEENTCH**\n- **NURGLE**\n- **SLAANESH**',
+  'Assigned Agents': 'If your Army Faction is **AGENTS OF THE IMPERIUM**, then in the Select Detachment Rules step, you can select one of the available Detachments from this book as normal.\nIf your Army Faction is not **AGENTS OF THE IMPERIUM**, but every model in your army has the **IMPERIUM** keyword, you can include **AGENTS OF THE IMPERIUM** units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of **AGENTS OF THE IMPERIUM** units you can include in your army depends on the battle size, as shown below.\n- Incursion: **RETINUE** units 1, **CHARACTER** units 1, **REQUISITIONED** units 1\n- Strike Force: **RETINUE** units 2, **CHARACTER** units 2, **REQUISITIONED** units 1\n- Onslaught: **RETINUE** units 3, **CHARACTER** units 3, **REQUISITIONED** units 2\nNote that you can include **AGENTS OF THE IMPERIUM DEDICATED TRANSPORT** units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round.',
+  // [CONVERSION]: no core or glossary definition (GW's Core Rules, Wahapedia core rules): each datasheet defines it for its own weapon,
+  // with that weapon's range (the Faction Pack's Armiger Moirax: 12", Acastus Knight Asterius: 24"), so each weapon's own words, named
+  // by its weapon, as its datasheet prints them; the lists have one: the Knight Defender's (Wahapedia, Knight Defender datasheet)
+  'Conversion': '**Conversion beam obliterator** (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit.',
   'Hazardous': 'Each time a unit is **selected to shoot** or **selected to fight**, after that unit has resolved all of its attacks, make a number of **hazard rolls** (06.03) for that unit equal to the number of **[HAZARDOUS]** weapons you selected in the Select Weapons step.',
   'Heavy': 'In your Shooting phase, each time an attack is made with a **[HEAVY]** weapon, add 1 to the **hit roll** if all of the following apply to the attacking unit:\n- That unit is **unengaged**.\n- That unit was not set up on the battlefield this turn.\n- No model in that unit has moved more than 3" this turn.',
   'Ignores Cover': 'Each time an attack is made with an **[IGNORES COVER]** weapon, the target cannot have the **benefit of cover** against that attack (13.08), including from rules that give a model or unit the **benefit of cover** (e.g. **Stealth**).',
@@ -100,7 +108,7 @@ const RULES = {
 
 // Which RULES entry a keyword or rule chip opens ("RAPID FIRE 4" -> "Rapid Fire").
 // where a RULES entry comes from when it is not a core rule
-const RULE_SRC = { 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing' };
+const RULE_SRC = { 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing', 'Conversion':'weapon ability each datasheet defines for its own weapon (Knight Defender datasheet: conversion beam obliterator)', 'Daemonic Pact':'Chaos Daemons army rule (Legiones Daemonica allies)', 'Assigned Agents':'Imperial Agents army rule (Agents of the Imperium units in another army)' };
 const RULE_ALIASES = [
   [/^supa-hazardous/i, 'Supa-hazardous'], [/^pulse jet move$/i, 'Pulse Jet Move'], [/^support$/i, 'Support'],
   [/^(below |at |at or below )?(starting|half)[- ]strength$/i, 'Starting Strength'], [/^towering$/i, 'Plunging Fire'], [/^(select|choosing) weapons?$/i, 'Select Weapons'],
@@ -115,7 +123,7 @@ const RULE_ALIASES = [
   [/^melta/i, 'Melta'], [/^lance/i, 'Lance'], [/^super-heavy walker/i, 'Super-Heavy Walker'],
   [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'], [/^damaged \d+$/i, 'Damaged'],
   [/^psychic$/i, 'Psychic'],
-  [/^harpooned$/i, 'Harpooned'],
+  [/^harpooned$/i, 'Harpooned'], [/^conversion$/i, 'Conversion'], [/^daemonic pact$/i, 'Daemonic Pact'], [/^assigned agents$/i, 'Assigned Agents'],
   [/^hazard(ous)? (roll|test)s?$/i, 'Hazard Roll'],
   [/^mortal wounds?$/i, 'Mortal Wounds'],
   [/^battle-shock/i, 'Battle-shock'],
@@ -395,6 +403,8 @@ const FACTIONS = {
   },
   'imperial-knights': {
     name: 'Imperial Knights',
+    // an allied unit's reason to be in the list (New Recruit's role "Allies: X"): the rule that lets X's units into this faction's army
+    allies: { 'Imperial Agents':'Assigned Agents' },
     // words players use for a rule that has another name
     aliases: [[/^oath/i, 'Code Chivalric'], [/^honoured/i, 'Code Chivalric']],
     armyRules: [
@@ -1144,6 +1154,8 @@ const FACTIONS = {
   },
   'chaos-knights': {
     name: 'Chaos Knights',
+    // an allied unit's reason to be in the list (New Recruit's role "Allies: X"): the rule that lets X's units into this faction's army
+    allies: { 'Legiones Daemonica':'Daemonic Pact' },
     // Wahapedia also lists Dreadblades (CHAOS KNIGHTS models in another faction's army); it does nothing in these lists, so it is left out.
     armyRules: [
       // Wahapedia wording; the table is the Dread abilities, label = the name and the D6 result that selects it (drawn as a dice
@@ -1492,6 +1504,8 @@ const FACTIONS = {
   },
   'ultramarines': {
     name: 'Ultramarines',
+    // an allied unit's reason to be in the list (New Recruit's role "Allies: X"): the rule that lets X's units into this faction's army
+    allies: { 'Deathwatch':'Mission Tactics' },
     // army rules: Wahapedia, Ultramarines, Army Rules (the ones the list’s units name), written by verify/from-json.js
     armyRules: [
       { name:'Combat Doctrines', at:'Start of your Command phase', ph:['command','movement','shooting','charge'], turn:'your', text:'At the start of your Command phase, you can select one **combat doctrine** listed below. If you do, that **combat doctrine** is active for friendly **ADEPTUS ASTARTES** units with this ability until the start of your next Command phase.\nASSAULT DOCTRINE\nWhen this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.\nDEVASTATOR DOCTRINE\nThis unit’s ranged attacks have **[ASSAULT]**.\nTACTICAL DOCTRINE\nWhen this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge**.\nUnless otherwise stated:\n- You can only select each **combat doctrine** once per battle.\n- Only one **combat doctrine** can be active for each unit. If a rule makes a **combat doctrine** active for a unit, any **combat doctrine** previously active for that unit is no longer active for that unit.' },
@@ -2905,9 +2919,6 @@ const ARMIES = [
       mods:[
         { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'+1 to hit rolls', from:'Aggressive Assault' },
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
-      aura:[
-        { kind:'ranged', needs:{ all:['Armiger'] }, when:'Affected by Errant’s Duty (Bondsman)', note:'ranged weapons have [ASSAULT]', from:'Errant’s Duty' }
       ]
     },
     {
@@ -2918,10 +2929,6 @@ const ARMIES = [
       mods:[
         { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'improve AP by 1', from:'Seasoned Noble' },
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Armiger'] }, when:'Affected by Paladin’s Duty (Bondsman)', note:'weapons have [LETHAL HITS]', from:'Paladin’s Duty' },
-        { kind:'melee', needs:{ all:['Armiger'] }, when:'Affected by Paladin’s Duty (Bondsman)', note:'melee weapons have [LANCE]', from:'Paladin’s Duty' }
       ]
     },
     {
@@ -2932,10 +2939,6 @@ const ARMIES = [
       mods:[
         { kind:'ranged', when:'vs non-MONSTER/VEHICLE targets', note:'ranged attacks have [DEVASTATING WOUNDS]', from:'Thin Their Ranks', always:true, vs:{ none:['Monster','Vehicle'] } },
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Armiger'] }, when:'Affected by Warden’s Duty (Bondsman)', note:'weapons have [SUSTAINED HITS 1]', from:'Warden’s Duty' },
-        { kind:'ranged', needs:{ all:['Armiger'] }, when:'Affected by Warden’s Duty (Bondsman)', note:'ranged weapons have [IGNORES COVER]', from:'Warden’s Duty' }
       ],
       kw:['Character','Faction: Imperial Knights','Imperium','Knight Warden','Questoris','Titanic','Towering','Vehicle','Walker','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
@@ -2979,9 +2982,6 @@ const ARMIES = [
         { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } } },
         { kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Bringer of Justice', always:true },
         { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Armiger'] }, when:'Affected by Atrapos’ Duty (Bondsman), vs a TITANIC or TOWERING model', note:'re-roll the hit roll and the wound roll', from:'Atrapos’ Duty', vs:{ any:['Titanic','Towering'] } }
       ]
     },
     {
@@ -2999,7 +2999,7 @@ const ARMIES = [
       gear:[['Avenger gatling cannon','Heavy flamer','Titanic feet','Stormspear rocket pod','Meltagun','Questoris heavy stubber','Rapid-fire battle cannon']],
       ranged:[
         { name:'Avenger gatling cannon', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
-        { name:'Heavy flamer', kw:['IGNORES COVER','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
+        { name:'Heavy flamer' },
         { name:'Stormspear rocket pod', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
         { name:'Meltagun', kw:['MELTA 2','IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
         { name:'Questoris heavy stubber', kw:['RAPID FIRE 3','IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
@@ -3017,9 +3017,6 @@ const ARMIES = [
       mods:[
         { kind:'ranged', when:'Remained Stationary in your Movement phase', cond:'stationary', note:'ranged weapons have [SUSTAINED HITS 1] until the end of the turn', from:'Punishing Salvoes' },
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
-      aura:[
-        { kind:'ranged', needs:{ all:['Armiger'] }, when:'Affected by Crusader’s Duty (Bondsman)', note:'+1 to hit rolls', from:'Crusader’s Duty' }
       ],
       rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Ignores Cover','Torrent','Melta','Rapid Fire','Blast'],
       why:{ rules:{ 'Ignores Cover':'Hunter’s Eye' } }
@@ -5498,6 +5495,120 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'navigator-sounds-op-ngl', name:'Navigator sounds op ngl', faction:'imperial-knights', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Purge the Foe',
+  detachments:['freeblade-company'],
+  config:{ 'Code Chivalric':'Deed, Quality' },
+  source:'New Recruit, exported 25 Oct 2026 (JSON)',
+  units:[
+    {
+      id:'cerastus-knight-atrapos', ds:'imperial-knights/cerastus-knight-atrapos', pts:450, enhancement:'Bringer of Justice', warlord:true,
+      models:['1× Cerastus Knight Atrapos'],
+      gear:[['Atrapos lascutter','Graviton singularity cannon']],
+      melee:[
+        { name:'high intensity', A:'8', from:{ A:'Bringer of Justice' } },
+        { name:'low intensity', A:'14', from:{ A:'Bringer of Justice' } }
+      ],
+      abilities:[
+        { name:'Macro-extinction Protocols' },
+        { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Atrapos’ Duty' },
+        { name:'Bringer of Justice', tag:'Enhancement', ph:['fight'], turn:'either', text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } } },
+        { kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Bringer of Justice', always:true },
+        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining' }
+      ],
+      kw:['Cerastus','Character','Faction: Imperial Knights','Imperium','Knight Atrapos','Titanic','Towering','Vehicle','Walker','Warlord'],
+      why:{ kw:{ Warlord:'Warlord' } }
+    },
+    {
+      id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
+      models:['1× Knight Crusader'],
+      gear:[['Avenger gatling cannon','Heavy flamer','Titanic feet','Stormspear rocket pod','Meltagun','Questoris heavy stubber','Rapid-fire battle cannon']],
+      ranged:[
+        { name:'Avenger gatling cannon', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
+        { name:'Heavy flamer' },
+        { name:'Stormspear rocket pod', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
+        { name:'Meltagun', kw:['MELTA 2','IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
+        { name:'Questoris heavy stubber', kw:['RAPID FIRE 3','IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } },
+        { name:'Rapid-fire battle cannon', kw:['BLAST','RAPID FIRE D6+3','IGNORES COVER'], from:{ 'IGNORES COVER':'Hunter’s Eye' } }
+      ],
+      abilities:[
+        { name:'Punishing Salvoes' },
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Crusader’s Duty' },
+        { name:'Hunter’s Eye', tag:'Enhancement', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Remained Stationary in your Movement phase', cond:'stationary', note:'ranged weapons have [SUSTAINED HITS 1] until the end of the turn', from:'Punishing Salvoes' },
+        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
+      ],
+      rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
+      why:{ rules:{ 'Ignores Cover':'Hunter’s Eye' } }
+    },
+    {
+      id:'knight-defender', ds:'imperial-knights/knight-defender', pts:385,
+      models:['1× Knight Defender'],
+      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', weapon:'Conversion beam obliterator', when:'Target more than 18" away', note:'an unmodified successful hit roll of 4+ scores a Critical Hit', from:'Conversion', calc:{ critHit:4 } },
+        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
+      ],
+      guard:[
+        { from:'Selfless Protector', needs:{ all:['Faction: Imperial Knights'] }, kind:'ranged', when:'Not fully visible to every model in the attacking unit because of the Knight Defender', note:'the Benefit of Cover and a 4+ invulnerable save against that attack', calc:{ cover:true, insv:4 } }
+      ]
+    },
+    {
+      id:'knight-destrier', ds:'imperial-knights/knight-destrier', pts:265,
+      models:['1× Knight Destrier'],
+      gear:[['Questoris heavy stubber','Titanic feet','Chastiser gatling cannon','Frag bombard']],
+      abilities:[
+        { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Thundercharge', na:'Needs a thundershock spear and bellatus reaper chainsword: not this loadout' },
+        { name:'Ram Jets' },
+        { name:'Saturation Fire' },
+        { name:'Invulnerable Save (5+*)' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target within range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Saturation Fire' },
+        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls (and -4 OC)', from:'Damaged: 1-6 Wounds Remaining' }
+      ]
+    },
+    {
+      id:'knight-errant', ds:'imperial-knights/knight-errant', pts:390, enhancement:'Mysterious Guardian',
+      models:['1× Knight Errant'],
+      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Aggressive Assault' },
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Errant’s Duty' },
+        { name:'Mysterious Guardian', tag:'Enhancement', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'+1 to hit rolls', from:'Aggressive Assault' },
+        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
+      ],
+      rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Melta','Blast','Deep Strike'],
+      why:{ rules:{ 'Deep Strike':'Mysterious Guardian' } }
+    },
+    {
+      id:'navigator', ds:'imperial-knights/navigator', pts:75,
+      models:['1× Navigator'],
+      gear:[['Force-orb cane','Laspistol']]
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -6744,8 +6855,8 @@ const DATASHEETS = {
     { name:'contained', group:'Graviton singularity cannon', range:'24"', A:'D3', BS:'3+', S:'16', AP:'-4', D:'D6+1', kw:['BLAST'] }
   ],
   melee:[
-    { name:'high intensity', group:'Atrapos lascutter', range:'Melee', WS:'3+', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'] },
-    { name:'low intensity', group:'Atrapos lascutter', range:'Melee', WS:'3+', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'] }
+    { name:'high intensity', group:'Atrapos lascutter', range:'Melee', WS:'3+', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'], A:'6' },
+    { name:'low intensity', group:'Atrapos lascutter', range:'Melee', WS:'3+', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'], A:'12' }
   ],
   abilities:[
     { name:'Macro-extinction Protocols', text:'Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.' },
@@ -6782,7 +6893,7 @@ const DATASHEETS = {
   ],
   ranged:[
     { name:'Avenger gatling cannon', range:'36"', A:'18', BS:'3+', S:'6', AP:'-2', D:'2' },
-    { name:'Heavy flamer', range:'12"', A:'D6', BS:'–', S:'5', AP:'-1', D:'1' },
+    { name:'Heavy flamer', range:'12"', A:'D6', BS:'–', S:'5', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] },
     { name:'Stormspear rocket pod', range:'48"', A:'3', BS:'3+', S:'8', AP:'-2', D:'D6' },
     { name:'Meltagun', range:'12"', A:'1', BS:'3+', S:'9', AP:'-4', D:'D6' },
     { name:'Questoris heavy stubber', range:'36"', A:'3', BS:'3+', S:'4', AP:'-1', D:'1' },
@@ -6799,6 +6910,48 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Crusader','Questoris','Titanic','Towering','Vehicle','Walker']
+},
+'imperial-knights/knight-defender':{
+  name:'Knight Defender', faction:'imperial-knights', bsId:'f12b-ca2a-9c87-79bb', role:'Character',
+  stats:[
+    { name:'Knight Defender', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'4+*', base:'170×109mm Oval' }
+  ],
+  ranged:[
+    { name:'Conversion beam obliterator', range:'36"', A:'3', BS:'3+', S:'12', AP:'-2', D:'4', kw:['CONVERSION','SUSTAINED HITS D3'] },
+    { name:'Phosphor blaster', range:'24"', A:'1', BS:'3+', S:'5', AP:'0', D:'1', kw:['IGNORES COVER','RAPID FIRE 1'] },
+    { name:'standard', group:'Plasma executor', range:'36"', A:'D6+3', BS:'3+', S:'8', AP:'-2', D:'2', kw:['BLAST'] },
+    { name:'supercharge', group:'Plasma executor', range:'36"', A:'D6+3', BS:'3+', S:'9', AP:'-3', D:'3', kw:['BLAST','HAZARDOUS'] },
+    { name:'Twin incendine combustor', range:'12"', A:'D6', BS:'–', S:'6', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT','TWIN-LINKED'] }
+  ],
+  melee:[
+    { name:'Titanic feet', range:'Melee', A:'4', WS:'4+', S:'8', AP:'-1', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Selfless Protector', text:'Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack.' },
+    { name:'Invulnerable Save (4+*)', def:'4+ invulnerable save against ranged attacks only', text:'This model has a 4+ invulnerable save against ranged attacks.', defOf:'fbb32536' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Defender’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.' }
+  ],
+  rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Conversion','Sustained Hits','Rapid Fire','Ignores Cover','Hazardous','Blast','Twin-linked','Torrent'],
+  kw:['Character','Faction: Imperial Knights','Imperium','Knight Defender','Questoris','Titanic','Towering','Vehicle','Walker']
+},
+'imperial-knights/navigator':{
+  name:'Navigator', faction:'imperial-knights', bsId:'55cf-8d86-affd-bc9b', role:'Allies: Imperial Agents',
+  stats:[
+    { name:'Navigator', M:'6"', T:'3', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Laspistol', range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Force-orb cane', range:'Melee', A:'3', WS:'4+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'Third Eye', tag:'Psychic', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy unit within 12" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**.' },
+    { name:'Gaze into the Empyrean', tag:'Psychic', text:'Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.' }
+  ],
+  rules:['Leader','Psychic','Pistol'],
+  kw:['Allies: Imperial Agents','Character','Faction: Agents of the Imperium','Imperium','Infantry','Navigator','Psyker','Voidfarers']
 },
 'adeptus-mechanicus/belisarius-cawl':{
   name:'Belisarius Cawl', faction:'adeptus-mechanicus', bsId:'1f1e-2989-4762-cf88', role:'Epic Hero',
@@ -8476,6 +8629,12 @@ const BS_IDS = {
     "mucho-mutantes/tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion":["c251-bd54-441-4799|1×190d-7321-6e85-5251,1×1a98-844f-f54b-f76c,1×4287-4c82-30d5-bfaa","1703-3edd-5eb3-fcef|1×7ebd-c3dc-8467-70ae,1×7ebd-c3dc-8467-70ae/7b4e-03d3-6b3f-6c48,5×996-bd56-400b-a51e,5×996-bd56-400b-a51e/7b4e-03d3-6b3f-6c48"],
     "mucho-mutantes/tzaangor-shaman-tzaangor-enlightened-flowing-flesh":["c251-bd54-441-4799|1×1a98-844f-f54b-f76c,1×4287-4c82-30d5-bfaa,1×c84c-683a-79be-1620","1703-3edd-5eb3-fcef|1×7ebd-c3dc-8467-70ae,1×7ebd-c3dc-8467-70ae/7b4e-03d3-6b3f-6c48,5×996-bd56-400b-a51e,5×996-bd56-400b-a51e/7b4e-03d3-6b3f-6c48"],
     "mucho-mutantes/tzaangors":["f5b9-50c8-5c60-d8ea|1×255b-146d-ca61-55fb,1×255b-146d-ca61-55fb/ee84-120d-a66b-0b72,9×5b9-7d59-48fd-b485,9×5b9-7d59-48fd-b485/a484-6a41-3648-bce1"],
+    "navigator-sounds-op-ngl/cerastus-knight-atrapos":["37a7-d156-1e4c-8fe1|1×406-60ac-f728-9c6d,1×73e9-498e-2d97-e18,1×ad65-d3cb-c677-7cb3,1×cc5a-e1bc-3dd8-f367"],
+    "navigator-sounds-op-ngl/knight-crusader":["1e27-a6de-3840-a050|1×273-38fa-249e-3aa4,1×288c-1cbc-8340-9c0a,1×441c-a2a8-59a4-85a4,1×4fc1-2679-a110-3cd,1×a05e-db63-84ad-4c5e,1×a05e-db63-84ad-4c5e/d6c0-4d42-c3c4-db8a,1×a05e-db63-84ad-4c5e/eedf-6059-a15-3c86,1×ca02-db54-10e6-f20e,1×e584-f803-7858-05bc"],
+    "navigator-sounds-op-ngl/knight-defender":["f12b-ca2a-9c87-79bb|1×288c-1cbc-8340-9c0a,1×615e-5655-130f-d14a,1×6bdb-2665-95ec-fcde,1×d956-a7af-5c96-2577,1×dbc9-8e4f-edf0-f9d6"],
+    "navigator-sounds-op-ngl/knight-destrier":["10d8-d702-f556-5d3c|1×3ded-7df8-ef3e-913a,1×646c-5f7f-cd1c-d5c9,1×c62a-bc9c-37fb-2b36,1×fc2d-063a-a9fa-968f"],
+    "navigator-sounds-op-ngl/knight-errant":["9efd-ec72-353f-4b23|1×1187-f3db-ea97-bada,1×273-38fa-249e-3aa4,1×35da-aa05-fc7f-9b1d,1×441c-a2a8-59a4-85a4,1×86c9-46db-4de-4a5d"],
+    "navigator-sounds-op-ngl/navigator":["55cf-8d86-affd-bc9b|1×7e50-4dc-fae1-c2d4,1×8309-f4fd-e530-94ec"],
     "nerf-when/deathwatch-terminator-squad":["390e-706b-a059-378b|3×259f-d98e-e052-ec64,3×259f-d98e-e052-ec64/8d7-b5ed-f870-e86e,3×259f-d98e-e052-ec64/8d7-b5ed-f870-e86e/5a2-c6a5-9b4b-605f,3×259f-d98e-e052-ec64/8d7-b5ed-f870-e86e/7efe-d1b8-35d1-f9c1,1×4595-7ad2-617a-c07d,1×4595-7ad2-617a-c07d/f831-6dfb-6b1b-8112,1×4595-7ad2-617a-c07d/f831-6dfb-6b1b-8112/8ad7-4a78-859d-2305,1×4595-7ad2-617a-c07d/f831-6dfb-6b1b-8112/ff14-7e0a-4b32-6fc1,1×45fa-9a7-8352-362e,1×45fa-9a7-8352-362e/f831-6dfb-6b1b-8112,1×45fa-9a7-8352-362e/f831-6dfb-6b1b-8112/8ad7-4a78-859d-2305,1×45fa-9a7-8352-362e/f831-6dfb-6b1b-8112/ff14-7e0a-4b32-6fc1"],
     "nerf-when/eradicator-squad-with-melta-rifles":["c570-c6ba-c9dc-5a44|1×71fb-48d9-b0da-332c,1×71fb-48d9-b0da-332c/0bb3-01f1-8be5-f285,1×71fb-48d9-b0da-332c/18b0-8c2-173f-5,1×71fb-48d9-b0da-332c/c88c-d4a0-4ec4-625c,1×ab61-e814-8c4d-1cb,1×ab61-e814-8c4d-1cb/0bb3-01f1-8be5-f285,1×ab61-e814-8c4d-1cb/18b0-8c2-173f-5,1×ab61-e814-8c4d-1cb/c88c-d4a0-4ec4-625c,1×eba8-6f8c-759-4e22,1×eba8-6f8c-759-4e22/0bb3-01f1-8be5-f285,1×eba8-6f8c-759-4e22/18b0-8c2-173f-5,1×eba8-6f8c-759-4e22/4bff-1982-fbf1-7a8f"],
     "nerf-when/heavy-intercessor-squad":["7324-e591-939b-b675|1×5f80-3d00-6e4d-cfaf,1×5f80-3d00-6e4d-cfaf/0bb3-01f1-8be5-f285,1×5f80-3d00-6e4d-cfaf/18b0-8c2-173f-5,1×5f80-3d00-6e4d-cfaf/36dc-bea0-75e7-f76a,1×bc1-73c2-c18-8687,1×bc1-73c2-c18-8687/0bb3-01f1-8be5-f285,1×bc1-73c2-c18-8687/18b0-8c2-173f-5,1×bc1-73c2-c18-8687/d941-c4cd-8b82-c453,3×deb4-6018-b8cf-1d66,3×deb4-6018-b8cf-1d66/0bb3-01f1-8be5-f285,3×deb4-6018-b8cf-1d66/18b0-8c2-173f-5,3×deb4-6018-b8cf-1d66/6881-277b-1f28-22f2"],
@@ -8690,6 +8849,7 @@ const BS_IDS = {
     "3449-7dac-6ac8-5d51":"Khârn the Betrayer",
     "3469-166f-44f3-51b8":"Bolt pistol",
     "34b5-f449-28f6-b365":"Heavy reaper autocannon",
+    "35da-aa05-fc7f-9b1d":"Mysterious Guardian",
     "3667-92c8-a7e5-1ccd":"Vashtorr's hammer",
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
     "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
@@ -8792,6 +8952,7 @@ const BS_IDS = {
     "54ca-fec8-f0c6-2c77":"Ectoplasma cannon and claws",
     "5514-3810-cf3e-3b23":"Memento Moritoi",
     "5541-daf-9f4a-ce3d":"Bolt pistol",
+    "55cf-8d86-affd-bc9b":"Navigator",
     "55fb-9c91-1a4f-3037":"Canis Rex",
     "5622-c756-d3e8-85ae":"Watcher's Axe",
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
@@ -8821,6 +8982,7 @@ const BS_IDS = {
     "60c9-9f30-7dc8-2b63":"Malefic Curse",
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
     "6155-c404-a228-cb72":"Bolt Rifle",
+    "615e-5655-130f-d14a":"Plasma executor",
     "626e-72e0-7869-82c1":"Skitarii Ranger w/ omnispex",
     "62a1-1fa7-70b7-614d":"Twin Lastrum Bolt Cannon",
     "62ab-b83f-26b-b699":"Techno-virus injector",
@@ -8854,6 +9016,7 @@ const BS_IDS = {
     "6a9b-8e2f-edac-fa2d":"Norn Assimilator",
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
     "6b9e-c6ae-2626-45c9":"Kustom Force Field",
+    "6bdb-2665-95ec-fcde":"Phosphor blaster",
     "6cc8-d237-eec9-d038":"Aviarch",
     "6cd8-62e0-c6e4-74b3":"Visionary",
     "6d28-ca9d-79a5-063a":"Disciple of Khorne",
@@ -8913,6 +9076,7 @@ const BS_IDS = {
     "7d49-39ac-d17e-63bf":"Rokkit Launcha",
     "7d7c-c212-47a3-38e4":"Trajann Valoris",
     "7dfc-efc5-a31c-a724":"Da Grabzappa",
+    "7e50-4dc-fae1-c2d4":"Laspistol",
     "7e60-1733-57d1-71f3":"Eightbound",
     "7ebd-c3dc-8467-70ae":"Aviarch",
     "7efb-de37-79c4-cccb":"Ironstrider Ballistarii",
@@ -8929,6 +9093,7 @@ const BS_IDS = {
     "81fb-325e-49fd-9a6f":"Servo arm",
     "82ba-6095-1f1f-202d":"Close combat weapon",
     "82cc-4b0b-8e55-bf48":"Tellyport Blasta",
+    "8309-f4fd-e530-94ec":"Force-orb cane",
     "8331-d762-2987-76a":"Cultist w/ autopistol and brutal assault weapon",
     "836c-fa5c-db9d-7566":"Storm Bolters",
     "83a1-feb8-d495-aa28":"Heavy Bolt Pistol",
@@ -9176,6 +9341,7 @@ const BS_IDS = {
     "d8dd-5401-5ac7-5922":"Gaius Silva",
     "d92d-2a5e-3dd9-f60f":"Twin Kastelan fist",
     "d941-c4cd-8b82-c453":"Heavy Bolter",
+    "d956-a7af-5c96-2577":"Conversion beam obliterator",
     "d9a6-8dbd-2c01-862b":"Lastrum storm bolter",
     "d9ca-c6b0-ba9c-b6c8":"Arachnus Blaze Carronade",
     "d9f5-2270-b9b2-8060":"Icon of Flame",
@@ -9183,6 +9349,7 @@ const BS_IDS = {
     "dadc-d370-ef10-853c":"Tankbustas",
     "db3b-02cd-87a2-3b52":"Contemptor-Achillus Dreadnought",
     "db97-9aa4-717e-6766":"Nostraman chainglaive",
+    "dbc9-8e4f-edf0-f9d6":"Twin incendine combustor",
     "dbf0-5211-463c-40ec":"Caladius Annihilator Grav-tank",
     "dc0b-cdb9-4123-782":"Plasma gun",
     "dc69-1094-613-6daf":"Monstrous scything talons",
@@ -9245,6 +9412,7 @@ const BS_IDS = {
     "f0b2-e942-6896-6acf":"Reaper autocannon",
     "f0e4-fd2b-1ba8-7234":"Scarab Occult Terminator w/ soulreaper cannon",
     "f12b-b113-de8a-4f1e":"Flamer",
+    "f12b-ca2a-9c87-79bb":"Knight Defender",
     "f132-71e1-81e2-5074":"Infernal cannon",
     "f158-2979-c38b-65b5":"Defiler",
     "f1aa-b2e0-2fa8-4c39":"Las-impulsor",
@@ -9300,6 +9468,7 @@ const BS_IDS = {
     "2f57-9703-18b2-6390":1,
     "33e2-4ee8-2e10-3e47":1,
     "3449-7dac-6ac8-5d51":1,
+    "35da-aa05-fc7f-9b1d":1,
     "3811-a215-d4a1-d197":1,
     "3924-3f8-745d-7097":1,
     "3bfa-bf00-b5ed-cc81":1,
@@ -9498,6 +9667,7 @@ const CHECKLIST = {
   "a|1nv0bem":{"at":"Start of the battle round","s":1},
   "a|1nv8bld":{"t":"command:your","s":1},
   "a|1o8wyag":{"u":"fight:either"},
+  "a|1ogsbz3":{"u":"shooting:opp,fight:either"},
   "a|1om4fn2":{"t":"shooting:your,fight:either","u":"shooting:your,fight:either","a":1},
   "a|1or5jd0":{"u":"movement:your,shooting:your"},
   "a|1oxefnu":{"x":1},
@@ -9544,6 +9714,7 @@ const CHECKLIST = {
   "a|27guih":{"u":"shooting:your"},
   "a|29j4r6":{"x":1},
   "a|2a26l9":{"u":"shooting:your"},
+  "a|2ackoq":{"t":"shooting:your","s":1},
   "a|2ccif":{"u":"fight:either"},
   "a|2iohwj":{"t":"shooting:your","u":"shooting:your,fight:your","s":1},
   "a|2wd7r5":{"u":"shooting:your,fight:either"},
@@ -9572,6 +9743,7 @@ const CHECKLIST = {
   "a|70om4s":{"u":"shooting:opp,fight:either","g":[{"name":"Feel No Pain","to":{"all":["Cybernetica Datasmith"]},"while":"While a CYBERNETICA DATASMITH model is leading this unit"}]},
   "a|73bjkb":{"u":"shooting:opp"},
   "a|7n1mj3":{"u":"shooting:your,fight:either"},
+  "a|82gw9o":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|8547tb":{"t":"fight:either","u":"fight:either","s":1},
   "a|85a58d":{"u":"shooting:your,fight:either"},
   "a|89p4db":{"u":"shooting:opp,fight:either"},
@@ -9580,6 +9752,7 @@ const CHECKLIST = {
   "a|92qgnt":{"u":"shooting:opp"},
   "a|97frp":{"u":"shooting:either","a":1},
   "a|9dsaql":{"none":1},
+  "a|9dx9q1":{"u":"shooting:opp,fight:either","g":[{"name":"Benefit of Cover","to":{"all":["Faction: Imperial Knights"]}}]},
   "a|9e4bul":{"u":"shooting:opp"},
   "a|9ripaa":{"x":1},
   "a|a5zbf8":{"u":"shooting:your,fight:either"},
@@ -9677,6 +9850,7 @@ const CHECKLIST = {
   "a|tdsmft":{"t":"shooting:your","u":"movement:your,shooting:your,charge:either"},
   "a|tyqh32":{"u":"shooting:your,fight:either"},
   "a|u5ddi":{"x":1,"o":[{"n":"Daemon Prince of Khorne","x":1},{"n":"Daemon Prince of Tzeentch","x":1},{"n":"Daemon Prince of Nurgle","x":1},{"n":"Daemon Prince of Slaanesh","u":"movement:your"}]},
+  "a|u7b31q":{"x":1},
   "a|u86jue":{"t":"shooting:your","s":1},
   "a|uc39pe":{"u":"fight:either","f":[{"n":"riled up","r":"Waaagh!","x":1}]},
   "a|udum88":{"u":"shooting:your,fight:either"},
@@ -9706,6 +9880,7 @@ const CHECKLIST = {
   "a|yphext":{"at":"End of your opponent’s turn","s":1},
   "a|yylazo":{"u":"shooting:your"},
   "a|yzv1r5":{"t":"fight:either","s":1},
+  "a|z3zaz9":{"u":"shooting:opp"},
   "a|zcevae":{"u":"fight:either"},
   "a|zns9bl":{"u":"shooting:your,fight:either"},
   "a|zsa42i":{"u":"fight:either"},
@@ -9910,7 +10085,9 @@ const GRANTS = [
   { rule:'the-exiled-legion · Daemon Prince of Chaos · Daemonic Lord', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units', text:'While this model is within 3" of one or more friendly **LEGIONES DAEMONICA INFANTRY** units, this model has the **Lone Operative** ability.' },
   { rule:'fellhammer-siege-task-force · Vashtorr the Arkifane · Indentured Daemon Engines', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly DAEMON VEHICLE units', text:'While this model is within 3" of one or more friendly **DAEMON VEHICLE** units, this model has the **Lone Operative** ability.' },
   { rule:'fellhammer-siege-task-force · Warpsmith · Warpsmith', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units', text:'While this model is within 3" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability.' },
-  { rule:'fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font', grants:'SOUL FORGE', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Models in the bearer\'s unit have the **SOUL FORGE** keyword.' }
+  { rule:'fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font', grants:'SOUL FORGE', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Models in the bearer\'s unit have the **SOUL FORGE** keyword.' },
+  { rule:'navigator-sounds-op-ngl · Knight Defender · Selfless Protector', grants:'Benefit of Cover', type:'ability', to:{ all:['Faction: Imperial Knights'] }, while:null, text:'Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack.' },
+  { rule:'navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 
@@ -9920,7 +10097,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from','own'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','at','tag','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']
+  abilities:['name','who','tag','at','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

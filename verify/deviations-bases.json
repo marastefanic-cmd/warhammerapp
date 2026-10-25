@@ -20,6 +20,16 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2950 (CHAOS DAEMONS): \"Nurglings  40mm\", line 3144 (DEATH GUARD): \"Nurglings  40mm\"; verify/.cache/waha/ds/chaos-daemons_Nurglings.html: \"(⌀40mm)\"."
  },
  {
+  "datasheet": "imperial-knights/navigator",
+  "row": "Navigator",
+  "guide": {
+   "section": "IMPERIAL AGENTS",
+   "entry": "Navigator"
+  },
+  "reason": "The Navigator in the navigator-sounds-op-ngl list is an Agents of the Imperium unit taken by an Imperial Knights army (New Recruit's “Allies: Imperial Agents”); GW's base size guide has it under IMPERIAL AGENTS, not IMPERIAL KNIGHTS.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3325 (IMPERIAL AGENTS, from line 3301): \"Navigator  32mm\"; verify/.cache/waha/ds/imperial-agents_Navigator.html: \"(⌀32mm)\"."
+ },
+ {
   "datasheet": "ultramarines/marneus-calgar",
   "row": "Marneus Calgar",
   "guide": {

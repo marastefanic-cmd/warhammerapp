@@ -888,7 +888,9 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
       cmp(kind, key + '.D', cellV(W.D), cellV(R.D));
       cmp(kind, key + '.n', W.n || 1, nw.n || 1);
       cmp(kind, key + '.hunter', !!W.hunter, nw.hunter);
-      cmp(kind, key + '.kw', (W.kw || []).map(k => nm(k).toUpperCase()), splitItems(R.kw).map(k => nm(k).toUpperCase()));
+      // (each weapon ability once: New Recruit repeats one a rule of the list gives a weapon that has it already, "Ignores Cover, Torrent,
+      // Ignores Cover" for the heavy flamer with Hunter’s Eye; GW's datasheet prints it once)
+      cmp(kind, key + '.kw', (W.kw || []).map(k => nm(k).toUpperCase()), [...new Set(splitItems(R.kw).map(k => nm(k).toUpperCase()))]);
     }
   }
   // and each such name is one of the unit's abilities (enhancements included) or a detachment/army rule of the list

@@ -1,0 +1,241 @@
+[
+ {
+  "key": "6f8ee02bfec3744e",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Bringer of Justice",
+  "verdict": "ok",
+  "why": "GW Faction Pack p5 (Freeblade Company) prints the same words. “each time the bearer makes a melee attack, add 1 to the Hit roll” is an offensive always-on effect used in the Fight phase of either turn, so Fight / either is right (melee rule). This matches the approved JSON-list precedents Headwoppa’s Killchoppa and Monstrous Nemesis. Note for the owner: 4-megas-and-a-destrier stores the same enhancement with no label (derive.md lists it as differing), so the two lists label it differently. That is not this list’s error."
+ },
+ {
+  "key": "8d8e1e595ae6f385",
+  "where": "navigator-sounds-op-ngl · Knight Crusader · Hunter’s Eye",
+  "verdict": "ok",
+  "why": "GW p5: “Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.” That is your Shooting phase, plus the Fire Overwatch moment in your opponent’s Movement phase (the overwatch modifier). The label has the same shape as the approved Even More Dakka, Bringers of Change and Total Obliteration. As with Bringer of Justice, 4-megas stores no label for it."
+ },
+ {
+  "key": "671338c32e1af0f8",
+  "where": "navigator-sounds-op-ngl · Knight Defender · Invulnerable Save (4+*)",
+  "verdict": "ok",
+  "why": "GW’s/Wahapedia’s Knight Defender box: “INSV* 4+ * against ranged attacks only”. BSData has InSv 4+*. The def has the same form as the approved Knights’ “5+ invulnerable save against ranged attacks only” (defOf 08e20e06). It is defensive and always on, and correctly has no timing label."
+ },
+ {
+  "key": "1108a15bf556ea39",
+  "where": "navigator-sounds-op-ngl · Knight Defender · Defender’s Duty",
+  "verdict": "ok",
+  "why": "Wahapedia Knight Defender: “Defender’s Duty (Bondsman): While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.” The tag is Bondsman, the words match, and it is not tagged (Aura)."
+ },
+ {
+  "key": "d57a09e1836f0288",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "verdict": "ok",
+  "why": "Wahapedia Knight Defender, under the weapons: “Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.” The weapon is the conversion beam obliterator [CONVERSION, SUSTAINED HITS D3] (also BSData). The condition, the note and calc critHit:4 all follow the text, which the footnote quotes without interpretation. It shows once under the ranged table."
+ },
+ {
+  "key": "026d270f49b9419c",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "verdict": "ok",
+  "why": "Wahapedia/BSData Selfless Protector is quoted exactly. It is not tagged (Aura), so it is correctly a guard, not an aura. needs Faction: Imperial Knights matches “an IMPERIAL KNIGHTS model from your army”, and the kind is ranged (“a ranged attack is allocated”). calc {cover, insv:4} is “the Benefit of Cover and a 4+ invulnerable save”. The snapshot shows it on the Atrapos, Crusader, Destrier and Errant, and not on the Defender itself or the Navigator (no IMPERIAL KNIGHTS keyword)."
+ },
+ {
+  "key": "70a106ada2bff7f1",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "verdict": "ok",
+  "why": "Export: Conversion beam obliterator, Phosphor blaster, Plasma executor, Titanic feet, Twin incendine combustor. This is GW’s unit composition (“conversion beam obliterator; plasma executor; twin incendine combustor; phosphor blaster; titanic feet”). The plasma executor has two profiles, standard and supercharge, as on Wahapedia and in BSData."
+ },
+ {
+  "key": "eb4465fedd8412be",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "This Destrier has Questoris heavy stubber, titanic feet, chastiser gatling cannon and frag bombard (export). Thundercharge needs “a thundershock spear and a bellatus reaper chainsword”, and no unit in the list has them. The wording is the same as the approved Destriers in 6-bigs and 4-megas."
+ },
+ {
+  "key": "1e98117db3170bef",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "verdict": "ok",
+  "why": "GW p5 is the same text. at End of your opponent’s turn plus fight:opp is the end-opp-turn moment (the same as the approved Hunters from the Warp). movement:your comes from “must make an ingress move in your next Movement phase”. “until the start of your next Shooting phase” is a duration, correctly skipped. The checklist shows it once per battle, per army, at End of your opponent’s turn."
+ },
+ {
+  "key": "9d088f7e149c2660",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "verdict": "ok",
+  "why": "It is a Freeblade Company enhancement (GW p5), so the tag is Enhancement. The once-per-battle, per-army limit is in its text and the checklist reads it as per army."
+ },
+ {
+  "key": "ad23b1721d7efa47",
+  "where": "navigator-sounds-op-ngl · Navigator · Third Eye",
+  "verdict": "ok",
+  "why": "Wahapedia Navigator: “Third Eye (Psychic): At the start of your Shooting phase, …”. That is a fixed moment in your Shooting phase, so Shooting / your. The checklist puts it under To do now, Shooting · Your turn."
+ },
+ {
+  "key": "7eea82cee798485a",
+  "where": "navigator-sounds-op-ngl · Navigator · Third Eye",
+  "verdict": "ok",
+  "why": "Wahapedia Navigator prints “Third Eye (Psychic):”."
+ },
+ {
+  "key": "5fc15df4e8462531",
+  "where": "navigator-sounds-op-ngl · Navigator · Gaze into the Empyrean",
+  "verdict": "ok",
+  "why": "Wahapedia Navigator prints “Gaze into the Empyrean (Psychic):”. Having no phase label is right: it names no phase or moment, and it is triggered by enemy reinforcements."
+ },
+ {
+  "key": "b197dbca7a04ae00",
+  "where": "navigator-sounds-op-ngl · Navigator",
+  "verdict": "ok",
+  "why": "Export: Force-orb cane, Laspistol. Wahapedia: “This model is equipped with: laspistol; force-orb cane.” Laspistol 12\" A1 BS4+ S3 AP0 D1 [PISTOL]; force-orb cane Melee A3 WS4+ S6 AP-1 DD3 [PSYCHIC]. Wahapedia and BSData agree."
+ },
+ {
+  "key": "d6e27098a09c369c",
+  "where": "/^conversion$/i",
+  "verdict": "ok",
+  "why": "/^conversion$/i opens the Conversion entry, which the Defender’s [CONVERSION] weapon keyword needs. No other rule is named Conversion."
+ },
+ {
+  "key": "80a5aa052b9a6d56",
+  "where": "/^daemonic pact$/i",
+  "verdict": "ok",
+  "why": "The Daemonic Pact entry is GW’s Chaos Daemons Faction Pack, Army Rules, word for word (the Incursion/Strike Force/Onslaught bullets, the Warlord/Enhancements line and the KHORNE…SLAANESH list). The alias opens it from the Nurglings’ header link."
+ },
+ {
+  "key": "737a8125f33acef1",
+  "where": "/^assigned agents$/i",
+  "verdict": "ok",
+  "why": "The Assigned Agents entry matches Wahapedia imperial-agents.txt lines 19–26. GW’s Imperial Agents pack names it only as “FACTION: Assigned Agents” and prints no text. The alias opens it from the Navigator header link."
+ },
+ {
+  "key": "d3898e18a2940ff9",
+  "where": "imperial-knights/navigator · guide: IMPERIAL AGENTS / Navigator",
+  "verdict": "ok",
+  "why": "Event Companion line 3301 is IMPERIAL AGENTS and line 3325 is “Navigator  32mm”. Wahapedia (⌀32mm) and BSData 32mm agree. The ally-section exception is declared the same way as the Nurglings."
+ },
+ {
+  "key": "5a8778abd7d68e87",
+  "where": "RULES · Conversion · **Conversion beam obliterator** (Knight Defender): Each time",
+  "verdict": "fix",
+  "why": "The app text is right: it is the Wahapedia Knight Defender’s Conversion line, attributed to its weapon. That is a label, not an interpretation, and GW’s Core Rules and Rules Updates have no Conversion definition. But the reason misnames its evidence. GW Faction Pack line 369 (the 24\" Conversion) is on the ACASTUS KNIGHT ASTERIUS datasheet (header at lines 352/383), on its twin conversion beam cannon. The pack has no Knight Castellan/Valiant datasheet; it names them only in the Rules Updates. The 24\" version also reads “more than 24\" from the bearer”, not “away”. The same “Knight Castellan/Valiant: 24\"” slip is in the data.js comment above RULES 'Conversion'. Fix the reason in verify/deviations-texts.json, and that comment the same way.",
+  "fix": {
+   "app": "**Conversion beam obliterator** (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit.",
+   "reason": "[CONVERSION] has no core-rules or glossary definition (GW's Core Rules, the Universal Rules Updates and Wahapedia's core rules have none): GW's datasheets define it per weapon, each with its own range (the Faction Pack's Armiger Moirax conversion beam cannon: \"more than 12\" from the bearer\"; its Acastus Knight Asterius twin conversion beam cannon: \"more than 24\" from the bearer\"). So the glossary entry gives each weapon's own words, named by the weapon (\"Conversion beam obliterator (Knight Defender):\", the app's label); the lists have one such weapon. GW's Faction Pack does not reprint the Knight Defender datasheet; the Wahapedia Knight Defender datasheet (the codex) is the only source of these words, which texts.js does not search for glossary entries.",
+   "data.js comment": "// with that weapon's range (the Faction Pack's Armiger Moirax: 12\", Acastus Knight Asterius: 24\"), so each weapon's own words, named"
+  }
+ },
+ {
+  "key": "1ec0104db97095ce",
+  "where": "RULES · Assigned Agents · - Incursion: **RETINUE** units 1, **CHARACTER** units 1, **R",
+  "verdict": "ok",
+  "why": "Wahapedia imperial-agents.html has the table headers BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS and the row “Incursion 1 1 1”. The line keeps every number in its column and in the same order. The keywords stay bold, as Wahapedia bolds RETINUE, CHARACTER and REQUISITIONED. A small nit: the header’s upper-case “UNITS” is written “units”, which changes no word. The table is written as lines in the same style as Daemonic Pact’s bullets. GW’s Imperial Agents pack doesn’t print the rule."
+ },
+ {
+  "key": "0ba12aab5af17c9d",
+  "where": "RULES · Assigned Agents · - Strike Force: **RETINUE** units 2, **CHARACTER** units 2, ",
+  "verdict": "ok",
+  "why": "Wahapedia imperial-agents.html has the table headers BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS and the row “Strike Force 2 2 1”. The line keeps every number in its column and in the same order. The keywords stay bold, as Wahapedia bolds RETINUE, CHARACTER and REQUISITIONED. A small nit: the header’s upper-case “UNITS” is written “units”, which changes no word. The table is written as lines in the same style as Daemonic Pact’s bullets. GW’s Imperial Agents pack doesn’t print the rule."
+ },
+ {
+  "key": "a9848739ed7d28bd",
+  "where": "RULES · Assigned Agents · - Onslaught: **RETINUE** units 3, **CHARACTER** units 3, **R",
+  "verdict": "ok",
+  "why": "Wahapedia imperial-agents.html has the table headers BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS and the row “Onslaught 3 3 2”. The line keeps every number in its column and in the same order. The keywords stay bold, as Wahapedia bolds RETINUE, CHARACTER and REQUISITIONED. A small nit: the header’s upper-case “UNITS” is written “units”, which changes no word. The table is written as lines in the same style as Daemonic Pact’s bullets. GW’s Imperial Agents pack doesn’t print the rule."
+ },
+ {
+  "key": "be388f6483a84f27",
+  "where": "knight-defender · ability",
+  "verdict": "ok",
+  "why": "BSData at the pin has the Defender’s ability as “Warden's Duty (Bondsman)” (Knight Defender entry f12b-…; it also holds an empty “Defender's Duty (Bondsman)” node). Wahapedia (GW) prints “Defender’s Duty (Bondsman)”, with the same words as BSData’s Warden’s Duty text. GW wins."
+ },
+ {
+  "key": "b54170d98e8e143b",
+  "where": "knight-defender · ability",
+  "verdict": "ok",
+  "why": "This is the other half of the same rename: BSData’s “Warden's Duty (Bondsman)” is not in the app because GW names it Defender’s Duty."
+ },
+ {
+  "key": "224cd99a6d86b40f",
+  "where": "navigator · rules",
+  "verdict": "ok",
+  "why": "Wahapedia Navigator lists ARMY RULES “Assigned Agents”, and BSData/NR give it. Leaving it off the Rules line follows the owner’s ruling that an agent doesn’t get its own faction’s army rules (the Nurglings precedent). The rule is not lost: the header now cites it as the reason the Navigator is in this army (“In this army through Assigned Agents (Imperial Agents)”), with its popup."
+ },
+ {
+  "key": "a7534877c3fa6080",
+  "where": "knight-crusader · from[ranged Heavy flamer]",
+  "verdict": "ok",
+  "why": "NR txt line 158: “Heavy flamer (Hunter's Eye) … Ignores Cover, Torrent, Ignores Cover”. Wahapedia Knight Crusader: Heavy flamer [IGNORES COVER, TORRENT]. Hunter’s Eye adds nothing the weapon lacks, so no from-mark and no doubled keyword. The 4-megas screen is unchanged (no snapshot diff)."
+ },
+ {
+  "key": "33d26b4d54cf7439",
+  "where": "verify/sources/nr-json/navigator-sounds-op-ngl.json · Cerastus Knight Atrapos · Warlord",
+  "verdict": "ok",
+  "why": "Diffed the edited export against the owner’s upload (/root/.claude/uploads/…/47d7a0ae-Navigator_sounds_op_ngl.json, sha256 5a0369f4…, the same as the hash noted). The only difference is the one added selection under the Cerastus Knight Atrapos. In the BSData Library, fb98-f509-dbe3-8a3b is the catalogue’s link to the Atrapos (37a7-…), ddee-b14f-2f5f-b710 is the “Warlord” entryLink inside 37a7-d156-1e4c-8fe1, and it targets ad65-d3cb-c677-7cb3. That has the same shape as 6-bigs’ Warden (e9f3-…::c837-…::ad65-…). The import and nr gates pass, the Atrapos gets warlord:true, and there are no Warlord-only rules in the list."
+ },
+ {
+  "key": "cb0429802ff5c96d",
+  "where": "FACTIONS · allies (imperial-knights, chaos-knights, ultramarines)",
+  "verdict": "ok",
+  "why": "Assigned Agents (Wahapedia Imperial Agents: “…you can include AGENTS OF THE IMPERIUM units in your army…”), Daemonic Pact (GW CD pack: “If every model from your army has the CHAOS KNIGHTS or HERETIC ASTARTES keyword, you can include LEGIONES DAEMONICA units…”) and Mission Tactics are all the rules that admit those allies. Mission Tactics is right because its stored text has the “DEATHWATCH ALLIES You can include DEATHWATCH units in your army…” paragraph, and nerf-when takes the Deathwatch Support detachment. The header shows it only when ruleFor resolves. Note: an Ultramarines list with Deathwatch but without Deathwatch Support would get no line, which is correct."
+ },
+ {
+  "key": "19c763543485127c",
+  "where": "5 Bondsman Duty aura entries (4-megas: Atrapos, Crusader; 6-bigs: Errant, Paladin ×2, Warden ×2 lines)",
+  "verdict": "ok",
+  "why": "GW Faction Pack lines 464, 515, 567, 621, 677 and 731 all read “… Duty (Bondsman):”. The pack’s only “(Aura)” tag (line 77) is Assisted Targeting, a Questor Forgepact detachment rule. Wahapedia tags the Crusader, Errant, Paladin, Warden and Defender Duties “(Bondsman)”. So by the owner’s rule they are not auras. data.js removes exactly the 5 aura blocks (8 lines), and the 4-megas and 6-bigs snapshots are byte-identical after run.js."
+ },
+ {
+  "key": "5d896f95bce8c37c",
+  "where": "verify/from-json.js · allied units",
+  "verdict": "ok",
+  "why": "pageFac/allyByName read the export’s primary “Allies: X” category and look up the Wahapedia page and base-guide section under factions.json allies. The ally’s own army rules go to allyArmy and are declared as deviations, not put on the Rules line. Result: the Navigator comes from imperial-agents_Navigator.html with base 32mm, under IMPERIAL AGENTS, and has no Assigned Agents on its Rules line. The bsdata, nr and bases gates pass."
+ },
+ {
+  "key": "2f04ac532ee59555",
+  "where": "verify/from-json.js · datasheet rows other lists have",
+  "verdict": "ok",
+  "why": "The reused-row block keeps the signed-off DATASHEETS facts for the Atrapos, Crusader, Destrier and Errant (stats, weapons, abilities and their labels, the Rules line). It reports every difference and leaves list-caused values to the list. The only row changes in data.js are the Atrapos melee lascutter base A 6/12 being filled in (GW pack melee: low intensity A 12, high intensity A 6, which matches NR’s 14/8 with +2) and the heavy flamer kw. No label changed on the rows. A re-run is clean, per the builder, and the tables gate passes."
+ },
+ {
+  "key": "3dfaefc9fcd85435",
+  "where": "verify/from-json.js · InSv box / tag-named rule / small fixes",
+  "verdict": "ok",
+  "why": "The INSV* box gives the Defender InSv 4+* (GW box). The Bondsman tag-named rule keeps Bondsman on the Defender’s Rules line, as on the approved Crusader/Errant rows. The Damaged regex /i matches “Damaged: 1-9 Wounds Remaining”, the apostrophe-loose rename matches Defender’s/Warden's, hand `na` is written before the text, and uniq() is applied to weapon keywords. All gates pass."
+ },
+ {
+  "key": "6bba43d90e995630",
+  "where": "verify/waha-words.js · wahaDatasheet",
+  "verdict": "ok",
+  "why": "The Defender’s and Destrier’s Wahapedia boxes are “INSV* 4+ / * against ranged attacks only”. Treating a footnote that starts with “against” as a condition (every model, value with *) is correct; before, the comment was read as model names. The nested-span keyword walk splits “conversion” and “sustained hits d3” correctly (the Defender row has kw CONVERSION, SUSTAINED HITS D3, as in BSData)."
+ },
+ {
+  "key": "098639fd06bec27b",
+  "where": "verify/bsdata.js · Show/Hide Options, Bondsman, keywords once",
+  "verdict": "ok",
+  "why": "The Show/Hide change makes BSData show the Navigator (“Imperial Agents are visible” is in the export), and the bsdata gate passes with 0 failures. With the Bondsman check, a Bondsman-tagged ability is read as never applying to its own unit, the job the aura’s ARMIGER needs used to do. With the kwList Set, the doubled IGNORES COVER is not a grant. bsdata passes 14867 facts with 0 failures."
+ },
+ {
+  "key": "682ab086664b5409",
+  "where": "verify/nr.js · keywords once",
+  "verdict": "ok",
+  "why": "The NR keyword comparison now de-duplicates NR’s list, so “Ignores Cover, Torrent, Ignores Cover” equals the app’s [IGNORES COVER, TORRENT], with the from-mark declared (a7534877). The nr gate has 0 failures."
+ },
+ {
+  "key": "31d848af45a774ef",
+  "where": "verify/derive.js · explicitTiming",
+  "verdict": "ok",
+  "why": "The strip regex only removes a leading “<CAPS> model(s)/unit(s)/character(s) only.” and one bracketed tag, and only for ^-anchored MOMENT_RULES. Compared with main 57086f9, the CHECKLIST changes are additions only (6 new keys, all this list’s), and no existing entry changed. derive’s 537 agreed labels hold."
+ },
+ {
+  "key": "81a54e565fbd8b81",
+  "where": "verify/texts.js · allied faction pages",
+  "verdict": "ok",
+  "why": "ALLY_PAGES loads only allied-faction Wahapedia pages that no list has as its own faction (imperial-agents), and only for RULES entries that RULE_SRC names. With it, texts passes 4055 facts with 0 failures and 16 deviations (the 4 new ones declared)."
+ },
+ {
+  "key": "3d3e2c97909cc0f3",
+  "where": "app.html · screenUnit",
+  "verdict": "ok",
+  "why": "The header line comes from the role “Allies: X” plus faction().allies, and only when ruleFor(rule) resolves; the rule is a link. Snapshots confirm the only changes: the Navigator (“Allies: Imperial Agents · In this army through Assigned Agents (Imperial Agents)”), infernal-lance’s Nurglings line plus a new 21-line Daemonic Pact popup, and nerf-when’s Deathwatch Terminator Squad line. The screens pass at 390 and 320 px with 0 failures."
+ },
+ {
+  "key": "f9fb530b81d9330a",
+  "where": "data.js · RULES",
+  "verdict": "ok",
+  "why": "The RULES entries are right: Daemonic Pact is GW’s words, Assigned Agents is Wahapedia’s with the table as lines, and Conversion is the Defender weapon’s own words with a label. The three aliases and RULE_SRC strings are there. The only slip is the Conversion comment’s “Knight Castellan/Valiant: 24\"” (it is the Acastus Knight Asterius); the corrected text is under 5a8778abd7d68e87."
+ }
+]

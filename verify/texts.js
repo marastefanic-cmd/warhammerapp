@@ -271,6 +271,11 @@ for (const id of Object.keys(GWFILES)) loadPdf(id);
 for (const f of FACTIONS) loadWahaTxt(f);
 for (const f of FACTIONS) loadWahaHtml('wahahtml:' + f, path.join(CACHE, 'waha', f + '.html'), 'Wahapedia ' + f);
 loadWahaHtml('wahahtml:core', path.join(CACHE, 'waha', 'core.html'), 'Wahapedia core rules');
+// the Wahapedia faction page of an allied faction no list has as its own (sources/factions.json "allies": Imperial Agents), whose army
+// rule brings its units into a list (Assigned Agents): a source for RULES entries that RULE_SRC names, as a faction's own page is
+const ALLY_PAGES = [...new Set(Object.entries(JSON.parse(fs.readFileSync(path.join(VERIFY, 'sources', 'factions.json'), 'utf8'))).filter(([k]) => k[0] !== '_')
+  .flatMap(([, v]) => Object.values(v.allies || {})))].filter(f => !FACTIONS.includes(f) && fs.existsSync(path.join(CACHE, 'waha', f + '.html')));
+for (const f of ALLY_PAGES) loadWahaHtml('wahahtml:' + f, path.join(CACHE, 'waha', f + '.html'), 'Wahapedia ' + f);
 loadPacket();
 
 if (process.argv.includes('--find')) {   // debugging aid: node verify/texts.js --find "some text" [--ctx 200]
@@ -466,7 +471,7 @@ function ssSpecial() {
   };
 }
 for (const [key, text] of Object.entries(D.rules))   // a faction term (D.ruleSrc) comes from its faction's pages, as detachment texts do
-  checkLines('rules', 'core', 'rule:' + key, 'text', text, (D.ruleSrc || {})[key] ? GW_ALL.concat(FACTIONS.map(f => 'wahahtml:' + f)) : GW_ALL, WAHA_CORE, key === 'Starting Strength' ? { special: ssSpecial() } : {});
+  checkLines('rules', 'core', 'rule:' + key, 'text', text, (D.ruleSrc || {})[key] ? GW_ALL.concat(FACTIONS.concat(ALLY_PAGES).map(f => 'wahahtml:' + f)) : GW_ALL, WAHA_CORE, key === 'Starting Strength' ? { special: ssSpecial() } : {});
 
 /* ------------------------------------------------------------------ source parsers: stratagems */
 // Lines of a document (page range) as { text, page, line }; the PDF extraction keeps each text frame together.
