@@ -34,11 +34,17 @@ TO DO NOW
 
 Transhuman Strategist · Ultramarines army rule
 Command · Your turn
-1 to do
+1 to do · 3 once per battle
 
 TO DO NOW
 
 Combat Doctrines · Ultramarines army rule
+
+ONCE PER BATTLE
+
+ASSAULT DOCTRINE · option of Combat Doctrines
+DEVASTATOR DOCTRINE · option of Combat Doctrines
+TACTICAL DOCTRINE · option of Combat Doctrines
 Command · Their turn
 nothing
 
@@ -51,22 +57,18 @@ TO DO NOW
 
 Author of the Codex · Roboute Guilliman
 Master Tactician · Marneus Calgar
-Raise the Banner · Marneus Calgar
+Raise the Banner · Wardens of Ultramar
 Movement · Their turn
 nothing
 
 Nothing in this list.
 
 Shooting · Your turn
-1 to do · 1 active
+1 to do
 
 TO DO NOW
 
 Soul Sight · Librarian in Phobos Armour
-
-ACTIVE NOW
-
-DEVASTATOR DOCTRINE · option of Combat Doctrines
 Shooting · Their turn
 nothing
 
@@ -87,13 +89,13 @@ Fight · Your turn
 
 TO DO NOW
 
-Fearsome Assault · Reiver Squad
+Fearsome Assault · Reiver Squad×2
 Fight · Their turn
 1 to do
 
 TO DO NOW
 
-Fearsome Assault · Reiver Squad
+Fearsome Assault · Reiver Squad×2
 
 Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
 
@@ -241,7 +243,7 @@ Librarian in Phobos Armour Scouts 6", Infiltrators
 Reiver Squad Scouts 6"
 ABILITIES
 Thunderhawk Insertion · Marneus Calgar
-Strategium Command · Marneus Calgar
+Strategium Command · Wardens of Ultramar
 START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
 Teleport Homer · Deathwatch Terminator Squad
@@ -250,7 +252,10 @@ Transhuman Strategist · Ultramarines army rule
 USES PER BATTLE
 NEW GAME
 RULES
-Combat Doctrines · Ultramarines army rule
+Combat Doctrines · Ultramarines army rule:
+ASSAULT DOCTRINE
+DEVASTATOR DOCTRINE
+TACTICAL DOCTRINE
 STRATA­GEMS
 1CP Insane Bravery
 

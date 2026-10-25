@@ -38,7 +38,7 @@ Command · Your turn
 
 TO DO NOW
 
-Objective Defiled · Tormentors
+Objective Defiled · Tormentors×2
 Command · Their turn
 nothing
 
@@ -59,7 +59,7 @@ Shooting · Your turn
 
 TO DO NOW
 
-Icon of Excess · Lord Exultant, Tormentors
+Icon of Excess · Infractors×2, Tormentors×2
 
 ACTIVE NOW
 
@@ -87,7 +87,7 @@ Fight · Your turn
 TO DO NOW
 
 Duellist’s Hubris · Lucius the Eternal
-Icon of Excess · Lord Exultant, Tormentors
+Icon of Excess · Infractors×2, Tormentors×2
 
 ACTIVE NOW
 
@@ -106,7 +106,7 @@ Fight · Their turn
 TO DO NOW
 
 Duellist’s Hubris · Lucius the Eternal
-Icon of Excess · Lord Exultant, Tormentors
+Icon of Excess · Infractors×2, Tormentors×2
 
 ACTIVE NOW
 
