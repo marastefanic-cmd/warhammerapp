@@ -4481,7 +4481,7 @@ function screenUnit(){
   const statCols = innerWidth < 360 ? 'minmax(0,1fr) repeat(7, 26px)' : 'minmax(0,1fr) repeat(7, 31px)';
   const stats = '<section class="dsx statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
       '<span class="h n">Unit</span>' + ['M','T','Sv','W','LD','OC','InSv'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc(s.base) + '</small></span>' +
+      u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc([s.base].concat(Object.entries(s.baseWith || {}).map(([g, b]) => b + ' w/ ' + g)).join(' · ')) + '</small></span>' +
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
     // (a part of a detachment rule for some of its units can carry one too: Warpmeld Sacrifice's KEYWORDS, for TZAANGORS units)
@@ -4655,7 +4655,7 @@ function screenBases(){
   const sizes = [...total].sort((x, y) => (parseFloat(x[0]) || 999) - (parseFloat(y[0]) || 999));
   return '<p class="lbl grp-h">Bases to print</p><p class="pxt">' + sizes.map(([b, n]) => '<span><b>' + n + '×</b> ' + esc(b) + '</span>').join('') + '</p>' +
     '<p class="lbl grp-h">What to write on each base</p><div class="list">' + cards.join('') + '</div>' +
-    '<p class="note">From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.</p>';
+    '<p class="note">From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).</p>';
 }
 
 /* ---------- screen: before the battle ----------
