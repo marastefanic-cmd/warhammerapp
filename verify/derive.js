@@ -52,7 +52,7 @@ const PHASE_RE = new RegExp('(?:\\b(your opponent\'s|your next|your|the next|the
   '(?:(?:\\s*/\\s*|\\s*,\\s*|\\s+or\\s+|\\s+and\\s+)' + PHW + ')*) phases?\\b', 'gi');
 // words that name a phase without saying when the item is used: cut out before looking for phases
 const NOT_TIMING = [
-  { id:'until',          re:new RegExp('\\buntil the (?:start|end) of (?:your opponent\'s |your next |your |the next |the |that )?(?:' + PHW + ' phase|turn|battle round|battle|phase)\\b', 'gi'), why:'a duration ("until the start of your next Command phase"), not when it is used' },
+  { id:'until',          re:new RegExp('\\buntil the (?:start|end) of (?:your opponent\'s next |your opponent\'s |your next |your |the next |the |that )?(?:' + PHW + ' phase|turn|battle round|battle|phase)\\b', 'gi'), why:'a duration ("until the start of your next Command phase", "… of your opponent\'s next Command phase"), not when it is used' },
   { id:'once-per-phase', re:new RegExp('\\b(?:once|twice) per ' + PHW + ' phase\\b', 'gi'), why:'a limit ("once per Command phase"), not a timing' },
 ];
 // moments that are not a phase

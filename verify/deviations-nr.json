@@ -1909,16 +1909,6 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2651 (\"Ironstrider Ballistarii  105x70mm Oval Base\"); verify/sources/nr/purge-goes-the-foe.txt line 265 (Base 105x70mm)."
  },
  {
-  "army": "defilers-and-friends",
-  "unit": "maulerfiend",
-  "field": "stats[Maulerfiend].base",
-  "app": "120x92mm Oval",
-  "source": "120x92mm",
-  "where": "verify/sources/nr/defilers-and-friends.txt p9",
-  "reason": "GW’s base size guide prints the base as an oval, \"120x92mm Oval Base\"; New Recruit (BSData) gives 120x92mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3219 (\"Maulerfiend  120x92mm Oval Base\"); verify/sources/nr/defilers-and-friends.txt line 314 (Base 120x92mm)."
- },
- {
   "army": "infernal-lance",
   "unit": "chaos-cerastus-knight-atrapos",
   "field": "stats[Chaos Cerastus Knight Atrapos].base",

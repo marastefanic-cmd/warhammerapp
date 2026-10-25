@@ -164,12 +164,12 @@ if(L('4-megas-and-a-destrier'))
 if(L('defilers-and-friends')){
   neg('two excruciator cannons ×2', 'defilers-and-friends', j => { for(const d of units(j).filter(s => s.name === 'Defiler')) for(const c of d.selections) if(c.name === 'Two excruciator cannons'){ c.number = 2; return; } },
     ['option 2× Two excruciator cannons on unit Defiler not recognized']);
-  neg('a leader detached from its bodyguard', 'defilers-and-friends', j => { delete byName(j, 'Lucius the Eternal').associations; },
-    ['unit Lucius the Eternal on its own not recognized (the app has it only in an attached unit)', 'unit Flawless Blades on its own not recognized (the app has it only in an attached unit)']);
-  neg('several things at once (all listed)', 'defilers-and-friends', j => { byName(j, 'Defiler').name = 'Defiler Mk II'; byName(j, 'Maulerfiend').selections[0].name = 'Big fists'; },
-    ['unit Defiler Mk II not recognized', 'option Big fists on unit Maulerfiend not recognized']);
-  neg('a leader attached to a unit inside another', 'defilers-and-friends', j => { const l = byName(j, 'Lucius the Eternal'); l.associations[0].to = byName(j, 'Defiler').selections[0].id; },
-    ['leader attachment of Lucius the Eternal not recognized (what it leads is not a unit of the list)', 'unit Lucius the Eternal on its own not recognized (the app has it only in an attached unit)', 'unit Flawless Blades on its own not recognized (the app has it only in an attached unit)']);
+  neg('a leader detached from its bodyguard', 'defilers-and-friends', j => { delete byName(j, 'Lord Exultant').associations; },
+    ['unit Lord Exultant on its own not recognized (the app has it only in an attached unit)', 'unit Infractors on its own not recognized (the app has it only in an attached unit)']);
+  neg('several things at once (all listed)', 'defilers-and-friends', j => { byName(j, 'Defiler').name = 'Defiler Mk II'; byName(j, 'Fulgrim').selections[0].name = 'Big blades'; },
+    ['option Big blades on unit Fulgrim not recognized', 'unit Defiler Mk II not recognized']);
+  neg('a leader attached to a unit inside another', 'defilers-and-friends', j => { const l = byName(j, 'Lord Exultant'); l.associations[0].to = byName(j, 'Defiler').selections[0].id; },
+    ['leader attachment of Lord Exultant not recognized (what it leads is not a unit of the list)', 'unit Lord Exultant on its own not recognized (the app has it only in an attached unit)', 'unit Infractors on its own not recognized (the app has it only in an attached unit)']);
 }
 if(L('princes') && L('standard')){
   neg('two leaders swapped between their bodyguards', 'princes', j => { const k = byName(j, 'Khârn the Betrayer'), l = byName(j, 'Lord on Juggernaut'); const t = k.associations[0].to; k.associations[0].to = l.associations[0].to; l.associations[0].to = t; },

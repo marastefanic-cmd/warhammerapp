@@ -1,0 +1,711 @@
+[
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Fulgrim · Daemonic Poisons",
+  "judgement": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Daemonic Poisons",
+   "text": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 **mortal wounds**."
+  },
+  "key": "2805f8a92b74ce1a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Fulgrim · Daemon Primarch of Slaanesh",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Daemon Primarch of Slaanesh",
+   "text": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability."
+  },
+  "key": "8b043d4d14b16e50"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-damaged",
+  "where": "defilers-and-friends · Fulgrim · Damaged: 1-6 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "16"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 Wounds Remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "7a8239d44ce90cc5"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-note",
+  "where": "defilers-and-friends · Fulgrim · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Daemonic Poisons: In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 **mortal wounds**.",
+    "Daemon Primarch of Slaanesh: At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability.",
+    "Damaged: 1-6 Wounds Remaining: While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.",
+    "Beguiling Form: Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**.",
+    "Daemonic Speed: This model has the **Fights First** ability.",
+    "Enthralling Hypnosis: While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead."
+   ],
+   "listRules": [
+    "Thrill Seekers",
+    "Pact of Excess",
+    "Pledges to the Dark Prince"
+   ]
+  },
+  "key": "cf37a59bea3dfc68"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Fulgrim · Beguiling Form",
+  "judgement": {
+   "who": "Daemon Primarch of Slaanesh: pick one",
+   "models": [
+    "1× Fulgrim"
+   ]
+  },
+  "source": {
+   "ability": "Beguiling Form",
+   "text": "Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**."
+  },
+  "key": "87c721d03b8cc5dd"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-def",
+  "where": "defilers-and-friends · Fulgrim · Beguiling Form",
+  "judgement": {
+   "def": "while it is the Daemon Primarch of Slaanesh ability selected: -1 to the hit roll of attacks that target this model"
+  },
+  "source": {
+   "ability": "Beguiling Form",
+   "text": "Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**."
+  },
+  "key": "fcde1eced3883f3c"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Fulgrim · Daemonic Speed",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Daemonic Speed",
+   "text": "This model has the **Fights First** ability."
+  },
+  "key": "dc14f62a0885eef5"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Fulgrim · Daemonic Speed",
+  "judgement": {
+   "who": "Daemon Primarch of Slaanesh: pick one",
+   "models": [
+    "1× Fulgrim"
+   ]
+  },
+  "source": {
+   "ability": "Daemonic Speed",
+   "text": "This model has the **Fights First** ability."
+  },
+  "key": "f8bf3f4afca87ed3"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Fulgrim · Enthralling Hypnosis",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Enthralling Hypnosis",
+   "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead."
+  },
+  "key": "75743b3fd99937b9"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Fulgrim · Enthralling Hypnosis",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Enthralling Hypnosis",
+   "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead."
+  },
+  "key": "94c8f99e73103b6d"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Fulgrim · Enthralling Hypnosis",
+  "judgement": {
+   "who": "Daemon Primarch of Slaanesh: pick one",
+   "models": [
+    "1× Fulgrim"
+   ]
+  },
+  "source": {
+   "ability": "Enthralling Hypnosis",
+   "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead."
+  },
+  "key": "016a98503919a698"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Fulgrim",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-6 wounds left)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged: 1-6 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 Wounds Remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "4d26b7e3e0a1210a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-weapons",
+  "where": "defilers-and-friends · Fulgrim",
+  "judgement": {
+   "gear": [
+    [
+     "Daemonic blades",
+     "Malefic lash",
+     "Serpentine tail"
+    ]
+   ],
+   "weapons": [
+    "Malefic lash",
+    "Daemonic blades · strike",
+    "Daemonic blades · sweep",
+    "Serpentine tail"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Fulgrim"
+   ],
+   "leads": null
+  },
+  "key": "4cd529fe0c08ce1a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Daemonic Destruction",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Daemonic Destruction",
+   "text": "Each time this model ends a **Charge move**, select one enemy unit within **Engagement Range** of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 mortal wounds)."
+  },
+  "key": "342928219a3791d1"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Pledge of Unholy Fortune",
+   "text": "**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead."
+  },
+  "key": "971ff51f65eaa03a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Pledge of Eternal Servitude",
+   "text": "**EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a **Leadership test** for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic)."
+  },
+  "key": "bf2b8a4d97fc7a14"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Lord Exultant · Perfectionists",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Perfectionists",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "d80c9aade703b766"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lord Exultant · Perfectionists",
+  "judgement": {
+   "who": "Lord Exultant",
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ]
+  },
+  "source": {
+   "ability": "Perfectionists",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "a394ec50c6911e6b"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Euphoric Strikes",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+  },
+  "key": "5966bd59868fb021"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Euphoric Strikes",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+  },
+  "key": "e2574ef37bcb55fb"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "judgement": {
+   "who": "Lord Exultant",
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ]
+  },
+  "source": {
+   "ability": "Euphoric Strikes",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+  },
+  "key": "d72962dc6a494b11"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lord Exultant · Lord of the Host",
+  "judgement": {
+   "who": "Lord Exultant",
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ]
+  },
+  "source": {
+   "ability": "Lord of the Host",
+   "text": "If this model is **attached** to an **EMPEROR’S CHILDREN BATTLELINE** unit during the Declare Battle Formations step, this model has the **Infiltrators** and **Scouts 6\"** abilities."
+  },
+  "key": "ac6fcc591854fc5a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Lord Exultant · Excessive Assault",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Excessive Assault",
+   "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "a8bddc767c6ac608"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lord Exultant · Excessive Assault",
+  "judgement": {
+   "who": "Infractors",
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ]
+  },
+  "source": {
+   "ability": "Excessive Assault",
+   "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "c604d625c195eeab"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Tormentors · Icon of Excess",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Icon of Excess",
+   "text": "At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a **Leadership test**. If that test is passed, you gain 1CP."
+  },
+  "key": "b9b68a44d0c58c4d"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lord Exultant · Icon of Excess",
+  "judgement": {
+   "who": "Infractors",
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Excess",
+   "text": "At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a **Leadership test**. If that test is passed, you gain 1CP."
+  },
+  "key": "739da76ae390a112"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "kind": "melee",
+   "when": "Euphoric Strikes used at the start of the Fight phase (once per battle)",
+   "note": "+3 A and +1 AP",
+   "from": "Euphoric Strikes"
+  },
+  "source": {
+   "ability": "Euphoric Strikes",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+  },
+  "key": "487cc0b8c5c2aa61"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "kind": "melee",
+   "when": "Every melee attack",
+   "note": "re-roll wound rolls of 1",
+   "from": "Excessive Assault",
+   "always": true
+  },
+  "source": {
+   "ability": "Excessive Assault",
+   "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "39a186ff4c7294a2"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "kind": "melee",
+   "when": "Target within range of an objective marker",
+   "cond": "targetObjective",
+   "note": "re-roll the wound roll",
+   "from": "Excessive Assault"
+  },
+  "source": {
+   "ability": "Excessive Assault",
+   "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "05c1fa6928cd567a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-kwNote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "kwNote": "Battleline, Infractors come from the led Infractors."
+  },
+  "source": {
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ],
+   "stats": [
+    "Lord Exultant W5 OC1",
+    "Infractors ×5 W2 OC2"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Plasma pistol standard 1 -2 1 PISTOL, LETHAL HITS",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL, LETHAL HITS",
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Close combat weapon 6 0 1 LETHAL HITS",
+    "Phoenix power spear 5 -2 2 LANCE, LETHAL HITS",
+    "Rapture lash 4 -1 1 EXTRA ATTACKS, LETHAL HITS",
+    "Rapture lash 6 -1 1 PRECISION, LETHAL HITS",
+    "Duelling sabre 4 -1 1 PRECISION, LETHAL HITS"
+   ]
+  },
+  "key": "64c6a9b5ffb0212d"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-ptsNote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "ptsNote": "95 + Infractors 95"
+  },
+  "source": {
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ],
+   "stats": [
+    "Lord Exultant W5 OC1",
+    "Infractors ×5 W2 OC2"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Plasma pistol standard 1 -2 1 PISTOL, LETHAL HITS",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL, LETHAL HITS",
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Close combat weapon 6 0 1 LETHAL HITS",
+    "Phoenix power spear 5 -2 2 LANCE, LETHAL HITS",
+    "Rapture lash 4 -1 1 EXTRA ATTACKS, LETHAL HITS",
+    "Rapture lash 6 -1 1 PRECISION, LETHAL HITS",
+    "Duelling sabre 4 -1 1 PRECISION, LETHAL HITS"
+   ]
+  },
+  "key": "71f9f9d7d8f93fd4"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-weapons",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "gear": [
+    [
+     "Bolt pistol",
+     "Close combat weapon",
+     "Phoenix power spear",
+     "Rapture lash"
+    ],
+    [
+     "Rapture lash",
+     "Plasma pistol"
+    ],
+    [
+     "Bolt pistol",
+     "Duelling sabre"
+    ],
+    [
+     "Bolt pistol",
+     "Duelling sabre"
+    ]
+   ],
+   "weapons": [
+    "Lord Exultant · Bolt pistol",
+    "Infractors · Plasma pistol · standard",
+    "Infractors · Plasma pistol · supercharge",
+    "Infractors · ×4 · Bolt pistol",
+    "Lord Exultant · Close combat weapon",
+    "Lord Exultant · Phoenix power spear",
+    "Lord Exultant · Rapture lash",
+    "Infractors · Rapture lash",
+    "Infractors · ×4 · Duelling sabre"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ],
+   "leads": "Infractors"
+  },
+  "key": "52fa7ccc32d13def"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-weapons",
+  "where": "defilers-and-friends · Tormentors",
+  "judgement": {
+   "gear": [
+    [
+     "Plasma pistol",
+     "Power sword"
+    ],
+    [
+     "Boltgun",
+     "Close combat weapon"
+    ],
+    [
+     "Boltgun",
+     "Close combat weapon"
+    ],
+    [
+     "Close combat weapon",
+     "Meltagun"
+    ]
+   ],
+   "weapons": [
+    "Plasma pistol · standard",
+    "Plasma pistol · supercharge",
+    "×3 · Boltgun",
+    "Meltagun",
+    "Power sword",
+    "×4 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Obsessionist",
+    "2× Tormentor",
+    "1× Tormentor (Icon of Excess)",
+    "1× Tormentor w/ meltagun"
+   ],
+   "leads": null
+  },
+  "key": "755306fabd8612bb"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Defiler · Scuttling Walker",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Scuttling Walker",
+   "text": "Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+  },
+  "key": "cff6737b7d51fff4"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Defiler · Revel in Desecration",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Revel in Desecration",
+   "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**."
+  },
+  "key": "39c815cd990e9b24"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Defiler",
+  "judgement": {
+   "kind": "all",
+   "when": "Target not Below Half-strength",
+   "note": "+1 to hit rolls",
+   "from": "Revel in Desecration"
+  },
+  "source": {
+   "ability": "Revel in Desecration",
+   "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**."
+  },
+  "key": "c80654182fade3ae"
+ }
+]

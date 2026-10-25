@@ -1028,7 +1028,9 @@ function compareUnit(army, u, F, fail) {
     const appTags = (a.tag ? nn(a.tag).split(/\s*[·,]\s*/) : []).map((t) => t.toLowerCase());
     const whoRoot = rootFor(a.who);
     let pool = whoRoot ? F.abilities.filter((b) => b.root === whoRoot) : F.abilities;
-    if (a.who && !whoRoot) pool = pool.filter((b) => nn(a.who).startsWith(nn(b.typeName)));
+    // (a who that names a group of abilities to pick one from: BSData's profile type of that name, "Wrathful Presence", else, where BSData
+    // gives the group no type of its own, the unit's abilities: Fulgrim's "Daemon Primarch of Slaanesh: pick one")
+    if (a.who && !whoRoot) { const typed = pool.filter((b) => nn(a.who).startsWith(nn(b.typeName))); pool = typed.length || !/: pick one$/.test(a.who) ? typed : pool; }
     const isEnh = /(^|, | · )Enhancement(, | · |$)/.test(a.tag || '');
     if (isEnh) pool = pool.filter((b) => b.enh);
     const spelt = isEnh || /(^|, | · )Upgrade(, | · |$)/.test(a.tag || '') ? enhSpelling(army, a.name) : null;
