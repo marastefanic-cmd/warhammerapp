@@ -3010,7 +3010,7 @@ Nurglings ›
 ######## unit nurglings · KNIGHT RUINATOR Infernal Lance
 NURGLINGS
 45 PTS
-Allies: Legiones Daemonica
+Allies: Legiones Daemonica · In this army through Daemonic Pact (Legiones Daemonica)
 Models
 Options
 3× Nurgling Swarm
@@ -3497,6 +3497,27 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus
 
+Ask about this rule
+
+######## popup rule:Daemonic Pact · INFERNAL LANCE Infernal Lance
+CHAOS DAEMONS ARMY RULE (LEGIONES DAEMONICA ALLIES)
+
+Daemonic Pact
+
+If every model from your army has the CHAOS KNIGHTS or HERETIC ASTARTES keyword, you can include LEGIONES DAEMONICA units in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points cost of such units you can include depends on your battle size, as shown below.
+
+Incursion: Up to 250 pts
+Strike Force: Up to 500 pts
+Onslaught: Up to 750 pts
+
+None of these models can be your WARLORD, and they cannot be given Enhancements.
+
+In addition, for each of the following keywords, the number of non-BATTLELINE units with that keyword you include in this way cannot be greater than the number of BATTLELINE units with that keyword you include in this way:
+
+KHORNE
+TZEENTCH
+NURGLE
+SLAANESH
 Ask about this rule
 
 ######## popup rule:Deadly Demise · INFERNAL LANCE Infernal Lance

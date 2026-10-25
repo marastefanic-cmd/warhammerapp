@@ -1,0 +1,4610 @@
+######## army · DREAD HOST Navigator sounds op ngl
+Imperial Knights · 2000 / 2000 pts · Strike Force
+
+Freeblade Company
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
+
+Overview
+Phase checklist
+Bases & proxies
+6
+Units
+6
+Stratagems
+16
+Ranged weapons
+19
+Melee weapons
+6
+Abilities
+25
+Rules
+Damage calculator
+
+New Recruit, exported 25 Oct 2026 (JSON)
+
+######## checklist · NAVIGATOR SOUNDS OP NGL Phase checklist
+PHASE BY PHASE
+RESET
+Command · Your turn
+2 to do
+
+TO DO NOW
+
+Bondsman · Imperial Knights army rule no unit in this list it applies to
+Knights of Legend · Freeblade Company
+Command · Their turn
+nothing
+
+Nothing in this list.
+
+Movement · Your turn
+nothing
+
+Nothing in this list.
+
+Movement · Their turn
+nothing
+
+Nothing in this list.
+
+Shooting · Your turn
+1 to do
+
+TO DO NOW
+
+Third Eye · Navigator
+Shooting · Their turn
+nothing
+
+Nothing in this list.
+
+Charge · Your turn
+nothing
+
+Nothing in this list.
+
+Charge · Their turn
+nothing
+
+Nothing in this list.
+
+Fight · Your turn
+nothing
+
+Nothing in this list.
+
+Fight · Their turn
+nothing
+
+Nothing in this list.
+
+End of your turn
+1 to do
+
+TO DO NOW
+
+Code Chivalric · Imperial Knights army rule
+End of your opponent’s turn
+1 to do · 1 once per battle
+
+TO DO NOW
+
+Code Chivalric · Imperial Knights army rule
+
+ONCE PER BATTLE
+
+Mysterious Guardian · Knight Errant per army
+End of the battle round
+1 to do
+
+TO DO NOW
+
+Code Chivalric · Imperial Knights army rule
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## pregame · NAVIGATOR SOUNDS OP NGL Overview
+YOUR LIST
+WARLORD
+Cerastus Knight Atrapos · Bringer of Justice
+ENHANCE­MENTS
+Bringer of Justice 30 pts on Cerastus Knight Atrapos
+Hunter’s Eye 25 pts on Knight Crusader
+Mysterious Guardian 35 pts on Knight Errant
+DETACH­MENTS
+Freeblade Company (3 DP)
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Bondsman
+Your Command · no unit in this list it applies to
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+Super-heavy Walker
+Your Movement
+
+IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CORE RULESuper-Heavy Walker
+
+Knights of Legend
+Freeblade Company · Your Command
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+APPLIES TOCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+READ MISSION OBJECTIVES STEP
+RULES
+Code Chivalric · Imperial Knights army rule
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Knight Errant · Mysterious Guardian 390 pts
+START OF THE BATTLE AND THE BATTLE ROUNDS
+START OF THE BATTLE
+Code Chivalric (Deed 1–2) · Imperial Knights army rule
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Mysterious Guardian · Knight Errant per army
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+CHARACTERS
+5
+Cerastus Knight Atrapos
+Warlord
+Bringer of Justice
+12"
+11
+3+
+28
+6+
+10
+5+
+450
+Knight Crusader
+Hunter’s Eye
+10"
+11
+3+
+26
+6+
+10
+5+*
+435
+Knight Defender
+10"
+11
+3+
+26
+6+
+10
+4+*
+385
+Knight Destrier
+12"
+10
+3+
+18
+6+
+8
+5+*
+265
+Knight Errant
+Mysterious Guardian
+10"
+11
+3+
+26
+6+
+10
+5+*
+390
+ALLIES
+1
+Navigator
+6"
+3
+5+
+3
+7+
+1
+4+
+75
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Cerastus Knight Atrapos
+Warlord
+Bringer of Justice
+Atrapos lascutter
+➤high intensity
+24"
+D6
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+36"
+2D6
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+Graviton singularity cannon
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+➤contained
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Crusader
+Hunter’s Eye
+Avenger gatling cannon
+36"
+18
+3+
+6
+-2
+2
+IGNORES COVER
+Heavy flamer
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2, IGNORES COVER
+Questoris heavy stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3, IGNORES COVER
+Rapid-fire battle cannon
+72"
+D6+3
+3+
+10
+-1
+3
+BLAST, RAPID FIRE D6+3, IGNORES COVER
+Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Defender
+Conversion beam obliterator
+36"
+3
+3+
+12
+-2
+4
+CONVERSION, SUSTAINED HITS D3
+Phosphor blaster
+24"
+1
+3+
+5
+0
+1
+IGNORES COVER, RAPID FIRE 1
+Plasma executor
+➤standard
+36"
+D6+3
+3+
+8
+-2
+2
+BLAST
+➤supercharge
+36"
+D6+3
+3+
+9
+-3
+3
+BLAST, HAZARDOUS
+Twin incendine combustor
+12"
+D6
+–
+6
+-1
+1
+IGNORES COVER, TORRENT, TWIN-LINKED
+Target more than 18" away: an unmodified successful hit roll of 4+ scores a Critical Hit (Conversion)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Destrier
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
+Chastiser gatling cannon
+24"
+12
+3+
+6
+-1
+2
+ASSAULT
+Frag bombard
+24"
+D6+3
+3+
+7
+-1
+2
+ASSAULT, BLAST, RAPID FIRE D6+3
+Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
+Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Errant
+Mysterious Guardian
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Navigator
+Laspistol
+12"
+1
+4+
+3
+0
+1
+PISTOL
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Cerastus Knight Atrapos
+Warlord
+Bringer of Justice
+Atrapos lascutter
+➤high intensity
+8
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+14
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+Every melee attack: +1 to hit rolls (Bringer of Justice)
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Crusader
+Hunter’s Eye
+Titanic feet
+4
+4+
+8
+-1
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Defender
+Titanic feet
+4
+4+
+8
+-1
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Destrier
+Titanic feet
+4
+4+
+7
+-1
+2
+Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Knight Errant
+Mysterious Guardian
+Reaper chainsword
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+Navigator
+Force-orb cane
+3
+4+
+6
+-1
+D3
+PSYCHIC
+
+######## abilities · MELEE Abilities
+Cerastus Knight Atrapos
+Warlord
+Bringer of Justice
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Atrapos’ Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+Bringer of Justice
+Enhancement
+Already in A
+Fight
+
+Enhancement · Fight · Either turn
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Knight Crusader
+Hunter’s Eye
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Crusader’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
+
+Hunter’s Eye
+Enhancement
+Their Move · Your Shoot
+
+Enhancement · Their Movement / Your Shooting
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Knight Defender
+Selfless Protector
+
+Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
+
+Invulnerable Save (4+*)
+
+This model has a 4+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Defender’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.
+
+Knight Destrier
+Damaged: 1-6 Wounds Remaining
+
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
+Ram Jets
+Your Movement
+
+Movement · Your turn
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+Saturation Fire
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Knight Errant
+Mysterious Guardian
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Errant’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
+
+Mysterious Guardian
+Enhancement
+Once per battle, per army
+End of your opponent’s turn
+
+Enhancement · End of your opponent’s turn
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Navigator
+Third Eye
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+At the start of your Shooting phase, select one enemy unit within 12" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suffers 3 mortal wounds.
+
+Gaze into the Empyrean
+
+Psychic
+
+Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.
+
+######## rules · ABILITIES Rules
+Imperial Knights · Purge the Foe
+ARMY RULES
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Bondsman
+Your Command · no unit in this list it applies to
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+Super-heavy Walker
+Your Movement
+
+IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CORE RULESuper-Heavy Walker
+
+DETACHMENTS
+FREEBLADE COMPANY
+Knights of Legend
+Detachment rule · Your Command
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+APPLIES TOCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Bringer of Justice
+Enhancement · 30 pts · on Cerastus Knight Atrapos
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+ONCerastus Knight Atrapos
+
+Hunter’s Eye
+Enhancement · 25 pts · on Knight Crusader
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+ONKnight Crusader
+
+Mysterious Guardian
+Enhancement · 35 pts · on Knight Errant
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+ONKnight Errant
+
+Other enhancements
+1 not in this list
+Sanctuary 20 pts
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+STRATAGEMSFull Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice, Flanking Manoeuvres (no unit in this list)
+
+UNIT RULES
+Deadly Demise
+Cerastus Knight Atrapos · Bringer of Justice D6+2
+Knight Crusader · Hunter’s Eye D6
+Knight Defender D6
+Knight Destrier D6
+Knight Errant · Mysterious Guardian D6
+Deep Strike
+Knight Errant · Mysterious Guardian
+Mysterious Guardian: IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Leader
+Navigator
+Super-Heavy Walker
+Cerastus Knight Atrapos · Bringer of Justice
+Knight Crusader · Hunter’s Eye
+Knight Defender
+Knight Destrier
+Knight Errant · Mysterious Guardian
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+1× 32mm
+1× 150×95mm Oval
+4× 170×109mm Oval
+
+WHAT TO WRITE ON EACH BASE
+
+Cerastus Knight Atrapos · Bringer of Justice
+1× 170×109mm Oval
+Cerastus Knight Atrapos · Warlord · Bringer of Justice
+Knight Crusader · Hunter’s Eye
+1× 170×109mm Oval
+Knight Crusader · Hunter’s Eye
+Knight Defender
+1× 170×109mm Oval
+Knight Defender
+Knight Destrier
+1× 150×95mm Oval
+Knight Destrier
+Knight Errant · Mysterious Guardian
+1× 170×109mm Oval
+Knight Errant · Mysterious Guardian
+Navigator
+1× 32mm
+Navigator
+
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
+
+######## damage shooting · BASES Damage
+YOUR
+Cerastus Knight Atrapos
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+3.4
+of 5 destroyed
+6.8 wounds lost · wiped in 31% of games
+Atrapos lascutter: high intensity
+Graviton singularity cannon: singularity
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Cerastus Knight Atrapos
+Atrapos lascutter
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−31% wiped
+−1.8
+MODELS IF UNTICKED
+PICK ONE PROFILE
+high intensity
+3.4
+BEST · 24"
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+low intensity
+3.4
+RNG
+36"
+A
+2D6
+BS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+Graviton singularity cannon
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+−23% wiped
+−1.4
+MODELS IF UNTICKED
+PICK ONE PROFILE
+singularity
+3.4
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+contained
+3.4
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++16% wiped
++0.5
+MODELS
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
++16% wiped
++0.5
+MODELS
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
++7% wiped
++0.3
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−14% wiped
+−0.7
+MODELS
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−14% wiped
+−0.7
+MODELS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−27% wiped
+−1.8
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−27% wiped
+−1.8
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding TITANIC units)” (15.08) · yours to count anyway
+−31% wiped
+−2.6
+MODELS
+STRATAGEMS
+with their CP
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+if used
++26% wiped
++0.8
+MODELS
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
+each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
+1CP Noble Sacrifice
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+1CP Point-Blank Barrage
+Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Cerastus Knight Atrapos
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.6
+of 5 destroyed
+9.1 wounds lost · wiped in 72% of games
+Atrapos lascutter: high intensity
+Charged this turn
+×
+Bringer of Justice
+5 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Cerastus Knight Atrapos
+Atrapos lascutter
+A
+8
+WS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−72% wiped
+−4.6
+MODELS IF UNTICKED
+PICK ONE PROFILE
+high intensity
+4.6
+BEST
+A
+8
+WS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+low intensity
+4.1
+A
+14
+WS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+SITUATION AND RULES
+Bringer of Justice
+Every melee attack: +1 to hit rolls
+always counted · you can leave it out
+if left out: −0.5 models · −20% wiped
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
+no change: already hits on 2+
+0
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
++1% wiped
+≈0
+MODELS
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−20% wiped
+−0.5
+MODELS
+STRATAGEMS
+with their CP
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+if used
++26% wiped
++0.4
+MODELS
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (5)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
+each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
+1CP Noble Sacrifice
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Cerastus Knight Atrapos
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+9.9 wounds lost · wiped in 98% of games
+
+Shoot 3.41 · Fight 1.56 · the charge is taken to succeed
+
+Atrapos lascutter: high intensity
+Graviton singularity cannon: singularity
++2 MORE
+9 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Cerastus Knight Atrapos
+Atrapos lascutter
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−6% wiped
+−0.1
+MODELS IF UNTICKED
+PICK ONE PROFILE
+high intensity
+5.0
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+low intensity
+5.0
+RNG
+36"
+A
+2D6
+BS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+Graviton singularity cannon
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+−6% wiped
+−0.1
+MODELS IF UNTICKED
+PICK ONE PROFILE
+singularity
+5.0
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+contained
+5.0
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++1% wiped
+≈0
+MODELS
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
++1% wiped
+≈0
+MODELS
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
+≈0
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−2% wiped
+≈0
+MODELS
++1 MORE ▾
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−2% wiped
+≈0
+MODELS
++1 MORE ▾
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−9% wiped
+−0.1
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−9% wiped
+−0.1
+MODELS
+STRATAGEMS
+with their CP
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+if used
++1% wiped
+≈0
+MODELS
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
+each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
+1CP Noble Sacrifice
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+1CP Point-Blank Barrage
+Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Cerastus Knight Atrapos
+
+Against what the shooting left of the target, in each game.
+
+Atrapos lascutter
+A
+8
+WS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−67% wiped
+−1.6
+MODELS IF UNTICKED
+PICK ONE PROFILE
+high intensity
+5.0
+BEST
+A
+8
+WS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+low intensity
+4.9
+A
+14
+WS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+SITUATION AND RULES
+Bringer of Justice
+Every melee attack: +1 to hit rolls
+always counted · you can leave it out
+if left out: −0.1 models · −4% wiped
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
+no change: already hits on 2+
+0
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
+≈0
+MODELS
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−4% wiped
+−0.1
+MODELS
+STRATAGEMS
+with their CP
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+if used
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (5)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
+each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
+1CP Noble Sacrifice
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+FREEBLADE COMPANY
+6
+1
+CP
+Full Tilt
+Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).
+Your Movement All but Navigator
+1
+CP
+Strength from Exile
+Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
+Your Shoot · Fight All but Navigator
+1
+CP
+Point-Blank Barrage
+Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
+Your Shooting All but Navigator
+1
+CP
+Survivor of Strife
+Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
+Their Shooting All but Navigator
+1
+CP
+Noble Sacrifice
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Any phase All but Navigator
+1
+CP
+Flanking Manoeuvres
+Your unit within 9" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
+End of their Fight No unit in this list can use it (needs ARMIGER)
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement Navigator
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge All but Navigator
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Any unit
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+6
+1
+CP
+Full Tilt
+Your Movement All but Navigator
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.” So a Knight Destrier adds either 6" or 9": the sources don’t say whether this stratagem’s DESTRIER means KNIGHT DESTRIER.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+1
+CP
+Strength from Exile
+Your Shoot · Fight All but Navigator
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+1
+CP
+Point-Blank Barrage
+Your Shooting All but Navigator
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+1
+CP
+Survivor of Strife
+Their Shooting All but Navigator
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+1
+CP
+Noble Sacrifice
+Any phase All but Navigator
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+1
+CP
+Flanking Manoeuvres
+End of their Fight No unit in this list can use it (needs ARMIGER)
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne ARMIGER unit from your army that is within 9" of one or more battlefield edges and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYno unit in this list (needs ARMIGER)
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Navigator
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYNavigator
+
+1
+CP
+Crushing Impact
+Your Charge All but Navigator
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight Any unit
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit cerastus-knight-atrapos · STRATAGEMS Navigator sounds op ngl
+CERASTUS KNIGHT ATRAPOS
+450 PTS
+Character
+Warlord
+Bringer of Justice
+Models
+Options
+1× Cerastus Knight Atrapos
+Atrapos lascutter, Graviton singularity cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Cerastus Knight Atrapos
+170×109mm Oval
+12"
+11
+3+
+28
+6+
+10
+5+
+WHEN TARGETED
+3
+Feel No Pain 6+
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
+DAMAGED 1-10 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Atrapos lascutter
+➤high intensity
+24"
+D6
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+36"
+2D6
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+Graviton singularity cannon
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+➤contained
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Atrapos lascutter
+➤high intensity
+8
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+14
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+Every melee attack: +1 to hit rolls (Bringer of Justice)
+ABILITIES
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Atrapos’ Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+Bringer of Justice
+Enhancement
+Already in A
+Fight
+
+Enhancement · Fight · Either turn
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Rules
+Code Chivalric, Deadly Demise D6+2, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CERASTUS
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT ATRAPOS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+WARLORD
+Ask about this unit
+Knight Crusader · Hunter’s Eye ›
+
+######## unit knight-crusader · CERASTUS KNIGHT ATRAPOS Navigator sounds op ngl
+KNIGHT CRUSADER
+435 PTS
+Character
+Hunter’s Eye
+Models
+Options
+1× Knight Crusader
+Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Questoris heavy stubber, Rapid-fire battle cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Crusader
+170×109mm Oval
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETED
+4
+Feel No Pain 6+
+5+ invulnerable save against ranged attacks only
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Avenger gatling cannon
+36"
+18
+3+
+6
+-2
+2
+IGNORES COVER
+Heavy flamer
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2, IGNORES COVER
+Questoris heavy stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3, IGNORES COVER
+Rapid-fire battle cannon
+72"
+D6+3
+3+
+10
+-1
+3
+BLAST, RAPID FIRE D6+3, IGNORES COVER
+Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+8
+-1
+2
+ABILITIES
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Crusader’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
+
+Hunter’s Eye
+Enhancement
+Their Move · Your Shoot
+
+Enhancement · Their Movement / Your Shooting
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Sustained Hits, Bondsman (no unit in this list it applies to), Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT CRUSADER
+QUESTORIS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Cerastus Knight Atrapos · Bringer of Justice
+Knight Defender ›
+
+######## unit knight-defender · KNIGHT CRUSADER Navigator sounds op ngl
+KNIGHT DEFENDER
+385 PTS
+Character
+Models
+Options
+1× Knight Defender
+Conversion beam obliterator, Phosphor blaster, Plasma executor, Titanic feet, Twin incendine combustor
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Defender
+170×109mm Oval
+10"
+11
+3+
+26
+6+
+10
+4+*
+WHEN TARGETED
+3
+Feel No Pain 6+
+4+ invulnerable save against ranged attacks only
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Conversion beam obliterator
+36"
+3
+3+
+12
+-2
+4
+CONVERSION, SUSTAINED HITS D3
+Phosphor blaster
+24"
+1
+3+
+5
+0
+1
+IGNORES COVER, RAPID FIRE 1
+Plasma executor
+➤standard
+36"
+D6+3
+3+
+8
+-2
+2
+BLAST
+➤supercharge
+36"
+D6+3
+3+
+9
+-3
+3
+BLAST, HAZARDOUS
+Twin incendine combustor
+12"
+D6
+–
+6
+-1
+1
+IGNORES COVER, TORRENT, TWIN-LINKED
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Target more than 18" away: an unmodified successful hit roll of 4+ scores a Critical Hit (Conversion)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+8
+-1
+2
+ABILITIES
+Selfless Protector
+
+Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
+
+Invulnerable Save (4+*)
+
+This model has a 4+ invulnerable save against ranged attacks.
+
+Defender’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.
+
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman (no unit in this list it applies to), Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT DEFENDER
+QUESTORIS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Knight Crusader · Hunter’s Eye
+Knight Destrier ›
+
+######## unit knight-destrier · KNIGHT DEFENDER Navigator sounds op ngl
+KNIGHT DESTRIER
+265 PTS
+Character
+Models
+Options
+1× Knight Destrier
+Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Destrier
+150×95mm Oval
+12"
+10
+3+
+18
+6+
+8
+5+*
+WHEN TARGETED
+4
+Feel No Pain 6+
+5+ invulnerable save against ranged attacks only
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
+DAMAGED 1-6 W
+-1 TO HIT ROLLS (AND -4 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
+Chastiser gatling cannon
+24"
+12
+3+
+6
+-1
+2
+ASSAULT
+Frag bombard
+24"
+D6+3
+3+
+7
+-1
+2
+ASSAULT, BLAST, RAPID FIRE D6+3
+Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+7
+-1
+2
+ABILITIES
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
+Ram Jets
+Your Movement
+
+Movement · Your turn
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+Saturation Fire
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BELLATUS
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT DESTRIER
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Knight Defender
+Knight Errant · Mysterious Guardian ›
+
+######## unit knight-errant · KNIGHT DESTRIER Navigator sounds op ngl
+KNIGHT ERRANT
+390 PTS
+Character
+Mysterious Guardian
+Models
+Options
+1× Knight Errant
+Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Errant
+170×109mm Oval
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETED
+4
+Feel No Pain 6+
+5+ invulnerable save against ranged attacks only
+1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Reaper chainsword
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+ABILITIES
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Errant’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
+
+Mysterious Guardian
+Enhancement
+Once per battle, per army
+End of your opponent’s turn
+
+Enhancement · End of your opponent’s turn
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman (no unit in this list it applies to), Deep Strike, Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT ERRANT
+QUESTORIS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Knight Destrier
+Navigator ›
+
+######## unit navigator · KNIGHT ERRANT Navigator sounds op ngl
+NAVIGATOR
+75 PTS
+Allies: Imperial Agents · In this army through Assigned Agents (Imperial Agents)
+Models
+Options
+1× Navigator
+Force-orb cane, Laspistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Navigator
+32mm
+6"
+3
+5+
+3
+7+
+1
+4+
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Laspistol
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Force-orb cane
+3
+4+
+6
+-1
+D3
+PSYCHIC
+ABILITIES
+Third Eye
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+At the start of your Shooting phase, select one enemy unit within 12" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suffers 3 mortal wounds.
+
+Gaze into the Empyrean
+
+Psychic
+
+Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.
+
+Rules
+Leader
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Freeblade Company.
+
+Keywords
+ALLIES: IMPERIAL AGENTS
+CHARACTER
+FACTION: AGENTS OF THE IMPERIUM
+IMPERIUM
+INFANTRY
+NAVIGATOR
+PSYKER
+VOIDFARERS
+Ask about this unit
+‹ Knight Errant · Mysterious Guardian
+
+######## popup ability:navigator-sounds-op-ngl|Aggressive Assault|Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**. · NAVIGATOR Navigator sounds op ngl
+ABILITY · SHOOTING · YOUR TURN
+
+Aggressive Assault
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+UNITKnight Errant · Mysterious Guardian
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Bringer of Justice|**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · ENHANCEMENT · FIGHT · EITHER TURN
+
+Bringer of Justice
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+UNITCerastus Knight Atrapos · Bringer of Justice
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Damaged: 1-10 Wounds Remaining|While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITCerastus Knight Atrapos · Bringer of Justice
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Damaged: 1-6 Wounds Remaining|While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Damaged: 1-6 Wounds Remaining
+
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKnight Destrier
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Damaged: 1-9 Wounds Remaining|While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKnight Crusader · Hunter’s Eye, Knight Defender, Knight Errant · Mysterious Guardian
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Invulnerable Save (4+*)|This model has a 4+ invulnerable save against ranged attacks. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Invulnerable Save (4+*)
+
+This model has a 4+ invulnerable save against ranged attacks.
+
+UNITKnight Defender
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Invulnerable Save (5+*)|This model has a 5+ invulnerable save against ranged attacks. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+UNITKnight Crusader · Hunter’s Eye, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Macro-extinction Protocols|Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+UNITCerastus Knight Atrapos · Bringer of Justice
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Mysterious Guardian|**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:
+- Place this unit in **strategic reserves**.
+- This unit has **Deep Strike** until the start of your next Shooting phase.
+- This unit must make an **ingress move** in your next Movement phase (including in your first turn). · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · ENHANCEMENT · END OF YOUR OPPONENT’S TURN
+
+Mysterious Guardian
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+UNITKnight Errant · Mysterious Guardian
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Punishing Salvoes|In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · MOVEMENT / SHOOTING · YOUR TURN
+
+Punishing Salvoes
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+UNITKnight Crusader · Hunter’s Eye
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · SHOOTING · YOUR TURN
+
+Saturation Fire
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+UNITKnight Destrier
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Third Eye|At the start of your Shooting phase, select one enemy unit within 12" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · PSYCHIC · SHOOTING · YOUR TURN
+
+Third Eye
+
+At the start of your Shooting phase, select one enemy unit within 12" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suffers 3 mortal wounds.
+
+UNITNavigator
+
+Ask about this ability
+
+######## popup enh:freeblade-company|Bringer of Justice · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ENHANCEMENT · FREEBLADE COMPANY · 30 PTS
+
+Bringer of Justice
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+ONCerastus Knight Atrapos
+
+Ask about this enhancement
+
+######## popup enh:freeblade-company|Hunter’s Eye · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ENHANCEMENT · FREEBLADE COMPANY · 25 PTS
+
+Hunter’s Eye
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+ONKnight Crusader
+
+Ask about this enhancement
+
+######## popup enh:freeblade-company|Mysterious Guardian · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ENHANCEMENT · FREEBLADE COMPANY · 35 PTS
+
+Mysterious Guardian
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+ONKnight Errant
+
+Ask about this enhancement
+
+######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 14",null] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+A 14 · GRANTED BY
+
+Bringer of Justice
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 8",null] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+A 8 · GRANTED BY
+
+Bringer of Justice
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Hunter’s Eye","knight-crusader","IGNORES COVER","IGNORES COVER"] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+IGNORES COVER · GRANTED BY
+
+Hunter’s Eye
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+######## popup rule:ASSAULT · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYKnight Destrier, Knight Errant · Mysterious Guardian (in Errant’s Duty)
+
+Ask about this rule
+
+######## popup rule:Advance · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance move · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance roll · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance rolls · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Assigned Agents · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+IMPERIAL AGENTS ARMY RULE (AGENTS OF THE IMPERIUM UNITS IN ANOTHER ARMY)
+
+Assigned Agents
+
+If your Army Faction is AGENTS OF THE IMPERIUM, then in the Select Detachment Rules step, you can select one of the available Detachments from this book as normal.
+
+If your Army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below.
+
+Incursion: RETINUE units 1, CHARACTER units 1, REQUISITIONED units 1
+Strike Force: RETINUE units 2, CHARACTER units 2, REQUISITIONED units 1
+Onslaught: RETINUE units 3, CHARACTER units 3, REQUISITIONED units 2
+
+Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round.
+
+Ask about this rule
+
+######## popup rule:BLAST · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Battle-shock test · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Benefit of Cover · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:Bondsman · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+IMPERIAL KNIGHTS ARMY RULE
+
+Bondsman
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+Ask about this rule
+
+######## popup rule:CONVERSION · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+WEAPON ABILITY EACH DATASHEET DEFINES FOR ITS OWN WEAPON (KNIGHT DEFENDER DATASHEET: CONVERSION BEAM OBLITERATOR)
+
+CONVERSION
+
+Conversion beam obliterator (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.
+
+Ask about this rule
+
+######## popup rule:Charge roll · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Code Chivalric · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+IMPERIAL KNIGHTS ARMY RULE
+
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6+2 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Deadly Demise D6+2
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Deep Strike · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYKnight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Engagement Range · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Fall Back move · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:Feel No Pain 6+ · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
+
+######## popup rule:Fights First · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:HAZARDOUS · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Defender
+
+Ask about this rule
+
+######## popup rule:Hazard roll · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier (in Saturation Fire)
+
+Ask about this rule
+
+######## popup rule:Knights of Legend · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+FREEBLADE COMPANY DETACHMENT RULE
+
+Knights of Legend
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Leader · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYNavigator
+
+Ask about this rule
+
+######## popup rule:MELTA 2 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:MELTA 6 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+MELTA 6
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Normal · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:PISTOL · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYNavigator
+
+Ask about this rule
+
+######## popup rule:PSYCHIC · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+PSYCHIC
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYNavigator
+
+Ask about this rule
+
+######## popup rule:Plunging Fire · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Plunging Fire
+
+Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the BS characteristic of that attack by 1:
+
+The attacking model is on a section of a terrain feature that is 3" or more in height.
+The attacking model has the TOWERING keyword and the target unit is within 12".
+
+23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 1 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 3 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE D6+3 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+RAPID FIRE D6+3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS D3 · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+SUSTAINED HITS D3
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender
+
+Ask about this rule
+
+######## popup rule:Strategic Reserves · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:Super-Heavy Walker · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Super-Heavy Walker
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+IMPERIAL KNIGHTS ARMY RULE
+
+Super-heavy Walker
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this rule
+
+######## popup rule:Sustained Hits · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Sustained Hits
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender
+
+Ask about this rule
+
+######## popup rule:TORRENT · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Defender
+
+Ask about this rule
+
+######## popup rule:TWIN-LINKED · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYKnight Defender
+
+Ask about this rule
+
+######## popup rule:[ASSAULT] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYKnight Destrier, Knight Errant · Mysterious Guardian (in Errant’s Duty)
+
+Ask about this rule
+
+######## popup rule:[IGNORES COVER] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier (in Saturation Fire)
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+Ask about this rule
+
+######## popup rule:advance move · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:engaged · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:ingress move · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:command-re-roll · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYNavigator
+
+Ask about this stratagem
+
+######## popup strat:flanking-manoeuvres · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · FIGHT · THEIR TURN
+
+Flanking Manoeuvres
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne ARMIGER unit from your army that is within 9" of one or more battlefield edges and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYno unit in this list (needs ARMIGER)
+
+Ask about this stratagem
+
+######## popup strat:full-tilt · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · MOVEMENT · YOUR TURN
+
+Full Tilt
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.” So a Knight Destrier adds either 6" or 9": the sources don’t say whether this stratagem’s DESTRIER means KNIGHT DESTRIER.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:noble-sacrifice · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · ANY PHASE · EITHER TURN
+
+Noble Sacrifice
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this stratagem
+
+######## popup strat:point-blank-barrage · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · SHOOTING · YOUR TURN
+
+Point-Blank Barrage
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:strength-from-exile · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Strength from Exile
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this stratagem
+
+######## popup strat:survivor-of-strife · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+1CP · SHOOTING · THEIR TURN
+
+Survivor of Strife
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
+
+Ask about this stratagem

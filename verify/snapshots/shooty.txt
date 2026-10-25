@@ -117,7 +117,7 @@ PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 IMPERIAL KNIGHTS
-2
+3
 6 bigs
 2000 pts
 Freeblade Company
@@ -125,6 +125,12 @@ PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 4 megas and a destrier
+2000 pts
+Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Navigator sounds op ngl
 2000 pts
 Freeblade Company
 PRIORITY ASSETS
