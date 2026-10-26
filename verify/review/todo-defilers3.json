@@ -1,0 +1,434 @@
+[
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Lucius the Eternal · Duellist’s Hubris",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Duellist’s Hubris",
+   "text": "At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability."
+  },
+  "key": "345826e38c8ccf88"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lucius the Eternal · Duellist’s Hubris",
+  "judgement": {
+   "who": "Lucius the Eternal",
+   "models": [
+    "1× Lucius the Eternal",
+    "3× Flawless Blade"
+   ]
+  },
+  "source": {
+   "ability": "Duellist’s Hubris",
+   "text": "At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability."
+  },
+  "key": "6bdb0896448f33c1"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Lucius the Eternal · A Challenge Worthy of Skill",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "A Challenge Worthy of Skill",
+   "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "ff7e1e631fbdbaa9"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lucius the Eternal · A Challenge Worthy of Skill",
+  "judgement": {
+   "who": "Lucius the Eternal",
+   "models": [
+    "1× Lucius the Eternal",
+    "3× Flawless Blade"
+   ]
+  },
+  "source": {
+   "ability": "A Challenge Worthy of Skill",
+   "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "2effc4db8142a0ad"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Daemonic Patrons",
+   "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+  },
+  "key": "d5f1b73968c41a7f"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-who",
+  "where": "defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+  "judgement": {
+   "who": "Flawless Blades",
+   "models": [
+    "1× Lucius the Eternal",
+    "3× Flawless Blade"
+   ]
+  },
+  "source": {
+   "ability": "Daemonic Patrons",
+   "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+  },
+  "key": "1d5146bf15577827"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "judgement": {
+   "kind": "all",
+   "when": "vs CHARACTER, MONSTER or WALKER units",
+   "note": "re-roll the hit roll and the wound roll",
+   "from": "A Challenge Worthy of Skill",
+   "always": true,
+   "vs": {
+    "any": [
+     "Character",
+     "Monster",
+     "Walker"
+    ]
+   }
+  },
+  "source": {
+   "ability": "A Challenge Worthy of Skill",
+   "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "9efd39853175103b"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-footnote",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "judgement": {
+   "kind": "melee",
+   "when": "Called upon daemonic patrons when selected to fight (until the end of the phase)",
+   "note": "a Critical Wound on an unmodified wound roll of 3+",
+   "from": "Daemonic Patrons",
+   "calc": {
+    "critWound": 3
+   }
+  },
+  "source": {
+   "ability": "Daemonic Patrons",
+   "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+  },
+  "key": "f3b278734996b305"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-kwNote",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "judgement": {
+   "kwNote": "Flawless Blades, Grenades come from the led Flawless Blades."
+  },
+  "source": {
+   "models": [
+    "1× Lucius the Eternal",
+    "3× Flawless Blade"
+   ],
+   "stats": [
+    "Lucius the Eternal W6 OC1",
+    "Flawless Blades ×3 W3 OC1"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Blade of the Laer 6 -3 3 PRECISION",
+    "Lash of Torment 10 -1 1 SUSTAINED HITS 1",
+    "Blissblade 4 -3 2"
+   ]
+  },
+  "key": "b4d0115d4d402666"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-ptsNote",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "judgement": {
+   "ptsNote": "130 + Flawless Blades 95"
+  },
+  "source": {
+   "models": [
+    "1× Lucius the Eternal",
+    "3× Flawless Blade"
+   ],
+   "stats": [
+    "Lucius the Eternal W6 OC1",
+    "Flawless Blades ×3 W3 OC1"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Blade of the Laer 6 -3 3 PRECISION",
+    "Lash of Torment 10 -1 1 SUSTAINED HITS 1",
+    "Blissblade 4 -3 2"
+   ]
+  },
+  "key": "97d4143741e1881a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-partialRules",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Lucius the Eternal",
+    "Lone Operative": "Lucius the Eternal"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Lucius the Eternal",
+    "3× Flawless Blade"
+   ],
+   "rules": [
+    "Leader",
+    "Thrill Seekers",
+    "Feel No Pain 5+",
+    "Lone Operative",
+    "Precision",
+    "Sustained Hits",
+    "Pistol"
+   ],
+   "abilities": [
+    "Lucius the Eternal · Duellist’s Hubris: At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.",
+    "Lucius the Eternal · A Challenge Worthy of Skill: Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.",
+    "Flawless Blades · Daemonic Patrons: Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+   ]
+  },
+  "key": "47536d26c2754edf"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Sorcerer · Warped Interference",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Warped Interference",
+   "text": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack."
+  },
+  "key": "e633f5f46102874c"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-def",
+  "where": "defilers-and-friends · Sorcerer · Warped Interference",
+  "judgement": {
+   "def": "while this model is leading a unit: models in that unit have the Benefit of Cover against ranged attacks"
+  },
+  "source": {
+   "ability": "Warped Interference",
+   "text": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack."
+  },
+  "key": "79861bb664ff2e9a"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Sorcerer · Wracking Agonies",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your",
+   "turns": {
+    "charge": "either"
+   }
+  },
+  "source": {
+   "ability": "Wracking Agonies",
+   "text": "In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+  },
+  "key": "3fb8752938be8c8e"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Sorcerer · Wracking Agonies",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Wracking Agonies",
+   "text": "In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+  },
+  "key": "8c9c87d9c4c04412"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-weapons",
+  "where": "defilers-and-friends · Sorcerer",
+  "judgement": {
+   "gear": [
+    [
+     "Agonising Energies",
+     "Bolt pistol",
+     "Force weapon"
+    ]
+   ],
+   "weapons": [
+    "Agonising Energies · witchfire",
+    "Agonising Energies · focused witchfire",
+    "Bolt pistol",
+    "Force weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer"
+   ],
+   "leads": null
+  },
+  "key": "5fcdb9a239c61138"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-kwNote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "kwNote": "Battleline, Infractors come from the led Infractors."
+  },
+  "source": {
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ],
+   "stats": [
+    "Lord Exultant W5 OC1",
+    "Infractors ×5 W2 OC2"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Plasma pistol standard 1 -2 1 PISTOL, LETHAL HITS",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL, LETHAL HITS",
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Close combat weapon 6 0 1 LETHAL HITS",
+    "Phoenix power spear 5 -2 2 LANCE, LETHAL HITS",
+    "Rapture lash 4 -1 1 EXTRA ATTACKS, LETHAL HITS",
+    "Power sword 4 -2 1 PRECISION, LETHAL HITS",
+    "Duelling sabre 4 -1 1 PRECISION, LETHAL HITS"
+   ]
+  },
+  "key": "ae0771b1b0787b21"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-ptsNote",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "ptsNote": "95 + Infractors 95"
+  },
+  "source": {
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ],
+   "stats": [
+    "Lord Exultant W5 OC1",
+    "Infractors ×5 W2 OC2"
+   ],
+   "weapons": [
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Plasma pistol standard 1 -2 1 PISTOL, LETHAL HITS",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL, LETHAL HITS",
+    "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+    "Close combat weapon 6 0 1 LETHAL HITS",
+    "Phoenix power spear 5 -2 2 LANCE, LETHAL HITS",
+    "Rapture lash 4 -1 1 EXTRA ATTACKS, LETHAL HITS",
+    "Power sword 4 -2 1 PRECISION, LETHAL HITS",
+    "Duelling sabre 4 -1 1 PRECISION, LETHAL HITS"
+   ]
+  },
+  "key": "1016fe171fd26ea1"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Chaos Rhino · Assault Vehicle",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Assault Vehicle",
+   "text": "Units can disembark from this **TRANSPORT** after it has Advanced. Units that do so make a **shock disembark move** (Core Rules, 18.07) for that disembarkation."
+  },
+  "key": "a84033528705b3fc"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-tag",
+  "where": "defilers-and-friends · Chaos Rhino · Transport",
+  "judgement": {
+   "tag": "Capacity"
+  },
+  "source": {
+   "ability": "Transport",
+   "text": "This model has a **transport capacity** of 12 **EMPEROR’S CHILDREN INFANTRY** models (excluding **TERMINATOR** and **FLAWLESS BLADE** models)."
+  },
+  "key": "0683187950592830"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing",
+  "where": "defilers-and-friends · Maulerfiend · Glutton for Punishment",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Glutton for Punishment",
+   "text": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**. If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "d6f6324bc0121862"
+ }
+]

@@ -537,7 +537,10 @@ function buildGroup(g, k) {
       else if (named) o.who = partName(p);
       if (e) o.tag = (e.upgrade ? 'Upgrade' : 'Enhancement') + (/\(Aura\)$/.test(e.name) ? ' · Aura' : '');   // GW's "(Aura)" in its name
       else if (a.paren !== null && o.name === typo(a.base)) o.tag = a.paren;
-      o._bs = prof.characteristics.map(c => c.$text || '').join('\n');
+      // (BSData's Transport profile, named after the unit, is GW's TRANSPORT box: the ability Transport, its characteristic's name
+      // the tag, as New Recruit prints "Transport Capacity" and the World Eaters' Chaos Rhino has it)
+      if (table === 'Transport') { o.name = 'Transport'; delete o.who; o.tag = typo(nm(prof.characteristics[0].name)); }
+      o._bs =prof.characteristics.map(c => c.$text || '').join('\n');
       o._e = e; o._part = p; hide(o, { _sel: sel });
       abilities.push(o);
     }
@@ -650,7 +653,10 @@ for (const u of units) {
       let ww = null;
       // (and a name whose apostrophe GW puts elsewhere: New Recruit's "Attendant's hellblades", GW's "Attendants’ hellblades")
       const noApos = x => gwName(x).replace(/'/g, '');
+      // (and GW's plural name for a pair, the Maulerfiend's "Magma cutters" for New Recruit's "Magma cutter" ×2: listed below as named
+      // otherwise)
       for (const n of wn) { ww = ds.weapons.find(x => sameKind(x) && nameOf(n) === nameOf(x.name)) || ds.weapons.find(x => sameKind(x) && gwName(n) === gwName(x.name)) || ds.weapons.find(x => sameKind(x) && noApos(n) === noApos(x.name)); if (ww) break; }
+      if (!ww && (row.n || 1) > 1) ww = ds.weapons.find(x => sameKind(x) && gwName(x.name) === gwName(wn[0]) + 's') || null;
       if (ww && row.hunter && / - hunter$/i.test(ww.name)) gwFacts.set(u.id + '|' + kind + '|' + nm(row.name) + '|hunter', { gw: 'true', pin: 'no Hunter profile', nr: row.name, file: where, src: 'GW’s datasheet names it ' + ww.name + ' (its Hunter profile, used against MONSTER/VEHICLE units)' });
       if (ww && nameOf(ww.name) !== nameOf(wn[0]) && !wn.slice(1).some(n => nameOf(n) === nameOf(ww.name))) gwNames.push({ unit: u.id, kind, app: row.group ? row.group + ' - ' + row.name : row.name, gw: ww.name, file: where });
       const bc = bsChars(row._pid);

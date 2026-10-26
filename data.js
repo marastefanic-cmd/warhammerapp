@@ -3221,18 +3221,39 @@ const ARMIES = [
   id:'defilers-and-friends', name:'Defilers and friends', faction:'emperors-children', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Purge the Foe',
   detachments:['coterie-of-the-conceited'],
-  source:'New Recruit, exported 25 Oct 2026 (JSON)',
+  source:'New Recruit, exported 26 Oct 2026 (JSON)',
   units:[
     {
-      id:'fulgrim', ds:'emperors-children/fulgrim', pts:340, warlord:true,
-      models:['1× Fulgrim'],
-      gear:[['Daemonic blades','Malefic lash','Serpentine tail']],
-      kw:['Chaos','Character','Daemon','Epic Hero','Faction: Emperor\'s Children','Fly','Fulgrim','Mobile','Monster','Primarch','Slaanesh','Warlord'],
-      why:{ kw:{ Warlord:'Warlord' } }
+      id:'lucius-the-eternal-flawless-blades', ds:['emperors-children/lucius-the-eternal','emperors-children/flawless-blades'], role:'Epic Hero', pts:225, ptsNote:'130 + Flawless Blades 95', warlord:true,
+      leads:'Flawless Blades',
+      models:['1× Lucius the Eternal','3× Flawless Blade'],
+      gear:[['Blade of the Laer','Lash of Torment'],['Blissblade','Bolt pistol']],
+      stats:[
+        { name:'Lucius the Eternal' },
+        { name:'Flawless Blades ×3' }
+      ],
+      ranged:[
+        { name:'Bolt pistol', who:'Flawless Blades', n:3 }
+      ],
+      melee:[
+        { name:'Blade of the Laer', who:'Lucius the Eternal' },
+        { name:'Lash of Torment', who:'Lucius the Eternal' },
+        { name:'Blissblade', who:'Flawless Blades', n:3 }
+      ],
+      abilities:[
+        { name:'Duellist’s Hubris', who:'Lucius the Eternal' },
+        { name:'A Challenge Worthy of Skill', who:'Lucius the Eternal' },
+        { name:'Daemonic Patrons', who:'Flawless Blades' }
+      ],
+      rules:['Leader','Thrill Seekers','Feel No Pain 5+','Lone Operative','Precision','Sustained Hits','Pistol'],
+      kw:['Chaos','Character','Epic Hero','Faction: Emperor\'s Children','Infantry','Lucius the Eternal','Slaanesh','Warlord','Flawless Blades','Grenades'],
+      kwNote:'Flawless Blades, Grenades come from the led Flawless Blades.',
+      partialRules:{ 'Feel No Pain 5+':'Lucius the Eternal', 'Lone Operative':'Lucius the Eternal' },
+      why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Flawless Blades', ptsNote:'the points of its parts as the list has them (Lucius the Eternal + Flawless Blades)' }
     },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:235, enhancement:'Pledge of Unholy Fortune',
+      id:'daemon-prince-of-slaanesh-with-wings', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:235, enhancement:'Pledge of Unholy Fortune',
       models:['1× Daemon Prince of Slaanesh with Wings'],
       gear:[['Hellforged weapons','Infernal cannon']],
       abilities:[
@@ -3243,20 +3264,15 @@ const ARMIES = [
     },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:250, enhancement:'Pledge of Eternal Servitude',
-      models:['1× Daemon Prince of Slaanesh with Wings'],
-      gear:[['Hellforged weapons','Infernal cannon']],
-      abilities:[
-        { name:'Daemonic Destruction' },
-        { name:'Stimulated by Pain' },
-        { name:'Pledge of Eternal Servitude', tag:'Enhancement', text:'**EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a **Leadership test** for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).' }
-      ]
+      id:'sorcerer', ds:'emperors-children/sorcerer', pts:55,
+      models:['1× Sorcerer'],
+      gear:[['Agonising Energies','Bolt pistol','Force weapon']]
     },
     {
       id:'lord-exultant-infractors', ds:['emperors-children/lord-exultant','emperors-children/infractors'], role:'Character', pts:190, copies:2, ptsNote:'95 + Infractors 95',
       leads:'Infractors',
       models:['1× Lord Exultant','1× Obsessionist','3× Infractor','1× Infractor (Icon of Excess)'],
-      gear:[['Bolt pistol','Close combat weapon','Phoenix power spear','Rapture lash'],['Rapture lash','Plasma pistol'],['Bolt pistol','Duelling sabre'],['Bolt pistol','Duelling sabre']],
+      gear:[['Bolt pistol','Close combat weapon','Phoenix power spear','Rapture lash'],['Power sword','Plasma pistol'],['Bolt pistol','Duelling sabre'],['Bolt pistol','Duelling sabre']],
       stats:[
         { name:'Lord Exultant' },
         { name:'Infractors ×5' }
@@ -3271,7 +3287,7 @@ const ARMIES = [
         { name:'Close combat weapon', who:'Lord Exultant', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
         { name:'Phoenix power spear', who:'Lord Exultant', kw:['LANCE','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
         { name:'Rapture lash', who:'Lord Exultant', kw:['EXTRA ATTACKS','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
-        { name:'Rapture lash', who:'Infractors', kw:['PRECISION','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { name:'Power sword', who:'Infractors', kw:['PRECISION','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
         { name:'Duelling sabre', who:'Infractors', n:4, kw:['PRECISION','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } }
       ],
       abilities:[
@@ -3306,6 +3322,12 @@ const ARMIES = [
       ]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'chaos-rhino', ds:'emperors-children/chaos-rhino', pts:70,
+      models:['1× Chaos Rhino'],
+      gear:[['Armoured tracks','Combi-bolter']]
+    },
+    {
       id:'defiler', ds:'emperors-children/defiler', pts:330,
       models:['1× Defiler'],
       gear:[['Ectoplasma destructor','Heavy reaper autocannon','Heavy reaper autocannon','Shearing claws','Excruciator cannon','Excruciator cannon']],
@@ -3323,6 +3345,14 @@ const ARMIES = [
         { name:'Ectoplasma destructor' },
         { name:'Excruciator cannon', n:2 },
         { name:'Heavy reaper autocannon', n:2 }
+      ]
+    },
+    {
+      id:'maulerfiend', ds:'emperors-children/maulerfiend', pts:120, copies:2,
+      models:['1× Maulerfiend'],
+      gear:[['Maulerfiend fists','Magma cutter','Magma cutter']],
+      ranged:[
+        { name:'Magma cutter', n:2 }
       ]
     }
   ]
@@ -6701,34 +6731,41 @@ const DATASHEETS = {
   rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Twin-linked'],
   kw:['Faction: Adeptus Mechanicus','Frame','Imperium','Skitarii','Skorpius Disintegrator','Smoke','Vehicle']
 },
-'emperors-children/fulgrim':{
-  name:'Fulgrim', faction:'emperors-children', bsId:'1e0a-cf2b-6602-2a34', role:'Epic Hero',
+'emperors-children/lucius-the-eternal':{
+  name:'Lucius the Eternal', faction:'emperors-children', bsId:'e390-b58b-db9-816',
   stats:[
-    { name:'Fulgrim', M:'16"', T:'11', Sv:'2+', W:'16', Ld:'5+', OC:'6', InSv:'4+', base:'130mm' }
-  ],
-  ranged:[
-    { name:'Malefic lash', range:'12"', A:'6', BS:'2+', S:'8', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'] }
+    { name:'Lucius the Eternal', M:'8"', T:'6', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' }
   ],
   melee:[
-    { name:'strike', group:'Daemonic blades', range:'Melee', A:'6', WS:'2+', S:'14', AP:'-3', D:'D6+1', kw:['SUSTAINED HITS 1'] },
-    { name:'sweep', group:'Daemonic blades', range:'Melee', A:'12', WS:'2+', S:'8', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'] },
-    { name:'Serpentine tail', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-1', D:'1', kw:['EXTRA ATTACKS'] }
+    { name:'Blade of the Laer', range:'Melee', A:'6', WS:'2+', S:'8', AP:'-3', D:'3', kw:['PRECISION'] },
+    { name:'Lash of Torment', range:'Melee', A:'10', WS:'2+', S:'4', AP:'-1', D:'1', kw:['SUSTAINED HITS 1'] }
   ],
   abilities:[
-    { name:'Daemonic Poisons', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 **mortal wounds**.' },
-    { name:'Daemon Primarch of Slaanesh', ph:['command'], turn:'opp', text:'At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability.' },
-    { name:'Damaged: 1-6 Wounds Remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' },
-    { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
-    { name:'Beguiling Form', who:'Daemon Primarch of Slaanesh: pick one', def:'while it is the Daemon Primarch of Slaanesh ability selected: -1 to the hit roll of attacks that target this model', text:'Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**.', defOf:'a5a2537f' },
-    { name:'Daemonic Speed', who:'Daemon Primarch of Slaanesh: pick one', ph:['fight'], turn:'either', text:'This model has the **Fights First** ability.' },
-    { name:'Enthralling Hypnosis', who:'Daemon Primarch of Slaanesh: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'While an enemy unit is within 6" of this model, each time that unit is selected to Fall Back, it must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead.' }
+    { name:'Duellist’s Hubris', ph:['fight'], turn:'either', text:'At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.' },
+    { name:'A Challenge Worthy of Skill', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
-    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 Wounds Remaining', readOf:'2c58235b', readBy:'derive' }
+    { kind:'all', when:'vs CHARACTER, MONSTER or WALKER units', note:'re-roll the hit roll and the wound roll', from:'A Challenge Worthy of Skill', always:true, vs:{ any:['Character','Monster','Walker'] }, readOf:'ed251c7c' }
+  ]
+},
+'emperors-children/flawless-blades':{
+  name:'Flawless Blades', faction:'emperors-children', bsId:'183e-f3bb-3ce6-7b55',
+  stats:[
+    { name:'Flawless Blades', M:'8"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
-  rules:['Thrill Seekers','Deep Strike','Deadly Demise D6','Sustained Hits','Extra Attacks'],
-  kw:['Chaos','Character','Daemon','Epic Hero','Faction: Emperor\'s Children','Fly','Fulgrim','Mobile','Monster','Primarch','Slaanesh']
+  ranged:[
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Blissblade', range:'Melee', A:'4', WS:'2+', S:'6', AP:'-3', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Daemonic Patrons', ph:['fight'], turn:'either', text:'Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.' }
+  ],
+  mods:[
+    { kind:'melee', when:'Called upon daemonic patrons when selected to fight (until the end of the phase)', note:'a Critical Wound on an unmodified wound roll of 3+', from:'Daemonic Patrons', calc:{ critWound:3 }, readOf:'6f8249c2' }
+  ]
 },
 'emperors-children/daemon-prince-of-slaanesh-with-wings':{
   name:'Daemon Prince of Slaanesh with Wings', faction:'emperors-children', bsId:'e452-08be-33e6-3864', role:'Character',
@@ -6748,6 +6785,26 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D3','Thrill Seekers','Deep Strike'],
   kw:['Chaos','Character','Daemon','Daemon Prince with Wings','Faction: Emperor\'s Children','Fly','Monster','Slaanesh']
+},
+'emperors-children/sorcerer':{
+  name:'Sorcerer', faction:'emperors-children', bsId:'2cd1-13f5-d59d-cc7f', role:'Character',
+  stats:[
+    { name:'Sorcerer', M:'7"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+  ],
+  ranged:[
+    { name:'witchfire', group:'Agonising Energies', range:'18"', A:'D6', BS:'3+', S:'5', AP:'-1', D:'D3', kw:['PSYCHIC'] },
+    { name:'focused witchfire', group:'Agonising Energies', range:'18"', A:'D6', BS:'3+', S:'6', AP:'-2', D:'D3', kw:['DEVASTATING WOUNDS','HAZARDOUS','PSYCHIC'] },
+    { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+  ],
+  melee:[
+    { name:'Force weapon', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-2', D:'D3', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'Warped Interference', tag:'Psychic', def:'while this model is leading a unit: models in that unit have the Benefit of Cover against ranged attacks', text:'While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack.', defOf:'bbaa8f1f' },
+    { name:'Wracking Agonies', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your', turns:{ charge:'either' }, text:'In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it.' }
+  ],
+  rules:['Leader','Thrill Seekers','Psychic','Hazardous','Devastating Wounds','Pistol'],
+  kw:['Chaos','Character','Faction: Emperor\'s Children','Grenades','Infantry','Psyker','Slaanesh','Sorcerer']
 },
 'emperors-children/lord-exultant':{
   name:'Lord Exultant', faction:'emperors-children', bsId:'7b4c-dfe0-6a0a-304a',
@@ -6783,7 +6840,7 @@ const DATASHEETS = {
     { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1' }
   ],
   melee:[
-    { name:'Rapture lash', range:'Melee', A:'6', WS:'3+', S:'4', AP:'-1', D:'1' },
+    { name:'Power sword', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'1' },
     { name:'Duelling sabre', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1' }
   ],
   abilities:[
@@ -6817,6 +6874,24 @@ const DATASHEETS = {
   rules:['Infiltrators','Thrill Seekers','Hazardous','Pistol','Precision','Melta'],
   kw:['Battleline','Chaos','Faction: Emperor\'s Children','Grenades','Infantry','Slaanesh','Tormentors']
 },
+'emperors-children/chaos-rhino':{
+  name:'Chaos Rhino', faction:'emperors-children', bsId:'8ae1-aa47-e1d1-1b31', role:'Dedicated Transport',
+  stats:[
+    { name:'Chaos Rhino', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'2', InSv:'–', base:'Hull' }
+  ],
+  ranged:[
+    { name:'Combi-bolter', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 2'] }
+  ],
+  melee:[
+    { name:'Armoured tracks', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Assault Vehicle', ph:['movement'], turn:'your', text:'Units can disembark from this **TRANSPORT** after it has Advanced. Units that do so make a **shock disembark move** (Core Rules, 18.07) for that disembarkation.' },
+    { name:'Transport', tag:'Capacity', text:'This model has a **transport capacity** of 12 **EMPEROR’S CHILDREN INFANTRY** models (excluding **TERMINATOR** and **FLAWLESS BLADE** models).' }
+  ],
+  rules:['Deadly Demise D3','Thrill Seekers','Firing Deck 2','Rapid Fire'],
+  kw:['Chaos','Dedicated Transport','Faction: Emperor\'s Children','Frame','Rhino','Slaanesh','Smoke','Transport','Vehicle']
+},
 'emperors-children/defiler':{
   name:'Defiler', faction:'emperors-children', bsId:'b541-3292-a5cc-dbeb', role:'Vehicle',
   stats:[
@@ -6843,6 +6918,29 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D6','Thrill Seekers','Blast','Sustained Hits','Devastating Wounds','Precision'],
   kw:['Chaos','Daemon','Defiler','Faction: Emperor\'s Children','Slaanesh','Vehicle','Walker']
+},
+'emperors-children/maulerfiend':{
+  name:'Maulerfiend', faction:'emperors-children', bsId:'656c-8b78-8e59-0591', role:'Vehicle',
+  stats:[
+    { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
+  ],
+  ranged:[
+    { name:'Magma cutter', range:'6"', A:'2', BS:'3+', S:'9', AP:'-4', D:'D6', kw:['MELTA 2'] }
+  ],
+  melee:[
+    { name:'Maulerfiend fists', range:'Melee', A:'6', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:[] }
+  ],
+  abilities:[
+    { name:'Glutton for Punishment', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**. If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Lost any wounds (below Starting Strength)', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength', from:'Glutton for Punishment', pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' },{ name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }], readOf:'9e1994b5' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
+  ],
+  rules:['Deadly Demise D3','Thrill Seekers'],
+  kw:['Chaos','Daemon','Faction: Emperor\'s Children','Maulerfiend','Slaanesh','Vehicle','Walker']
 },
 'chaos-knights/chaos-cerastus-knight-atrapos':{
   name:'Chaos Cerastus Knight Atrapos', faction:'chaos-knights', bsId:'8b1d-9029-f9e1-42d9', role:'Character',
@@ -8275,12 +8373,14 @@ const BS_IDS = {
     "big-demons-baby/lord-on-juggernaut-khorne-berzerkers":["ec72-f024-4283-0558|1×1673-a61f-d5a2-b17c,1×4292-1471-4fd6-7dac,1×47e1-9e86-8a80-66e1,1×6d28-ca9d-79a5-063a","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,4×8cbb-0e54-096a-e053,4×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,4×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,1×8e1d-9846-a460-6002,15×b568-8a23-be6f-a14d,15×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,15×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
     "big-demons-baby/master-of-executions":["1b56-682c-ac33-bc5f|1×6105-a18c-fcd1-a9da,1×c41d-61c0-3e59-01b5,1×eddd-9b27-00c2-b0ce"],
     "big-demons-baby/skarbrand":["71d9-9dc2-2b9a-6db3|1×1d6b-5a43-7bc9-18af,1×78e7-69eb-d93a-2b00"],
-    "defilers-and-friends/daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude":["e452-08be-33e6-3864|1×481c-fd3f-f851-c1f4,1×9ad3-083a-577b-56b0,1×b464-6a59-916f-c9d9"],
-    "defilers-and-friends/daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune":["e452-08be-33e6-3864|1×88b7-8def-835d-259d,1×9ad3-083a-577b-56b0,1×b464-6a59-916f-c9d9"],
+    "defilers-and-friends/chaos-rhino":["8ae1-aa47-e1d1-1b31|1×02c9-ea19-b105-af58,1×661a-207c-a66d-8da0"],
+    "defilers-and-friends/daemon-prince-of-slaanesh-with-wings":["e452-08be-33e6-3864|1×88b7-8def-835d-259d,1×9ad3-083a-577b-56b0,1×b464-6a59-916f-c9d9"],
     "defilers-and-friends/defiler":["b541-3292-a5cc-dbeb|1×23ce-dba1-8242-532d,2×23ce-dba1-8242-532d/bd01-88b9-7d60-b49a,1×2ca0-73ea-2725-79c7,2×34b5-f449-28f6-b365,1×b77f-43c5-91b6-7da7"],
     "defilers-and-friends/defiler-2":["b541-3292-a5cc-dbeb|1×23ce-dba1-8242-532d,2×23ce-dba1-8242-532d/bd01-88b9-7d60-b49a,1×2ca0-73ea-2725-79c7,2×34b5-f449-28f6-b365,1×b77f-43c5-91b6-7da7"],
-    "defilers-and-friends/fulgrim":["1e0a-cf2b-6602-2a34|1×37e2-d0fa-d7e5-b958,1×c7a7-3164-12bc-3462,1×e6eb-4713-7a67-6a2d,1×fb08-130a-eb0a-d9a9"],
-    "defilers-and-friends/lord-exultant-infractors":["7b4c-dfe0-6a0a-304a|1×1e16-0387-abcf-0e9a,1×3469-166f-44f3-51b8,1×d5fe-026f-1f46-e9c5,1×f1b5-b55a-e18b-fe84","e456-0afc-9b42-226c|1×8a59-c996-8ae9-8bd6,1×b59f-e25b-6248-8f90,1×b59f-e25b-6248-8f90/7d60-17ec-c8ad-1ba4,1×b59f-e25b-6248-8f90/e13a-503d-72dc-f4ed,4×ea82-9845-1b96-c57c,4×ea82-9845-1b96-c57c/3469-166f-44f3-51b8,4×ea82-9845-1b96-c57c/6ab9-df1b-b1fb-8d20"],
+    "defilers-and-friends/lord-exultant-infractors":["7b4c-dfe0-6a0a-304a|1×1e16-0387-abcf-0e9a,1×3469-166f-44f3-51b8,1×d5fe-026f-1f46-e9c5,1×f1b5-b55a-e18b-fe84","e456-0afc-9b42-226c|1×8a59-c996-8ae9-8bd6,1×b59f-e25b-6248-8f90,1×b59f-e25b-6248-8f90/e13a-503d-72dc-f4ed,1×b59f-e25b-6248-8f90/ea86-f483-33bb-182b,4×ea82-9845-1b96-c57c,4×ea82-9845-1b96-c57c/3469-166f-44f3-51b8,4×ea82-9845-1b96-c57c/6ab9-df1b-b1fb-8d20"],
+    "defilers-and-friends/lucius-the-eternal-flawless-blades":["e390-b58b-db9-816|1×23e2-6d93-5012-304d,1×c7a7-3164-12bc-3462,1×cd60-e6ca-4de4-bf07","183e-f3bb-3ce6-7b55|3×0567-0f45-90e8-d3f4,3×0567-0f45-90e8-d3f4/3469-166f-44f3-51b8,3×0567-0f45-90e8-d3f4/f048-127d-0e0b-2279"],
+    "defilers-and-friends/maulerfiend":["656c-8b78-8e59-0591|1×167f-5eee-fb7b-a9a9,1×9ef8-1cb6-2f19-cc1b,2×9ef8-1cb6-2f19-cc1b/bd33-fe8e-fe90-2bb7"],
+    "defilers-and-friends/sorcerer":["2cd1-13f5-d59d-cc7f|1×3469-166f-44f3-51b8,1×76d8-2228-b6cb-2d36,1×f2f1-616b-c202-a071"],
     "defilers-and-friends/tormentors":["4494-dd7d-69f7-306c|1×2a06-5c5b-c129-27d7,1×2a06-5c5b-c129-27d7/e13a-503d-72dc-f4ed,1×2a06-5c5b-c129-27d7/ea86-f483-33bb-182b,1×c1d2-2cf5-b6bd-17fc,1×c6a8-0dbc-ab1b-38b5,1×c6a8-0dbc-ab1b-38b5/ab80-e71b-5a84-2852,1×c6a8-0dbc-ab1b-38b5/b717-8754-263b-3a20,3×d813-7c6b-1dfe-e99a,3×d813-7c6b-1dfe-e99a/8ff6-03ed-5125-9b6d,3×d813-7c6b-1dfe-e99a/ab80-e71b-5a84-2852"],
     "dread-host/allarus-custodians":["c8a6-a4c5-703e-b717|1×59ef-1bf3-f681-c8ae,2×fab4-d437-6e07-eb33,2×fab4-d437-6e07-eb33/4863-f443-2b45-e18b,2×fab4-d437-6e07-eb33/ab4a-1a4f-5898-70db"],
     "dread-host/caladius-annihilator-grav-tank":["dbf0-5211-463c-40ec|1×62a1-1fa7-70b7-614d,1×d9ca-c6b0-ba9c-b6c8,1×dca3-638e-52a2-b1b8"],
@@ -8446,6 +8546,8 @@ const BS_IDS = {
     "0119-8c04-435e-c782":"Knight Despoiler",
     "0157-e958-1a91-3024":"Ancient Gadriel",
     "01c4-5ae9-0cf0-5fb3":"Custodian Guard",
+    "02c9-ea19-b105-af58":"Combi-bolter",
+    "0567-0f45-90e8-d3f4":"Flawless Blade",
     "0574-f558-2957-584f":"Warlord",
     "0580-79ca-da98-77c3":"Warlord",
     "0620-25eb-4da2-5dae":"Jakhal",
@@ -8476,9 +8578,11 @@ const BS_IDS = {
     "14a5-4b2-415a-c1d":"Plasma pistol",
     "1576-174e-e5d6-82ea":"Salvo launcher",
     "1673-a61f-d5a2-b17c":"Bladed horn",
+    "167f-5eee-fb7b-a9a9":"Maulerfiend fists",
     "1703-3edd-5eb3-fcef":"Tzaangor Enlightened",
     "1705-379b-330d-36d4":"Tyrannofex",
     "1724-8c9c-c385-16c6":"Exalted Sorcerer on Disc of Tzeentch",
+    "183e-f3bb-3ce6-7b55":"Flawless Blades",
     "18b0-8c2-173f-5":"Bolt pistol",
     "18e2-a849-ff3e-fe3":"Brutal assault weapon",
     "18ee-2abf-8522-1b75":"2 heavy bolters",
@@ -8494,7 +8598,6 @@ const BS_IDS = {
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
     "1db9-89c3-c7cb-2041":"Obliterator",
     "1de9-b138-28a1-9c4b":"Flash Gitz",
-    "1e0a-cf2b-6602-2a34":"Fulgrim",
     "1e16-0387-abcf-0e9a":"Phoenix power spear",
     "1e27-a6de-3840-a050":"Knight Crusader",
     "1e2b-bdd2-116e-1f83":"Predator twin lascannon",
@@ -8515,6 +8618,7 @@ const BS_IDS = {
     "23a5-d6be-b617-1565":"Close combat weapon",
     "23ce-ae71-4a30-c513":"Putrid appendages",
     "23ce-dba1-8242-532d":"Two excruciator cannons",
+    "23e2-6d93-5012-304d":"Lash of Torment",
     "244-694c-22c-74fb":"Plasma pistol",
     "252b-cdba-84bd-3ed3":"Nob w/ Kustom Shoota and Kustom Krumpa",
     "255b-146d-ca61-55fb":"Twistbray",
@@ -8538,6 +8642,7 @@ const BS_IDS = {
     "2c4c-5aac-b510-28ef":"Berzerker Glaive",
     "2c61-621f-9a2e-f681":"Helstalker autocannon",
     "2ca0-73ea-2725-79c7":"Ectoplasma destructor",
+    "2cd1-13f5-d59d-cc7f":"Sorcerer",
     "2ce1-75b2-4291-586e":"Incendine combustor",
     "2d4d-9623-1cea-b73a":"Combi-bolter",
     "2d5d-40b5-4ac8-cedc":"Ironstrider Ballistarius (Twin cognis autocannon)",
@@ -8564,7 +8669,6 @@ const BS_IDS = {
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
     "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
     "37a7-d156-1e4c-8fe1":"Cerastus Knight Atrapos",
-    "37e2-d0fa-d7e5-b958":"Serpentine tail",
     "3811-a215-d4a1-d197":"Umbralefic Crystal",
     "3854-44a6-5746-d602":"Close combat weapon",
     "38c3-d575-5d7b-6ba9":"Close combat weapon",
@@ -8623,7 +8727,6 @@ const BS_IDS = {
     "47bc-4cb8-5ff6-e208":"Instrument of Chaos",
     "47e1-9e86-8a80-66e1":"Plasma pistol",
     "47f0-7e05-a4aa-2cef":"Multi-busta Launcha",
-    "481c-fd3f-f851-c1f4":"Pledge of Eternal Servitude",
     "4848-c7ef-a65f-d15c":"Juggernaut's bladed horn",
     "484b-6da4-9390-33ae":"Deffkopta w/ Kustom mega-blasta",
     "4858-7bde-a8d4-e7da":"Cawl's Omnissian axe",
@@ -8705,10 +8808,12 @@ const BS_IDS = {
     "646c-5f7f-cd1c-d5c9":"Questoris heavy stubber",
     "6483-eb5-46a4-ff63":"Galvanic rifle",
     "649f-d2b6-c43b-f9be":"Crushing fists",
+    "656c-8b78-8e59-0591":"Maulerfiend",
     "65ae-c95a-cd9e-f0b0":"Bane-forged weapons",
     "65c-aa48-f306-465a":"Flash Gitz",
     "65d0-a5c5-919a-6444":"Chitinous claws and teeth",
     "65ef-e78a-ac45-b60a":"Soul-rending fangs",
+    "661a-207c-a66d-8da0":"Armoured tracks",
     "6633-5a38-bd55-b080":"Prosperine khopesh",
     "6638-278a-5331-d1ff":"Armoured feet",
     "665-8af3-4b52-8ac6":"Mechadendrite hive",
@@ -8763,6 +8868,7 @@ const BS_IDS = {
     "7664-c6bb-fce5-f057":"Havoc Champion",
     "7669-1442-2c0b-e0c9":"Painboy",
     "7685-1ab3-8d12-fac7":"Shield Dome",
+    "76d8-2228-b6cb-2d36":"Force weapon",
     "7793-9fa8-84f7-3454":"Bladed limbs",
     "77aa-7131-9a3e-2e7b":"Havoc w/ lascannon",
     "77b6-41ee-7952-e94d":"Gun Stock",
@@ -8783,7 +8889,6 @@ const BS_IDS = {
     "7c36-bbb0-278-5c42":"Lascannon",
     "7d0f-67d3-25b-f6fe":"Kaptin",
     "7d49-39ac-d17e-63bf":"Rokkit Launcha",
-    "7d60-17ec-c8ad-1ba4":"Rapture lash",
     "7d7c-c212-47a3-38e4":"Trajann Valoris",
     "7dfc-efc5-a31c-a724":"Da Grabzappa",
     "7e50-4dc-fae1-c2d4":"Laspistol",
@@ -8828,6 +8933,7 @@ const BS_IDS = {
     "8a59-c996-8ae9-8bd6":"Icon of Excess",
     "8a8f-5ceb-8a0a-6c6c":"Saddlegit's Shiv",
     "8ad7-4a78-859d-2305":"Storm Shield",
+    "8ae1-aa47-e1d1-1b31":"Chaos Rhino",
     "8b1d-9029-f9e1-42d9":"Chaos Cerastus Knight Atrapos",
     "8b5-898c-f79b-5a9c":"Warlord",
     "8b9f-917f-37c1-99c3":"Tzaangor Enlightened with Fatecaster greatbows",
@@ -8881,6 +8987,7 @@ const BS_IDS = {
     "9e94-b7d4-ec7f-9163":"Terrorpulse missiles",
     "9ec7-baa9-ba0c-6a7":"Soulreaper cannon",
     "9ee-e289-bc6c-d943":"Cerastus Knight Lancer",
+    "9ef8-1cb6-2f19-cc1b":"2 magma cutters",
     "9efd-ec72-353f-4b23":"Knight Errant",
     "9f43-3691-5be1-8623":"Twin Neutronium Cascade Projectors",
     "9fdd-e31a-5f28-85ea":"Witchseeker",
@@ -8970,6 +9077,7 @@ const BS_IDS = {
     "bc1-73c2-c18-8687":"Heavy Intercessor w/Heavy Bolter",
     "bc2f-662f-58e7-5fef":"Daemonic Icon",
     "bd01-88b9-7d60-b49a":"Excruciator cannon",
+    "bd33-fe8e-fe90-2bb7":"Magma cutter",
     "bd6c-8683-8bc4-962d":"Kastelan Robots",
     "beb2-89f6-847c-52bf":"Sentinel blade",
     "bfb1-7512-e1a3-9fa2":"Impulsor",
@@ -9012,6 +9120,7 @@ const BS_IDS = {
     "cc2c-abb5-1cb7-d195":"Dainal Kornelius",
     "cc5a-e1bc-3dd8-f367":"Bringer of Justice",
     "ccae-b5f1-8787-4c7d":"Bloodmaster",
+    "cd60-e6ca-4de4-bf07":"Blade of the Laer",
     "cdad-e2e0-9db3-93fc":"Meganob w/ Kombi-weapon and Power Klaw",
     "cdd4-c8f7-bc72-9af0":"Nob",
     "cde4-4b0b-0fa4-766e":"Chainblades",
@@ -9077,6 +9186,7 @@ const BS_IDS = {
     "e0c6-58cd-a822-8b84":"Kustom Mega-blasta",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
     "e201-253f-1f52-e389":"Kunnin' But Brutal",
+    "e390-b58b-db9-816":"Lucius the Eternal",
     "e403-3a9-279e-41b7":"Nurglings",
     "e452-08be-33e6-3864":"Daemon Prince of Slaanesh with Wings",
     "e456-0afc-9b42-226c":"Infractors",
@@ -9086,7 +9196,6 @@ const BS_IDS = {
     "e4f0-79-126a-ac41":"Hellblade",
     "e584-f803-7858-05bc":"Hunter's Eye",
     "e687-6d7a-bb28-dcaa":"Chaos Vindicator",
-    "e6eb-4713-7a67-6a2d":"Malefic lash",
     "e7d7-e613-0029-4d08":"Guardian Spear",
     "e7d8-1c73-7d03-8b62":"Telemon Heavy Dreadnought",
     "e806-3c87-d3d5-e71d":"Flamer tendril",
@@ -9113,6 +9222,7 @@ const BS_IDS = {
     "efec-643e-117d-a977":"Reaper chaintalon",
     "effb-d65d-a1b1-51d6":"Monstrous bonesword and lash whip",
     "f03b-8761-eac6-1405":"Killa Kan",
+    "f048-127d-0e0b-2279":"Blissblade",
     "f075-4ccc-9a91-5e6d":"Fellbore",
     "f09-36ce-d80d-1464":"Twin cognis lascannon",
     "f0b2-e942-6896-6acf":"Reaper autocannon",
@@ -9126,6 +9236,7 @@ const BS_IDS = {
     "f209-cd62-f531-edc0":"Omnissian axe",
     "f20c-0563-3e0a-e0c8":"Plasma pistol",
     "f20e-ff73-5f0c-9970":"Bloodletter",
+    "f2f1-616b-c202-a071":"Agonising Energies",
     "f3f0-a73b-d062-9dc6":"Cybork Boosta",
     "f401-c74a-cca8-5de3":"Runtherd",
     "f4a1-7f17-ec57-6c69":"Heavy darkflamer",
@@ -9148,7 +9259,6 @@ const BS_IDS = {
     "f909-00c7-8ba4-018a":"Khorne Berzerkers",
     "fa30-43a8-57eb-a82e":"Squig Jaws",
     "fab4-d437-6e07-eb33":"Allarus Custodian",
-    "fb08-130a-eb0a-d9a9":"Daemonic blades",
     "fb26-6d89-aa65-fb7e":"Panoply of the Cursed Knights",
     "fbad-4487-a8bc-9ef0":"Collar of Khorne",
     "fbee-427a-1c46-f621":"Big Mek",
@@ -9166,7 +9276,6 @@ const BS_IDS = {
     "131b-ff57-84bb-e87a":1,
     "13f7-1a3-eff-7393":1,
     "190d-7321-6e85-5251":1,
-    "1e0a-cf2b-6602-2a34":1,
     "1f1e-2989-4762-cf88":1,
     "202a-2f25-f692-8b36":1,
     "217d-4d10-bad0-1d6e":3,
@@ -9184,7 +9293,6 @@ const BS_IDS = {
     "42e1-e706-eb89-6cb6":1,
     "44f2-27ca-fad5-70ad":1,
     "4676-0c32-b62c-debd":1,
-    "481c-fd3f-f851-c1f4":1,
     "4aea-b1cc-6c69-1c44":1,
     "4ea0-6b70-c17c-bc00":1,
     "4ff3-7dce-5a52-94e9":1,
@@ -9226,6 +9334,7 @@ const BS_IDS = {
     "d40a-c9a6-74d5-288d":3,
     "dcc0-b70c-9779-e6c9":1,
     "e201-253f-1f52-e389":1,
+    "e390-b58b-db9-816":1,
     "e4da-4f2d-19c3-416b":1,
     "e584-f803-7858-05bc":1,
     "ebfb-d2a4-5280-a6e6":3,
@@ -9255,7 +9364,6 @@ const CHECKLIST = {
   "a|11lueh2":{"x":1},
   "a|11n13i4":{"t":"shooting:opp","u":"shooting:opp"},
   "a|11p632b":{"u":"shooting:your"},
-  "a|1235z0h":{"u":"shooting:your,fight:either"},
   "a|128j63r":{"u":"shooting:your"},
   "a|12u09c2":{"u":"charge:either"},
   "a|1348p3r":{"u":"shooting:your,fight:either"},
@@ -9341,16 +9449,19 @@ const CHECKLIST = {
   "a|1gg1hfo":{"u":"shooting:your,fight:either"},
   "a|1h42m7":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|1h88t2m":{"t":"fight:either"},
+  "a|1hqloj6":{"t":"fight:either","u":"fight:either","s":1},
   "a|1hrixn1":{"u":"fight:either"},
   "a|1hxono":{"u":"fight:either"},
   "a|1hzxe56":{"t":"fight:either","u":"fight:either","a":1},
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
   "a|1ill500":{"u":"movement:opp"},
+  "a|1j6lbpi":{"u":"shooting:opp,fight:either"},
   "a|1j9160m":{"t":"command:your","s":1},
   "a|1jln2xs":{"u":"shooting:your"},
   "a|1jnojq8":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","u":"shooting:either,fight:either","s":1},
   "a|1k3vxfa":{"u":"shooting:your,fight:either"},
   "a|1ka988h":{"t":"shooting:your","u":"shooting:your","a":1},
+  "a|1kacp7k":{"t":"fight:either","u":"fight:either","a":1},
   "a|1kamgkt":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "a|1kk5eyl":{"x":1},
   "a|1knl5yg":{"u":"shooting:your"},
@@ -9365,9 +9476,9 @@ const CHECKLIST = {
   "a|1lx0g6o":{"t":"command:your","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Invocation of Machine Vengeance","t":"command:your","u":"shooting:your,fight:either","s":1},{"n":"Mantra of Discipline"},{"n":"Binharic Courage (Aura)"},{"n":"Shroudpsalm (Aura)"}],"g":[{"name":"Stealth","to":{"all":["Faction: Adeptus Mechanicus"]},"opt":"Shroudpsalm (Aura)","while":"Shroudpsalm (Aura) active; While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model"}]},
   "a|1m3sbur":{"u":"fight:either"},
   "a|1mkrij5":{"u":"shooting:opp,fight:either"},
+  "a|1mlxswk":{"none":1},
   "a|1ms0gwk":{"t":"movement:opp","u":"movement:opp"},
   "a|1n6jx36":{"t":"shooting:your","u":"shooting:your"},
-  "a|1n6w3cn":{"x":1},
   "a|1nd78rp":{"u":"charge:either"},
   "a|1neh4ut":{"u":"shooting:opp,fight:either"},
   "a|1nfdpzv":{"u":"shooting:your,fight:either"},
@@ -9386,11 +9497,13 @@ const CHECKLIST = {
   "a|1qfxao4":{"t":"movement:your","u":"movement:your"},
   "a|1qoyqu0":{"u":"shooting:your"},
   "a|1qqyaef":{"t":"shooting:opp","u":"shooting:opp","s":1},
+  "a|1qrfvgq":{"u":"movement:your"},
   "a|1r09x76":{"x":1},
   "a|1r1uvjb":{"x":1},
   "a|1r8f5xs":{"u":"fight:either"},
   "a|1rdp754":{"u":"fight:either"},
   "a|1riztmj":{"u":"shooting:opp,fight:either"},
+  "a|1rusnxu":{"u":"movement:your,shooting:your,charge:either"},
   "a|1sufx47":{"u":"shooting:your"},
   "a|1sul8lz":{"t":"movement:your","u":"charge:your"},
   "a|1susps1":{"u":"shooting:your"},
@@ -9464,7 +9577,6 @@ const CHECKLIST = {
   "a|9dsaql":{"none":1},
   "a|9dx9q1":{"u":"shooting:opp,fight:either","g":[{"name":"Benefit of Cover","to":{"all":["Faction: Imperial Knights"]}}]},
   "a|9e4bul":{"u":"shooting:opp"},
-  "a|9hu9wm":{"t":"command:opp","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|9ripaa":{"x":1},
   "a|acxlx0":{"u":"shooting:opp,fight:either"},
   "a|akltst":{"t":"fight:either","u":"fight:either","a":1},
@@ -9484,11 +9596,9 @@ const CHECKLIST = {
   "a|ccvp33":{"u":"shooting:opp,fight:either"},
   "a|ct1ind":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "a|dcqyl1":{"u":"charge:either"},
-  "a|dngm65":{"u":"shooting:opp,fight:either","a":1},
   "a|ds28tt":{"u":"fight:either"},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
-  "a|e3q45l":{"u":"movement:opp","a":1},
   "a|erffw0":{"x":1},
   "a|exlwqq":{"u":"shooting:your,fight:either"},
   "a|eyx1ad":{"u":"shooting:your"},
@@ -9538,6 +9648,7 @@ const CHECKLIST = {
   "a|oasam8":{"x":1},
   "a|og823m":{"u":"movement:your,shooting:your"},
   "a|ohqcma":{"t":"command:your","s":1},
+  "a|opohoe":{"u":"shooting:your,fight:either"},
   "a|oxs2wr":{"u":"shooting:your,fight:either","a":1},
   "a|oxtl28":{"none":1},
   "a|ppb9dv":{"x":1},
@@ -9562,6 +9673,7 @@ const CHECKLIST = {
   "a|u7b31q":{"x":1},
   "a|u86jue":{"t":"shooting:your","s":1},
   "a|uc39pe":{"u":"fight:either","f":[{"n":"riled up","r":"Waaagh!","x":1}]},
+  "a|udum88":{"u":"shooting:your,fight:either"},
   "a|uv4iz0":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
   "a|uwea7i":{"x":1},
   "a|v2j916":{"t":"shooting:your","s":1},
@@ -9587,13 +9699,11 @@ const CHECKLIST = {
   "a|ybaz3c":{"t":"command:your","s":1},
   "a|ynp2ng":{"u":"shooting:your,fight:either"},
   "a|yphext":{"at":"End of your opponent’s turn","s":1},
-  "a|yxrv8l":{"u":"fight:either"},
   "a|yylazo":{"u":"shooting:your"},
   "a|yzv1r5":{"t":"fight:either","s":1},
   "a|z3zaz9":{"u":"shooting:opp"},
   "a|zcevae":{"u":"fight:either"},
   "a|zns9bl":{"u":"shooting:your,fight:either"},
-  "a|zr8p6k":{"t":"command:either","s":1},
   "a|zsa42i":{"u":"fight:either"},
   "r|adeptus-custodes|Aegis of the Emperor":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
   "r|adeptus-custodes|Anathema Psykana":{"x":1},
@@ -9782,7 +9892,8 @@ const GRANTS = [
   { rule:'purge-goes-the-foe · Cybernetica Datasmith · Martial Signatum Amplificator', grants:'SKITARII', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Models in the bearer\'s unit have the **SKITARII** keyword.' },
   { rule:'purge-goes-the-foe · Cybernetica Datasmith · Robotic Bodyguard', grants:'Feel No Pain', type:'ability', to:{ all:['Cybernetica Datasmith'] }, while:'While a CYBERNETICA DATASMITH model is leading this unit', text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
   { rule:'purge-goes-the-foe · Skitarii Rangers · Omnispex', grants:'IGNORES COVER', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Ranged weapons equipped by models in the bearer\'s unit have the **IGNORES COVER** ability.' },
-  { rule:'defilers-and-friends · Fulgrim · Daemonic Speed', grants:'Fights First', type:'ability', to:'this unit / model', while:null, text:'This model has the **Fights First** ability.' },
+  { rule:'defilers-and-friends · Lucius the Eternal · Duellist’s Hubris', grants:'Fights First', type:'ability', to:'this unit / model', while:null, text:'At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.' },
+  { rule:'defilers-and-friends · Sorcerer · Warped Interference', grants:'Benefit of Cover', type:'ability', to:'this unit / model', while:'While this model is leading a unit', text:'While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack.' },
   { rule:'defilers-and-friends · Lord Exultant · Lord of the Host', grants:'Infiltrators', type:'ability', to:'this unit / model', while:'If this model is attached to an EMPEROR\'S CHILDREN BATTLELINE unit during the Declare Battle Formations step', text:'If this model is **attached** to an **EMPEROR\'S CHILDREN BATTLELINE** unit during the Declare Battle Formations step, this model has the **Infiltrators** and **Scouts 6"** abilities.' },
   { rule:'big-demons-baby · Lord on Juggernaut · Disciple of Khorne', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.' },
   { rule:'mucho-mutantes · Tzaangor Shaman · Flowing Flesh', grants:'Feel No Pain 4+', type:'ability', to:'this unit / model', while:null, text:'The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.' },

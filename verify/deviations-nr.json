@@ -2057,5 +2057,15 @@
   "reason": "New Recruit’s export (catalogue revision 2) gives the base as 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3353: \"Knight Errant  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 170x109mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "defilers-and-friends",
+  "unit": "maulerfiend",
+  "field": "stats[Maulerfiend].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 14) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3219: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/defilers-and-friends.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
  }
 ]

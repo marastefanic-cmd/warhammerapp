@@ -2040,57 +2040,37 @@
  },
  {
   "army": "defilers-and-friends",
-  "unit": "fulgrim",
+  "unit": "lucius-the-eternal-flawless-blades",
   "field": "ability.text",
-  "app": "Daemonic Poisons: In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 **mortal wounds**.",
-  "source": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+, that enemy unit suffers D3 mortal wounds.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit …\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Fulgrim.html: \"In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's…\".",
+  "app": "Duellist’s Hubris: At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.",
+  "source": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights Firs…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/emperors-children_Lucius-the-Eternal.html: \"At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.\".",
   "by": "verify/from-json.js"
  },
  {
   "army": "defilers-and-friends",
-  "unit": "fulgrim",
-  "field": "ability",
-  "app": "Daemon Primarch of Slaanesh",
-  "source": "",
-  "reason": "GW names the ability Daemon Primarch of Slaanesh, BSData at the pin (Chaos - Emperor's Children catalogue revision 14) Daemon Prince of Slaanesh. GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Fulgrim.html: \"Daemon Primarch of Slaanesh\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "fulgrim",
+  "unit": "lucius-the-eternal-flawless-blades",
   "field": "ability.text",
-  "app": "Beguiling Form: Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**.",
-  "source": "Each time a model makes an attack that targets this unit, subtract 1 from the Hit roll.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time a model makes an attack that targets this unit, subtract 1 from the Hit roll.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Fulgrim.html: \"Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.\".",
+  "app": "A Challenge Worthy of Skill: Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.",
+  "source": "Each time this model makes an attack that targets a **^^Character, Monster^^** or **^^Walker^^** unit, you can re-roll the Hit roll and re-roll the Wound roll.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time this model makes an attack that targets a Character, Monster or Walker unit, you can re-roll the Hit roll and …\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/emperors-children_Lucius-the-Eternal.html: \"Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\".",
   "by": "verify/from-json.js"
  },
  {
   "army": "defilers-and-friends",
-  "unit": "fulgrim",
-  "field": "ability",
-  "app": "",
-  "source": "Daemon Prince of Slaanesh",
-  "reason": "GW names the ability Daemon Primarch of Slaanesh, BSData at the pin (Chaos - Emperor's Children catalogue revision 14) Daemon Prince of Slaanesh. GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Fulgrim.html: \"Daemon Primarch of Slaanesh\".",
+  "unit": "lucius-the-eternal-flawless-blades",
+  "field": "ability.text",
+  "app": "Daemonic Patrons: Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.",
+  "source": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, eac…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/emperors-children_Flawless-Blades.html: \"Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the F…\".",
   "by": "verify/from-json.js"
  },
  {
   "army": "defilers-and-friends",
-  "unit": "fulgrim",
-  "field": "ability",
-  "app": "",
-  "source": "Serpentine",
-  "reason": "GW’s datasheet does not print the ability Serpentine; BSData at the pin (Chaos - Emperor's Children catalogue revision 14) and New Recruit’s export (catalogue revision 14) have it, so the app leaves it out. GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Fulgrim.html: no ability Serpentine among its abilities and boxes.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune",
+  "unit": "daemon-prince-of-slaanesh-with-wings",
   "field": "ability.text",
   "app": "Daemonic Destruction: Each time this model ends a **Charge move**, select one enemy unit within **Engagement Range** of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 mortal wounds).",
   "source": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
@@ -2100,32 +2080,12 @@
  },
  {
   "army": "defilers-and-friends",
-  "unit": "daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune",
+  "unit": "daemon-prince-of-slaanesh-with-wings",
   "field": "ability.text",
   "app": "Pledge of Unholy Fortune: **EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
   "source": "Once per turn, after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
   "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Once per turn, after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer i…\"). GW wins.",
   "evidence": "verify/.cache/waha/emperors-children.txt: \"EMPEROR'S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as a…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude",
-  "field": "ability.text",
-  "app": "Daemonic Destruction: Each time this model ends a **Charge move**, select one enemy unit within **Engagement Range** of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 mortal wounds).",
-  "source": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Daemon-Prince-of-Slaanesh-with-Wings.html: \"Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude",
-  "field": "ability.text",
-  "app": "Pledge of Eternal Servitude: **EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a **Leadership test** for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
-  "source": "The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. if that test is passed, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
-  "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. if that test is p…\"). GW wins.",
-  "evidence": "verify/.cache/waha/emperors-children.txt: \"EMPEROR'S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was de…\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2176,6 +2136,36 @@
   "source": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase,…\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/emperors-children_Tormentors.html: \"At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units that phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "defilers-and-friends",
+  "unit": "chaos-rhino",
+  "field": "ability.text",
+  "app": "Assault Vehicle: Units can disembark from this **TRANSPORT** after it has Advanced. Units that do so make a **shock disembark move** (Core Rules, 18.07) for that disembarkation.",
+  "source": "Units can disembark from this **^^Vehicle**^^ after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Units can disembark from this Vehicle after it has Advanced. Units that do so count as having made a Normal move that ph…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/emperors-children_Chaos-Rhino.html: \"Units can disembark from this TRANSPORT after it has Advanced. Units that do so make a shock disembark move (Core Rules, 18.07) for that disembarkation.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "defilers-and-friends",
+  "unit": "chaos-rhino",
+  "field": "ability.text",
+  "app": "Transport: This model has a **transport capacity** of 12 **EMPEROR’S CHILDREN INFANTRY** models (excluding **TERMINATOR** and **FLAWLESS BLADE** models).",
+  "source": "This model has a transport capacity of 12 **^^Emperor's Children Infantry^^**models (excluding ^^**Terminator**^^ and ^^**Flawless Blade**^^ models).",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"This model has a transport capacity of 12 Emperor's Children Infantrymodels (excluding Terminator and Flawless Blade mod…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/emperors-children_Chaos-Rhino.html: \"This model has a transport capacity of 12 EMPEROR'S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "defilers-and-friends",
+  "unit": "maulerfiend",
+  "field": "stats.base",
+  "app": "Maulerfiend: 120×92mm Oval",
+  "source": "Maulerfiend: 120x92mm",
+  "reason": "BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has Maulerfiend: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 14) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3219: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/defilers-and-friends.json: 120×92mm.",
   "by": "verify/from-json.js"
  }
 ]
