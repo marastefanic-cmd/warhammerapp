@@ -194,6 +194,7 @@ const CODE_RULES = {
   armyRuleOption:'the datasheet (unit screen) does not spell out an army rule\'s options: a "When targeted" line of an army rule that starts with the name of one of its options (RULE_OPTIONS: Martial Ka\'tah\'s Kaptaris) is left out there, the Rules line opens the whole rule; the Damage tab and the Overview keep it',
   // verify/readings.js: which sentences of an ability state a bonus that needs a reading, and what says it
   CONDITION:'verify/readings.js: the words that make a bonus conditional (if, while, each time, until, after, when, once it has, in / at the start or end of a phase, that targets, against X units, within N", on a turn, for every / each, during the battle round in which, select one)',
+  WA:'verify/readings.js: the weapon abilities a grant can name (Melta / Rapid Fire with a number or D3 / D6; [HAZARDOUS], not [SUPA-HAZARDOUS], a drawback)',
   WA_RE:'verify/readings.js: a weapon ability granted: in brackets (qualified ones too, "[LETHAL HITS: non-MONSTER/VEHICLE]"), "the X ability" in any case, or bare after have / has / gain ("have Sustained Hits 1")',
   BACK:'verify/readings.js: a sentence referring back to the one before it ("If it does", "that unit", "those weapons", "Until …"), the only kind an earlier sentence\'s condition counts for',
   ATTACK:'verify/readings.js: the attack bonuses read from the words (+1 to hit / wound, re-rolls of hit, wound and Damage rolls, Critical Hits, +N or improved A / S / AP / D, "a Strength characteristic of N") and how a reading says each',

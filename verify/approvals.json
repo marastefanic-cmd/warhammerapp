@@ -977,6 +977,12 @@
   "at": "2026-10-23",
   "why": "NR prints “Slayers of Tyrants - Allarus Custodians”; it is the Allarus datasheet’s ability (Wahapedia “Slayer of Tyrants”). “This unit’s melee attacks” then applies to the whole attached unit (19.04: bodyguard unit ability applies to every model while a bodyguard model lives)."
  },
+ "0fc98e0df0dab5fe": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 112). The enemy's and forbidden re-roll filters work on the earlier review's cases and on mine ('your opponent cannot re-roll', 'that enemy unit cannot re-roll', 'enemy units within 6\" of it can re-roll'). But the filter drops every re-roll in the whole sentence. Missed: 'You can re-roll Hit rolls for this unit, and enemy units cannot re-roll Hit rolls that target it.' and 'While an enemy unit is within 6\" of this model you can re-roll Hit rolls for this unit.' (the enemy pattern runs on to the unit's own 'you can re-roll'). The fix reads re-rolls clause by clause, and keeps a clause that says 'you / this unit can re-roll'. Noted only: 'Each time an attack targets this unit, add 1 to the Hit roll' (the enemy's +1, a drawback) is read as the unit's own hit+1. That is stricter but would ask for a misleading reading."
+ },
  "0fe6f52c8dc8fe0a": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -3599,6 +3605,12 @@
   "at": "2026-10-21",
   "why": "“Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability”: melee, Fight phase (which is its duration), [LANCE]."
  },
+ "3d9592972b1a38ba": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file exactly (verify/readings.js line 68). Every listed condition is read, and the 'i' flag makes '\\bagainst [A-Z]' accept any word after 'against', which only makes more sentences conditional (stricter, no false positive today). Missed: a timing said only as 'this phase' / 'this turn' (\"When this unit is selected to shoot, you can use this ability. Ranged weapons … have [SUSTAINED HITS 1] this phase.\" is not flagged) and 'Once per battle/turn' with no other condition. The fix adds 'once per battle|turn|phase' and widens 'on a turn' to 'on a / this / that turn|phase'. With all the fixes applied, today's texts still give 0 false positives (the only new gap is Fleshmetal Fusion, a real one; see DEFENCE)."
+ },
  "3daa4b0242b2507e": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -4054,6 +4066,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.\""
+ },
+ "45873337af43f29c": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 54). A list line ('- …') under a paragraph that does not end in ':' is read alone with an empty pre. REAL CASE: Battle Protocols (purge-goes-the-foe/cybernetica-datasmith-kastelan-robots). \"- Protector Protocol: Add 2 to the Attacks … in that unit.\" carries its condition in the paragraph above it (\"In your Command phase, … select one protocol\"). With its two mods removed in memory, the check does not flag it. It passes today only because the readings exist. The fix gives each list line the paragraph it comes under as its pre. With BACK ('that unit') it is then read as conditional, and the deletion test catches it."
  },
  "4598357d894fb025": {
   "verdict": "ok",
@@ -5596,6 +5614,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "6218afa6d4939376": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 175). It is correct as a mechanism. A weapon ability is matched by name only, so a reading of [SUSTAINED HITS 1] covers a text granting [SUSTAINED HITS 2]. Most 'said' patterns are loose (/damage/, /\\bAP\\b/, /\\bsave\\b/), so a reading covers a bonus by sharing a word with it. That is acceptable only when readings are limited to the right kind, which is the abilityGaps fix."
  },
  "62254becbc9f2e1e": {
   "verdict": "ok",
@@ -9263,6 +9287,12 @@
   "at": "2026-10-16",
   "why": "Crimson King section lists \"Impossible Form (Psychic)\"."
  },
+ "a21b3d1d582dd504": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 82). Every phrasing the earlier review named is now read: improve the Strength/AP/Damage, +1 Damage, re-roll the Damage roll, and +N S/AP/D. Missed, tested: (1) a second bonus in a list: 'you can re-roll Hit rolls and Wound rolls' and 're-roll the Hit roll and the Wound roll' give rr-hit only, '+1 to Hit and Wound rolls' gives hit+1 only, 'add 1 to the Hit and Wound rolls' gives nothing, and '+1 A, S and D' gives a+ only. So a reading that says only one of them passes. (2) 're-roll one damage roll' (real text: Advanced Firepower, Caladius; its reading happens to say it). (3) Numbers written as words: 'add one to the Attacks and Strength', 'improve the Weapon Skill … by one'. (4) '+1 WS/BS'. (5) 'have a Damage characteristic of 3'. The fix covers all five, and the wound+1 'said' also accepts '+1 to hit and wound'. Still not read, noted only: 'an Armour Penetration of -2'."
+ },
  "a21b919c5b85d98b": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -11285,6 +11315,12 @@
   "at": "2026-10-22",
   "why": "“your Shooting phase”: your turn."
  },
+ "c5feada01b965fc1": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 123). Footnotes, auras and guards named by the ability, or by an option it names in bold, are read. Today's bold matches are Synapse for Domination of the Hive Mind and Neurocytes, Singular Purpose for Protean Purpose, and Shroudpsalm for Canticles, all genuine. Also read: def/calcDef/defCalc, the Rules-line Feel No Pain, and the marks. ab.riled and ab.damaged are not read, which is fine: Damaged is covered by its mods ('-1 to hit rolls') and Super Runts' riled flag gives no bonus sentence. The defSaid it builds is not what abilityGaps checks defences against (see abilityGaps)."
+ },
  "c604d625c195eeab": {
   "verdict": "ok",
   "by": "review:defilers2",
@@ -12791,6 +12827,12 @@
   "at": "2026-10-16",
   "why": "\"In your opponent’s Shooting phase, when an enemy unit has shot\" = Shooting, their turn."
  },
+ "e0b9b1e4db33940c": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 111). The roll bonuses (hit+1, wound+1, all three re-rolls, crit) need a reading with no condition. Characteristics and weapon abilities are left to the weapon marks, which is right because the cell shows them. Tested: 'You can re-roll Hit rolls for attacks made by this unit' with no condition is flagged. Knight Diabolus ('Improve the Weapon Skill … by 1', no condition) is covered by its WS mark."
+ },
  "e0c2948bc46a034a": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -12880,6 +12922,12 @@
   "by": "review:exiled-units (its fix)",
   "at": "2026-10-24",
   "why": "For every other LEGIONES DAEMONICA unit it is right: Stealth (24.33, the benefit of cover against ranged attacks), ranged, within 6\". But Prince of Darkness is a GW (Aura), and 22.01 says “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability”. The Daemon Prince is itself a friendly LEGIONES DAEMONICA unit, so it has Stealth too. Its WHEN TARGETED line in the snapshot leaves it out, because app.html (shields, line ~4359) skips the source unit (src !== u). The aura entries mark this with selfAlways and selfWhen: “Own aura”. The guard needs the same, and app.html must honour it (the other reviewer owns that code)."
+ },
+ "e2aa76b6ab696511": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 76). Tested: qualified brackets ([LETHAL HITS: non-MONSTER/VEHICLE], [ANTI-VEHICLE 4+: excluding TITANIC], [Sustained Hits 1: non-Monster/Vehicle]), [SUSTAINED HITS D3], 'the [ASSAULT] and [HEAVY] abilities', 'the Lethal Hits and Sustained Hits 1 abilities', bare 'have Sustained Hits 1' and [TWIN-LINKED] are all read. Notes, not blocking: (1) WA, which this builds on and which is not under review, has 'melta \\d+' and 'rapid fire \\d+', so [RAPID FIRE D3] and [MELTA D3] are not read. (2) The bare 'has/have the X' form also reads an enemy's ability ('if it has the Lethal Hits ability, that ability does not apply'), which is a possible future false positive. (3) 'hazardous' also matches inside [SUPA-HAZARDOUS], a drawback rather than a bonus. That one is unconditional today, so it has no effect."
  },
  "e2e4e12454597fc1": {
   "verdict": "ok",
@@ -13463,6 +13511,12 @@
   "at": "2026-10-23",
   "why": "Enemy units shoot in their Shooting phase and fight in either Fight phase; your units shoot in yours and fight in either: either turn for both phases."
  },
+ "ec0667b0ddf53bcc": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 97). Every phrasing the earlier review named is read: -1 D, -1 AP, worsen the AP, 4+ InSv, subtract 1 from the Damage (allocated to or made against), that attack's Hit roll, Stealth, +1 to save rolls, and an enemy unit's -1 to hit. A REAL TEXT IS MISSED: Fleshmetal Fusion (infernal-lance/knight-ruinator-fleshmetal-fusion) says 'add 1 to any armour saving throw made against that attack' while using Unnatural Fortitude against Damage 1 attacks. 'any' is not accepted, the ability has no reading, and the check says 0 gaps. So the commit's claim of 'no gap in today's texts' is wrong. Also missed, tested: 'reduce the Damage characteristic … by 1', 'halve the Damage', 'is made against this unit, subtract 1 from the Hit roll', a friendly aura ('targets a friendly ADEPTUS ASTARTES unit within 6\", subtract 1 from the Damage'), 'have the Benefit of Cover', and 'add 1 to the Toughness characteristic' (Battle Protocols' Aegis Protocol; its def says it). The fix covers these: save+1 accepts any/an/one, dmg-1 accepts 'reduce … by 1' and friendly units, a new dmg-half, hit-vs/wound-vs accept 'made against', stealth accepts benefit of cover, and a new t+. Still not read, noted only: 'a Save characteristic of 2+' and '-1 Strength of the attack'. With the fix, the gate shows Fleshmetal Fusion as a new gap, and the owner must give it a reading or record it."
+ },
  "ec06f99eb0858c2b": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -13480,6 +13534,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "Knight Destrier datasheet (GW faction pack, Wahapedia, NR): W 18 and \"DAMAGED: 1-6 WOUNDS REMAINING ... While this model has 1-6 wounds remaining\". Sanctuary does not change W, so damaged '1-6' with W 18 matches."
+ },
+ "ec855bc56c000d34": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 79). It removes the earlier false positive (an unrelated earlier sentence's condition). But a sentence that carries an earlier condition with none of these words is now treated as unconditional, and for a weapon ability or characteristic that means no reading is required. Missed: \"Once per battle, at the start of the Fight phase, this unit can use this ability. Its melee weapons have +1 A.\" ('Its' fails the '^it\\b' test) and \"… you can use this ability. Ranged weapons … have [SUSTAINED HITS 1] this phase.\" The fix adds '^its?', '^their' and 'this/that phase|turn'. The setup-sentence case is fixed in abilityGaps. No current sentence depends on BACK: of 153 attack sentences, none relies on an earlier sentence's condition, so the change has no effect today."
  },
  "ecae1981e543f482": {
   "verdict": "ok",
@@ -14332,6 +14392,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Wahapedia and NR: \"War Cry (Once per battle, per army)\"."
+ },
+ "fe8c045c577df1cf": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 145). Two problems. (1) Defences are checked against 'all', which includes the attack footnotes, so any attack reading of the ability that mentions 'damage', 'AP' or 'save' covers a defence (dmg-1's said is /damage/, ap-worse's is /\\bAP\\b/). That contradicts the module doc ('Said by its \"When targeted\" readings'). The fix checks defences against r.defSaid plus the marks, and today's data still passes with it. (2) The header's own example (line 52-53: \"At the start of the Fight phase, select one enemy unit. Melee weapons … have [PRECISION].\") is no longer flagged, because the second sentence has no back-reference. The fix lets a setup sentence ('can/may use this ability', 'select one') carry its condition to the sentences after it. The riled branch, the na skip and the keyword-option skip are right."
  },
  "feca44625d46ab7f": {
   "verdict": "ok",
