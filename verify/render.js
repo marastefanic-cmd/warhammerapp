@@ -46,7 +46,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   if(main) fs.rmSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true, force:true });
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
 
-  for(const a of armies){
+  // VERIFY_LISTS=a,b: only those lists' screens (a check run by hand, e.g. that the same build renders the same text again; run.js
+  // renders every list)
+  const only = (process.env.VERIFY_LISTS || '').split(',').filter(Boolean);
+  for(const a of armies.filter(x => !only.length || only.includes(x.id))){
     const snap = [];
     // one screen: render it, open every fold, keep its text and its helpers
     const take = async (label, fn, folded) => {

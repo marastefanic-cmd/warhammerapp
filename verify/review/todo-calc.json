@@ -2,41 +2,49 @@
  {
   "army": "code",
   "kind": "code",
-  "where": "calc.js · prep",
-  "judgement": "[TORRENT] weapons cannot have [PRECISION]: precision is false for a [TORRENT] weapon, whether [PRECISION] comes from the weapon, a rule, or the Precision box",
-  "source": "24.37: \"[TORRENT] weapons cannot have [INDIRECT FIRE] or [PRECISION].\"",
-  "note": "was: the Precision box made the Knight Despoiler's Heavy darkflamer precise"
+  "where": "app.html · dmFill (the list order)",
+  "judgement": "the list is first put in order from the quick games alone (never a mix of exact and quick effects, which depended on which 10,000-game results a memo hit or a fast worker had already delivered); once every exact effect is in, it is put in order again from the exact effects alone (ties: the order listed) and kept for that unit and step (DM_RANK_FINAL); Reset forgets both",
+  "source": "the root cause of the navigator Code Chivalric row landing 1st or 4th: the first order took lv.fx (exact, from results already in the memo from earlier screens) for some rows and lv.est (2,000 games) for others",
+  "note": "the final order now depends only on the exact effects, which are seeded"
  },
  {
   "army": "code",
   "kind": "code",
-  "where": "calc.js · explain (aux qd, gainOf)",
-  "judgement": "the working spends a Damage re-roll as attackOnce does: a roll below the dice's average whose damage leaves the model with wounds left (the model the attacks meet first, at full W, as the working assumes); the gain is averaged over those rolls only",
-  "source": "05.04 (each attack resolved one at a time); the policy in calc.js attackOnce",
-  "note": "cases: 6 [TORRENT] D3 attacks at 10 W1 models; two weapons sharing one re-roll of any roll at 20 W1 models (the working and the dice agree)"
- },
- {
-  "army": "code",
-  "kind": "code",
-  "where": "calc.js · poolOrder",
-  "judgement": "the weapons are reordered most valuable first only when a re-roll of one die can go to more than one weapon; otherwise kept in the order listed",
-  "source": "04.03 (the attacker selects which weapon's attacks are resolved next)",
-  "note": "non-re-roll inputs are bit-identical to main (128 matchups compared)"
- },
- {
-  "army": "code",
-  "kind": "code",
-  "where": "app.html · dmNoWhy",
-  "judgement": "\"no roll here that it can re-roll fails without being re-rolled already\" only when the working with the re-roll ticked re-rolls about nothing (under 0.005 per weapon); otherwise the usual reasons, or none",
-  "source": "01.05.02",
-  "note": "the four Command Re-roll rows in Both whose fight wipes the unit (Skarbrand and others) now show no reason"
- },
- {
-  "army": "code",
-  "kind": "code",
-  "where": "app.html · dmOneWent",
-  "judgement": "each rule's row lists only its own re-rolls (\"its re-rolls go to, on average: …\"), from the working's per-rule shares (explain one.by)",
+  "where": "app.html · dmListKeep",
+  "judgement": "the list drawn again as the player left it (folds from dmState, focus, the row at the top of the screen kept where it was; a just-tapped row kept by dmAnchor), shared by dmRedraw (the note) and the final re-order",
   "source": "—",
-  "note": "was: every re-roll of the unit together on each row"
+  "note": "was inline in dmRedraw"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmGet / dmPut",
+  "judgement": "the memo of played games keeps the most recently used (a hit moves an entry to the end) and holds 2,400 inputs instead of 800 (first in, first out)",
+  "source": "—",
+  "note": "an input hit from an earlier screen kept its old place and was evicted while its screen still needed it: a row lost its number (…) in a full render"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmPatch",
+  "judgement": "an effect is never replaced by nothing: when a result is no longer in the memo, the effect already worked out from it stays",
+  "source": "—",
+  "note": ""
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · How this is worked out (The number beside each choice)",
+  "judgement": "the list is ordered first from the quick games, then once more from the 10,000 when every effect is in (a tie keeps the order listed), then it stays put",
+  "source": "—",
+  "note": ""
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/render.js",
+  "judgement": "VERIFY_LISTS=a,b renders only those lists’ screens (a check run by hand: the same build renders the same text again); run.js renders every list",
+  "source": "—",
+  "note": ""
  }
 ]
