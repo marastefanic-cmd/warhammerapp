@@ -1281,11 +1281,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 1.8
 of 5 destroyed
 4.2 wounds lost · wiped in 1% of games
 Plasma pistol: supercharge
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1431,9 +1433,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++2% wiped
++0.4
+MODELS
 NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
@@ -1443,14 +1448,12 @@ MODELS IF YOU COUNT IT
 
 Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
@@ -1610,13 +1613,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 Charged this turn
 ×
 Legendary Killer
-5 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1704,11 +1709,15 @@ with their CP
 Made a charge move this turn: +1 AP in the Fight phase
 if used
 0
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (5)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1716,8 +1725,6 @@ They can matter at the table, but the calculator does not play them: what each o
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1879,6 +1886,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
@@ -1889,7 +1898,7 @@ Plasma pistol: supercharge
 Charged this turn
 ×
 Legendary Killer
-8 NOT COUNTED
+6 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -2026,9 +2035,10 @@ if it applies
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
@@ -2037,14 +2047,12 @@ NO CHANGE
 
 Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
@@ -2153,11 +2161,15 @@ with their CP
 Made a charge move this turn: +1 AP in the Fight phase
 if used
 0
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (5)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -2165,8 +2177,6 @@ They can matter at the table, but the calculator does not play them: what each o
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

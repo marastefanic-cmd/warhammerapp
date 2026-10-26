@@ -1138,11 +1138,12 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.5
 of 5 destroyed
 9.0 wounds lost · wiped in 68% of games
 Captain-General
-1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1239,19 +1240,16 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++7% wiped
++0.1
+MODELS
 NOT FOR THIS STEP, BY THE RULES (3)
 
 Nothing to count: 1CP Lightning Wrath, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1400,13 +1398,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 Charged this turn
 ×
 Captain-General
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1474,17 +1474,16 @@ if it applies
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Lightning Wrath
 Your unit is selected to make a pile-in move: it can move up to D3+3".
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1637,6 +1636,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
@@ -1647,7 +1648,7 @@ Captain-General
 Charged this turn
 ×
 Captain-General (fight)
-5 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1734,19 +1735,14 @@ if it applies
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (3)
 
 Nothing to count: 1CP Lightning Wrath, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1830,17 +1826,16 @@ if it applies
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Lightning Wrath
 Your unit is selected to make a pile-in move: it can move up to D3+3".
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

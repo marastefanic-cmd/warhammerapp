@@ -977,12 +977,14 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 3.4
 of 5 destroyed
 6.8 wounds lost · wiped in 30% of games
 Atrapos lascutter: high intensity
 Graviton singularity cannon: contained
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1155,6 +1157,12 @@ by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding 
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+11% wiped
++0.4
+MODELS
 1CP Warp Vision
 Your Shooting phase: ranged weapons have [IGNORES COVER]
 if used
@@ -1165,7 +1173,7 @@ NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1173,8 +1181,6 @@ They can matter at the table, but the calculator does not play them: what each o
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
 1CP Unleash Balefire
 After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1312,13 +1318,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 3.9
 of 5 destroyed
 7.8 wounds lost · wiped in 40% of games
 Atrapos lascutter: high intensity
 Charged this turn
 ×
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1418,9 +1426,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++17% wiped
++0.4
+MODELS
 NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 
 1CP Warp Vision
@@ -1429,14 +1440,12 @@ NO CHANGE
 
 Nothing to count: 1CP Unleash Balefire (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Profane Symbiosis
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1578,6 +1587,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.9
 of 5 destroyed
 9.8 wounds lost · wiped in 93% of games
@@ -1588,7 +1599,7 @@ Atrapos lascutter: high intensity
 Graviton singularity cannon: contained
 Charged this turn
 ×
-7 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1698,6 +1709,13 @@ D
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
 SITUATION AND RULES
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++3% wiped
+≈0
+MODELS
++1 MORE ▾
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1712,13 +1730,12 @@ if it applies
 ≈0
 MODELS
 +1 MORE ▾
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
 if it applies
-+3% wiped
++1% wiped
 ≈0
 MODELS
-+1 MORE ▾
 Malefic Surge
 Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
 if it applies
@@ -1728,12 +1745,6 @@ Lethal Hits
 ≈0
 Sustained Hits 1
 ≈0
-Macro-extinction Protocols
-vs TITANIC/TOWERING: +1 to wound rolls
-if it applies
-+1% wiped
-≈0
-MODELS
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
@@ -1760,6 +1771,13 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++2% wiped
+≈0
+MODELS
++1 MORE ▾
 1CP Warp Vision
 Your Shooting phase: ranged weapons have [IGNORES COVER]
 if used
@@ -1770,7 +1788,7 @@ NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1778,8 +1796,6 @@ They can matter at the table, but the calculator does not play them: what each o
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
 1CP Unleash Balefire
 After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1905,9 +1921,13 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++3% wiped
+≈0
+MODELS
++1 MORE ▾
 NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 
 1CP Warp Vision
@@ -1916,14 +1936,12 @@ NO CHANGE
 
 Nothing to count: 1CP Unleash Balefire (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Profane Symbiosis
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

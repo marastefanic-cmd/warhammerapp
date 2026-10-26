@@ -1460,11 +1460,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 2.4
 of 5 destroyed
 4.8 wounds lost · wiped in 3% of games
 Primarch of the XIII
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1541,14 +1543,17 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++2% wiped
++0.3
+MODELS
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1557,8 +1562,6 @@ Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
 1CP Gene-Wrought Might
 Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
 COUNT IT BY HAND: AP +1
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1696,13 +1699,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 Charged this turn
 ×
 Primarch of the XIII
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1755,18 +1760,17 @@ said to hold
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Gene-Wrought Might
 Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
 COUNT IT BY HAND: AP +1
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1908,6 +1912,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
@@ -1918,7 +1924,7 @@ Primarch of the XIII
 Charged this turn
 ×
 Primarch of the XIII (fight)
-7 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1983,14 +1989,15 @@ if it applies
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1999,8 +2006,6 @@ Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
 1CP Gene-Wrought Might
 Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
 COUNT IT BY HAND: AP +1
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -2073,18 +2078,17 @@ holds: Both takes the charge as made (no charge roll)
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Gene-Wrought Might
 Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
 COUNT IT BY HAND: AP +1
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

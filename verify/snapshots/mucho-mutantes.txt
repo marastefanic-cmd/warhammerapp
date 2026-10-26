@@ -1231,11 +1231,12 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.3
 of 5 destroyed
 8.6 wounds lost · wiped in 61% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1336,19 +1337,16 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++10% wiped
++0.2
+MODELS
 NOT FOR THIS STEP, BY THE RULES (3)
 
 Nothing to count: 1CP Mutagenic Magicks, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1486,13 +1484,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.2
 of 5 destroyed
 8.4 wounds lost · wiped in 56% of games
 Blade of Magnus: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1559,17 +1559,18 @@ no change: the weapons can ignore modifiers to the hit roll
 ALL ▾
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++7% wiped
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Mutagenic Magicks
 Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1711,6 +1712,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in 99% of games
@@ -1720,7 +1723,7 @@ Shoot 4.30 · Fight 0.68 · the charge is taken to succeed
 Blade of Magnus: sweep
 Charged this turn
 ×
-5 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1817,19 +1820,15 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+≈0
+MODELS
 NOT FOR THIS STEP, BY THE RULES (3)
 
 Nothing to count: 1CP Mutagenic Magicks, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1917,17 +1916,17 @@ no change: the weapons can ignore modifiers to the hit roll
 ALL ▾
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+≈0
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Mutagenic Magicks
 Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

@@ -1602,11 +1602,12 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 3.6
 of 5 destroyed
 7.3 wounds lost · wiped in 37% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1692,19 +1693,16 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++6% wiped
++0.2
+MODELS
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1842,12 +1840,14 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 3.8
 of 5 destroyed
 7.9 wounds lost · wiped in 37% of games
 Charged this turn
 ×
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1903,25 +1903,26 @@ CLEAVE 1, EXTRA ATTACKS
 −0.2
 MODELS IF UNTICKED
 SITUATION AND RULES
-Clever Know-wotz (Mek)
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
-if it applies
-0
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
+Clever Know-wotz (Mek)
+Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+if it applies
+0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (3)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++13% wiped
++0.3
+MODELS
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -2063,6 +2064,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.8
 of 5 destroyed
 9.7 wounds lost · wiped in 87% of games
@@ -2071,7 +2074,7 @@ Shoot 3.6 · Fight 1.2 · the charge is taken to succeed
 
 Charged this turn
 ×
-4 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -2123,14 +2126,14 @@ AGAINST THIS TARGET
 +0.1
 models
 SITUATION AND RULES
-Clever Know-wotz (Mek)
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +6% wiped
 +0.1
 MODELS
-Plunging Fire
-BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+Clever Know-wotz (Mek)
+Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 if it applies
 +6% wiped
 +0.1
@@ -2155,19 +2158,17 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++3% wiped
+≈0
+MODELS
++1 MORE ▾
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -2245,25 +2246,26 @@ CLEAVE 1, EXTRA ATTACKS
 MODELS IF UNTICKED
 +1 MORE ▾
 SITUATION AND RULES
-Clever Know-wotz (Mek)
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
-if it applies
-0
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
+Clever Know-wotz (Mek)
+Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+if it applies
+0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (3)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++4% wiped
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

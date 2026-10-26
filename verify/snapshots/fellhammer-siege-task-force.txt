@@ -1449,11 +1449,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 0.5
 of 5 destroyed
 1.6 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1543,18 +1545,21 @@ Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
 if used
 +0.2
 MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++0.1
+MODELS
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Touch of the Arkifane
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1692,13 +1697,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.3
 of 5 destroyed
 8.6 wounds lost · wiped in 60% of games
 Vashtorr’s hammer: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1793,14 +1800,18 @@ if used
 +18% wiped
 +0.3
 MODELS
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++8% wiped
++0.2
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Touch of the Arkifane
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1942,6 +1953,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.5
 of 5 destroyed
 9.0 wounds lost · wiped in 71% of games
@@ -1951,7 +1964,7 @@ Shoot 0.5 · Fight 4.0 · the charge is taken to succeed
 Vashtorr’s hammer: sweep
 Charged this turn
 ×
-6 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -2043,18 +2056,23 @@ if used
 +3% wiped
 +0.1
 MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++2% wiped
+≈0
+MODELS
++1 MORE ▾
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Touch of the Arkifane
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -2171,14 +2189,18 @@ if used
 +14% wiped
 +0.3
 MODELS
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++7% wiped
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Touch of the Arkifane
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

@@ -950,11 +950,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 1.9
 of 5 destroyed
 4.2 wounds lost · wiped in 1% of games
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1036,9 +1038,11 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++0.1
+MODELS
 NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
@@ -1056,14 +1060,12 @@ MODELS IF YOU COUNT IT
 
 Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1203,13 +1205,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.9
 of 5 destroyed
 9.7 wounds lost · wiped in 90% of games
 Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-5 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1313,10 +1317,17 @@ with their CP
 1CP Hack and Slash
 Made a charge move this turn: +1 AP in the Fight phase
 if used
-+7% wiped
+BEST · MOST MODELS+7% wiped
 +0.1
 MODELS
-NOT COUNTED BY THE CALCULATOR (5)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++3% wiped
+≈0
+MODELS
++1 MORE ▾
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1324,8 +1335,6 @@ They can matter at the table, but the calculator does not play them: what each o
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1488,6 +1497,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
@@ -1496,7 +1507,7 @@ Shoot 1.9 · Fight 3.1 · the charge is taken to succeed
 
 Charged this turn
 ×
-6 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1569,9 +1580,10 @@ if it applies
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
@@ -1586,14 +1598,12 @@ NO CHANGE
 
 Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1712,7 +1722,11 @@ if used
 When selected to fight, vs MONSTER/VEHICLE targets: +1 to wound rolls
 if used
 0
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1720,8 +1734,6 @@ They can matter at the table, but the calculator does not play them: what each o
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 2CP Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE

@@ -1281,11 +1281,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 1.2
 of 5 destroyed
 3.0 wounds lost · wiped in <1% of games
 Mork’s Roar: Point Blank
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1366,9 +1368,11 @@ no change: [TORRENT] hits automatically: no hit roll
 ALL ▾
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++0.2
+MODELS
 NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
 1CP Hit ’Em Harder
@@ -1377,14 +1381,12 @@ NO CHANGE
 
 Nothing to count: 1CP Orks Is Never Beaten, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Close-range Dakka
 Your unit’s ranged attacks have [RAPID FIRE 1], or +1 to the value of a [RAPID FIRE] they already have.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
@@ -1524,13 +1526,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.9
 of 5 destroyed
 9.7 wounds lost · wiped in 91% of games
 Charged this turn
 ×
 Prophet of Da Great Waaagh!
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1582,6 +1586,12 @@ always counted · you can leave it out
 if left out: no change
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++4% wiped
++0.1
+MODELS
 1CP Hit ’Em Harder
 Fight phase: [LETHAL HITS]
 if used
@@ -1591,14 +1601,12 @@ NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Close-range Dakka, 1CP Explosives (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Orks Is Never Beaten
 An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1740,6 +1748,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.9
 of 5 destroyed
 9.8 wounds lost · wiped in 93% of games
@@ -1750,7 +1760,7 @@ Mork’s Roar: Point Blank
 Charged this turn
 ×
 Prophet of Da Great Waaagh!
-7 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1829,9 +1839,10 @@ no change: [TORRENT] hits automatically: no hit roll
 ALL ▾
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
 1CP Hit ’Em Harder
@@ -1840,14 +1851,12 @@ NO CHANGE
 
 Nothing to count: 1CP Orks Is Never Beaten, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Close-range Dakka
 Your unit’s ranged attacks have [RAPID FIRE 1], or +1 to the value of a [RAPID FIRE] they already have.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
@@ -1923,6 +1932,13 @@ always counted · you can leave it out
 if left out: no change
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++3% wiped
+≈0
+MODELS
++1 MORE ▾
 1CP Hit ’Em Harder
 Fight phase: [LETHAL HITS]
 if used
@@ -1932,14 +1948,12 @@ NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Close-range Dakka, 1CP Explosives (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Orks Is Never Beaten
 An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

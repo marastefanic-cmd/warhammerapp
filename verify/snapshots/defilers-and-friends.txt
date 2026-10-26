@@ -1083,11 +1083,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 3.2
 of 5 destroyed
 6.5 wounds lost · wiped in 20% of games
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1164,6 +1166,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+12% wiped
++0.4
+MODELS
 1CP Unshakeable Opponents
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
@@ -1177,14 +1185,12 @@ MODELS IF YOU COUNT IT
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1322,13 +1328,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.9
 of 5 destroyed
 9.8 wounds lost · wiped in 90% of games
 Daemonic blades: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1435,18 +1443,23 @@ if used
 BEST · MOST MODELS+7% wiped
 +0.1
 MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++3% wiped
+≈0
+MODELS
++1 MORE ▾
 1CP Unshakeable Opponents
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
 0
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1588,6 +1601,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in 99% of games
@@ -1597,7 +1612,7 @@ Shoot 3.23 · Fight 1.76 · the charge is taken to succeed
 Daemonic blades: sweep
 Charged this turn
 ×
-6 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1666,6 +1681,11 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+≈0
+MODELS
 1CP Unshakeable Opponents
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
@@ -1679,14 +1699,12 @@ MODELS IF YOU COUNT IT
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1812,14 +1830,16 @@ MODELS
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
 0
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

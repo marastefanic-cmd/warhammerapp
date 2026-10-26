@@ -1205,11 +1205,14 @@ FNP
 6+
 Benefit of cover
 −1 Damage
-3.6
++
+Add a group
+3.8
 of 5 destroyed
-7.3 wounds lost · wiped in 29% of games
+8.0 wounds lost · wiped in 38% of games
+Magna Imperator
 Captain-General
-3 NOT COUNTED
+1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1232,7 +1235,7 @@ AP
 D
 2
 ASSAULT, RAPID FIRE 2
-−22% wiped
+−27% wiped
 −0.9
 MODELS IF UNTICKED
 Balistus grenade launcher ×2 ALLARUS CUSTODIANS
@@ -1249,7 +1252,7 @@ AP
 D
 1
 ASSAULT, BLAST 1
-−25% wiped
+−30% wiped
 −1.1
 MODELS IF UNTICKED
 Castellan axe ×2 ALLARUS CUSTODIANS
@@ -1266,7 +1269,7 @@ AP
 D
 2
 ASSAULT, RAPID FIRE 2
-−28% wiped
+−36% wiped
 −1.4
 MODELS IF UNTICKED
 HALF RANGE
@@ -1276,13 +1279,17 @@ the target is farther than 12" (every weapon is taken to be in range)
 NOW
 Within 12"
 bonus for Eagle’s Scream and Castellan axe
-+54% wiped
-+1.1
++50% wiped
++1
 SITUATION AND RULES
 Captain-General
 Own aura: re-roll hit rolls of 1 and wound rolls of 1
 always counted · you can leave it out
-if left out: −1 models · −21% wiped
+if left out: −0.6 models · −18% wiped
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll · its re-rolls go to, on average: Eagle’s Scream 0.3 wound; Balistus grenade launcher 0.26 wound; Castellan axe 0.36 wound
+always counted · you can leave it out
+if left out: −0.2 models · −9% wiped
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1295,17 +1302,23 @@ if it applies
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−28% wiped
-−1.6
+−34% wiped
+−1.4
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 if it applies
-−29% wiped
-−3.1
+−38% wiped
+−3.3
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+4% wiped
++0.1
+MODELS
 1CP Honoured Interred
 Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
 if used
@@ -1314,16 +1327,12 @@ NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll
 1CP Superhuman Focus
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1471,13 +1480,16 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 Charged this turn
 ×
+Magna Imperator
 Captain-General
-5 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1523,7 +1535,7 @@ SITUATION AND RULES
 Captain-General
 Own aura: re-roll hit rolls of 1 and wound rolls of 1
 always counted · you can leave it out
-if left out: −0.1 models · −10% wiped
+if left out: ≈0 models · −3% wiped
 Charged this turn
 said to hold
 0
@@ -1535,6 +1547,10 @@ Slayer of Tyrants
 Target has a T greater than this unit’s T: +1 to wound rolls
 if it applies
 0
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll
+always counted · you can leave it out
+if left out: no change
 Dacatarai
 Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets: re-roll hit rolls of 1
 if it applies
@@ -1549,16 +1565,16 @@ with their CP
 Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
 if used
 0
-NOT COUNTED BY THE CALCULATOR (5)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll
 1CP Superhuman Focus
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1710,17 +1726,21 @@ FNP
 6+
 Benefit of cover
 −1 Damage
-5.0
++
+Add a group
+5
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 
-Shoot 3.64 · Fight 1.36 · the charge is taken to succeed
+Shoot 3.8 · Fight 1.2 · the charge is taken to succeed
 
+Magna Imperator
 Captain-General
 Charged this turn
 ×
+Magna Imperator (fight)
 Captain-General (fight)
-8 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1797,6 +1817,10 @@ Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
 0
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll · its re-rolls go to, on average: Eagle’s Scream 0.3 wound; Balistus grenade launcher 0.26 wound; Castellan axe 0.36 wound
+always counted · you can leave it out
+if left out: no change
 Captain-General
 Own aura: re-roll hit rolls of 1 and wound rolls of 1
 always counted · you can leave it out
@@ -1811,20 +1835,20 @@ with their CP
 Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
 if used
 0
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll
 1CP Superhuman Focus
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1869,7 +1893,7 @@ AP
 D
 4
 CLEAVE 1
-−5% wiped
+−4% wiped
 −0.1
 MODELS IF UNTICKED
 Castellan axe ×2 ALLARUS CUSTODIANS
@@ -1886,10 +1910,6 @@ D
 ≈0
 MODELS IF UNTICKED
 SITUATION AND RULES
-Captain-General
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: ≈0 models
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 0
@@ -1901,6 +1921,14 @@ Slayer of Tyrants
 Target has a T greater than this unit’s T: +1 to wound rolls
 if it applies
 0
+Magna Imperator
+Selected to attack: re-roll one hit roll and re-roll one wound roll
+always counted · you can leave it out
+if left out: no change
+Captain-General
+Own aura: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: no change
 Dacatarai
 Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets: re-roll hit rolls of 1
 if it applies
@@ -1915,16 +1943,16 @@ with their CP
 Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
 if used
 0
-NOT COUNTED BY THE CALCULATOR (5)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll
 1CP Superhuman Focus
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

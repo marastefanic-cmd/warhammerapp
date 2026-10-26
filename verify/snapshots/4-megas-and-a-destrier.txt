@@ -940,11 +940,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 3.1
 of 5 destroyed
 6.6 wounds lost · wiped in 25% of games
 Las-impulsor: high intensity
-4 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1038,6 +1040,12 @@ by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If
 +0.2
 MODELS
 SITUATION AND RULES
+Code Chivalric
+Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
+if it applies
++16% wiped
++0.6
+MODELS
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1078,25 +1086,27 @@ with their CP
 1CP Strength from Exile
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
 if used
-+24% wiped
+BEST · MOST MODELS+24% wiped
 +0.8
+MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++11% wiped
++0.4
 MODELS
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
 Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1CP Point-Blank Barrage
 Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1241,13 +1251,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.5
 of 5 destroyed
 9.0 wounds lost · wiped in 70% of games
 Freedom’s Hand: sweep
 Charged this turn
 ×
-5 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1316,6 +1328,12 @@ by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If
 ≈0
 MODELS
 SITUATION AND RULES
+Code Chivalric
+Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
+if it applies
++15% wiped
++0.3
+MODELS
 Charged this turn
 said to hold
 no change: no rule here needs it
@@ -1331,23 +1349,25 @@ with their CP
 1CP Strength from Exile
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
 if used
-+25% wiped
+BEST · MOST MODELS+25% wiped
 +0.4
+MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++10% wiped
++0.2
 MODELS
 NOT FOR THIS STEP, BY THE RULES (1)
 
 Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (5)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
 Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1496,6 +1516,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.9
 of 5 destroyed
 9.9 wounds lost · wiped in 96% of games
@@ -1506,7 +1528,7 @@ Las-impulsor: high intensity
 Freedom’s Hand: sweep
 Charged this turn
 ×
-9 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1601,6 +1623,13 @@ by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If
 ≈0
 MODELS
 SITUATION AND RULES
+Code Chivalric
+Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1641,22 +1670,24 @@ if used
 ≈0
 MODELS
 +1 MORE ▾
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++1% wiped
+≈0
+MODELS
 NOT FOR THIS STEP, BY THE RULES (2)
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
 Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1CP Point-Blank Barrage
 Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1746,6 +1777,13 @@ D
 by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
 0
 SITUATION AND RULES
+Code Chivalric
+Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
@@ -1765,20 +1803,22 @@ if used
 ≈0
 MODELS
 +1 MORE ▾
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++1% wiped
+≈0
+MODELS
 NOT FOR THIS STEP, BY THE RULES (1)
 
 Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (5)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
 Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

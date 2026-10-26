@@ -1227,11 +1227,12 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 1.8
 of 5 destroyed
 3.7 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1314,9 +1315,11 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++0.5
+MODELS
 NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
 
 1CP Servo-driven Charge
@@ -1325,12 +1328,6 @@ NO CHANGE
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1468,12 +1465,14 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 2.5
 of 5 destroyed
 5.4 wounds lost · wiped in 4% of games
 Charged this turn
 ×
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1564,18 +1563,22 @@ counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of
 +0.1
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+9% wiped
++0.6
+MODELS
 1CP Servo-driven Charge
 Fight phase: [LANCE]
 if used
 +3% wiped
 +0.2
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1717,6 +1720,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.1
 of 5 destroyed
 8.4 wounds lost · wiped in 44% of games
@@ -1725,7 +1730,7 @@ Shoot 1.8 · Fight 2.3 · the charge is taken to succeed
 
 Charged this turn
 ×
-4 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1813,9 +1818,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++16% wiped
++0.3
+MODELS
 NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
 
 1CP Servo-driven Charge
@@ -1824,12 +1832,6 @@ NO CHANGE
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1936,18 +1938,22 @@ counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of
 +2% wiped
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+16% wiped
++0.3
+MODELS
 1CP Servo-driven Charge
 Fight phase: [LANCE]
 if used
 +6% wiped
 +0.1
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

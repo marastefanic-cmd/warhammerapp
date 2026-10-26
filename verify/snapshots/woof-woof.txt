@@ -940,11 +940,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 2.6
 of 5 destroyed
 5.6 wounds lost · wiped in 3% of games
 Final Howl (Aura)
-3 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1079,9 +1081,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++6% wiped
++0.5
+MODELS
 NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hungry for Combat
@@ -1090,7 +1095,7 @@ NO CHANGE
 
 Nothing to count: 1CP Animalistic Rage (in the other player’s turn only) · 1CP Encircling Pack, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1098,8 +1103,6 @@ They can matter at the table, but the calculator does not play them: what each o
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
 1CP Leash of the Masters
 Your unit has shot: those attacks do not prevent it from being eligible to start an action.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1237,13 +1240,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 0.1
 of 5 destroyed
 0.7 wounds lost · wiped in <1% of games
 Charged this turn
 ×
 Final Howl (Aura)
-6 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1293,6 +1298,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS
++0.1
+MODELS
 1CP Hungry for Combat
 Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it): a Critical Hit on an unmodified hit roll of 5+
 if used
@@ -1301,7 +1312,7 @@ NOT FOR THIS STEP, BY THE RULES (1)
 
 Nothing to count: 1CP Leash of the Masters (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (6)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1311,8 +1322,6 @@ Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-sh
 Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
 1CP Encircling Pack
 Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1454,6 +1463,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 2.9
 of 5 destroyed
 6.3 wounds lost · wiped in 8% of games
@@ -1464,7 +1475,7 @@ Final Howl (Aura)
 Charged this turn
 ×
 Final Howl (Aura) (fight)
-9 NOT COUNTED
+7 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1597,9 +1608,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++11% wiped
++0.6
+MODELS
 NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hungry for Combat
@@ -1608,7 +1622,7 @@ NO CHANGE
 
 Nothing to count: 1CP Animalistic Rage (in the other player’s turn only) · 1CP Encircling Pack, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1616,8 +1630,6 @@ They can matter at the table, but the calculator does not play them: what each o
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
 1CP Leash of the Masters
 Your unit has shot: those attacks do not prevent it from being eligible to start an action.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1693,6 +1705,12 @@ if it applies
 MODELS
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+1% wiped
++0.1
+MODELS
 1CP Hungry for Combat
 Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it): a Critical Hit on an unmodified hit roll of 5+
 if used
@@ -1701,7 +1719,7 @@ NOT FOR THIS STEP, BY THE RULES (1)
 
 Nothing to count: 1CP Leash of the Masters (Shooting phase only)
 
-NOT COUNTED BY THE CALCULATOR (6)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1711,8 +1729,6 @@ Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-sh
 Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
 1CP Encircling Pack
 Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

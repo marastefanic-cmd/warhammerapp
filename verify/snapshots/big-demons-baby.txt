@@ -1225,11 +1225,12 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 1.2
 of 5 destroyed
 2.9 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1281,19 +1282,15 @@ no change: [TORRENT] hits automatically: no hit roll
 ALL ▾
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++0.2
+MODELS
 NOT FOR THIS STEP, BY THE RULES (6)
 
 Nothing to count: 1CP Daemonic Fury, 1CP A Worthy Skull, 1CP Murder-call, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Blessing of Burning Blood (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1433,13 +1430,15 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.8
 of 5 destroyed
 9.6 wounds lost · wiped in 86% of games
 Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1531,21 +1530,25 @@ with their CP
 1CP Daemonic Fury
 Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6": [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase)
 if used
-+11% wiped
+BEST · MOST MODELS+11% wiped
 +0.2
 MODELS
 [LANCE]
 +0.2
 Daemonic Rage active
 +0.2
-NOT COUNTED BY THE CALCULATOR (4)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++4% wiped
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP A Worthy Skull
 Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1687,6 +1690,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 5.0
 of 5 destroyed
 10 wounds lost · wiped in 98% of games
@@ -1697,7 +1702,7 @@ Slaughter and Carnage: sweep
 Charged this turn
 ×
 Rage Embodied
-8 NOT COUNTED
+6 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1749,19 +1754,14 @@ no change: [TORRENT] hits automatically: no hit roll
 ALL ▾
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
 NOT FOR THIS STEP, BY THE RULES (6)
 
 Nothing to count: 1CP Daemonic Fury, 1CP A Worthy Skull, 1CP Murder-call, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Blessing of Burning Blood (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1834,14 +1834,14 @@ AP
 D
 2
 SITUATION AND RULES
-Damaged (1-7 wounds left)
-+2 A
+Martial Excellence
+Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [SUSTAINED HITS 1]
 if it applies
 +1% wiped
 ≈0
 MODELS
-Martial Excellence
-Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [SUSTAINED HITS 1]
+Damaged (1-7 wounds left)
++2 A
 if it applies
 +1% wiped
 ≈0
@@ -1851,6 +1851,10 @@ Blessing of Khorne active this battle round, melee attacks that target an INFANT
 if it applies
 ≈0
 MODELS
+Rage Embodied
+Own aura: +1 A
+always counted · you can leave it out
+if left out: ≈0 models
 Warp Blades
 Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [LETHAL HITS]
 if it applies
@@ -1865,10 +1869,6 @@ Daemonic Rage active (3BTP): [LANCE]
 if it applies
 no change: already wounds on 2+
 0
-Rage Embodied
-Own aura: +1 A
-always counted · you can leave it out
-if left out: ≈0 models
 Daemon Lord of Khorne (Bloodthirster)
 Within 6" of the Bloodthirster: +1 to hit
 if it applies
@@ -1876,10 +1876,12 @@ no change: already hits on 2+
 0
 STRATAGEMS
 with their CP
-
-None that change these numbers.
-
-NOT COUNTED BY THE CALCULATOR (7)
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+≈0
+MODELS
+NOT COUNTED BY THE CALCULATOR (6)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1891,8 +1893,6 @@ Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models
 A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
 1CP Murder-call
 Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive

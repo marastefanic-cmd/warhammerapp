@@ -1072,11 +1072,13 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 2.1
 of 5 destroyed
 4.3 wounds lost · wiped in 5% of games
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1144,6 +1146,12 @@ no change: [TORRENT] hits automatically: no hit roll
 ALL ▾
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+2% wiped
++0.3
+MODELS
 1CP Swarm-guided Salvoes
 Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 if used
@@ -1156,14 +1164,12 @@ NO CHANGE
 
 Nothing to count: 1CP Corrosive Viscera (in the other player’s turn only) · 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1301,12 +1307,14 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.0
 of 5 destroyed
 8.1 wounds lost · wiped in 45% of games
 Charged this turn
 ×
-5 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1356,8 +1364,14 @@ with their CP
 1CP Rampaging Monstrosities
 Fight phase: re-roll hit rolls
 if used
-+22% wiped
+BEST · MOST MODELS+22% wiped
 +0.4
+MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++13% wiped
++0.3
 MODELS
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 
@@ -1365,7 +1379,7 @@ NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 Shooting phase only
 NO CHANGE
 
-NOT COUNTED BY THE CALCULATOR (5)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1373,8 +1387,6 @@ Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Corrosive Viscera
 Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
@@ -1516,6 +1528,8 @@ FNP
 6+
 Benefit of cover
 −1 Damage
++
+Add a group
 4.8
 of 5 destroyed
 9.6 wounds lost · wiped in 85% of games
@@ -1524,7 +1538,7 @@ Shoot 2.14 · Fight 2.63 · the charge is taken to succeed
 
 Charged this turn
 ×
-7 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1590,6 +1604,13 @@ no change: [TORRENT] hits automatically: no hit roll
 ALL ▾
 STRATAGEMS
 with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++3% wiped
+≈0
+MODELS
++1 MORE ▾
 1CP Swarm-guided Salvoes
 Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 if used
@@ -1602,14 +1623,12 @@ NO CHANGE
 
 Nothing to count: 1CP Corrosive Viscera (in the other player’s turn only) · 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 MODIFIERS · NONE
 Hit roll
 −
@@ -1684,13 +1703,19 @@ if used
 +8% wiped
 +0.1
 MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
++5% wiped
++0.1
+MODELS
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 
 1CP Swarm-guided Salvoes
 Shooting phase only
 NO CHANGE
 
-NOT COUNTED BY THE CALCULATOR (5)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
@@ -1698,8 +1723,6 @@ Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Corrosive Viscera
 Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
-1CP Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
