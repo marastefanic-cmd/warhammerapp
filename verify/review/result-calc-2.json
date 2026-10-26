@@ -1,0 +1,32 @@
+[
+ {
+  "key": "prep",
+  "where": "calc.js · prep",
+  "verdict": "ok",
+  "why": "precision:!!k.precision && !k.torrent. k.precision gathers every source: the weapon's own [PRECISION], a rule's mod.precision (MOD_KW), and the Precision box, which app.html dmCalc adds as a mod { from:'Precision (ticked with the target)', precision:true } on every group. All three are therefore cut for a [TORRENT] weapon. k.torrent is used rather than G.torrent, so a [TORRENT] weapon in snap shooting with ctx.snapSix is still never precise (right: it is still a [TORRENT] weapon, 24.37). No rule can give TORRENT (it is not in MOD_KW), so the weapon's own keyword is the only source. Every downstream use (sigOf, poolOrder, attackOnce precG, explain precRow) reads G.precision. Checked on the Knight Despoiler with Precision ticked and a Leader group: Heavy darkflamer precision false, its working meets the Bodyguard; the other three weapons are precise. The new hand cases re-derive: 2 attacks at 2+, S8 vs T4, D3, no save, at a W3 Boss: 3·(1-(11/36)²)+(25/36)²; not picked: 2·25/36; [TORRENT]: 2·5/6. Minor, harmless: G.applied still lists the Precision mod for the darkflamer, but nothing in app.html reads .applied."
+ },
+ {
+  "key": "explain Damage re-roll",
+  "where": "calc.js · explain (aux qd, gainOf)",
+  "verdict": "ok",
+  "why": "ok(v,m) = v < Dmean and val(v,m) < row.W is attackOnce's test (dr < g.Dmean && dmg < M.w && take(use.d)), with melta kept and -1 Damage applied the same way. qd is the chance of an eligible roll (used as th = sf·qd in poolWeapon). gainOf averages E[f(val(u,m))] - f(val(v,m)) over the eligible rolls only. Explain vs 100k games (re-rolls spent, explain/dice): reviewer R1, 6 [TORRENT] D3 attacks at 10 W1: wound 0.984/0.984, dmg 0/0. Reviewer R2, shared one-any re-roll at 20 W1: b hit 0.9956/0.9952, b wound 0.0038/0.0040, a hit 0.0006/0.0008, dmg 0/0. New N1, D6 oneDmg at one W1e6 model: 0.5852/0.5862 (analytic 1-(43/48)^8 = 0.5853; +0.878 dmg = 0.585·1.5), dmg 6.711/6.698. New N4, two weapons sharing one-any at W1e6: every one.* within 0.002, total dmg 2.578/2.579. New N8, D6 oneDmg at W3 (only 1 and 2 eligible): 0.8057/0.8050. Extra: N5b, D6+MELTA D3 with -1 Damage at W1e6: 0.4418/0.4440. Remaining gap, by design: the working takes every attack to meet a model at full W, while the dice use the wounds it has left. Against multi-wound models that get wounded the working over-counts Damage re-rolls: N5 W6 0.442/0.421, N6 W2 1.248/1.206, and largest for a [PRECISION] Leader that dies part-way (N7 W4 Boss: 0.794/0.443). This is the documented working assumption, not a mismatch in the condition."
+ },
+ {
+  "key": "poolOrder",
+  "where": "calc.js · poolOrder",
+  "verdict": "ok",
+  "why": "It returns the listed order unless some pool entry has users.size > 1. With a pool each weapon is its own batch, so users means weapons. Regression: every army × unit × shooting/fight × 4 targets (5×W2 Sv3; 10×W1 Sv5 FNP6; 1×W13 Sv2 InSv4; 3×W3 plus a W5 Leader) = 1380 matchups. run() output JSON vs main:calc.js: all 1276 without a one-die re-roll are bit-identical. The same 1276 are identical again with every other box ticked (the ticks change 311 of 345 inputs). The 104 with a re-roll differ from main only because main has no re-roll pool at all. Against the pre-fix a3bc737 calc.js: 1380/1380 identical, and 1380/1380 with every box ticked (776 single-user, 604 shared). So the change alters only the hand case where a lone weapon's rule used to be sorted ahead of a more valuable listed weapon; calc-test covers it ('a re-roll for one weapon only: the order listed')."
+ },
+ {
+  "key": "dmNoWhy",
+  "where": "app.html · dmNoWhy",
+  "verdict": "ok",
+  "why": "The reason is said only when explain(MM.input), the side with the larger pool, re-rolls under 0.005 per weapon in total. Otherwise the code falls through, and with only `one` changed every per-weapon branch is empty, so it returns ''. I loaded app.html's own dmNoWhy and called it for every one-die re-roll lever (each direction) on every army × unit × shooting/fight × 4 targets: 3216 calls. It said the reason 56 times. In each of those, that rule's own share in the working was under 0.005 per weapon, and the dice (C.run, 4000 games) spent under 0.01 of all re-rolls; 0 false. Example: Trajann's unit's fight already re-rolls every failed roll, so it spends 0. Per-rule shares (one.by) always sum to the weapon totals (0 mismatches). The test is stricter than needed: it uses all re-rolls together, not only the lever's rule, so a reason can be missed when another rule re-rolls. It is never false."
+ },
+ {
+  "key": "dmOneWent",
+  "where": "app.html · dmOneWent",
+  "verdict": "ok",
+  "why": "It filters explain's per-weapon one.by to entries whose src is the row's r.m.from (or from + ' (' / from + ':'). poolWeapon's per-entry shares are exact: Σ_j(s.v - v1) = uh, and for Damage Σ (j-1)·P(exactly j-1) + kd·P(≥kd) = sd. Caladius, W13 vehicle, AF + CR on (Magna Imperator always on): AF row 'Arachnus Blaze Carronade 0.52 hit, 0.79 wound, 0.74 Damage; Twin Lastrum Bolt Cannon 0.2 hit'; Magna row 'Carronade 0.13 hit, 0.39 wound; Bolt Cannon 0.2 hit'; CR row 'Carronade 0.1 wound, 0.3 Damage' (its 0.016 hit and the bolt cannon's 0.05 are cut below 0.05). Each row is only its own, and the three add up to the weapon totals. Knight Destrier (6-bigs) with Code Chivalric + CR, shooting: CC 'Chastiser gatling cannon 0.99 hit, 1 wound'; CR 'Chastiser 0.95 hit, 0.05 wound'. Knight Errant, shooting: CC lists Thermal cannon, Stormspear and Meltagun; CR lists 'Thermal cannon 0.4 hit, 0.2 wound, 0.31 Damage'. The fight rows are separate too. The explain is now cached per M (M._oneX) and shared by the rows."
+ }
+]

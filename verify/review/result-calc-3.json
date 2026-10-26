@@ -1,0 +1,39 @@
+[
+ {
+  "key": "dmFill order",
+  "where": "app.html · dmFill (the list order)",
+  "verdict": "ok",
+  "why": "The first order (app.html:2895-2899) now scores every lever with dmEff(C, lv, true), the quick games only; lv.fx is never read there. The final order (2906-2912) runs once per pk, only when every lever in todo has fx (or is same, or !dmOk). It scores from lv.fx alone, sets dmRank[pk], adds pk to DM_RANK_FINAL, and redraws through dmListKeep('rank') when the order changes. ids() sorts all of C.levers by (score, index). The ranked lists in dmListPart (rl, sl; per part for Both via dmPartCtx) are C.levers.filter subsets with the same index tie-break, so a change shown on screen always changes ids(). The reverse is not true: a change ids() sees may not show on screen, which only costs an unneeded redraw. Races: screenDamage increments dmGen synchronously, and live() is checked after every await. No await falls between the every-fx test and the rank write, and Reset deletes dmRank and DM_RANK_FINAL for the same keys before rerender(). Probe across all 23 lists × every unit × shoot/fight/both (507 screens) in one page, so the memo is warm from earlier screens: after settling, the DOM order equals a fresh dmListHtml(C) in 507/507. dmRank[pk] equals dmGain of the exact fx for every lever, and DM_RANK_FINAL has pk in 507/507. Each ranked section descends, with ties in C.levers order (4560 rows, 0 violations). 251 screens re-ordered at the final step. The same check with the 10,000-game jobs delayed randomly by 0-1.5 s: 69/69 screens, 0 violations. Minor, transient only: a lever skipped in the quick pass because its exact result was already in the memo (2890) gets 0 in the first order when its lv.inQ is not in the memo (dmOrdered can give it a key no earlier screen played). The final order corrects this, and it only matters when dmRank[pk] is empty (first visit or after Reset). Optional fix: in scoreOf, use q ? (dmEff(C, lv, true) || lv.est) : lv.fx, or play inQ for those levers too."
+ },
+ {
+  "key": "dmListKeep",
+  "where": "app.html · dmListKeep",
+  "verdict": "ok",
+  "why": "The body is the old dmRedraw inline code, moved unchanged: folds from dmState(), focus by data-dmlv, the row at the top kept by scrollBy. One change: why === 'rank' always looks for the top row, while 'note' only does so when the .dmsat note is above the top bar, as before. A row just tapped (dmAnchor) still wins, and dmAnchorKeep() runs at the end. dmRedraw now calls dmListKeep(C, 'note') under the same condition as before. The kept row is the first [data-dmlv] at or below the top bar, which can be off screen below. The list always starts with the weapon rows, which are not ranked and so do not move on a re-order, so this leads to no scroll jump."
+ },
+ {
+  "key": "dmGet / dmPut",
+  "where": "app.html · dmGet / dmPut",
+  "verdict": "ok",
+  "why": "On a hit, dmGet deletes and re-sets the key, moving it to the end of the Map's insertion order. dmPut evicts keys().next(), the least recently used, once size passes 2400. dmPut on a key that already exists does not move it, but every dmPut follows a miss or a dmGet in the same task, so the order still stays roughly LRU. Measured: one result is about 2.4-4 KB as JSON, so 2400 entries are at most around 10 MB. A Both screen uses 50-92 entries. In the 507-screen probe in one page, no row was left with '…'."
+ },
+ {
+  "key": "dmPatch",
+  "where": "app.html · dmPatch",
+  "verdict": "ok",
+  "why": "f = dmEff(...) || (q ? lv.est : lv.fx). Levers are rebuilt for every drawing (screenDamage → dmLevers), so the value it falls back to was worked out for the same inputs in the same drawing and is never from an earlier state. When dmEff is legitimately null (k < 0, no plan), est/fx were already null, so nothing changes. The quick path (q) only runs while !lv.fx, so a quick value never overwrites an exact one."
+ },
+ {
+  "key": "How text",
+  "where": "app.html · How this is worked out (The number beside each choice)",
+  "verdict": "ok",
+  "why": "'ordered for each unit and mode … first from the quick games, then once more from the 10,000 when every effect is in (a tie keeps the order listed), and then it stays put' matches the code. pk = dmPairKey(your unit, step or 'both', attacking unit). The first order comes from scoreOf(true) once every quick effect is in. The final order comes from scoreOf(false) only when every lever has fx, once per pk (DM_RANK_FINAL). Ties fall back to listed order in dmListPart. Nothing re-orders after that until Reset, which clears both. The only nuance is the transient first-order 0 for memo-skipped levers noted under dmFill. 2,000/1,000 come from DM_Q."
+ },
+ {
+  "key": "render.js VERIFY_LISTS",
+  "where": "verify/render.js",
+  "verdict": "not ok",
+  "why": "The filter at verify/render.js:51 works: three runs of VERIFY_LISTS=navigator-sounds-op-ngl,lite-knights,emperors-chosen were byte-identical with each other and with the builder's det-r1..5. Apart from line 1 (the back label, which names the list before it), they also equal those lists in the full gate render. But the todo's claim 'run.js renders every list' is not enforced. run.js's node() (verify/run.js:47) passes process.env through, so `VERIFY_LISTS=x node verify/run.js` renders only x. The snapshots step only compares the files present in verify/out/snapshots (run.js:83-90, after render.js:46 wipes the folder), so the other 22 lists pass unseen. helpers.json likewise holds only x's helpers, report.json is written ok:true, and build.js will then build. --accept would also accept only part of the snapshots. Fix: in verify/run.js:47 drop it from the child env, e.g. env:Object.assign({}, process.env, env || {}, { VERIFY_LISTS:'' }) (render.js already treats '' as all lists), or have render.js refuse VERIFY_LISTS when VERIFY_BUILDING or a run.js flag is set.",
+  "fixed": "verify/run.js:47 now passes VERIFY_LISTS:'' to every step (the reviewer's fix, applied as written)"
+ }
+]

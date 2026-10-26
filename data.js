@@ -156,7 +156,10 @@ const CORE_STRATAGEMS = [
   { id:'command-re-roll', gist:'Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).', gistOf:'377ce33f', name:'Command Re-roll', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either',
     when:'Any phase, just after you make one of the following rolls for a friendly unit or model:\n- **Advance roll**\n- **Charge roll**\n- **Damage roll**\n- **Hazard roll**\n- **Hit roll**\n- **Save roll**\n- **Wound roll**\n- A roll to determine the number of attacks generated with a weapon.',
     target:'That unit or model.',
-    effect:'You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).' },
+    effect:'You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).',
+    // the Damage tab's reading (read by it alone): one Hit, Wound or Damage roll of the unit's attacks re-rolled, once in the phase (15.01:
+    // the same stratagem not more than once in the same phase)
+    calcMods:[{ kind:'all', when:'Just after a hit, wound or damage roll of these attacks; once in the phase (15.01)', note:'re-roll one hit roll, one wound roll or one damage roll', calc:{ oneAny:1, phase:true } }] },
   { id:'epic-challenge', gist:'One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.', gistOf:'59bef664', name:'Epic Challenge', cp:1, phases:['fight'], turn:'either', needs:{ all:['Character'] },
     when:'Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.',
     target:'That **CHARACTER** unit.',
@@ -421,9 +424,9 @@ const FACTIONS = {
           ['Quality 3–4 · …and we are eager for the challenge', 'Add 2" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.'],
           ['Quality 5–6 · …yet shall our legacy be unsullied', 'Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.']
         ],
-        // the Damage tab's reading (read by it alone): the Quality that changes attacks is listed as not counted (one re-roll a selection:
-        // the calculator re-rolls no single die)
-        calcNc:[{ kind:'all', from:'Code Chivalric', when:'Quality 1–2 (…with our martial valour risen over all)', note:'each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll', why:'one re-roll: the calculator re-rolls no single die' }], readOf:'285e3402' },
+        // the Damage tab's reading (read by it alone): the Quality that changes attacks, one Hit roll and one Wound roll re-rolled each time
+        // the model is selected to shoot or fight; a box (the Oath's Quality is the player's pick for the battle)
+        calcMods:[{ kind:'all', from:'Code Chivalric', when:'Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight', note:'re-roll one hit roll and re-roll one wound roll' }], readOf:'285e3402' },
       // needs: a Bondsman ability only ever affects an ARMIGER model, so without one in the army it does nothing
       { name:'Bondsman', ph:['command'], turn:'your', needs:{ any:['Armiger'] },
         text:'Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.' },
@@ -1348,7 +1351,7 @@ const FACTIONS = {
         name:'Emperor’s Chosen', dispositions:['Priority Assets'], dp:1,
         // ph/turn: "selected to attack" (shoot or fight, and Fire Overwatch in the opponent's Movement phase); the Favoured Ka’tah's additional effect is Rendax's, in the Fight phase
         rule:{ name:'Magna Imperator', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes'] },
-          mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll' }, readOf:'f6a64756',
+          mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll', always:true }, readOf:'f6a64756',
           text:'When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**.' },
         enhancements:[
           { name:'From the Hall of Armouries', pts:15, text:'**ADEPTUS CUSTODES** model only. This model’s melee attacks have **[Devastating Wounds]**.' },
@@ -6922,7 +6925,7 @@ const DATASHEETS = {
   // abilities that change this unit's attacks, shown inside its weapon tables
   // (Bestial Aspect's [ASSAULT] is already on every ranged weapon, as New Recruit prints them: no footnote)
   mods:[
-    { kind:'all', when:'Selected to shoot or fight', note:'re-roll one hit roll or one wound roll', from:'Seething Hatred', readOf:'31dda915' },
+    { kind:'all', when:'Selected to shoot or fight', note:'re-roll one hit roll or one wound roll', from:'Seething Hatred', always:true, readOf:'31dda915' },
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining', readOf:'214508e4', readBy:'derive' }
   ],
   rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Torrent','Ignores Cover','Rapid Fire'],

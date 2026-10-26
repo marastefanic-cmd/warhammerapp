@@ -1,0 +1,50 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmFill (the list order)",
+  "judgement": "the list is first put in order from the quick games alone (never a mix of exact and quick effects, which depended on which 10,000-game results a memo hit or a fast worker had already delivered); once every exact effect is in, it is put in order again from the exact effects alone (ties: the order listed) and kept for that unit and step (DM_RANK_FINAL); Reset forgets both",
+  "source": "the root cause of the navigator Code Chivalric row landing 1st or 4th: the first order took lv.fx (exact, from results already in the memo from earlier screens) for some rows and lv.est (2,000 games) for others",
+  "note": "the final order now depends only on the exact effects, which are seeded"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmListKeep",
+  "judgement": "the list drawn again as the player left it (folds from dmState, focus, the row at the top of the screen kept where it was; a just-tapped row kept by dmAnchor), shared by dmRedraw (the note) and the final re-order",
+  "source": "—",
+  "note": "was inline in dmRedraw"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmGet / dmPut",
+  "judgement": "the memo of played games keeps the most recently used (a hit moves an entry to the end) and holds 2,400 inputs instead of 800 (first in, first out)",
+  "source": "—",
+  "note": "an input hit from an earlier screen kept its old place and was evicted while its screen still needed it: a row lost its number (…) in a full render"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmPatch",
+  "judgement": "an effect is never replaced by nothing: when a result is no longer in the memo, the effect already worked out from it stays",
+  "source": "—",
+  "note": ""
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · How this is worked out (The number beside each choice)",
+  "judgement": "the list is ordered first from the quick games, then once more from the 10,000 when every effect is in (a tie keeps the order listed), then it stays put",
+  "source": "—",
+  "note": ""
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/render.js",
+  "judgement": "VERIFY_LISTS=a,b renders only those lists’ screens (a check run by hand: the same build renders the same text again); run.js renders every list",
+  "source": "—",
+  "note": ""
+ }
+]

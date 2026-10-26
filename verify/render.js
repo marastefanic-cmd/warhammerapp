@@ -46,7 +46,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   if(main) fs.rmSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true, force:true });
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
 
-  for(const a of armies){
+  // VERIFY_LISTS=a,b: only those lists' screens (a check run by hand, e.g. that the same build renders the same text again; run.js
+  // renders every list)
+  const only = (process.env.VERIFY_LISTS || '').split(',').filter(Boolean);
+  for(const a of armies.filter(x => !only.length || only.includes(x.id))){
     const snap = [];
     // one screen: render it, open every fold, keep its text and its helpers
     const take = async (label, fn, folded) => {
@@ -621,6 +624,18 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('[data-dmtt="cover"]'); await page.waitForTimeout(600);
     const tt = await page.evaluate(() => ({ cover:dmTypedVals(dmState()).cover, pressed:document.querySelector('[data-dmtt="cover"]').getAttribute('aria-pressed'), ctx:$('#dmAns .dmctx').textContent, kept:document.querySelector('[data-wh="tg:n"]')._seen === 1 }));
     if(!tt.cover || tt.pressed !== 'true' || !/cover/.test(tt.ctx) || !tt.kept) fail('damage-wheels', A, 'Benefit of cover', JSON.stringify(tt));
+    // a group added to the target (a Leader): its own six wheels, CHARACTER ticked, Precision offered; ticked, counted (the card says so,
+    // with the Leader's fate); the page no wider than the phone; removed, the target as before
+    await page.evaluate(() => document.querySelector('[data-dmgadd]').click()); await page.waitForTimeout(600);
+    const gr = await page.evaluate(() => ({ n:document.querySelectorAll('#dmTgt .dwv[role="spinbutton"]').length, lead:!!document.querySelector('[data-dmgch="0"][aria-pressed="true"]'), prec:!!document.querySelector('[data-dmtt="prec"]'),
+      wide:document.documentElement.scrollWidth - innerWidth, ctx:$('#dmAns .dmctx').textContent }));
+    if(gr.n !== 12 || !gr.lead || !gr.prec || gr.wide > 0 || !/\(CHARACTER\)/.test(gr.ctx)) fail('damage-groups', A, 'a group added', JSON.stringify(gr));
+    await page.evaluate(() => document.querySelector('[data-dmtt="prec"]').click()); await settled();
+    const pr = await page.evaluate(() => ({ ctx:$('#dmAns .dmctx').textContent, sub:$('#dmAns .dmbig small').textContent, pressed:document.querySelector('[data-dmtt="prec"]').getAttribute('aria-pressed'), wide:document.documentElement.scrollWidth - innerWidth }));
+    if(!/\[PRECISION\]/.test(pr.ctx) || !/Leader destroyed in/.test(pr.sub) || pr.pressed !== 'true' || pr.wide > 0) fail('damage-groups', A, 'Precision', JSON.stringify(pr));
+    await page.evaluate(() => document.querySelector('[data-dmgrm="0"]').click()); await page.waitForTimeout(600);
+    const rm = await page.evaluate(() => ({ n:document.querySelectorAll('#dmTgt .dwv[role="spinbutton"]').length, prec:!!document.querySelector('[data-dmtt="prec"]'), more:dmTypedVals(dmState()).more.length }));
+    if(rm.n !== 6 || rm.prec || rm.more) fail('damage-groups', A, 'the group removed', JSON.stringify(rm));
     // the modifiers, folded under one row that says what is set: +1 to hit set, said there and as a chip
     await page.evaluate(() => { const d = document.querySelector('#dmList .dmmanf'); d.open = true; d.scrollIntoView({ block:'center' }); }); await page.waitForTimeout(300);
     await page.click('[data-dmman="hit|1"]'); await settled();
