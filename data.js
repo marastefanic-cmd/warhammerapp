@@ -2358,13 +2358,13 @@ const ARMIES = [
         { name:'Rend and Tear', who:'Exalted Eightbound' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[{ kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'11' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa', listWhy:'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (+1, marked), so Possessed Lord’s +3 makes 11 (the datasheet’s A 7 makes 10)' },'Rend and Tear'],
+      mods:[{ kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'11' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa+559e5240+eef27867', listWhy:'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (its datasheet’s A 6, +1 from Relentless Rage, +1 from Berzerker Glaive, both marked), so Possessed Lord’s +3 makes 11 (without the Glaive, A 7 makes 10)' },'Rend and Tear'],
       rules:['Leader','Deadly Demise D3','Blessings of Khorne','Deep Strike','Scouts 6"','Anti'],
       kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound','Exalted Eightbound'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
       partialRules:{ 'Scouts 6"':'Slaughterbound' },
-      why:{ mods:{ 'Possessed Lord':'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (+1, marked), so Possessed Lord’s +3 makes 11 (the datasheet’s A 7 makes 10)' }, kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
+      why:{ mods:{ 'Possessed Lord':'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (its datasheet’s A 6, +1 from Relentless Rage, +1 from Berzerker Glaive, both marked), so Possessed Lord’s +3 makes 11 (without the Glaive, A 7 makes 10)' }, kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
       id:'chaos-rhino', ds:'world-eaters/chaos-rhino', pts:75,
@@ -5456,7 +5456,7 @@ const DATASHEETS = {
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
-    { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' }
+    { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa+eef27867' }
   ],
   rules:['Leader','Deadly Demise D3','Blessings of Khorne'],
   kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound']
@@ -6209,7 +6209,7 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
   aura:[
-    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Errant (Bondsman, your Command phase)', note:'[ASSAULT]', from:'Errant’s Duty', oneModel:true, lasts:'round', readOf:'54db6f62' }
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Errant (Bondsman, your Command phase)', note:'[ASSAULT]', from:'Errant’s Duty', oneModel:true, lasts:'round', readOf:'54db6f62+6a3f9305' }
   ],
   // New Recruit's Rules line also has Assault, named only by Errant’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Melta','Blast'],
@@ -6242,8 +6242,8 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
   aura:[
-    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LETHAL HITS]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a' },
-    { kind:'melee', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LANCE]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a' }
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LETHAL HITS]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a+6a3f9305' },
+    { kind:'melee', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LANCE]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a+6a3f9305' }
   ],
   // New Recruit's Rules line also has Lethal Hits and Lance, named only by Paladin’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Rapid Fire','Blast','Melta'],
@@ -6276,8 +6276,8 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
   aura:[
-    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[SUSTAINED HITS 1]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae' },
-    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[IGNORES COVER]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae' }
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[SUSTAINED HITS 1]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae+6a3f9305' },
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[IGNORES COVER]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae+6a3f9305' }
   ],
   // New Recruit's Rules line also has Sustained Hits, named only by Warden’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Devastating Wounds','Bondsman','Ignores Cover','Torrent','Melta'],
@@ -6351,7 +6351,7 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining', readOf:'3a172fd2', readBy:'derive' }
   ],
   aura:[
-    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Cerastus Knight Atrapos (Bondsman, your Command phase), vs TITANIC/TOWERING models', note:'re-roll the hit roll and the wound roll', from:'Atrapos’ Duty', vs:{ any:['Titanic','Towering'] }, oneModel:true, lasts:'round', readOf:'7522a4f2' }
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Cerastus Knight Atrapos (Bondsman, your Command phase), vs TITANIC/TOWERING models', note:'re-roll the hit roll and the wound roll', from:'Atrapos’ Duty', vs:{ any:['Titanic','Towering'] }, oneModel:true, lasts:'round', readOf:'7522a4f2+6a3f9305' }
   ],
   rules:['Code Chivalric','Deadly Demise D6+2','Super-Heavy Walker','Bondsman','Sustained Hits','Blast','Devastating Wounds','Hazardous'],
   kw:['Cerastus','Character','Faction: Imperial Knights','Imperium','Knight Atrapos','Titanic','Towering','Vehicle','Walker']
@@ -6407,7 +6407,7 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
   aura:[
-    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Crusader (Bondsman, your Command phase)', note:'+1 to hit rolls', from:'Crusader’s Duty', oneModel:true, lasts:'round', readOf:'cb466686' }
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Crusader (Bondsman, your Command phase)', note:'+1 to hit rolls', from:'Crusader’s Duty', oneModel:true, lasts:'round', readOf:'cb466686+6a3f9305' }
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Crusader','Questoris','Titanic','Towering','Vehicle','Walker']
@@ -6439,7 +6439,8 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
   guard:[
-    { from:'Selfless Protector', needs:{ all:['Faction: Imperial Knights'] }, kind:'ranged', when:'Not fully visible to every model in the attacking unit because of the Knight Defender', note:'the Benefit of Cover and a 4+ invulnerable save against that attack', calc:{ cover:true, insv:4 }, readOf:'c18b16c5' }
+    { from:'Selfless Protector', needs:{ all:['Faction: Imperial Knights'] }, kind:'ranged', when:'Not fully visible to every model in the attacking unit because of the Knight Defender', note:'the Benefit of Cover and a 4+ invulnerable save against that attack', calc:{ cover:true, insv:4 }, readOf:'c18b16c5' },
+    { from:'Defender’s Duty', needs:{ all:['Faction: Imperial Knights','Armiger'] }, kind:'all', when:'Picked by a Knight Defender (Bondsman, your Command phase)', note:'-1 Damage to each attack allocated to that ARMIGER model', oneModel:true, lasts:'round', readOf:'99bd01da+6a3f9305' }
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Conversion','Sustained Hits','Rapid Fire','Ignores Cover','Hazardous','Blast','Twin-linked','Torrent'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Defender','Questoris','Titanic','Towering','Vehicle','Walker']

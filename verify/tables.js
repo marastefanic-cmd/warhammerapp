@@ -626,6 +626,25 @@ function readSource(D, a, u, m){
   const st = dets.flatMap(d => d.stratagems || []).concat(D.coreStratagems).find(x => x.name === m.from || x.id === m.from);
   return st ? stratText(st) : null;
 }
+// every text a reading of a unit uses, the one it reads first (readSource), then: the rule an ability's tag names that says how it is
+// used (a Bondsman Duty: the Bondsman army rule's pick, 12", until your next Command phase); for a value it sets outright on a weapon
+// (Possessed Lord's A 10, not Battle Protocols' +2), what gave that weapon its value in the list (its from: Relentless Rage, an
+// enhancement). Its readOf is their fingerprints in that order, joined with "+".
+function readSources(D, a, u, m){
+  const main = readSource(D, a, u, m);
+  if(main == null) return null;
+  const F = D.factions[a.faction] || {}, dets = (a.detachments || []).map(d => (F.detachments || {})[d]).filter(Boolean);
+  const rules = (F.armyRules || []).concat(dets.flatMap(detRulesOf)), out = [{ name:m.rule || m.from, text:main }];
+  const put = (name, text) => { if(text != null && !out.some(x => x.name === name)) out.push({ name, text }); };
+  const named = n => { const r = rules.find(x => x.name === n); if(r) return ruleText(r); const e = dets.flatMap(d => d.enhancements || []).find(x => x.name === n); if(e) return e.text;
+    const ab = (u.abilities || []).find(x => x.name === n); return ab ? ab.text : null; };
+  const ab = (u.abilities || []).find(x => x.name === m.from) || (u.abilities || []).find(x => String(x.text || '').includes('**' + m.from));
+  if(ab) for(const t of String(ab.tag || '').split(' · ')){ const r = rules.find(x => x.name === t); if(r) put(r.name, ruleText(r)); }
+  if(m.weapon && m.set){ const w = [].concat(u.ranged || [], u.melee || []).find(x => x.name === m.weapon || x.group === m.weapon);
+    for(const [k, v] of Object.entries(m.set)) if(!/^[+-]/.test(String(v)) && w && w.from && w.from[k]) for(const n of [].concat(w.from[k])) put(n, named(n)); }
+  return out;
+}
+const readFp = srcs => srcs.map(x => fp(x.text)).join('+');
 // verify/derive.js's fixed rules for readings, loaded on first use (derive.js loads this file)
 let deriveReadings_ = null;
 const deriveReadings = (text, name) => (deriveReadings_ || (deriveReadings_ = require('./derive').readingsOf))(text, name);
@@ -708,8 +727,9 @@ function readingTables(R, units, conflicts){
         const [U0, xs0] = [...g.obs.entries()].find(([, xs]) => xs.length);
         const text = readSource(D, U0.a, U0.u, xs0[0].m), d = text != null ? deriveReadings(text, g.from) : null, want = d && d[g.kind] ? d[g.kind] : null;
         const was = g.list.some(o => o[READ_BY] === 'derive');
-        if(want && stable(want) === stable(unFp(g.list))){ g.list = g.list.map(o => Object.assign(unFp(o), { [READ_FP]:fp(text), [READ_BY]:'derive' })); derived.push(g); }
-        else if(was){ g.list = (want || []).map(o => Object.assign({}, o, { [READ_FP]:fp(text), [READ_BY]:'derive' })); g.rederived = true; if(want) derived.push(g); }
+        const dfp = o => readFp(readSources(D, U0.a, U0.u, o) || [{ text }]);
+        if(want && stable(want) === stable(unFp(g.list))){ g.list = g.list.map(o => Object.assign(unFp(o), { [READ_FP]:dfp(o), [READ_BY]:'derive' })); derived.push(g); }
+        else if(was){ g.list = (want || []).map(o => Object.assign({}, o, { [READ_FP]:dfp(o), [READ_BY]:'derive' })); g.rederived = true; if(want) derived.push(g); }
       }
     } else {
       g.agreed = false;
@@ -967,8 +987,8 @@ function sites(D, armies){
     for(const ab of u.abilities || []){ const k = ab.name + '\n' + ab.text + '\n' + stable(READ_COLS.ability.map(c => ab[c])) + '\n' + ab[READ_FP]; if(seenR.has(k)) continue; seenR.add(k);
       rowSite('ARMIES', null, a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, READ_COLS.ability); }
     for(const kind of READ) for(const m of u[kind] || []){
-      const src = readSource(D, a, u, m), k = stable(unFp(m)) + '\n' + src + '\n' + m[READ_FP]; if(seenR.has(k)) continue; seenR.add(k);
-      out.push({ table:'ARMIES', path:null, where:a.id + ' · ' + u.name + ' · ' + kind + ' · ' + m.from + (m.when ? ' (' + m.when + ')' : ''), col:kind, fpKey:READ_FP, has:m[READ_FP], source:src, reading:true, derived:m[READ_BY] === 'derive' });
+      const srcs = readSources(D, a, u, m), k = stable(unFp(m)) + '\n' + stable(srcs) + '\n' + m[READ_FP]; if(seenR.has(k)) continue; seenR.add(k);
+      out.push({ table:'ARMIES', path:null, where:a.id + ' · ' + u.name + ' · ' + kind + ' · ' + m.from + (m.when ? ' (' + m.when + ')' : ''), col:kind, fpKey:READ_FP, has:m[READ_FP], source:srcs && srcs[0].text, sources:srcs, want:srcs && readFp(srcs), reading:true, derived:m[READ_BY] === 'derive' });
     }
   }));
   return out;
@@ -998,7 +1018,10 @@ const stampRows = restamp => (armies, D) => {
       if(typeof ab.def === 'string' && need(ab, 'defOf', ab.text)){ ab.defOf = fp(ab.text); n++; }
       if(READ_COLS.ability.some(c => ab[c] !== undefined) && need(ab, READ_FP, ab.text)){ ab[READ_FP] = fp(ab.text); n++; }
     }
-    for(const kind of READ) for(const m of u[kind] || []){ const src = readSource(D, a, u, m); if(need(m, READ_FP, src)){ m[READ_FP] = fp(src); n++; } }
+    // (a reading's readOf covers every text it uses: one with fewer fingerprints than texts gets the rest; --restamp: all again)
+    for(const kind of READ) for(const m of u[kind] || []){ const srcs = readSources(D, a, u, m); if(!srcs) continue; const want = readFp(srcs), has = m[READ_FP];
+      const fewer = has !== undefined && has.split('+').length < srcs.length && want.startsWith(has + '+');
+      if(has === undefined || fewer || (restamp && has !== want)){ m[READ_FP] = want; n++; } }
   }
   return n;
 };
@@ -1096,7 +1119,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
@@ -1106,11 +1129,19 @@ if(require.main === module){
     const D = evaluate(src), R = read(src), bad = [], all = sites(D, R.armies);
     for(const x of all){
       const what = x.reading ? 'reading' : 'summary';
-      if(x.reading && x.source == null) bad.push('NO TEXT ' + x.where + ': nothing of its unit or list is the text it reads (' + x.col + '); name the rule it reads (from / rule)');
+      if(x.reading && x.source == null && !x.want) bad.push('NO TEXT ' + x.where + ': nothing of its unit or list is the text it reads (' + x.col + '); name the rule it reads (from / rule)');
       else if(x.has === undefined) bad.push('NO FINGERPRINT ' + x.where + ' · ' + x.col + ': ' + (x.reading ? 'read from which text? check the reading against its text' : 'written from which text? check it against its text') + ', then node verify/tables.js --stamp');
+      else if(x.sources){
+        // a reading: each text it uses against its part of readOf
+        const hs = x.has.split('+'), cs = x.sources.map((s, i) => ({ s, now:fp(s.text), was:hs[i] }));
+        const missing = cs.filter(c => c.was === undefined), changed = cs.filter(c => c.was !== undefined && c.was !== c.now);
+        if(changed.length) bad.push('STALE ' + x.where + ' (readOf ' + x.has + '): ' + changed.map(c => 'the text of ' + c.s.name + ' changed (' + c.was + ' → ' + c.now + ')').join('; ') + '; read it again from the new text, then node verify/tables.js --restamp');
+        if(missing.length) bad.push('NO FINGERPRINT ' + x.where + ' for ' + missing.map(c => c.s.name).join(', ') + ' (a text it also uses): check the reading against it, then node verify/tables.js --stamp');
+        if(!changed.length && !missing.length && hs.length > cs.length) bad.push('STALE ' + x.where + ' (readOf ' + x.has + '): it fingerprints ' + hs.length + ' texts, it uses ' + cs.length + ' (' + cs.map(c => c.s.name).join(', ') + '); node verify/tables.js --restamp after checking it');
+      }
       else if(x.has !== fp(x.source)) bad.push('STALE ' + x.where + ' · ' + x.col + ' (' + x.fpKey + ' ' + x.has + ', its text now ' + fp(x.source) + '): the text the ' + what + ' ' + (x.reading ? 'reads' : 'summarises') + ' changed; ' + (x.reading ? 'read it again from the new text' : 'rewrite it from the new text') + ', then node verify/tables.js --restamp');
     }
-    const ai = all.filter(x => !x.reading), rd = all.filter(x => x.reading), ok = xs => xs.filter(x => x.source != null && x.has === fp(x.source)).length;
+    const ai = all.filter(x => !x.reading), rd = all.filter(x => x.reading), ok = xs => xs.filter(x => x.source != null && x.has === (x.want || fp(x.source))).length;
     console.log('fingerprints: ' + ok(ai) + ' of ' + ai.length + ' AI-written values (gist, def) and ' + ok(rd) + ' of ' + rd.length + ' readings (' + rd.filter(x => x.derived).length + ' derived) match the text they were written or read from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
     bad.forEach(b => console.log('  ' + b));
     process.exit(bad.length ? 1 : 0);

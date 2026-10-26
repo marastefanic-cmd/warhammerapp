@@ -122,6 +122,10 @@ function items(D, appSource){
     add('core', 'rule-appnote', name, { note:line }, { rule:name, text:text.split('\n').filter(l => l !== line).join('\n') });
   for(const [re, k] of D.ruleAliases) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
   for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
+  // a sentence verify/readings.js reads as a bonus with no reading, declared no numeric bonus after all (readings-gaps.json
+  // status:'not-applicable', with its why): that declaration, against the ability's words
+  for(const [k, g] of Object.entries(readJSON(path.join(ROOT, 'verify/readings-gaps.json'), {}))) if(g && g.status === 'not-applicable')
+    add('core', 'reading-not-applicable', g.ability + ' · ' + k.split('|')[0], { status:g.status, why:g.why, bonus:g.bonus }, { ability:g.ability, sentence:g.sentence, units:g.units });
   // the code that applies the core rules: reviewed as code, against the rules it implements
   for(const [name, src] of Object.entries(appSource)) add('code', 'code', name, { code:src }, { implements:CODE_RULES[name] || '' });
   return out;

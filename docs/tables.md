@@ -63,27 +63,33 @@ its enhancement or upgrade, the detachment rules whose needs it meets, then the 
 order (the Atrapos's Bringer of Justice before its Damaged line), its entry holds its whole list, a name standing for the rows'
 readings of that name: `mods:['Macro-extinction Protocols','Bringer of Justice','Damaged: 1-10 Wounds Remaining']`; `null`: none.
 What is the list's own stays on its entry with its reason: which unit it leads (`why.kwNote`), the points of its parts
-(`why.ptsNote`), a reading of a row only the list has.
+(`why.ptsNote`), a reading of a row only the list has, and a reading the list has otherwise for a reason of the list: its
+`listWhy` (hidden, signed off as `unit-reading-why`) names it, and it does not count against the row's reading (ooga-booga's
+More Dakka [IGNORES COVER] for the Meganobz' Kombi-weapons; a Possessed Lord's A 11 with the Berzerker Glaive).
 
 **One rule, one reading.** Where two lists hold different readings of one ability (or rule, or enhancement), neither is picked:
 the row has none of them, each list keeps its own on its entry, and `verify/out/tables.md` lists the conflict (Reading
 conflicts) until it is decided against GW's text.
 
-**Fingerprinted.** Each reading carries `readOf`, the first 8 hex of the sha256 of the exact text it was read from (the ability,
-rule, enhancement, core rule or stratagem its `from` / `rule` names: `readSource` in `verify/tables.js`); a row's own reading
-columns share one `readOf` on the row (`READ_COLS`). The gate step `fingerprints` fails on a reading whose text changed (stale:
-read it again from the new text, then `node verify/tables.js --restamp`) and on one with none (check it against its text, then
-`--stamp`). A reading the rule tables of `verify/derive.js` give from the words (`readingsOf`, READING_RULES: a Damaged ability,
+**Fingerprinted.** Each reading carries `readOf`, the first 8 hex of the sha256 of each exact text it was read from, joined with
+`+` (`readSources` in `verify/tables.js`): first the ability, rule, enhancement, core rule or stratagem its `from` / `rule` names;
+then the rule an ability's tag names that says how it is used (a Bondsman Duty: the Bondsman army rule's pick, 12", duration);
+then, for a value it sets outright on a weapon (Possessed Lord's A 10), what gave that weapon its value in the list (its `from`:
+Relentless Rage, Berzerker Glaive). A row's own reading columns share one `readOf` on the row (`READ_COLS`). The gate step
+`fingerprints` checks each text: one that changed is stale (read the reading again from the new text, then `node
+verify/tables.js --restamp`), one with no fingerprint yet is missing (check it against that text, then `--stamp`, which adds it). A reading the rule tables of `verify/derive.js` give from the words (`readingsOf`, READING_RULES: a Damaged ability,
 the core ability Damaged X, a riled-up weapon ability, a characteristic bonus after a charge) is derived: `readBy:'derive'`, and
 `--write` writes it again from the words when they change. `readOf` and `readBy` are hidden from the app, and from the helpers'
 keys: a reading's sign-off (`verify/approvals.json`, keyed on the reading as the app gets it and its source text) is the same
 on whichever row it is kept.
 
-**Complete.** The gate step `readings` (`verify/readings.js`) reads every ability of every list by fixed rules: one saying "if
-this unit is riled up, … [X]" needs a riled-up reading of it on its unit; one granting a weapon ability or a change to its
-attacks' rolls or characteristics under a condition needs a reading of it (a footnote, aura or guard from it, a row reading, a
-value marked on a weapon). Nothing is filled in: the gaps known today are listed in `verify/readings-gaps.json` (and
-`verify/out/readings.md`) for the owner; a new one fails.
+**Complete.** The gate step `readings` (`verify/readings.js`) reads every ability of every list by fixed rules, sentence by
+sentence, and each bonus a sentence states needs a reading of that ability saying it: "if this unit is riled up, … [X]" a
+riled-up reading; a weapon ability or a change to its attacks' rolls or characteristics under a condition a footnote, aura, guard
+or row reading (or a marked value); a defence (Feel No Pain, invulnerable save, -1 Damage, -1 to hit or wound against it) a "When
+targeted" reading (def, guard, calcDef, defCalc, its Rules line's Feel No Pain). Nothing is filled in: a gap is listed in
+`verify/out/readings.md` and `verify/readings-gaps.json` for the owner (a new one fails); one that is no numeric bonus after all
+stays there as `status:'not-applicable'` with its `why`, signed off like a reading (`reading-not-applicable`). There are none today.
 
 ## Columns and their sources
 
