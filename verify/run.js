@@ -44,7 +44,7 @@ catch(e){
   fs.writeFileSync(LOCK, String(process.pid));   // left over from a run that was killed
 }
 process.on('exit', () => { try { if(fs.readFileSync(LOCK, 'utf8') === String(process.pid)) fs.unlinkSync(LOCK); } catch(e){} });
-const node = (args, env) => spawnSync(process.execPath, args, { cwd:ROOT, encoding:'utf8', env:Object.assign({}, process.env, env || {}) });
+const node = (args, env) => spawnSync(process.execPath, args, { cwd:ROOT, encoding:'utf8', env:Object.assign({}, process.env, env || {}, { VERIFY_LISTS:'' }) });
 const steps = {};
 const step = (name, args, env) => {
   const file = args[0];
