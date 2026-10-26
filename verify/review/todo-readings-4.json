@@ -1,0 +1,63 @@
+[
+ {
+  "army": "infernal-lance",
+  "kind": "ability-def",
+  "where": "infernal-lance · Knight Ruinator · Fleshmetal Fusion",
+  "judgement": {
+   "def": "Using Unnatural Fortitude, vs attacks with Damage 1: +1 to armour saving throws"
+  },
+  "source": {
+   "ability": "Fleshmetal Fusion",
+   "text": "**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack."
+  },
+  "key": "6e41ae1a49824413"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "WA",
+  "judgement": {
+   "code": "const WA = 'lethal hits|sustained hits (?:\\\\d+|d3|d6)|devastating wounds|ignores cover|lance|assault|precision|twin-linked|heavy|blast|torrent|melta (?:\\\\d+|d3|d6)|rapid fire (?:\\\\d+|d3|d6)|anti-[a-z -]+ \\\\d\\\\+|(?<!-)hazardous|indirect fire|pistol|extra attacks|cleave \\\\d+';"
+  },
+  "source": {
+   "implements": "verify/readings.js: the weapon abilities a grant can name (Melta / Rapid Fire with a number or D3 / D6; [HAZARDOUS], not [SUPA-HAZARDOUS], a drawback)"
+  },
+  "key": "ea29a02818d7e6e6"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ATTACK",
+  "judgement": {
+   "code": "const ATTACK = [\n  { id:'hit+1',      re:/\\+1 to (?:the |its )?hit\\b|add (?:1|one) to the hit\\b|\\+1 (?:ws|bs)\\b|improve the (?:ballistic|weapon) skill characteristic[^.]*? by (?:1|one)\\b/i, said:/\\+1 to hit|BS improved|WS improved|\"hit\":1/i },\n  { id:'wound+1',    re:/\\+1 to (?:the |its )?(?:hit (?:and|or) )?wound\\b|add (?:1|one) to the (?:hit (?:and|or) )?wound\\b/i, said:/\\+1 to (?:hit (?:and|or) )?wound|\"wound\":1/i },\n  { id:'rr-hit',     re:/re-roll (?:a |the |one )?hit rolls?\\b|re-roll the hit roll/i, said:/re-roll[^|]*?hit|rrHit/i },\n  { id:'rr-wound',   re:/re-roll (?:a |the |one )?(?:hit rolls? (?:and|or) (?:the |a |one )?)?wound rolls?\\b/i, said:/re-roll[^|]*?wound|rrWound/i },\n  { id:'crit',       re:/critical hit (?:is scored )?on (?:an unmodified )?(?:hit roll of )?\\d\\+|unmodified (?:successful )?hit roll of \\d\\+[^.]*?critical hit|scores? a critical hit/i, said:/critical hit|critHit/i },\n  { id:'a+',         re:/\\+\\d+ (?:a|attacks)\\b|add (?:\\d+|d3|one|two) to the attacks|improve the attacks characteristic|attacks characteristic of \\d+/i, said:/\\+(?:\\d+|D3) A\\b|\"A\":\"?[+\\d]|\\battacks? \\+\\d|\\+\\d+ attacks\\b/i },\n  { id:'s+',         re:/\\+\\d+ (?:(?:a|attacks|ws|bs),? (?:and )?)*(?:s|strength)\\b|add (?:\\d+|d3|one|two) to the (?:attacks,? )?(?:and )?strength|strength characteristic of \\d+|gains? \\+\\d+ strength|improve the strength/i, said:/\\+(?:\\d+|D3) S\\b|\"S\":\"?[+\\d]|strength (?:\\+|of )?\\d|improve (?:[A-Z]+,? (?:and )?)*S\\b[^|]*? by \\d/i },\n  { id:'ap',         re:/\\+\\d+ (?:(?:a|s|ws|bs|attacks|strength),? (?:and )?)*ap\\b|improve the (?:[a-z]+,? )*(?:and )?armou?r penetration|improve the ap\\b|an armou?r penetration (?:characteristic )?of -\\d/i, said:/\\bAP\\b/i },\n  { id:'rr-dmg',     re:/re-roll (?:the |a |one )?damage rolls?/i, said:/re-roll[^|]*?damage|rrDmg|rrDamage/i },\n  { id:'d+',         re:/\\+\\d+ (?:(?:a|s|ap|ws|bs|attacks|strength),? (?:and )?)*(?:d|damage)\\b|improve the damage characteristic|improve the (?:[a-z]+,? )*(?:and )?damage characteristics?|add (?:\\d+|one) to the (?:[a-z]+,? )*(?:and )?damage characteristics?|ha(?:s|ve) a damage characteristic of \\d/i, said:/\\+(?:\\d+|D3) D\\b|\"D\":\"?[+\\d]|damage \\+\\d|\\+\\d damage\\b|improve (?:[A-Z]+,? (?:and )?)*D\\b[^|]*? by \\d/i },\n  { id:'hit-1',      re:/this model makes an attack, subtract 1 from the hit roll/i, said:/-1 to hit/i },\n];"
+  },
+  "source": {
+   "implements": "verify/readings.js: the attack bonuses read from the words (+1 to hit / wound, re-rolls of hit, wound and Damage rolls, Critical Hits, +N or improved A / S / AP / D, \"a Strength characteristic of N\") and how a reading says each"
+  },
+  "key": "7f7675245e4f55a2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "DEFENCE",
+  "judgement": {
+   "code": "const DEFENCE = [\n  { id:'fnp',      re:/feel no pain \\d\\+/i, said:/feel no pain|FNP|\"fnp\"/i },\n  { id:'invuln',   re:/\\d\\+\\*? ?(?:invulnerable save|insv)\\b/i, said:/invulnerable|InSv|\\bINV\\b/i },\n  { id:'sv-set',   re:/\\b(?:has|have) an? save characteristic of \\d\\+/i, said:/\\b\\d\\+ (?:save|Sv)\\b|\\bSv\\b|save characteristic|\"sv\"/i },\n  { id:'s-vs',     re:new RegExp('(?:targets? ' + SELF + '|allocated to ' + SELF + ')[^.]*?(?:-1 strength\\\\b|subtract 1 from the strength characteristic)', 'i'), said:/-1 S\\b|-1 Strength/i },\n  { id:'save+1',   re:/\\+1 to (?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)|add (?:1|one) to (?:the |its |any |an )?(?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)/i, said:/\\+1 to (?:armou?r )?sav|\\bsave\\b|\"sv\"/i },\n  { id:'stealth',  re:/\\b(?:has|have|gains?) (?:the )?(?:stealth|benefit of cover)\\b/i, said:/stealth|\"stealth\"|benefit of cover/i },\n  { id:'dmg-1',    re:new RegExp('(?:allocated to ' + SELF + '|made against (?:' + SELF + '|this [A-Z]+\\\\b)|attacks? (?:that )?targets? ' + SELF + '|attacks? allocated to ' + SELF + '|targets? a friendly [^.,]*?(?:unit|model)\\\\b)[^.]*?(?:subtract 1 from the damage|reduce the damage characteristic[^.]*? by 1\\\\b|-1 d\\\\b|-1 damage\\\\b)', 'i'), said:/-1 D\\b|-1 Damage|damage/i },\n  { id:'dmg-half', re:new RegExp('(?:allocated to ' + SELF + '|made against ' + SELF + '|targets? ' + SELF + ')[^.]*?halve the damage', 'i'), said:/halve|half/i },\n  { id:'dmg-0',    re:/change the damage characteristic of that attack to 0/i, said:/damage[^|]* to 0|\"dmg\":0/i },\n  { id:'hit-vs',   re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? (?:targets? |(?:is|are) made against )' + SELF + '[^.]*?(?:subtract 1 from (?:the|that attack[\\\\u2019\\\\x27]s) hit roll|-1 to hit)', 'i'), said:/-1 to (?:the )?hit/i },\n  // an enemy unit's attacks made worse (Reorder Reality, Mischief Makers): a defence of the units it attacks\n  { id:'enemy-hit-1', re:/\\benemy (?:unit|model)s?\\b[^.]*?(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)|(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)[^.]*?\\benemy (?:unit|model)/i, said:/-1 to (?:the )?hit/i },\n  { id:'wound-vs', re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? (?:targets? |(?:is|are) made against )' + SELF + '[^.]*?(?:subtract 1 from the wound roll|-1 to wound)', 'i'), said:/-1 to (?:the )?wound/i },\n  { id:'ap-worse', re:new RegExp('targets? ' + SELF + '[^.]*?(?:worsen the (?:armou?r penetration|ap)\\\\b|-1 ap\\\\b)', 'i'), said:/-1 AP|worsen the AP|\\bAP\\b/i },\n  { id:'t+',       re:/\\b(?:add (?:1|one) to (?:the |its |this model[’']s |the bearer[’']s )?toughness characteristic|\\+1 (?:t|toughness)\\b)/i, said:/toughness|\\+1 T\\b|\\| T\\b/i },\n];"
+  },
+  "source": {
+   "implements": "verify/readings.js: the defences read from the words (Feel No Pain, invulnerable save or InSv, +1 to save rolls, Stealth granted, -1 Damage / -1 D of an attack allocated to or made against the unit, Damage 0, -1 to hit / wound or -1 AP / worse AP against attacks that target it, an enemy unit's -1 to hit; not \"this unit's …\", \"the bearer's …\", \"an enemy model\") and how its \"When targeted\" reading says each"
+  },
+  "key": "2938f8dba93ee6b5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "bonusOf",
+  "judgement": {
+   "code": "function bonusOf(s){\n  const def = DEFENCE.filter(b => b.re.test(s)).map(b => b.id);\n  // (a re-roll that is the enemy's, or one forbidden, is no bonus of the unit: \"your opponent can re-roll\", \"cannot re-roll\"; clause by\n  // clause, so the unit's own re-roll in the same sentence still counts: \"You can re-roll Hit rolls for this unit, and enemy units cannot …\")\n  const ownRr = s.split(/[,;]/).filter(c => !/\\b(?:cannot|can't|can ?not) re-roll\\b/i.test(c) && !(/\\b(?:enemy (?:unit|model|player)s?|your opponent)\\b[^.]*?\\bcan re-roll\\b/i.test(c) && !/\\b(?:you|this (?:unit|model)) can re-roll\\b/i.test(c))).join(',');\n  let att = ATTACK.filter(b => b.re.test(/^rr-/.test(b.id) ? ownRr : s)).map(b => b.id);\n  // (the enemy's -1 to hit is the defence above, not this unit's own -1: Damaged)\n  if(def.includes('enemy-hit-1')) att = att.filter(id => id !== 'hit-1');\n  // (the enemy's +1 to its attacks on this unit is a drawback, not this unit's bonus: \"Each time an attack targets this unit, add 1 to\n  // the Hit roll\")\n  if(new RegExp('(?:an attack|attacks)(?: that)? targets? ' + SELF, 'i').test(s) && !/\\bthis (?:unit|model) makes an? (?:ranged |melee )?attack\\b/i.test(s)) att = att.filter(id => id !== 'hit+1' && id !== 'wound+1');\n  // (an ability a unit loses or that does not apply is no grant: \"if it has the Lethal Hits ability, that ability does not apply\")\n  if(!/\\b(?:that|those|the) abilit(?:y|ies) (?:does|do) not apply\\b|\\b(?:loses?|lost|cannot use|can't use)\\b[^.]*?\\babilit/i.test(s))\n  if(GRANT.test(s)) for(const m of s.matchAll(WA_RE)){ const n = (m[1] || m[2] || m[3] || '').toLowerCase().replace(/ (?:\\d+|d3|d6|\\d\\+)$/, ''); if(n) att.push('wa:' + n); }\n  return { def:[...new Set(def)], att:[...new Set(att)] };\n}"
+  },
+  "source": {
+   "implements": "verify/readings.js: a sentence's attack bonuses and defences (ATTACK, DEFENCE, WA_RE after a grant verb); an enemy's or a forbidden re-roll is none; the enemy's -1 to hit is not the unit's own"
+  },
+  "key": "02cf068e3bc5aeb9"
+ }
+]
