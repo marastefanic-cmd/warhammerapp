@@ -4277,7 +4277,7 @@ function weaponRows(list, keys, mods, u, kind){
 // the footnotes under the weapons say it, its numbers first ("Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] …"); the
 // Damage tab offers it as before
 const oneOffMod = (m, u) => { const ab = ((u && u.abilities) || []).find(x => x.name === m.from);
-  return /\bonce per battle\b/i.test([m.when, ab && ab.tag, ab && ab.text].join(' ')); };
+  return /\bonce per battle\b(?! round)/i.test([m.when, ab && ab.tag].join(' ')); };
 const rowMod = (m, u) => !!(m.weapon && m.set) && !oneOffMod(m, u);
 const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note }) : m;
 function weaponTable(list, kind, mods, u){
