@@ -1606,8 +1606,6 @@ Effects are on the total: models destroyed by the end of the fight, the shooting
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
 
-Nothing here changes this: the target is destroyed in every game anyway.
-
 THE SHOOTING
 FIRST
 RANGED WEAPONS
