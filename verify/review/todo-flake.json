@@ -1,0 +1,15 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "dmRedraw",
+  "judgement": {
+   "code": "function dmRedraw(C){\n  if(DM_CTX !== C) return;\n  const sat0 = C.A ? dmSatWhy(C) : '';\n  C.r = dmGet(C.inX); C.prov = false; C.A = dmAnsOf(C.plan, C.plan.k, C.r);\n  // the list's \"Nothing here changes this\" (and each row's reason for no change) was said from the quick games: said again from\n  // the answer's own 10,000 when they disagree (2,000 games can wipe the target in 99.5% where 10,000 do in 99.4%)\n  const host = $('#dmList');\n  if(host && (C.A ? dmSatWhy(C) : '') !== sat0){ host.innerHTML = dmListHtml(C); for(const lv of C.levers) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx); }\n  const a = $('#dmAns');\n  if(a){ const h0 = a.offsetHeight, t = document.createElement('template'); t.innerHTML = dmCard(C); const n = t.content.firstElementChild;\n    const keys = e => [...e.querySelectorAll('[data-dmc]')].map(x => x.dataset.dmc).join('|');\n    if(keys(a) === keys(n)){ a.classList.remove('prov'); for(const x of n.querySelectorAll('[data-dmc]')){ const o = a.querySelector('[data-dmc=\"' + x.dataset.dmc + '\"]'); if(o.innerHTML !== x.innerHTML) o.innerHTML = x.innerHTML;\n      if(x.hasAttribute('aria-label')) o.setAttribute('aria-label', x.getAttribute('aria-label')); } }\n    else { a.outerHTML = n.outerHTML; dmChipCap(); }\n    const a2 = $('#dmAns'); if(a2.offsetHeight < h0) a2.style.minHeight = h0 + 'px'; }\n  dmStick();\n  // the profile picked shows the answer itself: now from its own 10,000 games\n  for(const lv of C.levers) if(lv.sec === 'prof' && lv.on) for(const el of document.querySelectorAll('[data-fx=\"' + CSS.escape(lv.id) + '\"]')) el.innerHTML = dmFxHtml(C, lv);\n  dmAnchorKeep();\n}"
+  },
+  "source": {
+   "implements": "the answer card, and the list's \"Nothing here changes this\" with each row's reason for no change, said again from the answer's own 10,000 games when they come in after the screen was drawn from the quick 2,000 (dmSatWhy: the target destroyed in every game is A.wipe >= 0.995 of the 10,000, not of the 2,000)"
+  },
+  "key": "4b6421140938837b",
+  "note": "not one of verify/helpers.js's tracked functions (the gate lists none to check): recorded for review of the flake fix. Changed: the dmsat note and lv.zw were left as the provisional (2,000-game) answer said them; defilers-and-friends damage both: 2,000 games wipe 0.9950, 10,000 games 0.9938."
+ }
+]
