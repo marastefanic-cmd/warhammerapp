@@ -3395,7 +3395,7 @@ const ARMIES = [
         { name:'Close-range Killers', na:'No WAR DOG in this list' },
         { name:'Damaged: 1-9 wounds remaining' },
         { name:'*Invulnerable Save' },
-        { name:'Fleshmetal Fusion', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.' }
+        { name:'Fleshmetal Fusion', tag:'Enhancement', def:'Using Unnatural Fortitude, vs attacks with Damage 1: +1 to armour saving throws', text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.', defOf:'be0f3b01' }
       ]
     },
     {
