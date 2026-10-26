@@ -1,0 +1,27 @@
+[
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-weapons",
+  "where": "defilers-and-friends · Maulerfiend",
+  "judgement": {
+   "gear": [
+    [
+     "Maulerfiend fists",
+     "Magma cutter",
+     "Magma cutter"
+    ]
+   ],
+   "weapons": [
+    "Magma cutter",
+    "Maulerfiend fists"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Maulerfiend"
+   ],
+   "leads": null
+  },
+  "key": "eb7cce5b1b61c753"
+ }
+]

@@ -1,20 +1,13 @@
 {
- "_about": "What verify/from-json.js cannot fill mechanically for defilers-and-friends, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). The list was built from its New Recruit PDF (verify/sources/nr/defilers-and-friends.txt) and is rebuilt from the owner’s newer JSON export (25 Oct 2026); the hand work of the units that stay is carried over from that list as signed off. Coterie of the Conceited is in data.js already (its gists, mods, defs and the rule’s footnote stay there: no gists or rules here). units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01: none of this list gives friendly units anything; Fulgrim’s Enthralling Hypnosis (Aura) works on enemy units, so it is no aura entry, as Angron’s Overwhelming Wrath). Each is a judgement verify/helpers.js lists for sign-off.",
+ "_about": "What verify/from-json.js cannot fill mechanically for defilers-and-friends, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). The list was built from its New Recruit PDF (verify/sources/nr/defilers-and-friends.txt) and is rebuilt from the owner’s newer JSON exports (25 Oct 2026, then Defilers_and_friends_2.json: Lucius the Eternal, a Sorcerer, two Maulerfiends and a Chaos Rhino in place of Fulgrim and one Daemon Prince); the hand work of the units that stay is carried over as signed off, and the readings of the units that come back (Lucius the Eternal and Flawless Blades, the Maulerfiend) are the ones the PDF-built list had, signed off then. Coterie of the Conceited is in data.js already (its gists, mods, defs and the rule’s footnote stay there: no gists or rules here). units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01: none of this list gives friendly units anything). Each is a judgement verify/helpers.js lists for sign-off.",
  "units": {
-  "fulgrim": {
-   "notes": {
-    "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  "lucius-the-eternal-flawless-blades": {
+   "labels": {
+    "A Challenge Worthy of Skill": {}
    },
-   "defs": {
-    "Beguiling Form": {
-     "by": "AI (Claude)",
-     "def": "while it is the Daemon Primarch of Slaanesh ability selected: -1 to the hit roll of attacks that target this model",
-     "defOf": "a5a2537f"
-    }
-   },
-   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did. Beguiling Form is one of the three Daemon Primarch of Slaanesh abilities, selected at the start of your opponent’s Command phase (until the start of their next one): its When targeted line says so. Daemonic Speed (Fights First) changes no weapon numbers; Daemonic Poisons is mortal wounds."
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did. A Challenge Worthy of Skill (“Each time this model makes an attack”) reaches Lucius’s weapons only; Daemonic Patrons (“a model in this unit”) every melee attack of the attached unit (Core Rules 19.04)."
   },
-  "daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune": {
+  "daemon-prince-of-slaanesh-with-wings": {
    "defs": {
     "Stimulated by Pain": {
      "by": "AI (Claude)",
@@ -24,15 +17,23 @@
    },
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
   },
-  "daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude": {
+  "sorcerer": {
    "defs": {
-    "Stimulated by Pain": {
+    "Warped Interference": {
      "by": "AI (Claude)",
-     "def": "-1 D to each attack allocated to this model",
-     "defOf": "b9b595b9"
+     "def": "while this model is leading a unit: models in that unit have the Benefit of Cover against ranged attacks",
+     "defOf": "bbaa8f1f"
     }
    },
-   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+   "labels": {
+    "Wracking Agonies": {
+     "ph": [
+      "shooting"
+     ],
+     "turn": "your"
+    }
+   },
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did. Warped Interference works only while the Sorcerer leads a unit, and the export attaches it to none: its When targeted line keeps the condition (no Damage-tab reading, which would give the cover whether or not it leads). Wracking Agonies works on enemy units: no footnote."
   },
   "lord-exultant-infractors": {
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
@@ -40,16 +41,55 @@
   "tormentors": {
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
   },
+  "chaos-rhino": {
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
   "defiler": {
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
   },
   "defiler-2": {
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
+  "maulerfiend": {
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
   }
  },
  "readings": {
   "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, an army or detachment rule, an enhancement), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf; readBy:\"derive\" where verify/derive.js gives it from the words). verify/from-json.js gives each unit the readings of its rows in the order data.js resolves them, then the unit's own (units.<id>.mods / aura / guard; a name there stands for the rows' readings of that name, the list being the unit's whole list). A datasheet not here: data.js's row, else verify/derive.js's derived readings.",
   "datasheets": {
+   "Lucius the Eternal": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "vs CHARACTER, MONSTER or WALKER units",
+      "note": "re-roll the hit roll and the wound roll",
+      "from": "A Challenge Worthy of Skill",
+      "always": true,
+      "vs": {
+       "any": [
+        "Character",
+        "Monster",
+        "Walker"
+       ]
+      },
+      "readOf": "ed251c7c"
+     }
+    ]
+   },
+   "Flawless Blades": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Called upon daemonic patrons when selected to fight (until the end of the phase)",
+      "note": "a Critical Wound on an unmodified wound roll of 3+",
+      "from": "Daemonic Patrons",
+      "calc": {
+       "critWound": 3
+      },
+      "readOf": "6f8249c2"
+     }
+    ]
+   },
    "Lord Exultant": {
     "mods": [
      {
@@ -96,6 +136,35 @@
       "note": "-1 to hit rolls",
       "from": "Damaged: 1-6 wounds remaining",
       "readOf": "2c58235b",
+      "readBy": "derive"
+     }
+    ]
+   },
+   "Maulerfiend": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "Lost any wounds (below Starting Strength)",
+      "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+      "from": "Glutton for Punishment",
+      "pick": [
+       {
+        "name": "Below Starting Strength",
+        "note": "+1 to hit rolls"
+       },
+       {
+        "name": "Below Half-strength",
+        "note": "+1 to hit rolls, +1 to wound rolls"
+       }
+      ],
+      "readOf": "9e1994b5"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-4 wounds left)",
+      "note": "-1 to hit rolls",
+      "from": "Damaged: 1-4 wounds remaining",
+      "readOf": "9c4d4e20",
       "readBy": "derive"
      }
     ]

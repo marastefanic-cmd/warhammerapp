@@ -146,3 +146,4 @@ chaos-space-marines Maulerfiend
 imperial-knights Knight-Defender
 imperial-agents Navigator
 emperors-children Fulgrim
+emperors-children Sorcerer

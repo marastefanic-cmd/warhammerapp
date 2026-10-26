@@ -101,12 +101,6 @@
   "at": "2026-10-16",
   "why": "TARGET \"That MONSTER/VEHICLE unit\": any:[Monster,Vehicle]; picks every Monster/Vehicle in the five lists (all Knights, Rhino, Forgefiend, Defiler, Kans, Dakkarigs, Tyranid monsters…)."
  },
- "016a98503919a698": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "In the DAEMON PRIMARCH OF SLAANESH box (Wahapedia Fulgrim)."
- },
  "017d51a2c5b13890": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -430,6 +424,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Pack 1.2: “In your Shooting phase, you can select one visible enemy unit within 12\" of a friendly WAR DOG unit.”"
+ },
+ "0683187950592830": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "GW’s TRANSPORT box (Wahapedia: “TRANSPORT This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).”) shown as the ability Transport tagged Capacity, the same as the signed-off World Eaters Chaos Rhino (princes, standard)."
  },
  "0691de7b46f3b733": {
   "verdict": "ok",
@@ -994,6 +994,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "WHEN “Your opponent’s Shooting phase, just after an enemy unit has shot” and TARGET “One SKITARII INFANTRY unit from your army that lost one or more models as a result of the attacking unit’s attacks” = “An enemy unit has shot and your unit lost models to those attacks”; EFFECT “Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target” = the rest."
+ },
+ "1016fe171fd26ea1": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Wahapedia: Lord Exultant 95; Infractors “5 models 95”; export 95 + 95 per copy, two copies."
  },
  "102ca050b2ea0b07": {
   "verdict": "ok",
@@ -1697,6 +1703,12 @@
   "at": "2026-10-23",
   "why": "“One TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves”."
  },
+ "1d5146bf15577827": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Ability of the Flawless Blades datasheet; under Core Rules 19.04 (“abilities/rules that affect a unit (or models in it) apply to every model in an attached unit”) it reaches Lucius’s attacks too, which the melee footnote reflects."
+ },
  "1d68fa71eab6355a": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -2393,12 +2405,6 @@
   "at": "2026-10-16",
   "why": "Talons enhancement (an Upgrade); \"Upgrades are a type of enhancement\"."
  },
- "2805f8a92b74ce1a": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia Fulgrim: “In your Shooting phase and the Fight phase, after this model has finished making its attacks … At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit”: Command either turn, your Shooting, Fight either turn. Label right. (Checklist note in the report: its Shooting/Fight part is triggered by Fulgrim’s own attacks, a unit activation.)"
- },
  "281b84719f041718": {
   "verdict": "ok",
   "by": "review:literal",
@@ -2747,6 +2753,12 @@
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit can make a surge move of up to D6\". If your unit is riled up, it can re-roll that D6.”"
  },
+ "2effc4db8142a0ad": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "On Lucius’s own datasheet; “Each time this model makes an attack” = Lucius."
+ },
  "2f1f0d5527dd9aef": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -3046,6 +3058,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "Keeps the 2+ models requirement, the split into one-model units, and each new unit's starting strength of 1. Nothing added."
+ },
+ "345826e38c8ccf88": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "“At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability” (Wahapedia ds/emperors-children_Lucius-the-Eternal): the Fight phase, either turn; same label as the signed-off PDF-built Lucius (result-defilers-and-friends 59226a4946203f43). In this list he leads Flawless Blades, so it does nothing until that unit is gone; the text carries that condition."
  },
  "346475051be17cf3": {
   "verdict": "ok",
@@ -4175,6 +4193,12 @@
   "at": "2026-10-16",
   "why": "\"Your opponent's Movement phase\"."
  },
+ "47536d26c2754edf": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Feel No Pain 5+ and Lone Operative are Lucius’s CORE ABILITIES only (Flawless Blades has none). Lone Operative is inert while he leads the unit (“Unless part of an attached unit”), which the rule’s own text says."
+ },
  "4774dce1cee6cd0b": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -4487,23 +4511,11 @@
   "at": "2026-10-21",
   "why": "TARGET: “One ADEPTUS MECHANICUS unit from your army that has not been selected to fight this phase”: Faction: Adeptus Mechanicus, every unit here."
  },
- "4cd529fe0c08ce1a": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Export: Daemonic blades, Malefic lash, Serpentine tail. Wahapedia (“equipped with: malefic lash; daemonic blades; serpentine tail”): Malefic lash 12\" 6 2+ 8 -2 2 [SUSTAINED HITS 1]; Daemonic blades strike 6 2+ 14 -3 D6+1 and sweep 12 2+ 8 -2 2, both [SUSTAINED HITS 1]; Serpentine tail 6 2+ 6 -1 1 [EXTRA ATTACKS]. The rows and data.js agree."
- },
  "4cdc719b5cdc72ec": {
   "verdict": "ok",
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"the Command phase\", which can be either player's."
- },
- "4d26b7e3e0a1210a": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "“While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll”: all attacks, -1 to hit. Right."
  },
  "4d4bd04ff488a071": {
   "verdict": "ok",
@@ -4786,12 +4798,6 @@
   "by": "review:r23-army (its fix)",
   "at": "2026-10-22",
   "why": "The text has two triggers. “Each time you make a Blessings of Khorne roll” is at the start of the battle round (Blessings of Khorne: “at the start of the battle round, you can make a Blessings of Khorne roll”) or via Skulls for the Skull Throne! (Fight phase): the new at:“Start of the battle round” (gStep → round: shown in the round’s first Command phase only, not under Command abilities 08.04) plus fight cover it, and that is what the play test (g5 F13) asked for. But “each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit, and the Lord’s unit (plasma pistols, bolt pistols, GRENADES for Explosives; not TITANIC, so Fire Overwatch at the end of your opponent’s Movement phase) can destroy units in your Shooting phase and their Movement phase too. Dropping those two phases drops where that sentence triggers, against the app’s convention for attack-triggered abilities (Hunter of Souls: movement opp, shooting your, fight either; the fixlist keeps Fire Overwatch “opp movement” tags as deliberate) and against the earlier sign-off of exactly these tags for this text (result-literal 52c3668253df7eb6). Keep the at (it alone fixes the Command placement; in the other phases place() gives “during”) and restore the phases."
- },
- "52fa7ccc32d13def": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Export: Lord with bolt pistol, close combat weapon, Phoenix power spear and rapture lash (the rapture lash replaces the plasma pistol, GW’s option); Obsessionist with rapture lash and plasma pistol; 4 Infractors with bolt pistol and duelling sabre. Wahapedia: Lord bolt pistol 12\" 1 2+ 5 -1 1; CCW 6 2+ 5 0 1; spear 5 2+ 7 -2 2 [LANCE]; Lord’s rapture lash 4 2+ 4 -1 1 [EXTRA ATTACKS]. Infractors: plasma pistol 1 3+ 7/-2/1 and 8/-3/2 [HAZARDOUS]; bolt pistol 1 3+ 5 -1 1; rapture lash 6 3+ 4 -1 1 [PRECISION]; duelling sabre 4 3+ 5 -1 1 [PRECISION]. Every number matches, and [LETHAL HITS] comes from Perfectionists."
  },
  "530787891908c7bc": {
   "verdict": "ok",
@@ -5495,6 +5501,12 @@
   "at": "2026-10-24",
   "why": "WHEN “Your Charge phase”. Matches GW word for word; 1CP."
  },
+ "5fcdb9a239c61138": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Export: Sorcerer with Agonising Energies, Bolt pistol, Force weapon; Wahapedia: “This model is equipped with: Agonising Energies; bolt pistol; force weapon.” Profiles: witchfire 18\" D6 3+ 5 -1 D3 [PSYCHIC]; focused witchfire 18\" D6 3+ 6 -2 D3 [DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC]; Bolt pistol 12\" 1 3+ 5 -1 1 [PISTOL] (Faction Pack: S5 AP-1 for the Sorcerer); Force weapon 4 3+ 6 -2 D3 [PSYCHIC]. All match."
+ },
  "5fddcb4a9888632d": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -5776,12 +5788,6 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
- },
- "64c6a9b5ffb0212d": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia: Infractors KEYWORDS have BATTLELINE and INFRACTORS; Lord Exultant has neither. The note is right."
  },
  "64e2fb903ae42f9e": {
   "verdict": "ok",
@@ -6118,6 +6124,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Borne by the Dark Apostle (export: under the Dark Apostle model)."
+ },
+ "6bdb0896448f33c1": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "On Lucius the Eternal’s own datasheet (“this model”). Models lines match the export: 1× Lucius the Eternal, 3× Flawless Blade."
  },
  "6c01bc8bce6ada5b": {
   "verdict": "ok",
@@ -6473,12 +6485,6 @@
   "at": "2026-10-24",
   "why": "Ranged attacks: their Movement + your Shooting, as approved Total Obliteration."
  },
- "71f9f9d7d8f93fd4": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia: Lord Exultant 95 (1st to 2nd unit), Infractors 5 models 95. Export 95 + 95, twice. 190 each."
- },
  "7216fa448a775e9a": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -6682,12 +6688,6 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": all attacks, phases stated."
- },
- "75743b3fd99937b9": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "“each time that [enemy] unit is selected to Fall Back”: the enemy’s Movement phase. Their Movement, the same as Angron’s Overwhelming Wrath. The checklist rightly leaves it out, because it is an enemy activation."
  },
  "758c11eada2dd44a": {
   "verdict": "ok",
@@ -6905,6 +6905,12 @@
   "at": "2026-10-24",
   "why": "Export: Champion bolt pistol (autopistol replaced, a Wahapedia option) + brutal assault weapon; 9 Cultists autopistol + BAW. Counts right; Cultist bolt pistol stays S4 AP0 (not in the Faction Pack bolt pistol list). 10 models 50 pts."
  },
+ "79861bb664ff2e9a": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "GW: “While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.” The line keeps the condition, adds nothing. The export attaches the Sorcerer to no unit, so a conditional When targeted line (and no Damage-tab guard) is the right way to show it: shown, its condition marked."
+ },
  "799223ddd1aedeaf": {
   "verdict": "ok",
   "by": "review:exiled-2",
@@ -6916,6 +6922,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is a Blood Legion enhancement (Wahapedia: “Gateway Unto Damnation 10 pts”). The bearer is a LEGIONES DAEMONICA KHORNE MONSTER, which is legal."
+ },
+ "79be6437c1fd2ce8": {
+  "verdict": "ok",
+  "by": "review:defilers-and-friends",
+  "at": "2026-10-22",
+  "why": "Gear matches NR's four Options lines (Icon of Excess left off the gear, kept in the line name); rows \"Bolt pistol - Lord Exultant\", \"➤ Plasma pistol - standard/supercharge - Infractors\", \"Bolt pistol (x4) - Infractors\", CCW, Phoenix power spear, Rapture lash (Lord), \"Power sword - Infractors\", \"Duelling sabre (x4) - Infractors\" (1 + 3 + 0 and 3 + 1 = 4)."
  },
  "79c543e400e00cba": {
   "verdict": "ok",
@@ -6976,12 +6988,6 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting + Fight."
- },
- "7a8239d44ce90cc5": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia ds/emperors-children_Fulgrim: box “DAMAGED: 1-6 WOUNDS REMAINING”, W 16. Band and W right."
  },
  "7a94c964a5582ba2": {
   "verdict": "ok",
@@ -7727,12 +7733,6 @@
   "at": "2026-10-21",
   "why": "\"that unit’s CHARACTER models’ melee attacks can have: [CLEAVE 1]. Or: +1 AP.\" Two picks, each scoped to \"CHARACTER models\", with exactly those effects; \"can have\" is the player’s choice, so unticked is right. needs WORLD EATERS + Character, none Epic Hero matches \"(excluding EPIC HERO units)\" (an attached unit with Khârn has EPIC HERO, 19.03)."
  },
- "87c721d03b8cc5dd": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia ds/emperors-children_Fulgrim: Beguiling Form is in the DAEMON PRIMARCH OF SLAANESH box, which “select one of the abilities in the Daemon Primarch of Slaanesh section” picks from; the same form as Angron’s “Wrathful Presence: pick one”. One model."
- },
  "87c8aa2640b1c554": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -7931,12 +7931,6 @@
   "at": "2026-10-16",
   "why": "Labels: PRECISION, [PRECISION] (incl. Epic Challenge); all 24.28."
  },
- "8b043d4d14b16e50": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia ds/emperors-children_Fulgrim: “At the start of your opponent’s Command phase, select one of the abilities …”: Command, their turn. The “until the start of your opponent’s next Command phase” is a duration, rightly cut out by the derive.js change."
- },
  "8b058ec31b3d13ed": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -8086,6 +8080,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Pulse Jet says “this unit can make a pulse jet move”. That opens the Pulse Jet Move entry, the special move type on Wahapedia’s Orks army-rules page (“PULSE JET MOVE / MAXIMUM DISTANCE: Pulse roll + 18\"”)."
+ },
+ "8c9c87d9c4c04412": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Wahapedia ds/emperors-children_Sorcerer: “Wracking Agonies (Psychic)”."
  },
  "8c9ce8dfdf6de924": {
   "verdict": "ok",
@@ -8513,12 +8513,6 @@
   "at": "2026-10-24",
   "why": "It is a Bloodletters wargear ability."
  },
- "94c8f99e73103b6d": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia prints “Enthralling Hypnosis (Aura):”. It has no aura entry because it affects enemy units, the same as Overwhelming Wrath."
- },
  "94e27aa796426add": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -8656,6 +8650,12 @@
   "by": "review:exiled-2",
   "at": "2026-10-24",
   "why": "\"At the start of any phase\" and the battle-shock effects apply in both players' turns: either. The FAQ line does not change this."
+ },
+ "97d4143741e1881a": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Wahapedia: Lucius “1 model 130”, Flawless Blades “3 models 95”; the export: Lucius the Eternal 130, Flawless Blades 95 (3 models). 225 total."
  },
  "980ff948d3a100d1": {
   "verdict": "ok",
@@ -9136,6 +9136,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"TARGET: One THOUSAND SONS PSYKER unit\"."
+ },
+ "9efd39853175103b": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Reads GW’s “you can re-roll the Hit roll and you can re-roll the Wound roll” for attacks that target CHARACTER, MONSTER or WALKER units; always:true and vs any of the three are right; identical to the signed-off PDF-built footnote. The Damage tab scopes it to Lucius’s weapons (“for Blade of the Laer”, “none of the ticked weapons” for the Blades’ bolt pistols)."
  },
  "9f3efe1dbebf9a4c": {
   "verdict": "ok",
@@ -9731,6 +9737,12 @@
   "at": "2026-10-16",
   "why": "\"Friendly BEAST SNAGGA units' attacks\": selects Mozrog and both Beastbosses."
  },
+ "a84033528705b3fc": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "“Units can disembark from this TRANSPORT after it has Advanced” (Wahapedia ds/emperors-children_Chaos-Rhino): your Movement phase."
+ },
  "a84a61e9ae0e111f": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -9874,6 +9886,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "“Your opponent’s Shooting phase”: opp."
+ },
+ "ab6b3384ccb074cc": {
+  "verdict": "ok",
+  "by": "review:defilers-and-friends",
+  "at": "2026-10-22",
+  "why": "\"if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well\"; one model: below Starting Strength = \"remaining wounds are less than its W\" (01.02.01), so \"Lost any wounds\" is the same; the two states are a pick, nothing added."
  },
  "abba383d56822d89": {
   "verdict": "ok",
@@ -10024,6 +10042,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” Same."
+ },
+ "ae0771b1b0787b21": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Unchanged from the signed-off list: Battleline and Infractors are the Infractors’ (Wahapedia ds/emperors-children_Infractors) only. Weapons now show Power sword 4 3+ 5 -2 1 [PRECISION] (Wahapedia; Faction Pack “Infractors, Melee Weapons, Power Sword: Change Strength characteristic to ‘5’”), matching the export’s Obsessionist “Power sword, Plasma pistol” in both units."
  },
  "ae079e36c5bafef8": {
   "verdict": "ok",
@@ -10379,6 +10403,12 @@
   "at": "2026-10-24",
   "why": "GW: \"While this model is within 3\\\" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.\" Faithful."
  },
+ "b4070d441c4828c0": {
+  "verdict": "ok",
+  "by": "review:defilers3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Movement · Your turn is wrong: the effect is on the enemy unit hit (“subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it”), from your Shooting phase “until the start of your next turn”, so your own Movement phase is never inside it; derive.js’s move-own rule (verify/derive.js:116, “its Move characteristic: your Movement phase”) reads the enemy’s Move characteristic as this unit’s own. The signed-off Thousand Sons Binding Tendrils (mucho-mutantes, word-for-word the same ability with Arcane Fire / ensnared) stores {ph:[shooting], turn:your}, the trigger, with this exact derived label listed as a difference in verify/out/derive.md. Fix to match: verify/sources/hand/defilers-and-friends.json units.sorcerer.labels[\"Wracking Agonies\"] = {\"ph\":[\"shooting\"],\"turn\":\"your\"}."
+ },
  "b43ebd69f2ae39b4": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -10414,6 +10444,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "A Stratagem can target a unit in any phase of either turn."
+ },
+ "b4d0115d4d402666": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Lucius’s keywords (Wahapedia): Infantry, Character, Epic Hero, Chaos, Slaanesh, Lucius the Eternal; Flawless Blades’: Infantry, Grenades, Chaos, Slaanesh, Flawless Blades. Grenades and Flawless Blades are the led unit’s only."
  },
  "b4d8681ec8000012": {
   "verdict": "ok",
@@ -10739,6 +10775,12 @@
   "at": "2026-10-24",
   "why": "Vexilla is the Allarus wargear ability (one model has it: NR line 3x Allarus: Vexilla on one). Text matches Wahapedia."
  },
+ "baee5fef4d4573fe": {
+  "verdict": "ok",
+  "by": "review:defilers-and-friends",
+  "at": "2026-10-22",
+  "why": "NR Options: Lucius \"Blade of the Laer, Lash of Torment, Warlord\" (Warlord is not gear), 3x Flawless Blade \"Blissblade, Bolt pistol\"; weapon rows \"Bolt pistol (x3) - Flawless Blades\", \"Blade of the Laer - Lucius\", \"Lash of Torment - Lucius\", \"Blissblade (x3) - Flawless Blades\"."
+ },
  "bafa6623bf26d1a9": {
   "verdict": "ok",
   "by": "review:defilers2-b (its fix)",
@@ -10972,12 +11014,6 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Faction Pack v1.2 Rules Updates: Knight Errant Damaged \"While this model has 1-9 wounds remaining\"; W 26."
- },
- "bf2b8a4d97fc7a14": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia Coterie of the Conceited enhancement, 25 pts (export 25). “The first time the bearer is destroyed” sets no once-per limit in GW’s form. Enhancement only is right."
  },
  "bf30d07404212c80": {
   "verdict": "ok",
@@ -11897,12 +11933,6 @@
   "at": "2026-10-22",
   "why": "“Start of the Fight phase”, no “your”: either turn."
  },
- "cf37a59bea3dfc68": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "Wahapedia core.txt 25.04 Fill Your Army Roster has the quoted sentences word for word; the same note as the other Supreme Commander units (Guilliman, Ghazghkull). Fulgrim is the Warlord in the export."
- },
  "cf3efc5a4a626bc8": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -12299,6 +12329,12 @@
   "at": "2026-10-24",
   "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” Shooting and Fight are what the WHEN names."
  },
+ "d5f1b73968c41a7f": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "“Each time this unit is selected to fight … until the end of the phase … At the end of the Fight phase”: Fight phase, either turn (Wahapedia ds/emperors-children_Flawless-Blades); same as the signed-off PDF-built list."
+ },
  "d670be3723cdd038": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -12340,6 +12376,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"At the end of your Charge phase\" = Charge phase, your turn."
+ },
+ "d6f6324bc0121862": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "“Each time this model makes an attack”: the Maulerfiend has ranged magma cutters (6\"), so Fire Overwatch (their Movement), your Shooting and the Fight phase all apply; the same label as the signed-off Defiler’s Revel in Desecration in this list."
  },
  "d705ebb5f99fbdc7": {
   "verdict": "ok",
@@ -12568,12 +12610,6 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "WHEN (Pack 1.2 Rules Update, which the data has): “Your opponent’s Shooting phase or the Fight phase” = Shooting, Fight."
- },
- "dc14f62a0885eef5": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "“This model has the Fights First ability”: Fights First is used in the Fight phase, either turn. Label right. (Checklist note in the report: it belongs in Active now, not in When unclear.)"
  },
  "dc210ef8cb21a370": {
   "verdict": "ok",
@@ -13163,6 +13199,12 @@
   "at": "2026-10-24",
   "why": "This is the export's loadout model for model. Aemelia and Gaius: Archeotech Laspistol + Power Weapon. Gadriel: Bolt Rifle + Ceramite Fists. Dainal: Astropathic Blast + Force Stave. Lucia: Laspistol + Ultramarian Combat Weapons. Metaurus: Heavy Bolt Pistol + Master-crafted power weapon. Bladeguard Sergeant: Neo-volkite Pistol (a legal swap for the Heavy Bolt Pistol) + MCPW. 5 Veterans: Heavy Bolt Pistol + MCPW. The counts are right: Laspistol ×3, Power Weapon ×2, Heavy Bolt Pistol ×5 (BG), MCPW ×6 (BG). All profiles match Wahapedia, including the Wardens' Master-crafted Power Weapon [PRECISION] (A5 WS2+) and the Bladeguard's (A4 WS3+)."
  },
+ "e633f5f46102874c": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "Wahapedia ds/emperors-children_Sorcerer: “Warped Interference (Psychic)”."
+ },
  "e6593957c1bf983f": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -13510,6 +13552,12 @@
   "by": "review:navigator",
   "at": "2026-10-25",
   "why": "This Destrier has Questoris heavy stubber, titanic feet, chastiser gatling cannon and frag bombard (export). Thundercharge needs “a thundershock spear and a bellatus reaper chainsword”, and no unit in the list has them. The wording is the same as the approved Destriers in 6-bigs and 4-megas."
+ },
+ "eb7cce5b1b61c753": {
+  "verdict": "ok",
+  "by": "review:defilers3b",
+  "at": "2026-10-26",
+  "why": "Export: Maulerfiend fists + “2 magma cutters” (2× Magma cutter); gear keeps the export’s two. Weapons: one Magma cutter row (6\" A2 3+ S9 -4 D6 [MELTA 2]) and Maulerfiend fists. GW prints one profile, “Magma cutters” A2, for the pair (Wahapedia ds/emperors-children_Maulerfiend: “This model’s lasher tendrils can be replaced with 2 magma cutters”; the same pattern on GW’s EC Faction Pack Defiler, lines 284/321). Where GW means two weapons it names the profile in the singular (Chaos Predator Destructor “2 heavy bolters”, “Heavy bolter”). So n 1 (2 attacks in total) is GW’s number, with New Recruit’s name kept and the deviation declared (deviations-bsdata.json field ranged.n; the code writes kind + '.n', so melee.n for a melee pair)."
  },
  "eba8309b22fe4885": {
   "verdict": "ok",
@@ -13895,6 +13943,12 @@
   "at": "2026-10-21",
   "why": "NR roster: \"Nazdreg Epic Hero 165\" and \"(5) Meganobz Infantry 200 Nazdreg\"; header \"365 PTS\". 165 + 200 = 365."
  },
+ "f3b278734996b305": {
+  "verdict": "ok",
+  "by": "review:defilers3",
+  "at": "2026-10-26",
+  "why": "“an unmodified Wound roll of 3+ scores a Critical Wound” after calling upon daemonic patrons when selected to fight, until the end of the phase: melee (selected to fight), critWound 3. The cost (one model destroyed if nothing was killed) is in the text, not a number. Same as the signed-off PDF-built reading."
+ },
  "f3d8fa561325a985": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -14086,12 +14140,6 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is a Bloodletters wargear ability."
- },
- "f8bf3f4afca87ed3": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "In the DAEMON PRIMARCH OF SLAANESH box (Wahapedia Fulgrim); the same as Angron’s pick-one abilities."
  },
  "f8c54369f7043c1b": {
   "verdict": "ok",
@@ -14326,12 +14374,6 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "WHEN: \"when an enemy unit has shot\"; TARGET: \"One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks\"; EFFECT: \"Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.\" The gist puts the trigger first, shortened (the phase is left out, as in the allowed \"After shooting:\" example). \"hit yours\" comes from the TARGET, and \"only at that enemy unit\" = \"can only target that enemy unit\". Nothing added."
- },
- "fcde1eced3883f3c": {
-  "verdict": "ok",
-  "by": "review:defilers2",
-  "at": "2026-10-26",
-  "why": "GW: “Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.” The line says just that, and adds the condition that it is the selected Daemon Primarch ability. Faithful, nothing added."
  },
  "fce594ee62eae82d": {
   "verdict": "ok",

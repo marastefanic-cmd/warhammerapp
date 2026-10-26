@@ -1173,7 +1173,9 @@ function ruleTables(D){
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
       const rs = [];
       const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
-      const cond = (/^(while|if|when|until) [^,]+/i.exec(plain(sent)) || [])[0];
+      // (the condition opens the sentence, or follows the moment it is checked at: Duellist’s Hubris, "At the start of the Fight phase; if
+      // this model is not leading a unit, …")
+      const cond = (/^(?:at the (?:start|end) of [^,;]+[,;] )?((?:while|if|when|until) [^,]+)/i.exec(plain(sent)) || [])[1];
       const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
       // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
       const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;

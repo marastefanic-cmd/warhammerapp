@@ -30,7 +30,9 @@ Text made with `pdftotext -layout <pdf> <txt>` (poppler).
 A list rebuilt from the owner’s newer New Recruit JSON export (`verify/from-json.js`) no longer has its PDF text here: `verify/nr.js` then
 checks it against the export (`nr-json/<id>.json`), and git history keeps the old text. Defilers and friends: nr/defilers-and-friends.txt
 (Defilers and friends - New Recruit.pdf, exported 10/22/26, sha256 fb7b785ca640f46895d0564984d92f0e2cad94d17d4461baea038e9ceb09106f) was
-superseded by its JSON export of 25 Oct 2026 (Fulgrim in place of Lucius the Eternal) and removed.
+superseded by its JSON export of 25 Oct 2026 (Fulgrim in place of Lucius the Eternal) and removed. That export was in turn replaced
+by the owner's newer one of 26 Oct 2026 (Defilers_and_friends_2.json: Lucius the Eternal, a Sorcerer, two Maulerfiends and a Chaos
+Rhino in place of Fulgrim and one Daemon Prince); git history keeps the older one.
 
 ## Downloaded into verify/.cache (not committed), see verify/fetch.sh
 - BSData wh40k-11e at a pinned commit (the data New Recruit is built from)
