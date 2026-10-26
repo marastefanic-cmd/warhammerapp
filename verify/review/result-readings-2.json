@@ -1,0 +1,35 @@
+[
+ {
+  "key": "278ee97ac60f3925",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "Possessed Lord (data.js = Wahapedia World Eaters Slaughterbound, word for word): once per battle, at the start of the Fight phase; until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model, and those weapons have [DEVASTATING WOUNDS]. set:{A:'+3'} on the Lacerator and daemonic claw, kind melee, the when and the note say exactly that and nothing more. It is right in every detachment and every list: the calculator adds a relative set value to the list's A (calc.js setOf), so A 7 (datasheet 6 + Relentless Rage) gives 10 and the Glaive's A 8 gives 11, as the earlier fix said. The listWhy and the list's own reading are gone; readOf is Possessed Lord's text only (5648d8fa). Tested on a scratch copy: changing the texts of Relentless Rage and Berzerker Glaive (all three copies) leaves it fresh, as it should for a +3. Rendered: princes and standard show the profile's A (7, and 8 with the Glaive) in the cell and one footnote \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\" per unit. Against main 558a750 those are the only changes in those two lists."
+ },
+ {
+  "key": "360b6d45483975a2",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "verdict": "ok",
+  "why": "Defender's Duty matches Wahapedia (verify/.cache/waha/ds/imperial-knights_Knight-Defender.html) word for word: \"While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.\" That covers every attack, ranged or melee, so kind all is right. A guard is the right place: it protects another model, the picked ARMIGER, not the Knight Defender, so there is no selfWhen. The note \"-1 Damage to each attack allocated to that ARMIGER model\" says only what the text says. The Bondsman rule (Wahapedia Imperial Knights army rules) supplies the rest. The pick is made in your Command phase (when), and it is one friendly ARMIGER model (needs Armiger, oneModel) until the start of your next Command phase (lasts round). The same conventions as the five reviewed Duty readings: \"Faction: Imperial Knights\" in needs narrows nothing, and 12\" is left out of when, as on the others. readOf 99bd01da+6a3f9305 covers the Duty and Bondsman. Changing either text makes it stale (tested); changing Code Chivalric does not. No list has an ARMIGER model, so nothing renders (no snapshot change, as expected). Guards feed only the \"When targeted\" lines, not the calculator, as with Selfless Protector."
+ },
+ {
+  "key": "e04c4c102872b188",
+  "where": "oneOffMod",
+  "verdict": "fix",
+  "why": "Today it classifies correctly. Of the 4 readings with weapon and set, only Possessed Lord is a one-off; Blitz Dem Gitz! (vs non-MONSTER/VEHICLE, always), Vengeance for the Omnissiah (after a VEHICLE dies, for the rest of the battle) and Battle Protocols (a protocol picked each Command phase) have no \"once per battle\" in their when, tag or text, so they rightly stay in the cells (\"8 (+6)\", \"/6\", \"(+2)\"). But the test is too wide. (1) /\\bonce per battle\\b/ also matches \"once per battle round\": \\b falls between \"battle\" and \" round\". data.js has 9 tags \"Once per battle round…\" and 13 such phrases in texts, and the test already returns true for Necromechanic (when \"once per battle round\", a guard, so no effect today). A future per-round reading with weapon and set would leave the cell wrongly. (2) Matching the whole ability text catches an ability that has an always-on bonus and a separate once-per-battle sentence. Possessed Lord says it in both when and tag, so the text adds nothing that tag and when do not already cover. Every once-per-battle ability in data.js carries a \"Once per battle\" tag, so dropping the text test misses none of today's readings. Not covered either way: \"twice per battle\" (tag \"Once per turn, twice per battle, per unit\") is not a one-off by this rule; the owner's rule says once per battle, so that is consistent.",
+  "fix": {
+   "code": "const oneOffMod = (m, u) => { const ab = ((u && u.abilities) || []).find(x => x.name === m.from);\n  return /\\bonce per battle\\b(?! round)/i.test([m.when, ab && ab.tag].join(' ')); };"
+  }
+ },
+ {
+  "key": "c634c20bf40c94c7",
+  "where": "rowMod",
+  "verdict": "ok",
+  "why": "A weapon row shows a reading in its numbers only when it changes that weapon (weapon and set) and is not a one-off. It is used in all three places that used to test m.weapon && m.set: weaponBlock's cell, searchIndex's search line (e.vm), and the footnote filters in weaponTable and unitWeapons. So a reading is shown in the row or in the footnotes, never both and never neither. The Damage tab does not use it (dmEffects/line 1913 still reads m.set), so Possessed Lord stays offered there, and calc.js adds a \"+3\" set to the list's A. Rendered: Blitzkannon, Omnissian axe, Incendine combustor and Twin Kastelan fist cells are unchanged against main; only the Possessed Lord cells change (7/10 to 7, 8/11 to 8). Depends on oneOffMod (see its fix)."
+ },
+ {
+  "key": "ae0fc45e1ad36ce8",
+  "where": "footMod",
+  "verdict": "ok",
+  "why": "For a one-off weapon reading, the footnote gets the weapon and its numbers before the note: \"+3 A\" for a relative value, \"A 6\" for a set one. The rendered line is exactly what the owner asked for: \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\". It appears once per unit, deduplicated after footMod. Other readings pass through unchanged. Minor, non-blocking: a future one-off weapon reading with no note would print \"… +3 A undefined\". Every weapon-and-set reading in data.js has a note today. [m.weapon, …, m.note].filter(Boolean).join(' ') would guard it."
+ }
+]
