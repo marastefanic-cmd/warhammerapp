@@ -21,6 +21,13 @@
                   allocated to it, Damage 0, -1 to hit / wound or worse AP against attacks that target it (DEFENCE). Said by its
                   "When targeted" readings: def, calcDef, defCalc, a guard line, the Feel No Pain on its Rules line, a marked InSv.
                   "An attack that targets this unit's …", "the bearer's …", "allocated to an enemy model" are not defences.
+   Also read: a qualified bracket ("[LETHAL HITS: non-MONSTER/VEHICLE]") or a bare one after have / has ("have Sustained Hits 1"),
+   "improve the Strength / AP / Damage", "+1 Damage", a re-roll of the Damage roll; defences "-1 D", "-1 AP" or "worsen the AP" on
+   attacks that target it, "has 4+ InSv", "subtract 1 from the Damage" (of an attack allocated to or made against it), "subtract 1
+   from that attack's Hit roll", Stealth granted, "+1 to save rolls", and an enemy unit's -1 to hit. A bonus to a roll (hit, wound,
+   re-roll, Critical Hit) needs a reading with no condition too: no weapon value shows it. An earlier sentence's condition counts
+   only for a sentence that refers back to it ("If it does", "that unit", "those weapons", "Until …"); an enemy's re-roll, or one
+   the rule forbids ("cannot re-roll"), is no bonus of the unit.
    An ability the list cannot use (na), or an option for a keyword the unit does not have ("If this model has the TZEENTCH
    keyword" on a Daemon Prince of Khorne), is not checked.
 
@@ -64,7 +71,12 @@ const CONDITION = new RegExp([
   '\\bthat targets?\\b', '\\bagainst [A-Z]', '\\bagainst (?:an? |the )?[a-z]+ (?:units?|models?)\\b', '\\bmade a charge move\\b', '\\bwithin \\d+"', '\\bon a turn\\b',
   '\\bfor (?:every|each) \\b', '\\bduring the battle round in which\\b', '\\bselect(?:s|ed)? (?:one|a)\\b'].join('|'), 'i');
 const WA = 'lethal hits|sustained hits (?:\\d+|d3|d6)|devastating wounds|ignores cover|lance|assault|precision|twin-linked|heavy|blast|torrent|melta \\d+|rapid fire \\d+|anti-[a-z -]+ \\d\\+|hazardous|indirect fire|pistol|extra attacks|cleave \\d+';
-const WA_RE = new RegExp('\\[(' + WA + ')\\]|\\b(?:the )?(' + WA + ')(?:\\]| abilit(?:y|ies)\\b| and (?:the )?\\[?(?:' + WA + ')\\]? abilities\\b)', 'gi');
+// in brackets (a qualified one too: "[LETHAL HITS: non-MONSTER/VEHICLE]"), named as an ability ("the Lethal Hits ability"), or bare
+// after have / has / gain ("have Sustained Hits 1")
+const WA_RE = new RegExp('\\[(' + WA + ')(?::[^\\]]*)?\\]|\\b(?:the )?(' + WA + ')(?:\\]| abilit(?:y|ies)\\b| and (?:the )?\\[?(?:' + WA + ')\\]? abilities\\b)|\\b(?:ha(?:s|ve)|gains?) (?:the )?(' + WA + ')\\b', 'gi');
+// a sentence that refers back to the one before it ("If it does, …", "That unit …", "those weapons"): that one's condition is its
+// condition; an unrelated earlier sentence is not
+const BACK = /^(?:if (?:it|you|they) do(?:es)?\b|that\b|those\b|it\b|they\b|the selected\b|until\b)|\bthat (?:enemy )?(?:unit|model|weapon)s?\b|\bthose (?:weapons|attacks|models|units)\b|\bthe selected\b/i;
 const GRANT = /\b(?:ha(?:s|ve)|gains?|gets?)\b/i;
 // an attack bonus in the words → how a reading of it says it (its note, when, set, calc)
 const ATTACK = [
@@ -74,30 +86,41 @@ const ATTACK = [
   { id:'rr-wound',   re:/re-roll (?:a |the |one )?wound rolls?\b|re-roll the wound roll|re-roll a wound roll/i, said:/re-roll[^|]*?wound|rrWound/i },
   { id:'crit',       re:/critical hit (?:is scored )?on (?:an unmodified )?(?:hit roll of )?\d\+|unmodified (?:successful )?hit roll of \d\+[^.]*?critical hit|scores? a critical hit/i, said:/critical hit|critHit/i },
   { id:'a+',         re:/\+\d+ (?:a|attacks)\b|add (?:\d+|d3) to the attacks|improve the attacks characteristic|attacks characteristic of \d+/i, said:/\+(?:\d+|D3) A\b|"A":"?[+\d]|\battacks? \+\d|\+\d+ attacks\b/i },
-  { id:'s+',         re:/\+\d+ (?:s|strength)\b|add (?:\d+|d3) to the (?:attacks,? )?(?:and )?strength|strength characteristic of \d+|gains? \+\d+ strength/i, said:/\+(?:\d+|D3) S\b|"S":"?[+\d]|strength (?:\+|of )?\d/i },
-  { id:'ap',         re:/\+\d+ ap\b|improve the armou?r penetration characteristic/i, said:/\bAP\b/i },
-  { id:'d+',         re:/\+\d+ d\b|improve the damage characteristic|add \d+ to the (?:[a-z]+,? )*(?:and )?damage characteristics?/i, said:/\+(?:\d+|D3) D\b|"D":"?[+\d]|damage \+\d|\+\d damage\b/i },
+  { id:'s+',         re:/\+\d+ (?:s|strength)\b|add (?:\d+|d3) to the (?:attacks,? )?(?:and )?strength|strength characteristic of \d+|gains? \+\d+ strength|improve the strength/i, said:/\+(?:\d+|D3) S\b|"S":"?[+\d]|strength (?:\+|of )?\d|improve (?:[A-Z]+,? (?:and )?)*S\b[^|]*? by \d/i },
+  { id:'ap',         re:/\+\d+ ap\b|improve the (?:[a-z]+,? )*(?:and )?armou?r penetration|improve the ap\b/i, said:/\bAP\b/i },
+  { id:'rr-dmg',     re:/re-roll (?:the |a )?damage rolls?/i, said:/re-roll[^|]*?damage|rrDmg|rrDamage/i },
+  { id:'d+',         re:/\+\d+ (?:d|damage)\b|improve the damage characteristic|improve the (?:[a-z]+,? )*(?:and )?damage characteristics?|add \d+ to the (?:[a-z]+,? )*(?:and )?damage characteristics?/i, said:/\+(?:\d+|D3) D\b|"D":"?[+\d]|damage \+\d|\+\d damage\b|improve (?:[A-Z]+,? (?:and )?)*D\b[^|]*? by \d/i },
   { id:'hit-1',      re:/this model makes an attack, subtract 1 from the hit roll/i, said:/-1 to hit/i },
 ];
 // a defence: what protects the unit (or the unit it is given to) when it is attacked → its "When targeted" line (def, guard)
 const SELF = '(?:this (?:unit|model)|the bearer|that (?:unit|model|armiger model)|it|a model in (?:this|that) unit|your unit)(?![\'’]s)\\b';
 const DEFENCE = [
   { id:'fnp',      re:/feel no pain \d\+/i, said:/feel no pain|FNP|"fnp"/i },
-  { id:'invuln',   re:/\d\+ invulnerable save/i, said:/invulnerable|InSv|\bINV\b/i },
-  { id:'dmg-1',    re:new RegExp('allocated to ' + SELF + '[^.]*?subtract 1 from the damage characteristic', 'i'), said:/-1 D\b|-1 Damage|damage/i },
+  { id:'invuln',   re:/\d\+\*? ?(?:invulnerable save|insv)\b/i, said:/invulnerable|InSv|\bINV\b/i },
+  { id:'save+1',   re:/\+1 to (?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)|add 1 to (?:the |its )?(?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)/i, said:/\+1 to (?:armou?r )?sav|\bsave\b|"sv"/i },
+  { id:'stealth',  re:/\b(?:has|have|gains?) (?:the )?stealth\b/i, said:/stealth|"stealth"|benefit of cover/i },
+  { id:'dmg-1',    re:new RegExp('(?:allocated to ' + SELF + '|made against (?:' + SELF + '|this [A-Z]+\\b)|attacks? (?:that )?targets? ' + SELF + '|attacks? allocated to ' + SELF + ')[^.]*?(?:subtract 1 from the damage|-1 d\\b|-1 damage\\b)', 'i'), said:/-1 D\b|-1 Damage|damage/i },
   { id:'dmg-0',    re:/change the damage characteristic of that attack to 0/i, said:/damage[^|]* to 0|"dmg":0/i },
-  { id:'hit-vs',   re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? targets? ' + SELF + '[^.]*?(?:subtract 1 from the hit roll|-1 to hit)', 'i'), said:/-1 to (?:the )?hit/i },
+  { id:'hit-vs',   re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? targets? ' + SELF + '[^.]*?(?:subtract 1 from (?:the|that attack[\\u2019\\x27]s) hit roll|-1 to hit)', 'i'), said:/-1 to (?:the )?hit/i },
+  // an enemy unit's attacks made worse (Reorder Reality, Mischief Makers): a defence of the units it attacks
+  { id:'enemy-hit-1', re:/\benemy (?:unit|model)s?\b[^.]*?(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)|(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)[^.]*?\benemy (?:unit|model)/i, said:/-1 to (?:the )?hit/i },
   { id:'wound-vs', re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? targets? ' + SELF + '[^.]*?(?:subtract 1 from the wound roll|-1 to wound)', 'i'), said:/-1 to (?:the )?wound/i },
-  { id:'ap-worse', re:new RegExp('targets? ' + SELF + '[^.]*?worsen the armou?r penetration', 'i'), said:/-1 AP|worsen the AP|AP/i },
+  { id:'ap-worse', re:new RegExp('targets? ' + SELF + '[^.]*?(?:worsen the (?:armou?r penetration|ap)\\b|-1 ap\\b)', 'i'), said:/-1 AP|worsen the AP|\bAP\b/i },
 ];
+// the bonuses to a roll (no weapon value shows them): hit and wound modifiers, re-rolls, Critical Hits
+const ROLLS = ['hit+1', 'wound+1', 'rr-hit', 'rr-wound', 'rr-dmg', 'crit'];
 function bonusOf(s){
   const def = DEFENCE.filter(b => b.re.test(s)).map(b => b.id);
-  const att = ATTACK.filter(b => b.re.test(s)).map(b => b.id);
-  if(GRANT.test(s)) for(const m of s.matchAll(WA_RE)){ const n = (m[1] || m[2] || '').toLowerCase().replace(/ (?:\d+|d3|d6|\d\+)$/, ''); if(n) att.push('wa:' + n); }
+  let att = ATTACK.filter(b => b.re.test(s)).map(b => b.id);
+  // (a re-roll that is the enemy's, or one forbidden, is no bonus of the unit: "your opponent can re-roll", "cannot re-roll")
+  if(/\b(?:cannot|can't|can ?not) re-roll\b|\b(?:enemy (?:unit|model|player)s?|your opponent)\b[^.,;]*?\bcan re-roll\b/i.test(s)) att = att.filter(id => !/^rr-/.test(id));
+  // (the enemy's -1 to hit is the defence above, not this unit's own -1: Damaged)
+  if(def.includes('enemy-hit-1')) att = att.filter(id => id !== 'hit-1');
+  if(GRANT.test(s)) for(const m of s.matchAll(WA_RE)){ const n = (m[1] || m[2] || m[3] || '').toLowerCase().replace(/ (?:\d+|d3|d6|\d\+)$/, ''); if(n) att.push('wa:' + n); }
   return { def:[...new Set(def)], att:[...new Set(att)] };
 }
 // what of the unit reads this ability: its readings (from the ability or an option it names in bold), its row's own, a marked value
-function readingsOf(u, ab){
+function readingsOfUnit(u, ab){
   const named = m => m.from === ab.name || String(ab.text || '').includes('**' + m.from);
   const attack = ['mods', 'aura'].flatMap(k => (u[k] || []).filter(named)), guard = (u.guard || []).filter(named);
   const words = ms => ms.map(m => [m.note, m.when, m.selfWhen, JSON.stringify(m.set || {}), JSON.stringify(m.calc || {})].join(' ')).join(' | ');
@@ -122,7 +145,7 @@ function gapsOf(){
 function abilityGaps(u, ab){
   const found = [];
   if(ab.na) return found;
-  const r = readingsOf(u, ab), all = r.attackSaid + ' | ' + r.defSaid;
+  const r = readingsOfUnit(u, ab), all = r.attackSaid + ' | ' + r.defSaid;
   const hasKw = k => (u.kw || []).some(x => x.toLowerCase() === k.toLowerCase() || x.toLowerCase() === 'faction: ' + k.toLowerCase());
   for(const { s, pre } of sentenceCtx(ab.text)){
     // (an option for a keyword the unit does not have: "If this model has the TZEENTCH keyword" on a Daemon Prince of Khorne)
@@ -135,8 +158,12 @@ function abilityGaps(u, ab){
       const said = rl.map(m => [m.note, JSON.stringify(m.set || {}), JSON.stringify(m.calc || {})].join(' ')).join(' | ');
       for(const id of b.att) if(!rl.length || !covers(id, said, ATTACK)) miss.push(id);
       if(miss.length) check = 'riled';
-    } else if(b.att.length && (CONDITION.test(s) || CONDITION.test(pre))){
+    } else if(b.att.length && (CONDITION.test(s) || (BACK.test(s) && CONDITION.test(pre)))){
       for(const id of b.att) if(!covers(id, all, ATTACK)) miss.push(id);
+      if(miss.length) check = 'conditional';
+    } else if(b.att.some(id => ROLLS.includes(id))){
+      // (with no condition: a weapon ability or a characteristic is marked on the weapons; a roll's bonus cannot be, it needs a reading)
+      for(const id of b.att.filter(id => ROLLS.includes(id))) if(!covers(id, all, ATTACK)) miss.push(id);
       if(miss.length) check = 'conditional';
     }
     const dmiss = b.def.filter(id => !covers(id, all, DEFENCE));
@@ -150,6 +177,7 @@ function covers(id, said, table){
   const b = table.find(x => x.id === id); return !!b && b.said.test(said);
 }
 
+// the gate step (and --record)
 if(require.main === module){
   const gaps = gapsOf(), known = readJSON(GAPS, {});
   if(process.argv.includes('--record')){

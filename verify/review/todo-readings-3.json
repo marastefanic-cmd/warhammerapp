@@ -1,0 +1,134 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "CONDITION",
+  "judgement": {
+   "code": "const CONDITION = new RegExp([\n  '\\\\b(?:if|while|whilst|each time|every time|until|unless|after|when|whenever|once it has|once this (?:unit|model) has)\\\\b',\n  '\\\\b(?:in|during|at the start of|at the end of) (?:your |the |your opponent\\'s |each |either player\\'s )?(?:command|movement|shooting|charge|fight) phase\\\\b',\n  '\\\\bthat targets?\\\\b', '\\\\bagainst [A-Z]', '\\\\bagainst (?:an? |the )?[a-z]+ (?:units?|models?)\\\\b', '\\\\bmade a charge move\\\\b', '\\\\bwithin \\\\d+\"', '\\\\bon a turn\\\\b',\n  '\\\\bfor (?:every|each) \\\\b', '\\\\bduring the battle round in which\\\\b', '\\\\bselect(?:s|ed)? (?:one|a)\\\\b'].join('|'), 'i');"
+  },
+  "source": {
+   "implements": "verify/readings.js: the words that make a bonus conditional (if, while, each time, until, after, when, once it has, in / at the start or end of a phase, that targets, against X units, within N\", on a turn, for every / each, during the battle round in which, select one)"
+  },
+  "key": "4badc5da5ef1fd5f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "WA_RE",
+  "judgement": {
+   "code": "const WA_RE = new RegExp('\\\\[(' + WA + ')(?::[^\\\\]]*)?\\\\]|\\\\b(?:the )?(' + WA + ')(?:\\\\]| abilit(?:y|ies)\\\\b| and (?:the )?\\\\[?(?:' + WA + ')\\\\]? abilities\\\\b)|\\\\b(?:ha(?:s|ve)|gains?) (?:the )?(' + WA + ')\\\\b', 'gi');"
+  },
+  "source": {
+   "implements": "verify/readings.js: a weapon ability granted: in brackets (qualified ones too, \"[LETHAL HITS: non-MONSTER/VEHICLE]\"), \"the X ability\" in any case, or bare after have / has / gain (\"have Sustained Hits 1\")"
+  },
+  "key": "e2aa76b6ab696511"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "BACK",
+  "judgement": {
+   "code": "const BACK = /^(?:if (?:it|you|they) do(?:es)?\\b|that\\b|those\\b|it\\b|they\\b|the selected\\b|until\\b)|\\bthat (?:enemy )?(?:unit|model|weapon)s?\\b|\\bthose (?:weapons|attacks|models|units)\\b|\\bthe selected\\b/i;"
+  },
+  "source": {
+   "implements": "verify/readings.js: a sentence referring back to the one before it (\"If it does\", \"that unit\", \"those weapons\", \"Until …\"), the only kind an earlier sentence's condition counts for"
+  },
+  "key": "741cab568e4d4283"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ATTACK",
+  "judgement": {
+   "code": "const ATTACK = [\n  { id:'hit+1',      re:/\\+1 to (?:the |its )?hit\\b|add 1 to the hit roll|improve the (?:ballistic|weapon) skill characteristic[^.]*? by 1/i, said:/\\+1 to hit|BS improved|WS improved|\"hit\":1/i },\n  { id:'wound+1',    re:/\\+1 to (?:the |its )?wound\\b|add 1 to the wound roll/i, said:/\\+1 to wound|\"wound\":1/i },\n  { id:'rr-hit',     re:/re-roll (?:a |the |one )?hit rolls?\\b|re-roll the hit roll/i, said:/re-roll[^|]*?hit|rrHit/i },\n  { id:'rr-wound',   re:/re-roll (?:a |the |one )?wound rolls?\\b|re-roll the wound roll|re-roll a wound roll/i, said:/re-roll[^|]*?wound|rrWound/i },\n  { id:'crit',       re:/critical hit (?:is scored )?on (?:an unmodified )?(?:hit roll of )?\\d\\+|unmodified (?:successful )?hit roll of \\d\\+[^.]*?critical hit|scores? a critical hit/i, said:/critical hit|critHit/i },\n  { id:'a+',         re:/\\+\\d+ (?:a|attacks)\\b|add (?:\\d+|d3) to the attacks|improve the attacks characteristic|attacks characteristic of \\d+/i, said:/\\+(?:\\d+|D3) A\\b|\"A\":\"?[+\\d]|\\battacks? \\+\\d|\\+\\d+ attacks\\b/i },\n  { id:'s+',         re:/\\+\\d+ (?:s|strength)\\b|add (?:\\d+|d3) to the (?:attacks,? )?(?:and )?strength|strength characteristic of \\d+|gains? \\+\\d+ strength|improve the strength/i, said:/\\+(?:\\d+|D3) S\\b|\"S\":\"?[+\\d]|strength (?:\\+|of )?\\d|improve (?:[A-Z]+,? (?:and )?)*S\\b[^|]*? by \\d/i },\n  { id:'ap',         re:/\\+\\d+ ap\\b|improve the (?:[a-z]+,? )*(?:and )?armou?r penetration|improve the ap\\b/i, said:/\\bAP\\b/i },\n  { id:'rr-dmg',     re:/re-roll (?:the |a )?damage rolls?/i, said:/re-roll[^|]*?damage|rrDmg|rrDamage/i },\n  { id:'d+',         re:/\\+\\d+ (?:d|damage)\\b|improve the damage characteristic|improve the (?:[a-z]+,? )*(?:and )?damage characteristics?|add \\d+ to the (?:[a-z]+,? )*(?:and )?damage characteristics?/i, said:/\\+(?:\\d+|D3) D\\b|\"D\":\"?[+\\d]|damage \\+\\d|\\+\\d damage\\b|improve (?:[A-Z]+,? (?:and )?)*D\\b[^|]*? by \\d/i },\n  { id:'hit-1',      re:/this model makes an attack, subtract 1 from the hit roll/i, said:/-1 to hit/i },\n];"
+  },
+  "source": {
+   "implements": "verify/readings.js: the attack bonuses read from the words (+1 to hit / wound, re-rolls of hit, wound and Damage rolls, Critical Hits, +N or improved A / S / AP / D, \"a Strength characteristic of N\") and how a reading says each"
+  },
+  "key": "544e641e7f4a707a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "DEFENCE",
+  "judgement": {
+   "code": "const DEFENCE = [\n  { id:'fnp',      re:/feel no pain \\d\\+/i, said:/feel no pain|FNP|\"fnp\"/i },\n  { id:'invuln',   re:/\\d\\+\\*? ?(?:invulnerable save|insv)\\b/i, said:/invulnerable|InSv|\\bINV\\b/i },\n  { id:'save+1',   re:/\\+1 to (?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)|add 1 to (?:the |its )?(?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)/i, said:/\\+1 to (?:armou?r )?sav|\\bsave\\b|\"sv\"/i },\n  { id:'stealth',  re:/\\b(?:has|have|gains?) (?:the )?stealth\\b/i, said:/stealth|\"stealth\"|benefit of cover/i },\n  { id:'dmg-1',    re:new RegExp('(?:allocated to ' + SELF + '|made against (?:' + SELF + '|this [A-Z]+\\\\b)|attacks? (?:that )?targets? ' + SELF + '|attacks? allocated to ' + SELF + ')[^.]*?(?:subtract 1 from the damage|-1 d\\\\b|-1 damage\\\\b)', 'i'), said:/-1 D\\b|-1 Damage|damage/i },\n  { id:'dmg-0',    re:/change the damage characteristic of that attack to 0/i, said:/damage[^|]* to 0|\"dmg\":0/i },\n  { id:'hit-vs',   re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? targets? ' + SELF + '[^.]*?(?:subtract 1 from (?:the|that attack[\\\\u2019\\\\x27]s) hit roll|-1 to hit)', 'i'), said:/-1 to (?:the )?hit/i },\n  // an enemy unit's attacks made worse (Reorder Reality, Mischief Makers): a defence of the units it attacks\n  { id:'enemy-hit-1', re:/\\benemy (?:unit|model)s?\\b[^.]*?(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)|(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)[^.]*?\\benemy (?:unit|model)/i, said:/-1 to (?:the )?hit/i },\n  { id:'wound-vs', re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? targets? ' + SELF + '[^.]*?(?:subtract 1 from the wound roll|-1 to wound)', 'i'), said:/-1 to (?:the )?wound/i },\n  { id:'ap-worse', re:new RegExp('targets? ' + SELF + '[^.]*?(?:worsen the (?:armou?r penetration|ap)\\\\b|-1 ap\\\\b)', 'i'), said:/-1 AP|worsen the AP|\\bAP\\b/i },\n];"
+  },
+  "source": {
+   "implements": "verify/readings.js: the defences read from the words (Feel No Pain, invulnerable save or InSv, +1 to save rolls, Stealth granted, -1 Damage / -1 D of an attack allocated to or made against the unit, Damage 0, -1 to hit / wound or -1 AP / worse AP against attacks that target it, an enemy unit's -1 to hit; not \"this unit's …\", \"the bearer's …\", \"an enemy model\") and how its \"When targeted\" reading says each"
+  },
+  "key": "9cdd548575a070e4"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ROLLS",
+  "judgement": {
+   "code": "const ROLLS = ['hit+1', 'wound+1', 'rr-hit', 'rr-wound', 'rr-dmg', 'crit'];"
+  },
+  "source": {
+   "implements": "verify/readings.js: the bonuses to a roll, which need a reading even with no condition (a weapon value cannot show them)"
+  },
+  "key": "e0b9b1e4db33940c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "bonusOf",
+  "judgement": {
+   "code": "function bonusOf(s){\n  const def = DEFENCE.filter(b => b.re.test(s)).map(b => b.id);\n  let att = ATTACK.filter(b => b.re.test(s)).map(b => b.id);\n  // (a re-roll that is the enemy's, or one forbidden, is no bonus of the unit: \"your opponent can re-roll\", \"cannot re-roll\")\n  if(/\\b(?:cannot|can't|can ?not) re-roll\\b|\\b(?:enemy (?:unit|model|player)s?|your opponent)\\b[^.,;]*?\\bcan re-roll\\b/i.test(s)) att = att.filter(id => !/^rr-/.test(id));\n  // (the enemy's -1 to hit is the defence above, not this unit's own -1: Damaged)\n  if(def.includes('enemy-hit-1')) att = att.filter(id => id !== 'hit-1');\n  if(GRANT.test(s)) for(const m of s.matchAll(WA_RE)){ const n = (m[1] || m[2] || m[3] || '').toLowerCase().replace(/ (?:\\d+|d3|d6|\\d\\+)$/, ''); if(n) att.push('wa:' + n); }\n  return { def:[...new Set(def)], att:[...new Set(att)] };\n}"
+  },
+  "source": {
+   "implements": "verify/readings.js: a sentence's attack bonuses and defences (ATTACK, DEFENCE, WA_RE after a grant verb); an enemy's or a forbidden re-roll is none; the enemy's -1 to hit is not the unit's own"
+  },
+  "key": "43c1c62dcaa840cb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "readingsOfUnit",
+  "judgement": {
+   "code": "function readingsOfUnit(u, ab){\n  const named = m => m.from === ab.name || String(ab.text || '').includes('**' + m.from);\n  const attack = ['mods', 'aura'].flatMap(k => (u[k] || []).filter(named)), guard = (u.guard || []).filter(named);\n  const words = ms => ms.map(m => [m.note, m.when, m.selfWhen, JSON.stringify(m.set || {}), JSON.stringify(m.calc || {})].join(' ')).join(' | ');\n  const marks = [...(u.stats || []), ...(u.ranged || []), ...(u.melee || [])].flatMap(x => Object.entries(x.from || {}).filter(([, v]) => [].concat(v).includes(ab.name)).map(([k]) => k));\n  const fnpLine = (u.rules || []).filter(r => /^feel no pain \\d\\+/i.test(r) && String(ab.text || '').toLowerCase().includes(r.toLowerCase().replace(/\\*$/, '')));\n  return { attack, guard, marks,\n    attackSaid:words(attack) + ' | ' + marks.map(k => /^(A|S|D)$/.test(k) ? '\"' + k + '\":\"+' : k === 'AP' ? '+1 AP' : k === 'WS' || k === 'BS' ? k + ' improved' : k).join(' | ') + ' | ' + JSON.stringify(ab.defCalc || {}),\n    defSaid:[ab.def, ab.calcDef, JSON.stringify(ab.defCalc || {}), words(guard), fnpLine.join(' '), marks.includes('InSv') ? 'InSv' : ''].filter(Boolean).join(' | ') };\n}"
+  },
+  "source": {
+   "implements": "verify/readings.js: what of a unit reads an ability: its footnotes, auras and guards from it or an option it names in bold, its row's def / calcDef / defCalc, its Rules line's Feel No Pain, a value it gives marked on a weapon or stat"
+  },
+  "key": "c5feada01b965fc1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "abilityGaps",
+  "judgement": {
+   "code": "function abilityGaps(u, ab){\n  const found = [];\n  if(ab.na) return found;\n  const r = readingsOfUnit(u, ab), all = r.attackSaid + ' | ' + r.defSaid;\n  const hasKw = k => (u.kw || []).some(x => x.toLowerCase() === k.toLowerCase() || x.toLowerCase() === 'faction: ' + k.toLowerCase());\n  for(const { s, pre } of sentenceCtx(ab.text)){\n    // (an option for a keyword the unit does not have: \"If this model has the TZEENTCH keyword\" on a Daemon Prince of Khorne)\n    const kwIf = /\\b[Ii]f this (?:model|unit) has the ([A-Z][A-Z’' -]+?) keyword/.exec(s);\n    if(kwIf && !hasKw(kwIf[1].trim())) continue;\n    const b = bonusOf(s), miss = [];\n    let check = null;\n    if(b.att.length && RILED.test(s)){\n      const rl = r.attack.filter(m => m.cond === 'riled' || /riled/i.test((m.when || '') + ' ' + (m.selfWhen || '')));\n      const said = rl.map(m => [m.note, JSON.stringify(m.set || {}), JSON.stringify(m.calc || {})].join(' ')).join(' | ');\n      for(const id of b.att) if(!rl.length || !covers(id, said, ATTACK)) miss.push(id);\n      if(miss.length) check = 'riled';\n    } else if(b.att.length && (CONDITION.test(s) || (BACK.test(s) && CONDITION.test(pre)))){\n      for(const id of b.att) if(!covers(id, all, ATTACK)) miss.push(id);\n      if(miss.length) check = 'conditional';\n    } else if(b.att.some(id => ROLLS.includes(id))){\n      // (with no condition: a weapon ability or a characteristic is marked on the weapons; a roll's bonus cannot be, it needs a reading)\n      for(const id of b.att.filter(id => ROLLS.includes(id))) if(!covers(id, all, ATTACK)) miss.push(id);\n      if(miss.length) check = 'conditional';\n    }\n    const dmiss = b.def.filter(id => !covers(id, all, DEFENCE));\n    if(dmiss.length){ check = check || 'defence'; miss.push(...dmiss); }\n    if(check) found.push({ check, sentence:s, bonus:[...new Set(miss)] });\n  }\n  return found;\n}"
+  },
+  "source": {
+   "implements": "verify/readings.js: per sentence and per bonus, a gap when no reading of the ability says it: riled up needs a riled-up reading; an attack bonus with a condition (its own, or an earlier sentence's it refers back to), or a roll bonus with none, needs one; a defence needs a When targeted reading; na and options for keywords the unit lacks are skipped"
+  },
+  "key": "4c506f08bddea48c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "covers",
+  "judgement": {
+   "code": "function covers(id, said, table){\n  if(id.startsWith('wa:')) return new RegExp(id.slice(3).replace(/[-]/g, '[- ]'), 'i').test(said);\n  const b = table.find(x => x.id === id); return !!b && b.said.test(said);\n}"
+  },
+  "source": {
+   "implements": "verify/readings.js: a bonus said by a reading (its said pattern; a weapon ability by its name)"
+  },
+  "key": "6218afa6d4939376"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "sentenceCtx",
+  "judgement": {
+   "code": "function sentenceCtx(text){\n  const lines = norm(text).split('\\n').filter(l => !/^\\*(?!\\*)[^\\n]*\\*$/.test(l.trim())).map(l => l.replace(/\\*\\*/g, '').replace(/[ \\t]+/g, ' ').trim()).filter(Boolean);\n  const out = [];\n  for(let i = 0; i < lines.length; i++){\n    const lead = /:$/.test(lines[i]) ? lines[i] : null;\n    if(lead){ let j = i + 1; for(; j < lines.length && /^- /.test(lines[j]); j++) out.push({ s:lead + ' ' + lines[j].replace(/^- /, ''), pre:lead }); if(j > i + 1){ i = j - 1; continue; } }\n    const parts = lines[i].replace(/^- /, '').split(/(?<=[.!?])\\s+(?=[A-Z(])/);\n    parts.forEach((p, k) => out.push({ s:p, pre:parts.slice(0, k).join(' ') }));\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "verify/readings.js: the sentences of an ability (italic notes left out; a list line with the line that leads it), each with the earlier sentences of its paragraph"
+  },
+  "key": "bd3a52865bb965d3"
+ }
+]
