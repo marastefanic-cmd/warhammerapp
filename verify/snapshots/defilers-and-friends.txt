@@ -8,21 +8,21 @@ Dispositions: Priority Assets · Purge the Foe (chosen)
 Overview
 Phase checklist
 Bases & proxies
-22
+28
 Units
-8
+11
 Stratagems
 16
 Ranged weapons
-15
+18
 Melee weapons
-13
+16
 Abilities
-26
+25
 Rules
 Damage calculator
 
-New Recruit, exported 25 Oct 2026 (JSON)
+New Recruit, exported 26 Oct 2026 (JSON)
 
 ######## checklist · DEFILERS AND FRIENDS Phase checklist
 PHASE BY PHASE
@@ -34,19 +34,16 @@ TO DO NOW
 
 Pledges to the Dark Prince · Coterie of the Conceited
 Command · Your turn
-2 to do
+1 to do
 
 TO DO NOW
 
-Daemonic Poisons · Fulgrim
 Objective Defiled · Tormentors
 Command · Their turn
-2 to do
+nothing
 
-TO DO NOW
+Nothing in this list.
 
-Daemonic Poisons · Fulgrim
-Daemon Primarch of Slaanesh · Fulgrim
 Movement · Your turn
 nothing
 
@@ -85,10 +82,11 @@ nothing
 Nothing in this list.
 
 Fight · Your turn
-1 to do · 5 active · 2 once per battle
+2 to do · 4 active · 2 once per battle
 
 TO DO NOW
 
+Duellist’s Hubris · Lucius the Eternal
 Icon of Excess · Infractors×2, Tormentors
 
 ACTIVE NOW
@@ -97,17 +95,17 @@ ACTIVE NOW
 3+ · option of Pledges to the Dark Prince
 5+ · option of Pledges to the Dark Prince
 7+ · option of Pledges to the Dark Prince
-Daemonic Speed (Daemon Primarch of Slaanesh) · Fulgrim
 
 ONCE PER BATTLE
 
 Euphoric Strikes · Lord Exultant + Infractors · Unit 1
 Euphoric Strikes · Lord Exultant + Infractors · Unit 2
 Fight · Their turn
-1 to do · 5 active · 2 once per battle
+2 to do · 4 active · 2 once per battle
 
 TO DO NOW
 
+Duellist’s Hubris · Lucius the Eternal
 Icon of Excess · Infractors×2, Tormentors
 
 ACTIVE NOW
@@ -116,7 +114,6 @@ ACTIVE NOW
 3+ · option of Pledges to the Dark Prince
 5+ · option of Pledges to the Dark Prince
 7+ · option of Pledges to the Dark Prince
-Daemonic Speed (Daemon Primarch of Slaanesh) · Fulgrim
 
 ONCE PER BATTLE
 
@@ -134,11 +131,11 @@ Listed: what you must remember when the game reaches a moment: a rule or ability
 ######## pregame · DEFILERS AND FRIENDS Overview
 YOUR LIST
 WARLORD
-Fulgrim
+Lucius the Eternal
 ENHANCE­MENTS
 Pledge of Unholy Fortune 30 pts on Daemon Prince of Slaanesh with Wings
-Pledge of Eternal Servitude 25 pts on Daemon Prince of Slaanesh with Wings
 ATTACHED
+Lucius the Eternal leads Flawless Blades
 Lord Exultant leads Infractors ×2 units
 DETACH­MENTS
 Coterie of the Conceited (3 DP)
@@ -174,14 +171,13 @@ Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAI
 7+
 Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.
 
-APPLIES TOFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Lord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
+APPLIES TOLucius the Eternal, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant, Tormentors, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
-Fulgrim 340 pts
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune 235 pts
-Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude 250 pts
-All of them: 825 pts
+TRANSPORTS
+Chaos Rhino: This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).
 DEPLOYMENT AND PRE-BATTLE ABILITIES
 SCOUTS AND INFILTRATORS
 Lord Exultant Scouts 6"
@@ -204,16 +200,26 @@ Gathered from this list’s datasheets and rules; each line opens the full text.
 ######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
 EPIC HEROES
 1
-Fulgrim
+Lucius the Eternal
++ Flawless Blades
 Warlord
-16"
-11
-2+
-16
-5+
+225
+Lucius the Eternal
+8"
 6
+2+
+6
+6+
+1
 4+
-340
+Flawless Blades×3
+8"
+5
+3+
+3
+6+
+1
+5+
 CHARACTERS
 4
 Daemon Prince of Slaanesh with Wings
@@ -226,16 +232,15 @@ Pledge of Unholy Fortune
 3
 4+
 235
-Daemon Prince of Slaanesh with Wings
-Pledge of Eternal Servitude
-14"
-9
-2+
-10
+Sorcerer
+7"
+5
+3+
+4
 6+
-3
-4+
-250
+1
+–
+55
 Lord Exultant
 + Infractors
 2×190
@@ -268,7 +273,7 @@ Tormentors
 –
 85
 VEHICLES
-2
+4
 Defiler
 1 of 2
 12"
@@ -289,19 +294,40 @@ Defiler
 5
 5+
 380
+Maulerfiend
+10"
+10
+3+
+12
+6+
+3
+5+
+2×120
+DEDICATED TRANSPORTS
+1
+Chaos Rhino
+12"
+9
+3+
+10
+6+
+2
+–
+70
 
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
-Fulgrim
+Lucius the Eternal
 Warlord
-Malefic lash
++ Flawless Blades
+Bolt pistol×3
 12"
-6
-2+
-8
--2
-2
-SUSTAINED HITS 1
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 Wounds Remaining)
+1
+3+
+5
+-1
+1
+PISTOL
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll (A Challenge Worthy of Skill)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
@@ -317,15 +343,34 @@ Infernal cannon
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
-Daemon Prince of Slaanesh with Wings
-Pledge of Eternal Servitude
-Infernal cannon
-24"
-3
-2+
+Sorcerer
+Agonising Energies
+➤witchfire
+18"
+D6
+3+
 5
 -1
-2
+D3
+PSYCHIC
+➤focused witchfire
+18"
+D6
+3+
+6
+-2
+D3
+DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
@@ -407,6 +452,18 @@ HAZARDOUS, PISTOL, PRECISION
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
+Chaos Rhino
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
+1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
 Defiler
 1 of 2
 Ectoplasma destructor
@@ -467,34 +524,51 @@ Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
+Maulerfiend
+×2 units
+Magma cutter
+6"
+2
+3+
+9
+-4
+D6
+MELTA 2
+Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Glutton for Punishment)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
+1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
-Fulgrim
+Lucius the Eternal
 Warlord
-Daemonic blades
-➤strike
++ Flawless Blades
+LUCIUS THE ETERNAL
+Blade of the Laer
 6
-2+
-14
--3
-D6+1
-SUSTAINED HITS 1
-➤sweep
-12
 2+
 8
--2
-2
-SUSTAINED HITS 1
-+
-Serpentine tail
-6
+-3
+3
+PRECISION
+OR
+Lash of Torment
+10
 2+
-6
+4
 -1
 1
-EXTRA ATTACKS
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 Wounds Remaining)
+SUSTAINED HITS 1
+FLAWLESS BLADES
+Blissblade×3
+4
+2+
+6
+-3
+2
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll (A Challenge Worthy of Skill)
+Called upon daemonic patrons when selected to fight (until the end of the phase): a Critical Wound on an unmodified wound roll of 3+ (Daemonic Patrons)
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
@@ -520,21 +594,14 @@ Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 
 STRATAGEMS · COTERIE OF THE CONCEITED
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, Command phase, until the end of the turn
 1CP Martial Perfection: re-roll hit rolls, Fight phase, not yet selected to fight
-Daemon Prince of Slaanesh with Wings
-Pledge of Eternal Servitude
-Hellforged weapons
-➤strike
+Sorcerer
+Force weapon
+4
+3+
 6
-2+
-8
 -2
-3
-➤sweep
-14
-2+
-6
-0
-1
+D3
+PSYCHIC
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
@@ -568,11 +635,11 @@ Rapture lash
 1
 EXTRA ATTACKS, LETHAL HITS
 INFRACTORS
-Rapture lashOBSESSIONIST
-6
-3+
+Power swordOBSESSIONIST
 4
--1
+3+
+5
+-2
 1
 PRECISION, LETHAL HITS
 Duelling sabre×4
@@ -609,6 +676,18 @@ Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 
 STRATAGEMS · COTERIE OF THE CONCEITED
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, Command phase, until the end of the turn
 1CP Martial Perfection: re-roll hit rolls, Fight phase, not yet selected to fight
+Chaos Rhino
+Armoured tracks
+3
+4+
+6
+0
+1
+5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED
+1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, Command phase, until the end of the turn
+1CP Martial Perfection: re-roll hit rolls, Fight phase, not yet selected to fight
 Defiler
 1 of 2
 Shearing claws
@@ -655,52 +734,45 @@ Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 
 STRATAGEMS · COTERIE OF THE CONCEITED
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, Command phase, until the end of the turn
 1CP Martial Perfection: re-roll hit rolls, Fight phase, not yet selected to fight
+Maulerfiend
+×2 units
+Maulerfiend fists
+6
+3+
+14
+-2
+D6+1
+Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Glutton for Punishment)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED
+1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, Command phase, until the end of the turn
+1CP Martial Perfection: re-roll hit rolls, Fight phase, not yet selected to fight
 
 ######## abilities · MELEE Abilities
-Fulgrim
+Lucius the Eternal
 Warlord
-Daemonic Poisons
-Command · Your Shoot · Fight
-
-Command (either turn) / Your Shooting / Fight (either turn)
-
-In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 mortal wounds.
-
-Daemon Primarch of Slaanesh
-Their Command
-
-Command · Their turn
-
-At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability.
-
-Damaged: 1-6 Wounds Remaining
-
-While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-Supreme Commander
-
-If this model is in your army, it must be your WARLORD.
-
-Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
-
-DAEMON PRIMARCH OF SLAANESH: PICK ONE
-Beguiling Form
-
-Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.
-
-Daemonic Speed
++ Flawless Blades
+LUCIUS THE ETERNAL
+Duellist’s Hubris
 Fight
 
 Fight · Either turn
 
-This model has the Fights First ability.
+At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.
 
-Enthralling Hypnosis
-Their Movement
+A Challenge Worthy of Skill
 
-Aura · Movement · Their turn
+Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
-While an enemy unit is within 6" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+FLAWLESS BLADES
+Daemonic Patrons
+Fight
+
+Fight · Either turn
+
+Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.
 
 Daemon Prince of Slaanesh with Wings
 Pledge of Unholy Fortune
@@ -723,25 +795,19 @@ Enhancement · Once per turn
 
 EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.
 
-Daemon Prince of Slaanesh with Wings
-Pledge of Eternal Servitude
-Daemonic Destruction
-Charge
+Sorcerer
+Warped Interference
 
-Charge · Either turn
+Psychic
 
-Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).
+While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.
 
-Stimulated by Pain
+Wracking Agonies
+Your Shooting
 
-Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.
+Psychic · Shooting · Your turn
 
-Pledge of Eternal Servitude
-Enhancement
-
-Enhancement
-
-EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).
+In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
 
 Lord Exultant
 + Infractors
@@ -798,6 +864,20 @@ Your Shooting / Fight (either turn)
 
 At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP.
 
+Chaos Rhino
+Assault Vehicle
+Your Movement
+
+Movement · Your turn
+
+Units can disembark from this TRANSPORT after it has Advanced. Units that do so make a shock disembark move (Core Rules, 18.07) for that disembarkation.
+
+Transport
+
+Capacity
+
+This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).
+
 Defiler
 1 of 2
 Scuttling Walker
@@ -837,6 +917,19 @@ Each time this model makes an attack that targets an enemy unit that is not belo
 Damaged: 1-6 wounds remaining
 
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Maulerfiend
+×2 units
+Glutton for Punishment
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 ######## rules · ABILITIES Rules
 Emperor’s Children · Purge the Foe
@@ -870,14 +963,7 @@ Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAI
 7+
 Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.
 
-APPLIES TOFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Lord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
-
-Pledge of Eternal Servitude
-Enhancement · 25 pts · on Daemon Prince of Slaanesh with Wings
-
-EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).
-
-ONDaemon Prince of Slaanesh with Wings
+APPLIES TOLucius the Eternal, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant, Tormentors, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 Pledge of Unholy Fortune
 Enhancement · 30 pts · on Daemon Prince of Slaanesh with Wings
@@ -887,7 +973,11 @@ EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll, a 
 ONDaemon Prince of Slaanesh with Wings
 
 Other enhancements
-2 not in this list
+3 not in this list
+Pledge of Eternal Servitude 25 pts
+
+EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).
+
 Pledge of Dark Glory 25 pts
 
 EMPEROR’S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.
@@ -900,24 +990,30 @@ STRATAGEMSUnshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Embrac
 
 UNIT RULES
 Deadly Demise
-Fulgrim D6
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune D3
-Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude D3
+Chaos Rhino D3
 Defiler (1 of 2) D6
 Defiler (2 of 2) D6
+Maulerfiend D3
 Deep Strike
-Fulgrim
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
-Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude
+Feel No Pain
+Lucius the Eternal + Flawless Blades 5+: Lucius the Eternal only
 Fights First
-Fulgrim
-Daemonic Speed: This model has the Fights First ability.
+Lucius the Eternal + Flawless Blades
+Duellist’s Hubris: At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.
+Firing Deck
+Chaos Rhino 2
 Infiltrators
 Lord Exultant + Infractors
 Lord of the Host: If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" abilities.
 Tormentors
 Leader
+Lucius the Eternal leads Flawless Blades
+Sorcerer
 Lord Exultant leads Infractors
+Lone Operative
+Lucius the Eternal + Flawless Blades: Lucius the Eternal only
 Scouts
 Lord Exultant + Infractors 6"
 
@@ -925,29 +1021,33 @@ Lord Exultant + Infractors 6"
 BASES TO PRINT
 
 15× 32mm
-2× 40mm
-2× 60mm
-1× 130mm
+6× 40mm
+1× 50mm
+1× 60mm
+2× 120×92mm Oval
 2× 160mm
 
 WHAT TO WRITE ON EACH BASE
 
-Fulgrim
-1× 130mm
-Fulgrim · Warlord
+Lucius the Eternal
++ Flawless Blades
+1× 50mm
+Lucius the Eternal · Warlord
+3× 40mm
+standard Blissblade, Bolt pistol
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 1× 60mm
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
-Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude
-1× 60mm
-Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude
+Sorcerer
+1× 40mm
+Sorcerer
 Lord Exultant
 + Infractors
 2 units: mark them apart (1, 2)
 1× 40mm
 Lord Exultant
 1× 32mm
-Obsessionist · Rapture lash + Plasma pistol
+Obsessionist · Power sword + Plasma pistol
 3× 32mm
 standard Bolt pistol, Duelling sabre
 1× 32mm
@@ -969,15 +1069,31 @@ Defiler
 2 of 2
 1× 160mm
 Defiler
+Maulerfiend
+2 units: mark them apart (1, 2)
+1× 120×92mm Oval
+Maulerfiend
+Chaos Rhino
+1× no base
+Chaos Rhino
 
 From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
 
 ######## damage shooting · BASES Damage
 YOUR
-Fulgrim
+Lucius the Eternal + Flawless Blades
 SHOOT
 FIGHT
 BOTH
+MODELS LEFT · ALL 4
+Lucius the Eternal
+0
+1
+Flawless Blade
+0
+1
+2
+3
 TARGET
 MODELS
 1
@@ -1085,11 +1201,11 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-3.2
+0.1
 of 5 destroyed
-6.5 wounds lost · wiped in 20% of games
+0.7 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1097,100 +1213,92 @@ SHOOT · BIGGEST FIRST
 Effects are on the damage these attacks deal.
 
 RANGED WEAPONS
-Fulgrim
-Malefic lash
+Lucius the Eternal + Flawless Blades
+Bolt pistol ×3 FLAWLESS BLADES
 RNG
 12"
 A
-6
+1
 BS
-2+
+3+
 S
-8
+5
 AP
--2
+-1
 D
-2
-SUSTAINED HITS 1
-−20% wiped
-−3.2
+1
+PISTOL
+−0.1
 MODELS IF UNTICKED
 SITUATION AND RULES
-Pledges to the Dark Prince
-Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
-if it applies
-+13% wiped
-+0.5
-MODELS
-1+ Pact points
-+0.5
-3+ Pact points
-+1
-7+ Pact points
-+1.3
-BEST
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
-no change: already hits on 2+
-0
++0.1
+MODELS
+Pledges to the Dark Prince
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
+if it applies
++0.1 wounds
+≈0
+MODELS
+1+ Pact points
++0.1 wounds
+3+ Pact points
++0.1
+7+ Pact points
++0.1
 Close-quarters shooting at a unit it is engaged with
--1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+only [CLOSE-QUARTERS] weapons
 if it applies
-−9% wiped
-−0.5
-MODELS
-Close-quarters shooting at another unit
--1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+no change: every weapon ticked is a [CLOSE-QUARTERS] weapon
+0
+ALL ▾
+A Challenge Worthy of Skill
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · none of the ticked weapons
 if it applies
-−9% wiped
-−0.5
-MODELS
+no change: not for the weapons ticked
+0
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−9% wiped
-−0.5
-MODELS
-Damaged (1-6 wounds left)
--1 to hit rolls
-if it applies
-−9% wiped
-−0.5
+−0.2 wounds
+≈0
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 if it applies
-−20% wiped
-−2.7
+−0.1
 MODELS
 STRATAGEMS
 with their CP
 1CP Command Re-roll
 Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
 if used
-BEST · MOST MODELS+12% wiped
-+0.4
+BEST · MOST MODELS
++0.1
 MODELS
 1CP Unshakeable Opponents
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
 1CP Martial Perfection
 Fight phase only
-+0.5
++0.1
 MODELS IF YOU COUNT IT
 
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+Nothing to count: 1CP Embrace the Pain, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
+1CP Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
 Hit roll
 −
@@ -1219,10 +1327,19 @@ all
 
 ######## damage fight · DAMAGE Damage
 YOUR
-Fulgrim
+Lucius the Eternal + Flawless Blades
 SHOOT
 FIGHT
 BOTH
+MODELS LEFT · ALL 4
+Lucius the Eternal
+0
+1
+Flawless Blade
+0
+1
+2
+3
 TARGET
 MODELS
 1
@@ -1330,13 +1447,12 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-4.9
+5.0
 of 5 destroyed
-9.8 wounds lost · wiped in 90% of games
-Daemonic blades: sweep
+10 wounds lost · wiped in 99% of games
 Charged this turn
 ×
-3 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1346,118 +1462,113 @@ Effects are on the damage these attacks deal.
 The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
-Fulgrim
-Daemonic blades
-A
-12
-WS
-2+
-S
-8
-AP
--2
-D
-2
-SUSTAINED HITS 1
-−90% wiped
-−4.3
-MODELS IF UNTICKED
-PICK ONE PROFILE
-strike
-4.2
+Lucius the Eternal + Flawless Blades
+Blade of the Laer
 A
 6
 WS
 2+
 S
-14
+8
 AP
 -3
 D
-D6+1
-SUSTAINED HITS 1
-sweep
-4.9
-BEST
+3
+PRECISION
+one of the weapons its models pick between
+−26% wiped
+−0.4
+MODELS IF UNTICKED
+Lash of Torment
 A
-12
+10
 WS
 2+
 S
-8
-AP
--2
-D
-2
-SUSTAINED HITS 1
-Serpentine tail
-A
-6
-WS
-2+
-S
-6
+4
 AP
 -1
 D
 1
-EXTRA ATTACKS
-−5% wiped
-−0.1
+SUSTAINED HITS 1
+one of the weapons its models pick between
+−13% wiped
+−0.2
+MODELS
+Blissblade ×3 FLAWLESS BLADES
+A
+4
+WS
+2+
+S
+6
+AP
+-3
+D
+2
+−79% wiped
+−1.6
 MODELS IF UNTICKED
 SITUATION AND RULES
 Pledges to the Dark Prince
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
 if it applies
-+7% wiped
-+0.1
++1% wiped
+≈0
 MODELS
 1+ Pact points
-+0.1
++1% wiped
 3+ Pact points
-+0.1
++1% wiped
 7+ Pact points
-+0.1
++1% wiped
 Pledges to the Dark Prince
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1]
 if it applies
-+3% wiped
++1% wiped
 ≈0
 MODELS
-+1 MORE ▾
+A Challenge Worthy of Skill
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · for Blade of the Laer
+if it applies
++1% wiped
+≈0
+MODELS
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Daemonic Patrons
+Called upon daemonic patrons when selected to fight (until the end of the phase): a Critical Wound on an unmodified wound roll of 3+
 if it applies
-−16% wiped
-−0.3
-MODELS
+0
 STRATAGEMS
 with their CP
 1CP Martial Perfection
 Fight phase, not yet selected to fight: re-roll hit rolls
 if used
-BEST · MOST MODELS+7% wiped
-+0.1
++1% wiped
+≈0
 MODELS
 1CP Command Re-roll
 Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
 if used
-+3% wiped
 ≈0
 MODELS
-+1 MORE ▾
 1CP Unshakeable Opponents
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Explosives (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
+1CP Embrace the Pain
+Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
 1CP Epic Challenge
@@ -1492,10 +1603,19 @@ all
 
 ######## damage both · DAMAGE Damage
 YOUR
-Fulgrim
+Lucius the Eternal + Flawless Blades
 SHOOT
 FIGHT
 BOTH
+MODELS LEFT · ALL 4
+Lucius the Eternal
+0
+1
+Flawless Blade
+0
+1
+2
+3
 TARGET
 MODELS
 1
@@ -1607,12 +1727,11 @@ Add a group
 of 5 destroyed
 10 wounds lost · wiped in 99% of games
 
-Shoot 3.23 · Fight 1.76 · the charge is taken to succeed
+Shoot 0.12 · Fight 4.86 · the charge is taken to succeed
 
-Daemonic blades: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+6 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1624,87 +1743,80 @@ The charge is taken to succeed (no charge roll); “Charged this turn” is tick
 THE SHOOTING
 FIRST
 RANGED WEAPONS
-Fulgrim
-Malefic lash
+Lucius the Eternal + Flawless Blades
+Bolt pistol ×3 FLAWLESS BLADES
 RNG
 12"
 A
-6
+1
 BS
-2+
+3+
 S
-8
+5
 AP
--2
+-1
 D
-2
-SUSTAINED HITS 1
-−9% wiped
-−0.1
-MODELS IF UNTICKED
+1
+PISTOL
+0
 SITUATION AND RULES
 Pledges to the Dark Prince
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
 if it applies
++1% wiped
 ≈0
 MODELS
 1+ Pact points
-≈0
++1% wiped
 3+ Pact points
-≈0
++1% wiped
 7+ Pact points
-≈0
++1% wiped
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
-no change: already hits on 2+
 0
 Close-quarters shooting at a unit it is engaged with
--1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+only [CLOSE-QUARTERS] weapons
 if it applies
-≈0
-MODELS
-Close-quarters shooting at another unit
--1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
-if it applies
-≈0
-MODELS
+no change: every weapon ticked is a [CLOSE-QUARTERS] weapon
+0
+ALL ▾
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-≈0
-MODELS
-Damaged (1-6 wounds left)
--1 to hit rolls
+0
+A Challenge Worthy of Skill
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · none of the ticked weapons
 if it applies
-≈0
-MODELS
+no change: not for the weapons ticked
+0
 STRATAGEMS
 with their CP
-1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
-if used
-≈0
-MODELS
 1CP Unshakeable Opponents
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
 1CP Martial Perfection
 Fight phase only
-≈0
-MODELS IF YOU COUNT IT
+NO CHANGE
 
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+Nothing to count: 1CP Embrace the Pain, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (1)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
+1CP Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
 Hit roll
 −
@@ -1733,96 +1845,99 @@ all
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
-Fulgrim
+Lucius the Eternal + Flawless Blades
 
 Against what the shooting left of the target, in each game.
 
-Daemonic blades
-A
-12
-WS
-2+
-S
-8
-AP
--2
-D
-2
-SUSTAINED HITS 1
-−65% wiped
-−1.3
-MODELS IF UNTICKED
-PICK ONE PROFILE
-strike
-4.9
+Blade of the Laer
 A
 6
 WS
 2+
 S
-14
+8
 AP
 -3
 D
-D6+1
-SUSTAINED HITS 1
-sweep
-5.0
-BEST
+3
+PRECISION
+one of the weapons its models pick between
+−25% wiped
+−0.4
+MODELS IF UNTICKED
+Lash of Torment
 A
-12
+10
 WS
 2+
 S
-8
-AP
--2
-D
-2
-SUSTAINED HITS 1
-Serpentine tail
-A
-6
-WS
-2+
-S
-6
+4
 AP
 -1
 D
 1
-EXTRA ATTACKS
-0
+SUSTAINED HITS 1
+one of the weapons its models pick between
+−10% wiped
+−0.1
+MODELS
+Blissblade ×3 FLAWLESS BLADES
+A
+4
+WS
+2+
+S
+6
+AP
+-3
+D
+2
+−75% wiped
+−1.5
+MODELS IF UNTICKED
 SITUATION AND RULES
+A Challenge Worthy of Skill
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · for Blade of the Laer
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1]
+if it applies
++1% wiped
+≈0
+MODELS
 Pledges to the Dark Prince
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
 if it applies
++1% wiped
 ≈0
 MODELS
 1+ Pact points
-≈0
++1% wiped
 3+ Pact points
-≈0
++1% wiped
 7+ Pact points
-≈0
++1% wiped
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Pledges to the Dark Prince
-5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1]
+Daemonic Patrons
+Called upon daemonic patrons when selected to fight (until the end of the phase): a Critical Wound on an unmodified wound roll of 3+
 if it applies
 0
-Damaged (1-6 wounds left)
--1 to hit rolls
-if it applies
-−2% wiped
-≈0
-MODELS
 STRATAGEMS
 with their CP
 1CP Martial Perfection
 Fight phase, not yet selected to fight: re-roll hit rolls
+if used
++1% wiped
+≈0
+MODELS
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
 if used
 ≈0
 MODELS
@@ -1830,14 +1945,16 @@ MODELS
 Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
 if used
 0
-1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
-if used
-0
-NOT COUNTED BY THE CALCULATOR (3)
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Explosives (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
+1CP Embrace the Pain
+Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
 1CP Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
 1CP Epic Challenge
@@ -1893,7 +2010,7 @@ Their Shoot · Fight Any unit
 CP
 Embrace the Pain
 Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
-Start of Fight Lord Exultant + Infractors ×2, Tormentors
+Start of Fight Lucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 1
 CP
 Martial Perfection
@@ -1925,22 +2042,27 @@ End of their Movement Any unit
 CP
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
-Your Shooting Lord Exultant + Infractors ×2, Tormentors
+Your Shooting Lucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting Chaos Rhino
 1
 CP
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-Your Charge All but Lord Exultant + Infractors ×2, Tormentors
+Your Charge Daemon Prince of Slaanesh with Wings, Chaos Rhino, Defiler ×2, Maulerfiend ×2
 1
 CP
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-End of their Charge · Into the Fray +1CP Any unit
+End of their Charge · Into the Fray +1CP All but Chaos Rhino
 1
 CP
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-Fight Fulgrim, Daemon Prince of Slaanesh with Wings ×2, Lord Exultant + Infractors ×2
+Fight Lucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings, Sorcerer, Lord Exultant + Infractors ×2
 2
 CP
 Counteroffensive
@@ -1951,11 +2073,6 @@ CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
@@ -2018,7 +2135,7 @@ USED BYany unit
 1
 CP
 Embrace the Pain
-Start of Fight Lord Exultant + Infractors ×2, Tormentors
+Start of Fight Lucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 WHEN
 
 Start of the Fight phase.
@@ -2029,7 +2146,7 @@ EFFECT
 
 Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.
 
-USED BYLord Exultant + Infractors ×2, Tormentors
+USED BYLucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 
 1
 CP
@@ -2122,7 +2239,7 @@ USED BYany unit
 1
 CP
 Explosives
-Your Shooting Lord Exultant + Infractors ×2, Tormentors
+Your Shooting Lucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 WHEN
 
 Your Shooting phase.
@@ -2139,12 +2256,28 @@ Resolve the following sequence:
 
 Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYLord Exultant + Infractors ×2, Tormentors
+USED BYLucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
+
+1
+CP
+Smokescreen
+Start of their Shooting Chaos Rhino
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYChaos Rhino
 
 1
 CP
 Crushing Impact
-Your Charge All but Lord Exultant + Infractors ×2, Tormentors
+Your Charge Daemon Prince of Slaanesh with Wings, Chaos Rhino, Defiler ×2, Maulerfiend ×2
 WHEN
 
 Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
@@ -2161,12 +2294,12 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Defiler (1 of 2), Defiler (2 of 2)
+USED BYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 1
 CP
 Heroic Intervention
-End of their Charge · Into the Fray +1CP Any unit
+End of their Charge · Into the Fray +1CP All but Chaos Rhino
 WHEN
 
 End of your opponent’s Charge phase.
@@ -2182,12 +2315,12 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
 
-USED BYany unit
+USED BYLucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant + Infractors ×2, Tormentors, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 1
 CP
 Epic Challenge
-Fight Fulgrim, Daemon Prince of Slaanesh with Wings ×2, Lord Exultant + Infractors ×2
+Fight Lucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings, Sorcerer, Lord Exultant + Infractors ×2
 WHEN
 
 Fight phase, just after a friendly CHARACTER unit is selected to fight.
@@ -2198,7 +2331,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Lord Exultant + Infractors ×2
+USED BYLucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant + Infractors ×2
 
 2
 CP
@@ -2241,33 +2374,20 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-1
-CP
-Smokescreen
-Start of their Shooting No unit in this list can use it (needs SMOKE)
-WHEN
-
-Start of your opponent’s Shooting phase.
-
-TARGETOne friendly SMOKE unit.
-
-EFFECT
-
-Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
-
-USED BYno unit in this list (needs SMOKE)
-
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit fulgrim · STRATAGEMS Defilers and friends
-FULGRIM
-340 PTS
-Epic Hero
+######## unit lucius-the-eternal-flawless-blades · STRATAGEMS Defilers and friends
+LUCIUS THE ETERNAL + FLAWLESS BLADES
+225 PTS
+Epic Hero · 130 + Flawless Blades 95
 Warlord
 Models
 Options
-1× Fulgrim
-Daemonic blades, Malefic lash, Serpentine tail
+1× Lucius the Eternal
+Blade of the Laer, Lash of Torment
+Leading Flawless Blades
+3× Flawless Blade
+Blissblade, Bolt pistol
 Unit
 M
 T
@@ -2276,23 +2396,31 @@ W
 LD
 OC
 InSv
-Fulgrim
-130mm
-16"
-11
-2+
-16
-5+
+Lucius the Eternal
+50mm
+8"
 6
+2+
+6
+6+
+1
 4+
+Flawless Blades×3
+40mm
+8"
+5
+3+
+3
+6+
+1
+5+
 WHEN TARGETED
 3
-while it is the Daemon Primarch of Slaanesh ability selected: -1 to the hit roll of attacks that target this model
+LUCIUS THE ETERNAL Feel No Pain 5+
 1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
-DAMAGED 1-6 W
--1 TO HIT ROLLS
-ALL ATTACKS
+ALL ATTACKS · WHOLE UNIT
+vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll (A Challenge Worthy of Skill)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
@@ -2303,113 +2431,94 @@ BS
 S
 AP
 D
-Malefic lash
+Bolt pistol×3
 12"
-6
-2+
-8
--2
-2
-SUSTAINED HITS 1
+1
+3+
+5
+-1
+1
+PISTOL
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-Daemonic blades
-➤strike
+LUCIUS THE ETERNAL
+Blade of the Laer
 6
-2+
-14
--3
-D6+1
-SUSTAINED HITS 1
-➤sweep
-12
 2+
 8
--2
-2
-SUSTAINED HITS 1
-+
-Serpentine tail
-6
+-3
+3
+PRECISION
+OR
+Lash of Torment
+10
 2+
-6
+4
 -1
 1
-EXTRA ATTACKS
+SUSTAINED HITS 1
+FLAWLESS BLADES
+Blissblade×3
+4
+2+
+6
+-3
+2
+WHOLE UNIT
+Called upon daemonic patrons when selected to fight (until the end of the phase): a Critical Wound on an unmodified wound roll of 3+ (Daemonic Patrons)
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
 1CP Martial Perfection: re-roll hit rolls, not yet selected to fight
 ABILITIES
-Daemonic Poisons
-Command · Your Shoot · Fight
-
-Command (either turn) / Your Shooting / Fight (either turn)
-
-In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 mortal wounds.
-
-Daemon Primarch of Slaanesh
-Their Command
-
-Command · Their turn
-
-At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability.
-
-Supreme Commander
-
-If this model is in your army, it must be your WARLORD.
-
-Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
-
-Beguiling Form
-- Daemon Primarch of Slaanesh: pick one
-
-Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.
-
-Daemonic Speed
-- Daemon Primarch of Slaanesh: pick one
+Duellist’s Hubris
+- Lucius the Eternal
 Fight
 
 Fight · Either turn
 
-This model has the Fights First ability.
+At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.
 
-Enthralling Hypnosis
-- Daemon Primarch of Slaanesh: pick one
-Their Movement
+A Challenge Worthy of Skill
+- Lucius the Eternal
 
-Aura · Movement · Their turn
+Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
-While an enemy unit is within 6" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+Daemonic Patrons
+- Flawless Blades
+Fight
+
+Fight · Either turn
+
+Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.
 
 Rules
-Thrill Seekers, Deep Strike, Deadly Demise D6, Pledges to the Dark Prince
+Leader, Thrill Seekers, Feel No Pain 5+ (Lucius the Eternal), Lone Operative (Lucius the Eternal), Pledges to the Dark Prince
 Stratagems
 
-COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Martial Perfection, Protection of the Dark Prince
+COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Embrace the Pain, Martial Perfection, Protection of the Dark Prince
 
-CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
 CHAOS
 CHARACTER
-DAEMON
 EPIC HERO
 FACTION: EMPEROR'S CHILDREN
-FLY
-FULGRIM
-MOBILE
-MONSTER
-PRIMARCH
+INFANTRY
+LUCIUS THE ETERNAL
 SLAANESH
 WARLORD
+FLAWLESS BLADES*
+GRENADES*
+*from the led Flawless Blades
 Ask about this unit
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune ›
 
-######## unit daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune · FULGRIM Defilers and friends
+######## unit daemon-prince-of-slaanesh-with-wings · LUCIUS THE ETERNAL Defilers and friends
 DAEMON PRINCE OF SLAANESH WITH WINGS
 235 PTS
 Character
@@ -2518,18 +2627,17 @@ FLY
 MONSTER
 SLAANESH
 Ask about this unit
-‹ Fulgrim
-Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude ›
+‹ Lucius the Eternal
+Sorcerer ›
 
-######## unit daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude · DAEMON PRINCE OF SLAANESH WITH WINGS Defilers and friends
-DAEMON PRINCE OF SLAANESH WITH WINGS
-250 PTS
+######## unit sorcerer · DAEMON PRINCE OF SLAANESH WITH WINGS Defilers and friends
+SORCERER
+55 PTS
 Character
-Pledge of Eternal Servitude
 Models
 Options
-1× Daemon Prince of Slaanesh with Wings
-Hellforged weapons, Infernal cannon
+1× Sorcerer
+Agonising Energies, Bolt pistol, Force weapon
 Unit
 M
 T
@@ -2538,18 +2646,18 @@ W
 LD
 OC
 InSv
-Daemon Prince of Slaanesh with Wings
-60mm
-14"
-9
-2+
-10
+Sorcerer
+40mm
+7"
+5
+3+
+4
 6+
-3
-4+
+1
+–
 WHEN TARGETED
 3
--1 D to each attack allocated to this model
+while this model is leading a unit: models in that unit have the Benefit of Cover against ranged attacks
 1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
 1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
 ALL ATTACKS
@@ -2563,76 +2671,85 @@ BS
 S
 AP
 D
-Infernal cannon
-24"
-3
-2+
+Agonising Energies
+➤witchfire
+18"
+D6
+3+
 5
 -1
-2
+D3
+PSYCHIC
+➤focused witchfire
+18"
+D6
+3+
+6
+-2
+D3
+DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Bolt pistol
+12"
+1
+3+
+5
+-1
+1
+PISTOL
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-Hellforged weapons
-➤strike
+Force weapon
+4
+3+
 6
-2+
-8
 -2
-3
-➤sweep
-14
-2+
-6
-0
-1
+D3
+PSYCHIC
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
 1CP Martial Perfection: re-roll hit rolls, not yet selected to fight
 ABILITIES
-Daemonic Destruction
-Charge
+Warped Interference
 
-Charge · Either turn
+Psychic
 
-Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).
+While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.
 
-Stimulated by Pain
+Wracking Agonies
+Your Shooting
 
-Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.
+Psychic · Shooting · Your turn
 
-Pledge of Eternal Servitude
-Enhancement
-
-Enhancement
-
-EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).
+In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
 
 Rules
-Deadly Demise D3, Thrill Seekers, Deep Strike, Pledges to the Dark Prince
+Leader, Thrill Seekers, Pledges to the Dark Prince
 Stratagems
 
-COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Martial Perfection, Protection of the Dark Prince
+COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Embrace the Pain, Martial Perfection, Protection of the Dark Prince
 
-CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
 CHAOS
 CHARACTER
-DAEMON
-DAEMON PRINCE WITH WINGS
 FACTION: EMPEROR'S CHILDREN
-FLY
-MONSTER
+GRENADES
+INFANTRY
+PSYKER
 SLAANESH
+SORCERER
 Ask about this unit
 ‹ Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 Lord Exultant ›
 
-######## unit lord-exultant-infractors · DAEMON PRINCE OF SLAANESH WITH WINGS Defilers and friends
+######## unit lord-exultant-infractors · SORCERER Defilers and friends
 LORD EXULTANT + INFRACTORS
 190 PTS EACH
 Character · 95 + Infractors 95 · ×2 in list
@@ -2642,7 +2759,7 @@ Options
 Bolt pistol, Close combat weapon, Phoenix power spear, Rapture lash
 Leading Infractors
 1× Obsessionist
-Rapture lash, Plasma pistol
+Power sword, Plasma pistol
 3× Infractor
 Bolt pistol, Duelling sabre
 1× Infractor (Icon of Excess)
@@ -2755,11 +2872,11 @@ Rapture lash
 1
 EXTRA ATTACKS, LETHAL HITS
 INFRACTORS
-Rapture lashOBSESSIONIST
-6
-3+
+Power swordOBSESSIONIST
 4
--1
+3+
+5
+-2
 1
 PRECISION, LETHAL HITS
 Duelling sabre×4
@@ -2838,7 +2955,7 @@ BATTLELINE*
 INFRACTORS*
 *from the led Infractors
 Ask about this unit
-‹ Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude
+‹ Sorcerer
 Tormentors ›
 
 ######## unit tormentors · LORD EXULTANT Defilers and friends
@@ -2976,7 +3093,105 @@ Ask about this unit
 ‹ Lord Exultant
 Defiler (1 of 2) ›
 
-######## unit defiler · TORMENTORS Defilers and friends
+######## unit chaos-rhino · TORMENTORS Defilers and friends
+CHAOS RHINO
+70 PTS
+Dedicated Transport
+Models
+Options
+1× Chaos Rhino
+Armoured tracks, Combi-bolter
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Rhino
+Hull
+12"
+9
+3+
+10
+6+
+2
+–
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+ALL ATTACKS
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
+1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured tracks
+3
+4+
+6
+0
+1
+5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
+1CP Martial Perfection: re-roll hit rolls, not yet selected to fight
+ABILITIES
+Assault Vehicle
+Your Movement
+
+Movement · Your turn
+
+Units can disembark from this TRANSPORT after it has Advanced. Units that do so make a shock disembark move (Core Rules, 18.07) for that disembarkation.
+
+Transport
+
+Capacity
+
+This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).
+
+Rules
+Deadly Demise D3, Thrill Seekers, Firing Deck 2, Pledges to the Dark Prince
+Stratagems
+
+COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Martial Perfection, Protection of the Dark Prince
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+DEDICATED TRANSPORT
+FACTION: EMPEROR'S CHILDREN
+FRAME
+RHINO
+SLAANESH
+SMOKE
+TRANSPORT
+VEHICLE
+Ask about this unit
+‹ Maulerfiend
+
+######## unit defiler · CHAOS RHINO Defilers and friends
 DEFILER
 330 PTS
 Vehicle
@@ -3224,73 +3439,132 @@ VEHICLE
 WALKER
 Ask about this unit
 ‹ Defiler (1 of 2)
+Maulerfiend ›
 
-######## popup ability:defilers-and-friends|Beguiling Form|Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**. · DEFILER Defilers and friends
+######## unit maulerfiend · DEFILER Defilers and friends
+MAULERFIEND
+120 PTS EACH
+Vehicle · ×2 in list
+Models
+Options
+1× Maulerfiend
+Maulerfiend fists, 2× Magma cutter
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Maulerfiend
+120×92mm Oval
+10"
+10
+3+
+12
+6+
+3
+5+
+WHEN TARGETED
+2
+1CP Protection of the Dark Prince: Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)
+1CP Armour of Abhorrence: their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Glutton for Punishment)
+Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
+1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Magma cutter
+6"
+2
+3+
+9
+-4
+D6
+MELTA 2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Maulerfiend fists
+6
+3+
+14
+-2
+D6+1
+5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
+STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
+1CP Martial Perfection: re-roll hit rolls, not yet selected to fight
+ABILITIES
+Glutton for Punishment
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well.
+
+Rules
+Deadly Demise D3, Thrill Seekers, Pledges to the Dark Prince
+Stratagems
+
+COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Martial Perfection, Protection of the Dark Prince
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+DAEMON
+FACTION: EMPEROR'S CHILDREN
+MAULERFIEND
+SLAANESH
+VEHICLE
+WALKER
+Ask about this unit
+‹ Defiler (2 of 2)
+Chaos Rhino ›
+
+######## popup ability:defilers-and-friends|A Challenge Worthy of Skill|Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. · MAULERFIEND Defilers and friends
 ABILITY
 
-Beguiling Form
+A Challenge Worthy of Skill
 
-Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.
+Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
-UNITFulgrim
-
-Ask about this ability
-
-######## popup ability:defilers-and-friends|Daemon Primarch of Slaanesh|At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability. · DEFILERS AND FRIENDS Defilers and friends
-ABILITY · COMMAND · THEIR TURN
-
-Daemon Primarch of Slaanesh
-
-At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability.
-
-TO PICK FROM: DAEMON PRIMARCH OF SLAANESH
-
-Beguiling Form
-
-Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.
-
-Daemonic Speed
-
-This model has the Fights First ability.
-
-Enthralling Hypnosis Aura
-
-While an enemy unit is within 6" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
-
-UNITFulgrim
+UNITLucius the Eternal + Flawless Blades
 
 Ask about this ability
 
-######## popup ability:defilers-and-friends|Daemonic Poisons|In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 **mortal wounds**. · DEFILERS AND FRIENDS Defilers and friends
-ABILITY · COMMAND (EITHER TURN) / YOUR SHOOTING / FIGHT (EITHER TURN)
-
-Daemonic Poisons
-
-In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 mortal wounds.
-
-UNITFulgrim
-
-Ask about this ability
-
-######## popup ability:defilers-and-friends|Daemonic Speed|This model has the **Fights First** ability. · DEFILERS AND FRIENDS Defilers and friends
+######## popup ability:defilers-and-friends|Daemonic Patrons|Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed. · DEFILERS AND FRIENDS Defilers and friends
 ABILITY · FIGHT · EITHER TURN
 
-Daemonic Speed
+Daemonic Patrons
 
-This model has the Fights First ability.
+Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.
 
-UNITFulgrim
+UNITLucius the Eternal + Flawless Blades
 
 Ask about this ability
 
-######## popup ability:defilers-and-friends|Damaged: 1-6 Wounds Remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · DEFILERS AND FRIENDS Defilers and friends
+######## popup ability:defilers-and-friends|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · DEFILERS AND FRIENDS Defilers and friends
 ABILITY
 
-Damaged: 1-6 Wounds Remaining
+Damaged: 1-4 wounds remaining
 
-While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
-UNITFulgrim
+UNITMaulerfiend
 
 Ask about this ability
 
@@ -3302,6 +3576,17 @@ Damaged: 1-6 wounds remaining
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITDefiler (1 of 2), Defiler (2 of 2)
+
+Ask about this ability
+
+######## popup ability:defilers-and-friends|Duellist’s Hubris|At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability. · DEFILERS AND FRIENDS Defilers and friends
+ABILITY · FIGHT · EITHER TURN
+
+Duellist’s Hubris
+
+At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.
+
+UNITLucius the Eternal + Flawless Blades
 
 Ask about this ability
 
@@ -3324,6 +3609,17 @@ Excessive Assault
 Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.
 
 UNITLord Exultant + Infractors ×2
+
+Ask about this ability
+
+######## popup ability:defilers-and-friends|Glutton for Punishment|Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**. If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well. · DEFILERS AND FRIENDS Defilers and friends
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Glutton for Punishment
+
+Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well.
+
+UNITMaulerfiend
 
 Ask about this ability
 
@@ -3378,20 +3674,20 @@ Stimulated by Pain
 
 Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.
 
-UNITDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude
+UNITDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 
 Ask about this ability
 
-######## popup enh:coterie-of-the-conceited|Pledge of Eternal Servitude · DEFILERS AND FRIENDS Defilers and friends
-ENHANCEMENT · COTERIE OF THE CONCEITED · 25 PTS
+######## popup ability:defilers-and-friends|Warped Interference|While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack. · DEFILERS AND FRIENDS Defilers and friends
+ABILITY · PSYCHIC
 
-Pledge of Eternal Servitude
+Warped Interference
 
-EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).
+While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.
 
-ONDaemon Prince of Slaanesh with Wings
+UNITSorcerer
 
-Ask about this enhancement
+Ask about this ability
 
 ######## popup enh:coterie-of-the-conceited|Pledge of Unholy Fortune · DEFILERS AND FRIENDS Defilers and friends
 ENHANCEMENT · COTERIE OF THE CONCEITED · 30 PTS
@@ -3503,6 +3799,47 @@ If a unit was battle-shocked at the start of this step and its battle-shock roll
 
 Ask about this rule
 
+######## popup rule:Below Half-strength · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:Benefit of Cover · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
 ######## popup rule:Charge move · DEFILERS AND FRIENDS Defilers and friends
 CORE RULE
 
@@ -3547,6 +3884,40 @@ Wahapedia FAQ: When a rule instructs you to perform a charge outside of the char
 
 Ask about this rule
 
+######## popup rule:Charge rolls · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Close-quarters · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYLucius the Eternal, Sorcerer, Lord Exultant, Tormentors
+
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS · DEFILERS AND FRIENDS Defilers and friends
 CORE RULE
 
@@ -3556,7 +3927,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYDefiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYSorcerer, Defiler (1 of 2), Defiler (2 of 2)
 
 Ask about this rule
 
@@ -3567,7 +3938,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 Ask about this rule
 
@@ -3578,7 +3949,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 Ask about this rule
 
@@ -3589,7 +3960,7 @@ Deadly Demise D6
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 Ask about this rule
 
@@ -3602,7 +3973,7 @@ Each time this unit makes an ingress move (20.04), if every model in this unit h
 
 App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
 
-IN THIS ARMYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude
+IN THIS ARMYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 
 Ask about this rule
 
@@ -3616,7 +3987,7 @@ Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fi
 All of that model’s [EXTRA ATTACKS] weapons.
 One of that model’s other melee weapons, if possible.
 
-IN THIS ARMYFulgrim, Lord Exultant
+IN THIS ARMYLord Exultant
 
 Ask about this rule
 
@@ -3671,12 +4042,36 @@ Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
 Ask about this rule
 
+######## popup rule:Feel No Pain · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYLucius the Eternal (Lucius the Eternal only)
+
+Ask about this rule
+
 ######## popup rule:Feel No Pain 4+ · DEFILERS AND FRIENDS Defilers and friends
 CORE RULE
 
 Feel No Pain 4+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYLucius the Eternal (Lucius the Eternal only)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYLucius the Eternal (Lucius the Eternal only)
 
 Ask about this rule
 
@@ -3686,6 +4081,8 @@ CORE RULE
 Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYLucius the Eternal (Lucius the Eternal only)
 
 Ask about this rule
 
@@ -3698,7 +4095,39 @@ While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
 
-IN THIS ARMYFulgrim (in Daemonic Speed)
+IN THIS ARMYLucius the Eternal (in Duellist’s Hubris)
+
+Ask about this rule
+
+######## popup rule:Firing Deck · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Firing Deck
+
+This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
+2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
+4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+IN THIS ARMYChaos Rhino
+
+Ask about this rule
+
+######## popup rule:Firing Deck 2 · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Firing Deck 2
+
+This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
+2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
+4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+IN THIS ARMYChaos Rhino
 
 Ask about this rule
 
@@ -3709,7 +4138,7 @@ HAZARDOUS
 
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
-IN THIS ARMYLord Exultant, Tormentors
+IN THIS ARMYSorcerer, Lord Exultant, Tormentors
 
 Ask about this rule
 
@@ -3770,7 +4199,7 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
-IN THIS ARMYLord Exultant
+IN THIS ARMYLucius the Eternal, Sorcerer, Lord Exultant
 
 Ask about this rule
 
@@ -3803,6 +4232,25 @@ If a unit was battle-shocked at the start of this step and its battle-shock roll
 
 Ask about this rule
 
+######## popup rule:Lone Operative · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYLucius the Eternal (Lucius the Eternal only)
+
+Ask about this rule
+
 ######## popup rule:MELTA 2 · DEFILERS AND FRIENDS Defilers and friends
 CORE RULE
 
@@ -3812,7 +4260,7 @@ This ability always takes the form [MELTA X]. Each time a model makes an attack 
 
 Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
 
-IN THIS ARMYTormentors
+IN THIS ARMYTormentors, Maulerfiend
 
 Ask about this rule
 
@@ -3845,7 +4293,7 @@ One or more of its other ranged weapons.
 
 [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
 
-IN THIS ARMYLord Exultant, Tormentors
+IN THIS ARMYLucius the Eternal, Sorcerer, Lord Exultant, Tormentors
 
 Ask about this rule
 
@@ -3858,7 +4306,18 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYLord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYLucius the Eternal, Lord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
+
+Ask about this rule
+
+######## popup rule:PSYCHIC · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+PSYCHIC
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYSorcerer
 
 Ask about this rule
 
@@ -3880,7 +4339,18 @@ Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAI
 7+
 Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.
 
-IN THIS ARMYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Lord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYLucius the Eternal, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant, Tormentors, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 2 · DEFILERS AND FRIENDS Defilers and friends
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYChaos Rhino
 
 Ask about this rule
 
@@ -3909,7 +4379,7 @@ SUSTAINED HITS 1
 
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
-IN THIS ARMYFulgrim, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYLucius the Eternal, Defiler (1 of 2), Defiler (2 of 2)
 
 Ask about this rule
 
@@ -4015,7 +4485,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYLord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYLucius the Eternal, Lord Exultant, Tormentors, Defiler (1 of 2), Defiler (2 of 2)
 
 Ask about this rule
 
@@ -4026,7 +4496,7 @@ SUSTAINED HITS 1
 
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
-IN THIS ARMYFulgrim, Defiler (1 of 2), Defiler (2 of 2)
+IN THIS ARMYLucius the Eternal, Defiler (1 of 2), Defiler (2 of 2)
 
 Ask about this rule
 
@@ -4447,7 +4917,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Defiler (1 of 2), Defiler (2 of 2)
+USED BYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 Ask about this stratagem
 
@@ -4465,7 +4935,7 @@ EFFECT
 
 Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.
 
-USED BYLord Exultant + Infractors ×2, Tormentors
+USED BYLucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 
 Ask about this stratagem
 
@@ -4483,7 +4953,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYFulgrim, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude, Lord Exultant + Infractors ×2
+USED BYLucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant + Infractors ×2
 
 Ask about this stratagem
 
@@ -4507,7 +4977,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYLord Exultant + Infractors ×2, Tormentors
+USED BYLucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 
 Ask about this stratagem
 
@@ -4548,7 +5018,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
 
-USED BYany unit
+USED BYLucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant + Infractors ×2, Tormentors, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
 Ask about this stratagem
 
@@ -4627,6 +5097,24 @@ Your unit makes an ingress move (20.04).
 RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:smokescreen · DEFILERS AND FRIENDS Defilers and friends
+1CP · SHOOTING · THEIR TURN
+
+Smokescreen
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYChaos Rhino
 
 Ask about this stratagem
 
