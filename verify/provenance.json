@@ -8889,17 +8889,10 @@
    "sha256": null
   },
   {
-   "item": "defilers-and-friends / daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune / ability:Pledge of Unholy Fortune",
+   "item": "defilers-and-friends / daemon-prince-of-slaanesh-with-wings / ability:Pledge of Unholy Fortune",
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Pledge of Unholy Fortune (Coterie of the Conceited) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "defilers-and-friends / daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude / ability:Pledge of Eternal Servitude",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Pledge of Eternal Servitude (Coterie of the Conceited) (whose source is recorded under that item)",
    "sha256": null
   },
   {
@@ -9884,14 +9877,6 @@
   },
   {
    "item": "purge-goes-the-foe / thulia-ghuld / ability:Supreme Commander",
-   "field": "note",
-   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
-  },
-  {
-   "item": "defilers-and-friends / fulgrim / ability:Supreme Commander",
    "field": "note",
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
