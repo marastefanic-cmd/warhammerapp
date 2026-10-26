@@ -5801,6 +5801,12 @@
   "at": "2026-10-24",
   "why": "Default GW loadout (Wahapedia: bolt pistol; Helstalker autocannon; techno-virus injector; bladed limbs; impaler chainglaive) = export. Profiles match GW Faction Pack (chainglaive 5 2+ 8 -3 3 [LANCE]); bolt pistol BS2+ S5 AP-1."
  },
+ "66a342715e0a836a": {
+  "verdict": "ok",
+  "by": "review:defilers2-b (its fix)",
+  "at": "2026-10-26",
+  "why": "oppnext is right per the alternating turn structure. Started in the opponent's turn, it covers the rest of their turn and all of your next turn, ending as their next turn starts. Started in your turn, it covers the rest of your turn only. From the end of your opponent's turn, it covers your next turn. Fulgrim's Daemon Primarch of Slaanesh (at the start of the opponent's Command phase) correctly gets pk every phase, both turns (main had pk x and t command:either). Through the skip-until edit its t is now command:opp, the same as the stored label. In the rendered checklist, Daemonic Speed is Active now in both Fight phases. One edge case is wrong. A trigger at the start of the battle round is read as both players' Command phases, so oppnext (and the existing yournext) from it adds the whole of the opponent's (or your) turn. That is never right, because at the start of a round the opponent's next turn is the one in this round, and how much the effect covers depends on who goes first. The case is not used in data.js. The fix returns x (When unclear) for yournext and oppnext from the start of the battle round, as is already done for \"phase\". With it, data.js and derive.json are byte-identical."
+ },
  "66b0e6394d2e86b2": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -9569,6 +9575,12 @@
   "at": "2026-10-17",
   "why": "“Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).” Same."
  },
+ "a7890e0cbd82acf5": {
+  "verdict": "ok",
+  "by": "review:defilers2-b",
+  "at": "2026-10-26",
+  "why": "An opening \"Each time a/an enemy model makes an attack that targets this model/unit\" is triggered by the enemy's attack. Marking it a:1 leaves it off the checklist (not Active now under its selector), as already done for the enemy-activation options Enthralling Hypnosis and Overwhelming Wrath (\"selected to Fall Back\"). This matches the checklist footer: what attacking or being targeted triggers is on the datasheet. The regex is anchored to the first sentence, so own-attack wording (\"Each time a model in this unit makes an attack\") is unaffected. In data.js only Beguiling Form changes: CHECKLIST u shooting:your,fight:either -> u shooting:opp,fight:either,a:1. Its timing label also changes, through the ACTIVITY_RULES targeted / any-attack edit in the same commit, from movement:opp,shooting:your to movement:your (Overwatch at it),shooting:opp,fight:either. That is correct for being attacked. The rendered Defilers checklist has no Beguiling Form line."
+ },
  "a7b2b575e982eb74": {
   "verdict": "ok",
   "by": "review:checklist-4",
@@ -10588,6 +10600,12 @@
   "by": "review:custodes-units",
   "at": "2026-10-24",
   "why": "Vexilla is the Allarus wargear ability (one model has it: NR line 3x Allarus: Vexilla on one). Text matches Wahapedia."
+ },
+ "bafa6623bf26d1a9": {
+  "verdict": "ok",
+  "by": "review:defilers2-b (its fix)",
+  "at": "2026-10-26",
+  "why": "Rule 3 is right for 11th ed: \"after this model has finished making its attacks / has shot / has fought\" is the unit's own activation, and a phase named only there is not a checklist trigger, matching how a unit activation is handled elsewhere. Over all of data.js (new vs main derive.js, CHECKLIST and derive.json) it changes only Daemonic Poisons (t command:either,shooting:your,fight:either -> command:either; s kept, so it shows only in Command, both turns, which is right as the roll happens \"at the start of each player's Command phase\") and Binding Tendrils (t shooting:your dropped, u unchanged, not listed before or after). It is not exact for phases named together: phs only reads a phase word that is directly followed by \"phase\", so \"In your Shooting or Fight phase, after this unit has shot…\" and \"your Shooting and Fight phases\" would read only Fight, and Shooting would stay as a trigger. No current text is worded like that, so this is latent. The fix makes phs also read each phase in a list that ends in \"phase(s)\". With it, data.js CHECKLIST and derive.json come out byte for byte the same."
  },
  "bb1434ec04449371": {
   "verdict": "ok",

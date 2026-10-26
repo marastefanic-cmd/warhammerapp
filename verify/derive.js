@@ -754,7 +754,7 @@ function ckEntry(d, text){
   const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];
   // a phase named only in a sentence whose moment is the unit's own activation ("In your Shooting phase and the Fight phase, after this
   // model has finished making its attacks, …", Daemonic Poisons; "after this model has shot"): not a trigger, as a unit activation is not
-  { const ss = sentences(plain(rulesText(text || ''))), ACT = /\bafter this (?:model|unit) has (?:finished making its attacks|shot|fought)\b/i, phs = x => [...x.matchAll(/\b(command|movement|shooting|charge|fight) phases?\b/gi)].map(m => m[1].toLowerCase());
+  { const ss = sentences(plain(rulesText(text || ''))), ACT = /\bafter this (?:model|unit) has (?:finished making its attacks|shot|fought)\b/i, phs = x => [...x.matchAll(/\b(command|movement|shooting|charge|fight)(?=(?:,? (?:or |and )?(?:the |your )?(?:command|movement|shooting|charge|fight))* phases?\b)/gi)].map(m => m[1].toLowerCase());
     const named = ss.filter(x => ACT.test(x)).flatMap(phs), elsewhere = ss.filter(x => !ACT.test(x)).flatMap(phs);
     for(const p of new Set(named)) if(!elsewhere.includes(p)) delete tp[p]; }
   const e = {};
@@ -815,7 +815,7 @@ function coverOf(dur, e){
   const startRound = /^start of the (?:first )?battle round$/i.test(e.at || ''), endOpp = /^end of your opponent.s turn$/i.test(e.at || '');
   if(startRound) trig.push('command|your', 'command|opp');
   // "until the end of the phase" from the start of the battle round names no phase in progress: not read
-  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound) || (dur === 'phase' && startRound)) return { x:1 };
+  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound) || ((dur === 'phase' || dur === 'yournext' || dur === 'oppnext') && startRound)) return { x:1 };
   const from = s => { const [p, w] = s.split('|'), i = PH.indexOf(p); return PH.slice(i).map(x => x + '|' + w); };
   const all = w => PH.map(x => x + '|' + w), other = w => w === 'your' ? 'opp' : 'your';
   for(const s of trig){ const w = s.split('|')[1];
