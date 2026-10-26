@@ -8,7 +8,10 @@
 //   data        check.js: the data is complete and consistent
 //   tables      verify/tables.js: data.js is in table form (every unit entry a reference to its datasheet, as --write writes it),
 //               every column has a source (verify/columns.json); datasheet facts two lists have differently: verify/out/tables.md
-//   fingerprints  verify/tables.js --fingerprints: every AI-written column (gist, def) matches the text it was written from
+//   fingerprints  verify/tables.js --fingerprints: every AI-written column (gist, def) matches the text it was written from, and
+//               every reading (mods, aura, guard, a rule's or ability's reading columns) the text it was read from (readOf)
+//   readings    verify/readings.js: every ability whose text states a conditional bonus ("if this unit is riled up, … [X]") has a
+//               reading on its unit; today's gaps are listed for the owner (verify/readings-gaps.json), a new one fails
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
@@ -57,6 +60,7 @@ const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f
 step('data', ['check.js']);
 step('tables', ['verify/tables.js']);
 step('fingerprints', ['verify/tables.js', '--fingerprints']);
+step('readings', ['verify/readings.js']);   // abilities with a conditional bonus have a reading
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);

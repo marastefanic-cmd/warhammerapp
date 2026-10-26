@@ -8,18 +8,24 @@
      node verify/tables.js               the gate: data.js is in table form exactly as --write would write it (a list
                                          added in the old form, a stale RULE_OPTIONS / GRANTS, fail), every column is in
                                          verify/columns.json; writes verify/out/tables.md (the datasheet conflicts)
-     node verify/tables.js --fingerprints   the gate: every AI-written column (gist, def) carries the fingerprint of the
-                                         text it was written from, and that text has not changed since
+     node verify/tables.js --fingerprints   the gate: every AI-written column (gist, def) and every reading (mods, aura,
+                                         guard; a rule's, stratagem's or ability's reading columns, READ_COLS) carries the
+                                         fingerprint of the text it was written or read from, and that text has not changed
      node verify/tables.js --write       converts data.js: every unit entry written in full (the old form, as
                                          import-nr.js writes a list) becomes a reference to its datasheet; DATASHEETS,
-                                         RULE_OPTIONS, GRANTS and the resolver are written again. Re-runnable: the same
-                                         data.js gives the same file.
+                                         RULE_OPTIONS, GRANTS and the resolver are written again, and every reading goes
+                                         to the row of the rule it reads (DATASHEETS, the FACTIONS row of an army or
+                                         detachment rule or an enhancement; the list's own, and a reading two lists have
+                                         otherwise, on the entry). Re-runnable: the same data.js gives the same file.
      node verify/tables.js --expand      writes data.js back in the old form (every unit in full, no DATASHEETS), the form
                                          the text-editing tools (write-grants.js, army-blocks.js) work on; --write after
-     node verify/tables.js --stamp       writes the fingerprint of every gist / def that has none (after checking it
-                                         against its text); --restamp also replaces the stale ones
+     node verify/tables.js --stamp       writes the fingerprint of every gist / def / reading that has none (after
+                                         checking it against its text); --restamp also replaces the stale ones (after
+                                         a person has read it again from the new text)
    Where two lists' copies of one datasheet differ in a datasheet fact, the datasheet leaves that fact out and each list
-   keeps its own value in `over` on its entry or row, until the owner decides (verify/out/tables.md lists them). */
+   keeps its own value in `over` on its entry or row, until the owner decides (verify/out/tables.md lists them). The same
+   for a reading: two lists reading one ability otherwise keep theirs on their entries (verify/out/tables.md, Reading
+   conflicts). */
 'use strict';
 const fs = require('fs'), path = require('path'), vm = require('vm'), crypto = require('crypto');
 const { parse, lit, key, q } = require('./literal');
@@ -33,7 +39,20 @@ const STAT_FIELDS = ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base'];
 const WEAPON_FIELDS = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
 // AI-written columns and the column holding the fingerprint of the text each was written from
 const FINGERPRINT = { gist:'gistOf', def:'defOf' };
-const FP_KEYS = Object.values(FINGERPRINT);
+// the readings: the app's interpretations of rule text into numbers and lines. A unit's footnotes (mods), what it gives other
+// units (aura) and their "When targeted" help (guard) are rows of readings, each on the row of the rule it reads (DATASHEETS for a
+// datasheet's ability, FACTIONS for an army or detachment rule or an enhancement, the list's entry for what is the list's own);
+// each reading carries readOf, the fingerprint of the exact text it was read from, and readBy:'derive' when verify/derive.js's
+// fixed rules give it from that text (then --write writes it again from the text). READ_COLS: the reading columns a row of
+// FACTIONS, CORE_STRATAGEMS or an ability row holds itself (the app reads them there); the row's readOf fingerprints them all.
+const READ = ['mods', 'aura', 'guard'];
+const READ_FP = 'readOf', READ_BY = 'readBy';
+const READ_COLS = {
+  rule:['mod', 'calcMods', 'calcDefs', 'calcNc', 'parts', 'both', 'limit'],
+  strat:['mod', 'help', 'shield', 'defCalc', 'defPick'],
+  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'embarked', 'fightOnDeath', 'comeback'],
+};
+const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY);
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
 
 const MARK = {
@@ -55,10 +74,16 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 // its row) is not the datasheet's: the rule, Warlord, enhancement or wargear that gives it (the value is the list's). of: which datasheet of an attached unit a
 // row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction and bsId, and the
 // fingerprints (gistOf, defOf) of AI-written columns.
-function resolveArmies(armies, sheets, order, opts){
-  opts = opts || {};
-  var ROWS = ['stats', 'ranged', 'melee', 'abilities'];
-  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(${JSON.stringify(Object.values(FINGERPRINT))}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+// The readings (mods: footnotes; aura: what the unit gives other units; guard: their "When targeted" help) are each on the row of
+// the rule they read, in this order: the army rules on the unit's Rules line, each datasheet of the unit, its enhancement (or
+// upgrade), the detachment rules of the list whose needs it meets; then the entry's own. An entry's list of them with names in it is
+// the whole list, in its order: a name stands for the readings of that name the rows give. null: none. Hidden: readOf (the
+// fingerprint of the text a reading was read from) and readBy.
+function resolveArmies(armies, sheets, order, factions, opts){
+  opts = opts || {}; factions = factions || {};
+  var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['mods', 'aura', 'guard'];
+  var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -70,13 +95,33 @@ function resolveArmies(armies, sheets, order, opts){
     for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
     return { p:-1, j:-1 };
   }
+  // names alike in case and apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's "Martial Ka’tah")
+  function nm(s){ return String(s).toLowerCase().replace(/[’‘]/g, "'"); }
+  function has(list, x){ for(var i = 0; i < (list || []).length; i++) if(nm(list[i]) === nm(x)) return true; return false; }
+  function meets(n, u){ return !n || (!n.all || n.all.every(function(k){ return has(u.kw, k); })) && (!n.any || n.any.some(function(k){ return has(u.kw, k); }))
+    && !(n.none || []).some(function(k){ return has(u.kw, k); }) && (!n.rule || n.rule.some(function(r){ return has(u.rules, r); })); }
+  // the readings of one kind a unit has: the rows' (each with where it is from, for the trace), then the entry's
+  function readings(a, u, out, ids, parts, kind){
+    var F = factions[a.faction] || {}, dets = (a.detachments || []).map(function(d){ return (F.detachments || {})[d]; }).filter(Boolean), t = [], enh = null;
+    function take(x, at){ ((x && x[kind]) || []).forEach(function(m, j){ t.push({ m:m, at:at, j:j }); }); }
+    (F.armyRules || []).forEach(function(r){ if(has(out.rules, r.name)) take(r, null); });
+    parts.forEach(function(p, i){ take(p, ids[i]); });
+    dets.forEach(function(d){ (d.enhancements || []).forEach(function(e){ if(!enh && (e.name === out.enhancement || e.name === out.upgrade)) take(enh = e, null); }); });
+    dets.forEach(function(d){ [d.rule].concat(d.moreRules || []).forEach(function(r){ if(r && meets(r.needs, out)) take(r, null); }); });
+    var own = u[kind], list = [];
+    if(own === null) list = [];
+    else if(!own) list = t;
+    else if(own.some(function(x){ return typeof x === 'string'; })) own.forEach(function(x, e){ if(typeof x !== 'string') list.push({ m:x, at:null, e:e }); else t.forEach(function(y, i){ if(y.m.from === x) list.push(i === t.findIndex(function(z){ return z.m.from === x; }) ? Object.assign({ e:e }, y) : y); }); });
+    else list = t.concat(own.map(function(x, e){ return { m:x, at:null, e:e }; }));
+    return list.map(function(y, n){ var m = copy(y.m); RHIDE.forEach(function(k){ delete m[k]; }); if(opts.trace) opts.trace(a, u, kind, n, y.at, y.at ? y.j : -1, y.e); return m; });
+  }
   return armies.map(function(a){
     return Object.assign({}, a, { units:a.units.map(function(u){
       if(!u.ds) return u;
       var ids = [].concat(u.ds), parts = ids.map(function(id){ if(!sheets[id]) throw new Error('data.js: ' + a.id + '/' + u.id + ' names no datasheet ' + id); return sheets[id]; });
       var out = {}, k, rest = {};
-      for(k in parts[0]) if(ROWS.indexOf(k) < 0 && HIDE.indexOf(k) < 0) out[k] = copy(parts[0][k]);
-      for(k in u) if(ROWS.indexOf(k) < 0) rest[k] = u[k];
+      for(k in parts[0]) if(ROWS.indexOf(k) < 0 && READ.indexOf(k) < 0 && HIDE.indexOf(k) < 0) out[k] = copy(parts[0][k]);
+      for(k in u) if(ROWS.indexOf(k) < 0 && READ.indexOf(k) < 0) rest[k] = u[k];
       put(out, rest); if(u.over) put(out, u.over);
       ROWS.forEach(function(kind){
         var list;
@@ -93,6 +138,7 @@ function resolveArmies(armies, sheets, order, opts){
           return sorted(row, order[kind] || []);
         });
       });
+      READ.forEach(function(kind){ var l = readings(a, u, out, ids, parts, kind); if(l.length) out[kind] = l; });
       return sorted(out, order.unit || []);
     }) });
   });
@@ -131,12 +177,13 @@ function read(src){
   const S = constant(src, 'DATASHEETS'), O = constant(src, 'TABLE_ORDER'), B = constant(src, 'BS_IDS');
   const sheets = S ? S.value : {}, order = O ? O.value : {};
   // resolve, and trace where each row came from (to put each comment of the datasheet table on every place it shows)
-  const tr = new Map();   // "ai/ui/kind" -> [{ sid, j }] per row
+  const tr = new Map();   // "ai/ui/kind" -> [{ sid, j }] per row (per reading: { sid, j } of a datasheet's, { e } of the entry's own)
   const aIndex = new Map(A.value.map((a, i) => [a, i]));
-  const armies = resolveArmies(A.value, sheets, order, { keep:FP_KEYS.concat('own'), trace:(a, u, kind, n, sid, j) => {
+  const D = evaluate(src);
+  const armies = resolveArmies(A.value, sheets, order, D.factions, { keep:FP_KEYS.concat('own'), trace:(a, u, kind, n, sid, j, e) => {
     const k = aIndex.get(a) + '/' + a.units.indexOf(u) + '/' + kind;
     if(!tr.has(k)) tr.set(k, []);
-    tr.get(k)[n] = { sid, j };
+    tr.get(k)[n] = { sid, j, e };
   } });
   // comments: the lists' own as they are; a datasheet's on every place that shows it
   const C = {};
@@ -149,6 +196,11 @@ function read(src){
         if(p[3] === 'ds'){ add(p.slice(0, 3).concat('name'), c); continue; }
         if(p[3] === 'over'){ add(p.length > 4 ? p.slice(0, 3).concat(p[4]) : p.slice(0, 3), c); continue; }
         if(ROWS.includes(p[3]) && p.length > 5){ add(p.slice(0, 5), c); continue; }
+        // a comment on one of the entry's own readings (or on a name in its list): on that reading of the unit
+        if(READ.includes(p[3]) && p.length > 4){
+          const n = (tr.get(p[0] + '/' + p[2] + '/' + p[3]) || []).findIndex(t => t && t.e === p[4]);
+          add(n >= 0 ? p.slice(0, 4).concat(n) : p.slice(0, 4), c); continue;
+        }
       }
     }
     add(p, c);
@@ -160,7 +212,7 @@ function read(src){
     A.value.forEach((a, ai) => a.units.forEach((u, ui) => {
       if(!u.ds) return;
       const ids = [].concat(u.ds);
-      if(p.length >= 3 && ROWS.includes(p[1])){
+      if(p.length >= 3 && (ROWS.includes(p[1]) || READ.includes(p[1]))){
         (tr.get(ai + '/' + ui + '/' + p[1]) || []).forEach((t, n) => { if(t && t.sid === sid && t.j === p[2]) add([ai, 'units', ui, p[1], n], c); });
       } else if(ids[0] === sid){
         if(p.length === 1) add([ai, 'units', ui, 'name'], c);
@@ -170,16 +222,19 @@ function read(src){
   }
   // the rules in force and what they give units (GRANTS, as verify/derive.js reads them from the words): the reasons a list's unit
   // has a keyword its datasheet does not
-  const D = evaluate(src);
   let G = null;
-  return { src, A, S, O, armies, comments:C, order, bsIds:B ? B.value : {}, factions:D.factions, get grants(){ return G || (G = require('./derive').ruleTables(D).grants); } };
+  return { src, A, S, O, armies, comments:C, order, bsIds:B ? B.value : {}, factions:D.factions, D, get grants(){ return G || (G = require('./derive').ruleTables(D).grants); } };
 }
 
 // ------------------------------------------------------------------------------------------------------------------
 // the tables: datasheets from the lists' units, and each list's entries
 // ------------------------------------------------------------------------------------------------------------------
 // the order keys are listed in: the one data.js has, if every object fits it; else by majority, as the objects have them
-function keyOrder(seqs, prev){
+// (the fingerprints, gistOf, defOf, readOf, readBy, last, in that order: they are no part of the order of what they fingerprint)
+function keyOrder(seqs0, prev0){
+  const fpl = FP_KEYS.filter(k => seqs0.some(s => s.includes(k)) || (prev0 || []).includes(k));
+  if(fpl.length) return keyOrder(seqs0.map(s => s.filter(k => !FP_KEYS.includes(k))), prev0 && prev0.filter(k => !FP_KEYS.includes(k))).concat(fpl);
+  const seqs = seqs0, prev = prev0;
   const fits = o => seqs.every(s => { const t = s.filter(k => o.includes(k)); return t.every((k, i) => !i || o.indexOf(t[i - 1]) < o.indexOf(k)); });
   if(prev && fits(prev)) return prev.concat([...new Set(seqs.flat())].filter(k => !prev.includes(k)));
   const keys = [...new Set(seqs.flat())], cnt = new Map();
@@ -329,6 +384,15 @@ function build(R){
     return why;
   };
   for(const U of units) U.why = unitWhy(U);
+  // the readings, each to the row it reads (readingTables); the list's own keep their reason
+  const RT = readingTables(R, units, conflicts);
+  for(const U of units){
+    for(const [k, w] of Object.entries(U.readWhy)) U.why[k] = w;
+    // the list's own notes: which unit it leads (kwNote), the points of its parts (ptsNote)
+    const u = U.u;
+    if(u.kwNote){ const m = / comes? from (?:the )?(.+?)(?:\.$| \(|;)/.exec(u.kwNote); U.why.kwNote = u.leads ? (u.support ? 'supports ' : 'leads ') + u.leads + (u.also && u.also.length ? ' (with ' + u.also.map(x => x.name).join(', ') + ')' : '') : m ? m[1] : 'the list'; }
+    if(u.ptsNote) U.why.ptsNote = 'the points of its parts as the list has them' + (u.leads ? ' (' + u.name + (u.also || []).map(x => ' + ' + x.name).join('') + ' + ' + u.leads + ')' : '');
+  }
   // the list's only where lists differ: a value an ability of the unit gives (Kustom Force Field: 4+* InSv), a weapon ability
   // on the Rules line from the wargear taken
   const rowWhy = (o, f) => {
@@ -388,7 +452,7 @@ function build(R){
   // comments on rows: on the datasheet's row when every place that shows it has the same; else on the lists' rows
   const SC = {}, AC = {};
   const addC = (M, p, c) => { const k = JSON.stringify(p); const x = M[k] = M[k] || { above:[], inline:[] }; x.above.push(...c.above); x.inline.push(...c.inline); };
-  const rowC = new Map(), fieldC = [];
+  const rowC = new Map(), fieldC = [], readC = [];
   for(const [pk, c] of Object.entries(C)){
     const p = JSON.parse(pk);
     if(p[1] !== 'units' || p.length < 4){ addC(AC, p, c); continue; }
@@ -399,6 +463,7 @@ function build(R){
       if(!rowC.has(o)) rowC.set(o, { above:[], inline:[] });
       rowC.get(o).above.push(...c.above); rowC.get(o).inline.push(...c.inline);
     } else if(ROWS.includes(f) || DS_UNIT.includes(f)) fieldC.push({ U, f, c, p });
+    else if(READ.includes(f)) readC.push({ U, f, n:p.length >= 5 ? p[4] : null, c });
     else addC(AC, p, c);
   }
   for(const s of sheets.values()) for(const kind of ROWS) for(const R of s.rows[kind].values()){
@@ -437,13 +502,14 @@ function build(R){
     const u = U.u, s0 = sheetOf(U.ids[0]), e = { id:u.id, ds:U.multi ? U.ids : U.ids[0] }, over = {};
     for(const k of order.unit){
       if(!(k in u) || k === 'id' || k === 'name') continue;
-      if(ROWS.includes(k)) continue;
+      if(ROWS.includes(k) || READ.includes(k)) continue;
       if(DS_UNIT.includes(k)){
         if(!U.multi){ if(s0.uconf.has(k)) over[k] = u[k]; else if(U.why[k] && !eq(u[k], s0.ds[k])) e[k] = u[k]; }
         else if(!eq(u[k], s0.ds[k])) e[k] = u[k];
       } else e[k] = u[k];
     }
-    for(const k of Object.keys(u)) if(!(k in e) && !order.unit.includes(k)) e[k] = u[k];
+    for(const k of Object.keys(u)) if(!(k in e) && !order.unit.includes(k) && !READ.includes(k)) e[k] = u[k];
+    for(const k of READ) if(k in U.readEntry) e[k] = U.readEntry[k];
     for(const k of DS_UNIT.slice(1)){
       if(k in u) continue;
       if(U.multi){ if(k in s0.ds) e[k] = null; }
@@ -468,6 +534,29 @@ function build(R){
     U.entry = out;
     return out;
   });
+  // comments on readings: on the entry's own (its key, its own reading, the name standing for a row's); on the datasheet's reading (or
+  // its key) when every unit that shows it has the same; else on the entry's first line
+  const tableLater = [], keyC = [], elC = new Map();
+  const toName = (U, c) => addC(AC, [U.ai, 'units', U.ui, 'id'], c);   // (its first line: a datasheet's name comment would not come back from --expand)
+  for(const x of readC){
+    const U = x.U, e = U.entry, kind = x.f;
+    if(x.n === null){ if(e[kind]) addC(AC, [U.ai, 'units', U.ui, kind], x.c); else if(kind in e) toName(U, x.c); else keyC.push(x); continue; }
+    const r = U.read[kind][x.n];
+    if(!r){ toName(U, x.c); continue; }
+    if(!(r.g && r.g.agreed)){ const i = (e[kind] || []).indexOf(r.m); if(i >= 0) addC(AC, [U.ai, 'units', U.ui, kind, i], x.c); else toName(U, x.c); continue; }
+    const j = r.g.obs.get(U).indexOf(r), k = r.g.key + '\0' + j;
+    if(!elC.has(k)) elC.set(k, { g:r.g, j, kind, by:new Map() });
+    const m = elC.get(k).by.get(U) || { above:[], inline:[] }; m.above.push(...x.c.above); m.inline.push(...x.c.inline); elC.get(k).by.set(U, m);
+  }
+  for(const { g, j, kind, by } of elC.values()){
+    const cs = [...g.obs.keys()].map(U => by.get(U));
+    if(g.cls === 'ds' && cs.every(c => c && stable(c) === stable(cs[0]))){ const J = RT.rowRead('ds\0' + g.sid, kind).findIndex(y => y.g === g) + j; tableLater.push([[g.sid, kind, J], cs[0]]); continue; }
+    for(const [U, c] of by){ const i = (U.entry[kind] || []).indexOf(g.from); if(i >= 0) addC(AC, [U.ai, 'units', U.ui, kind, i], c); else toName(U, c); }
+  }
+  { const bySid = new Map(); for(const x of keyC){ const k = x.U.ids[0] + '\0' + x.f; if(!bySid.has(k)) bySid.set(k, new Map()); const m = bySid.get(k).get(x.U) || { above:[], inline:[] }; m.above.push(...x.c.above); m.inline.push(...x.c.inline); bySid.get(k).set(x.U, m); }
+    for(const [k, by] of bySid){ const [sid, kind] = k.split('\0'); const all = units.filter(U => U.ids[0] === sid && !(kind in U.entry)), cs = all.map(U => by.get(U));
+      if(RT.rowRead('ds\0' + sid, kind).length && cs.every(c => c && stable(c) === stable(cs[0]))) tableLater.push([[sid, kind], cs[0]]);
+      else for(const [U, c] of by) toName(U, c); } }
   // comments on a unit's datasheet facts: on its entry when it lists them, on the datasheet when every unit of it has the same
   const fc = new Map();
   for(const x of fieldC){
@@ -491,6 +580,7 @@ function build(R){
   const table = {}, tableC = {};
   for(const s of list){
     const d = Object.assign({}, s.ds);
+    for(const kind of READ){ const rr = RT.rowRead('ds\0' + s.id, kind); if(rr.length) d[kind] = rr.map(y => y.o); }
     for(const kind of ROWS) if(s.rows[kind].size) d[kind] = [...s.rows[kind].values()].map(R => R.ds);
     const o = { name:d.name, faction:d.faction }; if(d.bsId) o.bsId = d.bsId;
     for(const k of order.unit.concat(ROWS)) if(k in d && !(k in o)) o[k] = d[k];
@@ -499,8 +589,178 @@ function build(R){
     for(const kind of ROWS) [...s.rows[kind].values()].forEach((R, j) => { if(R.comment) addC(tableC, [s.id, kind, j], R.comment); });
     for(const [f, c] of Object.entries(s.fieldComments || {})) addC(tableC, [s.id, f], c);
   }
+  for(const [p, c] of tableLater) addC(tableC, p, c);
   const armiesNew = armies.map((a, ai) => Object.assign({}, a, { units:units.filter(U => U.ai === ai).map(U => U.entry) }));
-  return { armies:armiesNew, sheets:table, order, armyComments:AC, sheetComments:tableC, conflicts, notes, shared:list.filter(s => s.all.length + 0 > 1 || s.rows.stats.size && [...s.rows.stats.values()].some(R => new Set(R.obs.map(o => o.U)).size > 1)).length };
+  return { armies:armiesNew, sheets:table, order, armyComments:AC, sheetComments:tableC, conflicts, notes, RT, shared:list.filter(s => s.all.length + 0 > 1 || s.rows.stats.size && [...s.rows.stats.values()].some(R => new Set(R.obs.map(o => o.U)).size > 1)).length };
+}
+
+// ------------------------------------------------------------------------------------------------------------------
+// the readings: each on the row of the rule it reads (docs/tables.md, "Readings")
+// ------------------------------------------------------------------------------------------------------------------
+const nmR = s => String(s).toLowerCase().replace(/[’‘]/g, "'");
+const hasN = (list, x) => (list || []).some(y => nmR(y) === nmR(x));
+const NEEDS_KEYS = ['all', 'any', 'none', 'rule'];   // the needs the resolver reads (a detachment rule's, for its readings)
+const meetsN = (n, u) => !n || (!n.all || n.all.every(k => hasN(u.kw, k))) && (!n.any || n.any.some(k => hasN(u.kw, k))) && !(n.none || []).some(k => hasN(u.kw, k)) && (!n.rule || n.rule.some(r => hasN(u.rules, r)));
+const detRulesOf = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];
+const unFp = v => JSON.parse(JSON.stringify(v, (k, x) => FP_KEYS.includes(k) ? undefined : x));
+const isOwnRow = ab => /\b(Enhancement|Upgrade)\b/.test(ab.tag || '');
+// a core rule a unit's Rules line or one of its weapons names ("Damaged 5", Conversion): the glossary entry, with the name for one
+// with its value in its name (as verify/helpers.js cites it)
+function coreText(D, name){
+  if(D.rules[name]) return D.rules[name];
+  const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1];
+  return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : null;
+}
+// the exact text a reading of a unit was read from: the unit's ability of that name (or the ability with an option of that name,
+// "**Shroudpsalm (Aura):**"), the army or detachment rule it names, the enhancement, a core rule, a stratagem
+function readSource(D, a, u, m){
+  const F = D.factions[a.faction] || {}, dets = (a.detachments || []).map(d => (F.detachments || {})[d]).filter(Boolean);
+  const rn = m.rule || m.from;
+  const rule = (F.armyRules || []).find(r => r.name === rn) || dets.flatMap(detRulesOf).find(r => r.name === rn);
+  if(m.rule && rule) return ruleText(rule);
+  const ab = (u.abilities || []).find(x => x.name === m.from) || (u.abilities || []).find(x => String(x.text || '').includes('**' + m.from));
+  if(ab) return ab.text;
+  if(rule) return ruleText(rule);
+  const e = dets.flatMap(d => d.enhancements || []).find(x => x.name === m.from); if(e) return e.text;
+  const c = coreText(D, m.from); if(c) return c;
+  const st = dets.flatMap(d => d.stratagems || []).concat(D.coreStratagems).find(x => x.name === m.from || x.id === m.from);
+  return st ? stratText(st) : null;
+}
+// verify/derive.js's fixed rules for readings, loaded on first use (derive.js loads this file)
+let deriveReadings_ = null;
+const deriveReadings = (text, name) => (deriveReadings_ || (deriveReadings_ = require('./derive').readingsOf))(text, name);
+
+function readingTables(R, units, conflicts){
+  const D = R.D, prevSheets = R.S ? R.S.value : {}, F = fk => D.factions[fk] || {};
+  // where a reading of a unit is from: { cls:'ds', p (the part) } | { cls:'rule', path } | { cls:'enh', path } | { cls:'own', why }
+  const enhPath = U => { const u = U.u, a = U.a, f = F(a.faction);
+    for(const dk of a.detachments) for(const [i, e] of (((f.detachments || {})[dk] || {}).enhancements || []).entries()) if(e.name === u.enhancement || e.name === u.upgrade) return { path:[a.faction, 'detachments', dk, 'enhancements', i], e };
+    return null; };
+  const ruleOf = (U, rn) => { const a = U.a, f = F(a.faction);
+    const i = (f.armyRules || []).findIndex(r => r.name === rn);
+    if(i >= 0) return { path:[a.faction, 'armyRules', i], r:f.armyRules[i], army:true };
+    for(const dk of a.detachments){ const d = (f.detachments || {})[dk]; if(!d) continue;
+      if(d.rule && d.rule.name === rn) return { path:[a.faction, 'detachments', dk, 'rule'], r:d.rule };
+      const j = (d.moreRules || []).findIndex(r => r.name === rn); if(j >= 0) return { path:[a.faction, 'detachments', dk, 'moreRules', j], r:d.moreRules[j] }; }
+    return null; };
+  const ruleApplies = (U, x) => x.army ? hasN(U.u.rules, x.r.name) : (!x.r.needs || Object.keys(x.r.needs).every(k => NEEDS_KEYS.includes(k))) && meetsN(x.r.needs, U.u);
+  const partOfAbility = (U, name) => {
+    const rs = U.rows.abilities || [], hit = rs.find(o => o.r.name === name) || rs.find(o => String(o.r.text || '').includes('**' + name));
+    return hit ? { part:hit.part, row:hit.r } : null; };
+  const coreOf = (U, name) => !U.multi && (hasN(U.u.rules, name) || [].concat(U.u.ranged || [], U.u.melee || []).some(w => (w.kw || []).some(k => nmR(k).startsWith(nmR(name))))) && coreText(D, name);
+  function classify(U, m){
+    const rn = m.rule || m.from, rule = ruleOf(U, rn);
+    if(m.rule && rule){ if(ruleApplies(U, rule)) return { cls:'rule', path:rule.path, rule:rule.r }; return { cls:'own', why:null, cant:'the rule it names (' + rn + ') does not reach this unit as the resolver places a rule\'s readings' }; }
+    const ab = partOfAbility(U, m.from);
+    if(ab && ab.part >= 0) return { cls:'ds', p:ab.part };
+    if(ab){
+      const e = enhPath(U);
+      if(e && e.e.name === m.from && isOwnRow(ab.row)) return { cls:'enh', path:e.path, enh:e.e };
+      return { cls:'own', why:'its ' + (ab.row.tag || 'own ability') + ' ' + ab.row.name + ' (a row of this list only)' };
+    }
+    if(rule){ if(ruleApplies(U, rule)) return { cls:'rule', path:rule.path, rule:rule.r }; return { cls:'own', why:null, cant:'the rule ' + rn + ' does not reach this unit as the resolver places a rule\'s readings' }; }
+    const e = enhPath(U); if(e && e.e.name === m.from) return { cls:'enh', path:e.path, enh:e.e };
+    if(coreOf(U, m.from)) return { cls:'ds', p:0, core:true };
+    return { cls:'own', why:null, cant:'nothing of the unit or the list it is from is named ' + m.from };
+  }
+  const gkey = (U, kind, c, from) => kind + '\0' + (c.cls === 'ds' ? 'ds\0' + U.ids[c.p] : c.cls + '\0' + JSON.stringify(c.path)) + '\0' + from;
+  const groups = new Map(), owns = [];
+  for(const U of units){
+    U.read = {};
+    for(const kind of READ){
+      U.read[kind] = (U.u[kind] || []).map((m, n) => {
+        const c = classify(U, m), x = { U, kind, n, m, c };
+        if(c.cls === 'own'){ owns.push(x); return x; }
+        const k = gkey(U, kind, c, m.from);
+        if(!groups.has(k)) groups.set(k, { key:k, kind, from:m.from, cls:c.cls, sid:c.cls === 'ds' ? U.ids[c.p] : null, path:c.path || null, src:c, obs:new Map() });
+        x.g = groups.get(k);
+        return x;
+      });
+    }
+  }
+  // who each group is for, as the resolver places it: every unit with that datasheet whose part has the ability (or core rule);
+  // every unit the rule reaches; the bearer of the enhancement
+  for(const g of groups.values()){
+    for(const U of units){
+      let on = false;
+      if(g.cls === 'ds'){ const p = U.ids.indexOf(g.sid); if(p >= 0){ const ab = partOfAbility(U, g.from); on = ab ? ab.part === p : (p === 0 && !!coreOf(U, g.from)); } }
+      else if(g.cls === 'rule'){ if(U.a.faction === g.path[0]){ const x = ruleOf(U, g.src.rule.name); on = !!x && JSON.stringify(x.path) === JSON.stringify(g.path) && ruleApplies(U, x); } }
+      else { const e = enhPath(U); on = !!e && JSON.stringify(e.path) === JSON.stringify(g.path); }
+      if(on) g.obs.set(U, U.read[g.kind].filter(x => x.g === g));
+    }
+  }
+  // a group every unit it is for has alike goes on its row; else it is a conflict: each list keeps its own
+  const readConflicts = [], derived = [];
+  const whereOf = g => g.cls === 'ds' ? g.sid : g.path[0] + ' · ' + g.path.slice(1).join(' · ');
+  for(const g of groups.values()){
+    const vals = [...g.obs.entries()].map(([U, xs]) => ({ U, v:stable(unFp(xs.map(x => x.m))) }));
+    if(vals.every(v => v.v === vals[0].v)){
+      g.agreed = true;
+      const first = [...g.obs.values()].find(xs => xs.length);
+      if(!first){ g.agreed = false; continue; }
+      g.list = first.map((x, j) => { const o = JSON.parse(JSON.stringify(x.m)); for(const k of [READ_FP, READ_BY]){ const w = [...g.obs.values()].map(xs => xs[j].m[k]).find(v => v !== undefined); if(w !== undefined) o[k] = w; else delete o[k]; } return o; });
+      // readings verify/derive.js's fixed rules give from the text: written from it (readBy:'derive'); one whose text changed is
+      // written again from the new text
+      if(g.cls === 'ds' || g.cls === 'enh'){
+        const [U0, xs0] = [...g.obs.entries()].find(([, xs]) => xs.length);
+        const text = readSource(D, U0.a, U0.u, xs0[0].m), d = text != null ? deriveReadings(text, g.from) : null, want = d && d[g.kind] ? d[g.kind] : null;
+        const was = g.list.some(o => o[READ_BY] === 'derive');
+        if(want && stable(want) === stable(unFp(g.list))){ g.list = g.list.map(o => Object.assign(unFp(o), { [READ_FP]:fp(text), [READ_BY]:'derive' })); derived.push(g); }
+        else if(was){ g.list = (want || []).map(o => Object.assign({}, o, { [READ_FP]:fp(text), [READ_BY]:'derive' })); g.rederived = true; if(want) derived.push(g); }
+      }
+    } else {
+      g.agreed = false;
+      const by = new Map(); for(const v of vals){ if(!by.has(v.v)) by.set(v.v, []); by.get(v.v).push(v.U); }
+      readConflicts.push({ where:whereOf(g), field:g.kind + ' · ' + g.from, values:[...by.entries()].map(([v, us]) => ({ value:JSON.parse(v), lists:us.map(U => U.a.id + '/' + U.u.id) })) });
+    }
+  }
+  // each row's readings, in the order the lists show them (the one data.js has, where it fits)
+  const rowLists = new Map();   // "ds\0sid" | JSON path -> { kind: [group] }
+  const rowKeyOf = g => g.cls === 'ds' ? 'ds\0' + g.sid : JSON.stringify(g.path);
+  for(const g of groups.values()) if(g.agreed && g.list.length){ const k = rowKeyOf(g); if(!rowLists.has(k)) rowLists.set(k, {}); (rowLists.get(k)[g.kind] = rowLists.get(k)[g.kind] || []).push(g); }
+  const prevFroms = (k, kind) => { const row = k.startsWith('ds\0') ? prevSheets[k.slice(3)] : JSON.parse(k).reduce((o, x) => o && o[x], D.factions);
+    return row && Array.isArray(row[kind]) ? [...new Set(row[kind].map(m => m.from))] : null; };
+  for(const [k, m] of rowLists) for(const kind of Object.keys(m)){
+    const seqs = units.map(U => [...new Set(U.read[kind].filter(x => x.g && rowKeyOf(x.g) === k && x.g.agreed).map(x => x.g.from))]).filter(s => s.length);
+    const ord = keyOrder(seqs, prevFroms(k, kind));
+    m[kind].sort((x, y) => ord.indexOf(x.from) - ord.indexOf(y.from));
+  }
+  const rowRead = (k, kind) => ((rowLists.get(k) || {})[kind] || []).flatMap(g => g.list.map(o => ({ o, g })));
+  // each unit: the readings the rows give it (as the resolver orders them), its own after; where that is not the list's order, the
+  // whole list with names for the rows' readings
+  for(const U of units){
+    const a = U.a, u = U.u, f = F(a.faction), e = enhPath(U);
+    U.readEntry = {}; U.readWhy = {};
+    for(const kind of READ){
+      const t = [];
+      (f.armyRules || []).forEach((r, i) => { if(hasN(u.rules, r.name)) t.push(...rowRead(JSON.stringify([a.faction, 'armyRules', i]), kind)); });
+      U.ids.forEach(id => t.push(...rowRead('ds\0' + id, kind)));
+      if(e) t.push(...rowRead(JSON.stringify(e.path), kind));
+      for(const dk of a.detachments){ const d = (f.detachments || {})[dk]; if(!d) continue;
+        if(d.rule && meetsN(d.rule.needs, u)) t.push(...rowRead(JSON.stringify([a.faction, 'detachments', dk, 'rule']), kind));
+        (d.moreRules || []).forEach((r, j) => { if(meetsN(r.needs, u)) t.push(...rowRead(JSON.stringify([a.faction, 'detachments', dk, 'moreRules', j]), kind)); }); }
+      const actual = U.read[kind], own = actual.filter(x => !(x.g && x.g.agreed));
+      for(const x of own) if(x.c.cls === 'own' && x.c.why) (U.readWhy[kind] = U.readWhy[kind] || {})[x.m.from] = x.c.why;
+      const shown = xs => stable(unFp(xs));
+      // (a group written again from its new text: the unit shows what its row now gives)
+      const act = actual.flatMap(x => x.g && x.g.rederived ? (x === actual.find(y => y.g === x.g) ? x.g.list : []) : [x.g && x.g.agreed ? x.g.list[x.g.obs.get(U).indexOf(x)] : x.m]);
+      const ownM = own.map(x => x.m);
+      if(!act.length && !t.length) continue;
+      if(!act.length){ U.readEntry[kind] = null; continue; }
+      if(shown(t.map(y => y.o).concat(ownM)) === shown(act)){ if(ownM.length) U.readEntry[kind] = ownM; continue; }
+      // the whole list: a name for each group of the rows' readings, the list's own in full
+      const full = [], done = new Set();
+      for(const x of actual){
+        if(x.g && x.g.agreed){ if(!done.has(x.g.from)){ done.add(x.g.from); full.push(x.g.from); } }
+        else full.push(x.m);
+      }
+      const exp = full.flatMap(y => typeof y === 'string' ? t.filter(z => z.o.from === y).map(z => z.o) : [y]);
+      if(!full.some(y => typeof y === 'string') || shown(exp) !== shown(act)) throw new Error(U.a.id + '/' + U.u.id + ' ' + kind + ': its readings cannot be written as the rows\' readings and its own');
+      U.readEntry[kind] = full;
+    }
+  }
+  const cant = owns.filter(x => x.c.cant).map(x => ({ where:x.U.a.id + '/' + x.U.u.id + ' · ' + x.kind + ' · ' + x.m.from, why:x.c.cant }));
+  return { groups, rowLists, rowRead, readConflicts, derived, cant, owns };
 }
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -592,15 +852,42 @@ function ruleTablesText(T){
     rows('RULE_OPTIONS', T.options), rows('GRANTS', T.grants), MARK.rules[1]].join('\n');
 }
 
+// FACTIONS with each rule's and enhancement's readings (mods, aura, guard: the rows readingTables gives), as it is otherwise
+function factionsText(src, RT){
+  const c = constant(src, 'FACTIONS'), edits = [], same = (p, q) => p.length === q.length && p.every((x, i) => x === q[i]);
+  const props = p => c.nodes.filter(n => n.prop && n.path.length === p.length + 1 && same(n.path.slice(0, -1), p));
+  const rows = [];
+  for(const [fk, f] of Object.entries(c.value)){
+    (f.armyRules || []).forEach((r, i) => rows.push([fk, 'armyRules', i]));
+    for(const [dk, d] of Object.entries(f.detachments || {})){
+      if(d.rule) rows.push([fk, 'detachments', dk, 'rule']);
+      (d.moreRules || []).forEach((r, i) => rows.push([fk, 'detachments', dk, 'moreRules', i]));
+      (d.enhancements || []).forEach((r, i) => rows.push([fk, 'detachments', dk, 'enhancements', i]));
+    }
+  }
+  for(const p of rows){
+    const row = p.reduce((o, x) => o[x], c.value), ps = props(p);
+    for(const kind of READ){
+      const want = RT.rowRead(JSON.stringify(p), kind).map(y => y.o), at = ps.findIndex(n => n.path[n.path.length - 1] === kind);
+      if(at >= 0 && !want.length){ const n = ps[at]; edits.push(at > 0 ? { at:ps[at - 1].end, del:n.end - ps[at - 1].end, text:'' } : { at:n.pos, del:(ps[1] ? ps[1].pos : n.end) - n.pos, text:'' }); }
+      else if(at >= 0 && stable(row[kind]) !== stable(want)){ const v = c.nodes.find(n => !n.prop && same(n.path, p.concat(kind))); edits.push({ at:v.pos, del:v.end - v.pos, text:lit(want) }); }
+      else if(at < 0 && want.length){ const last = ps.reduce((x, n) => !x || n.end > x.end ? n : x, null); edits.push({ at:last.end, del:0, text:', ' + kind + ':' + lit(want) }); }
+    }
+  }
+  edits.sort((a, b) => b.at - a.at);
+  for(const e of edits) src = src.slice(0, e.at) + e.text + src.slice(e.at + e.del);
+  return src;
+}
+
 const RETURN_RE = /\nreturn \{ version:VERSION[^\n]*\};\n/;
 // data.js in table form, from data.js in any form
 function tableForm(src, opts){
   opts = opts || {};
   const R = read(src);
-  if(opts.stampRows) opts.stampRows(R.armies);
+  if(opts.stampRows) opts.stampRows(R.armies, R.D);
   const B = build(R);
-  // the parts of data.js outside the tables, as they are
-  let out = src;
+  // the parts of data.js outside the tables, as they are (FACTIONS with its rows' readings)
+  let out = factionsText(src, B.RT);
   for(const m of [MARK.sheets, MARK.rules, MARK.resolver]){ const r = marked(out, m); if(r) out = out.slice(0, r.start) + out.slice(r.stop); }
   const A = constant(out, 'ARMIES');
   const sheetsBlock = MARK.sheets[0] + '\n' + sheetsText(B.sheets, B.sheetComments) + '\n' + MARK.sheets[1];
@@ -615,7 +902,7 @@ function tableForm(src, opts){
   return { text:compose({ options:T.options, grants:T.grants }), B, R };
 }
 function returnLine(l, tables, rules){
-  l = l.replace(/armies:(?:ARMIES|resolveArmies\(ARMIES, DATASHEETS, TABLE_ORDER\))/, tables ? 'armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER)' : 'armies:ARMIES')
+  l = l.replace(/armies:(?:ARMIES|resolveArmies\(ARMIES, DATASHEETS, TABLE_ORDER(?:, FACTIONS)?\))/, tables ? 'armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER, FACTIONS)' : 'armies:ARMIES')
     .replace(/, datasheets:DATASHEETS|, ruleOptions:RULE_OPTIONS|, grants:GRANTS/g, '');
   return l.replace(/ \};\n$/, (tables ? ', datasheets:DATASHEETS' : '') + (rules ? ', ruleOptions:RULE_OPTIONS, grants:GRANTS' : '') + ' };\n');
 }
@@ -659,6 +946,28 @@ function sites(D, armies){
     const k = ab.name + '\n' + ab.text + '\n' + ab.def; if(seen.has(k)) return; seen.add(k);
     each('ARMIES', null, a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text);
   })));
+  // the readings: a row's own reading columns (READ_COLS) under one readOf, the text of the row; every reading of a unit (mods, aura,
+  // guard: on DATASHEETS, FACTIONS or the entry) its own readOf, the text it was read from (readSource)
+  const rowSite = (table, path, where, o, source, cols) => { const c = Object.keys(o).filter(k => cols.includes(k) && o[k] !== undefined).pop();
+    if(c) out.push({ table, path, where, col:c, fpKey:READ_FP, has:o[READ_FP], source, reading:true }); };
+  D.coreStratagems.forEach((x, i) => rowSite('CORE_STRATAGEMS', [i], 'Core · ' + x.name, x, stratText(x), READ_COLS.strat));
+  for(const [fk, f] of Object.entries(D.factions)){
+    (f.armyRules || []).forEach((r, i) => rowSite('FACTIONS', [fk, 'armyRules', i], f.name + ' army rule · ' + r.name, r, ruleText(r), READ_COLS.rule));
+    for(const [dk, d] of Object.entries(f.detachments || {})){
+      if(d.rule) rowSite('FACTIONS', [fk, 'detachments', dk, 'rule'], f.name + ' · ' + d.name + ' rule · ' + d.rule.name, d.rule, ruleText(d.rule), READ_COLS.rule);
+      (d.moreRules || []).forEach((r, i) => rowSite('FACTIONS', [fk, 'detachments', dk, 'moreRules', i], f.name + ' · ' + d.name + ' rule · ' + r.name, r, ruleText(r), READ_COLS.rule));
+      (d.stratagems || []).forEach((x, i) => rowSite('FACTIONS', [fk, 'detachments', dk, 'stratagems', i], f.name + ' · ' + d.name + ' · ' + x.name, x, stratText(x), READ_COLS.strat));
+    }
+  }
+  const seenR = new Set();
+  armies.forEach(a => a.units.forEach(u => {
+    for(const ab of u.abilities || []){ const k = ab.name + '\n' + ab.text + '\n' + stable(READ_COLS.ability.map(c => ab[c])) + '\n' + ab[READ_FP]; if(seenR.has(k)) continue; seenR.add(k);
+      rowSite('ARMIES', null, a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, READ_COLS.ability); }
+    for(const kind of READ) for(const m of u[kind] || []){
+      const src = readSource(D, a, u, m), k = stable(unFp(m)) + '\n' + src + '\n' + m[READ_FP]; if(seenR.has(k)) continue; seenR.add(k);
+      out.push({ table:'ARMIES', path:null, where:a.id + ' · ' + u.name + ' · ' + kind + ' · ' + m.from + (m.when ? ' (' + m.when + ')' : ''), col:kind, fpKey:READ_FP, has:m[READ_FP], source:src, reading:true, derived:m[READ_BY] === 'derive' });
+    }
+  }));
   return out;
 }
 // write the missing fingerprints (and with restamp the stale ones) into CORE_STRATAGEMS and FACTIONS (the units' through stampRows)
@@ -670,6 +979,7 @@ function stampConstants(src, D, restamp){
     for(const x of sites(D, []).filter(x => x.table === name)){
       const want = fp(x.source);
       if(x.has === undefined){ const n = node(x.path.concat(x.col), true); edits.push({ at:n.end, del:0, text:', ' + x.fpKey + ':' + q(want) }); }
+      else if(x.source == null) continue;
       else if(restamp && x.has !== want){ const n = node(x.path.concat(x.fpKey), false); edits.push({ at:n.pos, del:n.end - n.pos, text:q(want) }); }
     }
   }
@@ -677,7 +987,18 @@ function stampConstants(src, D, restamp){
   for(const e of edits) src = src.slice(0, e.at) + e.text + src.slice(e.at + e.del);
   return { src, n:edits.length };
 }
-const stampRows = restamp => armies => { let n = 0; for(const a of armies) for(const u of a.units) for(const ab of u.abilities || []) if(typeof ab.def === 'string' && (ab.defOf === undefined || (restamp && ab.defOf !== fp(ab.text)))){ ab.defOf = fp(ab.text); n++; } return n; };
+const stampRows = restamp => (armies, D) => {
+  let n = 0;
+  const need = (o, k, src) => src != null && (o[k] === undefined || (restamp && o[k] !== fp(src)));
+  for(const a of armies) for(const u of a.units){
+    for(const ab of u.abilities || []){
+      if(typeof ab.def === 'string' && need(ab, 'defOf', ab.text)){ ab.defOf = fp(ab.text); n++; }
+      if(READ_COLS.ability.some(c => ab[c] !== undefined) && need(ab, READ_FP, ab.text)){ ab[READ_FP] = fp(ab.text); n++; }
+    }
+    for(const kind of READ) for(const m of u[kind] || []){ const src = readSource(D, a, u, m); if(need(m, READ_FP, src)){ m[READ_FP] = fp(src); n++; } }
+  }
+  return n;
+};
 
 // ------------------------------------------------------------------------------------------------------------------
 // the column registry (verify/columns.json): where every column's values come from
@@ -695,16 +1016,19 @@ function columnsInData(src){
       add('FACTIONS.detachments', d); if(d.rule) add('FACTIONS.detachments.rule', d.rule); (d.moreRules || []).forEach(r => add('FACTIONS.detachments.moreRules', r));
       (d.stratagems || []).forEach(x => add('FACTIONS.detachments.stratagems', x)); (d.enhancements || []).forEach(x => add('FACTIONS.detachments.enhancements', x));
     }
+    // the readings on its rule and enhancement rows (one table: they are the lists' readings, on the row they read)
+    for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => detRulesOf(d).concat(d.enhancements || []))))
+      for(const k of READ) (r[k] || []).forEach(m => add('FACTIONS.readings', m));
   }
   for(const a of A){
     add('ARMIES', a);
     for(const u of a.units){
       add('ARMIES.units', u);
       for(const k of ROWS) (u[k] || []).forEach(r => add('ARMIES.units.' + k, r));
-      for(const k of ['mods', 'aura', 'guard']) (u[k] || []).forEach(r => add('ARMIES.units.' + k, r));
+      for(const k of READ) (u[k] || []).forEach(r => { if(typeof r !== 'string') add('ARMIES.units.' + k, r); });
     }
   }
-  for(const s of Object.values(S)){ add('DATASHEETS', s); for(const k of ROWS) (s[k] || []).forEach(r => add('DATASHEETS.' + k, r)); }
+  for(const s of Object.values(S)){ add('DATASHEETS', s); for(const k of ROWS.concat(READ)) (s[k] || []).forEach(r => add('DATASHEETS.' + k, r)); }
   (D.ruleOptions || []).forEach(r => add('RULE_OPTIONS', r)); (D.grants || []).forEach(r => add('GRANTS', r));
   add('BS_IDS', D.bsIds);
   return Object.fromEntries(Object.entries(T).map(([k, v]) => [k, [...v]]));
@@ -723,6 +1047,18 @@ const SOURCES = ['bsdata', 'wahapedia', 'gw', 'newrecruit', 'derived', 'hand', '
 // ------------------------------------------------------------------------------------------------------------------
 // the report: the datasheets and every fact two lists have differently
 // ------------------------------------------------------------------------------------------------------------------
+// the readings by where they are: rows (datasheets, army rules, detachment rules, enhancements), the lists' entries; derived ones
+function readingStats(t){
+  const RT = t.B.RT, by = { ds:'datasheets', army:'army rules', det:'detachment rules', enh:'enhancements' }, rows = {};
+  const kindOf = g => g.cls === 'ds' ? 'ds' : g.cls === 'enh' ? 'enh' : g.path[1] === 'armyRules' ? 'army' : 'det';
+  for(const g of RT.groups.values()) if(g.agreed && g.list.length){ const k = kindOf(g), r = rows[k] = rows[k] || { what:by[k], n:0, copies:0 }; r.n += g.list.length; r.copies += [...g.obs.values()].reduce((n, xs) => n + xs.length, 0); }
+  const conflictObs = [...RT.groups.values()].filter(g => !g.agreed).reduce((n, g) => n + [...g.obs.values()].reduce((m, xs) => m + xs.length, 0), 0);
+  const derived = RT.derived.reduce((n, g) => n + g.list.length, 0), rules = {};
+  const derivedList = RT.derived.map(g => { const r = (g.list[0] && require('./derive').readingsOf(readSource(t.R.D, [...g.obs.keys()][0].a, [...g.obs.keys()][0].u, g.list[0]) || '', g.from)) || {}; rules[r.rule] = (rules[r.rule] || 0) + g.list.length;
+    return (g.cls === 'ds' ? g.sid : g.path.join(' · ')) + ' · ' + g.kind + ' · ' + g.from + ' (' + r.rule + '): ' + g.list.map(o => o.when + ': ' + o.note).join('; '); });
+  return { rows:['ds', 'army', 'det', 'enh'].filter(k => rows[k]).map(k => rows[k]), own:RT.owns.length + conflictObs, ownWhy:RT.owns.filter(x => x.c.why).length, ownConflict:conflictObs + RT.owns.filter(x => !x.c.why).length,
+    derived, derivedRules:Object.entries(rules).map(([k, n]) => k + ' ' + n).join(', ') || 'none', derivedList };
+}
 function report(t){
   const B = t.B, sheets = Object.keys(B.sheets), units = B.armies.reduce((n, a) => n + a.units.length, 0);
   const users = {}; for(const a of B.armies) for(const u of a.units) for(const id of [].concat(u.ds)) (users[id] = users[id] || new Set()).add(a.id);
@@ -739,29 +1075,40 @@ function report(t){
   }
   const whys = [];
   for(const a of B.armies) for(const u of a.units){
-    for(const [f, m] of Object.entries(u.why || {})) for(const [v, r] of Object.entries(m)) whys.push('- ' + a.id + '/' + u.id + ' · `' + f + '` ' + show(v) + ': ' + r);
+    for(const [f, m] of Object.entries(u.why || {})) if(typeof m === 'string') whys.push('- ' + a.id + '/' + u.id + ' · `' + f + '`: ' + m); else for(const [v, r] of Object.entries(m)) whys.push('- ' + a.id + '/' + u.id + ' · `' + f + '` ' + show(v) + ': ' + r);
     for(const k of ROWS) for(const r of Array.isArray(u[k]) ? u[k] : []) for(const [f, why] of Object.entries(r.why || {})) whys.push('- ' + a.id + '/' + u.id + ' · ' + k + ' · ' + r.name + ' · `' + f + '` ' + show(r[f]) + ': ' + why);
   }
   lines.push('', '## The lists\' own values, with their reason (' + whys.length + ')', '', 'Values a list has that its datasheet does not, because of the list: the Warlord, a rule in force (GRANTS), an enhancement or',
     'upgrade, an ability its wargear gives, the weapons it took. On the entry as the list\'s value; `why` names the reason (written by --write).', '', ...whys);
+  // the readings: on which rows, derived, conflicts, what stays on the lists
+  const RS = readingStats(t);
+  lines.push('', '## Readings', '', 'Each reading (a footnote `mods`, an `aura`, a `guard` line) is on the row of the rule it reads: ' + RS.rows.map(r => r.n + ' on ' + r.what + ' (' + r.copies + ' unit copies)').join(', ') +
+    '; ' + RS.own + ' on the lists\' entries (' + RS.ownWhy + ' the list\'s own, with `why`; ' + RS.ownConflict + ' kept per list, conflicts below). ' + RS.derived + ' of them are derived from their text by verify/derive.js (`readBy`): ' + RS.derivedRules + '.', '');
+  lines.push('### Reading conflicts (' + B.RT.readConflicts.length + ')', '', 'Readings of one ability (or rule, or enhancement) that two lists have otherwise. Neither is picked: the row has none of them and each list',
+    'keeps its own on its entry. To decide one: read the rule against GW\'s text, make the lists\' readings alike (in the old form, `--expand`), `--write`, the gate.', '');
+  for(const c of B.RT.readConflicts){ lines.push('- **' + c.where + '** · `' + c.field + '`'); for(const v of c.values) lines.push('  - ' + show(v.value) + ': ' + v.lists.join(', ')); }
+  lines.push('', '### Readings that stay on the lists (' + B.RT.owns.length + ')', '', ...B.RT.owns.map(x => '- ' + x.U.a.id + '/' + x.U.u.id + ' · ' + x.kind + ' · ' + x.m.from + ': ' + (x.c.why || 'cannot be moved: ' + x.c.cant)));
+  lines.push('', '### Derived readings (' + RS.derived + ')', '', ...RS.derivedList.map(x => '- ' + x));
   if(B.notes.length) lines.push('', '## Notes', '', ...B.notes.map(n => '- ' + n));
   return lines.join('\n') + '\n';
 }
 
-module.exports = { RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, ROWS, DS_UNIT, MARK };
+module.exports = { readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
   const arg = process.argv.slice(2), has = a => arg.includes(a);
   if(has('--expand')){ fs.writeFileSync(DATA, oldForm(src)); console.log('tables: data.js written in the old form (every unit in full); node verify/tables.js --write puts it back'); process.exit(0); }
   if(has('--fingerprints')){
-    const D = evaluate(src), R = read(src), bad = [];
-    for(const x of sites(D, R.armies)){
-      if(x.has === undefined) bad.push('NO FINGERPRINT ' + x.where + ' · ' + x.col + ': written from which text? check it against its text, then node verify/tables.js --stamp');
-      else if(x.has !== fp(x.source)) bad.push('STALE ' + x.where + ' · ' + x.col + ' (' + x.fpKey + ' ' + x.has + ', its text now ' + fp(x.source) + '): the text it summarises changed; rewrite it from the new text, then node verify/tables.js --restamp');
+    const D = evaluate(src), R = read(src), bad = [], all = sites(D, R.armies);
+    for(const x of all){
+      const what = x.reading ? 'reading' : 'summary';
+      if(x.reading && x.source == null) bad.push('NO TEXT ' + x.where + ': nothing of its unit or list is the text it reads (' + x.col + '); name the rule it reads (from / rule)');
+      else if(x.has === undefined) bad.push('NO FINGERPRINT ' + x.where + ' · ' + x.col + ': ' + (x.reading ? 'read from which text? check the reading against its text' : 'written from which text? check it against its text') + ', then node verify/tables.js --stamp');
+      else if(x.has !== fp(x.source)) bad.push('STALE ' + x.where + ' · ' + x.col + ' (' + x.fpKey + ' ' + x.has + ', its text now ' + fp(x.source) + '): the text the ' + what + ' ' + (x.reading ? 'reads' : 'summarises') + ' changed; ' + (x.reading ? 'read it again from the new text' : 'rewrite it from the new text') + ', then node verify/tables.js --restamp');
     }
-    const n = sites(D, R.armies).length;
-    console.log('fingerprints: ' + (n - bad.length) + ' of ' + n + ' AI-written values (gist, def) match the text they were written from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
+    const ai = all.filter(x => !x.reading), rd = all.filter(x => x.reading), ok = xs => xs.filter(x => x.source != null && x.has === fp(x.source)).length;
+    console.log('fingerprints: ' + ok(ai) + ' of ' + ai.length + ' AI-written values (gist, def) and ' + ok(rd) + ' of ' + rd.length + ' readings (' + rd.filter(x => x.derived).length + ' derived) match the text they were written or read from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
     bad.forEach(b => console.log('  ' + b));
     process.exit(bad.length ? 1 : 0);
   }
@@ -769,9 +1116,16 @@ if(require.main === module){
     const restamp = has('--restamp'), stamp = restamp || has('--stamp');
     let n = 0;
     if(stamp){ const s1 = stampConstants(src, evaluate(src), restamp); src = s1.src; n += s1.n; }
-    const t = tableForm(src, stamp ? { stampRows:A => { n += stampRows(restamp)(A); } } : {});
+    let t = tableForm(src, stamp ? { stampRows:(A, D) => { n += stampRows(restamp)(A, D); } } : {});
+    // (a rule's or enhancement's readings moved onto its row by this run: their fingerprints are written there too)
+    if(stamp){ const s2 = stampConstants(t.text, evaluate(t.text), restamp); if(s2.n){ n += s2.n; t = tableForm(s2.src); } }
     const before = evaluate(src), after = evaluate(t.text);
-    if(!sameLists(before.armies, after.armies)){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    // (a derived reading whose words changed is written again from them: the one difference allowed)
+    const re = [...t.B.RT.groups.values()].filter(g => g.rederived), skip = new Map();
+    for(const g of re) for(const U of g.obs.keys()) skip.set(U.a.id + '/' + U.u.id, (skip.get(U.a.id + '/' + U.u.id) || new Set()).add(g.kind + '\0' + g.from));
+    const drop = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => { const sk = skip.get(a.id + '/' + u.id); if(!sk) return u; const v = Object.assign({}, u); for(const k of READ) if(v[k]) v[k] = v[k].filter(m => !sk.has(k + '\0' + m.from)); return v; }) }));
+    if(!sameLists(drop(before.armies), drop(after.armies))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    if(re.length) console.log('tables: written again from their changed words (derived readings, verify/derive.js): ' + re.map(g => (g.sid || g.path.join(' · ')) + ' · ' + g.from + (g.list.length ? '' : ' (no longer derivable: none now)')).join('; '));
     fs.writeFileSync(DATA, t.text);
     fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
     console.log('tables: data.js written: ' + Object.keys(t.B.sheets).length + ' datasheets, ' + t.B.conflicts.length + ' conflicts kept per list (verify/out/tables.md)' + (stamp ? '; ' + n + ' fingerprints written' : '') + '; ' + Buffer.byteLength(src) + ' → ' + Buffer.byteLength(t.text) + ' bytes');

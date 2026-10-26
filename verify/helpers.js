@@ -12,7 +12,9 @@
 const fs = require('fs'), path = require('path');
 const { ROOT, key, loadData, readJSON, writeJSON } = require('./lib');
 const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
-const FP_KEYS = Object.values(require('./tables').FINGERPRINT);
+// (the fingerprints of AI-written columns and readings, and readBy: not part of a judgement; a reading's key is the same on whichever
+// row of data.js it is kept, as the app gets it: verify/tables.js hides them)
+const FP_KEYS = require('./tables').FP_KEYS;
 
 function items(D, appSource){
   const out = [];
@@ -174,7 +176,7 @@ const CODE_RULES = {
   ckStored:'a rule or ability derive cannot place (x) that data.js gives a moment (at): listed at that moment only (Harbingers of Dread, Icon of Khorne: Start of the battle round), not at its display phase tags; with no moment it stays not derivable',
   armyRuleOption:'the datasheet (unit screen) does not spell out an army rule\'s options: a "When targeted" line of an army rule that starts with the name of one of its options (RULE_OPTIONS: Martial Ka\'tah\'s Kaptaris) is left out there, the Rules line opens the whole rule; the Damage tab and the Overview keep it',
   // data.js's own code (written by verify/tables.js)
-  resolveArmies:'the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet\'s columns, then the entry\'s own (null: none); each row the datasheet\'s row of that name (a stats row without its "×N"; for an attached unit the part its who or of names, else the first part that has it) with the entry row\'s fields on top, a row the datasheet does not have as the list\'s own; an entry without a kind of rows takes all of its datasheet\'s; over (a fact two lists have differently) on top of all; ds, over, of, faction, bsId and fingerprints hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet\'s values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was',
+  resolveArmies:'the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet\'s columns, then the entry\'s own (null: none); each row the datasheet\'s row of that name (a stats row without its "×N"; for an attached unit the part its who or of names, else the first part that has it) with the entry row\'s fields on top, a row the datasheet does not have as the list\'s own; an entry without a kind of rows takes all of its datasheet\'s; over (a fact two lists have differently) on top of all; the readings (mods, aura, guard) from the rows of the rules they read, in this order: the army rules on the unit\'s Rules line (FACTIONS), each datasheet of the unit, its enhancement or upgrade (the first of the list\'s detachments that has it), the detachment rules (rule, moreRules) of the list whose needs (all, any, none, rule) the unit meets, then the entry\'s own; an entry\'s list with names in it is the whole list in its order, a name standing for the rows\' readings of that name; null: none; ds, over, of, faction, bsId, fingerprints (readOf too) and readBy hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet\'s values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was',
 };
 function appFunctions(html){
   const out = {};

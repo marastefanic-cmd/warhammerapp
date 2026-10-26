@@ -117,30 +117,6 @@
      "defOf": "21019393"
     }
    },
-   "mods": [
-    {
-     "kind": "ranged",
-     "when": "Codex Adept (the devastator doctrine is active for this unit)",
-     "note": "[ASSAULT]",
-     "from": "Codex Adept",
-     "always": true
-    }
-   ],
-   "aura": [
-    {
-     "kind": "all",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Astartes"
-      ]
-     },
-     "when": "Within 6\" of Roboute Guilliman",
-     "selfWhen": "Own aura",
-     "note": "re-roll hit rolls of 1 and wound rolls of 1",
-     "from": "Primarch of the XIII",
-     "selfAlways": true
-    }
-   ],
    "why": "Codex Adept: the devastator doctrine is active for this unit (its ranged attacks have [ASSAULT]). Primarch of the XIII (Aura): friendly ADEPTUS ASTARTES units within 6\", his own unit included (22.01).",
    "notes": {
     "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
@@ -154,21 +130,6 @@
      "defOf": "7366a778"
     }
    },
-   "mods": [
-    {
-     "kind": "ranged",
-     "when": "Codex Adept (the devastator doctrine is active for this unit)",
-     "note": "[ASSAULT]",
-     "from": "Codex Adept",
-     "always": true
-    },
-    {
-     "kind": "melee",
-     "when": "Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it)",
-     "note": "+1 to hit rolls",
-     "from": "Bladeguard"
-    }
-   ],
    "why": "Codex Adept (Marneus Calgar): the doctrines are active for this unit, the whole attached unit (19.04); Bladeguard: one of its two effects, once per turn."
   },
   "librarian-in-phobos-armour": {
@@ -194,17 +155,7 @@
     }
    }
   },
-  "eradicator-squad-with-melta-rifles": {
-   "mods": [
-    {
-     "kind": "ranged",
-     "when": "Every ranged attack",
-     "note": "can re-roll damage rolls",
-     "from": "Total Obliteration",
-     "always": true
-    }
-   ]
-  },
+  "eradicator-squad-with-melta-rifles": {},
   "impulsor": {
    "stats": {
     "Impulsor": {
@@ -212,6 +163,74 @@
     }
    },
    "why": "Shield Dome: \"This unit has 5+ InSv.\" BSData’s modifier gives it (the \"+\" mark names Shield Dome); New Recruit’s export shows none."
+  }
+ },
+ "readings": {
+  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, an army or detachment rule, an enhancement), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf; readBy:\"derive\" where verify/derive.js gives it from the words). verify/from-json.js gives each unit the readings of its rows in the order data.js resolves them, then the unit's own (units.<id>.mods / aura / guard; a name there stands for the rows' readings of that name, the list being the unit's whole list). A datasheet not here: data.js's row, else verify/derive.js's derived readings.",
+  "datasheets": {
+   "Roboute Guilliman": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "when": "Codex Adept (the devastator doctrine is active for this unit)",
+      "note": "[ASSAULT]",
+      "from": "Codex Adept",
+      "always": true,
+      "readOf": "d42feb49"
+     }
+    ],
+    "aura": [
+     {
+      "kind": "all",
+      "needs": {
+       "all": [
+        "Faction: Adeptus Astartes"
+       ]
+      },
+      "when": "Within 6\" of Roboute Guilliman",
+      "selfWhen": "Own aura",
+      "note": "re-roll hit rolls of 1 and wound rolls of 1",
+      "from": "Primarch of the XIII",
+      "selfAlways": true,
+      "readOf": "83d4b7b8"
+     }
+    ]
+   },
+   "Marneus Calgar": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "when": "Codex Adept (the devastator doctrine is active for this unit)",
+      "note": "[ASSAULT]",
+      "from": "Codex Adept",
+      "always": true,
+      "readOf": "d42feb49"
+     }
+    ]
+   },
+   "Bladeguard Veteran Squad": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it)",
+      "note": "+1 to hit rolls",
+      "from": "Bladeguard",
+      "readOf": "7366a778"
+     }
+    ]
+   },
+   "Eradicator Squad with Melta Rifles": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "when": "Every ranged attack",
+      "note": "can re-roll damage rolls",
+      "from": "Total Obliteration",
+      "always": true,
+      "readOf": "93294bcf"
+     }
+    ]
+   }
   }
  }
 }

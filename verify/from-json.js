@@ -1115,9 +1115,53 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   }
   // keywords a rule of the list gives that BSData's entry and the export lack (the Forgefiend's SOUL FORGE: Soul Forge Boons)
   for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); u.kw.sort(); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
-  if (h.mods) { u.mods = h.mods; handDone.push({ what: 'footnotes of ' + u.name, by: 'hand (Claude)', text: h.mods.map(m => m.from + ': ' + m.note).join('; ') }); }
-  if (h.guard) { u.guard = h.guard; handDone.push({ what: 'guard of ' + u.name, by: 'hand (Claude)', text: h.guard.map(m => m.from + ': ' + m.note).join('; ') }); }
-  if (h.aura) { u.aura = h.aura; handDone.push({ what: 'aura of ' + u.name, by: 'hand (Claude)', text: h.aura.map(m => m.from + ': ' + m.note).join('; ') }); }
+}
+// ---------------------------------------------------------------- the readings (docs/tables.md, Readings)
+// A reading (a footnote, mods; an aura; a guard line) is on the row of the rule it reads: a datasheet's ability's on its DATASHEETS
+// row, an army or detachment rule's on its row, an enhancement's on the enhancement. A row's readings: the hand file's (readings:
+// { datasheets, rules, enhancements } by name, each { mods, aura, guard } in its order), else the ones data.js has on that row
+// (another list's, or this list's from an earlier run); a datasheet's abilities none of those read that verify/derive.js's fixed
+// rules read (readingsOf: a Damaged ability, a riled-up weapon ability, a charge bonus) get the derived reading (readBy). Each unit
+// gets its rows' readings in the order data.js resolves them (verify/tables.js: the army rules on its Rules line, each datasheet of
+// the unit, its enhancement, the detachment rules whose needs it meets), then its own (the hand file's units.<id>.mods / aura / guard;
+// a name in that list stands for the rows' readings of that name, the list being the unit's whole list in its order). The list is
+// written in the old form; verify/tables.js --write then keeps each reading on its row (two lists reading one rule otherwise: listed).
+{
+  const HR = HAND.readings || {}, READ = ['mods', 'aura', 'guard'], F0 = (D.factions || {})[factionId] || facSrc || {};
+  const { readingsOf } = require('./derive'), T = require('./tables');
+  const nmR = s => String(s).toLowerCase().replace(/[’‘]/g, "'"), hasN = (l, x) => (l || []).some(y => nmR(y) === nmR(x));
+  const meets = (n, u) => !n || (!n.all || n.all.every(k => hasN(u.kw, k))) && (!n.any || n.any.some(k => hasN(u.kw, k))) && !(n.none || []).some(k => hasN(u.kw, k)) && (!n.rule || n.rule.some(r => hasN(u.rules, r)));
+  const dsRow = name => Object.values(D.datasheets || {}).find(S => S.faction === factionId && S.name === nm(name));
+  const pick = (hand, row, kind) => hand && hand[kind] ? hand[kind] : row && row[kind] ? row[kind] : [];
+  const coreText = name => { if (D.rules[name]) return D.rules[name]; const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1]; return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : null; };
+  for (const u of units) {
+    const h = (HAND.units || {})[u.id] || {}, dets = army.detachments.map(id => (F0.detachments || {})[id]).filter(Boolean);
+    const parts = [u.name].concat((u.also || []).map(x => x.name), u.leads ? [u.leads] : []);
+    // an ability row's own readings (riled, damaged, defCalc, …): the fingerprint data.js's row has for the same words
+    for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && x.readOf); if (sa && ab.readOf === undefined) { ab.readOf = sa.readOf; break; } }
+    const enh = dets.flatMap(d => d.enhancements || []).find(e => e.name === u.enhancement || e.name === u.upgrade);
+    for (const kind of READ) {
+      const t = [];
+      for (const r of F0.armyRules || []) if (hasN(u.rules, r.name)) t.push(...pick((HR.rules || {})[r.name], r, kind));
+      parts.forEach((pn, i) => {
+        const hand = (HR.datasheets || {})[pn], row = dsRow(pn), have = pick(hand, row, kind);
+        t.push(...have);
+        // (derived: only a single datasheet's own abilities, the ones with no reading of their own here)
+        if (kind !== 'mods' || hand && !hand.derive) return;
+        if (row && row.mods) return;
+        const own = u.abilities.filter(a => !/\b(Enhancement|Upgrade)\b/.test(a.tag || '') && (parts.length === 1 || a.who === pn));
+        const texts = own.map(a => [a.text, a.name]).concat(i === 0 ? u.rules.map(r => [coreText(r), r]).filter(x => x[0]) : []);
+        for (const [text, name] of texts) { if (have.some(m => m.from === name)) continue; const d = readingsOf(text, name); if (d) t.push(...d.mods.map(m => Object.assign({}, m, { readOf: T.fp(text), readBy: 'derive' }))); }
+      });
+      if (enh) t.push(...pick((HR.enhancements || {})[enh.name], enh, kind));
+      for (const d of dets) for (const r of [d.rule].concat(d.moreRules || [])) if (r && meets(r.needs, u)) t.push(...pick((HR.rules || {})[r.name], r, kind));
+      const mine = h[kind];
+      const list = mine === null ? [] : !mine ? t : mine.some(x => typeof x === 'string') ? mine.flatMap(x => typeof x === 'string' ? t.filter(m => m.from === x) : [x]) : t.concat(mine);
+      if (list.length) u[kind] = JSON.parse(JSON.stringify(list)); else delete u[kind];
+      if (mine && mine.some(x => typeof x !== 'string')) handDone.push({ what: kind + ' of ' + u.name + ' (its own)', by: 'hand (Claude)', text: mine.filter(x => typeof x !== 'string').map(m => m.from + ': ' + m.note).join('; ') });
+    }
+  }
+  for (const [k, by] of Object.entries(HR)) if (k !== '_about') for (const [n, r] of Object.entries(by)) handDone.push({ what: 'readings of ' + n + ' (' + k + ')', by: 'hand (Claude)', text: READ.flatMap(kd => (r[kd] || []).map(m => m.from + ': ' + m.note)).join('; ') });
 }
 const abOrder = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];
 for (const u of units) { for (const ab of u.abilities) { delete ab._bs; delete ab._e; delete ab._part; } delete u._parts; }

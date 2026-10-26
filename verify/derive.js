@@ -1035,6 +1035,44 @@ function derive(D){
 }
 
 // ---------------------------------------------------------------------------------------------
+// READINGS: a footnote (mods) the words give by a fixed rule. verify/tables.js --write writes a datasheet's or an enhancement's
+// reading from these rules (readBy:'derive') where they give exactly the reading data.js had, and writes it again from the words
+// when they change. Only the words are read (and the name the reading is from, which it names); none: not derivable.
+// ---------------------------------------------------------------------------------------------
+const READING_BONUS = '\\+\\d+ (?:A|S|D|AP)';
+const READING_RULES = [
+  // "While this model has 1-6 wounds remaining, [subtract 4 from this model's Objective Control characteristic and] each time this
+  // model makes an attack, subtract 1 from the Hit roll."
+  { id:'damaged-hit', re:/^While this model has 1-(\d+) wounds remaining, (?:subtract (\d+) from this model's Objective Control characteristic and )?each time this model makes an attack, subtract 1 from the Hit roll\.$/i,
+    give:(m, name) => [{ kind:'all', when:'Damaged (1-' + m[1] + ' wounds left)', note:'-1 to hit rolls' + (m[2] ? ' (and -' + m[2] + ' OC)' : ''), from:name }],
+    why:'a Damaged ability whose only effect is -1 to its attacks\' hit rolls (and a lower OC, said in brackets): one footnote for every attack' },
+  // the core ability Damaged X (its glossary text, with its name): "while damaged, that model's attacks have -1 to hit rolls"
+  { id:'damaged-core', re:/^Damaged (\d+): .*\bwhile damaged, that model's attacks have -1 to hit rolls\b/i,
+    give:(m, name) => name === 'Damaged ' + m[1] ? [{ kind:'all', when:'Damaged (' + m[1] + ' or fewer wounds remaining)', note:'-1 to hit rolls', from:name }] : null,
+    why:'the core ability Damaged X: -1 to hit rolls while it has X or fewer wounds remaining' },
+  // "If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1]."
+  { id:'riled-weapon-ability', re:/^If this unit is riled up, this unit's (ranged|melee) attacks have \[([^\]]+)\]\.$/i,
+    give:(m, name) => [{ kind:m[1].toLowerCase(), when:'Riled up', cond:'riled', note:'[' + m[2] + ']', from:name }],
+    why:'a weapon ability its attacks have while riled up: a footnote under that kind of weapons, while riled up' },
+  // "This unit's ranged attacks have:\n- [IGNORES COVER].\n- If this unit is riled up, [SUSTAINED HITS 1]." (the unconditional ones
+  // are on the weapons, marked +)
+  { id:'riled-weapon-ability-list', re:/^This unit's (ranged|melee) attacks have:((?:\n- (?:If this unit is riled up, )?\[[^\]]+\]\.)+)$/i,
+    give:(m, name) => { const out = [...m[2].matchAll(/\n- If this unit is riled up, \[([^\]]+)\]\./gi)].map(x => ({ kind:m[1].toLowerCase(), when:'Riled up', cond:'riled', note:'[' + x[1] + ']', from:name })); return out.length ? out : null; },
+    why:'a list of weapon abilities its attacks have, one of them while riled up: a footnote for each of those' },
+  // "If this unit made a charge move this turn, this unit's melee attacks have +1 S." (or a list: "have:\n- +3 A.\n- +2 S.")
+  { id:'charge-stat', re:new RegExp('^(?:[A-Z][A-Za-z\'/ ]* models? only\\. )?If this unit made a charge move this turn, this (?:unit|model)\'s melee attacks have(?: (' + READING_BONUS + ')\\.|:((?:\\n- ' + READING_BONUS + '\\.)+))$', 'i'),
+    give:(m, name) => [{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:m[1] || [...m[2].matchAll(new RegExp(READING_BONUS, 'gi'))].map(x => x[0]).join(', '), from:name }],
+    why:'a characteristic bonus to its melee attacks after it charged: one footnote under its melee weapons' },
+];
+// the words as one reading: GW's markup and italic notes left out, the bullets kept on lines of their own
+const readingWords = t => rulesText(t).split('\n').map(l => plain(l)).filter(Boolean).join('\n');
+function readingsOf(text, name){
+  const w = readingWords(text);
+  for(const r of READING_RULES){ const m = r.re.exec(w); if(!m) continue; const mods = r.give(m, name); if(mods) return { mods, rule:r.id }; }
+  return null;
+}
+
+// ---------------------------------------------------------------------------------------------
 // RULE_OPTIONS and GRANTS: the options inside a rule or ability, and the abilities a rule gives units, read from the words.
 // verify/tables.js --write writes them into data.js; derive() reads them there and fails the gate when the words say otherwise.
 // ---------------------------------------------------------------------------------------------
@@ -1357,4 +1395,4 @@ if(require.main === module){
   if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
   process.exit(drift.length || items.tablesStale || ckStale ? 1 : 0);
 }
-module.exports = { derive, ruleTables, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ruleTables, readingsOf, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
