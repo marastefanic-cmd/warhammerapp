@@ -2431,10 +2431,11 @@ Magnus the Red
 6
 4+
 WHEN TARGETED
-3
+4
 Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2575,9 +2576,10 @@ Daemon Prince of Tzeentch with wings
 3
 4+
 WHEN TARGETED
-2
+3
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS
 vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
 vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
@@ -2730,9 +2732,10 @@ Aspiring Sorcerer
 2
 4+
 WHEN TARGETED
-2
+3
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 RANGED WEAPONS
@@ -2960,10 +2963,11 @@ Scarab Occult Terminator×9
 1
 4+
 WHEN TARGETED
-3
+4
 SCARAB OCCULT TERMINATORS Rites of Coalescence: -1 to wound rolls against this unit while it contains a PSYKER model
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 RANGED WEAPONS
@@ -3147,8 +3151,9 @@ Tzaangors
 1
 6+
 WHEN TARGETED
-1
+2
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3227,8 +3232,9 @@ Tzaangor Enlightened with Fatecaster greatbows
 2
 5+
 WHEN TARGETED
-1
+2
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 RANGED WEAPONS
 Range
 A
@@ -3309,8 +3315,9 @@ Defiler
 5
 5+
 WHEN TARGETED
-1
+2
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 RANGED WEAPONS
@@ -3426,8 +3433,9 @@ Sekhetar Robots×2
 1
 5+
 WHEN TARGETED
-1
+2
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 RANGED WEAPONS
 Range
 A

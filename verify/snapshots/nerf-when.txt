@@ -472,6 +472,7 @@ Hand of Dominion
 RAPID FIRE 2, SUSTAINED HITS 1
 Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Marneus Calgar
 + Wardens of Ultramar + Bladeguard Veteran Squad
 Furious Assault
@@ -545,6 +546,7 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 DEVASTATING WOUNDS, CLOSE-QUARTERS
 Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
 1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
 Librarian in Phobos Armour
@@ -576,6 +578,7 @@ Bolt pistol
 1
 CLOSE-QUARTERS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Heavy Intercessor Squad
 Heavy Bolt Rifle×4
 30"
@@ -604,6 +607,7 @@ Bolt pistol×5
 1
 CLOSE-QUARTERS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Impulsor
 ×2 units
 Ironhail Heavy Stubber
@@ -623,6 +627,7 @@ Storm Bolters
 1
 RAPID FIRE 4
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Eradicator Squad with Melta Rifles
 ×2 units
 Melta rifle×2
@@ -671,6 +676,7 @@ Bolt pistol×3
 CLOSE-QUARTERS
 Every ranged attack: can re-roll damage rolls (Total Obliteration)
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Reiver Squad
 ×2 units
 Bolt Carbine×5
@@ -692,6 +698,7 @@ Special-issue Bolt Pistol×5
 1
 CLOSE-QUARTERS, PRECISION
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Deathwatch Terminator Squad
 ×2 units
 Plasma cannon×3
@@ -712,6 +719,7 @@ BLAST 1
 3
 BLAST 1, HAZARDOUS
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
 1CP Kraken Rounds: +6" range and +1 S, selected to shoot
 1CP Dragonfire Rounds: re-roll wound rolls of 1, [IGNORES COVER], selected to shoot
@@ -1501,6 +1509,12 @@ BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 
 if it applies
 no change: already hits on 2+
 0
+Soul Sight (Librarian in Phobos Armour)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1963,6 +1977,10 @@ Primarch of the XIII
 Own aura: re-roll hit rolls of 1 and wound rolls of 1
 always counted · you can leave it out
 if left out: no change
+Soul Sight (Librarian in Phobos Armour)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+if it applies
+0
 STRATAGEMS
 with their CP
 
@@ -2638,6 +2656,7 @@ Hand of Dominion
 2
 RAPID FIRE 2, SUSTAINED HITS 1
 Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -2917,6 +2936,7 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 DEVASTATING WOUNDS, CLOSE-QUARTERS
 WHOLE UNIT
 Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
 1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
 MELEE WEAPONS
@@ -3140,6 +3160,7 @@ Bolt pistol
 -1
 1
 CLOSE-QUARTERS
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -3286,6 +3307,7 @@ Bolt pistol×5
 -1
 1
 CLOSE-QUARTERS
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -3381,6 +3403,7 @@ Storm Bolters
 -1
 1
 RAPID FIRE 4
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -3530,6 +3553,7 @@ Bolt pistol×3
 1
 CLOSE-QUARTERS
 Every ranged attack: can re-roll damage rolls (Total Obliteration)
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -3640,6 +3664,7 @@ Special-issue Bolt Pistol×5
 -2
 1
 CLOSE-QUARTERS, PRECISION
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -3769,6 +3794,7 @@ BLAST 1
 -3
 3
 BLAST 1, HAZARDOUS
+Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
 1CP Kraken Rounds: +6" range and +1 S, selected to shoot
 1CP Dragonfire Rounds: re-roll wound rolls of 1, [IGNORES COVER], selected to shoot

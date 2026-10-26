@@ -1,6 +1,6 @@
 {
- "hash": "0b2c0bc464e74f7ae72fd752dc1c807a87a74759fdc73b805566a2ca05c53cce",
- "at": "2026-10-26T08:25:39.818Z",
+ "hash": "e13c349e75f1954b0c4b7573567b210122c9931884f56b46b0d4ea0055d94469",
+ "at": "2026-10-26T09:28:07.775Z",
  "ok": true,
  "steps": {
   "data": {
@@ -13,7 +13,11 @@
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 249 of 249 AI-written values (gist, def) match the text they were written from"
+   "summary": "fingerprints: 249 of 249 AI-written values (gist, def) and 220 of 220 readings (19 derived) match the text they were written or read from"
+  },
+  "readings": {
+   "ok": true,
+   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json)"
   },
   "invariants": {
    "ok": true,
@@ -57,11 +61,11 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 2929 screens and popups, 1685 helper texts, 0 failures"
+   "summary": "render at 390px: 2929 screens and popups, 1686 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 2929 screens and popups, 1685 helper texts, 0 failures"
+   "summary": "render at 320px: 2929 screens and popups, 1686 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -69,7 +73,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1975 judgements, 1975 approved, 0 to check, 408 stale approvals"
+   "summary": "helpers: 1988 judgements, 1988 approved, 0 to check, 412 stale approvals"
   }
  }
 }
