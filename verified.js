@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "15da848596",
- "data": "2026-10-26.4",
+ "build": "772230b928",
+ "data": "2026-10-26.5",
  "date": "26 Oct 2026",
  "checks": [
   {
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "2001 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "2002 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",

@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '15da848596';</script>
+<script>window.WH_BUILD = '772230b928';</script>
 </head>
 <body>
 <style>
@@ -810,6 +810,12 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmtt.on .ck{background:var(--accent); box-shadow:none}
 .dmtt.on .ck::after{content:''; width:10px; height:5px; margin-top:-3px; border:solid var(--accent-ink); border-width:0 0 2.5px 2.5px; transform:rotate(-45deg)}
 .dmtt:active{background:var(--surface)}
+/* a group added to the target (a Leader): its name, CHARACTER and Remove on one line (wrapping on a narrow phone), its own wheels */
+.dmgrp{margin-top:12px; padding-top:10px; border-top:1px solid var(--line)}
+.dmgh{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 6px}
+.dmgh h3{margin:0; flex:1 1 auto; min-width:0}
+.dmtt.dmgx{padding:0 12px}
+.dmtt .pl{width:20px; text-align:center; font:700 18px/1 var(--f-head)}
 .dmleft{margin-top:10px}
 /* the half-range bands: a whole row to tap, with room between them */
 .dmbands .dmlv{grid-template-columns:24px minmax(0,1fr) var(--fxw); min-height:58px; padding:13px 2px 11px}
@@ -1043,10 +1049,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=15da848596"></script>
-<script src="data.js?v=15da848596"></script>
-<script src="calc.js?v=15da848596"></script>
-<script src="import.js?v=15da848596"></script>
+<script src="verified.js?v=772230b928"></script>
+<script src="data.js?v=772230b928"></script>
+<script src="calc.js?v=772230b928"></script>
+<script src="import.js?v=772230b928"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1807,6 +1813,11 @@ function dmEffects(note, empty){
   let t = ' ' + String(note || '').toLowerCase().replace(/[’']/g, '').replace(/[–−]/g, '-') + ' ';
   const e = {};
   const take = (re, f) => { t = t.replace(re, (...m) => { f(m); return ' '; }); };
+  // one die re-rolled (calc.js oneHit, oneWound, oneDmg; oneEither: a hit or a wound roll; oneAny: a hit, wound or damage roll)
+  take(/re-?roll one hit roll,? (?:re-?roll )?one wound roll(?:,)? and (?:re-?roll )?one damage roll/g, () => { e.oneHit = 1; e.oneWound = 1; e.oneDmg = 1; });
+  take(/re-?roll one hit roll,? (?:re-?roll )?one wound roll(?:,)? or (?:re-?roll )?one damage roll/g, () => { e.oneAny = 1; });
+  take(/re-?roll one hit roll and (?:re-?roll )?one wound roll/g, () => { e.oneHit = 1; e.oneWound = 1; });
+  take(/re-?roll one hit roll or (?:re-?roll )?one wound roll/g, () => { e.oneEither = 1; });
   take(/re-?roll (?:the )?hit (?:rolls )?and (?:the )?wound rolls of 1/g, () => { e.rrHit = '1s'; e.rrWound = '1s'; });
   take(/re-?roll hit rolls of 1 and wound rolls of 1/g, () => { e.rrHit = '1s'; e.rrWound = '1s'; });
   take(/re-?roll (?:the )?hit (?:rolls? )?and (?:the )?wound rolls?/g, () => { e.rrHit = 'all'; e.rrWound = 'all'; });
@@ -1886,19 +1897,28 @@ function dmSides(st){
 // the target, set by hand: models, T, Sv, W, InSv, Feel No Pain (a save of 0: none), the benefit of cover, -1 Damage. Its keywords are
 // not set: each rule or weapon ability about them is the player's own box
 const DM_TYPED = { n:5, T:4, Sv:3, W:2, InSv:0, fnp:0, cover:false, dm1:false };
+// more groups of models the player adds to the target (more: [{ n, T, Sv, W, InSv, fnp, char }], at most DM_MORE), one of them the
+// CHARACTER (a Leader attached to the bodyguard, the first group); prec: the attacks taken to be [PRECISION] against it
+const DM_MORE = 3;
 // (a value the wheels do not have, an earlier screen's typed one: the nearest they have)
-const dmTypedVals = st => { const t = Object.assign({}, DM_TYPED, isObj(st.typed) ? st.typed : {});
-  for(const k of ['n', 'T', 'W']) t[k] = Math.max(1, +t[k] || DM_TYPED[k]);
+const dmTypedNorm = (t, d) => { for(const k of ['n', 'T', 'W']) t[k] = Math.max(1, +t[k] || d[k]);
   for(const k of ['Sv', 'InSv', 'fnp']) t[k] = +t[k] >= 2 && +t[k] <= (k === 'Sv' ? 7 : 6) ? +t[k] : 0;
   for(const [k, , , vals] of DM_WHEELS) t[k] = vals[whAt(vals, t[k])];
-  t.cover = !!t.cover; t.dm1 = !!t.dm1; return t; };
+  return t; };
+const dmTypedVals = st => { const t = dmTypedNorm(Object.assign({}, DM_TYPED, isObj(st.typed) ? st.typed : {}), DM_TYPED);
+  t.cover = !!t.cover; t.dm1 = !!t.dm1;
+  let ch = false;
+  t.more = (Array.isArray(t.more) ? t.more : []).filter(isObj).slice(0, DM_MORE).map(g => { const x = dmTypedNorm(Object.assign({}, g), DM_TYPED);
+    x.char = !!g.char && !ch; if(x.char) ch = true; return x; });
+  t.prec = !!t.prec && ch; return t; };
 // the target as a unit the screen names ("the target"): no keywords, no rules of its own
 const dmTarget = st => ({ id:'typed', typed:true, name:'the target', kw:[], abilities:[], rules:[], mods:[], models:[dmTypedVals(st).n + '× Target'], stats:[] });
 // a rule's recorded condition on the target (vs in data.js): about its keywords (any: one of them; all: every one; none: none of them),
 // the player's box (ok null, its words say which); maxT, no model above that T: the T set
 function dmVs(vs, tg){
   if(!vs) return { ok:true, why:'' };
-  if(vs.maxT && !vs.any && !vs.all && !vs.none){ const ok = tg.T <= vs.maxT; return { ok, why:ok ? 'the target is T' + tg.T : 'only against a unit with no T ' + (vs.maxT + 1) + '+ model' }; }
+  if(vs.maxT && !vs.any && !vs.all && !vs.none){ const T = Math.max(tg.T, ...(tg.more || []).map(g => g.T)), ok = T <= vs.maxT;   // (every group's models)
+    return { ok, why:ok ? 'the target is T' + T : 'only against a unit with no T ' + (vs.maxT + 1) + '+ model' }; }
   return { ok:null, why:'' };
 }
 // a box's state: on (starts ticked, says why), choice, out (the matchup rules it out: unticked, with the reason, and the
@@ -1995,8 +2015,15 @@ const DM_ONE_STRAT = '“Unless otherwise stated, each player cannot target the 
 function dmCalc(st, A, au, tg, kind){
   const ranged = kind === 'ranged';
   tg = dmTypedVals({ typed:tg || {} });
-  // the target: one stats row of identical models, as set
-  const models = [{ name:'Target', count:tg.n, fixed:true, W:tg.W, T:tg.T, Sv:tg.Sv || 7, InSv:tg.InSv || 7, fnp:7, char:false, bodyguard:false, part:'Target' }];
+  // the target: one stats row of identical models, as set; with groups added, one row for each (the first is the bodyguard when one of
+  // the others is the CHARACTER: a Leader attached to it, 19.01), each with its own Feel No Pain (19.04 FAQ: a rule that gives one model
+  // Feel No Pain applies to that model only). The engine follows the core rules for the rest: allocation groups, the CHARACTER group
+  // last and the defender's order (05.03), the bodyguard models' highest T while one is left (19.02), [PRECISION] (24.28)
+  const lead = tg.more.find(g => g.char);
+  const models = !tg.more.length ? [{ name:'Target', count:tg.n, fixed:true, W:tg.W, T:tg.T, Sv:tg.Sv || 7, InSv:tg.InSv || 7, fnp:7, char:false, bodyguard:false, part:'Target' }]
+    : [{ name:lead ? 'Bodyguard' : 'Group 1', count:tg.n, fixed:true, W:tg.W, T:tg.T, Sv:tg.Sv || 7, InSv:tg.InSv || 7, fnp:tg.fnp || 7, fnpSrc:tg.fnp ? 'set for ' + (lead ? 'the bodyguard' : 'group 1') : '', char:false, bodyguard:!!lead, part:'Target' }]
+      .concat(tg.more.map((g, i) => { const name = g.char ? 'Leader' : 'Group ' + (i + 2);
+        return { name, count:g.n, fixed:true, W:g.W, T:g.T, Sv:g.Sv || 7, InSv:g.InSv || 7, fnp:g.fnp || 7, fnpSrc:g.fnp ? 'set for ' + (g.char ? 'the Leader' : name.toLowerCase()) : '', char:g.char, bodyguard:!g.char && !!lead, part:'Target' }; }));
   const items = weaponItems(ranged ? au.ranged : au.melee);
   const key = it => kind + ':' + itemName(it) + '|' + (it.who || '');
   const abig = hasKw(au, 'Monster') || hasKw(au, 'Vehicle');
@@ -2121,6 +2148,12 @@ function dmCalc(st, A, au, tg, kind){
     if(seen.has(k)) continue; seen.add(k);
     rules.push(decide(Object.assign(dmRuleOf(m, st), { k, help:m.help ? m.rule : '' })));
   }
+  // a stratagem's own reading for this tab (calcMods on a stratagem: Command Re-roll's one die, once in the phase; never ticked for you)
+  for(const s of inArmy(A, () => allStratagems().filter(s => s.calcMods && eligible(s).includes(au)))) for(const cm of s.calcMods.filter(m => m.kind === kind || m.kind === 'all')){
+    const m = Object.assign({ from:s.name, strat:s.id, cp:s.cp }, cm), k = 'm:' + [m.from, m.when, m.note].join('|');
+    if(seen.has(k)) continue; seen.add(k);
+    rules.push(decide(Object.assign(dmRuleOf(m, st), { k })));
+  }
   // the attacker's stratagems for the other kind of attack (a Shooting phase one in a fight): unticked, the reason said, the
   // player's to count anyway (their numbers on these weapons, as if it were that phase)
   for(const s of inArmy(A, () => allStratagems().filter(s => s.mod && eligible(s).includes(au) && !(s.mod.kind === kind || s.mod.kind === 'all')))){
@@ -2233,10 +2266,14 @@ function dmCalc(st, A, au, tg, kind){
     }
   }
 
-  // ---- the target, as set: its InSv and Feel No Pain, -1 Damage ----
+  // ---- the target, as set: its InSv and Feel No Pain (with groups added: each group's own, on its row), -1 Damage ----
   const tmod = { src:{} };
-  if(tg.fnp){ tmod.fnp = tg.fnp; tmod.src.fnp = 'the target'; }
+  if(tg.fnp && !tg.more.length){ tmod.fnp = tg.fnp; tmod.src.fnp = 'the target'; }
   if(tg.dm1){ tmod.dMinus = 1; tmod.src.dMinus = 'the target'; }
+  // a CHARACTER group: [PRECISION] attacks are allocated to it (24.28: the active player can select it; taken that they do), and
+  // "Precision" ticked with the target makes every attack here one
+  if(lead){ ctx.precision = 'Leader';
+    if(tg.prec) for(const g of groups) g.mods = g.mods.concat([{ from:'Precision (ticked with the target)', precision:true }]); }
   const input = { groups, target:{ T:tg.T, kw:[], models, mod:tmod }, ctx, sims:10000, seed:7 };
   ctx.halves = halves;
   const R = WH_CALC.resolve(input);
@@ -2292,6 +2329,9 @@ function dmCalcWords(e){
   if(e.wound) w.push((e.wound > 0 ? '+' : '') + e.wound + ' to wound rolls');
   if(e.rrHit) w.push(e.rrHit === '1s' ? 're-roll hit rolls of 1' : 're-roll hit rolls');
   if(e.rrWound) w.push(e.rrWound === '1s' ? 're-roll wound rolls of 1' : 're-roll wound rolls');
+  // (the words the footnotes use: "re-roll one hit roll, one wound roll or one damage roll")
+  const one = [['oneHit', 'hit roll'], ['oneWound', 'wound roll'], ['oneDmg', 'damage roll'], ['oneEither', 'hit roll or one wound roll'], ['oneAny', 'hit roll, one wound roll or one damage roll']].filter(([k]) => e[k]);
+  if(one.length) w.push('re-roll one ' + one.map(x => x[1]).join(' and one '));
   if(e.insv) w.push(e.insv + '+ InSv');
   if(e.fnp) w.push('Feel No Pain ' + e.fnp + '+');
   if(e.fnpMortal) w.push('Feel No Pain ' + e.fnpMortal + '+ against mortal wounds');
@@ -2342,9 +2382,16 @@ function dmHowLines(c, st, r0, plan){
   if(c.rules.some(r => r.on && r.m.ar && r.m.ar.name === 'Doctrina Imperatives')) L.push(['Doctrina Imperatives', 'the Imperative picked counts for this unit; Both only where a rule of the list makes both active for it (Omnicogitator, Transcendent Cogitation, The Fires of Mars), else as your own call. A value a rule sets comes first and the Imperative improves it: the Faction Pack’s FAQ, Auto-divinatory Targeting’s BS 3+ improved by the Protector Imperative to 2+. The +1 AP (Conqueror) counts while “BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit” holds for the unit: a BATTLELINE unit by itself, else as you say.']);
   if(c.rules.some(r => r.on && r.m.limit)) L.push(['Blessings of Khorne', 'each one ticked counts as active this battle round; by the rules two are active at once (one more with Skulls for the Skull Throne! or, for a TERMINATOR SQUAD unit, Adamantine Avalanche; every one with Archslaughterer for its bearer’s unit), so a Blessing ticked past that is counted by you.']);
   L.push(['Range (04.02)', 'every weapon is taken to be in range of the target; a rule that changes range counts only through half range.' + (c.ctx.halves && c.ctx.halves.length ? ' Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked: the bands come from the half ranges of the weapons as picked, with and without each ticked rule here that changes range; a weapon gets its bonus when its half range, after the ticked rules, reaches the band.' : '')]);
-  L.push(['The number beside each choice', 'the whole turn played again with that one choice changed, in the same games: it is what the answer becomes when the choice is tapped (models destroyed, for Both the shooting and the fight added up; wounds lost for a one-model unit; when that does not move, the chance to wipe the unit). Only the damage dealt is measured: what the attacking unit loses is not played. It comes first from ' + String(DM_Q).replace(/\B(?=(\d{3})+$)/g, ',') + ' games (' + String(DM_Q / 2).replace(/\B(?=(\d{3})+$)/g, ',') + ' for Both; shown faint), then from the answer’s own 10,000; after a tap, the numbers before it stay in place, dimmed, until the new ones are in. The list is ordered once for each unit and mode, by what each choice gains, and then stays put.']);
+  L.push(['The number beside each choice', 'the whole turn played again with that one choice changed, in the same games: it is what the answer becomes when the choice is tapped (models destroyed, for Both the shooting and the fight added up; wounds lost for a one-model unit; when that does not move, the chance to wipe the unit). Only the damage dealt is measured: what the attacking unit loses is not played. It comes first from ' + String(DM_Q).replace(/\B(?=(\d{3})+$)/g, ',') + ' games (' + String(DM_Q / 2).replace(/\B(?=(\d{3})+$)/g, ',') + ' for Both; shown faint), then from the answer’s own 10,000; after a tap, the numbers before it stay in place, dimmed, until the new ones are in. The list is ordered for each unit and mode by what each choice gains: first from the quick games, then once more from the 10,000 when every effect is in (a tie keeps the order listed), and then it stays put.']);
   L.push(['Another unit’s rule', 'an aura or ability of another unit of the list that reaches this unit (Clever Know-wotz from a Mek, Beacons of Rage from Eightbound) is listed with the unit it comes from, and is never ticked for you: whether that unit gives it depends on the table.']);
-  L.push(['Not counted', 'a rule whose effect the calculator does not play (Fights First, mortal wounds of its own, a single re-roll) is listed with its words; when one of the Modifiers says the same thing, “Count it by hand” sets that modifier for this step, as your own call.']);
+  if(c.models.length > 1) L.push(['The target’s groups (19.02, 05.03, 19.04)', 'each group added is its own stats row. A group ticked CHARACTER is taken to be a Leader attached to the first group, its bodyguard: attacks use the highest T of the bodyguard models while one is left, then the Leader’s (19.02); the defender declares the allocation order with the CHARACTER group last (05.03), and the calculator plays every order the rules allow and takes the one that loses the fewest models; each group has its own Feel No Pain (19.04 FAQ: a rule that gives one model Feel No Pain applies to that model only). The target’s keywords are not set: CHARACTER is not counted for [ANTI-…] or a rule about the target’s keywords unless you tick its box.']);
+  if(c.models.some(m => m.char)) L.push(['[PRECISION] (24.28)', 'the active player can select the CHARACTER group for [PRECISION] attacks (the weapon’s own, a rule’s, or every attack here with “Precision” ticked under the target): the calculator takes it that they do, and that the Leader is visible. [TORRENT] weapons cannot have [PRECISION] (24.37): never theirs. It is the current allocation group until those attacks are resolved or it is destroyed; the rest then go to the bodyguard. [DEVASTATING WOUNDS] mortal wounds of those attacks go to it first (24.28.01).']);
+  if(on.some(x => x.one)){ const ph = on.some(x => x.one.some(o => o.phase)), af = c.rules.some(r => r.on && r.m.from === 'Advanced Firepower'), cc = c.rules.some(r => r.on && r.m.from === 'Code Chivalric');
+    L.push(['A re-roll of one die (01.05.02, 04.03)', 'a rule that lets you re-roll one hit, wound or Damage roll leaves which one to you. The calculator re-rolls the first failed hit or wound roll it can go to (never a die already re-rolled: 01.05.02), and the first Damage roll below the dice’s average that leaves the model it hits with wounds left; the mortal wounds of [DEVASTATING WOUNDS] are not re-rolled. When one can go to several weapons, it resolves them most valuable first (the damage one attack does on average: 04.03 lets the attacker pick the order), so it goes where a success is worth the most; the working says how often each weapon gets it. The same rule on several weapons is one re-roll for the unit.' +
+      (ph ? ' Command Re-roll can be used once in the phase (15.01): it is shared by the attacks of that phase (Shoot and Fight are different phases); here it goes to this unit’s attacks.' : '') +
+      (af ? ' Advanced Firepower does not say how often: the calculator gives the unit one of each each time it shoots.' : '') +
+      (cc ? ' Code Chivalric’s Quality gives one to each model with it, each time it is selected to shoot or fight: the calculator gives the unit one.' : '')]); }
+  L.push(['Not counted', 'a rule whose effect the calculator does not play (Fights First, mortal wounds of its own) is listed with its words; when one of the Modifiers says the same thing, “Count it by hand” sets that modifier for this step, as your own call.']);
   L.push(['A fact of the table', 'saying one holds (charged, riled up, on an objective, remained stationary, the closest target) ticks every rule of this step whose condition it is, for the unit it is about; each can still be unticked by itself, and a stratagem with that condition is never ticked for you.']);
   L.push(['Shoot, Fight, Both', 'Shoot is the shooting alone, Fight the fight alone (“Charged this turn” as you say). Both plays the shooting, then the charge, then the fight, in the same games: the fight meets what the shooting left. The charge is taken to be made, not rolled: “Charged this turn” is ticked for the fight (untick it for a fight with no charge move; a unit that shot with close-quarters shooting is engaged and cannot declare one, 10.06). Fights First and which models are in engagement range are not played: every model left takes part. What the target does back and what the unit loses are not played: the calculator shows the damage dealt.']);
   if(beats.some(x => x.M.rules.some(r => r.carried))) L.push(['A tick that lasts', 'a rule or stratagem whose words make it last past its step (to the end of the turn, the battle round, until your next Command or Movement phase) carries from the shooting into the fight of the same unit, as a carried chip (an army rule by its name and pick: a Doctrina Imperative ticked for the shooting is the one in the fight); the fight can untick it for itself. A rule whose words do not say how long it lasts stays in its step.']);
@@ -2477,8 +2524,10 @@ const dmKey = inp => JSON.stringify(inp);
 // answer and every effect after it
 const DM_Q = 2000, DM_X = 10000, dmQ = plan => plan.beats.length > 1 ? DM_Q / 2 : DM_Q;
 const dmMemo = new Map();
-const dmGet = inp => dmMemo.get(dmKey(inp));
-const dmPut = (inp, r) => { dmMemo.set(dmKey(inp), r); if(dmMemo.size > 800) dmMemo.delete(dmMemo.keys().next().value); };
+// (the least recently used goes first, and there is room for every game of a screen: a screen with many choices plays two inputs for
+// each, and a result dropped while its screen still needs it would leave a row without its number, or put the list in another order)
+const dmGet = inp => { const k = dmKey(inp), r = dmMemo.get(k); if(r){ dmMemo.delete(k); dmMemo.set(k, r); } return r; };
+const dmPut = (inp, r) => { dmMemo.set(dmKey(inp), r); if(dmMemo.size > 2400) dmMemo.delete(dmMemo.keys().next().value); };
 const dmOk = plan => plan.beats.length && plan.beats.some(b => b.M.input.groups.length);
 function dmPlaySync(inp){ let r = dmGet(inp); if(!r){ r = WH_CALC.play(inp); dmPut(inp, r); } return r; }
 // a step's numbers, as the answer shows them: destroyed (or wounds lost, for one model), wounds lost, wiped by its end, before it
@@ -2578,6 +2627,12 @@ function dmNoWhy(M, M2, lv){
     const ins = MM => MM.models.map(m => m.InSv).join();
     if(ins(M) !== ins(M2)){ const v = Math.min(...M.models.concat(M2.models).map(m => m.InSv));
       if(a.every(x => x.out || Math.max(2, sv - x.AP) <= v)) return 'their Sv ' + sv + '+ after AP is as good as an InSv ' + v + '+ against every weapon here'; } }
+  // only a re-roll of one die changed: no failed roll it can go to here (every failed one re-rolled already, 01.05.02)
+  const noOne = g => JSON.stringify(Object.assign({}, g, { one:0, notes:0, applied:0, skipped:0 }));
+  if(a.every((x, i) => noOne(x) === noOne(b[i])) && a.some((x, i) => core(x) !== core(b[i]))){
+    // (said only when the working, with it ticked, re-rolls about nothing; else the rest of the reasons, or none)
+    const MM = (M2.R.pool || []).length > (M.R.pool || []).length ? M2 : M, X = WH_CALC.explain(MM.input);
+    if(X.groups.every(g => !g.one || g.one.hit + g.one.wound + g.one.dmg < 0.005)) return 'no roll here that it can re-roll fails without being re-rolled already'; }
   // each weapon that changes: why it changes nothing; a reason only when every one of them has one
   const why = [];
   for(let i = 0; i < a.length; i++){
@@ -2606,6 +2661,8 @@ function dmNoWhy(M, M2, lv){
    background: each one the turn played again with that one change ---- */
 let DM_LV = new Map(), DM_CTX = null;
 const dmRank = {};   // a step's list order (by effect), set once per pair and step and then kept, so rows never move under a finger
+// (the pairs and steps whose order comes from the exact effects: until then it is the quick games', put in order again once, dmFill)
+const DM_RANK_FINAL = new Set();
 const dmPairKey = (st, k) => JSON.stringify([dmMe().id, k, dmPair(st).au ? dmPair(st).au.id : '']);   // (your unit and the mode: the target set by hand does not reorder the list)
 // a lever: id, how it changes the whole state (apply), whether it is on now, the part of the list it is in. Both: the shooting's
 // levers and the fight's, each with its step (ids "shoot/…", "fight/…"); a fact of the table is one lever for the whole turn
@@ -2848,11 +2905,11 @@ async function dmFill(C){
     await Promise.all(todo.filter(lv => !lv.same && !(known() && dmGet(lv.inX)) && dmOk(lv.plan)).map(lv => dmExec(lv.inQ).then(() => { if(live() && !lv.fx){ lv.est = dmEff(C, lv, true); dmPatch(C, lv, true); } })));
     if(!live()) return;
     const pk = dmRankKey(C);
+    // the benefit to whose choice it is (a rule of the target that saves models is a gain for them), biggest first; a first order from
+    // the quick games alone (never some exact effects and some quick: which are in by now depends on how fast the games come back)
+    const scoreOf = q => { const score = {}; for(const lv of todo){ const e = q ? dmEff(C, lv, true) : lv.fx; score[lv.id] = dmGain(C, lv, e); } return score; };
     if(!dmRank[pk]){
-      // the benefit to whose choice it is (a rule of the target that saves models is a gain for them), biggest first
-      const score = {};
-      for(const lv of todo){ const e = lv.fx || lv.est || dmEff(C, lv, true); score[lv.id] = dmGain(C, lv, e); }
-      dmRank[pk] = score;
+      dmRank[pk] = scoreOf(true);
       const host = $('#dmList'); if(host){ host.innerHTML = dmListHtml(C); for(const lv of todo) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx); dmAnchorKeep(); }
     }
     if(base){ await base; if(!live()) return; }
@@ -2861,6 +2918,13 @@ async function dmFill(C){
     await Promise.all(order.filter(lv => !lv.same && dmOk(lv.plan)).map(lv => dmExec(lv.inX).then(() => { if(live()) dmPatch(C, lv); })));
     if(!live()) return;
     for(const lv of todo) if(!lv.fx) dmPatch(C, lv);
+    // the order for good: from the exact effects alone, every one of them in (the same for the same picks, however the games came
+    // back; a tie keeps the order listed), once for each pair and step; the list drawn again when it changes, as the player left it
+    if(!DM_RANK_FINAL.has(pk) && todo.every(lv => lv.fx || lv.same || !dmOk(lv.plan))){
+      const was = dmRank[pk], now = scoreOf(false), ids = sc => { const L = C.levers.map((lv, i) => [lv.id, i]); return L.sort((a, b) => (sc[b[0]] || 0) - (sc[a[0]] || 0) || a[1] - b[1]).map(x => x[0]).join('|'); };
+      dmRank[pk] = now; DM_RANK_FINAL.add(pk);
+      if(ids(was) !== ids(now)) dmListKeep(C, 'rank');
+    }
     dmBest(C);
   } finally { dmPending--; }
 }
@@ -2881,7 +2945,7 @@ function dmMoreShow(lv){
 }
 // a lever's effect, its secondary line and its crown, written into the row in place (q: the quick one, until the exact one is in)
 function dmPatch(C, lv, q){
-  const f = dmEff(C, lv, !!q);
+  const f = dmEff(C, lv, !!q) || (q ? lv.est : lv.fx);   // (a result no longer kept: the effect worked out from it stays)
   if(q) lv.est = f; else lv.fx = f;
   const g = lv.fx || lv.est;
   // why it changes nothing (a reason for every row at once is said once, above the list)
@@ -2961,6 +3025,22 @@ function screenDamage(){
   setTimeout(() => { dmStick(); dmChipCap(); dmAnchorKeep(); dmFill(C); }, 0);
   return h;
 }
+// the list drawn again as the player left it: the folds opened since the screen was drawn (dmState's, not the screen's copy of it), the
+// focus, and the row at the top of the screen where it was (why: 'note', only when the "Nothing here changes this" note was above
+// the top of the screen; 'rank', always, the rows having moved), unless a row just tapped is kept in place (dmAnchor)
+function dmListKeep(C, why){
+  const host = $('#dmList'); if(!host) return;
+  C.st.fold = Object.assign({}, dmState().fold);
+  const ae = document.activeElement, fid = ae && host.contains(ae) && ae.dataset ? ae.dataset.dmlv : null;
+  const topY = $('#top').getBoundingClientRect().bottom, note = host.querySelector('.dmsat');
+  const vis = !dmAnchor && (why === 'rank' || (note && note.getBoundingClientRect().bottom <= topY)) ? [...host.querySelectorAll('[data-dmlv]')].find(e => e.getClientRects().length && e.getBoundingClientRect().top >= topY) : null;
+  const vid = vis ? vis.dataset.dmlv : null, vtop = vis ? vis.getBoundingClientRect().top : 0;
+  host.innerHTML = dmListHtml(C); for(const lv of C.levers) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx);
+  const at = id => id && host.querySelector('[data-dmlv="' + CSS.escape(id) + '"]');
+  const fe = at(fid); if(fe) fe.focus({ preventScroll:true });
+  const ve = at(vid); if(ve && ve.getClientRects().length){ const d = ve.getBoundingClientRect().top - vtop; if(Math.abs(d) >= 1) scrollBy(0, d); }
+  dmAnchorKeep();
+}
 // the answer card again, when the answer's own 10,000 games come in: its numbers written in place (the same lines as before, so
 // nothing below it moves); the card never gets shorter while it is on the screen
 function dmRedraw(C){
@@ -2969,19 +3049,7 @@ function dmRedraw(C){
   C.r = dmGet(C.inX); C.prov = false; C.A = dmAnsOf(C.plan, C.plan.k, C.r);
   // the list's "Nothing here changes this" (and each row's reason for no change) was said from the quick games: said again from
   // the answer's own 10,000 when they disagree (2,000 games can wipe the target in 99.5% where 10,000 do in 99.4%)
-  const host = $('#dmList');
-  if(host && (C.A ? dmSatWhy(C) : '') !== sat0){
-    // drawn again as the player left it: the folds opened since the screen was drawn (dmState's, not the screen's copy of it), the
-    // focus, and, when the note was above the top of the screen, the rows where they were
-    C.st.fold = Object.assign({}, dmState().fold);
-    const ae = document.activeElement, fid = ae && host.contains(ae) && ae.dataset ? ae.dataset.dmlv : null;
-    const topY = $('#top').getBoundingClientRect().bottom, note = host.querySelector('.dmsat');
-    const vis = !dmAnchor && note && note.getBoundingClientRect().bottom <= topY ? [...host.querySelectorAll('[data-dmlv]')].find(e => e.getClientRects().length && e.getBoundingClientRect().top >= topY) : null;
-    const vid = vis ? vis.dataset.dmlv : null, vtop = vis ? vis.getBoundingClientRect().top : 0;
-    host.innerHTML = dmListHtml(C); for(const lv of C.levers) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx);
-    const at = id => id && host.querySelector('[data-dmlv="' + CSS.escape(id) + '"]');
-    const fe = at(fid); if(fe) fe.focus({ preventScroll:true });
-    const ve = at(vid); if(ve && ve.getClientRects().length){ const d = ve.getBoundingClientRect().top - vtop; if(Math.abs(d) >= 1) scrollBy(0, d); } }
+  if((C.A ? dmSatWhy(C) : '') !== sat0) dmListKeep(C, 'note');
   const a = $('#dmAns');
   if(a){ const h0 = a.offsetHeight, t = document.createElement('template'); t.innerHTML = dmCard(C); const n = t.content.firstElementChild;
     const keys = e => [...e.querySelectorAll('[data-dmc]')].map(x => x.dataset.dmc).join('|');
@@ -3009,8 +3077,10 @@ function dmSentence(st, P, plan){
     '<div class="dml1 dmvb"><span class="dmwd"></span><div class="dmmode" role="group" aria-label="Shoot, fight or both">' + seg + '</div></div></div>';
 }
 // the target in a line (the pinned card, the working): "5 × T4 Sv 3+ W2 · InSv 4+ · FNP 5+ · cover · -1 D"
+// (groups added: each after a "+", the CHARACTER one named; "[PRECISION]" when ticked)
+const dmGroupLine = g => g.n + ' × T' + g.T + ' Sv ' + (g.Sv ? g.Sv + '+' : '–') + ' W' + g.W + (g.InSv ? ' · InSv ' + g.InSv + '+' : '') + (g.fnp ? ' · FNP ' + g.fnp + '+' : '');
 const dmTypedLine = st => { const t = dmTypedVals(st);
-  return t.n + ' × T' + t.T + ' Sv ' + (t.Sv ? t.Sv + '+' : '–') + ' W' + t.W + (t.InSv ? ' · InSv ' + t.InSv + '+' : '') + (t.fnp ? ' · FNP ' + t.fnp + '+' : '') + (t.cover ? ' · cover' : '') + (t.dm1 ? ' · −1 D' : ''); };
+  return dmGroupLine(t) + t.more.map(g => ' + ' + dmGroupLine(g) + (g.char ? ' (CHARACTER)' : '')).join('') + (t.cover ? ' · cover' : '') + (t.dm1 ? ' · −1 D' : '') + (t.prec ? ' · [PRECISION]' : ''); };
 
 /* ---- wheels: a number picked by swiping a short column up or down (scroll-snap, the phone's own momentum), with a mouse wheel, a tap
    on a row, or the arrow keys (role spinbutton for screen readers). The value is taken once the column stops; the screen is then
@@ -3024,13 +3094,22 @@ const dmWhTxt = (k, v) => ['Sv', 'InSv', 'fnp'].includes(k) ? (v ? v + '+' : '�
 const whAt = (vals, v) => { const i = vals.indexOf(v); if(i >= 0) return i; let b = 0; vals.forEach((x, j) => { if(Math.abs(x - v) < Math.abs(vals[b] - v)) b = j; }); return b; };
 const whHtml = (id, label, aria, texts, i) => '<div class="dw"><span class="dwl" aria-hidden="true">' + esc(label) + '</span><div class="dwb"><div class="dwv" role="spinbutton" tabindex="0" data-wh="' + esc(id) + '" data-i="' + i + '" aria-label="' + esc(aria) + '" aria-valuemin="0" aria-valuemax="' + (texts.length - 1) + '" aria-valuenow="' + i + '" aria-valuetext="' + esc(texts[i]) + '">' +
   '<i class="dwp"></i>' + texts.map((t, j) => '<span class="dwi' + (j === i ? ' cur' : '') + '" aria-hidden="true">' + esc(t) + '</span>').join('') + '<i class="dwp"></i></div></div></div>';
-// the target, set by hand: six wheels, the benefit of cover and -1 Damage
+// the target, set by hand: six wheels, the benefit of cover and -1 Damage; the groups the player adds (Add a group: a Leader, say), each
+// with its own six wheels, CHARACTER and Remove (data-shape: how many groups and which is the CHARACTER, so a redraw that keeps the
+// wheels draws the section again when that changes)
 function dmTargetHtml(st){
-  const t = dmTypedVals(st);
-  return '<section class="dmtg" id="dmTgt" data-whkeep><h2 class="dmwd dmtgh">Target</h2><div class="dws" role="group" aria-label="The target">' +
-    DM_WHEELS.map(([k, label, aria, vals]) => whHtml('tg:' + k, label, aria, vals.map(v => dmWhTxt(k, v)), whAt(vals, t[k]))).join('') + '</div>' + dmTargetToggles(t) + '</section>';
+  const t = dmTypedVals(st), wheels = (pre, g, who) => '<div class="dws" role="group" aria-label="' + esc(who) + '">' +
+    DM_WHEELS.map(([k, label, aria, vals]) => whHtml(pre + k, label, aria + (pre === 'tg:' ? '' : ', ' + who), vals.map(v => dmWhTxt(k, v)), whAt(vals, g[k]))).join('') + '</div>';
+  const lead = t.more.some(g => g.char);
+  const more = t.more.map((g, i) => { const nm = g.char ? 'Leader' : 'Group ' + (i + 2);
+    return '<div class="dmgrp"><div class="dmgh"><h3 class="dmwd">' + nm + '</h3><button class="dmtt' + (g.char ? ' on' : '') + '" data-dmgch="' + i + '" aria-pressed="' + g.char + '"><span class="ck" aria-hidden="true"></span>CHARACTER</button>' +
+      '<button class="dmtt dmgx" data-dmgrm="' + i + '" aria-label="Remove ' + esc(nm) + '">Remove</button></div>' + wheels('tg2:' + i + ':', g, nm) + '</div>'; }).join('');
+  return '<section class="dmtg" id="dmTgt" data-whkeep data-shape="' + t.more.map(g => g.char ? 'c' : 'g').join('') + '"><h2 class="dmwd dmtgh">Target' + (t.more.length ? ' · ' + (lead ? 'Bodyguard' : 'Group 1') : '') + '</h2>' +
+    wheels('tg:', t, 'The target') + more + dmTargetToggles(t) + '</section>';
 }
-const dmTargetToggles = t => '<div class="dmtgt">' + [['cover', 'Benefit of cover'], ['dm1', '−1 Damage']].map(([k, label]) => '<button class="dmtt' + (t[k] ? ' on' : '') + '" data-dmtt="' + k + '" aria-pressed="' + !!t[k] + '"><span class="ck" aria-hidden="true"></span>' + label + '</button>').join('') + '</div>';
+const dmTargetToggles = t => '<div class="dmtgt">' + [['cover', 'Benefit of cover'], ['dm1', '−1 Damage']].concat(t.more.some(g => g.char) ? [['prec', 'Precision']] : [])
+  .map(([k, label]) => '<button class="dmtt' + (t[k] ? ' on' : '') + '" data-dmtt="' + k + '" aria-pressed="' + !!t[k] + '"' + (k === 'prec' ? ' aria-label="Precision: these attacks are [PRECISION] against the Leader"' : '') + '><span class="ck" aria-hidden="true"></span>' + label + '</button>').join('') +
+  (t.more.length < DM_MORE ? '<button class="dmtt dmgadd" data-dmgadd aria-label="Add a group of models to the target: a Leader, say"><span class="pl" aria-hidden="true">+</span>Add a group</button>' : '') + '</div>';
 // the models left of your unit, one wheel for each models line (folded: "Models left · all 10")
 const dmLeftOf = (st, u) => isObj(st.left) && isObj(st.left[u.id]) ? st.left[u.id] : {};
 function dmLeftHtml(st, P){
@@ -3045,6 +3124,7 @@ function dmLeftHtml(st, P){
 function whSet(id, i){
   const st = dmState();
   if(id.startsWith('tg:')){ const w = DM_WHEELS.find(x => x[0] === id.slice(3)); if(!w) return; st.typed[w[0]] = w[3][i]; }
+  else if(id.startsWith('tg2:')){ const [, gi, k] = id.split(':'), w = DM_WHEELS.find(x => x[0] === k), g = (st.typed.more || [])[+gi]; if(!w || !isObj(g)) return; g[k] = w[3][i]; }
   else if(id.startsWith('left:')){ const u = dmPair(st).au, li = +id.slice(5); if(!u) return;
     const L = st.left[u.id] = isObj(st.left[u.id]) ? st.left[u.id] : {};
     if(i >= (parseInt(u.models[li], 10) || 1)) delete L[li]; else L[li] = i;
@@ -3085,7 +3165,8 @@ function dmRedrawKeep(){
   const v = $('#view');
   if(cur.s !== 'damage' || !v) return;
   const y = scrollY, tpl = document.createElement('template'); tpl.innerHTML = screenDamage();
-  const fresh = [...tpl.content.children], kept = new Map([...v.children].filter(e => e.hasAttribute('data-whkeep') && fresh.some(f => f.id === e.id)).map(e => [e.id, e]));
+  // (a kept part whose shape changed, a group added to the target or taken away, is drawn again)
+  const fresh = [...tpl.content.children], kept = new Map([...v.children].filter(e => e.hasAttribute('data-whkeep') && fresh.some(f => f.id === e.id && (f.dataset.shape || '') === (e.dataset.shape || ''))).map(e => [e.id, e]));
   for(const e of [...v.children]) if(!kept.has(e.id)) e.remove();
   let pos = v.firstChild;
   for(const f of fresh){ const k = kept.get(f.id);
@@ -3113,7 +3194,10 @@ function dmCard(C){
   if(!A) return '<div class="dmans" id="dmAns">' + ctxLine + '<p class="dmmsg">' + (plan.beats.some(x => x.M.input.groups.length) ? 'None of the ticked weapons can attack here (see Weapons).' : 'No weapon ticked: tick one under ' + (both ? 'Ranged or Melee weapons' : 'Weapons') + '.') + '</p>' + note + dmChips(C) + '</div>';
   const n = A.models, tw = A.x.target.wounds;
   const big = A.one ? f(A.lost) : f(A.killed), of = A.one ? 'of ' + tw + ' wounds lost' : 'of ' + n + ' destroyed';
-  const sub = A.one ? 'destroyed in ' + dmPct(A.wipe) + ' of games' : (f(A.lost) === '1' ? '1 wound' : f(A.lost) + ' wounds') + ' lost · wiped in ' + dmPct(A.wipe) + ' of games';
+  // (a CHARACTER group added to the target: its own fate, by the end of the step shown)
+  const lr = A.rb && (A.rb.rows || []).find(x => x.char);
+  const sub = (A.one ? 'destroyed in ' + dmPct(A.wipe) + ' of games' : (f(A.lost) === '1' ? '1 wound' : f(A.lost) + ' wounds') + ' lost · wiped in ' + dmPct(A.wipe) + ' of games') +
+    (lr ? ' · Leader destroyed in ' + dmPct(lr.gone) : '');
   // Both: each part's own number, and the charge between them
   const pv = both ? dmPartsF(A.parts.map(x => x ? (A.one ? x.lost : x.killed) : 0), A.one ? A.lost : A.killed) : [];
   const parts = both ? '<p class="dmparts" data-dmc="parts">' + esc(A.parts.map((x, i) => plan.beats[i].label + ' ' + pv[i]).join(' · ') + ' · ' +
@@ -3291,7 +3375,9 @@ function dmLeverRow(C, x){
     // a rule that follows another's pick (Murderous Imperative), and the part of a rule a fact of the table switches on (the +1 AP)
     const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pickLabel : 'none ticked') : '';
     const bu = C.plan.beats[C.plan.k].atk.u, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while the BATTLELINE fact holds (above)' : '') : '';
-    const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : ''));
+    // a re-roll of one die, ticked: which weapons it goes to (the working's exact averages; the unit's re-rolls of one die together)
+    const went = r.on && r.e && ['oneHit', 'oneWound', 'oneDmg', 'oneEither', 'oneAny'].some(k => r.e[k]) ? dmOneWent(C.M, r.m.from) : '';
+    const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '') + went);
     return dmRowHtml(C, x, title, sub, '', dmPills(C, x)); }
   // (Both: the rules it switches on in either part, the fight's said as such)
   if(x.fact){ const kids = (C.all || C.levers).filter(y => y.underFact === x.id);
@@ -3300,6 +3386,16 @@ function dmLeverRow(C, x){
       return '<button class="dmpp dmkid' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b><span class="kc" aria-hidden="true">' + (y.on ? '✓' : '') + '</span>' + esc(dmCap(nm)) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>' : ''); }
   if(x.x) return dmRowHtml(C, x, esc(x.x.label), esc(x.x.sub), '');
   return '';
+}
+// where a rule's re-rolls of one die go (calc.js explain: the weapons most valuable first when one can go to several, each re-roll to
+// the first failed roll it can go to), on average over the games: " · its re-rolls go to, on average: Castellan axe 0.45 hit, 0.3
+// wound; Eagle’s Scream 0.2 hit" (only this rule's; a weapon that gets under 0.05 of one left out)
+function dmOneWent(M, from){
+  const X = M._oneX !== undefined ? M._oneX : (M._oneX = M.input.groups.length ? WH_CALC.explain(M.input) : null), r2 = v => String(Math.round(v * 100) / 100);
+  const mine = x => x.src === from || x.src.startsWith(from + ' (') || x.src.startsWith(from + ':');
+  const list = X ? X.groups.map((g, i) => { if(!g.one) return null; const by = (g.one.by || []).filter(mine), t = k => by.reduce((a, x) => a + x[k], 0);
+    return [M.input.groups[i].name, [[t('hit'), 'hit'], [t('wound'), 'wound'], [t('dmg'), 'Damage']].filter(x => x[0] >= 0.05).map(([v, w]) => r2(v) + ' ' + w)]; }).filter(x => x && x[1].length) : [];
+  return list.length ? ' · its re-rolls go to, on average: ' + list.map(([n, xs]) => n + ' ' + xs.join(', ')).join('; ') : '';
 }
 const dmCap = t => String(t || '').charAt(0).toUpperCase() + String(t || '').slice(1);
 // a rule's name in its row opens the same popup the other screens use: its ability, stratagem or rule
@@ -3497,7 +3593,7 @@ function dmWorkSheet(){
       if(e.out){ h += '<div class="dmr out"><span class="n">' + esc(g.name) + '<small>left out: ' + esc(e.out) + '</small></span></div>'; return; }
       const gone = s.gone >= 0.005 ? 'the unit is destroyed before these attacks in ' + dmPct(s.gone) + ' of the games' : '';
       h += '<details class="dmr"><summary><span class="n">' + esc(g.name) + (gone ? '<small>' + esc(gone) + '</small>' : '') + '</span>' + cells(e) + '</summary><div class="body">' +
-        e.steps.map(q => '<p>' + esc(q.t).replace(/^([A-Z][a-z]+(?: roll)?):/, '<b>$1:</b>') + '</p>').join('') +
+        e.steps.map(q => '<p>' + esc(q.t).replace(/^([A-Z][a-z]+(?: roll| re-roll)?):/, '<b>$1:</b>') + '</p>').join('') +
         (gone ? '<p><b>Played out:</b> ' + esc(gone) + '; the dice give this weapon ' + n(s.unsaved + s.mortals) + ' through and ' + n(s.dmg) + ' wounds lost on average.</p>' : '') + '</div></details>';
     });
     const T = x.total, later = both ? pi > 0 : plan.k > 0;
@@ -5322,6 +5418,15 @@ document.addEventListener('click', e => {
     if(dmModeOf(st.turn[d]) !== ds.dmmode){ st.turn[d] = dmModeTurn(ds.dmmode, st.turn[d]); st.step[d] = ''; saveSession(); rerender(); } return; }
   // the target's boxes: the benefit of cover, -1 Damage (the wheels kept where they are)
   if(ds.dmtt){ const st = dmState(); st.typed[ds.dmtt] = !dmTypedVals(st)[ds.dmtt]; saveSession(); dmRedrawKeep(); return; }
+  // the target's groups: one added (the first a CHARACTER, a Leader: one model, the target's T, Sv and W to start with), its CHARACTER box
+  // (one group at most: ticking one unticks the others), removed
+  if(el.hasAttribute('data-dmgadd') || ds.dmgch != null || ds.dmgrm != null){ const st = dmState(), t = dmTypedVals(st), more = t.more.map(g => Object.assign({}, g));
+    if(ds.dmgch != null){ const i = +ds.dmgch, on = !more[i].char; more.forEach((g, j) => { g.char = j === i ? on : false; }); }
+    else if(ds.dmgrm != null) more.splice(+ds.dmgrm, 1);
+    else if(more.length < DM_MORE) more.push({ n:1, T:t.T, Sv:t.Sv, W:t.W, InSv:t.InSv, fnp:t.fnp, char:!more.some(g => g.char) });
+    if(more.length) st.typed.more = more; else delete st.typed.more;
+    if(!more.some(g => g.char)) delete st.typed.prec;
+    saveSession(); dmRedrawKeep(); return; }
   // a choice in the list or a chip: changed in place, the answer redrawn where it is
   if(ds.dmmore){ const id = ds.dmmore; if(DM_MX.has(id)) DM_MX.delete(id); else DM_MX.add(id); const lv = DM_LV.get(id); if(lv) dmMoreShow(lv); return; }
   if(ds.dmto){ const r = document.querySelector('#dmList [data-dmlv="' + CSS.escape(ds.dmto) + '"]'); if(r){ const top = $('#top').getBoundingClientRect().bottom + 96;
@@ -5336,7 +5441,7 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-dmreset')){ const st = dmState(), d = st.dir, u = dmPair(st).au;
     for(const k of Object.keys(st.ch)) if(k.startsWith(d + ':')) delete st.ch[k];
     delete st.facts[d]; if(u) delete st.left[u.id];
-    for(const id of Object.keys(DM_STEPS).concat(['both'])) delete dmRank[dmPairKey(st, id)];
+    for(const id of Object.keys(DM_STEPS).concat(['both'])){ delete dmRank[dmPairKey(st, id)]; DM_RANK_FINAL.delete(dmPairKey(st, id)); }
     saveSession(); rerender(); dmToast('Back to the datasheets as printed'); return; }
   // a rule the calculator does not play, counted by hand: the matching modifier set for the step shown
   if(ds.dmbyhand){ const [k, v] = ds.dmbyhand.split('|'), st = dmState(); dmCh(st, dmStepId(el)).man[k] = /^-?\d+$/.test(v) ? +v : v;
