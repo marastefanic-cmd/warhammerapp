@@ -236,13 +236,22 @@ function wahaDatasheet(html, chapter) {
   // Sergeant Metaurus only"): a box without a footnote is every model's
   const boxes = top.split('class="dsInvulWrap"').slice(1).map(b => {
     const v = /dsCharInvulValue[^>]*>([^<]*)</.exec(b), only = /dsInvulComment[^>]*>\s*\*\s*([^<]*?)\s+only\s*</.exec(b.split('class="dsInvulWrap"')[0]);
+    // (a footnote that is a condition, not models: "INSV* 4+ * against ranged attacks only" is every model's 4+*, as GW prints it)
+    if (v && only && /^against\b/i.test(txt(only[1]))) return { v: txt(v[1]) + '*', names: null };
     return v ? { v: txt(v[1]), names: only ? txt(only[1]).split(/\s*(?:,|\band\b)\s*/).filter(Boolean).map(x => x.toLowerCase()) : null } : null;
   }).filter(Boolean);
   if (!boxes.length && inv) boxes.push({ v: txt(inv[1]), names: null });
   for (const p of out.profiles) { const b = boxes.find(x => x.names && x.names.includes(String(p.name || '').toLowerCase())) || boxes.find(x => !x.names); if (b) p.INSV = b.v; }
   for (const m of top.matchAll(/<tr class="dsWeaponRow">([\s\S]*?)<\/tr>/g)) {
     const row = m[1], name = txt((/dsWeaponName">([\s\S]*?)<\/b>/.exec(row) || [])[1] || '');
-    const kws = [...row.matchAll(/<span class="kwbw[^"]*">([\s\S]*?)<\/span><\/span><\/span>/g)].map(k => txt(k[1]));
+    // each keyword is one <span class="kwbw …"> with its own nested spans (a tooltip's, or none: Wahapedia's plain "conversion"),
+    // read to its matching close
+    const kws = [];
+    for (const k of row.matchAll(/<span class="kwbw[^"]*">/g)) {
+      const re = /<(\/?)span\b[^>]*>/g; re.lastIndex = k.index + k[0].length; let depth = 1, m2;
+      while (depth && (m2 = re.exec(row))) depth += m2[1] ? -1 : 1;
+      if (m2) kws.push(txt(row.slice(k.index + k[0].length, m2.index)));
+    }
     const v = [...row.matchAll(/<div class="ct pad2626">([\s\S]*?)<\/div>/g)].map(k => txt(k[1]));
     out.weapons.push({ name, kw: kws, range: v[0], A: v[1], BS: v[2], S: v[3], AP: v[4], D: v[5] });
   }

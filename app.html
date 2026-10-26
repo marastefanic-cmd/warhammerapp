@@ -4460,6 +4460,9 @@ function screenUnit(){
   const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
   const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
+  // an allied unit: the rule that brings it into this army (the faction's allies: Assigned Agents, Daemonic Pact), once, as its reason
+  const ally = /^Allies: (.+)$/.exec(u.role || ''), allyRule = ally && (faction().allies || {})[ally[1]];
+  if(allyRule && ruleFor(allyRule)) meta.push('In this army through ' + linkTo('rule', allyRule, allyRule) + ' (' + esc(ally[1]) + ')');
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports

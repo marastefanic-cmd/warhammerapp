@@ -173,6 +173,12 @@
   "at": "2026-10-16",
   "why": "\"At the start of the Command phase\"."
  },
+ "026d270f49b9419c": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Wahapedia/BSData Selfless Protector is quoted exactly. It is not tagged (Aura), so it is correctly a guard, not an aura. needs Faction: Imperial Knights matches “an IMPERIAL KNIGHTS model from your army”, and the kind is ranged (“a ranged attack is allocated”). calc {cover, insv:4} is “the Benefit of Cover and a 4+ invulnerable save”. The snapshot shows it on the Atrapos, Crusader, Destrier and Errant, and not on the Defender itself or the Navigator (no IMPERIAL KNIGHTS keyword)."
+ },
  "027442776549cd66": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -1019,6 +1025,12 @@
   "at": "2026-10-21",
   "why": "\"While a friendly WORLD EATERS unit is within 6\" of this unit, that unit’s melee attacks can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\" needs Faction: World Eaters, kind melee and the note match. The \"this round\" condition is Wrathful Presence’s \"Until the start of the next battle round, this model has that ability\", and the own-sheet line follows 22.01 \"it is always within range of its own aura ability\"."
  },
+ "1108a15bf556ea39": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Wahapedia Knight Defender: “Defender’s Duty (Bondsman): While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.” The tag is Bondsman, the words match, and it is not tagged (Aura)."
+ },
  "110fbbb49ead4681": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1714,6 +1726,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "NR: “1x Trajann Valoris — Eagle’s Scream, Watcher’s Axe”, two Allarus Custodians each “Balistus grenade launcher, Castellan Axe” (one with Vexilla, which is no weapon). Gear per line and weapons rows (ranged then melee, ×2 for the Allarus) match; Wahapedia allows the Guardian Spear → Castellan Axe swap."
+ },
+ "1e98117db3170bef": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "GW p5 is the same text. at End of your opponent’s turn plus fight:opp is the end-opp-turn moment (the same as the approved Hunters from the Warp). movement:your comes from “must make an ingress move in your next Movement phase”. “until the start of your next Shooting phase” is a duration, correctly skipped. The checklist shows it once per battle, per army, at End of your opponent’s turn."
  },
  "1eba3c91e07867de": {
   "verdict": "ok",
@@ -5339,6 +5357,12 @@
   "at": "2026-10-16",
   "why": "Possessed Lord is the Slaughterbound's ability (\"this model\")."
  },
+ "5fc15df4e8462531": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Wahapedia Navigator prints “Gaze into the Empyrean (Psychic):”. Having no phase label is right: it names no phase or moment, and it is triggered by enemy reinforcements."
+ },
  "5fc49dce6ef14af2": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -5716,6 +5740,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Ranged attacks that target this unit have -1 D.” Literal."
+ },
+ "671338c32e1af0f8": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "GW’s/Wahapedia’s Knight Defender box: “INSV* 4+ * against ranged attacks only”. BSData has InSv 4+*. The def has the same form as the approved Knights’ “5+ invulnerable save against ranged attacks only” (defOf 08e20e06). It is defensive and always on, and correctly has no timing label."
  },
  "67247f752582f9c8": {
   "verdict": "ok",
@@ -6173,6 +6203,12 @@
   "at": "2026-10-24",
   "why": "Sentinel Guard Sodality's datasheet ability Praesidium Shield (unit-wide 'Attacks that target this unit...')."
  },
+ "6f8ee02bfec3744e": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "GW Faction Pack p5 (Freeblade Company) prints the same words. “each time the bearer makes a melee attack, add 1 to the Hit roll” is an offensive always-on effect used in the Fight phase of either turn, so Fight / either is right (melee rule). This matches the approved JSON-list precedents Headwoppa’s Killchoppa and Monstrous Nemesis. Note for the owner: 4-megas-and-a-destrier stores the same enhancement with no label (derive.md lists it as differing), so the two lists label it differently. That is not this list’s error."
+ },
  "6fc94ed89a54ac2f": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -6232,6 +6268,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "The Fight phase has no owner, so 'either'. Same as the approved In Auramite Clad. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "70a106ada2bff7f1": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Export: Conversion beam obliterator, Phosphor blaster, Plasma executor, Titanic feet, Twin incendine combustor. This is GW’s unit composition (“conversion beam obliterator; plasma executor; twin incendine combustor; phosphor blaster; titanic feet”). The plasma executor has two profiles, standard and supercharge, as on Wahapedia and in BSData."
  },
  "70df0ecc9690d001": {
   "verdict": "ok",
@@ -6352,6 +6394,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Any phase of either turn: either."
+ },
+ "737a8125f33acef1": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "The Assigned Agents entry matches Wahapedia imperial-agents.txt lines 19–26. GW’s Imperial Agents pack names it only as “FACTION: Assigned Agents” and prints no text. The alias opens it from the Navigator header link."
  },
  "737ce6747e17b50f": {
   "verdict": "ok",
@@ -6995,6 +7043,12 @@
   "at": "2026-10-21",
   "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
  },
+ "7eea82cee798485a": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Wahapedia Navigator prints “Third Eye (Psychic):”."
+ },
  "7ef800581701e572": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -7090,6 +7144,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
+ },
+ "80a5aa052b9a6d56": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "The Daemonic Pact entry is GW’s Chaos Daemons Faction Pack, Army Rules, word for word (the Incursion/Strike Force/Onslaught bullets, the Warlord/Enhancements line and the KHORNE…SLAANESH list). The alias opens it from the Nurglings’ header link."
  },
  "80cc7b715ba1adee": {
   "verdict": "ok",
@@ -7883,6 +7943,12 @@
   "at": "2026-10-23",
   "why": "Export categories: Khârn “Faction: World Eaters, Infantry, Character, Epic Hero, Grenades, Chaos, Khorne, Khârn the Betrayer”; Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Only Battleline and Berzerkers come from the bodyguard."
  },
+ "8d8e1e595ae6f385": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "GW p5: “Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.” That is your Shooting phase, plus the Fire Overwatch moment in your opponent’s Movement phase (the overwatch modifier). The label has the same shape as the approved Even More Dakka, Bringers of Change and Total Obliteration. As with Bringer of Justice, 4-megas stores no label for it."
+ },
  "8dae4f49a6278c7c": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -8668,6 +8734,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'Nazdreg's Know-wotz - Nazdreg' (melee.txt l.60); BSData profile is on the Nazdreg model. Models match NR: 1x Nazdreg, 5x Meganob w/ Twin Killsaw (roster (5) Meganobz led by Nazdreg)."
+ },
+ "9d088f7e149c2660": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "It is a Freeblade Company enhancement (GW p5), so the tag is Enhancement. The once-per-battle, per-army limit is in its text and the checklist reads it as per army."
  },
  "9d222befb3251dda": {
   "verdict": "ok",
@@ -9623,6 +9695,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.\""
  },
+ "ad23b1721d7efa47": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Wahapedia Navigator: “Third Eye (Psychic): At the start of your Shooting phase, …”. That is a fixed moment in your Shooting phase, so Shooting / your. The checklist puts it under To do now, Shooting · Your turn."
+ },
  "ad660349b515ce5e": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -9892,6 +9970,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "TARGET \"... unit from your army that is below its Starting Strength\", EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" The gist says the same, shorter. It adds the TARGET condition the digest asked for, and needs carries the keywords."
+ },
+ "b197dbca7a04ae00": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Export: Force-orb cane, Laspistol. Wahapedia: “This model is equipped with: laspistol; force-orb cane.” Laspistol 12\" A1 BS4+ S3 AP0 D1 [PISTOL]; force-orb cane Melee A3 WS4+ S6 AP-1 DD3 [PSYCHIC]. Wahapedia and BSData agree."
  },
  "b1bb7ccc40ddcf56": {
   "verdict": "ok",
@@ -11819,6 +11903,12 @@
   "at": "2026-10-16",
   "why": "Drops \"friendly\": the rule is \"within 3\\\" of one or more friendly WORLD EATERS INFANTRY units\" (matters in a mirror match). The army does have such units (Jakhals, Eightbound, Slaughterbound's and Khârn's/Lord's units)."
  },
+ "d57a09e1836f0288": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "Wahapedia Knight Defender, under the weapons: “Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.” The weapon is the conversion beam obliterator [CONVERSION, SUSTAINED HITS D3] (also BSData). The condition, the note and calc critHit:4 all follow the text, which the footnote quotes without interpretation. It shows once under the ranged table."
+ },
  "d587d9bedfb7d0d1": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -11896,6 +11986,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Exact \"Stealth\"; 24.33."
+ },
+ "d6e27098a09c369c": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "/^conversion$/i opens the Conversion entry, which the Defender’s [CONVERSION] weapon keyword needs. No other rule is named Conversion."
  },
  "d6e995b2d8fa6689": {
   "verdict": "ok",
@@ -13018,6 +13114,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase\"."
+ },
+ "eb4465fedd8412be": {
+  "verdict": "ok",
+  "by": "review:navigator",
+  "at": "2026-10-25",
+  "why": "This Destrier has Questoris heavy stubber, titanic feet, chastiser gatling cannon and frag bombard (export). Thundercharge needs “a thundershock spear and a bellatus reaper chainsword”, and no unit in the list has them. The wording is the same as the approved Destriers in 6-bigs and 4-megas."
  },
  "eba8309b22fe4885": {
   "verdict": "ok",

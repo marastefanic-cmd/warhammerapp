@@ -1949,6 +1949,96 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3532 (\"Tankbustas: Boss Nob  40mm\"); verify/.cache/bsdata/Orks.json line 589 (the shared Nob profile bd7a-2297-edcb-9729, which the Tankbustas entry links at line 20096: Base 32mm); verify/.cache/waha/ds/orks_Tankbustas.html: the Nob \"(⌀40mm)\" (the Tankbustas ⌀32mm)."
  },
  {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "cerastus-knight-atrapos",
+  "field": "stats.base",
+  "app": "Cerastus Knight Atrapos: 170×109mm Oval",
+  "source": "Cerastus Knight Atrapos: 170x109mm",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has Cerastus Knight Atrapos: 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval; New Recruit’s export (catalogue revision 2) has 170×109mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3364: \"Cerastus Knight Atrapos  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: 170×109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-crusader",
+  "field": "stats.base",
+  "app": "Knight Crusader: 170×109mm Oval",
+  "source": "Knight Crusader: 170x109mm",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has Knight Crusader: 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval; New Recruit’s export (catalogue revision 2) has 170×109mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3350: \"Knight Crusader  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: 170×109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "stats.base",
+  "app": "Knight Defender: 170×109mm Oval",
+  "source": "Knight Defender: 170x109mm",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has Knight Defender: 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval; New Recruit’s export (catalogue revision 2) has 170×109mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3351: \"Knight Defender  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: 170×109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "ability",
+  "app": "Defender’s Duty",
+  "source": "",
+  "reason": "GW names the ability Defender’s Duty, BSData at the pin (Imperium - Imperial Knights catalogue revision 2) Warden’s Duty. GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html: \"Defender’s Duty\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "ability",
+  "app": "",
+  "source": "Warden's Duty (Bondsman)",
+  "reason": "GW names the ability Defender’s Duty, BSData at the pin (Imperium - Imperial Knights catalogue revision 2) Warden’s Duty. GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Defender.html: \"Defender’s Duty\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-destrier",
+  "field": "stats.base",
+  "app": "Knight Destrier: 150×95mm Oval",
+  "source": "Knight Destrier: 150x95mm",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has Knight Destrier: 150x95mm; GW’s base size guide (Event Companion) has 150×95mm Oval; New Recruit’s export (catalogue revision 2) has 150×95mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3352: \"Knight Destrier  150x95mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: 150×95mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-errant",
+  "field": "stats.base",
+  "app": "Knight Errant: 170×109mm Oval",
+  "source": "Knight Errant: 170x109mm",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has Knight Errant: 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval; New Recruit’s export (catalogue revision 2) has 170×109mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3353: \"Knight Errant  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: 170×109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "navigator",
+  "field": "ability.text",
+  "app": "Third Eye: At the start of your Shooting phase, select one enemy unit within 12\" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**.",
+  "source": "At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit; if the test is failed, that enemy unit suffers 3 mortal wounds.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: \"At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suf…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "navigator",
+  "field": "rules",
+  "app": "",
+  "source": "Assigned Agents",
+  "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) gives the unit Assigned Agents, the army rule of its own faction (Imperial Agents; GW’s datasheet prints it under ARMY RULES); the unit is an ally in a Imperial Knights army, and the owner’s ruling is that a unit taken as an ally or agent does not get its own faction’s army rule (as the Nurglings in Chaos Knights lists have no Shadow of Chaos).",
+  "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: ARMY RULES \"Assigned Agents\".",
+  "by": "verify/from-json.js"
+ },
+ {
   "army": "defilers-and-friends",
   "unit": "fulgrim",
   "field": "ability.text",

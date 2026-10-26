@@ -3694,7 +3694,7 @@ Impulsor ›
 ######## unit deathwatch-terminator-squad · REIVER SQUAD Nerf when
 DEATHWATCH TERMINATOR SQUAD
 200 PTS EACH
-Allies: Deathwatch · ×2 in list
+Allies: Deathwatch · ×2 in list · In this army through Mission Tactics (Deathwatch)
 Models
 Options
 1× Deathwatch Terminator Sergeant (Storm Shield)

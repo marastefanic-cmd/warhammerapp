@@ -140,9 +140,12 @@ function explicitTiming(text, opts){
   let t = plain(rulesText(text));
   const reasons = [], out = {}, named = new Set();
   let at, atPh = [];
+  // the moment a text opens with comes after an enhancement's "X model only." and a tag in brackets ("IMPERIAL KNIGHTS model only.
+  // (Once per battle, per army) At the end of your opponent’s turn, …": Mysterious Guardian): those are who may take it and how often
+  const tm = t.replace(/^[A-Z][A-Z0-9 '’/-]*? (?:models?|units?|characters?) only\.\s+(?:\([^)]*\)\s+)?/, '');
   for(const r of MOMENT_RULES){
     if(r.rulesOnly && !(opts && opts.rule)) continue;
-    const m = r.re.exec(t);
+    const m = r.re.exec(r.re.source[0] === '^' ? tm : t);
     if(!m) continue;
     if(r.id === 'start-battle-round-later' && at) continue;      // already the opening moment
     if(r.id === 'start-battle-round' && at) continue;

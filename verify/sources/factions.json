@@ -7,7 +7,7 @@
     "pack": { "file": "eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.pdf", "label": "GW Faction Pack Thousand Sons" } },
   "tyranids": { "waha": "tyranids", "bsdata": "Xenos - Tyranids",
     "pack": { "file": "eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.pdf", "label": "GW Faction Pack Tyranids" } },
-  "imperial-knights": { "waha": "imperial-knights", "bsdata": "Imperium - Imperial Knights",
+  "imperial-knights": { "waha": "imperial-knights", "bsdata": "Imperium - Imperial Knights", "allies": { "Imperial Agents": "imperial-agents" },
     "pack": { "file": "eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.pdf", "label": "GW Faction Pack Imperial Knights" } },
   "adeptus-mechanicus": { "waha": "adeptus-mechanicus", "bsdata": "Imperium - Adeptus Mechanicus",
     "pack": { "file": "eng_14-10_wh40k_-faction_pack_adeptus-mechanicus-g0jwiuyz3x-f5itnst9j9.pdf", "label": "GW Faction Pack Adeptus Mechanicus" } },

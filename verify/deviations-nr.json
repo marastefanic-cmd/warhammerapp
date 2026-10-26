@@ -1997,5 +1997,65 @@
   "where": "verify/sources/nr/shooty.txt p2",
   "reason": "GW’s base size guide gives the Tankbustas’ Boss Nob (the app’s and New Recruit’s \"Nob\") a 40mm base; New Recruit (BSData) gives 32mm. The owner: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3532 (\"Tankbustas: Boss Nob  40mm\"); verify/sources/nr/shooty.txt line 43 (Base 32mm); verify/.cache/waha/ds/orks_Tankbustas.html: the Nob \"(⌀40mm)\" (the Tankbustas ⌀32mm)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-crusader",
+  "field": "from[ranged Heavy flamer]",
+  "app": null,
+  "source": "New Recruit marks \"(Hunter's Eye)\" as applied",
+  "reason": "The heavy flamer has [IGNORES COVER] on GW's datasheet already; Hunter’s Eye (\"Ranged weapons equipped by the bearer have the [IGNORES COVER] ability\") gives it nothing it lacks. New Recruit prints the weapon as changed by Hunter’s Eye and its keywords as \"Ignores Cover, Torrent, Ignores Cover\"; the app shows each weapon ability once, as GW prints it, with no mark (verify/nr.js and verify/bsdata.js read a keyword repeated by a rule as one).",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Knight-Crusader.html: Heavy flamer [IGNORES COVER, TORRENT]; verify/sources/nr/4-megas-and-a-destrier.txt, line 158, the Knight Crusader's Heavy flamer (Hunter's Eye): \"Ignores Cover, Torrent, Ignores Cover\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "cerastus-knight-atrapos",
+  "field": "stats[Cerastus Knight Atrapos].base",
+  "app": "170×109mm Oval",
+  "source": "170x109mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3364: \"Cerastus Knight Atrapos  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 170x109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-crusader",
+  "field": "stats[Knight Crusader].base",
+  "app": "170×109mm Oval",
+  "source": "170x109mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3350: \"Knight Crusader  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 170x109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-defender",
+  "field": "stats[Knight Defender].base",
+  "app": "170×109mm Oval",
+  "source": "170x109mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3351: \"Knight Defender  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 170x109mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-destrier",
+  "field": "stats[Knight Destrier].base",
+  "app": "150×95mm Oval",
+  "source": "150x95mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 150x95mm; GW’s base size guide (Event Companion) has 150×95mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3352: \"Knight Destrier  150x95mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 150x95mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "unit": "knight-errant",
+  "field": "stats[Knight Errant].base",
+  "app": "170×109mm Oval",
+  "source": "170x109mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 170x109mm; GW’s base size guide (Event Companion) has 170×109mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3353: \"Knight Errant  170x109mm Oval Base\"; verify/sources/nr-json/navigator-sounds-op-ngl.json: Base 170x109mm.",
+  "by": "verify/from-json.js"
  }
 ]
