@@ -1333,6 +1333,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   },
@@ -1426,6 +1430,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   },
@@ -1519,6 +1527,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   },
@@ -2064,6 +2076,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   },
@@ -2157,6 +2173,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   },
@@ -2250,6 +2270,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   },
@@ -2343,6 +2367,10 @@
     "readBy": {
      "source": "derived",
      "note": "\"derive\": the reading is what verify/derive.js's READING_RULES give from its text (readingsOf), written by verify/tables.js --write and written again from the text when it changes; absent: hand-written"
+    },
+    "listWhy": {
+     "source": "hand",
+     "note": "why this reading is the list's own and not its row's (hidden from the app): the reason of the list (a bodyguard's weapons the ability reaches, an enhancement in a value it reads); verify/tables.js keeps it on the entry, verify/helpers.js lists it for sign-off (unit-reading-why)"
     }
    }
   }

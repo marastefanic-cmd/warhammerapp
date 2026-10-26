@@ -1764,10 +1764,6 @@ const ARMIES = [
         { name:'More Dakka' },
         { name:'Supa-glowy Fing', tag:'Enhancement', text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761' }
-      ],
       rules:['Waaagh!','Leader','Supa-hazardous'],
       why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' } }
     },
@@ -2031,8 +2027,6 @@ const ARMIES = [
         { name:'Krumpin’ Time', who:'Meganobz' },
         { name:'Arrogant Invulnerability', who:'Meganobz' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[{ kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761' },'Krumpin’ Time'],
       kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
       kwNote:'Meganobz comes from the led Meganobz.',
       why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
@@ -2217,8 +2211,6 @@ const ARMIES = [
         { name:'Battle-lust', who:'Slaughterbound', tag:'Enhancement', ph:['charge'], turn:'either', text:'**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.' },
         { name:'Rend and Tear', who:'Exalted Eightbound' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[{ kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' },'Rend and Tear'],
       rules:['Leader','Deadly Demise D3','Blessings of Khorne','Deep Strike','Scouts 6"','Anti'],
       kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound','Exalted Eightbound'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
@@ -2343,10 +2335,6 @@ const ARMIES = [
         { name:'Rage Eternal', na:'Not leading a unit in this list' },
         { name:'Possessed Lord' },
         { name:'Lord of the Eightbound' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' }
       ]
     },
     {
@@ -2370,13 +2358,13 @@ const ARMIES = [
         { name:'Rend and Tear', who:'Exalted Eightbound' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[{ kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'11' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' },'Rend and Tear'],
+      mods:[{ kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'11' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa', listWhy:'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (+1, marked), so Possessed Lord’s +3 makes 11 (the datasheet’s A 7 makes 10)' },'Rend and Tear'],
       rules:['Leader','Deadly Demise D3','Blessings of Khorne','Deep Strike','Scouts 6"','Anti'],
       kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound','Exalted Eightbound'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
       partialRules:{ 'Scouts 6"':'Slaughterbound' },
-      why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
+      why:{ mods:{ 'Possessed Lord':'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (+1, marked), so Possessed Lord’s +3 makes 11 (the datasheet’s A 7 makes 10)' }, kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
       id:'chaos-rhino', ds:'world-eaters/chaos-rhino', pts:75,
@@ -2978,11 +2966,11 @@ const ARMIES = [
       // More Dakka's [IGNORES COVER] is printed on the Big Mek's weapons only: BSData gives it to the leader's own
       // profiles while it labels the Meganobz' Kombi-weapon "(More Dakka)" too; the rule is for the whole attached
       // unit (Core Rules 19.04), so the Meganobz' profile stays as printed and the footnote says it
-      mods:[{ kind:'ranged', when:'Every ranged attack', note:'[IGNORES COVER]', from:'More Dakka', always:true, readOf:'37fca761' },{ kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761' },'Krumpin’ Time'],
+      mods:[{ kind:'ranged', when:'Every ranged attack', note:'[IGNORES COVER]', from:'More Dakka', always:true, readOf:'37fca761', listWhy:'the Meganobz it leads in this list carry ranged weapons (their Kombi-weapons): More Dakka gives the whole attached unit [IGNORES COVER] (“This unit’s ranged attacks have”), which BSData marks only on the Big Mek’s own weapons' },'More Dakka','Krumpin’ Time'],
       rules:['Waaagh!','Leader','Supa-hazardous'],
       kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
       kwNote:'Meganobz comes from the led Meganobz.',
-      why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' }, kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
+      why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' }, mods:{ 'More Dakka':'the Meganobz it leads in this list carry ranged weapons (their Kombi-weapons): More Dakka gives the whole attached unit [IGNORES COVER] (“This unit’s ranged attacks have”), which BSData marks only on the Big Mek’s own weapons' }, kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
     },
     {
       id:'gretchin', ds:'orks/gretchin', role:'Battleline', pts:45, copies:3,
@@ -4976,6 +4964,10 @@ const DATASHEETS = {
     { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
     { name:'Kustom Force Field', def:'4+ InSv against ranged attacks', text:'This unit has 4+ **InSv** against ranged attacks.', defOf:'e9dead84' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761', readBy:'derive' }
+  ],
   rules:['Waaagh!','Leader'],
   kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour']
 },
@@ -5462,6 +5454,10 @@ const DATASHEETS = {
     { name:'Possessed Lord', tag:'Once per battle', ph:['fight'], turn:'either', text:'Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability.' },
     { name:'Lord of the Eightbound', text:'If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6"** abilities.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' }
+  ],
   rules:['Leader','Deadly Demise D3','Blessings of Khorne'],
   kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound']
 },
@@ -5755,6 +5751,9 @@ const DATASHEETS = {
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
     { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'2c58235b', readBy:'derive' }
+  ],
+  guard:[
+    { from:'Treason of Tzeentch', kind:'ranged', when:'Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase', selfWhen:'Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase', note:'its ranged weapons have [HAZARDOUS] until the end of the phase', readOf:'844fa497' }
   ],
   rules:['Deep Strike','Deadly Demise D6','Cabal of Sorcerers','Devastating Wounds','Psychic','Blast','Ignores Cover'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Thousand Sons','Fly','Magnus the Red','Monster','Primarch','Psyker','Tzeentch']
@@ -6209,6 +6208,9 @@ const DATASHEETS = {
     { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'+1 to hit rolls', from:'Aggressive Assault', readOf:'bca49143' },
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Errant (Bondsman, your Command phase)', note:'[ASSAULT]', from:'Errant’s Duty', oneModel:true, lasts:'round', readOf:'54db6f62' }
+  ],
   // New Recruit's Rules line also has Assault, named only by Errant’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Melta','Blast'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Errant','Questoris','Titanic','Towering','Vehicle','Walker']
@@ -6239,6 +6241,10 @@ const DATASHEETS = {
     { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'improve AP by 1', from:'Seasoned Noble', readOf:'f65d08c2' },
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LETHAL HITS]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a' },
+    { kind:'melee', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LANCE]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a' }
+  ],
   // New Recruit's Rules line also has Lethal Hits and Lance, named only by Paladin’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Rapid Fire','Blast','Melta'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Paladin','Questoris','Titanic','Towering','Vehicle','Walker']
@@ -6268,6 +6274,10 @@ const DATASHEETS = {
   mods:[
     { kind:'ranged', when:'vs non-MONSTER/VEHICLE targets', note:'ranged attacks have [DEVASTATING WOUNDS]', from:'Thin Their Ranks', always:true, vs:{ none:['Monster','Vehicle'] }, readOf:'3c1a544a' },
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[SUSTAINED HITS 1]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae' },
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[IGNORES COVER]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae' }
   ],
   // New Recruit's Rules line also has Sustained Hits, named only by Warden’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Devastating Wounds','Bondsman','Ignores Cover','Torrent','Melta'],
@@ -6340,6 +6350,9 @@ const DATASHEETS = {
     { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } }, readOf:'3c11830a' },
     { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining', readOf:'3a172fd2', readBy:'derive' }
   ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Cerastus Knight Atrapos (Bondsman, your Command phase), vs TITANIC/TOWERING models', note:'re-roll the hit roll and the wound roll', from:'Atrapos’ Duty', vs:{ any:['Titanic','Towering'] }, oneModel:true, lasts:'round', readOf:'7522a4f2' }
+  ],
   rules:['Code Chivalric','Deadly Demise D6+2','Super-Heavy Walker','Bondsman','Sustained Hits','Blast','Devastating Wounds','Hazardous'],
   kw:['Cerastus','Character','Faction: Imperial Knights','Imperium','Knight Atrapos','Titanic','Towering','Vehicle','Walker']
 },
@@ -6392,6 +6405,9 @@ const DATASHEETS = {
   mods:[
     { kind:'ranged', when:'Remained Stationary in your Movement phase', cond:'stationary', note:'ranged weapons have [SUSTAINED HITS 1] until the end of the turn', from:'Punishing Salvoes', readOf:'0eb266cf' },
     { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Crusader (Bondsman, your Command phase)', note:'+1 to hit rolls', from:'Crusader’s Duty', oneModel:true, lasts:'round', readOf:'cb466686' }
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Crusader','Questoris','Titanic','Towering','Vehicle','Walker']
@@ -7431,6 +7447,9 @@ const DATASHEETS = {
     { name:'Soul Sight', tag:'psychic level 1', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit. Ranged attacks that target that enemy unit have **[IGNORES COVER]**.' },
     { name:'Psychic Hood', tag:'Psychic', def:'Feel No Pain 4+ against psychic attacks', text:'This unit has **Feel No Pain 4+** against **psychic attacks**.', defOf:'3eefcb3b' },
     { name:'Librarian', tag:'psyker level 1', text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' }
+  ],
+  aura:[
+    { kind:'ranged', when:'Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll)', note:'[IGNORES COVER]', from:'Soul Sight', readOf:'a4058129' }
   ],
   rules:['Leader','Deep Strike','Combat Doctrines','Scouts 6"','Librarius','Stealth','Infiltrators','Close-quarters','Psychic','Hazardous','Devastating Wounds'],
   kw:['Character','Explosives','Faction: Adeptus Astartes','Imperium','Infantry','Librarian','Phobos','Psyker']
@@ -9804,11 +9823,11 @@ const TABLE_ORDER = {
 // the rule they read, in this order: the army rules on the unit's Rules line, each datasheet of the unit, its enhancement (or
 // upgrade), the detachment rules of the list whose needs it meets; then the entry's own. An entry's list of them with names in it is
 // the whole list, in its order: a name stands for the readings of that name the rows give. null: none. Hidden: readOf (the
-// fingerprint of the text a reading was read from) and readBy.
+// fingerprint of the text a reading was read from), readBy and listWhy.
 function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['mods', 'aura', 'guard'];
-  var FPK = ["gistOf","defOf","readOf","readBy"], RHIDE = ['readOf', 'readBy'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var FPK = ["gistOf","defOf","readOf","readBy","listWhy"], RHIDE = ['readOf', 'readBy', 'listWhy'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values

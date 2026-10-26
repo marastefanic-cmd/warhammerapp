@@ -46,13 +46,13 @@ const FINGERPRINT = { gist:'gistOf', def:'defOf' };
 // fixed rules give it from that text (then --write writes it again from the text). READ_COLS: the reading columns a row of
 // FACTIONS, CORE_STRATAGEMS or an ability row holds itself (the app reads them there); the row's readOf fingerprints them all.
 const READ = ['mods', 'aura', 'guard'];
-const READ_FP = 'readOf', READ_BY = 'readBy';
+const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWhy: a reading the list's own, and why: it stays on the entry)
 const READ_COLS = {
   rule:['mod', 'calcMods', 'calcDefs', 'calcNc', 'parts', 'both', 'limit'],
   strat:['mod', 'help', 'shield', 'defCalc', 'defPick'],
   ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'embarked', 'fightOnDeath', 'comeback'],
 };
-const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY);
+const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
 
 const MARK = {
@@ -78,11 +78,11 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 // the rule they read, in this order: the army rules on the unit's Rules line, each datasheet of the unit, its enhancement (or
 // upgrade), the detachment rules of the list whose needs it meets; then the entry's own. An entry's list of them with names in it is
 // the whole list, in its order: a name stands for the readings of that name the rows give. null: none. Hidden: readOf (the
-// fingerprint of the text a reading was read from) and readBy.
+// fingerprint of the text a reading was read from), readBy and listWhy.
 function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['mods', 'aura', 'guard'];
-  var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}', '${READ_WHY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
@@ -649,6 +649,7 @@ function readingTables(R, units, conflicts){
     return hit ? { part:hit.part, row:hit.r } : null; };
   const coreOf = (U, name) => !U.multi && (hasN(U.u.rules, name) || [].concat(U.u.ranged || [], U.u.melee || []).some(w => (w.kw || []).some(k => nmR(k).startsWith(nmR(name))))) && coreText(D, name);
   function classify(U, m){
+    if(m[READ_WHY]) return { cls:'own', why:m[READ_WHY] };   // the list's own, with its reason (a bodyguard's weapons, an enhancement)
     const rn = m.rule || m.from, rule = ruleOf(U, rn);
     if(m.rule && rule){ if(ruleApplies(U, rule)) return { cls:'rule', path:rule.path, rule:rule.r }; return { cls:'own', why:null, cant:'the rule it names (' + rn + ') does not reach this unit as the resolver places a rule\'s readings' }; }
     const ab = partOfAbility(U, m.from);
@@ -693,12 +694,14 @@ function readingTables(R, units, conflicts){
   const readConflicts = [], derived = [];
   const whereOf = g => g.cls === 'ds' ? g.sid : g.path[0] + ' · ' + g.path.slice(1).join(' · ');
   for(const g of groups.values()){
-    const vals = [...g.obs.entries()].map(([U, xs]) => ({ U, v:stable(unFp(xs.map(x => x.m))) }));
-    if(vals.every(v => v.v === vals[0].v)){
+    // (a unit with its own reading of this, for a reason of the list (listWhy), does not vote: it shows its own)
+    const voters = [...g.obs.entries()].filter(([U]) => !U.read[g.kind].some(x => x.c.cls === 'own' && x.m[READ_WHY] && x.m.from === g.from));
+    const vals = voters.map(([U, xs]) => ({ U, v:stable(unFp(xs.map(x => x.m))) }));
+    if(vals.length && vals.every(v => v.v === vals[0].v)){
       g.agreed = true;
-      const first = [...g.obs.values()].find(xs => xs.length);
+      const first = voters.map(([, xs]) => xs).find(xs => xs.length);
       if(!first){ g.agreed = false; continue; }
-      g.list = first.map((x, j) => { const o = JSON.parse(JSON.stringify(x.m)); for(const k of [READ_FP, READ_BY]){ const w = [...g.obs.values()].map(xs => xs[j].m[k]).find(v => v !== undefined); if(w !== undefined) o[k] = w; else delete o[k]; } return o; });
+      g.list = first.map((x, j) => { const o = JSON.parse(JSON.stringify(x.m)); for(const k of [READ_FP, READ_BY]){ const w = voters.map(([, xs]) => xs[j] && xs[j].m[k]).find(v => v !== undefined); if(w !== undefined) o[k] = w; else delete o[k]; } return o; });
       // readings verify/derive.js's fixed rules give from the text: written from it (readBy:'derive'); one whose text changed is
       // written again from the new text
       if(g.cls === 'ds' || g.cls === 'enh'){

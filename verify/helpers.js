@@ -16,6 +16,11 @@ const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   
 // row of data.js it is kept, as the app gets it: verify/tables.js hides them)
 const FP_KEYS = require('./tables').FP_KEYS;
 
+// the readings data.js keeps on a list's entry for a reason of the list (listWhy), by "<army>/<unit>"
+let OWN_ = null;
+const OWN = () => OWN_ || (OWN_ = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')), m = new Map();
+  for(const a of R.armies) for(const u of a.units) for(const k of T.READ) for(const x of u[k] || []) if(x && x.listWhy){ const id = a.id + '/' + u.id; if(!m.has(id)) m.set(id, []); m.get(id).push(x); }
+  return m; })());
 function items(D, appSource){
   const out = [];
   // (a fingerprint next to an AI-written column, gistOf / defOf, is not a judgement: verify/tables.js --fingerprints checks it)
@@ -75,6 +80,11 @@ function items(D, appSource){
       for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
       for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
+      // a reading kept on the list, not on the row it reads, for a reason of the list (data.js listWhy, hidden from the app: the
+      // bodyguard's weapons More Dakka reaches, an enhancement's +1 A in a Possessed Lord's Attacks): that reason, against the unit
+      const own = (OWN().get(a.id + '/' + u.id) || []);
+      for(const m of own) add(a.id, 'unit-reading-why', w, { listWhy:m.listWhy, reading:JSON.parse(JSON.stringify(m, (k, v) => FP_KEYS.includes(k) ? undefined : v)) },
+        Object.assign(cited(a.id, u, m), { weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.name, 'A' + x.A, (x.kw || []).join(', '), JSON.stringify(x.from || {})].filter(Boolean).join(' · ')), enhancement:u.enhancement || null }));
       for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
       // must have, and the app names that model
