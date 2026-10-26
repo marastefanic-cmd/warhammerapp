@@ -2687,24 +2687,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · Duellist’s Hubris": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | defilers-and-friends · Lucius the Eternal · Flawless Blades · Daemonic Patrons": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | defilers-and-friends · Daemon Prince of Slaanesh with Wings · Daemonic Destruction": {
-   "ph": [
-    "charge"
-   ],
-   "turn": "either"
-  },
   "ability-timing | defilers-and-friends · Lord Exultant · Lord Exultant · Euphoric Strikes": {
    "ph": [
     "fight"
@@ -2739,8 +2721,6 @@
     "shooting": "your"
    }
   },
-  "ability-timing | defilers-and-friends · Chaos Rhino · Transport": {},
-  "ability-tag | defilers-and-friends · Chaos Rhino · Transport": "Capacity",
   "ability-tag | infernal-lance · Chaos Cerastus Knight Atrapos · Knight Diabolus": "Enhancement",
   "ability-tag | infernal-lance · Chaos Cerastus Knight Lancer · Blasphemous Engine": "Enhancement",
   "ability-tag | infernal-lance · Knight Despoiler · Bestial Aspect": "Enhancement",

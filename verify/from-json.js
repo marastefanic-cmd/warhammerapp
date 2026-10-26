@@ -752,8 +752,12 @@ function wahaSectionsOf(page) {
     const KNOWN = /^(RANGED WEAPONS|MELEE WEAPONS|WARGEAR OPTIONS|CORE ABILITIES|ARMY RULES|ABILITIES|PSYCHIC ABILITIES|TRANSPORT|UNIT COMPOSITION|LEADER|SUPPORT|STRATAGEMS|DETACHMENT ABILITY|WARGEAR ABILITIES|DAMAGED.*|KEYWORDS.*|FACTION KEYWORDS.*|RANGE)$/;
     if (head(lines[i]) && !KNOWN.test(t) && t.split(/\s+/).length >= 2 && seenWeapons && !seenAbilities && lines[i + 1] && !head(lines[i + 1]) && /[a-z]/.test(lines[i + 1])) {
       const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]); j++) tl.push(lines[j]);
-      const nmTc = t.toLowerCase().replace(/(^|\s)([a-z])/g, (m, a, b) => a + b.toUpperCase());
-      out.abilities.push({ name: nmTc, tag: null, lines: tl, box: true });
+      // (title case, its small words lower case: "Daemon Primarch of Slaanesh")
+      const nmTc = t.toLowerCase().replace(/(^|\s)([a-z]+)/g, (m, a, w) => a + (a && /^(of|the|and|in|on|to|for|a|an)$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)));
+      // (a box of named abilities, each "**Name (tag):** text": its parts, for an ability of the datasheet that selects one of them, below)
+      const NAMED = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/;
+      const subs = tl.length && tl.every(l => NAMED.test(l)) ? tl.map(l => { const m = NAMED.exec(l); return { name: m[1].trim(), tag: m[2] || null, lines: [m[3]], box: true, group: nmTc }; }) : null;
+      out.abilities.push({ name: nmTc, tag: null, lines: tl, box: true, subs });
     }
     // DAMAGED: the box "DAMAGED: 1-7 WOUNDS REMAINING" and its text: the ability BSData names "Damaged: 1-7 wounds remaining"
     const dmg = /^DAMAGED: (\S+) WOUNDS REMAINING$/.exec(t);
@@ -764,6 +768,11 @@ function wahaSectionsOf(page) {
     if (t === 'TRANSPORT') { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Transport', tag: null, lines: tl }); }
     for (const a of out.abilities) a.text = a.lines.join('\n').trim();
   }
+  // a box of named abilities that another ability of the datasheet selects from ("select one of the abilities in the Daemon Primarch of
+  // Slaanesh section": Fulgrim's DAEMON PRIMARCH OF SLAANESH): each is an ability of its own, the box's name its group (a box no ability
+  // selects from stays one ability: the Daemon Prince of Chaos's Daemonic Allegiance)
+  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && new RegExp('select one of the abilities in the ' + a.name + ' section', 'i').test(x.text.replace(/\*\*/g, ''))) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
+  for (const a of out.abilities) delete a.subs;
   return out;
 }
 const partName0 = p => typo(nm(p.name));
@@ -781,6 +790,9 @@ for (const u of units) {
   gwRules.set(u.id, { core: uniq(secs.flatMap(x => x.core)), army: isAlly ? [] : uniq(secs.flatMap(x => x.army)), allyArmy: isAlly ? uniq(secs.flatMap(x => x.army)).map(typo) : [], ally: isAlly ? allyByName.get(nm(u._parts[0].name)) : null, leader: uniq(secs.flatMap(x => x.leader)), files: secs.map(x => x.file),
     byPart: u._parts.map(p => { const pg = pageFac(p.name) && WW.wahaPage(nm(p.name), pageFac(p.name)); return pg ? { name: partName0(p), core: wahaSectionsOf(pg).core.map(typo) } : null; }) });
   const used = new Set();
+  // an ability of a box of named abilities that another ability selects from ("select one of the abilities in the Daemon Primarch of
+  // Slaanesh section"): who '<box>: pick one', as Angron's Wrathful Presence abilities (one model: who names no part)
+  const pickOf = g => g.group && u._parts.length === 1 && gwAbs.some(x => !x.box && new RegExp('select one of the abilities in the ' + g.group + ' section', 'i').test(bare(x.text))) ? g.group + ': pick one' : null;
   for (const ab of u.abilities) {
     const plain = plainBS(ab._bs);
     // an enhancement: its text from the detachment (data.js or this run's rows)
@@ -799,7 +811,12 @@ for (const u of units) {
     // the datasheet's ability: the one with BSData's words, else the one of BSData's name (GW's name, tag and words win)
     // (BSData's "[Psychic Abilities] - Shrouding" is GW's Shrouding)
     const loose = n => lc(n).replace(/^\[[^\]]*\]\s*-\s*/, '').replace(/[^a-z ]/g, '').split(' ').map(w => w.replace(/s$/, '')).join(' ');
-    const g = gwAbs.find(x => !used.has(x) && textEq(x.text, plain)) || gwAbs.find(x => !used.has(x) && lc(x.name) === lc(ab.name)) || gwAbs.find(x => !used.has(x) && loose(x.name) === loose(ab.name));
+    // (and, last, the one whose words are BSData's but for one or two words in place, the name among them: BSData's "Daemon Prince of
+    // Slaanesh", "… select one of the abilities in the Daemon Prince of Slaanesh section …", is GW's Daemon Primarch of Slaanesh)
+    const wordsOf = t => lc(appText(t).s).replace(/[^a-z0-9+" ]/g, ' ').split(/\s+/).filter(Boolean);
+    const nearly = (a, b) => { const x = wordsOf(a), y = wordsOf(b); return x.length > 8 && x.length === y.length && x.filter((w, k) => w !== y[k]).length <= 2; };
+    const g = gwAbs.find(x => !used.has(x) && textEq(x.text, plain)) || gwAbs.find(x => !used.has(x) && lc(x.name) === lc(ab.name)) || gwAbs.find(x => !used.has(x) && loose(x.name) === loose(ab.name))
+      || gwAbs.find(x => !used.has(x) && !x.box && nearly(x.text, plain) && lc(ab.name).split(' ').filter(w => !lc(x.name).split(' ').includes(w)).length <= 1);
     // an ability of the unit itself (not of its wargear) that GW's datasheet does not print (Roboute Guilliman's "Supreme
     // Commander"): GW wins, the app leaves it out
     // (BSData's "Invulnerable Save (4+*)" is GW's INSV* box with its footnote, "* against ranged attacks only": a header box GW prints,
@@ -819,6 +836,7 @@ for (const u of units) {
     used.add(g);
     ab.text = g.text;
     if (g.damaged) ab.damaged = g.damaged;
+    if (pickOf(g)) { ab.who = pickOf(g); filled.push({ what: 'who ' + u.name + ' · ' + g.name + ': ' + ab.who, from: g.file + ' (an ability of the box ' + g.group + ', which "select one of the abilities in the ' + g.group + ' section" picks from)' }); }
     // (GW's spelling of a tag BSData has too: "psychic level 1" for "Psychic Level 1")
     if (g.tag && ab.tag) ab.tag = ab.tag.split(' · ').map(x => lc(x) === lc(g.tag) ? g.tag : x).join(' · ');
     if (g.tag && !(ab.tag || '').split(' · ').includes(g.tag)) { ab.tag = ab.tag ? ab.tag + ' · ' + g.tag : g.tag; filled.push({ what: 'tag ' + u.name + ' · ' + g.name + ': ' + g.tag, from: g.file + ' (the ability’s name)' }); }
@@ -831,7 +849,7 @@ for (const u of units) {
   for (const g of gwAbs) if (g.box && !used.has(g) && !u.abilities.some(a => lc(a.name) === lc(g.name))) {
     used.add(g);
     const p = u._parts.find(x => wahaFile((pageFac(x.name) && WW.wahaPage(nm(x.name), pageFac(x.name))) || { file: '' }) === g.file) || u._parts[0];
-    const o = { name: typo(g.name) }; if (u._parts.length > 1) o.who = partName0(p); o.text = g.text;
+    const o = { name: typo(g.name) }; if (u._parts.length > 1) o.who = partName0(p); else if (pickOf(g)) o.who = pickOf(g); if (g.tag) o.tag = g.tag; o.text = g.text;
     u.abilities.push(o);
     devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: o.name, app: o.name, bsdata: null, why: 'GW’s datasheet prints the ability ' + o.name + ' (a box of its own); BSData’s entry does not have it', file: g.file });
     filled.push({ what: 'ability ' + u.name + ' · ' + o.name, from: g.file + ' (a header box of GW’s datasheet; not in BSData)' });
@@ -878,6 +896,13 @@ for (const u of units) {
     for (const r of u.rules) {
       if (/^(Leader|Support)$/.test(r)) continue;
       const has = G.byPart.filter(x => x.core.some(c => lc(c) === lc(r)));
+      // (not when an ability of each part without it gives it that rule: the Lord Exultant's Lord of the Host, "If this model is
+      // attached to an EMPEROR’S CHILDREN BATTLELINE unit …, this model has the Infiltrators and Scouts 6" abilities", attached to
+      // Infractors, a BATTLELINE unit: every model then has Scouts 6")
+      const re = new RegExp('\\bthis model has the\\b[^.]*\\b' + r.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=[\\s.,]|$)', 'i');
+      const gives = p => u.abilities.find(a => a.who === p.name && re.test(bare(a.text || '')) && (m => !m || u.kw.some(k => lc(k) === lc(m[1].split(/\s+/).pop())))(/\battached to an? ([^.,]*?) unit\b/i.exec(bare(a.text || ''))));
+      const lack = G.byPart.filter(x => !has.includes(x));
+      if (has.length === 1 && lack.length && lack.every(gives)) { filled.push({ what: 'no partialRules ' + u.name + ' for ' + r, from: lack.map(p => p.name + '’s ' + gives(p).name).join(', ') + ' gives it ' + r + ' (the unit has the keyword its condition names)' }); continue; }
       if (has.length === 1) pr[r] = has[0].name;
     }
     if (Object.keys(pr).length) { u.partialRules = pr; filled.push({ what: 'partialRules ' + u.name + ': ' + JSON.stringify(pr), from: 'the datasheets’ CORE ABILITIES (' + G.files.join(', ') + ')' }); }
@@ -1207,18 +1232,20 @@ for (const it of labels) {
     want(it.where, it.kind.replace('-', ' '), 'derive.js has no rule that gives it from the words: left out (no label)'); continue;
   }
   if (it.kind === 'ability-timing') {
-    // a Damaged band: no timing label, as every approved list stores it (its damaged chip and footnote show it)
+    // a Damaged band (New Recruit's "Damaged: 1-6 Wounds Remaining" too): no timing label, as every approved list stores it (its damaged chip
+    // and footnote show it)
     if (/ · Damaged: [^·]* wounds remaining$/i.test(it.where.replace(/ #\d+$/, ''))) { filled.push({ what: 'no timing label ' + it.where, from: 'a Damaged band (stored without timing, as in the approved lists)' }); continue; }
     // an always-on ability that protects the unit and names no phase (Feel No Pain, an InSv, +1 to save rolls, Lone Operative while …,
     // "when an enemy unit targets this unit"): no timing label, as the signed-off lists store none (Kustom Force Field, Augury Uplink,
     // Da Grand Warlord’s Ladz, the Repulsor Grid); its When targeted line (def) or stat column shows it
     const DEFENSIVE = ['targeted', 'targeted-ranged', 'targeted-melee', 'lone-operative', 'overwatch'];
     if ((it.reasons || []).length && it.reasons.every(r => r.part === 'used' && DEFENSIVE.includes(r.rule))) { filled.push({ what: 'no timing label ' + it.where, from: 'an always-on defensive ability naming no phase (verify/derive.js: ' + it.reasons.map(r => r.rule).join(', ') + ')' }); continue; }
-    // an ability that opens "Each time an enemy unit … targets this model" protects the unit (Reorder Reality): no timing label, its
-    // When targeted line shows it (the enemy's weapons it names are not this unit's attacks)
+    // an ability that opens "Each time an enemy unit … targets this model" protects the unit (Reorder Reality), as does one opening "Each
+    // time a model makes an attack that targets this model" (Fulgrim's Beguiling Form): no timing label, its When targeted line shows it
+    // (the enemy's weapons it names are not this unit's attacks)
     { const [, uN, ...r0] = it.where.split(' · '), an = r0[r0.length - 1].replace(/ #\d+$/, '');
       const ab = ((D.armies.find(a => a.id === armyId).units.find(x => x.name === uN.replace(/ \[.*\]$/, '')) || {}).abilities || []).find(a => a.name === an);
-      if (ab && /^Each time an enemy unit\b[^.]*\btargets this (?:model|unit)\b/i.test(bare(ab.text || ''))) { filled.push({ what: 'no timing label ' + it.where, from: 'its words open "Each time an enemy unit … targets this model": it protects the unit' }); continue; } }
+      if (ab && /^Each time (?:an enemy unit\b[^.]*|a model makes an attack that )\btargets this (?:model|unit)\b/i.test(bare(ab.text || ''))) { filled.push({ what: 'no timing label ' + it.where, from: 'its words open "Each time an enemy unit … targets this model": it protects the unit' }); continue; } }
     const o = lab(it.derived); if (!Object.keys(o).length) continue;
     const [, uName, ...rest] = it.where.split(' · '); const abName = rest[rest.length - 1].replace(/ #\d+$/, '');
     const u = D.armies.find(a => a.id === armyId).units.find(x => x.name === uName.replace(/ \[.*\]$/, '') && (!/\[/.test(uName) || x.id === /\[(.*)\]/.exec(uName)[1]));
@@ -1242,6 +1269,15 @@ for (const it of labels) {
       filled.push({ what: 'tag ' + it.where + ': ' + it.derived, from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') + ' (the source prints no tag)' });
       continue;
     }
+    // an enhancement whose words add a limit after its "… model only." restriction ("Once per turn, just after making a Hit roll …",
+    // Pledge of Unholy Fortune): the export's "Enhancement" and the limit, as the approved lists store Necromechanic's
+    // "Enhancement · Once per battle round" (review result-derive.json 209e61b314704242)
+    { const parts = String(it.derived || '').split(/\s*[,·]\s*/), lim = parts.filter(x => /^Once per /i.test(x));
+      if (it.stored === 'Enhancement' && parts[0] === 'Enhancement' && lim.length === 1 && parts.length === 2) {
+        const at = abAt(it), row = at && at.ai >= 0 ? d.slice(at.ai, d.indexOf(' }', at.ai)) : '';
+        if (row.includes("tag:'Enhancement',")) { const k = at.ai + row.indexOf("tag:'Enhancement',"); d = d.slice(0, k) + "tag:" + lit('Enhancement · ' + lim[0]) + ',' + d.slice(k + "tag:'Enhancement',".length);
+          filled.push({ what: 'tag ' + it.where + ': Enhancement · ' + lim[0], from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') + ' (the limit after its “model only.”, as Necromechanic’s)' }); continue; }
+      } }
     want(it.where, 'ability tag', 'derive.js gives ' + it.derived + ', the export ' + JSON.stringify(it.stored) + ': kept as the export has it');
   } else if (it.kind === 'strat-timing' || it.kind === 'strat-needs') {
     const sName = it.where.split(' · ').pop();
@@ -1310,8 +1346,8 @@ for (const f of fails) {
     const untag = n => String(n || '').replace(/\s*\([^()]*\)$/, '');
     const rec = devs.find(x => x.unit === f.unit && (x.name === name || x.bsdata === name || (x.bsdata && typo(x.bsdata) === typo(untag(name)))) && (f.field === 'ability' ? x.field === 'ability' : x.field === 'ability.text'));
     if (rec) {
-      reason = (f.field === 'ability' ? (rec.bsdata == null ? 'GW’s datasheet prints the ability ' + rec.app + ' (a box of its own); ' + pinS + ' and ' + expS + ' do not have it' : 'GW names the ability ' + rec.app + ', ' + pinS + ' ' + rec.bsdata) : 'The app has GW’s words: ' + rec.why + ' (' + pinS + ' has its own wording' + (textEq(rec.app, rec.bsdata) ? '' : '; ' + expS + ' has "' + clip(rec.bsdata, 120) + '"') + ')') + '. GW wins.';
-      evidence = rec.file + ': "' + (f.field === 'ability' ? rec.app : clip(rec.app, 240)) + '".';
+      reason = (f.field === 'ability' ? (rec.bsdata == null ? 'GW’s datasheet prints the ability ' + rec.app + ' (a box of its own); ' + pinS + ' and ' + expS + ' do not have it' : rec.app == null ? 'GW’s datasheet does not print the ability ' + rec.bsdata + '; ' + pinS + ' and ' + expS + ' have it, so the app leaves it out' : 'GW names the ability ' + rec.app + ', ' + pinS + ' ' + rec.bsdata) : 'The app has GW’s words: ' + rec.why + ' (' + pinS + ' has its own wording' + (textEq(rec.app, rec.bsdata) ? '' : '; ' + expS + ' has "' + clip(rec.bsdata, 120) + '"') + ')') + '. GW wins.';
+      evidence = f.field === 'ability' && rec.app == null ? rec.file + ': no ability ' + rec.bsdata + ' among its abilities and boxes.' : rec.file + ': "' + (f.field === 'ability' ? rec.app : clip(rec.app, 240)) + '".';
     }
   } else if (f.field === 'rules') {
     const extra = f.app, missing = !f.app ? f.source : null, gw = G.core.concat(G.army).map(typo);

@@ -101,6 +101,12 @@
   "at": "2026-10-16",
   "why": "TARGET \"That MONSTER/VEHICLE unit\": any:[Monster,Vehicle]; picks every Monster/Vehicle in the five lists (all Knights, Rhino, Forgefiend, Defiler, Kans, Dakkarigs, Tyranid monsters…)."
  },
+ "016a98503919a698": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "In the DAEMON PRIMARCH OF SLAANESH box (Wahapedia Fulgrim)."
+ },
  "017d51a2c5b13890": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -287,12 +293,6 @@
   "at": "2026-10-23",
   "why": "“Until the end of the phase, models in your unit have a 4+ invulnerable save”; phases as the WHEN says."
  },
- "0489b9cfa23288ca": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR Options \"Armoured tracks, 2x Combi-bolter, Havoc launcher\"; rows \"Combi-bolter (x2)\", \"Havoc launcher\", \"Armoured tracks\"."
- },
  "04a8ae4d39a7f565": {
   "verdict": "ok",
   "by": "review:gists",
@@ -364,6 +364,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "GW prints \"Shrouding (psychic level 1):\" under PSYCHIC ABILITIES (Wahapedia Librarian in Phobos Armour). Librarius reads the level from the ability's name."
+ },
+ "05c1fa6928cd567a": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead”: a fact about the target (targetObjective), melee."
  },
  "05ceaa88cf8ca796": {
   "verdict": "ok",
@@ -808,12 +814,6 @@
   "by": "review:derive (its fix)",
   "at": "2026-10-23",
   "why": "'Once per turn' is exact. 'Aura' is not on GW's card (Wahapedia tyranids_Norn-Assimilator: 'Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back…', no tag; New Recruit has no tag either). It is a one-off trigger on a unit falling back, not a standing effect over a stated distance. The deviations-nr.json entries (norn-assimilator-synaptoprescience, -2) should go."
- },
- "0c943028a617befa": {
-  "verdict": "ok",
-  "by": "review:derive",
-  "at": "2026-10-23",
-  "why": "New Recruit prints 'Transport Capacity' for the Chaos Rhino (defilers-and-friends.txt l.349-351). The old entry had name and who swapped (name 'Chaos Rhino', who 'Transport'). It now matches the two World Eaters Rhino entries (name 'Transport', tag 'Capacity'). The text is unchanged."
  },
  "0c954ec614b08f88": {
   "verdict": "ok",
@@ -1510,6 +1510,12 @@
   "by": "review:checklist-3",
   "at": "2026-10-24",
   "why": "Harbingers of Dread and Icon of Khorne appear only under Start of the battle round, not in either Command phase. Note for the owner: Harbingers' text says 'at the start of the first, third and fifth battle rounds', but the section is the general 'Start of the battle round'."
+ },
+ "1ac40dfe5db61973": {
+  "verdict": "ok",
+  "by": "review:defilers2 (its fix)",
+  "at": "2026-10-26",
+  "why": "Enhancement is right, but the text’s limit is missing. Wahapedia Coterie of the Conceited: “EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll …”. The precedent is result-derive.json 209e61b314704242 (Necromechanic: the limit after the “model only.” restriction belongs in the stored tag, giving “Enhancement · Once per battle round”). derive.js itself derives “Enhancement · Once per turn” (verify/out/derive.md). The row chip already shows Once per turn; only the opened label lacks it."
  },
  "1ad5c7528c89ec8c": {
   "verdict": "ok",
@@ -2369,6 +2375,12 @@
   "at": "2026-10-16",
   "why": "Talons enhancement (an Upgrade); \"Upgrades are a type of enhancement\"."
  },
+ "2805f8a92b74ce1a": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia Fulgrim: “In your Shooting phase and the Fight phase, after this model has finished making its attacks … At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit”: Command either turn, your Shooting, Fight either turn. Label right. (Checklist note in the report: its Shooting/Fight part is triggered by Fulgrim’s own attacks, a unit activation.)"
+ },
  "281b84719f041718": {
   "verdict": "ok",
   "by": "review:literal",
@@ -2404,12 +2416,6 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches the Faction Pack composition \"1 chastiser gatling cannon; 1 frag bombard; 1 Questoris heavy stubber; 1 titanic feet\" and the NR line."
- },
- "287248e16c0c7039": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase ... an unmodified Wound roll of 3+ scores a Critical Wound\": attacks in that Fight phase are melee; \"a model in this unit\" covers the attached unit (19.04 FAQ: \"’this/that unit’ ... applies to all models in an attached unit\"). The cost (one model destroyed if nothing is killed) stays in the ability text."
  },
  "287f8bb74ac4fe5d": {
   "verdict": "ok",
@@ -2464,12 +2470,6 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "NR and Wahapedia: darkflame lance, terrorpulse missiles, and fellbore (strike and sweep). The profiles match the pack's Rules Updates: “Darkflame Lance [IGNORES COVER, TORRENT] 18\" D6+6 N/A 8 -1 2” and “Terrorpulse Missiles [BLAST] 36\" D6+6 3+ 8 -2 2”."
- },
- "29b66635800b3415": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead\": a fact about the target, the player's tick (targetObjective), melee only."
  },
  "29c8d442867499ee": {
   "verdict": "ok",
@@ -3005,6 +3005,12 @@
   "at": "2026-10-24",
   "why": "“LEGIONES DAEMONICA BATTLELINE unit (excluding PINK HORRORS units)”: all, plus none Pink Horrors."
  },
+ "342928219a3791d1": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“Each time this model ends a Charge move”: your Charge phase, and theirs through Heroic Intervention. Charge, either turn, the same label main had (an approved derive-agreed entry under the old unit name)."
+ },
  "3433f137994f64b4": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3052,12 +3058,6 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” The footnote covers all attacks with +1 to hit vs MONSTER/VEHICLE. Being always on, keyed to the hand-set target's keywords, is the owner's Damage-tab convention."
- },
- "351ada26dc6b2ab2": {
-  "verdict": "ok",
-  "by": "review:checklist-5",
-  "at": "2026-10-24",
-  "why": "Matches derive.js word for word. The one change in the function is that the MORTAL_GUARD override now goes through mortalUse(text, e), where text is the entry's own words (withoutOptions) and e holds only at, t and ae, which is what coverOf needs. The no-stratagem rule is not inside ckEntry. It is applied at its two call sites through timing(own, ckCtx(ctx|actx)), and in ruleTables for options (usedIn(o.text, ckCtx({}), trig), with x now set from phCk). Regenerated CHECKLIST: 114 entries differ from 93ed3d1, and every one is accounted for. 91 lose only the Movement phase that Fire Overwatch gave (the overwatch modifier, the attacker's or the enemy's). 6 more go from movement:either to movement:your for the same reason (Thrill Seekers, Waaagh!, Kunnin’ But Brutal, Errant’s Duty, Elevated Strider, Bestial Aspect). 2 lose movement:either altogether (Repulsor Grid, Warpmeld Sacrifice). The options of Harbingers (Doom), Code Chivalric (Quality 1–2), Icon of War (Fanatical Devotion, Adaptive Tactics) and Daughters of the Abyss and Magna Imperator change the same way. 9 go to x because their only phase came from a stratagem: 'targeted with a Stratagem' (Direct the Slaughter, Will of the Hive Mind, Legendary Freeblade, Malign Presence, the data-tethers ×3), Fire Overwatch/Heroic Intervention named (Prophetic Sentinels) and Counteroffensive named (Destroyer of Futures). None of these 9 is listed, so no screen changes. Cabal of Sorcerers losing oc is review 4's optCover fix. mortalUse changes no entry today, because the 3 protections (Unnatural Resistance, Aegis of the Emperor, Enraged Abjuration) state no 'until'. The derive gate passes, so CHECKLIST is what the rules give. Note: the implements text still says only 'u … table 1's used-in'. The stratagem exclusion and the mortal-wound duration are described under ckCtx and MORTAL_GUARD/mortalUse, which is acceptable."
  },
  "352c2bdffb6e1e0c": {
   "verdict": "ok",
@@ -3305,11 +3305,23 @@
   "at": "2026-10-16",
   "why": "TARGET \"One friendly SMOKE unit\": all:[Smoke]; only the Chaos Rhino has SMOKE."
  },
+ "39a186ff4c7294a2": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1”: every melee attack. Right."
+ },
  "39bf8d0ae789149d": {
   "verdict": "ok",
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"If this model is equipped with a thundershock spear and a bellatus reaper chainsword\"; both 6-bigs Destriers (x2) carry \"Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p2), so the condition is never met."
+ },
+ "39c815cd990e9b24": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“Each time this model makes an attack that targets …”: the approved label for always-on attack abilities (Hunter of Souls “Each time this model makes an attack that targets a CHARACTER unit” has the same)."
  },
  "39fd18bc2ca70efb": {
   "verdict": "ok",
@@ -3551,12 +3563,6 @@
   "at": "2026-10-21",
   "why": "NR standard: \"255 PTS SLAUGHTERBOUND\" (Berzerker Glaive), roster lines \"Slaughterbound Character 125\" and \"(3) Exalted Eightbound Infantry 130\". So the split 125 + 130 = 255 still holds after the stats rename."
  },
- "3d36ae183a8142f7": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "Gear matches NR's three Options lines; rows \"➤ Plasma pistol - standard/supercharge\", \"Boltgun (x3)\", \"Meltagun\", \"Power sword\", \"Close combat weapon (x4)\". NR prints Icon of Excess only in the Abilities table, on no models line, so unplaced is right."
- },
  "3d58512771b1037d": {
   "verdict": "ok",
   "by": "review:round2",
@@ -3580,12 +3586,6 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your opponent’s Shooting phase, just after an enemy unit has shot.”"
- },
- "3daa93b3114d88b4": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR \"Icon of Excess - Infractors\", carried on the \"1x Infractor | Bolt pistol, Duelling sabre, Icon of Excess\" line (kept in that model line's name)."
  },
  "3dbf71e2a3220efa": {
   "verdict": "ok",
@@ -3815,12 +3815,6 @@
   "at": "2026-10-16",
   "why": "\"You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit\" (15.11): matches() drops a unit only when it is VEHICLE and neither CHARACTER nor WALKER. In these armies that excludes only the Chaos Rhino; Killa Kans, Forgefiends, Defiler, Dakkarigs and Knights (WALKER) and non-vehicles (e.g. Deffkoptas, MOUNTED) stay eligible. No TITANIC exclusion in this stratagem, correctly."
  },
- "41c29a26d7eb7c55": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Once per battle, at the start of the Fight phase ... add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1\": melee, +3 A, +1 AP, once per battle kept; \"equipped by this model\" reaches the Lord's weapons only."
- },
  "41cb081ffce6dbdf": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -4019,12 +4013,6 @@
   "at": "2026-10-24",
   "why": "rulesOf, detRows and onceRules now go through detRules(d) (rule, then moreRules), each row with src d.name. The Detachments row still links the detachment name to its first rule. The rendered Overview lists Murdercall then Blood Tainted ('Blood Legion · Any phase') after the army rules. Every other list's Overview is unchanged (snapshots identical apart from the list picker showing the new lists)."
  },
- "4472ae2c5333a268": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Each time this unit is selected to fight ... At the end of the Fight phase\": the Fight phase, either turn."
- },
  "44a7f43462c4dee6": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -4187,6 +4175,12 @@
   "at": "2026-10-16",
   "why": "The battle round starts before whichever player goes first, so either."
  },
+ "487cc0b8c5c2aa61": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration … by 1”: melee, +3 A and +1 AP, only after it is used. The same footnote as before; only the source words changed (“If it does”)."
+ },
  "48b448a08e7f6bc3": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -4319,12 +4313,6 @@
   "at": "2026-10-23",
   "why": "Wahapedia Trajann Valoris: “CORE ABILITIES Deep Strike, Feel No Pain 5+, Leader”; Allarus Custodians: “CORE ABILITIES Deep Strike” only. The starred “Feel No Pain 5+*” is Aegis of the Emperor (“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds”), on both datasheets. So the plain Feel No Pain 5+ is Trajann’s alone: partialRules names him, and the new partialWho clause keeps the starred one from matching it (rendered: “Trajann Valoris · Feel No Pain 5+ · … · Feel No Pain 5+ against mortal wounds”)."
  },
- "4a9cfd28162134d2": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll\": all attacks, target keywords as the player's tick (vs any), both re-rolls; reaches Lucius's weapons only (\"this model makes\")."
- },
  "4a9f85ad31dcaecc": {
   "verdict": "ok",
   "by": "review:import-2",
@@ -4342,12 +4330,6 @@
   "by": "review:infernal-lance (its fix)",
   "at": "2026-10-22",
   "why": "The EFFECT part is literal (“Select one objective marker your unit is within range of that you control … until your opponent’s Level of Control … is greater than yours at the end of a phase”). But the WHEN trigger “just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge” decides when it can be used, and it is dropped. The row shows only “Your Command”, so it reads as usable at any point of the Command phase by any Knight. The fix adds the trigger, as the Hellforged and Bulwark gists keep their “Just after …”."
- },
- "4adf6535f92934e6": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR \"Euphoric Strikes - Lord Exultant\"; \"melee weapons equipped by this model\"."
  },
  "4ae11775e8f6fca0": {
   "verdict": "ok",
@@ -4427,12 +4409,6 @@
   "at": "2026-10-23",
   "why": "unitDetRules(u) (rule needs: any BLOOD LEGIONS / WORLD EATERS) then each part whose needs matches(u) by the unit's keywords: a unit with any model with the keyword meets it (02.05.01, 19.03), right for Daemonic Rage, Boon of Blood and Might of Khorne (\"BLOOD LEGIONS units\") and for Enraged Abjuration (every model of the list is BLOOD LEGIONS or WORLD EATERS)."
  },
- "4c634939000c699c": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR prints \"Duellist’s Hubris - Lucius the Eternal\"; \"if this model is not leading a unit\" = Lucius. Model lines match NR (1x Lucius the Eternal, 3x Flawless Blade)."
- },
  "4c6a06d49810e04f": {
   "verdict": "ok",
   "by": "review:m1-units",
@@ -4451,11 +4427,23 @@
   "at": "2026-10-21",
   "why": "TARGET: “One ADEPTUS MECHANICUS unit from your army that has not been selected to fight this phase”: Faction: Adeptus Mechanicus, every unit here."
  },
+ "4cd529fe0c08ce1a": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Export: Daemonic blades, Malefic lash, Serpentine tail. Wahapedia (“equipped with: malefic lash; daemonic blades; serpentine tail”): Malefic lash 12\" 6 2+ 8 -2 2 [SUSTAINED HITS 1]; Daemonic blades strike 6 2+ 14 -3 D6+1 and sweep 12 2+ 8 -2 2, both [SUSTAINED HITS 1]; Serpentine tail 6 2+ 6 -1 1 [EXTRA ATTACKS]. The rows and data.js agree."
+ },
  "4cdc719b5cdc72ec": {
   "verdict": "ok",
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"the Command phase\", which can be either player's."
+ },
+ "4d26b7e3e0a1210a": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll”: all attacks, -1 to hit. Right."
  },
  "4d4bd04ff488a071": {
   "verdict": "ok",
@@ -4552,12 +4540,6 @@
   "by": "review:r20-damage",
   "at": "2026-10-21",
   "why": "n 2 is “activate up to two Blessings of Khorne”. The three ways to more are each in their own words. Skulls for the Skull Throne! adds one (“activate one Blessing of Khorne … active in addition to any other Blessings of Khorne that are currently active”). Adamantine Avalanche adds one for TERMINATOR SQUAD units (“… active for friendly TERMINATOR SQUAD units in addition…”). Archslaughterer gives all for its unit (“every Blessing of Khorne is active for this unit until the start of your next turn”). Extra ticks beyond these are counted by you."
- },
- "4eed01873f14993c": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1\": every melee attack of the attached unit (19.04 FAQ)."
  },
  "4ef23def31b046de": {
   "verdict": "ok",
@@ -4745,6 +4727,12 @@
   "at": "2026-10-22",
   "why": "The text has two triggers. “Each time you make a Blessings of Khorne roll” is at the start of the battle round (Blessings of Khorne: “at the start of the battle round, you can make a Blessings of Khorne roll”) or via Skulls for the Skull Throne! (Fight phase): the new at:“Start of the battle round” (gStep → round: shown in the round’s first Command phase only, not under Command abilities 08.04) plus fight cover it, and that is what the play test (g5 F13) asked for. But “each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit, and the Lord’s unit (plasma pistols, bolt pistols, GRENADES for Explosives; not TITANIC, so Fire Overwatch at the end of your opponent’s Movement phase) can destroy units in your Shooting phase and their Movement phase too. Dropping those two phases drops where that sentence triggers, against the app’s convention for attack-triggered abilities (Hunter of Souls: movement opp, shooting your, fight either; the fixlist keeps Fire Overwatch “opp movement” tags as deliberate) and against the earlier sign-off of exactly these tags for this text (result-literal 52c3668253df7eb6). Keep the at (it alone fixes the Command placement; in the other phases place() gives “during”) and restore the phases."
  },
+ "52fa7ccc32d13def": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Export: Lord with bolt pistol, close combat weapon, Phoenix power spear and rapture lash (the rapture lash replaces the plasma pistol, GW’s option); Obsessionist with rapture lash and plasma pistol; 4 Infractors with bolt pistol and duelling sabre. Wahapedia: Lord bolt pistol 12\" 1 2+ 5 -1 1; CCW 6 2+ 5 0 1; spear 5 2+ 7 -2 2 [LANCE]; Lord’s rapture lash 4 2+ 4 -1 1 [EXTRA ATTACKS]. Infractors: plasma pistol 1 3+ 7/-2/1 and 8/-3/2 [HAZARDOUS]; bolt pistol 1 3+ 5 -1 1; rapture lash 6 3+ 4 -1 1 [PRECISION]; duelling sabre 4 3+ 5 -1 1 [PRECISION]. Every number matches, and [LETHAL HITS] comes from Perfectionists."
+ },
  "530787891908c7bc": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -4852,12 +4840,6 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "An Infernal Lance enhancement (Wahapedia “Fleshmetal Fusion 35 pts”). NR gives it to the 360-pt Ruinator: “Options: Fleshmetal Fusion, Darkflame lance, …”, with T 12."
- },
- "54e9dac071b49459": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR \"Lord of the Host - Lord Exultant\"; \"this model has the Infiltrators and Scouts 6\" ability\"."
  },
  "5502238e7af1847a": {
   "verdict": "ok",
@@ -5111,12 +5093,6 @@
   "at": "2026-10-17",
   "why": "“If this unit made a charge move this turn, this model’s melee attacks have: +3 A. +2 S.” Same condition and effect, melee only, on the Warboss’s own one-model sheet."
  },
- "59226a4946203f43": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"At the start of the Fight phase ... until the end of the phase, it has the Fights First ability\": the Fight phase, either player's turn."
- },
  "5951ad6922d3279f": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -5128,6 +5104,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: Firing Deck 2 (Chaos Rhino), Firing Deck X; 24.14."
+ },
+ "5966bd59868fb021": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“Once per battle, at the start of the Fight phase”: Fight, either turn."
  },
  "596771c0f7b0602c": {
   "verdict": "ok",
@@ -5723,17 +5705,17 @@
   "at": "2026-10-23",
   "why": "“This unit’s ranged attacks that target a MONSTER/VEHICLE unit can: Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll.” Kind ranged, vs any Monster/Vehicle (the target’s keyword), always true otherwise (no other condition), as approved for Da Bigger Dey Iz… / Rend and Tear. The Damage tab marks it not counted (one re-roll each)."
  },
- "64a8871fca1a85af": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR prints \"A Challenge Worthy of Skill - Lucius the Eternal\"; \"Each time this model makes an attack\" = Lucius."
- },
  "64bb4a3660b3adad": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "64c6a9b5ffb0212d": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia: Infractors KEYWORDS have BATTLELINE and INFRACTORS; Lord Exultant has neither. The note is right."
  },
  "64e2fb903ae42f9e": {
   "verdict": "ok",
@@ -5818,6 +5800,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Default GW loadout (Wahapedia: bolt pistol; Helstalker autocannon; techno-virus injector; bladed limbs; impaler chainglaive) = export. Profiles match GW Faction Pack (chainglaive 5 2+ 8 -3 3 [LANCE]); bolt pistol BS2+ S5 AP-1."
+ },
+ "66a342715e0a836a": {
+  "verdict": "ok",
+  "by": "review:defilers2-b (its fix)",
+  "at": "2026-10-26",
+  "why": "oppnext is right per the alternating turn structure. Started in the opponent's turn, it covers the rest of their turn and all of your next turn, ending as their next turn starts. Started in your turn, it covers the rest of your turn only. From the end of your opponent's turn, it covers your next turn. Fulgrim's Daemon Primarch of Slaanesh (at the start of the opponent's Command phase) correctly gets pk every phase, both turns (main had pk x and t command:either). Through the skip-until edit its t is now command:opp, the same as the stored label. In the rendered checklist, Daemonic Speed is Active now in both Fight phases. One edge case is wrong. A trigger at the start of the battle round is read as both players' Command phases, so oppnext (and the existing yournext) from it adds the whole of the opponent's (or your) turn. That is never right, because at the start of a round the opponent's next turn is the one in this round, and how much the effect covers depends on who goes first. The case is not used in data.js. The fix returns x (When unclear) for yournext and oppnext from the start of the battle round, as is already done for \"phase\". With it, data.js and derive.json are byte-identical."
  },
  "66b0e6394d2e86b2": {
   "verdict": "ok",
@@ -6329,12 +6317,6 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
  },
- "703c1640294bb3ac": {
-  "verdict": "ok",
-  "by": "review:checklist-3",
-  "at": "2026-10-24",
-  "why": "Run directly. True: Diabolic Power ('When this unit is selected to shoot or fight'), Unholy Hunger, Unnatural Fortitude, Pulse Jet ('In your Movement phase, when this unit is selected to move'), Overwhelming Wrath ('Each time an enemy unit … is selected to Fall Back'), Turbo Engine, Calistus/Salvus/Rendax (WHEN line). False: Conservai ('WHEN: Your Command phase'), a Blessing's 'Each time a model in this unit makes a melee attack', The Blood God’s Favour ('Each time you make a Blessings of Khorne roll'). On screen: Overwhelming Wrath, Turbo Engine and Pulse Jet are not shown as selected abilities; Driven by Ultimate Rage, Impossible Form and Time Flux are. Note: 'Each time this unit makes a Charge move' (Daemonic Destruction, Prophesied Doom) is not a, because the first sentence neither opens with When nor has 'selected to'. No such text is an option or a selected ability in the data today."
- },
  "703e80dd796c6ea7": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -6377,12 +6359,6 @@
   "at": "2026-10-21",
   "why": "The start of the battle round comes before either player's turn (Core Rules 07.01 “before progressing to player turns”), and the Imperative lasts “Until the end of the battle round”, so either turn."
  },
- "70f45b89381ae53c": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR prints \"Daemonic Patrons - Flawless Blades\": the bodyguard's datasheet ability, named by its unit (same pattern as the signed-off \"Bringers of Change - Rubric Marines\")."
- },
  "7106690bf2b0ec29": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -6418,6 +6394,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Ranged attacks: their Movement + your Shooting, as approved Total Obliteration."
+ },
+ "71f9f9d7d8f93fd4": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia: Lord Exultant 95 (1st to 2nd unit), Infractors 5 models 95. Export 95 + 95, twice. 190 each."
  },
  "7216fa448a775e9a": {
   "verdict": "ok",
@@ -6515,6 +6497,12 @@
   "at": "2026-10-24",
   "why": "GW: Skullmaster has blade of blood and Juggernaut’s bladed horn; every Bloodcrusher model has hellblade and Juggernaut’s bladed horn (Bloodhunter + 2). So Hellblade ×3 and horn ×3. The profiles match GW: Blade A5 WS2+ S6 AP-2 D3; horn A4 WS4+ S6 AP-1 D1 [EXTRA ATTACKS, LANCE]; Hellblade A2 WS3+ S5 AP-2 D2."
  },
+ "739da76ae390a112": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "An Infractors wargear ability (the export has Icon of Excess on each Infractors unit; the model line is “1× Infractor (Icon of Excess)”)."
+ },
  "73bb789eb21a9247": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -6593,6 +6581,12 @@
   "at": "2026-10-23",
   "why": "Malign Trickery is on the Tzaangor Enlightened with Fatecaster Greatbows datasheet (Wahapedia), the led unit."
  },
+ "755306fabd8612bb": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Export: Obsessionist with plasma pistol and power sword; 3 Tormentors with boltgun and CCW; 1 Tormentor w/ meltagun with meltagun and CCW. Wahapedia: plasma pistol 12\" 1 3+ 7/-2/1 and 8/-3/2 [PISTOL, PRECISION]; boltgun 24\" 2 3+ 5 -1 1 [PRECISION]; meltagun 12\" 1 3+ 9 -4 D6 [MELTA 2, PRECISION]; power sword 4 3+ 5 -2 1 (S5 per the Faction Pack errata); CCW 3 3+ 5 0 1. Every number matches."
+ },
  "756236bc27288769": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -6604,6 +6598,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": all attacks, phases stated."
+ },
+ "75743b3fd99937b9": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“each time that [enemy] unit is selected to Fall Back”: the enemy’s Movement phase. Their Movement, the same as Angron’s Overwhelming Wrath. The checklist rightly leaves it out, because it is an enemy activation."
  },
  "758c11eada2dd44a": {
   "verdict": "ok",
@@ -6706,12 +6706,6 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Wahapedia and New Recruit: “Illusions of Tzeentch (Psychic)”."
- },
- "773b138935941351": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR roster: Lord Exultant 95, (5) Infractors 95; card \"190 PTS\"."
  },
  "77639f82388c69ea": {
   "verdict": "ok",
@@ -6839,12 +6833,6 @@
   "at": "2026-10-24",
   "why": "It is a Blood Legion enhancement (Wahapedia: “Gateway Unto Damnation 10 pts”). The bearer is a LEGIONES DAEMONICA KHORNE MONSTER, which is legal."
  },
- "79be6437c1fd2ce8": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "Gear matches NR's four Options lines (Icon of Excess left off the gear, kept in the line name); rows \"Bolt pistol - Lord Exultant\", \"➤ Plasma pistol - standard/supercharge - Infractors\", \"Bolt pistol (x4) - Infractors\", CCW, Phoenix power spear, Rapture lash (Lord), \"Power sword - Infractors\", \"Duelling sabre (x4) - Infractors\" (1 + 3 + 0 and 3 + 1 = 4)."
- },
  "79c543e400e00cba": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -6904,6 +6892,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting + Fight."
+ },
+ "7a8239d44ce90cc5": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia ds/emperors-children_Fulgrim: box “DAMAGED: 1-6 WOUNDS REMAINING”, W 16. Band and W right."
  },
  "7a94c964a5582ba2": {
   "verdict": "ok",
@@ -6982,12 +6976,6 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "\"At the start of the Fight phase … Until the end of the phase, that Blessing of Khorne is active\": the roll and the effect are both in the Fight phase."
- },
- "7be42863e297671c": {
-  "verdict": "ok",
-  "by": "review:checklist-3",
-  "at": "2026-10-24",
-  "why": "Run directly and checked against the pk values: round from the Start of the battle round gives every phase (Wrathful Presence, Unearthly Power). yournext from command:your gives every phase of both turns (Rod of the War Forge, Canticles, Full Throttle). battle from command:either gives every phase (Blood Tithe, in the scratch test). phase from the start of the round gives x. Edge cases fixed in earlier reviews still hold."
  },
  "7c00106c3da079a2": {
   "verdict": "ok",
@@ -7204,12 +7192,6 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"At the start of your Shooting phase ... Until the end of the phase\"."
- },
- "7f89ed81a07c3ab7": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR roster: Lucius the Eternal 130, (3) Flawless Blades 95; card \"225 PTS\"."
  },
  "7fa7abac9436c47b": {
   "verdict": "ok",
@@ -7649,6 +7631,12 @@
   "at": "2026-10-21",
   "why": "\"that unit’s CHARACTER models’ melee attacks can have: [CLEAVE 1]. Or: +1 AP.\" Two picks, each scoped to \"CHARACTER models\", with exactly those effects; \"can have\" is the player’s choice, so unticked is right. needs WORLD EATERS + Character, none Epic Hero matches \"(excluding EPIC HERO units)\" (an attached unit with Khârn has EPIC HERO, 19.03)."
  },
+ "87c721d03b8cc5dd": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia ds/emperors-children_Fulgrim: Beguiling Form is in the DAEMON PRIMARCH OF SLAANESH box, which “select one of the abilities in the Daemon Primarch of Slaanesh section” picks from; the same form as Angron’s “Wrathful Presence: pick one”. One model."
+ },
  "87c8aa2640b1c554": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -7846,6 +7834,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: PRECISION, [PRECISION] (incl. Epic Challenge); all 24.28."
+ },
+ "8b043d4d14b16e50": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia ds/emperors-children_Fulgrim: “At the start of your opponent’s Command phase, select one of the abilities …”: Command, their turn. The “until the start of your opponent’s next Command phase” is a duration, rightly cut out by the derive.js change."
  },
  "8b058ec31b3d13ed": {
   "verdict": "ok",
@@ -8410,6 +8404,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is a Bloodletters wargear ability."
+ },
+ "94c8f99e73103b6d": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia prints “Enthralling Hypnosis (Aura):”. It has no aura entry because it affects enemy units, the same as Overwhelming Wrath."
  },
  "94e27aa796426add": {
   "verdict": "ok",
@@ -9041,12 +9041,6 @@
   "at": "2026-10-16",
   "why": "Only \"Deep Strike\" (unit rules, Know-wotz, Umbralefic Crystal, Lord of the Eightbound, Aetherstride) matches; all mean the 24.09 ability."
  },
- "9f6996ae7cebfecf": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Once per battle, at the start of the Fight phase ... until the end of the phase\": the Fight phase, either turn."
- },
  "9f8af59f723d522c": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -9305,6 +9299,12 @@
   "at": "2026-10-21",
   "why": "The Faction Pack prints \"GORE-STAINED VETERANS UPGRADE\" and Wahapedia \"Gore-Stained Veterans UPGRADE 20 pts\". Its \"+1 WS\" is already in the WS values (Wahapedia 3+/4+/3+ → New Recruit 2+/3+/2+, from:{WS:'Gore-stained Veterans'}), and no footnote adds it again."
  },
+ "a394ec50c6911e6b": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Lord Exultant datasheet ability (“While this model is leading a unit”); the models match the export (Lord; Obsessionist; 4 Infractors, the Icon on one)."
+ },
  "a3b0dd39f4946a5a": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -9539,12 +9539,6 @@
   "at": "2026-10-24",
   "why": "An advance move is made in your Movement phase (09.06), and both effects last only that turn: your."
  },
- "a7234b5c6f3b906b": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll\": all attacks, +1 to hit, the target's state as the player's tick."
- },
  "a732f6466a8685d1": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -9580,6 +9574,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).” Same."
+ },
+ "a7890e0cbd82acf5": {
+  "verdict": "ok",
+  "by": "review:defilers2-b",
+  "at": "2026-10-26",
+  "why": "An opening \"Each time a/an enemy model makes an attack that targets this model/unit\" is triggered by the enemy's attack. Marking it a:1 leaves it off the checklist (not Active now under its selector), as already done for the enemy-activation options Enthralling Hypnosis and Overwhelming Wrath (\"selected to Fall Back\"). This matches the checklist footer: what attacking or being targeted triggers is on the datasheet. The regex is anchored to the first sentence, so own-attack wording (\"Each time a model in this unit makes an attack\") is unaffected. In data.js only Beguiling Form changes: CHECKLIST u shooting:your,fight:either -> u shooting:opp,fight:either,a:1. Its timing label also changes, through the ACTIVITY_RULES targeted / any-attack edit in the same commit, from movement:opp,shooting:your to movement:your (Overwatch at it),shooting:opp,fight:either. That is correct for being attacked. The rendered Defilers checklist has no Beguiling Form line."
  },
  "a7b2b575e982eb74": {
   "verdict": "ok",
@@ -9640,6 +9640,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints Turbo Engine under the heading “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”; “pick one” is a shorter “select one”. The when and how long stay on the Full Throttle row. Model line is NR’s “1x Wazdakka Gutsmek”."
+ },
+ "a8bddc767c6ac608": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Melee attacks only: Fight, either turn."
  },
  "a8f82a490d45f90f": {
   "verdict": "ok",
@@ -9743,12 +9749,6 @@
   "at": "2026-10-22",
   "why": "“Your opponent’s Shooting phase”: opp."
  },
- "ab6b3384ccb074cc": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well\"; one model: below Starting Strength = \"remaining wounds are less than its W\" (01.02.01), so \"Lost any wounds\" is the same; the two states are a pick, nothing added."
- },
  "abba383d56822d89": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -9779,12 +9779,6 @@
   "at": "2026-10-16",
   "why": "\"targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability\": ranged only, condition and effect exact."
  },
- "ac0320d1ad5b083f": {
-  "verdict": "ok",
-  "by": "review:derive",
-  "at": "2026-10-23",
-  "why": "The text opens 'Once per battle, at the start of the Fight phase…' (Wahapedia emperors-children_Lord-Exultant, New Recruit)."
- },
  "ac29be93a958f89b": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -9808,6 +9802,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR Categories: \"Painboy*, Nobz*, *from combined unit\"."
+ },
+ "ac6fcc591854fc5a": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Lord Exultant datasheet (LORD OF THE HOST box); “this model has …”."
  },
  "ac94a6d604ad5c54": {
   "verdict": "ok",
@@ -10511,6 +10511,12 @@
   "at": "2026-10-16",
   "why": "New Recruit PDF prints \"Prophet of Da Great Waaagh! (Aura)\". [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "b9b68a44d0c58c4d": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“At the end of your Shooting phase or the Fight phase”: your Shooting, Fight either turn. The same label main had."
+ },
  "b9bc61c052484217": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -10595,11 +10601,11 @@
   "at": "2026-10-24",
   "why": "Vexilla is the Allarus wargear ability (one model has it: NR line 3x Allarus: Vexilla on one). Text matches Wahapedia."
  },
- "baee5fef4d4573fe": {
+ "bafa6623bf26d1a9": {
   "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR Options: Lucius \"Blade of the Laer, Lash of Torment, Warlord\" (Warlord is not gear), 3x Flawless Blade \"Blissblade, Bolt pistol\"; weapon rows \"Bolt pistol (x3) - Flawless Blades\", \"Blade of the Laer - Lucius\", \"Lash of Torment - Lucius\", \"Blissblade (x3) - Flawless Blades\"."
+  "by": "review:defilers2-b (its fix)",
+  "at": "2026-10-26",
+  "why": "Rule 3 is right for 11th ed: \"after this model has finished making its attacks / has shot / has fought\" is the unit's own activation, and a phase named only there is not a checklist trigger, matching how a unit activation is handled elsewhere. Over all of data.js (new vs main derive.js, CHECKLIST and derive.json) it changes only Daemonic Poisons (t command:either,shooting:your,fight:either -> command:either; s kept, so it shows only in Command, both turns, which is right as the roll happens \"at the start of each player's Command phase\") and Binding Tendrils (t shooting:your dropped, u unchanged, not listed before or after). It is not exact for phases named together: phs only reads a phase word that is directly followed by \"phase\", so \"In your Shooting or Fight phase, after this unit has shot…\" and \"your Shooting and Fight phases\" would read only Fight, and Shooting would stay as a trigger. No current text is worded like that, so this is latent. The fix makes phs also read each phase in a list that ends in \"phase(s)\". With it, data.js CHECKLIST and derive.json come out byte for byte the same."
  },
  "bb1434ec04449371": {
   "verdict": "ok",
@@ -10816,6 +10822,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Faction Pack v1.2 Rules Updates: Knight Errant Damaged \"While this model has 1-9 wounds remaining\"; W 26."
+ },
+ "bf2b8a4d97fc7a14": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia Coterie of the Conceited enhancement, 25 pts (export 25). “The first time the bearer is destroyed” sets no once-per limit in GW’s form. Enhancement only is right."
  },
  "bf30d07404212c80": {
   "verdict": "ok",
@@ -11189,6 +11201,12 @@
   "at": "2026-10-22",
   "why": "“your Shooting phase”: your turn."
  },
+ "c604d625c195eeab": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Infractors datasheet ability (“Each time a model in this unit …”, so the attached Lord too); who names the bodyguard, as before."
+ },
  "c60a4363a9214c4f": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -11314,6 +11332,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Bare “Fight phase”: either."
+ },
+ "c80654182fade3ae": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“add 1 to the Hit roll” against a target not Below Half-strength: all attacks, +1 to hit. The same as before."
  },
  "c80f94d1003289c5": {
   "verdict": "ok",
@@ -11711,6 +11735,12 @@
   "at": "2026-10-22",
   "why": "“Start of the Fight phase”, no “your”: either turn."
  },
+ "cf37a59bea3dfc68": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Wahapedia core.txt 25.04 Fill Your Army Roster has the quoted sentences word for word; the same note as the other Supreme Commander units (Guilliman, Ghazghkull). Fulgrim is the Warlord in the export."
+ },
  "cf3efc5a4a626bc8": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -11740,6 +11770,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "Gist = WHEN/TARGET/EFFECT nearly word for word (“attacks that target your unit have -1 D until that enemy unit has attacked”)."
+ },
+ "cff6737b7d51fff4": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“Each time this unit makes a Normal, Advance or Fall Back move”: all of them in your Movement phase. Your Movement is right; main’s Movement/Shooting had no basis."
  },
  "cffe2a24d218822d": {
   "verdict": "ok",
@@ -11933,12 +11969,6 @@
   "at": "2026-10-22",
   "why": "“Your Command phase.”"
  },
- "d281e7a72b7360c8": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"Each time this model ends a Charge move\": your Charge phase, and theirs via Heroic Intervention (15.11 TARGET \"One friendly unengaged unit ... You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit\"; the Daemon Prince is a MONSTER)."
- },
  "d29b57f95b6fbbd9": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -11986,12 +12016,6 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "“Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.” Same as the EFFECT, both branches and the condition kept. ‘[Lance]’ capitalised as the app’s gists do."
- },
- "d3d39dd9727e4789": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR \"Excessive Assault - Infractors\": the bodyguard's datasheet ability, named by its unit."
  },
  "d3dbc1a7e9ba2457": {
   "verdict": "ok",
@@ -12076,12 +12100,6 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“WHEN: Your Shooting phase.”"
- },
- "d598a8b66d47d2a8": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR Options \"Maulerfiend fists, 2 magma cutters (2x Magma cutter)\"; rows \"Magma cutter (x2)\", \"Maulerfiend fists\"."
  },
  "d5b0cdbc119cec53": {
   "verdict": "ok",
@@ -12173,6 +12191,12 @@
   "at": "2026-10-16",
   "why": "Anchored exact match. \"Synapse Range\" is defined in the Synapse army rule (\"is said to be within Synapse Range\") and used bold in Domination of the Hive Mind and Neurocytes."
  },
+ "d72962dc6a494b11": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "Lord Exultant’s own ability (“melee weapons equipped by this model”)."
+ },
  "d73f04aca7c05002": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -12208,6 +12232,12 @@
   "by": "review:round2",
   "at": "2026-10-16",
   "why": "Wahapedia prints it as tooltip 04.01.05 linking to its rules appendix; the printed Core Rules do not contain \"selected to attack\" (grep), and their appendix says \"CONTINUED IN THE APP … The Warhammer 40,000 app contains an expanded range of definitions … The following pages present a selection\"."
+ },
+ "d80c9aade703b766": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“weapons equipped by models in that unit have [LETHAL HITS]”: wherever the unit attacks. Their Move · Your Shoot · Fight is the label 14 approved always-on attack abilities have (Hunter of Souls, Spiteful Power Trip, Dark Pacts)."
  },
  "d81d42f2cc054d3b": {
   "verdict": "ok",
@@ -12376,6 +12406,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "WHEN (Pack 1.2 Rules Update, which the data has): “Your opponent’s Shooting phase or the Fight phase” = Shooting, Fight."
+ },
+ "dc14f62a0885eef5": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "“This model has the Fights First ability”: Fights First is used in the Fight phase, either turn. Label right. (Checklist note in the report: it belongs in Active now, not in When unclear.)"
  },
  "dc210ef8cb21a370": {
   "verdict": "ok",
@@ -12707,12 +12743,6 @@
   "at": "2026-10-24",
   "why": "Cult of the Arkifane enhancement (20 pts); export Cybinfernal Font Enhancements=1."
  },
- "e13f23b385f429e0": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR Categories: \"... Warlord, Flawless Blades*, Grenades*, *from combined unit\"."
- },
  "e1a7879361d7820b": {
   "verdict": "ok",
   "by": "review:lite-knights (its fix)",
@@ -12730,6 +12760,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR \"Bringers of Change - Rubric Marines\": the Rubric Marines' datasheet ability."
+ },
+ "e2574ef37bcb55fb": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "The text opens “Once per battle,”."
  },
  "e2618ad40504b5b0": {
   "verdict": "ok",
@@ -13277,12 +13313,6 @@
   "at": "2026-10-21",
   "why": "“While this model is within 3\" of one or more friendly ADEPTUS MECHANICUS VEHICLE units, unless it is leading a unit, this model has the Lone Operative ability.” The def says the same in fewer words."
  },
- "eaf9202f06d64553": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "\"At the end of your Shooting phase or the Fight phase\": Shooting in your turn, Fight in either."
- },
  "eafaaaf04dc02b88": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -13510,12 +13540,6 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "The Fight phase with no player named, so either turn."
- },
- "f0a0d8420e96a8fe": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR \"Perfectionists - Lord Exultant\"; \"While this model is leading a unit\" = the Lord Exultant. Model lines match NR (1 Lord Exultant, 1 Obsessionist, 3 Infractor, 1 Infractor with Icon of Excess)."
  },
  "f0bbaa2f1a316bc3": {
   "verdict": "ok",
@@ -13853,6 +13877,12 @@
   "at": "2026-10-24",
   "why": "It is a Bloodletters wargear ability."
  },
+ "f8bf3f4afca87ed3": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "In the DAEMON PRIMARCH OF SLAANESH box (Wahapedia Fulgrim); the same as Angron’s pick-one abilities."
+ },
  "f8c54369f7043c1b": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -14087,6 +14117,12 @@
   "at": "2026-10-17",
   "why": "WHEN: \"when an enemy unit has shot\"; TARGET: \"One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks\"; EFFECT: \"Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.\" The gist puts the trigger first, shortened (the phase is left out, as in the allowed \"After shooting:\" example). \"hit yours\" comes from the TARGET, and \"only at that enemy unit\" = \"can only target that enemy unit\". Nothing added."
  },
+ "fcde1eced3883f3c": {
+  "verdict": "ok",
+  "by": "review:defilers2",
+  "at": "2026-10-26",
+  "why": "GW: “Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.” The line says just that, and adds the condition that it is the selected Daemon Primarch ability. Faithful, nothing added."
+ },
  "fce594ee62eae82d": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -14206,12 +14242,6 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR Options of \"1x Sorcerer in Terminator Armour\": \"Umbralefic Crystal, ...\"; abilities row \"Umbralefic Crystal - Sorcerer in Terminator Armour\"."
- },
- "fee2b409459eee86": {
-  "verdict": "ok",
-  "by": "review:defilers-and-friends",
-  "at": "2026-10-22",
-  "why": "NR Categories: \"... Battleline*, Infractors*, *from combined unit\"."
  },
  "ff04cd0cf3914920": {
   "verdict": "ok",

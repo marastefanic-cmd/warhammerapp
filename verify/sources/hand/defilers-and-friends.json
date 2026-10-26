@@ -1,0 +1,163 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for defilers-and-friends, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). The list was built from its New Recruit PDF (verify/sources/nr/defilers-and-friends.txt) and is rebuilt from the owner’s newer JSON export (25 Oct 2026); the hand work of the units that stay is carried over from that list as signed off. Coterie of the Conceited is in data.js already (its gists, mods, defs and the rule’s footnote stay there: no gists or rules here). units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01: none of this list gives friendly units anything; Fulgrim’s Enthralling Hypnosis (Aura) works on enemy units, so it is no aura entry, as Angron’s Overwhelming Wrath). Each is a judgement verify/helpers.js lists for sign-off.",
+ "units": {
+  "fulgrim": {
+   "notes": {
+    "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+   },
+   "defs": {
+    "Beguiling Form": {
+     "by": "AI (Claude)",
+     "def": "while it is the Daemon Primarch of Slaanesh ability selected: -1 to the hit roll of attacks that target this model",
+     "defOf": "a5a2537f"
+    }
+   },
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Damaged (1-6 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-6 Wounds Remaining"
+    },
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did. Beguiling Form is one of the three Daemon Primarch of Slaanesh abilities, selected at the start of your opponent’s Command phase (until the start of their next one): its When targeted line says so. Daemonic Speed (Fights First) changes no weapon numbers; Daemonic Poisons is mortal wounds."
+  },
+  "daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune": {
+   "defs": {
+    "Stimulated by Pain": {
+     "by": "AI (Claude)",
+     "def": "-1 D to each attack allocated to this model",
+     "defOf": "b9b595b9"
+    }
+   },
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
+  "daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude": {
+   "defs": {
+    "Stimulated by Pain": {
+     "by": "AI (Claude)",
+     "def": "-1 D to each attack allocated to this model",
+     "defOf": "b9b595b9"
+    }
+   },
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
+  "lord-exultant-infractors": {
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "Euphoric Strikes used at the start of the Fight phase (once per battle)",
+     "note": "+3 A and +1 AP",
+     "from": "Euphoric Strikes"
+    },
+    {
+     "kind": "melee",
+     "when": "Every melee attack",
+     "note": "re-roll wound rolls of 1",
+     "from": "Excessive Assault",
+     "always": true
+    },
+    {
+     "kind": "melee",
+     "when": "Target within range of an objective marker",
+     "cond": "targetObjective",
+     "note": "re-roll the wound roll",
+     "from": "Excessive Assault"
+    },
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
+  "tormentors": {
+   "mods": [
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
+  "defiler": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Target not Below Half-strength",
+     "note": "+1 to hit rolls",
+     "from": "Revel in Desecration"
+    },
+    {
+     "kind": "all",
+     "when": "Damaged (1-6 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-6 wounds remaining"
+    },
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  },
+  "defiler-2": {
+   "mods": [
+    {
+     "kind": "all",
+     "when": "Target not Below Half-strength",
+     "note": "+1 to hit rolls",
+     "from": "Revel in Desecration"
+    },
+    {
+     "kind": "all",
+     "when": "Damaged (1-6 wounds left)",
+     "note": "-1 to hit rolls",
+     "from": "Damaged: 1-6 wounds remaining"
+    },
+    {
+     "kind": "melee",
+     "when": "5+ Pact points gained during the battle",
+     "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+     "from": "Pledges to the Dark Prince",
+     "rule": "Pledges to the Dark Prince"
+    }
+   ],
+   "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did."
+  }
+ }
+}

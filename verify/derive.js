@@ -52,7 +52,7 @@ const PHASE_RE = new RegExp('(?:\\b(your opponent\'s|your next|your|the next|the
   '(?:(?:\\s*/\\s*|\\s*,\\s*|\\s+or\\s+|\\s+and\\s+)' + PHW + ')*) phases?\\b', 'gi');
 // words that name a phase without saying when the item is used: cut out before looking for phases
 const NOT_TIMING = [
-  { id:'until',          re:new RegExp('\\buntil the (?:start|end) of (?:your opponent\'s |your next |your |the next |the |that )?(?:' + PHW + ' phase|turn|battle round|battle|phase)\\b', 'gi'), why:'a duration ("until the start of your next Command phase"), not when it is used' },
+  { id:'until',          re:new RegExp('\\buntil the (?:start|end) of (?:your opponent\'s next |your opponent\'s |your next |your |the next |the |that )?(?:' + PHW + ' phase|turn|battle round|battle|phase)\\b', 'gi'), why:'a duration ("until the start of your next Command phase", "… of your opponent\'s next Command phase"), not when it is used' },
   { id:'once-per-phase', re:new RegExp('\\b(?:once|twice) per ' + PHW + ' phase\\b', 'gi'), why:'a limit ("once per Command phase"), not a timing' },
 ];
 // moments that are not a phase
@@ -79,8 +79,8 @@ const ACTIVITY_RULES = [
     why:'it protects the unit against ranged attacks: the attacker\'s Shooting phase' },
   { id:'targeted-melee', def:true, re:/\bagainst melee attacks\b|\bmelee attacks? (?:that )?targets? (?:this|it)\b/i, ph:{ fight:'either' },
     why:'it protects the unit against melee attacks: the Fight phase' },
-  { id:'targeted', def:true, re:/(?<!\bmakes? (?:ranged |melee )?|\bmakes? (?:an?|its) (?:ranged |melee )?|\b(?:unit|model|bearer)'s )\b(?:an attack|attacks?) (?:that )?(?:targets?|is made against) (?:this|the bearer|that unit|it)\b|\b(?:is|are) allocated to (?:this|the bearer|that model)\b|\bmade against this\b|\binvulnerable save\b|\binsv\b|\bsave characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\bfeel no pain\b/i, ph:TARGETED,
-    why:'it protects the unit when it is attacked (a save, an invulnerable save, Feel No Pain, a modifier to attacks on it): the attacker\'s phases (their Shooting phase, the Fight phase). Not the unit\'s own attacks: "this model makes an attack that targets that unit" is an attack it makes' },
+  { id:'targeted', def:true, re:/\b(?:a|an enemy) model makes an attack that targets this (?:model|unit)\b|(?<!\bmakes? (?:ranged |melee )?|\bmakes? (?:an?|its) (?:ranged |melee )?|\b(?:unit|model|bearer)'s )\b(?:an attack|attacks?) (?:that )?(?:targets?|is made against) (?:this|the bearer|that unit|it)\b|\b(?:is|are) allocated to (?:this|the bearer|that model)\b|\bmade against this\b|\binvulnerable save\b|\binsv\b|\bsave characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\bfeel no pain\b/i, ph:TARGETED,
+    why:'it protects the unit when it is attacked (a save, an invulnerable save, Feel No Pain, a modifier to attacks on it; "each time a model makes an attack that targets this model", Beguiling Form): the attacker\'s phases (their Shooting phase, the Fight phase). Not the unit\'s own attacks: "this model makes an attack that targets that unit" is an attack it makes' },
   { id:'lone-operative', def:true, re:/\bhas (?:the )?lone operative\b/i, ph:{ shooting:'opp' },
     why:'Lone Operative: it cannot be selected as the target of a ranged attack from far away: the attacker\'s Shooting phase' },
   { id:'pre-battle', re:/\bdeclare battle formations\b|\bafter both players have deployed\b|\bif this model is in your army\b|\btransport capacity\b/i, none:true,
@@ -105,7 +105,7 @@ const ACTIVITY_RULES = [
     why:'melee attacks / "selected to fight" / pile-in and consolidation moves: the Fight phase of either turn' },
   { id:'ranged', re:/(?<!against |target of a |with )\branged (?:attacks?|weapons?)\b|\bselected to shoot\b|\beligible to shoot\b|\bhas shot\b|\bshoots\b/i, ph:{ shooting:'your' }, shoots:true,
     why:'ranged attacks / "selected to shoot": your Shooting phase' },
-  { id:'any-attack', re:/\bmakes? an attack\b(?! with an? (?:ranged|melee) weapon)|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
+  { id:'any-attack', re:/(?<!\b(?:a|an enemy) model )\bmakes? an attack\b(?! with an? (?:ranged|melee) weapon)|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
     why:'"makes an attack" (ranged or melee): your Shooting phase and the Fight phase' },
   { id:'charge-move', re:/\bcharge (?:rolls?|moves?)\b|\bends a charge\b|\bmakes a charge\b/i, ph:{ charge:'either' },
     why:'charge rolls / charge moves: the Charge phase (either turn: a Heroic Intervention is a charge move too)' },
@@ -702,7 +702,9 @@ function seqTrigger(text){
 // time a model in this unit makes …" (a Blessing of Khorne) is not its trigger
 function actOf(text){
   const p = plain(rulesText(text)), when = /^\W*WHEN:\W*(.*)$/im.exec(p), first = sentences(p)[0] || '';
-  return when ? SEQ.activation.test(when[1]) : (/^\W*when\b/i.test(first) && SEQ.activation.test(first)) || /\b(?:when|whenever|each time|after)\b[^.]*?\bselected to\b/i.test(first);
+  // (and an enemy's attack on it: "Each time a model makes an attack that targets this model", Beguiling Form, is triggered by the attacker)
+  return when ? SEQ.activation.test(when[1]) : (/^\W*when\b/i.test(first) && SEQ.activation.test(first)) || /\b(?:when|whenever|each time|after)\b[^.]*?\bselected to\b/i.test(first)
+    || /^each time (?:a|an enemy) model makes an attack that targets this (?:model|unit)\b/i.test(first);
 }
 // what a listed ability selects among ("select one of the abilities in the X section", "select one X ability": the app's pickOptions)
 // is in force for the duration its words give from where it is triggered (pk, coverOf), or x
@@ -750,6 +752,11 @@ const endsOf = text => { const t = plain(rulesText(text)).replace(/\buntil the (
 function ckEntry(d, text){
   if(d.how === 'none') return { x:1 };
   const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];
+  // a phase named only in a sentence whose moment is the unit's own activation ("In your Shooting phase and the Fight phase, after this
+  // model has finished making its attacks, …", Daemonic Poisons; "after this model has shot"): not a trigger, as a unit activation is not
+  { const ss = sentences(plain(rulesText(text || ''))), ACT = /\bafter this (?:model|unit) has (?:finished making its attacks|shot|fought)\b/i, phs = x => [...x.matchAll(/\b(command|movement|shooting|charge|fight)(?=(?:,? (?:or |and )?(?:the |your )?(?:command|movement|shooting|charge|fight))* phases?\b)/gi)].map(m => m[1].toLowerCase());
+    const named = ss.filter(x => ACT.test(x)).flatMap(phs), elsewhere = ss.filter(x => !ACT.test(x)).flatMap(phs);
+    for(const p of new Set(named)) if(!elsewhere.includes(p)) delete tp[p]; }
   const e = {};
   if(d.at) e.at = d.at;
   // a phase named only as "your / the next X phase" is when the effect happens ("must make an ingress move in your next Movement
@@ -776,11 +783,13 @@ function ckEntry(d, text){
 // those the duration in the same sentence covers from where the text is triggered (t, at), in the order of a turn and the next:
 // "until the end of the phase" that phase; "of the turn" / "this turn" the rest of that turn; "of the next turn" the rest of that
 // turn and the whole next one; "until the start of your next turn / Command phase" the rest of that turn, and the opponent's turn
-// after one of yours; "until the end of the battle" every phase; "of the battle round" or "until the start of the next battle round" every phase only from the start of the
+// after one of yours; "until the start of your opponent's next turn / Command phase" the rest of that turn, and your turn after one of
+// theirs (Fulgrim's Daemon Primarch of Slaanesh); "until the end of the battle" every phase; "of the battle round" or "until the start of the next battle round" every phase only from the start of the
 // battle round. Any other duration, or none, or no trigger: x (When unclear), nothing guessed
 const DURATIONS = [
   { id:'phase', re:/\buntil the end of the phase\b/i }, { id:'next', re:/\buntil the end of the next turn\b/i },
   { id:'turn', re:/\buntil the end of (?:the|this|that) turn\b|\bthis turn\b/i }, { id:'yournext', re:/\buntil the start of your next (?:turn|command phase)\b/i },
+  { id:'oppnext', re:/\buntil the start of your opponent.s next (?:turn|command phase)\b/i },
   { id:'battle', re:/\buntil the end of the battle\b(?! round)|\buntil (?:it|they) enters? a different one\b|\buntil (?:it is |they are )?changed\b/i }, { id:'round', re:/\buntil the end of the battle round\b|\buntil the start of the next battle round\b/i },
 ];
 function inForce(text, f, self, e){
@@ -806,14 +815,14 @@ function coverOf(dur, e){
   const startRound = /^start of the (?:first )?battle round$/i.test(e.at || ''), endOpp = /^end of your opponent.s turn$/i.test(e.at || '');
   if(startRound) trig.push('command|your', 'command|opp');
   // "until the end of the phase" from the start of the battle round names no phase in progress: not read
-  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound) || (dur === 'phase' && startRound)) return { x:1 };
+  if(!dur || (!trig.length && !endOpp) || (dur === 'round' && !startRound) || ((dur === 'phase' || dur === 'yournext' || dur === 'oppnext') && startRound)) return { x:1 };
   const from = s => { const [p, w] = s.split('|'), i = PH.indexOf(p); return PH.slice(i).map(x => x + '|' + w); };
   const all = w => PH.map(x => x + '|' + w), other = w => w === 'your' ? 'opp' : 'your';
   for(const s of trig){ const w = s.split('|')[1];
-    const add = dur === 'phase' ? [s] : dur === 'turn' ? from(s) : dur === 'next' ? from(s).concat(all(other(w))) : dur === 'yournext' ? from(s).concat(w === 'your' ? all('opp') : []) : seq;
+    const add = dur === 'phase' ? [s] : dur === 'turn' ? from(s) : dur === 'next' ? from(s).concat(all(other(w))) : dur === 'yournext' ? from(s).concat(w === 'your' ? all('opp') : []) : dur === 'oppnext' ? from(s).concat(w === 'opp' ? all('your') : []) : seq;
     add.forEach(x => cov.add(x)); }
   // at the end of your opponent's turn: the next turn is yours; to the end of the battle is every phase after it, in both turns
-  if(endOpp){ if(dur === 'next') all('your').forEach(x => cov.add(x)); else if(dur === 'battle') seq.forEach(x => cov.add(x)); else if(dur !== 'yournext') return { x:1 }; }
+  if(endOpp){ if(dur === 'next' || dur === 'oppnext') all('your').forEach(x => cov.add(x)); else if(dur === 'battle') seq.forEach(x => cov.add(x)); else if(dur !== 'yournext') return { x:1 }; }
   if(!cov.size) return { x:1 };
   const m = {}; for(const x of cov){ const [p, w] = x.split('|'); m[p] = m[p] && m[p] !== w ? 'either' : w; }
   return { u:phStr(m) };
