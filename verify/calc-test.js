@@ -751,7 +751,13 @@ const NZ = { army:'melee', atk:'nazdreg-meganobz', typed:{}, ph:'shooting', on:{
 cases.push(['[TORRENT] in snap shooting: it hits automatically (24.37), no reading to pick', () => +(!dm.calc(cp(NZ)).sit.find(x => x.k === 'c:snap').torrent && dm.calc(Object.assign(cp(NZ), { val:{ snapTorrent:'six' } })).ctx.snapSix === false), 1]);
 // Canis Rex: Sir Hekhtur is not on the battlefield while Canis Rex lives: his weapons unticked (counted by you)
 cases.push(['Canis Rex: Hekhtur’s pistol unticked, with the reason quoted', () => (w => +(!!w && !w.on && /Using Sir Hekhtur/.test(w.emb)))(dm.calc({ army:'4-megas-and-a-destrier', atk:'canis-rex', typed:{}, ph:'shooting' }).weapons.find(c => /Hekhtur/.test(c.k))), 1]);
-cases.push(['Code Chivalric (Quality 1–2): in Not counted for a Knight', () => +dm.calc({ army:'6-bigs', atk:'knight-paladin', typed:{}, ph:'shooting' }).nc.some(x => /^Code Chivalric/.test(x.name)), 1]);
+// Code Chivalric's Quality 1–2 ("you can re-roll one Hit roll and you can re-roll one Wound roll"): a box (the Quality is the player's
+// pick for the battle), no longer in Not counted; ticked, one hit and one wound re-roll for the unit's attacks
+const KP = { army:'6-bigs', atk:'knight-paladin', typed:{}, ph:'shooting' };
+cases.push(['Code Chivalric (Quality 1–2): a box for a Knight, not in Not counted', () => { const c = dm.calc(cp(KP)), r = c.rules.find(x => x.m.from === 'Code Chivalric');
+  return +(!!r && r.state === 'choice' && !r.on && !c.nc.some(x => /^Code Chivalric/.test(x.name))); }, 1]);
+cases.push(['Code Chivalric (Quality 1–2): ticked, one hit roll and one wound roll re-rolled', () => { const k = dm.calc(cp(KP)).rules.find(x => x.m.from === 'Code Chivalric').k, c = dm.calc(Object.assign(cp(KP), { on:{ [k]:true } }));
+  return +(c.R.pool.length === 2 && c.R.pool.every(e => e.n === 1 && !e.phase && /^Code Chivalric/.test(e.src)) && c.R.pool.map(e => e.kind).sort().join() === 'h,w'); }, 1]);
 cases.push(['Destiny’s Ruin: help for a THOUSAND SONS unit, 10+ re-rolls every hit roll', () => { const s = { army:'pubstomper', atk:'tzaangors', typed:{}, ph:'shooting' }, r = dm.calc(cp(s)).rules.find(x => x.m.from === 'Destiny’s Ruin');
   return +(!!r && !!r.help && dm.calc(Object.assign(cp(s), { on:{ [r.k]:true }, val:{ 'pick:Destiny’s Ruin':'Result 10+' } })).R.groups.every(g => g.out || g.rrHit === 'all')); }, 1]);
 // Both: the charge taken as made ("Charged this turn" ticked for the fight, said why); unticked, the fight with no charge move; with
@@ -768,6 +774,80 @@ cases.push(['Fight: “Charged this turn” ticked by the player: charged; the m
 // Both's levers: the shooting's and the fight's, each with its step; a fact once for the whole turn
 cases.push(['Both: the levers of both steps, the facts once', () => { const p = KT(MT('both')), L = dm.app.dmLevers(dm.app.dmState(), p), ids = L.map(l => l.id);
   return +(L.some(l => l.id.startsWith('shoot/w:')) && L.some(l => l.id.startsWith('fight/w:')) && new Set(ids).size === ids.length && L.filter(l => l.fact && l.store === 'riled' && l.unitWho === 'mine').length <= 1); }, 1]);
+
+// ---- a re-roll of one die (01.05.02): the first failed roll it can go to; a pool shared by the weapons, and by the phase ----
+// one attack at 4+ with one hit re-roll: 1/2 + 1/2 × 1/2 = 0.75 hits (played; the working's exact average the same)
+const one = (mods, o) => g(Object.assign({ mods }, o || {}));
+cases.push(['one hit re-roll: 1 attack at 4+ hits', () => run([one([{ from:'R', oneHit:1 }])], { T:4, models:[big(10, 1)] }).groups[0].hits, 0.75, 0.015]);
+cases.push(['one hit re-roll: the working, exact', () => C.explain({ groups:[one([{ from:'R', oneHit:1 }])], target:{ T:4, models:[big(10, 1)] }, ctx:{} }).groups[0].hits, 0.75, 1e-9]);
+// one wound re-roll: 1 [TORRENT] hit, S4 vs T4 (4+): 0.75 wounds
+cases.push(['one wound re-roll: 1 torrent hit S4 vs T4 wounds', () => run([one([{ from:'R', oneWound:1 }], { kw:['TORRENT'] })], { T:4, models:[big(10, 1)] }).groups[0].wounds, 0.75, 0.015]);
+// one hit and one wound re-roll (Magna Imperator), 3 attacks at 4+: 3/2 + (1 - (1/2)^3) × 1/2 = 1.9375 hits
+cases.push(['one hit and one wound re-roll: 3 attacks at 4+ hits', () => run([one([{ from:'M', oneHit:1, oneWound:1 }], { A:'3' })], { T:4, models:[big(10, 1)] }).groups[0].hits, 1.9375, 0.02]);
+// one hit or one wound roll (Seething Hatred), 1 attack at 4+, S4 vs T4: a miss takes it (1/2 × 1/2 × 1/2), else the wound (1/2 × 3/4): 0.5
+cases.push(['one hit or wound re-roll: 1 attack 4+/4+ wounds', () => run([one([{ from:'S', oneEither:1 }])], { T:4, models:[big(10, 1)] }).groups[0].wounds, 0.5, 0.012]);
+cases.push(['one hit or wound re-roll: the working, exact', () => C.explain({ groups:[one([{ from:'S', oneEither:1 }])], target:{ T:4, models:[big(10, 1)] }, ctx:{} }).groups[0].wounds, 0.5, 1e-9]);
+// never a die re-rolled already: with "re-roll failed hit rolls" the one re-roll adds nothing: 0.75
+cases.push(['one hit re-roll: not on a die re-rolled already', () => run([one([{ from:'A', rrHit:'all' }, { from:'R', oneHit:1 }])], { T:4, models:[big(10, 1)] }).groups[0].hits, 0.75, 0.015]);
+// [TORRENT] makes no hit roll: a hit-or-wound re-roll goes to the wound roll: 1 hit, S4 vs T4: 0.75
+cases.push(['one hit or wound re-roll: [TORRENT] (no hit roll), the wound roll', () => run([one([{ from:'S', oneEither:1 }], { kw:['TORRENT'] })], { T:4, models:[big(10, 1)] }).groups[0].wounds, 0.75, 0.015]);
+// one Damage re-roll: 1 torrent S8 hit (5/6 wound), D6, no save, at one W3 model: a 1 or 2 is re-rolled (below 3.5 and leaving it wounds),
+// a 3 not: wounds lost 5/6 × (2/6 × E[min(D6, 3)] + 4/6 × 3) = 5/6 × (2/6 × 2.5 + 2) = 2.361
+cases.push(['one Damage re-roll: D6 at a W3 model, lost', () => run([one([{ from:'AF', oneDmg:1 }], { S:8, D:'D6', kw:['TORRENT'] })], { T:4, models:[big(1, 3)] }).dmg, 5 / 6 * (2 / 6 * 2.5 + 2), 0.02]);
+// ... the working (every attack as if its model had wounds enough): a roll of 1-3 re-rolled: 5/6 × (3.5 + 1/2 × (3.5 - 2)) = 3.542
+cases.push(['one Damage re-roll: the working, exact', () => C.explain({ groups:[one([{ from:'AF', oneDmg:1 }], { S:8, D:'D6', kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1000)] }, ctx:{} }).groups[0].dmg, 5 / 6 * 4.25, 1e-9]);
+// shared by two weapons, the most valuable first (04.03): 1 attack at 4+ each, D1 listed first, D3 second, one hit re-roll for the unit:
+// the D3 weapon is resolved first and has it (0.75 hits); the D1 weapon has it only when the D3 one hit first (1/2): 1/2 + 1/2 × 1/4 = 0.625
+const twoW = () => run([one([{ from:'M', oneHit:1 }], { name:'light' }), one([{ from:'M', oneHit:1 }], { name:'heavy', D:'3' })], { T:4, models:[big(10, 10)] });
+cases.push(['one re-roll for two weapons: the most valuable (listed second) first', () => twoW().groups[1].hits, 0.75, 0.015]);
+cases.push(['one re-roll for two weapons: the other only when it is left', () => twoW().groups[0].hits, 0.625, 0.015]);
+cases.push(['one re-roll for two weapons: the working agrees', () => { const x = C.explain({ groups:[one([{ from:'M', oneHit:1 }], { name:'light' }), one([{ from:'M', oneHit:1 }], { name:'heavy', D:'3' })], target:{ T:4, models:[big(10, 10)] }, ctx:{} });
+  return x.groups[0].hits * 10 + x.groups[1].hits; }, 6.25 + 0.75, 1e-9]);
+// once in the phase (Command Re-roll, 15.01): two beats of the shooting share it: the first 0.75, the second only when the first did not
+// need it (it hit first time, 1/2): 1/2 + 1/2 × 1/4 = 0.625; one of each attack sequence (Magna Imperator) is there again: 0.75; the
+// fight is another phase: 0.75
+const pb = (ph, mods) => ({ side:1, ph, input:{ groups:[one(mods)], target:tenW1() } });
+const PH = [{ from:'Command Re-roll', oneHit:1, phase:true }];
+cases.push(['once in the phase: the second beat of the shooting', () => pl([pb('shooting', PH), pb('shooting', PH)]).beats[1].groups[0].hits, 0.625, 0.015]);
+cases.push(['once in the phase: the fight has it again', () => pl([pb('shooting', PH), pb('fight', PH)]).beats[1].groups[0].hits, 0.75, 0.015]);
+cases.push(['each attack sequence: the second beat has its own', () => pl([pb('shooting', [{ from:'M', oneHit:1 }]), pb('shooting', [{ from:'M', oneHit:1 }])]).beats[1].groups[0].hits, 0.75, 0.015]);
+cases.push(['a re-roll of one die: which weapon used it (played)', () => twoW().groups[1].one.hit, 0.5, 0.015]);
+// the rules that now count, as the screen reads them: Magna Imperator (always: ticked for you), Advanced Firepower (vs MONSTER/VEHICLE:
+// a box), Seething Hatred (a hit or a wound roll), Command Re-roll (a stratagem, once in the phase: never ticked for you)
+const LK2 = { army:'lite-knights', atk:'trajann-valoris-allarus-custodians', typed:{}, ph:'shooting' }, CAL = { army:'lite-knights', atk:'caladius-annihilator-grav-tank', typed:{}, ph:'shooting' };
+cases.push(['Magna Imperator: ticked for you, one hit and one wound roll', () => { const r = box(cp(LK2), 'Magna Imperator'); return +(r.state === 'on' && r.on && r.e.oneHit === 1 && r.e.oneWound === 1); }, 1]);
+cases.push(['Advanced Firepower: a box (the target’s keywords), one hit, wound and Damage roll', () => { const r = box(cp(CAL), 'Advanced Firepower'); return +(r.state === 'choice' && !r.on && r.e.oneHit && r.e.oneWound && r.e.oneDmg); }, 1]);
+cases.push(['Seething Hatred: ticked for you, one hit or wound roll', () => { const r = box({ army:'infernal-lance', atk:'knight-despoiler', typed:{}, ph:'shooting' }, 'Seething Hatred'); return +(r.state === 'on' && r.on && r.e.oneEither === 1); }, 1]);
+cases.push(['Command Re-roll: a stratagem box, not ticked for you; ticked: one of any roll, once in the phase', () => { const r = box(cp(CAL), 'Command Re-roll'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true } }));
+  return +(r.state === 'choice' && !r.on && !!r.m.strat && c.R.pool.some(e => e.kind === 'hwd' && e.phase)); }, 1]);
+cases.push(['the Caladius with Advanced Firepower: the working and the dice agree', () => { const r = box(cp(CAL), 'Advanced Firepower'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true }, typed:{ n:1, T:10, W:1e6, Sv:3 } }));
+  const x = C.explain(c.input), p = C.run(Object.assign({}, c.input, { sims:20000, seed:3 })); return Math.abs(x.total.dmg - p.dmg) / x.total.dmg; }, 0, 0.02]);
+
+// ---- the target's groups: a Leader attached to the bodyguard (19.02, 05.03, 19.04) and [PRECISION] (24.28) ----
+// 1 [TORRENT] S8 attack (5/6 wound), no save, at a W1 bodyguard model and a W1 Leader: with [PRECISION] the Leader is destroyed 5/6 of
+// the time; without, the attack goes to the bodyguard (the CHARACTER group last, 05.03): never
+const duo = kw => C.run({ groups:[g({ S:8, kw:['TORRENT'].concat(kw) })], target:{ T:4, models:[big(1, 1, 7, { name:'Bodyguard', bodyguard:true }), big(1, 1, 7, { name:'Leader', char:true })] }, ctx:{ precision:'Leader' }, sims:20000, seed:11, track:true });
+cases.push(['a 2-model target with a Leader: [PRECISION], the Leader destroyed', () => duo(['PRECISION']).fate[1], 5 / 6, 0.01]);
+cases.push(['a 2-model target with a Leader: no [PRECISION], the Leader untouched', () => duo([]).fate[1], 0, 0]);
+// the screen: a group added and ticked CHARACTER is a Leader row (char), the first the bodyguard (19.02), each with its own Feel No Pain
+// (19.04 FAQ), the unit-wide one not used; the Leader's higher T does not change the wound roll while a bodyguard model is left:
+// 10 Grot Blastas at 10 × T3 W1 Sv 5+ FNP 6+ with a T6 Leader: 10 × 3/6 × 3/6 × 4/6 × 5/6 = 1.39, as without it
+const GB = more => ({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5, fnp:6, more } });
+cases.push(['target groups: a Leader row and the bodyguard row, each its own Feel No Pain', () => { const c = dm.calc(GB([{ n:1, T:6, W:4, Sv:2, fnp:5, char:true }])), [b, l] = c.models;
+  return +(c.models.length === 2 && b.name === 'Bodyguard' && b.bodyguard && !b.char && b.fnp === 6 && l.name === 'Leader' && l.char && l.fnp === 5 && !c.tmod.fnp && c.ctx.precision === 'Leader'); }, 1]);
+cases.push(['target groups: the bodyguard’s T while it lasts (19.02)', () => exact(GB([{ n:1, T:6, W:4, Sv:2, char:true }])), 10 * 3 / 6 * 3 / 6 * 4 / 6 * 5 / 6]);
+// two groups, none a CHARACTER: the highest T in the unit (05.02.01): S3 vs T6 wounds on 6+: 10 × 3/6 × 1/6 × 4/6 × 5/6
+cases.push(['target groups: no CHARACTER, the highest T in the unit', () => exact(GB([{ n:2, T:6, W:1, Sv:5 }])), 10 * 3 / 6 * 1 / 6 * 4 / 6 * 5 / 6]);
+// "Precision" ticked with the target: every weapon [PRECISION]; the Leader (T3 W1, no save, with one W1 bodyguard model) is destroyed when
+// one of the 10 Grot Blastas' shots (1/2 to hit × 1/2 to wound each) gets through: 1 - (3/4)^10 = 0.944
+const GBP = prec => { const c = dm.calc(Object.assign(GB([{ n:1, T:3, W:1, Sv:0, char:true }]), { typed:{ n:1, T:3, W:1, Sv:0, prec, more:[{ n:1, T:3, W:1, Sv:0, char:true }] } }));
+  return { c, r:C.run(Object.assign({}, c.input, { sims:20000, seed:11, track:true })) }; };
+cases.push(['Precision ticked: every weapon has [PRECISION]', () => +GBP(true).c.R.groups.every(g => g.out || g.precision), 1]);
+cases.push(['Precision ticked: the Leader destroyed', () => GBP(true).r.fate[1], 1 - Math.pow(3 / 4, 10), 0.01]);
+// without it the bodyguard model first: the Leader only when two of the 10 get through: 1 - (3/4)^10 - 10 × 1/4 × (3/4)^9 = 0.756
+cases.push(['Precision not ticked: the Leader after the bodyguard', () => GBP(false).r.fate[1], 1 - Math.pow(3 / 4, 10) - 10 / 4 * Math.pow(3 / 4, 9), 0.012]);
+cases.push(['target groups: none added, the target as before (one row, the unit-wide Feel No Pain)', () => { const c = dm.calc(GB(undefined)); return +(c.models.length === 1 && c.models[0].name === 'Target' && c.tmod.fnp === 6 && c.ctx.precision == null); }, 1]);
+
 for(const t of twice) console.log('  ' + t);
 
 let fail = 0;

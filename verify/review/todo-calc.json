@@ -1,0 +1,108 @@
+[
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "rule-calcMods",
+  "where": "imperial-knights army rule · Code Chivalric",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "all",
+     "from": "Code Chivalric",
+     "when": "Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight",
+     "note": "re-roll one hit roll and re-roll one wound roll"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Code Chivalric",
+   "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nDeed 1–2 · We vow to lay low the tyrant…: At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.\nDeed 3–4 · We swear to reclaim the realm…: This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.\nDeed 5–6 · We pledge to reap a great tally…: This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).\nQuality 1–2 · …with our martial valour risen over all: Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.\nQuality 3–4 · …and we are eager for the challenge: Add 2\" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.\nQuality 5–6 · …yet shall our legacy be unsullied: Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1."
+  },
+  "key": "e8fcf9dc763651ad",
+  "note": "was calcNc (not counted); now counted as a box: one hit and one wound re-roll for the unit (the rule gives one per model with it)"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "unit-footnote",
+  "where": "infernal-lance · Knight Despoiler",
+  "judgement": {
+   "kind": "all",
+   "when": "Selected to shoot or fight",
+   "note": "re-roll one hit roll or one wound roll",
+   "from": "Seething Hatred",
+   "always": true
+  },
+  "source": {
+   "ability": "Seething Hatred",
+   "text": "Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** or you can re-roll one **Wound roll** when resolving those attacks."
+  },
+  "key": "be127a145f7ed186",
+  "note": "always:true added: counted for you each time the Knight Despoiler attacks (one hit OR one wound roll)"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "rule-mod",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Selected to attack",
+    "note": "re-roll one hit roll and re-roll one wound roll",
+    "always": true
+   }
+  },
+  "source": {
+   "rule": "Magna Imperator",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**."
+  },
+  "key": "ef4d65f8eb186db0",
+  "note": "always:true added: counted for you (one hit and one wound re-roll each time the unit is selected to attack)"
+ },
+ {
+  "army": "core",
+  "kind": "strat-calcMods",
+  "where": "Core · Command Re-roll",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "all",
+     "when": "Just after a hit, wound or damage roll of these attacks; once in the phase (15.01)",
+     "note": "re-roll one hit roll, one wound roll or one damage roll",
+     "calc": {
+      "oneAny": 1,
+      "phase": true
+     }
+    }
+   ]
+  },
+  "source": {
+   "stratagem": "Command Re-roll",
+   "text": "WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:\n- **Advance roll**\n- **Charge roll**\n- **Damage roll**\n- **Hazard roll**\n- **Hit roll**\n- **Save roll**\n- **Wound roll**\n- A roll to determine the number of attacks generated with a weapon.\nTARGET: That unit or model.\nEFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full)."
+  },
+  "key": "1b713b66cd8a6011",
+  "note": "new: the Damage tab counts Command Re-roll as one hit, wound or Damage roll, once in the phase (15.01), never ticked for you"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-footnote",
+  "where": "dread-host · Caladius Annihilator Grav-tank",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "re-roll one hit roll, one wound roll and one damage roll",
+   "from": "Advanced Firepower",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+  },
+  "key": "649eba0fd02c5533",
+  "note": "approved before; unchanged, but now counted by the Damage tab (dmEffects reads \"re-roll one hit roll, one wound roll and one damage roll\"): one of each per time the unit shoots, a box (vs MONSTER/VEHICLE)"
+ }
+]

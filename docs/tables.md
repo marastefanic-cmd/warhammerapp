@@ -53,7 +53,7 @@ Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k
 | `RULE_SRC` | where a RULES entry comes from when it is not a core rule | **hand**: `name`, `source` |
 | `RULE_ALIASES` | which RULES entry a keyword or rule chip opens: [pattern, rule] | **hand**: `pattern`, `rule` |
 | `CONCEPTS` | core terms kept out of a unit's rule list | **gw**: `term` |
-| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `help`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
+| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `calcMods`, `cpNote`, `mod`, `shield`, `help`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
 | `FACTIONS` | one row per faction: its army rules, detachments and aliases | **gw**: `name`, `armyRules`, `detachments` · **hand**: `aliases` |
 | `FACTIONS.armyRules` | a faction's army rules | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf` · **hand**: `coreTwin`, `note`, `calcNc`, `calcMods`, `calcDefs`, `limit`, `both`, `mod`, `parts`, `statNote`, `tableAt`, `missing` · **ai**: `def` |
 | `FACTIONS.detachments` | a faction's detachments | **bsdata**: `dispositions` · **gw**: `name`, `dp`, `rule`, `moreRules` (its further rules, after `rule`: Blood Legion's Blood Tainted), `enhancements`, `stratagems` |

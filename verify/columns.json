@@ -116,6 +116,10 @@
      "source": "hand",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
     },
+    "calcMods": {
+     "source": "hand",
+     "note": "the Damage tab's reading of the stratagem (its numbers and conditions: Command Re-roll's one die, once in the phase), hand-written from the words and signed off (approvals.json)"
+    },
     "cpNote": {
      "source": "hand",
      "note": "the extra CP part, from the words; signed off"
