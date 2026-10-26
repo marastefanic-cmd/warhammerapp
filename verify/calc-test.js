@@ -69,12 +69,16 @@ const cases = [
   // ---- [PRECISION] (24.28, 24.28.01) ----
   // 2 torrent attacks, S8 vs T4 (2+: 5/6), D3, no save, at 10 W1 models and a W3 CHARACTER. Allocated to the CHARACTER:
   // one wound destroys it (3 wounds lost), a second goes to a W1 model (1): 3 × 2 × 5/6 × 1/6 + 4 × (5/6)² = 3.61
-  ['precision: allocated to the character', () => run([g({ n:2, S:8, D:'3', kw:['TORRENT', 'PRECISION'] })], { T:4, models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }, { precision:'Boss' }).dmg, 3 * 10 / 36 + 4 * 25 / 36],
+  // ([TORRENT] weapons cannot have [PRECISION], 24.37: these attacks hit on 2+, 5/6, so each gets through 5/6 × 5/6 = 25/36)
+  ['precision: allocated to the character', () => run([g({ n:2, skill:'2+', S:8, D:'3', kw:['PRECISION'] })], { T:4, models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }, { precision:'Boss' }).dmg, 3 * (1 - (11 / 36) ** 2) + (25 / 36) ** 2],
   // ... and not picked: the W1 models first, 1 wound each (excess lost): 2 × 5/6
-  ['precision: not picked', () => run([g({ n:2, S:8, D:'3', kw:['TORRENT', 'PRECISION'] })], { T:4, models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }).dmg, 2 * 5 / 6],
+  ['precision: not picked', () => run([g({ n:2, skill:'2+', S:8, D:'3', kw:['PRECISION'] })], { T:4, models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }).dmg, 2 * 25 / 36],
+  // [TORRENT] weapons cannot have [PRECISION] (24.37): a [TORRENT] weapon given it is not precise, the attacks go to the bodyguard
+  ['precision: never on a [TORRENT] weapon (24.37)', () => run([g({ n:2, S:8, D:'3', kw:['TORRENT', 'PRECISION'] })], { T:4, models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }, { precision:'Boss' }).dmg, 2 * 5 / 6],
+  ['precision: never on a [TORRENT] weapon, from a rule either', () => +!C.resolve({ groups:[g({ kw:['TORRENT'], mods:[{ from:'Precision (ticked with the target)', precision:true }] })], target:{ T:4, models:[big(10, 1)] }, ctx:{} }).groups[0].precision, 1],
   // [PRECISION] + [DEVASTATING WOUNDS]: the mortal wounds go to the picked CHARACTER first; [ANTI-INFANTRY 2+] makes every
-  // wound (2+ at S4 vs T4 with Anti) critical: the same 3.61 as above, as mortal wounds
-  ['precision + devastating wounds: mortals to the character', () => run([g({ n:2, S:4, D:'3', kw:['TORRENT', 'PRECISION', 'DEVASTATING WOUNDS', 'ANTI-INFANTRY 2+'] })], { T:4, kw:['Infantry'], models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }, { precision:'Boss' }).dmg, 3 * 10 / 36 + 4 * 25 / 36],
+  // wound (2+ at S4 vs T4 with Anti) critical: the same as above, as mortal wounds
+  ['precision + devastating wounds: mortals to the character', () => run([g({ n:2, skill:'2+', S:4, D:'3', kw:['PRECISION', 'DEVASTATING WOUNDS', 'ANTI-INFANTRY 2+'] })], { T:4, kw:['Infantry'], models:[big(10, 1), big(1, 3, 7, { name:'Boss', char:true })] }, { precision:'Boss' }).dmg, 3 * (1 - (11 / 36) ** 2) + (25 / 36) ** 2],
 
   // ---- Toughness of an attached unit (19.02, 05.02.01) ----
   // the highest T among the bodyguard models (T6), even with a T7 leader: 60 torrent S6 hits wound on 4+: 30
@@ -197,11 +201,11 @@ const cases = [
   ['return blow: every game is played (the chances add up to 1)', () => C.play({ beats:[{ side:1, input:{ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { lines:[{ id:0, n:1 }] })] }, ctx:{} } },
     { side:0, input:{ groups:[g({ name:'back', A:'2', S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(5, 1)] }, ctx:{} } }], sims:2000, seed:11 }).beats[1].dist.reduce((t, p) => t + p, 0), 1, 1e-9],
   // a CHARACTER's own rules stop when it is destroyed (alt): the bodyguard's weapon (4+ to hit, re-roll hit rolls with the
-  // CHARACTER alive) fights back; the first beat (1 torrent [PRECISION] attack S8, D1, no save, allocated to the CHARACTER) destroys it
-  // in 5/6 of the games: 1/6 × (3/6 + 3/6 × 3/6) + 5/6 × 3/6 = 0.542 hits back
-  ['return blow: a destroyed CHARACTER’s rule stops counting', () => C.play({ beats:[{ side:1, input:{ groups:[g({ S:8, kw:['TORRENT', 'PRECISION'] })], target:{ T:4, models:[big(1, 1, 7, { name:'Boss', char:true, lines:[{ id:0, n:1 }] }), big(1, 9, 7, { name:'guard', lines:[{ id:1, n:1 }] })] }, ctx:{ precision:'Boss' } } },
+  // CHARACTER alive) fights back; the first beat (1 [PRECISION] attack at 2+, S8, D1, no save, allocated to the CHARACTER) destroys it
+  // in 25/36 of the games: 11/36 × (3/6 + 3/6 × 3/6) + 25/36 × 3/6 = 0.576 hits back
+  ['return blow: a destroyed CHARACTER’s rule stops counting', () => C.play({ beats:[{ side:1, input:{ groups:[g({ skill:'2+', S:8, kw:['PRECISION'] })], target:{ T:4, models:[big(1, 1, 7, { name:'Boss', char:true, lines:[{ id:0, n:1 }] }), big(1, 9, 7, { name:'guard', lines:[{ id:1, n:1 }] })] }, ctx:{ precision:'Boss' } } },
     { side:0, input:{ groups:[g({ name:'back', carry:[[1, 1]], mods:[{ from:'Boss’s rule', rrHit:'all' }] })], target:{ T:4, models:[big(100, 10)] }, ctx:{} },
-      alt:{ lines:[0], input:{ groups:[g({ name:'back', carry:[[1, 1]], mods:[] })], target:{ T:4, models:[big(100, 10)] }, ctx:{} } } }], sims:20000, seed:11 }).beats[1].groups[0].hits, 1 / 6 * (3 / 6 + 3 / 6 * 3 / 6) + 5 / 6 * 3 / 6],
+      alt:{ lines:[0], input:{ groups:[g({ name:'back', carry:[[1, 1]], mods:[] })], target:{ T:4, models:[big(100, 10)] }, ctx:{} } } }], sims:20000, seed:11 }).beats[1].groups[0].hits, 11 / 36 * (3 / 6 + 3 / 6 * 3 / 6) + 25 / 36 * 3 / 6],
 ];
 
 // ---- one beat after another in the same games (play): shoot, then fight, then what is left fights back ----
@@ -823,11 +827,26 @@ cases.push(['Command Re-roll: a stratagem box, not ticked for you; ticked: one o
 cases.push(['the Caladius with Advanced Firepower: the working and the dice agree', () => { const r = box(cp(CAL), 'Advanced Firepower'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true }, typed:{ n:1, T:10, W:1e6, Sv:3 } }));
   const x = C.explain(c.input), p = C.run(Object.assign({}, c.input, { sims:20000, seed:3 })); return Math.abs(x.total.dmg - p.dmg) / x.total.dmg; }, 0, 0.02]);
 
+// the working spends a re-roll of one die as the dice do (the review's cases): a Damage re-roll only on a roll that leaves the model
+// alive (none against W1 models), so it stays for nothing else; hits, wounds, what gets through and each re-roll's use agree within
+// the dice's noise (5 standard errors of 40,000 games; the re-rolls' use within 0.01)
+const agree = (input, tag) => { const x = C.explain(input), r = C.run(Object.assign({}, input, { sims:40000, seed:5, moments:true })), bad = [];
+  x.groups.forEach((e, i) => { const q = r.groups[i]; for(const k of ['hits', 'wounds', 'unsaved', 'mortals']) if(Math.abs(e[k] - q[k]) > 5 * q.sd[k] / 200 + 1e-6) bad.push(tag + ' ' + i + ' ' + k + ' ' + e[k].toFixed(3) + '/' + q[k].toFixed(3));
+    const eo = e.one || { hit:0, wound:0, dmg:0 }; for(const k of ['hit', 'wound', 'dmg']) if(Math.abs(eo[k] - q.one[k]) > 0.01) bad.push(tag + ' ' + i + ' one.' + k + ' ' + eo[k].toFixed(3) + '/' + q.one[k].toFixed(3)); });
+  for(const b of bad) console.log('  ' + b); return bad.length; };
+cases.push(['the working spends a Damage re-roll as the dice do: 6 [TORRENT] D3 attacks at 10 W1 models', () => agree({ groups:[g({ n:6, S:4, D:'D3', kw:['TORRENT'], mods:[{ from:'AF', oneHit:1, oneWound:1, oneDmg:1 }] })], target:{ T:4, models:[big(10, 1)] }, ctx:{} }, 'torrent'), 0, 0]);
+cases.push(['the working spends a shared re-roll as the dice do: two weapons, one re-roll of any roll, 20 W1 models', () => agree({ groups:[g({ name:'a', n:5, A:'2', D:'D3', mods:[{ from:'CR', oneAny:1, phase:true }] }), g({ name:'b', n:3, A:'D6', S:6, AP:-1, D:'D6', mods:[{ from:'CR', oneAny:1, phase:true }] })], target:{ T:4, models:[big(20, 1, 4)] }, ctx:{} }, 'shared'), 0, 0]);
+// a re-roll of one die that only one weapon can use: the weapons keep the order listed (the first listed is resolved first)
+cases.push(['a re-roll for one weapon only: the order listed', () => C.run({ groups:[one([], { name:'light' }), one([{ from:'M', oneHit:1 }], { name:'heavy', D:'3' })], target:{ T:4, models:[big(10, 10)] }, ctx:{}, sims:100, seed:1 }).poolOrder.join() === '0,1' ? 1 : 0, 1]);
+
 // ---- the target's groups: a Leader attached to the bodyguard (19.02, 05.03, 19.04) and [PRECISION] (24.28) ----
-// 1 [TORRENT] S8 attack (5/6 wound), no save, at a W1 bodyguard model and a W1 Leader: with [PRECISION] the Leader is destroyed 5/6 of
+// 1 S8 attack at 2+ (5/6 hit, 5/6 wound), no save, at a W1 bodyguard model and a W1 Leader: with [PRECISION] the Leader is destroyed 25/36 of
 // the time; without, the attack goes to the bodyguard (the CHARACTER group last, 05.03): never
-const duo = kw => C.run({ groups:[g({ S:8, kw:['TORRENT'].concat(kw) })], target:{ T:4, models:[big(1, 1, 7, { name:'Bodyguard', bodyguard:true }), big(1, 1, 7, { name:'Leader', char:true })] }, ctx:{ precision:'Leader' }, sims:20000, seed:11, track:true });
-cases.push(['a 2-model target with a Leader: [PRECISION], the Leader destroyed', () => duo(['PRECISION']).fate[1], 5 / 6, 0.01]);
+const duo = kw => C.run({ groups:[g({ skill:'2+', S:8, kw })], target:{ T:4, models:[big(1, 1, 7, { name:'Bodyguard', bodyguard:true }), big(1, 1, 7, { name:'Leader', char:true })] }, ctx:{ precision:'Leader' }, sims:20000, seed:11, track:true });
+cases.push(['a 2-model target with a Leader: [PRECISION], the Leader destroyed', () => duo(['PRECISION']).fate[1], 25 / 36, 0.012]);
+// "Precision" ticked with the target does not make a [TORRENT] weapon precise (24.37): the Knight Despoiler's Heavy darkflamer
+cases.push(['Precision ticked: not a [TORRENT] weapon (24.37)', () => { const c = dm.calc({ army:'infernal-lance', atk:'knight-despoiler', ph:'shooting', typed:{ n:5, T:4, W:2, Sv:3, prec:true, more:[{ n:1, T:4, W:4, Sv:2, char:true }] } });
+  const i = c.input.groups.findIndex(x => /darkflamer/i.test(x.name)); return +(i >= 0 && c.input.groups[i].mods.some(m => m.precision) && !c.R.groups[i].precision && c.R.groups.some((x, j) => j !== i && !x.out && x.precision)); }, 1]);
 cases.push(['a 2-model target with a Leader: no [PRECISION], the Leader untouched', () => duo([]).fate[1], 0, 0]);
 // the screen: a group added and ticked CHARACTER is a Leader row (char), the first the bodyguard (19.02), each with its own Feel No Pain
 // (19.04 FAQ), the unit-wide one not used; the Leader's higher T does not change the wound roll while a bodyguard model is left:

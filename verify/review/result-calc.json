@@ -1,0 +1,32 @@
+[
+ {
+  "key": "e8fcf9dc763651ad",
+  "where": "imperial-knights army rule · Code Chivalric",
+  "verdict": "ok",
+  "why": "data.js text matches Wahapedia (imperial-knights.html, Quality '…with our martial valour risen over all': 'Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll'). A box is right because the Quality is the player's pick for the battle. dmEffects reads the note as oneHit:1 + oneWound:1 (test: pool h,w, n 1 each, not phase). The rule is per model, but every Imperial Knights unit in the lists is a single model. Canis Rex's Sir Hekhtur is not on the battlefield while Rex lives, so one re-roll for the unit is the same thing here. The 'How this is worked out' text says the calculator gives the unit one. It would only undercount a multi-model ARMIGER unit, and none is in the lists."
+ },
+ {
+  "key": "be127a145f7ed186",
+  "where": "infernal-lance · Knight Despoiler · Seething Hatred",
+  "verdict": "ok",
+  "why": "The Wahapedia datasheet (ds/chaos-knights_Knight-Despoiler.html) and data.js agree: 'Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.' The only trigger is the model being selected to shoot or fight, which is always true for the tab, so always:true is right. It is a single-model unit, so per model = per unit. It is read as oneEither (the 0.5 hand case checks out). The Despoiler's answers change (shooting 28.0→29.3 exact damage at the default target), but infernal-lance's snapshot shows the Atrapos, so no snapshot answer moves."
+ },
+ {
+  "key": "ef4d65f8eb186db0",
+  "where": "Emperor’s Chosen rule · Magna Imperator",
+  "verdict": "ok",
+  "why": "Wahapedia (adeptus-custodes.txt, Emperor’s Chosen) and data.js agree: 'When a friendly ADEPTUS CUSTODES unit is selected to attack, that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.' It has no condition beyond the ADEPTUS CUSTODES unit (the needs entry) and being selected to attack (shoot, fight, overwatch). The 'Favoured ka’tah: RENDAX' condition applies only to the Additional Effect's mortal wounds, which are not counted here. So always:true is right. One hit and one wound re-roll per unit matches 'that unit’s attacks can'. Over all 1098 unit×phase×target cases compared against 558a750, only ADEPTUS CUSTODES units in lite-knights and emperors-chosen change (plus the Despoiler for Seething Hatred)."
+ },
+ {
+  "key": "1b713b66cd8a6011",
+  "where": "Core · Command Re-roll",
+  "verdict": "ok",
+  "why": "15.02 lets you re-roll a just-made Hit, Wound or Damage roll, one die of several, so oneAny:1 fits. 15.01 says 'Each player cannot use the same stratagem more than once in the same phase', so phase:true fits. In play() the pool is shared by the same side's beats within one phase (key side|entry, cleared when ph changes), and Shoot and Fight are separate phases (hand cases 0.625 / 0.75 check out). Never ticked for you, which is right for a CP spend. Spending it on the first failed roll matches the table, since the stratagem must be used 'just after' the roll. The attacks-number roll is not counted, which is conservative and fine."
+ },
+ {
+  "key": "649eba0fd02c5533",
+  "where": "dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "The Wahapedia datasheet (ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html) matches data.js: 'This unit’s ranged attacks that target a MONSTER/VEHICLE unit can: Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll.' Ranged, vs MONSTER/VEHICLE, and a box (the typed target has no keywords) are all right. The text gives no frequency; one of each per time the unit shoots is the natural reading, and 'How this is worked out' states it. Note: the working's Damage-re-roll figures for this rule are off on low-W targets (explain() ignores the 'leaves the model alive' condition; see the report). That is not a problem with this judgement."
+ }
+]

@@ -2370,7 +2370,7 @@ function dmHowLines(c, st, r0, plan){
   L.push(['The number beside each choice', 'the whole turn played again with that one choice changed, in the same games: it is what the answer becomes when the choice is tapped (models destroyed, for Both the shooting and the fight added up; wounds lost for a one-model unit; when that does not move, the chance to wipe the unit). Only the damage dealt is measured: what the attacking unit loses is not played. It comes first from ' + String(DM_Q).replace(/\B(?=(\d{3})+$)/g, ',') + ' games (' + String(DM_Q / 2).replace(/\B(?=(\d{3})+$)/g, ',') + ' for Both; shown faint), then from the answer’s own 10,000; after a tap, the numbers before it stay in place, dimmed, until the new ones are in. The list is ordered once for each unit and mode, by what each choice gains, and then stays put.']);
   L.push(['Another unit’s rule', 'an aura or ability of another unit of the list that reaches this unit (Clever Know-wotz from a Mek, Beacons of Rage from Eightbound) is listed with the unit it comes from, and is never ticked for you: whether that unit gives it depends on the table.']);
   if(c.models.length > 1) L.push(['The target’s groups (19.02, 05.03, 19.04)', 'each group added is its own stats row. A group ticked CHARACTER is taken to be a Leader attached to the first group, its bodyguard: attacks use the highest T of the bodyguard models while one is left, then the Leader’s (19.02); the defender declares the allocation order with the CHARACTER group last (05.03), and the calculator plays every order the rules allow and takes the one that loses the fewest models; each group has its own Feel No Pain (19.04 FAQ: a rule that gives one model Feel No Pain applies to that model only). The target’s keywords are not set: CHARACTER is not counted for [ANTI-…] or a rule about the target’s keywords unless you tick its box.']);
-  if(c.models.some(m => m.char)) L.push(['[PRECISION] (24.28)', 'the active player can select the CHARACTER group for [PRECISION] attacks (the weapon’s own, a rule’s, or every attack here with “Precision” ticked under the target): the calculator takes it that they do, and that the Leader is visible. It is the current allocation group until those attacks are resolved or it is destroyed; the rest then go to the bodyguard. [DEVASTATING WOUNDS] mortal wounds of those attacks go to it first (24.28.01).']);
+  if(c.models.some(m => m.char)) L.push(['[PRECISION] (24.28)', 'the active player can select the CHARACTER group for [PRECISION] attacks (the weapon’s own, a rule’s, or every attack here with “Precision” ticked under the target): the calculator takes it that they do, and that the Leader is visible. [TORRENT] weapons cannot have [PRECISION] (24.37): never theirs. It is the current allocation group until those attacks are resolved or it is destroyed; the rest then go to the bodyguard. [DEVASTATING WOUNDS] mortal wounds of those attacks go to it first (24.28.01).']);
   if(on.some(x => x.one)){ const ph = on.some(x => x.one.some(o => o.phase)), af = c.rules.some(r => r.on && r.m.from === 'Advanced Firepower'), cc = c.rules.some(r => r.on && r.m.from === 'Code Chivalric');
     L.push(['A re-roll of one die (01.05.02, 04.03)', 'a rule that lets you re-roll one hit, wound or Damage roll leaves which one to you. The calculator re-rolls the first failed hit or wound roll it can go to (never a die already re-rolled: 01.05.02), and the first Damage roll below the dice’s average that leaves the model it hits with wounds left; the mortal wounds of [DEVASTATING WOUNDS] are not re-rolled. When one can go to several weapons, it resolves them most valuable first (the damage one attack does on average: 04.03 lets the attacker pick the order), so it goes where a success is worth the most; the working says how often each weapon gets it. The same rule on several weapons is one re-roll for the unit.' +
       (ph ? ' Command Re-roll can be used once in the phase (15.01): it is shared by the attacks of that phase (Shoot and Fight are different phases); here it goes to this unit’s attacks.' : '') +
@@ -2612,7 +2612,10 @@ function dmNoWhy(M, M2, lv){
       if(a.every(x => x.out || Math.max(2, sv - x.AP) <= v)) return 'their Sv ' + sv + '+ after AP is as good as an InSv ' + v + '+ against every weapon here'; } }
   // only a re-roll of one die changed: no failed roll it can go to here (every failed one re-rolled already, 01.05.02)
   const noOne = g => JSON.stringify(Object.assign({}, g, { one:0, notes:0, applied:0, skipped:0 }));
-  if(a.every((x, i) => noOne(x) === noOne(b[i])) && a.some((x, i) => core(x) !== core(b[i]))) return 'no roll here that it can re-roll fails without being re-rolled already';
+  if(a.every((x, i) => noOne(x) === noOne(b[i])) && a.some((x, i) => core(x) !== core(b[i]))){
+    // (said only when the working, with it ticked, re-rolls about nothing; else the rest of the reasons, or none)
+    const MM = (M2.R.pool || []).length > (M.R.pool || []).length ? M2 : M, X = WH_CALC.explain(MM.input);
+    if(X.groups.every(g => !g.one || g.one.hit + g.one.wound + g.one.dmg < 0.005)) return 'no roll here that it can re-roll fails without being re-rolled already'; }
   // each weapon that changes: why it changes nothing; a reason only when every one of them has one
   const why = [];
   for(let i = 0; i < a.length; i++){
@@ -3343,7 +3346,7 @@ function dmLeverRow(C, x){
     const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pickLabel : 'none ticked') : '';
     const bu = C.plan.beats[C.plan.k].atk.u, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while the BATTLELINE fact holds (above)' : '') : '';
     // a re-roll of one die, ticked: which weapons it goes to (the working's exact averages; the unit's re-rolls of one die together)
-    const went = r.on && r.e && ['oneHit', 'oneWound', 'oneDmg', 'oneEither', 'oneAny'].some(k => r.e[k]) ? dmOneWent(C.M) : '';
+    const went = r.on && r.e && ['oneHit', 'oneWound', 'oneDmg', 'oneEither', 'oneAny'].some(k => r.e[k]) ? dmOneWent(C.M, r.m.from) : '';
     const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '') + went);
     return dmRowHtml(C, x, title, sub, '', dmPills(C, x)); }
   // (Both: the rules it switches on in either part, the fight's said as such)
@@ -3354,14 +3357,15 @@ function dmLeverRow(C, x){
   if(x.x) return dmRowHtml(C, x, esc(x.x.label), esc(x.x.sub), '');
   return '';
 }
-// where the unit's re-rolls of one die go (calc.js explain: the weapons most valuable first, each re-roll to the first failed roll
-// it can go to), on average over the games, every one of them together: " · re-rolls go to, on average: Castellan axe 0.45 hit, 0.3
-// wound; Eagle’s Scream 0.2 hit" (a weapon that gets under 0.05 of one left out)
-function dmOneWent(M){
-  if(M._went != null) return M._went;
-  const R = M.input.groups.length ? WH_CALC.explain(M.input) : null, r2 = v => String(Math.round(v * 100) / 100);
-  const list = R ? R.groups.map((g, i) => g.one ? [M.input.groups[i].name, [[g.one.hit, 'hit'], [g.one.wound, 'wound'], [g.one.dmg, 'Damage']].filter(x => x[0] >= 0.05).map(([v, w]) => r2(v) + ' ' + w)] : null).filter(x => x && x[1].length) : [];
-  return M._went = list.length ? ' · re-rolls go to, on average: ' + list.map(([n, xs]) => n + ' ' + xs.join(', ')).join('; ') : '';
+// where a rule's re-rolls of one die go (calc.js explain: the weapons most valuable first when one can go to several, each re-roll to
+// the first failed roll it can go to), on average over the games: " · its re-rolls go to, on average: Castellan axe 0.45 hit, 0.3
+// wound; Eagle’s Scream 0.2 hit" (only this rule's; a weapon that gets under 0.05 of one left out)
+function dmOneWent(M, from){
+  const X = M._oneX !== undefined ? M._oneX : (M._oneX = M.input.groups.length ? WH_CALC.explain(M.input) : null), r2 = v => String(Math.round(v * 100) / 100);
+  const mine = x => x.src === from || x.src.startsWith(from + ' (') || x.src.startsWith(from + ':');
+  const list = X ? X.groups.map((g, i) => { if(!g.one) return null; const by = (g.one.by || []).filter(mine), t = k => by.reduce((a, x) => a + x[k], 0);
+    return [M.input.groups[i].name, [[t('hit'), 'hit'], [t('wound'), 'wound'], [t('dmg'), 'Damage']].filter(x => x[0] >= 0.05).map(([v, w]) => r2(v) + ' ' + w)]; }).filter(x => x && x[1].length) : [];
+  return list.length ? ' · its re-rolls go to, on average: ' + list.map(([n, xs]) => n + ' ' + xs.join(', ')).join('; ') : '';
 }
 const dmCap = t => String(t || '').charAt(0).toUpperCase() + String(t || '').slice(1);
 // a rule's name in its row opens the same popup the other screens use: its ability, stratagem or rule

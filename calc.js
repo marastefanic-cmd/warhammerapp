@@ -255,7 +255,7 @@ function prep(g, X){
     woundMod:why.wound.reduce((t, x) => t + x.v, 0),
     critWound:Math.min(cW.v, k.antiV || 7), critWoundSrc:k.antiV && k.antiV <= cW.v ? '[' + k.text.anti + '] (24.03)' + (k.from('anti') ? ', from ' + k.from('anti') : '') : cW.src, rrWound:rrWound.v, rrWoundSrc:rrWound.src,
     AP:Math.min(0, (ap0 || 0) - apImp + (tm.apWorse || 0)),   // improvements and worsenings added up, then not worse than 0
-    D, dPlus, sus:k.sus || null, lethal:!!k.lethal, dev:!!k.dev, precision:!!k.precision, psychic:ignore,
+    D, dPlus, sus:k.sus || null, lethal:!!k.lethal, dev:!!k.dev, precision:!!k.precision && !k.torrent, psychic:ignore,   // [TORRENT] weapons cannot have [PRECISION] (24.37)
     // hazard rolls after the unit's attacks: one for [HAZARDOUS] (24.15), two for [SUPA-HAZARDOUS] when it shoots (its own words);
     // a weapon with both makes all three: neither replaces the other
     hazRolls:(k.hazardous ? 1 : 0) + (k.supaHaz && ranged ? 2 : 0)
@@ -371,7 +371,7 @@ function setup(input){
 // out at the start against the model the attacks meet first, as explain does; on a tie, the order listed. Indexes into S.batches
 function poolOrder(S, order){
   const ix = S.batches.map((b, i) => i);
-  if(!S.pool.length || S.batches.length < 2) return ix;
+  if(!S.pool.some(e => e.users.size > 1) || S.batches.length < 2) return ix;   // (no re-roll that more than one weapon can use: as listed)
   const key = order.join(','), cache = S.poK || (S.poK = {});
   if(cache[key]) return cache[key];
   const { rows, groups, tm, ctx } = S, attached = rows.some(r => r.bodyguard);
@@ -883,6 +883,8 @@ function poolWeapon(a, use, states, pool){
   // the binomial chance of at least j Damage rolls to re-roll, from the jet: P(B ≥ j) = P - Σ_{i<j} θ^i E[C(S,i) x^(S-i)]
   const atLeast = (c, j) => { let t = c[0]; for(let i = 0; i < j; i++) t -= Math.pow(th, i) * c[i + 1]; return Math.max(0, t); };
   let sh = 0, sw = 0, sd = 0;
+  // (each entry's own share: what each rule re-rolls here, h / w / d)
+  const own = pool.map(() => ({ h:0, w:0, d:0 })), owe = (a, b, k, p) => { a.forEach((x, j) => { if(x > b[j]) own[j][k] += p * (x - b[j]); }); };
   const next = new Map(), add = (v, p) => { if(p <= 0) return; const k = v.join(','); next.set(k, (next.get(k) || 0) + p); };
   const dps = new Map();
   for(const s of parsed){
@@ -897,14 +899,14 @@ function poolWeapon(a, use, states, pool){
       let c = c0.slice();
       for(let r = 0; r < uw && K; r++){ const o = new Float64Array(J); plus(c, o, 1 - fs); timesZ(c, o, fs); c = o; }
       const p = s.p * c[0];
-      sh += p * uh; sw += p * uw;
+      sh += p * uh; sw += p * uw; owe(s.v, v1, 'h', p); owe(v1, v2, 'w', p);
       if(!kd){ add(v2, p); continue; }
       let prev = c[0];
-      for(let j = 1; j <= kd; j++){ const pj = atLeast(c, j); add(spend(v2, use.d, j - 1), s.p * (prev - pj)); sd += s.p * pj; prev = pj; }
-      add(spend(v2, use.d, kd), s.p * prev);
+      for(let j = 1; j <= kd; j++){ const pj = atLeast(c, j), v3 = spend(v2, use.d, j - 1); add(v3, s.p * (prev - pj)); owe(v2, v3, 'd', s.p * (prev - pj)); sd += s.p * pj; prev = pj; }
+      const v3 = spend(v2, use.d, kd); add(v3, s.p * prev); owe(v2, v3, 'd', s.p * prev);
     }
   }
-  return { sh, sw, sd, next };
+  return { sh, sw, sd, next, per:own };
 }
 
 function explain(input, orderIdx){
@@ -1026,9 +1028,12 @@ function explain(input, orderIdx){
       st.push({ k:'dmg', t:d });
     }
     // (a Damage roll below the dice's average: the one a Damage re-roll goes to; what re-rolling it adds, melta's dice kept)
-    const pD = pmf(G.D), qd = ex(pD, v => v < G.Dmean - 1e-9 ? 1 : 0), pm = G.melta ? pmf(G.melta) : new Map([[0, 1]]);
-    const val = (v, m) => Math.max(RULE.minDamage, v + G.dPlus + m - (tm.dMinus || 0));
-    const gainOf = f => !qd ? 0 : ex(pm, m => ex(pD, v => f(val(v, m))) - ex(pD, v => v < G.Dmean - 1e-9 ? f(val(v, m)) : 0) / qd);
+    // (as the dice spend it, attackOnce: a roll below the dice's average whose damage leaves the model it hits with wounds left; here the
+    // model the attacks meet first, with all its wounds, as the working takes every attack to find one)
+    const pD = pmf(G.D), pm = G.melta ? pmf(G.melta) : new Map([[0, 1]]);
+    const val = (v, m) => Math.max(RULE.minDamage, v + G.dPlus + m - (tm.dMinus || 0)), ok = (v, m) => v < G.Dmean - 1e-9 && val(v, m) < row.W;
+    const qd = ex(pm, m => ex(pD, v => ok(v, m) ? 1 : 0));
+    const gainOf = f => !qd ? 0 : ex(pm, m => ex(pD, v => ok(v, m) ? ex(pD, u => f(val(u, m))) - f(val(v, m)) : 0)) / qd;
     aux[i] = { G, hr, wr, pl, sf, qd, n:normal, kw:wr.p, gainD:gainOf(v => v) * keep(fnp), gainCap:gainOf(v => Math.min(row.W, v * keep(fnp))),
       perN:dN * keep(fnp), perM:dM * keep(fnpM), capN:capOf(tm.dMinus || 0, keep(fnp)), capM:capOf(tm.dMinusChar || 0, keep(fnpM)) };
     return { attacks, hits:toWound + auto, wounds:normal + devC, unsaved, mortals:devC, dmg:dmgN + dmgM, dmgCap, out:'', steps:st };
@@ -1050,7 +1055,7 @@ function explain(input, orderIdx){
       const dWounds = dNorm + dMort, dUns = dNorm * a.sf;
       const dDmg = dUns * a.perN + dMort * a.perM + r.sd * a.gainD, dCap = dUns * a.capN + dMort * a.capM + r.sd * a.gainCap;
       Object.assign(o, { hits:o.hits + dHits, wounds:o.wounds + dWounds, unsaved:o.unsaved + dUns, mortals:o.mortals + dMort, dmg:o.dmg + dDmg, dmgCap:o.dmgCap + dCap,
-        one:{ hit:r.sh, wound:r.sw, dmg:r.sd } });
+        one:{ hit:r.sh, wound:r.sw, dmg:r.sd, by:S.pool.map((e, j) => ({ src:e.src, kind:e.kind, hit:r.per[j].h, wound:r.per[j].w, dmg:r.per[j].d })).filter(x => x.hit + x.wound + x.dmg > 0) } });
       // its rules, each with the rolls it re-rolls one of ("Magna Imperator: a hit roll and a wound roll")
       const mine = S.pool.filter((e, j) => b.use.h.concat(b.use.w, b.use.d).includes(j)), names = [...new Set(mine.map(e => e.src))];
       const src = names.map(nm => { const es = mine.filter(e => e.src === nm);
@@ -1060,7 +1065,7 @@ function explain(input, orderIdx){
       const used = [[r.sh, 'h', 'a hit roll', 'hit rolls'], [r.sw, 'w', 'a wound roll', 'wound rolls'], [r.sd, 'd', 'a Damage roll', 'Damage rolls']].filter(x => x[0] > 1e-9)
         .map(([v, k, one, many]) => most(k) <= 1 ? one + ' in ' + pct(v) : fmtStep(v) + ' ' + many + ' on average');
       const add = [[dHits, 'hits'], [dWounds, 'wounds'], [dUns + dMort, 'get through'], [dDmg, 'damage']].filter(x => x[0] > 1e-9).map(([v, w]) => '+' + fmtStep(v) + ' ' + w);
-      o.steps.push({ k:'one', t:'One re-roll: ' + src.join('; ') + '. It goes to the first failed roll it can (a die not re-rolled already, 01.05.02)' + (b.use.d.length ? ', and a Damage re-roll to the first Damage roll below the dice’s average' : '') +
+      o.steps.push({ k:'one', t:'One re-roll: ' + src.join('; ') + '. It goes to the first failed roll it can (a die not re-rolled already, 01.05.02)' + (b.use.d.length ? ', and a Damage re-roll to the first Damage roll below the dice’s average that leaves the model with wounds left' : '') +
         (po.length > 1 ? '; the weapons are resolved most valuable first (04.03), this one ' + (rank + 1) + (['st', 'nd', 'rd'][rank] || 'th') + ' of ' + po.length : '') + ' · re-rolled: ' + used.join(', ') + ' → ' + add.join(', ') });
     });
   }
