@@ -2955,7 +2955,18 @@ function dmRedraw(C){
   // the list's "Nothing here changes this" (and each row's reason for no change) was said from the quick games: said again from
   // the answer's own 10,000 when they disagree (2,000 games can wipe the target in 99.5% where 10,000 do in 99.4%)
   const host = $('#dmList');
-  if(host && (C.A ? dmSatWhy(C) : '') !== sat0){ host.innerHTML = dmListHtml(C); for(const lv of C.levers) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx); }
+  if(host && (C.A ? dmSatWhy(C) : '') !== sat0){
+    // drawn again as the player left it: the folds opened since the screen was drawn (dmState's, not the screen's copy of it), the
+    // focus, and, when the note was above the top of the screen, the rows where they were
+    C.st.fold = Object.assign({}, dmState().fold);
+    const ae = document.activeElement, fid = ae && host.contains(ae) && ae.dataset ? ae.dataset.dmlv : null;
+    const topY = $('#top').getBoundingClientRect().bottom, note = host.querySelector('.dmsat');
+    const vis = !dmAnchor && note && note.getBoundingClientRect().bottom <= topY ? [...host.querySelectorAll('[data-dmlv]')].find(e => e.getClientRects().length && e.getBoundingClientRect().top >= topY) : null;
+    const vid = vis ? vis.dataset.dmlv : null, vtop = vis ? vis.getBoundingClientRect().top : 0;
+    host.innerHTML = dmListHtml(C); for(const lv of C.levers) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx);
+    const at = id => id && host.querySelector('[data-dmlv="' + CSS.escape(id) + '"]');
+    const fe = at(fid); if(fe) fe.focus({ preventScroll:true });
+    const ve = at(vid); if(ve && ve.getClientRects().length){ const d = ve.getBoundingClientRect().top - vtop; if(Math.abs(d) >= 1) scrollBy(0, d); } }
   const a = $('#dmAns');
   if(a){ const h0 = a.offsetHeight, t = document.createElement('template'); t.innerHTML = dmCard(C); const n = t.content.firstElementChild;
     const keys = e => [...e.querySelectorAll('[data-dmc]')].map(x => x.dataset.dmc).join('|');
@@ -5381,6 +5392,7 @@ document.addEventListener('toggle', e => {
   const d = e.target;
   if(!d.dataset) return;
   if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession();   // the Damage tab's folds stay as left
+    if(DM_CTX) DM_CTX.st.fold[d.dataset.dmfold] = d.open;   // (and in the screen's copy, which a list drawn again in the background draws from)
     if(d.open) for(const w of d.querySelectorAll('.dwv[data-wh]')) w.scrollTop = +w.dataset.i * WH_ROW;   // (a wheel drawn folded takes its row once shown)
     return; }
   if(d.dataset.ckfold){ if(d.open) openStrats.add(d.dataset.ckfold); else openStrats.delete(d.dataset.ckfold); saveSession(); return; }   // a Phase checklist fold
