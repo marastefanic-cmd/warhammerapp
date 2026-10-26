@@ -2445,8 +2445,9 @@ Magnus the Red
 6
 4+
 WHEN TARGETED
-1
+2
 Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 DAMAGED 1-6 W
 -1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2598,9 +2599,10 @@ Tzaangor Enlightened with Fatecaster greatbows
 2
 5+
 WHEN TARGETED
-2
+3
 Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
 RANGED WEAPONS
@@ -2738,6 +2740,9 @@ Daemon Prince of Tzeentch with wings
 6+
 3
 4+
+WHEN TARGETED
+1
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS
 vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
 vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
@@ -2867,10 +2872,11 @@ Tzaangor Enlightened with Fatecaster greatbows
 2
 5+
 WHEN TARGETED
-3
+4
 Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
 EXALTED SORCERER ON DISC OF TZEENTCH Illusions of Tzeentch: only by a ranged attack whose attacking model is within 18"
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
 RANGED WEAPONS
@@ -3031,9 +3037,10 @@ Tzaangor Enlightened
 2
 5+
 WHEN TARGETED
-2
+3
 Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
@@ -3177,10 +3184,11 @@ Tzaangor Enlightened
 2
 5+
 WHEN TARGETED
-3
+4
 Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
 TZAANGOR SHAMAN Diamond of Distortion: -1 to hit rolls against it (while the bearer leads it)
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
@@ -3323,10 +3331,11 @@ Tzaangor Enlightened
 2
 5+
 WHEN TARGETED
-3
+4
 TZAANGOR SHAMAN Feel No Pain 4+
 Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
@@ -3460,9 +3469,10 @@ Tzaangors
 OC +1 for each TZAANGOR model unless Battle-shocked, not in the OC above (Warpmeld Sacrifice)
 
 WHEN TARGETED
-2
+3
 Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase
 1CP Warped Vicissitude: their Shooting phase or the Fight phase: 4+ invulnerable save (until the end of the phase)
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3531,6 +3541,9 @@ Sekhetar Robots×2
 7+
 1
 5+
+WHEN TARGETED
+1
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 RANGED WEAPONS
 Range
 A

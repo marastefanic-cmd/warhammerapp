@@ -628,12 +628,11 @@ Battle-lust
 + Exalted Eightbound
 SLAUGHTERBOUND
 Lacerator and daemonic claw
-7/10
+7
 2+
 10
 -2
 2
-A 10 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
 EXALTED EIGHTBOUND
 Chainblades×3
 5
@@ -642,6 +641,7 @@ Chainblades×3
 -3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
+Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
@@ -3377,12 +3377,11 @@ AP
 D
 SLAUGHTERBOUND
 Lacerator and daemonic claw
-7/10
+7
 2+
 10
 -2
 2
-A 10 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
 EXALTED EIGHTBOUND
 Chainblades×3
 5
@@ -3400,6 +3399,7 @@ STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase
 ABILITIES
 Rage Eternal
 - Slaughterbound

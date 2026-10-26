@@ -977,6 +977,12 @@
   "at": "2026-10-23",
   "why": "NR prints “Slayers of Tyrants - Allarus Custodians”; it is the Allarus datasheet’s ability (Wahapedia “Slayer of Tyrants”). “This unit’s melee attacks” then applies to the whole attached unit (19.04: bodyguard unit ability applies to every model while a bodyguard model lives)."
  },
+ "0fc98e0df0dab5fe": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 112). The enemy's and forbidden re-roll filters work on the earlier review's cases and on mine ('your opponent cannot re-roll', 'that enemy unit cannot re-roll', 'enemy units within 6\" of it can re-roll'). But the filter drops every re-roll in the whole sentence. Missed: 'You can re-roll Hit rolls for this unit, and enemy units cannot re-roll Hit rolls that target it.' and 'While an enemy unit is within 6\" of this model you can re-roll Hit rolls for this unit.' (the enemy pattern runs on to the unit's own 'you can re-roll'). The fix reads re-rolls clause by clause, and keeps a clause that says 'you / this unit can re-roll'. Noted only: 'Each time an attack targets this unit, add 1 to the Hit roll' (the enemy's +1, a drawback) is read as the unit's own hit+1. That is stricter but would ask for a misleading reading."
+ },
  "0fe6f52c8dc8fe0a": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -2315,6 +2321,12 @@
   "at": "2026-10-24",
   "why": "The labels match the now-bold headings exactly: from 'Furor Tactics' over \"If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1]\", and from 'Malleus Tactics' over \"If the tactical doctrine is active … [LETHAL HITS]\". Each when quotes its condition. The names are also the new GRANTS and RULE_OPTIONS names (Furor, Malleus, Purgatus Tactics). kind 'all' is right because the text says \"attacks\". Purgatus is still left out because index.html passes the calculator no character allocation, so [PRECISION] changes no numbers (the approved convention). Two boxes rather than one pick is still right: Codex Adept and Author of the Codex can make several doctrines active at once."
  },
+ "278ee97ac60f3925": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "Possessed Lord (data.js = Wahapedia World Eaters Slaughterbound, word for word): once per battle, at the start of the Fight phase; until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model, and those weapons have [DEVASTATING WOUNDS]. set:{A:'+3'} on the Lacerator and daemonic claw, kind melee, the when and the note say exactly that and nothing more. It is right in every detachment and every list: the calculator adds a relative set value to the list's A (calc.js setOf), so A 7 (datasheet 6 + Relentless Rage) gives 10 and the Glaive's A 8 gives 11, as the earlier fix said. The listWhy and the list's own reading are gone; readOf is Possessed Lord's text only (5648d8fa). Tested on a scratch copy: changing the texts of Relentless Rage and Berzerker Glaive (all three copies) leaves it fresh, as it should for a +3. Rendered: princes and standard show the profile's A (7, and 8 with the Glaive) in the cell and one footnote \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\" per unit. Against main 558a750 those are the only changes in those two lists."
+ },
  "2792f58b963e34d9": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -2446,6 +2458,12 @@
   "by": "review:r9-code",
   "at": "2026-10-21",
   "why": "RULES['Heavy'] matches 24.16 word for word in rules/core-rules.md and Wahapedia core.html: \"In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: That unit is unengaged. / That unit was not set up on the battlefield this turn. / No model in that unit has moved more than 3\" this turn.\" Its bold on 'hit roll' and 'unengaged' follows Wahapedia's <b>; the only difference is Wahapedia's underline on 'all', which is formatting. ruleFor strips the brackets and the anchored /^heavy$/i matches only 'HEAVY'/'[HEAVY]'/'Heavy' (a weapon keyword, the AdMech unit's rules chip, and the **[HEAVY]** in Protector Imperative). It does not match 'Heavy bolter', 'Heavy flamer', 'Heavy weapon' or 'SUPER-HEAVY WALKER' (that one goes to its own alias), and no faction alias or army rule is named 'heavy'."
+ },
+ "2938f8dba93ee6b5": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "Matches the file. Beyond the earlier fixes it adds sv-set and s-vs. sv-set: \"has/have a Save characteristic of 2+\" is read (bearer, \"models in that unit\", \"it has … 3+\"). Its said accepts a stat mark: Blood-forged Armour (big-demons-baby/master-of-executions) is covered by its Sv mark and is flagged once the mark is removed. That is the only change in the false-positive run, and it is not a false positive. s-vs: \"subtract 1 from the Strength characteristic\" and \"-1 Strength\" of an attack that targets, or is allocated to, this unit / the bearer are read, and the unit's own attack on a MONSTER is not. Noted only, both stricter and not in today's texts: (1) sv-set also reads another unit's save, e.g. \"If the target has a Save characteristic of 3+, add 1 to the Wound roll\". (2) s-vs misses \"this unit is targeted by an attack\". Strip test, by ability over all lists: 157 flagged, against 156 without the additions (+Blood-forged Armour), and none lost."
  },
  "2952bf06aeba01fb": {
   "verdict": "ok",
@@ -3101,6 +3119,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Charge phase, just after a SICARIAN unit from your army declares a charge.”"
  },
+ "360b6d45483975a2": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "Defender's Duty matches Wahapedia (verify/.cache/waha/ds/imperial-knights_Knight-Defender.html) word for word: \"While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.\" That covers every attack, ranged or melee, so kind all is right. A guard is the right place: it protects another model, the picked ARMIGER, not the Knight Defender, so there is no selfWhen. The note \"-1 Damage to each attack allocated to that ARMIGER model\" says only what the text says. The Bondsman rule (Wahapedia Imperial Knights army rules) supplies the rest. The pick is made in your Command phase (when), and it is one friendly ARMIGER model (needs Armiger, oneModel) until the start of your next Command phase (lasts round). The same conventions as the five reviewed Duty readings: \"Faction: Imperial Knights\" in needs narrows nothing, and 12\" is left out of when, as on the others. readOf 99bd01da+6a3f9305 covers the Duty and Bondsman. Changing either text makes it stale (tested); changing Code Chivalric does not. No list has an ARMIGER model, so nothing renders (no snapshot change, as expected). Guards feed only the \"When targeted\" lines, not the calculator, as with Selfless Protector."
+ },
  "3617145e79607863": {
   "verdict": "ok",
   "by": "review:import-2 (its fix)",
@@ -3569,6 +3593,12 @@
   "at": "2026-10-21",
   "why": "NR standard: \"255 PTS SLAUGHTERBOUND\" (Berzerker Glaive), roster lines \"Slaughterbound Character 125\" and \"(3) Exalted Eightbound Infantry 130\". So the split 125 + 130 = 255 still holds after the stats rename."
  },
+ "3d3ed1fb83bb0a92": {
+  "verdict": "ok",
+  "by": "review:readings (its fix)",
+  "at": "2026-10-26",
+  "why": "The A 11 is right: Wahapedia's Slaughterbound has Lacerator and daemonic claw A 6. Relentless Rage (Berzerker Warband) gives +1 (A 7 in every list), Berzerker Glaive another +1 (A 8 here, marked), and Possessed Lord adds +3, so 11. [DEVASTATING WOUNDS] until the end of the phase, once per battle, at the start of the Fight phase: all correct. Making it the list's own reading is right. But listWhy says 'the datasheet’s A 7 makes 10'. The datasheet's A is 6 (DATASHEETS leaves A out because it varies by list), and 7 already includes the detachment's +1. The fix below corrects only the listWhy wording. Two related notes. (1) The datasheet reading set:{A:'10'} has Relentless Rage baked in, so a future Slaughterbound list in another detachment would get a wrong A 10. set:{A:'+3'} (as Battle Protocols writes set:{A:'+2'}) would be right for every list and would make this listWhy unnecessary. That is the owner's call, since it changes the display. (2) readOf fingerprints only Possessed Lord's text. Changing Berzerker Glaive's or Relentless Rage's text does not make A 11 or A 10 stale (tested on a scratch copy)."
+ },
  "3d58512771b1037d": {
   "verdict": "ok",
   "by": "review:round2",
@@ -3586,6 +3616,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability”: melee, Fight phase (which is its duration), [LANCE]."
+ },
+ "3d9592972b1a38ba": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file exactly (verify/readings.js line 68). Every listed condition is read, and the 'i' flag makes '\\bagainst [A-Z]' accept any word after 'against', which only makes more sentences conditional (stricter, no false positive today). Missed: a timing said only as 'this phase' / 'this turn' (\"When this unit is selected to shoot, you can use this ability. Ranged weapons … have [SUSTAINED HITS 1] this phase.\" is not flagged) and 'Once per battle/turn' with no other condition. The fix adds 'once per battle|turn|phase' and widens 'on a turn' to 'on a / this / that turn|phase'. With all the fixes applied, today's texts still give 0 false positives (the only new gap is Fleshmetal Fusion, a real one; see DEFENCE)."
  },
  "3daa4b0242b2507e": {
   "verdict": "ok",
@@ -4043,6 +4079,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.\""
  },
+ "45873337af43f29c": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 54). A list line ('- …') under a paragraph that does not end in ':' is read alone with an empty pre. REAL CASE: Battle Protocols (purge-goes-the-foe/cybernetica-datasmith-kastelan-robots). \"- Protector Protocol: Add 2 to the Attacks … in that unit.\" carries its condition in the paragraph above it (\"In your Command phase, … select one protocol\"). With its two mods removed in memory, the check does not flag it. It passes today only because the readings exist. The fix gives each list line the paragraph it comes under as its pre. With BACK ('that unit') it is then read as conditional, and the deletion test catches it."
+ },
  "4598357d894fb025": {
   "verdict": "ok",
   "by": "review:r18b-game",
@@ -4072,6 +4114,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "EFFECT “Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” Only “is eligible to” becomes “can”. The trigger “just after … Falls Back” is in “a turn in which it Fell Back” and the Movement tag, in the approved form of “Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.”"
+ },
+ "466219869d462b9f": {
+  "verdict": "ok",
+  "by": "review:readings-4 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file. Both additions work on their target cases: \"if that attack has the [LETHAL HITS] ability, that ability does not apply\", \"that enemy unit loses the Lethal Hits ability\", and \"Each time an attack targets this unit, add 1 to the Hit roll\" are no longer bonuses. They change no current sentence (0 diffs, 0 gaps). But each one drops the unit's OWN bonus in plausible wordings, and a dropped bonus is a hole in the gate. Tested, missed today: (1) The lost-ability test runs over the whole sentence and matches any \"lost … ability\". So \"If this model has lost one or more wounds, its melee weapons have the [LETHAL HITS] ability.\" gives nothing, and neither does the same sentence without the comma. \"… that enemy unit cannot use the Feel No Pain ability, and this unit's weapons have [LETHAL HITS]\", \"… have [LETHAL HITS], and enemy units within 6\\\" lose the Stealth ability\" and \"models in that unit have the Lethal Hits ability; if this model is destroyed, that unit loses this ability\" also give nothing. (2) The drawback test uses SELF, which also covers \"that unit\", \"that model\", \"it\" and \"your unit\", and it exempts only \"this unit/model makes\". So a friendly attack on the chosen enemy loses its +1: \"each time a friendly ADEPTUS ASTARTES model within 6\\\" makes an attack that targets that unit, add 1 to the Wound roll\" and \"each time a model in that unit makes an attack that targets that unit, add 1 to the Hit roll\" both give nothing. It also misses the enemy's \"a ranged attack targets this unit, add 1 to the Hit roll\" and \"an enemy unit makes a ranged attack that targets this unit\", which are stricter only. The fix does three things. It tests the drawback only on attacks that target this unit / this model / the bearer (ranged or melee too), unless a non-enemy unit or model makes the attack. It reads grants clause by clause, dropping a clause that says lose / lost / cannot use … ability (within 30 characters) or \"… does not apply\" in that clause or the next. And it does not split at a comma inside a bracket. Tested on 23 cases (all as expected, including \"[LETHAL HITS: non-MONSTER, non-VEHICLE]\" and \"[ASSAULT], [HEAVY] and [LETHAL HITS]\"). Over the 490 current sentences it gives 0 differences from the current code and 0 gaps, and the strip test is unchanged (157 flagged)."
  },
  "4663acd5db5646cf": {
   "verdict": "ok",
@@ -4270,6 +4318,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "opp."
+ },
+ "49b1b573bbc039b6": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Crusader’s Duty: each ranged attack adds 1 to the hit roll, so kind ranged, '+1 to hit rolls'. dmEffects turns that into hit:+1, so no calc is needed (Clever Know-wotz's calc:{hit:1} is equivalent). The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
  },
  "49c4b473ec9a4578": {
   "verdict": "ok",
@@ -5579,6 +5633,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
  },
+ "6218afa6d4939376": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 175). It is correct as a mechanism. A weapon ability is matched by name only, so a reading of [SUSTAINED HITS 1] covers a text granting [SUSTAINED HITS 2]. Most 'said' patterns are loose (/damage/, /\\bAP\\b/, /\\bsave\\b/), so a reading covers a bonus by sharing a word with it. That is acceptable only when readings are limited to the right kind, which is the abilityGaps fix."
+ },
  "62254becbc9f2e1e": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -6023,6 +6083,12 @@
   "at": "2026-10-16",
   "why": "Goes with item 71: the Movement phase entry is their turn only (Fire Overwatch)."
  },
+ "6add443b67e95080": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Atrapos’ Duty: each attack (any weapon, so kind 'all') that targets a TITANIC or TOWERING model may re-roll the hit roll and the wound roll. vs any [Titanic, Towering] is right. The note parses (dmEffects) to rrHit all and rrWound all, as the text says. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "6aeb0680cf62d2a1": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -6196,6 +6262,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "Skullmaster (GW): MOUNTED, CHARACTER, CHAOS, DAEMON, KHORNE, SKULLMASTER. Bloodcrushers: MOUNTED, CHAOS, DAEMON, KHORNE, BLOODCRUSHERS. Only BLOODCRUSHERS comes from the bodyguard."
+ },
+ "6e41ae1a49824413": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "The text in data.js (line 1202, and the row at line 3398) is word for word the same as Wahapedia (verify/.cache/waha/chaos-knights.txt line 143). The def is right on every point. Condition: \"While the bearer is using the Unnatural Fortitude ability\" becomes \"Using Unnatural Fortitude\", the Malefic Surge option. Being Empowered is already on the detachment line above it (\"Empowered, using Unnatural Fortitude: …\"). Restriction: \"an attack with a Damage characteristic of 1\" becomes \"vs attacks with Damage 1\". Effect: \"add 1 to any armour saving throw\" becomes \"+1 to armour saving throws\", which correctly leaves out the invulnerable save. The +1 Toughness is not in the def. It is a stat mark (T 12, from Fleshmetal Fusion), the same split other rows use. The line follows the app's pattern of \"<condition>: <effect>\", like Helm of Brazen Ire's \"-1 D to each attack allocated to this model\" and the \"Empowered, using Unnatural Fortitude: …\" line, and defOf is stamped. Strip test: remove the def alone and save+1 is flagged; remove the T mark alone and t+ is flagged; with both present there is no gap. Snapshot: the only change is this line under WHEN TARGETED (count 4 to 5) and the new popup."
  },
  "6e4d9278440f0b7f": {
   "verdict": "ok",
@@ -6436,6 +6508,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Export: demolisher cannon, armoured tracks, combi-bolter, Havoc launcher. 180 pts."
+ },
+ "72c779635829d860": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Matches the text (data.js = Wahapedia Magnus the Red): at the start of your opponent's Shooting phase, one enemy unit within 24\" of this PSYKER; until the end of the phase its ranged weapons have [HAZARDOUS]. The effect is on the enemy unit's weapons, whatever they shoot at. So a 'When targeted' line on every unit of the list (no needs) is the right place, and that includes Magnus himself (selfWhen; he can be shot by that unit too). It adds nothing the text does not say. Ranged only, opponent's Shooting phase, until the end of the phase: correct. There is no psychic roll in this text, so none is needed. Rendered in pubstomper (8 units) and mucho-mutantes (9 lines), with the 'When targeted' counts +1. Those are the only changes against main's own render."
  },
  "730222f6b64fa49c": {
   "verdict": "ok",
@@ -6971,6 +7049,12 @@
   "at": "2026-10-24",
   "why": "It is on Karanak’s own datasheet (GW Faction Pack, Wahapedia)."
  },
+ "7bb68f628e3ff944": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Paladin’s Duty, first half: 'weapons equipped by that model have [LETHAL HITS]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "7bc53c14d45dff9d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -7192,6 +7276,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "7f7675245e4f55a2": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "Matches the file. The one addition is \"an armou?r penetration (?:characteristic )?of -\\d\" on ap. Tested: \"have an Armour Penetration of -2\" and \"… characteristic of -3\" are read, and \"… of 0\" is not. Over all current sentences, nothing changes. Noted only: (1) \"an AP of -2\" is still not read. (2) It also matches a condition on the enemy's attack, e.g. \"an enemy attack … with an Armour Penetration of -2 or better against this unit\". That case is stricter, not a hole, and no current text has it."
  },
  "7f7e21b5f742aeab": {
   "verdict": "ok",
@@ -7865,6 +7955,12 @@
   "at": "2026-10-16",
   "why": "charge/charge roll(s)/declare(s/d) a charge/eligible to declare a charge/resolve a charge: all 11.02 terms."
  },
+ "8b24aca160a7f050": {
+  "verdict": "ok",
+  "by": "review:readings-2 (its fix)",
+  "at": "2026-10-26",
+  "why": "Today it classifies correctly. Of the 4 readings with weapon and set, only Possessed Lord is a one-off; Blitz Dem Gitz! (vs non-MONSTER/VEHICLE, always), Vengeance for the Omnissiah (after a VEHICLE dies, for the rest of the battle) and Battle Protocols (a protocol picked each Command phase) have no \"once per battle\" in their when, tag or text, so they rightly stay in the cells (\"8 (+6)\", \"/6\", \"(+2)\"). But the test is too wide. (1) /\\bonce per battle\\b/ also matches \"once per battle round\": \\b falls between \"battle\" and \" round\". data.js has 9 tags \"Once per battle round…\" and 13 such phrases in texts, and the test already returns true for Necromechanic (when \"once per battle round\", a guard, so no effect today). A future per-round reading with weapon and set would leave the cell wrongly. (2) Matching the whole ability text catches an ability that has an always-on bonus and a separate once-per-battle sentence. Possessed Lord says it in both when and tag, so the text adds nothing that tag and when do not already cover. Every once-per-battle ability in data.js carries a \"Once per battle\" tag, so dropping the text test misses none of today's readings. Not covered either way: \"twice per battle\" (tag \"Once per turn, twice per battle, per unit\") is not a one-off by this rule; the owner's rule says once per battle, so that is consistent."
+ },
  "8b528b2587553581": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -8351,6 +8447,12 @@
   "at": "2026-10-24",
   "why": "It is on Skulltaker’s own datasheet (“Each time this model makes an attack”)."
  },
+ "939cee318ff5b336": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Warden’s Duty, first half: 'weapons … have [SUSTAINED HITS 1]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "93dcd4f8af862830": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -8602,6 +8704,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Ranged-attack modifier; TITANIC, so no Fire Overwatch: your Shooting phase only."
+ },
+ "9879f287d8dbe416": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Soul Sight (data.js = Wahapedia Librarian in Phobos Armour): 'Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].' That covers every ranged attack against that unit, whoever makes it. So an aura with no needs and no notSelf is right: the app gives it to every unit of the list, the Librarian's own included. The nerf-when render confirms this: every unit's ranged footnotes get it, plus the Damage-tab option. Those are the only changes against main's own render. 'Your Shooting phase … (its psychic roll)': right. It adds nothing; it leaves out only 'if this unit is not battle-shocked', which could optionally be added to when."
  },
  "988890d0abd7b673": {
   "verdict": "ok",
@@ -9209,6 +9317,12 @@
   "at": "2026-10-16",
   "why": "Crimson King section lists \"Impossible Form (Psychic)\"."
  },
+ "a21b3d1d582dd504": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 82). Every phrasing the earlier review named is now read: improve the Strength/AP/Damage, +1 Damage, re-roll the Damage roll, and +N S/AP/D. Missed, tested: (1) a second bonus in a list: 'you can re-roll Hit rolls and Wound rolls' and 're-roll the Hit roll and the Wound roll' give rr-hit only, '+1 to Hit and Wound rolls' gives hit+1 only, 'add 1 to the Hit and Wound rolls' gives nothing, and '+1 A, S and D' gives a+ only. So a reading that says only one of them passes. (2) 're-roll one damage roll' (real text: Advanced Firepower, Caladius; its reading happens to say it). (3) Numbers written as words: 'add one to the Attacks and Strength', 'improve the Weapon Skill … by one'. (4) '+1 WS/BS'. (5) 'have a Damage characteristic of 3'. The fix covers all five, and the wound+1 'said' also accepts '+1 to hit and wound'. Still not read, noted only: 'an Armour Penetration of -2'."
+ },
  "a21b919c5b85d98b": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -9665,6 +9779,12 @@
   "at": "2026-10-21",
   "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
  },
+ "a98587ee506d5ca4": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Errant’s Duty: ranged weapons of the model have [ASSAULT] (kind ranged, note [ASSAULT]). The re-roll of Advance rolls is not an attack effect, so leaving it out says nothing extra. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "a9aa41aeb7dd564c": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -9917,6 +10037,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your Shooting phase\"."
  },
+ "ae0fc45e1ad36ce8": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "For a one-off weapon reading, the footnote gets the weapon and its numbers before the note: \"+3 A\" for a relative value, \"A 6\" for a set one. The rendered line is exactly what the owner asked for: \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\". It appears once per unit, deduplicated after footMod. Other readings pass through unchanged. Minor, non-blocking: a future one-off weapon reading with no note would print \"… +3 A undefined\". Every weapon-and-set reading in data.js has a note today. [m.weapon, …, m.note].filter(Boolean).join(' ') would guard it."
+ },
  "ae4ba2712c859010": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -9946,6 +10072,12 @@
   "by": "review:oioioi (its fix)",
   "at": "2026-10-16",
   "why": "Warpflamer [IGNORES COVER, TORRENT] and warpflame pistol [IGNORES COVER, PISTOL, TORRENT] have it natively (BSData/datasheet); only Malefic Curse and the soulreaper cannon get it from \"Ranged weapons ... (excluding CHARACTERS) have the [IGNORES COVER] ability\". As written, losing the Icon bearer would wrongly strip it from the flamers."
+ },
+ "aea5e0927c6bbdfd": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "More Dakka (Wahapedia Big Mek in Mega Armour): 'This unit’s ranged attacks have [Ignores Cover]'. Once the Big Mek leads Meganobz, that is the whole attached unit. In ooga-booga the Meganobz carry Kombi-weapons (Shoota, Kill Shot, Point Blank), and BSData/New Recruit mark IGNORES COVER only on the Big Mek's Kustom Mega-blasta and Tellyport Blasta. So the 'Every ranged attack' footnote is needed there. In the other list (shooty) the Meganobz have only Twin Killsaws, so they have no ranged weapons and need no footnote. The difference is caused by the list; the listWhy is accurate. The riled-up [SUSTAINED HITS 1] reading is now derived on the datasheet and still named in ooga-booga's list ('More Dakka'). The resolved output is unchanged from main."
  },
  "aeaac06c75e1870c": {
   "verdict": "ok",
@@ -10799,6 +10931,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”: your turn."
  },
+ "be4e410bd7f1109e": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Paladin’s Duty, second half: 'melee weapons … have [LANCE]', so kind melee is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "be4ed110f239644e": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -11213,6 +11351,12 @@
   "at": "2026-10-22",
   "why": "“your Shooting phase”: your turn."
  },
+ "c5feada01b965fc1": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 123). Footnotes, auras and guards named by the ability, or by an option it names in bold, are read. Today's bold matches are Synapse for Domination of the Hive Mind and Neurocytes, Singular Purpose for Protean Purpose, and Shroudpsalm for Canticles, all genuine. Also read: def/calcDef/defCalc, the Rules-line Feel No Pain, and the marks. ab.riled and ab.damaged are not read, which is fine: Damaged is covered by its mods ('-1 to hit rolls') and Super Runts' riled flag gives no bonus sentence. The defSaid it builds is not what abilityGaps checks defences against (see abilityGaps)."
+ },
  "c604d625c195eeab": {
   "verdict": "ok",
   "by": "review:defilers2",
@@ -11224,6 +11368,12 @@
   "by": "review:import-lists",
   "at": "2026-10-23",
   "why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+ },
+ "c634c20bf40c94c7": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "A weapon row shows a reading in its numbers only when it changes that weapon (weapon and set) and is not a one-off. It is used in all three places that used to test m.weapon && m.set: weaponBlock's cell, searchIndex's search line (e.vm), and the footnote filters in weaponTable and unitWeapons. So a reading is shown in the row or in the footnotes, never both and never neither. The Damage tab does not use it (dmEffects/line 1913 still reads m.set), so Possessed Lord stays offered there, and calc.js adds a \"+3\" set to the list's A. Rendered: Blitzkannon, Omnissian axe, Incendine combustor and Twin Kastelan fist cells are unchanged against main; only the Possessed Lord cells change (7/10 to 7, 8/11 to 8). Depends on oneOffMod (see its fix)."
  },
  "c638e54714706332": {
   "verdict": "ok",
@@ -12713,6 +12863,12 @@
   "at": "2026-10-16",
   "why": "\"In your opponent’s Shooting phase, when an enemy unit has shot\" = Shooting, their turn."
  },
+ "e0b9b1e4db33940c": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 111). The roll bonuses (hit+1, wound+1, all three re-rolls, crit) need a reading with no condition. Characteristics and weapon abilities are left to the weapon marks, which is right because the cell shows them. Tested: 'You can re-roll Hit rolls for attacks made by this unit' with no condition is flagged. Knight Diabolus ('Improve the Weapon Skill … by 1', no condition) is covered by its WS mark."
+ },
  "e0c2948bc46a034a": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -12802,6 +12958,12 @@
   "by": "review:exiled-units (its fix)",
   "at": "2026-10-24",
   "why": "For every other LEGIONES DAEMONICA unit it is right: Stealth (24.33, the benefit of cover against ranged attacks), ranged, within 6\". But Prince of Darkness is a GW (Aura), and 22.01 says “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability”. The Daemon Prince is itself a friendly LEGIONES DAEMONICA unit, so it has Stealth too. Its WHEN TARGETED line in the snapshot leaves it out, because app.html (shields, line ~4359) skips the source unit (src !== u). The aura entries mark this with selfAlways and selfWhen: “Own aura”. The guard needs the same, and app.html must honour it (the other reviewer owns that code)."
+ },
+ "e2aa76b6ab696511": {
+  "verdict": "ok",
+  "by": "review:readings-3",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 76). Tested: qualified brackets ([LETHAL HITS: non-MONSTER/VEHICLE], [ANTI-VEHICLE 4+: excluding TITANIC], [Sustained Hits 1: non-Monster/Vehicle]), [SUSTAINED HITS D3], 'the [ASSAULT] and [HEAVY] abilities', 'the Lethal Hits and Sustained Hits 1 abilities', bare 'have Sustained Hits 1' and [TWIN-LINKED] are all read. Notes, not blocking: (1) WA, which this builds on and which is not under review, has 'melta \\d+' and 'rapid fire \\d+', so [RAPID FIRE D3] and [MELTA D3] are not read. (2) The bare 'has/have the X' form also reads an enemy's ability ('if it has the Lethal Hits ability, that ability does not apply'), which is a possible future false positive. (3) 'hazardous' also matches inside [SUPA-HAZARDOUS], a drawback rather than a bonus. That one is unconditional today, so it has no effect."
  },
  "e2e4e12454597fc1": {
   "verdict": "ok",
@@ -13277,6 +13439,12 @@
   "at": "2026-10-23",
   "why": "\"While a friendly BLOOD LEGIONS unit is within 6\"... add 1 to the Attacks characteristic of melee weapons\": only melee attacks change, in either player's Fight phase."
  },
+ "ea29a02818d7e6e6": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "Matches the file. Tested: [MELTA D3], [RAPID FIRE D3], [RAPID FIRE D6], [MELTA 2], \"the Melta D3 ability\" and \"[RAPID FIRE 1] and [MELTA D3]\" are all read (wa:melta / wa:rapid fire). [HAZARDOUS] and \"[ASSAULT] and [HAZARDOUS]\" are still read. [SUPA-HAZARDOUS] and \"Supa-Hazardous ability\" (any case) are no longer read, and \"[SUPA-HAZARDOUS] and [SUSTAINED HITS 1]\" still gives sustained hits. Over all 490 current sentences, the only change is Supa-glowy Fing, which is no longer read as a hazardous grant. That is right: it is a drawback and has no condition, so there are no gaps either way."
+ },
  "ea4ea78104a4a851": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -13391,6 +13559,12 @@
   "at": "2026-10-23",
   "why": "Enemy units shoot in their Shooting phase and fight in either Fight phase; your units shoot in yours and fight in either: either turn for both phases."
  },
+ "ec0667b0ddf53bcc": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 97). Every phrasing the earlier review named is read: -1 D, -1 AP, worsen the AP, 4+ InSv, subtract 1 from the Damage (allocated to or made against), that attack's Hit roll, Stealth, +1 to save rolls, and an enemy unit's -1 to hit. A REAL TEXT IS MISSED: Fleshmetal Fusion (infernal-lance/knight-ruinator-fleshmetal-fusion) says 'add 1 to any armour saving throw made against that attack' while using Unnatural Fortitude against Damage 1 attacks. 'any' is not accepted, the ability has no reading, and the check says 0 gaps. So the commit's claim of 'no gap in today's texts' is wrong. Also missed, tested: 'reduce the Damage characteristic … by 1', 'halve the Damage', 'is made against this unit, subtract 1 from the Hit roll', a friendly aura ('targets a friendly ADEPTUS ASTARTES unit within 6\", subtract 1 from the Damage'), 'have the Benefit of Cover', and 'add 1 to the Toughness characteristic' (Battle Protocols' Aegis Protocol; its def says it). The fix covers these: save+1 accepts any/an/one, dmg-1 accepts 'reduce … by 1' and friendly units, a new dmg-half, hit-vs/wound-vs accept 'made against', stealth accepts benefit of cover, and a new t+. Still not read, noted only: 'a Save characteristic of 2+' and '-1 Strength of the attack'. With the fix, the gate shows Fleshmetal Fusion as a new gap, and the owner must give it a reading or record it."
+ },
  "ec06f99eb0858c2b": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -13408,6 +13582,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "Knight Destrier datasheet (GW faction pack, Wahapedia, NR): W 18 and \"DAMAGED: 1-6 WOUNDS REMAINING ... While this model has 1-6 wounds remaining\". Sanctuary does not change W, so damaged '1-6' with W 18 matches."
+ },
+ "ec855bc56c000d34": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 79). It removes the earlier false positive (an unrelated earlier sentence's condition). But a sentence that carries an earlier condition with none of these words is now treated as unconditional, and for a weapon ability or characteristic that means no reading is required. Missed: \"Once per battle, at the start of the Fight phase, this unit can use this ability. Its melee weapons have +1 A.\" ('Its' fails the '^it\\b' test) and \"… you can use this ability. Ranged weapons … have [SUSTAINED HITS 1] this phase.\" The fix adds '^its?', '^their' and 'this/that phase|turn'. The setup-sentence case is fixed in abilityGaps. No current sentence depends on BACK: of 153 attack sentences, none relies on an earlier sentence's condition, so the change has no effect today."
  },
  "ecae1981e543f482": {
   "verdict": "ok",
@@ -13678,6 +13858,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "WHEN \"a friendly unengaged GRETCHIN unit\"; TARGET: \"That GRETCHIN unit.\""
+ },
+ "f2aff3eea02b5c88": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Checked line by line against main's. Readings are composed in the documented order: army rules on the unit's Rules line (case- and apostrophe-insensitive), each datasheet part, the first matching enhancement or upgrade across the list's detachments, the detachment rule and moreRules whose needs (all/any/none/rule) the resolved unit meets, then the entry's own. An entry list with names replaces the whole list in its order; null gives none. readOf, readBy and listWhy are stripped from every reading; READ keys are kept off the datasheet copy and the entry rest. Every one of the 155 datasheet readings reaches at least one unit (trace). The resolved lists equal main's except the 7 new readings. Every other table is equal once reading keys are stripped. Minor, non-blocking: (a) enhancements are matched by strict ===, not nm(), so an apostrophe variant would silently drop an enhancement's readings (none today); (b) a misspelt name in an entry's list resolves to nothing in resolveArmies, but verify/tables.js throws on it (tested); (c) helpers.js CODE_RULES.resolveArmies says 'fingerprints (readOf too) and readBy hidden' and does not name listWhy, which is also hidden."
  },
  "f2d79da589c98126": {
   "verdict": "ok",
@@ -14249,11 +14435,23 @@
   "at": "2026-10-16",
   "why": "Matches NR model lines and counts (warpflamer x3, CCW x4 = soulreaper + 3 warpflamers; Aspiring Sorcerer: Force weapon, Malefic Curse, Warpflame pistol). NR does not say who holds the Icon; any Rubric Marine may."
  },
+ "fe6402b8b9c6a250": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Warden’s Duty, second half: 'ranged weapons … have [IGNORES COVER]', so kind ranged is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "fe6f0a3e272493d8": {
   "verdict": "ok",
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Wahapedia and NR: \"War Cry (Once per battle, per army)\"."
+ },
+ "fe8c045c577df1cf": {
+  "verdict": "ok",
+  "by": "review:readings-3 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file (line 145). Two problems. (1) Defences are checked against 'all', which includes the attack footnotes, so any attack reading of the ability that mentions 'damage', 'AP' or 'save' covers a defence (dmg-1's said is /damage/, ap-worse's is /\\bAP\\b/). That contradicts the module doc ('Said by its \"When targeted\" readings'). The fix checks defences against r.defSaid plus the marks, and today's data still passes with it. (2) The header's own example (line 52-53: \"At the start of the Fight phase, select one enemy unit. Melee weapons … have [PRECISION].\") is no longer flagged, because the second sentence has no back-reference. The fix lets a setup sentence ('can/may use this ability', 'select one') carry its condition to the sentences after it. The riled branch, the na skip and the keyword-option skip are right."
  },
  "feca44625d46ab7f": {
   "verdict": "ok",

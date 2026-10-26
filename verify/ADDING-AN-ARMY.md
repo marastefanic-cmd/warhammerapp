@@ -44,9 +44,12 @@ stratagem's gist) is read from `verify/sources/hand/<id>.json`, marked by whom; 
 `verify/out/from-json-<id>.md`. A list without a PDF is checked by `verify/nr.js` against its export (base sizes).
 
 The hand pass (section 3) goes into the same file, so a re-run gives the same data.js: `gists` (a stratagem's `gist`, `def` with
-their fingerprints `gistOf` / `defOf`, and `mod`), `rules` (a detachment rule's `calcMods`) and `units` (per unit entry: `defs` for
-its abilities, `mods`, `aura`, and `stats` values a rule of the list gives that the export does not show). A new AI-written
-line gets its fingerprint from `node verify/tables.js --stamp` (after checking it against its text), copied into the file.
+their fingerprints `gistOf` / `defOf`, and `mod`), `rules` (a detachment rule's `calcMods`), `readings` (the readings by the row they
+read: `datasheets` by name, `rules`, `enhancements`, each `{ mods, aura, guard }` in its order, each reading with its `readOf`;
+a datasheet not there gets data.js's row, else what verify/derive.js derives from its words) and `units` (per unit entry: `defs`
+for its abilities, its own `mods` / `aura` / `guard` (or, where it shows its rows' readings in another order, its whole list with
+their names), and `stats` values a rule of the list gives that the export does not show). A new AI-written line or reading gets
+its fingerprint from `node verify/tables.js --stamp` (after checking it against its text), copied into the file.
 The run ends with `verify/tables.js --write`, `--expand` and `--write` again.
 
 ## 2. A new faction or detachment
@@ -75,9 +78,11 @@ Add the faction's catalogue and pack to `verify/sources/factions.json` if `add-a
 
 Each line of `import-<id>.md`, written in `data.js` (field reference above `ARMIES`; `docs/tables.md`): an ability's
 `ph` / `turn` / `turns` / `def` / `tag` / `who` on its datasheet's row in `DATASHEETS` (every list with that datasheet
-shows them), `mods`, `aura`, `na`, `kwNote`, `ptsNote` on the list's entry in `ARMIES`. Or write them in the list's
-block in the old form (`node verify/tables.js --expand`, edit, `node verify/tables.js --write`). A new `gist` or `def`:
-`node verify/tables.js --stamp` after checking it against its text (its fingerprint):
+shows them), `na`, `kwNote`, `ptsNote` on the list's entry in `ARMIES`; `mods`, `aura`, `guard` on the row of the rule
+they read (`docs/tables.md`, Readings: write them on the unit in the old form and `--write` moves them). Or write them in
+the list's block in the old form (`node verify/tables.js --expand`, edit, `node verify/tables.js --write`). A new `gist`,
+`def` or reading: `node verify/tables.js --stamp` after checking it against its text (its fingerprint). (The gate step
+`readings` lists an ability whose words give a bonus under a condition and that has no reading.) The fields:
 
 - `ph` / `turn` / `turns`: the phase(s) and turn an ability's words name ("In your Shooting phase" →
   `ph:['shooting'], turn:'your'`). No phase words and no moment: leave it untagged.

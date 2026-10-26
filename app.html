@@ -3983,7 +3983,7 @@ function searchIndex(){
     const s1 = weaponStatText(w, kind);
     const key = title + '|' + s1 + '|' + u.name;
     const kws = (w.hunter ? [HUNTER_KW] : []).concat(w.kw);
-    const vm = (u.mods || []).find(m => m.weapon === w.name && m.set);
+    const vm = (u.mods || []).find(m => m.weapon === w.name && rowMod(m, u));
     if(wmap.has(key)){ wmap.get(key).units.push(u); continue; }
     const e = { kind:'Weapons', title, s1, units:[u], kws, vm, who:w.who, hay:hay(title, kind, 'weapon', kws.join(' '), u.name, u.short, w.who), act:{ unit:u.id, sec:kind } };
     wmap.set(key, e); add(e);
@@ -4162,7 +4162,7 @@ function weaponBlock(it, keys, mods, u){
   const w0 = it.profiles[0];
   // an ability that changes this weapon against some targets: one row, the value and the change in the cell
   // ("8 (+6)", as the rule says "+6 A"; a set value shows as "8/14")
-  const vm = !it.group && mods.find(m => m.weapon === w0.name && m.set);
+  const vm = !it.group && mods.find(m => m.weapon === w0.name && rowMod(m, u));
   if(vm){
     const cells = keys.map(k => vm.set[k] == null ? '<span>' + gv(w0, k) + '</span>' : /^[+-]/.test(vm.set[k]) ? '<span>' + gv(w0, k) + '<i class="hb">(' + esc(vm.set[k]) + ')</i></span>'
       : '<span>' + gv(w0, k) + '<i class="alt">/' + esc(vm.set[k]) + '</i></span>');
@@ -4353,9 +4353,17 @@ function weaponRows(list, keys, mods, u, kind){
   return h;
 }
 // one kind of weapon for one unit (the Ranged and Melee screens)
+// a footnote that changes one weapon's numbers (set) is shown in that weapon's row ("8 (+6)", "7/10"), unless it is a one-off the
+// player uses (oneOffMod: once per battle, Possessed Lord): its numbers are not the weapon's, so the row keeps the profile's value and
+// the footnotes under the weapons say it, its numbers first ("Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] …"); the
+// Damage tab offers it as before
+const oneOffMod = (m, u) => { const ab = ((u && u.abilities) || []).find(x => x.name === m.from);
+  return /\bonce per battle\b(?! round)/i.test([m.when, ab && ab.tag].join(' ')); };
+const rowMod = (m, u) => !!(m.weapon && m.set) && !oneOffMod(m, u);
+const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note }) : m;
 function weaponTable(list, kind, mods, u){
   // the same footnote from several units (three Meks' Clever Know-wotz) once, as on the datasheet
-  const seen = new Set(), notes = mods.filter(m => !(m.weapon && m.set)).filter(m => { const k = [m.from, m.when, m.note].join('|'); return !seen.has(k) && seen.add(k); });
+  const seen = new Set(), notes = mods.filter(m => !rowMod(m, u)).map(m => footMod(m, u)).filter(m => { const k = [m.from, m.when, m.note].join('|'); return !seen.has(k) && seen.add(k); });
   const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
   return '<div class="wt ' + kind + '">' + weaponRows(list, kind === 'ranged' ? RANGED_KEYS : MELEE_KEYS, mods, u, kind) +
     (notes.length ? '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>' : '') + '</div>';
@@ -4383,9 +4391,9 @@ function unitWeapons(u){
   const damaged = new Set(u.abilities.filter(ab => ab.damaged).map(ab => ab.name));
   for(const x of mr.concat(mm)){
     const k = key(x);
-    if((x.weapon && x.set) || seen.has(k) || damaged.has(x.from)) continue;
+    if(rowMod(x, u) || seen.has(k) || damaged.has(x.from)) continue;
     seen.add(k);
-    notes.push(Object.assign({}, x, { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
+    notes.push(Object.assign({}, footMod(x, u), { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
   }
   const hasHunter = m.some(w => w.hunter) && mm.some(x => x.hunter);
   // in an attached unit a footnote counts for every model (19.04): say so, or it reads as the last chip's;
