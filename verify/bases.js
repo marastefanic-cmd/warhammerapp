@@ -35,7 +35,7 @@ const src = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
 const D = T.evaluate(src), R = T.read(src), S = R.S ? R.S.value : {};
 // which datasheet (and row of it) each stats row of each unit comes from
 const from = new Map();
-T.resolveArmies(R.A.value, S, R.order, { trace: (a, u, kind, n, sid, j) => { if (kind === 'stats') from.set(a.id + '/' + u.id + '/' + n, sid); } });
+T.resolveArmies(R.A.value, S, R.order, R.factions, { trace: (a, u, kind, n, sid, j) => { if (kind === 'stats') from.set(a.id + '/' + u.id + '/' + n, sid); } });
 
 const fails = [], rows = [], used = new Set();
 const fail = (where, msg) => fails.push(where + ': ' + msg);

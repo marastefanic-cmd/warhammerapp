@@ -183,7 +183,7 @@ const CORE_STRATAGEMS = [
     when:'End of your opponent’s Movement phase.',
     target:'One friendly **unengaged** unit (excluding **TITANIC** units).',
     effect:'Your unit shoots using **snap shooting**.' },
-  { id:'smokescreen', gist:'Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…', gistOf:'041dc9b7', defCalc:{ cover:true }, name:'Smokescreen', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Smoke'] },
+  { id:'smokescreen', gist:'Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…', gistOf:'041dc9b7', defCalc:{ cover:true }, readOf:'041dc9b7', name:'Smokescreen', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Smoke'] },
     when:'Start of your opponent’s Shooting phase.',
     target:'One friendly **SMOKE** unit.',
     effect:'Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08).' },
@@ -232,7 +232,7 @@ const FACTIONS = {
             effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
           { id:'armed-to-da-teef', gist:'Your unit’s attacks can re-roll hit rolls of 1, or re-roll hit rolls if your unit is riled up.', gistOf:'602b09cc', name:'Armed to da Teef', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ any:['Meganobz','Nobz'] },
             mod:{ kind:'all', when:'Your Shooting phase or the Fight phase', note:'can re-roll hit rolls of 1 (riled up: can re-roll hit rolls)',
-              pick:[{ name:'Hit rolls of 1', note:'re-roll hit rolls of 1' }, { name:'Riled up: every hit roll', note:'re-roll hit rolls' }] },
+              pick:[{ name:'Hit rolls of 1', note:'re-roll hit rolls of 1' }, { name:'Riled up: every hit roll', note:'re-roll hit rolls' }] }, readOf:'602b09cc',
             when:'Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.',
             target:'That **MEGANOBZ**/**NOBZ** unit.',
             effect:'Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**.' },
@@ -253,12 +253,12 @@ const FACTIONS = {
           // D6 is the rules' (said in the note) and not counted: the Damage tab shows damage dealt
           mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6)', note:'1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)',
             // label: what the Damage tab's chip says (the owner's call: the effect, not the dice results); name stays the key
-            pick:[{ name:'1–2', label:'+1 A', note:'+1 A' }, { name:'3–4', label:'+2 S', note:'+2 S' }, { name:'5–6', label:'+1 AP', note:'+1 AP' }, { name:'1–2 and 3–4', label:'+1 A & +2 S', note:'+1 A, +2 S' }, { name:'1–2 and 5–6', label:'+1 A & +1 AP', note:'+1 A, +1 AP' }, { name:'3–4 and 5–6', label:'+2 S & +1 AP', note:'+2 S, +1 AP' }] },
+            pick:[{ name:'1–2', label:'+1 A', note:'+1 A' }, { name:'3–4', label:'+2 S', note:'+2 S' }, { name:'5–6', label:'+1 AP', note:'+1 AP' }, { name:'1–2 and 3–4', label:'+1 A & +2 S', note:'+1 A, +2 S' }, { name:'1–2 and 5–6', label:'+1 A & +1 AP', note:'+1 A, +1 AP' }, { name:'3–4 and 5–6', label:'+2 S & +1 AP', note:'+2 S, +1 AP' }] }, readOf:'d6aed0ae',
           text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
           table:[['1–2','+1 **A**'],['3–4','+2 **S**'],['5–6','+1 **AP**']] },
         enhancements:[
           { name:'Cybork Boosta', pts:10, text:'**BIG MEK/MEK** model only. This model has +2" **M**.' },
-          { name:'Dreadherder', pts:30, text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.' }
+          { name:'Dreadherder', pts:30, text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.', aura:[{ kind:'all', needs:{ all:['Faction: Orks','Walker'] }, when:'Picked by the Dreadherder', selfWhen:'Picked by the Dreadherder for its own unit', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder', lasts:'turn', readOf:'2373b0a6' }] }
         ],
         stratagems:[
           { id:'crazed-rampage', gist:'An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…', gistOf:'263b4efe', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
@@ -301,7 +301,7 @@ const FACTIONS = {
           // mortal wound, while a model of it is on the battlefield ([TORRENT] hits are not hit rolls: the FAQ);
           // shield.def: the "When targeted" line of each unit it protects (their Shooting phase only), with the FAQ quoted
           { id:'grot-shields', shield:{ protects:{ all:['Faction: Orks','Infantry'], none:['Gretchin'] }, by:{ all:['Gretchin'] },
-              def:'their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”' },
+              def:'their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”' }, readOf:'049168ae',
             gist:'An enemy unit targets an ORKS INFANTRY unit (excluding GRETCHIN units) within 3" of your GRETCHIN unit: if a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', gistOf:'049168ae', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
             note:'Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”',
             when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).',
@@ -313,7 +313,7 @@ const FACTIONS = {
       'shoota-boyz': {
         name:'Shoota Boyz', dispositions:['Purge the Foe'], dp:1,
         rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp' }, needs:{ all:['Faction: Orks','Infantry'] },
-          mod:{ kind:'ranged', when:'Riled up', cond:'riled', note:'+3" range' },
+          mod:{ kind:'ranged', when:'Riled up', cond:'riled', note:'+3" range' }, readOf:'48632a72',
           text:'Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3" **R**.' },
         enhancements:[
           { name:'Supa-glowy Fing', pts:25, text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.\n**[SUPA-HAZARDOUS]:** Each time a unit is **selected to shoot**, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step.' },
@@ -321,17 +321,17 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'kustom-dakka', gist:'Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).', gistOf:'d592ba36', name:'Kustom Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
-            mod:{ kind:'ranged', when:'Your Shooting phase, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', vs:{ none:['Monster','Vehicle'] } },
+            mod:{ kind:'ranged', when:'Your Shooting phase, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', vs:{ none:['Monster','Vehicle'] } }, readOf:'d592ba36',
             when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
             target:'That **ORKS INFANTRY** unit.',
             effect:'Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**.' },
           { id:'glowin-dakka', gist:'Your unit’s ranged attacks against a unit within 9" have +1 AP.', gistOf:'5f6a7b0e', name:'Glowin’ Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
-            mod:{ kind:'ranged', when:'Your Shooting phase, vs targets within 9"', note:'+1 AP' },
+            mod:{ kind:'ranged', when:'Your Shooting phase, vs targets within 9"', note:'+1 AP' }, readOf:'5f6a7b0e',
             when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
             target:'That **ORKS INFANTRY** unit.',
             effect:'Your unit’s ranged attacks that target a unit within 9" have +1 **AP**.' },
           { id:'never-enough-dakka', gist:'Your unit’s ranged attacks have [SUSTAINED HITS 1].', gistOf:'e564f4a2', name:'Never Enough Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
-            mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1]' },
+            mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1]' }, readOf:'e564f4a2',
             when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
             target:'That **ORKS INFANTRY** unit.',
             effect:'Your unit’s ranged attacks have **[SUSTAINED HITS 1]**.' }
@@ -342,7 +342,7 @@ const FACTIONS = {
         rule:{ name:'Get Stuck In', ph:['fight'], turn:'either', needs:{ all:['Faction: Orks'] },
           text:'Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**.' },
         enhancements:[
-          { name:'Headwoppa’s Killchoppa', pts:15, text:'**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.' },
+          { name:'Headwoppa’s Killchoppa', pts:15, text:'**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.', mods:[{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP', from:'Headwoppa’s Killchoppa', readOf:'c965af8e', readBy:'derive' }] },
           { name:'Da Boss is Watchin’', pts:25, text:'**ORKS** model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is **riled up** until the start of your next turn.' },
           { name:'Kunnin’ But Brutal', pts:20, text:'**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**.' },
           { name:'Follow Me Ladz', pts:20, text:'**ORKS** model only. This unit has +2" **M**.' }
@@ -353,7 +353,7 @@ const FACTIONS = {
             target:'That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.',
             effect:'Roll one D3:\n- Your unit suffers a number of **mortal wounds** equal to the result.\n- Your unit is no longer **battle-shocked**.' },
           { id:'hit-em-harder', gist:'Your unit’s melee attacks have [LETHAL HITS].', gistOf:'8f79aca5', name:'Hit ’Em Harder', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks'] },
-            mod:{ kind:'melee', when:'Fight phase', note:'[LETHAL HITS]' },
+            mod:{ kind:'melee', when:'Fight phase', note:'[LETHAL HITS]' }, readOf:'8f79aca5',
             when:'Fight phase, when a friendly **ORKS** unit is **selected to fight**.',
             target:'That **ORKS** unit.',
             effect:'Your unit’s melee attacks have **[LETHAL HITS]**.' },
@@ -378,7 +378,7 @@ const FACTIONS = {
       'wreckas': {
         name:'Wreckas', dispositions:['Priority Assets'], dp:1,
         rule:{ name:'Wreckin’ and Lootin’', ph:['shooting'], turn:'your', needs:{ any:['Breaka Boyz','Flash Gitz','Tankbustas'] },
-          mod:{ kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', cond:'objective', note:'can re-roll hit rolls of 1' },
+          mod:{ kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', cond:'objective', note:'can re-roll hit rolls of 1' }, readOf:'13d6a292',
           text:'In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**.' },
         enhancements:[
           { name:'Kaptin’s Hat', pts:25, text:'**LEADER: FLASH GITZ**\n**BIG MEK**/**WARBOSS INFANTRY** model only. When both players have deployed their armies, you can redeploy up to three friendly **ORKS INFANTRY** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in strategic reserves.' },
@@ -423,7 +423,7 @@ const FACTIONS = {
         ],
         // the Damage tab's reading (read by it alone): the Quality that changes attacks is listed as not counted (one re-roll a selection:
         // the calculator re-rolls no single die)
-        calcNc:[{ kind:'all', from:'Code Chivalric', when:'Quality 1–2 (…with our martial valour risen over all)', note:'each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll', why:'one re-roll: the calculator re-rolls no single die' }] },
+        calcNc:[{ kind:'all', from:'Code Chivalric', when:'Quality 1–2 (…with our martial valour risen over all)', note:'each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll', why:'one re-roll: the calculator re-rolls no single die' }], readOf:'285e3402' },
       // needs: a Bondsman ability only ever affects an ARMIGER model, so without one in the army it does nothing
       { name:'Bondsman', ph:['command'], turn:'your', needs:{ any:['Armiger'] },
         text:'Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.' },
@@ -447,7 +447,7 @@ const FACTIONS = {
           def:'Feel No Pain 6+', defOf:'3ad29b72',
           text:'**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound.' },
         enhancements:[
-          { name:'Bringer of Justice', pts:30, text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' },
+          { name:'Bringer of Justice', pts:30, text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.', mods:[{ kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Bringer of Justice', always:true, readOf:'d1f22b85' }] },
           { name:'Hunter’s Eye', pts:25, text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' },
           { name:'Mysterious Guardian', pts:35, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' },
           { name:'Sanctuary', pts:20, text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
@@ -457,7 +457,7 @@ const FACTIONS = {
             when:'Any phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.',
             effect:'Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6.' },
-          { id:'strength-from-exile', gist:'Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.', gistOf:'407f79f0', mod:{ kind:'all', when:'No other friendly unit within 9"', note:'re-roll hit and wound rolls of 1 (your Shooting or the Fight phase)', calc:{ rrHit:'1s', rrWound:'1s' } }, name:'Strength from Exile', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Imperial Knights'] },
+          { id:'strength-from-exile', gist:'Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.', gistOf:'407f79f0', mod:{ kind:'all', when:'No other friendly unit within 9"', note:'re-roll hit and wound rolls of 1 (your Shooting or the Fight phase)', calc:{ rrHit:'1s', rrWound:'1s' } }, readOf:'407f79f0', name:'Strength from Exile', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Imperial Knights'] },
             when:'Your Shooting phase or the Fight phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.' },
@@ -517,7 +517,7 @@ const FACTIONS = {
           { kind:'melee', from:'Decapitating Strikes', limit:'blessing', lasts:'round', when:'Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit', note:'[DEVASTATING WOUNDS]', vs:{ any:['Infantry'] } },
           { kind:'melee', from:'Total Carnage', limit:'blessing', lasts:'round', when:'Blessing of Khorne active this battle round', note:'fighting back: its models destroyed by melee attacks before it fought fight on a 4+, then are removed', onDeath:{ roll:4 }, calc:{} }
         ],
-        limit:{ blessing:{ n:2, what:'Blessings of Khorne', more:[{ strat:'skulls-for-the-skull-throne', n:1 }, { rule:'Adamantine Avalanche', n:1 }, { enhancement:'Archslaughterer', all:true }] } } }
+        limit:{ blessing:{ n:2, what:'Blessings of Khorne', more:[{ strat:'skulls-for-the-skull-throne', n:1 }, { rule:'Adamantine Avalanche', n:1 }, { enhancement:'Archslaughterer', all:true }] } }, readOf:'46cd04fc' }
     ],
     detachments: {
       'berzerker-warband': {
@@ -537,7 +537,7 @@ const FACTIONS = {
             when:'Any phase.',
             target:'One **WORLD EATERS** unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.',
             effect:'Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
-          { id:'hack-and-slash', gist:'Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.', gistOf:'2800cd94', mod:{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP in the Fight phase' }, name:'Hack and Slash', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+          { id:'hack-and-slash', gist:'Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.', gistOf:'2800cd94', mod:{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP in the Fight phase' }, readOf:'2800cd94', name:'Hack and Slash', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
             when:'Fight phase.',
             target:'One **WORLD EATERS** unit from your army that has not been selected to fight this phase and that made a **charge move** this turn.',
             effect:'Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.' },
@@ -577,7 +577,7 @@ const FACTIONS = {
             { name:'Boon of Blood', needs:{ any:['Faction: Blood Legions'] }, def:'Boon of Blood active (4BTP): 4+ invulnerable save', defOf:'09981cf0' },
             // grants: the Damage tab gives a BLOOD LEGIONS unit without the Blessings of Khorne ability the Blessings' ticks, with this condition
             { name:'Might of Khorne', needs:{ any:['Faction: Blood Legions'] }, grants:'Blessings of Khorne', when:'Might of Khorne active (5BTP)' }
-          ] },
+          ], readOf:'09981cf0' },
         enhancements:[
           { name:'Icon of War', pts:25, text:'**WORLD EATERS** model only. While a friendly **BLOOD LEGIONS** unit is within 6" of the bearer, that unit has the Blessings of Khorne ability. If the Might of Khorne ability is active for your army, then while a friendly **BLOOD LEGIONS** unit is within 6" of the bearer, you can re-roll **Battle-shock tests** taken for that unit.' },
           { name:'Blood-forged Armour', pts:20, text:'**BLOOD LEGIONS** or **WORLD EATERS** model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.' },
@@ -597,7 +597,7 @@ const FACTIONS = {
           // help lists it on each WORLD EATERS unit of a list with another BLOOD LEGIONS unit, with its footnote (via: who is its target)
           { id:'daemonic-fury', help:{ to:{ all:['Faction: World Eaters'] }, by:{ all:['Faction: Blood Legions'] }, via:'its target: a BLOOD LEGIONS unit within 6"',
               mod:{ kind:'melee', when:'Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"', note:'[LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase)',
-                pick:[{ name:'[LANCE]', note:'[LANCE]' }, { name:'Daemonic Rage active', note:'[LANCE], [TWIN-LINKED]' }] } },
+                pick:[{ name:'[LANCE]', note:'[LANCE]' }, { name:'Daemonic Rage active', note:'[LANCE], [TWIN-LINKED]' }] } }, readOf:'bf58a7af',
             gist:'Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).', gistOf:'bf58a7af', name:'Daemonic Fury', cp:1, phases:['fight'], turn:'your', needs:{ all:['Faction: Blood Legions'] },
             when:'Start of your Fight phase.',
             target:'One **BLOOD LEGIONS** unit from your army.',
@@ -609,7 +609,7 @@ const FACTIONS = {
           // needs is the TARGET (the BLOOD LEGIONS unit); shield.def: the "When targeted" line of each WORLD EATERS unit, with a
           // BLOOD LEGIONS unit in the list, as the effect says it ("models in your WORLD EATERS unit")
           { id:'blessing-of-burning-blood', shield:{ protects:{ all:['Faction: World Eaters'] }, by:{ all:['Faction: Blood Legions'] },
-              def:'their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)' },
+              def:'their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)' }, readOf:'220ca20b',
             gist:'A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).', gistOf:'220ca20b', name:'Blessing of Burning Blood', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Blood Legions'] },
             when:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.',
             target:'One **BLOOD LEGIONS** unit from your army that is within 6" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.',
@@ -639,11 +639,11 @@ const FACTIONS = {
           { name:'Gore-stained Veterans', pts:20, upgrade:true, text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
         ],
         stratagems:[
-          { id:'focused-ferocity', gist:'Your unit’s melee attacks have +1 A.', gistOf:'f1e3267b', mod:{ kind:'melee', when:'When selected to fight', note:'+1 A' }, name:'Focused Ferocity', cp:1, phases:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
+          { id:'focused-ferocity', gist:'Your unit’s melee attacks have +1 A.', gistOf:'f1e3267b', mod:{ kind:'melee', when:'When selected to fight', note:'+1 A' }, readOf:'f1e3267b', name:'Focused Ferocity', cp:1, phases:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
             when:'Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.',
             target:'That **TERMINATOR SQUAD** unit.',
             effect:'Your unit’s melee attacks have +1 **A**.' },
-          { id:'a-trophy-for-the-throne', gist:'Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls.', gistOf:'be5bf151', mod:{ kind:'melee', when:'When selected to fight, vs MONSTER/VEHICLE targets', note:'+1 to wound rolls', vs:{ any:['Monster','Vehicle'] } }, name:'A Trophy for the Throne', cp:1, phases:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
+          { id:'a-trophy-for-the-throne', gist:'Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls.', gistOf:'be5bf151', mod:{ kind:'melee', when:'When selected to fight, vs MONSTER/VEHICLE targets', note:'+1 to wound rolls', vs:{ any:['Monster','Vehicle'] } }, readOf:'be5bf151', name:'A Trophy for the Throne', cp:1, phases:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
             when:'Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.',
             target:'That **TERMINATOR SQUAD** unit.',
             effect:'Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**.' },
@@ -658,7 +658,7 @@ const FACTIONS = {
         name:'Vessels of Wrath', dispositions:['Priority Assets'], dp:1,
         rule:{ name:'Wrath of Khorne', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
           mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models: [CLEAVE 1] or +1 AP',
-            pick:[{ name:'[CLEAVE 1]', note:'CHARACTER models: [CLEAVE 1]' }, { name:'+1 AP', note:'CHARACTER models: +1 AP' }] },
+            pick:[{ name:'[CLEAVE 1]', note:'CHARACTER models: [CLEAVE 1]' }, { name:'+1 AP', note:'CHARACTER models: +1 AP' }] }, readOf:'9379cbb5',
           text:'When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**, that unit’s **CHARACTER** models’ melee attacks can have:\n- **[CLEAVE 1]**.\n- Or: +1 **AP**.' },
         enhancements:[
           { name:'Archslaughterer', pts:30, text:'**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn.' },
@@ -669,7 +669,7 @@ const FACTIONS = {
             when:'Any phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) suffers a **mortal wound**.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'Your unit has **Feel No Pain 4+** against **mortal wounds**.' },
-          { id:'aspire-to-infamy', gist:'Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.', gistOf:'64a0e87c', mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models +1 A, +2 S' }, name:'Aspire to Infamy', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
+          { id:'aspire-to-infamy', gist:'Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.', gistOf:'64a0e87c', mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models +1 A, +2 S' }, readOf:'64a0e87c', name:'Aspire to Infamy', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
             when:'Fight phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'Your unit’s **CHARACTER** models’ melee attacks have:\n- +1 **A**.\n- +2 **S**.' },
@@ -707,7 +707,7 @@ const FACTIONS = {
             pick:[{ name:'Result 5-9', note:'re-roll hit rolls of 1' }, { name:'Result 10+', note:'re-roll hit rolls' }] },
           { kind:'ranged', from:'Twist of Fate', help:true, needs:{ any:['Faction: Thousand Sons','Scintillating Legions'] }, when:'Your Shooting phase, manifested against this target (Warp Charge 9)', note:'+1 AP (12+: +2 AP)',
             pick:[{ name:'Result 9-11', note:'+1 AP' }, { name:'Result 12+', note:'+2 AP' }] }
-        ] },
+        ], readOf:'07c0f798' },
       { name:'Pact of Sorcery',
         text:'When mustering your army, unless specifically stated otherwise, you cannot select **SCINTILLATING LEGIONS** as your Army Faction.' }
     ],
@@ -718,7 +718,7 @@ const FACTIONS = {
         // needs: the units with Psychic weapons (every one of them is a PSYKER unit, and no other unit of the list has one)
         rule:{ name:'Kindred Sorcery', ph:['command','movement','shooting','fight'], turn:'either', turns:{ command:'your', movement:'opp', shooting:'your' }, needs:{ all:['Faction: Thousand Sons','Psyker'] },
           mod:{ kind:'all', lasts:'round', when:'Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)', note:'Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]',
-            pick:[{ name:'Imbued Manifestation', note:'Psychic weapons only: +6" range' }, { name:'Psychic Maelstrom', note:'Psychic weapons only: +1 to wound rolls' }, { name:'Wrath of the Immaterium', note:'Psychic weapons only: [DEVASTATING WOUNDS]' }] },
+            pick:[{ name:'Imbued Manifestation', note:'Psychic weapons only: +6" range' }, { name:'Psychic Maelstrom', note:'Psychic weapons only: +1 to wound rolls' }, { name:'Wrath of the Immaterium', note:'Psychic weapons only: [DEVASTATING WOUNDS]' }] }, readOf:'93503b18',
           text:'In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.',
           table:[
             ['Imbued Manifestation', 'Add 6" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.'],
@@ -760,7 +760,7 @@ const FACTIONS = {
             target:'That **THOUSAND SONS** model.',
             effect:'Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).' },
           // mod/def candidate, not active: mod:{ kind:'ranged', when:'Devastating Sorcery used this phase', note:'Psychic weapons +9" range; re-roll hit rolls and wound rolls with Psychic weapons' }
-          { id:'devastating-sorcery', gist:'Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.', gistOf:'abea7dcf', mod:{ kind:'ranged', when:'Psychic weapons, your Shooting phase', note:'+9" range, re-roll hit and wound rolls' }, name:'Devastating Sorcery', cp:2, phases:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+          { id:'devastating-sorcery', gist:'Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.', gistOf:'abea7dcf', mod:{ kind:'ranged', when:'Psychic weapons, your Shooting phase', note:'+9" range, re-roll hit and wound rolls' }, readOf:'abea7dcf', name:'Devastating Sorcery', cp:2, phases:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
             when:'Your Shooting phase.',
             target:'One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' }
@@ -810,7 +810,7 @@ const FACTIONS = {
             { name:'Warpmeld Sacrifice (selected as a target)', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] }, def:'Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase', defOf:'e924f440' },
             { name:'Warpmeld Sacrifice (selected to shoot or fight)', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] }, mod:{ kind:'all', when:'Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase)', note:'+1 to wound rolls' } },
             { name:'Keywords', needs:{ all:['Tzaangors'] }, statNote:{ text:'OC +1 for each TZAANGOR model unless Battle-shocked, not in the OC above' } }
-          ] },
+          ], readOf:'e924f440' },
         // pts from Wahapedia, matching New Recruit: Tzaangor Shaman 65 + Diamond of Distortion 20 = 85, + Flowing Flesh 10 = 75
         enhancements:[
           { name:'Warpmeld Dagger', pts:10, text:'**TZAANGOR SHAMAN** model only. Each time the bearer attempts a **Ritual**, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 **mortal wounds**; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered.' },
@@ -862,7 +862,7 @@ const FACTIONS = {
     armyRules: [
       // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
       { name:'Synapse',
-        text:'If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.' },
+        text:'If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.', mods:[{ kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse', readOf:'2910ec76' }] },
       // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
       { name:'Shadow in the Warp', tag:'Once per battle', ph:['command'], turn:'either',
         note:'Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”',
@@ -877,7 +877,7 @@ const FACTIONS = {
         rule:{ name:'Enraged Behemoths', ph:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
           mod:{ kind:'all', when:'Below Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength',
             pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' }, { name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }],
-            single:{ when:'Lost any wounds (below Starting Strength)', note:'+1 to hit rolls; also +1 to wound rolls at {half} or fewer wounds left' } },
+            single:{ when:'Lost any wounds (below Starting Strength)', note:'+1 to hit rolls; also +1 to wound rolls at {half} or fewer wounds left' } }, readOf:'cc8a44e5',
           statNote:{ text:'OC {OC+2} while at Starting Strength, unless Battle-shocked', single:'OC {OC+2} while it has lost no wounds, unless Battle-shocked' },
           text:'Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.' },
         // pts from Wahapedia; Monstrous Nemesis 25 matches BSData (Hive Tyrant 195 + 25 = the 220 New Recruit prints)
@@ -885,19 +885,19 @@ const FACTIONS = {
           { name:'Ominous Presence', pts:15, text:'**TYRANIDS MONSTER** model only. Add 3 to the bearer’s Objective Control characteristic.' },
           { name:'Enraged Reserves', pts:20, text:'**TYRANIDS MONSTER** model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.' },
           { name:'Null Nodules', pts:10, text:'**TYRANIDS MONSTER** model only. Once per battle, when a **Psychic Attack** is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the **Feel No Pain 5+** ability against Psychic Attacks.' },
-          { name:'Monstrous Nemesis', pts:25, text:'**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.' }
+          { name:'Monstrous Nemesis', pts:25, text:'**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.', mods:[{ kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 to wound rolls', from:'Monstrous Nemesis', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'4256a0f5' }] }
         ],
         stratagems:[
           { id:'corrosive-viscera', gist:'Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).', gistOf:'90c54863', name:'Corrosive Viscera', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Tyranids','Monster'], none:['Fly'] },
             when:'Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.',
             target:'That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.',
             effect:'Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.' },
-          { id:'rampaging-monstrosities', gist:'Until the end of the phase, your unit’s attacks can re-roll the hit roll.', gistOf:'ca1851c1', mod:{ kind:'melee', when:'Fight phase', note:'re-roll hit rolls' }, name:'Rampaging Monstrosities', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
+          { id:'rampaging-monstrosities', gist:'Until the end of the phase, your unit’s attacks can re-roll the hit roll.', gistOf:'ca1851c1', mod:{ kind:'melee', when:'Fight phase', note:'re-roll hit rolls' }, readOf:'ca1851c1', name:'Rampaging Monstrosities', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
             when:'Fight phase.',
             target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**.' },
           { id:'savage-roar', gist:'An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.', gistOf:'4a887823',
-            defPick:[{ name:'Test passed', calc:{ hitMinus:1 } }, { name:'Test failed', calc:{ hitMinus:1, woundMinus:1 } }], name:'Savage Roar', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
+            defPick:[{ name:'Test passed', calc:{ hitMinus:1 } }, { name:'Test failed', calc:{ hitMinus:1, woundMinus:1 } }], readOf:'4a887823', name:'Savage Roar', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
             when:'Fight phase, just after an enemy unit has selected its targets.',
             target:'One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
             effect:'That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well.' },
@@ -906,7 +906,7 @@ const FACTIONS = {
             when:'Your Movement phase.',
             target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to move this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is **Battle-shocked**.' },
-          { id:'swarm-guided-salvoes', gist:'Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.', gistOf:'fc165280', mod:{ kind:'ranged', when:'Your Shooting phase', note:'[IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll' }, name:'Swarm-guided Salvoes', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
+          { id:'swarm-guided-salvoes', gist:'Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.', gistOf:'fc165280', mod:{ kind:'ranged', when:'Your Shooting phase', note:'[IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll' }, readOf:'fc165280', name:'Swarm-guided Salvoes', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
             when:'Your Shooting phase.',
             target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**.' },
@@ -933,7 +933,7 @@ const FACTIONS = {
             when:'Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a **mortal wound**.',
             target:'That **NORN ASSIMILATOR** unit.',
             effect:'Your unit has **Feel No Pain 4+** against **mortal wounds**.' },
-          { id:'lesser-prey', gist:'Your unit’s melee attacks have +2 S.', gistOf:'bb361063', mod:{ kind:'melee', when:'When selected to fight', note:'+2 S' }, name:'Lesser Prey', cp:1, phases:['fight'], turn:'either', needs:{ any:['Norn Assimilator','Norn Emissary'] },
+          { id:'lesser-prey', gist:'Your unit’s melee attacks have +2 S.', gistOf:'bb361063', mod:{ kind:'melee', when:'When selected to fight', note:'+2 S' }, readOf:'bb361063', name:'Lesser Prey', cp:1, phases:['fight'], turn:'either', needs:{ any:['Norn Assimilator','Norn Emissary'] },
             when:'Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.',
             target:'That **NORN ASSIMILATOR/NORN EMISSARY** unit.',
             effect:'Your unit’s melee attacks have +2 **S**.' },
@@ -977,7 +977,7 @@ const FACTIONS = {
         ],
         // what makes both Imperatives active for a unit: Omnicogitator (the bearer's unit), Transcendent Cogitation (its target), and
         // Thulia Ghuld's Icon of War, The Fires of Mars (a SKITARII or THULIA GHULD unit within 6" of her)
-        both:[{ enhancement:'Omnicogitator' }, { strat:'transcendent-cogitation' }, { ability:'Icon of War', part:'The Fires of Mars', of:'Thulia Ghuld', needs:{ any:['Skitarii','Thulia Ghuld'] } }] }
+        both:[{ enhancement:'Omnicogitator' }, { strat:'transcendent-cogitation' }, { ability:'Icon of War', part:'The Fires of Mars', of:'Thulia Ghuld', needs:{ any:['Skitarii','Thulia Ghuld'] } }], readOf:'44863faa' }
     ],
     detachments: {
       'cohort-cybernetica': {
@@ -993,7 +993,7 @@ const FACTIONS = {
           text:'Add 2" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit.' },
         // pts from Wahapedia, matching BSData
         enhancements:[
-          { name:'Necromechanic', pts:20, text:'**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.' },
+          { name:'Necromechanic', pts:20, text:'**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.', guard:[{ from:'Necromechanic', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] }, kind:'all', when:'Within 12" of the Enginseer, once per battle round', note:'after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0', readOf:'59f3e2cf' }] },
           { name:'Lord of Machines', pts:15, text:'**TECH-PRIEST** model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit within 12" of and visible to the bearer. That unit must take a **Leadership test**: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**; if that test is failed, that unit is not eligible to shoot this phase.' },
           { name:'Emotionless Clarity', pts:10, text:'**TECH-PRIEST** model only. Once per turn, when a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model with the **Deadly Demise** ability that is within 12" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any **mortal wounds** are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.' },
           { name:'Arch-negator', pts:5, text:'**TECH-PRIEST** model only. Ranged weapons equipped by the bearer have the **[ANTI-VEHICLE 4+]** ability.' }
@@ -1006,19 +1006,19 @@ const FACTIONS = {
             target:'One **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
             effect:'Until the start of your next Command phase, add 3" to the Move characteristic of models in your unit and add 1 to **Advance** and **Charge rolls** made for it.' },
           { id:'auto-divinatory-targeting', gist:'Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker.', gistOf:'e0edfb73', name:'Auto-divinatory Targeting', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
-            mod:{ kind:'ranged', lasts:'round', when:'Your Command phase, until the start of your next Command phase', note:'BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker', calc:{ set:{ BS:'3+' }, ignoresCover:true } },
+            mod:{ kind:'ranged', lasts:'round', when:'Your Command phase, until the start of your next Command phase', note:'BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker', calc:{ set:{ BS:'3+' }, ignoresCover:true } }, readOf:'e0edfb73',
             note:'FAQ (Faction Pack 1.4): “If I target a unit with the Auto-divinatory Targeting Stratagem while the Protector Imperative is active for my army, in what order are the Ballistic Skill modifiers applied?” “The Ballistic Skill characteristic of ranged weapons equipped by models in that unit is first changed to 3+ by the Stratagem, then improved by 1 by the Protector Imperative, for a final result of 2+ (assuming no other modifiers apply).”',
             when:'Your Command phase.',
             target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.',
             effect:'Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker.' },
           { id:'machine-spirit-resurgent', gist:'Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.', gistOf:'da102dc5', name:'Machine Spirit Resurgent', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
             mod:{ kind:'all', lasts:'round', when:'Your Command phase, below its Starting Strength; until the start of your next Command phase', note:'can re-roll hit rolls (and wound rolls if Below Half-strength)',
-              pick:[{ name:'Below Starting Strength', note:'re-roll hit rolls' }, { name:'Below Half-strength', note:'re-roll hit rolls and wound rolls' }] },
+              pick:[{ name:'Below Starting Strength', note:'re-roll hit rolls' }, { name:'Below Half-strength', note:'re-roll hit rolls and wound rolls' }] }, readOf:'da102dc5',
             when:'Your Command phase.',
             target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.',
             effect:'Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.' },
           { id:'machine-superiority', gist:'Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).', gistOf:'530feb04', name:'Machine Superiority', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
-            mod:{ kind:'all', when:'Your Command phase, until the end of the turn', note:'can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws)' },
+            mod:{ kind:'all', when:'Your Command phase, until the end of the turn', note:'can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws)' }, readOf:'530feb04',
             when:'Your Command phase.',
             target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
             effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).' },
@@ -1042,7 +1042,7 @@ const FACTIONS = {
           // follow: the Damage tab takes the Imperative from the Doctrina Imperatives pick (no pick of its own, so it is never taken for
           // the Imperative itself), ticked with it
           mod:{ kind:'all', when:'Protector or Conqueror Imperative active for this unit', note:'Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1', follow:'Doctrina Imperatives',
-            pick:[{ name:'Protector', note:'re-roll hit rolls of 1' }, { name:'Conqueror', note:'re-roll wound rolls of 1' }, { name:'Both', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
+            pick:[{ name:'Protector', note:'re-roll hit rolls of 1' }, { name:'Conqueror', note:'re-roll wound rolls of 1' }, { name:'Both', note:'re-roll hit rolls of 1 and wound rolls of 1' }] }, readOf:'665d4f12',
           text:'Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1.' },
         enhancements:[
           { name:'Omnicogitator', pts:25, text:'**SKITARII MARSHAL** model only. The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.' },
@@ -1052,7 +1052,7 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'servo-driven-charge', gist:'Until the end of the phase, your unit’s melee weapons have [LANCE].', gistOf:'565fbe33', name:'Servo-driven Charge', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Mechanicus'] },
-            mod:{ kind:'melee', when:'Fight phase', note:'[LANCE]' },
+            mod:{ kind:'melee', when:'Fight phase', note:'[LANCE]' }, readOf:'565fbe33',
             when:'Fight phase.',
             target:'One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.',
             effect:'Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability.' },
@@ -1062,12 +1062,12 @@ const FACTIONS = {
             effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead.' },
           { id:'unshackled-wrath', gist:'Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].', gistOf:'81de5445', name:'Unshackled Wrath', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Skitarii'] },
             mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]',
-              pick:[{ name:'Sustained Hits', note:'[SUSTAINED HITS 1]' }, { name:'Lethal Hits', note:'[LETHAL HITS]' }, { name:'All three', note:'[SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS]' }] },
+              pick:[{ name:'Sustained Hits', note:'[SUSTAINED HITS 1]' }, { name:'Lethal Hits', note:'[LETHAL HITS]' }, { name:'All three', note:'[SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS]' }] }, readOf:'81de5445',
             when:'Your Shooting phase.',
             target:'One **SKITARII** unit from your army that has not been selected to shoot this phase.',
             effect:'Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase.' },
           { id:'threat-cogitation-targeters', gist:'Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll.', gistOf:'cfa80657', name:'Threat-cogitation Targeters', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Skitarii','Vehicle'] },
-            mod:{ kind:'ranged', when:'Your Shooting phase, attacks allocated to a MONSTER or VEHICLE model', note:'can re-roll the Damage roll', vs:{ any:['Monster','Vehicle'] } },
+            mod:{ kind:'ranged', when:'Your Shooting phase, attacks allocated to a MONSTER or VEHICLE model', note:'can re-roll the Damage roll', vs:{ any:['Monster','Vehicle'] } }, readOf:'cfa80657',
             when:'Your Shooting phase.',
             target:'One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll.' },
@@ -1104,14 +1104,14 @@ const FACTIONS = {
           // melee weapons only: each unit's own melee footnote)
           mod:{ kind:'all', lasts:'battle', when:'Pact points gained during the battle (cumulative)', note:'1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+',
             pick:[{ name:'1+ Pact points', note:'re-roll hit rolls of 1' }, { name:'3+ Pact points', note:'re-roll hit rolls of 1 and wound rolls of 1' },
-              { name:'7+ Pact points', note:'re-roll hit rolls of 1 and wound rolls of 1, a Critical Hit on an unmodified hit roll of 5+', calc:{ rrHit:'1s', rrWound:'1s', critHit:5 } }] },
+              { name:'7+ Pact points', note:'re-roll hit rolls of 1 and wound rolls of 1, a Critical Hit on an unmodified hit roll of 5+', calc:{ rrHit:'1s', rrWound:'1s', critHit:5 } }] }, readOf:'1b5bed40',
           text:'At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).',
           table:[
             ['1+', 'Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.'],
             ['3+', 'Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.'],
             ['5+', 'Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.'],
             ['7+', 'Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+.']
-          ] },
+          ], mods:[{ kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince', readOf:'1b5bed40' }] },
         enhancements:[
           { name:'Pledge of Eternal Servitude', pts:25, text:'**EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a **Leadership test** for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).' },
           { name:'Pledge of Dark Glory', pts:25, text:'**EMPEROR’S CHILDREN** model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.' },
@@ -1124,7 +1124,7 @@ const FACTIONS = {
             target:'That **EMPEROR’S CHILDREN** unit.',
             effect:'Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**.' },
           // the calculator counts the hit roll part (no modifier to the wound roll is set on a target here)
-          { id:'unshakeable-opponents', gist:'Until the end of the turn, your unit’s attacks can ignore any or all modifiers to BS or WS, the hit roll and the wound roll.', gistOf:'df1ed0dd', mod:{ kind:'all', when:'Command phase, until the end of the turn', note:'can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll', calc:{ ignoreHitMods:true } }, name:'Unshakeable Opponents', cp:1, phases:['command'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
+          { id:'unshakeable-opponents', gist:'Until the end of the turn, your unit’s attacks can ignore any or all modifiers to BS or WS, the hit roll and the wound roll.', gistOf:'df1ed0dd', mod:{ kind:'all', when:'Command phase, until the end of the turn', note:'can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll', calc:{ ignoreHitMods:true } }, readOf:'df1ed0dd', name:'Unshakeable Opponents', cp:1, phases:['command'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
             when:'Command phase.',
             target:'One **EMPEROR’S CHILDREN** unit from your army.',
             effect:'Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**.' },
@@ -1132,7 +1132,7 @@ const FACTIONS = {
             when:'Start of the Fight phase.',
             target:'One **EMPEROR’S CHILDREN INFANTRY** unit from your army.',
             effect:'Until the end of the phase, each time an enemy model within **Engagement Range** of your unit selects targets, it must select your unit as the target of its attacks.' },
-          { id:'martial-perfection', gist:'Your unit has not been selected to fight this phase: until the end of the phase, it can re-roll the hit roll.', gistOf:'a79ca781', mod:{ kind:'melee', when:'Fight phase, not yet selected to fight', note:'re-roll hit rolls' }, name:'Martial Perfection', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
+          { id:'martial-perfection', gist:'Your unit has not been selected to fight this phase: until the end of the phase, it can re-roll the hit roll.', gistOf:'a79ca781', mod:{ kind:'melee', when:'Fight phase, not yet selected to fight', note:'re-roll hit rolls' }, readOf:'a79ca781', name:'Martial Perfection', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
             when:'Fight phase.',
             target:'One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**.' },
@@ -1174,7 +1174,7 @@ const FACTIONS = {
         ],
         // the Damage tab's reading (read by it alone): Doom, a box the player ticks (whether it is active and the target Battle-shocked
         // is theirs to say); the other Dread abilities change no numbers of your attacks
-        calcMods:[{ kind:'all', from:'Doom', lasts:'battle', when:'Doom active (Harbingers of Dread), the target Battle-shocked', note:'+1 to wound rolls' }] },
+        calcMods:[{ kind:'all', from:'Doom', lasts:'battle', when:'Doom active (Harbingers of Dread), the target Battle-shocked', note:'+1 to wound rolls' }], readOf:'850a61ac' },
       // Wahapedia, Codex: Chaos Knights army rules (GW's Faction Pack 1.2 prints "FACTION: Harbingers of Dread, Super-heavy Walker"
       // on the Chaos Knights datasheets). coreTwin: the core ability of the same name (Core Rules 24.35), which the datasheets'
       // Rules line opens; the two are shown together, and the note says the sources don't settle which applies
@@ -1193,11 +1193,11 @@ const FACTIONS = {
         // Unnatural Fortitude (5+ invulnerable save or Feel No Pain 6+) the When targeted line
         rule:{ name:'Malefic Surge', ph:['command'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
           mod:{ kind:'all', when:'Empowered, using Diabolic Power (when selected to shoot or fight)', note:'[LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)',
-            pick:[{ name:'Lethal Hits', note:'[LETHAL HITS]' }, { name:'Sustained Hits 1', note:'[SUSTAINED HITS 1]' }] },
+            pick:[{ name:'Lethal Hits', note:'[LETHAL HITS]' }, { name:'Sustained Hits 1', note:'[SUSTAINED HITS 1]' }] }, readOf:'90edb259',
           def:'Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)', defOf:'90edb259',
           text:'In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*' },
         enhancements:[
-          { name:'Knight Diabolus', pts:25, text:'**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability.' },
+          { name:'Knight Diabolus', pts:25, text:'**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability.', mods:[{ kind:'melee', when:'Using the Diabolic Power ability (Malefic Surge)', note:'melee weapons have [LANCE]', from:'Knight Diabolus', readOf:'a4412751' }] },
           { name:'Blasphemous Engine', pts:35, text:'**CHAOS KNIGHTS** model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the **Leadership test** taken to see if it suffers any **mortal wounds**.' },
           { name:'Fleshmetal Fusion', pts:35, text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.' },
           { name:'Bestial Aspect', pts:30, text:'**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit.' }
@@ -1220,7 +1220,7 @@ const FACTIONS = {
             when:'Your Shooting phase.',
             target:'One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.',
             effect:'After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it.' },
-          { id:'warp-vision', gist:'Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER].', gistOf:'d33f9b4e', mod:{ kind:'ranged', when:'Your Shooting phase', note:'ranged weapons have [IGNORES COVER]' }, name:'Warp Vision', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
+          { id:'warp-vision', gist:'Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER].', gistOf:'d33f9b4e', mod:{ kind:'ranged', when:'Your Shooting phase', note:'ranged weapons have [IGNORES COVER]' }, readOf:'d33f9b4e', name:'Warp Vision', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
             when:'Your Shooting phase.',
             target:'One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability.' },
@@ -1236,11 +1236,11 @@ const FACTIONS = {
         name:'Houndpack Lance', dispositions:['Reconnaissance'], dp:2,
         // ph/turn: the unit is selected at the start of your Command phase; the attack bonus is the footnote of every WAR DOG unit
         rule:{ name:'Marked Prey', ph:['command'], turn:'your', needs:{ all:['War Dog'] },
-          mod:{ kind:'all', lasts:'round', when:'Target is the unit selected at the start of your Command phase, visible to the attacking model', note:'[SUSTAINED HITS 1]' },
+          mod:{ kind:'all', lasts:'round', when:'Target is the unit selected at the start of your Command phase, visible to the attacking model', note:'[SUSTAINED HITS 1]' }, readOf:'14b1ad41',
           text:'At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**.' },
         enhancements:[
           { name:'Preyslayer’s Mantle', pts:15, text:'**WAR DOG** model only. The bearer has the Super-heavy Walker ability.' },
-          { name:'Final Howl (Aura)', pts:20, text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' },
+          { name:'Final Howl (Aura)', pts:20, text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.', aura:[{ kind:'all', needs:{ all:['War Dog'] }, when:'Within 6" of the War Dog Brigand with Final Howl', selfWhen:'Own aura', note:'re-roll wound rolls of 1', from:'Final Howl (Aura)', selfAlways:true, readOf:'0324c6a8' }] },
           { name:'Loping Predator', pts:10, text:'**WAR DOG** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability.' },
           { name:'Panoply of the Cursed Knights', pts:15, text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
         ],
@@ -1252,7 +1252,7 @@ const FACTIONS = {
             target:'One ~~**WAR DOG CHARACTER**~~ unit from your army.',
             effect:'Each enemy unit within 6" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.',
             restrictions:'You can only use this Stratagem once per turn.' },
-          { id:'hungry-for-combat', gist:'Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', gistOf:'a5afcf82', mod:{ kind:'melee', when:'Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
+          { id:'hungry-for-combat', gist:'Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', gistOf:'a5afcf82', mod:{ kind:'melee', when:'Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, readOf:'a5afcf82', name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
             when:'Start of the Fight phase.',
             target:'Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.',
             effect:'Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
@@ -1331,13 +1331,13 @@ const FACTIONS = {
           { kind:'ranged', from:'Salvus', when:'Salvus (your Shooting phase, a readied unit selected to shoot)', note:'can ignore modifiers to BS, hit rolls and wound rolls', calc:{ ignoreHitMods:true } },
           { kind:'melee', from:'Dacatarai', when:'Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets', note:'re-roll hit rolls of 1', vs:{ none:['Monster','Vehicle'] } },
           { kind:'melee', from:'Rendax', when:'Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets', note:'[LETHAL HITS]', vs:{ any:['Monster','Vehicle'] } }
-        ] },
+        ], readOf:'545367df' },
       { name:'Aegis of the Emperor', def:'Feel No Pain 5+ against mortal wounds', defOf:'df193819',
         text:'Friendly **ADEPTUS CUSTODES** units with this ability have Feel No Pain 5+ against mortal wounds.' },
       { name:'Aquila Commander', at:'Start of the battle round', ph:['command'], turn:'either',
         text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' },
       { name:'Daughters of the Abyss', def:'Feel No Pain 3+ against psychic attacks', defOf:'7e9be553',
-        text:'- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
+        text:'- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.', guard:[{ from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks', readOf:'7e9be553' }] },
       // how an Adeptus Custodes army includes the Prosecutors and Witchseekers (ANATHEMA PSYKANA, not ADEPTUS CUSTODES)
       { name:'Anathema Psykana',
         text:'You can include **ANATHEMA PSYKANA** units in your army, even though they do not have the **ADEPTUS CUSTODES** faction keyword.\nWhen mustering your army, unless otherwise stated:\n- You cannot select **ANATHEMA PSYKANA** as your army faction.\n- You cannot select an **ANATHEMA PSYKANA** model to be your **WARLORD**.' }
@@ -1348,7 +1348,7 @@ const FACTIONS = {
         name:'Emperor’s Chosen', dispositions:['Priority Assets'], dp:1,
         // ph/turn: "selected to attack" (shoot or fight, and Fire Overwatch in the opponent's Movement phase); the Favoured Ka’tah's additional effect is Rendax's, in the Fight phase
         rule:{ name:'Magna Imperator', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes'] },
-          mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll' },
+          mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll' }, readOf:'f6a64756',
           text:'When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**.' },
         enhancements:[
           { name:'From the Hall of Armouries', pts:15, text:'**ADEPTUS CUSTODES** model only. This model’s melee attacks have **[Devastating Wounds]**.' },
@@ -1385,12 +1385,12 @@ const FACTIONS = {
             when:'Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.',
             target:'That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.',
             effect:'Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**.' },
-          { id:'advanced-stabilisers', gist:'Your unit’s ranged attacks have [ASSAULT].', gistOf:'9ce5cb53', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'ranged attacks have [ASSAULT]' }, name:'Advanced Stabilisers', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
+          { id:'advanced-stabilisers', gist:'Your unit’s ranged attacks have [ASSAULT].', gistOf:'9ce5cb53', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'ranged attacks have [ASSAULT]' }, readOf:'9ce5cb53', name:'Advanced Stabilisers', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
             when:'Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.',
             target:'That **GRAV-ASSAULT** unit.',
             effect:'Your unit’s ranged attacks have **[Assault]**.' },
           // the calculator counts the hit roll part (BS and hit roll modifiers)
-          { id:'inevitable-annihilation', gist:'Your unit can ignore modifiers to its BS and hit rolls.', gistOf:'0b8d7833', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'can ignore modifiers to BS and hit rolls', calc:{ ignoreHitMods:true } }, name:'Inevitable Annihilation', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
+          { id:'inevitable-annihilation', gist:'Your unit can ignore modifiers to its BS and hit rolls.', gistOf:'0b8d7833', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'can ignore modifiers to BS and hit rolls', calc:{ ignoreHitMods:true } }, readOf:'0b8d7833', name:'Inevitable Annihilation', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
             when:'Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.',
             target:'That **GRAV-ASSAULT** unit.',
             effect:'Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**.' }
@@ -1403,7 +1403,7 @@ const FACTIONS = {
         // the re-rolls for below starting strength / below half-strength: one pick (OC +2 at starting strength is not an attack)
         rule:{ name:'Moritoi Ancients', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
           mod:{ kind:'all', when:'Below starting strength, or below half-strength', note:'below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1',
-            pick:[{ name:'Below starting strength', note:'re-roll hit rolls of 1' }, { name:'Below half-strength', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
+            pick:[{ name:'Below starting strength', note:'re-roll hit rolls of 1' }, { name:'Below half-strength', note:'re-roll hit rolls of 1 and wound rolls of 1' }] }, readOf:'fb6c3146',
           text:'- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
         // limit: Wahapedia prints "(one per army)" after the name; New Recruit and BSData name them without it
         enhancements:[
@@ -1412,11 +1412,11 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'honoured-interred', help:{ to:{ all:['Faction: Adeptus Custodes'] }, by:{ all:['Faction: Adeptus Custodes','Dreadnought'] }, via:'its aura: within 6" of the ADEPTUS CUSTODES DREADNOUGHT unit with it',
-              mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred', note:'re-roll hit rolls of 1' } }, gist:'Your unit has the Honoured Interred aura: friendly ADEPTUS CUSTODES units within 6" can re-roll hit rolls of 1.', gistOf:'644594f9', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")', note:'re-roll hit rolls of 1' }, name:'Honoured Interred', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+              mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred', note:'re-roll hit rolls of 1' } }, gist:'Your unit has the Honoured Interred aura: friendly ADEPTUS CUSTODES units within 6" can re-roll hit rolls of 1.', gistOf:'644594f9', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")', note:'re-roll hit rolls of 1' }, readOf:'644594f9', name:'Honoured Interred', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
             when:'Your Shooting phase or the Fight phase.',
             target:'One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.',
             effect:'Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit can re-roll **hit rolls** of 1.' },
-          { id:'unceasing-onslaught', gist:'Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge.', gistOf:'12129802', mod:{ kind:'ranged', when:'Ended an advance move this turn (until the end of the turn)', note:'ranged attacks have [ASSAULT]' }, name:'Unceasing Onslaught', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+          { id:'unceasing-onslaught', gist:'Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge.', gistOf:'12129802', mod:{ kind:'ranged', when:'Ended an advance move this turn (until the end of the turn)', note:'ranged attacks have [ASSAULT]' }, readOf:'12129802', name:'Unceasing Onslaught', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
             when:'Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.',
             target:'That **ADEPTUS CUSTODES DREADNOUGHT** unit.',
             effect:'- Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**.' },
@@ -1455,7 +1455,7 @@ const FACTIONS = {
       'honoured-companions': {
         name:'Honoured Companions', dispositions:['Take and Hold'], dp:1,
         rule:{ name:'Companion’s Watch', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Trusted Sentinel'] },
-          mod:{ kind:'all', when:'Within range of an objective', note:'re-roll wound rolls of 1' },
+          mod:{ kind:'all', when:'Within range of an objective', note:'re-roll wound rolls of 1' }, readOf:'a80839ce',
           text:'While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, that unit’s attacks can re-roll **wound rolls** of 1.' },
         enhancements:[
           { name:'Arae-Shrike', pts:20, text:'**ADEPTUS CUSTODES INFANTRY** model only. Enemy units that are selected to make an **ingress move** cannot be set up within 12" of this unit.' },
@@ -1466,7 +1466,7 @@ const FACTIONS = {
             when:'Fight phase, when a friendly **TRUSTED SENTINEL** unit is selected to make a **consolidation move**.',
             target:'That **TRUSTED SENTINEL** unit.',
             effect:'You can select the **objective consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving restrictions.\n*This means your unit can move out of **engagement range** with enemy units, provided it meets the conditions of the **objective consolidation mode**.*' },
-          { id:'avenge-the-fallen', mod:{ kind:'melee', when:'Fight phase, selected to fight, below starting strength', note:'+2 A (not the attacks of CHARACTER models)' }, gist:'Your unit below starting strength is selected to fight: its melee attacks (not those of CHARACTER models) have +2 A.', gistOf:'68587ceb', name:'Avenge the Fallen', cp:1, phases:['fight'], turn:'either', needs:{ all:['Trusted Sentinel'] },
+          { id:'avenge-the-fallen', mod:{ kind:'melee', when:'Fight phase, selected to fight, below starting strength', note:'+2 A (not the attacks of CHARACTER models)' }, readOf:'68587ceb', gist:'Your unit below starting strength is selected to fight: its melee attacks (not those of CHARACTER models) have +2 A.', gistOf:'68587ceb', name:'Avenge the Fallen', cp:1, phases:['fight'], turn:'either', needs:{ all:['Trusted Sentinel'] },
             when:'Fight phase, when a friendly **TRUSTED SENTINEL** unit that is **below starting strength** is **selected to fight**.',
             target:'That **TRUSTED SENTINEL** unit.',
             effect:'Your unit’s melee attacks (excluding those made by **CHARACTER** models) have +2 **A**.' },
@@ -1525,21 +1525,21 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'armour-of-contempt', gist:'Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked.', gistOf:'d40ab81e', def:'their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)', defOf:'d40ab81e', name:'Armour of Contempt', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Adeptus Astartes'] }, when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES** unit.', target:'That **ADEPTUS ASTARTES** unit.', effect:'Attacks that target your unit have -1 **AP** until that enemy unit has attacked.' },
-          { id:'gene-wrought-might', gist:'Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.', gistOf:'f8229239', mod:{ kind:'melee', when:'Fight phase, selected to fight', note:'[LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)' }, name:'Gene-Wrought Might', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Fight phase, when a friendly **ADEPTUS ASTARTES** unit is **selected to fight**.', target:'That **ADEPTUS ASTARTES** unit.', effect:'Your unit’s melee attacks have:\n- **[Lance]**.\n- Or: If the **assault doctrine** is active for your unit, **[Lance]** and +1 **AP**.' },
+          { id:'gene-wrought-might', gist:'Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.', gistOf:'f8229239', mod:{ kind:'melee', when:'Fight phase, selected to fight', note:'[LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)' }, readOf:'f8229239', name:'Gene-Wrought Might', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Fight phase, when a friendly **ADEPTUS ASTARTES** unit is **selected to fight**.', target:'That **ADEPTUS ASTARTES** unit.', effect:'Your unit’s melee attacks have:\n- **[Lance]**.\n- Or: If the **assault doctrine** is active for your unit, **[Lance]** and +1 **AP**.' },
           { id:'duty-in-death', gist:'Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase.', gistOf:'aaca68f5', def:'Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase', defOf:'aaca68f5', name:'Duty in Death', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES** unit.', target:'That **ADEPTUS ASTARTES** unit.', effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if the **assault doctrine** is active for your unit:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' }
         ]
       },
       // Deathwatch Support: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'deathwatch-support': {
         name:'Deathwatch Support', dispositions:['Disruption'], dp:1,
-        rule:{ name:'Mission Tactics', needs:{ all:['Kill Team'] }, ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, calcMods:[{ kind:'all', from:'Furor Tactics', when:'Furor Tactics (the devastator doctrine is active for your unit)', note:'[SUSTAINED HITS 1]' },{ kind:'all', from:'Malleus Tactics', when:'Malleus Tactics (the tactical doctrine is active for your unit)', note:'[LETHAL HITS]' }], text:'Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules.' },
+        rule:{ name:'Mission Tactics', needs:{ all:['Kill Team'] }, ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, calcMods:[{ kind:'all', from:'Furor Tactics', when:'Furor Tactics (the devastator doctrine is active for your unit)', note:'[SUSTAINED HITS 1]' },{ kind:'all', from:'Malleus Tactics', when:'Malleus Tactics (the tactical doctrine is active for your unit)', note:'[LETHAL HITS]' }], readOf:'69377417', text:'Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules.' },
         enhancements:[
           { name:'Beacon Angelis', pts:25, text:'**ADEPTUS ASTARTES** model only. If this unit is a **KILL TEAM** unit, this unit has:\n- **Deep Strike**.\n- When you target this unit with the **Rapid Ingress Stratagem**, that use is -1CP.' }
         ],
         stratagems:[
-          { id:'kraken-rounds', gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks have +6" range and +1 S.', gistOf:'0ec4f7bb', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'+6" range and +1 S' }, name:'Kraken Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks have:\n- Have +6" **R**.\n- Have +1 **S**.' },
-          { id:'dragonfire-rounds', gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].', gistOf:'a2eb55d2', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'re-roll wound rolls of 1, [IGNORES COVER]' }, name:'Dragonfire Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks:\n- Can re-roll **wound rolls** of 1.\n- Have **[IGNORES COVER]**.' },
-          { id:'hellfire-rounds', gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].', gistOf:'be854996', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'[ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks)' }, name:'Hellfire Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks (excluding **[DEVASTATING WOUNDS]** attacks) have **[ANTI-non-VEHICLE 4+]**.' },
+          { id:'kraken-rounds', gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks have +6" range and +1 S.', gistOf:'0ec4f7bb', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'+6" range and +1 S' }, readOf:'0ec4f7bb', name:'Kraken Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks have:\n- Have +6" **R**.\n- Have +1 **S**.' },
+          { id:'dragonfire-rounds', gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].', gistOf:'a2eb55d2', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'re-roll wound rolls of 1, [IGNORES COVER]' }, readOf:'a2eb55d2', name:'Dragonfire Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks:\n- Can re-roll **wound rolls** of 1.\n- Have **[IGNORES COVER]**.' },
+          { id:'hellfire-rounds', gist:'Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].', gistOf:'be854996', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'[ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks)' }, readOf:'be854996', name:'Hellfire Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Kill Team'] }, when:'Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.', target:'That **KILL TEAM** unit.', effect:'Your unit’s ranged attacks (excluding **[DEVASTATING WOUNDS]** attacks) have **[ANTI-non-VEHICLE 4+]**.' },
           { id:'blackstar-extraction', gist:'End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.', gistOf:'22f956b5', name:'Blackstar Extraction', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Kill Team'] }, when:'End of your opponent’s Fight phase.', target:'One friendly **unengaged KILL TEAM** unit.', effect:'Place your unit in **strategic reserves**.' }
         ]
       },
@@ -1553,7 +1553,7 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'tactical-dreadnought-fortitude', gist:'Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked.', gistOf:'45bccdf8', def:'their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)', defOf:'45bccdf8', name:'Tactical Dreadnought Fortitude', cp:2, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES TERMINATOR** unit.', target:'That **ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Attacks that target your unit have -1 **D** until that enemy unit has attacked.' },
-          { id:'merciless-veterans', gist:'Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'f957f56d', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, name:'Merciless Veterans', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'Your Shooting phase, when a friendly **ADEPTUS ASTARTES TERMINATOR** unit is **selected to shoot**.', target:'That **ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Your unit’s ranged attacks have:\n- **[Lethal Hits]**.\n- **[Sustained Hits 1]**.' },
+          { id:'merciless-veterans', gist:'Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'f957f56d', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, readOf:'f957f56d', name:'Merciless Veterans', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'Your Shooting phase, when a friendly **ADEPTUS ASTARTES TERMINATOR** unit is **selected to shoot**.', target:'That **ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Your unit’s ranged attacks have:\n- **[Lethal Hits]**.\n- **[Sustained Hits 1]**.' },
           { id:'gunship-extraction', gist:'End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.', gistOf:'ec24cfb9', name:'Gunship Extraction', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Adeptus Astartes','Terminator'] }, when:'End of your opponent’s Fight phase.', target:'One friendly **unengaged ADEPTUS ASTARTES TERMINATOR** unit.', effect:'Place your unit in **strategic reserves**.' }
         ]
       }
@@ -1574,7 +1574,7 @@ const FACTIONS = {
           { name:'Blood Tainted', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, ph:['command','movement','shooting','charge','fight'], turn:'either', text:'At the end of a phase in which a **LEGIONES DAEMONICA KHORNE** unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' }
         ],
         enhancements:[
-          { name:'Slaughterthirst (Aura)', pts:25, text:'**LEGIONES DAEMONICA KHORNE** model only. While a friendly **LEGIONES DAEMONICA KHORNE** unit (excluding **MONSTERS**) is within 6" of the bearer, weapons equipped by models in that unit have the **[LANCE]** ability.' },
+          { name:'Slaughterthirst (Aura)', pts:25, text:'**LEGIONES DAEMONICA KHORNE** model only. While a friendly **LEGIONES DAEMONICA KHORNE** unit (excluding **MONSTERS**) is within 6" of the bearer, weapons equipped by models in that unit have the **[LANCE]** ability.', aura:[{ kind:'all', needs:{ all:['Faction: Legiones Daemonica','Khorne'], none:['Monster'] }, when:'Within 6" of the Daemon Prince of Chaos', note:'[LANCE]', from:'Slaughterthirst (Aura)', readOf:'4ad2de5b' }] },
           { name:'Fury’s Cage', pts:20, text:'**LEGIONES DAEMONICA KHORNE MONSTER** model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 **mortal wounds**, and until the end of the phase, each time it makes an attack, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' },
           { name:'Brazenmaw', pts:15, text:'**LEGIONES DAEMONICA KHORNE** model only. Add 2 to **Charge rolls** made for the bearer’s unit.' },
           { name:'Gateway Unto Damnation', pts:10, text:'**LEGIONES DAEMONICA KHORNE MONSTER** model only. The bearer’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.' }
@@ -1608,7 +1608,7 @@ const FACTIONS = {
     name: 'Chaos Space Marines',
     // army rules: Wahapedia, Chaos Space Marines, Army Rules (the ones the list’s units name), written by verify/from-json.js
     armyRules: [
-      { name:'Dark Pacts', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*', calcMods:[{ kind:'all', from:'Dark Pacts', when:'A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase', note:'[LETHAL HITS] or [SUSTAINED HITS 1]', pick:[{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS 1]', note:'[SUSTAINED HITS 1]' },{ name:'Both', both:true, note:'[LETHAL HITS], [SUSTAINED HITS 1]' }] }], both:[{ strat:'touch-of-the-arkifane' }] }
+      { name:'Dark Pacts', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*', calcMods:[{ kind:'all', from:'Dark Pacts', when:'A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase', note:'[LETHAL HITS] or [SUSTAINED HITS 1]', pick:[{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS 1]', note:'[SUSTAINED HITS 1]' },{ name:'Both', both:true, note:'[LETHAL HITS], [SUSTAINED HITS 1]' }] }], both:[{ strat:'touch-of-the-arkifane' }], readOf:'27127046' }
     ],
     detachments: {
       // Cult of the Arkifane: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
@@ -1618,13 +1618,13 @@ const FACTIONS = {
         enhancements:[
           { name:'Wyredjinn', pts:25, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.' },
           { name:'Cybinfernal Font', pts:20, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.' },
-          { name:'Mark of the Soul Forges', pts:20, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
+          { name:'Mark of the Soul Forges', pts:20, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.', mods:[{ kind:'all', when:'Every attack', note:'a Critical Hit on an unmodified hit roll of 5+', from:'Mark of the Soul Forges', always:true, calc:{ critHit:5 }, readOf:'6b9be3c8' }] },
           { name:'Crown of Worms', pts:15, text:'**WARPSMITH** model only. Add 3" to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.' }
         ],
         stratagems:[
           { id:'touch-of-the-arkifane', gist:'Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.', gistOf:'09483c24', name:'Touch of the Arkifane', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Heretic Astartes'], none:['Damned'] }, when:'Any phase.', target:'One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, if your unit is selected to make a **Dark Pact**, you can select both abilities for that unit’s weapons to gain.' },
-          { id:'balefire-boon', gist:'Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.', gistOf:'212a3924', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, until the end of the phase', note:'+1 AP' }, name:'Balefire Boon', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Soul Forge'] }, when:'Your Shooting phase or the Fight phase.', target:'One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.' },
-          { id:'soul-tally-offering', gist:'Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.', gistOf:'80282bdc', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units', note:'re-roll the wound roll', vs:{ any:['Character','Monster','Vehicle'] } }, name:'Soul-Tally Offering', cp:2, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Soul Forge'] }, when:'Your Shooting phase or the Fight phase.', target:'One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**.' },
+          { id:'balefire-boon', gist:'Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.', gistOf:'212a3924', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, until the end of the phase', note:'+1 AP' }, readOf:'212a3924', name:'Balefire Boon', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Soul Forge'] }, when:'Your Shooting phase or the Fight phase.', target:'One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.' },
+          { id:'soul-tally-offering', gist:'Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.', gistOf:'80282bdc', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units', note:'re-roll the wound roll', vs:{ any:['Character','Monster','Vehicle'] } }, readOf:'80282bdc', name:'Soul-Tally Offering', cp:2, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Soul Forge'] }, when:'Your Shooting phase or the Fight phase.', target:'One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the **Wound roll**.' },
           { id:'biomechanoid-regeneration', gist:'Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword.', gistOf:'dd9a9f1d', name:'Biomechanoid Regeneration', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Heretic Astartes'], none:['Damned'] }, when:'Your Command phase.', target:'One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).', effect:'One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead.' },
           { id:'forge-fire-surge', gist:'Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge.', gistOf:'8cf08ab2', name:'Forge-Fire Surge', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Heretic Astartes'] }, when:'Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.', target:'That **HERETIC ASTARTES** unit.', effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.' },
           { id:'unholy-fortitude', gist:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.', gistOf:'21eb4840', def:'their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase', defOf:'21eb4840', name:'Unholy Fortitude', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Soul Forge'] }, when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.', target:'One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.' }
@@ -1639,7 +1639,7 @@ const FACTIONS = {
           { name:'Eye of Oblivion', pts:20, text:'**WARPSMITH** model only. When this unit is **selected to shoot**, select one enemy unit within 24" of this unit. That enemy unit has +6" **detection range** until this unit has shot.' }
         ],
         stratagems:[
-          { id:'ruinations-bounty', gist:'Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'872a02da', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, name:'Ruination’s Bounty', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Havocs','Obliterators'] }, when:'Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**.' },
+          { id:'ruinations-bounty', gist:'Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'872a02da', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, readOf:'872a02da', name:'Ruination’s Bounty', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Havocs','Obliterators'] }, when:'Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**.' },
           { id:'snare-of-fire', gist:'Your opponent’s Movement phase, an enemy unit ends a move within 8" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3".', gistOf:'388b5e8e', name:'Snare of Fire', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Havocs'] }, when:'Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly **unengaged HAVOCS** unit.', target:'That **HAVOCS** unit.', effect:'Your unit can make a **normal move** of up to D3+3".' },
           { id:'undying-hatred', gist:'Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.', gistOf:'7e2a015e', def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T', defOf:'7e2a015e', name:'Undying Hatred', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Havocs','Obliterators'] }, when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.' }
         ]
@@ -1736,14 +1736,6 @@ const ARMIES = [
         { name:'Even More Dakka' },
         { name:'Blitz Dem Gitz!' },
         { name:'Dreadherder', tag:'Enhancement', ph:['shooting','fight'], turn:'your', def:'Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)', text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.', defOf:'2373b0a6' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', weapon:'Blitzkannon', set:{ A:'+6' }, when:'vs non-MONSTER/VEHICLE targets', note:'in your Shooting phase', from:'Blitz Dem Gitz!', always:true, vs:{ none:['Monster','Vehicle'] } },
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'Even More Dakka' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Orks','Walker'] }, when:'Picked by the Dreadherder', selfWhen:'Picked by the Dreadherder for its own unit', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder', lasts:'turn' }
       ]
     },
     {
@@ -1757,11 +1749,6 @@ const ARMIES = [
         { name:'Even More Dakka' },
         { name:'Blitz Dem Gitz!' },
         { name:'Cybork Boosta', tag:'Enhancement', text:'**BIG MEK/MEK** model only. This model has +2" **M**.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', weapon:'Blitzkannon', set:{ A:'+6' }, when:'vs non-MONSTER/VEHICLE targets', note:'in your Shooting phase', from:'Blitz Dem Gitz!', always:true, vs:{ none:['Monster','Vehicle'] } },
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'Even More Dakka' }
       ]
     },
     {
@@ -1777,10 +1764,6 @@ const ARMIES = [
         { name:'More Dakka' },
         { name:'Supa-glowy Fing', tag:'Enhancement', text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka' }
-      ],
       rules:['Waaagh!','Leader','Supa-hazardous'],
       why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' } }
     },
@@ -1790,11 +1773,6 @@ const ARMIES = [
       gear:[['Kustom Choppa','Kustom Shoota']],
       ranged:[
         { name:'Kustom Shoota', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+3 A, +2 S', from:'Might is Right' },
-        { kind:'ranged', when:'Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Boss’ Ammo Runt' }
       ],
       kw:['Character','Faction: Orks','Grenades','Infantry','Warboss','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
@@ -1826,14 +1804,13 @@ const ARMIES = [
         { name:'Rokkit Barrage', who:'Tankbustas' },
         { name:'Bomb Squig', who:'Tankbustas' }
       ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Orks','Vehicle'], none:['Aircraft','Titanic'] }, when:'Picked by a Mek’s Clever Know-wotz', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase', from:'Clever Know-wotz', calc:{ hit:1 }, oneModel:true, lasts:'round' }
-      ],
       rules:['Waaagh!','Support'],
       kw:['Character','Explosives','Faction: Orks','Infantry','Mek','Tankbustas'],
-      kwNote:'Tankbustas comes from the supported Tankbustas.'
+      kwNote:'Tankbustas comes from the supported Tankbustas.',
+      why:{ kwNote:'supports Tankbustas', ptsNote:'the points of its parts as the list has them (Mek + Tankbustas)' }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'mek-flashgitz', ds:['orks/mek','orks/flash-gitz'], role:'Character', pts:300, ptsNote:'55 + Flash Gitz 245', upgrade:'Supa-snazz Dakka',
       leads:'Flash Gitz', support:true,
       models:['1× Mek','1× Kaptin','9× Flash Gitz'],
@@ -1858,16 +1835,10 @@ const ARMIES = [
         { name:'Finderz Keeperz', who:'Flash Gitz' },
         { name:'Supa-snazz Dakka', who:'Flash Gitz', tag:'Upgrade', text:'**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[RAPID FIRE 1]**.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', cond:'objective', note:'+1 AP', from:'Finderz Keeperz' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Orks','Vehicle'], none:['Aircraft','Titanic'] }, when:'Picked by a Mek’s Clever Know-wotz', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase', from:'Clever Know-wotz', calc:{ hit:1 }, oneModel:true, lasts:'round' }
-      ],
       rules:['Waaagh!','Support'],
       kw:['Character','Explosives','Faction: Orks','Infantry','Mek','Flash Gitz'],
-      kwNote:'Flash Gitz comes from the supported Flash Gitz.'
+      kwNote:'Flash Gitz comes from the supported Flash Gitz.',
+      why:{ kwNote:'supports Flash Gitz', ptsNote:'the points of its parts as the list has them (Mek + Flash Gitz)' }
     },
     {
       id:'gretchin', ds:'orks/gretchin', pts:45, copies:3,
@@ -1898,10 +1869,6 @@ const ARMIES = [
       melee:[
         { name:'Choppa', n:3 },
         { name:'Spinnin’ Blades', n:3 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Your Shooting phase, after an ingress move this turn', note:'+1 to hit rolls', from:'Deff from Above' }
       ]
     },
     {
@@ -1918,10 +1885,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Kan Klaw', n:6 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'vs units with no T 7+ models', note:'+1 to hit rolls', from:'Spiteful Power Trip', always:true, vs:{ maxT:6 } }
       ]
     }
   ]
@@ -1940,9 +1903,6 @@ const ARMIES = [
         { name:'Adamantine ’Eadbutt', kw:['DEVASTATING WOUNDS','EXTRA ATTACKS','PRECISION','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Gork’s Klaw', kw:['CLEAVE 2','DEVASTATING WOUNDS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
       ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: Orks'] }, when:'Within 6" of Ghazghkull', selfWhen:'Own aura', note:'+1 to hit, +1 to wound', from:'Prophet of Da Great Waaagh!', selfAlways:true }
-      ],
       kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -1954,13 +1914,10 @@ const ARMIES = [
         { name:'Big Chompa’s Jaws', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Hunter', kw:['LETHAL HITS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Standard', kw:['CLEAVE 1','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'can re-roll wound rolls', from:'Da Bigger Dey Iz…', always:true, vs:{ any:['Monster','Vehicle'] } }
       ]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'nazdreg-meganobz', ds:['orks/nazdreg','orks/meganobz'], role:'Epic Hero', pts:365, ptsNote:'165 + Meganobz 200',
       leads:'Meganobz',
       models:['1× Nazdreg','5× Meganob w/ Twin Killsaw'],
@@ -1986,15 +1943,13 @@ const ARMIES = [
         { name:'Krumpin’ Time', who:'Meganobz' },
         { name:'Arrogant Invulnerability', who:'Meganobz' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Riled up, Fight phase', cond:'riled', note:'+1 to hit rolls', from:'Krumpin’ Time' }
-      ],
       rules:['Waaagh!','Leader','Da Boss','Deep Strike'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Mega Armour','Nazdreg','Warboss','Explosives','Meganobz'],
-      kwNote:'Explosives, Meganobz come from the led Meganobz.'
+      kwNote:'Explosives, Meganobz come from the led Meganobz.',
+      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Nazdreg + Meganobz)' }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'beastboss-on-squigosaur-headwoppas-killchoppa', ds:'orks/beastboss-on-squigosaur', short:'Beastboss', pts:155, enhancement:'Headwoppa’s Killchoppa',
       models:['1× Beastboss on Squigosaur'],
       gear:[['Beastchoppa','Slugga','Squigosaur’s jaws','Thump Gun']],
@@ -2008,10 +1963,6 @@ const ARMIES = [
         { name:'Boss of da Hunt' },
         { name:'Keep Huntin’!' },
         { name:'Headwoppa’s Killchoppa', tag:'Enhancement', ph:['fight'], turn:'either', text:'**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP', from:'Headwoppa’s Killchoppa' }
       ]
     },
     {
@@ -2047,15 +1998,10 @@ const ARMIES = [
         { name:'Get Out da Way!', who:'Nobz' },
         { name:'Paired Krumpas', who:'Nobz' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
-        { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts' },
-        { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas', always:true }
-      ],
       rules:['Waaagh!','Leader','Support'],
       kw:['Big Mek','Character','Explosives','Faction: Orks','Infantry','Painboy','Nobz'],
-      kwNote:'Painboy, Nobz come from the combined unit.'
+      kwNote:'Painboy, Nobz come from the combined unit.',
+      why:{ kwNote:'leads Nobz (with Painboy)', ptsNote:'the points of its parts as the list has them (Big Mek + Painboy + Nobz)' }
     },
     {
       id:'big-mek-in-mega-armour-meganobz', ds:['orks/big-mek-in-mega-armour','orks/meganobz'], pts:310, ptsNote:'110 + Meganobz 200', enhancement:'Follow Me Ladz',
@@ -2081,13 +2027,9 @@ const ARMIES = [
         { name:'Krumpin’ Time', who:'Meganobz' },
         { name:'Arrogant Invulnerability', who:'Meganobz' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
-        { kind:'melee', when:'Riled up, Fight phase', cond:'riled', note:'+1 to hit rolls', from:'Krumpin’ Time' }
-      ],
       kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
-      kwNote:'Meganobz comes from the led Meganobz.'
+      kwNote:'Meganobz comes from the led Meganobz.',
+      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
     },
     {
       id:'gretchin', ds:'orks/gretchin', pts:45, copies:2,
@@ -2119,10 +2061,6 @@ const ARMIES = [
       melee:[
         { name:'Choppa', n:3, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Spinnin’ Blades', n:3, kw:['CLEAVE 1','HAZARDOUS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Your Shooting phase, after an ingress move this turn', note:'+1 to hit rolls', from:'Deff from Above' }
       ]
     },
     {
@@ -2142,10 +2080,6 @@ const ARMIES = [
         { name:'Big Choppa', kw:['ANTI-MONSTER/VEHICLE 4+','CLEAVE 2','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Squig Jaws', n:4, kw:['EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Stikka', n:3, kw:['ANTI-MONSTER/VEHICLE 4+','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 D', from:'Brutal Impact' }
       ]
     }
   ]
@@ -2185,15 +2119,10 @@ const ARMIES = [
         { name:'Murderous Charge', who:'Khorne Berzerkers' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        // "that unit" is the unit Khârn leads; he leads it for the whole battle
-        { kind:'melee', when:'While Khârn leads this unit', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Legendary Killer', always:true },
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 S', from:'Murderous Charge' }
-      ],
       rules:['Leader','Blessings of Khorne','Pistol','Hazardous'],
       kw:['Chaos','Character','Epic Hero','Faction: World Eaters','Grenades','Infantry','Khorne','Khârn the Betrayer','Battleline','Berzerkers'],
-      kwNote:'Battleline, Berzerkers come from the led Khorne Berzerkers.'
+      kwNote:'Battleline, Berzerkers come from the led Khorne Berzerkers.',
+      why:{ kwNote:'leads Khorne Berzerkers', ptsNote:'the points of its parts as the list has them (Khârn the Betrayer + Khorne Berzerkers)' }
     },
     {
       id:'daemon-prince-of-khorne-helm-of-brazen-ire', ds:'world-eaters/daemon-prince-of-khorne', short:'Daemon Prince', pts:230, enhancement:'Helm of Brazen Ire', warlord:true,
@@ -2208,10 +2137,6 @@ const ARMIES = [
         { name:'Devastating Assault' },
         { name:'Direct the Slaughter' },
         { name:'Helm of Brazen Ire', tag:'Enhancement', def:'-1 D to each attack allocated to this model', text:'**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.', defOf:'385eacd0' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn', from:'Devastating Assault' }
       ],
       kw:['Chaos','Character','Daemon','Daemon Prince','Faction: World Eaters','Khorne','Monster','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
@@ -2229,13 +2154,10 @@ const ARMIES = [
         { name:'Devastating Assault' },
         { name:'Direct the Slaughter' },
         { name:'Berzerker Glaive', tag:'Enhancement', text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn', from:'Devastating Assault' }
       ]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'lord-on-juggernaut-khorne-berzerkers', ds:['world-eaters/lord-on-juggernaut','world-eaters/khorne-berzerkers'], pts:455, ptsNote:'125 + Khorne Berzerkers 330', enhancement:'Archslaughterer',
       leads:'Khorne Berzerkers',
       models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','3× Khorne Berzerker w/ eviscerator and plasma pistol','1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)'],
@@ -2265,12 +2187,9 @@ const ARMIES = [
         { name:'Murderous Charge', who:'Khorne Berzerkers' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 S', from:'Murderous Charge' }
-      ],
       kw:['Chaos','Character','Faction: World Eaters','Khorne','Lord on Juggernaut','Mounted','Battleline','Berzerkers','Grenades','Infantry'],
-      kwNote:'Battleline, Berzerkers, Grenades, Infantry come from the led Khorne Berzerkers.'
+      kwNote:'Battleline, Berzerkers, Grenades, Infantry come from the led Khorne Berzerkers.',
+      why:{ kwNote:'leads Khorne Berzerkers', ptsNote:'the points of its parts as the list has them (Lord on Juggernaut + Khorne Berzerkers)' }
     },
     {
       id:'slaughterbound-exalted-eightbound', ds:['world-eaters/slaughterbound','world-eaters/exalted-eightbound'], pts:240, ptsNote:'110 + Exalted Eightbound 130', enhancement:'Battle-lust',
@@ -2292,17 +2211,12 @@ const ARMIES = [
         { name:'Battle-lust', who:'Slaughterbound', tag:'Enhancement', ph:['charge'], turn:'either', text:'**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.' },
         { name:'Rend and Tear', who:'Exalted Eightbound' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord' },
-        // "this unit" is the whole attached unit, the Slaughterbound included
-        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 D', from:'Rend and Tear', always:true, vs:{ any:['Monster','Vehicle'] } }
-      ],
       rules:['Leader','Deadly Demise D3','Blessings of Khorne','Deep Strike','Scouts 6"','Anti'],
       kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound','Exalted Eightbound'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
-      partialRules:{ 'Scouts 6"':'Slaughterbound' }
+      partialRules:{ 'Scouts 6"':'Slaughterbound' },
+      why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
       id:'chaos-rhino', ds:'world-eaters/chaos-rhino', pts:75,
@@ -2318,10 +2232,6 @@ const ARMIES = [
       gear:[['Chainblades'],['Chainblades']],
       melee:[
         { name:'Chainblades', n:3, A:'6', from:{ A:'Relentless Rage' } }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } },
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 } }
       ]
     },
     {
@@ -2346,11 +2256,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Forgefiend claws', A:'7', from:{ A:'Relentless Rage' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target within 18"', cond:'closest18', note:'re-roll the hit roll', from:'Furious Onslaught' },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ]
     }
   ]
@@ -2368,13 +2273,6 @@ const ARMIES = [
       melee:[
         { name:'strike', A:'9', from:{ A:'Relentless Rage' } },
         { name:'sweep', A:'17', from:{ A:'Relentless Rage' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Angron, if he has Driven by Ultimate Rage this round', selfWhen:'Own aura, if he has Driven by Ultimate Rage this round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Driven by Ultimate Rage' }
       ],
       kw:['Angron','Chaos','Character','Daemon','Epic Hero','Faction: World Eaters','Fly','Khorne','Monster','Primarch','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
@@ -2408,15 +2306,10 @@ const ARMIES = [
         { name:'Murderous Charge', who:'Khorne Berzerkers' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        // "that unit" is the unit Khârn leads; he leads it for the whole battle
-        { kind:'melee', when:'While Khârn leads this unit', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Legendary Killer', always:true },
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 S', from:'Murderous Charge' }
-      ],
       rules:['Leader','Blessings of Khorne','Pistol','Hazardous'],
       kw:['Chaos','Character','Epic Hero','Faction: World Eaters','Grenades','Infantry','Khorne','Khârn the Betrayer','Battleline','Berzerkers'],
-      kwNote:'Battleline, Berzerkers come from the led Khorne Berzerkers.'
+      kwNote:'Battleline, Berzerkers come from the led Khorne Berzerkers.',
+      why:{ kwNote:'leads Khorne Berzerkers', ptsNote:'the points of its parts as the list has them (Khârn the Betrayer + Khorne Berzerkers)' }
     },
     {
       id:'lord-on-juggernaut', ds:'world-eaters/lord-on-juggernaut', pts:95,
@@ -2442,10 +2335,6 @@ const ARMIES = [
         { name:'Rage Eternal', na:'Not leading a unit in this list' },
         { name:'Possessed Lord' },
         { name:'Lord of the Eightbound' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord' }
       ]
     },
     {
@@ -2468,17 +2357,12 @@ const ARMIES = [
         { name:'Berzerker Glaive', who:'Slaughterbound', tag:'Enhancement', text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' },
         { name:'Rend and Tear', who:'Exalted Eightbound' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'11' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord' },
-        // "this unit" is the whole attached unit, the Slaughterbound included
-        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 D', from:'Rend and Tear', always:true, vs:{ any:['Monster','Vehicle'] } }
-      ],
       rules:['Leader','Deadly Demise D3','Blessings of Khorne','Deep Strike','Scouts 6"','Anti'],
       kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound','Exalted Eightbound'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
-      partialRules:{ 'Scouts 6"':'Slaughterbound' }
+      partialRules:{ 'Scouts 6"':'Slaughterbound' },
+      why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
       id:'chaos-rhino', ds:'world-eaters/chaos-rhino', pts:75,
@@ -2494,10 +2378,6 @@ const ARMIES = [
       gear:[['Chainblades'],['Chainblades']],
       melee:[
         { name:'Chainblades', n:3, A:'6', from:{ A:'Relentless Rage' } }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } },
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 } }
       ]
     },
     {
@@ -2506,10 +2386,6 @@ const ARMIES = [
       gear:[['Chainblades'],['Chainblades']],
       melee:[
         { name:'Chainblades', n:3, A:'5', from:{ A:'Relentless Rage' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 D', from:'Rend and Tear', always:true, vs:{ any:['Monster','Vehicle'] } }
       ]
     },
     {
@@ -2546,11 +2422,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Forgefiend claws', A:'7', from:{ A:'Relentless Rage' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target within 18"', cond:'closest18', note:'re-roll the hit roll', from:'Furious Onslaught' },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ]
     }
   ]
@@ -2565,10 +2436,6 @@ const ARMIES = [
       id:'magnus-the-red', ds:'thousand-sons/magnus-the-red', pts:455, warlord:true,
       models:['1× Magnus the Red'],
       gear:[['Blade of Magnus','Gaze of Magnus','Tzeentch’s Firestorm']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Thousand Sons','Fly','Magnus the Red','Monster','Primarch','Psyker','Tzeentch','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -2588,15 +2455,10 @@ const ARMIES = [
         { name:'Aetherstride' },
         { name:'Hunter of Souls' },
         { name:'Eldritch Vortex of E’taph', tag:'Enhancement', text:'**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'vs CHARACTER units', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Hunter of Souls', always:true, vs:{ any:['Character'] } },
-        { kind:'all', when:'vs PSYKER CHARACTER units', note:'re-roll the hit roll and the wound roll', from:'Hunter of Souls', always:true, vs:{ all:['Psyker','Character'] } },
-        { kind:'ranged', when:'After an aetherstride this turn', note:'Dark Blessing has [SUSTAINED HITS D3]', from:'Aetherstride', calc:{ sus:'D3', weapon:'Dark Blessing' }, lasts:'turn' }
       ]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'exalted-sorcerer-rubric-marines', ds:['thousand-sons/exalted-sorcerer','thousand-sons/rubric-marines'], role:'Character', pts:230, ptsNote:'115 + Rubric Marines 115', enhancement:'Incandaeum',
       leads:'Rubric Marines',
       models:['1× Exalted Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon','3× Rubric Marine w/ warpflamer'],
@@ -2632,18 +2494,14 @@ const ARMIES = [
         { name:'Bringers of Change', who:'Rubric Marines' },
         { name:'Icon of Flame', who:'Rubric Marines' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Every ranged attack', note:'re-roll wound rolls of 1', from:'Bringers of Change', always:true, calc:{ rrWound:'1s' } },
-        { kind:'ranged', when:'Target within range of an objective marker you do not control', cond:'targetObjectiveNotYours', note:'re-roll the wound roll', from:'Bringers of Change', calc:{ rrWound:'all' } }
-      ],
       rules:['Leader','Cabal of Sorcerers','Blast','Devastating Wounds','Psychic','Pistol','Anti','Torrent','Ignores Cover'],
       kw:['Chaos','Character','Exalted Sorcerer','Faction: Thousand Sons','Grenades','Infantry','Psyker','Tzeentch','Battleline','Rubric','Rubric Marines','Rubricae'],
       kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.',
       partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer and Aspiring Sorcerer' },
       // Wahapedia's Rubric Marines: "ASPIRING SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Aspiring Sorcerer only)"; BSData has
       // both on the Aspiring Sorcerer model; the Exalted Sorcerer has both on his own datasheet
-      kwOnly:{ Psyker:'Exalted Sorcerer and Aspiring Sorcerer' }
+      kwOnly:{ Psyker:'Exalted Sorcerer and Aspiring Sorcerer' },
+      why:{ kwNote:'leads Rubric Marines', ptsNote:'the points of its parts as the list has them (Exalted Sorcerer + Rubric Marines)' }
     },
     {
       id:'sorcerer-in-terminator-armour-scarab-occult-terminators', ds:['thousand-sons/sorcerer-in-terminator-armour','thousand-sons/scarab-occult-terminators'], role:'Character', pts:565, ptsNote:'140 + Scarab Occult Terminators 425', enhancement:'Umbralefic Crystal',
@@ -2679,17 +2537,14 @@ const ARMIES = [
         { name:'Umbralefic Crystal', who:'Sorcerer in Terminator Armour', tag:'Enhancement · Once per battle, per army', ph:['command','movement'], turn:'your', text:'**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' },
         { name:'Rites of Coalescence', who:'Scarab Occult Terminators' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Your Shooting phase, vs the enemy unit picked at its start', note:'+1 to hit rolls', from:'Marked by Fate' }
-      ],
       rules:['Leader','Deep Strike','Cabal of Sorcerers','Psychic','Anti','Devastating Wounds','Rapid Fire'],
       kw:['Chaos','Character','Faction: Thousand Sons','Infantry','Psyker','Sorcerer','Terminator','Tzeentch','Rubricae','Scarab Occult'],
       kwNote:'Rubricae, Scarab Occult come from the led Scarab Occult Terminators.',
       partialRules:{ 'Cabal of Sorcerers':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
       // Wahapedia's Scarab Occult Terminators: "SCARAB OCCULT SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Scarab Occult Sorcerer
       // only)"; BSData has both on the Scarab Occult Sorcerer model; the Sorcerer in Terminator Armour has both on his own datasheet
-      kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' }
+      kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
+      why:{ kwNote:'leads Scarab Occult Terminators', ptsNote:'the points of its parts as the list has them (Sorcerer in Terminator Armour + Scarab Occult Terminators)' }
     },
     {
       id:'tzaangors', ds:'thousand-sons/tzaangors', pts:75,
@@ -2718,10 +2573,6 @@ const ARMIES = [
         { name:'Ectoplasma destructor' },
         { name:'Excruciator cannon', n:2 },
         { name:'Heavy reaper autocannon', n:2 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
       ]
     },
     {
@@ -2749,18 +2600,13 @@ const ARMIES = [
   source:'New Recruit, exported 20 Oct 2026',
   units:[
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'the-swarmlord', ds:'tyranids/the-swarmlord', pts:210,
       models:['1× The Swarmlord'],
-      gear:[['Bone Sabres','Synaptic Pulse']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Tyranids'] }, when:'Within 9" of the Swarmlord', note:'within your army’s Synapse Range', from:'Domination of the Hive Mind' }
-      ]
+      gear:[['Bone Sabres','Synaptic Pulse']]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'hive-tyrant', ds:'tyranids/hive-tyrant', pts:220, enhancement:'Monstrous Nemesis', warlord:true,
       models:['1× Hive Tyrant'],
       gear:[['Monstrous bonesword and lash whip','Monstrous scything talons']],
@@ -2769,18 +2615,11 @@ const ARMIES = [
         { name:'Will of the Hive Mind' },
         { name:'Monstrous Nemesis', tag:'Enhancement', ph:['fight'], turn:'either', text:'**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
-        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 to wound rolls', from:'Monstrous Nemesis', always:true, vs:{ any:['Monster','Vehicle'] } }
-      ],
-      aura:[
-        { kind:'ranged', needs:{ all:['Faction: Tyranids'] }, when:'Within 6" of the Hive Tyrant', note:'ranged weapons have [ASSAULT] and [LETHAL HITS]', from:'Onslaught', selfAlways:true }
-      ],
       kw:['Character','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'neurogaunts', ds:'tyranids/neurogaunts', pts:45, copies:2,
       models:['1× Neurogaunt Nodebeast','10× Neurogaunt'],
       gear:[['Chitinous claws and teeth'],['Chitinous claws and teeth']],
@@ -2790,10 +2629,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Chitinous claws and teeth', n:11 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' }
       ]
     },
     {
@@ -2809,12 +2644,6 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Protean Purpose' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
-        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle' }
       ]
     },
     {
@@ -2830,12 +2659,6 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Protean Purpose' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
-        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle' }
       ]
     },
     {
@@ -2854,35 +2677,18 @@ const ARMIES = [
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' },
         { name:'Unnatural Resistance' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
-        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle' }
-      ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Anti','Extra Attacks','Melta','Blast','Psychic'],
       why:{ rules:{ Anti:'Destabilising Predation' } }
     },
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:270,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
-        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle' }
-      ]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
     },
     {
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180, copies:2,
       models:['1× Tyrannofex'],
-      gear:[['Powerful limbs','Stinger salvoes','Acid spray']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' }
-      ]
+      gear:[['Powerful limbs','Stinger salvoes','Acid spray']]
     }
   ]
 },
@@ -2904,42 +2710,22 @@ const ARMIES = [
         { name:'Ram Jets' },
         { name:'Saturation Fire' },
         { name:'Invulnerable Save (5+*)' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target within range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Saturation Fire' },
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls (and -4 OC)', from:'Damaged: 1-6 Wounds Remaining' }
       ]
     },
     {
       id:'knight-errant', ds:'imperial-knights/knight-errant', pts:355,
       models:['1× Knight Errant'],
-      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'+1 to hit rolls', from:'Aggressive Assault' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ]
+      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']]
     },
     {
       id:'knight-paladin', ds:'imperial-knights/knight-paladin', pts:375, copies:2,
       models:['1× Knight Paladin'],
-      gear:[['Questoris heavy stubber','Rapid-fire battle cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'improve AP by 1', from:'Seasoned Noble' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ]
+      gear:[['Questoris heavy stubber','Rapid-fire battle cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']]
     },
     {
       id:'knight-warden', ds:'imperial-knights/knight-warden', pts:365, warlord:true,
       models:['1× Knight Warden'],
       gear:[['Avenger gatling cannon','Heavy flamer','Stormspear rocket pod','Meltagun','Reaper chainsword']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'vs non-MONSTER/VEHICLE targets', note:'ranged attacks have [DEVASTATING WOUNDS]', from:'Thin Their Ranks', always:true, vs:{ none:['Monster','Vehicle'] } },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
       kw:['Character','Faction: Imperial Knights','Imperium','Knight Warden','Questoris','Titanic','Towering','Vehicle','Walker','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     }
@@ -2955,11 +2741,7 @@ const ARMIES = [
     {
       id:'canis-rex', ds:'imperial-knights/canis-rex', pts:415,
       models:['1× Canis Rex','1× Sir Hekhtur'],
-      gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ]
+      gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']]
     },
     {
       id:'cerastus-knight-atrapos', ds:'imperial-knights/cerastus-knight-atrapos', pts:450, enhancement:'Bringer of Justice',
@@ -2977,23 +2759,16 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       // (Bringer of Justice's +2 A is already in the melee profiles, as New Recruit prints them: only its +1 to hit is a footnote)
-      mods:[
-        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } } },
-        { kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Bringer of Justice', always:true },
-        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining' }
-      ]
+      mods:['Macro-extinction Protocols','Bringer of Justice','Damaged: 1-10 Wounds Remaining']
     },
     {
       id:'cerastus-knight-lancer', ds:'imperial-knights/cerastus-knight-lancer', pts:415,
       models:['1× Cerastus Knight Lancer'],
-      gear:[['Cerastus shock lance']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining' }
-      ]
+      gear:[['Cerastus shock lance']]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      // (Hunter's Eye's [IGNORES COVER] is already on every ranged weapon, as New Recruit prints them: no footnote)
       id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
       models:['1× Knight Crusader'],
       gear:[['Avenger gatling cannon','Heavy flamer','Titanic feet','Stormspear rocket pod','Meltagun','Questoris heavy stubber','Rapid-fire battle cannon']],
@@ -3011,12 +2786,6 @@ const ARMIES = [
         { name:'Damaged: 1-9 Wounds Remaining' },
         { name:'Hunter’s Eye', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' },
         { name:'Crusader’s Duty' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // (Hunter's Eye's [IGNORES COVER] is already on every ranged weapon, as New Recruit prints them: no footnote)
-      mods:[
-        { kind:'ranged', when:'Remained Stationary in your Movement phase', cond:'stationary', note:'ranged weapons have [SUSTAINED HITS 1] until the end of the turn', from:'Punishing Salvoes' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
       ],
       rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Ignores Cover','Torrent','Melta','Rapid Fire','Blast'],
       why:{ rules:{ 'Ignores Cover':'Hunter’s Eye' } }
@@ -3038,11 +2807,6 @@ const ARMIES = [
         { name:'Saturation Fire' },
         { name:'Invulnerable Save (5+*)' },
         { name:'Sanctuary', tag:'Enhancement', def:'Sanctuary: 5+ invulnerable save', text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.', defOf:'5b60c82a' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target within range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Saturation Fire' },
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls (and -4 OC)', from:'Damaged: 1-6 Wounds Remaining' }
       ]
     }
   ]
@@ -3061,13 +2825,11 @@ const ARMIES = [
         { name:'Point Blank', kw:['CLOSE-QUARTERS','TORRENT','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } },
         { name:'Aimed', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 4','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
       ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: Orks'] }, when:'Within 6" of Ghazghkull', selfWhen:'Own aura', note:'+1 to hit, +1 to wound', from:'Prophet of Da Great Waaagh!', selfAlways:true }
-      ],
       kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'nazdreg-meganobz', ds:['orks/nazdreg','orks/meganobz'], role:'Epic Hero', pts:365, ptsNote:'165 + Meganobz 200',
       leads:'Meganobz',
       models:['1× Nazdreg','5× Meganob w/ Twin Killsaw'],
@@ -3093,13 +2855,10 @@ const ARMIES = [
         { name:'Krumpin’ Time', who:'Meganobz' },
         { name:'Arrogant Invulnerability', who:'Meganobz' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Riled up, Fight phase', cond:'riled', note:'+1 to hit rolls', from:'Krumpin’ Time' }
-      ],
       rules:['Waaagh!','Leader','Da Boss','Deep Strike'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Mega Armour','Nazdreg','Warboss','Explosives','Meganobz'],
-      kwNote:'Explosives, Meganobz come from the led Meganobz.'
+      kwNote:'Explosives, Meganobz come from the led Meganobz.',
+      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Nazdreg + Meganobz)' }
     },
     {
       id:'zodgrod-wortsnagga-runtherd-gretchin', ds:['orks/zodgrod-wortsnagga','orks/runtherd','orks/gretchin'], role:'Epic Hero', pts:150, ptsNote:'50 + Runtherd 10 + Gretchin 90', upgrade:'Extra Sneaky',
@@ -3134,7 +2893,7 @@ const ARMIES = [
       rules:['Waaagh!','Leader','Support'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Runtherd','Zodgrod Wortsnagga','Battleline','Gretchin','Grots'],
       kwNote:'Battleline, Gretchin, Grots come from the combined unit.',
-      why:{ kw:{ Battleline:'Sneaky Little Gitz' } }
+      why:{ kw:{ Battleline:'Sneaky Little Gitz' }, kwNote:'leads Gretchin (with Runtherd)', ptsNote:'the points of its parts as the list has them (Zodgrod Wortsnagga + Runtherd + Gretchin)' }
     },
     {
       id:'big-mek-painboy-nobz', ds:['orks/big-mek','orks/painboy','orks/nobz'], role:'Character', pts:385, copies:2, ptsNote:'100 + Painboy 45 + Nobz 240',
@@ -3169,15 +2928,10 @@ const ARMIES = [
         { name:'Get Out da Way!', who:'Nobz' },
         { name:'Paired Krumpas', who:'Nobz' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
-        { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts' },
-        { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas', always:true }
-      ],
       rules:['Waaagh!','Leader','Support'],
       kw:['Big Mek','Character','Explosives','Faction: Orks','Infantry','Painboy','Nobz'],
-      kwNote:'Painboy, Nobz come from the combined unit.'
+      kwNote:'Painboy, Nobz come from the combined unit.',
+      why:{ kwNote:'leads Nobz (with Painboy)', ptsNote:'the points of its parts as the list has them (Big Mek + Painboy + Nobz)' }
     },
     {
       id:'big-mek-in-mega-armour-meganobz', ds:['orks/big-mek-in-mega-armour','orks/meganobz'], pts:290, ptsNote:'115 + Meganobz 175', enhancement:'Supa-glowy Fing',
@@ -3210,15 +2964,11 @@ const ARMIES = [
       // More Dakka's [IGNORES COVER] is printed on the Big Mek's weapons only: BSData gives it to the leader's own
       // profiles while it labels the Meganobz' Kombi-weapon "(More Dakka)" too; the rule is for the whole attached
       // unit (Core Rules 19.04), so the Meganobz' profile stays as printed and the footnote says it
-      mods:[
-        { kind:'ranged', when:'Every ranged attack', note:'[IGNORES COVER]', from:'More Dakka', always:true },
-        { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
-        { kind:'melee', when:'Riled up, Fight phase', cond:'riled', note:'+1 to hit rolls', from:'Krumpin’ Time' }
-      ],
+      mods:[{ kind:'ranged', when:'Every ranged attack', note:'[IGNORES COVER]', from:'More Dakka', always:true, readOf:'37fca761', listWhy:'the Meganobz it leads in this list carry ranged weapons (their Kombi-weapons): More Dakka gives the whole attached unit [IGNORES COVER] (“This unit’s ranged attacks have”), which BSData marks only on the Big Mek’s own weapons' },'More Dakka','Krumpin’ Time'],
       rules:['Waaagh!','Leader','Supa-hazardous'],
       kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
       kwNote:'Meganobz comes from the led Meganobz.',
-      why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' } }
+      why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' }, mods:{ 'More Dakka':'the Meganobz it leads in this list carry ranged weapons (their Kombi-weapons): More Dakka gives the whole attached unit [IGNORES COVER] (“This unit’s ranged attacks have”), which BSData marks only on the Big Mek’s own weapons' }, kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
     },
     {
       id:'gretchin', ds:'orks/gretchin', role:'Battleline', pts:45, copies:3,
@@ -3252,13 +3002,6 @@ const ARMIES = [
         { name:'strike', A:'9', from:{ A:'Relentless Rage' } },
         { name:'sweep', A:'17', from:{ A:'Relentless Rage' } }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Angron, if he has Driven by Ultimate Rage this round', selfWhen:'Own aura, if he has Driven by Ultimate Rage this round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Driven by Ultimate Rage' }
-      ],
       kw:['Angron','Chaos','Character','Daemon','Epic Hero','Faction: World Eaters','Fly','Khorne','Monster','Primarch','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -3279,10 +3022,6 @@ const ARMIES = [
         { name:'Bloody Fury' },
         // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'re-roll hit rolls', from:'Bloody Fury' }
       ]
     },
     {
@@ -3302,10 +3041,6 @@ const ARMIES = [
         { name:'Bloody Fury' },
         // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'re-roll hit rolls', from:'Bloody Fury' }
       ]
     },
     {
@@ -3314,10 +3049,6 @@ const ARMIES = [
       gear:[['Chainblades'],['Chainblades']],
       melee:[
         { name:'Chainblades', n:3, A:'6', from:{ A:'Relentless Rage' } }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } },
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 } }
       ]
     },
     {
@@ -3354,11 +3085,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Forgefiend claws', A:'7', from:{ A:'Relentless Rage' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target within 18"', cond:'closest18', note:'re-roll the hit roll', from:'Furious Onslaught' },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ]
     }
   ]
@@ -3373,15 +3099,6 @@ const ARMIES = [
       id:'belisarius-cawl', ds:'adeptus-mechanicus/belisarius-cawl', pts:220, warlord:true,
       models:['1× Belisarius Cawl'],
       gear:[['Arc Scourge','Cawl’s Omnissian axe','Mechadendrite hive','Solar atomiser']],
-      // what Belisarius Cawl gives other units: the Invocation of Machine Vengeance canticle (Binharic Courage's OC and
-      // test bonus and Shroudpsalm's Stealth change no attacks)
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Adeptus Mechanicus'] }, when:'If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target', selfWhen:'If he has Invocation of Machine Vengeance, vs your Machine Vengeance target', note:'can re-roll the hit roll', from:'Canticles of the Omnissiah', lasts:'round' }
-      ],
-      // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
-      guard:[
-        { from:'Shroudpsalm', needs:{ all:['Faction: Adeptus Mechanicus'] }, kind:'ranged', when:'Within 6" of Cawl, if he has Shroudpsalm', note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true } }
-      ],
       kw:['Belisarius Cawl','Character','Cult Mechanicus','Epic Hero','Faction: Adeptus Mechanicus','Imperium','Mobile','Monster','Tech-Priest','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -3391,6 +3108,8 @@ const ARMIES = [
       gear:[['Jericho-class conversion resonator','Rod of the War Forge']]
     },
     {
+      // the enhancement's "friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model": no calc (a choice once per battle round
+      // after a failed save, not numbers the calculator plays)
       id:'tech-priest-enginseer', ds:'adeptus-mechanicus/tech-priest-enginseer', pts:75, enhancement:'Necromechanic',
       models:['1× Tech-Priest Enginseer'],
       gear:[['Mechanicus pistol','Omnissian axe','Servo arm']],
@@ -3400,17 +3119,6 @@ const ARMIES = [
         { name:'Vengeance for the Omnissiah' },
         // the Cohort Cybernetica enhancement as data.js has it; New Recruit leaves out "TECH-PRIEST model only." (deviations-nr.json)
         { name:'Necromechanic', tag:'Enhancement · Once per battle round', text:'**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', weapon:'Omnissian axe', set:{ A:'6' }, when:'After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of it', note:'until the end of the battle', from:'Vengeance for the Omnissiah', calc:{}, lasts:'battle' }
-      ],
-      // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
-      guard:[
-        { from:'Omnissiah’s Blessing', needs:{ all:['Faction: Adeptus Mechanicus','Vehicle'] }, kind:'all', one:true, when:'Picked by the Enginseer in your Command phase (within 3")', note:'Feel No Pain 5+ for that VEHICLE model', calc:{ fnp:5 } },
-        // the enhancement's "friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model": no calc (a choice once per battle round
-        // after a failed save, not numbers the calculator plays)
-        { from:'Necromechanic', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] }, kind:'all', when:'Within 12" of the Enginseer, once per battle round', note:'after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0' }
       ]
     },
     {
@@ -3437,15 +3145,10 @@ const ARMIES = [
         { name:'Robotic Bodyguard', who:'Kastelan Robots' },
         { name:'Repulsor Grid', who:'Kastelan Robots' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', weapon:'Incendine combustor', set:{ A:'+2' }, when:'In Protector Protocol', note:'selected in your Command phase', from:'Battle Protocols', calc:{}, lasts:'round' },
-        { kind:'melee', weapon:'Twin Kastelan fist', set:{ A:'+2' }, when:'In Conqueror Protocol', note:'selected in your Command phase', from:'Battle Protocols', calc:{}, lasts:'round' }
-      ],
       rules:['Support','Doctrina Imperatives','Feel No Pain 4+','Devastating Wounds','Pistol','Deadly Demise 1','Twin-linked','Ignores Cover','Torrent'],
       kw:['Character','Cybernetica Datasmith','Faction: Adeptus Mechanicus','Imperium','Legio Cybernetica','Skitarii','Tech-Priest','Vehicle','Kastelan Robots','Walker'],
       kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.',
-      why:{ kw:{ Skitarii:'Martial Signatum Amplificator' } }
+      why:{ kw:{ Skitarii:'Martial Signatum Amplificator' }, kwNote:'supports Kastelan Robots', ptsNote:'the points of its parts as the list has them (Cybernetica Datasmith + Kastelan Robots)' }
     },
     {
       id:'skitarii-rangers', ds:'adeptus-mechanicus/skitarii-rangers', pts:85, copies:2,
@@ -3497,15 +3200,7 @@ const ARMIES = [
     {
       id:'onager-dunecrawler', ds:'adeptus-mechanicus/onager-dunecrawler', pts:150,
       models:['1× Onager Dunecrawler (Broad spectrum data-tether)'],
-      gear:[['Cognis heavy stubber','Dunecrawler legs','Twin Onager heavy phosphor blaster']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
-      ],
-      // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
-      guard:[
-        { from:'Emanatus Forcefield', needs:{ all:['Faction: Adeptus Mechanicus','Battleline'] }, kind:'ranged', when:'Wholly within 6" of the Onager Dunecrawler', note:'4+ InSv against ranged attacks', calc:{ insv:4 } }
-      ]
+      gear:[['Cognis heavy stubber','Dunecrawler legs','Twin Onager heavy phosphor blaster']]
     },
     {
       id:'skorpius-disintegrator', ds:'adeptus-mechanicus/skorpius-disintegrator', pts:170, copies:2,
@@ -3515,11 +3210,6 @@ const ARMIES = [
         { name:'Cognis heavy stubber', n:3 },
         { name:'Disruptor missile launcher' },
         { name:'Ferrumite cannon' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables (it has no belleros energy cannon)
-      mods:[
-        { kind:'ranged', weapon:'Ferrumite cannon', when:'Ferrumite cannon vs MONSTER or VEHICLE targets', note:'+1 to hit rolls', from:'Blistering Salvoes', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ]
     }
   ]
@@ -3534,15 +3224,11 @@ const ARMIES = [
       id:'fulgrim', ds:'emperors-children/fulgrim', pts:340, warlord:true,
       models:['1× Fulgrim'],
       gear:[['Daemonic blades','Malefic lash','Serpentine tail']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 Wounds Remaining' },
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
-      ],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Emperor\'s Children','Fly','Fulgrim','Mobile','Monster','Primarch','Slaanesh','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'daemon-prince-of-slaanesh-with-wings-pledge-of-unholy-fortune', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:235, enhancement:'Pledge of Unholy Fortune',
       models:['1× Daemon Prince of Slaanesh with Wings'],
       gear:[['Hellforged weapons','Infernal cannon']],
@@ -3550,13 +3236,10 @@ const ARMIES = [
         { name:'Daemonic Destruction' },
         { name:'Stimulated by Pain' },
         { name:'Pledge of Unholy Fortune', tag:'Enhancement · Once per turn', text:'**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
       ]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'daemon-prince-of-slaanesh-with-wings-pledge-of-eternal-servitude', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:250, enhancement:'Pledge of Eternal Servitude',
       models:['1× Daemon Prince of Slaanesh with Wings'],
       gear:[['Hellforged weapons','Infernal cannon']],
@@ -3564,10 +3247,6 @@ const ARMIES = [
         { name:'Daemonic Destruction' },
         { name:'Stimulated by Pain' },
         { name:'Pledge of Eternal Servitude', tag:'Enhancement', text:'**EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a **Leadership test** for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
       ]
     },
     {
@@ -3599,18 +3278,13 @@ const ARMIES = [
         { name:'Excessive Assault', who:'Infractors' },
         { name:'Icon of Excess', who:'Infractors' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Euphoric Strikes used at the start of the Fight phase (once per battle)', note:'+3 A and +1 AP', from:'Euphoric Strikes' },
-        { kind:'melee', when:'Every melee attack', note:'re-roll wound rolls of 1', from:'Excessive Assault', always:true },
-        { kind:'melee', when:'Target within range of an objective marker', cond:'targetObjective', note:'re-roll the wound roll', from:'Excessive Assault' },
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
-      ],
       rules:['Leader','Thrill Seekers','Scouts 6"','Pistol','Lance','Extra Attacks','Precision','Hazardous'],
       kw:['Chaos','Character','Faction: Emperor\'s Children','Grenades','Infantry','Lord Exultant','Slaanesh','Battleline','Infractors'],
-      kwNote:'Battleline, Infractors come from the led Infractors.'
+      kwNote:'Battleline, Infractors come from the led Infractors.',
+      why:{ kwNote:'leads Infractors', ptsNote:'the points of its parts as the list has them (Lord Exultant + Infractors)' }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'tormentors', ds:'emperors-children/tormentors', pts:85,
       models:['1× Obsessionist','2× Tormentor','1× Tormentor (Icon of Excess)','1× Tormentor w/ meltagun'],
       gear:[['Plasma pistol','Power sword'],['Boltgun','Close combat weapon'],['Boltgun','Close combat weapon'],['Close combat weapon','Meltagun']],
@@ -3626,10 +3300,6 @@ const ARMIES = [
       melee:[
         { name:'Power sword' },
         { name:'Close combat weapon', n:4 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
       ]
     },
     {
@@ -3640,12 +3310,6 @@ const ARMIES = [
         { name:'Ectoplasma destructor' },
         { name:'Excruciator cannon', n:2 },
         { name:'Heavy reaper autocannon', n:2 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Target not Below Half-strength', note:'+1 to hit rolls', from:'Revel in Desecration' },
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' },
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
       ]
     },
     {
@@ -3656,12 +3320,6 @@ const ARMIES = [
         { name:'Ectoplasma destructor' },
         { name:'Excruciator cannon', n:2 },
         { name:'Heavy reaper autocannon', n:2 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Target not Below Half-strength', note:'+1 to hit rolls', from:'Revel in Desecration' },
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' },
-        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
       ]
     }
   ]
@@ -3688,15 +3346,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       // (Knight Diabolus's improved WS is already in the melee profiles, as New Recruit prints them: only its [LANCE] is a footnote)
-      mods:[
-        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } } },
-        { kind:'melee', when:'Using the Diabolic Power ability (Malefic Surge)', note:'melee weapons have [LANCE]', from:'Knight Diabolus' },
-        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 wounds remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 6" of Chaos Cerastus Knight Atrapos, vs a TITANIC or TOWERING unit', note:'re-roll the hit roll', from:'Consumed with Hunger', vs:{ any:['Titanic','Towering'] } }
-      ]
+      mods:['Macro-extinction Protocols','Knight Diabolus','Damaged: 1-10 wounds remaining']
     },
     {
       id:'chaos-cerastus-knight-lancer', ds:'chaos-knights/chaos-cerastus-knight-lancer', pts:420, enhancement:'Blasphemous Engine',
@@ -3710,13 +3360,6 @@ const ARMIES = [
         { name:'Dark Fervour', na:'No WAR DOG in this list' },
         { name:'Damaged: 1-10 wounds remaining' },
         { name:'Blasphemous Engine', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the **Leadership test** taken to see if it suffers any **mortal wounds**.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 wounds remaining' }
-      ],
-      aura:[
-        { kind:'ranged', needs:{ all:['War Dog'] }, when:'Within 6" of Chaos Cerastus Knight Lancer', note:'ranged weapons have [ASSAULT]', from:'Dark Fervour' }
       ]
     },
     {
@@ -3736,12 +3379,6 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Bestial Aspect', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // (Bestial Aspect's [ASSAULT] is already on every ranged weapon, as New Recruit prints them: no footnote)
-      mods:[
-        { kind:'all', when:'Selected to shoot or fight', note:'re-roll one hit roll or one wound roll', from:'Seething Hatred' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
-      ],
       rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Assault','Torrent','Ignores Cover','Rapid Fire'],
       kw:['Abhorrent','Chaos','Character','Faction: Chaos Knights','Knight Despoiler','Titanic','Towering','Vehicle','Walker','Warlord'],
       why:{ kw:{ Warlord:'Warlord' }, rules:{ Assault:'Bestial Aspect' } }
@@ -3759,14 +3396,6 @@ const ARMIES = [
         { name:'Damaged: 1-9 wounds remaining' },
         { name:'*Invulnerable Save' },
         { name:'Fleshmetal Fusion', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed)', note:'re-roll the wound roll', from:'Methodical Destruction' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 9" of Knight Ruinator, target is the closest enemy unit', note:'improve AP by 1', from:'Close-range Killers' }
       ]
     },
     {
@@ -3778,14 +3407,6 @@ const ARMIES = [
         { name:'Close-range Killers', na:'No WAR DOG in this list' },
         { name:'Damaged: 1-9 wounds remaining' },
         { name:'*Invulnerable Save' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed)', note:'re-roll the wound roll', from:'Methodical Destruction' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 9" of Knight Ruinator, target is the closest enemy unit', note:'improve AP by 1', from:'Close-range Killers' }
       ]
     },
     {
@@ -3814,40 +3435,22 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Final Howl (Aura)', tag:'Enhancement · Aura', text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 6" of the War Dog Brigand with Final Howl', selfWhen:'Own aura', note:'re-roll wound rolls of 1', from:'Final Howl (Aura)', selfAlways:true }
-      ],
       kw:['Battleline','Brigand','Chaos','Character','Faction: Chaos Knights','Vehicle','Walker','War Dog','Warlord'],
       kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
-      why:{ kw:{ Warlord:'Warlord', Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
+      why:{ kw:{ Warlord:'Warlord', Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Houndpack Lance Character' }
     },
     {
       id:'war-dog-brigand', ds:'chaos-knights/war-dog-brigand', role:'Battleline', pts:135,
       models:['1× War Dog Brigand (Houndpack Lance Character)'],
       gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
-      ],
       kw:['Battleline','Brigand','Chaos','Character','Faction: Chaos Knights','Vehicle','Walker','War Dog'],
       kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
-      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
+      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Houndpack Lance Character' }
     },
     {
       id:'war-dog-brigand-2', ds:'chaos-knights/war-dog-brigand', role:'Battleline', pts:135, copies:3,
       models:['1× War Dog Brigand'],
       gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
-      ],
       kw:['Battleline','Brigand','Chaos','Faction: Chaos Knights','Vehicle','Walker','War Dog'],
       why:{ kw:{ Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
     },
@@ -3865,12 +3468,6 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Snarling Rivalry', tag:'Upgrade', text:'**EXECUTIONER** unit only. This unit’s ranged attacks have **[IGNORES COVER]**.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // (Snarling Rivalry's [IGNORES COVER] is already on every ranged weapon, as New Recruit prints them: no footnote)
-      mods:[
-        { kind:'all', when:'Target Below Half-strength', note:'+1 to hit rolls', from:'Executioner' },
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
-      ],
       kw:['Battleline','Chaos','Executioner','Faction: Chaos Knights','Vehicle','Walker','War Dog'],
       why:{ kw:{ Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
     },
@@ -3884,22 +3481,14 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Panoply of the Cursed Knights', tag:'Enhancement', def:'worsen the AP of each attack that targets it by 1', text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.', defOf:'6b3ad7c8' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
-      ],
       kw:['Battleline','Chaos','Character','Faction: Chaos Knights','Karnivore','Vehicle','Walker','War Dog'],
       kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
-      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
+      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Houndpack Lance Character' }
     },
     {
       id:'war-dog-karnivore', ds:'chaos-knights/war-dog-karnivore', role:'Battleline', pts:145, copies:5,
       models:['1× War Dog Karnivore'],
       gear:[['Reaper chaintalon','Slaughterclaw','Diabolus heavy stubber']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
-      ],
       kw:['Battleline','Chaos','Faction: Chaos Knights','Karnivore','Vehicle','Walker','War Dog'],
       why:{ kw:{ Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
     }
@@ -3915,41 +3504,18 @@ const ARMIES = [
       id:'angron', ds:'world-eaters/angron', pts:330, warlord:true,
       models:['1× Angron'],
       gear:[['Samni’arius and Spinegrinder']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Angron, if he has Driven by Ultimate Rage this round', selfWhen:'Own aura, if he has Driven by Ultimate Rage this round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Driven by Ultimate Rage' }
-      ],
       kw:['Angron','Chaos','Character','Daemon','Epic Hero','Faction: World Eaters','Fly','Khorne','Monster','Primarch','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
       id:'skarbrand', ds:'world-eaters/skarbrand', pts:315,
       models:['1× Skarbrand'],
-      gear:[['Bellow of endless fury','Slaughter and Carnage']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Damaged (1-7 wounds left)', note:'+2 A', from:'Damaged: 1-7 wounds remaining' }
-      ],
-      // "a friendly BLOOD LEGIONS unit": an attached unit with a BLOOD LEGIONS model (the Lord on Juggernaut with Disciple of Khorne) is one
-      aura:[
-        { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of Skarbrand', selfWhen:'Own aura', note:'+1 A', from:'Rage Embodied', selfAlways:true }
-      ]
+      gear:[['Bellow of endless fury','Slaughter and Carnage']]
     },
     {
       id:'bloodthirster', ds:'world-eaters/bloodthirster', pts:320,
       models:['1× Bloodthirster'],
-      gear:[['Hellfire breath','Great axe of Khorne']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
-      // "a friendly BLOOD LEGIONS unit": an attached unit with a BLOOD LEGIONS model (the Lord on Juggernaut with Disciple of Khorne) is one
-      aura:[
-        { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of the Bloodthirster', selfWhen:'Own aura', note:'+1 to hit', from:'Daemon Lord of Khorne', selfAlways:true }
-      ]
+      gear:[['Hellfire breath','Great axe of Khorne']]
     },
     {
       id:'daemon-prince-of-khorne', ds:'world-eaters/daemon-prince-of-khorne', short:'Daemon Prince', pts:230, enhancement:'Blade of Endless Bloodshed',
@@ -3964,10 +3530,6 @@ const ARMIES = [
         { name:'Devastating Assault' },
         { name:'Direct the Slaughter' },
         { name:'Blade of Endless Bloodshed', tag:'Enhancement', text:'**WORLD EATERS** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn', from:'Devastating Assault' }
       ]
     },
     {
@@ -3981,13 +3543,10 @@ const ARMIES = [
         { name:'A Worthy Skull' },
         { name:'Forwards, For Blood!', na:'Not leading a unit in this list' },
         { name:'Blood-forged Armour', tag:'Enhancement', text:'**BLOOD LEGIONS** or **WORLD EATERS** model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Melee attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'A Worthy Skull', vs:{ any:['Character'] } }
       ]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'lord-on-juggernaut-khorne-berzerkers', ds:['world-eaters/lord-on-juggernaut','world-eaters/khorne-berzerkers'], pts:440, ptsNote:'110 + Khorne Berzerkers 330', enhancement:'Disciple of Khorne',
       leads:'Khorne Berzerkers',
       models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion (Icon of Khorne)','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
@@ -4017,15 +3576,12 @@ const ARMIES = [
         { name:'Murderous Charge', who:'Khorne Berzerkers' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 S', from:'Murderous Charge' }
-      ],
       rules:['Leader','Blessings of Khorne','Deep Strike','Extra Attacks','Lance','Pistol','Hazardous'],
       kw:['Chaos','Character','Faction: Blood Legions','Khorne','Lord on Juggernaut','Mounted','Battleline','Berzerkers','Faction: World Eaters','Grenades','Infantry'],
       kwNote:'Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”).',
       // Deep Strike is the Lord on Juggernaut's (Disciple of Khorne); the Khorne Berzerkers don't have it, so the unit can't use it (24.09)
-      partialRules:{ 'Deep Strike':'Lord on Juggernaut' }
+      partialRules:{ 'Deep Strike':'Lord on Juggernaut' },
+      why:{ kwNote:'leads Khorne Berzerkers', ptsNote:'the points of its parts as the list has them (Lord on Juggernaut + Khorne Berzerkers)' }
     },
     {
       id:'goremongers', ds:'world-eaters/goremongers', pts:70,
@@ -4071,10 +3627,6 @@ const ARMIES = [
       id:'magnus-the-red', ds:'thousand-sons/magnus-the-red', pts:455, warlord:true,
       models:['1× Magnus the Red'],
       gear:[['Blade of Magnus','Gaze of Magnus','Tzeentch’s Firestorm']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Thousand Sons','Fly','Magnus the Red','Monster','Primarch','Psyker','Tzeentch','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -4107,18 +3659,13 @@ const ARMIES = [
       partialRules:{ 'Cabal of Sorcerers':'Ahriman' },
       // Wahapedia: Ahriman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened with Fatecaster greatbows are MOUNTED, not INFANTRY or
       // PSYKER, and have no Cabal of Sorcerers (BSData the same)
-      kwOnly:{ Infantry:'Ahriman', Psyker:'Ahriman' }
+      kwOnly:{ Infantry:'Ahriman', Psyker:'Ahriman' },
+      why:{ kwNote:'leads Tzaangor Enlightened with Fatecaster greatbows', ptsNote:'the points of its parts as the list has them (Ahriman + Tzaangor Enlightened with Fatecaster greatbows)' }
     },
     {
       id:'daemon-prince-of-tzeentch-with-wings', ds:'thousand-sons/daemon-prince-of-tzeentch-with-wings', pts:170,
       models:['1× Daemon Prince of Tzeentch with wings'],
-      gear:[['Dark Blessing','Hellforged weapons','Infernal cannon']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'vs CHARACTER units', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Hunter of Souls', always:true, vs:{ any:['Character'] } },
-        { kind:'all', when:'vs PSYKER CHARACTER units', note:'re-roll the hit roll and the wound roll', from:'Hunter of Souls', always:true, vs:{ all:['Psyker','Character'] } },
-        { kind:'ranged', when:'After an aetherstride this turn', note:'Dark Blessing has [SUSTAINED HITS D3]', from:'Aetherstride', calc:{ sus:'D3', weapon:'Dark Blessing' }, lasts:'turn' }
-      ]
+      gear:[['Dark Blessing','Hellforged weapons','Infernal cannon']]
     },
     {
       id:'exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows', ds:['thousand-sons/exalted-sorcerer-on-disc-of-tzeentch','thousand-sons/tzaangor-enlightened-with-fatecaster-greatbows'], role:'Character', pts:205, copies:2, ptsNote:'95 + Tzaangor Enlightened with Fatecaster greatbows 110',
@@ -4150,7 +3697,8 @@ const ARMIES = [
       partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer on Disc of Tzeentch' },
       // Wahapedia: the Exalted Sorcerer on Disc of Tzeentch is INFANTRY, MOUNTED … GRENADES, PSYKER; the Tzaangor Enlightened with Fatecaster
       // greatbows are MOUNTED, without those, and have no Cabal of Sorcerers (BSData the same)
-      kwOnly:{ Grenades:'Exalted Sorcerer on Disc of Tzeentch', Infantry:'Exalted Sorcerer on Disc of Tzeentch', Psyker:'Exalted Sorcerer on Disc of Tzeentch' }
+      kwOnly:{ Grenades:'Exalted Sorcerer on Disc of Tzeentch', Infantry:'Exalted Sorcerer on Disc of Tzeentch', Psyker:'Exalted Sorcerer on Disc of Tzeentch' },
+      why:{ kwNote:'leads Tzaangor Enlightened with Fatecaster greatbows', ptsNote:'the points of its parts as the list has them (Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows)' }
     },
     {
       id:'tzaangor-shaman-tzaangor-enlightened-curse-of-life', ds:['thousand-sons/tzaangor-shaman','thousand-sons/tzaangor-enlightened'], role:'Character', pts:175, ptsNote:'85 + Tzaangor Enlightened 90', enhancement:'Curse of Life',
@@ -4174,19 +3722,14 @@ const ARMIES = [
         { name:'Curse of Life', who:'Tzaangor Shaman', tag:'Enhancement', ph:['shooting'], turn:'your', text:'**INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**.' },
         { name:'Prophesied Doom', who:'Tzaangor Enlightened' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // Bestial Prophet: every model of the unit it leads, the Shaman included; New Recruit does not print it in the hit rolls
-      mods:[
-        { kind:'all', when:'Every attack (this model leads the unit)', note:'+1 to hit rolls', from:'Bestial Prophet', always:true },
-        { kind:'all', who:'Tzaangor Shaman', when:'Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed)', note:'Psychic weapons +D3 A and +D3 S', from:'Sacrificial Blessing' }
-      ],
       rules:['Leader','Cabal of Sorcerers','Devastating Wounds','Blast','Psychic','Lance','Precision'],
       kw:['Chaos','Character','Faction: Thousand Sons','Fly','Infantry','Mounted','Mutant','Psyker','Tzaangor Shaman','Tzeentch','Tzaangor Enlightened'],
       kwNote:'Tzaangor Enlightened comes from the led Tzaangor Enlightened.',
       partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman' },
       // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
       // no Cabal of Sorcerers (BSData the same)
-      kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' }
+      kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
+      why:{ kwNote:'leads Tzaangor Enlightened', ptsNote:'the points of its parts as the list has them (Tzaangor Shaman + Tzaangor Enlightened)' }
     },
     {
       id:'tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion', ds:['thousand-sons/tzaangor-shaman','thousand-sons/tzaangor-enlightened'], role:'Character', pts:175, ptsNote:'85 + Tzaangor Enlightened 90', enhancement:'Diamond of Distortion',
@@ -4210,19 +3753,14 @@ const ARMIES = [
         { name:'Diamond of Distortion', who:'Tzaangor Shaman', tag:'Enhancement', def:'-1 to hit rolls against it (while the bearer leads it)', text:'**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.', defOf:'ee6006b5' },
         { name:'Prophesied Doom', who:'Tzaangor Enlightened' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // Bestial Prophet: every model of the unit it leads, the Shaman included; New Recruit does not print it in the hit rolls
-      mods:[
-        { kind:'all', when:'Every attack (this model leads the unit)', note:'+1 to hit rolls', from:'Bestial Prophet', always:true },
-        { kind:'all', who:'Tzaangor Shaman', when:'Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed)', note:'Psychic weapons +D3 A and +D3 S', from:'Sacrificial Blessing' }
-      ],
       rules:['Leader','Cabal of Sorcerers','Devastating Wounds','Blast','Psychic','Lance','Precision'],
       kw:['Chaos','Character','Faction: Thousand Sons','Fly','Infantry','Mounted','Mutant','Psyker','Tzaangor Shaman','Tzeentch','Tzaangor Enlightened'],
       kwNote:'Tzaangor Enlightened comes from the led Tzaangor Enlightened.',
       partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman' },
       // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
       // no Cabal of Sorcerers (BSData the same)
-      kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' }
+      kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
+      why:{ kwNote:'leads Tzaangor Enlightened', ptsNote:'the points of its parts as the list has them (Tzaangor Shaman + Tzaangor Enlightened)' }
     },
     {
       id:'tzaangor-shaman-tzaangor-enlightened-flowing-flesh', ds:['thousand-sons/tzaangor-shaman','thousand-sons/tzaangor-enlightened'], role:'Character', pts:165, ptsNote:'75 + Tzaangor Enlightened 90', enhancement:'Flowing Flesh',
@@ -4246,12 +3784,6 @@ const ARMIES = [
         { name:'Flowing Flesh', who:'Tzaangor Shaman', tag:'Enhancement', text:'**TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.' },
         { name:'Prophesied Doom', who:'Tzaangor Enlightened' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // Bestial Prophet: every model of the unit it leads, the Shaman included; New Recruit does not print it in the hit rolls
-      mods:[
-        { kind:'all', when:'Every attack (this model leads the unit)', note:'+1 to hit rolls', from:'Bestial Prophet', always:true },
-        { kind:'all', who:'Tzaangor Shaman', when:'Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed)', note:'Psychic weapons +D3 A and +D3 S', from:'Sacrificial Blessing' }
-      ],
       rules:['Leader','Cabal of Sorcerers','Feel No Pain 4+','Devastating Wounds','Blast','Psychic','Lance','Precision'],
       kw:['Chaos','Character','Faction: Thousand Sons','Fly','Infantry','Mounted','Mutant','Psyker','Tzaangor Shaman','Tzeentch','Tzaangor Enlightened'],
       kwNote:'Tzaangor Enlightened comes from the led Tzaangor Enlightened.',
@@ -4259,7 +3791,7 @@ const ARMIES = [
       // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
       // no Cabal of Sorcerers (BSData the same)
       kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
-      why:{ rules:{ 'Feel No Pain 4+':'Flowing Flesh' } }
+      why:{ rules:{ 'Feel No Pain 4+':'Flowing Flesh' }, kwNote:'leads Tzaangor Enlightened', ptsNote:'the points of its parts as the list has them (Tzaangor Shaman + Tzaangor Enlightened)' }
     },
     {
       id:'tzaangors', ds:'thousand-sons/tzaangors', role:'Battleline', pts:75, copies:2,
@@ -4323,22 +3855,15 @@ const ARMIES = [
         { name:'Slayer of Tyrants', who:'Allarus Custodians' },
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
-      mods:[
-        { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle' },
-        { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayer of Tyrants' }
-      ],
-      // Captain-General: friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of Trajann, his own unit included
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }, when:'Within 6" of Trajann Valoris', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Captain-General', selfAlways:true }
-      ],
       rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
       kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
-      why:{ kw:{ Warlord:'Warlord' } }
+      why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Allarus Custodians', ptsNote:'the points of its parts as the list has them (Trajann Valoris + Allarus Custodians)' }
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'prosecutor-squad', ds:'adeptus-custodes/prosecutor-squad', pts:45, copies:2,
       models:['4× Prosecutor'],
       gear:[['Boltgun','Gun Stock']],
@@ -4350,13 +3875,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'witchseeker-squad', ds:'adeptus-custodes/witchseeker-squad', pts:55,
       models:['4× Witchseeker'],
       gear:[['Flamer','Gun Stock']],
@@ -4368,13 +3890,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'witchseeker-squad-2', ds:'adeptus-custodes/witchseeker-squad', pts:60,
       models:['5× Witchseeker'],
       gear:[['Flamer','Gun Stock']],
@@ -4386,10 +3905,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:5 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     {
@@ -4401,10 +3916,6 @@ const ARMIES = [
       gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
       stats:[
         { name:'Caladius Annihilator Grav-tank', InSv:'5+, 4+*', from:{ InSv:'Flare Shields' } }
-      ],
-      mods:[
-        { kind:'ranged', when:'vs MONSTER/VEHICLE', note:'re-roll one hit roll, one wound roll and one damage roll', from:'Advanced Firepower', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
       ]
     },
     {
@@ -4414,9 +3925,6 @@ const ARMIES = [
       ranged:[
         { name:'Dreadspear' },
         { name:'Lastrum storm bolter', n:2 }
-      ],
-      mods:[
-        { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4' }
       ]
     },
     {
@@ -4431,9 +3939,6 @@ const ARMIES = [
         // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out; the +1 A, S and D are in the
         // Warblade's melee profile already (from)
         { name:'Memento Moritoi', tag:'Upgrade', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.' }
-      ],
-      mods:[
-        { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4' }
       ]
     },
     {
@@ -4452,9 +3957,6 @@ const ARMIES = [
         // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out
         { name:'Augury Uplink', tag:'Upgrade', def:'Feel No Pain 5+', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.', defOf:'bd81d7df' }
       ],
-      mods:[
-        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
-      ],
       rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Feel No Pain 5+','Blast','Twin-linked','Torrent'],
       why:{ rules:{ 'Feel No Pain 5+':'Augury Uplink', Blast:'its wargear (Spiculus bolt launcher)', 'Twin-linked':'its wargear (Twin Neutronium Cascade Projectors)', Torrent:'its wargear (Twin Neutronium Cascade Projectors)' } }
     },
@@ -4469,9 +3971,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Caestus Fist' }
-      ],
-      mods:[
-        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
       ],
       rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Blast','Torrent','Twin-linked'],
       why:{ rules:{ Blast:'its wargear (Spiculus bolt launcher)', Torrent:'its wargear (Twin Neutronium Cascade Projectors)', 'Twin-linked':'its wargear (Twin Neutronium Cascade Projectors)' } }
@@ -4488,13 +3987,6 @@ const ARMIES = [
       id:'roboute-guilliman', ds:'ultramarines/roboute-guilliman', pts:415, warlord:true,
       models:['1× Roboute Guilliman'],
       gear:[['Hand of Dominion','The Emperor’s Sword']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Codex Adept (the devastator doctrine is active for this unit)', note:'[ASSAULT]', from:'Codex Adept', always:true }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Within 6" of Roboute Guilliman', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Primarch of the XIII', selfAlways:true }
-      ],
       kw:['Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Mobile','Monster','Primarch','Roboute Guilliman','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -4546,16 +4038,12 @@ const ARMIES = [
         { name:'Bladeguard', who:'Bladeguard Veteran Squad' },
         { name:'Furious Assault', who:'Bladeguard Veteran Squad', tag:'Upgrade', ph:['fight'], turn:'either', text:'**ADEPTUS ASTARTES INFANTRY** unit only. This unit’s melee attacks have **[Sustained Hits 1: non-Monster/Vehicle]**.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Codex Adept (the devastator doctrine is active for this unit)', note:'[ASSAULT]', from:'Codex Adept', always:true },
-        { kind:'melee', when:'Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it)', note:'+1 to hit rolls', from:'Bladeguard' }
-      ],
       rules:['Deep Strike','Combat Doctrines','Leader','Transhuman Strategist','Close-quarters','Twin-linked','Extra Attacks','Support','Assault','Heavy','Rapid Fire','Blast','Psychic','Devastating Wounds'],
       kw:['Chapter Master','Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Infantry','Marneus Calgar','Terminator','Explosives','Psyker','Tacticus','Wardens of Ultramar','Bladeguard Veteran Squad'],
       kwNote:'Explosives, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit.',
       partialRules:{ 'Deep Strike':'Marneus Calgar' },
-      kwOnly:{ Psyker:'Dainal Kornelius' }
+      kwOnly:{ Psyker:'Dainal Kornelius' },
+      why:{ kwNote:'leads Bladeguard Veteran Squad (with Wardens of Ultramar)', ptsNote:'the points of its parts as the list has them (Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad)' }
     },
     {
       id:'librarian-in-phobos-armour', ds:'ultramarines/librarian-in-phobos-armour', pts:75,
@@ -4604,10 +4092,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Ceramite Fists', n:3 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Every ranged attack', note:'can re-roll damage rolls', from:'Total Obliteration', always:true }
       ]
     },
     {
@@ -4657,13 +4141,6 @@ const ARMIES = [
       id:'skarbrand', ds:'chaos-daemons/skarbrand', pts:330, warlord:true,
       models:['1× Skarbrand'],
       gear:[['Bellow of endless fury','Slaughter and Carnage']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Damaged (1-7 wounds left)', note:'+2 A', from:'Damaged: 1-7 wounds remaining' }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Within 6" of Skarbrand', selfWhen:'Own aura', note:'+1 A', from:'Rage Embodied', selfAlways:true }
-      ],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Khorne','Monster','Skarbrand','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
@@ -4691,13 +4168,10 @@ const ARMIES = [
         { name:'Hunters from the Warp', who:'Flesh Hounds' },
         { name:'Collar of Khorne', who:'Flesh Hounds' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'Melee attacks that target Karanak’s prey', note:'can re-roll the wound roll', from:'Prey of the Blood God' }
-      ],
       rules:['Deep Strike','Leader','The Shadow of Chaos','Ignores Cover','Torrent','Precision','Anti'],
       kw:['Beast','Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Karanak','Khorne','Flesh Hounds'],
-      kwNote:'Flesh Hounds comes from the led Flesh Hounds.'
+      kwNote:'Flesh Hounds comes from the led Flesh Hounds.',
+      why:{ kwNote:'leads Flesh Hounds', ptsNote:'the points of its parts as the list has them (Karanak + Flesh Hounds)' }
     },
     {
       id:'skulltaker-bloodletters', ds:['chaos-daemons/skulltaker','chaos-daemons/bloodletters'], role:'Epic Hero', pts:210, ptsNote:'85 + Bloodletters 125', upgrade:'Bane-Forged Weapons',
@@ -4721,13 +4195,10 @@ const ARMIES = [
         { name:'Daemonic Icon', who:'Bloodletters' },
         { name:'Instrument of Chaos', who:'Bloodletters' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', who:'Skulltaker', when:'Attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'Skulls for Khorne', vs:{ any:['Character'] }, always:true }
-      ],
       rules:['Deep Strike','The Shadow of Chaos','Leader','Devastating Wounds','Precision'],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Infantry','Khorne','Skulltaker','Battleline','Bloodletters'],
-      kwNote:'Battleline, Bloodletters come from the led Bloodletters.'
+      kwNote:'Battleline, Bloodletters come from the led Bloodletters.',
+      why:{ kwNote:'leads Bloodletters', ptsNote:'the points of its parts as the list has them (Skulltaker + Bloodletters)' }
     },
     {
       id:'bloodthirster', ds:'chaos-daemons/bloodthirster', pts:330, enhancement:'Gateway Unto Damnation',
@@ -4739,13 +4210,6 @@ const ARMIES = [
         { name:'Damaged: 1-6 wounds remaining' },
         { name:'Greater Daemon of Khorne' },
         { name:'Gateway Unto Damnation', tag:'Enhancement', text:'**LEGIONES DAEMONICA KHORNE MONSTER** model only. The bearer’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
-      ],
-      aura:[
-        { kind:'melee', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Within 6" of the Bloodthirster', selfWhen:'Own aura', note:'+1 to hit', from:'Daemon Lord of Khorne', selfAlways:true }
       ]
     },
     {
@@ -4763,24 +4227,13 @@ const ARMIES = [
         { name:'Slaughterthirst (Aura)', tag:'Enhancement · Aura', ph:['fight'], turn:'either', text:'**LEGIONES DAEMONICA KHORNE** model only. While a friendly **LEGIONES DAEMONICA KHORNE** unit (excluding **MONSTERS**) is within 6" of the bearer, weapons equipped by models in that unit have the **[LANCE]** ability.' },
         { name:'Daemonic Allegiance' }
       ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Legiones Daemonica','Khorne'], none:['Monster'] }, when:'Within 6" of the Daemon Prince of Chaos', note:'[LANCE]', from:'Slaughterthirst (Aura)' }
-      ],
-      guard:[
-        { from:'Prince of Darkness', needs:{ all:['Faction: Legiones Daemonica'] }, kind:'ranged', when:'Within 6" of the Daemon Prince of Chaos', selfWhen:'Own aura', selfAlways:true, note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true } }
-      ],
       kw:['Chaos','Character','Daemon','Daemon Prince of Chaos','Faction: Legiones Daemonica','Khorne','Monster'],
       why:{ kw:{ Khorne:'Daemonic Allegiance: Khorne' } }
     },
     {
       id:'rendmaster-on-blood-throne', ds:'chaos-daemons/rendmaster-on-blood-throne', pts:160, copies:2,
       models:['1× Rendmaster on Blood Throne'],
-      gear:[['Attendant’s hellblades','Blade of blood']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Fight phase, attacks that target the enemy unit selected with Blood Throne', note:'improve S, AP and D by 1', from:'Blood Throne' },
-        { kind:'melee', when:'Melee attacks that target a CHARACTER or MONSTER unit', note:'can re-roll the wound roll', from:'Champion Slayer', vs:{ any:['Character','Monster'] }, always:true }
-      ]
+      gear:[['Attendant’s hellblades','Blade of blood']]
     },
     {
       id:'bloodmaster-bloodletters', ds:['chaos-daemons/bloodmaster','chaos-daemons/bloodletters'], role:'Character', pts:190, ptsNote:'65 + Bloodletters 125', upgrade:'Bane-Forged Weapons',
@@ -4804,13 +4257,10 @@ const ARMIES = [
         { name:'Daemonic Icon', who:'Bloodletters' },
         { name:'Instrument of Chaos', who:'Bloodletters' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'While the Bloodmaster is leading the unit', note:'+1 to wound rolls', from:'Bloodmaster', always:true }
-      ],
       rules:['Deep Strike','The Shadow of Chaos','Leader'],
       kw:['Bloodmaster','Chaos','Character','Daemon','Faction: Legiones Daemonica','Infantry','Khorne','Battleline','Bloodletters'],
-      kwNote:'Battleline, Bloodletters come from the led Bloodletters.'
+      kwNote:'Battleline, Bloodletters come from the led Bloodletters.',
+      why:{ kwNote:'leads Bloodletters', ptsNote:'the points of its parts as the list has them (Bloodmaster + Bloodletters)' }
     },
     {
       id:'skullmaster-bloodcrushers', ds:['chaos-daemons/skullmaster','chaos-daemons/bloodcrushers'], role:'Character', pts:195, ptsNote:'100 + Bloodcrushers 95', enhancement:'Brazenmaw',
@@ -4836,13 +4286,10 @@ const ARMIES = [
         { name:'Daemonic Icon', who:'Bloodcrushers' },
         { name:'Instrument of Chaos', who:'Bloodcrushers' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', weapon:'Juggernaut’s bladed horn', when:'Ended a Charge move this turn', cond:'charged', note:'[DEVASTATING WOUNDS] until the end of the turn', from:'Skullmaster’s Fury' }
-      ],
       rules:['Deep Strike','The Shadow of Chaos','Leader','Extra Attacks','Lance'],
       kw:['Chaos','Character','Daemon','Faction: Legiones Daemonica','Khorne','Mounted','Skullmaster','Bloodcrushers'],
-      kwNote:'Bloodcrushers comes from the led Bloodcrushers.'
+      kwNote:'Bloodcrushers comes from the led Bloodcrushers.',
+      why:{ kwNote:'leads Bloodcrushers', ptsNote:'the points of its parts as the list has them (Skullmaster + Bloodcrushers)' }
     },
     {
       id:'beasts-of-nurgle', ds:'chaos-daemons/beasts-of-nurgle', pts:80,
@@ -4861,13 +4308,6 @@ const ARMIES = [
       id:'vashtorr-the-arkifane', ds:'chaos-space-marines/vashtorr-the-arkifane', pts:220, warlord:true,
       models:['1× Vashtorr the Arkifane'],
       gear:[['Vashtorr’s claw','Vashtorr’s hammer']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Daemon','Vehicle'] }, when:'Within 6" of Vashtorr the Arkifane', note:'+2 S', from:'Unholy Mechanisms' }
-      ],
       kw:['Chaos','Character','Daemon','Epic Hero','Faction: Heretic Astartes','Fly','Monster','Soul Forge','Vashtorr the Arkifane','Warlord'],
       why:{ kw:{ Warlord:'Warlord', 'Soul Forge':'Soul Forge Boons' } }
     },
@@ -4881,13 +4321,7 @@ const ARMIES = [
         { name:'Mark of the Soul Forges', tag:'Enhancement', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Every attack', note:'a Critical Hit on an unmodified hit roll of 5+', from:'Mark of the Soul Forges', always:true, calc:{ critHit:5 } },
-        { kind:'ranged', when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] } }
-      ],
-      aura:[
-        { kind:'ranged', needs:{ all:['Faction: Heretic Astartes'] }, when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] }, notSelf:true }
-      ],
+      mods:['Mark of the Soul Forges','Spirit Thief'],
       kw:['Chaos','Character','Daemon','Faction: Heretic Astartes','Lord Discordant','Mounted','Soul Forge'],
       why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
     },
@@ -4900,9 +4334,6 @@ const ARMIES = [
         { name:'Master of Mechanisms' },
         { name:'Enrage Machine Spirits' },
         { name:'Wyredjinn', tag:'Enhancement', ph:['command'], turn:'your', text:'**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.' }
-      ],
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Heretic Astartes','Vehicle'] }, when:'Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3")', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase', from:'Master of Mechanisms', calc:{ hit:1 }, oneModel:true, lasts:'round' }
       ]
     },
     {
@@ -4948,18 +4379,12 @@ const ARMIES = [
         { name:'Attached Unit', who:'Nemesis Claw' },
         { name:'Voice eater', who:'Nemesis Claw' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'melee', when:'While the Dark Apostle leads this unit and it contains its DARK APOSTLE model', note:'+1 to wound rolls', from:'Dark Zealotry', always:true },
-        { kind:'melee', when:'While the Master of Executions leads this unit, target below its Starting Strength', note:'re-roll the hit roll; also the wound roll if Below Half-strength', from:'Warp-sighted Butcher', pick:[{ name:'Below Starting Strength', note:'re-roll hit rolls' },{ name:'Below Half-strength', note:'re-roll hit rolls and wound rolls' }] },
-        { kind:'all', when:'Target below its Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength', from:'Visions of Suffering', pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' },{ name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }] }
-      ],
       rules:['Dark Pacts','Leader','Pistol','Support','Devastating Wounds','Precision','Stealth','Sustained Hits','Hazardous','Twin-linked'],
       kw:['Chaos','Character','Dark Apostle','Faction: Heretic Astartes','Grenades','Infantry','Soul Forge','Master of Executions','Nemesis Claw','Psyker'],
       kwNote:'Master of Executions, Nemesis Claw, Psyker come from the combined unit.',
       partialRules:{ Stealth:'Nemesis Claw' },
       kwOnly:{ Character:'Dark Apostle and Master of Executions', 'Dark Apostle':'Dark Apostle' },
-      why:{ kw:{ 'Soul Forge':'Cybinfernal Font' } }
+      why:{ kw:{ 'Soul Forge':'Cybinfernal Font' }, kwNote:'leads Nemesis Claw (with Master of Executions)', ptsNote:'the points of its parts as the list has them (Dark Apostle + Master of Executions + Nemesis Claw)' }
     },
     {
       id:'cultist-mob', ds:'chaos-space-marines/cultist-mob', pts:50,
@@ -4993,10 +4418,6 @@ const ARMIES = [
       melee:[
         { name:'Power fist' },
         { name:'Close combat weapon', n:4 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Every ranged attack', note:'can ignore any or all modifiers to BS and any or all modifiers to the hit roll', from:'Stabilisation Talons', always:true }
       ]
     },
     {
@@ -5013,10 +4434,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Crushing fists', n:2 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Once per battle, your Shooting phase, when selected to shoot', note:'[INDIRECT FIRE]', from:'Warp Rift Firepower' }
       ]
     },
     {
@@ -5031,11 +4448,6 @@ const ARMIES = [
         { name:'Predator twin lascannon' },
         { name:'Combi-bolter' },
         { name:'Lascannon', n:2 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Allocated to a MONSTER or VEHICLE model', note:'can re-roll the damage roll', from:'Annihilator', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Frame','Predator Annihilator','Smoke','Soul Forge','Vehicle'],
       why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
@@ -5053,11 +4465,6 @@ const ARMIES = [
         { name:'Combi-bolter' },
         { name:'Heavy bolter', n:2 }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'vs INFANTRY units', note:'+1 AP', from:'Destructor', always:true, vs:{ any:['Infantry'] } },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
-      ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Frame','Predator Destructor','Smoke','Soul Forge','Vehicle'],
       why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
     },
@@ -5067,11 +4474,6 @@ const ARMIES = [
       gear:[['Armoured tracks','Demolisher cannon','Havoc launcher','Combi-bolter']],
       stats:[
         { name:'Chaos Vindicator', InSv:'5+', from:{ InSv:'Soul Forge Boons' } }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Within Engagement Range of one or more enemy units', note:'no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit)', from:'Siege Shield', always:true },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Frame','Smoke','Soul Forge','Vehicle','Vindicator'],
       why:{ kw:{ Daemon:'Soul Forge Boons', 'Soul Forge':'Soul Forge Boons' } }
@@ -5083,11 +4485,6 @@ const ARMIES = [
       ranged:[
         { name:'Ectoplasma cannon', n:3 }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Selected to shoot, if it uses this ability (until the end of the phase)', note:'[DEVASTATING WOUNDS] and [HAZARDOUS]', from:'Daemonic Ordnance' },
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
-      ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Forgefiend','Soul Forge','Vehicle','Walker'],
       why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
     },
@@ -5095,10 +4492,6 @@ const ARMIES = [
       id:'maulerfiend', ds:'chaos-space-marines/maulerfiend', pts:125,
       models:['1× Maulerfiend'],
       gear:[['Maulerfiend fists','Lasher tendrils']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
-      ],
       kw:['Chaos','Daemon','Faction: Heretic Astartes','Maulerfiend','Soul Forge','Vehicle','Walker'],
       why:{ kw:{ 'Soul Forge':'Soul Forge Boons' } }
     }
@@ -5136,20 +4529,12 @@ const ARMIES = [
         { name:'Slayer of Tyrants', who:'Allarus Custodians' },
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
-      mods:[
-        { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle' },
-        { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayer of Tyrants' }
-      ],
-      // Captain-General: friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of Trajann, his own unit included
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }, when:'Within 6" of Trajann Valoris', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Captain-General', selfAlways:true }
-      ],
       rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
       kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
-      why:{ kw:{ Warlord:'Warlord' } }
+      why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Allarus Custodians', ptsNote:'the points of its parts as the list has them (Trajann Valoris + Allarus Custodians)' }
     },
     {
       id:'shield-captain-sentinel-guard-sodality', ds:['adeptus-custodes/shield-captain','adeptus-custodes/sentinel-guard-sodality'], role:'Character', pts:445, ptsNote:'205 + Sentinel Guard Sodality 240',
@@ -5178,12 +4563,10 @@ const ARMIES = [
         { name:'Vexilla', who:'Sentinel Guard Sodality' },
         { name:'Praesidium Shield', who:'Sentinel Guard Sodality' }
       ],
-      mods:[
-        { kind:'all', when:'This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets', cond:'objective', note:'[LETHAL HITS]', from:'Stand Vigil', vs:{ none:['Monster','Vehicle'] } }
-      ],
       rules:['Deep Strike','Leader','Martial Ka\'tah','Aegis of the Emperor','Aquila Commander','Feel No Pain 5+*','Precision','Assault','Close-quarters'],
       kw:['Character','Faction: Adeptus Custodes','Imperium','Infantry','Shield-Captain','Battleline','Sentinel Guard Sodality','Trusted Sentinel'],
-      kwNote:'Battleline, Sentinel Guard Sodality, Trusted Sentinel come from the led Sentinel Guard Sodality.'
+      kwNote:'Battleline, Sentinel Guard Sodality, Trusted Sentinel come from the led Sentinel Guard Sodality.',
+      why:{ kwNote:'leads Sentinel Guard Sodality', ptsNote:'the points of its parts as the list has them (Shield-Captain + Sentinel Guard Sodality)' }
     },
     {
       id:'custodian-guard-sodality', ds:'adeptus-custodes/custodian-guard-sodality', pts:240,
@@ -5197,9 +4580,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Guardian Spear', n:3 }
-      ],
-      mods:[
-        { kind:'all', when:'This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets', cond:'objective', note:'[SUSTAINED HITS 1]', from:'Impenetrable Defence', vs:{ none:['Monster','Vehicle'] } }
       ]
     },
     {
@@ -5219,6 +4599,7 @@ const ARMIES = [
       why:{ rules:{ Assault:'its wargear (Guardian Spear)', 'Rapid Fire':'its wargear (Guardian Spear)' } }
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'prosecutor-squad', ds:'adeptus-custodes/prosecutor-squad', pts:50,
       models:['5× Prosecutor'],
       gear:[['Boltgun','Gun Stock']],
@@ -5230,13 +4611,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:5 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'witchseeker-squad', ds:'adeptus-custodes/witchseeker-squad', pts:60,
       models:['5× Witchseeker'],
       gear:[['Flamer','Gun Stock']],
@@ -5248,10 +4626,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:5 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     {
@@ -5266,9 +4640,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Interceptor lance', n:2 }
-      ],
-      mods:[
-        { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'[SUSTAINED HITS 1]', from:'Quicksilver Execution' }
       ]
     },
     // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
@@ -5276,11 +4647,7 @@ const ARMIES = [
     {
       id:'caladius-annihilator-grav-tank', ds:'adeptus-custodes/caladius-annihilator-grav-tank', pts:250,
       models:['1× Caladius Annihilator Grav-tank'],
-      gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
-      mods:[
-        { kind:'ranged', when:'vs MONSTER/VEHICLE', note:'re-roll one hit roll, one wound roll and one damage roll', from:'Advanced Firepower', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
-      ]
+      gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']]
     }
   ]
 },
@@ -5316,20 +4683,12 @@ const ARMIES = [
         { name:'Slayer of Tyrants', who:'Allarus Custodians' },
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
-      mods:[
-        { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle' },
-        { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayer of Tyrants' }
-      ],
-      // Captain-General: friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of Trajann, his own unit included
-      aura:[
-        { kind:'all', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }, when:'Within 6" of Trajann Valoris', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Captain-General', selfAlways:true }
-      ],
       rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
       kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
-      why:{ kw:{ Warlord:'Warlord' } }
+      why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Allarus Custodians', ptsNote:'the points of its parts as the list has them (Trajann Valoris + Allarus Custodians)' }
     },
     {
       id:'shield-captain-sentinel-guard-sodality', ds:['adeptus-custodes/shield-captain','adeptus-custodes/sentinel-guard-sodality'], role:'Character', pts:445, ptsNote:'205 + Sentinel Guard Sodality 240',
@@ -5358,12 +4717,10 @@ const ARMIES = [
         { name:'Vexilla', who:'Sentinel Guard Sodality' },
         { name:'Praesidium Shield', who:'Sentinel Guard Sodality' }
       ],
-      mods:[
-        { kind:'all', when:'This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets', cond:'objective', note:'[LETHAL HITS]', from:'Stand Vigil', vs:{ none:['Monster','Vehicle'] } }
-      ],
       rules:['Deep Strike','Leader','Martial Ka\'tah','Aegis of the Emperor','Aquila Commander','Feel No Pain 5+*','Precision','Assault','Close-quarters'],
       kw:['Character','Faction: Adeptus Custodes','Imperium','Infantry','Shield-Captain','Battleline','Sentinel Guard Sodality','Trusted Sentinel'],
-      kwNote:'Battleline, Sentinel Guard Sodality, Trusted Sentinel come from the led Sentinel Guard Sodality.'
+      kwNote:'Battleline, Sentinel Guard Sodality, Trusted Sentinel come from the led Sentinel Guard Sodality.',
+      why:{ kwNote:'leads Sentinel Guard Sodality', ptsNote:'the points of its parts as the list has them (Shield-Captain + Sentinel Guard Sodality)' }
     },
     {
       id:'custodian-guard-sodality', ds:'adeptus-custodes/custodian-guard-sodality', pts:240,
@@ -5377,9 +4734,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Guardian Spear', n:3 }
-      ],
-      mods:[
-        { kind:'all', when:'This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets', cond:'objective', note:'[SUSTAINED HITS 1]', from:'Impenetrable Defence', vs:{ none:['Monster','Vehicle'] } }
       ]
     },
     {
@@ -5395,9 +4749,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Guardian Spear', n:2 }
-      ],
-      mods:[
-        { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayer of Tyrants' }
       ]
     },
     {
@@ -5417,6 +4768,7 @@ const ARMIES = [
       why:{ rules:{ Assault:'its wargear (Castellan axe)' } }
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'prosecutor-squad', ds:'adeptus-custodes/prosecutor-squad', pts:45, copies:2,
       models:['4× Prosecutor'],
       gear:[['Boltgun','Gun Stock']],
@@ -5428,13 +4780,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     {
+      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'witchseeker-squad', ds:'adeptus-custodes/witchseeker-squad', pts:60,
       models:['5× Witchseeker'],
       gear:[['Flamer','Gun Stock']],
@@ -5446,10 +4795,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:5 }
-      ],
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
-      guard:[
-        { from:'Daughters of the Abyss', needs:{ all:['Faction: Adeptus Custodes'] }, kind:'all', when:'Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null)', note:'Feel No Pain 5+ against psychic attacks' }
       ]
     },
     // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
@@ -5457,11 +4802,7 @@ const ARMIES = [
     {
       id:'caladius-annihilator-grav-tank', ds:'adeptus-custodes/caladius-annihilator-grav-tank', pts:250,
       models:['1× Caladius Annihilator Grav-tank'],
-      gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
-      mods:[
-        { kind:'ranged', when:'vs MONSTER/VEHICLE', note:'re-roll one hit roll, one wound roll and one damage roll', from:'Advanced Firepower', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
-      ]
+      gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']]
     }
   ]
 },
@@ -5487,16 +4828,12 @@ const ARMIES = [
         { name:'Bringer of Justice', tag:'Enhancement', ph:['fight'], turn:'either', text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] } },
-        { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } } },
-        { kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Bringer of Justice', always:true },
-        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining' }
-      ],
+      mods:['Macro-extinction Protocols','Bringer of Justice','Damaged: 1-10 Wounds Remaining'],
       kw:['Cerastus','Character','Faction: Imperial Knights','Imperium','Knight Atrapos','Titanic','Towering','Vehicle','Walker','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
       models:['1× Knight Crusader'],
       gear:[['Avenger gatling cannon','Heavy flamer','Titanic feet','Stormspear rocket pod','Meltagun','Questoris heavy stubber','Rapid-fire battle cannon']],
@@ -5515,26 +4852,13 @@ const ARMIES = [
         { name:'Crusader’s Duty' },
         { name:'Hunter’s Eye', tag:'Enhancement', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Remained Stationary in your Movement phase', cond:'stationary', note:'ranged weapons have [SUSTAINED HITS 1] until the end of the turn', from:'Punishing Salvoes' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
       rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
       why:{ rules:{ 'Ignores Cover':'Hunter’s Eye' } }
     },
     {
       id:'knight-defender', ds:'imperial-knights/knight-defender', pts:385,
       models:['1× Knight Defender'],
-      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', weapon:'Conversion beam obliterator', when:'Target more than 18" away', note:'an unmodified successful hit roll of 4+ scores a Critical Hit', from:'Conversion', calc:{ critHit:4 } },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
-      ],
-      guard:[
-        { from:'Selfless Protector', needs:{ all:['Faction: Imperial Knights'] }, kind:'ranged', when:'Not fully visible to every model in the attacking unit because of the Knight Defender', note:'the Benefit of Cover and a 4+ invulnerable save against that attack', calc:{ cover:true, insv:4 } }
-      ]
+      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']]
     },
     {
       id:'knight-destrier', ds:'imperial-knights/knight-destrier', pts:265,
@@ -5546,11 +4870,6 @@ const ARMIES = [
         { name:'Ram Jets' },
         { name:'Saturation Fire' },
         { name:'Invulnerable Save (5+*)' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target within range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Saturation Fire' },
-        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls (and -4 OC)', from:'Damaged: 1-6 Wounds Remaining' }
       ]
     },
     {
@@ -5563,11 +4882,6 @@ const ARMIES = [
         { name:'Damaged: 1-9 Wounds Remaining' },
         { name:'Errant’s Duty' },
         { name:'Mysterious Guardian', tag:'Enhancement', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'+1 to hit rolls', from:'Aggressive Assault' },
-        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
       ],
       rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Melta','Blast','Deep Strike'],
       why:{ rules:{ 'Deep Strike':'Mysterious Guardian' } }
@@ -5623,6 +4937,11 @@ const DATASHEETS = {
     { name:'Even More Dakka', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
     { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', weapon:'Blitzkannon', set:{ A:'+6' }, when:'vs non-MONSTER/VEHICLE targets', note:'in your Shooting phase', from:'Blitz Dem Gitz!', always:true, vs:{ none:['Monster','Vehicle'] }, readOf:'74cc90dd' },
+    { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'Even More Dakka', readOf:'7fb021cc', readBy:'derive' }
+  ],
   rules:['Deadly Demise 1','Waaagh!'],
   kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
 },
@@ -5643,6 +4962,10 @@ const DATASHEETS = {
     { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
     { name:'Kustom Force Field', def:'4+ InSv against ranged attacks', text:'This unit has 4+ **InSv** against ranged attacks.', defOf:'e9dead84' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761', readBy:'derive' }
+  ],
   rules:['Waaagh!','Leader'],
   kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour']
 },
@@ -5662,6 +4985,11 @@ const DATASHEETS = {
     { name:'Boss’ Ammo Runt', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\nPlace a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.' },
     { name:'Intimidating Motivation', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+3 A, +2 S', from:'Might is Right', readOf:'40005e0c', readBy:'derive' },
+    { kind:'ranged', when:'Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Boss’ Ammo Runt', readOf:'682a29b8' }
+  ],
   rules:['Da Boss','Leader','Waaagh!'],
   kw:['Character','Faction: Orks','Grenades','Infantry','Warboss']
 },
@@ -5679,6 +5007,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Clever Know-wotz', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'your' }, text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase.' },
     { name:'Kustom Dakka', text:'This unit’s ranged attacks have **[IGNORES COVER]**.' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Orks','Vehicle'], none:['Aircraft','Titanic'] }, when:'Picked by a Mek’s Clever Know-wotz', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase', from:'Clever Know-wotz', calc:{ hit:1 }, oneModel:true, lasts:'round', readOf:'8aaf39c2' }
   ]
 },
 'orks/tankbustas':{
@@ -5716,6 +5047,9 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Finderz Keeperz', ph:['shooting'], turn:'your', text:'In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**.' }
+  ],
+  mods:[
+    { kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', cond:'objective', note:'+1 AP', from:'Finderz Keeperz', readOf:'ade43863' }
   ]
 },
 'orks/gretchin':{
@@ -5755,6 +5089,10 @@ const DATASHEETS = {
     { name:'Aerial Manoover', ph:['fight'], turn:'opp', text:'At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' },
     { name:'Deff from Above', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Your Shooting phase, after an ingress move this turn', note:'+1 to hit rolls', from:'Deff from Above', readOf:'50bb03d5' }
+  ],
   rules:['Deep Strike','Waaagh!'],
   kw:['Deffkoptas','Explosives','Faction: Orks','Fly','Mounted','Speed Freeks']
 },
@@ -5773,6 +5111,10 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Spiteful Power Trip', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'vs units with no T 7+ models', note:'+1 to hit rolls', from:'Spiteful Power Trip', always:true, vs:{ maxT:6 }, readOf:'b841a494' }
   ],
   rules:['Deadly Demise 1','Waaagh!'],
   kw:['Faction: Orks','Grots','Killa Kans','Vehicle','Walker']
@@ -5796,6 +5138,9 @@ const DATASHEETS = {
     { name:'Da Grand Warlord’s Ladz', def:'Lone Operative while within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.', defOf:'b7669049' },
     { name:'Prophet of Da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**.' }
   ],
+  aura:[
+    { kind:'melee', needs:{ all:['Faction: Orks'] }, when:'Within 6" of Ghazghkull', selfWhen:'Own aura', note:'+1 to hit, +1 to wound', from:'Prophet of Da Great Waaagh!', selfAlways:true, readOf:'86a5e4c3' }
+  ],
   rules:['Waaagh!','Da Boss'],
   kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss']
 },
@@ -5816,6 +5161,10 @@ const DATASHEETS = {
     { name:'Beast Snagga Following', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.', defOf:'951ba989' },
     { name:'One Last Kill', ph:['fight'], turn:'either', def:'Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends', text:'In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.', defOf:'0bf404d3' },
     { name:'Da Bigger Dey Iz…', ph:['fight'], turn:'either', text:'This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'vs MONSTER/VEHICLE', note:'can re-roll wound rolls', from:'Da Bigger Dey Iz…', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'0a95c35b' }
   ],
   rules:['Feel No Pain 5+','Waaagh!'],
   kw:['Beast Snagga','Character','Epic Hero','Faction: Orks','Monster','Mozrog Skragbad']
@@ -5857,6 +5206,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Krumpin’ Time', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
     { name:'Arrogant Invulnerability', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.', defOf:'07cfa46d' }
+  ],
+  mods:[
+    { kind:'melee', when:'Riled up, Fight phase', cond:'riled', note:'+1 to hit rolls', from:'Krumpin’ Time', readOf:'0ad3bcc2' }
   ]
 },
 'orks/beastboss-on-squigosaur':{
@@ -5895,6 +5247,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Shokk-boosta', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- This unit can change that **advance roll** to a 6.\n- This unit can move through all types of model.\n- When this unit ends that **advance move**, make a **hazard roll** for each model in this unit.' },
     { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761', readBy:'derive' }
   ]
 },
 'orks/painboy':{
@@ -5928,6 +5284,10 @@ const DATASHEETS = {
     { name:'Ammo Runts', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.\n*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.*' },
     { name:'Get Out da Way!', ph:['charge'], turn:'either', text:'While making a **charge move**, this unit can move through models (excluding **MONSTER/VEHICLE** models).' },
     { name:'Paired Krumpas', text:'Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**.' }
+  ],
+  mods:[
+    { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts', readOf:'4967f30b' },
+    { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas', always:true, readOf:'2ed08b87' }
   ]
 },
 'orks/squighog-boyz':{
@@ -5950,6 +5310,10 @@ const DATASHEETS = {
     { name:'Brutal Impact', ph:['fight'], turn:'either', text:'If this unit made a **charge move** this turn, this unit’s attacks have +1 **D**.' },
     { name:'Bomb Squig', tag:'Once per battle, per unit', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place one Bomb Squig token next to the unit, removing it after this ability is used.*' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 D', from:'Brutal Impact', readOf:'27a9e0f6' }
+  ],
   rules:['Waaagh!'],
   kw:['Beast Snagga','Explosives','Faction: Orks','Mobile','Mounted','Squighog Boyz']
 },
@@ -5965,7 +5329,7 @@ const DATASHEETS = {
     { name:'Da Grabzappa', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
   ],
   abilities:[
-    { name:'Super Runts', riled:true, text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.' }
+    { name:'Super Runts', riled:true, text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.', readOf:'b65d65b6' }
   ]
 },
 'orks/runtherd':{
@@ -5999,6 +5363,11 @@ const DATASHEETS = {
     { name:'Legendary Killer', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.' },
     { name:'The Betrayer', ph:['charge'], turn:'your', text:'At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**:\n- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**.' },
     { name:'Berserker Frenzy', def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.', defOf:'b3301bb7' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    // "that unit" is the unit Khârn leads; he leads it for the whole battle
+    { kind:'melee', when:'While Khârn leads this unit', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Legendary Killer', always:true, readOf:'9d39bb0a' }
   ]
 },
 'world-eaters/khorne-berzerkers':{
@@ -6021,6 +5390,9 @@ const DATASHEETS = {
     // at/ph: when its extra dice are rolled, with a Blessings of Khorne roll (the start of the battle round; Skulls for the Skull
     // Throne! in the Fight phase)
     { name:'Icon of Khorne', at:'Start of the battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+  ],
+  mods:[
+    { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 S', from:'Murderous Charge', readOf:'501c562f', readBy:'derive' }
   ]
 },
 'world-eaters/daemon-prince-of-khorne':{
@@ -6039,6 +5411,10 @@ const DATASHEETS = {
     { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit', text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.', defOf:'45fe6a69' },
     { name:'Devastating Assault', ph:['charge','fight'], turn:'either', text:'Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability.' },
     { name:'Direct the Slaughter', tag:'Once per battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn', from:'Devastating Assault', readOf:'7f23f1e2' }
   ],
   rules:['Deadly Demise D3','Blessings of Khorne','Rapid Fire'],
   kw:['Chaos','Character','Daemon','Daemon Prince','Faction: World Eaters','Khorne','Monster']
@@ -6076,6 +5452,10 @@ const DATASHEETS = {
     { name:'Possessed Lord', tag:'Once per battle', ph:['fight'], turn:'either', text:'Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability.' },
     { name:'Lord of the Eightbound', text:'If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6"** abilities.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'+3' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' }
+  ],
   rules:['Leader','Deadly Demise D3','Blessings of Khorne'],
   kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound']
 },
@@ -6089,6 +5469,10 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Rend and Tear', ph:['fight'], turn:'either', text:'Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 D', from:'Rend and Tear', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'7710f363' }
   ],
   rules:['Deep Strike','Blessings of Khorne','Anti'],
   kw:['Chaos','Daemon','Exalted Eightbound','Faction: World Eaters','Infantry','Khorne','Possessed']
@@ -6121,6 +5505,10 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.' }
+  ],
+  aura:[
+    { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 }, readOf:'85d8c656' },
+    { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 }, readOf:'85d8c656' }
   ],
   rules:['Scouts 6"','Blessings of Khorne'],
   kw:['Chaos','Daemon','Eightbound','Faction: World Eaters','Infantry','Khorne','Possessed']
@@ -6158,7 +5546,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Furious Onslaught', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'469029fe' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Target is the closest eligible target within 18"', cond:'closest18', note:'re-roll the hit roll', from:'Furious Onslaught', readOf:'b383eef1' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'469029fe', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Blessings of Khorne','Rapid Fire','Blast'],
   kw:['Chaos','Daemon','Faction: World Eaters','Forgefiend','Khorne','Vehicle','Walker']
@@ -6175,12 +5568,19 @@ const DATASHEETS = {
   abilities:[
     { name:'Reborn in Blood', at:'Start of the battle round', ph:['command','movement'], turn:'either', turns:{ movement:'your' }, text:'At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining.' },
     { name:'Wrathful Presence', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.' },
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'71948d80' },
     // the three Wrathful Presence abilities: Angron has the one selected at the start of the battle round
     { name:'The Blood God’s Favour', who:'Wrathful Presence: pick one', text:'Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.' },
     // GW Faction Pack Rules Update wording (BSData has it too)
     { name:'Driven by Ultimate Rage', who:'Wrathful Presence: pick one', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
     { name:'Overwhelming Wrath', who:'Wrathful Presence: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'71948d80', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Angron, if he has Driven by Ultimate Rage this round', selfWhen:'Own aura, if he has Driven by Ultimate Rage this round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Driven by Ultimate Rage', readOf:'99e17d39' }
   ],
   rules:['Deadly Demise D6','Deep Strike','Blessings of Khorne','Devastating Wounds'],
   kw:['Angron','Chaos','Character','Daemon','Epic Hero','Faction: World Eaters','Fly','Khorne','Monster','Primarch']
@@ -6222,6 +5622,10 @@ const DATASHEETS = {
     // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
     { name:'Bloody Fury', ph:['shooting','charge'], turn:'your', turns:{ charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'re-roll hit rolls', from:'Bloody Fury', readOf:'aabd0078' }
+  ],
   rules:['Deep Strike','Blessings of Khorne','Twin-linked','Anti','Rapid Fire','Sustained Hits','Devastating Wounds'],
   kw:['Chaos','Faction: World Eaters','Infantry','Khorne','Terminator','Terminator Squad']
 },
@@ -6240,7 +5644,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Rage Embodied', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **BLOOD LEGIONS** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.' },
     { name:'Murderlust', text:'This unit is eligible to declare a charge in a turn in which it Advanced.' },
-    { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.' }
+    { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.', readOf:'4b25ce47' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Damaged (1-7 wounds left)', note:'+2 A', from:'Damaged: 1-7 wounds remaining', readOf:'4b25ce47' }
+  ],
+  // "a friendly BLOOD LEGIONS unit": an attached unit with a BLOOD LEGIONS model (the Lord on Juggernaut with Disciple of Khorne) is one
+  aura:[
+    { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of Skarbrand', selfWhen:'Own aura', note:'+1 A', from:'Rage Embodied', selfAlways:true, readOf:'95905179' }
   ],
   rules:['Deadly Demise D6','Deep Strike','Ignores Cover','Torrent'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Blood Legions','Khorne','Monster','Skarbrand']
@@ -6260,7 +5672,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Daemon Lord of Khorne', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **BLOOD LEGIONS** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**.' },
     { name:'Relentless Carnage', ph:['fight'], turn:'either', text:'At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.' },
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'71948d80' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'71948d80', readBy:'derive' }
+  ],
+  // "a friendly BLOOD LEGIONS unit": an attached unit with a BLOOD LEGIONS model (the Lord on Juggernaut with Disciple of Khorne) is one
+  aura:[
+    { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of the Bloodthirster', selfWhen:'Own aura', note:'+1 to hit', from:'Daemon Lord of Khorne', selfAlways:true, readOf:'e204fae3' }
   ],
   rules:['Deadly Demise D6','Deep Strike','Ignores Cover','Torrent'],
   kw:['Bloodthirster','Chaos','Character','Daemon','Faction: Blood Legions','Fly','Khorne','Monster','Summoned']
@@ -6279,6 +5699,10 @@ const DATASHEETS = {
   abilities:[
     { name:'A Worthy Skull', ph:['fight'], turn:'either', text:'Each time this model makes a melee attack that targets a **CHARACTER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model’s unit destroys a **CHARACTER** model, you gain 1CP.' },
     { name:'Forwards, For Blood!', ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' }, text:'While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Melee attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'A Worthy Skull', vs:{ any:['Character'] }, readOf:'b894744e' }
   ],
   rules:['Leader','Blessings of Khorne','Precision','Devastating Wounds','Pistol'],
   kw:['Chaos','Character','Faction: World Eaters','Infantry','Khorne','Master of Executions']
@@ -6315,12 +5739,19 @@ const DATASHEETS = {
     { name:'sweep', group:'Blade of Magnus', range:'Melee', A:'14', WS:'2+', S:'8', AP:'-1', D:'2', kw:['PSYCHIC'] }
   ],
   abilities:[
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' },
     { name:'Unearthly Power', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.' },
     { name:'Lord of the Planet of the Sorcerers', tag:'Psychic', ph:['shooting'], turn:'your', text:'This model can attempt up to 2 **Rituals** per turn instead of one, and each time this model attempts a **Ritual**, add 2 to the **Psychic test** result.' },
     { name:'Impossible Form', who:'Crimson King', tag:'Psychic', def:'Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks', text:'Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack.', defOf:'e55add18' },
     { name:'Treason of Tzeentch', who:'Crimson King', tag:'Psychic', ph:['shooting'], turn:'opp', text:'At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability.' },
     { name:'Time Flux', who:'Crimson King', tag:'Aura, Psychic', ph:['movement'], turn:'your', text:'While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'2c58235b', readBy:'derive' }
+  ],
+  guard:[
+    { from:'Treason of Tzeentch', kind:'ranged', when:'Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase', selfWhen:'Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase', note:'its ranged weapons have [HAZARDOUS] until the end of the phase', readOf:'844fa497' }
   ],
   rules:['Deep Strike','Deadly Demise D6','Cabal of Sorcerers','Devastating Wounds','Psychic','Blast','Ignores Cover'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Thousand Sons','Fly','Magnus the Red','Monster','Primarch','Psyker','Tzeentch']
@@ -6342,6 +5773,12 @@ const DATASHEETS = {
     // Aetherstride: the Faction Pack's Rules Updates wording ("that is more than 6\""); New Recruit and BSData print the older text
     { name:'Aetherstride', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your', text:'In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.' },
     { name:'Hunter of Souls', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead).' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'vs CHARACTER units', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Hunter of Souls', always:true, vs:{ any:['Character'] }, readOf:'44d94ca0' },
+    { kind:'all', when:'vs PSYKER CHARACTER units', note:'re-roll the hit roll and the wound roll', from:'Hunter of Souls', always:true, vs:{ all:['Psyker','Character'] }, readOf:'44d94ca0' },
+    { kind:'ranged', when:'After an aetherstride this turn', note:'Dark Blessing has [SUSTAINED HITS D3]', from:'Aetherstride', calc:{ sus:'D3', weapon:'Dark Blessing' }, lasts:'turn', readOf:'4e6c7ef7' }
   ],
   rules:['Deadly Demise D3','Cabal of Sorcerers','Deep Strike','Ignores Cover','Sustained Hits','Psychic','Devastating Wounds'],
   kw:['Chaos','Character','Daemon','Daemon Prince','Faction: Thousand Sons','Fly','Monster','Psyker','Tzeentch']
@@ -6383,6 +5820,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Bringers of Change', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.' },
     { name:'Icon of Flame', text:'Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability.' }
+  ],
+  mods:[
+    { kind:'ranged', when:'Every ranged attack', note:'re-roll wound rolls of 1', from:'Bringers of Change', always:true, calc:{ rrWound:'1s' }, readOf:'524737ff' },
+    { kind:'ranged', when:'Target within range of an objective marker you do not control', cond:'targetObjectiveNotYours', note:'re-roll the wound roll', from:'Bringers of Change', calc:{ rrWound:'all' }, readOf:'524737ff' }
   ]
 },
 'thousand-sons/sorcerer-in-terminator-armour':{
@@ -6400,6 +5841,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Marked by Fate', tag:'Psychic', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**.' },
     { name:'Empyric Guidance', tag:'Psychic', text:'While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Your Shooting phase, vs the enemy unit picked at its start', note:'+1 to hit rolls', from:'Marked by Fate', readOf:'5883d452' }
   ]
 },
 'thousand-sons/scarab-occult-terminators':{
@@ -6473,7 +5918,11 @@ const DATASHEETS = {
     { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
     // every source ends the text with a stray closing quote mark (’); the app leaves it out
     { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp', text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'2c58235b', readBy:'derive' }
   ],
   rules:['Deadly Demise D6','Blast','Sustained Hits','Devastating Wounds'],
   kw:['Chaos','Daemon','Defiler','Faction: Thousand Sons','Tzeentch','Vehicle','Walker']
@@ -6547,6 +5996,12 @@ const DATASHEETS = {
   abilities:[
     { name:'Sacrificial Blessing', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.' },
     { name:'Bestial Prophet', text:'While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  // Bestial Prophet: every model of the unit it leads, the Shaman included; New Recruit does not print it in the hit rolls
+  mods:[
+    { kind:'all', when:'Every attack (this model leads the unit)', note:'+1 to hit rolls', from:'Bestial Prophet', always:true, readOf:'2e051e31' },
+    { kind:'all', who:'Tzaangor Shaman', when:'Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed)', note:'Psychic weapons +D3 A and +D3 S', from:'Sacrificial Blessing', readOf:'9be57ec8' }
   ]
 },
 'thousand-sons/tzaangor-enlightened':{
@@ -6577,6 +6032,9 @@ const DATASHEETS = {
     { name:'Malign Presence', tag:'Aura · Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.' },
     { name:'Domination of the Hive Mind', tag:'Aura', text:'While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**.' }
   ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Tyranids'] }, when:'Within 9" of the Swarmlord', note:'within your army’s Synapse Range', from:'Domination of the Hive Mind', readOf:'f351d5c1' }
+  ],
   rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Leader','Twin-linked','Torrent'],
   kw:['Character','Epic Hero','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse','The Swarmlord']
 },
@@ -6592,6 +6050,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Onslaught', tag:'Aura, Psychic', ph:['movement','shooting'], turn:'either', turns:{ shooting:'your' }, text:'While a friendly **TYRANIDS** unit is within 6" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.' },
     { name:'Will of the Hive Mind', tag:'Once per battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Tyranids'] }, when:'Within 6" of the Hive Tyrant', note:'ranged weapons have [ASSAULT] and [LETHAL HITS]', from:'Onslaught', selfAlways:true, readOf:'dcfa3a50' }
   ],
   rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Leader','Twin-linked','Extra Attacks'],
   kw:['Character','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse']
@@ -6625,9 +6086,14 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Harpoon Barbs', tag:'Once per turn', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
     { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.', defOf:'f285866f' },
     { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining', readOf:'59b4c593', readBy:'derive' },
+    { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle', readOf:'f285866f' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Harpooned','Extra Attacks'],
   kw:['Faction: Tyranids','Great Devourer','Harvester','Monster','Norn Assimilator','Synapse']
@@ -6648,9 +6114,14 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.', defOf:'f285866f' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
     { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
     { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.', defOf:'ece97c50' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining', readOf:'59b4c593', readBy:'derive' },
+    { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle', readOf:'f285866f' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic'],
   kw:['Faction: Tyranids','Great Devourer','Monster','Norn Emissary','Psyker','Synapse']
@@ -6669,7 +6140,11 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Resilient Organism', tag:'Once per battle', def:'Once per battle: change the Damage of an attack allocated to it to 0', text:'Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.', defOf:'2d7e2fc0' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining', readOf:'59b4c593', readBy:'derive' }
   ],
   rules:['Deadly Demise D6','Synapse','Torrent'],
   kw:['Faction: Tyranids','Great Devourer','Monster','Tyrannofex'],
@@ -6692,11 +6167,16 @@ const DATASHEETS = {
     { name:'Titanic feet', range:'Melee', A:'4', WS:'4+', S:'7', AP:'-1', D:'2', kw:[] }
   ],
   abilities:[
-    { name:'Damaged: 1-6 Wounds Remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-6 Wounds Remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'02c43b71' },
     { name:'Thundercharge', text:'If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.' },
     { name:'Ram Jets', ph:['movement'], turn:'your', text:'Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3" to the Move characteristic of this model.' },
     { name:'Saturation Fire', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.' },
     { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Target within range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Saturation Fire', readOf:'b8cd4988' },
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls (and -4 OC)', from:'Damaged: 1-6 Wounds Remaining', readOf:'02c43b71', readBy:'derive' }
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Assault','Rapid Fire','Blast'],
   kw:['Bellatus','Character','Faction: Imperial Knights','Imperium','Knight Destrier','Titanic','Towering','Vehicle','Walker']
@@ -6718,8 +6198,16 @@ const DATASHEETS = {
   abilities:[
     { name:'Aggressive Assault', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**.' },
     { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
-    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
     { name:'Errant’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, you can re-roll **Advance rolls** made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'+1 to hit rolls', from:'Aggressive Assault', readOf:'bca49143' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Errant (Bondsman, your Command phase)', note:'[ASSAULT]', from:'Errant’s Duty', oneModel:true, lasts:'round', readOf:'54db6f62+6a3f9305' }
   ],
   // New Recruit's Rules line also has Assault, named only by Errant’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Melta','Blast'],
@@ -6743,8 +6231,17 @@ const DATASHEETS = {
   abilities:[
     { name:'Seasoned Noble', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.' },
     { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
-    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
     { name:'Paladin’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Target is the closest eligible target', cond:'closest', note:'improve AP by 1', from:'Seasoned Noble', readOf:'f65d08c2' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LETHAL HITS]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a+6a3f9305' },
+    { kind:'melee', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Paladin (Bondsman, your Command phase)', note:'[LANCE]', from:'Paladin’s Duty', oneModel:true, lasts:'round', readOf:'0529a76a+6a3f9305' }
   ],
   // New Recruit's Rules line also has Lethal Hits and Lance, named only by Paladin’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Rapid Fire','Blast','Melta'],
@@ -6768,8 +6265,17 @@ const DATASHEETS = {
   abilities:[
     { name:'Thin Their Ranks', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability.' },
     { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
-    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
     { name:'Warden’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'vs non-MONSTER/VEHICLE targets', note:'ranged attacks have [DEVASTATING WOUNDS]', from:'Thin Their Ranks', always:true, vs:{ none:['Monster','Vehicle'] }, readOf:'3c1a544a' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[SUSTAINED HITS 1]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae+6a3f9305' },
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Warden (Bondsman, your Command phase)', note:'[IGNORES COVER]', from:'Warden’s Duty', oneModel:true, lasts:'round', readOf:'f4e10bae+6a3f9305' }
   ],
   // New Recruit's Rules line also has Sustained Hits, named only by Warden’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Devastating Wounds','Bondsman','Ignores Cover','Torrent','Melta'],
@@ -6796,10 +6302,14 @@ const DATASHEETS = {
     { name:'Chainbreaker', tag:'Once per battle', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked.' },
     { name:'Legendary Freeblade', tag:'Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.' },
     { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
-    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
     // embarked: the Damage tab reads Sir Hekhtur as not on the battlefield while Canis Rex lives (a model disembarking from a destroyed
     // Transport: 18.05 sets it up then), so his weapons start unticked (counted by you) and Canis Rex is the target alone
-    { name:'Using Sir Hekhtur', embarked:{ model:'Sir Hekhtur', until:'Canis Rex' }, text:'If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.' }
+    { name:'Using Sir Hekhtur', embarked:{ model:'Sir Hekhtur', until:'Canis Rex' }, text:'If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.', readOf:'07121bc1' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
   ],
   rules:['Deadly Demise D6','Sustained Hits','Super-Heavy Walker','Blast','Code Chivalric','Lone Operative'],
   kw:['Canis Rex','Character','Epic Hero','Faction: Imperial Knights','Imperium','Infantry','Questoris','Sir Hekhtur','Titanic','Towering','Vehicle','Walker'],
@@ -6830,8 +6340,16 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Macro-extinction Protocols', text:'Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.' },
-    { name:'Damaged: 1-10 Wounds Remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.' },
+    { name:'Damaged: 1-10 Wounds Remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'3a172fd2' },
     { name:'Atrapos’ Duty', tag:'Bondsman', text:'While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.' }
+  ],
+  mods:[
+    { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'3c11830a' },
+    { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } }, readOf:'3c11830a' },
+    { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining', readOf:'3a172fd2', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Cerastus Knight Atrapos (Bondsman, your Command phase), vs TITANIC/TOWERING models', note:'re-roll the hit roll and the wound roll', from:'Atrapos’ Duty', vs:{ any:['Titanic','Towering'] }, oneModel:true, lasts:'round', readOf:'7522a4f2+6a3f9305' }
   ],
   rules:['Code Chivalric','Deadly Demise D6+2','Super-Heavy Walker','Bondsman','Sustained Hits','Blast','Devastating Wounds','Hazardous'],
   kw:['Cerastus','Character','Faction: Imperial Knights','Imperium','Knight Atrapos','Titanic','Towering','Vehicle','Walker']
@@ -6850,8 +6368,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Shock Charge', text:'You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
-    { name:'Damaged: 1-10 Wounds Remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.' },
+    { name:'Damaged: 1-10 Wounds Remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'3a172fd2' },
     { name:'Lancer’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining', readOf:'3a172fd2', readBy:'derive' }
   ],
   rules:['Deadly Demise D6+2','Code Chivalric','Super-Heavy Walker','Bondsman','Sustained Hits','Assault','Lance'],
   kw:['Cerastus','Character','Faction: Imperial Knights','Imperium','Knight Lancer','Titanic','Towering','Vehicle','Walker']
@@ -6875,8 +6397,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Punishing Salvoes', ph:['movement','shooting'], turn:'your', text:'In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.' },
     { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
-    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
     { name:'Crusader’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.' }
+  ],
+  mods:[
+    { kind:'ranged', when:'Remained Stationary in your Movement phase', cond:'stationary', note:'ranged weapons have [SUSTAINED HITS 1] until the end of the turn', from:'Punishing Salvoes', readOf:'0eb266cf' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Imperial Knights','Armiger'] }, when:'Picked by a Knight Crusader (Bondsman, your Command phase)', note:'+1 to hit rolls', from:'Crusader’s Duty', oneModel:true, lasts:'round', readOf:'cb466686+6a3f9305' }
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Crusader','Questoris','Titanic','Towering','Vehicle','Walker']
@@ -6899,8 +6428,17 @@ const DATASHEETS = {
   abilities:[
     { name:'Selfless Protector', text:'Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack.' },
     { name:'Invulnerable Save (4+*)', def:'4+ invulnerable save against ranged attacks only', text:'This model has a 4+ invulnerable save against ranged attacks.', defOf:'fbb32536' },
-    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
     { name:'Defender’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', weapon:'Conversion beam obliterator', when:'Target more than 18" away', note:'an unmodified successful hit roll of 4+ scores a Critical Hit', from:'Conversion', calc:{ critHit:4 }, readOf:'fc735334' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining', readOf:'56b999de', readBy:'derive' }
+  ],
+  guard:[
+    { from:'Selfless Protector', needs:{ all:['Faction: Imperial Knights'] }, kind:'ranged', when:'Not fully visible to every model in the attacking unit because of the Knight Defender', note:'the Benefit of Cover and a 4+ invulnerable save against that attack', calc:{ cover:true, insv:4 }, readOf:'c18b16c5' },
+    { from:'Defender’s Duty', needs:{ all:['Faction: Imperial Knights','Armiger'] }, kind:'all', when:'Picked by a Knight Defender (Bondsman, your Command phase)', note:'-1 Damage to each attack allocated to that ARMIGER model', oneModel:true, lasts:'round', readOf:'99bd01da+6a3f9305' }
   ],
   rules:['Deadly Demise D6','Super-Heavy Walker','Code Chivalric','Bondsman','Conversion','Sustained Hits','Rapid Fire','Ignores Cover','Hazardous','Blast','Twin-linked','Torrent'],
   kw:['Character','Faction: Imperial Knights','Imperium','Knight Defender','Questoris','Titanic','Towering','Vehicle','Walker']
@@ -6945,6 +6483,15 @@ const DATASHEETS = {
     { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.', defOf:'a15f3d7e' },
     { name:'Self-repair Mechanisms', ph:['command'], turn:'your', text:'At the start of your Command phase, this model regains up to D3 lost wounds.' },
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your Warlord.' }
+  ],
+  // what Belisarius Cawl gives other units: the Invocation of Machine Vengeance canticle (Binharic Courage's OC and
+  // test bonus and Shroudpsalm's Stealth change no attacks)
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Adeptus Mechanicus'] }, when:'If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target', selfWhen:'If he has Invocation of Machine Vengeance, vs your Machine Vengeance target', note:'can re-roll the hit roll', from:'Canticles of the Omnissiah', lasts:'round', readOf:'e84b6c9d' }
+  ],
+  // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
+  guard:[
+    { from:'Shroudpsalm', needs:{ all:['Faction: Adeptus Mechanicus'] }, kind:'ranged', when:'Within 6" of Cawl, if he has Shroudpsalm', note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true }, readOf:'e84b6c9d' }
   ],
   // no Blast: none of his weapons has [BLAST] (the Solar atomiser is [MELTA 3]); BSData still links a Blast rule to it, and
   // New Recruit prints it (deviations-nr.json, deviations-bsdata.json)
@@ -6996,6 +6543,14 @@ const DATASHEETS = {
     { name:'Omnissiah’s Blessing', ph:['command'], turn:'your', text:'In your Command phase, select one friendly **ADEPTUS MECHANICUS** model within 3" of this model. That model regains up to D3 lost wounds and, if it is a **VEHICLE** model, until the start of your next Command phase, that model has the **Feel No Pain 5+** ability. Each model can only be selected for this ability once per Command phase.' },
     { name:'Vengeance for the Omnissiah', text:'If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', weapon:'Omnissian axe', set:{ A:'6' }, when:'After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of it', note:'until the end of the battle', from:'Vengeance for the Omnissiah', calc:{}, lasts:'battle', readOf:'3495342d' }
+  ],
+  // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
+  guard:[
+    { from:'Omnissiah’s Blessing', needs:{ all:['Faction: Adeptus Mechanicus','Vehicle'] }, kind:'all', one:true, when:'Picked by the Enginseer in your Command phase (within 3")', note:'Feel No Pain 5+ for that VEHICLE model', calc:{ fnp:5 }, readOf:'524f48be' }
+  ],
   rules:['Leader','Doctrina Imperatives','Devastating Wounds','Pistol','Extra Attacks'],
   kw:['Character','Cult Mechanicus','Enginseer','Faction: Adeptus Mechanicus','Imperium','Infantry','Tech-Priest']
 },
@@ -7014,6 +6569,11 @@ const DATASHEETS = {
     { name:'Battle Protocols', ph:['command'], turn:'your', def:'Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)', text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.', defOf:'3aa72642' },
     // Wahapedia's markup and bullets (BSData and GW's Faction Pack, PDF p17, print the two bullets too)
     { name:'Data-severed', text:'If there are no **KASTELAN ROBOT** models in this unit:\n- This unit loses **VEHICLE**.\n- This unit has **INFANTRY**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', weapon:'Incendine combustor', set:{ A:'+2' }, when:'In Protector Protocol', note:'selected in your Command phase', from:'Battle Protocols', calc:{}, lasts:'round', readOf:'3aa72642' },
+    { kind:'melee', weapon:'Twin Kastelan fist', set:{ A:'+2' }, when:'In Conqueror Protocol', note:'selected in your Command phase', from:'Battle Protocols', calc:{}, lasts:'round', readOf:'3aa72642' }
   ]
 },
 'adeptus-mechanicus/kastelan-robots':{
@@ -7097,9 +6657,17 @@ const DATASHEETS = {
   abilities:[
     { name:'Emanatus Forcefield', tag:'Aura', text:'While a friendly **ADEPTUS MECHANICUS BATTLELINE** model is wholly within 6" of this model, that **BATTLELINE** model has a 4+ invulnerable save against ranged attacks.' },
     // "mdel" in New Recruit and BSData; Wahapedia's datasheet has "model" (deviations-nr.json, deviations-bsdata.json)
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' },
     { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this model makes a **Normal**, **Advance** or **Fall Back move**, it can move through friendly **MONSTER** and **VEHICLE** models and sections of **terrain features** that are 4" or less in height.' },
     { name:'Broad spectrum data-tether', text:'The bearer loses the **SMOKE** keyword, but each time you target the bearer with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
+  ],
+  // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
+  guard:[
+    { from:'Emanatus Forcefield', needs:{ all:['Faction: Adeptus Mechanicus','Battleline'] }, kind:'ranged', when:'Wholly within 6" of the Onager Dunecrawler', note:'4+ InSv against ranged attacks', calc:{ insv:4 }, readOf:'e4ba4568' }
   ],
   rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Ignores Cover','Twin-linked'],
   kw:['Faction: Adeptus Mechanicus','Imperium','Onager Dunecrawler','Skitarii','Vehicle','Walker']
@@ -7120,7 +6688,12 @@ const DATASHEETS = {
   abilities:[
     { name:'Broad spectrum data-tether', text:'Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.' },
     { name:'Blistering Salvoes', text:'Each time this model makes an attack with a belleros energy cannon that targets an **INFANTRY** unit, add 1 to the **Hit roll**. Each time this model makes an attack with a ferrumite cannon that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Hit roll.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables (it has no belleros energy cannon)
+  mods:[
+    { kind:'ranged', weapon:'Ferrumite cannon', when:'Ferrumite cannon vs MONSTER or VEHICLE targets', note:'+1 to hit rolls', from:'Blistering Salvoes', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'8ddcceb7' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Twin-linked'],
   kw:['Faction: Adeptus Mechanicus','Frame','Imperium','Skitarii','Skorpius Disintegrator','Smoke','Vehicle']
@@ -7141,11 +6714,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Daemonic Poisons', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 **mortal wounds**.' },
     { name:'Daemon Primarch of Slaanesh', ph:['command'], turn:'opp', text:'At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent’s next Command phase, this model has that ability.' },
-    { name:'Damaged: 1-6 Wounds Remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-6 Wounds Remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' },
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
     { name:'Beguiling Form', who:'Daemon Primarch of Slaanesh: pick one', def:'while it is the Daemon Primarch of Slaanesh ability selected: -1 to the hit roll of attacks that target this model', text:'Each time a model makes an attack that targets this model, subtract 1 from the **Hit roll**.', defOf:'a5a2537f' },
     { name:'Daemonic Speed', who:'Daemon Primarch of Slaanesh: pick one', ph:['fight'], turn:'either', text:'This model has the **Fights First** ability.' },
     { name:'Enthralling Hypnosis', who:'Daemon Primarch of Slaanesh: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'While an enemy unit is within 6" of this model, each time that unit is selected to Fall Back, it must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 Wounds Remaining', readOf:'2c58235b', readBy:'derive' }
   ],
   rules:['Thrill Seekers','Deep Strike','Deadly Demise D6','Sustained Hits','Extra Attacks'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Emperor\'s Children','Fly','Fulgrim','Mobile','Monster','Primarch','Slaanesh']
@@ -7186,6 +6763,10 @@ const DATASHEETS = {
     { name:'Perfectionists', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.' },
     { name:'Euphoric Strikes', tag:'Once per battle', ph:['fight'], turn:'either', text:'Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.' },
     { name:'Lord of the Host', text:'If this model is **attached** to an **EMPEROR’S CHILDREN BATTLELINE** unit during the Declare Battle Formations step, this model has the **Infiltrators** and **Scouts 6"** abilities.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Euphoric Strikes used at the start of the Fight phase (once per battle)', note:'+3 A and +1 AP', from:'Euphoric Strikes', readOf:'25e0b51e' }
   ]
 },
 'emperors-children/infractors':{
@@ -7205,6 +6786,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Excessive Assault', ph:['fight'], turn:'either', text:'Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.' },
     { name:'Icon of Excess', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a **Leadership test**. If that test is passed, you gain 1CP.' }
+  ],
+  mods:[
+    { kind:'melee', when:'Every melee attack', note:'re-roll wound rolls of 1', from:'Excessive Assault', always:true, readOf:'dbc2396e' },
+    { kind:'melee', when:'Target within range of an objective marker', cond:'targetObjective', note:'re-roll the wound roll', from:'Excessive Assault', readOf:'dbc2396e' }
   ]
 },
 'emperors-children/tormentors':{
@@ -7246,7 +6831,12 @@ const DATASHEETS = {
   abilities:[
     { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
     { name:'Revel in Desecration', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**.' },
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Target not Below Half-strength', note:'+1 to hit rolls', from:'Revel in Desecration', readOf:'8b09a482' },
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'2c58235b', readBy:'derive' }
   ],
   rules:['Deadly Demise D6','Thrill Seekers','Blast','Sustained Hits','Devastating Wounds','Precision'],
   kw:['Chaos','Daemon','Defiler','Faction: Emperor\'s Children','Slaanesh','Vehicle','Walker']
@@ -7269,7 +6859,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Macro-extinction Protocols', text:'Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well.' },
     { name:'Consumed with Hunger', tag:'Aura', text:'While a friendly **WAR DOG** model is within 6" of this model, each time that **WAR DOG** model makes an attack that targets a **TITANIC** or **TOWERING** unit, you can re-roll the **Hit roll**.' },
-    { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'40b115a5' }
+  ],
+  mods:[
+    { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'42b18b8c' },
+    { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } }, readOf:'42b18b8c' },
+    { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 wounds remaining', readOf:'40b115a5', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['War Dog'] }, when:'Within 6" of Chaos Cerastus Knight Atrapos, vs a TITANIC or TOWERING unit', note:'re-roll the hit roll', from:'Consumed with Hunger', vs:{ any:['Titanic','Towering'] }, readOf:'998d3b00' }
   ],
   rules:['Deadly Demise D6+2','Harbingers of Dread','Super-Heavy Walker','Sustained Hits','Blast','Devastating Wounds','Hazardous'],
   kw:['Cerastus','Chaos','Character','Faction: Chaos Knights','Knight Atrapos','Titanic','Towering','Vehicle','Walker']
@@ -7289,7 +6887,14 @@ const DATASHEETS = {
   abilities:[
     { name:'Shock Charge', text:'You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
     { name:'Dark Fervour', tag:'Aura', text:'While a friendly **WAR DOG** model is within 6" of this model, ranged weapons equipped by that War Dog model have the **[ASSAULT]** ability.' },
-    { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'40b115a5' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 wounds remaining', readOf:'40b115a5', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['War Dog'] }, when:'Within 6" of Chaos Cerastus Knight Lancer', note:'ranged weapons have [ASSAULT]', from:'Dark Fervour', readOf:'aa9a9d49' }
   ],
   rules:['Deadly Demise D6+2','Harbingers of Dread','Super-Heavy Walker','Sustained Hits','Assault','Lance'],
   kw:['Cerastus','Chaos','Character','Faction: Chaos Knights','Knight Lancer','Titanic','Towering','Vehicle','Walker']
@@ -7311,8 +6916,14 @@ const DATASHEETS = {
   abilities:[
     { name:'Dread Dominion', tag:'Aura', text:'While a friendly **WAR DOG** model is within 9" of this model, improve that **WAR DOG** model’s Leadership and Objective Control characteristics by 1.' },
     { name:'Seething Hatred', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** or you can re-roll one **Wound roll** when resolving those attacks.' },
-    { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'214508e4' },
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  // (Bestial Aspect's [ASSAULT] is already on every ranged weapon, as New Recruit prints them: no footnote)
+  mods:[
+    { kind:'all', when:'Selected to shoot or fight', note:'re-roll one hit roll or one wound roll', from:'Seething Hatred', readOf:'31dda915' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining', readOf:'214508e4', readBy:'derive' }
   ],
   rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Torrent','Ignores Cover','Rapid Fire'],
   kw:['Abhorrent','Chaos','Character','Faction: Chaos Knights','Knight Despoiler','Titanic','Towering','Vehicle','Walker']
@@ -7333,8 +6944,16 @@ const DATASHEETS = {
   abilities:[
     { name:'Methodical Destruction', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.' },
     { name:'Close-range Killers', tag:'Aura', text:'While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.' },
-    { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'214508e4' },
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed)', note:'re-roll the wound roll', from:'Methodical Destruction', readOf:'d72ed885' },
+    { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining', readOf:'214508e4', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['War Dog'] }, when:'Within 9" of Knight Ruinator, target is the closest enemy unit', note:'improve AP by 1', from:'Close-range Killers', readOf:'bfc39fb4' }
   ],
   rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Ignores Cover','Torrent','Sustained Hits','Blast'],
   kw:['Abhorrent','Chaos','Character','Faction: Chaos Knights','Knight Ruinator','Titanic','Towering','Vehicle','Walker']
@@ -7368,8 +6987,13 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Brigand', text:'Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.' },
-    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'44dd308a' },
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand', readOf:'5dc3c2dc' },
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining', readOf:'44dd308a', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Harbingers of Dread','Melta','Rapid Fire'],
   kw:['Brigand','Chaos','Faction: Chaos Knights','Vehicle','Walker','War Dog']
@@ -7388,8 +7012,14 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Executioner', text:'Each time this model makes an attack that targets a unit **Below Half-strength**, add 1 to the **Hit roll**. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a **Battle-shock test**.' },
-    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'44dd308a' },
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  // (Snarling Rivalry's [IGNORES COVER] is already on every ranged weapon, as New Recruit prints them: no footnote)
+  mods:[
+    { kind:'all', when:'Target Below Half-strength', note:'+1 to hit rolls', from:'Executioner', readOf:'4c3a2bf1' },
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining', readOf:'44dd308a', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Harbingers of Dread','Rapid Fire'],
   kw:['Chaos','Executioner','Faction: Chaos Knights','Vehicle','Walker','War Dog']
@@ -7408,8 +7038,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Karnivore', text:'You can re-roll **Advance** and **Charge rolls** made for this model.' },
-    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'44dd308a' },
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining', readOf:'44dd308a', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Harbingers of Dread','Sustained Hits','Rapid Fire'],
   kw:['Chaos','Faction: Chaos Knights','Karnivore','Vehicle','Walker','War Dog']
@@ -7433,6 +7067,13 @@ const DATASHEETS = {
     // ph/turn: "at the start of any phase"; the +3 A is the Watcher's Axe footnote, the 3+ InSv the When targeted line (one of the two)
     { name:'Moment Shackle', tag:'Once per battle, per army', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase', text:'(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.', defOf:'5935cd9c' },
     { name:'Leader', text:'This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY' }
+  ],
+  mods:[
+    { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle', readOf:'5935cd9c' }
+  ],
+  // Captain-General: friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of Trajann, his own unit included
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }, when:'Within 6" of Trajann Valoris', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Captain-General', selfAlways:true, readOf:'d2d51895' }
   ]
 },
 'adeptus-custodes/allarus-custodians':{
@@ -7453,6 +7094,9 @@ const DATASHEETS = {
     // the new codex's name (Wahapedia); New Recruit prints "Slayers of Tyrants"
     { name:'Slayer of Tyrants', text:'This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.' },
     { name:'Vexilla', text:'- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
+  ],
+  mods:[
+    { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayer of Tyrants', readOf:'c849a61b' }
   ],
   rules:['Deep Strike','Martial Ka\'tah','Aegis of the Emperor','Feel No Pain 5+*','Blast','Assault','Rapid Fire'],
   kw:['Allarus Custodians','Faction: Adeptus Custodes','Imperium','Infantry','Terminator']
@@ -7511,6 +7155,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Advanced Firepower', text:'This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.' }
   ],
+  mods:[
+    { kind:'ranged', when:'vs MONSTER/VEHICLE', note:'re-roll one hit roll, one wound roll and one damage roll', from:'Advanced Firepower', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'6069966f' },
+    { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5', readOf:'d4250aa7', readBy:'derive' }
+  ],
   rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Lethal Hits','Sustained Hits'],
   kw:['Caladius','Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle']
 },
@@ -7529,6 +7177,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Unyielding Ancient', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.', defOf:'15a3c4f8' }
   ],
+  mods:[
+    { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4', readOf:'9b4b1cb7', readBy:'derive' }
+  ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Lance','Rapid Fire'],
   kw:['Contemptor-Achillus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker']
 },
@@ -7545,6 +7196,9 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Unyielding Ancient', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.', defOf:'15a3c4f8' }
+  ],
+  mods:[
+    { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4', readOf:'9b4b1cb7', readBy:'derive' }
   ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Blast','Torrent','Twin-linked'],
   kw:['Contemptor-Galatus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker']
@@ -7565,6 +7219,9 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Guardian Eternal', def:'Ranged attacks that target it have -1 D', text:'Ranged attacks that target this unit have -1 **D**.', defOf:'f7500cb9' }
+  ],
+  mods:[
+    { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5', readOf:'d4250aa7', readBy:'derive' }
   ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*'],
   kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
@@ -7604,6 +7261,9 @@ const DATASHEETS = {
     { name:'Stand Vigil', text:'This unit’s attacks have **[LETHAL HITS: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**.' },
     { name:'Vexilla', text:'- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' },
     { name:'Praesidium Shield', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.', defOf:'15a3c4f8' }
+  ],
+  mods:[
+    { kind:'all', when:'This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets', cond:'objective', note:'[LETHAL HITS]', from:'Stand Vigil', vs:{ none:['Monster','Vehicle'] }, readOf:'320e23dd' }
   ]
 },
 'adeptus-custodes/custodian-guard-sodality':{
@@ -7620,6 +7280,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Impenetrable Defence', text:'This unit’s attacks have **[SUSTAINED HITS 1: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**.' },
     { name:'Vexilla', text:'- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
+  ],
+  mods:[
+    { kind:'all', when:'This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets', cond:'objective', note:'[SUSTAINED HITS 1]', from:'Impenetrable Defence', vs:{ none:['Monster','Vehicle'] }, readOf:'b729d41c' }
   ],
   rules:['Deep Strike','Martial Ka\'tah','Aegis of the Emperor','Feel No Pain 5+*','Assault','Rapid Fire'],
   kw:['Battleline','Custodian Guard Sodality','Faction: Adeptus Custodes','Imperium','Infantry','Trusted Sentinel']
@@ -7659,6 +7322,9 @@ const DATASHEETS = {
     // ph/turn: its melee attacks after "a charge move this turn": the Fight phase
     { name:'Quicksilver Execution', ph:['fight'], turn:'either', text:'If this unit made a **charge move** this turn, this unit’s melee attacks have **[SUSTAINED HITS 1]**.' }
   ],
+  mods:[
+    { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'[SUSTAINED HITS 1]', from:'Quicksilver Execution', readOf:'c2776538' }
+  ],
   rules:['Martial Ka\'tah','Aegis of the Emperor','Feel No Pain 5+*','Deep Strike','Lance'],
   kw:['Faction: Adeptus Custodes','Fly','Imperium','Mounted','Vertus Praetors']
 },
@@ -7681,6 +7347,13 @@ const DATASHEETS = {
     { name:'Primarch of the XIII', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **ADEPTUS ASTARTES** unit is within 6" of this unit, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
     { name:'Codex Adept', text:'The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Codex Adept (the devastator doctrine is active for this unit)', note:'[ASSAULT]', from:'Codex Adept', always:true, readOf:'d42feb49' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Adeptus Astartes'] }, when:'Within 6" of Roboute Guilliman', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Primarch of the XIII', selfAlways:true, readOf:'83d4b7b8' }
+  ],
   rules:['Combat Doctrines','Feel No Pain 5+','Transhuman Strategist','Lethal Hits','Rapid Fire','Sustained Hits','Devastating Wounds','Cleave'],
   kw:['Character','Epic Hero','Faction: Adeptus Astartes','Faction: Ultramarines','Imperium','Mobile','Monster','Primarch','Roboute Guilliman']
 },
@@ -7700,6 +7373,10 @@ const DATASHEETS = {
     { name:'Master Tactician', ph:['movement'], turn:'your', text:'In your Movement phase, you can select one **visible** friendly **ADEPTUS ASTARTES** unit within 9" of this model, and select one **combat doctrine**. That **combat doctrine** is active for that unit until the start of your next Command phase.' },
     { name:'Thunderhawk Insertion', text:'In the Declare Battle Formations step, you can select one friendly **GRAVIS/PHOBOS/TACTICUS** unit. That unit has **Deep Strike**.' },
     { name:'Codex Adept', text:'The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Codex Adept (the devastator doctrine is active for this unit)', note:'[ASSAULT]', from:'Codex Adept', always:true, readOf:'d42feb49' }
   ]
 },
 'ultramarines/wardens-of-ultramar':{
@@ -7746,6 +7423,9 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Bladeguard', tag:'Once per turn, per unit', ph:['fight'], turn:'either', def:'Bladeguard (once per turn, in the Fight phase, when an enemy unit targets it, instead of +1 to hit for its own melee attacks): attacks that target it have -1 to hit rolls', text:'In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**.', defOf:'7366a778' }
+  ],
+  mods:[
+    { kind:'melee', when:'Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it)', note:'+1 to hit rolls', from:'Bladeguard', readOf:'7366a778' }
   ]
 },
 'ultramarines/librarian-in-phobos-armour':{
@@ -7766,6 +7446,9 @@ const DATASHEETS = {
     { name:'Soul Sight', tag:'psychic level 1', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit. Ranged attacks that target that enemy unit have **[IGNORES COVER]**.' },
     { name:'Psychic Hood', tag:'Psychic', def:'Feel No Pain 4+ against psychic attacks', text:'This unit has **Feel No Pain 4+** against **psychic attacks**.', defOf:'3eefcb3b' },
     { name:'Librarian', tag:'psyker level 1', text:'This model has the **psychic abilities** listed in the Psychic Abilities section.' }
+  ],
+  aura:[
+    { kind:'ranged', when:'Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll)', note:'[IGNORES COVER]', from:'Soul Sight', readOf:'a4058129' }
   ],
   rules:['Leader','Deep Strike','Combat Doctrines','Scouts 6"','Librarius','Stealth','Infiltrators','Close-quarters','Psychic','Hazardous','Devastating Wounds'],
   kw:['Character','Explosives','Faction: Adeptus Astartes','Imperium','Infantry','Librarian','Phobos','Psyker']
@@ -7829,6 +7512,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Total Obliteration', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'This unit’s ranged attacks can re-roll **damage rolls**.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Every ranged attack', note:'can re-roll damage rolls', from:'Total Obliteration', always:true, readOf:'93294bcf' }
+  ],
   rules:['Combat Doctrines','Close-quarters','Melta'],
   kw:['Eradicator Squad with Melta Rifles','Explosives','Faction: Adeptus Astartes','Gravis','Imperium','Infantry']
 },
@@ -7890,8 +7577,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Rage Embodied', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.' },
     { name:'Murderlust', text:'This unit is eligible to declare a charge in a turn in which it Advanced.' },
-    { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.' },
+    { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.', readOf:'4b25ce47' },
     { name:'Greater Daemon of Khorne', tag:'Aura', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Damaged (1-7 wounds left)', note:'+2 A', from:'Damaged: 1-7 wounds remaining', readOf:'4b25ce47' }
+  ],
+  aura:[
+    { kind:'melee', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Within 6" of Skarbrand', selfWhen:'Own aura', note:'+1 A', from:'Rage Embodied', selfAlways:true, readOf:'fcef0817' }
   ],
   rules:['Deadly Demise D6','Deep Strike','The Shadow of Chaos','Ignores Cover','Torrent'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Khorne','Monster','Skarbrand']
@@ -7911,6 +7605,10 @@ const DATASHEETS = {
     { name:'Pack Leader', ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'While this model is leading a unit, you can re-roll **Advance** and **Charge rolls** made for that unit.' },
     { name:'Prey of the Blood God', at:'Start of the first battle round', ph:['command','fight'], turn:'either', text:'At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the **Wound roll**. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey.' },
     { name:'Brass Collar of Bloody Vengeance', def:'Feel No Pain 3+ against Psychic Attacks and mortal wounds', text:'The bearer has the **Feel No Pain 3+** ability against **Psychic Attacks** and **mortal wounds**.', defOf:'af5afad5' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'Melee attacks that target Karanak’s prey', note:'can re-roll the wound roll', from:'Prey of the Blood God', readOf:'e7394576' }
   ]
 },
 'chaos-daemons/flesh-hounds':{
@@ -7940,6 +7638,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Lord of Decapitations', ph:['fight'], turn:'either', text:'While this model is leading a unit, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.' },
     { name:'Skulls for Khorne', text:'Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', who:'Skulltaker', when:'Attacks that target a CHARACTER unit', note:'can re-roll the hit roll and the wound roll', from:'Skulls for Khorne', vs:{ any:['Character'] }, always:true, readOf:'3bb6879b' }
   ]
 },
 'chaos-daemons/bloodletters':{
@@ -7971,8 +7673,15 @@ const DATASHEETS = {
   abilities:[
     { name:'Daemon Lord of Khorne', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**.' },
     { name:'Relentless Carnage', ph:['fight'], turn:'either', text:'At the end of the Fight phase, you can select one enemy unit within **Engagement Range** of this model and roll eight D6: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
-    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' },
     { name:'Greater Daemon of Khorne', tag:'Aura', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining', readOf:'2c58235b', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'melee', needs:{ all:['Faction: Legiones Daemonica','Khorne'] }, when:'Within 6" of the Bloodthirster', selfWhen:'Own aura', note:'+1 to hit', from:'Daemon Lord of Khorne', selfAlways:true, readOf:'50e7d43a' }
   ],
   rules:['Deadly Demise D6','Deep Strike','The Shadow of Chaos','Ignores Cover','Torrent'],
   kw:['Bloodthirster','Chaos','Character','Daemon','Faction: Legiones Daemonica','Fly','Khorne','Monster']
@@ -7995,6 +7704,9 @@ const DATASHEETS = {
     { name:'Daemonic Lord', def:'Lone Operative while within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit', text:'While this model is within 3" of one or more friendly **LEGIONES DAEMONICA INFANTRY** units, this model has the **Lone Operative** ability.', defOf:'e269580e' },
     { name:'Daemonic Allegiance', text:'**Daemon Prince of Khorne:** If this model has the **KHORNE** keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.\n**Daemon Prince of Tzeentch:** If this model has the **TZEENTCH** keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.\n**Daemon Prince of Nurgle:** If this model has the **NURGLE** keyword, add 1 to this model’s Toughness characteristic.\n**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2" to this model’s Move characteristic.' }
   ],
+  guard:[
+    { from:'Prince of Darkness', needs:{ all:['Faction: Legiones Daemonica'] }, kind:'ranged', when:'Within 6" of the Daemon Prince of Chaos', selfWhen:'Own aura', selfAlways:true, note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true }, readOf:'bdeddf49' }
+  ],
   rules:['Deep Strike','The Shadow of Chaos','Deadly Demise D3'],
   kw:['Chaos','Character','Daemon','Daemon Prince of Chaos','Faction: Legiones Daemonica','Monster']
 },
@@ -8011,6 +7723,11 @@ const DATASHEETS = {
     { name:'Blood Throne', ph:['fight'], turn:'either', text:'At the start of the Fight phase, select one enemy unit within 18" of and visible to this model. Until the end of the phase, each time a friendly **KHORNE LEGIONES DAEMONICA** unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1.' },
     { name:'Champion Slayer', ph:['fight'], turn:'either', text:'Each time this model makes a melee attack that targets a **CHARACTER** or **MONSTER** unit, you can re-roll the **Wound roll**. Each time this model destroys an enemy **CHARACTER** or **MONSTER** unit, this model regains up to D6 lost wounds.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Fight phase, attacks that target the enemy unit selected with Blood Throne', note:'improve S, AP and D by 1', from:'Blood Throne', readOf:'d9c03c85' },
+    { kind:'melee', when:'Melee attacks that target a CHARACTER or MONSTER unit', note:'can re-roll the wound roll', from:'Champion Slayer', vs:{ any:['Character','Monster'] }, always:true, readOf:'bbc8912a' }
+  ],
   rules:['Deep Strike','The Shadow of Chaos','Extra Attacks'],
   kw:['Chaos','Character','Daemon','Faction: Legiones Daemonica','Khorne','Mounted','Rendmaster on Blood Throne']
 },
@@ -8025,6 +7742,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Bloodmaster', text:'While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Wound roll**.' },
     { name:'A Gory Path', text:'Each time this model’s unit Consolidates, it can move up to 6" instead of up to 3".' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'While the Bloodmaster is leading the unit', note:'+1 to wound rolls', from:'Bloodmaster', always:true, readOf:'fdeba804' }
   ]
 },
 'chaos-daemons/skullmaster':{
@@ -8039,6 +7760,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Skullmaster’s Fury', ph:['charge','fight'], turn:'either', text:'While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.' },
     { name:'Devastating Charge', ph:['charge'], turn:'either', text:'Each time this model’s unit ends a **Charge move**, each enemy unit within **Engagement Range** of that unit must take a **Battle-shock test**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', weapon:'Juggernaut’s bladed horn', when:'Ended a Charge move this turn', cond:'charged', note:'[DEVASTATING WOUNDS] until the end of the turn', from:'Skullmaster’s Fury', readOf:'a0458dae' }
   ]
 },
 'chaos-daemons/bloodcrushers':{
@@ -8086,7 +7811,14 @@ const DATASHEETS = {
     { name:'Unholy Mechanisms', tag:'Aura', text:'While a friendly **DAEMON VEHICLE** unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.' },
     { name:'Reorder Reality', def:'an enemy unit within 18" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase', text:'Each time an enemy unit within 18" of this model targets this model, subtract 1 from the **Hit roll** and, until the end of the phase, that enemy unit’s ranged weapons have the **[HAZARDOUS]** ability.', defOf:'9eb7b966' },
     { name:'Indentured Daemon Engines', def:'Lone Operative while within 3" of a friendly DAEMON VEHICLE unit', text:'While this model is within 3" of one or more friendly **DAEMON VEHICLE** units, this model has the **Lone Operative** ability.', defOf:'7e81e6e7' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Daemon','Vehicle'] }, when:'Within 6" of Vashtorr the Arkifane', note:'+2 S', from:'Unholy Mechanisms', readOf:'56ff5891' }
   ],
   rules:['Dark Pacts','Deadly Demise D3','Deep Strike','Torrent','Anti','Devastating Wounds'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Heretic Astartes','Fly','Monster','Vashtorr the Arkifane']
@@ -8108,6 +7840,12 @@ const DATASHEETS = {
   abilities:[
     { name:'Corrupt Machine Spirits', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 **mortal wounds**; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.' },
     { name:'Spirit Thief', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1.' }
+  ],
+  mods:[
+    { kind:'ranged', when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] }, readOf:'cf4e855c' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Heretic Astartes'] }, when:'Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start', note:'re-roll wound rolls of 1', from:'Spirit Thief', vs:{ any:['Vehicle'] }, notSelf:true, readOf:'cf4e855c' }
   ],
   rules:['Dark Pacts','Extra Attacks','Pistol','Lance','Anti'],
   kw:['Chaos','Character','Daemon','Faction: Heretic Astartes','Lord Discordant','Mounted']
@@ -8131,6 +7869,9 @@ const DATASHEETS = {
     { name:'Master of Mechanisms', ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' }, text:'In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase.' },
     { name:'Enrage Machine Spirits', ph:['movement'], turn:'your', text:'At the end of your Movement phase, select one enemy **VEHICLE** unit within 12" of this model. That unit must take a **Battle-shock test**.' }
   ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Heretic Astartes','Vehicle'] }, when:'Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3")', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase', from:'Master of Mechanisms', calc:{ hit:1 }, oneModel:true, lasts:'round', readOf:'266481da' }
+  ],
   rules:['Dark Pacts','Leader','Ignores Cover','Pistol','Torrent','Anti','Melta','Hazardous'],
   kw:['Chaos','Character','Faction: Heretic Astartes','Grenades','Infantry','Warpsmith']
 },
@@ -8150,6 +7891,10 @@ const DATASHEETS = {
     { name:'Dark Zealotry', ph:['fight'], turn:'either', text:'While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.' },
     { name:'Demagogue', tag:'Once per battle', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle, at the start of any phase, you can select one friendly **HERETIC ASTARTES** unit that is **Battle-shocked** and within 12" of this unit’s **DARK APOSTLE** model. That unit is no longer Battle-shocked.' },
     { name:'Malign Sacrifice', ph:['fight'], turn:'either', text:'At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within **Engagement Range** of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'While the Dark Apostle leads this unit and it contains its DARK APOSTLE model', note:'+1 to wound rolls', from:'Dark Zealotry', always:true, readOf:'b9aa750e' }
   ]
 },
 'chaos-space-marines/master-of-executions':{
@@ -8166,6 +7911,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Warp-sighted Butcher', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.' },
     { name:'Trophy Taker', text:'Each time this model destroys an enemy **CHARACTER** model, you gain 1CP.' }
+  ],
+  mods:[
+    { kind:'melee', when:'While the Master of Executions leads this unit, target below its Starting Strength', note:'re-roll the hit roll; also the wound roll if Below Half-strength', from:'Warp-sighted Butcher', pick:[{ name:'Below Starting Strength', note:'re-roll hit rolls' },{ name:'Below Half-strength', note:'re-roll hit rolls and wound rolls' }], readOf:'06aa201e' }
   ]
 },
 'chaos-space-marines/nemesis-claw':{
@@ -8191,6 +7939,9 @@ const DATASHEETS = {
     { name:'Visions of Suffering', tag:'Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well.' },
     { name:'Attached Unit', text:'If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead.' },
     { name:'Voice eater', text:'Enemy units (excluding **MONSTERS** and **VEHICLES**) cannot be targeted with Stratagems while they are within **Engagement Range** of the bearer’s unit.' }
+  ],
+  mods:[
+    { kind:'all', when:'Target below its Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength', from:'Visions of Suffering', pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' },{ name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }], readOf:'ffa1b94e' }
   ]
 },
 'chaos-space-marines/cultist-mob':{
@@ -8230,6 +7981,10 @@ const DATASHEETS = {
   abilities:[
     { name:'Stabilisation Talons', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Every ranged attack', note:'can ignore any or all modifiers to BS and any or all modifiers to the hit roll', from:'Stabilisation Talons', always:true, readOf:'d0e51e85' }
+  ],
   rules:['Dark Pacts','Hazardous','Rapid Fire'],
   kw:['Chaos','Faction: Heretic Astartes','Havocs','Infantry']
 },
@@ -8248,6 +8003,10 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Warp Rift Firepower', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit\'s ranged attacks have **[INDIRECT FIRE]**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Once per battle, your Shooting phase, when selected to shoot', note:'[INDIRECT FIRE]', from:'Warp Rift Firepower', readOf:'bf11a465' }
   ],
   rules:['Dark Pacts','Deep Strike','Melta','Blast','Sustained Hits'],
   kw:['Chaos','Daemon','Faction: Heretic Astartes','Infantry','Obliterators']
@@ -8268,7 +8027,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Annihilator', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time a ranged attack made by this model is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Allocated to a MONSTER or VEHICLE model', note:'can re-roll the damage roll', from:'Annihilator', always:true, vs:{ any:['Monster','Vehicle'] }, readOf:'c62d4c71' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Dark Pacts','Blast','Twin-linked','Rapid Fire'],
   kw:['Chaos','Faction: Heretic Astartes','Frame','Predator Annihilator','Smoke','Vehicle']
@@ -8289,7 +8053,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Destructor', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time a ranged attack made by this model targets an enemy **INFANTRY** unit, improve the Armour Penetration characteristic of that attack by 1.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'vs INFANTRY units', note:'+1 AP', from:'Destructor', always:true, vs:{ any:['Infantry'] }, readOf:'a6bdb4e3' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Dark Pacts','Blast','Rapid Fire','Sustained Hits'],
   kw:['Chaos','Faction: Heretic Astartes','Frame','Predator Destructor','Smoke','Vehicle']
@@ -8309,7 +8078,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Siege Shield', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Within Engagement Range of one or more enemy units', note:'no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit)', from:'Siege Shield', always:true, readOf:'ff60fee3' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Dark Pacts','Blast','Rapid Fire'],
   kw:['Chaos','Faction: Heretic Astartes','Frame','Smoke','Vehicle','Vindicator']
@@ -8327,7 +8101,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Daemonic Ordnance', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', when:'Selected to shoot, if it uses this ability (until the end of the phase)', note:'[DEVASTATING WOUNDS] and [HAZARDOUS]', from:'Daemonic Ordnance', readOf:'95a13b90' },
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Dark Pacts','Blast'],
   kw:['Chaos','Daemon','Faction: Heretic Astartes','Forgefiend','Vehicle','Walker']
@@ -8343,7 +8122,11 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Siege Crawler', ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'You can ignore any or all modifiers to this model’s Move characteristic and to **Advance** and **Charge rolls** made for it.' },
-    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+    { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining', readOf:'9c4d4e20', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','Dark Pacts'],
   kw:['Chaos','Daemon','Faction: Heretic Astartes','Maulerfiend','Vehicle','Walker']
@@ -10023,7 +9806,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from','own'],
   melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf']
+  abilities:['name','who','tag','at','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the
@@ -10035,10 +9818,16 @@ const TABLE_ORDER = {
 // its row) is not the datasheet's: the rule, Warlord, enhancement or wargear that gives it (the value is the list's). of: which datasheet of an attached unit a
 // row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction and bsId, and the
 // fingerprints (gistOf, defOf) of AI-written columns.
-function resolveArmies(armies, sheets, order, opts){
-  opts = opts || {};
-  var ROWS = ['stats', 'ranged', 'melee', 'abilities'];
-  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(["gistOf","defOf"]).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+// The readings (mods: footnotes; aura: what the unit gives other units; guard: their "When targeted" help) are each on the row of
+// the rule they read, in this order: the army rules on the unit's Rules line, each datasheet of the unit, its enhancement (or
+// upgrade), the detachment rules of the list whose needs it meets; then the entry's own. An entry's list of them with names in it is
+// the whole list, in its order: a name stands for the readings of that name the rows give. null: none. Hidden: readOf (the
+// fingerprint of the text a reading was read from), readBy and listWhy.
+function resolveArmies(armies, sheets, order, factions, opts){
+  opts = opts || {}; factions = factions || {};
+  var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['mods', 'aura', 'guard'];
+  var FPK = ["gistOf","defOf","readOf","readBy","listWhy"], RHIDE = ['readOf', 'readBy', 'listWhy'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -10050,13 +9839,33 @@ function resolveArmies(armies, sheets, order, opts){
     for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
     return { p:-1, j:-1 };
   }
+  // names alike in case and apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's "Martial Ka’tah")
+  function nm(s){ return String(s).toLowerCase().replace(/[’‘]/g, "'"); }
+  function has(list, x){ for(var i = 0; i < (list || []).length; i++) if(nm(list[i]) === nm(x)) return true; return false; }
+  function meets(n, u){ return !n || (!n.all || n.all.every(function(k){ return has(u.kw, k); })) && (!n.any || n.any.some(function(k){ return has(u.kw, k); }))
+    && !(n.none || []).some(function(k){ return has(u.kw, k); }) && (!n.rule || n.rule.some(function(r){ return has(u.rules, r); })); }
+  // the readings of one kind a unit has: the rows' (each with where it is from, for the trace), then the entry's
+  function readings(a, u, out, ids, parts, kind){
+    var F = factions[a.faction] || {}, dets = (a.detachments || []).map(function(d){ return (F.detachments || {})[d]; }).filter(Boolean), t = [], enh = null;
+    function take(x, at){ ((x && x[kind]) || []).forEach(function(m, j){ t.push({ m:m, at:at, j:j }); }); }
+    (F.armyRules || []).forEach(function(r){ if(has(out.rules, r.name)) take(r, null); });
+    parts.forEach(function(p, i){ take(p, ids[i]); });
+    dets.forEach(function(d){ (d.enhancements || []).forEach(function(e){ if(!enh && (e.name === out.enhancement || e.name === out.upgrade)) take(enh = e, null); }); });
+    dets.forEach(function(d){ [d.rule].concat(d.moreRules || []).forEach(function(r){ if(r && meets(r.needs, out)) take(r, null); }); });
+    var own = u[kind], list = [];
+    if(own === null) list = [];
+    else if(!own) list = t;
+    else if(own.some(function(x){ return typeof x === 'string'; })) own.forEach(function(x, e){ if(typeof x !== 'string') list.push({ m:x, at:null, e:e }); else t.forEach(function(y, i){ if(y.m.from === x) list.push(i === t.findIndex(function(z){ return z.m.from === x; }) ? Object.assign({ e:e }, y) : y); }); });
+    else list = t.concat(own.map(function(x, e){ return { m:x, at:null, e:e }; }));
+    return list.map(function(y, n){ var m = copy(y.m); RHIDE.forEach(function(k){ delete m[k]; }); if(opts.trace) opts.trace(a, u, kind, n, y.at, y.at ? y.j : -1, y.e); return m; });
+  }
   return armies.map(function(a){
     return Object.assign({}, a, { units:a.units.map(function(u){
       if(!u.ds) return u;
       var ids = [].concat(u.ds), parts = ids.map(function(id){ if(!sheets[id]) throw new Error('data.js: ' + a.id + '/' + u.id + ' names no datasheet ' + id); return sheets[id]; });
       var out = {}, k, rest = {};
-      for(k in parts[0]) if(ROWS.indexOf(k) < 0 && HIDE.indexOf(k) < 0) out[k] = copy(parts[0][k]);
-      for(k in u) if(ROWS.indexOf(k) < 0) rest[k] = u[k];
+      for(k in parts[0]) if(ROWS.indexOf(k) < 0 && READ.indexOf(k) < 0 && HIDE.indexOf(k) < 0) out[k] = copy(parts[0][k]);
+      for(k in u) if(ROWS.indexOf(k) < 0 && READ.indexOf(k) < 0) rest[k] = u[k];
       put(out, rest); if(u.over) put(out, u.over);
       ROWS.forEach(function(kind){
         var list;
@@ -10073,11 +9882,12 @@ function resolveArmies(armies, sheets, order, opts){
           return sorted(row, order[kind] || []);
         });
       });
+      READ.forEach(function(kind){ var l = readings(a, u, out, ids, parts, kind); if(l.length) out[kind] = l; });
       return sorted(out, order.unit || []);
     }) });
   });
 }
 // ---- end of resolveArmies ----
 
-return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER), bsIds:BS_IDS, checklist:CHECKLIST, datasheets:DATASHEETS, ruleOptions:RULE_OPTIONS, grants:GRANTS };
+return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER, FACTIONS), bsIds:BS_IDS, checklist:CHECKLIST, datasheets:DATASHEETS, ruleOptions:RULE_OPTIONS, grants:GRANTS };
 })();

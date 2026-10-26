@@ -55,60 +55,12 @@
  },
  "units": {
   "skarbrand": {
-   "mods": [
-    {
-     "kind": "melee",
-     "when": "Damaged (1-7 wounds left)",
-     "note": "+2 A",
-     "from": "Damaged: 1-7 wounds remaining"
-    }
-   ],
-   "aura": [
-    {
-     "kind": "melee",
-     "needs": {
-      "all": [
-       "Faction: Legiones Daemonica",
-       "Khorne"
-      ]
-     },
-     "when": "Within 6\" of Skarbrand",
-     "selfWhen": "Own aura",
-     "note": "+1 A",
-     "from": "Rage Embodied",
-     "selfAlways": true
-    }
-   ],
    "why": "Rage Embodied (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", his own unit included (22.01). Greater Daemon of Khorne (Aura) puts units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard.",
    "labels": {
     "Murderlust": {}
    }
   },
   "bloodthirster": {
-   "mods": [
-    {
-     "kind": "all",
-     "when": "Damaged (1-6 wounds left)",
-     "note": "-1 to hit rolls",
-     "from": "Damaged: 1-6 wounds remaining"
-    }
-   ],
-   "aura": [
-    {
-     "kind": "melee",
-     "needs": {
-      "all": [
-       "Faction: Legiones Daemonica",
-       "Khorne"
-      ]
-     },
-     "when": "Within 6\" of the Bloodthirster",
-     "selfWhen": "Own aura",
-     "note": "+1 to hit",
-     "from": "Daemon Lord of Khorne",
-     "selfAlways": true
-    }
-   ],
    "why": "Daemon Lord of Khorne (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", its own unit included (22.01)."
   },
   "karanak-flesh-hounds": {
@@ -123,87 +75,24 @@
      "def": "Feel No Pain 3+ against Psychic Attacks",
      "defOf": "5c6e1911"
     }
-   },
-   "mods": [
-    {
-     "kind": "melee",
-     "when": "Melee attacks that target Karanak’s prey",
-     "note": "can re-roll the wound roll",
-     "from": "Prey of the Blood God"
-    }
-   ]
+   }
   },
   "skulltaker-bloodletters": {
-   "mods": [
-    {
-     "kind": "all",
-     "who": "Skulltaker",
-     "when": "Attacks that target a CHARACTER unit",
-     "note": "can re-roll the hit roll and the wound roll",
-     "from": "Skulls for Khorne",
-     "vs": {
-      "any": [
-       "Character"
-      ]
-     },
-     "always": true
-    }
-   ],
    "labels": {
     "Skulls for Khorne": {},
     "Bane-Forged Weapons": {}
    }
   },
   "bloodmaster-bloodletters": {
-   "mods": [
-    {
-     "kind": "all",
-     "when": "While the Bloodmaster is leading the unit",
-     "note": "+1 to wound rolls",
-     "from": "Bloodmaster",
-     "always": true
-    }
-   ],
    "labels": {
     "Bane-Forged Weapons": {},
     "Bloodmaster": {}
    }
   },
   "rendmaster-on-blood-throne": {
-   "mods": [
-    {
-     "kind": "all",
-     "when": "Fight phase, attacks that target the enemy unit selected with Blood Throne",
-     "note": "improve S, AP and D by 1",
-     "from": "Blood Throne"
-    },
-    {
-     "kind": "melee",
-     "when": "Melee attacks that target a CHARACTER or MONSTER unit",
-     "note": "can re-roll the wound roll",
-     "from": "Champion Slayer",
-     "vs": {
-      "any": [
-       "Character",
-       "Monster"
-      ]
-     },
-     "always": true
-    }
-   ],
    "why": "Blood Throne gives every friendly KHORNE LEGIONES DAEMONICA unit the bonus against the selected unit, but GW does not tag it (Aura): shown on the Rendmaster’s own weapons only."
   },
   "skullmaster-bloodcrushers": {
-   "mods": [
-    {
-     "kind": "melee",
-     "weapon": "Juggernaut’s bladed horn",
-     "when": "Ended a Charge move this turn",
-     "cond": "charged",
-     "note": "[DEVASTATING WOUNDS] until the end of the turn",
-     "from": "Skullmaster’s Fury"
-    }
-   ],
    "labels": {
     "Skullmaster’s Fury": {
      "ph": [
@@ -227,41 +116,6 @@
      "defOf": "e269580e"
     }
    },
-   "aura": [
-    {
-     "kind": "all",
-     "needs": {
-      "all": [
-       "Faction: Legiones Daemonica",
-       "Khorne"
-      ],
-      "none": [
-       "Monster"
-      ]
-     },
-     "when": "Within 6\" of the Daemon Prince of Chaos",
-     "note": "[LANCE]",
-     "from": "Slaughterthirst (Aura)"
-    }
-   ],
-   "guard": [
-    {
-     "from": "Prince of Darkness",
-     "needs": {
-      "all": [
-       "Faction: Legiones Daemonica"
-      ]
-     },
-     "kind": "ranged",
-     "when": "Within 6\" of the Daemon Prince of Chaos",
-     "selfWhen": "Own aura",
-     "selfAlways": true,
-     "note": "Stealth: the benefit of cover against ranged attacks",
-     "calc": {
-      "stealth": true
-     }
-    }
-   ],
    "why": "Slaughterthirst (Aura): KHORNE LEGIONES DAEMONICA units within 6\" excluding MONSTERS, so not the Daemon Prince itself (22.01). Prince of Darkness (Aura): Stealth for LEGIONES DAEMONICA units within 6\". Daemonic Allegiance: this list chose KHORNE (New Recruit: “Daemon Prince of Chaos (Khorne)”); the KHORNE keyword and the hellforged weapons’ S 10 / 8 are the list’s values (verify/tables.js why), the datasheet keeps GW’s S 8 / 6.",
    "labels": {
     "Daemonic Allegiance": {}
@@ -274,6 +128,180 @@
    "faq": [
     "*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*"
    ]
+  }
+ },
+ "readings": {
+  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, an army or detachment rule, an enhancement), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf; readBy:\"derive\" where verify/derive.js gives it from the words). verify/from-json.js gives each unit the readings of its rows in the order data.js resolves them, then the unit's own (units.<id>.mods / aura / guard; a name there stands for the rows' readings of that name, the list being the unit's whole list). A datasheet not here: data.js's row, else verify/derive.js's derived readings.",
+  "datasheets": {
+   "Skarbrand": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Damaged (1-7 wounds left)",
+      "note": "+2 A",
+      "from": "Damaged: 1-7 wounds remaining",
+      "readOf": "4b25ce47"
+     }
+    ],
+    "aura": [
+     {
+      "kind": "melee",
+      "needs": {
+       "all": [
+        "Faction: Legiones Daemonica",
+        "Khorne"
+       ]
+      },
+      "when": "Within 6\" of Skarbrand",
+      "selfWhen": "Own aura",
+      "note": "+1 A",
+      "from": "Rage Embodied",
+      "selfAlways": true,
+      "readOf": "fcef0817"
+     }
+    ]
+   },
+   "Bloodthirster": {
+    "aura": [
+     {
+      "kind": "melee",
+      "needs": {
+       "all": [
+        "Faction: Legiones Daemonica",
+        "Khorne"
+       ]
+      },
+      "when": "Within 6\" of the Bloodthirster",
+      "selfWhen": "Own aura",
+      "note": "+1 to hit",
+      "from": "Daemon Lord of Khorne",
+      "selfAlways": true,
+      "readOf": "50e7d43a"
+     }
+    ]
+   },
+   "Karanak": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Melee attacks that target Karanak’s prey",
+      "note": "can re-roll the wound roll",
+      "from": "Prey of the Blood God",
+      "readOf": "e7394576"
+     }
+    ]
+   },
+   "Skulltaker": {
+    "mods": [
+     {
+      "kind": "all",
+      "who": "Skulltaker",
+      "when": "Attacks that target a CHARACTER unit",
+      "note": "can re-roll the hit roll and the wound roll",
+      "from": "Skulls for Khorne",
+      "vs": {
+       "any": [
+        "Character"
+       ]
+      },
+      "always": true,
+      "readOf": "3bb6879b"
+     }
+    ]
+   },
+   "Bloodmaster": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "While the Bloodmaster is leading the unit",
+      "note": "+1 to wound rolls",
+      "from": "Bloodmaster",
+      "always": true,
+      "readOf": "fdeba804"
+     }
+    ]
+   },
+   "Rendmaster on Blood Throne": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "Fight phase, attacks that target the enemy unit selected with Blood Throne",
+      "note": "improve S, AP and D by 1",
+      "from": "Blood Throne",
+      "readOf": "d9c03c85"
+     },
+     {
+      "kind": "melee",
+      "when": "Melee attacks that target a CHARACTER or MONSTER unit",
+      "note": "can re-roll the wound roll",
+      "from": "Champion Slayer",
+      "vs": {
+       "any": [
+        "Character",
+        "Monster"
+       ]
+      },
+      "always": true,
+      "readOf": "bbc8912a"
+     }
+    ]
+   },
+   "Skullmaster": {
+    "mods": [
+     {
+      "kind": "melee",
+      "weapon": "Juggernaut’s bladed horn",
+      "when": "Ended a Charge move this turn",
+      "cond": "charged",
+      "note": "[DEVASTATING WOUNDS] until the end of the turn",
+      "from": "Skullmaster’s Fury",
+      "readOf": "a0458dae"
+     }
+    ]
+   },
+   "Daemon Prince of Chaos": {
+    "guard": [
+     {
+      "from": "Prince of Darkness",
+      "needs": {
+       "all": [
+        "Faction: Legiones Daemonica"
+       ]
+      },
+      "kind": "ranged",
+      "when": "Within 6\" of the Daemon Prince of Chaos",
+      "selfWhen": "Own aura",
+      "selfAlways": true,
+      "note": "Stealth: the benefit of cover against ranged attacks",
+      "calc": {
+       "stealth": true
+      },
+      "readOf": "bdeddf49"
+     }
+    ]
+   }
+  },
+  "enhancements": {
+   "Slaughterthirst (Aura)": {
+    "aura": [
+     {
+      "kind": "all",
+      "needs": {
+       "all": [
+        "Faction: Legiones Daemonica",
+        "Khorne"
+       ],
+       "none": [
+        "Monster"
+       ]
+      },
+      "when": "Within 6\" of the Daemon Prince of Chaos",
+      "note": "[LANCE]",
+      "from": "Slaughterthirst (Aura)",
+      "readOf": "4ad2de5b"
+     }
+    ]
+   }
   }
  }
 }

@@ -12,8 +12,15 @@
 const fs = require('fs'), path = require('path');
 const { ROOT, key, loadData, readJSON, writeJSON } = require('./lib');
 const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   // a detachment's rules: rule, then moreRules (Blood Legion's Blood Tainted)
-const FP_KEYS = Object.values(require('./tables').FINGERPRINT);
+// (the fingerprints of AI-written columns and readings, and readBy: not part of a judgement; a reading's key is the same on whichever
+// row of data.js it is kept, as the app gets it: verify/tables.js hides them)
+const FP_KEYS = require('./tables').FP_KEYS;
 
+// the readings data.js keeps on a list's entry for a reason of the list (listWhy), by "<army>/<unit>"
+let OWN_ = null;
+const OWN = () => OWN_ || (OWN_ = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')), m = new Map();
+  for(const a of R.armies) for(const u of a.units) for(const k of T.READ) for(const x of u[k] || []) if(x && x.listWhy){ const id = a.id + '/' + u.id; if(!m.has(id)) m.set(id, []); m.get(id).push(x); }
+  return m; })());
 function items(D, appSource){
   const out = [];
   // (a fingerprint next to an AI-written column, gistOf / defOf, is not a judgement: verify/tables.js --fingerprints checks it)
@@ -73,6 +80,11 @@ function items(D, appSource){
       for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
       for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
+      // a reading kept on the list, not on the row it reads, for a reason of the list (data.js listWhy, hidden from the app: the
+      // bodyguard's weapons More Dakka reaches, an enhancement's +1 A in a Possessed Lord's Attacks): that reason, against the unit
+      const own = (OWN().get(a.id + '/' + u.id) || []);
+      for(const m of own) add(a.id, 'unit-reading-why', w, { listWhy:m.listWhy, reading:JSON.parse(JSON.stringify(m, (k, v) => FP_KEYS.includes(k) ? undefined : v)) },
+        Object.assign(cited(a.id, u, m), { weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.name, 'A' + x.A, (x.kw || []).join(', '), JSON.stringify(x.from || {})].filter(Boolean).join(' · ')), enhancement:u.enhancement || null }));
       for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
       // must have, and the app names that model
@@ -110,6 +122,10 @@ function items(D, appSource){
     add('core', 'rule-appnote', name, { note:line }, { rule:name, text:text.split('\n').filter(l => l !== line).join('\n') });
   for(const [re, k] of D.ruleAliases) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
   for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
+  // a sentence verify/readings.js reads as a bonus with no reading, declared no numeric bonus after all (readings-gaps.json
+  // status:'not-applicable', with its why): that declaration, against the ability's words
+  for(const [k, g] of Object.entries(readJSON(path.join(ROOT, 'verify/readings-gaps.json'), {}))) if(g && g.status === 'not-applicable')
+    add('core', 'reading-not-applicable', g.ability + ' · ' + k.split('|')[0], { status:g.status, why:g.why, bonus:g.bonus }, { ability:g.ability, sentence:g.sentence, units:g.units });
   // the code that applies the core rules: reviewed as code, against the rules it implements
   for(const [name, src] of Object.entries(appSource)) add('code', 'code', name, { code:src }, { implements:CODE_RULES[name] || '' });
   return out;
@@ -131,6 +147,9 @@ const CODE_RULES = {
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',
   auraMods:'auras from other units in the list',
+  oneOffMod:'a footnote that is a one-off use the player makes (its when, its ability\'s tag or words say once per battle: Possessed Lord): not in the weapon\'s numbers (the owner\'s decision, 2026-10-26)',
+  rowMod:'which footnote a weapon row shows in its numbers ("8 (+6)", "7/10"): one that changes that weapon\'s values (weapon, set), unless a one-off (oneOffMod)',
+  footMod:'a one-off\'s footnote under the weapons: its numbers first, with the weapon ("Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase"), as the row no longer shows them',
   proxyLines:'Bases & proxies: bases per models line and what to mark',
   unplacedOf:'wargear New Recruit lists for the unit but on no models line (data.js unplaced): shown with its count, and that New Recruit does not say which models carry it (Models, weapon row, Bases & proxies)',
   perBattle:'tick boxes: how many uses a rule allows per battle ("once"/"twice"/"three times per battle") and whether they are counted per army or for each unit',
@@ -174,7 +193,7 @@ const CODE_RULES = {
   ckStored:'a rule or ability derive cannot place (x) that data.js gives a moment (at): listed at that moment only (Harbingers of Dread, Icon of Khorne: Start of the battle round), not at its display phase tags; with no moment it stays not derivable',
   armyRuleOption:'the datasheet (unit screen) does not spell out an army rule\'s options: a "When targeted" line of an army rule that starts with the name of one of its options (RULE_OPTIONS: Martial Ka\'tah\'s Kaptaris) is left out there, the Rules line opens the whole rule; the Damage tab and the Overview keep it',
   // data.js's own code (written by verify/tables.js)
-  resolveArmies:'the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet\'s columns, then the entry\'s own (null: none); each row the datasheet\'s row of that name (a stats row without its "×N"; for an attached unit the part its who or of names, else the first part that has it) with the entry row\'s fields on top, a row the datasheet does not have as the list\'s own; an entry without a kind of rows takes all of its datasheet\'s; over (a fact two lists have differently) on top of all; ds, over, of, faction, bsId and fingerprints hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet\'s values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was',
+  resolveArmies:'the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet\'s columns, then the entry\'s own (null: none); each row the datasheet\'s row of that name (a stats row without its "×N"; for an attached unit the part its who or of names, else the first part that has it) with the entry row\'s fields on top, a row the datasheet does not have as the list\'s own; an entry without a kind of rows takes all of its datasheet\'s; over (a fact two lists have differently) on top of all; the readings (mods, aura, guard) from the rows of the rules they read, in this order: the army rules on the unit\'s Rules line (FACTIONS), each datasheet of the unit, its enhancement or upgrade (the first of the list\'s detachments that has it), the detachment rules (rule, moreRules) of the list whose needs (all, any, none, rule) the unit meets, then the entry\'s own; an entry\'s list with names in it is the whole list in its order, a name standing for the rows\' readings of that name; null: none; ds, over, of, faction, bsId, fingerprints (readOf too) and readBy hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet\'s values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was',
 };
 function appFunctions(html){
   const out = {};

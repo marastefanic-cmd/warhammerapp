@@ -7,70 +7,13 @@
  "units": {
   "cerastus-knight-atrapos": {
    "mods": [
-    {
-     "kind": "all",
-     "when": "vs MONSTER/VEHICLE",
-     "note": "+1 to hit rolls",
-     "from": "Macro-extinction Protocols",
-     "always": true,
-     "vs": {
-      "any": [
-       "Monster",
-       "Vehicle"
-      ]
-     }
-    },
-    {
-     "kind": "all",
-     "when": "vs TITANIC/TOWERING",
-     "note": "+1 to wound rolls",
-     "from": "Macro-extinction Protocols",
-     "always": true,
-     "vs": {
-      "any": [
-       "Titanic",
-       "Towering"
-      ],
-      "also": {
-       "any": [
-        "Monster",
-        "Vehicle"
-       ]
-      }
-     }
-    },
-    {
-     "kind": "melee",
-     "when": "Every melee attack",
-     "note": "+1 to hit rolls",
-     "from": "Bringer of Justice",
-     "always": true
-    },
-    {
-     "kind": "all",
-     "when": "Damaged (1-10 wounds left)",
-     "note": "-1 to hit rolls (and -5 OC)",
-     "from": "Damaged: 1-10 Wounds Remaining"
-    }
+    "Macro-extinction Protocols",
+    "Bringer of Justice",
+    "Damaged: 1-10 Wounds Remaining"
    ],
    "why": "As 4-megas-and-a-destrier's Atrapos (the same datasheet and enhancement): Bringer of Justice's +2 A is already in the melee profiles (New Recruit's), only its +1 to hit is a footnote. No Atrapos’ Duty aura: it is tagged (Bondsman), not (Aura), and this list has no ARMIGER."
   },
   "knight-crusader": {
-   "mods": [
-    {
-     "kind": "ranged",
-     "when": "Remained Stationary in your Movement phase",
-     "cond": "stationary",
-     "note": "ranged weapons have [SUSTAINED HITS 1] until the end of the turn",
-     "from": "Punishing Salvoes"
-    },
-    {
-     "kind": "all",
-     "when": "Damaged (1-9 wounds left)",
-     "note": "-1 to hit rolls (and -5 OC)",
-     "from": "Damaged: 1-9 Wounds Remaining"
-    }
-   ],
    "why": "As 4-megas-and-a-destrier's Crusader (the same datasheet and enhancement): Hunter’s Eye's [IGNORES COVER] is already on every ranged weapon (New Recruit's), no footnote."
   },
   "knight-defender": {
@@ -81,81 +24,182 @@
      "defOf": "fbb32536"
     }
    },
-   "mods": [
-    {
-     "kind": "ranged",
-     "weapon": "Conversion beam obliterator",
-     "when": "Target more than 18\" away",
-     "note": "an unmodified successful hit roll of 4+ scores a Critical Hit",
-     "from": "Conversion",
-     "calc": {
-      "critHit": 4
-     }
-    },
-    {
-     "kind": "all",
-     "when": "Damaged (1-9 wounds left)",
-     "note": "-1 to hit rolls (and -5 OC)",
-     "from": "Damaged: 1-9 Wounds Remaining"
-    }
-   ],
-   "guard": [
-    {
-     "from": "Selfless Protector",
-     "needs": {
-      "all": [
-       "Faction: Imperial Knights"
-      ]
-     },
-     "kind": "ranged",
-     "when": "Not fully visible to every model in the attacking unit because of the Knight Defender",
-     "note": "the Benefit of Cover and a 4+ invulnerable save against that attack",
-     "calc": {
-      "cover": true,
-      "insv": 4
-     }
-    }
-   ],
    "why": "Conversion: the conversion beam obliterator's weapon ability (GW's datasheet: \"Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit\"); a condition the player ticks. Selfless Protector: not tagged (Aura), so not an aura; it protects other IMPERIAL KNIGHTS models from your army (a guard, as Emanatus Forcefield), not the Defender itself (it cannot be what hides itself). Defender’s Duty: tagged (Bondsman), affects only an ARMIGER model; this list has none."
   },
   "knight-destrier": {
    "na": {
     "Thundercharge": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout"
    },
-   "mods": [
-    {
-     "kind": "ranged",
-     "when": "Target within range of an objective marker",
-     "cond": "targetObjective",
-     "note": "ranged attacks have [IGNORES COVER]",
-     "from": "Saturation Fire"
-    },
-    {
-     "kind": "all",
-     "when": "Damaged (1-6 wounds left)",
-     "note": "-1 to hit rolls (and -4 OC)",
-     "from": "Damaged: 1-6 Wounds Remaining"
-    }
-   ],
    "why": "As 4-megas-and-a-destrier's and 6-bigs's Destrier (the same datasheet and loadout: titanic feet, no thundershock spear or bellatus reaper chainsword)."
   },
   "knight-errant": {
-   "mods": [
-    {
-     "kind": "ranged",
-     "when": "Target is the closest eligible target",
-     "cond": "closest",
-     "note": "+1 to hit rolls",
-     "from": "Aggressive Assault"
-    },
-    {
-     "kind": "all",
-     "when": "Damaged (1-9 wounds left)",
-     "note": "-1 to hit rolls (and -5 OC)",
-     "from": "Damaged: 1-9 Wounds Remaining"
-    }
-   ],
    "why": "As 6-bigs's Errant (the same datasheet). Mysterious Guardian's timing is derive.js's (its moment, \"At the end of your opponent’s turn\", read after the enhancement's \"IMPERIAL KNIGHTS model only. (Once per battle, per army)\")."
+  }
+ },
+ "readings": {
+  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, an army or detachment rule, an enhancement), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf; readBy:\"derive\" where verify/derive.js gives it from the words). verify/from-json.js gives each unit the readings of its rows in the order data.js resolves them, then the unit's own (units.<id>.mods / aura / guard; a name there stands for the rows' readings of that name, the list being the unit's whole list). A datasheet not here: data.js's row, else verify/derive.js's derived readings.",
+  "datasheets": {
+   "Cerastus Knight Atrapos": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "vs MONSTER/VEHICLE",
+      "note": "+1 to hit rolls",
+      "from": "Macro-extinction Protocols",
+      "always": true,
+      "vs": {
+       "any": [
+        "Monster",
+        "Vehicle"
+       ]
+      },
+      "readOf": "3c11830a"
+     },
+     {
+      "kind": "all",
+      "when": "vs TITANIC/TOWERING",
+      "note": "+1 to wound rolls",
+      "from": "Macro-extinction Protocols",
+      "always": true,
+      "vs": {
+       "any": [
+        "Titanic",
+        "Towering"
+       ],
+       "also": {
+        "any": [
+         "Monster",
+         "Vehicle"
+        ]
+       }
+      },
+      "readOf": "3c11830a"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-10 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-10 Wounds Remaining",
+      "readOf": "3a172fd2",
+      "readBy": "derive"
+     }
+    ]
+   },
+   "Knight Crusader": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "when": "Remained Stationary in your Movement phase",
+      "cond": "stationary",
+      "note": "ranged weapons have [SUSTAINED HITS 1] until the end of the turn",
+      "from": "Punishing Salvoes",
+      "readOf": "0eb266cf"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-9 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-9 Wounds Remaining",
+      "readOf": "56b999de",
+      "readBy": "derive"
+     }
+    ]
+   },
+   "Knight Defender": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "weapon": "Conversion beam obliterator",
+      "when": "Target more than 18\" away",
+      "note": "an unmodified successful hit roll of 4+ scores a Critical Hit",
+      "from": "Conversion",
+      "calc": {
+       "critHit": 4
+      },
+      "readOf": "fc735334"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-9 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-9 Wounds Remaining",
+      "readOf": "56b999de",
+      "readBy": "derive"
+     }
+    ],
+    "guard": [
+     {
+      "from": "Selfless Protector",
+      "needs": {
+       "all": [
+        "Faction: Imperial Knights"
+       ]
+      },
+      "kind": "ranged",
+      "when": "Not fully visible to every model in the attacking unit because of the Knight Defender",
+      "note": "the Benefit of Cover and a 4+ invulnerable save against that attack",
+      "calc": {
+       "cover": true,
+       "insv": 4
+      },
+      "readOf": "c18b16c5"
+     }
+    ]
+   },
+   "Knight Destrier": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "when": "Target within range of an objective marker",
+      "cond": "targetObjective",
+      "note": "ranged attacks have [IGNORES COVER]",
+      "from": "Saturation Fire",
+      "readOf": "b8cd4988"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-6 wounds left)",
+      "note": "-1 to hit rolls (and -4 OC)",
+      "from": "Damaged: 1-6 Wounds Remaining",
+      "readOf": "02c43b71",
+      "readBy": "derive"
+     }
+    ]
+   },
+   "Knight Errant": {
+    "mods": [
+     {
+      "kind": "ranged",
+      "when": "Target is the closest eligible target",
+      "cond": "closest",
+      "note": "+1 to hit rolls",
+      "from": "Aggressive Assault",
+      "readOf": "bca49143"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-9 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-9 Wounds Remaining",
+      "readOf": "56b999de",
+      "readBy": "derive"
+     }
+    ]
+   }
+  },
+  "enhancements": {
+   "Bringer of Justice": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Every melee attack",
+      "note": "+1 to hit rolls",
+      "from": "Bringer of Justice",
+      "always": true,
+      "readOf": "d1f22b85"
+     }
+    ]
+   }
   }
  }
 }

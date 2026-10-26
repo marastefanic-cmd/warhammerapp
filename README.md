@@ -69,9 +69,10 @@ The facts come from New Recruit, never typed by hand:
    --write`: a datasheet another list has is shared). It lists what it cannot know in `verify/out/import-<id>.md`.
 4. Write those parts: phase tags, weapon footnotes (`mods`) and auras, a missing detachment or
    rule (from Wahapedia/GW), stratagem gists. That is the only part that needs judgement. An ability's tags and
-   "When targeted" line go on its datasheet's row in `DATASHEETS`; footnotes and auras on the list's entry (or edit
-   the old form: `node verify/tables.js --expand`, then `--write`). A new gist or def: `node verify/tables.js --stamp`
-   records the fingerprint of the text it was written from.
+   "When targeted" line go on its datasheet's row in `DATASHEETS`; footnotes and auras on the row of the rule they read
+   (`docs/tables.md`, Readings: write them on the unit in the old form, `node verify/tables.js --expand`, then `--write`
+   moves each to its row). A new gist, def or reading: `node verify/tables.js --stamp` (after checking it against its
+   text) records the fingerprint of the text it was written or read from.
 5. `node verify/run.js` until it passes. It checks the list against the PDF, BSData and GW's texts;
    renders every screen at 390 and 320px; shows any screen change (accept with `--accept` after
    reading the diff); and lists every judgement the app adds that has no sign-off yet. Those are

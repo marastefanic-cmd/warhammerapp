@@ -2309,6 +2309,12 @@
   "at": "2026-10-24",
   "why": "The labels match the now-bold headings exactly: from 'Furor Tactics' over \"If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1]\", and from 'Malleus Tactics' over \"If the tactical doctrine is active … [LETHAL HITS]\". Each when quotes its condition. The names are also the new GRANTS and RULE_OPTIONS names (Furor, Malleus, Purgatus Tactics). kind 'all' is right because the text says \"attacks\". Purgatus is still left out because index.html passes the calculator no character allocation, so [PRECISION] changes no numbers (the approved convention). Two boxes rather than one pick is still right: Codex Adept and Author of the Codex can make several doctrines active at once."
  },
+ "278ee97ac60f3925": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "Possessed Lord (data.js = Wahapedia World Eaters Slaughterbound, word for word): once per battle, at the start of the Fight phase; until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model, and those weapons have [DEVASTATING WOUNDS]. set:{A:'+3'} on the Lacerator and daemonic claw, kind melee, the when and the note say exactly that and nothing more. It is right in every detachment and every list: the calculator adds a relative set value to the list's A (calc.js setOf), so A 7 (datasheet 6 + Relentless Rage) gives 10 and the Glaive's A 8 gives 11, as the earlier fix said. The listWhy and the list's own reading are gone; readOf is Possessed Lord's text only (5648d8fa). Tested on a scratch copy: changing the texts of Relentless Rage and Berzerker Glaive (all three copies) leaves it fresh, as it should for a +3. Rendered: princes and standard show the profile's A (7, and 8 with the Glaive) in the cell and one footnote \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\" per unit. Against main 558a750 those are the only changes in those two lists."
+ },
  "2792f58b963e34d9": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -3095,6 +3101,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Charge phase, just after a SICARIAN unit from your army declares a charge.”"
  },
+ "360b6d45483975a2": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "Defender's Duty matches Wahapedia (verify/.cache/waha/ds/imperial-knights_Knight-Defender.html) word for word: \"While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.\" That covers every attack, ranged or melee, so kind all is right. A guard is the right place: it protects another model, the picked ARMIGER, not the Knight Defender, so there is no selfWhen. The note \"-1 Damage to each attack allocated to that ARMIGER model\" says only what the text says. The Bondsman rule (Wahapedia Imperial Knights army rules) supplies the rest. The pick is made in your Command phase (when), and it is one friendly ARMIGER model (needs Armiger, oneModel) until the start of your next Command phase (lasts round). The same conventions as the five reviewed Duty readings: \"Faction: Imperial Knights\" in needs narrows nothing, and 12\" is left out of when, as on the others. readOf 99bd01da+6a3f9305 covers the Duty and Bondsman. Changing either text makes it stale (tested); changing Code Chivalric does not. No list has an ARMIGER model, so nothing renders (no snapshot change, as expected). Guards feed only the \"When targeted\" lines, not the calculator, as with Selfless Protector."
+ },
  "3617145e79607863": {
   "verdict": "ok",
   "by": "review:import-2 (its fix)",
@@ -3562,6 +3574,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "NR standard: \"255 PTS SLAUGHTERBOUND\" (Berzerker Glaive), roster lines \"Slaughterbound Character 125\" and \"(3) Exalted Eightbound Infantry 130\". So the split 125 + 130 = 255 still holds after the stats rename."
+ },
+ "3d3ed1fb83bb0a92": {
+  "verdict": "ok",
+  "by": "review:readings (its fix)",
+  "at": "2026-10-26",
+  "why": "The A 11 is right: Wahapedia's Slaughterbound has Lacerator and daemonic claw A 6. Relentless Rage (Berzerker Warband) gives +1 (A 7 in every list), Berzerker Glaive another +1 (A 8 here, marked), and Possessed Lord adds +3, so 11. [DEVASTATING WOUNDS] until the end of the phase, once per battle, at the start of the Fight phase: all correct. Making it the list's own reading is right. But listWhy says 'the datasheet’s A 7 makes 10'. The datasheet's A is 6 (DATASHEETS leaves A out because it varies by list), and 7 already includes the detachment's +1. The fix below corrects only the listWhy wording. Two related notes. (1) The datasheet reading set:{A:'10'} has Relentless Rage baked in, so a future Slaughterbound list in another detachment would get a wrong A 10. set:{A:'+3'} (as Battle Protocols writes set:{A:'+2'}) would be right for every list and would make this listWhy unnecessary. That is the owner's call, since it changes the display. (2) readOf fingerprints only Possessed Lord's text. Changing Berzerker Glaive's or Relentless Rage's text does not make A 11 or A 10 stale (tested on a scratch copy)."
  },
  "3d58512771b1037d": {
   "verdict": "ok",
@@ -4264,6 +4282,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "opp."
+ },
+ "49b1b573bbc039b6": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Crusader’s Duty: each ranged attack adds 1 to the hit roll, so kind ranged, '+1 to hit rolls'. dmEffects turns that into hit:+1, so no calc is needed (Clever Know-wotz's calc:{hit:1} is equivalent). The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
  },
  "49c4b473ec9a4578": {
   "verdict": "ok",
@@ -6017,6 +6041,12 @@
   "at": "2026-10-16",
   "why": "Goes with item 71: the Movement phase entry is their turn only (Fire Overwatch)."
  },
+ "6add443b67e95080": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Atrapos’ Duty: each attack (any weapon, so kind 'all') that targets a TITANIC or TOWERING model may re-roll the hit roll and the wound roll. vs any [Titanic, Towering] is right. The note parses (dmEffects) to rrHit all and rrWound all, as the text says. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "6aeb0680cf62d2a1": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -6430,6 +6460,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Export: demolisher cannon, armoured tracks, combi-bolter, Havoc launcher. 180 pts."
+ },
+ "72c779635829d860": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Matches the text (data.js = Wahapedia Magnus the Red): at the start of your opponent's Shooting phase, one enemy unit within 24\" of this PSYKER; until the end of the phase its ranged weapons have [HAZARDOUS]. The effect is on the enemy unit's weapons, whatever they shoot at. So a 'When targeted' line on every unit of the list (no needs) is the right place, and that includes Magnus himself (selfWhen; he can be shot by that unit too). It adds nothing the text does not say. Ranged only, opponent's Shooting phase, until the end of the phase: correct. There is no psychic roll in this text, so none is needed. Rendered in pubstomper (8 units) and mucho-mutantes (9 lines), with the 'When targeted' counts +1. Those are the only changes against main's own render."
  },
  "730222f6b64fa49c": {
   "verdict": "ok",
@@ -6964,6 +7000,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is on Karanak’s own datasheet (GW Faction Pack, Wahapedia)."
+ },
+ "7bb68f628e3ff944": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Paladin’s Duty, first half: 'weapons equipped by that model have [LETHAL HITS]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
  },
  "7bc53c14d45dff9d": {
   "verdict": "ok",
@@ -7859,6 +7901,12 @@
   "at": "2026-10-16",
   "why": "charge/charge roll(s)/declare(s/d) a charge/eligible to declare a charge/resolve a charge: all 11.02 terms."
  },
+ "8b24aca160a7f050": {
+  "verdict": "ok",
+  "by": "review:readings-2 (its fix)",
+  "at": "2026-10-26",
+  "why": "Today it classifies correctly. Of the 4 readings with weapon and set, only Possessed Lord is a one-off; Blitz Dem Gitz! (vs non-MONSTER/VEHICLE, always), Vengeance for the Omnissiah (after a VEHICLE dies, for the rest of the battle) and Battle Protocols (a protocol picked each Command phase) have no \"once per battle\" in their when, tag or text, so they rightly stay in the cells (\"8 (+6)\", \"/6\", \"(+2)\"). But the test is too wide. (1) /\\bonce per battle\\b/ also matches \"once per battle round\": \\b falls between \"battle\" and \" round\". data.js has 9 tags \"Once per battle round…\" and 13 such phrases in texts, and the test already returns true for Necromechanic (when \"once per battle round\", a guard, so no effect today). A future per-round reading with weapon and set would leave the cell wrongly. (2) Matching the whole ability text catches an ability that has an always-on bonus and a separate once-per-battle sentence. Possessed Lord says it in both when and tag, so the text adds nothing that tag and when do not already cover. Every once-per-battle ability in data.js carries a \"Once per battle\" tag, so dropping the text test misses none of today's readings. Not covered either way: \"twice per battle\" (tag \"Once per turn, twice per battle, per unit\") is not a one-off by this rule; the owner's rule says once per battle, so that is consistent."
+ },
  "8b528b2587553581": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -8345,6 +8393,12 @@
   "at": "2026-10-24",
   "why": "It is on Skulltaker’s own datasheet (“Each time this model makes an attack”)."
  },
+ "939cee318ff5b336": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Warden’s Duty, first half: 'weapons … have [SUSTAINED HITS 1]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "93dcd4f8af862830": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -8596,6 +8650,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Ranged-attack modifier; TITANIC, so no Fire Overwatch: your Shooting phase only."
+ },
+ "9879f287d8dbe416": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Soul Sight (data.js = Wahapedia Librarian in Phobos Armour): 'Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].' That covers every ranged attack against that unit, whoever makes it. So an aura with no needs and no notSelf is right: the app gives it to every unit of the list, the Librarian's own included. The nerf-when render confirms this: every unit's ranged footnotes get it, plus the Damage-tab option. Those are the only changes against main's own render. 'Your Shooting phase … (its psychic roll)': right. It adds nothing; it leaves out only 'if this unit is not battle-shocked', which could optionally be added to when."
  },
  "988890d0abd7b673": {
   "verdict": "ok",
@@ -9659,6 +9719,12 @@
   "at": "2026-10-21",
   "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
  },
+ "a98587ee506d5ca4": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Errant’s Duty: ranged weapons of the model have [ASSAULT] (kind ranged, note [ASSAULT]). The re-roll of Advance rolls is not an attack effect, so leaving it out says nothing extra. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "a9aa41aeb7dd564c": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -9911,6 +9977,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your Shooting phase\"."
  },
+ "ae0fc45e1ad36ce8": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "For a one-off weapon reading, the footnote gets the weapon and its numbers before the note: \"+3 A\" for a relative value, \"A 6\" for a set one. The rendered line is exactly what the owner asked for: \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\". It appears once per unit, deduplicated after footMod. Other readings pass through unchanged. Minor, non-blocking: a future one-off weapon reading with no note would print \"… +3 A undefined\". Every weapon-and-set reading in data.js has a note today. [m.weapon, …, m.note].filter(Boolean).join(' ') would guard it."
+ },
  "ae4ba2712c859010": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -9940,6 +10012,12 @@
   "by": "review:oioioi (its fix)",
   "at": "2026-10-16",
   "why": "Warpflamer [IGNORES COVER, TORRENT] and warpflame pistol [IGNORES COVER, PISTOL, TORRENT] have it natively (BSData/datasheet); only Malefic Curse and the soulreaper cannon get it from \"Ranged weapons ... (excluding CHARACTERS) have the [IGNORES COVER] ability\". As written, losing the Icon bearer would wrongly strip it from the flamers."
+ },
+ "aea5e0927c6bbdfd": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "More Dakka (Wahapedia Big Mek in Mega Armour): 'This unit’s ranged attacks have [Ignores Cover]'. Once the Big Mek leads Meganobz, that is the whole attached unit. In ooga-booga the Meganobz carry Kombi-weapons (Shoota, Kill Shot, Point Blank), and BSData/New Recruit mark IGNORES COVER only on the Big Mek's Kustom Mega-blasta and Tellyport Blasta. So the 'Every ranged attack' footnote is needed there. In the other list (shooty) the Meganobz have only Twin Killsaws, so they have no ranged weapons and need no footnote. The difference is caused by the list; the listWhy is accurate. The riled-up [SUSTAINED HITS 1] reading is now derived on the datasheet and still named in ooga-booga's list ('More Dakka'). The resolved output is unchanged from main."
  },
  "aeaac06c75e1870c": {
   "verdict": "ok",
@@ -10787,6 +10865,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”: your turn."
  },
+ "be4e410bd7f1109e": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Paladin’s Duty, second half: 'melee weapons … have [LANCE]', so kind melee is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
+ },
  "be4ed110f239644e": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -11212,6 +11296,12 @@
   "by": "review:import-lists",
   "at": "2026-10-23",
   "why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+ },
+ "c634c20bf40c94c7": {
+  "verdict": "ok",
+  "by": "review:readings-2",
+  "at": "2026-10-26",
+  "why": "A weapon row shows a reading in its numbers only when it changes that weapon (weapon and set) and is not a one-off. It is used in all three places that used to test m.weapon && m.set: weaponBlock's cell, searchIndex's search line (e.vm), and the footnote filters in weaponTable and unitWeapons. So a reading is shown in the row or in the footnotes, never both and never neither. The Damage tab does not use it (dmEffects/line 1913 still reads m.set), so Possessed Lord stays offered there, and calc.js adds a \"+3\" set to the list's A. Rendered: Blitzkannon, Omnissian axe, Incendine combustor and Twin Kastelan fist cells are unchanged against main; only the Possessed Lord cells change (7/10 to 7, 8/11 to 8). Depends on oneOffMod (see its fix)."
  },
  "c638e54714706332": {
   "verdict": "ok",
@@ -13655,6 +13745,12 @@
   "at": "2026-10-21",
   "why": "WHEN \"a friendly unengaged GRETCHIN unit\"; TARGET: \"That GRETCHIN unit.\""
  },
+ "f2aff3eea02b5c88": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Checked line by line against main's. Readings are composed in the documented order: army rules on the unit's Rules line (case- and apostrophe-insensitive), each datasheet part, the first matching enhancement or upgrade across the list's detachments, the detachment rule and moreRules whose needs (all/any/none/rule) the resolved unit meets, then the entry's own. An entry list with names replaces the whole list in its order; null gives none. readOf, readBy and listWhy are stripped from every reading; READ keys are kept off the datasheet copy and the entry rest. Every one of the 155 datasheet readings reaches at least one unit (trace). The resolved lists equal main's except the 7 new readings. Every other table is equal once reading keys are stripped. Minor, non-blocking: (a) enhancements are matched by strict ===, not nm(), so an apostrophe variant would silently drop an enhancement's readings (none today); (b) a misspelt name in an entry's list resolves to nothing in resolveArmies, but verify/tables.js throws on it (tested); (c) helpers.js CODE_RULES.resolveArmies says 'fingerprints (readOf too) and readBy hidden' and does not name listWhy, which is also hidden."
+ },
  "f2d79da589c98126": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -14224,6 +14320,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Matches NR model lines and counts (warpflamer x3, CCW x4 = soulreaper + 3 warpflamers; Aspiring Sorcerer: Force weapon, Malefic Curse, Warpflame pistol). NR does not say who holds the Icon; any Rubric Marine may."
+ },
+ "fe6402b8b9c6a250": {
+  "verdict": "ok",
+  "by": "review:readings",
+  "at": "2026-10-26",
+  "why": "Warden’s Duty, second half: 'ranged weapons … have [IGNORES COVER]', so kind ranged is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friendly ARMIGER model (needs Armiger, oneModel), until the start of your next Command phase (lasts:'round', which the app's dmLasts defines as exactly that). 'Faction: Imperial Knights' in needs is not in the words ('friendly ARMIGER model'), but only IMPERIAL KNIGHTS models have ARMIGER, so it narrows nothing. Optional, not required: 'within 12\"' could go in when, as Master of Mechanisms and Omnissiah’s Blessing say their 3\"; Clever Know-wotz, the precedent, leaves it out. Matches data.js and Wahapedia (verify/.cache/waha/ds) word for word. No list has an ARMIGER model today, so nothing shows (no snapshot changes, as expected). Note: readOf covers only the Duty text; changing the Bondsman army rule (e.g. its duration) does not make this reading stale (tested on a scratch copy)."
  },
  "fe6f0a3e272493d8": {
   "verdict": "ok",
