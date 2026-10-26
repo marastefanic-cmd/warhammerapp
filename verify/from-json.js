@@ -1269,6 +1269,15 @@ for (const it of labels) {
       filled.push({ what: 'tag ' + it.where + ': ' + it.derived, from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') + ' (the source prints no tag)' });
       continue;
     }
+    // an enhancement whose words add a limit after its "… model only." restriction ("Once per turn, just after making a Hit roll …",
+    // Pledge of Unholy Fortune): the export's "Enhancement" and the limit, as the approved lists store Necromechanic's
+    // "Enhancement · Once per battle round" (review result-derive.json 209e61b314704242)
+    { const parts = String(it.derived || '').split(/\s*[,·]\s*/), lim = parts.filter(x => /^Once per /i.test(x));
+      if (it.stored === 'Enhancement' && parts[0] === 'Enhancement' && lim.length === 1 && parts.length === 2) {
+        const at = abAt(it), row = at && at.ai >= 0 ? d.slice(at.ai, d.indexOf(' }', at.ai)) : '';
+        if (row.includes("tag:'Enhancement',")) { const k = at.ai + row.indexOf("tag:'Enhancement',"); d = d.slice(0, k) + "tag:" + lit('Enhancement · ' + lim[0]) + ',' + d.slice(k + "tag:'Enhancement',".length);
+          filled.push({ what: 'tag ' + it.where + ': Enhancement · ' + lim[0], from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') + ' (the limit after its “model only.”, as Necromechanic’s)' }); continue; }
+      } }
     want(it.where, 'ability tag', 'derive.js gives ' + it.derived + ', the export ' + JSON.stringify(it.stored) + ': kept as the export has it');
   } else if (it.kind === 'strat-timing' || it.kind === 'strat-needs') {
     const sName = it.where.split(' · ').pop();

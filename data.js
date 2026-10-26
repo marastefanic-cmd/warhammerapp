@@ -3549,7 +3549,7 @@ const ARMIES = [
       abilities:[
         { name:'Daemonic Destruction' },
         { name:'Stimulated by Pain' },
-        { name:'Pledge of Unholy Fortune', tag:'Enhancement', text:'**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.' }
+        { name:'Pledge of Unholy Fortune', tag:'Enhancement · Once per turn', text:'**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -9678,7 +9678,7 @@ const CHECKLIST = {
   "a|9dsaql":{"none":1},
   "a|9dx9q1":{"u":"shooting:opp,fight:either","g":[{"name":"Benefit of Cover","to":{"all":["Faction: Imperial Knights"]}}]},
   "a|9e4bul":{"u":"shooting:opp"},
-  "a|9hu9wm":{"t":"command:opp","s":1,"pk":{"x":1}},
+  "a|9hu9wm":{"t":"command:opp","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|9ripaa":{"x":1},
   "a|acxlx0":{"u":"shooting:opp,fight:either"},
   "a|akltst":{"t":"fight:either","u":"fight:either","a":1},
@@ -9698,7 +9698,7 @@ const CHECKLIST = {
   "a|ccvp33":{"u":"shooting:opp,fight:either"},
   "a|ct1ind":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "a|dcqyl1":{"u":"charge:either"},
-  "a|dngm65":{"u":"shooting:your,fight:either"},
+  "a|dngm65":{"u":"shooting:opp,fight:either","a":1},
   "a|ds28tt":{"u":"fight:either"},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
@@ -9771,7 +9771,7 @@ const CHECKLIST = {
   "a|snh6gk":{"u":"shooting:your"},
   "a|ss613f":{"t":"fight:either","u":"fight:either","s":1},
   "a|t52unt":{"u":"charge:either"},
-  "a|tdsmft":{"t":"shooting:your","u":"movement:your,shooting:your,charge:either"},
+  "a|tdsmft":{"u":"movement:your,shooting:your,charge:either"},
   "a|u5ddi":{"x":1,"o":[{"n":"Daemon Prince of Khorne","x":1},{"n":"Daemon Prince of Tzeentch","x":1},{"n":"Daemon Prince of Nurgle","x":1},{"n":"Daemon Prince of Slaanesh","u":"movement:your"}]},
   "a|u7b31q":{"x":1},
   "a|u86jue":{"t":"shooting:your","s":1},
@@ -9807,7 +9807,7 @@ const CHECKLIST = {
   "a|z3zaz9":{"u":"shooting:opp"},
   "a|zcevae":{"u":"fight:either"},
   "a|zns9bl":{"u":"shooting:your,fight:either"},
-  "a|zr8p6k":{"t":"command:either,shooting:your,fight:either","s":1},
+  "a|zr8p6k":{"t":"command:either","s":1},
   "a|zsa42i":{"u":"fight:either"},
   "r|adeptus-custodes|Aegis of the Emperor":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
   "r|adeptus-custodes|Anathema Psykana":{"x":1},

@@ -1,0 +1,221 @@
+[
+ {
+  "key": "2805f8a92b74ce1a",
+  "where": "defilers-and-friends · Fulgrim · Daemonic Poisons",
+  "verdict": "ok",
+  "why": "Wahapedia Fulgrim: “In your Shooting phase and the Fight phase, after this model has finished making its attacks … At the start of each player’s Command phase, roll one D6 for each poisoned enemy unit”: Command either turn, your Shooting, Fight either turn. Label right. (Checklist note in the report: its Shooting/Fight part is triggered by Fulgrim’s own attacks, a unit activation.)"
+ },
+ {
+  "key": "8b043d4d14b16e50",
+  "where": "defilers-and-friends · Fulgrim · Daemon Primarch of Slaanesh",
+  "verdict": "ok",
+  "why": "Wahapedia ds/emperors-children_Fulgrim: “At the start of your opponent’s Command phase, select one of the abilities …”: Command, their turn. The “until the start of your opponent’s next Command phase” is a duration, rightly cut out by the derive.js change."
+ },
+ {
+  "key": "7a8239d44ce90cc5",
+  "where": "defilers-and-friends · Fulgrim · Damaged: 1-6 Wounds Remaining",
+  "verdict": "ok",
+  "why": "Wahapedia ds/emperors-children_Fulgrim: box “DAMAGED: 1-6 WOUNDS REMAINING”, W 16. Band and W right."
+ },
+ {
+  "key": "cf37a59bea3dfc68",
+  "where": "defilers-and-friends · Fulgrim · Supreme Commander",
+  "verdict": "ok",
+  "why": "Wahapedia core.txt 25.04 Fill Your Army Roster has the quoted sentences word for word; the same note as the other Supreme Commander units (Guilliman, Ghazghkull). Fulgrim is the Warlord in the export."
+ },
+ {
+  "key": "87c721d03b8cc5dd",
+  "where": "defilers-and-friends · Fulgrim · Beguiling Form",
+  "verdict": "ok",
+  "why": "Wahapedia ds/emperors-children_Fulgrim: Beguiling Form is in the DAEMON PRIMARCH OF SLAANESH box, which “select one of the abilities in the Daemon Primarch of Slaanesh section” picks from; the same form as Angron’s “Wrathful Presence: pick one”. One model."
+ },
+ {
+  "key": "fcde1eced3883f3c",
+  "where": "defilers-and-friends · Fulgrim · Beguiling Form",
+  "verdict": "ok",
+  "why": "GW: “Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.” The line says just that, and adds the condition that it is the selected Daemon Primarch ability. Faithful, nothing added."
+ },
+ {
+  "key": "dc14f62a0885eef5",
+  "where": "defilers-and-friends · Fulgrim · Daemonic Speed",
+  "verdict": "ok",
+  "why": "“This model has the Fights First ability”: Fights First is used in the Fight phase, either turn. Label right. (Checklist note in the report: it belongs in Active now, not in When unclear.)"
+ },
+ {
+  "key": "f8bf3f4afca87ed3",
+  "where": "defilers-and-friends · Fulgrim · Daemonic Speed",
+  "verdict": "ok",
+  "why": "In the DAEMON PRIMARCH OF SLAANESH box (Wahapedia Fulgrim); the same as Angron’s pick-one abilities."
+ },
+ {
+  "key": "75743b3fd99937b9",
+  "where": "defilers-and-friends · Fulgrim · Enthralling Hypnosis",
+  "verdict": "ok",
+  "why": "“each time that [enemy] unit is selected to Fall Back”: the enemy’s Movement phase. Their Movement, the same as Angron’s Overwhelming Wrath. The checklist rightly leaves it out, because it is an enemy activation."
+ },
+ {
+  "key": "94c8f99e73103b6d",
+  "where": "defilers-and-friends · Fulgrim · Enthralling Hypnosis",
+  "verdict": "ok",
+  "why": "Wahapedia prints “Enthralling Hypnosis (Aura):”. It has no aura entry because it affects enemy units, the same as Overwhelming Wrath."
+ },
+ {
+  "key": "016a98503919a698",
+  "where": "defilers-and-friends · Fulgrim · Enthralling Hypnosis",
+  "verdict": "ok",
+  "why": "In the DAEMON PRIMARCH OF SLAANESH box (Wahapedia Fulgrim)."
+ },
+ {
+  "key": "4d26b7e3e0a1210a",
+  "where": "defilers-and-friends · Fulgrim",
+  "verdict": "ok",
+  "why": "“While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll”: all attacks, -1 to hit. Right."
+ },
+ {
+  "key": "4cd529fe0c08ce1a",
+  "where": "defilers-and-friends · Fulgrim",
+  "verdict": "ok",
+  "why": "Export: Daemonic blades, Malefic lash, Serpentine tail. Wahapedia (“equipped with: malefic lash; daemonic blades; serpentine tail”): Malefic lash 12\" 6 2+ 8 -2 2 [SUSTAINED HITS 1]; Daemonic blades strike 6 2+ 14 -3 D6+1 and sweep 12 2+ 8 -2 2, both [SUSTAINED HITS 1]; Serpentine tail 6 2+ 6 -1 1 [EXTRA ATTACKS]. The rows and data.js agree."
+ },
+ {
+  "key": "342928219a3791d1",
+  "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Daemonic Destruction",
+  "verdict": "ok",
+  "why": "“Each time this model ends a Charge move”: your Charge phase, and theirs through Heroic Intervention. Charge, either turn, the same label main had (an approved derive-agreed entry under the old unit name)."
+ },
+ {
+  "key": "971ff51f65eaa03a",
+  "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune",
+  "verdict": "fix",
+  "why": "Enhancement is right, but the text’s limit is missing. Wahapedia Coterie of the Conceited: “EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll …”. The precedent is result-derive.json 209e61b314704242 (Necromechanic: the limit after the “model only.” restriction belongs in the stored tag, giving “Enhancement · Once per battle round”). derive.js itself derives “Enhancement · Once per turn” (verify/out/derive.md). The row chip already shows Once per turn; only the opened label lacks it.",
+  "fix": {
+   "tag": "Enhancement · Once per turn"
+  }
+ },
+ {
+  "key": "bf2b8a4d97fc7a14",
+  "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Pledge of Eternal Servitude",
+  "verdict": "ok",
+  "why": "Wahapedia Coterie of the Conceited enhancement, 25 pts (export 25). “The first time the bearer is destroyed” sets no once-per limit in GW’s form. Enhancement only is right."
+ },
+ {
+  "key": "d80c9aade703b766",
+  "where": "defilers-and-friends · Lord Exultant · Perfectionists",
+  "verdict": "ok",
+  "why": "“weapons equipped by models in that unit have [LETHAL HITS]”: wherever the unit attacks. Their Move · Your Shoot · Fight is the label 14 approved always-on attack abilities have (Hunter of Souls, Spiteful Power Trip, Dark Pacts)."
+ },
+ {
+  "key": "a394ec50c6911e6b",
+  "where": "defilers-and-friends · Lord Exultant · Perfectionists",
+  "verdict": "ok",
+  "why": "Lord Exultant datasheet ability (“While this model is leading a unit”); the models match the export (Lord; Obsessionist; 4 Infractors, the Icon on one)."
+ },
+ {
+  "key": "5966bd59868fb021",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "verdict": "ok",
+  "why": "“Once per battle, at the start of the Fight phase”: Fight, either turn."
+ },
+ {
+  "key": "e2574ef37bcb55fb",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "verdict": "ok",
+  "why": "The text opens “Once per battle,”."
+ },
+ {
+  "key": "d72962dc6a494b11",
+  "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "verdict": "ok",
+  "why": "Lord Exultant’s own ability (“melee weapons equipped by this model”)."
+ },
+ {
+  "key": "ac6fcc591854fc5a",
+  "where": "defilers-and-friends · Lord Exultant · Lord of the Host",
+  "verdict": "ok",
+  "why": "Lord Exultant datasheet (LORD OF THE HOST box); “this model has …”."
+ },
+ {
+  "key": "a8bddc767c6ac608",
+  "where": "defilers-and-friends · Lord Exultant · Excessive Assault",
+  "verdict": "ok",
+  "why": "Melee attacks only: Fight, either turn."
+ },
+ {
+  "key": "c604d625c195eeab",
+  "where": "defilers-and-friends · Lord Exultant · Excessive Assault",
+  "verdict": "ok",
+  "why": "Infractors datasheet ability (“Each time a model in this unit …”, so the attached Lord too); who names the bodyguard, as before."
+ },
+ {
+  "key": "b9b68a44d0c58c4d",
+  "where": "defilers-and-friends · Tormentors · Icon of Excess",
+  "verdict": "ok",
+  "why": "“At the end of your Shooting phase or the Fight phase”: your Shooting, Fight either turn. The same label main had."
+ },
+ {
+  "key": "739da76ae390a112",
+  "where": "defilers-and-friends · Lord Exultant · Icon of Excess",
+  "verdict": "ok",
+  "why": "An Infractors wargear ability (the export has Icon of Excess on each Infractors unit; the model line is “1× Infractor (Icon of Excess)”)."
+ },
+ {
+  "key": "487cc0b8c5c2aa61",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "“add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration … by 1”: melee, +3 A and +1 AP, only after it is used. The same footnote as before; only the source words changed (“If it does”)."
+ },
+ {
+  "key": "39a186ff4c7294a2",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "“Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1”: every melee attack. Right."
+ },
+ {
+  "key": "05c1fa6928cd567a",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "“If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead”: a fact about the target (targetObjective), melee."
+ },
+ {
+  "key": "64c6a9b5ffb0212d",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Wahapedia: Infractors KEYWORDS have BATTLELINE and INFRACTORS; Lord Exultant has neither. The note is right."
+ },
+ {
+  "key": "71f9f9d7d8f93fd4",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Wahapedia: Lord Exultant 95 (1st to 2nd unit), Infractors 5 models 95. Export 95 + 95, twice. 190 each."
+ },
+ {
+  "key": "52fa7ccc32d13def",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Export: Lord with bolt pistol, close combat weapon, Phoenix power spear and rapture lash (the rapture lash replaces the plasma pistol, GW’s option); Obsessionist with rapture lash and plasma pistol; 4 Infractors with bolt pistol and duelling sabre. Wahapedia: Lord bolt pistol 12\" 1 2+ 5 -1 1; CCW 6 2+ 5 0 1; spear 5 2+ 7 -2 2 [LANCE]; Lord’s rapture lash 4 2+ 4 -1 1 [EXTRA ATTACKS]. Infractors: plasma pistol 1 3+ 7/-2/1 and 8/-3/2 [HAZARDOUS]; bolt pistol 1 3+ 5 -1 1; rapture lash 6 3+ 4 -1 1 [PRECISION]; duelling sabre 4 3+ 5 -1 1 [PRECISION]. Every number matches, and [LETHAL HITS] comes from Perfectionists."
+ },
+ {
+  "key": "755306fabd8612bb",
+  "where": "defilers-and-friends · Tormentors",
+  "verdict": "ok",
+  "why": "Export: Obsessionist with plasma pistol and power sword; 3 Tormentors with boltgun and CCW; 1 Tormentor w/ meltagun with meltagun and CCW. Wahapedia: plasma pistol 12\" 1 3+ 7/-2/1 and 8/-3/2 [PISTOL, PRECISION]; boltgun 24\" 2 3+ 5 -1 1 [PRECISION]; meltagun 12\" 1 3+ 9 -4 D6 [MELTA 2, PRECISION]; power sword 4 3+ 5 -2 1 (S5 per the Faction Pack errata); CCW 3 3+ 5 0 1. Every number matches."
+ },
+ {
+  "key": "cff6737b7d51fff4",
+  "where": "defilers-and-friends · Defiler · Scuttling Walker",
+  "verdict": "ok",
+  "why": "“Each time this unit makes a Normal, Advance or Fall Back move”: all of them in your Movement phase. Your Movement is right; main’s Movement/Shooting had no basis."
+ },
+ {
+  "key": "39c815cd990e9b24",
+  "where": "defilers-and-friends · Defiler · Revel in Desecration",
+  "verdict": "ok",
+  "why": "“Each time this model makes an attack that targets …”: the approved label for always-on attack abilities (Hunter of Souls “Each time this model makes an attack that targets a CHARACTER unit” has the same)."
+ },
+ {
+  "key": "c80654182fade3ae",
+  "where": "defilers-and-friends · Defiler",
+  "verdict": "ok",
+  "why": "“add 1 to the Hit roll” against a target not Below Half-strength: all attacks, +1 to hit. The same as before."
+ }
+]
