@@ -125,11 +125,14 @@ function bonusOf(s){
   // (the enemy's -1 to hit is the defence above, not this unit's own -1: Damaged)
   if(def.includes('enemy-hit-1')) att = att.filter(id => id !== 'hit-1');
   // (the enemy's +1 to its attacks on this unit is a drawback, not this unit's bonus: "Each time an attack targets this unit, add 1 to
-  // the Hit roll")
-  if(new RegExp('(?:an attack|attacks)(?: that)? targets? ' + SELF, 'i').test(s) && !/\bthis (?:unit|model) makes an? (?:ranged |melee )?attack\b/i.test(s)) att = att.filter(id => id !== 'hit+1' && id !== 'wound+1');
-  // (an ability a unit loses or that does not apply is no grant: "if it has the Lethal Hits ability, that ability does not apply")
-  if(!/\b(?:that|those|the) abilit(?:y|ies) (?:does|do) not apply\b|\b(?:loses?|lost|cannot use|can't use)\b[^.]*?\babilit/i.test(s))
-  if(GRANT.test(s)) for(const m of s.matchAll(WA_RE)){ const n = (m[1] || m[2] || m[3] || '').toLowerCase().replace(/ (?:\d+|d3|d6|\d\+)$/, ''); if(n) att.push('wa:' + n); }
+  // the Hit roll"; not when a model of this unit or a friendly one makes the attack, at "that unit")
+  if(/\b(?:an attack|attacks|an? (?:ranged|melee) attack|(?:ranged|melee) attacks)(?: that)? targets? (?:this (?:unit|model)|the bearer)(?![’']s)\b/i.test(s) && !/\b(?<!enemy )(?:unit|model)s? (?:[^.,;]*? )?makes? an? (?:ranged |melee )?attack\b/i.test(s)) att = att.filter(id => id !== 'hit+1' && id !== 'wound+1');
+  // (an ability a unit loses or that does not apply is no grant: "if it has the Lethal Hits ability, that ability does not apply"; clause by
+  // clause, so the unit's own grant in the same sentence still counts: "… cannot use the Feel No Pain ability, and this unit's weapons have …")
+  const NOAPPLY = /\b(?:that|those|the) abilit(?:y|ies) (?:does|do) not apply\b/i, LOST = /\b(?:loses?|lost|cannot use|can't use) (?:the |this |that |its |all |any )?[^.,;]{0,30}?\babilit/i;
+  const cl = s.split(/[,;](?![^\[\]]*\])/);   // (not a comma inside a bracket: "[LETHAL HITS: non-MONSTER, non-VEHICLE]")
+  if(GRANT.test(s)) cl.forEach((c, i) => { if(LOST.test(c) || NOAPPLY.test(c) || NOAPPLY.test(cl[i + 1] || '')) return;
+    for(const m of c.matchAll(WA_RE)){ const n = (m[1] || m[2] || m[3] || '').toLowerCase().replace(/ (?:\d+|d3|d6|\d\+)$/, ''); if(n) att.push('wa:' + n); } });
   return { def:[...new Set(def)], att:[...new Set(att)] };
 }
 // what of the unit reads this ability: its readings (from the ability or an option it names in bold), its row's own, a marked value

@@ -2453,6 +2453,12 @@
   "at": "2026-10-21",
   "why": "RULES['Heavy'] matches 24.16 word for word in rules/core-rules.md and Wahapedia core.html: \"In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: That unit is unengaged. / That unit was not set up on the battlefield this turn. / No model in that unit has moved more than 3\" this turn.\" Its bold on 'hit roll' and 'unengaged' follows Wahapedia's <b>; the only difference is Wahapedia's underline on 'all', which is formatting. ruleFor strips the brackets and the anchored /^heavy$/i matches only 'HEAVY'/'[HEAVY]'/'Heavy' (a weapon keyword, the AdMech unit's rules chip, and the **[HEAVY]** in Protector Imperative). It does not match 'Heavy bolter', 'Heavy flamer', 'Heavy weapon' or 'SUPER-HEAVY WALKER' (that one goes to its own alias), and no faction alias or army rule is named 'heavy'."
  },
+ "2938f8dba93ee6b5": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "Matches the file. Beyond the earlier fixes it adds sv-set and s-vs. sv-set: \"has/have a Save characteristic of 2+\" is read (bearer, \"models in that unit\", \"it has … 3+\"). Its said accepts a stat mark: Blood-forged Armour (big-demons-baby/master-of-executions) is covered by its Sv mark and is flagged once the mark is removed. That is the only change in the false-positive run, and it is not a false positive. s-vs: \"subtract 1 from the Strength characteristic\" and \"-1 Strength\" of an attack that targets, or is allocated to, this unit / the bearer are read, and the unit's own attack on a MONSTER is not. Noted only, both stricter and not in today's texts: (1) sv-set also reads another unit's save, e.g. \"If the target has a Save characteristic of 3+, add 1 to the Wound roll\". (2) s-vs misses \"this unit is targeted by an attack\". Strip test, by ability over all lists: 157 flagged, against 156 without the additions (+Blood-forged Armour), and none lost."
+ },
  "2952bf06aeba01fb": {
   "verdict": "ok",
   "by": "review:infernal-lance (its fix)",
@@ -4102,6 +4108,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "EFFECT “Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” Only “is eligible to” becomes “can”. The trigger “just after … Falls Back” is in “a turn in which it Fell Back” and the Movement tag, in the approved form of “Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.”"
+ },
+ "466219869d462b9f": {
+  "verdict": "ok",
+  "by": "review:readings-4 (its fix)",
+  "at": "2026-10-26",
+  "why": "Matches the file. Both additions work on their target cases: \"if that attack has the [LETHAL HITS] ability, that ability does not apply\", \"that enemy unit loses the Lethal Hits ability\", and \"Each time an attack targets this unit, add 1 to the Hit roll\" are no longer bonuses. They change no current sentence (0 diffs, 0 gaps). But each one drops the unit's OWN bonus in plausible wordings, and a dropped bonus is a hole in the gate. Tested, missed today: (1) The lost-ability test runs over the whole sentence and matches any \"lost … ability\". So \"If this model has lost one or more wounds, its melee weapons have the [LETHAL HITS] ability.\" gives nothing, and neither does the same sentence without the comma. \"… that enemy unit cannot use the Feel No Pain ability, and this unit's weapons have [LETHAL HITS]\", \"… have [LETHAL HITS], and enemy units within 6\\\" lose the Stealth ability\" and \"models in that unit have the Lethal Hits ability; if this model is destroyed, that unit loses this ability\" also give nothing. (2) The drawback test uses SELF, which also covers \"that unit\", \"that model\", \"it\" and \"your unit\", and it exempts only \"this unit/model makes\". So a friendly attack on the chosen enemy loses its +1: \"each time a friendly ADEPTUS ASTARTES model within 6\\\" makes an attack that targets that unit, add 1 to the Wound roll\" and \"each time a model in that unit makes an attack that targets that unit, add 1 to the Hit roll\" both give nothing. It also misses the enemy's \"a ranged attack targets this unit, add 1 to the Hit roll\" and \"an enemy unit makes a ranged attack that targets this unit\", which are stricter only. The fix does three things. It tests the drawback only on attacks that target this unit / this model / the bearer (ranged or melee too), unless a non-enemy unit or model makes the attack. It reads grants clause by clause, dropping a clause that says lose / lost / cannot use … ability (within 30 characters) or \"… does not apply\" in that clause or the next. And it does not split at a comma inside a bracket. Tested on 23 cases (all as expected, including \"[LETHAL HITS: non-MONSTER, non-VEHICLE]\" and \"[ASSAULT], [HEAVY] and [LETHAL HITS]\"). Over the 490 current sentences it gives 0 differences from the current code and 0 gaps, and the strip test is unchanged (157 flagged)."
  },
  "4663acd5db5646cf": {
   "verdict": "ok",
@@ -6245,6 +6257,12 @@
   "at": "2026-10-24",
   "why": "Skullmaster (GW): MOUNTED, CHARACTER, CHAOS, DAEMON, KHORNE, SKULLMASTER. Bloodcrushers: MOUNTED, CHAOS, DAEMON, KHORNE, BLOODCRUSHERS. Only BLOODCRUSHERS comes from the bodyguard."
  },
+ "6e41ae1a49824413": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "The text in data.js (line 1202, and the row at line 3398) is word for word the same as Wahapedia (verify/.cache/waha/chaos-knights.txt line 143). The def is right on every point. Condition: \"While the bearer is using the Unnatural Fortitude ability\" becomes \"Using Unnatural Fortitude\", the Malefic Surge option. Being Empowered is already on the detachment line above it (\"Empowered, using Unnatural Fortitude: …\"). Restriction: \"an attack with a Damage characteristic of 1\" becomes \"vs attacks with Damage 1\". Effect: \"add 1 to any armour saving throw\" becomes \"+1 to armour saving throws\", which correctly leaves out the invulnerable save. The +1 Toughness is not in the def. It is a stat mark (T 12, from Fleshmetal Fusion), the same split other rows use. The line follows the app's pattern of \"<condition>: <effect>\", like Helm of Brazen Ire's \"-1 D to each attack allocated to this model\" and the \"Empowered, using Unnatural Fortitude: …\" line, and defOf is stamped. Strip test: remove the def alone and save+1 is flagged; remove the T mark alone and t+ is flagged; with both present there is no gap. Snapshot: the only change is this line under WHEN TARGETED (count 4 to 5) and the new popup."
+ },
  "6e4d9278440f0b7f": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -7252,6 +7270,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "7f7675245e4f55a2": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "Matches the file. The one addition is \"an armou?r penetration (?:characteristic )?of -\\d\" on ap. Tested: \"have an Armour Penetration of -2\" and \"… characteristic of -3\" are read, and \"… of 0\" is not. Over all current sentences, nothing changes. Noted only: (1) \"an AP of -2\" is still not read. (2) It also matches a condition on the enemy's attack, e.g. \"an enemy attack … with an Armour Penetration of -2 or better against this unit\". That case is stricter, not a hole, and no current text has it."
  },
  "7f7e21b5f742aeab": {
   "verdict": "ok",
@@ -13396,6 +13420,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"While a friendly BLOOD LEGIONS unit is within 6\"... add 1 to the Attacks characteristic of melee weapons\": only melee attacks change, in either player's Fight phase."
+ },
+ "ea29a02818d7e6e6": {
+  "verdict": "ok",
+  "by": "review:readings-4",
+  "at": "2026-10-26",
+  "why": "Matches the file. Tested: [MELTA D3], [RAPID FIRE D3], [RAPID FIRE D6], [MELTA 2], \"the Melta D3 ability\" and \"[RAPID FIRE 1] and [MELTA D3]\" are all read (wa:melta / wa:rapid fire). [HAZARDOUS] and \"[ASSAULT] and [HAZARDOUS]\" are still read. [SUPA-HAZARDOUS] and \"Supa-Hazardous ability\" (any case) are no longer read, and \"[SUPA-HAZARDOUS] and [SUSTAINED HITS 1]\" still gives sustained hits. Over all 490 current sentences, the only change is Supa-glowy Fing, which is no longer read as a hazardous grant. That is right: it is a drawback and has no condition, so there are no gaps either way."
  },
  "ea4ea78104a4a851": {
   "verdict": "ok",
