@@ -2357,14 +2357,12 @@ const ARMIES = [
         { name:'Berzerker Glaive', who:'Slaughterbound', tag:'Enhancement', text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' },
         { name:'Rend and Tear', who:'Exalted Eightbound' }
       ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[{ kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'11' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa+559e5240+eef27867', listWhy:'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (its datasheet’s A 6, +1 from Relentless Rage, +1 from Berzerker Glaive, both marked), so Possessed Lord’s +3 makes 11 (without the Glaive, A 7 makes 10)' },'Rend and Tear'],
       rules:['Leader','Deadly Demise D3','Blessings of Khorne','Deep Strike','Scouts 6"','Anti'],
       kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound','Exalted Eightbound'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
       partialRules:{ 'Scouts 6"':'Slaughterbound' },
-      why:{ mods:{ 'Possessed Lord':'its enhancement Berzerker Glaive: the Slaughterbound’s Lacerator and daemonic claw has A 8 in this list (its datasheet’s A 6, +1 from Relentless Rage, +1 from Berzerker Glaive, both marked), so Possessed Lord’s +3 makes 11 (without the Glaive, A 7 makes 10)' }, kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
+      why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
       id:'chaos-rhino', ds:'world-eaters/chaos-rhino', pts:75,
@@ -5456,7 +5454,7 @@ const DATASHEETS = {
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
-    { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'10' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa+eef27867' }
+    { kind:'melee', weapon:'Lacerator and daemonic claw', set:{ A:'+3' }, when:'Possessed Lord (once per battle, start of the Fight phase)', note:'and [DEVASTATING WOUNDS] until the end of the phase', from:'Possessed Lord', readOf:'5648d8fa' }
   ],
   rules:['Leader','Deadly Demise D3','Blessings of Khorne'],
   kw:['Chaos','Character','Daemon','Faction: World Eaters','Infantry','Khorne','Possessed','Slaughterbound']

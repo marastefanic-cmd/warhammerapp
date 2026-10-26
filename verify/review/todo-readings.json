@@ -1,5 +1,25 @@
 [
  {
+  "army": "standard",
+  "kind": "unit-footnote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Lacerator and daemonic claw",
+   "set": {
+    "A": "+3"
+   },
+   "when": "Possessed Lord (once per battle, start of the Fight phase)",
+   "note": "and [DEVASTATING WOUNDS] until the end of the phase",
+   "from": "Possessed Lord"
+  },
+  "source": {
+   "ability": "Possessed Lord",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability."
+  },
+  "key": "278ee97ac60f3925"
+ },
+ {
   "army": "navigator-sounds-op-ngl",
   "kind": "unit-guard",
   "where": "navigator-sounds-op-ngl · Knight Defender",
@@ -22,5 +42,41 @@
    "text": "While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack."
   },
   "key": "360b6d45483975a2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "oneOffMod",
+  "judgement": {
+   "code": "const oneOffMod = (m, u) => { const ab = ((u && u.abilities) || []).find(x => x.name === m.from);\n  return /\\bonce per battle\\b/i.test([m.when, ab && ab.tag, ab && ab.text].join(' ')); };"
+  },
+  "source": {
+   "implements": "a footnote that is a one-off use the player makes (its when, its ability's tag or words say once per battle: Possessed Lord): not in the weapon's numbers (the owner's decision, 2026-10-26)"
+  },
+  "key": "e04c4c102872b188"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "rowMod",
+  "judgement": {
+   "code": "const rowMod = (m, u) => !!(m.weapon && m.set) && !oneOffMod(m, u);"
+  },
+  "source": {
+   "implements": "which footnote a weapon row shows in its numbers (\"8 (+6)\", \"7/10\"): one that changes that weapon's values (weapon, set), unless a one-off (oneOffMod)"
+  },
+  "key": "c634c20bf40c94c7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "footMod",
+  "judgement": {
+   "code": "const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note }) : m;"
+  },
+  "source": {
+   "implements": "a one-off's footnote under the weapons: its numbers first, with the weapon (\"Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\"), as the row no longer shows them"
+  },
+  "key": "ae0fc45e1ad36ce8"
  }
 ]

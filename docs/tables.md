@@ -65,7 +65,9 @@ readings of that name: `mods:['Macro-extinction Protocols','Bringer of Justice',
 What is the list's own stays on its entry with its reason: which unit it leads (`why.kwNote`), the points of its parts
 (`why.ptsNote`), a reading of a row only the list has, and a reading the list has otherwise for a reason of the list: its
 `listWhy` (hidden, signed off as `unit-reading-why`) names it, and it does not count against the row's reading (ooga-booga's
-More Dakka [IGNORES COVER] for the Meganobz' Kombi-weapons; a Possessed Lord's A 11 with the Berzerker Glaive).
+More Dakka [IGNORES COVER] for the Meganobz' Kombi-weapons). A reading changes a weapon's values by what its rule adds (`set:{A:'+3'}`,
+Possessed Lord), not by a total that bakes in the list's other grants; a one-off the player uses (once per battle) is not shown in
+the weapon's numbers, only in the footnotes under the weapons (the app's `oneOffMod`).
 
 **One rule, one reading.** Where two lists hold different readings of one ability (or rule, or enhancement), neither is picked:
 the row has none of them, each list keeps its own on its entry, and `verify/out/tables.md` lists the conflict (Reading
@@ -74,8 +76,8 @@ conflicts) until it is decided against GW's text.
 **Fingerprinted.** Each reading carries `readOf`, the first 8 hex of the sha256 of each exact text it was read from, joined with
 `+` (`readSources` in `verify/tables.js`): first the ability, rule, enhancement, core rule or stratagem its `from` / `rule` names;
 then the rule an ability's tag names that says how it is used (a Bondsman Duty: the Bondsman army rule's pick, 12", duration);
-then, for a value it sets outright on a weapon (Possessed Lord's A 10), what gave that weapon its value in the list (its `from`:
-Relentless Rage, Berzerker Glaive). A row's own reading columns share one `readOf` on the row (`READ_COLS`). The gate step
+then, for a value it sets outright on a weapon (Vengeance for the Omnissiah's A 6), what gave that weapon its value in the list
+(its `from`). A row's own reading columns share one `readOf` on the row (`READ_COLS`). The gate step
 `fingerprints` checks each text: one that changed is stale (read the reading again from the new text, then `node
 verify/tables.js --restamp`), one with no fingerprint yet is missing (check it against that text, then `--stamp`, which adds it). A reading the rule tables of `verify/derive.js` give from the words (`readingsOf`, READING_RULES: a Damaged ability,
 the core ability Damaged X, a riled-up weapon ability, a characteristic bonus after a charge) is derived: `readBy:'derive'`, and
