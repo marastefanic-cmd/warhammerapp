@@ -540,7 +540,7 @@ function buildGroup(g, k) {
       // (BSData's Transport profile, named after the unit, is GW's TRANSPORT box: the ability Transport, its characteristic's name
       // the tag, as New Recruit prints "Transport Capacity" and the World Eaters' Chaos Rhino has it)
       if (table === 'Transport') { o.name = 'Transport'; delete o.who; o.tag = typo(nm(prof.characteristics[0].name)); }
-      o._bs =prof.characteristics.map(c => c.$text || '').join('\n');
+      o._bs = prof.characteristics.map(c => c.$text || '').join('\n');
       o._e = e; o._part = p; hide(o, { _sel: sel });
       abilities.push(o);
     }
@@ -656,7 +656,12 @@ for (const u of units) {
       // (and GW's plural name for a pair, the Maulerfiend's "Magma cutters" for New Recruit's "Magma cutter" ×2: listed below as named
       // otherwise)
       for (const n of wn) { ww = ds.weapons.find(x => sameKind(x) && nameOf(n) === nameOf(x.name)) || ds.weapons.find(x => sameKind(x) && gwName(n) === gwName(x.name)) || ds.weapons.find(x => sameKind(x) && noApos(n) === noApos(x.name)); if (ww) break; }
-      if (!ww && (row.n || 1) > 1) ww = ds.weapons.find(x => sameKind(x) && gwName(x.name) === gwName(wn[0]) + 's') || null;
+      // (GW's one profile for the pair is one weapon row: its A is the pair's, so the app counts it once, n 1, declared; the gear keeps
+      // New Recruit's two)
+      if (!ww && row.n === 2 && !row.group) {
+        ww = ds.weapons.find(x => sameKind(x) && gwName(x.name) === gwName(wn[0]) + 's') || null;
+        if (ww) { gwFacts.set(u.id + '|' + kind + '|' + nm(row.name) + '|n', { gw: '1', pin: '2', nr: '2', file: where, src: 'GW’s datasheet (one profile, ' + ww.name + ', for the pair)' }); gwDevs.push({ unit: u.id, kind, row: row.name, field: 'n', app: '1', bsdata: '2', file: where }); delete row.n; }
+      }
       if (ww && row.hunter && / - hunter$/i.test(ww.name)) gwFacts.set(u.id + '|' + kind + '|' + nm(row.name) + '|hunter', { gw: 'true', pin: 'no Hunter profile', nr: row.name, file: where, src: 'GW’s datasheet names it ' + ww.name + ' (its Hunter profile, used against MONSTER/VEHICLE units)' });
       if (ww && nameOf(ww.name) !== nameOf(wn[0]) && !wn.slice(1).some(n => nameOf(n) === nameOf(ww.name))) gwNames.push({ unit: u.id, kind, app: row.group ? row.group + ' - ' + row.name : row.name, gw: ww.name, file: where });
       const bc = bsChars(row._pid);

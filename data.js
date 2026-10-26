@@ -3350,10 +3350,7 @@ const ARMIES = [
     {
       id:'maulerfiend', ds:'emperors-children/maulerfiend', pts:120, copies:2,
       models:['1× Maulerfiend'],
-      gear:[['Maulerfiend fists','Magma cutter','Magma cutter']],
-      ranged:[
-        { name:'Magma cutter', n:2 }
-      ]
+      gear:[['Maulerfiend fists','Magma cutter','Magma cutter']]
     }
   ]
 },
@@ -6742,7 +6739,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Duellist’s Hubris', ph:['fight'], turn:'either', text:'At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.' },
-    { name:'A Challenge Worthy of Skill', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' }
+    { name:'A Challenge Worthy of Skill', text:'Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
@@ -6801,7 +6798,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Warped Interference', tag:'Psychic', def:'while this model is leading a unit: models in that unit have the Benefit of Cover against ranged attacks', text:'While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack.', defOf:'bbaa8f1f' },
-    { name:'Wracking Agonies', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your', turns:{ charge:'either' }, text:'In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it.' }
+    { name:'Wracking Agonies', tag:'Psychic', ph:['shooting'], turn:'your', text:'In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it.' }
   ],
   rules:['Leader','Thrill Seekers','Psychic','Hazardous','Devastating Wounds','Pistol'],
   kw:['Chaos','Character','Faction: Emperor\'s Children','Grenades','Infantry','Psyker','Slaanesh','Sorcerer']
@@ -9892,7 +9889,7 @@ const GRANTS = [
   { rule:'purge-goes-the-foe · Cybernetica Datasmith · Martial Signatum Amplificator', grants:'SKITARII', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Models in the bearer\'s unit have the **SKITARII** keyword.' },
   { rule:'purge-goes-the-foe · Cybernetica Datasmith · Robotic Bodyguard', grants:'Feel No Pain', type:'ability', to:{ all:['Cybernetica Datasmith'] }, while:'While a CYBERNETICA DATASMITH model is leading this unit', text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
   { rule:'purge-goes-the-foe · Skitarii Rangers · Omnispex', grants:'IGNORES COVER', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Ranged weapons equipped by models in the bearer\'s unit have the **IGNORES COVER** ability.' },
-  { rule:'defilers-and-friends · Lucius the Eternal · Duellist’s Hubris', grants:'Fights First', type:'ability', to:'this unit / model', while:null, text:'At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.' },
+  { rule:'defilers-and-friends · Lucius the Eternal · Duellist’s Hubris', grants:'Fights First', type:'ability', to:'this unit / model', while:'if this model is not leading a unit', text:'At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.' },
   { rule:'defilers-and-friends · Sorcerer · Warped Interference', grants:'Benefit of Cover', type:'ability', to:'this unit / model', while:'While this model is leading a unit', text:'While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack.' },
   { rule:'defilers-and-friends · Lord Exultant · Lord of the Host', grants:'Infiltrators', type:'ability', to:'this unit / model', while:'If this model is attached to an EMPEROR\'S CHILDREN BATTLELINE unit during the Declare Battle Formations step', text:'If this model is **attached** to an **EMPEROR\'S CHILDREN BATTLELINE** unit during the Declare Battle Formations step, this model has the **Infiltrators** and **Scouts 6"** abilities.' },
   { rule:'big-demons-baby · Lord on Juggernaut · Disciple of Khorne', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.' },

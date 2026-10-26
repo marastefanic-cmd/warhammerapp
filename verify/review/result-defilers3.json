@@ -1,0 +1,135 @@
+[
+ {
+  "key": "345826e38c8ccf88",
+  "where": "defilers-and-friends · Lucius the Eternal · Duellist’s Hubris",
+  "verdict": "ok",
+  "why": "“At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability” (Wahapedia ds/emperors-children_Lucius-the-Eternal): the Fight phase, either turn; same label as the signed-off PDF-built Lucius (result-defilers-and-friends 59226a4946203f43). In this list he leads Flawless Blades, so it does nothing until that unit is gone; the text carries that condition."
+ },
+ {
+  "key": "6bdb0896448f33c1",
+  "where": "defilers-and-friends · Lucius the Eternal · Duellist’s Hubris",
+  "verdict": "ok",
+  "why": "On Lucius the Eternal’s own datasheet (“this model”). Models lines match the export: 1× Lucius the Eternal, 3× Flawless Blade."
+ },
+ {
+  "key": "ff7e1e631fbdbaa9",
+  "where": "defilers-and-friends · Lucius the Eternal · A Challenge Worthy of Skill",
+  "verdict": "fix",
+  "why": "“Each time this model makes an attack …”: Lucius has no ranged weapons (Wahapedia ds/emperors-children_Lucius-the-Eternal prints MELEE WEAPONS only: Blade of the Laer, Lash of Torment; the export gives him nothing else), so “Their Movement” (Fire Overwatch) and “Your Shooting” can never apply. The signed-off PDF-built Lucius stored no label for this ability, and result-exiled-units d071fc92aa47eb99 (Skulltaker’s Skulls for Khorne, the same wording) fixed the same derive.js three-phase label to {} on that precedent. Revel in Desecration / Glutton for Punishment keep the three-phase label because those models have ranged weapons. Fix: verify/sources/hand/defilers-and-friends.json units[\"lucius-the-eternal-flawless-blades\"].labels[\"A Challenge Worthy of Skill\"] = {}.",
+  "fix": {}
+ },
+ {
+  "key": "2effc4db8142a0ad",
+  "where": "defilers-and-friends · Lucius the Eternal · A Challenge Worthy of Skill",
+  "verdict": "ok",
+  "why": "On Lucius’s own datasheet; “Each time this model makes an attack” = Lucius."
+ },
+ {
+  "key": "d5f1b73968c41a7f",
+  "where": "defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+  "verdict": "ok",
+  "why": "“Each time this unit is selected to fight … until the end of the phase … At the end of the Fight phase”: Fight phase, either turn (Wahapedia ds/emperors-children_Flawless-Blades); same as the signed-off PDF-built list."
+ },
+ {
+  "key": "1d5146bf15577827",
+  "where": "defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+  "verdict": "ok",
+  "why": "Ability of the Flawless Blades datasheet; under Core Rules 19.04 (“abilities/rules that affect a unit (or models in it) apply to every model in an attached unit”) it reaches Lucius’s attacks too, which the melee footnote reflects."
+ },
+ {
+  "key": "9efd39853175103b",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "verdict": "ok",
+  "why": "Reads GW’s “you can re-roll the Hit roll and you can re-roll the Wound roll” for attacks that target CHARACTER, MONSTER or WALKER units; always:true and vs any of the three are right; identical to the signed-off PDF-built footnote. The Damage tab scopes it to Lucius’s weapons (“for Blade of the Laer”, “none of the ticked weapons” for the Blades’ bolt pistols)."
+ },
+ {
+  "key": "f3b278734996b305",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "verdict": "ok",
+  "why": "“an unmodified Wound roll of 3+ scores a Critical Wound” after calling upon daemonic patrons when selected to fight, until the end of the phase: melee (selected to fight), critWound 3. The cost (one model destroyed if nothing was killed) is in the text, not a number. Same as the signed-off PDF-built reading."
+ },
+ {
+  "key": "b4d0115d4d402666",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "verdict": "ok",
+  "why": "Lucius’s keywords (Wahapedia): Infantry, Character, Epic Hero, Chaos, Slaanesh, Lucius the Eternal; Flawless Blades’: Infantry, Grenades, Chaos, Slaanesh, Flawless Blades. Grenades and Flawless Blades are the led unit’s only."
+ },
+ {
+  "key": "97d4143741e1881a",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "verdict": "ok",
+  "why": "Wahapedia: Lucius “1 model 130”, Flawless Blades “3 models 95”; the export: Lucius the Eternal 130, Flawless Blades 95 (3 models). 225 total."
+ },
+ {
+  "key": "47536d26c2754edf",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "verdict": "ok",
+  "why": "Feel No Pain 5+ and Lone Operative are Lucius’s CORE ABILITIES only (Flawless Blades has none). Lone Operative is inert while he leads the unit (“Unless part of an attached unit”), which the rule’s own text says."
+ },
+ {
+  "key": "e633f5f46102874c",
+  "where": "defilers-and-friends · Sorcerer · Warped Interference",
+  "verdict": "ok",
+  "why": "Wahapedia ds/emperors-children_Sorcerer: “Warped Interference (Psychic)”."
+ },
+ {
+  "key": "79861bb664ff2e9a",
+  "where": "defilers-and-friends · Sorcerer · Warped Interference",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.” The line keeps the condition, adds nothing. The export attaches the Sorcerer to no unit, so a conditional When targeted line (and no Damage-tab guard) is the right way to show it: shown, its condition marked."
+ },
+ {
+  "key": "3fb8752938be8c8e",
+  "where": "defilers-and-friends · Sorcerer · Wracking Agonies",
+  "verdict": "fix",
+  "why": "Movement · Your turn is wrong: the effect is on the enemy unit hit (“subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it”), from your Shooting phase “until the start of your next turn”, so your own Movement phase is never inside it; derive.js’s move-own rule (verify/derive.js:116, “its Move characteristic: your Movement phase”) reads the enemy’s Move characteristic as this unit’s own. The signed-off Thousand Sons Binding Tendrils (mucho-mutantes, word-for-word the same ability with Arcane Fire / ensnared) stores {ph:[shooting], turn:your}, the trigger, with this exact derived label listed as a difference in verify/out/derive.md. Fix to match: verify/sources/hand/defilers-and-friends.json units.sorcerer.labels[\"Wracking Agonies\"] = {\"ph\":[\"shooting\"],\"turn\":\"your\"}.",
+  "fix": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  }
+ },
+ {
+  "key": "8c9c87d9c4c04412",
+  "where": "defilers-and-friends · Sorcerer · Wracking Agonies",
+  "verdict": "ok",
+  "why": "Wahapedia ds/emperors-children_Sorcerer: “Wracking Agonies (Psychic)”."
+ },
+ {
+  "key": "5fcdb9a239c61138",
+  "where": "defilers-and-friends · Sorcerer",
+  "verdict": "ok",
+  "why": "Export: Sorcerer with Agonising Energies, Bolt pistol, Force weapon; Wahapedia: “This model is equipped with: Agonising Energies; bolt pistol; force weapon.” Profiles: witchfire 18\" D6 3+ 5 -1 D3 [PSYCHIC]; focused witchfire 18\" D6 3+ 6 -2 D3 [DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC]; Bolt pistol 12\" 1 3+ 5 -1 1 [PISTOL] (Faction Pack: S5 AP-1 for the Sorcerer); Force weapon 4 3+ 6 -2 D3 [PSYCHIC]. All match."
+ },
+ {
+  "key": "ae0771b1b0787b21",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Unchanged from the signed-off list: Battleline and Infractors are the Infractors’ (Wahapedia ds/emperors-children_Infractors) only. Weapons now show Power sword 4 3+ 5 -2 1 [PRECISION] (Wahapedia; Faction Pack “Infractors, Melee Weapons, Power Sword: Change Strength characteristic to ‘5’”), matching the export’s Obsessionist “Power sword, Plasma pistol” in both units."
+ },
+ {
+  "key": "1016fe171fd26ea1",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Wahapedia: Lord Exultant 95; Infractors “5 models 95”; export 95 + 95 per copy, two copies."
+ },
+ {
+  "key": "a84033528705b3fc",
+  "where": "defilers-and-friends · Chaos Rhino · Assault Vehicle",
+  "verdict": "ok",
+  "why": "“Units can disembark from this TRANSPORT after it has Advanced” (Wahapedia ds/emperors-children_Chaos-Rhino): your Movement phase."
+ },
+ {
+  "key": "0683187950592830",
+  "where": "defilers-and-friends · Chaos Rhino · Transport",
+  "verdict": "ok",
+  "why": "GW’s TRANSPORT box (Wahapedia: “TRANSPORT This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).”) shown as the ability Transport tagged Capacity, the same as the signed-off World Eaters Chaos Rhino (princes, standard)."
+ },
+ {
+  "key": "d6f6324bc0121862",
+  "where": "defilers-and-friends · Maulerfiend · Glutton for Punishment",
+  "verdict": "ok",
+  "why": "“Each time this model makes an attack”: the Maulerfiend has ranged magma cutters (6\"), so Fire Overwatch (their Movement), your Shooting and the Fight phase all apply; the same label as the signed-off Defiler’s Revel in Desecration in this list."
+ }
+]

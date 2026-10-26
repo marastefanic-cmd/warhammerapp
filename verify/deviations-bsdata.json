@@ -2167,5 +2167,15 @@
   "reason": "BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has Maulerfiend: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 14) has 120×92mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3219: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/defilers-and-friends.json: 120×92mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "defilers-and-friends",
+  "unit": "maulerfiend",
+  "field": "ranged.n",
+  "app": "Magma cutter: 1",
+  "source": "2",
+  "reason": "BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has 2; GW’s datasheet (one profile, Magma cutters, for the pair) has 1; New Recruit’s export (catalogue revision 14) has 2. GW wins.",
+  "evidence": "verify/.cache/waha/ds/emperors-children_Maulerfiend.html; verify/sources/nr-json/defilers-and-friends.json: 2.",
+  "by": "verify/from-json.js"
  }
 ]
