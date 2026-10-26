@@ -13553,6 +13553,12 @@
   "at": "2026-10-25",
   "why": "This Destrier has Questoris heavy stubber, titanic feet, chastiser gatling cannon and frag bombard (export). Thundercharge needs “a thundershock spear and a bellatus reaper chainsword”, and no unit in the list has them. The wording is the same as the approved Destriers in 6-bigs and 4-megas."
  },
+ "eb7cce5b1b61c753": {
+  "verdict": "ok",
+  "by": "review:defilers3b",
+  "at": "2026-10-26",
+  "why": "Export: Maulerfiend fists + “2 magma cutters” (2× Magma cutter); gear keeps the export’s two. Weapons: one Magma cutter row (6\" A2 3+ S9 -4 D6 [MELTA 2]) and Maulerfiend fists. GW prints one profile, “Magma cutters” A2, for the pair (Wahapedia ds/emperors-children_Maulerfiend: “This model’s lasher tendrils can be replaced with 2 magma cutters”; the same pattern on GW’s EC Faction Pack Defiler, lines 284/321). Where GW means two weapons it names the profile in the singular (Chaos Predator Destructor “2 heavy bolters”, “Heavy bolter”). So n 1 (2 attacks in total) is GW’s number, with New Recruit’s name kept and the deviation declared (deviations-bsdata.json field ranged.n; the code writes kind + '.n', so melee.n for a melee pair)."
+ },
  "eba8309b22fe4885": {
   "verdict": "ok",
   "by": "review:infernal-lance (its fix)",

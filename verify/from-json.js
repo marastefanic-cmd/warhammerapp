@@ -658,7 +658,10 @@ for (const u of units) {
       for (const n of wn) { ww = ds.weapons.find(x => sameKind(x) && nameOf(n) === nameOf(x.name)) || ds.weapons.find(x => sameKind(x) && gwName(n) === gwName(x.name)) || ds.weapons.find(x => sameKind(x) && noApos(n) === noApos(x.name)); if (ww) break; }
       // (GW's one profile for the pair is one weapon row: its A is the pair's, so the app counts it once, n 1, declared; the gear keeps
       // New Recruit's two)
-      if (!ww && row.n === 2 && !row.group) {
+      // (only when one model carries both: two models with one each, 2 Meganobz with twin killsaws, are two weapons)
+      const gl = u.gear.map((g, i) => i).filter(i => u.gear[i].includes(row.name));
+      const onOne = gl.length === 1 && u.gear[gl[0]].filter(x => x === row.name).length === 2 && /^1× /.test(u.models[gl[0]]);
+      if (!ww && row.n === 2 && !row.group && onOne) {
         ww = ds.weapons.find(x => sameKind(x) && gwName(x.name) === gwName(wn[0]) + 's') || null;
         if (ww) { gwFacts.set(u.id + '|' + kind + '|' + nm(row.name) + '|n', { gw: '1', pin: '2', nr: '2', file: where, src: 'GW’s datasheet (one profile, ' + ww.name + ', for the pair)' }); gwDevs.push({ unit: u.id, kind, row: row.name, field: 'n', app: '1', bsdata: '2', file: where }); delete row.n; }
       }

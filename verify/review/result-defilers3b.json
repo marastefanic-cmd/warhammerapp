@@ -1,0 +1,8 @@
+[
+ {
+  "key": "eb7cce5b1b61c753",
+  "where": "defilers-and-friends · Maulerfiend",
+  "verdict": "ok",
+  "why": "Export: Maulerfiend fists + “2 magma cutters” (2× Magma cutter); gear keeps the export’s two. Weapons: one Magma cutter row (6\" A2 3+ S9 -4 D6 [MELTA 2]) and Maulerfiend fists. GW prints one profile, “Magma cutters” A2, for the pair (Wahapedia ds/emperors-children_Maulerfiend: “This model’s lasher tendrils can be replaced with 2 magma cutters”; the same pattern on GW’s EC Faction Pack Defiler, lines 284/321). Where GW means two weapons it names the profile in the singular (Chaos Predator Destructor “2 heavy bolters”, “Heavy bolter”). So n 1 (2 attacks in total) is GW’s number, with New Recruit’s name kept and the deviation declared (deviations-bsdata.json field ranged.n; the code writes kind + '.n', so melee.n for a melee pair)."
+ }
+]
