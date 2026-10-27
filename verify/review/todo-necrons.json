@@ -1,0 +1,2340 @@
+[
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Imotekh the Stormlord · Grand Strategist",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Grand Strategist",
+   "text": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP."
+  },
+  "key": "3a422637d7e0bf34"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Imotekh the Stormlord · Lord of the Storm",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Lord of the Storm",
+   "text": "Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12\" of this model: on a 2-5, that enemy unit suffers D3 **mortal wounds**; on a 6, that enemy unit suffers D3+3 mortal wounds."
+  },
+  "key": "48d07d7c40cae33f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Imotekh the Stormlord · Lord of the Storm",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Lord of the Storm",
+   "text": "Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12\" of this model: on a 2-5, that enemy unit suffers D3 **mortal wounds**; on a 6, that enemy unit suffers D3+3 mortal wounds."
+  },
+  "key": "2136052a4edee021"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-footnote",
+  "where": "u-w0t-m8 · Tesseract Vault",
+  "judgement": {
+   "kind": "all",
+   "when": "Vs the enemy unit you selected in your Command phase, until the start of your next Command phase",
+   "note": "+1 to wound rolls",
+   "from": "Worthy Foes"
+  },
+  "source": {
+   "rule": "Worthy Foes",
+   "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
+  },
+  "key": "29b4ac3952ac46c9"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Imotekh the Stormlord",
+  "judgement": {
+   "gear": [
+    [
+     "Gauntlet of Fire",
+     "Staff of the Destroyer"
+    ]
+   ],
+   "weapons": [
+    "Gauntlet of Fire",
+    "Staff of the Destroyer",
+    "Staff of the Destroyer"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Imotekh the Stormlord"
+   ],
+   "leads": null
+  },
+  "key": "989378cc924063dc"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Infectious Murder-madness",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Infectious Murder-madness",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** and **TITANIC** units) is within 6\" of this model, each time a model in that unit makes an attack, if that model has the **DESTROYER CULT** keyword or that enemy unit is the closest eligible target, that attack has the **[SUSTAINED HITS 1]** ability."
+  },
+  "key": "d74087b626bdc15f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Infectious Murder-madness",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Infectious Murder-madness",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** and **TITANIC** units) is within 6\" of this model, each time a model in that unit makes an attack, if that model has the **DESTROYER CULT** keyword or that enemy unit is the closest eligible target, that attack has the **[SUSTAINED HITS 1]** ability."
+  },
+  "key": "910e7cf906253883"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Prophet of Destruction",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Prophet of Destruction",
+   "text": "Each time this model destroys an enemy unit, select one other friendly **DESTROYER CULT** unit within 9\" of it. Until the end of the phase, each time a model in that unit makes an attack, re-roll a **Wound roll** of 1."
+  },
+  "key": "4417ee82e418ac67"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Nullstone Field Generator",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Nullstone Field Generator",
+   "text": "While a friendly **NECRONS** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**."
+  },
+  "key": "78d5d5e43076e64d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-aura",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Necrons"
+    ],
+    "none": [
+     "Monster",
+     "Titanic"
+    ]
+   },
+   "when": "Within 6\" of Nekrosor Ammentar: an attack by a DESTROYER CULT model, or at the closest eligible target",
+   "selfWhen": "Own aura (DESTROYER CULT)",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "Infectious Murder-madness",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Infectious Murder-madness",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** and **TITANIC** units) is within 6\" of this model, each time a model in that unit makes an attack, if that model has the **DESTROYER CULT** keyword or that enemy unit is the closest eligible target, that attack has the **[SUSTAINED HITS 1]** ability."
+  },
+  "key": "feb461b10521b285"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-aura",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Destroyer Cult"
+    ]
+   },
+   "when": "Picked by Nekrosor Ammentar’s Prophet of Destruction (it destroyed an enemy unit; within 9\"), until the end of the phase",
+   "note": "re-roll a wound roll of 1",
+   "from": "Prophet of Destruction",
+   "notSelf": true
+  },
+  "source": {
+   "ability": "Prophet of Destruction",
+   "text": "Each time this model destroys an enemy unit, select one other friendly **DESTROYER CULT** unit within 9\" of it. Until the end of the phase, each time a model in that unit makes an attack, re-roll a **Wound roll** of 1."
+  },
+  "key": "29cd143236c33dbb"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-guard",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "judgement": {
+   "from": "Nullstone Field Generator",
+   "needs": {
+    "all": [
+     "Faction: Necrons"
+    ]
+   },
+   "kind": "all",
+   "when": "Within 6\" of Nekrosor Ammentar",
+   "selfWhen": "Own aura",
+   "selfAlways": true,
+   "note": "Feel No Pain 5+ against mortal wounds and Psychic Attacks"
+  },
+  "source": {
+   "ability": "Nullstone Field Generator",
+   "text": "While a friendly **NECRONS** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**."
+  },
+  "key": "4e2a8f897d90fde5"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "judgement": {
+   "gear": [
+    [
+     "Blade tail and whip coils",
+     "Enmitic disintegrators",
+     "Unmaker gauntlet"
+    ]
+   ],
+   "weapons": [
+    "Enmitic disintegrators",
+    "Blade tail and whip coils",
+    "Unmaker gauntlet"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Nekrosor Ammentar (Nullstone field generator)"
+   ],
+   "leads": null
+  },
+  "key": "64866327d69875e8"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-damaged",
+  "where": "u-w0t-m8 · The Silent King · Damaged: 1-6 wounds remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "16"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "b03d000b946ed639"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · The Silent King · Triarch Abilities",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Triarch Abilities",
+   "text": "At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability."
+  },
+  "key": "67bcaeb0448f90e9"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Stars",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Phaeron of the Stars",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "d1a51d2db951ad32"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Stars",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Phaeron of the Stars",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "3727661804f149bf"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-who",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Stars",
+  "judgement": {
+   "who": "Triarch Abilities: pick one",
+   "models": [
+    "1× Szarekh",
+    "2× Triarchal Menhir"
+   ]
+  },
+  "source": {
+   "ability": "Phaeron of the Stars",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "29695b14ad9b97f7"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Blades",
+  "judgement": {
+   "ph": [
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Phaeron of the Blades",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "4e14b2b88d57854d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Blades",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Phaeron of the Blades",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "bb58444c5235a52d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-who",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Blades",
+  "judgement": {
+   "who": "Triarch Abilities: pick one",
+   "models": [
+    "1× Szarekh",
+    "2× Triarchal Menhir"
+   ]
+  },
+  "source": {
+   "ability": "Phaeron of the Blades",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "db9e0d48d5ea0d7f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · The Silent King · Relentless March",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Relentless March",
+   "text": "While a friendly **NECRONS** unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "a6056f11be1de31f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · The Silent King · Relentless March",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Relentless March",
+   "text": "While a friendly **NECRONS** unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "552b4e47b5c5e653"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-who",
+  "where": "u-w0t-m8 · The Silent King · Relentless March",
+  "judgement": {
+   "who": "Triarch Abilities: pick one",
+   "models": [
+    "1× Szarekh",
+    "2× Triarchal Menhir"
+   ]
+  },
+  "source": {
+   "ability": "Relentless March",
+   "text": "While a friendly **NECRONS** unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "a3dc271167a9e577"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-footnote",
+  "where": "u-w0t-m8 · The Silent King",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (Szarekh 1-6 wounds left)",
+   "note": "-1 to hit rolls; Szarekh’s weapons: halve A",
+   "from": "Damaged: 1-6 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "394b1f6b308d9f53"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-aura",
+  "where": "u-w0t-m8 · The Silent King",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Necrons"
+    ],
+    "none": [
+     "Monster"
+    ]
+   },
+   "when": "Within 6\" of Szarekh, if The Silent King has Phaeron of the Stars this battle round",
+   "selfWhen": "Own aura, if it has Phaeron of the Stars this battle round",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Phaeron of the Stars"
+  },
+  "source": {
+   "ability": "Phaeron of the Stars",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "7a249c267573eaa1"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-aura",
+  "where": "u-w0t-m8 · The Silent King",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: Necrons"
+    ],
+    "none": [
+     "Monster"
+    ]
+   },
+   "when": "Within 6\" of Szarekh, if The Silent King has Phaeron of the Blades this battle round",
+   "selfWhen": "Own aura, if it has Phaeron of the Blades this battle round",
+   "note": "+1 S (and re-roll Charge rolls)",
+   "from": "Phaeron of the Blades"
+  },
+  "source": {
+   "ability": "Phaeron of the Blades",
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "0592328ddd1d0477"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-kwOnly",
+  "where": "u-w0t-m8 · The Silent King",
+  "judgement": {
+   "kwOnly": {
+    "Character": "Szarekh",
+    "The Silent King": "Szarekh"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Szarekh",
+    "2× Triarchal Menhir"
+   ],
+   "kw": [
+    "Character",
+    "Epic Hero",
+    "Faction: Necrons",
+    "The Silent King",
+    "Triarch",
+    "Vehicle",
+    "Warlord"
+   ],
+   "kwNote": null
+  },
+  "key": "44159cade111f908"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · The Silent King",
+  "judgement": {
+   "gear": [
+    [
+     "Sceptre of Eternal Glory",
+     "Staff of Stars",
+     "Weapons of the Final Triarch"
+    ],
+    [
+     "Annihilator beam",
+     "Armoured bulk"
+    ]
+   ],
+   "weapons": [
+    "Sceptre of Eternal Glory",
+    "Staff of Stars",
+    "×2 · Annihilator beam",
+    "Weapons of the Final Triarch",
+    "×2 · Armoured bulk"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Szarekh",
+    "2× Triarchal Menhir"
+   ],
+   "leads": null
+  },
+  "key": "14c69e5e53a98c17"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Royal Warden · Adaptive Strategy",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your",
+   "turns": {
+    "movement": "either"
+   }
+  },
+  "source": {
+   "ability": "Adaptive Strategy",
+   "text": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+  },
+  "key": "231348fb544bd6eb"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Royal Warden · Engrammatic Logic",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Engrammatic Logic",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **NECRONS** unit that is **Battle-shocked** and within 12\" of this model. That unit is no longer Battle-shocked."
+  },
+  "key": "df6226869b55952d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Royal Warden · Engrammatic Logic",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Engrammatic Logic",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **NECRONS** unit that is **Battle-shocked** and within 12\" of this model. That unit is no longer Battle-shocked."
+  },
+  "key": "d578c6e3838f752b"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Royal Warden",
+  "judgement": {
+   "gear": [
+    [
+     "Close combat weapon",
+     "Relic gauss blaster"
+    ]
+   ],
+   "weapons": [
+    "Relic gauss blaster",
+    "Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Royal Warden"
+   ],
+   "leads": null
+  },
+  "key": "1079cc66dd360a3e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Flayed Ones · Flesh Hunger",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Flesh Hunger",
+   "text": "Each time a model in this unit makes a melee attack, if the target of that attack is **Below Half-strength**, a successful **Hit roll** scores a Critical Hit."
+  },
+  "key": "f1b70eb72fc5529a"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-footnote",
+  "where": "u-w0t-m8 · Flayed Ones",
+  "judgement": {
+   "kind": "melee",
+   "when": "Target Below Half-strength",
+   "note": "a successful hit roll scores a Critical Hit",
+   "from": "Flesh Hunger"
+  },
+  "source": {
+   "ability": "Flesh Hunger",
+   "text": "Each time a model in this unit makes a melee attack, if the target of that attack is **Below Half-strength**, a successful **Hit roll** scores a Critical Hit."
+  },
+  "key": "d2cf4d136e615a7e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Flayed Ones",
+  "judgement": {
+   "gear": [
+    [
+     "Flayer claws"
+    ]
+   ],
+   "weapons": [
+    "×5 · Flayer claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "5× Flayed One"
+   ],
+   "leads": null
+  },
+  "key": "1f6eb5801f795659"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Ophydian Destroyers · Tunnelling Horrors",
+  "judgement": {
+   "ph": [
+    "movement",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "opp"
+   }
+  },
+  "source": {
+   "ability": "Tunnelling Horrors",
+   "text": "At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "523551777a3de990"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Ophydian Destroyers",
+  "judgement": {
+   "gear": [
+    [
+     "Ophydian hyperphase weapons"
+    ]
+   ],
+   "weapons": [
+    "×3 · Ophydian hyperphase weapons"
+   ]
+  },
+  "source": {
+   "models": [
+    "3× Ophydian Destroyer"
+   ],
+   "leads": null
+  },
+  "key": "10667cef329f1806"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Canoptek Reanimator · Nanoscarab Reanimation Beam",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Nanoscarab Reanimation Beam",
+   "text": "While a friendly **NECRONS** unit is within 3\" of this model, each time that unit’s **Reanimation Protocols** activate, that unit **heals** an additional D3 wounds."
+  },
+  "key": "4993763f59ebd53c"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Canoptek Reanimator",
+  "judgement": {
+   "gear": [
+    [
+     "Atomiser beam",
+     "Atomiser beam",
+     "Reanimator’s claws"
+    ]
+   ],
+   "weapons": [
+    "×2 · Atomiser beam",
+    "Reanimator’s claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Canoptek Reanimator"
+   ],
+   "leads": null
+  },
+  "key": "8a0a16b322e41cef"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Tesseract Vault · Damaged: 1-8 wounds remaining",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Damaged: 1-8 wounds remaining",
+   "text": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two."
+  },
+  "key": "d81cd95ab0fa9583"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-damaged",
+  "where": "u-w0t-m8 · Tesseract Vault · Damaged: 1-8 wounds remaining",
+  "judgement": {
+   "damaged": "1-8",
+   "W": "24"
+  },
+  "source": {
+   "ability": "Damaged: 1-8 wounds remaining",
+   "text": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two."
+  },
+  "key": "9907b15cbefaac8b"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Tesseract Vault · Powers of the C’tan",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Powers of the C’tan",
+   "text": "In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase)."
+  },
+  "key": "82ec5e546587a35e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Tesseract Vault",
+  "judgement": {
+   "gear": [
+    [
+     "Armoured bulk",
+     "Cosmic fire",
+     "Time’s arrow",
+     "Antimatter meteor",
+     "Tesla sphere",
+     "Tesla sphere",
+     "Tesla sphere",
+     "Tesla sphere"
+    ]
+   ],
+   "weapons": [
+    "Cosmic fire",
+    "Time’s arrow",
+    "Antimatter meteor",
+    "×4 · Tesla sphere",
+    "Armoured bulk"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Tesseract Vault"
+   ],
+   "leads": null
+  },
+  "key": "90135ce6b36d3068"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-ph",
+  "where": "necrons army rule · Reanimation Protocols",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Reanimation Protocols",
+   "text": "If your Army Faction is **NECRONS**, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its **Reanimation Protocols**:\n- When a unit’s **Reanimation Protocols** activate, that unit **heals** D3 wounds."
+  },
+  "key": "5259c8834fd3690e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-turn",
+  "where": "necrons army rule · Reanimation Protocols",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Reanimation Protocols",
+   "text": "If your Army Faction is **NECRONS**, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its **Reanimation Protocols**:\n- When a unit’s **Reanimation Protocols** activate, that unit **heals** D3 wounds."
+  },
+  "key": "970252e6a0171776"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-ph",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "judgement": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Worthy Foes",
+   "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
+  },
+  "key": "b957515c4f8e3b70"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-turn",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Worthy Foes",
+   "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
+  },
+  "key": "8d3193b8ca8ea379"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-turns",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "judgement": {
+   "turns": {
+    "fight": "either"
+   }
+  },
+  "source": {
+   "rule": "Worthy Foes",
+   "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
+  },
+  "key": "daba4cf241d0cd36"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-needs",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Noble",
+     "Lychguard",
+     "Triarch"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Worthy Foes",
+   "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
+  },
+  "key": "ebaa1eef2e1e0be1"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Your Time Is Nigh",
+   "text": "WHEN: Any phase, just after your opponent’s **WARLORD** is destroyed.\nTARGET: Your **NECRONS WARLORD**.\nEFFECT: Until the end of the battle, each time an enemy unit takes a Battle-shock or **Leadership test**, subtract 1 from the result."
+  },
+  "key": "65e0ffa662ea0cbb"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Your Time Is Nigh",
+   "text": "WHEN: Any phase, just after your opponent’s **WARLORD** is destroyed.\nTARGET: Your **NECRONS WARLORD**.\nEFFECT: Until the end of the battle, each time an enemy unit takes a Battle-shock or **Leadership test**, subtract 1 from the result."
+  },
+  "key": "d253f74fd448c2b6"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Warlord"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Your Time Is Nigh",
+   "text": "WHEN: Any phase, just after your opponent’s **WARLORD** is destroyed.\nTARGET: Your **NECRONS WARLORD**.\nEFFECT: Until the end of the battle, each time an enemy unit takes a Battle-shock or **Leadership test**, subtract 1 from the result."
+  },
+  "key": "f10a1faf78d9b7ca"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "judgement": {
+   "gist": "Any phase, just after your opponent’s WARLORD is destroyed, your NECRONS WARLORD: until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, -1 to the result."
+  },
+  "source": {
+   "stratagem": "Your Time Is Nigh",
+   "text": "WHEN: Any phase, just after your opponent’s **WARLORD** is destroyed.\nTARGET: Your **NECRONS WARLORD**.\nEFFECT: Until the end of the battle, each time an enemy unit takes a Battle-shock or **Leadership test**, subtract 1 from the result."
+  },
+  "key": "486b0faf4502e769"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Enslaved Artifice",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "d123f0fdd6de9b6d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Enslaved Artifice",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "01ea4a2610578db7"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turns",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Enslaved Artifice",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "12359279c306764e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons"
+    ],
+    "none": [
+     "Titanic"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Enslaved Artifice",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "af4072e5d4cd2846"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-mod",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase",
+    "note": "a Critical Hit on an unmodified hit roll of 5+",
+    "calc": {
+     "critHit": 5
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Enslaved Artifice",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "702a230267ae7949"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "judgement": {
+   "gist": "Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+."
+  },
+  "source": {
+   "stratagem": "Enslaved Artifice",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "df1edca14fb50e2e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Nanoassembly Protocols",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "b311defc10401675"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Nanoassembly Protocols",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "5940a85519013ee3"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turns",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Nanoassembly Protocols",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "9881e83dbf846c59"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Nanoassembly Protocols",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "993a861e97930670"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-def",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "judgement": {
+   "def": "Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase"
+  },
+  "source": {
+   "stratagem": "Nanoassembly Protocols",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "34e810a3aed68421"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "judgement": {
+   "gist": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit."
+  },
+  "source": {
+   "stratagem": "Nanoassembly Protocols",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "fec5fcb9949c23dc"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Sentinels of Eternity",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LYCHGUARD** or **TRIARCH PRAETORIANS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
+  },
+  "key": "1e8fcb1e54334782"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Sentinels of Eternity",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LYCHGUARD** or **TRIARCH PRAETORIANS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
+  },
+  "key": "1c4150ad94f52315"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Lychguard",
+     "Triarch Praetorians"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Sentinels of Eternity",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LYCHGUARD** or **TRIARCH PRAETORIANS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
+  },
+  "key": "68489cef026ae922"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "judgement": {
+   "gist": "Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed."
+  },
+  "source": {
+   "stratagem": "Sentinels of Eternity",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LYCHGUARD** or **TRIARCH PRAETORIANS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
+  },
+  "key": "c8f4738e93b0f02b"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Suffer No Rival",
+   "text": "WHEN: Fight phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+  },
+  "key": "b3a089cb83677130"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Suffer No Rival",
+   "text": "WHEN: Fight phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+  },
+  "key": "3cd6cd2ed1272a23"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Lychguard",
+     "Triarch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Suffer No Rival",
+   "text": "WHEN: Fight phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+  },
+  "key": "9440364a0ccaae4f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-mod",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Fight phase, not yet selected to fight, until the end of the phase",
+    "note": "[PRECISION]"
+   }
+  },
+  "source": {
+   "stratagem": "Suffer No Rival",
+   "text": "WHEN: Fight phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+  },
+  "key": "e6738ded2430cedf"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "judgement": {
+   "gist": "Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION]."
+  },
+  "source": {
+   "stratagem": "Suffer No Rival",
+   "text": "WHEN: Fight phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+  },
+  "key": "838b3b469f784a77"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Territorial Obsession",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army.\nEFFECT: Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the **VEHICLE** keyword, add 3 to the Objective Control characteristic instead."
+  },
+  "key": "07cf4c6dfd116728"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Territorial Obsession",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army.\nEFFECT: Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the **VEHICLE** keyword, add 3 to the Objective Control characteristic instead."
+  },
+  "key": "5d481e796c416692"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Lychguard",
+     "Triarch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Territorial Obsession",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army.\nEFFECT: Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the **VEHICLE** keyword, add 3 to the Objective Control characteristic instead."
+  },
+  "key": "074a00cf4d047b82"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "judgement": {
+   "gist": "Your Command phase, your LYCHGUARD or TRIARCH unit: until the start of your next Command phase, +1 OC for its models (+3 instead if it is a VEHICLE unit)."
+  },
+  "source": {
+   "stratagem": "Territorial Obsession",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LYCHGUARD** or **TRIARCH** unit from your army.\nEFFECT: Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the **VEHICLE** keyword, add 3 to the Objective Control characteristic instead."
+  },
+  "key": "a5921e17368191dc"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-ph",
+  "where": "The Phaeron’s Armoury rule · Empowered Engines",
+  "judgement": {
+   "ph": [
+    "movement"
+   ]
+  },
+  "source": {
+   "rule": "Empowered Engines",
+   "text": "Friendly **NECRONS TITANIC FLY** units have +6\" **M**.\nThis **detachment** has the **HYPERCRYPT** tag and cannot be taken with another **HYPERCRYPT** detachment."
+  },
+  "key": "31fe496ec07811db"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-turn",
+  "where": "The Phaeron’s Armoury rule · Empowered Engines",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Empowered Engines",
+   "text": "Friendly **NECRONS TITANIC FLY** units have +6\" **M**.\nThis **detachment** has the **HYPERCRYPT** tag and cannot be taken with another **HYPERCRYPT** detachment."
+  },
+  "key": "584e74acd6871090"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "rule-needs",
+  "where": "The Phaeron’s Armoury rule · Empowered Engines",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Titanic",
+     "Fly"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Empowered Engines",
+   "text": "Friendly **NECRONS TITANIC FLY** units have +6\" **M**.\nThis **detachment** has the **HYPERCRYPT** tag and cannot be taken with another **HYPERCRYPT** detachment."
+  },
+  "key": "83424b9a3fec2d9a"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Subsurface Quantumweave",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.\nTARGET: That **NECRONS TITANIC FLY** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "74ce66c9df94fffb"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Subsurface Quantumweave",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.\nTARGET: That **NECRONS TITANIC FLY** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "7243279696f7001e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turns",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Subsurface Quantumweave",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.\nTARGET: That **NECRONS TITANIC FLY** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "26d60d5b52c19f00"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Titanic",
+     "Fly"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Subsurface Quantumweave",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.\nTARGET: That **NECRONS TITANIC FLY** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "9cbf99bce63d1efd"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-def",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "judgement": {
+   "def": "Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked"
+  },
+  "source": {
+   "stratagem": "Subsurface Quantumweave",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.\nTARGET: That **NECRONS TITANIC FLY** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "3610e758647396e4"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "judgement": {
+   "gist": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked."
+  },
+  "source": {
+   "stratagem": "Subsurface Quantumweave",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.\nTARGET: That **NECRONS TITANIC FLY** unit.\nEFFECT: Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+  },
+  "key": "59a9cc6e72b3a218"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Particle Pulse",
+   "text": "WHEN: Start of your Shooting phase.\nTARGET: One friendly **NECRONS TITANIC FLY** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. That enemy unit has +3\" **detection range**."
+  },
+  "key": "c8566a6b08194fe5"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Particle Pulse",
+   "text": "WHEN: Start of your Shooting phase.\nTARGET: One friendly **NECRONS TITANIC FLY** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. That enemy unit has +3\" **detection range**."
+  },
+  "key": "c89f6043cc9f90d5"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Titanic",
+     "Fly"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Particle Pulse",
+   "text": "WHEN: Start of your Shooting phase.\nTARGET: One friendly **NECRONS TITANIC FLY** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. That enemy unit has +3\" **detection range**."
+  },
+  "key": "531d0432d9a7c4a7"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "judgement": {
+   "gist": "Start of your Shooting phase, your NECRONS TITANIC FLY unit: one visible enemy unit within 12\" of it has +3\" detection range."
+  },
+  "source": {
+   "stratagem": "Particle Pulse",
+   "text": "WHEN: Start of your Shooting phase.\nTARGET: One friendly **NECRONS TITANIC FLY** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. That enemy unit has +3\" **detection range**."
+  },
+  "key": "2715c3f6dc208cf9"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-phases",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Cosmic Storm",
+   "text": "WHEN: Your Shooting phase, when a friendly **OBELISK**/**TESSERACT VAULT** unit is **selected to shoot**.\nTARGET: That **OBELISK/TESSERACT VAULT** unit.\nEFFECT: Your unit’s Tesla Sphere weapons have +1 **AP**."
+  },
+  "key": "1882de1670eb70e9"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-turn",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Cosmic Storm",
+   "text": "WHEN: Your Shooting phase, when a friendly **OBELISK**/**TESSERACT VAULT** unit is **selected to shoot**.\nTARGET: That **OBELISK/TESSERACT VAULT** unit.\nEFFECT: Your unit’s Tesla Sphere weapons have +1 **AP**."
+  },
+  "key": "048c759fbd47d068"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Obelisk",
+     "Tesseract Vault"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Cosmic Storm",
+   "text": "WHEN: Your Shooting phase, when a friendly **OBELISK**/**TESSERACT VAULT** unit is **selected to shoot**.\nTARGET: That **OBELISK/TESSERACT VAULT** unit.\nEFFECT: Your unit’s Tesla Sphere weapons have +1 **AP**."
+  },
+  "key": "663d98f74bc45619"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-mod",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "weapon": "Tesla sphere",
+    "when": "Your Shooting phase, selected to shoot: its Tesla Sphere weapons",
+    "note": "+1 AP"
+   }
+  },
+  "source": {
+   "stratagem": "Cosmic Storm",
+   "text": "WHEN: Your Shooting phase, when a friendly **OBELISK**/**TESSERACT VAULT** unit is **selected to shoot**.\nTARGET: That **OBELISK/TESSERACT VAULT** unit.\nEFFECT: Your unit’s Tesla Sphere weapons have +1 **AP**."
+  },
+  "key": "6018aeed36448653"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-gist",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "judgement": {
+   "gist": "Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP."
+  },
+  "source": {
+   "stratagem": "Cosmic Storm",
+   "text": "WHEN: Your Shooting phase, when a friendly **OBELISK**/**TESSERACT VAULT** unit is **selected to shoot**.\nTARGET: That **OBELISK/TESSERACT VAULT** unit.\nEFFECT: Your unit’s Tesla Sphere weapons have +1 **AP**."
+  },
+  "key": "56f3b611ec7b78a0"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^c['’]tan power$/i",
+  "judgement": {
+   "opens": "C’tan Power"
+  },
+  "source": {
+   "rule": "C’tan Power",
+   "text": "**Powers of the C’tan** (Tesseract Vault): In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make at"
+  },
+  "key": "aae633f79726f457"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-silent-king · ability.text",
+  "judgement": {
+   "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
+   "source": "While a friendly ^^**Necrons**^^ unit (excluding ^^**Monster^^** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has th…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.\"."
+  },
+  "key": "3f54fb21ed75d36f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-silent-king · ability.tag",
+  "judgement": {
+   "app": "The Silent King: ",
+   "source": "The Silent King (Aura)"
+  },
+  "source": {
+   "reason": "GW’s datasheet prints The Silent King without a tag (no \"(Aura)\"); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) name it \"The Silent King (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"The Silent King:\" (no tag)."
+  },
+  "key": "206f92515a2143c8"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-silent-king · ability.text",
+  "judgement": {
+   "app": "Phaeron of the Blades: While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+   "source": "While a friendly ^^**Necrons^^** (excluding ^^**Monster^^** units) unit is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly Necrons (excluding Monster units) unit is within 6\" of this unit's Szarekh model, you can re-roll Charg…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit's Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic…\"."
+  },
+  "key": "720977ccd909caa5"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-silent-king · ability",
+  "judgement": {
+   "app": "Supreme Commander",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) do not have it. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Supreme Commander\"."
+  },
+  "key": "5a6f316eff1d74a3"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-silent-king · ability",
+  "judgement": {
+   "app": "",
+   "source": "Voice of the Triarch"
+  },
+  "source": {
+   "reason": "GW names the ability Triarch Abilities, BSData at the pin (Xenos - Necrons catalogue revision 28) Voice of the Triarch. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Triarch Abilities\"."
+  },
+  "key": "45350d7d440a1c82"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault · stats.base",
+  "judgement": {
+   "app": "Tesseract Vault: 120×92mm Oval",
+   "source": "Tesseract Vault: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm."
+  },
+  "key": "1535622de65748db"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault · ranged.kw",
+  "judgement": {
+   "app": "Cosmic fire: C'TAN POWER, DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+   "source": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has DEVASTATING WOUNDS, IGNORES COVER, TORRENT; GW’s datasheet (the new codex, as Wahapedia transcribes it) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; New Recruit’s export (catalogue revision 28) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Cosmic fire kw IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: IGNORES COVER, DEVASTATING WOUNDS, TORRENT."
+  },
+  "key": "0e9f9408a35bbf0d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault · ranged.kw",
+  "judgement": {
+   "app": "Time's arrow: ANTI-CHARACTER 4+, C'TAN POWER, DEVASTATING WOUNDS, PRECISION",
+   "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION."
+  },
+  "key": "1603e3114485d331"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault · ranged.kw",
+  "judgement": {
+   "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
+   "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE."
+  },
+  "key": "4724f93a4be88b52"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault · ability.text",
+  "judgement": {
+   "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+   "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase)."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\"."
+  },
+  "key": "ecb737948af18e29"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · stats.base",
+  "judgement": {
+   "app": "Tesseract Vault: 120×92mm Oval",
+   "source": "Tesseract Vault: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm."
+  },
+  "key": "1535622de65748db"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ranged.kw",
+  "judgement": {
+   "app": "Cosmic fire: C'TAN POWER, DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+   "source": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has DEVASTATING WOUNDS, IGNORES COVER, TORRENT; GW’s datasheet (the new codex, as Wahapedia transcribes it) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; New Recruit’s export (catalogue revision 28) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Cosmic fire kw IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: IGNORES COVER, DEVASTATING WOUNDS, TORRENT."
+  },
+  "key": "0e9f9408a35bbf0d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ranged.kw",
+  "judgement": {
+   "app": "Time's arrow: ANTI-CHARACTER 4+, C'TAN POWER, DEVASTATING WOUNDS, PRECISION",
+   "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION."
+  },
+  "key": "1603e3114485d331"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ranged.kw",
+  "judgement": {
+   "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
+   "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE."
+  },
+  "key": "4724f93a4be88b52"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ability.text",
+  "judgement": {
+   "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+   "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase)."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\"."
+  },
+  "key": "ecb737948af18e29"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-nr.json · tesseract-vault · stats[Tesseract Vault].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 28) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: Base 120x92mm."
+  },
+  "key": "cf016a75a4129a51"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-nr.json · tesseract-vault-2 · stats[Tesseract Vault].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 28) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: Base 120x92mm."
+  },
+  "key": "cf016a75a4129a51"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "gw-words",
+  "where": "the-phaerons-armoury/enhancement/Relocational Optimiser",
+  "judgement": {
+   "field": "name",
+   "from": "Relocational Optimiser",
+   "to": "Prelocational Optimiser"
+  },
+  "source": {
+   "reason": "GW Faction Pack Necrons 1.3, The Phaeron’s Armoury, ENHANCEMENTS: \"PRELOCATIONAL OPTIMISER\" (BSData: \"Prelocational Optimiser\"; Wahapedia: \"Relocational Optimiser\")",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt; verify/.cache/waha/necrons.txt"
+  },
+  "key": "2e6c4e1500f10870"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "gw-words",
+  "where": "the-phaerons-armoury/enhancement/Mortality Shroud (Aura)",
+  "judgement": {
+   "field": "text",
+   "from": "is **below **starting** strength**,",
+   "to": "is **below starting strength**,"
+  },
+  "source": {
+   "reason": "Markup only: Wahapedia's page nests its bold (\"**below **starting** strength**\"), which the app would show broken; GW Faction Pack Necrons 1.3 prints \"if an enemy unit within 8\" of this unit is below starting strength\" (the words are unchanged)",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt; verify/.cache/waha/necrons.txt"
+  },
+  "key": "78ad722ca93d6616"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "gw-words",
+  "where": "the-silent-king · Relentless March",
+  "judgement": {
+   "from": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, add 2\"",
+   "to": "While a friendly **NECRONS** unit is within 6\" of this unit’s Szarekh model, add 2\""
+  },
+  "source": {
+   "reason": "GW Faction Pack Necrons 1.3, Rules Updates, The Silent King: \"Bringer of Unity Ability: Change to ‘Relentless March (Aura): While a friendly NECRONS unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit.’\" (Wahapedia: \"(excluding MONSTER units)\"; BSData has the pack’s words)",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt (Rules Updates, The Silent King)"
+  },
+  "key": "c683655aaa427ca8"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "the-silent-king",
+  "judgement": {
+   "why": "The Silent King: Szarekh and two Triarchal Menhirs, all present from the start (GW’s UNIT COMPOSITION: 1 Szarekh, 2 Triarchal Menhirs); if Szarekh is destroyed the Menhirs are too (Triarchal Menhirs). Keywords as GW’s Faction Pack 1.3 changes them: ALL MODELS VEHICLE, EPIC HERO, TRIARCH; SZAREKH MODEL CHARACTER, THE SILENT KING (kwOnly). Triarch Abilities: GW’s ability (BSData: Voice of the Triarch) selects one of the three abilities of GW’s TRIARCH ABILITIES box at the start of each battle round (Wrathful Presence’s layout, Angron); each is an (Aura) of Szarekh’s, shown with who “Triarch Abilities: pick one”; Relentless March in the pack’s words. Supreme Commander: GW’s box, not in BSData. The Silent King: GW prints it without (Aura) (BSData tags it), Leadership only: no reading. Damaged: Szarekh’s weapons have their Attacks halved and the unit’s attacks -1 to hit: a footnote. Worthy Foes: TRIARCH, so its +1 to wound applies."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.the-silent-king.why (not shown in the app)"
+  },
+  "key": "d9382bbc6e2ac463"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "nekrosor-ammentar",
+  "judgement": {
+   "why": "GW’s Faction Pack Necrons 1.3 prints the datasheet in full (enmitic disintegrators [SUSTAINED HITS 2], as BSData). Infectious Murder-madness (Aura): [SUSTAINED HITS 1] for friendly NECRONS units (excluding MONSTER and TITANIC units) within 6\", for an attack by a DESTROYER CULT model or at the closest eligible target; its own unit is DESTROYER CULT (22.01: an aura affects its own unit). Nullstone Field Generator (Aura, wargear): Feel No Pain 5+ against mortal wounds and Psychic Attacks for friendly NECRONS units within 6\", its own included: a guard. Prophet of Destruction is not tagged (Aura): what it gives one other DESTROYER CULT unit (re-roll a Wound roll of 1, until the end of the phase, after Nekrosor destroys an enemy unit) is written as what this unit gives others, for that one picked unit (as Spirit Thief). Protective Disciples: Lone Operative while within 3\" of another friendly DESTROYER CULT unit (the Ophydian Destroyers)."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.nekrosor-ammentar.why (not shown in the app)"
+  },
+  "key": "ba71f8f7c43cfc0f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "ophydian-destroyers",
+  "judgement": {
+   "why": "Plasmacyte: GW’s wargear option (\"For every 3 models in this unit, this unit can have 1 Plasmacyte\") this list did not take (the export has no Plasmacyte), so the Plasmacyte ability and its Designer’s Note are left out. Tunnelling Horrors in GW’s Faction Pack 1.3 words (as Wahapedia and BSData)."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.ophydian-destroyers.why (not shown in the app)"
+  },
+  "key": "51cfd282b8e83977"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-label-hand",
+  "where": "tesseract-vault · Damaged: 1-8 wounds remaining",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "reason": "Its words: “you can only select one of the C’tan Powers weapons in your Shooting phase”; from-json.js gives a Damaged band no label otherwise, and invariants require the phase it names."
+  },
+  "key": "6c9363a70494e06d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "tesseract-vault",
+  "judgement": {
+   "why": "Powers of the C’tan: in your Shooting phase, when selected to shoot, it selects up to two different C’tan Powers weapons (one while Damaged); GW prints them as RANGED WEAPONS with [C’TAN POWER] (BSData’s profiles of the type \"C'tan Powers\", read as weapons): shown as three ranged weapons, the choice is the ability’s, not a pick-one or all-fire group. Tesla sphere: GW’s composition gives 4 tesla spheres (the profile named “Tesla spheres”), New Recruit 4× Tesla sphere: four weapons of A 6. M 14\": Empowered Engines (The Phaeron’s Armoury: friendly NECRONS TITANIC FLY units have +6\" M), the datasheet’s 8\" kept as its own value. Damaged: 1-8 wounds remaining is labelled your Shooting phase (its words: only one C’tan Powers weapon “in your Shooting phase”); a Damaged band otherwise gets no label."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.tesseract-vault.why (not shown in the app)"
+  },
+  "key": "41838ee1825c6f49"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-label-hand",
+  "where": "tesseract-vault-2 · Damaged: 1-8 wounds remaining",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "reason": "Its words: “you can only select one of the C’tan Powers weapons in your Shooting phase”; from-json.js gives a Damaged band no label otherwise, and invariants require the phase it names."
+  },
+  "key": "6c9363a70494e06d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "tesseract-vault-2",
+  "judgement": {
+   "why": "As the other Tesseract Vault (the same datasheet); 505 pts, GW’s price of a 2nd+ unit."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.tesseract-vault-2.why (not shown in the app)"
+  },
+  "key": "60b54c8b12e9ce13"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "imotekh-the-stormlord",
+  "judgement": {
+   "why": "Imotekh leads no unit in this list (Leader: IMMORTALS, LYCHGUARD, NECRON WARRIORS; none taken). NOBLE: Worthy Foes applies."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.imotekh-the-stormlord.why (not shown in the app)"
+  },
+  "key": "ff1f7e1a999dfc3a"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-why",
+  "where": "royal-warden",
+  "judgement": {
+   "why": "The Royal Warden leads no unit in this list (Leader: IMMORTALS, NECRON WARRIORS; none taken): Adaptive Strategy (\"This model’s unit\") is its own."
+  },
+  "source": {
+   "file": "verify/sources/hand/u-w0t-m8.json units.royal-warden.why (not shown in the app)"
+  },
+  "key": "4633093eb1aaba9d"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "gw-words",
+  "where": "necrons army rule · Reanimation Protocols",
+  "judgement": {
+   "removed": "the codex Example paragraph"
+  },
+  "source": {
+   "reason": "GW Faction Pack Necrons 1.3, Rules Updates, Reanimation Protocols Army Rule, “Change to:” the two paragraphs (“If your Army Faction is NECRONS, at the end of your Command phase, … that unit heals D3 wounds.”), with no Example; Wahapedia still prints the codex’s Example after its errata box.",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt (Rules Updates, ARMY RULES)"
+  },
+  "key": "3b320b43aef2ca65"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs-hand",
+  "where": "obeisance-phalanx/your-time-is-nigh",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Warlord"
+    ]
+   }
+  },
+  "source": {
+   "reason": "TARGET: “Your NECRONS WARLORD.” (derive.js reads a unit from “… unit from your army”)"
+  },
+  "key": "8de88f59078fe9cb"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "strat-needs-hand",
+  "where": "obeisance-phalanx/sentinels-of-eternity",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Lychguard",
+     "Triarch Praetorians"
+    ]
+   }
+  },
+  "source": {
+   "reason": "TARGET: “One LYCHGUARD or TRIARCH PRAETORIANS unit from your army …”: TRIARCH PRAETORIANS is one keyword (the Triarch Praetorians datasheet), not TRIARCH; no unit of the list has either (The Silent King is TRIARCH)"
+  },
+  "key": "05d8031ac7817f5d"
+ },
+ {
+  "army": "core",
+  "kind": "glossary",
+  "where": "RULES · C’tan Power (alias /^c['’]tan power$/i)",
+  "judgement": {
+   "text": "**Powers of the C’tan** (Tesseract Vault): In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, …"
+  },
+  "source": {
+   "reason": "GW prints [C’TAN POWER] on the Tesseract Vault’s three C’tan Powers weapons and defines it nowhere; the entry quotes the ability that selects them, as the Conversion entry does (declared in deviations-texts.json).",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html"
+  },
+  "key": "c3de0979e8c51161"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "points",
+  "where": "points: Tesseract Vault 465 + 505, Ophydian Destroyers 80, Flayed Ones 55 ×2",
+  "judgement": {
+   "app": {
+    "Tesseract Vault": [
+     465,
+     505
+    ],
+    "Imotekh the Stormlord": 100,
+    "Nekrosor Ammentar": 195,
+    "The Silent King": 420,
+    "Royal Warden": 50,
+    "Flayed Ones": [
+     55,
+     55
+    ],
+    "Ophydian Destroyers": 80,
+    "Canoptek Reanimator": 75
+   }
+  },
+  "source": {
+   "reason": "The export’s points = Wahapedia’s tables: Tesseract Vault 1st unit 465, 2nd+ 505; Ophydian Destroyers 3 models 80 (1st to 2nd units); Flayed Ones 5 models 55; the rest single prices. Total 2000.",
+   "evidence": "verify/.cache/waha/ds/necrons_*.html; verify/sources/nr-json/u-w0t-m8.json"
+  },
+  "key": "9615314d5a04cfcf"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "question",
+  "where": "Tesseract Vault · Tesla sphere ×4",
+  "judgement": {
+   "app": "four Tesla sphere weapons, A 6 each (24 attacks)"
+  },
+  "source": {
+   "reason": "GW’s composition: “This model is equipped with: 4 tesla spheres; armoured bulk.”; its profile is named “Tesla spheres” (A 6). New Recruit/BSData: 4× Tesla sphere, A 6 each. The app follows the count GW prints; the plural profile name could be read as one profile for all four (as the Maulerfiend’s magma cutters). Owner to confirm.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html"
+  },
+  "key": "cdd799ada3f5b02e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "question",
+  "where": "Tesseract Vault · C’tan Powers as three ungrouped weapons",
+  "judgement": {
+   "app": "Cosmic fire, Time’s arrow, Antimatter meteor: three ranged weapons with [C’TAN POWER]; gear “C’tan Powers” is New Recruit’s one option"
+  },
+  "source": {
+   "reason": "Up to two (one while Damaged) are selected each Shooting phase (Powers of the C’tan): neither “pick one” nor “all fire”, so no group; the Damage tab can untick the ones not selected.",
+   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html"
+  },
+  "key": "c7e609c0b62cf026"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "question",
+  "where": "“(see left)” kept",
+  "judgement": {
+   "app": "Triarch Abilities and Powers of the C’tan keep GW’s “(see left)”"
+  },
+  "source": {
+   "reason": "GW’s words (BSData leaves it out, declared). The Thulia Ghuld precedent dropped “(see next page)” because the app kept BSData’s words there; here the app has GW’s. Owner to decide.",
+   "evidence": "verify/deviations-bsdata.json (the-silent-king, tesseract-vault ability.text)"
+  },
+  "key": "ab501b6aa5a9da74"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "question",
+  "where": "Imotekh and the Royal Warden lead nothing",
+  "judgement": {
+   "app": "own units"
+  },
+  "source": {
+   "reason": "The export attaches neither (no Immortals, Lychguard or Necron Warriors in the list).",
+   "evidence": "verify/sources/nr-json/u-w0t-m8.json"
+  },
+  "key": "52c08a1d4650ad5f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "question",
+  "where": "Empowered Engines label",
+  "judgement": {
+   "app": "ph movement, your turn (derive.js)"
+  },
+  "source": {
+   "reason": "+6\" M for NECRONS TITANIC FLY units; derive.js reads M as the Movement phase; it also counts for charges (Charge phase). Not hand-labelled.",
+   "evidence": "data.js the-phaerons-armoury rule"
+  },
+  "key": "2b9f661e24299b82"
+ },
+ {
+  "army": "shooty",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt (home screen)",
+  "judgement": {
+   "change": "a NECRONS 1 group with the U w0t m8? card (2000 pts, Obeisance Phalanx · The Phaeron’s Armoury, PRIORITY ASSETS)"
+  },
+  "source": {
+   "reason": "The home screen lists every list.",
+   "evidence": "scratchpad/two-work (shooty diff after the feature run)"
+  },
+  "key": "7eb5c599f28cdab9"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · weapon-shaped profiles",
+  "judgement": {
+   "change": "A profile of another type with Range, A, BS|WS, S, AP and D (BSData’s “C'tan Powers”) is a weapon (ranged unless Range is Melee); bsdata.js reads it the same way; a gear line may name each weapon of such one selection (bsdata.js gear: “same”)."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js verify/bsdata.js"
+  },
+  "key": "4beec6f9741aa012"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · plural GW weapon name counted by its composition",
+  "judgement": {
+   "change": "GW’s plural profile name for N (>2) copies of one weapon on one model, when GW’s composition says “equipped with: … N <plural>”: GW checks the profile under that name, n stays N (Tesla spheres)."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js"
+  },
+  "key": "551ec5e20ab5cd65"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · boxes after the composition",
+  "judgement": {
+   "change": "wahaSectionsOf: an upper-case heading after UNIT COMPOSITION (not YOUR … COSTS, not a known section), up to the keywords, is a box ability (SUPREME COMMANDER added from GW; TRIARCHAL MENHIRS by its own lines, where boxAfterComposition took everything to the keywords). The page glossary after the keywords is no box."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js"
+  },
+  "key": "f5c2138a3e11e0a4"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · selectsFrom",
+  "judgement": {
+   "change": "A box’s abilities are split into “<box>: pick one” abilities also when an ability says “select one <box less Abilities> ability” (Triarch Abilities)."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js"
+  },
+  "key": "314dc511d4f36fe5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · “(see left)”",
+  "judgement": {
+   "change": "A GW ability whose words are BSData’s but for “(see left|right|next page|overleaf)” matches it (Voice of the Triarch → GW’s Triarch Abilities)."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js"
+  },
+  "key": "2abc730b94ec6dc2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · kwOnly “<X> MODEL”",
+  "judgement": {
+   "change": "GW’s “SZAREKH MODEL: CHARACTER” names the model Szarekh (its stats row)."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js"
+  },
+  "key": "c589259c2284ba8d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · hand needs and army rule texts",
+  "judgement": {
+   "change": "gists.<id>.needs (with needsWhy) for a stratagem derive.js cannot read; armyRules.<name>.texts { from, to, why }; an armyRules entry without calcMods no longer reports a Damage-tab reading."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/from-json.js"
+  },
+  "key": "f0d044ccfe25b5ed"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/texts.js · titleN",
+  "judgement": {
+   "change": "A Rules Updates title “<rule> Army Rule” is the rule (only the Necrons pack prints one)."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/texts.js"
+  },
+  "key": "085408fa1f7f513b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/invariants.js · strat-needs",
+  "judgement": {
+   "change": "The keywords a stratagem’s needs name count among the TARGET’s keywords, so a longer one no unit has (TRIARCH PRAETORIANS) is not also read as TRIARCH."
+  },
+  "source": {
+   "diff": "git diff 15170ba 2e37dd1 -- verify/invariants.js"
+  },
+  "key": "9b4a5a6f82e7cf65"
+ }
+]
