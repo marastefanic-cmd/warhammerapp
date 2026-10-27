@@ -957,7 +957,8 @@ Object.assign(module.exports, { enhNamesOf, nrOptions, nrWeapon, nrStatName, nrA
 function compareJsonArmy(D, A, J, out, where) {
   const sels = ((J.roster || {}).forces || [{}])[0].selections || [];
   const bases = new Map();   // root selection name -> profile name -> base
-  const walk = (s, m) => { for (const p of s.profiles || []) if (p.typeName === 'Unit') { const b = (p.characteristics || []).find(c => c.typeId === 'nr-base-size'); m.set(nrStatName(p.name, []).name, b ? cellV(b.$text || '') : NONE); } for (const c of s.selections || []) walk(c, m); };
+  // (BSData's "Blue/Brimstone Horror (ref. only)" keeps its mark, as the app's row does: verify/from-json.js)
+  const walk = (s, m) => { for (const p of s.profiles || []) if (p.typeName === 'Unit') { const b = (p.characteristics || []).find(c => c.typeId === 'nr-base-size'); const sn = nrStatName(p.name, []); m.set(sn.name + (sn.parens.includes('ref. only') ? ' (ref. only)' : ''), b ? cellV(b.$text || '') : NONE); } for (const c of s.selections || []) walk(c, m); };
   for (const s of sels) if (s.type !== 'upgrade') { const m = bases.get(nm(s.name)) || new Map(); walk(s, m); bases.set(nm(s.name), m); }
   out.checked.army = (out.checked.army || 0) + 1;
   for (const u of A.units) {

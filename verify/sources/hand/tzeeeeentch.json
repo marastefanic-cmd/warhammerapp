@@ -1,0 +1,318 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for tzeeeeentch, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). units: per unit entry, GW's words where Wahapedia's transcription of an ability differs from GW's Faction Pack (texts), its abilities' When targeted lines (def, AI-written, with defOf), timing labels where derive.js's reading is not the rule's (labels; {} for none), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
+ "gists": {
+  "cavalcade-of-chaos/from-beyond-the-veil": {
+   "by": "AI (Claude)",
+   "gist": "End of the Movement phase, from the start of the battle, your LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves: it can make an Ingress move.",
+   "gistOf": "66358767"
+  },
+  "cavalcade-of-chaos/warp-riders": {
+   "by": "AI (Claude)",
+   "gist": "Your Movement phase, when your LEGIONES DAEMONICA MOUNTED unit is selected to move: it has MOBILE.",
+   "gistOf": "99a5b4ae"
+  },
+  "cavalcade-of-chaos/inescapable-manifestations": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls).",
+   "gistOf": "222fbaa3"
+  },
+  "scintillating-legion/impossible-eclipse": {
+   "by": "AI (Claude)",
+   "gist": "Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.",
+   "gistOf": "6e653a70"
+  },
+  "scintillating-legion/pyrogenesis": {
+   "by": "AI (Claude)",
+   "gist": "Your Shooting phase or the Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not yet selected to shoot or fight: until the end of the phase, +2 S to its weapons, or spend one Flux token for +3 S and +1 AP instead.",
+   "gistOf": "c42d5406",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase",
+    "note": "+2 S (one Flux token spent: +3 S and +1 AP instead)",
+    "pick": [
+     {
+      "name": "+2 S",
+      "note": "+2 S"
+     },
+     {
+      "name": "Flux token spent",
+      "note": "+3 S, +1 AP"
+     }
+    ]
+   }
+  },
+  "scintillating-legion/flickering-reality": {
+   "by": "AI (Claude)",
+   "gist": "Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit.",
+   "gistOf": "e8ece45e",
+   "def": "Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit",
+   "defOf": "e8ece45e"
+  },
+  "scintillating-legion/fateborne-nightmares": {
+   "by": "AI (Claude)",
+   "gist": "Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA TZEENTCH unit can move through terrain features.",
+   "gistOf": "23dc44f1"
+  },
+  "scintillating-legion/ficklefire": {
+   "by": "AI (Claude)",
+   "gist": "Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.",
+   "gistOf": "5a68b795"
+  },
+  "scintillating-legion/delirium-unmade": {
+   "by": "AI (Claude)",
+   "gist": "End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.",
+   "gistOf": "70b46e6a"
+  }
+ },
+ "rules": {
+  "scintillating-legion": {
+   "by": "hand (Claude)",
+   "label": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "why": "Fates in Flux: a Flux token is spent just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test (and by the opponent after their rolls), in any phase of either turn; derive.js reads only the Command phase gain and the saving throws (their Shooting phase, the Fight phase)."
+  }
+ },
+ "units": {
+  "kairos-fateweaver": {
+   "texts": {
+    "One Head Looks Back": {
+     "from": "the CP cost of the use of that stratagem",
+     "to": "the CP cost of that use of that stratagem",
+     "why": "GW Faction Pack Chaos Daemons 1.2, Kairos Fateweaver datasheet: \"… increase the CP cost of that use of that stratagem by 1CP.\" (Wahapedia: \"of the use of\"; BSData has GW's words)"
+    }
+   },
+   "why": "One Head Looks Back: BSData and New Recruit tag it (Aura); GW’s datasheet (Faction Pack 1.2, Wahapedia) prints “One Head Looks Back:” with no tag, so it is no aura (Core Rules 22.01). Greater Daemon of Tzeentch (Aura) puts friendly TZEENTCH LEGIONES DAEMONICA units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard (as the-exiled-legion’s Greater Daemon of Khorne)."
+  },
+  "fluxmaster-pink-horrors": {
+   "texts": {
+    "Altered Reality": {
+     "from": "a **Wound roll**, or a saving throw",
+     "to": "a **Wound roll** or a saving throw",
+     "why": "GW Faction Pack Chaos Daemons 1.2, Fluxmaster datasheet: \"… after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.\" (Wahapedia: a comma after Wound roll; BSData: \"to a 6\")"
+    }
+   },
+   "defs": {
+    "Fluxmaster": {
+     "by": "AI (Claude)",
+     "def": "This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls",
+     "defOf": "55ebfa69"
+    }
+   },
+   "why": "Pink Horrors: BSData’s “(ref. only)” profiles (Blue/Brimstone Horror; Coruscating Blue and Yellow flames, Blue and Yellow claws) are the ones GW’s datasheet gives the Blue and Brimstone Horrors its Split adds; no model carries them at the start, so they are on no models line (unplaced). Daemonic Icon and Instrument of Chaos: wargear this list did not take, left out. Improbable Shield (Aura): Feel No Pain 4+ against Psychic Attacks and mortal wounds for friendly LEGIONES DAEMONICA TZEENTCH units within 6\", the Fluxmaster’s own unit included (22.01), as a guard.",
+   "notes": {
+    "Split": "FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”",
+    "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.": "FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”"
+   }
+  },
+  "daemon-prince-of-chaos-with-wings": {
+   "labels": {
+    "Harbinger of Death": {
+     "ph": [
+      "fight"
+     ],
+     "turn": "either"
+    },
+    "Daemonic Allegiance": {}
+   },
+   "why": "Daemonic Allegiance: this list chose TZEENTCH (New Recruit: “Daemon Prince of Chaos with wings (Tzeentch)”); the TZEENTCH keyword and the infernal cannon’s A 6 (“add 3 to the Attacks characteristic of this model’s infernal cannon”) are the list’s values, the datasheet keeps GW’s A 3. Neverblade’s +2 S, +1 A and +1 AP are in the hellforged weapons’ profiles (New Recruit’s), its +1 to hit is a footnote. Timing: Harbinger of Death is used each time the model is selected to fight (derive.js reads its weapon abilities as shooting too); Daemonic Allegiance is a choice made when mustering, no phase (as the-exiled-legion’s Daemon Prince of Chaos)."
+  },
+  "flamers": {
+   "labels": {
+    "Bounding Leaps": {
+     "ph": [
+      "movement",
+      "shooting"
+     ],
+     "turn": "your"
+    }
+   },
+   "why": "Bounding Leaps: a Fall Back move (your Movement phase) does not stop the unit shooting (your Shooting phase); derive.js reads the Movement phase as either turn."
+  },
+  "the-changeling": {
+   "defs": {
+    "Formless Horror": {
+     "by": "AI (Claude)",
+     "def": "an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase",
+     "defOf": "2d7b0c5f"
+    }
+   },
+   "why": "Mischief and Confusion is not tagged (Aura): its -1 to hit is on every attack of the enemy unit it selected, whatever that unit targets, so it is help for every unit of the list (a guard, as Necromechanic), not an aura."
+  },
+  "lord-of-change-infernal-puppeteer": {
+   "why": "Daemon Lord of Tzeentch (Aura): +1 S to the ranged attacks of friendly TZEENTCH LEGIONES DAEMONICA units within 6\", its own unit included (22.01). Greater Daemon of Tzeentch (Aura): Shadow of Chaos only, neither aura nor guard."
+  },
+  "lord-of-change-inescapable-eye": {
+   "why": "As the other Lord of Change (the same datasheet)."
+  },
+  "tzeentch-soul-grinder": {
+   "why": "BSData’s “Tzeentch Soul Grinder” is GW’s Soul Grinder datasheet with the TZEENTCH Daemonic Allegiance (its warp gaze); its warpsword replaced by a warpclaw (WARGEAR OPTIONS). The app keeps New Recruit’s name. The TZEENTCH keyword and the warp gaze are its Daemonic Allegiance choice (GW: “Tzeentch – This model is additionally equipped with: warp gaze”): why.kw names it.",
+   "texts": {
+    "Daemonic Allegiance": {
+     "from": "stated for that keyword below:",
+     "to": "stated for that keyword below.",
+     "why": "GW Faction Pack Chaos Daemons 1.2, Soul Grinder datasheet: \"… this model has that keyword and the additional wargear stated for that keyword below.\" followed by a table of four rows (keyword, wargear), which the app gives as Wahapedia marks them, one line each (Wahapedia: \"below:\")"
+    }
+   }
+  },
+  "the-blue-scribes": {
+   "why": "P’tarix’s Sorcerous Syphon (Aura): -1 to the wound roll of Psychic Attacks made by enemy units within 12\" of The Blue Scribes, whatever they target: help for every unit of the list (guard), not an attack bonus."
+  }
+ },
+ "readings": {
+  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, an enhancement), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf; readBy:\"derive\" where verify/derive.js gives it from the words). A datasheet not here: verify/derive.js's derived readings.",
+  "datasheets": {
+   "Daemon Prince of Chaos with wings": {
+    "mods": [
+     {
+      "kind": "melee",
+      "set": {
+       "A": "+3"
+      },
+      "when": "Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase",
+      "note": "+3 A",
+      "from": "Malefic Destruction",
+      "readOf": "d40d1254"
+     },
+     {
+      "kind": "melee",
+      "when": "Selected to fight, its hellforged weapons, until the end of the phase (select one)",
+      "note": "[LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]",
+      "from": "Harbinger of Death",
+      "pick": [
+       {
+        "name": "[LETHAL HITS]",
+        "note": "[LETHAL HITS]"
+       },
+       {
+        "name": "[PRECISION]",
+        "note": "[PRECISION]"
+       },
+       {
+        "name": "[SUSTAINED HITS 1]",
+        "note": "[SUSTAINED HITS 1]"
+       }
+      ],
+      "readOf": "abd3cac8"
+     }
+    ]
+   },
+   "Lord of Change": {
+    "aura": [
+     {
+      "kind": "ranged",
+      "needs": {
+       "all": [
+        "Faction: Legiones Daemonica",
+        "Tzeentch"
+       ]
+      },
+      "when": "Within 6\" of the Lord of Change",
+      "selfWhen": "Own aura",
+      "note": "+1 S",
+      "from": "Daemon Lord of Tzeentch",
+      "selfAlways": true,
+      "readOf": "85453822"
+     }
+    ],
+    "mods": [
+     {
+      "kind": "ranged",
+      "weapon": "Bolt of Change",
+      "when": "Your Shooting phase, its Bolt of Change, until the end of the phase (select one)",
+      "note": "[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]",
+      "from": "Master of Magicks",
+      "pick": [
+       {
+        "name": "[IGNORES COVER]",
+        "note": "[IGNORES COVER]"
+       },
+       {
+        "name": "[LETHAL HITS]",
+        "note": "[LETHAL HITS]"
+       },
+       {
+        "name": "[SUSTAINED HITS D3]",
+        "note": "[SUSTAINED HITS D3]"
+       }
+      ],
+      "readOf": "10a7c1ef"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-7 wounds left)",
+      "note": "-1 to hit rolls",
+      "from": "Damaged: 1-7 wounds remaining",
+      "readOf": "e6c48f12",
+      "readBy": "derive"
+     }
+    ]
+   },
+   "The Blue Scribes": {
+    "guard": [
+     {
+      "from": "P’tarix’s Sorcerous Syphon",
+      "kind": "all",
+      "when": "Psychic Attacks made by an enemy unit within 12\" of The Blue Scribes",
+      "note": "-1 to the wound roll",
+      "selfAlways": true,
+      "readOf": "3cbd9adc"
+     }
+    ]
+   },
+   "The Changeling": {
+    "guard": [
+     {
+      "from": "Mischief and Confusion",
+      "kind": "all",
+      "when": "Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5)",
+      "note": "-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)",
+      "selfAlways": true,
+      "readOf": "b60f9b93"
+     }
+    ]
+   }
+  },
+  "enhancements": {
+   "Neverblade": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Every melee attack",
+      "note": "+1 to hit rolls",
+      "from": "Neverblade",
+      "always": true,
+      "readOf": "6fd9df01"
+     }
+    ]
+   },
+   "Improbable Shield (Aura)": {
+    "guard": [
+     {
+      "from": "Improbable Shield (Aura)",
+      "needs": {
+       "all": [
+        "Faction: Legiones Daemonica",
+        "Tzeentch"
+       ]
+      },
+      "kind": "all",
+      "when": "Within 6\" of the Fluxmaster",
+      "selfWhen": "Own aura",
+      "selfAlways": true,
+      "note": "Feel No Pain 4+ against Psychic Attacks and mortal wounds",
+      "readOf": "4bd89386"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -23,6 +23,12 @@
   "at": "2026-10-16",
   "why": "24.27: \"[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. See [CLOSE-QUARTERS].\" The Close-quarters text carries that sentence."
  },
+ "007b6b44f868867c": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"P’tarix’s Sorcerous Syphon (Aura)\" (FP 1.2 l.1363, Wahapedia ds/chaos-daemons_The-Blue-Scribes)."
+ },
  "0091eb134a44041d": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -65,6 +71,12 @@
   "at": "2026-10-23",
   "why": "“Captain-General (Aura): Friendly ADEPTUS CUSTODES units (excluding MONSTER / VEHICLE units) within 6\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.” needs all Faction: Adeptus Custodes, none Monster/Vehicle (so not the Anathema Psykana squads, whose only faction keyword is ANATHEMA PSYKANA, nor the Caladius/Dreadnoughts); tagged Aura, so 22.01 “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability” puts his own unit in it (selfAlways, Own aura). Note literal; the change is only the from’s and text’s punctuation."
  },
+ "0122b0b65b9db59a": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Malefic Destruction: \"until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons\" (the DP's only melee weapons): melee, +3 A, with its once-per-battle start-of-Fight condition."
+ },
  "01338a760bf739b4": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -76,6 +88,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.186); BSData profile is on the Meganobz unit. Models match NR."
+ },
+ "01411ef8a8e114ec": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Fight phase, just after an enemy unit has selected its targets.\""
  },
  "0142096fcb539e29": {
   "verdict": "ok",
@@ -262,6 +280,12 @@
   "by": "review:import-lists",
   "at": "2026-10-23",
   "why": "Export categories: Mek “Character, Infantry, Mek, Faction: Orks, Explosives, Support”; Tankbustas “Infantry, Tankbustas, Faction: Orks, Explosives”. The only keyword the Mek lacks is Tankbustas, and Support is the rule in rules. data.js kw matches."
+ },
+ "043cbd5d982aa06d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "No more unplaced lines: the Models box shows 1× Fluxmaster and 10× Pink Horror only, the Bases tab no \"1× … (ref. only)\" lines. The four rows carry \"BLUE/BRIMSTONE HORRORS ADDED BY SPLIT\", from GW's \"Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws. Every Brimstone Horror … Coruscating Yellow Flames; yellow claws.\" (l.1552-1556); Blue→Blue flames/claws, Brimstone→Yellow flames/claws, right pairing."
  },
  "044569ab567613e5": {
   "verdict": "ok",
@@ -485,6 +509,12 @@
   "at": "2026-10-23",
   "why": "WHEN “End of any phase”, TARGET “not readied”, EFFECT “Your unit is readied”, RESTRICTIONS “not … more than once per battle round”: all kept."
  },
+ "071d2d84751b2775": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 … and improve the Armour Penetration … by 1 instead\": all weapons, +2 S or (Flux) +3 S and +1 AP (the app's \"+1 AP\" for an improvement, as elsewhere)."
+ },
  "0754c41a7ab25cc5": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -557,6 +587,12 @@
   "at": "2026-10-21",
   "why": "“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport” (18.05: “Your unit is set up”), so Sir Hekhtur is not on the battlefield until then. His weapons start unticked with that quote (“yours to count anyway”), and the target is Canis Rex alone (T11 · Sv 3+ · W26), with the working saying the rest of an attack after that is not played. Small follow-up, not this mark: the headline “destroyed in X% of games” for this target is Canis Rex, while the rule says “Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed”. Saying “Canis Rex destroyed” there would be exact."
  },
+ "08773f59fe64b153": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"At the end of your Movement phase, roll one D6 for each enemy unit within 6\"\": your Movement phase, a fixed moment (checklist Movement · Your turn)."
+ },
  "08a220105e94f750": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -592,6 +628,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” The start of the battle round comes before either player’s turn (07.01): 'either', as for Doctrina Imperatives."
+ },
+ "0907d7d696a676e1": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"Once per battle, at the start of the Fight phase\": a fixed moment, no \"your\", so the Fight phase of either turn (FP 1.2 l.3220)."
  },
  "090e1adb2d526076": {
   "verdict": "ok",
@@ -827,6 +869,12 @@
   "at": "2026-10-24",
   "why": "TARGET: “One friendly unengaged ADEPTUS ASTARTES TERMINATOR unit.” = {all:['Faction: Adeptus Astartes','Terminator']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
  },
+ "0cd13d858c7e2797": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"TARGET: One friendly LEGIONES DAEMONICA MOUNTED unit in strategic reserves.\""
+ },
  "0cdae548b1769f3d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -934,6 +982,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Sentence 1: HERETIC ASTARTES VEHICLE. Sentence 2: HERETIC ASTARTES VEHICLE, LORD DISCORDANT, VASHTORR THE ARKIFANE. Sentence 3: SOUL FORGE. The union is {all:[Faction: Heretic Astartes], any:[Vehicle, Lord Discordant, Vashtorr the Arkifane, Soul Forge]}, exactly as required. “Faction: Heretic Astartes” on Lord Discordant, Vashtorr and SOUL FORGE units is a narrowing the text does not state. In this faction they are all HERETIC ASTARTES, and “from your army” in a CSM army makes it hold. I re-ran derive on the branch data with main’s and the branch’s derive.js: only this item’s derived needs change. With main’s data the two derive.js give identical output (1291 items)."
+ },
+ "0ed2a033795026c9": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Infernal Puppeteer: \"In your Shooting phase, when this unit is selected to shoot …\": your Shooting phase (an activation, so not on the checklist)."
  },
  "0f40e847dc09e472": {
   "verdict": "ok",
@@ -1061,6 +1115,12 @@
   "at": "2026-10-17",
   "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied."
  },
+ "11363887e1b8de3c": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW: \"This model is equipped with: Infernal Flames; the Trickster’s Staff.\" (FP 1.2 l.1229); profiles match (witchfire 12\" D6 N/A S6 AP-1 D1 [IGNORES COVER, PSYCHIC, TORRENT]; focused D6+3 … DD3 [+HAZARDOUS]; Staff A3 WS4+ S4 AP-1 DD3 [PSYCHIC])."
+ },
  "117dd1379380c102": {
   "verdict": "ok",
   "by": "review:checklist-4",
@@ -1090,6 +1150,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Nemesis Claw datasheet ability."
+ },
+ "11bbad8d16991d06": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"Once per turn, …\" in the ability's own words; the tag repeats them, nothing added. No (Aura) tag (GW prints \"One Head Looks Back:\" untagged, FP 1.2 l.1096), so no Aura tag."
  },
  "11c3a37840e9ca1a": {
   "verdict": "ok",
@@ -1139,6 +1205,12 @@
   "at": "2026-10-16",
   "why": "Quality 3–4 adds 1 to \"Charge rolls made for this model\". Knights (VEHICLE CHARACTER WALKER) can take Heroic Intervention (\"End of your opponent’s Charge phase ... before making the charge roll\"), and the app offers it to them. So the reminder also belongs in the opponent’s Charge phase; Move and Advance stay your turn."
  },
+ "1295284bf6ded42f": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW: \"This model is equipped with: Infernal Gateway; Staff of Tomorrow.\" WARGEAR OPTIONS None (FP 1.2 l.1120-1122); profiles match GW (witchfire 24\" D6+3 2+ S9 AP-2 DD3 [BLAST, INDIRECT FIRE, PSYCHIC]; focused D3+6 … D3 → 3 [+HAZARDOUS]; Staff A5 WS3+ S8 AP-2 D2D3 [PSYCHIC])."
+ },
  "12d5d6ed864ee274": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1150,6 +1222,12 @@
   "by": "review:cooking (its fix)",
   "at": "2026-10-16",
   "why": "An always-on rule for \"attacks that target a MONSTER/VEHICLE unit\". Fire Overwatch (End of your opponent's Movement phase) gives Beast Snagga ranged attacks (Thump Gun, Slugga, Gobshot Thunderbuss), and the +1 AP applies to them. Add their Movement phase."
+ },
+ "1343363b607b11e5": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"a friendly LEGIONES DAEMONICA MOUNTED unit\"."
  },
  "1349107b6a372350": {
   "verdict": "ok",
@@ -1331,6 +1409,12 @@
   "at": "2026-10-21",
   "why": "NR \"Marked by Fate (Psychic) - Sorcerer in Terminator Armour\"; \"this PSYKER model\" = that Sorcerer. Model lines match NR."
  },
+ "16e30d7d87cefff2": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful to WHEN and EFFECT; \"-1 to those hazard rolls\" for GW's \"-1 from those hazard rolls\" says the same."
+ },
  "171dc5c7552b4572": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -1355,11 +1439,23 @@
   "at": "2026-10-23",
   "why": "NR prints “Moment Shackle - Trajann Valoris”; Trajann’s datasheet ability, and both effects name “This model”, so it is his alone (19.04: an ability affecting a single specified model applies only to that model)."
  },
+ "177fd7903d7b26b9": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Any phase of either turn."
+ },
  "1798200929c13cf2": {
   "verdict": "ok",
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "“Until the end of the phase, models in your unit have a Save characteristic of 3+”, in their Shooting phase once targeted: faithful."
+ },
+ "17aa32ec88258f25": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Fight phase, no \"your\": either turn (your Fight phase too, when the enemy unit fights in it)."
  },
  "17b184e71d966a00": {
   "verdict": "ok",
@@ -1384,6 +1480,12 @@
   "by": "review:r14-picks",
   "at": "2026-10-21",
   "why": "TARGET \"… that is below its Starting Strength\"; EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" Picks Below Starting Strength (re-roll hit rolls) and Below Half-strength (hit and wound rolls) match, and kind all fits an effect that lasts into the opponent’s turn."
+ },
+ "17cee3c3d3cabd0b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "The Fluxmaster ability is on the Fluxmaster's datasheet (FP 1.2 l.1306-1310), so its source is the Fluxmaster. Its words are \"This unit …\", which under Core Rules 19.04 (\"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed\") cover the Pink Horrors too while the Fluxmaster lives: see the def fix (ab039ae92add6462)."
  },
  "185956b0a477f4da": {
   "verdict": "ok",
@@ -1439,6 +1541,12 @@
   "at": "2026-10-24",
   "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” Shooting."
  },
+ "192c6ab78aab1054": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"… is made for this model\": the Fluxmaster model only (19.04, a single specified model)."
+ },
  "193b99e557fe69c2": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1469,6 +1577,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly ORKS unit (excluding TITANIC units)”. TARGET: “That ORKS unit”. That gives Orks, and none Titanic. text: same as Wahapedia word for word."
  },
+ "19aba5d00a372a6b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Any phase.\" (FP 1.2 l.3609)."
+ },
  "19b18564b8e689d2": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -1492,6 +1606,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Faithful."
+ },
+ "1a016e6f1af93a60": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "WHEN, TARGET and EFFECT kept, shorter, nothing added."
  },
  "1a26079f75de4fea": {
   "verdict": "ok",
@@ -1691,6 +1811,12 @@
   "at": "2026-10-16",
   "why": "\"Your unit’s melee attacks have +2 S\", when selected to fight."
  },
+ "1d1084402e85c21e": {
+  "verdict": "ok",
+  "by": "review:tzeentch-code-b",
+  "at": "2026-10-27",
+  "why": "The new auraMods code. I checked every unit of every list against every other unit’s aura, ignoring needs, so this is a superset of what can be hidden. Exactly 2 auras are hidden: the two Lords of Change’s Daemon Lord of Tzeentch (+1 S) from each other, and the hidden and own entries are identical apart from when/selfWhen. No list has an aura with the same from but a different note, so nothing else could be hidden. The own set takes only !notSelf, selfAlways auras whose needs the unit meets, so an own aura that is not always on never hides another unit’s. Optional hardening: add m.kind to the key (app.html, the auraMods own Set and its has() check), so a same-name, same-note aura of another kind is never hidden."
+ },
  "1d25652e34de8562": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -1739,6 +1865,12 @@
   "at": "2026-10-21",
   "why": "\"If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well\" (Wahapedia repeats \"(excluding MONSTERS and VEHICLES)\" there): note \"+1 to wound rolls\", calc {wound:1}, vs none Monster/Vehicle. Below Half-strength is the target’s state in the battle, a table condition, so having no always/selfAlways (an unticked box, for other units and its own) is right."
  },
+ "1ddec049fecb0f89": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength\": ranged, +1 S, needs LEGIONES DAEMONICA + TZEENTCH, its own unit included (\"it is always within range of its own aura ability\", Core Rules 22.01). Display note (code, not this reading): with two Lords of Change each Lord shows both \"Own aura: +1 S\" and \"Within 6\" of the Lord of Change: +1 S\"; 22.01 says \"if a unit is within range of the same aura ability more than once, that aura ability only applies to that unit once\", so the two lines must not be read as +2 S (see the report)."
+ },
  "1de9e2289afddf58": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -1774,6 +1906,12 @@
   "by": "review:navigator",
   "at": "2026-10-25",
   "why": "GW p5 is the same text. at End of your opponent’s turn plus fight:opp is the end-opp-turn moment (the same as the approved Hunters from the Warp). movement:your comes from “must make an ingress move in your next Movement phase”. “until the start of your next Shooting phase” is a duration, correctly skipped. The checklist shows it once per battle, per army, at End of your opponent’s turn."
+ },
+ "1ea14b9bc0ac6a8a": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW's own words \"Once per battle\"."
  },
  "1eba3c91e07867de": {
   "verdict": "ok",
@@ -2129,6 +2267,12 @@
   "at": "2026-10-24",
   "why": "Stand Vigil: 'This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if' unit or target within range of an objective. Core weapon abilities: a keyword-qualified ability applies only vs targets with (here: without) those keywords, so vs none Monster/Vehicle is right. 'This unit' is a bodyguard ability: applies to the whole attached unit incl. the Shield-Captain (core 19.04). kind all (ranged+melee), cond objective. Correct."
  },
+ "241d5ac611f37102": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"Each time this model makes a Normal or Advance move\": those are made in your Movement phase."
+ },
  "244977472ae6210a": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -2453,6 +2597,12 @@
   "at": "2026-10-16",
   "why": "\"action/actions\" (16); exact-anchored."
  },
+ "2909c0cf3382f4d0": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "On the Pink Horrors datasheet (FP 1.2 l.1558-1566)."
+ },
  "2916ae5057a4184a": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -2555,11 +2705,23 @@
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
  },
+ "2ad2e2bd94f302b1": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW: \"This model is equipped with: infernal cannon; hellforged weapons.\" (FP 1.2 l.3245). Infernal cannon A 6 = GW A3 + Daemon Prince of Tzeentch \"add 3 to the Attacks characteristic of this model’s infernal cannon\" (list-caused, from: Daemonic Allegiance); strike A7 S10 AP-3 and sweep A15 S8 AP-1 = GW 6/8/-2 and 14/6/0 with Neverblade (+1 A, +2 S, +1 AP), from: Neverblade."
+ },
  "2b2d7d1576c3e4bf": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "\"While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll\": said shorter, nothing added."
+ },
+ "2b667666ee6c3162": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"Greater Daemon of Tzeentch (Aura)\" on the Lord of Change (FP 1.2 l.1143) and Kairos (l.1088): tagged Aura by GW (22.01)."
  },
  "2b75c943db2a25a6": {
   "verdict": "ok",
@@ -2807,6 +2969,12 @@
   "at": "2026-10-24",
   "why": "Stand Vigil is on the Sentinel Guard Sodality datasheet."
  },
+ "3076ec8bdbfc725b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful: \"Your unit has MOBILE.\""
+ },
  "307dbc6f7bf5efca": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -2884,6 +3052,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks\": shortened only; the moment (\"Start of the Fight phase\") is the row's tag and INFANTRY is in who can use it."
+ },
+ "318986ebbe649754": {
+  "verdict": "ok",
+  "by": "review:tzeentch-code",
+  "at": "2026-10-27",
+  "why": "The new seqTrigger is the approved one plus opensMoment: a sentence that opens \"At the start/end of …\" and names its moment before any activation words. I reverted only that clause in a scratch worktree and ran derive.js --write. CHECKLIST then differs in one entry, a|hbymu9 (Mischief and Confusion, which loses s:1), so it changes nothing in any other list. Base and head CHECKLIST: no entry changed or removed, 26 added, all Tzeeeeentch. render.js seqOwn matches it (MOM is SEQ.moment, neither regex has a g flag), and the screens pass at 390 and 320 with 0 failures. Mischief and Confusion is a fixed moment with a choice (\"At the start of your opponent’s Shooting phase, select one enemy unit …\"), so listing it fits the checklist scope."
  },
  "318a69a3070fccbb": {
   "verdict": "ok",
@@ -3215,6 +3389,12 @@
   "at": "2026-10-23",
   "why": "TARGET: “One THOUSAND SONS PSYKER model … and one friendly TZAANGORS unit”: either half of the target is a unit of the list, so shown on PSYKER units (Magnus, Daemon Prince, the led units) and on the Tzaangors."
  },
+ "37189a44903338f3": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: End of the Movement phase, from the start of the battle.\" (FP 1.2 l.3278-3281): Movement. 2CP as FP 1.2 \"What's new\" sets it, and the app shows 2CP."
+ },
  "3760fbf478878852": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -3262,6 +3442,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"While this model has 1-10 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
+ },
+ "384f2839a61b827d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"At the start of your opponent’s Shooting phase, select one enemy unit …\": their Shooting phase, a fixed moment with a choice (checklist Shooting · Their turn)."
  },
  "385f2544c7af1b81": {
   "verdict": "ok",
@@ -3551,6 +3737,12 @@
   "at": "2026-10-23",
   "why": "Your Command phase."
  },
+ "3c7efae47842a2df": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"Each time this model is selected to fight\": the Fight phase, either turn; an activation trigger, so (rightly) not on the checklist."
+ },
  "3c8401a4b8a2df3c": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -3653,6 +3845,12 @@
   "at": "2026-10-16",
   "why": "Start of the battle round is not tied to one player's turn."
  },
+ "3de3b19939a4a46a": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range …\"."
+ },
  "3dfd40f372685fd1": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -3664,6 +3862,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"improve the Armour Penetration characteristic of melee weapons ... by 1\" until end of phase, unit \"made a charge move this turn\"."
+ },
+ "3e00d1947651f014": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem\": the opponent can use a stratagem in any phase of either turn, so every phase, either turn; an enemy trigger, so rightly not on the phase checklist."
  },
  "3e016b5f886b1ca4": {
   "verdict": "ok",
@@ -3682,6 +3886,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "WHEN: \"Any phase, just after an enemy unit has selected its targets\" (Wahapedia): all five phases."
+ },
+ "3e799ad04dc00c2e": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "No \"your\": the end of either player's Movement phase."
  },
  "3e812606a07731e7": {
   "verdict": "ok",
@@ -4085,6 +4295,12 @@
   "at": "2026-10-16",
   "why": "The Icon is carried by a Rubric Marine (NR \"Icon of Flame - Rubric Marines\")."
  },
+ "44e119ff4bfc326c": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Your turn."
+ },
  "453652530610e0da": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -4120,6 +4336,12 @@
   "by": "review:code2",
   "at": "2026-10-17",
   "why": "grantSource returns the named ability on that same unit with its stored who/tag and text. If there is none, it returns the army, detachment or core rule that ruleFor finds, with its name, source, text and table. If nothing is found it shows only the name and no text, so nothing is made up. Every name in the w.from/s.from marks of all 6 lists resolves to an ability of that unit or a detachment rule of that list (Relentless Rage → Berzerker Warband, Dakka! Dakka! Dakka! → Shoota Boyz). No fallback is hit."
+ },
+ "4624b2eab99bae75": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "A fall-back move is made in your own Movement phase, and shooting/declaring a charge after it in that same turn: your turn."
  },
  "4645be0303458666": {
   "verdict": "ok",
@@ -4162,6 +4384,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Psychic test\" is not a Core Rules term; in Thousand Sons rules it only ever means the Cabal of Sorcerers test (Lord of the Planet of the Sorcerers, Arcane Focus, Tzaangor Shaman/Mutalith text). Anchored, faction-scoped pattern: nothing else matches."
+ },
+ "46e33c6df32f9912": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW: \"DAMAGED: 1-7 WOUNDS REMAINING … subtract 1 from the Hit roll\" and W 20 (FP 1.2 l.1074-1096)."
  },
  "46f8f620dbaf790e": {
   "verdict": "ok",
@@ -4354,6 +4582,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Rain of Ruin (GW Faction Pack p3 = Wahapedia = data.js): “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” Needs {any:[Havocs, Obliterators]} are the two named units. Like Wahapedia, the text does not restrict it to HERETIC ASTARTES."
+ },
+ "49ca927e56b5c438": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "The Fight phase of either turn plus your Shooting phase: either, with turns.shooting = your."
  },
  "49d2820a1a78b12d": {
   "verdict": "ok",
@@ -4595,6 +4829,12 @@
   "at": "2026-10-16",
   "why": "Datasheet loadout: Hellforged weapons (strike/sweep) and Infernal cannon."
  },
+ "4e5967d3645f44b0": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"Daemon Lord of Tzeentch (Aura)\" (FP 1.2 l.1146)."
+ },
  "4e80e1b646212a47": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -4673,11 +4913,23 @@
   "at": "2026-10-16",
   "why": "\"At the end of your opponent's Fight phase…\""
  },
+ "5032d7e52b3b0d94": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"This unit is eligible to shoot in a turn in which it Fell Back\": the Fall Back move is in your Movement phase, the shooting in your Shooting phase (FP 1.2 l.1582). Your turn only."
+ },
  "5057786a3abb1ae3": {
   "verdict": "ok",
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“TARGET: One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.”: either keyword, copied."
+ },
+ "507b2e58dc999588": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW Faction Pack 1.2 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt l.1092), Kairos Fateweaver: \"One Head Looks Forward: At the end of your Command phase, if this model is on the battlefield, take a Leadership test …\": your Command phase, a fixed moment (on the checklist under Command · Your turn)."
  },
  "507bb89a309d636a": {
   "verdict": "ok",
@@ -4738,6 +4990,12 @@
   "by": "review:r20-damage",
   "at": "2026-10-21",
   "why": "The Protector ranged pick is “[HEAVY] … Improve the Ballistic Skill characteristic … by 1” = heavy + skill 1. Conqueror ranged is “[ASSAULT]”, no number. Conqueror melee is “Improve the Weapon Skill characteristic of melee weapons … by 1” = skill 1. The Conqueror part “improve the Armour Penetration characteristic of that attack by 1” (any attack, if BATTLELINE and/or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) = ap 1 on both kinds, under that fact (a BATTLELINE unit meets it by itself). lasts 'round' is “Until the end of the battle round”, and only units with the ability get it (“units … that have the Doctrina Imperatives ability”)."
+ },
+ "51bffdb3cca1a152": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW Lord of Change W 18, \"DAMAGED: 1-7 WOUNDS REMAINING\" (FP 1.2 l.1129-1150)."
  },
  "51d77e7b195fb8b5": {
   "verdict": "ok",
@@ -4804,6 +5062,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” The opponent’s."
+ },
+ "5314ce9f0e883f4d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"Master of Magicks (Psychic)\" (FP 1.2 l.1151)."
  },
  "5350277d096742d2": {
   "verdict": "ok",
@@ -5069,6 +5333,12 @@
   "at": "2026-10-16",
   "why": "Rubric Marines datasheet ability (NR \"Bringers of Change - Rubric Marines\"); the screen notes \"this unit\" = whole attached unit."
  },
+ "57d0756c6f58a8a7": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW Lord of Change: \"DAMAGED: 1-7 WOUNDS REMAINING While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\" (FP 1.2 l.1150): all attacks, -1 to hit, quoted."
+ },
  "5817d3d1cf14223f": {
   "verdict": "ok",
   "by": "review:nerf-3",
@@ -5141,6 +5411,12 @@
   "at": "2026-10-23",
   "why": "“selected to make an advance/fall back move … That move does not prevent your unit from being eligible to start an action.” The WHEN is in “advance or fall back move”."
  },
+ "58f4b6633e463bc0": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Your Shooting phase or the Fight phase.\""
+ },
  "58f5b90e7aaa9b10": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5201,6 +5477,12 @@
   "at": "2026-10-20",
   "why": "NR Options: 1x Nazdreg 'Kustom Blasta X, Moonchewa'; 5x Meganob 'Twin Killsaw', so the gear lines match. NR weapon rows: Kustom Blasta X Skorcha/Gatler/Shoota and Kustom Blasta X (melee) and Moonchewa '- Nazdreg'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
  },
+ "59afa2d5f134c68d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "All attacks, -1 to hit, GW's words."
+ },
  "59fa4425d6212738": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5212,6 +5494,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Your Command phase\"."
+ },
+ "5a01d30fcc5707e3": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful."
  },
  "5a13062b1d592ce1": {
   "verdict": "ok",
@@ -5284,6 +5572,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” Movement."
+ },
+ "5c588e13f984302b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds\": GW-tagged aura, so its own unit too (22.01: selfAlways); needs LEGIONES DAEMONICA + TZEENTCH; a defence, so a guard. Every unit of this list qualifies (all are TZEENTCH, the Soul Grinder through its Daemonic Allegiance)."
  },
  "5c66bad42301351a": {
   "verdict": "ok",
@@ -5705,6 +5999,12 @@
   "at": "2026-10-22",
   "why": "“WHEN: Fight phase, just after an enemy unit has selected its targets.”"
  },
+ "63359b8b64e670d9": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Unholy Avalanche (FP 1.2 l.3276-3283): a fall-back move (Movement), eligible to shoot (Shooting) / declare a charge (Charge)."
+ },
  "633ec50dc5e13fad": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -5866,6 +6166,12 @@
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "Battle Protocols gives Protector / Conqueror / Aegis Protocol from “- **…:**”. Singular Purpose gives “Select one enemy unit” / “Select one objective marker”, i.e. its own bullets named by their first words."
+ },
+ "666b12d32233cf4a": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"a friendly LEGIONES DAEMONICA MOUNTED unit\": The Blue Scribes (Mounted) and the Fluxmaster's attached unit (has MOUNTED, 19.03)."
  },
  "66a2fc4bc05afdeb": {
   "verdict": "ok",
@@ -6797,6 +7103,12 @@
   "at": "2026-10-24",
   "why": "Hand-written needs, checked: WHEN says 'a friendly ADEPTUS CUSTODES unit' and TARGET 'That ADEPTUS CUSTODES Unit' (Wahapedia's capital U, also in the HTML). So the only requirement is the faction keyword, as for Lightning Wrath and Preternatural Rapidity. derive.js marks it not derivable (rule no-unit, the capital U), as data.js's comment says."
  },
+ "777ed0fd1c537198": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Export: Pyrocaster and 2 Flamers each with Flamer mouths, Flickering Flames; GW \"Every model is equipped with: Flickering Flames; Flamer mouths.\" (FP 1.2 l.1606). ×3 per unit, ×3 units. Profiles match (12\" D6 N/A S4 AP-1 D1 [IGNORES COVER, PSYCHIC, TORRENT]; A3 WS4+ S4 AP0 D1)."
+ },
  "779abb4c642ccc74": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -7205,6 +7517,12 @@
   "at": "2026-10-23",
   "why": "Wahapedia: the Shaman has Cabal of Sorcerers; Tzaangor Enlightened have no army rule."
  },
+ "7e367f46fff8c607": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Export: Fluxmaster 70 + Improbable Shield (Aura) 30 = 100, Pink Horrors 150; Wahapedia: Fluxmaster 70, Pink Horrors 10 models 150, enhancement 30. 250 total. Same form as the signed-off \"180 + Wardens of Ultramar 115 + …\"."
+ },
  "7e38ba43759ec810": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -7343,11 +7661,23 @@
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
  },
+ "80a51828fa2da38a": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "GW \"■ This unit has Stealth. ■ Melee attacks that target this unit have ‑1 to hit rolls.\" (FP 1.2 l.1308-1310); the def now says \"this unit\". The small FLUXMASTER label in front is the part the ability is on (app.html defLine), exactly as the signed-off \"MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP\" and \"SCARAB OCCULT TERMINATORS Rites of Coalescence: … against this unit\": with the words saying \"this unit\" it reads as source, not reach. Consistent, not misleading."
+ },
  "80a5aa052b9a6d56": {
   "verdict": "ok",
   "by": "review:navigator",
   "at": "2026-10-25",
   "why": "The Daemonic Pact entry is GW’s Chaos Daemons Faction Pack, Army Rules, word for word (the Incursion/Strike Force/Onslaught bullets, the Warlord/Enhancements line and the KHORNE…SLAANESH list). The alias opens it from the Nurglings’ header link."
+ },
+ "80a980bc5b015e0d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Split is on the Pink Horrors datasheet (FP 1.2 l.1518)."
  },
  "80cc7b715ba1adee": {
   "verdict": "ok",
@@ -7535,6 +7865,12 @@
   "at": "2026-10-16",
   "why": "The Enhancement is on the Slaughterbound (NR options)."
  },
+ "83f08308182eae49": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Either turn: both players spend tokens on their own rolls in both turns."
+ },
  "84005f1e14f9d1d2": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -7612,6 +7948,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Arrogant Invulnerability - Meganobz\"."
+ },
+ "859912a4f6b1402e": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful, the Flux alternative kept (\"including those within Engagement Range\")."
  },
  "859bd86abf8fc642": {
   "verdict": "ok",
@@ -7691,6 +8033,12 @@
   "at": "2026-10-16",
   "why": "all = every, any = some, none = no keyword, unless = exclude when the sub-test matches (Heroic Intervention: VEHICLE unless CHARACTER/WALKER — Rhino excluded, Forgefiend/Defiler/Knights kept); case-insensitive exact keyword match incl. \"Faction: X\"."
  },
+ "8706db28ac64adec": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Export: Harvester cannon, Iron claw, Warp gaze, Warpclaw. GW: \"equipped with: harvester cannon; iron claw; warpsword\", \"This model’s warpsword can be replaced with 1 warpclaw\", Daemonic Allegiance \"Tzeentch — This model is additionally equipped with: warp gaze\" (FP 1.2 l.3125-3140). Profiles match (Warp gaze 48\" D3 3+ S12 AP-2 DD6+2 [BLAST]; Warpclaw A6 WS3+ S8 AP-1 D2 [EXTRA ATTACKS]; Iron claw A5 3+ S16 AP-3 DD6+2; Harvester 36\" A3 3+ S10 AP-1 D3)."
+ },
  "8726b23e6fe9d9be": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -7720,6 +8068,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Export: Maulerfiend fists + lasher tendrils (default). 125 pts."
+ },
+ "879736048d8f7544": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful, the Flux option kept."
  },
  "87acdc950cb3d834": {
   "verdict": "ok",
@@ -7828,6 +8182,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "TARGET: “That WAR DOG unit.”"
+ },
+ "89b37393318217f5": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Their turn."
  },
  "89b5116d60d62722": {
   "verdict": "ok",
@@ -8009,6 +8369,12 @@
   "at": "2026-10-23",
   "why": "“Your Shooting phase, when … selected to shoot”: shooting."
  },
+ "8ba44ccc23f32ba8": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Your Movement phase, when … selected to move.\""
+ },
  "8bdb8f3b66a68e4e": {
   "verdict": "ok",
   "by": "review:literal",
@@ -8153,6 +8519,12 @@
   "at": "2026-10-23",
   "why": "Export categories: Khârn “Faction: World Eaters, Infantry, Character, Epic Hero, Grenades, Chaos, Khorne, Khârn the Betrayer”; Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Only Battleline and Berzerkers come from the bodyguard."
  },
+ "8d5b1ba1900030fc": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "GW: \"roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase\" (FP 1.2 l.1204). \"(on a D6 roll of 2-5)\" says the same, no colon to break defLine's split; faithful."
+ },
  "8d8e1e595ae6f385": {
   "verdict": "ok",
   "by": "review:navigator",
@@ -8248,6 +8620,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Magnus W 16 (NR stats row); \"While this model has 1-6 wounds remaining\" = band 1-6."
+ },
+ "8f713b1d16afad3f": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-c",
+  "at": "2026-10-27",
+  "why": "GW Faction Pack 1.2 (l.1151), Lord of Change: \"Master of Magicks (Psychic): In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.\" The footnote is ranged, weapon Bolt of Change, your Shooting phase, until the end of the phase, a pick of GW's three, and its when now names the weapon (\"Your Shooting phase, its Bolt of Change, until the end of the phase (select one)\", as Harbinger of Death's \"its hellforged weapons\"), so under the Rod of sorcery row it no longer reads as the rod's. Rendered (VERIFY_LISTS=tzeeeeentch, own detached copy of the working tree, rebuilt): the four places (Ranged tab ×2, both Lord of Change pages) read exactly that; nothing else in the list changed. Replaces e4910699bf8b7ab9."
  },
  "8f7a8042028783e6": {
   "verdict": "ok",
@@ -8489,6 +8867,12 @@
   "at": "2026-10-24",
   "why": "“its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER]” = the EFFECT. Nothing added."
  },
+ "9451b818058f0231": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"LEGIONES DAEMONICA TZEENTCH unit(s) from your army\"."
+ },
  "945ccc84b6770171": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -8561,6 +8945,12 @@
   "at": "2026-10-21",
   "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
  },
+ "960985e1b3592461": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: End of your opponent’s Fight phase.\""
+ },
  "9613375029f7cc82": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -8602,6 +8992,12 @@
   "by": "review:infernal-lance (ambiguous rule)",
   "at": "2026-10-22",
   "why": "Sources differ: New Recruit and BSData say \"targets the closest enemy unit\", Wahapedia \"the closest eligible target\"; GW's pack doesn't print it. The app quotes New Recruit's wording, as for every unit ability. It affects WAR DOG models only and this list has none."
+ },
+ "973008fe650fc5dc": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Untagged-by-target effect: \"While an enemy unit is within 12\" of this model, each time a model in that unit makes a Psychic Attack, subtract 1 from the Wound roll\" protects whatever that enemy unit attacks, so a guard for every unit of the list (selfAlways: The Blue Scribes too). It is GW-tagged (Aura) and is shown with that tag; the guard line quotes its reach and effect, nothing added."
  },
  "973bebc37d63d6a3": {
   "verdict": "ok",
@@ -8680,6 +9076,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase”: shooting and fight."
+ },
+ "9837c3fa66ecd139": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer\": the bearer is the Fluxmaster."
  },
  "984f18bb80704834": {
   "verdict": "ok",
@@ -8813,6 +9215,12 @@
   "at": "2026-10-16",
   "why": "\"+1 to charge rolls\": charge rolls are made in your Charge phase and in theirs (Heroic Intervention, 15.11: \"before making the charge roll\"). [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "9a56cbab23e85e9b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "Unchanged rule label: \"At the start of any phase\" (FP 1.2 Shadow of Chaos); only the FAQ label in its text changed."
+ },
  "9a56e921a85dd292": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -8927,6 +9335,12 @@
   "at": "2026-10-21",
   "why": "“each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well”, targeting a unit “below its Starting Strength”, until the start of your next Command phase: kind all, the condition and the duration are all there."
  },
+ "9c7643f22ce34bcb": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"Your Movement phase\"."
+ },
  "9c7b5db0777da822": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -9004,6 +9418,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "WHEN 'Fight phase, ...' (waha l.395); Wahapedia's card icons: Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "9d8f935deac06384": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Export: Bolt of Change, Staff of Tzeentch, Rod of sorcery on both Lords. GW: \"This model is equipped with: Bolt of Change; staff of Tzeentch.\" and \"This model can be equipped with one of the following: 1 rod of sorcery, 1 baleful sword\" (FP 1.2 l.1175-1177), so the rod is in addition. Profiles match GW (Rod 18\" A6 2+ S8 AP-1 D2 [PSYCHIC]; Bolt witchfire 18\" A9 2+ S9 AP-1 D1 [PSYCHIC]; focused A9 S9 AP-2 D3 [HAZARDOUS, PSYCHIC]; Staff A5 WS3+ S6 AP-1 D3 [PSYCHIC])."
  },
  "9d960f233b6aa06a": {
   "verdict": "ok",
@@ -9143,6 +9563,12 @@
   "at": "2026-10-26",
   "why": "Reads GW’s “you can re-roll the Hit roll and you can re-roll the Wound roll” for attacks that target CHARACTER, MONSTER or WALKER units; always:true and vs any of the three are right; identical to the signed-off PDF-built footnote. The Damage tab scopes it to Lucius’s weapons (“for Blade of the Laer”, “none of the ticked weapons” for the Blades’ bolt pistols)."
  },
+ "9f2fbfdb69e3b07d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW: \"This model is equipped with: sharp quills.\" Sharp quills [ANTI-PSYKER 2+] Melee A4 WS5+ S2 AP0 D1 (FP 1.2 l.1357)."
+ },
  "9f3efe1dbebf9a4c": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -9208,6 +9634,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.\" maxT:6 = no target model above T6, exactly that; nothing else conditions it, so always is right."
+ },
+ "a018cf37a026418f": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW Fluxmaster KEYWORDS: Mounted, Character, Fly, Psyker, Chaos, Daemon, Tzeentch, Fluxmaster (FP 1.2 l.1324); Pink Horrors: Infantry, Battleline, Chaos, Daemon, Tzeentch, Horrors (l.1537). Infantry, Battleline and Horrors come only from the Pink Horrors; the attached unit has them all (19.03)."
  },
  "a03218d5f5ca6b25": {
   "verdict": "ok",
@@ -9575,6 +10007,12 @@
   "at": "2026-10-23",
   "why": "data.js text: “**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt …”. BSData (Incandeum): “Once per battle, when selecting a Ritual for the bearer to attempt …”; NR the same; Wahapedia Thousand Sons (and its Errata “Change to:”): “EXALTED SORCERER model only. Once per battle, when selecting a Ritual …”. The text says “Once per battle” and nowhere “per army” or “one model from your army with this ability” (its “a model from your army” is about who already attempted Doombolt, not the limit), so no “, per army” is right, as on Necromechanic (“Once per battle round, …” → “Enhancement · Once per battle round”)."
  },
+ "a5b3dd9e571fdb30": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Q5: \"each time a model in that unit makes a ranged attack, add 1 to the Strength\": ranged attacks are made in your Shooting phase and, through Fire Overwatch (\"WHEN: End of your opponent’s Movement phase … EFFECT: Your unit shoots using snap shooting\", Core Rules 15.08, verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt l.2762-2772), in their Movement phase. \"Their Move · Your Shoot\" is that, the same reading as the signed-off three-phase labels for \"each time this model makes an attack\" (result-defilers3 kept them where the model has ranged weapons)."
+ },
  "a5d9cc0a61fc2d2f": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -9755,6 +10193,12 @@
   "at": "2026-10-21",
   "why": "NR (princes p3) Categories: \"Battleline*, Berzerkers*, Grenades*, Infantry*, *from combined unit\", and the Lord is \"Leading: Khorne Berzerkers\"."
  },
+ "a86158e6732d93c1": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "A Scintillating Legion enhancement (FP 1.2 l.3576 NEVERBLADE); export: Neverblade 25 pts on the Daemon Prince."
+ },
  "a8728b1a5c0f7145": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -9923,6 +10367,12 @@
   "at": "2026-10-16",
   "why": "\"targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability\": ranged only, condition and effect exact."
  },
+ "ac0e76ae5fa16e35": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Neverblade's effects are on melee weapons and melee attacks (\"melee weapons equipped by the bearer … each time the bearer makes a melee attack, add 1 to the Hit roll\", FP 1.2 l.3576): the Fight phase, either turn."
+ },
  "ac29be93a958f89b": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -9971,6 +10421,12 @@
   "at": "2026-10-16",
   "why": "Matches \"add 9\" to the Range ... re-roll the Hit roll and ... the Wound roll\" for Psychic weapons until end of your Shooting phase (only ranged attacks then); shown with \"(2CP Devastating Sorcery)\"."
  },
+ "acffe5b4d2e22dbb": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Your Movement phase or your Charge phase.\""
+ },
  "ad06aa53ebe29429": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -9994,6 +10450,12 @@
   "by": "review:literal (its fix, applied as written)",
   "at": "2026-10-17",
   "why": "24.07 (RULES['Close-quarters']): “When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: One or more of its [CLOSE-QUARTERS] weapons. One or more of its other ranged weapons.” 10.06 Close-quarters shooting: “Non-MONSTER/Non-VEHICLE Models: You can only select [CLOSE-QUARTERS] weapons to make attacks with”. The sentence ‘Can shoot with A or B, not both (Close-quarters)’ drops 24.07’s condition “When using another shooting type”, so it still offers B in close-quarters shooting, where B can’t be selected. This was point (3) of the earlier audit. The rewrite fixed the ‘all’ wording but not this. Everything else matches: “You can select one or more ranged weapons that model has” (‘can shoot with one or both / one or more of these’), the MONSTER/VEHICLE exclusion, “You must select one melee weapon”, and 24.11 “All of that model’s [EXTRA ATTACKS] weapons. One of that model’s other melee weapons, if possible.” Latent, no change needed today: `big` tests the unit’s keywords, but 24.07 says “each model … (excluding MONSTER/VEHICLE models)” and 19.03 says “models in an attached unit do not gain the keywords of other models”. No attached unit in the five lists mixes MONSTER/VEHICLE and other models, and the data has no per-model keywords."
+ },
+ "ad7e53340b17af7c": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army\"."
  },
  "ad81991d5c0393f7": {
   "verdict": "ok",
@@ -10036,6 +10498,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is a Blood Legion enhancement (Wahapedia: “Slaughterthirst (Aura) 25 pts”), and GW names it “(Aura)”. This is the same tag as the approved Final Howl (Aura) (“Enhancement · Aura”)."
+ },
+ "addfc89d24278551": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW: \"Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.\" (FP 1.2 l.1198). The def says that, shorter, nothing added."
  },
  "adfb8b0ae937df52": {
   "verdict": "ok",
@@ -10163,6 +10631,12 @@
   "at": "2026-10-16",
   "why": "\"In the Fight phase, if this unit is riled up…\": either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "b02eddc070b02d86": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW names the enhancement \"IMPROBABLE SHIELD (AURA)\" (FP 1.2 l.3587): an enhancement and GW-tagged aura."
+ },
  "b04cbb09d3e9856b": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -10180,6 +10654,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability\"."
+ },
+ "b062e137966a5814": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Q6: Fates in Flux names no phase for spending (\"just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made …\", and the opponent \"after an Advance roll, Hit roll, Wound roll or saving throw … for a model or unit from their army\"; FP 1.2 l.3546-3600). Those rolls are made in the Movement, Shooting and Fight phases of both turns (saves in their Shooting phase, Overwatch in their Movement phase, Hazardous tests, damage rolls of mortal-wound abilities) and the gain is \"In your Command phase\". \"Any phase\" is the honest label for a rule that can bite in any phase; narrowing it would be a guess."
  },
  "b092a07be6b70721": {
   "verdict": "ok",
@@ -10258,6 +10738,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "Wahapedia’s Rubric Marines: “KEYWORDS – ALL MODELS: INFANTRY; BATTLELINE; CHAOS; TZEENTCH; RUBRICAE; RUBRIC MARINES … ASPIRING SORCERER ONLY: PSYKER”; the Sorcerer: “KEYWORDS: INFANTRY; CHARACTER; PSYKER; GRENADES; CHAOS; TZEENTCH; SORCERER”. BSData puts Psyker on the Aspiring Sorcerer model only. So PSYKER is the Sorcerer’s and the Aspiring Sorcerer’s, not the Rubric Marines’: right, and it matters for Destined by Fate (“That PSYKER model”). The Sorcerer’s own CHARACTER/GRENADES/SORCERER follow the attached-unit convention (the kwNote names the bodyguard’s). BSData’s “Rubric” category (only on the inferno boltgun and soulreaper cannon models) is no Wahapedia keyword, so not listing it apart is fine."
+ },
+ "b14a55c0d93e001d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"Your opponent’s Movement phase\"."
  },
  "b16262a12c3d36aa": {
   "verdict": "ok",
@@ -10457,6 +10943,12 @@
   "at": "2026-10-23",
   "why": "A Ritual is attempted only by Cabal of Sorcerers, “at the start of your Shooting phase” (Faction Pack Rules Update); same tag as Lord of the Planet of the Sorcerers."
  },
+ "b4e5fcdfe91f6e65": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"In your Command phase, if the bearer is on the battlefield …\": your Command phase (checklist Command · Your turn)."
+ },
  "b4ec840cb29ee8e6": {
   "verdict": "ok",
   "by": "review:r14-picks",
@@ -10499,6 +10991,12 @@
   "at": "2026-10-21",
   "why": "\"ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.\" calc {set:{BS:'3+'}, ignoresCover:true} matches (Wahapedia the same); the target restriction stays in the words on a stratagem box the player ticks."
  },
+ "b5b97f9a9ea5d6d2": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Harbinger of Death: pick one of [LETHAL HITS], [PRECISION], [SUSTAINED HITS 1] for its hellforged weapons until the end of the phase: melee, a pick of GW's three, nothing added."
+ },
  "b60342db49b96b36": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -10510,6 +11008,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Your turn."
+ },
+ "b650793ee7e92691": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "GW Faction Pack 1.2 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt) l.2203, Nurglings: \"Mischief Makers: Each time an enemy unit (excluding Titanic units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.\" The -1 is on every melee attack of that enemy unit whatever it targets, so it is help for every unit of the list (guard, kind melee, Nurglings included). The line keeps the TITANIC exclusion, the moment (selected to fight within Engagement Range) and the duration; nothing added. Same reading as Mischief and Confusion."
  },
  "b674fae6fc22f084": {
   "verdict": "ok",
@@ -11579,6 +12083,12 @@
   "at": "2026-10-22",
   "why": "Fight phase in either turn."
  },
+ "c8ca2c226b7c478d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW Soul Grinder W 14, \"DAMAGED: 1-5 WOUNDS REMAINING\" (FP 1.2 l.3082-3108)."
+ },
  "c8d7c89d95925d9f": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -11663,6 +12173,12 @@
   "at": "2026-10-23",
   "why": "Export: it is an Abilities profile of the Lord on Juggernaut selection, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
  },
+ "ca9b73087567964d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH MONSTER unit\": Kairos, the Daemon Prince, both Lords of Change (the Soul Grinder is a VEHICLE)."
+ },
  "cab4d5e961bad9ea": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -11687,11 +12203,23 @@
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit’s melee attacks have +2 S.”"
  },
+ "cb5b0667f17e2160": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "A Scintillating Legion enhancement (FP 1.2 l.3558 INESCAPABLE EYE); export: 15 pts on the other Lord of Change."
+ },
  "cb7a322291178fcc": {
   "verdict": "ok",
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “End of your opponent’s Fight phase.” “your opponent’s”: 'opp'."
+ },
+ "cb976747a14831e8": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Neverblade: \"each time the bearer makes a melee attack, add 1 to the Hit roll\": every melee attack, always."
  },
  "cbcfb662e87e20d7": {
   "verdict": "ok",
@@ -11753,6 +12281,12 @@
   "at": "2026-10-22",
   "why": "The condition WHEN sets is in: “a friendly ORKS VEHICLE unit (excluding WALKER units) that made a charge move this turn is selected to fight” = “Your unit made a charge move this turn”. “Is selected to fight” is the moment every “when … is selected to fight” gist leaves to the Fight tag (Hit ’Em Harder, Focused Ferocity, Lesser Prey, all signed off), and the WALKER exclusion is the users column. EFFECT “Your unit’s melee attacks have [CLEAVE 1]. Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE]” = “its melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have”."
  },
+ "cc81c463df30685e": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target …\"."
+ },
  "cc9862c915f856ee": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -11782,6 +12316,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "New Recruit prints “Captain-General (Aura) - Trajann Valoris”; it is on Trajann’s datasheet (Wahapedia), not the Allarus Custodians’. Model lines are NR’s (1x Trajann Valoris, 1x Allarus Custodian, 1x Allarus Custodian with Vexilla)."
+ },
+ "cd032d035bac961e": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army\"."
  },
  "cd03d796c86d8aee": {
   "verdict": "ok",
@@ -12149,6 +12689,12 @@
   "at": "2026-10-24",
   "why": "“At the end of your opponent’s turn” is the opponent’s turn, last phase, with at. It is identical to the approved WE Flesh Hounds and Ambushing Hunters."
  },
+ "d248fd0970a671aa": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Both effects kept, nothing added."
+ },
  "d25fff2c1d962b64": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -12184,6 +12730,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "New Recruit: \"1x Forgefiend: 2 Hades autocannons (2x Hades autocannon), Ectoplasma cannon and claws (Ectoplasma cannon, Forgefiend claws)\", tables \"Hades autocannon (x2)\", \"Ectoplasma cannon\", \"Forgefiend claws\". The one models line carries all four, so ×2 Hades autocannon, Ectoplasma cannon and Forgefiend claws match."
+ },
+ "d352feec3f52b87d": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army\": every unit of this list (APPLIES TO lists all nine)."
  },
  "d379d3c86d8d0c75": {
   "verdict": "ok",
@@ -12232,6 +12784,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "The leader’s ability (\"While this model is leading a unit\")."
+ },
+ "d49899fb07983b48": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "Either turn, as before."
  },
  "d49d608879417e1d": {
   "verdict": "ok",
@@ -12329,6 +12887,12 @@
   "at": "2026-10-24",
   "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” Shooting and Fight are what the WHEN names."
  },
+ "d5effc3df61d8fd6": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move …\"."
+ },
  "d5f1b73968c41a7f": {
   "verdict": "ok",
   "by": "review:defilers3",
@@ -12364,6 +12928,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Exact \"Stealth\"; 24.33."
+ },
+ "d6d44a8174815ba7": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful."
  },
  "d6e27098a09c369c": {
   "verdict": "ok",
@@ -12443,6 +13013,12 @@
   "at": "2026-10-26",
   "why": "“weapons equipped by models in that unit have [LETHAL HITS]”: wherever the unit attacks. Their Move · Your Shoot · Fight is the label 14 approved always-on attack abilities have (Hunter of Souls, Spiteful Power Trip, Dark Pacts)."
  },
+ "d814f5a50f3c4fb5": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Your turn."
+ },
  "d81d42f2cc054d3b": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -12454,6 +13030,12 @@
   "by": "review:custodes-units",
   "at": "2026-10-24",
   "why": "2 Vertus Praetors: Salvo launcher (24\" A2 2+ S10 -2 D3+2, no keywords) + Interceptor lance (A6 2+ S8 -2 2 Lance). Matches Wahapedia; names per NR. M12 T8 W7 OC2, 75×42mm Oval (GW guide), 220 pts."
+ },
+ "d835497b18412444": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "The three FAQs quoted word for word from FP 1.2 FAQS (l.3936-3956, checked by string match, including GW's \"it's\" and \"Yes\" without a full stop), and each is about Split: Split above starting strength; a model destroyed by its own [HAZARDOUS] weapon; damage other than an attack."
  },
  "d8572c3256baf0d4": {
   "verdict": "ok",
@@ -12472,6 +13054,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "TARGET: “That ADEPTUS MECHANICUS unit” (one that just Fell Back): Faction: Adeptus Mechanicus, every unit here."
+ },
+ "d892702bfc0a46b2": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Kairos's Infernal Gateway has [INDIRECT FIRE] (FP 1.2 l.1081); GW Core Rules 24.19 \"[INDIRECT FIRE] … Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).\" (verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt l.3809-3818): the popup quotes it."
  },
  "d8a7ee4028c33646": {
   "verdict": "ok",
@@ -12575,6 +13163,12 @@
   "at": "2026-10-21",
   "why": "\"While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.\" The Datasmith leads (as Support) the Kastelan Robots in this list, so it always holds; defCalc {fnp:4, model:'Cybernetica Datasmith'} gives it to that model only, as the words say."
  },
+ "db510a55b2c5b2ff": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"In your Shooting phase, select one of the following abilities\": your Shooting phase with a choice (checklist Shooting · Your turn)."
+ },
  "db60e53006a7d878": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -12676,6 +13270,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"At the start of the battle round ... you must pledge\" (listed under Command, the convention for that timing, as Blessings of Khorne) and the bonuses \"Each time a model in this unit makes an attack\" (Shooting, Fight)."
+ },
+ "dcbebf2dab9863ed": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "As GW's \"Your Shooting phase\"."
  },
  "dcdac8d8d772cd9a": {
   "verdict": "ok",
@@ -12977,6 +13577,12 @@
   "at": "2026-10-16",
   "why": "Your Shooting phase."
  },
+ "e2701ffebd7c5c5b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"Altered Reality (Psychic)\" (FP 1.2 l.1312)."
+ },
  "e27658f267cf26ec": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -13127,6 +13733,12 @@
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Place your unit in strategic reserves.”"
  },
+ "e4e9aaf0d39afd74": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "GW \"| PINK HORRORS: Pink |BLUE HORRORS: Blue | BRIMSTONE HORRORS: Brimstone\" (FP 1.2 l.1537-1538): all three now shown, each for its models (\"Brimstone Horrors only: BRIMSTONE\")."
+ },
  "e4f4987cee6cb885": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -13276,6 +13888,12 @@
   "by": "review:lite-knights-2",
   "at": "2026-10-23",
   "why": "Wahapedia Prosecutor Squad: “Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected”: shooting, your turn. Only the stored text’s punctuation changed."
+ },
+ "e76315b757bb2cfa": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"WHEN: Your Shooting phase.\""
  },
  "e77d5f7498438cbf": {
   "verdict": "ok",
@@ -13637,11 +14255,23 @@
   "at": "2026-10-26",
   "why": "Matches the file (line 79). It removes the earlier false positive (an unrelated earlier sentence's condition). But a sentence that carries an earlier condition with none of these words is now treated as unconditional, and for a weapon ability or characteristic that means no reading is required. Missed: \"Once per battle, at the start of the Fight phase, this unit can use this ability. Its melee weapons have +1 A.\" ('Its' fails the '^it\\b' test) and \"… you can use this ability. Ranged weapons … have [SUSTAINED HITS 1] this phase.\" The fix adds '^its?', '^their' and 'this/that phase|turn'. The setup-sentence case is fixed in abilityGaps. No current sentence depends on BACK: of 153 attack sentences, none relies on an earlier sentence's condition, so the change has no effect today."
  },
+ "ec8fd49776a3bd0b": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data-b",
+  "at": "2026-10-27",
+  "why": "The other three FAQs (l.3945-3981), word for word, are about the switch to the Blue Horrors datasheet that this box rules: returning Pink Horrors to such a unit; returning above starting strength; the Blue Horrors unit's starting strength. Grouping matches the pack."
+ },
  "ecae1981e543f482": {
   "verdict": "ok",
   "by": "review:pubstomper",
   "at": "2026-10-23",
   "why": "Wahapedia's Exalted Sorcerer: \"ARMY RULES Cabal of Sorcerers\"; Rubric Marines: \"ARMY RULES Cabal of Sorcerers (Aspiring Sorcerer only)\". In this attached unit exactly the Exalted Sorcerer and the Aspiring Sorcerer have it (\"models from your army with this ability\")."
+ },
+ "ecbd21d7fbcddc58": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "Faithful."
  },
  "eccdbfa7a2b9d825": {
   "verdict": "ok",
@@ -13901,6 +14531,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: \"Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.\" The gist keeps the duration, both kinds of unit and the benefit of cover. It leaves out \"to the attacking model\" and the per-attack wording, but ends with \"…\". Nothing added."
  },
+ "f298d113ada36f82": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "A Scintillating Legion enhancement (FP 1.2 l.3566 INFERNAL PUPPETEER); export: 20 pts on a Lord of Change."
+ },
  "f2a6d70c4b38195f": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -14039,6 +14675,12 @@
   "at": "2026-10-22",
   "why": "NR: “Houndpack Lance Character, Panoply of the Cursed Knights …” and Categories “Character”; Wahapedia KEYWORDS have no CHARACTER. The quote is the detachment rule word for word and the note only names where the keyword comes from. Accurate, and no more than the rule says."
  },
+ "f5c0a5ac4ebcb304": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "The def keeps the roll, the Flux re-roll, the end of the attack sequence on that unmodified Hit roll \"even if the original Hit roll would have been a Critical Hit\". Nothing added."
+ },
  "f5d6fe23f028e1c6": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -14122,6 +14764,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "WHEN: “a friendly ORKS unit”. TARGET: “That ORKS unit”. No other keyword is named. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”."
+ },
+ "f8ad0f251ac9f316": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "GW prints \"Xirat’p’s Sorcerous Barrages (Psychic)\" (FP 1.2 l.1366)."
  },
  "f8b39a4c97702a3b": {
   "verdict": "ok",
@@ -14320,6 +14968,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic\"."
+ },
+ "fc0f2ab82656216a": {
+  "verdict": "ok",
+  "by": "review:tzeentch-data",
+  "at": "2026-10-27",
+  "why": "\"TARGET: That LEGIONES DAEMONICA MOUNTED unit.\""
  },
  "fc1ced1ffef5c105": {
   "verdict": "ok",

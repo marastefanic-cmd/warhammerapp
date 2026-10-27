@@ -1,0 +1,8 @@
+[
+ {
+  "key": "8f713b1d16afad3f",
+  "where": "tzeeeeentch · Lord of Change",
+  "verdict": "ok",
+  "why": "GW Faction Pack 1.2 (l.1151), Lord of Change: \"Master of Magicks (Psychic): In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.\" The footnote is ranged, weapon Bolt of Change, your Shooting phase, until the end of the phase, a pick of GW's three, and its when now names the weapon (\"Your Shooting phase, its Bolt of Change, until the end of the phase (select one)\", as Harbinger of Death's \"its hellforged weapons\"), so under the Rod of sorcery row it no longer reads as the rod's. Rendered (VERIFY_LISTS=tzeeeeentch, own detached copy of the working tree, rebuilt): the four places (Ranged tab ×2, both Lord of Change pages) read exactly that; nothing else in the list changed. Replaces e4910699bf8b7ab9."
+ }
+]

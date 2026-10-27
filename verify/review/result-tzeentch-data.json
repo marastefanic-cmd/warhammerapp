@@ -1,0 +1,841 @@
+[
+ {
+  "key": "507b2e58dc999588",
+  "where": "tzeeeeentch · Kairos Fateweaver · One Head Looks Forward",
+  "verdict": "ok",
+  "why": "GW Faction Pack 1.2 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt l.1092), Kairos Fateweaver: \"One Head Looks Forward: At the end of your Command phase, if this model is on the battlefield, take a Leadership test …\": your Command phase, a fixed moment (on the checklist under Command · Your turn)."
+ },
+ {
+  "key": "3e00d1947651f014",
+  "where": "tzeeeeentch · Kairos Fateweaver · One Head Looks Back",
+  "verdict": "ok",
+  "why": "\"Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem\": the opponent can use a stratagem in any phase of either turn, so every phase, either turn; an enemy trigger, so rightly not on the phase checklist."
+ },
+ {
+  "key": "11bbad8d16991d06",
+  "where": "tzeeeeentch · Kairos Fateweaver · One Head Looks Back",
+  "verdict": "ok",
+  "why": "GW prints \"Once per turn, …\" in the ability's own words; the tag repeats them, nothing added. No (Aura) tag (GW prints \"One Head Looks Back:\" untagged, FP 1.2 l.1096), so no Aura tag."
+ },
+ {
+  "key": "46e33c6df32f9912",
+  "where": "tzeeeeentch · Kairos Fateweaver · Damaged: 1-7 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: \"DAMAGED: 1-7 WOUNDS REMAINING … subtract 1 from the Hit roll\" and W 20 (FP 1.2 l.1074-1096)."
+ },
+ {
+  "key": "2b667666ee6c3162",
+  "where": "tzeeeeentch · Lord of Change · Greater Daemon of Tzeentch",
+  "verdict": "ok",
+  "why": "GW prints \"Greater Daemon of Tzeentch (Aura)\" on the Lord of Change (FP 1.2 l.1143) and Kairos (l.1088): tagged Aura by GW (22.01)."
+ },
+ {
+  "key": "57d0756c6f58a8a7",
+  "where": "tzeeeeentch · Lord of Change",
+  "verdict": "ok",
+  "why": "GW Lord of Change: \"DAMAGED: 1-7 WOUNDS REMAINING While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\" (FP 1.2 l.1150): all attacks, -1 to hit, quoted."
+ },
+ {
+  "key": "1295284bf6ded42f",
+  "where": "tzeeeeentch · Kairos Fateweaver",
+  "verdict": "ok",
+  "why": "GW: \"This model is equipped with: Infernal Gateway; Staff of Tomorrow.\" WARGEAR OPTIONS None (FP 1.2 l.1120-1122); profiles match GW (witchfire 24\" D6+3 2+ S9 AP-2 DD3 [BLAST, INDIRECT FIRE, PSYCHIC]; focused D3+6 … D3 → 3 [+HAZARDOUS]; Staff A5 WS3+ S8 AP-2 D2D3 [PSYCHIC])."
+ },
+ {
+  "key": "007b6b44f868867c",
+  "where": "tzeeeeentch · The Blue Scribes · P’tarix’s Sorcerous Syphon",
+  "verdict": "ok",
+  "why": "GW prints \"P’tarix’s Sorcerous Syphon (Aura)\" (FP 1.2 l.1363, Wahapedia ds/chaos-daemons_The-Blue-Scribes)."
+ },
+ {
+  "key": "08773f59fe64b153",
+  "where": "tzeeeeentch · The Blue Scribes · Xirat’p’s Sorcerous Barrages",
+  "verdict": "ok",
+  "why": "\"At the end of your Movement phase, roll one D6 for each enemy unit within 6\"\": your Movement phase, a fixed moment (checklist Movement · Your turn)."
+ },
+ {
+  "key": "f8ad0f251ac9f316",
+  "where": "tzeeeeentch · The Blue Scribes · Xirat’p’s Sorcerous Barrages",
+  "verdict": "ok",
+  "why": "GW prints \"Xirat’p’s Sorcerous Barrages (Psychic)\" (FP 1.2 l.1366)."
+ },
+ {
+  "key": "973008fe650fc5dc",
+  "where": "tzeeeeentch · The Blue Scribes",
+  "verdict": "ok",
+  "why": "Untagged-by-target effect: \"While an enemy unit is within 12\" of this model, each time a model in that unit makes a Psychic Attack, subtract 1 from the Wound roll\" protects whatever that enemy unit attacks, so a guard for every unit of the list (selfAlways: The Blue Scribes too). It is GW-tagged (Aura) and is shown with that tag; the guard line quotes its reach and effect, nothing added."
+ },
+ {
+  "key": "9f2fbfdb69e3b07d",
+  "where": "tzeeeeentch · The Blue Scribes",
+  "verdict": "ok",
+  "why": "GW: \"This model is equipped with: sharp quills.\" Sharp quills [ANTI-PSYKER 2+] Melee A4 WS5+ S2 AP0 D1 (FP 1.2 l.1357)."
+ },
+ {
+  "key": "addfc89d24278551",
+  "where": "tzeeeeentch · The Changeling · Formless Horror",
+  "verdict": "ok",
+  "why": "GW: \"Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.\" (FP 1.2 l.1198). The def says that, shorter, nothing added."
+ },
+ {
+  "key": "384f2839a61b827d",
+  "where": "tzeeeeentch · The Changeling · Mischief and Confusion",
+  "verdict": "ok",
+  "why": "\"At the start of your opponent’s Shooting phase, select one enemy unit …\": their Shooting phase, a fixed moment with a choice (checklist Shooting · Their turn)."
+ },
+ {
+  "key": "d51cd629235385dd",
+  "where": "tzeeeeentch · The Changeling",
+  "verdict": "ok",
+  "why": "Q4: GW prints \"Mischief and Confusion:\" with no (Aura) tag (FP 1.2 l.1204), so it is not an aura (22.01). Its 2-5 result (\"each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll\") is on every attack of the selected unit whatever it targets, so it protects every unit of the list: a guard is the right home, as Necromechanic. The line keeps the condition (their Shooting phase, the unit selected at its start, D6 2-5) and the 6 result, nothing interpreted."
+ },
+ {
+  "key": "11363887e1b8de3c",
+  "where": "tzeeeeentch · The Changeling",
+  "verdict": "ok",
+  "why": "GW: \"This model is equipped with: Infernal Flames; the Trickster’s Staff.\" (FP 1.2 l.1229); profiles match (witchfire 12\" D6 N/A S6 AP-1 D1 [IGNORES COVER, PSYCHIC, TORRENT]; focused D6+3 … DD3 [+HAZARDOUS]; Staff A3 WS4+ S4 AP-1 DD3 [PSYCHIC])."
+ },
+ {
+  "key": "0907d7d696a676e1",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Malefic Destruction",
+  "verdict": "ok",
+  "why": "\"Once per battle, at the start of the Fight phase\": a fixed moment, no \"your\", so the Fight phase of either turn (FP 1.2 l.3220)."
+ },
+ {
+  "key": "1ea14b9bc0ac6a8a",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Malefic Destruction",
+  "verdict": "ok",
+  "why": "GW's own words \"Once per battle\"."
+ },
+ {
+  "key": "3c7efae47842a2df",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Harbinger of Death",
+  "verdict": "ok",
+  "why": "\"Each time this model is selected to fight\": the Fight phase, either turn; an activation trigger, so (rightly) not on the checklist."
+ },
+ {
+  "key": "ac0e76ae5fa16e35",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Neverblade",
+  "verdict": "ok",
+  "why": "Neverblade's effects are on melee weapons and melee attacks (\"melee weapons equipped by the bearer … each time the bearer makes a melee attack, add 1 to the Hit roll\", FP 1.2 l.3576): the Fight phase, either turn."
+ },
+ {
+  "key": "a86158e6732d93c1",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Neverblade",
+  "verdict": "ok",
+  "why": "A Scintillating Legion enhancement (FP 1.2 l.3576 NEVERBLADE); export: Neverblade 25 pts on the Daemon Prince."
+ },
+ {
+  "key": "0122b0b65b9db59a",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "verdict": "ok",
+  "why": "Malefic Destruction: \"until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons\" (the DP's only melee weapons): melee, +3 A, with its once-per-battle start-of-Fight condition."
+ },
+ {
+  "key": "b5b97f9a9ea5d6d2",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "verdict": "ok",
+  "why": "Harbinger of Death: pick one of [LETHAL HITS], [PRECISION], [SUSTAINED HITS 1] for its hellforged weapons until the end of the phase: melee, a pick of GW's three, nothing added."
+ },
+ {
+  "key": "cb976747a14831e8",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "verdict": "ok",
+  "why": "Neverblade: \"each time the bearer makes a melee attack, add 1 to the Hit roll\": every melee attack, always."
+ },
+ {
+  "key": "2ad2e2bd94f302b1",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "verdict": "ok",
+  "why": "GW: \"This model is equipped with: infernal cannon; hellforged weapons.\" (FP 1.2 l.3245). Infernal cannon A 6 = GW A3 + Daemon Prince of Tzeentch \"add 3 to the Attacks characteristic of this model’s infernal cannon\" (list-caused, from: Daemonic Allegiance); strike A7 S10 AP-3 and sweep A15 S8 AP-1 = GW 6/8/-2 and 14/6/0 with Neverblade (+1 A, +2 S, +1 AP), from: Neverblade."
+ },
+ {
+  "key": "a5b3dd9e571fdb30",
+  "where": "tzeeeeentch · Lord of Change · Daemon Lord of Tzeentch",
+  "verdict": "ok",
+  "why": "Q5: \"each time a model in that unit makes a ranged attack, add 1 to the Strength\": ranged attacks are made in your Shooting phase and, through Fire Overwatch (\"WHEN: End of your opponent’s Movement phase … EFFECT: Your unit shoots using snap shooting\", Core Rules 15.08, verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt l.2762-2772), in their Movement phase. \"Their Move · Your Shoot\" is that, the same reading as the signed-off three-phase labels for \"each time this model makes an attack\" (result-defilers3 kept them where the model has ranged weapons)."
+ },
+ {
+  "key": "4e5967d3645f44b0",
+  "where": "tzeeeeentch · Lord of Change · Daemon Lord of Tzeentch",
+  "verdict": "ok",
+  "why": "GW prints \"Daemon Lord of Tzeentch (Aura)\" (FP 1.2 l.1146)."
+ },
+ {
+  "key": "db510a55b2c5b2ff",
+  "where": "tzeeeeentch · Lord of Change · Master of Magicks",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase, select one of the following abilities\": your Shooting phase with a choice (checklist Shooting · Your turn)."
+ },
+ {
+  "key": "5314ce9f0e883f4d",
+  "where": "tzeeeeentch · Lord of Change · Master of Magicks",
+  "verdict": "ok",
+  "why": "GW prints \"Master of Magicks (Psychic)\" (FP 1.2 l.1151)."
+ },
+ {
+  "key": "51bffdb3cca1a152",
+  "where": "tzeeeeentch · Lord of Change · Damaged: 1-7 wounds remaining",
+  "verdict": "ok",
+  "why": "GW Lord of Change W 18, \"DAMAGED: 1-7 WOUNDS REMAINING\" (FP 1.2 l.1129-1150)."
+ },
+ {
+  "key": "0ed2a033795026c9",
+  "where": "tzeeeeentch · Lord of Change · Infernal Puppeteer",
+  "verdict": "ok",
+  "why": "Infernal Puppeteer: \"In your Shooting phase, when this unit is selected to shoot …\": your Shooting phase (an activation, so not on the checklist)."
+ },
+ {
+  "key": "f298d113ada36f82",
+  "where": "tzeeeeentch · Lord of Change · Infernal Puppeteer",
+  "verdict": "ok",
+  "why": "A Scintillating Legion enhancement (FP 1.2 l.3566 INFERNAL PUPPETEER); export: 20 pts on a Lord of Change."
+ },
+ {
+  "key": "1ddec049fecb0f89",
+  "where": "tzeeeeentch · Lord of Change",
+  "verdict": "ok",
+  "why": "\"While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength\": ranged, +1 S, needs LEGIONES DAEMONICA + TZEENTCH, its own unit included (\"it is always within range of its own aura ability\", Core Rules 22.01). Display note (code, not this reading): with two Lords of Change each Lord shows both \"Own aura: +1 S\" and \"Within 6\" of the Lord of Change: +1 S\"; 22.01 says \"if a unit is within range of the same aura ability more than once, that aura ability only applies to that unit once\", so the two lines must not be read as +2 S (see the report)."
+ },
+ {
+  "key": "9d8f935deac06384",
+  "where": "tzeeeeentch · Lord of Change",
+  "verdict": "ok",
+  "why": "Export: Bolt of Change, Staff of Tzeentch, Rod of sorcery on both Lords. GW: \"This model is equipped with: Bolt of Change; staff of Tzeentch.\" and \"This model can be equipped with one of the following: 1 rod of sorcery, 1 baleful sword\" (FP 1.2 l.1175-1177), so the rod is in addition. Profiles match GW (Rod 18\" A6 2+ S8 AP-1 D2 [PSYCHIC]; Bolt witchfire 18\" A9 2+ S9 AP-1 D1 [PSYCHIC]; focused A9 S9 AP-2 D3 [HAZARDOUS, PSYCHIC]; Staff A5 WS3+ S6 AP-1 D3 [PSYCHIC])."
+ },
+ {
+  "key": "b4e5fcdfe91f6e65",
+  "where": "tzeeeeentch · Lord of Change · Inescapable Eye",
+  "verdict": "ok",
+  "why": "\"In your Command phase, if the bearer is on the battlefield …\": your Command phase (checklist Command · Your turn)."
+ },
+ {
+  "key": "cb5b0667f17e2160",
+  "where": "tzeeeeentch · Lord of Change · Inescapable Eye",
+  "verdict": "ok",
+  "why": "A Scintillating Legion enhancement (FP 1.2 l.3558 INESCAPABLE EYE); export: 15 pts on the other Lord of Change."
+ },
+ {
+  "key": "17cee3c3d3cabd0b",
+  "where": "tzeeeeentch · Fluxmaster · Fluxmaster",
+  "verdict": "ok",
+  "why": "The Fluxmaster ability is on the Fluxmaster's datasheet (FP 1.2 l.1306-1310), so its source is the Fluxmaster. Its words are \"This unit …\", which under Core Rules 19.04 (\"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed\") cover the Pink Horrors too while the Fluxmaster lives: see the def fix (ab039ae92add6462)."
+ },
+ {
+  "key": "ab039ae92add6462",
+  "where": "tzeeeeentch · Fluxmaster · Fluxmaster",
+  "verdict": "fix",
+  "why": "GW: \"■ This unit has Stealth. ■ Melee attacks that target this unit have -1 to hit rolls.\" (FP 1.2 l.1308-1310). On the datasheet the line is shown as \"FLUXMASTER Fluxmaster: Stealth …; melee attacks that target it have -1 to hit rolls\", and the small FLUXMASTER label is, per app.html defLine, \"the one model of an attached unit it is on\", so it reads as protection for the Fluxmaster model only. That is wrong twice: 19.04 extends \"this unit\" to every model of the attached unit until the Fluxmaster is destroyed, and Stealth only works \"If every model in a unit has this ability\" (Core Rules 24.33). The signed-off precedent for a part's unit-wide line keeps GW's \"this unit\" (Meganobz \"MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP\"). Fix: verify/sources/hand/tzeeeeentch.json units[\"fluxmaster-pink-horrors\"].defs[\"Fluxmaster\"].def = \"This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls\" (defOf unchanged, 55ebfa69, the source text is the same).",
+  "fix": {
+   "def": "This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls"
+  }
+ },
+ {
+  "key": "e2701ffebd7c5c5b",
+  "where": "tzeeeeentch · Fluxmaster · Altered Reality",
+  "verdict": "ok",
+  "why": "GW prints \"Altered Reality (Psychic)\" (FP 1.2 l.1312)."
+ },
+ {
+  "key": "192c6ab78aab1054",
+  "where": "tzeeeeentch · Fluxmaster · Altered Reality",
+  "verdict": "ok",
+  "why": "\"… is made for this model\": the Fluxmaster model only (19.04, a single specified model)."
+ },
+ {
+  "key": "b02eddc070b02d86",
+  "where": "tzeeeeentch · Fluxmaster · Improbable Shield (Aura)",
+  "verdict": "ok",
+  "why": "GW names the enhancement \"IMPROBABLE SHIELD (AURA)\" (FP 1.2 l.3587): an enhancement and GW-tagged aura."
+ },
+ {
+  "key": "9837c3fa66ecd139",
+  "where": "tzeeeeentch · Fluxmaster · Improbable Shield (Aura)",
+  "verdict": "ok",
+  "why": "\"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer\": the bearer is the Fluxmaster."
+ },
+ {
+  "key": "80a980bc5b015e0d",
+  "where": "tzeeeeentch · Fluxmaster · Split",
+  "verdict": "ok",
+  "why": "Split is on the Pink Horrors datasheet (FP 1.2 l.1518)."
+ },
+ {
+  "key": "2909c0cf3382f4d0",
+  "where": "tzeeeeentch · Fluxmaster · Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+  "verdict": "ok",
+  "why": "On the Pink Horrors datasheet (FP 1.2 l.1558-1566)."
+ },
+ {
+  "key": "5c588e13f984302b",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "\"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds\": GW-tagged aura, so its own unit too (22.01: selfAlways); needs LEGIONES DAEMONICA + TZEENTCH; a defence, so a guard. Every unit of this list qualifies (all are TZEENTCH, the Soul Grinder through its Daemonic Allegiance)."
+ },
+ {
+  "key": "a018cf37a026418f",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "GW Fluxmaster KEYWORDS: Mounted, Character, Fly, Psyker, Chaos, Daemon, Tzeentch, Fluxmaster (FP 1.2 l.1324); Pink Horrors: Infantry, Battleline, Chaos, Daemon, Tzeentch, Horrors (l.1537). Infantry, Battleline and Horrors come only from the Pink Horrors; the attached unit has them all (19.03)."
+ },
+ {
+  "key": "7e367f46fff8c607",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "Export: Fluxmaster 70 + Improbable Shield (Aura) 30 = 100, Pink Horrors 150; Wahapedia: Fluxmaster 70, Pink Horrors 10 models 150, enhancement 30. 250 total. Same form as the signed-off \"180 + Wardens of Ultramar 115 + …\"."
+ },
+ {
+  "key": "cafe1b84042242e0",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "fix",
+  "why": "GW prints the model keywords \"| PINK HORRORS: Pink |BLUE HORRORS: Blue | BRIMSTONE HORRORS: Brimstone\" (FP 1.2 l.1537-1538; Wahapedia ds/chaos-daemons_Pink-Horrors \"PINK HORRORS: PINK BLUE HORRORS: BLUE BRIMSTONE HORRORS: BRIMSTONE\"). The app shows PINK (Pink Horror only) and BLUE (Blue Horrors only) but not BRIMSTONE, although the list shows the Blue/Brimstone Horror (ref. only) profile and the Brimstone Horrors' weapons. BLUE is there only because BSData/New Recruit tag the Pink Horror models \"Blue\" (export categories on the Pink Horror entry: Blue, Pink; GW gives Pink Horror models PINK only); BRIMSTONE is missing because from-json.js labels only keywords the export has (verify/from-json.js:714 \"const have = u.kw.find(…); if (!have) continue;\"). Show everything: fix data.js tzeeeeentch units[\"fluxmaster-pink-horrors\"].kw add \"Brimstone\", kwOnly = { Pink:\"Pink Horror\", Blue:\"Blue Horrors\", Brimstone:\"Brimstone Horrors\" } (GW's own model names, as the Blue label already is), through the importer (from-json.js should add a model keyword GW prints that the export lacks, or the hand file should declare it) so --write gives it again.",
+  "fix": {
+   "kw+": "Brimstone",
+   "kwOnly": {
+    "Pink": "Pink Horror",
+    "Blue": "Blue Horrors",
+    "Brimstone": "Brimstone Horrors"
+   }
+  }
+ },
+ {
+  "key": "35a3a5e3284c72f1",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "fix",
+  "why": "Q3. Gear [Arcane Fireball, Herald combat weapon] and [Coruscating Pink flames, Pink claws] ×10 match the export and GW (\"Every Pink Horror is equipped with: Coruscating Pink Flames; pink claws\", FP 1.2 l.1550-1551). The four (ref. only) weapons are right to show, marked: GW prints their profiles on the Pink Horrors datasheet. But GW does say who carries them: \"Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws. Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws.\" (l.1552-1556). As unplaced they render with GW-contradicting and invented text: weapon rows \"WHICH MODELS: NOT SAID\"; Models box and Bases & proxies \"1× Coruscating Yellow flames (ref. only) / New Recruit lists it for the Pink Horrors, not which model carries it\" ×4 (a count of 1 that no model has; at the start no model carries any). Fix: data.js tzeeeeentch units[\"fluxmaster-pink-horrors\"]: drop the four from unplaced (no Models/Bases lines for them), and mark the rows with GW's carrier instead of the unplaced tag: Coruscating Blue flames (ref. only), Blue claws (ref. only) → \"Blue Horrors added by Split\"; Coruscating Yellow flames (ref. only), Yellow claws (ref. only) → \"Brimstone Horrors added by Split\" (a who/note on the row; from-json.js \"ref. only rows\" needs to emit it).",
+  "fix": {
+   "unplaced": [],
+   "rowNote": {
+    "Coruscating Blue flames (ref. only)": "Blue Horrors added by Split",
+    "Blue claws (ref. only)": "Blue Horrors added by Split",
+    "Coruscating Yellow flames (ref. only)": "Brimstone Horrors added by Split",
+    "Yellow claws (ref. only)": "Brimstone Horrors added by Split"
+   }
+  }
+ },
+ {
+  "key": "5032d7e52b3b0d94",
+  "where": "tzeeeeentch · Flamers · Bounding Leaps",
+  "verdict": "ok",
+  "why": "\"This unit is eligible to shoot in a turn in which it Fell Back\": the Fall Back move is in your Movement phase, the shooting in your Shooting phase (FP 1.2 l.1582). Your turn only."
+ },
+ {
+  "key": "777ed0fd1c537198",
+  "where": "tzeeeeentch · Flamers",
+  "verdict": "ok",
+  "why": "Export: Pyrocaster and 2 Flamers each with Flamer mouths, Flickering Flames; GW \"Every model is equipped with: Flickering Flames; Flamer mouths.\" (FP 1.2 l.1606). ×3 per unit, ×3 units. Profiles match (12\" D6 N/A S4 AP-1 D1 [IGNORES COVER, PSYCHIC, TORRENT]; A3 WS4+ S4 AP0 D1)."
+ },
+ {
+  "key": "241d5ac611f37102",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder · Scuttling Walker",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a Normal or Advance move\": those are made in your Movement phase."
+ },
+ {
+  "key": "c8ca2c226b7c478d",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder · Damaged: 1-5 wounds remaining",
+  "verdict": "ok",
+  "why": "GW Soul Grinder W 14, \"DAMAGED: 1-5 WOUNDS REMAINING\" (FP 1.2 l.3082-3108)."
+ },
+ {
+  "key": "59afa2d5f134c68d",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder",
+  "verdict": "ok",
+  "why": "All attacks, -1 to hit, GW's words."
+ },
+ {
+  "key": "8706db28ac64adec",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder",
+  "verdict": "ok",
+  "why": "Export: Harvester cannon, Iron claw, Warp gaze, Warpclaw. GW: \"equipped with: harvester cannon; iron claw; warpsword\", \"This model’s warpsword can be replaced with 1 warpclaw\", Daemonic Allegiance \"Tzeentch — This model is additionally equipped with: warp gaze\" (FP 1.2 l.3125-3140). Profiles match (Warp gaze 48\" D3 3+ S12 AP-2 DD6+2 [BLAST]; Warpclaw A6 WS3+ S8 AP-1 D2 [EXTRA ATTACKS]; Iron claw A5 3+ S16 AP-3 DD6+2; Harvester 36\" A3 3+ S10 AP-1 D3)."
+ },
+ {
+  "key": "63359b8b64e670d9",
+  "where": "Cavalcade of Chaos rule · Unholy Avalanche",
+  "verdict": "ok",
+  "why": "Unholy Avalanche (FP 1.2 l.3276-3283): a fall-back move (Movement), eligible to shoot (Shooting) / declare a charge (Charge)."
+ },
+ {
+  "key": "4624b2eab99bae75",
+  "where": "Cavalcade of Chaos rule · Unholy Avalanche",
+  "verdict": "ok",
+  "why": "A fall-back move is made in your own Movement phase, and shooting/declaring a charge after it in that same turn: your turn."
+ },
+ {
+  "key": "666b12d32233cf4a",
+  "where": "Cavalcade of Chaos rule · Unholy Avalanche",
+  "verdict": "ok",
+  "why": "\"a friendly LEGIONES DAEMONICA MOUNTED unit\": The Blue Scribes (Mounted) and the Fluxmaster's attached unit (has MOUNTED, 19.03)."
+ },
+ {
+  "key": "37189a44903338f3",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "verdict": "ok",
+  "why": "\"WHEN: End of the Movement phase, from the start of the battle.\" (FP 1.2 l.3278-3281): Movement. 2CP as FP 1.2 \"What's new\" sets it, and the app shows 2CP."
+ },
+ {
+  "key": "3e799ad04dc00c2e",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "verdict": "ok",
+  "why": "No \"your\": the end of either player's Movement phase."
+ },
+ {
+  "key": "0cd13d858c7e2797",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "verdict": "ok",
+  "why": "\"TARGET: One friendly LEGIONES DAEMONICA MOUNTED unit in strategic reserves.\""
+ },
+ {
+  "key": "1a016e6f1af93a60",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "verdict": "ok",
+  "why": "WHEN, TARGET and EFFECT kept, shorter, nothing added."
+ },
+ {
+  "key": "8ba44ccc23f32ba8",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Movement phase, when … selected to move.\""
+ },
+ {
+  "key": "9c7643f22ce34bcb",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "verdict": "ok",
+  "why": "\"Your Movement phase\"."
+ },
+ {
+  "key": "1343363b607b11e5",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "verdict": "ok",
+  "why": "\"a friendly LEGIONES DAEMONICA MOUNTED unit\"."
+ },
+ {
+  "key": "3076ec8bdbfc725b",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "verdict": "ok",
+  "why": "Faithful: \"Your unit has MOBILE.\""
+ },
+ {
+  "key": "d5effc3df61d8fd6",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "verdict": "ok",
+  "why": "\"WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move …\"."
+ },
+ {
+  "key": "b14a55c0d93e001d",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Movement phase\"."
+ },
+ {
+  "key": "fc0f2ab82656216a",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "verdict": "ok",
+  "why": "\"TARGET: That LEGIONES DAEMONICA MOUNTED unit.\""
+ },
+ {
+  "key": "16e30d7d87cefff2",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "verdict": "ok",
+  "why": "Faithful to WHEN and EFFECT; \"-1 to those hazard rolls\" for GW's \"-1 from those hazard rolls\" says the same."
+ },
+ {
+  "key": "b062e137966a5814",
+  "where": "Scintillating Legion rule · Fates in Flux",
+  "verdict": "ok",
+  "why": "Q6: Fates in Flux names no phase for spending (\"just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made …\", and the opponent \"after an Advance roll, Hit roll, Wound roll or saving throw … for a model or unit from their army\"; FP 1.2 l.3546-3600). Those rolls are made in the Movement, Shooting and Fight phases of both turns (saves in their Shooting phase, Overwatch in their Movement phase, Hazardous tests, damage rolls of mortal-wound abilities) and the gain is \"In your Command phase\". \"Any phase\" is the honest label for a rule that can bite in any phase; narrowing it would be a guess."
+ },
+ {
+  "key": "83f08308182eae49",
+  "where": "Scintillating Legion rule · Fates in Flux",
+  "verdict": "ok",
+  "why": "Either turn: both players spend tokens on their own rolls in both turns."
+ },
+ {
+  "key": "d352feec3f52b87d",
+  "where": "Scintillating Legion rule · Fates in Flux",
+  "verdict": "ok",
+  "why": "\"a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army\": every unit of this list (APPLIES TO lists all nine)."
+ },
+ {
+  "key": "19aba5d00a372a6b",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase.\" (FP 1.2 l.3609)."
+ },
+ {
+  "key": "177fd7903d7b26b9",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "verdict": "ok",
+  "why": "Any phase of either turn."
+ },
+ {
+  "key": "ca9b73087567964d",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "verdict": "ok",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH MONSTER unit\": Kairos, the Daemon Prince, both Lords of Change (the Soul Grinder is a VEHICLE)."
+ },
+ {
+  "key": "879736048d8f7544",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "verdict": "ok",
+  "why": "Faithful, the Flux option kept."
+ },
+ {
+  "key": "58f4b6633e463bc0",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Shooting phase or the Fight phase.\""
+ },
+ {
+  "key": "49ca927e56b5c438",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "verdict": "ok",
+  "why": "The Fight phase of either turn plus your Shooting phase: either, with turns.shooting = your."
+ },
+ {
+  "key": "dcbebf2dab9863ed",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "verdict": "ok",
+  "why": "As GW's \"Your Shooting phase\"."
+ },
+ {
+  "key": "ad7e53340b17af7c",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "verdict": "ok",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army\"."
+ },
+ {
+  "key": "071d2d84751b2775",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "verdict": "ok",
+  "why": "\"add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 … and improve the Armour Penetration … by 1 instead\": all weapons, +2 S or (Flux) +3 S and +1 AP (the app's \"+1 AP\" for an improvement, as elsewhere)."
+ },
+ {
+  "key": "5a01d30fcc5707e3",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "verdict": "ok",
+  "why": "Faithful."
+ },
+ {
+  "key": "01411ef8a8e114ec",
+  "where": "Scintillating Legion · Flickering Reality",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase, just after an enemy unit has selected its targets.\""
+ },
+ {
+  "key": "17aa32ec88258f25",
+  "where": "Scintillating Legion · Flickering Reality",
+  "verdict": "ok",
+  "why": "Fight phase, no \"your\": either turn (your Fight phase too, when the enemy unit fights in it)."
+ },
+ {
+  "key": "cc81c463df30685e",
+  "where": "Scintillating Legion · Flickering Reality",
+  "verdict": "ok",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target …\"."
+ },
+ {
+  "key": "f5c0a5ac4ebcb304",
+  "where": "Scintillating Legion · Flickering Reality",
+  "verdict": "ok",
+  "why": "The def keeps the roll, the Flux re-roll, the end of the attack sequence on that unmodified Hit roll \"even if the original Hit roll would have been a Critical Hit\". Nothing added."
+ },
+ {
+  "key": "d6d44a8174815ba7",
+  "where": "Scintillating Legion · Flickering Reality",
+  "verdict": "ok",
+  "why": "Faithful."
+ },
+ {
+  "key": "acffe5b4d2e22dbb",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Movement phase or your Charge phase.\""
+ },
+ {
+  "key": "d814f5a50f3c4fb5",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "verdict": "ok",
+  "why": "Your turn."
+ },
+ {
+  "key": "cd032d035bac961e",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "verdict": "ok",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army\"."
+ },
+ {
+  "key": "ecbd21d7fbcddc58",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "verdict": "ok",
+  "why": "Faithful."
+ },
+ {
+  "key": "e76315b757bb2cfa",
+  "where": "Scintillating Legion · Ficklefire",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Shooting phase.\""
+ },
+ {
+  "key": "44e119ff4bfc326c",
+  "where": "Scintillating Legion · Ficklefire",
+  "verdict": "ok",
+  "why": "Your turn."
+ },
+ {
+  "key": "3de3b19939a4a46a",
+  "where": "Scintillating Legion · Ficklefire",
+  "verdict": "ok",
+  "why": "\"One LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range …\"."
+ },
+ {
+  "key": "d248fd0970a671aa",
+  "where": "Scintillating Legion · Ficklefire",
+  "verdict": "ok",
+  "why": "Both effects kept, nothing added."
+ },
+ {
+  "key": "960985e1b3592461",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "verdict": "ok",
+  "why": "\"WHEN: End of your opponent’s Fight phase.\""
+ },
+ {
+  "key": "89b37393318217f5",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "verdict": "ok",
+  "why": "Their turn."
+ },
+ {
+  "key": "9451b818058f0231",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "verdict": "ok",
+  "why": "\"LEGIONES DAEMONICA TZEENTCH unit(s) from your army\"."
+ },
+ {
+  "key": "859912a4f6b1402e",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "verdict": "ok",
+  "why": "Faithful, the Flux alternative kept (\"including those within Engagement Range\")."
+ },
+ {
+  "key": "d892702bfc0a46b2",
+  "where": "/^indirect fire\\b/i",
+  "verdict": "ok",
+  "why": "Kairos's Infernal Gateway has [INDIRECT FIRE] (FP 1.2 l.1081); GW Core Rules 24.19 \"[INDIRECT FIRE] … Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).\" (verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt l.3809-3818): the popup quotes it."
+ },
+ {
+  "key": "348a499c525863d8",
+  "where": "deviations-bsdata.json · kairos-fateweaver · ability.tag",
+  "verdict": "ok",
+  "why": "FP 1.2 l.1096: \"One Head Looks Back: Once per turn, …\", no (Aura) (Greater Daemon of Tzeentch next to it is tagged). GW wins."
+ },
+ {
+  "key": "6a6135605bc0ef45",
+  "where": "deviations-bsdata.json · the-blue-scribes · stats.base",
+  "verdict": "ok",
+  "why": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt l.2974 \"The Blue Scribes  Large Flying Base\". GW's wording kept."
+ },
+ {
+  "key": "b5556f166e9de4f7",
+  "where": "deviations-bsdata.json · the-changeling · ability.text",
+  "verdict": "ok",
+  "why": "App text = FP 1.2 l.1204-1210 word for word."
+ },
+ {
+  "key": "eec212b451403eb5",
+  "where": "deviations-bsdata.json · daemon-prince-of-chaos-with-wings · ability.text",
+  "verdict": "ok",
+  "why": "FP 1.2 l.3224-3229 prints the three as a bullet list; the app keeps it."
+ },
+ {
+  "key": "5d9f8091855b63ae",
+  "where": "deviations-bsdata.json · daemon-prince-of-chaos-with-wings · ability",
+  "verdict": "ok",
+  "why": "FP 1.2 l.3223-3233 prints DAEMONIC ALLEGIANCE with its four Daemon Prince of … lines on the Daemon Prince of Chaos with Wings datasheet."
+ },
+ {
+  "key": "3da53bc1882afd12",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · stats.base",
+  "verdict": "ok",
+  "why": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt l.2941 \"Fluxmaster  Large Flying Base\"."
+ },
+ {
+  "key": "9df0ff903b3e91ad",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · stats.base",
+  "verdict": "ok",
+  "why": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt l.2927 \"Blue Horrors  25mm\"; Wahapedia \"BLUE HORROR/BRIMSTONE HORROR (⌀25mm)\"; the guide has no Brimstone row."
+ },
+ {
+  "key": "aea3a962057c1a4f",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · ability.text",
+  "verdict": "ok",
+  "why": "FP 1.2 l.1312-1314: \"… change the result of that roll to an unmodified 6.\""
+ },
+ {
+  "key": "8eb2f8f59affc8a5",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · ability.text",
+  "verdict": "ok",
+  "why": "FP 1.2 l.1558-1566: \"Sullen Malevolence and Exploding Horrors\" (BSData's \"Cackling Horrors\" is not GW's)."
+ },
+ {
+  "key": "b7d2c9ff41a51e94",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · kw",
+  "verdict": "ok",
+  "why": "FP 1.2 l.1537: \"KEYWORDS – ALL MODELS: Infantry, Battleline, Chaos, Daemon, Tzeentch, Horrors\"."
+ },
+ {
+  "key": "7c471a1a60a08aa7",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · rules",
+  "verdict": "ok",
+  "why": "GW CORE for Fluxmaster \"Deep Strike, Leader\", Pink Horrors \"Deep Strike\" (FP 1.2 l.1301, l.1512); the unit gets Stealth from the Fluxmaster ability (\"This unit has Stealth\"), which the app shows (Rules tab Stealth: Fluxmaster + Pink Horrors)."
+ },
+ {
+  "key": "d22c8fedb34cba68",
+  "where": "deviations-bsdata.json · tzeentch-soul-grinder · stats.base",
+  "verdict": "ok",
+  "why": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt l.2971 \"Soul Grinder  160mm\"."
+ },
+ {
+  "key": "0d3de3ca5802c4e0",
+  "where": "deviations-bsdata.json · tzeentch-soul-grinder · ability",
+  "verdict": "ok",
+  "why": "FP 1.2 l.3127-3140 prints DAEMONIC ALLEGIANCE on the Soul Grinder datasheet."
+ },
+ {
+  "key": "e8f88c181ef5ed72",
+  "where": "deviations-nr.json · the-blue-scribes · stats[The Blue Scribes].base",
+  "verdict": "ok",
+  "why": "As 6a6135605bc0ef45."
+ },
+ {
+  "key": "f4400098c30741b5",
+  "where": "deviations-nr.json · fluxmaster-pink-horrors · stats[Fluxmaster].base",
+  "verdict": "ok",
+  "why": "As 3da53bc1882afd12."
+ },
+ {
+  "key": "767fe8aa95b8597f",
+  "where": "deviations-nr.json · fluxmaster-pink-horrors · stats[Blue/Brimstone Horror (ref. only)].base",
+  "verdict": "ok",
+  "why": "As 9df0ff903b3e91ad."
+ },
+ {
+  "key": "4f6bf7a76760d118",
+  "where": "deviations-nr.json · tzeentch-soul-grinder · stats[Soul Grinder].base",
+  "verdict": "ok",
+  "why": "As d22c8fedb34cba68."
+ },
+ {
+  "key": "550d40651b599655",
+  "where": "chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only) · guide: CHAOS DAEMONS / Blue Horrors",
+  "verdict": "ok",
+  "why": "GW's Pink Horrors profile \"BLUE HORROR/BRIMSTONE HORROR\" is the Split models'; the guide's Blue Horrors 25mm (l.2927) is their model; \"Pink Horrors 32mm\" (l.2951) is the Pink Horror models'. Wahapedia agrees (⌀25mm). Declared, with its reason."
+ },
+ {
+  "key": "a8e82e4b1046e40c",
+  "where": "kairos-fateweaver · One Head Looks Back",
+  "verdict": "ok",
+  "why": "FP 1.2 l.1096-1102: \"increase the CP cost of that use of that stratagem by 1CP.\""
+ },
+ {
+  "key": "0dac86f2edd65ba8",
+  "where": "fluxmaster-pink-horrors · Altered Reality",
+  "verdict": "ok",
+  "why": "FP 1.2 l.1312-1314: \"a Hit roll, a Wound roll or a saving throw\" (no comma)."
+ },
+ {
+  "key": "45650d6593b5e71c",
+  "where": "tzeentch-soul-grinder · Daemonic Allegiance",
+  "verdict": "ok",
+  "why": "FP 1.2 l.3128-3131: \"… the additional wargear stated for that keyword below.\" then the four-row table."
+ },
+ {
+  "key": "5e59fecb3f22b536",
+  "where": "kairos-fateweaver",
+  "verdict": "ok",
+  "why": "Matches GW (no tag on One Head Looks Back; Greater Daemon of Tzeentch is Shadow of Chaos only, no numbers) and the-exiled-legion precedent."
+ },
+ {
+  "key": "1ad8496a109a5374",
+  "where": "fluxmaster-pink-horrors",
+  "verdict": "ok",
+  "why": "The reasons are right (GW gives those profiles to the Split models; Icon/Instrument not taken). But the render contradicts \"they are on no models line\": see 35a3a5e3284c72f1."
+ },
+ {
+  "key": "43adfdd1859ea467",
+  "where": "daemon-prince-of-chaos-with-wings",
+  "verdict": "ok",
+  "why": "Matches GW (Daemon Prince of Tzeentch +3 A to the infernal cannon; Neverblade in the profiles; Daemonic Allegiance chosen when mustering)."
+ },
+ {
+  "key": "aac1fd2f96af3ad2",
+  "where": "flamers",
+  "verdict": "ok",
+  "why": "Matches GW."
+ },
+ {
+  "key": "1a421a497bb0b8a8",
+  "where": "the-changeling",
+  "verdict": "ok",
+  "why": "Matches GW (no (Aura) tag; see 384f2839… / d51cd629…)."
+ },
+ {
+  "key": "7cf05de40ed88b6f",
+  "where": "lord-of-change-infernal-puppeteer",
+  "verdict": "ok",
+  "why": "Matches GW and 22.01."
+ },
+ {
+  "key": "c7650695c2b82001",
+  "where": "lord-of-change-inescapable-eye",
+  "verdict": "ok",
+  "why": "Same datasheet."
+ },
+ {
+  "key": "4d7c1acd37b6352f",
+  "where": "tzeentch-soul-grinder",
+  "verdict": "ok",
+  "why": "GW FP 1.2 l.3082-3140: one Soul Grinder datasheet; Tzeentch allegiance gives warp gaze; warpsword → warpclaw. The name stays New Recruit's (precedent below, bab22ffeaed1ae81). Suggestion, not blocking: as the Daemon Prince does (why.kw Tzeentch: \"Daemonic Allegiance: Tzeentch\"), give the Soul Grinder's list-caused TZEENTCH and warp gaze their reason on the list unit, not only in this hidden why."
+ },
+ {
+  "key": "a5d1815c7a9dafe9",
+  "where": "the-blue-scribes",
+  "verdict": "ok",
+  "why": "Matches GW (P’tarix’s Sorcerous Syphon (Aura), any target)."
+ },
+ {
+  "key": "c90b21294117a1e7",
+  "where": "verify/snapshots/fellhammer-siege-task-force.txt (25 lines)",
+  "verdict": "ok",
+  "why": "GW Core Rules 24.19 quoted; Obliterators' Warp Rift Firepower gives \"[INDIRECT FIRE]\", so the new Indirect Fire entries in the Fellhammer list are right (scratchpad/tzeentch-work/fellhammer-snapshot.diff: two popups + one Rules line, nothing else)."
+ },
+ {
+  "key": "ea8b41d69f398913",
+  "where": "verify/snapshots/shooty.txt (home screen)",
+  "verdict": "ok",
+  "why": "The new list on the home screen: 2000 pts, Cavalcade of Chaos · Scintillating Legion, Priority Assets."
+ },
+ {
+  "key": "d67c4da82506393c",
+  "where": "points: Lord of Change, Tzeentch Soul Grinder",
+  "verdict": "ok",
+  "why": "Q1: there is no mismatch. Wahapedia's pages (verify/.cache/waha/ds/chaos-daemons_Lord-of-Change.html, _Soul-Grinder.html) print \"YOUR 1ST TO 2ND UNITS COST 1 model 320 / YOUR 3RD+ UNIT COSTS 1 model 340\" and \"YOUR 1ST TO 2ND UNITS COST 1 model 180 / YOUR 3RD+ UNIT COSTS 1 model 195\". This list has two Lords of Change (1st and 2nd: 320 each) and one Soul Grinder (180): the export's 320/320/180 are GW's current figures as Wahapedia transcribes them; 340/195 are the 3rd+ prices, misread as the price. GW publishes no separate points document in gw-downloads.json (FP 1.2 l.5-6: \"All of these changes are also updated in the Warhammer 40,000 app, along with points values\"). Precedent when export and GW differ: GW wins, declared as a pts deviation (deviations-bsdata.json nerf-when Bladeguard Veteran Squad, Wahapedia's \"YOUR 1ST TO 2ND UNITS COST\" as evidence). Recommendation: keep 320/320/180; replace the question's text so it does not say Wahapedia shows 340/195."
+ },
+ {
+  "key": "bab22ffeaed1ae81",
+  "where": "names: Daemon Prince of Chaos with wings, Tzeentch Soul Grinder",
+  "verdict": "ok",
+  "why": "Q2: names follow New Recruit, as precedent: the Emperor's Children Daemon Prince is \"Daemon Prince of Slaanesh with Wings\" because New Recruit spells it so (verify/sources/nr-json/defilers-and-friends.json), and the Thousand Sons one is \"Daemon Prince of Tzeentch with wings\" on main (data.js, New Recruit's lower-case). So \"Daemon Prince of Chaos with wings\" and \"Tzeentch Soul Grinder\" stay; GW's names are in the stats row (\"Soul Grinder\") and keywords (shown in capitals). Recommendation: keep."
+ },
+ {
+  "key": "f4fbac9ab7f2d1da",
+  "where": "Pink Horrors: (ref. only) rows",
+  "verdict": "fix",
+  "why": "Q3: the profile and weapon rows are acceptable and correct to show, marked \"(ref. only)\": GW prints the BLUE HORROR/BRIMSTONE HORROR profile and Coruscating Blue/Yellow Flames, Blue/Yellow claws on the Pink Horrors datasheet (FP 1.2 l.1505-1516), and the 25mm base is GW's Blue Horrors row (Event Companion l.2927; Brimstone has none, Wahapedia 25mm). What is not correct is the unplaced treatment: GW does say which models carry them (\"Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws. Every Brimstone Horror … Coruscating Yellow Flames; yellow claws.\", l.1552-1556), so \"WHICH MODELS: NOT SAID\" and \"New Recruit lists it for the Pink Horrors, not which model carries it\" contradict GW, and the Models box and Bases tab \"1×\" lines count a model that does not exist. Fix as 35a3a5e3284c72f1. Optionally the Bases tab can say Split can add Blue Horrors (25mm) and Brimstone Horrors (no GW row; Wahapedia 25mm) with no count.",
+  "fix": {
+   "see": "35a3a5e3284c72f1"
+  }
+ }
+]

@@ -1,0 +1,499 @@
+[
+ {
+  "army": "infernal-lance",
+  "kind": "unit-guard",
+  "where": "infernal-lance · Nurglings",
+  "judgement": {
+   "from": "Mischief Makers",
+   "kind": "melee",
+   "when": "Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings",
+   "note": "-1 to hit rolls (until the end of the phase)",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Mischief Makers",
+   "text": "Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "b650793ee7e92691"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-ph",
+  "where": "chaos-daemons army rule · The Shadow of Chaos",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "The Shadow of Chaos",
+   "text": "If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*"
+  },
+  "key": "9a56cbab23e85e9b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-turn",
+  "where": "chaos-daemons army rule · The Shadow of Chaos",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "The Shadow of Chaos",
+   "text": "If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*"
+  },
+  "key": "d49899fb07983b48"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-guard",
+  "where": "tzeeeeentch · The Changeling",
+  "judgement": {
+   "from": "Mischief and Confusion",
+   "kind": "all",
+   "when": "Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5)",
+   "note": "-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Mischief and Confusion",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase."
+  },
+  "key": "8d5b1ba1900030fc"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-footnote",
+  "where": "tzeeeeentch · Lord of Change",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Bolt of Change",
+   "when": "Your Shooting phase, until the end of the phase (select one)",
+   "note": "[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]",
+   "from": "Master of Magicks",
+   "pick": [
+    {
+     "name": "[IGNORES COVER]",
+     "note": "[IGNORES COVER]"
+    },
+    {
+     "name": "[LETHAL HITS]",
+     "note": "[LETHAL HITS]"
+    },
+    {
+     "name": "[SUSTAINED HITS D3]",
+     "note": "[SUSTAINED HITS D3]"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Master of Magicks",
+   "text": "In your Shooting phase, select one of the following abilities: **[IGNORES COVER]**; **[LETHAL HITS]**; **[SUSTAINED HITS D3]**. Until the end of the phase, this model’s Bolt of Change has that ability."
+  },
+  "key": "e4910699bf8b7ab9"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-def",
+  "where": "tzeeeeentch · Fluxmaster · Fluxmaster",
+  "judgement": {
+   "def": "This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls"
+  },
+  "source": {
+   "ability": "Fluxmaster",
+   "text": "- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**."
+  },
+  "key": "80a51828fa2da38a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-note",
+  "where": "tzeeeeentch · Fluxmaster · Split",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”"
+  },
+  "source": {
+   "ability": "Split",
+   "text": "Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit.",
+   "others": [
+    "Fluxmaster: - This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**.",
+    "Altered Reality: Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
+    "Improbable Shield (Aura): **LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.",
+    "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.: If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*"
+   ],
+   "listRules": [
+    "The Shadow of Chaos",
+    "Unholy Avalanche",
+    "Fates in Flux"
+   ]
+  },
+  "key": "d835497b18412444"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-note",
+  "where": "tzeeeeentch · Fluxmaster · Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”"
+  },
+  "source": {
+   "ability": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "text": "If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*",
+   "others": [
+    "Fluxmaster: - This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**.",
+    "Altered Reality: Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
+    "Improbable Shield (Aura): **LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.",
+    "Split: Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit."
+   ],
+   "listRules": [
+    "The Shadow of Chaos",
+    "Unholy Avalanche",
+    "Fates in Flux"
+   ]
+  },
+  "key": "ec8fd49776a3bd0b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-kwOnly",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "kwOnly": {
+    "Pink": "Pink Horror",
+    "Blue": "Blue Horrors",
+    "Brimstone": "Brimstone Horrors"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ],
+   "kw": [
+    "Battleline",
+    "Blue",
+    "Brimstone",
+    "Chaos",
+    "Character",
+    "Daemon",
+    "Faction: Legiones Daemonica",
+    "Fluxmaster",
+    "Fly",
+    "Horrors",
+    "Infantry",
+    "Mounted",
+    "Pink",
+    "Psyker",
+    "Tzeentch"
+   ],
+   "kwNote": "Infantry, Battleline, Horrors come from the led Pink Horrors."
+  },
+  "key": "e4e9aaf0d39afd74"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "gear": [
+    [
+     "Arcane Fireball",
+     "Herald combat weapon"
+    ],
+    [
+     "Coruscating Pink flames",
+     "Pink claws"
+    ]
+   ],
+   "weapons": [
+    "Fluxmaster · Arcane Fireball · witchfire",
+    "Fluxmaster · Arcane Fireball · focused witchfire",
+    "Pink Horrors · Coruscating Yellow flames (ref. only)",
+    "Pink Horrors · Coruscating Blue flames (ref. only)",
+    "Pink Horrors · ×10 · Coruscating Pink flames",
+    "Fluxmaster · Herald combat weapon",
+    "Pink Horrors · Yellow claws (ref. only)",
+    "Pink Horrors · Blue claws (ref. only)",
+    "Pink Horrors · ×10 · Pink claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ],
+   "leads": "Pink Horrors"
+  },
+  "key": "043cbd5d982aa06d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "auraMods",
+  "judgement": {
+   "code": "function auraMods(u){\n  const out = [];\n  // (the same aura from another unit is not said again where the unit's own always reaches it: an aura applies once, Core Rules 22.01;\n  // two Lords of Change's Daemon Lord of Tzeentch, as one unit's copies give it once)\n  const own = new Set((u.aura || []).filter(m => !m.notSelf && m.selfAlways && matches(m.needs, u)).map(m => m.from + '|' + m.note));\n  for(const src of army().units) for(const m of src.aura || []){\n    const self = src === u;\n    if((self && m.notSelf) || !matches(m.needs, u)) continue;\n    if(!self && own.has(m.from + '|' + m.note)) continue;\n    out.push(Object.assign({}, m, { when:self && m.selfWhen ? m.selfWhen : m.when, src }));\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "auras from other units in the list"
+  },
+  "key": "1d1084402e85c21e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · model keywords",
+  "judgement": {
+   "change": "A keyword GW prints for some models only (\"BRIMSTONE HORRORS: Brimstone\") that the export lacks is added to the unit (title case) and declared as a kw deviation, with its kwOnly (GW’s model name: \"Brimstone Horrors\"), instead of being dropped; Wahapedia’s trailing \": \" before a detachment keyword (\"BRIMSTONE: SHADOW LEGION\") is cut. --compare of every other export: unchanged. (review cafe1b84042242e0)"
+  },
+  "source": {
+   "diff": "git diff fd1276f -- verify/from-json.js"
+  },
+  "key": "eb6a1ef1474642df"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · (ref. only) rows",
+  "judgement": {
+   "change": "Only BSData \"(ref. only)\" weapon profiles of a unit entry are read (code review: before, any weapon on a unit entry); they are no longer `unplaced`; each gets `carrier` from GW’s UNIT COMPOSITION, carrierOf: \"Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws.\" -> \"Blue Horrors added by Split\" (a \"(ref. only)\" weapon no sentence names is listed to do). (review 35a3a5e3284c72f1, f4fbac9ab7f2d1da)"
+  },
+  "source": {
+   "diff": "git diff fd1276f -- verify/from-json.js"
+  },
+  "key": "f17fc6e1fd7534aa"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · hardening",
+  "judgement": {
+   "change": "kwNote tail `(/ from .*$/.exec(u.kwNote) || [' from the led ' + u.leads + '.'])[0]` at both places; `(facSrc.detachments[k].rule || {}).name` in the hand rule label (code review)."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- verify/from-json.js"
+  },
+  "key": "29c28bb46f5c56a0"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · weaponItems",
+  "judgement": {
+   "change": "A weapon row’s `carrier` (data.js) is its item’s carrier, shown with the existing carrier tag (the \"cr\" span the app already uses for \"which models: not said\" and a models line’s name): \"BLUE HORRORS ADDED BY SPLIT\". No other list has a carrier column, so no other screen changes."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- app.html"
+  },
+  "key": "6feef1e3b3eb995a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · screenBases (baseShown)",
+  "judgement": {
+   "change": "A base without a digit is \"no base\" only for \"Hull\" (or none); a named base is shown as GW prints it, \"Large Flying\" -> \"Large Flying Base\", and counted under Bases to print (The Blue Scribes, Fluxmaster: \"2× Large Flying Base\"). The only non-digit bases in data.js are Hull ×6 (unchanged: \"no base\") and these two."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- app.html"
+  },
+  "key": "7559847e0a1a3015"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · auraMods",
+  "judgement": {
+   "change": "Core Rules 22.01 (an aura applies once): a unit whose own aura always reaches it (selfAlways, its needs met) is not given the same aura (same from and note) again from another unit. Precedent: one unit entry’s copies (standard’s Eightbound ×2: their page shows only \"Own aura\"). Effect: each Lord of Change shows \"Own aura: +1 S\" and no longer also \"Within 6\" of the Lord of Change: +1 S\" (which a player could add to +2); other units still get one \"Within 6\" of the Lord of Change\" line (lines of the same text were already one). Checked: no other list’s snapshot changes (shooty Clever Know-wotz, standard Beacons of Rage, 6-bigs Paladin’s Duty, infernal-lance Close-range Killers are notSelf or one entry)."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- app.html"
+  },
+  "key": "beae13c92d6e54b6"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "check.js · mod weapon; carrier",
+  "judgement": {
+   "change": "A mod’s weapon may name a weapon of several profiles (its group: Master of Magicks’ Bolt of Change; dmReach already matches the group); \"set is ignored\" only for a mod with set. A weapon row with a carrier counts as carried (it is on no gear line) and must not be on a models line."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- check.js"
+  },
+  "key": "874c89fb6f482583"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/tables.js · unitWhy",
+  "judgement": {
+   "change": "A keyword that BSData’s Daemonic Allegiance entry names (\"Tzeentch Soul Grinder\"), stated by the unit’s Daemonic Allegiance ability, is the list’s with that reason: why.kw { Tzeentch:\"Daemonic Allegiance: Tzeentch\" } (as the Daemon Prince’s from its models line). Only an ability named Daemonic Allegiance (not Khorne Berzerkers), so no other list changes."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- verify/tables.js"
+  },
+  "key": "00db8b72330a9faa"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/columns.json",
+  "judgement": {
+   "change": "DATASHEETS.ranged / .melee `carrier`: source gw."
+  },
+  "source": {
+   "diff": "git diff fd1276f -- verify/columns.json"
+  },
+  "key": "7d70e43427f65180"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · nurglings · ability.tag",
+  "judgement": {
+   "app": "Mischief Makers: ",
+   "source": "Mischief Makers (Aura)"
+  },
+  "source": {
+   "reason": "GW’s datasheet prints Mischief Makers without a tag (no \"(Aura)\"); BSData at the pin (Chaos - Chaos Daemons Library) names it \"Mischief Makers (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins (as Kairos Fateweaver’s One Head Looks Back in tzeeeeentch).",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2203 (Nurglings datasheet): \"Mischief Makers: Each time an enemy unit (excluding Titanic …\"; verify/.cache/waha/ds/chaos-daemons_Nurglings.html: \"Mischief Makers:\" (no tag)."
+  },
+  "key": "bd71b9434293b1d0"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · kw",
+  "judgement": {
+   "app": "Brimstone",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS."
+  },
+  "key": "11f7dad580a7261f"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "deviation",
+  "where": "deviations-nr.json · nurglings · abilities[Mischief Makers (Aura)].tag",
+  "judgement": {
+   "app": null,
+   "source": "Aura"
+  },
+  "source": {
+   "reason": "New Recruit prints “Mischief Makers (Aura)” (BSData’s name); GW’s Faction Pack and Wahapedia print “Mischief Makers:” with no tag. Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
+   "evidence": "verify/sources/nr/infernal-lance.txt p7; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2203: \"Mischief Makers: Each time an enemy unit …\"."
+  },
+  "key": "695bf9f6f1472e9c"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "re-judge",
+  "where": "infernal-lance · Nurglings · Mischief Makers (approved 74ec1cd7b0afc248: tag \"Aura\")",
+  "judgement": {
+   "tag": null,
+   "def": null,
+   "guard": "Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase)",
+   "selfAlways": true
+  },
+  "source": {
+   "reason": "The owner’s rule: Aura is only what GW tags (Aura). GW’s Faction Pack (Nurglings datasheet) and Wahapedia print “Mischief Makers:” untagged; BSData and New Recruit’s PDF print “Mischief Makers (Aura)”. The tag is dropped (declared in deviations-bsdata.json and deviations-nr.json), so 74ec1cd7b0afc248 no longer applies. Its reading follows the rule used for Mischief and Confusion: the -1 to hit is on every melee attack of that enemy unit, whatever it targets, so it is help for every unit of the list (a guard, selfAlways: the Nurglings too), not a When targeted line of the Nurglings only (its def, b35db159, removed).",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2203; data.js DATASHEETS chaos-knights/nurglings"
+  },
+  "key": "1870b9d57264bc1e"
+ },
+ {
+  "army": "chaos-daemons",
+  "kind": "faq-label",
+  "where": "chaos-daemons army rule · The Shadow of Chaos · FAQ line",
+  "judgement": {
+   "from": "*Wahapedia FAQ: If there are no objective markers … affect those areas of the battlefield? No.*",
+   "to": "*FAQ (Faction Pack 1.2): If there are no objective markers … affect those areas of the battlefield? No.*"
+  },
+  "source": {
+   "reason": "GW’s Faction Pack 1.2 prints it (FAQS); labelled as the Insane Bravery FAQ next to it is (texts.js packfaq checks it in the pack).",
+   "evidence": "Faction Pack Chaos Daemons 1.2, Rules Updates, FAQS (pdftotext -raw line ~3759)"
+  },
+  "key": "860b411915a00152"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "guard-wording",
+  "where": "tzeeeeentch · The Changeling · Mischief and Confusion guard",
+  "judgement": {
+   "from": "(D6: 2-5)",
+   "to": "(on a D6 roll of 2-5)"
+  },
+  "source": {
+   "reason": "the When targeted line splits its head at the first \": \" (defLine), so \"(D6: 2-5)\" broke the head; same meaning, no colon.",
+   "evidence": "app.html defLine"
+  },
+  "key": "68f91a153d1c6ebf"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/the-exiled-legion.txt",
+  "judgement": {
+   "change": "Shadow of Chaos FAQ label \"Wahapedia FAQ:\" -> \"FAQ (Faction Pack 1.2):\" (3 places: Overview, Rules, rule popup)"
+  },
+  "source": {
+   "evidence": "git diff --no-index verify/snapshots/the-exiled-legion.txt verify/out/snapshots/the-exiled-legion.txt (scratchpad/tzeentch-work/the-exiled-legion-snapshot.diff)"
+  },
+  "key": "49e5f5accefd8130"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/infernal-lance.txt",
+  "judgement": {
+   "change": "Nurglings · Mischief Makers: \"Aura · Fight · Either turn\" -> \"Fight · Either turn\" (2 places, and the popup header); its When targeted line (Nurglings page) becomes the guard line \"Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)\" on every unit page (When targeted counts 3->4, 4->5, 5->6); the ability popup the def line opened is no longer a separate render target (the guard opens the unit)"
+  },
+  "source": {
+   "evidence": "git diff --no-index verify/snapshots/infernal-lance.txt verify/out/snapshots/infernal-lance.txt (scratchpad/tzeentch-work/infernal-lance-snapshot.diff)"
+  },
+  "key": "07aeaf3999cfdd85"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/fellhammer-siege-task-force.txt",
+  "judgement": {
+   "change": "unchanged from round 1: the Indirect Fire glossary entry for the Obliterators"
+  },
+  "source": {
+   "evidence": "git diff --no-index verify/snapshots/fellhammer-siege-task-force.txt verify/out/snapshots/fellhammer-siege-task-force.txt (scratchpad/tzeentch-work/fellhammer-siege-task-force-snapshot.diff)"
+  },
+  "key": "a07b39132e36719c"
+ },
+ {
+  "army": "shooty",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt",
+  "judgement": {
+   "change": "unchanged from round 1: the home screen lists Tzeeeeentch"
+  },
+  "source": {
+   "evidence": "git diff --no-index verify/snapshots/shooty.txt verify/out/snapshots/shooty.txt (scratchpad/tzeentch-work/shooty-snapshot.diff)"
+  },
+  "key": "d65b976bf919c90d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "note",
+  "where": "Fluxmaster When targeted line: label",
+  "judgement": {
+   "line": "FLUXMASTER Fluxmaster: This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls"
+  },
+  "source": {
+   "reason": "The text now says \"this unit\" (review ab039ae92add6462); the small label is the part the ability is on (app.html defLine, as the Meganobz line’s MEGANOBZ), unchanged: no app change."
+  },
+  "key": "02ceb78a93524311"
+ }
+]

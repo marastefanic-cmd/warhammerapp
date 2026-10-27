@@ -1,0 +1,2350 @@
+[
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Kairos Fateweaver · One Head Looks Forward",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "One Head Looks Forward",
+   "text": "At the end of your Command phase, if this model is on the battlefield, take a **Leadership test** for this model; if that test is passed, you gain 1CP."
+  },
+  "key": "507b2e58dc999588"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Kairos Fateweaver · One Head Looks Back",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "One Head Looks Back",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP."
+  },
+  "key": "3e00d1947651f014"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Kairos Fateweaver · One Head Looks Back",
+  "judgement": {
+   "tag": "Once per turn"
+  },
+  "source": {
+   "ability": "One Head Looks Back",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP."
+  },
+  "key": "11bbad8d16991d06"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-damaged",
+  "where": "tzeeeeentch · Kairos Fateweaver · Damaged: 1-7 wounds remaining",
+  "judgement": {
+   "damaged": "1-7",
+   "W": "20"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "46e33c6df32f9912"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Lord of Change · Greater Daemon of Tzeentch",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Greater Daemon of Tzeentch",
+   "text": "While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
+  },
+  "key": "2b667666ee6c3162"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-footnote",
+  "where": "tzeeeeentch · Lord of Change",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-7 wounds left)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged: 1-7 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "57d0756c6f58a8a7"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Kairos Fateweaver",
+  "judgement": {
+   "gear": [
+    [
+     "Infernal Gateway",
+     "Staff of Tomorrow"
+    ]
+   ],
+   "weapons": [
+    "Infernal Gateway · witchfire",
+    "Infernal Gateway · focused witchfire",
+    "Staff of Tomorrow"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Kairos Fateweaver"
+   ],
+   "leads": null
+  },
+  "key": "1295284bf6ded42f"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · The Blue Scribes · P’tarix’s Sorcerous Syphon",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "P’tarix’s Sorcerous Syphon",
+   "text": "While an enemy unit is within 12\" of this model, each time a model in that unit makes a **Psychic Attack**, subtract 1 from the **Wound roll**."
+  },
+  "key": "007b6b44f868867c"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · The Blue Scribes · Xirat’p’s Sorcerous Barrages",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Xirat’p’s Sorcerous Barrages",
+   "text": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 **mortal wound**; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds."
+  },
+  "key": "08773f59fe64b153"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · The Blue Scribes · Xirat’p’s Sorcerous Barrages",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Xirat’p’s Sorcerous Barrages",
+   "text": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 **mortal wound**; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds."
+  },
+  "key": "f8ad0f251ac9f316"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-guard",
+  "where": "tzeeeeentch · The Blue Scribes",
+  "judgement": {
+   "from": "P’tarix’s Sorcerous Syphon",
+   "kind": "all",
+   "when": "Psychic Attacks made by an enemy unit within 12\" of The Blue Scribes",
+   "note": "-1 to the wound roll",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "P’tarix’s Sorcerous Syphon",
+   "text": "While an enemy unit is within 12\" of this model, each time a model in that unit makes a **Psychic Attack**, subtract 1 from the **Wound roll**."
+  },
+  "key": "973008fe650fc5dc"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · The Blue Scribes",
+  "judgement": {
+   "gear": [
+    [
+     "Sharp quills"
+    ]
+   ],
+   "weapons": [
+    "Sharp quills"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× The Blue Scribes"
+   ],
+   "leads": null
+  },
+  "key": "9f2fbfdb69e3b07d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-def",
+  "where": "tzeeeeentch · The Changeling · Formless Horror",
+  "judgement": {
+   "def": "an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase"
+  },
+  "source": {
+   "ability": "Formless Horror",
+   "text": "Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a **Battle-shock test**. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase."
+  },
+  "key": "addfc89d24278551"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · The Changeling · Mischief and Confusion",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Mischief and Confusion",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase."
+  },
+  "key": "384f2839a61b827d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-guard",
+  "where": "tzeeeeentch · The Changeling",
+  "judgement": {
+   "from": "Mischief and Confusion",
+   "kind": "all",
+   "when": "Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (D6: 2-5)",
+   "note": "-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Mischief and Confusion",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase."
+  },
+  "key": "d51cd629235385dd"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · The Changeling",
+  "judgement": {
+   "gear": [
+    [
+     "Infernal Flames",
+     "The Trickster’s Staff"
+    ]
+   ],
+   "weapons": [
+    "Infernal Flames · witchfire",
+    "Infernal Flames · focused witchfire",
+    "The Trickster’s Staff"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× The Changeling"
+   ],
+   "leads": null
+  },
+  "key": "11363887e1b8de3c"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Malefic Destruction",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Malefic Destruction",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons."
+  },
+  "key": "0907d7d696a676e1"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Malefic Destruction",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Malefic Destruction",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons."
+  },
+  "key": "1ea14b9bc0ac6a8a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Harbinger of Death",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Harbinger of Death",
+   "text": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "3c7efae47842a2df"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Neverblade",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Neverblade",
+   "text": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "ac0e76ae5fa16e35"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Neverblade",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Neverblade",
+   "text": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "a86158e6732d93c1"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-footnote",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "judgement": {
+   "kind": "melee",
+   "set": {
+    "A": "+3"
+   },
+   "when": "Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase",
+   "note": "+3 A",
+   "from": "Malefic Destruction"
+  },
+  "source": {
+   "ability": "Malefic Destruction",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons."
+  },
+  "key": "0122b0b65b9db59a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-footnote",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "judgement": {
+   "kind": "melee",
+   "when": "Selected to fight, its hellforged weapons, until the end of the phase (select one)",
+   "note": "[LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]",
+   "from": "Harbinger of Death",
+   "pick": [
+    {
+     "name": "[LETHAL HITS]",
+     "note": "[LETHAL HITS]"
+    },
+    {
+     "name": "[PRECISION]",
+     "note": "[PRECISION]"
+    },
+    {
+     "name": "[SUSTAINED HITS 1]",
+     "note": "[SUSTAINED HITS 1]"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Harbinger of Death",
+   "text": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**"
+  },
+  "key": "b5b97f9a9ea5d6d2"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-footnote",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "judgement": {
+   "kind": "melee",
+   "when": "Every melee attack",
+   "note": "+1 to hit rolls",
+   "from": "Neverblade",
+   "always": true
+  },
+  "source": {
+   "ability": "Neverblade",
+   "text": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "cb976747a14831e8"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings",
+  "judgement": {
+   "gear": [
+    [
+     "Hellforged weapons",
+     "Infernal cannon"
+    ]
+   ],
+   "weapons": [
+    "Infernal cannon",
+    "Hellforged weapons · strike",
+    "Hellforged weapons · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Daemon Prince of Chaos with wings (Tzeentch)"
+   ],
+   "leads": null
+  },
+  "key": "2ad2e2bd94f302b1"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Lord of Change · Daemon Lord of Tzeentch",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Daemon Lord of Tzeentch",
+   "text": "While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "a5b3dd9e571fdb30"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Lord of Change · Daemon Lord of Tzeentch",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Daemon Lord of Tzeentch",
+   "text": "While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "4e5967d3645f44b0"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Lord of Change · Master of Magicks",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Master of Magicks",
+   "text": "In your Shooting phase, select one of the following abilities: **[IGNORES COVER]**; **[LETHAL HITS]**; **[SUSTAINED HITS D3]**. Until the end of the phase, this model’s Bolt of Change has that ability."
+  },
+  "key": "db510a55b2c5b2ff"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Lord of Change · Master of Magicks",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Master of Magicks",
+   "text": "In your Shooting phase, select one of the following abilities: **[IGNORES COVER]**; **[LETHAL HITS]**; **[SUSTAINED HITS D3]**. Until the end of the phase, this model’s Bolt of Change has that ability."
+  },
+  "key": "5314ce9f0e883f4d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-damaged",
+  "where": "tzeeeeentch · Lord of Change · Damaged: 1-7 wounds remaining",
+  "judgement": {
+   "damaged": "1-7",
+   "W": "18"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "51bffdb3cca1a152"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Lord of Change · Infernal Puppeteer",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Infernal Puppeteer",
+   "text": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9\" **detection range** until this unit has shot."
+  },
+  "key": "0ed2a033795026c9"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Lord of Change · Infernal Puppeteer",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Infernal Puppeteer",
+   "text": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9\" **detection range** until this unit has shot."
+  },
+  "key": "f298d113ada36f82"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-aura",
+  "where": "tzeeeeentch · Lord of Change",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   },
+   "when": "Within 6\" of the Lord of Change",
+   "selfWhen": "Own aura",
+   "note": "+1 S",
+   "from": "Daemon Lord of Tzeentch",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Daemon Lord of Tzeentch",
+   "text": "While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "1ddec049fecb0f89"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Lord of Change",
+  "judgement": {
+   "gear": [
+    [
+     "Bolt of Change",
+     "Staff of Tzeentch",
+     "Rod of sorcery"
+    ]
+   ],
+   "weapons": [
+    "Bolt of Change · witchfire",
+    "Bolt of Change · focused witchfire",
+    "Rod of sorcery",
+    "Staff of Tzeentch"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Lord of Change"
+   ],
+   "leads": null
+  },
+  "key": "9d8f935deac06384"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Lord of Change · Inescapable Eye",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Inescapable Eye",
+   "text": "**LEGIONES DAEMONICA TZEENTCH** model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+  },
+  "key": "b4e5fcdfe91f6e65"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Lord of Change · Inescapable Eye",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Inescapable Eye",
+   "text": "**LEGIONES DAEMONICA TZEENTCH** model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token."
+  },
+  "key": "cb5b0667f17e2160"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-who",
+  "where": "tzeeeeentch · Fluxmaster · Fluxmaster",
+  "judgement": {
+   "who": "Fluxmaster",
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ]
+  },
+  "source": {
+   "ability": "Fluxmaster",
+   "text": "- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**."
+  },
+  "key": "17cee3c3d3cabd0b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-def",
+  "where": "tzeeeeentch · Fluxmaster · Fluxmaster",
+  "judgement": {
+   "def": "Stealth (the benefit of cover against ranged attacks); melee attacks that target it have -1 to hit rolls"
+  },
+  "source": {
+   "ability": "Fluxmaster",
+   "text": "- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**."
+  },
+  "key": "ab039ae92add6462"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Fluxmaster · Altered Reality",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Altered Reality",
+   "text": "Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6."
+  },
+  "key": "e2701ffebd7c5c5b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-who",
+  "where": "tzeeeeentch · Fluxmaster · Altered Reality",
+  "judgement": {
+   "who": "Fluxmaster",
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ]
+  },
+  "source": {
+   "ability": "Altered Reality",
+   "text": "Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6."
+  },
+  "key": "192c6ab78aab1054"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-tag",
+  "where": "tzeeeeentch · Fluxmaster · Improbable Shield (Aura)",
+  "judgement": {
+   "tag": "Enhancement · Aura"
+  },
+  "source": {
+   "ability": "Improbable Shield (Aura)",
+   "text": "**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**."
+  },
+  "key": "b02eddc070b02d86"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-who",
+  "where": "tzeeeeentch · Fluxmaster · Improbable Shield (Aura)",
+  "judgement": {
+   "who": "Fluxmaster",
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ]
+  },
+  "source": {
+   "ability": "Improbable Shield (Aura)",
+   "text": "**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**."
+  },
+  "key": "9837c3fa66ecd139"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-who",
+  "where": "tzeeeeentch · Fluxmaster · Split",
+  "judgement": {
+   "who": "Pink Horrors",
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ]
+  },
+  "source": {
+   "ability": "Split",
+   "text": "Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit."
+  },
+  "key": "80a980bc5b015e0d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-who",
+  "where": "tzeeeeentch · Fluxmaster · Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+  "judgement": {
+   "who": "Pink Horrors",
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ]
+  },
+  "source": {
+   "ability": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "text": "If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*"
+  },
+  "key": "2909c0cf3382f4d0"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-guard",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "from": "Improbable Shield (Aura)",
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   },
+   "kind": "all",
+   "when": "Within 6\" of the Fluxmaster",
+   "selfWhen": "Own aura",
+   "selfAlways": true,
+   "note": "Feel No Pain 4+ against Psychic Attacks and mortal wounds"
+  },
+  "source": {
+   "ability": "Improbable Shield (Aura)",
+   "text": "**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**."
+  },
+  "key": "5c588e13f984302b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-kwNote",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "kwNote": "Infantry, Battleline, Horrors come from the led Pink Horrors."
+  },
+  "source": {
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ],
+   "stats": [
+    "Fluxmaster W4 OC1",
+    "Blue/Brimstone Horror (ref. only) W1 OC1",
+    "Pink Horror ×10 W1 OC2"
+   ],
+   "weapons": [
+    "Arcane Fireball witchfire 3 -1 D3 PSYCHIC",
+    "Arcane Fireball focused witchfire 3 -2 D3 DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC",
+    "Coruscating Yellow flames (ref. only) 2 -1 1 PISTOL, PSYCHIC",
+    "Coruscating Blue flames (ref. only) 2 -1 1 PISTOL, PSYCHIC",
+    "Coruscating Pink flames 2 -1 1 PISTOL, PSYCHIC",
+    "Herald combat weapon 3 -1 1 PSYCHIC",
+    "Yellow claws (ref. only) 2 0 1",
+    "Blue claws (ref. only) 1 0 1",
+    "Pink claws 1 0 1"
+   ]
+  },
+  "key": "a018cf37a026418f"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-ptsNote",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "ptsNote": "100 + Pink Horrors 150"
+  },
+  "source": {
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ],
+   "stats": [
+    "Fluxmaster W4 OC1",
+    "Blue/Brimstone Horror (ref. only) W1 OC1",
+    "Pink Horror ×10 W1 OC2"
+   ],
+   "weapons": [
+    "Arcane Fireball witchfire 3 -1 D3 PSYCHIC",
+    "Arcane Fireball focused witchfire 3 -2 D3 DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC",
+    "Coruscating Yellow flames (ref. only) 2 -1 1 PISTOL, PSYCHIC",
+    "Coruscating Blue flames (ref. only) 2 -1 1 PISTOL, PSYCHIC",
+    "Coruscating Pink flames 2 -1 1 PISTOL, PSYCHIC",
+    "Herald combat weapon 3 -1 1 PSYCHIC",
+    "Yellow claws (ref. only) 2 0 1",
+    "Blue claws (ref. only) 1 0 1",
+    "Pink claws 1 0 1"
+   ]
+  },
+  "key": "7e367f46fff8c607"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-kwOnly",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "kwOnly": {
+    "Pink": "Pink Horror",
+    "Blue": "Blue Horrors"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ],
+   "kw": [
+    "Battleline",
+    "Blue",
+    "Chaos",
+    "Character",
+    "Daemon",
+    "Faction: Legiones Daemonica",
+    "Fluxmaster",
+    "Fly",
+    "Horrors",
+    "Infantry",
+    "Mounted",
+    "Pink",
+    "Psyker",
+    "Tzeentch"
+   ],
+   "kwNote": "Infantry, Battleline, Horrors come from the led Pink Horrors."
+  },
+  "key": "cafe1b84042242e0"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Fluxmaster",
+  "judgement": {
+   "gear": [
+    [
+     "Arcane Fireball",
+     "Herald combat weapon"
+    ],
+    [
+     "Coruscating Pink flames",
+     "Pink claws"
+    ]
+   ],
+   "unplaced": [
+    "Coruscating Yellow flames (ref. only)",
+    "Yellow claws (ref. only)",
+    "Blue claws (ref. only)",
+    "Coruscating Blue flames (ref. only)"
+   ],
+   "weapons": [
+    "Fluxmaster · Arcane Fireball · witchfire",
+    "Fluxmaster · Arcane Fireball · focused witchfire",
+    "Pink Horrors · Coruscating Yellow flames (ref. only)",
+    "Pink Horrors · Coruscating Blue flames (ref. only)",
+    "Pink Horrors · ×10 · Coruscating Pink flames",
+    "Fluxmaster · Herald combat weapon",
+    "Pink Horrors · Yellow claws (ref. only)",
+    "Pink Horrors · Blue claws (ref. only)",
+    "Pink Horrors · ×10 · Pink claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Fluxmaster",
+    "10× Pink Horror"
+   ],
+   "leads": "Pink Horrors"
+  },
+  "key": "35a3a5e3284c72f1"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Flamers · Bounding Leaps",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Bounding Leaps",
+   "text": "This unit is eligible to shoot in a turn in which it Fell Back."
+  },
+  "key": "5032d7e52b3b0d94"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Flamers",
+  "judgement": {
+   "gear": [
+    [
+     "Flamer mouths",
+     "Flickering Flames"
+    ],
+    [
+     "Flamer mouths",
+     "Flickering Flames"
+    ]
+   ],
+   "weapons": [
+    "×3 · Flickering Flames",
+    "×3 · Flamer mouths"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Pyrocaster",
+    "2× Flamer"
+   ],
+   "leads": null
+  },
+  "key": "777ed0fd1c537198"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-timing",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder · Scuttling Walker",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Scuttling Walker",
+   "text": "Each time this model makes a **Normal** or **Advance** move, it can move over friendly **MONSTER** and **VEHICLE** models and **terrain features** that are 4\" or less in height as if they were not there."
+  },
+  "key": "241d5ac611f37102"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-damaged",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder · Damaged: 1-5 wounds remaining",
+  "judgement": {
+   "damaged": "1-5",
+   "W": "14"
+  },
+  "source": {
+   "ability": "Damaged: 1-5 wounds remaining",
+   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "c8ca2c226b7c478d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-footnote",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-5 wounds left)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged: 1-5 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-5 wounds remaining",
+   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "59afa2d5f134c68d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Tzeentch Soul Grinder",
+  "judgement": {
+   "gear": [
+    [
+     "Harvester cannon",
+     "Iron claw",
+     "Warp gaze",
+     "Warpclaw"
+    ]
+   ],
+   "weapons": [
+    "Harvester cannon",
+    "Warp gaze",
+    "Iron claw",
+    "Warpclaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Tzeentch Soul Grinder"
+   ],
+   "leads": null
+  },
+  "key": "8706db28ac64adec"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-ph",
+  "where": "Cavalcade of Chaos rule · Unholy Avalanche",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ]
+  },
+  "source": {
+   "rule": "Unholy Avalanche",
+   "text": "If a friendly **LEGIONES DAEMONICA MOUNTED** unit made a **fall-back move** this turn, that move does not prevent that unit from being **eligible to shoot**/**eligible to declare a charge**."
+  },
+  "key": "63359b8b64e670d9"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-turn",
+  "where": "Cavalcade of Chaos rule · Unholy Avalanche",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Unholy Avalanche",
+   "text": "If a friendly **LEGIONES DAEMONICA MOUNTED** unit made a **fall-back move** this turn, that move does not prevent that unit from being **eligible to shoot**/**eligible to declare a charge**."
+  },
+  "key": "4624b2eab99bae75"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-needs",
+  "where": "Cavalcade of Chaos rule · Unholy Avalanche",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Unholy Avalanche",
+   "text": "If a friendly **LEGIONES DAEMONICA MOUNTED** unit made a **fall-back move** this turn, that move does not prevent that unit from being **eligible to shoot**/**eligible to declare a charge**."
+  },
+  "key": "666b12d32233cf4a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "From Beyond the Veil",
+   "text": "WHEN: End of the Movement phase, from the start of the battle.\nTARGET: One friendly **LEGIONES DAEMONICA MOUNTED** unit in **strategic reserves**.\nEFFECT: Your unit can make an **ingress move**."
+  },
+  "key": "37189a44903338f3"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "From Beyond the Veil",
+   "text": "WHEN: End of the Movement phase, from the start of the battle.\nTARGET: One friendly **LEGIONES DAEMONICA MOUNTED** unit in **strategic reserves**.\nEFFECT: Your unit can make an **ingress move**."
+  },
+  "key": "3e799ad04dc00c2e"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "From Beyond the Veil",
+   "text": "WHEN: End of the Movement phase, from the start of the battle.\nTARGET: One friendly **LEGIONES DAEMONICA MOUNTED** unit in **strategic reserves**.\nEFFECT: Your unit can make an **ingress move**."
+  },
+  "key": "0cd13d858c7e2797"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Cavalcade of Chaos · From Beyond the Veil",
+  "judgement": {
+   "gist": "End of the Movement phase, from the start of the battle, your LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves: it can make an Ingress move."
+  },
+  "source": {
+   "stratagem": "From Beyond the Veil",
+   "text": "WHEN: End of the Movement phase, from the start of the battle.\nTARGET: One friendly **LEGIONES DAEMONICA MOUNTED** unit in **strategic reserves**.\nEFFECT: Your unit can make an **ingress move**."
+  },
+  "key": "1a016e6f1af93a60"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Warp-Riders",
+   "text": "WHEN: Your Movement phase, when a friendly **LEGIONES DAEMONICA MOUNTED** unit is **selected to move**.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "8ba44ccc23f32ba8"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Warp-Riders",
+   "text": "WHEN: Your Movement phase, when a friendly **LEGIONES DAEMONICA MOUNTED** unit is **selected to move**.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "9c7643f22ce34bcb"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Warp-Riders",
+   "text": "WHEN: Your Movement phase, when a friendly **LEGIONES DAEMONICA MOUNTED** unit is **selected to move**.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "1343363b607b11e5"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Cavalcade of Chaos · Warp-Riders",
+  "judgement": {
+   "gist": "Your Movement phase, when your LEGIONES DAEMONICA MOUNTED unit is selected to move: it has MOBILE."
+  },
+  "source": {
+   "stratagem": "Warp-Riders",
+   "text": "WHEN: Your Movement phase, when a friendly **LEGIONES DAEMONICA MOUNTED** unit is **selected to move**.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "3076ec8bdbfc725b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Inescapable Manifestations",
+   "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **LEGIONES DAEMONICA MOUNTED** unit.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+  },
+  "key": "d5effc3df61d8fd6"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Inescapable Manifestations",
+   "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **LEGIONES DAEMONICA MOUNTED** unit.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+  },
+  "key": "b14a55c0d93e001d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Inescapable Manifestations",
+   "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **LEGIONES DAEMONICA MOUNTED** unit.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+  },
+  "key": "fc0f2ab82656216a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Cavalcade of Chaos · Inescapable Manifestations",
+  "judgement": {
+   "gist": "Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls)."
+  },
+  "source": {
+   "stratagem": "Inescapable Manifestations",
+   "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **LEGIONES DAEMONICA MOUNTED** unit.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+  },
+  "key": "16e30d7d87cefff2"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-ph",
+  "where": "Scintillating Legion rule · Fates in Flux",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Fates in Flux",
+   "text": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an **Advance roll**, **Hit roll**, **Wound roll**, Damage roll, saving throw or Hazardous test is made for a **LEGIONES DAEMONICA TZEENTCH** model or **LEGIONES DAEMONICA TZEENTCH** unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n**Designer’s Note:** When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once."
+  },
+  "key": "b062e137966a5814"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-turn",
+  "where": "Scintillating Legion rule · Fates in Flux",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Fates in Flux",
+   "text": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an **Advance roll**, **Hit roll**, **Wound roll**, Damage roll, saving throw or Hazardous test is made for a **LEGIONES DAEMONICA TZEENTCH** model or **LEGIONES DAEMONICA TZEENTCH** unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n**Designer’s Note:** When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once."
+  },
+  "key": "83f08308182eae49"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "rule-needs",
+  "where": "Scintillating Legion rule · Fates in Flux",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Fates in Flux",
+   "text": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an **Advance roll**, **Hit roll**, **Wound roll**, Damage roll, saving throw or Hazardous test is made for a **LEGIONES DAEMONICA TZEENTCH** model or **LEGIONES DAEMONICA TZEENTCH** unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n**Designer’s Note:** When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once."
+  },
+  "key": "d352feec3f52b87d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Impossible Eclipse",
+   "text": "WHEN: Any phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH MONSTER** unit from your army that is on the battlefield.\nEFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos."
+  },
+  "key": "19aba5d00a372a6b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Impossible Eclipse",
+   "text": "WHEN: Any phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH MONSTER** unit from your army that is on the battlefield.\nEFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos."
+  },
+  "key": "177fd7903d7b26b9"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Impossible Eclipse",
+   "text": "WHEN: Any phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH MONSTER** unit from your army that is on the battlefield.\nEFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos."
+  },
+  "key": "ca9b73087567964d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Scintillating Legion · Impossible Eclipse",
+  "judgement": {
+   "gist": "Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos."
+  },
+  "source": {
+   "stratagem": "Impossible Eclipse",
+   "text": "WHEN: Any phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH MONSTER** unit from your army that is on the battlefield.\nEFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos."
+  },
+  "key": "879736048d8f7544"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Pyrogenesis",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead."
+  },
+  "key": "58f4b6633e463bc0"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Pyrogenesis",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead."
+  },
+  "key": "49ca927e56b5c438"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turns",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Pyrogenesis",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead."
+  },
+  "key": "dcbebf2dab9863ed"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Pyrogenesis",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead."
+  },
+  "key": "ad7e53340b17af7c"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-mod",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase",
+    "note": "+2 S (one Flux token spent: +3 S and +1 AP instead)",
+    "pick": [
+     {
+      "name": "+2 S",
+      "note": "+2 S"
+     },
+     {
+      "name": "Flux token spent",
+      "note": "+3 S, +1 AP"
+     }
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Pyrogenesis",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead."
+  },
+  "key": "071d2d84751b2775"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Scintillating Legion · Pyrogenesis",
+  "judgement": {
+   "gist": "Your Shooting phase or the Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not yet selected to shoot or fight: until the end of the phase, +2 S to its weapons, or spend one Flux token for +3 S and +1 AP instead."
+  },
+  "source": {
+   "stratagem": "Pyrogenesis",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead."
+  },
+  "key": "5a01d30fcc5707e3"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Scintillating Legion · Flickering Reality",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Flickering Reality",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved."
+  },
+  "key": "01411ef8a8e114ec"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Scintillating Legion · Flickering Reality",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Flickering Reality",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved."
+  },
+  "key": "17aa32ec88258f25"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Scintillating Legion · Flickering Reality",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Flickering Reality",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved."
+  },
+  "key": "cc81c463df30685e"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-def",
+  "where": "Scintillating Legion · Flickering Reality",
+  "judgement": {
+   "def": "Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit"
+  },
+  "source": {
+   "stratagem": "Flickering Reality",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved."
+  },
+  "key": "f5c0a5ac4ebcb304"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Scintillating Legion · Flickering Reality",
+  "judgement": {
+   "gist": "Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit."
+  },
+  "source": {
+   "stratagem": "Flickering Reality",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved."
+  },
+  "key": "d6d44a8174815ba7"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "judgement": {
+   "phases": [
+    "movement",
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Fateborne Nightmares",
+   "text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army.\nEFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**."
+  },
+  "key": "acffe5b4d2e22dbb"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Fateborne Nightmares",
+   "text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army.\nEFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**."
+  },
+  "key": "d814f5a50f3c4fb5"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Fateborne Nightmares",
+   "text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army.\nEFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**."
+  },
+  "key": "cd032d035bac961e"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Scintillating Legion · Fateborne Nightmares",
+  "judgement": {
+   "gist": "Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA TZEENTCH unit can move through terrain features."
+  },
+  "source": {
+   "stratagem": "Fateborne Nightmares",
+   "text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army.\nEFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**."
+  },
+  "key": "ecbd21d7fbcddc58"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Scintillating Legion · Ficklefire",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Ficklefire",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within **Engagement Range** of one or more enemy units.\nEFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 **mortal wound** after the attacking unit has finished making its attacks."
+  },
+  "key": "e76315b757bb2cfa"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Scintillating Legion · Ficklefire",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Ficklefire",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within **Engagement Range** of one or more enemy units.\nEFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 **mortal wound** after the attacking unit has finished making its attacks."
+  },
+  "key": "44e119ff4bfc326c"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Scintillating Legion · Ficklefire",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Ficklefire",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within **Engagement Range** of one or more enemy units.\nEFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 **mortal wound** after the attacking unit has finished making its attacks."
+  },
+  "key": "3de3b19939a4a46a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Scintillating Legion · Ficklefire",
+  "judgement": {
+   "gist": "Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks."
+  },
+  "source": {
+   "stratagem": "Ficklefire",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within **Engagement Range** of one or more enemy units.\nEFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 **mortal wound** after the attacking unit has finished making its attacks."
+  },
+  "key": "d248fd0970a671aa"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-phases",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Delirium Unmade",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is not within **Engagement Range** of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two **LEGIONES DAEMONICA TZEENTCH** units from your army instead (including those within Engagement Range of one or more enemy units).\nEFFECT: Remove your units from the battlefield and place them into **Strategic Reserves**."
+  },
+  "key": "960985e1b3592461"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-turn",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Delirium Unmade",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is not within **Engagement Range** of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two **LEGIONES DAEMONICA TZEENTCH** units from your army instead (including those within Engagement Range of one or more enemy units).\nEFFECT: Remove your units from the battlefield and place them into **Strategic Reserves**."
+  },
+  "key": "89b37393318217f5"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-needs",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Tzeentch"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Delirium Unmade",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is not within **Engagement Range** of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two **LEGIONES DAEMONICA TZEENTCH** units from your army instead (including those within Engagement Range of one or more enemy units).\nEFFECT: Remove your units from the battlefield and place them into **Strategic Reserves**."
+  },
+  "key": "9451b818058f0231"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "strat-gist",
+  "where": "Scintillating Legion · Delirium Unmade",
+  "judgement": {
+   "gist": "End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves."
+  },
+  "source": {
+   "stratagem": "Delirium Unmade",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is not within **Engagement Range** of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two **LEGIONES DAEMONICA TZEENTCH** units from your army instead (including those within Engagement Range of one or more enemy units).\nEFFECT: Remove your units from the battlefield and place them into **Strategic Reserves**."
+  },
+  "key": "859912a4f6b1402e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^indirect fire\\b/i",
+  "judgement": {
+   "opens": "Indirect Fire"
+  },
+  "source": {
+   "rule": "Indirect Fire",
+   "text": "Units containing one or more models with an **[INDIRECT FIRE]** weapon can shoot using **indirect shooting** (10.07)."
+  },
+  "key": "d892702bfc0a46b2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "seqTrigger",
+  "judgement": {
+   "code": "function seqTrigger(text){\n  // paragraph by paragraph: in one that opens with a unit activation (\"Each time … is selected to shoot or fight\", Warpmeld\n  // Sacrifice, Daemonic Patrons), a later moment is that activation's (\"At the end of the phase, that unit suffers D3 mortal wounds\")\n  // unless it is a choice of its own (\"At the start of the Command phase, you can spend\", Blood Tithe); sentence by sentence, with durations (\"until the\n  // start of your next Command phase\"), once-per-phase limits and a moment named only as a past reference (\"a unit it was within\n  // Engagement Range of at the start of the turn\", Thrill Seekers) left out\n  const PAST = /\\b(?:was|were)\\b[^.;:]*?\\b(?:at the )?(?:start|end) of (?:the|that) (?:turn|phase|battle round)\\b/gi;\n  return plain(rulesText(text)).split(/\\n+/).some(par => {\n    const ss = sentences(par).map(x => NOT_TIMING.reduce((y, r) => y.replace(r.re, ' '), x).replace(PAST, ' '));\n    const opensAct = ss.length && SEQ.activation.test(ss[0]);\n    // (a sentence that opens with its moment, \"At the start of your opponent's Shooting phase, select one enemy unit … : until the end of the\n    // phase, each time a model in that enemy unit makes an attack, …\" (Mischief and Confusion): the activation after it is its effect's)\n    const opensMoment = x => /^\\W*at the (?:start|end) of\\b/i.test(x) && SEQ.moment.test(x) && x.search(SEQ.moment) < x.search(SEQ.activation);\n    return ss.some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && (!SEQ.activation.test(x) || opensMoment(x)) && (!opensAct || /\\b(?:you can|select|choose)\\b/i.test(x)));\n  });\n}"
+  },
+  "source": {
+   "implements": "the Phase checklist's scope (CHECKLIST s): paragraph by paragraph, a sentence of the own words (durations, once-per-phase limits and a moment named only as a past reference, \"was within … at the start of the turn\", left out) naming the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (you can / select / choose), with no unit activation in it (selected to…, each time / when this or a unit or model…, this unit's move or attacks, makes an attack / charge / move, is targeted, targets this, after this unit has shot / fought / moved / charged, destroys, the first time; \"if this model is destroyed\" is a state); in a paragraph opening with a unit activation, a later moment counts only with a choice of its own (Warpmeld Sacrifice's \"At the end of the phase\" does not; Blood Tithe's \"At the start of the Command phase, you can spend\" does): what a unit's activation triggers is remembered from its datasheet"
+  },
+  "key": "318986ebbe649754"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · kairos-fateweaver · ability.tag",
+  "judgement": {
+   "app": "One Head Looks Back: Once per turn",
+   "source": "One Head Looks Back (Aura)"
+  },
+  "source": {
+   "reason": "GW’s datasheet prints One Head Looks Back without a tag (no \"(Aura)\"); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) name it \"One Head Looks Back (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Kairos-Fateweaver.html: \"One Head Looks Back:\" (no tag)."
+  },
+  "key": "348a499c525863d8"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-blue-scribes · stats.base",
+  "judgement": {
+   "app": "The Blue Scribes: Large Flying",
+   "source": "The Blue Scribes: 60mm Flying"
+  },
+  "source": {
+   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has The Blue Scribes: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2974: \"The Blue Scribes  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying."
+  },
+  "key": "6a6135605bc0ef45"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-changeling · ability.text",
+  "judgement": {
+   "app": "Mischief and Confusion: At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.",
+   "source": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase"
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll o…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_The-Changeling.html: \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the H…\"."
+  },
+  "key": "b5556f166e9de4f7"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · daemon-prince-of-chaos-with-wings · ability.text",
+  "judgement": {
+   "app": "Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
+   "source": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]"
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model's hellforged weapons have that ability: - [LETHAL HITS] - [PRECISION] - [SUSTAINED HITS 1]\"."
+  },
+  "key": "eec212b451403eb5"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · daemon-prince-of-chaos-with-wings · ability",
+  "judgement": {
+   "app": "Daemonic Allegiance",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Daemonic Allegiance\"."
+  },
+  "key": "5d9f8091855b63ae"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · stats.base",
+  "judgement": {
+   "app": "Fluxmaster: Large Flying",
+   "source": "Fluxmaster: 60mm Flying"
+  },
+  "source": {
+   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Fluxmaster: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2941: \"Fluxmaster  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying."
+  },
+  "key": "3da53bc1882afd12"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · stats.base",
+  "judgement": {
+   "app": "Blue/Brimstone Horror (ref. only): 25mm",
+   "source": "Blue/Brimstone Horror (ref. only): 32mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Blue/Brimstone Horror (ref. only): 32mm; verify/deviations-bases.json (declared) has 25mm; New Recruit’s export (catalogue revision 2) has 32mm. GW wins.",
+   "evidence": "verify/deviations-bases.json (chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only)); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927: \"Blue Horrors  25mm\"; verify/sources/nr-json/tzeeeeentch.json: 32mm."
+  },
+  "key": "9df0ff903b3e91ad"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · ability.text",
+  "judgement": {
+   "app": "Altered Reality: Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
+   "source": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the resul…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html: \"Once per battle round, after a Hit roll, a Wound roll, or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.\"."
+  },
+  "key": "aea3a962057c1a4f"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · ability.text",
+  "judgement": {
+   "app": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.: If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*",
+   "source": "If, at any point, this unit contains no ^^Pink Horrors^^ models, use the ^^Blue Horrors^^ datasheet for this unit. \n\n\n_Designer’s Note: While this unit contains one or more ^^Pink Horrors^^ models, the Cackling Horrors and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._"
+  },
+  "source": {
+   "reason": "The app has GW’s words: GW’s datasheet (Wahapedia) prints the box Horrors are Pink. Horrors are Blue. Where once there was one, now there are two. otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer's N…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit. *Designer's Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from…\"."
+  },
+  "key": "8eb2f8f59affc8a5"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · kw",
+  "judgement": {
+   "app": "Horrors",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, chaos-daemons_Pink-Horrors.html: KEYWORDS."
+  },
+  "key": "b7d2c9ff41a51e94"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · rules",
+  "judgement": {
+   "app": "",
+   "source": "Stealth"
+  },
+  "source": {
+   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the unit Stealth; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: CORE ABILITIES / ARMY RULES \"Deep Strike, Leader, The Shadow of Chaos\"."
+  },
+  "key": "7c471a1a60a08aa7"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tzeentch-soul-grinder · stats.base",
+  "judgement": {
+   "app": "Soul Grinder: 160mm",
+   "source": "Soul Grinder: ~160mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Soul Grinder: ~160mm; GW’s base size guide (Event Companion) has 160mm; New Recruit’s export (catalogue revision 2) has ~160mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2971: \"Soul Grinder  160mm\"; verify/sources/nr-json/tzeeeeentch.json: ~160mm."
+  },
+  "key": "d22c8fedb34cba68"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tzeentch-soul-grinder · ability",
+  "judgement": {
+   "app": "Daemonic Allegiance",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: \"Daemonic Allegiance\"."
+  },
+  "key": "0d3de3ca5802c4e0"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · the-blue-scribes · stats[The Blue Scribes].base",
+  "judgement": {
+   "app": "Large Flying",
+   "source": "60mm Flying"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 2) gives the base as 60mm Flying; GW’s base size guide (Event Companion) has Large Flying. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2974: \"The Blue Scribes  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: Base 60mm Flying."
+  },
+  "key": "e8f88c181ef5ed72"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · fluxmaster-pink-horrors · stats[Fluxmaster].base",
+  "judgement": {
+   "app": "Large Flying",
+   "source": "60mm Flying"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 2) gives the base as 60mm Flying; GW’s base size guide (Event Companion) has Large Flying. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2941: \"Fluxmaster  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: Base 60mm Flying."
+  },
+  "key": "f4400098c30741b5"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · fluxmaster-pink-horrors · stats[Blue/Brimstone Horror (ref. only)].base",
+  "judgement": {
+   "app": "25mm",
+   "source": "32mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 2) gives the base as 32mm; verify/deviations-bases.json (declared) has 25mm. GW wins (base sizes too).",
+   "evidence": "verify/deviations-bases.json (chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only)); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927: \"Blue Horrors  25mm\"; verify/sources/nr-json/tzeeeeentch.json: Base 32mm."
+  },
+  "key": "767fe8aa95b8597f"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · tzeentch-soul-grinder · stats[Soul Grinder].base",
+  "judgement": {
+   "app": "160mm",
+   "source": "~160mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 2) gives the base as ~160mm; GW’s base size guide (Event Companion) has 160mm. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2971: \"Soul Grinder  160mm\"; verify/sources/nr-json/tzeeeeentch.json: Base ~160mm."
+  },
+  "key": "4f6bf7a76760d118"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "base-exception",
+  "where": "chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only) · guide: CHAOS DAEMONS / Blue Horrors",
+  "judgement": {
+   "guide": {
+    "section": "CHAOS DAEMONS",
+    "entry": "Blue Horrors"
+   }
+  },
+  "source": {
+   "reason": "The Pink Horrors datasheet's second profile is for the Blue and Brimstone Horrors its Split ability adds to the unit (GW: \"BLUE HORROR/BRIMSTONE HORROR\"). GW's base size guide has no row for them under Pink Horrors (its \"Pink Horrors  32mm\" is the unit's Pink Horror models); its Blue Horrors row is the base of a Blue Horror model, and Wahapedia's datasheet gives this profile 25mm too. Brimstone Horrors have no row of their own in the guide.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\", line 2951: \"Pink Horrors  32mm\"; verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"BLUE HORROR/BRIMSTONE HORROR (⌀25mm)\"."
+  },
+  "key": "550d40651b599655"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "gw-words",
+  "where": "kairos-fateweaver · One Head Looks Back",
+  "judgement": {
+   "from": "the CP cost of the use of that stratagem",
+   "to": "the CP cost of that use of that stratagem"
+  },
+  "source": {
+   "reason": "GW Faction Pack Chaos Daemons 1.2, Kairos Fateweaver datasheet: \"… increase the CP cost of that use of that stratagem by 1CP.\" (Wahapedia: \"of the use of\"; BSData has GW's words)",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.pdf (pdftotext -raw), the datasheet; verify/.cache/waha/ds/chaos-daemons_*.html"
+  },
+  "key": "a8e82e4b1046e40c"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "gw-words",
+  "where": "fluxmaster-pink-horrors · Altered Reality",
+  "judgement": {
+   "from": "a **Wound roll**, or a saving throw",
+   "to": "a **Wound roll** or a saving throw"
+  },
+  "source": {
+   "reason": "GW Faction Pack Chaos Daemons 1.2, Fluxmaster datasheet: \"… after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.\" (Wahapedia: a comma after Wound roll; BSData: \"to a 6\")",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.pdf (pdftotext -raw), the datasheet; verify/.cache/waha/ds/chaos-daemons_*.html"
+  },
+  "key": "0dac86f2edd65ba8"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "gw-words",
+  "where": "tzeentch-soul-grinder · Daemonic Allegiance",
+  "judgement": {
+   "from": "stated for that keyword below:",
+   "to": "stated for that keyword below."
+  },
+  "source": {
+   "reason": "GW Faction Pack Chaos Daemons 1.2, Soul Grinder datasheet: \"… this model has that keyword and the additional wargear stated for that keyword below.\" followed by a table of four rows (keyword, wargear), which the app gives as Wahapedia marks them, one line each (Wahapedia: \"below:\")",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.pdf (pdftotext -raw), the datasheet; verify/.cache/waha/ds/chaos-daemons_*.html"
+  },
+  "key": "45650d6593b5e71c"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "kairos-fateweaver",
+  "judgement": {
+   "why": "One Head Looks Back: BSData and New Recruit tag it (Aura); GW’s datasheet (Faction Pack 1.2, Wahapedia) prints “One Head Looks Back:” with no tag, so it is no aura (Core Rules 22.01). Greater Daemon of Tzeentch (Aura) puts friendly TZEENTCH LEGIONES DAEMONICA units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard (as the-exiled-legion’s Greater Daemon of Khorne)."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.kairos-fateweaver.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "5e59fecb3f22b536"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "fluxmaster-pink-horrors",
+  "judgement": {
+   "why": "Pink Horrors: BSData’s “(ref. only)” profiles (Blue/Brimstone Horror; Coruscating Blue and Yellow flames, Blue and Yellow claws) are the ones GW’s datasheet gives the Blue and Brimstone Horrors its Split adds; no model carries them at the start, so they are on no models line (unplaced). Daemonic Icon and Instrument of Chaos: wargear this list did not take, left out. Improbable Shield (Aura): Feel No Pain 4+ against Psychic Attacks and mortal wounds for friendly LEGIONES DAEMONICA TZEENTCH units within 6\", the Fluxmaster’s own unit included (22.01), as a guard."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.fluxmaster-pink-horrors.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "1ad8496a109a5374"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "daemon-prince-of-chaos-with-wings",
+  "judgement": {
+   "why": "Daemonic Allegiance: this list chose TZEENTCH (New Recruit: “Daemon Prince of Chaos with wings (Tzeentch)”); the TZEENTCH keyword and the infernal cannon’s A 6 (“add 3 to the Attacks characteristic of this model’s infernal cannon”) are the list’s values, the datasheet keeps GW’s A 3. Neverblade’s +2 S, +1 A and +1 AP are in the hellforged weapons’ profiles (New Recruit’s), its +1 to hit is a footnote. Timing: Harbinger of Death is used each time the model is selected to fight (derive.js reads its weapon abilities as shooting too); Daemonic Allegiance is a choice made when mustering, no phase (as the-exiled-legion’s Daemon Prince of Chaos)."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.daemon-prince-of-chaos-with-wings.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "43adfdd1859ea467"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "flamers",
+  "judgement": {
+   "why": "Bounding Leaps: a Fall Back move (your Movement phase) does not stop the unit shooting (your Shooting phase); derive.js reads the Movement phase as either turn."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.flamers.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "aac1fd2f96af3ad2"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "the-changeling",
+  "judgement": {
+   "why": "Mischief and Confusion is not tagged (Aura): its -1 to hit is on every attack of the enemy unit it selected, whatever that unit targets, so it is help for every unit of the list (a guard, as Necromechanic), not an aura."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.the-changeling.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "1a421a497bb0b8a8"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "lord-of-change-infernal-puppeteer",
+  "judgement": {
+   "why": "Daemon Lord of Tzeentch (Aura): +1 S to the ranged attacks of friendly TZEENTCH LEGIONES DAEMONICA units within 6\", its own unit included (22.01). Greater Daemon of Tzeentch (Aura): Shadow of Chaos only, neither aura nor guard."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.lord-of-change-infernal-puppeteer.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "7cf05de40ed88b6f"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "lord-of-change-inescapable-eye",
+  "judgement": {
+   "why": "As the other Lord of Change (the same datasheet)."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.lord-of-change-inescapable-eye.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "c7650695c2b82001"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "tzeentch-soul-grinder",
+  "judgement": {
+   "why": "BSData’s “Tzeentch Soul Grinder” is GW’s Soul Grinder datasheet with the TZEENTCH Daemonic Allegiance (its warp gaze); its warpsword replaced by a warpclaw (WARGEAR OPTIONS). The app keeps New Recruit’s name."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.tzeentch-soul-grinder.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "4d7c1acd37b6352f"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-why",
+  "where": "the-blue-scribes",
+  "judgement": {
+   "why": "P’tarix’s Sorcerous Syphon (Aura): -1 to the wound roll of Psychic Attacks made by enemy units within 12\" of The Blue Scribes, whatever they target: help for every unit of the list (guard), not an attack bonus."
+  },
+  "source": {
+   "file": "verify/sources/hand/tzeeeeentch.json units.the-blue-scribes.why (the reasons the hand pass records; not shown in the app)"
+  },
+  "key": "a5d1815c7a9dafe9"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/waha-words.js · wahaAddress",
+  "judgement": {
+   "change": "A BSData name \"<Khorne|Tzeentch|Nurgle|Slaanesh> <name>\" with no Wahapedia link of its own resolves to the datasheet page of <name> (Tzeentch Soul Grinder -> Soul-Grinder); only when no link matches the whole name, so no other list changes."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/waha-words.js"
+  },
+  "key": "a44da443c130493c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · ref. only rows",
+  "judgement": {
+   "change": "BSData \"(ref. only)\" Unit and weapon profiles on a unit entry itself are read: the stats row keeps \"(ref. only)\" in its name, the weapons are rows of the part (n 1) and are listed in unplaced (no models line carries them); GW check names strip \"(ref. only)\" and match \"A/B X\" to GW's \"A X/B X\"."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/from-json.js"
+  },
+  "key": "cab16947afba66e7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · box after the composition",
+  "judgement": {
+   "change": "An ability BSData has and Wahapedia's ABILITIES do not, whose name is a heading after UNIT COMPOSITION on the datasheet page (Horrors are Pink. …), takes the lines under that heading (Designer's Note as an italic line) instead of being dropped as \"GW does not print it\"."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/from-json.js"
+  },
+  "key": "f6e5ed2c15cb780d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · (Aura) tag",
+  "judgement": {
+   "change": "A BSData \"(Aura)\" tag on an ability GW's datasheet names without a tag is dropped (declared as an ability.tag deviation with its reason)."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/from-json.js"
+  },
+  "key": "b930a0045ba83cdf"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · kwNote / kwOnly",
+  "judgement": {
+   "change": "A keyword GW prints that the export lacks, printed only by the datasheet of a part after the first (the led Pink Horrors), is added to the kwNote; kwOnly matches GW's plural model name (\"PINK HORRORS\") to the stats row of one model (\"Pink Horror\"), else writes GW's name in title case."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/from-json.js"
+  },
+  "key": "b5d534dc52aa6dfc"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · readings of a new detachment",
+  "judgement": {
+   "change": "The readings loop finds an enhancement / detachment rule of a detachment this run adds to an existing faction (facSrc), so Neverblade's and Improbable Shield's readings reach their bearers on the first run."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/from-json.js"
+  },
+  "key": "41f011a683608432"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · hand rule label",
+  "judgement": {
+   "change": "verify/sources/hand/<army>.json rules.<detachment id>.label sets a detachment rule's timing label in place of derive.js's (Fates in Flux: any phase, either turn)."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/from-json.js"
+  },
+  "key": "09e0b65650ff8096"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/bsdata.js · unplaced own profiles; ambiguous grant",
+  "judgement": {
+   "change": "unplaced: a name that is a weapon profile of the unit entry itself is checked (counted as gear) instead of failing \"no BSData wargear\". grantsOf: when two abilities say a characteristic change, the one whose text names the weapon wins (Daemonic Allegiance names the infernal cannon; Neverblade says \"melee weapons\"); before, it was an \"(ambiguous: …)\" failure."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/bsdata.js"
+  },
+  "key": "151ad4cac4fe3dbb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/nr.js · compareJsonArmy",
+  "judgement": {
+   "change": "A \"(ref. only)\" Unit profile of the export keeps its mark in the name it is looked up by, as the app's row does."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/nr.js"
+  },
+  "key": "fcba0a502a3d99e2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/derive.js · optionsOf",
+  "judgement": {
+   "change": "A \"**Designer’s Note:** …\" line is not an option (as \"**Example:**\" is not): Fates in Flux had a bogus \"Designer's Note\" option, active in the opponent's Shooting phase and the Fight phase."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/derive.js"
+  },
+  "key": "96bea7763eff9ad3"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/derive.js · seqTrigger and verify/render.js · seqOwn",
+  "judgement": {
+   "change": "A sentence that opens with \"At the start/end of …\" and names its moment before any unit-activation words is a fixed-moment trigger: the activation after it is its effect's (Mischief and Confusion: \"At the start of your opponent's Shooting phase, select … : on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, …\"). render.js writes the same rule out again. Only one CHECKLIST entry changed (Mischief and Confusion, s:1)."
+  },
+  "source": {
+   "diff": "git diff 6b89ac5 ab37494 -- verify/derive.js"
+  },
+  "key": "93604b27f9e7cc79"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/fellhammer-siege-task-force.txt (25 lines)",
+  "judgement": {
+   "change": "Obliterators: Warp Rift Firepower now lists the Indirect Fire core rule (its text names [INDIRECT FIRE]); two new popups (rule:Indirect Fire, rule:[INDIRECT FIRE]) with GW Core Rules 24.19 and \"IN THIS ARMY Obliterators (in Warp Rift Firepower)\"."
+  },
+  "source": {
+   "reason": "data.js RULES gains Indirect Fire (Wahapedia core rules [INDIRECT FIRE] 24.19, every line in GW's Core Rules) for Kairos Fateweaver's Infernal Gateway; the Fellhammer list had no glossary entry for it before.",
+   "evidence": "git diff --no-index verify/snapshots/fellhammer-siege-task-force.txt verify/out/snapshots/fellhammer-siege-task-force.txt"
+  },
+  "key": "c90b21294117a1e7"
+ },
+ {
+  "army": "shooty",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt (home screen)",
+  "judgement": {
+   "change": "CHAOS DAEMONS 1 -> 2; the new list Tzeeeeentch, 2000 pts, Cavalcade of Chaos · Scintillating Legion, DISRUPTION / PRIORITY ASSETS, CHOSEN."
+  },
+  "source": {
+   "reason": "the home screen lists every list"
+  },
+  "key": "ea8b41d69f398913"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "points",
+  "where": "points: Lord of Change, Tzeentch Soul Grinder",
+  "judgement": {
+   "app": {
+    "Lord of Change": 320,
+    "Tzeentch Soul Grinder": 180
+   }
+  },
+  "source": {
+   "reason": "The app has New Recruit’s / BSData’s points (the export: 320, 320 and 180; the bsdata step passes). Wahapedia’s 340 (Lord of Change) and 195 (Soul Grinder) are the prices of a third and later unit of the datasheet (the owner’s answer, 27 Oct 2026); this list has two Lords of Change and one Soul Grinder, so 320/320/180 is right.",
+   "evidence": "verify/sources/nr-json/tzeeeeentch.json; verify/.cache/waha/ds/chaos-daemons_Lord-of-Change.html, chaos-daemons_Soul-Grinder.html"
+  },
+  "key": "bf7d01c010cb083e"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "question",
+  "where": "names: Daemon Prince of Chaos with wings, Tzeentch Soul Grinder",
+  "judgement": {
+   "app": [
+    "Daemon Prince of Chaos with wings",
+    "Tzeentch Soul Grinder"
+   ]
+  },
+  "source": {
+   "reason": "Unit names follow New Recruit (BSData). GW prints \"Daemon Prince of Chaos with Wings\" and the Soul Grinder datasheet (its Daemonic Allegiance TZEENTCH choice); the keyword is shown in capitals either way.",
+   "evidence": "GW Faction Pack Chaos Daemons 1.2; verify/sources/nr-json/tzeeeeentch.json"
+  },
+  "key": "bab22ffeaed1ae81"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "question",
+  "where": "Pink Horrors: (ref. only) rows",
+  "judgement": {
+   "app": "Blue/Brimstone Horror (ref. only) stats row (25mm), Coruscating Blue/Yellow flames (ref. only), Blue/Yellow claws (ref. only): weapon rows with no count, in unplaced (\"New Recruit lists it for the Pink Horrors, not which model carries it\"; \"Which models: not said\")"
+  },
+  "source": {
+   "reason": "GW's Pink Horrors datasheet prints the Blue Horror/Brimstone Horror profile and their weapons for the models Split adds; the export carries them as BSData's \"(ref. only)\" profiles on the unit. Shown, marked, with BSData's names. The app's unplaced wording (\"New Recruit lists it for the Pink Horrors, not which model carries it\") is its existing template text. BSData's Horrors are Pink box names the Blue Horrors' \"Cackling Horrors\" ability; GW's Faction Pack and Wahapedia name it Sullen Malevolence (the app has GW's).",
+   "evidence": "GW Faction Pack Chaos Daemons 1.2, Pink Horrors datasheet; verify/sources/nr-json/tzeeeeentch.json"
+  },
+  "key": "f4fbac9ab7f2d1da"
+ }
+]

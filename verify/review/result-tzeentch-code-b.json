@@ -1,0 +1,62 @@
+[
+ {
+  "key": "1d1084402e85c21e",
+  "where": "auraMods",
+  "verdict": "ok",
+  "why": "The new auraMods code. I checked every unit of every list against every other unit’s aura, ignoring needs, so this is a superset of what can be hidden. Exactly 2 auras are hidden: the two Lords of Change’s Daemon Lord of Tzeentch (+1 S) from each other, and the hidden and own entries are identical apart from when/selfWhen. No list has an aura with the same from but a different note, so nothing else could be hidden. The own set takes only !notSelf, selfAlways auras whose needs the unit meets, so an own aura that is not always on never hides another unit’s. Optional hardening: add m.kind to the key (app.html, the auraMods own Set and its has() check), so a same-name, same-note aura of another kind is never hidden."
+ },
+ {
+  "key": "eb6a1ef1474642df",
+  "where": "verify/from-json.js · model keywords",
+  "verdict": "ok",
+  "why": "--compare on all 21 other exports: the output matches fd1276f except infernal-lance, whose Mischief Makers tag line is gone, as expected. --write of the five JSON-built lists matches fd1276f too. Only Tzeeeeentch gains a keyword: Brimstone, with kwOnly \"Brimstone Horrors\", declared as a kw deviation. The trailing-colon cut only trims a \":\" at the end."
+ },
+ {
+  "key": "f17fc6e1fd7534aa",
+  "where": "verify/from-json.js · (ref. only) rows",
+  "verdict": "ok",
+  "why": "Only weapon profiles named \"(ref. only)\" are walked now. carrierOf finds \"Every Blue Horror / Brimstone Horror added to this unit using the Split ability is equipped with: …\" and returns \"Blue Horrors added by Split\" / \"Brimstone Horrors added by Split\", matching all 4 rows in data.js. A \"(ref. only)\" weapon that no composition sentence gives to a model is listed as still to do. No other export has a \"(ref. only)\" weapon (21 --compare runs unchanged), and --write of tzeeeeentch reproduces data.js exactly."
+ },
+ {
+  "key": "29c28bb46f5c56a0",
+  "where": "verify/from-json.js · hardening",
+  "verdict": "ok",
+  "why": "Both guards are as proposed and change no output. Cosmetic: the fallback in the second guard says \"led\" even for a supported or combined unit, but it only runs when an existing kwNote has no \" from \", which no list has."
+ },
+ {
+  "key": "6feef1e3b3eb995a",
+  "where": "app.html · weaponItems",
+  "verdict": "fix",
+  "why": "Display is right: the \"cr\" tag shows on the 4 rows on the unit page and the popups, and line 4296 cannot overwrite it because check.js keeps carrier weapons off every models line. The bug is in the Damage tab. dmCalc gives each carrier item 1 model (n0 = 1) and ticks it by default. Running verify/damage-node.js calc for tzeeeeentch fluxmaster-pink-horrors in the fight phase gives groups Herald combat weapon ×1, Yellow claws (ref. only) ×1, Blue claws (ref. only) ×1 and Pink claws ×10: two phantom models, adding 3 attacks before the unit has split. The ranged ref-only flames escape only because [PISTOL] puts them in firstOff. (fd1276f had the same bug through unplaced.) Fix: in app.html dmCalc, after line 2034 `for(const it of items) if(embOf(it)) firstOff.add(key(it));`, add `for(const it of items) if(it.carrier) firstOff.add(key(it));   // (models the unit does not have yet: GW’s composition’s carrier)`. I tried it: fight now gives Herald combat weapon ×1 and Pink claws ×10, shooting is unchanged, and calc 308/308 and import still pass. The player can still tick them after a Split."
+ },
+ {
+  "key": "7559847e0a1a3015",
+  "where": "app.html · screenBases (baseShown)",
+  "verdict": "ok",
+  "why": "Every base without a digit in the resolved lists: Hull ×7 rows (chaos-rhino ×3 lists, skorpius-disintegrator, fellhammer’s predators ×2 and vindicator), all still \"no base\", and Large Flying on the-blue-scribes and fluxmaster-pink-horrors. Bases with a digit keep the same key and text as before, and no other list’s snapshot changes."
+ },
+ {
+  "key": "beae13c92d6e54b6",
+  "where": "app.html · auraMods",
+  "verdict": "ok",
+  "why": "The same change as 1d1084402e85c21e: only the two Lords of Change are affected in any list. The snapshots differ only in tzeeeeentch (screens pass at 390 and 320px)."
+ },
+ {
+  "key": "874c89fb6f482583",
+  "where": "check.js · mod weapon; carrier",
+  "verdict": "ok",
+  "why": "Matching x.group === m.weapon only widens which weapon a mod may name. The \"set is ignored\" warning now fires only when the mod has a set, which is what that warning means. Weapons with a carrier count as carried and must not be on any models line, a stricter check. The data step passes."
+ },
+ {
+  "key": "00db8b72330a9faa",
+  "where": "verify/tables.js · unitWhy",
+  "verdict": "ok",
+  "why": "It needs a unit named \"<god> …\" with an ability named exactly Daemonic Allegiance whose text has **<GOD>**, and no why.kw of its own. Only tzeentch-soul-grinder qualifies (Khorne Berzerkers has no such ability). The tables step passes and no other list resolves differently."
+ },
+ {
+  "key": "7d70e43427f65180",
+  "where": "verify/columns.json",
+  "verdict": "ok",
+  "why": "The carrier column is declared for DATASHEETS.ranged and .melee with source gw, and the tables step (\"every column has a source\") passes."
+ }
+]

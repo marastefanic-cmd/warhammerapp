@@ -369,6 +369,10 @@ function build(R){
       const ab = (u.abilities || []).find(y => (y.text || '').includes('**' + k.toUpperCase() + '**'));
       put('kw', k, (ab ? ab.name + ': ' : 'its selection ') + x);
     }
+    // (and the one BSData's entry for one choice of a Daemonic Allegiance datasheet names, "Tzeentch Soul Grinder": that ability, with it)
+    { const g = /^(Khorne|Tzeentch|Nurgle|Slaanesh) /.exec(u.name || ''), k = g && kwOf(g[1]);
+      const ab = k && !(why.kw && why.kw[k]) && (u.abilities || []).find(y => y.name === 'Daemonic Allegiance' && (y.text || '').includes('**' + k.toUpperCase() + '**'));
+      if(ab) put('kw', k, ab.name + ': ' + g[1]); }
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
     const own = ownAbilities(u);
     for(const r of u.rules || []){

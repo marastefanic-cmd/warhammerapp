@@ -103,7 +103,9 @@ const RULES = {
   // Core Rules 22.05
   'Plunging Fire': 'Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the **BS** characteristic of that attack by 1:\n- The attacking model is on a section of a terrain feature that is 3" or more in height.\n- The attacking model has the **TOWERING** keyword and the target unit is within 12".\n**23.03 Shooting:** The **Plunging Fire** rule (22.05) has no effect on attacks made by, or targeting, **AIRCRAFT** units.',
   // Core Rules 04.01, its Sidearms note, 24.11 and the multiple-profiles rule (04.01.03, app)
-  'Select Weapons': 'For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.\n**While shooting:** You can select one or more ranged weapons that model has.\n**While fighting:** You must select one melee weapon that model has.\n**Sidearms:** Some models are equipped with **[CLOSE-QUARTERS]** weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.\n**24.11 [EXTRA ATTACKS]:** Each time a unit containing one or more models with an **[EXTRA ATTACKS]** weapon fights, those models will make attacks with those weapons in addition to any others.\n**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).'
+  'Select Weapons': 'For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.\n**While shooting:** You can select one or more ranged weapons that model has.\n**While fighting:** You must select one melee weapon that model has.\n**Sidearms:** Some models are equipped with **[CLOSE-QUARTERS]** weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.\n**24.11 [EXTRA ATTACKS]:** Each time a unit containing one or more models with an **[EXTRA ATTACKS]** weapon fights, those models will make attacks with those weapons in addition to any others.\n**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).',
+  // Indirect Fire: Wahapedia core rules, written by verify/from-json.js
+  'Indirect Fire': 'Units containing one or more models with an **[INDIRECT FIRE]** weapon can shoot using **indirect shooting** (10.07).'
 };
 
 // Which RULES entry a keyword or rule chip opens ("RAPID FIRE 4" -> "Rapid Fire").
@@ -146,7 +148,8 @@ const RULE_ALIASES = [
   [/^surge (move|target)s?$/i, 'Surge Move'],
   [/^scout moves?$/i, 'Scout Move'],
   [/^stealth$/i, 'Stealth'],
-  [/^(lead|leading)$/i, 'Leader'], [/^support units?$/i, 'Support']
+  [/^(lead|leading)$/i, 'Leader'], [/^support units?$/i, 'Support'],
+  [/^indirect fire\b/i, 'Indirect Fire']
 ];
 
 /* ---------------- core stratagems ----------------
@@ -1566,9 +1569,42 @@ const FACTIONS = {
     name: 'Chaos Daemons',
     // army rules: Wahapedia, Chaos Daemons, Army Rules (the ones the list’s units name), written by verify/from-json.js
     armyRules: [
-      { name:'The Shadow of Chaos', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*' }
+      { name:'The Shadow of Chaos', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*' }
     ],
     detachments: {
+      // Cavalcade of Chaos: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'cavalcade-of-chaos': {
+        name:'Cavalcade of Chaos', dispositions:['Disruption'], dp:1,
+        rule:{ name:'Unholy Avalanche', needs:{ all:['Faction: Legiones Daemonica','Mounted'] }, ph:['movement','shooting','charge'], turn:'your', text:'If a friendly **LEGIONES DAEMONICA MOUNTED** unit made a **fall-back move** this turn, that move does not prevent that unit from being **eligible to shoot**/**eligible to declare a charge**.' },
+        enhancements:[
+          { name:'Apocalyptic Steeds', pts:10, upgrade:true, text:'**LEGIONES DAEMONICA MOUNTED** unit only. This unit has +1" **M**.' },
+          { name:'Soul-Shattering Charge', pts:10, upgrade:true, text:'**LEGIONES DAEMONICA MOUNTED** unit only. When this unit is **selected to fight**, if this unit made a **charge move** this turn, you can use this ability. If you do, when determining which models in this unit can fight, friendly models that are within 3" of enemy units **engaged** with this unit can target those enemy units.' }
+        ],
+        stratagems:[
+          { id:'from-beyond-the-veil', gist:'End of the Movement phase, from the start of the battle, your LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves: it can make an Ingress move.', gistOf:'66358767', name:'From Beyond the Veil', cp:2, phases:['movement'], turn:'either', needs:{ all:['Faction: Legiones Daemonica','Mounted'] }, when:'End of the Movement phase, from the start of the battle.', target:'One friendly **LEGIONES DAEMONICA MOUNTED** unit in **strategic reserves**.', effect:'Your unit can make an **ingress move**.' },
+          { id:'warp-riders', gist:'Your Movement phase, when your LEGIONES DAEMONICA MOUNTED unit is selected to move: it has MOBILE.', gistOf:'99a5b4ae', name:'Warp-Riders', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Mounted'] }, when:'Your Movement phase, when a friendly **LEGIONES DAEMONICA MOUNTED** unit is **selected to move**.', target:'That **LEGIONES DAEMONICA MOUNTED** unit.', effect:'Your unit has **MOBILE**.' },
+          { id:'inescapable-manifestations', gist:'Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls).', gistOf:'222fbaa3', name:'Inescapable Manifestations', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Faction: Legiones Daemonica','Mounted'] }, when:'Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **LEGIONES DAEMONICA MOUNTED** unit.', target:'That **LEGIONES DAEMONICA MOUNTED** unit.', effect:'When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**.' }
+        ]
+      },
+      // Scintillating Legion: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'scintillating-legion': {
+        name:'Scintillating Legion', dispositions:['Priority Assets'], dp:2,
+        rule:{ name:'Fates in Flux', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, ph:['command','movement','shooting','charge','fight'], turn:'either', text:'You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an **Advance roll**, **Hit roll**, **Wound roll**, Damage roll, saving throw or Hazardous test is made for a **LEGIONES DAEMONICA TZEENTCH** model or **LEGIONES DAEMONICA TZEENTCH** unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n**Designer’s Note:** When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.' },
+        enhancements:[
+          { name:'Inescapable Eye', pts:15, text:'**LEGIONES DAEMONICA TZEENTCH** model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.' },
+          { name:'Infernal Puppeteer', pts:20, text:'**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9" **detection range** until this unit has shot.' },
+          { name:'Neverblade', pts:25, text:'**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.', mods:[{ kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Neverblade', always:true, readOf:'6fd9df01' }] },
+          { name:'Improbable Shield (Aura)', pts:30, text:'**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.', guard:[{ from:'Improbable Shield (Aura)', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, kind:'all', when:'Within 6" of the Fluxmaster', selfWhen:'Own aura', selfAlways:true, note:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', readOf:'4bd89386' }] }
+        ],
+        stratagems:[
+          { id:'impossible-eclipse', gist:'Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.', gistOf:'6e653a70', name:'Impossible Eclipse', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Legiones Daemonica','Tzeentch','Monster'] }, when:'Any phase.', target:'One **LEGIONES DAEMONICA TZEENTCH MONSTER** unit from your army that is on the battlefield.', effect:'Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos.' },
+          { id:'pyrogenesis', gist:'Your Shooting phase or the Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not yet selected to shoot or fight: until the end of the phase, +2 S to its weapons, or spend one Flux token for +3 S and +1 AP instead.', gistOf:'c42d5406', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase', note:'+2 S (one Flux token spent: +3 S and +1 AP instead)', pick:[{ name:'+2 S', note:'+2 S' },{ name:'Flux token spent', note:'+3 S, +1 AP' }] }, readOf:'c42d5406', name:'Pyrogenesis', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, when:'Your Shooting phase or the Fight phase.', target:'One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.', effect:'Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.' },
+          { id:'flickering-reality', gist:'Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit.', gistOf:'e8ece45e', def:'Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit', defOf:'e8ece45e', name:'Flickering Reality', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, when:'Fight phase, just after an enemy unit has selected its targets.', target:'One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved.' },
+          { id:'fateborne-nightmares', gist:'Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA TZEENTCH unit can move through terrain features.', gistOf:'23dc44f1', name:'Fateborne Nightmares', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, when:'Your Movement phase or your Charge phase.', target:'One **LEGIONES DAEMONICA TZEENTCH** unit from your army.', effect:'Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**.' },
+          { id:'ficklefire', gist:'Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.', gistOf:'5a68b795', name:'Ficklefire', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, when:'Your Shooting phase.', target:'One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within **Engagement Range** of one or more enemy units.', effect:'Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 **mortal wound** after the attacking unit has finished making its attacks.' },
+          { id:'delirium-unmade', gist:'End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.', gistOf:'70b46e6a', name:'Delirium Unmade', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, when:'End of your opponent’s Fight phase.', target:'One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is not within **Engagement Range** of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two **LEGIONES DAEMONICA TZEENTCH** units from your army instead (including those within Engagement Range of one or more enemy units).', effect:'Remove your units from the battlefield and place them into **Strategic Reserves**.' }
+        ]
+      },
       // Blood Legion: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
       'blood-legion': {
         name:'Blood Legion', dispositions:['Purge the Foe'], dp:2,
@@ -4923,6 +4959,132 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'tzeeeeentch', name:'Tzeeeeentch', faction:'chaos-daemons', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Priority Assets',
+  detachments:['cavalcade-of-chaos','scintillating-legion'],
+  source:'New Recruit, exported 27 Oct 2026 (JSON)',
+  units:[
+    {
+      id:'kairos-fateweaver', ds:'chaos-daemons/kairos-fateweaver', pts:305, warlord:true,
+      models:['1× Kairos Fateweaver'],
+      gear:[['Infernal Gateway','Staff of Tomorrow']],
+      kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Fly','Kairos Fateweaver','Monster','Psyker','Tzeentch','Warlord'],
+      why:{ kw:{ Warlord:'Warlord' } }
+    },
+    {
+      id:'the-blue-scribes', ds:'chaos-daemons/the-blue-scribes', pts:75,
+      models:['1× The Blue Scribes'],
+      gear:[['Sharp quills']]
+    },
+    {
+      id:'the-changeling', ds:'chaos-daemons/the-changeling', pts:105,
+      models:['1× The Changeling'],
+      gear:[['Infernal Flames','The Trickster’s Staff']]
+    },
+    {
+      id:'daemon-prince-of-chaos-with-wings', ds:'chaos-daemons/daemon-prince-of-chaos-with-wings', pts:215, enhancement:'Neverblade',
+      models:['1× Daemon Prince of Chaos with wings (Tzeentch)'],
+      gear:[['Hellforged weapons','Infernal cannon']],
+      ranged:[
+        { name:'Infernal cannon', A:'6', from:{ A:'Daemonic Allegiance' } }
+      ],
+      melee:[
+        { name:'strike', A:'7', S:'10', AP:'-3', from:{ A:'Neverblade', S:'Neverblade', AP:'Neverblade' } },
+        { name:'sweep', A:'15', S:'8', AP:'-1', from:{ A:'Neverblade', S:'Neverblade', AP:'Neverblade' } }
+      ],
+      abilities:[
+        { name:'Malefic Destruction' },
+        { name:'Harbinger of Death' },
+        { name:'Neverblade', tag:'Enhancement', ph:['fight'], turn:'either', text:'**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' },
+        { name:'Daemonic Allegiance' }
+      ],
+      kw:['Chaos','Character','Daemon','Daemon Prince of Chaos with wings','Faction: Legiones Daemonica','Fly','Monster','Tzeentch'],
+      why:{ kw:{ Tzeentch:'Daemonic Allegiance: Tzeentch' } }
+    },
+    {
+      id:'lord-of-change-infernal-puppeteer', ds:'chaos-daemons/lord-of-change', pts:340, enhancement:'Infernal Puppeteer',
+      models:['1× Lord of Change'],
+      gear:[['Bolt of Change','Staff of Tzeentch','Rod of sorcery']],
+      abilities:[
+        { name:'Daemon Lord of Tzeentch' },
+        { name:'Master of Magicks' },
+        { name:'Damaged: 1-7 wounds remaining' },
+        { name:'Greater Daemon of Tzeentch' },
+        { name:'Infernal Puppeteer', tag:'Enhancement', ph:['shooting'], turn:'your', text:'**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9" **detection range** until this unit has shot.' }
+      ]
+    },
+    {
+      id:'lord-of-change-inescapable-eye', ds:'chaos-daemons/lord-of-change', pts:335, enhancement:'Inescapable Eye',
+      models:['1× Lord of Change'],
+      gear:[['Bolt of Change','Staff of Tzeentch','Rod of sorcery']],
+      abilities:[
+        { name:'Daemon Lord of Tzeentch' },
+        { name:'Master of Magicks' },
+        { name:'Damaged: 1-7 wounds remaining' },
+        { name:'Greater Daemon of Tzeentch' },
+        { name:'Inescapable Eye', tag:'Enhancement', ph:['command'], turn:'your', text:'**LEGIONES DAEMONICA TZEENTCH** model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.' }
+      ]
+    },
+    {
+      id:'fluxmaster-pink-horrors', ds:['chaos-daemons/fluxmaster','chaos-daemons/pink-horrors'], role:'Character', pts:250, ptsNote:'100 + Pink Horrors 150', enhancement:'Improbable Shield (Aura)',
+      leads:'Pink Horrors',
+      models:['1× Fluxmaster','10× Pink Horror'],
+      gear:[['Arcane Fireball','Herald combat weapon'],['Coruscating Pink flames','Pink claws']],
+      stats:[
+        { name:'Fluxmaster' },
+        { name:'Blue/Brimstone Horror (ref. only)' },
+        { name:'Pink Horror ×10' }
+      ],
+      ranged:[
+        { name:'witchfire', who:'Fluxmaster' },
+        { name:'focused witchfire', who:'Fluxmaster' },
+        { name:'Coruscating Yellow flames (ref. only)', who:'Pink Horrors' },
+        { name:'Coruscating Blue flames (ref. only)', who:'Pink Horrors' },
+        { name:'Coruscating Pink flames', who:'Pink Horrors', n:10 }
+      ],
+      melee:[
+        { name:'Herald combat weapon', who:'Fluxmaster' },
+        { name:'Yellow claws (ref. only)', who:'Pink Horrors' },
+        { name:'Blue claws (ref. only)', who:'Pink Horrors' },
+        { name:'Pink claws', who:'Pink Horrors', n:10 }
+      ],
+      abilities:[
+        { name:'Fluxmaster', who:'Fluxmaster' },
+        { name:'Altered Reality', who:'Fluxmaster' },
+        { name:'Improbable Shield (Aura)', who:'Fluxmaster', tag:'Enhancement · Aura', text:'**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' },
+        { name:'Split', who:'Pink Horrors' },
+        { name:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', who:'Pink Horrors' }
+      ],
+      rules:['Deep Strike','Leader','The Shadow of Chaos','Devastating Wounds','Hazardous','Psychic','Pistol'],
+      kw:['Battleline','Blue','Brimstone','Chaos','Character','Daemon','Faction: Legiones Daemonica','Fluxmaster','Fly','Horrors','Infantry','Mounted','Pink','Psyker','Tzeentch'],
+      kwNote:'Infantry, Battleline, Horrors come from the led Pink Horrors.',
+      kwOnly:{ Pink:'Pink Horror', Blue:'Blue Horrors', Brimstone:'Brimstone Horrors' },
+      why:{ kwNote:'leads Pink Horrors', ptsNote:'the points of its parts as the list has them (Fluxmaster + Pink Horrors)' }
+    },
+    {
+      id:'flamers', ds:'chaos-daemons/flamers', pts:65, copies:3,
+      models:['1× Pyrocaster','2× Flamer'],
+      gear:[['Flamer mouths','Flickering Flames'],['Flamer mouths','Flickering Flames']],
+      stats:[
+        { name:'Flamers ×3' }
+      ],
+      ranged:[
+        { name:'Flickering Flames', n:3 }
+      ],
+      melee:[
+        { name:'Flamer mouths', n:3 }
+      ]
+    },
+    {
+      id:'tzeentch-soul-grinder', ds:'chaos-daemons/tzeentch-soul-grinder', pts:180,
+      models:['1× Tzeentch Soul Grinder'],
+      gear:[['Harvester cannon','Iron claw','Warp gaze','Warpclaw']],
+      kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Tzeentch','Vehicle','Walker'],
+      why:{ kw:{ Tzeentch:'Daemonic Allegiance: Tzeentch' } }
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -7065,7 +7227,12 @@ const DATASHEETS = {
     { name:'Diseased claws and teeth', range:'Melee', A:'4', WS:'5+', S:'2', AP:'0', D:'1', kw:['LETHAL HITS'] }
   ],
   abilities:[
-    { name:'Mischief Makers', tag:'Aura', ph:['fight'], turn:'either', def:'Fight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase', text:'Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**.', defOf:'b35db159' }
+    { name:'Mischief Makers', ph:['fight'], turn:'either', text:'Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**.' }
+  ],
+  // Mischief Makers: GW does not tag it (Aura); its -1 to hit is on every melee attack of the enemy unit, whatever it targets: help for
+  // every unit of the list (a guard, as tzeeeeentch's Mischief and Confusion), the Nurglings' own unit included
+  guard:[
+    { from:'Mischief Makers', kind:'melee', when:'Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings', note:'-1 to hit rolls (until the end of the phase)', selfAlways:true, readOf:'b35db159' }
   ],
   rules:['Deep Strike','Infiltrators','Lethal Hits'],
   kw:['Allies: Legiones Daemonica','Battleline','Chaos','Daemon','Faction: Legiones Daemonica','Nurgle','Nurglings','Swarm']
@@ -7893,6 +8060,206 @@ const DATASHEETS = {
   rules:['Deep Strike','The Shadow of Chaos','Deadly Demise 1','Scouts 6"','Devastating Wounds'],
   kw:['Beast','Beasts of Nurgle','Chaos','Daemon','Faction: Legiones Daemonica','Nurgle']
 },
+'chaos-daemons/kairos-fateweaver':{
+  name:'Kairos Fateweaver', faction:'chaos-daemons', bsId:'6df5-f246-6bd-55b8', role:'Epic Hero',
+  stats:[
+    { name:'Kairos Fateweaver', M:'12"', T:'10', Sv:'6+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
+  ],
+  ranged:[
+    { name:'witchfire', group:'Infernal Gateway', range:'24"', A:'D6+3', BS:'2+', S:'9', AP:'-2', D:'D3', kw:['BLAST','INDIRECT FIRE','PSYCHIC'] },
+    { name:'focused witchfire', group:'Infernal Gateway', range:'24"', A:'D3+6', BS:'2+', S:'9', AP:'-2', D:'3', kw:['BLAST','INDIRECT FIRE','HAZARDOUS','PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Staff of Tomorrow', range:'Melee', A:'5', WS:'3+', S:'8', AP:'-2', D:'2D3', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'One Head Looks Forward', ph:['command'], turn:'your', text:'At the end of your Command phase, if this model is on the battlefield, take a **Leadership test** for this model; if that test is passed, you gain 1CP.' },
+    { name:'One Head Looks Back', tag:'Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.' },
+    { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'e6c48f12' },
+    { name:'Greater Daemon of Tzeentch', tag:'Aura', text:'While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-7 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-7 wounds remaining', readOf:'e6c48f12', readBy:'derive' }
+  ],
+  rules:['Deadly Demise D6','Deep Strike','The Shadow of Chaos','Blast','Indirect Fire','Hazardous','Psychic'],
+  kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Fly','Kairos Fateweaver','Monster','Psyker','Tzeentch']
+},
+'chaos-daemons/the-blue-scribes':{
+  name:'The Blue Scribes', faction:'chaos-daemons', bsId:'caf1-8818-9e65-7154', role:'Epic Hero',
+  stats:[
+    { name:'The Blue Scribes', M:'12"', T:'4', Sv:'6+', W:'6', Ld:'8+', OC:'2', InSv:'4+', base:'Large Flying' }
+  ],
+  melee:[
+    { name:'Sharp quills', range:'Melee', A:'4', WS:'5+', S:'2', AP:'0', D:'1', kw:['ANTI-PSYKER 2+'] }
+  ],
+  abilities:[
+    { name:'P’tarix’s Sorcerous Syphon', tag:'Aura', text:'While an enemy unit is within 12" of this model, each time a model in that unit makes a **Psychic Attack**, subtract 1 from the **Wound roll**.' },
+    { name:'Xirat’p’s Sorcerous Barrages', tag:'Psychic', ph:['movement'], turn:'your', text:'At the end of your Movement phase, roll one D6 for each enemy unit within 6" of this model: on a 2-3, that unit suffers 1 **mortal wound**; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.' }
+  ],
+  guard:[
+    { from:'P’tarix’s Sorcerous Syphon', kind:'all', when:'Psychic Attacks made by an enemy unit within 12" of The Blue Scribes', note:'-1 to the wound roll', selfAlways:true, readOf:'3cbd9adc' }
+  ],
+  rules:['Deep Strike','The Shadow of Chaos','Lone Operative'],
+  kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Fly','Mounted','The Blue Scribes','Tzeentch']
+},
+'chaos-daemons/the-changeling':{
+  name:'The Changeling', faction:'chaos-daemons', bsId:'ac75-c011-9a10-2c4a', role:'Epic Hero',
+  stats:[
+    { name:'The Changeling', M:'6"', T:'3', Sv:'7+', W:'5', Ld:'7+', OC:'1', InSv:'4+', base:'40mm' }
+  ],
+  ranged:[
+    { name:'witchfire', group:'Infernal Flames', range:'12"', A:'D6', BS:'–', S:'6', AP:'-1', D:'1', kw:['IGNORES COVER','PSYCHIC','TORRENT'] },
+    { name:'focused witchfire', group:'Infernal Flames', range:'12"', A:'D6+3', BS:'–', S:'6', AP:'-1', D:'D3', kw:['HAZARDOUS','IGNORES COVER','PSYCHIC','TORRENT'] }
+  ],
+  melee:[
+    { name:'The Trickster’s Staff', range:'Melee', A:'3', WS:'4+', S:'4', AP:'-1', D:'D3', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'Formless Horror', def:'an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase', text:'Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a **Battle-shock test**. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.', defOf:'2d7b0c5f' },
+    { name:'Mischief and Confusion', ph:['shooting'], turn:'opp', text:'At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.' }
+  ],
+  guard:[
+    { from:'Mischief and Confusion', kind:'all', when:'Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5)', note:'-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)', selfAlways:true, readOf:'b60f9b93' }
+  ],
+  rules:['The Shadow of Chaos','Deep Strike','Lone Operative','Stealth','Ignores Cover','Torrent','Hazardous','Psychic'],
+  kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Infantry','Psyker','The Changeling','Tzeentch']
+},
+'chaos-daemons/daemon-prince-of-chaos-with-wings':{
+  name:'Daemon Prince of Chaos with wings', faction:'chaos-daemons', bsId:'5800-3978-370d-b573', role:'Character',
+  stats:[
+    { name:'Daemon Prince of Chaos with wings', M:'12"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
+  ],
+  ranged:[
+    { name:'Infernal cannon', range:'24"', BS:'2+', S:'5', AP:'-1', D:'2', kw:[], A:'3' }
+  ],
+  melee:[
+    { name:'strike', group:'Hellforged weapons', range:'Melee', WS:'2+', D:'3', kw:[], A:'6', S:'8', AP:'-2' },
+    { name:'sweep', group:'Hellforged weapons', range:'Melee', WS:'2+', D:'1', kw:[], A:'14', S:'6', AP:'0' }
+  ],
+  abilities:[
+    { name:'Malefic Destruction', tag:'Once per battle', ph:['fight'], turn:'either', text:'Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons.' },
+    { name:'Harbinger of Death', ph:['fight'], turn:'either', text:'Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**' },
+    { name:'Daemonic Allegiance', text:'**Daemon Prince of Khorne:** If this model has the **KHORNE** keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.\n**Daemon Prince of Tzeentch:** If this model has the **TZEENTCH** keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.\n**Daemon Prince of Nurgle:** If this model has the **NURGLE** keyword, add 1 to this model’s Toughness characteristic.\n**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2" to this model’s Move characteristic.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', set:{ A:'+3' }, when:'Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase', note:'+3 A', from:'Malefic Destruction', readOf:'d40d1254' },
+    { kind:'melee', when:'Selected to fight, its hellforged weapons, until the end of the phase (select one)', note:'[LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]', from:'Harbinger of Death', pick:[{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[PRECISION]', note:'[PRECISION]' },{ name:'[SUSTAINED HITS 1]', note:'[SUSTAINED HITS 1]' }], readOf:'abd3cac8' }
+  ],
+  rules:['Deep Strike','The Shadow of Chaos','Deadly Demise D3'],
+  kw:['Chaos','Character','Daemon','Daemon Prince of Chaos with wings','Faction: Legiones Daemonica','Fly','Monster']
+},
+'chaos-daemons/lord-of-change':{
+  name:'Lord of Change', faction:'chaos-daemons', bsId:'3600-9f92-933-bf54', role:'Character',
+  stats:[
+    { name:'Lord of Change', M:'12"', T:'10', Sv:'6+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
+  ],
+  ranged:[
+    { name:'witchfire', group:'Bolt of Change', range:'18"', A:'9', BS:'2+', S:'9', AP:'-1', D:'1', kw:['PSYCHIC'] },
+    { name:'focused witchfire', group:'Bolt of Change', range:'18"', A:'9', BS:'2+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','PSYCHIC'] },
+    { name:'Rod of sorcery', range:'18"', A:'6', BS:'2+', S:'8', AP:'-1', D:'2', kw:['PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Staff of Tzeentch', range:'Melee', A:'5', WS:'3+', S:'6', AP:'-1', D:'3', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'Daemon Lord of Tzeentch', tag:'Aura', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.' },
+    { name:'Master of Magicks', tag:'Psychic', ph:['shooting'], turn:'your', text:'In your Shooting phase, select one of the following abilities: **[IGNORES COVER]**; **[LETHAL HITS]**; **[SUSTAINED HITS D3]**. Until the end of the phase, this model’s Bolt of Change has that ability.' },
+    { name:'Damaged: 1-7 wounds remaining', damaged:'1-7', text:'While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'e6c48f12' },
+    { name:'Greater Daemon of Tzeentch', tag:'Aura', text:'While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'ranged', weapon:'Bolt of Change', when:'Your Shooting phase, its Bolt of Change, until the end of the phase (select one)', note:'[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]', from:'Master of Magicks', pick:[{ name:'[IGNORES COVER]', note:'[IGNORES COVER]' },{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS D3]', note:'[SUSTAINED HITS D3]' }], readOf:'10a7c1ef' },
+    { kind:'all', when:'Damaged (1-7 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-7 wounds remaining', readOf:'e6c48f12', readBy:'derive' }
+  ],
+  aura:[
+    { kind:'ranged', needs:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, when:'Within 6" of the Lord of Change', selfWhen:'Own aura', note:'+1 S', from:'Daemon Lord of Tzeentch', selfAlways:true, readOf:'85453822' }
+  ],
+  rules:['Deadly Demise D6','Deep Strike','The Shadow of Chaos','Hazardous','Psychic'],
+  kw:['Chaos','Character','Daemon','Faction: Legiones Daemonica','Fly','Lord of Change','Monster','Psyker','Tzeentch']
+},
+'chaos-daemons/fluxmaster':{
+  name:'Fluxmaster', faction:'chaos-daemons', bsId:'eba5-8a7a-fc5b-d7ec',
+  stats:[
+    { name:'Fluxmaster', M:'12"', T:'4', Sv:'6+', W:'4', Ld:'7+', OC:'1', InSv:'4+', base:'Large Flying' }
+  ],
+  ranged:[
+    { name:'witchfire', group:'Arcane Fireball', range:'18"', A:'3', BS:'3+', S:'5', AP:'-1', D:'D3', kw:['PSYCHIC'] },
+    { name:'focused witchfire', group:'Arcane Fireball', range:'18"', A:'3', BS:'3+', S:'6', AP:'-2', D:'D3', kw:['DEVASTATING WOUNDS','HAZARDOUS','PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Herald combat weapon', range:'Melee', A:'3', WS:'4+', S:'4', AP:'-1', D:'1', kw:['PSYCHIC'] }
+  ],
+  abilities:[
+    { name:'Fluxmaster', def:'This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls', text:'- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**.', defOf:'55ebfa69' },
+    { name:'Altered Reality', tag:'Psychic', text:'Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.' }
+  ]
+},
+'chaos-daemons/pink-horrors':{
+  name:'Pink Horrors', faction:'chaos-daemons', bsId:'e7b8-aa40-6da7-778e',
+  stats:[
+    { name:'Blue/Brimstone Horror (ref. only)', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'8+', OC:'1', InSv:'4+', base:'25mm' },
+    { name:'Pink Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'7+', OC:'2', InSv:'4+', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Coruscating Yellow flames (ref. only)', carrier:'Brimstone Horrors added by Split', range:'18"', A:'2', BS:'5+', S:'2', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
+    { name:'Coruscating Blue flames (ref. only)', carrier:'Blue Horrors added by Split', range:'18"', A:'2', BS:'4+', S:'3', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
+    { name:'Coruscating Pink flames', range:'18"', A:'2', BS:'3+', S:'4', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Yellow claws (ref. only)', carrier:'Brimstone Horrors added by Split', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] },
+    { name:'Blue claws (ref. only)', carrier:'Blue Horrors added by Split', range:'Melee', A:'1', WS:'5+', S:'3', AP:'0', D:'1', kw:[] },
+    { name:'Pink claws', range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Split', note:'FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it\'s starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”', text:'Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit.' },
+    { name:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', note:'FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”', text:'If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*' }
+  ]
+},
+'chaos-daemons/flamers':{
+  name:'Flamers', faction:'chaos-daemons', bsId:'5f23-4d6-f2f9-5973', role:'Infantry',
+  stats:[
+    { name:'Flamers', M:'9"', T:'4', Sv:'7+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Flickering Flames', range:'12"', A:'D6', BS:'–', S:'4', AP:'-1', D:'1', kw:['IGNORES COVER','PSYCHIC','TORRENT'] }
+  ],
+  melee:[
+    { name:'Flamer mouths', range:'Melee', A:'3', WS:'4+', S:'4', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Bounding Leaps', ph:['movement','shooting'], turn:'your', text:'This unit is eligible to shoot in a turn in which it Fell Back.' }
+  ],
+  rules:['Deep Strike','The Shadow of Chaos','Ignores Cover','Psychic','Torrent'],
+  kw:['Chaos','Daemon','Faction: Legiones Daemonica','Flamers','Fly','Infantry','Tzeentch']
+},
+'chaos-daemons/tzeentch-soul-grinder':{
+  name:'Tzeentch Soul Grinder', faction:'chaos-daemons', bsId:'e1b1-146f-6f77-3a15', role:'Vehicle',
+  stats:[
+    { name:'Soul Grinder', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'5', InSv:'4+', base:'160mm' }
+  ],
+  ranged:[
+    { name:'Harvester cannon', range:'36"', A:'3', BS:'3+', S:'10', AP:'-1', D:'3', kw:[] },
+    { name:'Warp gaze', range:'48"', A:'D3', BS:'3+', S:'12', AP:'-2', D:'D6+2', kw:['BLAST'] }
+  ],
+  melee:[
+    { name:'Iron claw', range:'Melee', A:'5', WS:'3+', S:'16', AP:'-3', D:'D6+2', kw:[] },
+    { name:'Warpclaw', range:'Melee', A:'6', WS:'3+', S:'8', AP:'-1', D:'2', kw:['EXTRA ATTACKS'] }
+  ],
+  abilities:[
+    { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this model makes a **Normal** or **Advance** move, it can move over friendly **MONSTER** and **VEHICLE** models and **terrain features** that are 4" or less in height as if they were not there.' },
+    { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9ebcb82e' },
+    { name:'Daemonic Allegiance', text:'When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below.\n**KHORNE** – **This model is additionally equipped with:** torrent of burning blood\n**TZEENTCH** – **This model is additionally equipped with:** warp gaze\n**NURGLE** – **This model is additionally equipped with:** phlegm bombardment\n**SLAANESH** – **This model is additionally equipped with:** scream of despair' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 wounds remaining', readOf:'9ebcb82e', readBy:'derive' }
+  ],
+  rules:['Deadly Demise D3','The Shadow of Chaos','Deep Strike','Blast','Extra Attacks'],
+  kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Vehicle','Walker']
+},
 'chaos-space-marines/vashtorr-the-arkifane':{
   name:'Vashtorr the Arkifane', faction:'chaos-space-marines', bsId:'dcc0-b70c-9779-e6c9', role:'Epic Hero',
   stats:[
@@ -8283,6 +8650,7 @@ const BS_IDS = {
   },
   detachments:{
     "0985-28ae-cf24-2fba":"world-eaters/butchers-of-khorne",
+    "0dd1-86f6-d2a0-3aba":"chaos-daemons/cavalcade-of-chaos",
     "1558-660f-466b-a087":"world-eaters/khorne-daemonkin",
     "1bb5-5aba-6c8f-7afc":"adeptus-custodes/might-of-the-moritoi",
     "1c7e-56bc-3196-b5cd":"adeptus-custodes/emperors-chosen",
@@ -8314,6 +8682,7 @@ const BS_IDS = {
     "c6ca-bde2-8304-c97c":"chaos-space-marines/devotees-of-destruction",
     "ccb7-6823-6a97-7c19":"adeptus-custodes/grav-assault-force",
     "dbe4-0a6f-4eb5-5f06":"adeptus-custodes/honoured-companions",
+    "dec0-c9cb-c265-cae0":"chaos-daemons/scintillating-legion",
     "f67d-6f59-21b8-e1f9":"adeptus-mechanicus/cohort-cybernetica",
     "f782-e3f1-c132-fe52":"orks/wreckas",
     "fca1-ecdf-4e4a-df41":"orks/shoota-boyz"
@@ -8531,6 +8900,15 @@ const BS_IDS = {
     "the-exiled-legion/skarbrand":["7998-d0a-baa4-e8b3|1×13f1-2794-34e7-4bd6,1×573b-877e-5437-c3be,1×d231-290d-7de8-bc49"],
     "the-exiled-legion/skullmaster-bloodcrushers":["dd30-ba4c-34a4-e788|1×2eac-78bf-beb7-bfea,1×4848-c7ef-a65f-d15c,1×87ae-e092-2e5d-16a6","2f31-9132-b703-5fd8|1×47bc-4cb8-5ff6-e208,2×8876-fc4f-a6a0-5df,2×8876-fc4f-a6a0-5df/4848-c7ef-a65f-d15c,2×8876-fc4f-a6a0-5df/e4f0-79-126a-ac41,1×b87a-5121-1c03-894f,1×b87a-5121-1c03-894f/4848-c7ef-a65f-d15c,1×b87a-5121-1c03-894f/e4f0-79-126a-ac41,1×bc2f-662f-58e7-5fef"],
     "the-exiled-legion/skulltaker-bloodletters":["8872-785a-1efa-7ca1|1×fcdc-51d3-89ab-f5b6","4ecc-6aa5-da28-2c57|1×47bc-4cb8-5ff6-e208,1×65ae-c95a-cd9e-f0b0,1×a30d-a7e8-b7d1-a55c,1×a30d-a7e8-b7d1-a55c/e4f0-79-126a-ac41,1×bc2f-662f-58e7-5fef,9×f20e-ff73-5f0c-9970,9×f20e-ff73-5f0c-9970/e4f0-79-126a-ac41"],
+    "tzeeeeentch/daemon-prince-of-chaos-with-wings":["5800-3978-370d-b573|1×347c-42b8-a58c-176c,1×4dda-d9d2-153f-f294,1×9383-3f2f-50cd-1e7a,1×b4ce-a5bf-52e7-884c"],
+    "tzeeeeentch/flamers":["5f23-4d6-f2f9-5973|2×9280-14a0-f54-ebfb,2×9280-14a0-f54-ebfb/1c7f-c635-a77f-9204,2×9280-14a0-f54-ebfb/bebc-8637-c456-1c0f,1×9b72-9f8a-9554-43d4,1×9b72-9f8a-9554-43d4/7472-d1a5-5fbe-4052,1×9b72-9f8a-9554-43d4/fec2-85a0-1492-9c0e"],
+    "tzeeeeentch/fluxmaster-pink-horrors":["eba5-8a7a-fc5b-d7ec|1×2024-6ff7-2d17-938d,1×8a1b-35-5c24-d81c,1×d6e9-169c-3b2a-ee09","e7b8-aa40-6da7-778e|10×c34d-3170-c314-148e,10×c34d-3170-c314-148e/5afb-65ea-e6fc-f8e8,10×c34d-3170-c314-148e/b99-af3a-9728-26ad"],
+    "tzeeeeentch/kairos-fateweaver":["6df5-f246-6bd-55b8|1×13f1-2794-34e7-4bd6,1×6d7d-2763-378d-54de,1×ce51-41ab-fe5d-2402"],
+    "tzeeeeentch/lord-of-change-inescapable-eye":["3600-9f92-933-bf54|1×2b05-a636-23ce-28e,1×5c15-6ac1-0115-9df8,1×8440-a7a8-b859-2ac3,1×dc95-31f-eded-9d6b"],
+    "tzeeeeentch/lord-of-change-infernal-puppeteer":["3600-9f92-933-bf54|1×2b05-a636-23ce-28e,1×806e-b30b-3bcd-71c3,1×8440-a7a8-b859-2ac3,1×dc95-31f-eded-9d6b"],
+    "tzeeeeentch/the-blue-scribes":["caf1-8818-9e65-7154|1×570d-1bd7-4179-ad0e"],
+    "tzeeeeentch/the-changeling":["ac75-c011-9a10-2c4a|1×1d74-d498-28a1-244e,1×6614-2033-8b5d-ac9d"],
+    "tzeeeeentch/tzeentch-soul-grinder":["e1b1-146f-6f77-3a15|1×36a9-7135-9deb-5f95,1×416d-1da1-fc2c-174a,1×9f51-b187-b3bb-ffac,1×b83b-3b6-9aa7-5b3b"],
     "woof-woof/war-dog-brigand":["753d-4e02-eda3-4809|1×0b63-2988-ec78-7913,1×6638-278a-5331-d1ff,1×a30d-6752-d912-315e,1×b02a-a6e2-3eb4-4872,1×dfe8-cea0-8d16-db95"],
     "woof-woof/war-dog-brigand-2":["753d-4e02-eda3-4809|1×0b63-2988-ec78-7913,1×6638-278a-5331-d1ff,1×a30d-6752-d912-315e,1×dfe8-cea0-8d16-db95"],
     "woof-woof/war-dog-brigand-final-howl-aura":["753d-4e02-eda3-4809|1×0b63-2988-ec78-7913,1×3bee-8c85-68f7-e54b,1×42e1-e706-eb89-6cb6,1×6638-278a-5331-d1ff,1×a30d-6752-d912-315e,1×b02a-a6e2-3eb4-4872,1×dfe8-cea0-8d16-db95"],
@@ -8591,8 +8969,10 @@ const BS_IDS = {
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
     "1c66-4903-10ca-2a27":"Ironhail Heavy Stubber",
+    "1c7f-c635-a77f-9204":"Flamer mouths",
     "1d21-9b32-c427-398e":"Kustom Mega-slugga",
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
+    "1d74-d498-28a1-244e":"Infernal Flames",
     "1db9-89c3-c7cb-2041":"Obliterator",
     "1de9-b138-28a1-9c4b":"Flash Gitz",
     "1e16-0387-abcf-0e9a":"Phoenix power spear",
@@ -8602,6 +8982,7 @@ const BS_IDS = {
     "1f1e-2989-4762-cf88":"Belisarius Cawl",
     "1fbe-32e7-bd69-93b5":"Force Stave",
     "1fd1-28df-182d-bfcb":"Prosperine khopesh",
+    "2024-6ff7-2d17-938d":"Arcane Fireball",
     "202a-2f25-f692-8b36":"Gateway Unto Damnation",
     "20cf-5b7c-71d2-451d":"Kastelan Robot",
     "217a-9e22-3821-27e9":"Chainblades",
@@ -8632,6 +9013,7 @@ const BS_IDS = {
     "2ace-f88f-3405-d191":"Big Chompa's Jaws",
     "2aea-961-8345-fce5":"Diseased claws and teeth",
     "2afa-364b-7daf-f95e":"Warpflamer",
+    "2b05-a636-23ce-28e":"Rod of sorcery",
     "2b1f-798d-9bca-4ad9":"Mechanicus pistol",
     "2b6b-56b9-13a8-3320":"Master-crafted power weapon",
     "2ba4-635b-fffd-0f59":"Bolt pistol",
@@ -8660,10 +9042,13 @@ const BS_IDS = {
     "33e2-4ee8-2e10-3e47":"Battle-lust",
     "3449-7dac-6ac8-5d51":"Khârn the Betrayer",
     "3469-166f-44f3-51b8":"Bolt pistol",
+    "347c-42b8-a58c-176c":"Infernal cannon",
     "34b5-f449-28f6-b365":"Heavy reaper autocannon",
     "35da-aa05-fc7f-9b1d":"Mysterious Guardian",
+    "3600-9f92-933-bf54":"Lord of Change",
     "3667-92c8-a7e5-1ccd":"Vashtorr's hammer",
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
+    "36a9-7135-9deb-5f95":"Warpclaw",
     "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
     "37a7-d156-1e4c-8fe1":"Cerastus Knight Atrapos",
     "3811-a215-d4a1-d197":"Umbralefic Crystal",
@@ -8700,6 +9085,7 @@ const BS_IDS = {
     "40c5-9ebd-6d42-2855":"Daemon Prince of Khorne",
     "40fb-e485-dca0-cb12":"Headwoppa's Killchoppa",
     "414e-b8ff-7132-48c7":"Enlightened",
+    "416d-1da1-fc2c-174a":"Harvester cannon",
     "4175-82c6-8e96-bef8":"Chaos Cerastus Knight Lancer",
     "4268-2d76-f972-d7f5":"Gatling cannon and flamer",
     "4287-4c82-30d5-bfaa":"Force stave",
@@ -8745,6 +9131,7 @@ const BS_IDS = {
     "4bff-1982-fbf1-7a8f":"Multi-melta",
     "4c53-6d36-742f-85ca":"The Emperor's Sword",
     "4dcd-5d7f-65c2-245b":"Squigosaur's jaws",
+    "4dda-d9d2-153f-f294":"Hellforged weapons",
     "4ea0-6b70-c17c-bc00":"Ghazghkull Thraka",
     "4eac-1303-a0d6-2827":"Legionary w/ paired accursed weapons",
     "4ecc-6aa5-da28-2c57":"Bloodletters",
@@ -8768,18 +9155,22 @@ const BS_IDS = {
     "55fb-9c91-1a4f-3037":"Canis Rex",
     "5622-c756-d3e8-85ae":"Watcher's Axe",
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
+    "570d-1bd7-4179-ad0e":"Sharp quills",
     "5720-2873-8c2c-edc3":"Norn Emissary",
     "573b-877e-5437-c3be":"Bellow of endless fury",
     "5762-3c1f-658e-368":"Melta tendril",
+    "5800-3978-370d-b573":"Daemon Prince of Chaos with wings",
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
     "59ef-1bf3-f681-c8ae":"Vexilla",
     "5a2-c6a5-9b4b-605f":"Chainfist",
+    "5afb-65ea-e6fc-f8e8":"Pink claws",
     "5b35-b4f7-dffe-e4bb":"Gore-drenched fangs",
     "5b76-3e1c-8801-1e4b":"Archslaughterer",
     "5b9-7d59-48fd-b485":"Tzaangor w/ Tzaangor blades",
     "5bd5-bca3-6228-ef17":"Vertus Praetor",
     "5be8-d319-e2a9-8409":"Twin cognis autocannon",
+    "5c15-6ac1-0115-9df8":"Inescapable Eye",
     "5cd1-cb47-fd8f-5704":"Scavenged Shivs",
     "5d06-5a71-fde7-a641":"Force weapon",
     "5d3d-e13b-8b76-dad3":"Rubric Marines",
@@ -8789,6 +9180,7 @@ const BS_IDS = {
     "5efb-f61f-fdb6-a7d7":"Stikka",
     "5f0c-f31c-26ba-4f2a":"Armoured limbs",
     "5f1f-f3bb-d6dd-6714":"Heavy weapon",
+    "5f23-4d6-f2f9-5973":"Flamers",
     "5f80-3d00-6e4d-cfaf":"Heavy Intercessor Sergeant",
     "6084-9fb5-76d2-8487":"Beastchoppa",
     "60c9-9f30-7dc8-2b63":"Malefic Curse",
@@ -8810,6 +9202,7 @@ const BS_IDS = {
     "65c-aa48-f306-465a":"Flash Gitz",
     "65d0-a5c5-919a-6444":"Chitinous claws and teeth",
     "65ef-e78a-ac45-b60a":"Soul-rending fangs",
+    "6614-2033-8b5d-ac9d":"The Trickster's Staff",
     "661a-207c-a66d-8da0":"Armoured tracks",
     "6633-5a38-bd55-b080":"Prosperine khopesh",
     "6638-278a-5331-d1ff":"Armoured feet",
@@ -8832,7 +9225,9 @@ const BS_IDS = {
     "6cc8-d237-eec9-d038":"Aviarch",
     "6cd8-62e0-c6e4-74b3":"Visionary",
     "6d28-ca9d-79a5-063a":"Disciple of Khorne",
+    "6d7d-2763-378d-54de":"Infernal Gateway",
     "6dc0-a9d5-a111-daf2":"Power Weapon",
+    "6df5-f246-6bd-55b8":"Kairos Fateweaver",
     "6f2c-fc26-53bc-34bd":"Eightbound Champion",
     "6f51-9d72-19b7-25bb":"Ectoplasma cannon and limbs",
     "6f81-4538-a414-251e":"Jakhals",
@@ -8856,6 +9251,7 @@ const BS_IDS = {
     "7324-e591-939b-b675":"Heavy Intercessor Squad",
     "7361-7d8a-dbfc-b6e8":"Prosperine khopesh",
     "73e9-498e-2d97-e18":"Atrapos lascutter",
+    "7472-d1a5-5fbe-4052":"Flickering Flames",
     "74ce-a593-af24-5ef7":"Aemelia Minervas",
     "74f5-4553-6d71-b44c":"Force weapon",
     "753d-4e02-eda3-4809":"War Dog Brigand",
@@ -8896,6 +9292,7 @@ const BS_IDS = {
     "7f5-23ea-19ab-176":"Adamantine 'Eadbutt",
     "7f70-709e-68c5-64be":"Attendant's hellblades",
     "7f72-9cd7-e0a6-39fa":"Demolisher cannon",
+    "806e-b30b-3bcd-71c3":"Infernal Puppeteer",
     "8097-77df-1ed5-1e1a":"Fatecaster greatbow",
     "80c4-14b2-d02d-d289":"Nazdreg",
     "811f-e844-83ab-78a4":"Rokkit Pistol",
@@ -8910,6 +9307,7 @@ const BS_IDS = {
     "836c-fa5c-db9d-7566":"Storm Bolters",
     "83a1-feb8-d495-aa28":"Heavy Bolt Pistol",
     "8436-cec1-e65a-d1a7":"Karanak",
+    "8440-a7a8-b859-2ac3":"Bolt of Change",
     "8441-8356-5e7c-69ee":"Knight Paladin",
     "8484-4b54-f9e6-844b":"Hellfire breath",
     "8488-2efe-825f-a403":"Neurogaunt Nodebeast",
@@ -8927,6 +9325,7 @@ const BS_IDS = {
     "88ee-2f6b-0b00-0852":"Paired manglers",
     "89b1-3250-5148-c69f":"Choppa",
     "89c4-132e-6ad6-2a08":"Despoiler gatling cannon",
+    "8a1b-35-5c24-d81c":"Herald combat weapon",
     "8a59-c996-8ae9-8bd6":"Icon of Excess",
     "8a8f-5ceb-8a0a-6c6c":"Saddlegit's Shiv",
     "8ad7-4a78-859d-2305":"Storm Shield",
@@ -8956,6 +9355,8 @@ const BS_IDS = {
     "918b-c9ed-7af7-74df":"Vertus Praetors",
     "91b3-2e1c-e642-d213":"Custodian Guard Sodality",
     "91dc-9aad-0505-52a8":"Magnus the Red",
+    "9280-14a0-f54-ebfb":"Flamer",
+    "9383-3f2f-50cd-1e7a":"Tzeentch",
     "93c3-d64f-2d6e-ea":"Questoris heavy stubber",
     "93c8-9c05-8892-b481":"Black Staff of Ahriman",
     "9415-965c-37e9-d374":"Archeotech Laspistol",
@@ -8976,6 +9377,7 @@ const BS_IDS = {
     "99c8-e37d-ae6d-a8ba":"Nob on Smasha Squig",
     "9a9f-3dab-02c0-8be7":"Paired Krumpas",
     "9ad3-083a-577b-56b0":"Hellforged weapons",
+    "9b72-9f8a-9554-43d4":"Pyrocaster",
     "9c89-2141-493-1a45":"Impaler chainglaive",
     "9cc3-1188-9678-0ee1":"Combi-bolter",
     "9cea-2e7-8711-11bf":"Hellfyre missile rack",
@@ -8987,6 +9389,7 @@ const BS_IDS = {
     "9ef8-1cb6-2f19-cc1b":"2 magma cutters",
     "9efd-ec72-353f-4b23":"Knight Errant",
     "9f43-3691-5be1-8623":"Twin Neutronium Cascade Projectors",
+    "9f51-b187-b3bb-ffac":"Warp gaze",
     "9fdd-e31a-5f28-85ea":"Witchseeker",
     "a018-ca33-afd0-be83":"Bloodthirster",
     "a021-c1a0-c35c-f10f":"Warlord",
@@ -9030,6 +9433,7 @@ const BS_IDS = {
     "ab61-e814-8c4d-1cb":"Eradicator",
     "ab80-e71b-5a84-2852":"Close combat weapon",
     "ab93-64bd-1c95-c6a7":"Plasma caliver",
+    "ac75-c011-9a10-2c4a":"The Changeling",
     "ad65-d3cb-c677-7cb3":"Warlord",
     "adff-65e7-4566-084b":"Chainblades",
     "ae78-f3d8-6cf0-6a89":"Hellfyre missile rack",
@@ -9056,6 +9460,7 @@ const BS_IDS = {
     "b46a-4885-3b28-428b":"Twin Killsaw",
     "b472-94bc-9482-44b6":"Skitarii Ranger w/ plasma caliver",
     "b4ca-3419-c219-f429":"Darkflame lance",
+    "b4ce-a5bf-52e7-884c":"Neverblade",
     "b53-3d5b-356b-6b0a":"Flesh Hound",
     "b541-3292-a5cc-dbeb":"Defiler",
     "b568-8a23-be6f-a14d":"Khorne Berzerker",
@@ -9069,14 +9474,17 @@ const BS_IDS = {
     "b77f-43c5-91b6-7da7":"Shearing claws",
     "b793-b77e-9e49-d397":"Wardens of Ultramar",
     "b7a3-bfbd-1464-141d":"Omnispex",
+    "b83b-3b6-9aa7-5b3b":"Iron claw",
     "b87a-5121-1c03-894f":"Bloodhunter",
     "b93c-a0a7-1c46-66c4":"Skitarii Ranger w/ arc rifle",
+    "b99-af3a-9728-26ad":"Coruscating Pink flames",
     "bc1-73c2-c18-8687":"Heavy Intercessor w/Heavy Bolter",
     "bc2f-662f-58e7-5fef":"Daemonic Icon",
     "bd01-88b9-7d60-b49a":"Excruciator cannon",
     "bd33-fe8e-fe90-2bb7":"Magma cutter",
     "bd6c-8683-8bc4-962d":"Kastelan Robots",
     "beb2-89f6-847c-52bf":"Sentinel blade",
+    "bebc-8637-c456-1c0f":"Flickering Flames",
     "bfb1-7512-e1a3-9fa2":"Impulsor",
     "c089-546a-0546-3537":"Two excruciator cannons",
     "c0a2-eb65-6d34-5bc6":"Knight Ruinator",
@@ -9090,6 +9498,7 @@ const BS_IDS = {
     "c26c-fe9c-e557-e706":"Grabba Dragga",
     "c282-992e-9d74-f62a":"Maulerfiend fists",
     "c297-6f9c-b046-f2ad":"Astartes chainsword",
+    "c34d-3170-c314-148e":"Pink Horror",
     "c3a6-8fab-45f0-2d45":"Exalted Sorcerer",
     "c41d-61c0-3e59-01b5":"Bolt pistol",
     "c570-c6ba-c9dc-5a44":"Eradicator Squad with Melta Rifles",
@@ -9112,6 +9521,7 @@ const BS_IDS = {
     "ca9e-52d-14-a439":"Bladeguard Veteran Sergeant",
     "caa-f869-3cbd-b48e":"Warlord",
     "caa2-e441-2c31-454":"Infernal cannon",
+    "caf1-8818-9e65-7154":"The Blue Scribes",
     "cb16-d239-4f7a-91be":"Power fist",
     "cb31-e496-08de-77d4":"Sanctuary",
     "cc2c-abb5-1cb7-d195":"Dainal Kornelius",
@@ -9125,6 +9535,7 @@ const BS_IDS = {
     "ce35-c6e4-d9cc-799c":"Pyreflux meltagun",
     "ce45-db08-3795-18a9":"Zodgrod Wortsnagga",
     "ce4a-6df3-3c24-621b":"Bolt pistol",
+    "ce51-41ab-fe5d-2402":"Staff of Tomorrow",
     "ce61-585b-aea7-18fc":"Kombi-weapon",
     "ceab-62d9-31bf-7c61":"Warlord",
     "cf57-33c7-551b-fa36":"2 ectoplasma cannons",
@@ -9146,6 +9557,7 @@ const BS_IDS = {
     "d59d-ef1-9ef8-4f44":"Cybernetica Datasmith",
     "d5fe-026f-1f46-e9c5":"Close combat weapon",
     "d6c0-4d42-c3c4-db8a":"Rapid-fire battle cannon",
+    "d6e9-169c-3b2a-ee09":"Improbable Shield (Aura)",
     "d7a9-5697-357-855d":"Burning roar",
     "d7b3-df20-933-63b7":"Monstrous rending claws",
     "d7b7-a7e-ef2-783a":"Kan Klaw",
@@ -9166,6 +9578,7 @@ const BS_IDS = {
     "dbf0-5211-463c-40ec":"Caladius Annihilator Grav-tank",
     "dc0b-cdb9-4123-782":"Plasma gun",
     "dc69-1094-613-6daf":"Monstrous scything talons",
+    "dc95-31f-eded-9d6b":"Staff of Tzeentch",
     "dca3-638e-52a2-b1b8":"Armoured hull",
     "dcc0-b70c-9779-e6c9":"Vashtorr the Arkifane",
     "dcfe-758c-4a16-1c85":"Praesidium Shield",
@@ -9182,6 +9595,7 @@ const BS_IDS = {
     "e083-787f-1fff-4170":"Dok's Toolz",
     "e0c6-58cd-a822-8b84":"Kustom Mega-blasta",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
+    "e1b1-146f-6f77-3a15":"Tzeentch Soul Grinder",
     "e201-253f-1f52-e389":"Kunnin' But Brutal",
     "e390-b58b-db9-816":"Lucius the Eternal",
     "e403-3a9-279e-41b7":"Nurglings",
@@ -9193,6 +9607,7 @@ const BS_IDS = {
     "e4f0-79-126a-ac41":"Hellblade",
     "e584-f803-7858-05bc":"Hunter's Eye",
     "e687-6d7a-bb28-dcaa":"Chaos Vindicator",
+    "e7b8-aa40-6da7-778e":"Pink Horrors",
     "e7d7-e613-0029-4d08":"Guardian Spear",
     "e7d8-1c73-7d03-8b62":"Telemon Heavy Dreadnought",
     "e806-3c87-d3d5-e71d":"Flamer tendril",
@@ -9204,6 +9619,7 @@ const BS_IDS = {
     "ea82-9845-1b96-c57c":"Infractor",
     "ea86-f483-33bb-182b":"Power sword",
     "eb85-7ead-6dee-f00f":"Dunecrawler legs",
+    "eba5-8a7a-fc5b-d7ec":"Fluxmaster",
     "eba8-6f8c-759-4e22":"Eradicator with Multi-melta",
     "ebda-08ed-994a-b579":"Master-crafted power weapon",
     "ebfb-d2a4-5280-a6e6":"Gore-stained Veterans",
@@ -9263,6 +9679,7 @@ const BS_IDS = {
     "fcdc-51d3-89ab-f5b6":"The Slayer Sword",
     "fd31-64a2-b20f-f0bc":"Flesh Hounds",
     "fe4b-b3a4-69b7-3088":"Sekhetar Robots",
+    "fec2-85a0-1492-9c0e":"Flamer mouths",
     "ff11-9d42-ad3f-2fac":"Beast of Nurgle",
     "ff14-7e0a-4b32-6fc1":"Thunder Hammer"
   },
@@ -9296,10 +9713,12 @@ const BS_IDS = {
     "5514-3810-cf3e-3b23":1,
     "55fb-9c91-1a4f-3037":1,
     "5b76-3e1c-8801-1e4b":1,
+    "5c15-6ac1-0115-9df8":1,
     "65ae-c95a-cd9e-f0b0":3,
     "6836-5818-2135-a8aa":1,
     "68b0-c798-79a8-28f5":3,
     "6d28-ca9d-79a5-063a":1,
+    "6df5-f246-6bd-55b8":1,
     "7135-8430-eb02-ded4":1,
     "71d9-9dc2-2b9a-6db3":1,
     "7213-a7b3-4c8e-96bc":1,
@@ -9307,6 +9726,7 @@ const BS_IDS = {
     "7998-d0a-baa4-e8b3":1,
     "7b41-35aa-3265-14d7":1,
     "7d7c-c212-47a3-38e4":1,
+    "806e-b30b-3bcd-71c3":1,
     "80c4-14b2-d02d-d289":1,
     "8436-cec1-e65a-d1a7":1,
     "87ae-e092-2e5d-16a6":1,
@@ -9318,17 +9738,21 @@ const BS_IDS = {
     "a136-76f7-34d1-8035":1,
     "a336-1346-0281-b4b2":3,
     "a886-5b5b-d3b2-cf38":1,
+    "ac75-c011-9a10-2c4a":1,
     "b02a-a6e2-3eb4-4872":3,
     "b42b-ea0-38f1-6300":1,
+    "b4ce-a5bf-52e7-884c":1,
     "b681-8092-2465-7ba0":3,
     "b793-b77e-9e49-d397":1,
     "c799-77ce-c706-3079":1,
     "c84c-683a-79be-1620":1,
+    "caf1-8818-9e65-7154":1,
     "cb31-e496-08de-77d4":1,
     "cc5a-e1bc-3dd8-f367":1,
     "ce45-db08-3795-18a9":1,
     "d0ac-5a84-221a-3dd7":1,
     "d40a-c9a6-74d5-288d":3,
+    "d6e9-169c-3b2a-ee09":1,
     "dcc0-b70c-9779-e6c9":1,
     "e201-253f-1f52-e389":1,
     "e390-b58b-db9-816":1,
@@ -9357,10 +9781,12 @@ const CHECKLIST = {
   "a|10fw799":{"u":"movement:your,charge:either"},
   "a|10lucp2":{"u":"fight:either"},
   "a|10pf8qz":{"t":"shooting:your","u":"shooting:your","s":1},
+  "a|10x19q4":{"x":1},
   "a|119ongz":{"x":1},
   "a|11lueh2":{"x":1},
   "a|11n13i4":{"t":"shooting:opp","u":"shooting:opp"},
   "a|11p632b":{"u":"shooting:your"},
+  "a|11rkasx":{"u":"shooting:your"},
   "a|128j63r":{"u":"shooting:your"},
   "a|12u09c2":{"u":"charge:either"},
   "a|1348p3r":{"u":"shooting:your,fight:either"},
@@ -9382,6 +9808,7 @@ const CHECKLIST = {
   "a|15wfj8w":{"t":"movement:your","s":1},
   "a|16933gp":{"x":1,"g":[{"name":"Stealth","to":{"all":["Faction: Legiones Daemonica"]},"while":"While a friendly LEGIONES DAEMONICA unit is within 6\" of this model"}]},
   "a|16gssms":{"u":"fight:either"},
+  "a|16mwpe4":{"t":"fight:either","s":1},
   "a|16oy7t8":{"u":"shooting:your,fight:either"},
   "a|16vjj2d":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|16w10ps":{"u":"shooting:opp,fight:either"},
@@ -9395,6 +9822,7 @@ const CHECKLIST = {
   "a|17tabo3":{"t":"fight:either","s":1},
   "a|17vrn9o":{"u":"shooting:opp"},
   "a|17yjt8a":{"u":"shooting:opp,fight:either"},
+  "a|181c91p":{"u":"shooting:your,fight:either"},
   "a|1826tj4":{"u":"shooting:your"},
   "a|18qfwhq":{"u":"shooting:your"},
   "a|19570y3":{"u":"charge:either"},
@@ -9436,6 +9864,7 @@ const CHECKLIST = {
   "a|1f6xmvq":{"u":"movement:your,charge:either"},
   "a|1f7qtur":{"u":"fight:either"},
   "a|1fpl6vr":{"u":"fight:either"},
+  "a|1fpy810":{"t":"movement:your","s":1},
   "a|1fses0j":{"u":"shooting:opp"},
   "a|1fuvhlz":{"u":"shooting:opp,fight:either"},
   "a|1g2iw40":{"t":"command:your","s":1},
@@ -9450,7 +9879,9 @@ const CHECKLIST = {
   "a|1hrixn1":{"u":"fight:either"},
   "a|1hxono":{"u":"fight:either"},
   "a|1hzxe56":{"t":"fight:either","u":"fight:either","a":1},
+  "a|1igcb72":{"x":1},
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
+  "a|1ilhdau":{"u":"shooting:your,fight:either","a":1},
   "a|1ill500":{"u":"movement:opp"},
   "a|1j6lbpi":{"u":"shooting:opp,fight:either"},
   "a|1j9160m":{"t":"command:your","s":1},
@@ -9463,6 +9894,7 @@ const CHECKLIST = {
   "a|1kk5eyl":{"x":1},
   "a|1knl5yg":{"u":"shooting:your"},
   "a|1kw2clp":{"u":"shooting:your,fight:either"},
+  "a|1l0b9wc":{"x":1},
   "a|1l0et8j":{"u":"shooting:opp"},
   "a|1l151r1":{"u":"fight:either"},
   "a|1l602aj":{"u":"shooting:your"},
@@ -9481,9 +9913,11 @@ const CHECKLIST = {
   "a|1nfdpzv":{"u":"shooting:your,fight:either"},
   "a|1nv0bem":{"at":"Start of the battle round","s":1},
   "a|1nv8bld":{"t":"command:your","s":1},
+  "a|1o03wkj":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 4+ against Psychic Attacks and mortal wounds","to":{"all":["Faction: Legiones Daemonica","Tzeentch"]},"while":"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer"}]},
   "a|1o8wyag":{"u":"fight:either"},
   "a|1ogsbz3":{"u":"shooting:opp,fight:either"},
   "a|1om4fn2":{"t":"shooting:your,fight:either","u":"shooting:your,fight:either","a":1},
+  "a|1oqz8jr":{"u":"movement:your,shooting:your"},
   "a|1or5jd0":{"u":"movement:your,shooting:your"},
   "a|1oxefnu":{"x":1},
   "a|1p0lau8":{"x":1},
@@ -9527,6 +9961,7 @@ const CHECKLIST = {
   "a|1xwtgtp":{"t":"shooting:your,fight:either","s":1},
   "a|1xz08zy":{"t":"shooting:your"},
   "a|1y13n39":{"u":"fight:either"},
+  "a|1y7dm8c":{"t":"shooting:your","u":"shooting:your"},
   "a|1yx0ge2":{"u":"shooting:opp,fight:either"},
   "a|1yzm5vq":{"t":"shooting:your","u":"shooting:your"},
   "a|1zttx":{"u":"shooting:opp"},
@@ -9547,6 +9982,8 @@ const CHECKLIST = {
   "a|4twegt":{"u":"shooting:your,fight:either"},
   "a|4yj9j6":{"t":"command:your","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|50gddt":{"u":"fight:either"},
+  "a|52ik6r":{"t":"command:your","s":1},
+  "a|5cu3n5":{"u":"fight:either"},
   "a|5ffkd6":{"u":"movement:your"},
   "a|5fmbqx":{"u":"fight:either"},
   "a|5pzucl":{"u":"shooting:opp"},
@@ -9556,6 +9993,7 @@ const CHECKLIST = {
   "a|611p4g":{"x":1},
   "a|65wpmk":{"u":"charge:either"},
   "a|6ahdrh":{"u":"movement:your,shooting:your"},
+  "a|6azpb6":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|6jybil":{"u":"shooting:opp,fight:either"},
   "a|6q6bvm":{"u":"fight:either"},
   "a|6re8gu":{"u":"shooting:your,fight:either"},
@@ -9577,6 +10015,7 @@ const CHECKLIST = {
   "a|9ripaa":{"x":1},
   "a|acxlx0":{"u":"shooting:opp,fight:either"},
   "a|akltst":{"t":"fight:either","u":"fight:either","a":1},
+  "a|al81ur":{"u":"movement:your"},
   "a|apu7s6":{"u":"shooting:your"},
   "a|b2nexu":{"u":"movement:your,charge:your"},
   "a|b5h7tq":{"u":"charge:either"},
@@ -9585,6 +10024,7 @@ const CHECKLIST = {
   "a|bburpi":{"t":"shooting:your","s":1},
   "a|bqtobi":{"x":1},
   "a|bryfv4":{"t":"movement:your","f":[{"n":"riled up","r":"Waaagh!","u":"command:opp,movement:either,shooting:either,charge:either,fight:either"}],"s":1},
+  "a|bwwxyk":{"u":"fight:either"},
   "a|c1v9iq":{"t":"command:your","u":"shooting:your,fight:either","s":1},
   "a|c6hqsp":{"x":1},
   "a|c73q9i":{"t":"command:your","s":1},
@@ -9594,6 +10034,7 @@ const CHECKLIST = {
   "a|ct1ind":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "a|dcqyl1":{"u":"charge:either"},
   "a|ds28tt":{"u":"fight:either"},
+  "a|e1tops":{"t":"command:your","s":1},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
   "a|erffw0":{"x":1},
@@ -9604,6 +10045,7 @@ const CHECKLIST = {
   "a|fl8nb3":{"u":"shooting:opp,fight:either"},
   "a|fulcp9":{"t":"movement:your","u":"movement:your"},
   "a|fy53b1":{"u":"shooting:your"},
+  "a|fyfux1":{"u":"shooting:opp,fight:either"},
   "a|fyw42d":{"u":"fight:either"},
   "a|g4cb5g":{"t":"command:your","u":"movement:your","s":1},
   "a|g66xrn":{"u":"movement:opp","a":1},
@@ -9614,6 +10056,8 @@ const CHECKLIST = {
   "a|h1b4ln":{"x":1},
   "a|h4pgmm":{"none":1},
   "a|h55ynk":{"u":"shooting:opp,fight:either"},
+  "a|hbymu9":{"t":"shooting:opp","u":"shooting:opp","s":1},
+  "a|hfvzqg":{"x":1},
   "a|hqcw8c":{"u":"shooting:opp,fight:either","a":1},
   "a|i0iopt":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|i0q45v":{"u":"movement:your"},
@@ -9623,6 +10067,7 @@ const CHECKLIST = {
   "a|iv04nt":{"u":"shooting:opp,fight:either"},
   "a|j2qj5o":{"x":1},
   "a|j4crxj":{"u":"shooting:opp,fight:either"},
+  "a|j4iojd":{"x":1},
   "a|j4ww0l":{"t":"command:your","s":1},
   "a|jst03m":{"u":"fight:either","a":1},
   "a|k4qjtt":{"u":"shooting:your,fight:either"},
@@ -9666,6 +10111,7 @@ const CHECKLIST = {
   "a|ss613f":{"t":"fight:either","u":"fight:either","s":1},
   "a|t52unt":{"u":"charge:either"},
   "a|tdsmft":{"u":"movement:your,shooting:your,charge:either"},
+  "a|troxwt":{"x":1},
   "a|u5ddi":{"x":1,"o":[{"n":"Daemon Prince of Khorne","x":1},{"n":"Daemon Prince of Tzeentch","x":1},{"n":"Daemon Prince of Nurgle","x":1},{"n":"Daemon Prince of Slaanesh","u":"movement:your"}]},
   "a|u7b31q":{"x":1},
   "a|u86jue":{"t":"shooting:your","s":1},
@@ -9693,6 +10139,7 @@ const CHECKLIST = {
   "a|xebbb5":{"t":"command:your","u":"shooting:opp,fight:either","s":1},
   "a|xoco9k":{"t":"movement:your","s":1},
   "a|xt1xvf":{"t":"command:your","s":1},
+  "a|xwfllq":{"x":1},
   "a|ybaz3c":{"t":"command:your","s":1},
   "a|ynp2ng":{"u":"shooting:your,fight:either"},
   "a|yphext":{"at":"End of your opponent’s turn","s":1},
@@ -9700,6 +10147,7 @@ const CHECKLIST = {
   "a|yzv1r5":{"t":"fight:either","s":1},
   "a|z3zaz9":{"u":"shooting:opp"},
   "a|zcevae":{"u":"fight:either"},
+  "a|zi42v9":{"u":"shooting:your,fight:either"},
   "a|zns9bl":{"u":"shooting:your,fight:either"},
   "a|zsa42i":{"u":"fight:either"},
   "r|adeptus-custodes|Aegis of the Emperor":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
@@ -9717,9 +10165,11 @@ const CHECKLIST = {
   "r|adeptus-mechanicus|Doctrina Imperatives":{"at":"Start of the battle round","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Imperative","row":"Protector Imperative","u":"shooting:your,fight:either"},{"n":"Conqueror Imperative","row":"Conqueror Imperative","u":"shooting:your,fight:either"}]},
   "r|adeptus-mechanicus|Murderous Imperative":{"u":"shooting:your,fight:either"},
   "r|chaos-daemons|Blood Tainted":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
+  "r|chaos-daemons|Fates in Flux":{"t":"command:your","s":1},
   "r|chaos-daemons|Murdercall":{"t":"movement:opp","u":"movement:opp"},
   "r|chaos-daemons|Shudderblink":{"u":"movement:your,shooting:your,charge:your"},
   "r|chaos-daemons|The Shadow of Chaos":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1,"o":[{"n":"DAEMONIC MANIFESTATION"},{"n":"DAEMONIC TERROR"}]},
+  "r|chaos-daemons|Unholy Avalanche":{"u":"movement:your,shooting:your,charge:your"},
   "r|chaos-knights|Harbingers of Dread":{"x":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Deathly Terror","row":"Deathly Terror (Aura) · N/A","x":1},{"n":"Despair","row":"Despair (Aura) · 1","x":1},{"n":"Doom","row":"Doom · 2","u":"shooting:your,fight:either"},{"n":"Darkness","row":"Darkness · 3","x":1},{"n":"Dismay","row":"Dismay (Aura) · 4","t":"command:opp","s":1},{"n":"Delirium","row":"Delirium (Aura) · 5","x":1},{"n":"Dominion","row":"Dominion · 6","x":1}]},
   "r|chaos-knights|Malefic Surge":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Unholy Hunger","a":1},{"n":"Diabolic Power","a":1},{"n":"Unnatural Fortitude","a":1}]},
   "r|chaos-knights|Marked Prey":{"at":"Start of your Command phase","t":"command:your","u":"shooting:your,fight:either","s":1},
@@ -9907,7 +10357,9 @@ const GRANTS = [
   { rule:'fellhammer-siege-task-force · Warpsmith · Warpsmith', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly HERETIC ASTARTES VEHICLE units', text:'While this model is within 3" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability.' },
   { rule:'fellhammer-siege-task-force · Dark Apostle · Cybinfernal Font', grants:'SOUL FORGE', type:'keyword or weapon ability', to:'this unit / model', while:null, text:'Models in the bearer\'s unit have the **SOUL FORGE** keyword.' },
   { rule:'navigator-sounds-op-ngl · Knight Defender · Selfless Protector', grants:'Benefit of Cover', type:'ability', to:{ all:['Faction: Imperial Knights'] }, while:null, text:'Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack.' },
-  { rule:'navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' }
+  { rule:'navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' },
+  { rule:'tzeeeeentch · Fluxmaster · Fluxmaster', grants:'Stealth', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Stealth**.' },
+  { rule:'tzeeeeentch · Fluxmaster · Improbable Shield (Aura)', grants:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', type:'ability', to:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, while:'While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer', text:'While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 
@@ -9915,9 +10367,9 @@ const GRANTS = [
 const TABLE_ORDER = {
   unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
-  ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','from','own'],
-  melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','embarked','damaged','na','ph','riled','turn','turns','note','def','text','defOf','readOf']
+  ranged:['group','fireAll','name','who','n','carrier','hunter','range','A','BS','S','AP','D','kw','own','from'],
+  melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
+  abilities:['name','who','tag','at','damaged','embarked','na','ph','riled','turn','turns','note','def','text','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

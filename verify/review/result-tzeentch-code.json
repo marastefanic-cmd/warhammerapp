@@ -1,0 +1,74 @@
+[
+ {
+  "key": "318986ebbe649754",
+  "where": "seqTrigger",
+  "verdict": "ok",
+  "why": "The new seqTrigger is the approved one plus opensMoment: a sentence that opens \"At the start/end of …\" and names its moment before any activation words. I reverted only that clause in a scratch worktree and ran derive.js --write. CHECKLIST then differs in one entry, a|hbymu9 (Mischief and Confusion, which loses s:1), so it changes nothing in any other list. Base and head CHECKLIST: no entry changed or removed, 26 added, all Tzeeeeentch. render.js seqOwn matches it (MOM is SEQ.moment, neither regex has a g flag), and the screens pass at 390 and 320 with 0 failures. Mischief and Confusion is a fixed moment with a choice (\"At the start of your opponent’s Shooting phase, select one enemy unit …\"), so listing it fits the checklist scope."
+ },
+ {
+  "key": "a44da443c130493c",
+  "where": "verify/waha-words.js · wahaAddress",
+  "verdict": "ok",
+  "why": "The god-prefix fallback runs only when nothing matches the whole name and no numbered page matches (!hit && !num.length). It then needs an exact normalised key match of the rest of the name (\"Soul Grinder\" → Soul-Grinder), so it cannot pick a near-miss page. from-json.js --compare for all 21 other exports gives the same output at base and head, except the two unrelated lines noted under the (Aura) and box items."
+ },
+ {
+  "key": "cab16947afba66e7",
+  "where": "verify/from-json.js · ref. only rows",
+  "verdict": "ok",
+  "why": "Checked against all 22 exports: the only unit-type selection with weapon profiles on the unit entry itself is the Tzeeeeentch Pink Horrors (4 \"(ref. only)\" profiles). The new unplaced/walk branches therefore touch no other list (base and head --compare identical apart from the noted lines). The code is not gated on \"(ref. only)\", so a future export with unit-level weapons would get unplaced rows with n 1, which is the right reading for wargear on no model anyway. bsdata.js checks the 4 as gear (gear 1110→1114). The pair() and gwName strip are anchored ($), and the nr.js twin keeps the mark the same way; the nr and bsdata steps pass."
+ },
+ {
+  "key": "f6e5ed2c15cb780d",
+  "where": "verify/from-json.js · box after the composition",
+  "verdict": "ok",
+  "why": "Correct for Pink Horrors. It has one effect on another list: the purge-goes-the-foe export reading now finds Belisarius Cawl’s SUPREME COMMANDER box. Wahapedia prints it after YOUR UNIT COSTS (adeptus-mechanicus_Belisarius-Cawl.html), and the base reading wrongly dropped it as \"GW does not print it\". --compare therefore has one difference fewer, and the reading now equals data.js, whose text is the same. A --write of purge would keep Supreme Commander but without its hand note (Core Rules 25.04 quote). purge is PDF-built (no hand file), so it is never rebuilt that way, and data.js and the app are unchanged. Designer’s Note conversion: only \"**Designer’s Note:**\" at the start of a line, the box ends at KEYWORDS, and the search needs UNIT COMPOSITION earlier on the page."
+ },
+ {
+  "key": "b930a0045ba83cdf",
+  "where": "verify/from-json.js · (Aura) tag",
+  "verdict": "fix",
+  "why": "The code is right per GW (Kairos: Wahapedia and the Chaos Daemons Faction Pack print \"One Head Looks Back:\" with no tag). But it changes another list’s reading, which the change note says it does not. infernal-lance --compare gains \"nurglings.abilities: data.js |Mischief Makers|Aura, export |Mischief Makers|\", and a rebuild would drop the tag. GW prints it untagged too: Wahapedia chaos-daemons_Nurglings.html \"Mischief Makers:\" and the Chaos Daemons Faction Pack txt line 2203 \"Mischief Makers: Each time an enemy unit (excluding Titanic …\". data.js line 7229 keeps tag:\"Aura\", following the approved judgement result-infernal-lance 74ec1cd7b0afc248 (\"two sources carry it\"). So the new rule (verify/from-json.js:896) contradicts that approval and the two lists now disagree on the same policy. Fix: drop tag:\"Aura\" from Mischief Makers in data.js (chaos-knights/nurglings), declare it as an ability.tag deviation like Kairos’s, and re-judge 74ec1cd7b0afc248. Or, if BSData’s tag should win, scope the new rule to Kairos. Either way, state it in the todo."
+ },
+ {
+  "key": "b5d534dc52aa6dfc",
+  "where": "verify/from-json.js · kwNote / kwOnly",
+  "verdict": "ok",
+  "why": "It only runs for a keyword the first part’s datasheet does not print, on a multi-part unit, and changes no other list: base and head --compare/--write agree for all other lists. Minor hardening, not triggered by any list: at verify/from-json.js:748, `/ from .*$/.exec(u.kwNote)[0]` throws if an existing kwNote has no \" from \". Use `(/ from .*$/.exec(u.kwNote) || [' from the led ' + u.leads + '.'])[0]`. The no-row title-casing affects only kwOnly names with no stats row, and no other list has one."
+ },
+ {
+  "key": "41f011a683608432",
+  "where": "verify/from-json.js · readings of a new detachment",
+  "verdict": "ok",
+  "why": "`(F0.detachments || {})[id] || facSrc.detachments[id]` falls back only when data.js does not have the detachment yet. That happens only on the first run of a new detachment, so nothing changes for existing lists (their --write output is the same at base and head)."
+ },
+ {
+  "key": "09e0b65650ff8096",
+  "where": "verify/from-json.js · hand rule label",
+  "verdict": "ok",
+  "why": "Only HAND.rules entries with a label, for a detachment of this run’s faction source, with the rule name matched exactly. Only tzeeeeentch.json has one (Fates in Flux), and the hand pass records it in handDone. Minor: for a key without \"/\", `facSrc.detachments[k].rule.name` (verify/from-json.js:1402) throws if that detachment has no rule. Guard it with `(facSrc.detachments[k].rule || {}).name`."
+ },
+ {
+  "key": "151ad4cac4fe3dbb",
+  "where": "verify/bsdata.js · unplaced own profiles; ambiguous grant",
+  "verdict": "ok",
+  "why": "I reverted both hunks and ran bsdata.js on the head data.js. The only differences are the 5 Tzeeeeentch failures (4 Pink Horrors ref-only unplaced, 1 Daemon Prince infernal-cannon ambiguity), which become 0, with gear 1110→1114 and every other count and every other list unchanged. The \"+\" pick runs only when 2+ abilities already say the characteristic change and exactly one of them contains the weapon’s name. Otherwise it stays \"(ambiguous …)\". So it cannot misattribute silently in other lists. The substring has no word boundary (\"bolt pistol\" ⊂ \"heavy bolt pistol\"), but the named.length === 1 guard keeps a wrong unique pick unlikely."
+ },
+ {
+  "key": "fcba0a502a3d99e2",
+  "where": "verify/nr.js · compareJsonArmy",
+  "verdict": "ok",
+  "why": "Adds the mark only when nrStatName’s parens include \"ref. only\", matching from-json.js’s row name. The nr step passes (0 failures, 12821 facts) and no other export has such a profile."
+ },
+ {
+  "key": "96bea7763eff9ad3",
+  "where": "verify/derive.js · optionsOf",
+  "verdict": "ok",
+  "why": "I reverted the clause and ran derive.js --write. The only data.js change is r|chaos-daemons|Fates in Flux gaining the bogus \"Designer's Note\" option. data.js has 7 Designer’s Notes; none of the others (Core [LANCE]/Mobile notes, Chaos Knights Empowered, Horrors are Pink, the bold one at line 1246) gives or loses an option, and RULE_OPTIONS is unchanged. Nothing real is lost."
+ },
+ {
+  "key": "93604b27f9e7cc79",
+  "where": "verify/derive.js · seqTrigger and verify/render.js · seqOwn",
+  "verdict": "ok",
+  "why": "The same as 318986ebbe649754: the only CHECKLIST effect is a|hbymu9 (Mischief and Confusion) s:1, and no other list’s entry changes (base vs head CHECKLIST: 0 changed, 0 removed). render.js’s copy has the same rule, and screens and small phone pass with 0 failures."
+ }
+]
