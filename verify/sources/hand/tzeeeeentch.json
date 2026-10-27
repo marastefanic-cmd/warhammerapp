@@ -103,7 +103,8 @@
    "defs": {
     "Fluxmaster": {
      "by": "AI (Claude)",
-     "def": "Stealth (the benefit of cover against ranged attacks); melee attacks that target it have -1 to hit rolls"
+     "def": "Stealth (the benefit of cover against ranged attacks); melee attacks that target it have -1 to hit rolls",
+     "defOf": "55ebfa69"
     }
    },
    "why": "Pink Horrors: BSData’s “(ref. only)” profiles (Blue/Brimstone Horror; Coruscating Blue and Yellow flames, Blue and Yellow claws) are the ones GW’s datasheet gives the Blue and Brimstone Horrors its Split adds; no model carries them at the start, so they are on no models line (unplaced). Daemonic Icon and Instrument of Chaos: wargear this list did not take, left out. Improbable Shield (Aura): Feel No Pain 4+ against Psychic Attacks and mortal wounds for friendly LEGIONES DAEMONICA TZEENTCH units within 6\", the Fluxmaster’s own unit included (22.01), as a guard."
@@ -136,7 +137,8 @@
    "defs": {
     "Formless Horror": {
      "by": "AI (Claude)",
-     "def": "an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase"
+     "def": "an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase",
+     "defOf": "2d7b0c5f"
     }
    },
    "why": "Mischief and Confusion is not tagged (Aura): its -1 to hit is on every attack of the enemy unit it selected, whatever that unit targets, so it is help for every unit of the list (a guard, as Necromechanic), not an aura."
@@ -173,7 +175,8 @@
       },
       "when": "Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase",
       "note": "+3 A",
-      "from": "Malefic Destruction"
+      "from": "Malefic Destruction",
+      "readOf": "d40d1254"
      },
      {
       "kind": "melee",
@@ -193,7 +196,8 @@
         "name": "[SUSTAINED HITS 1]",
         "note": "[SUSTAINED HITS 1]"
        }
-      ]
+      ],
+      "readOf": "abd3cac8"
      }
     ]
    },
@@ -212,7 +216,8 @@
       "selfWhen": "Own aura",
       "note": "+1 S",
       "from": "Daemon Lord of Tzeentch",
-      "selfAlways": true
+      "selfAlways": true,
+      "readOf": "85453822"
      }
     ]
    },
@@ -223,7 +228,8 @@
       "kind": "all",
       "when": "Psychic Attacks made by an enemy unit within 12\" of The Blue Scribes",
       "note": "-1 to the wound roll",
-      "selfAlways": true
+      "selfAlways": true,
+      "readOf": "3cbd9adc"
      }
     ]
    },
@@ -234,7 +240,8 @@
       "kind": "all",
       "when": "Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (D6: 2-5)",
       "note": "-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)",
-      "selfAlways": true
+      "selfAlways": true,
+      "readOf": "b60f9b93"
      }
     ]
    }
@@ -247,7 +254,8 @@
       "when": "Every melee attack",
       "note": "+1 to hit rolls",
       "from": "Neverblade",
-      "always": true
+      "always": true,
+      "readOf": "6fd9df01"
      }
     ]
    },
@@ -265,7 +273,8 @@
       "when": "Within 6\" of the Fluxmaster",
       "selfWhen": "Own aura",
       "selfAlways": true,
-      "note": "Feel No Pain 4+ against Psychic Attacks and mortal wounds"
+      "note": "Feel No Pain 4+ against Psychic Attacks and mortal wounds",
+      "readOf": "4bd89386"
      }
     ]
    }
