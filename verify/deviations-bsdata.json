@@ -2179,6 +2179,15 @@
   "by": "verify/from-json.js"
  },
  {
+  "army": "infernal-lance",
+  "unit": "nurglings",
+  "field": "ability.tag",
+  "app": "Mischief Makers: ",
+  "source": "Mischief Makers (Aura)",
+  "reason": "GW’s datasheet prints Mischief Makers without a tag (no \"(Aura)\"); BSData at the pin (Chaos - Chaos Daemons Library) names it \"Mischief Makers (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins (as Kairos Fateweaver’s One Head Looks Back in tzeeeeentch).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2203 (Nurglings datasheet): \"Mischief Makers: Each time an enemy unit (excluding Titanic …\"; verify/.cache/waha/ds/chaos-daemons_Nurglings.html: \"Mischief Makers:\" (no tag)."
+ },
+ {
   "army": "tzeeeeentch",
   "unit": "kairos-fateweaver",
   "field": "ability.tag",
@@ -2266,6 +2275,16 @@
   "source": "If, at any point, this unit contains no ^^Pink Horrors^^ models, use the ^^Blue Horrors^^ datasheet for this unit. \n\n\n_Designer’s Note: While this unit contains one or more ^^Pink Horrors^^ models, the Cackling Horrors and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._",
   "reason": "The app has GW’s words: GW’s datasheet (Wahapedia) prints the box Horrors are Pink. Horrors are Blue. Where once there was one, now there are two. otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer's N…\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit. *Designer's Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "kw",
+  "app": "Brimstone",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
  {

@@ -2304,7 +2304,7 @@
  },
  {
   "army": "tzeeeeentch",
-  "kind": "question",
+  "kind": "points",
   "where": "points: Lord of Change, Tzeentch Soul Grinder",
   "judgement": {
    "app": {
@@ -2313,10 +2313,10 @@
    }
   },
   "source": {
-   "reason": "The app has New Recruit's / BSData's points (the export: 320 and 180; bsdata step passes). Wahapedia's datasheet pages (cached 27 Oct 2026) show \"YOUR UNIT COSTS 1 model 340\" for the Lord of Change and \"1 model 195\" for the Soul Grinder. GW's points (Warhammer 40,000 app) are not in the cache; the list totals 2000 of 2000 pts by the export. Every other unit and enhancement matches Wahapedia (Kairos 305, Blue Scribes 75, Changeling 105, Daemon Prince with Wings 190, Fluxmaster 70, Pink Horrors 150, Flamers 65, enhancements 15/20/25/30).",
-   "evidence": "verify/.cache/waha/ds/chaos-daemons_Lord-of-Change.html, chaos-daemons_Soul-Grinder.html"
+   "reason": "The app has New Recruit’s / BSData’s points (the export: 320, 320 and 180; the bsdata step passes). Wahapedia’s 340 (Lord of Change) and 195 (Soul Grinder) are the prices of a third and later unit of the datasheet (the owner’s answer, 27 Oct 2026); this list has two Lords of Change and one Soul Grinder, so 320/320/180 is right.",
+   "evidence": "verify/sources/nr-json/tzeeeeentch.json; verify/.cache/waha/ds/chaos-daemons_Lord-of-Change.html, chaos-daemons_Soul-Grinder.html"
   },
-  "key": "d67c4da82506393c"
+  "key": "bf7d01c010cb083e"
  },
  {
   "army": "tzeeeeentch",

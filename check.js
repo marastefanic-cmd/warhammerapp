@@ -99,9 +99,10 @@ function check(file){
         for(const k of ['when','from']) if(!m[k]) P(where, 'mod missing', k);
         if(!m.note && !m.set) P(where, 'mod missing note');
         if(m.weapon){
-          const w = (m.kind === 'all' ? weapons : u[m.kind] || []).find(x => x.name === m.weapon);
+          // (a weapon of several profiles by its name, the group: Master of Magicks' Bolt of Change)
+          const w = (m.kind === 'all' ? weapons : u[m.kind] || []).find(x => x.name === m.weapon || x.group === m.weapon);
           if(!w) P(where, 'mod names a weapon it does not have:', m.weapon);
-          else if(w.group) P(where, 'mod weapon', m.weapon, 'has several profiles; set is ignored');
+          else if(w.group && m.set) P(where, 'mod weapon', m.weapon, 'has several profiles; set is ignored');
         }
       }
       // kwOnly: keywords of only some models; each one is a keyword of the unit
@@ -120,8 +121,10 @@ function check(file){
           if(things.size > 1) P(where, 'unplaced name matches more than one weapon or ability:', n);
           if((u.unplaced || []).filter(x => x === n).length > 1) P(where, 'unplaced lists a name twice:', n);
         }
-        const carried = new Set([...u.gear.flat(), ...(u.unplaced || [])]);
+        // (a weapon GW's composition gives models the unit does not have yet, carrier: on no gear line)
+        const carried = new Set([...u.gear.flat(), ...(u.unplaced || []), ...weapons.filter(w => w.carrier).map(w => w.group || w.name)]);
         for(const n of names) if(!carried.has(n)) P(where, 'weapon not in any gear line:', n);
+        for(const w of weapons) if(w.carrier && u.gear.some(g => g.includes(w.group || w.name))) P(where, 'a weapon with a carrier is also on a models line:', w.group || w.name);
       }
       if(u.enhancement && !detachmentsOf(a).some(d => d.enhancements.some(e => e.name === u.enhancement))) P(where, 'enhancement not in its detachments:', u.enhancement);
       for(const ab of u.abilities || []) timing(ab, where + ' ability ' + ab.name);

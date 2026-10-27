@@ -1569,7 +1569,7 @@ const FACTIONS = {
     name: 'Chaos Daemons',
     // army rules: Wahapedia, Chaos Daemons, Army Rules (the ones the list’s units name), written by verify/from-json.js
     armyRules: [
-      { name:'The Shadow of Chaos', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*' }
+      { name:'The Shadow of Chaos', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n- Your deployment zone is always within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\nDAEMONIC MANIFESTATION\nWhile a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.\n*FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.*\n*FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.*' }
     ],
     detachments: {
       // Cavalcade of Chaos: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
@@ -5030,7 +5030,6 @@ const ARMIES = [
       id:'fluxmaster-pink-horrors', ds:['chaos-daemons/fluxmaster','chaos-daemons/pink-horrors'], role:'Character', pts:250, ptsNote:'100 + Pink Horrors 150', enhancement:'Improbable Shield (Aura)',
       leads:'Pink Horrors',
       models:['1× Fluxmaster','10× Pink Horror'],
-      unplaced:['Coruscating Yellow flames (ref. only)','Yellow claws (ref. only)','Blue claws (ref. only)','Coruscating Blue flames (ref. only)'],
       gear:[['Arcane Fireball','Herald combat weapon'],['Coruscating Pink flames','Pink claws']],
       stats:[
         { name:'Fluxmaster' },
@@ -5058,9 +5057,9 @@ const ARMIES = [
         { name:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', who:'Pink Horrors' }
       ],
       rules:['Deep Strike','Leader','The Shadow of Chaos','Devastating Wounds','Hazardous','Psychic','Pistol'],
-      kw:['Battleline','Blue','Chaos','Character','Daemon','Faction: Legiones Daemonica','Fluxmaster','Fly','Horrors','Infantry','Mounted','Pink','Psyker','Tzeentch'],
+      kw:['Battleline','Blue','Brimstone','Chaos','Character','Daemon','Faction: Legiones Daemonica','Fluxmaster','Fly','Horrors','Infantry','Mounted','Pink','Psyker','Tzeentch'],
       kwNote:'Infantry, Battleline, Horrors come from the led Pink Horrors.',
-      kwOnly:{ Pink:'Pink Horror', Blue:'Blue Horrors' },
+      kwOnly:{ Pink:'Pink Horror', Blue:'Blue Horrors', Brimstone:'Brimstone Horrors' },
       why:{ kwNote:'leads Pink Horrors', ptsNote:'the points of its parts as the list has them (Fluxmaster + Pink Horrors)' }
     },
     {
@@ -5080,7 +5079,9 @@ const ARMIES = [
     {
       id:'tzeentch-soul-grinder', ds:'chaos-daemons/tzeentch-soul-grinder', pts:180,
       models:['1× Tzeentch Soul Grinder'],
-      gear:[['Harvester cannon','Iron claw','Warp gaze','Warpclaw']]
+      gear:[['Harvester cannon','Iron claw','Warp gaze','Warpclaw']],
+      kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Tzeentch','Vehicle','Walker'],
+      why:{ kw:{ Tzeentch:'Daemonic Allegiance: Tzeentch' } }
     }
   ]
 },
@@ -7226,7 +7227,12 @@ const DATASHEETS = {
     { name:'Diseased claws and teeth', range:'Melee', A:'4', WS:'5+', S:'2', AP:'0', D:'1', kw:['LETHAL HITS'] }
   ],
   abilities:[
-    { name:'Mischief Makers', tag:'Aura', ph:['fight'], turn:'either', def:'Fight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase', text:'Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**.', defOf:'b35db159' }
+    { name:'Mischief Makers', ph:['fight'], turn:'either', text:'Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**.' }
+  ],
+  // Mischief Makers: GW does not tag it (Aura); its -1 to hit is on every melee attack of the enemy unit, whatever it targets: help for
+  // every unit of the list (a guard, as tzeeeeentch's Mischief and Confusion), the Nurglings' own unit included
+  guard:[
+    { from:'Mischief Makers', kind:'melee', when:'Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings', note:'-1 to hit rolls (until the end of the phase)', selfAlways:true, readOf:'b35db159' }
   ],
   rules:['Deep Strike','Infiltrators','Lethal Hits'],
   kw:['Allies: Legiones Daemonica','Battleline','Chaos','Daemon','Faction: Legiones Daemonica','Nurgle','Nurglings','Swarm']
@@ -8114,7 +8120,7 @@ const DATASHEETS = {
     { name:'Mischief and Confusion', ph:['shooting'], turn:'opp', text:'At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.' }
   ],
   guard:[
-    { from:'Mischief and Confusion', kind:'all', when:'Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (D6: 2-5)', note:'-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)', selfAlways:true, readOf:'b60f9b93' }
+    { from:'Mischief and Confusion', kind:'all', when:'Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5)', note:'-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)', selfAlways:true, readOf:'b60f9b93' }
   ],
   rules:['The Shadow of Chaos','Deep Strike','Lone Operative','Stealth','Ignores Cover','Torrent','Hazardous','Psychic'],
   kw:['Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Infantry','Psyker','The Changeling','Tzeentch']
@@ -8165,6 +8171,7 @@ const DATASHEETS = {
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
+    { kind:'ranged', weapon:'Bolt of Change', when:'Your Shooting phase, until the end of the phase (select one)', note:'[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]', from:'Master of Magicks', pick:[{ name:'[IGNORES COVER]', note:'[IGNORES COVER]' },{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS D3]', note:'[SUSTAINED HITS D3]' }], readOf:'10a7c1ef' },
     { kind:'all', when:'Damaged (1-7 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-7 wounds remaining', readOf:'e6c48f12', readBy:'derive' }
   ],
   aura:[
@@ -8186,7 +8193,7 @@ const DATASHEETS = {
     { name:'Herald combat weapon', range:'Melee', A:'3', WS:'4+', S:'4', AP:'-1', D:'1', kw:['PSYCHIC'] }
   ],
   abilities:[
-    { name:'Fluxmaster', def:'Stealth (the benefit of cover against ranged attacks); melee attacks that target it have -1 to hit rolls', text:'- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**.', defOf:'55ebfa69' },
+    { name:'Fluxmaster', def:'This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls', text:'- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**.', defOf:'55ebfa69' },
     { name:'Altered Reality', tag:'Psychic', text:'Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.' }
   ]
 },
@@ -8197,18 +8204,18 @@ const DATASHEETS = {
     { name:'Pink Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'7+', OC:'2', InSv:'4+', base:'32mm' }
   ],
   ranged:[
-    { name:'Coruscating Yellow flames (ref. only)', range:'18"', A:'2', BS:'5+', S:'2', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
-    { name:'Coruscating Blue flames (ref. only)', range:'18"', A:'2', BS:'4+', S:'3', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
+    { name:'Coruscating Yellow flames (ref. only)', carrier:'Brimstone Horrors added by Split', range:'18"', A:'2', BS:'5+', S:'2', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
+    { name:'Coruscating Blue flames (ref. only)', carrier:'Blue Horrors added by Split', range:'18"', A:'2', BS:'4+', S:'3', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
     { name:'Coruscating Pink flames', range:'18"', A:'2', BS:'3+', S:'4', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] }
   ],
   melee:[
-    { name:'Yellow claws (ref. only)', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] },
-    { name:'Blue claws (ref. only)', range:'Melee', A:'1', WS:'5+', S:'3', AP:'0', D:'1', kw:[] },
+    { name:'Yellow claws (ref. only)', carrier:'Brimstone Horrors added by Split', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] },
+    { name:'Blue claws (ref. only)', carrier:'Blue Horrors added by Split', range:'Melee', A:'1', WS:'5+', S:'3', AP:'0', D:'1', kw:[] },
     { name:'Pink claws', range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Split', text:'Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit.' },
-    { name:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', text:'If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*' }
+    { name:'Split', note:'FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it\'s starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”', text:'Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit.' },
+    { name:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', note:'FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”', text:'If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*' }
   ]
 },
 'chaos-daemons/flamers':{
@@ -8251,7 +8258,7 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 wounds remaining', readOf:'9ebcb82e', readBy:'derive' }
   ],
   rules:['Deadly Demise D3','The Shadow of Chaos','Deep Strike','Blast','Extra Attacks'],
-  kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Tzeentch','Vehicle','Walker']
+  kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Vehicle','Walker']
 },
 'chaos-space-marines/vashtorr-the-arkifane':{
   name:'Vashtorr the Arkifane', faction:'chaos-space-marines', bsId:'dcc0-b70c-9779-e6c9', role:'Epic Hero',
@@ -10360,8 +10367,8 @@ const GRANTS = [
 const TABLE_ORDER = {
   unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
-  ranged:['group','fireAll','name','who','n','hunter','range','A','BS','S','AP','D','kw','own','from'],
-  melee:['group','name','who','n','hunter','range','A','WS','S','AP','D','kw','from','own'],
+  ranged:['group','fireAll','name','who','n','carrier','hunter','range','A','BS','S','AP','D','kw','own','from'],
+  melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
   abilities:['name','who','tag','at','damaged','embarked','na','ph','riled','turn','turns','note','def','text','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,

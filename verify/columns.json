@@ -1706,6 +1706,10 @@
     "hunter": {
      "source": "newrecruit",
      "note": "the Hunter profile: against MONSTER/VEHICLE"
+    },
+    "carrier": {
+     "source": "gw",
+     "note": "the models GW's UNIT COMPOSITION says carry a weapon no model of the list has yet (\"Every Blue Horror added to this unit using the Split ability is equipped with: …\", verify/from-json.js carrierOf); the app's carrier tag on the row"
     }
    }
   },
@@ -1759,6 +1763,10 @@
     "hunter": {
      "source": "newrecruit",
      "note": "the Hunter profile: against MONSTER/VEHICLE"
+    },
+    "carrier": {
+     "source": "gw",
+     "note": "the models GW's UNIT COMPOSITION says carry a weapon no model of the list has yet (\"Every Blue Horror added to this unit using the Split ability is equipped with: …\", verify/from-json.js carrierOf); the app's carrier tag on the row"
     }
    }
   },

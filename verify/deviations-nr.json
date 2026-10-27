@@ -2069,6 +2069,15 @@
   "by": "verify/from-json.js"
  },
  {
+  "army": "infernal-lance",
+  "unit": "nurglings",
+  "field": "abilities[Mischief Makers (Aura)].tag",
+  "app": null,
+  "source": "Aura",
+  "reason": "New Recruit prints “Mischief Makers (Aura)” (BSData’s name); GW’s Faction Pack and Wahapedia print “Mischief Makers:” with no tag. Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
+  "evidence": "verify/sources/nr/infernal-lance.txt p7; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2203: \"Mischief Makers: Each time an enemy unit …\"."
+ },
+ {
   "army": "tzeeeeentch",
   "unit": "the-blue-scribes",
   "field": "stats[The Blue Scribes].base",

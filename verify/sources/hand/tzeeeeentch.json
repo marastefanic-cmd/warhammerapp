@@ -103,11 +103,15 @@
    "defs": {
     "Fluxmaster": {
      "by": "AI (Claude)",
-     "def": "Stealth (the benefit of cover against ranged attacks); melee attacks that target it have -1 to hit rolls",
+     "def": "This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls",
      "defOf": "55ebfa69"
     }
    },
-   "why": "Pink Horrors: BSData’s “(ref. only)” profiles (Blue/Brimstone Horror; Coruscating Blue and Yellow flames, Blue and Yellow claws) are the ones GW’s datasheet gives the Blue and Brimstone Horrors its Split adds; no model carries them at the start, so they are on no models line (unplaced). Daemonic Icon and Instrument of Chaos: wargear this list did not take, left out. Improbable Shield (Aura): Feel No Pain 4+ against Psychic Attacks and mortal wounds for friendly LEGIONES DAEMONICA TZEENTCH units within 6\", the Fluxmaster’s own unit included (22.01), as a guard."
+   "why": "Pink Horrors: BSData’s “(ref. only)” profiles (Blue/Brimstone Horror; Coruscating Blue and Yellow flames, Blue and Yellow claws) are the ones GW’s datasheet gives the Blue and Brimstone Horrors its Split adds; no model carries them at the start, so they are on no models line (unplaced). Daemonic Icon and Instrument of Chaos: wargear this list did not take, left out. Improbable Shield (Aura): Feel No Pain 4+ against Psychic Attacks and mortal wounds for friendly LEGIONES DAEMONICA TZEENTCH units within 6\", the Fluxmaster’s own unit included (22.01), as a guard.",
+   "notes": {
+    "Split": "FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”",
+    "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.": "FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”"
+   }
   },
   "daemon-prince-of-chaos-with-wings": {
    "labels": {
@@ -150,7 +154,7 @@
    "why": "As the other Lord of Change (the same datasheet)."
   },
   "tzeentch-soul-grinder": {
-   "why": "BSData’s “Tzeentch Soul Grinder” is GW’s Soul Grinder datasheet with the TZEENTCH Daemonic Allegiance (its warp gaze); its warpsword replaced by a warpclaw (WARGEAR OPTIONS). The app keeps New Recruit’s name.",
+   "why": "BSData’s “Tzeentch Soul Grinder” is GW’s Soul Grinder datasheet with the TZEENTCH Daemonic Allegiance (its warp gaze); its warpsword replaced by a warpclaw (WARGEAR OPTIONS). The app keeps New Recruit’s name. The TZEENTCH keyword and the warp gaze are its Daemonic Allegiance choice (GW: “Tzeentch – This model is additionally equipped with: warp gaze”): why.kw names it.",
    "texts": {
     "Daemonic Allegiance": {
      "from": "stated for that keyword below:",
@@ -202,7 +206,6 @@
     ]
    },
    "Lord of Change": {
-    "derive": true,
     "aura": [
      {
       "kind": "ranged",
@@ -218,6 +221,38 @@
       "from": "Daemon Lord of Tzeentch",
       "selfAlways": true,
       "readOf": "85453822"
+     }
+    ],
+    "mods": [
+     {
+      "kind": "ranged",
+      "weapon": "Bolt of Change",
+      "when": "Your Shooting phase, until the end of the phase (select one)",
+      "note": "[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]",
+      "from": "Master of Magicks",
+      "pick": [
+       {
+        "name": "[IGNORES COVER]",
+        "note": "[IGNORES COVER]"
+       },
+       {
+        "name": "[LETHAL HITS]",
+        "note": "[LETHAL HITS]"
+       },
+       {
+        "name": "[SUSTAINED HITS D3]",
+        "note": "[SUSTAINED HITS D3]"
+       }
+      ],
+      "readOf": "10a7c1ef"
+     },
+     {
+      "kind": "all",
+      "when": "Damaged (1-7 wounds left)",
+      "note": "-1 to hit rolls",
+      "from": "Damaged: 1-7 wounds remaining",
+      "readOf": "e6c48f12",
+      "readBy": "derive"
      }
     ]
    },
@@ -238,7 +273,7 @@
      {
       "from": "Mischief and Confusion",
       "kind": "all",
-      "when": "Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (D6: 2-5)",
+      "when": "Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5)",
       "note": "-1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase)",
       "selfAlways": true,
       "readOf": "b60f9b93"

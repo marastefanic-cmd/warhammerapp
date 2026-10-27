@@ -417,6 +417,15 @@ function oneModelCan(part, item) {
   const m = new RegExp('\\b1 ([A-Z][\\w’\' -]*?|model)(?: not equipped with [^.]*?)? can be equipped with 1 ' + nm(item).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').exec(t);
   return m ? (lc(m[1]) === 'model' ? 'model' : m[1]) : null;
 }
+// the models GW's UNIT COMPOSITION says carry a weapon no model of the list has yet ("Every Blue Horror added to this unit using the
+// Split ability is equipped with: Coruscating Blue Flames; blue claws."): "Blue Horrors added by Split"
+function carrierOf(part, weapon) {
+  const pg = WW.wahaPage(nm(part.name), pageFac(part.name)); if (!pg) return null;
+  const w = lc(nm(weapon).replace(/\s*\(ref\. only\)$/i, ''));
+  for (const m of nm(pg.P.s).matchAll(/\bEvery ([A-Z][\w’' ]*?) added to this unit using the ([\w’' ]+?) ability is equipped with:\s*([^.]+)\./g))
+    if (m[3].split(/\s*;\s*/).some(x => lc(x.trim()) === w)) return m[1].trim() + 's added by ' + m[2].trim();
+  return null;
+}
 function buildGroup(g, k) {
   const parts = g.chars.map(c => c.s).concat([g.body]);
   const named = parts.length > 1;
@@ -462,8 +471,6 @@ function buildGroup(g, k) {
       if (can.length === 1) { const l = can[0]; l.n -= k; l.splits = (l.splits || 0) + 1; lines.splice(lines.indexOf(l) + l.splits, 0, { n: k, name: l.name, wargear: l.wargear.concat(typo(nm(c.name))), weapons: l.weapons.slice() }); }
       else unplaced.push(typo(nm(c.name)));
     }
-    // (the unit's own weapon profiles, BSData's "(ref. only)" ones for models a rule adds later: no model carries them yet)
-    if (p.type === 'unit') for (const w of uniq(weaponProfiles(p).map(p2 => { const w = weaponOf(p2, p); return w.group || w.name; }))) unplaced.push(typo(w));
     for (const l of lines) { models.push(l.n + '× ' + l.name + (l.wargear.length ? ' (' + l.wargear.join(', ') + ')' : '')); gear.push(l.weapons); }
   }
   // stat rows: one per profile, with how many models carry it
@@ -515,12 +522,16 @@ function buildGroup(g, k) {
     };
     // (the weapon profiles of the unit itself, carried by no model yet: BSData's "Coruscating Blue flames (ref. only)", the weapons GW's
     // Pink Horrors datasheet gives the Blue and Brimstone Horrors its Split adds; as New Recruit names them, one each)
-    if (p.type === 'unit') walk({ selections: [Object.assign({}, p, { selections: [], number: 1 })] });
+    // (only those: no model carries them, and GW's UNIT COMPOSITION names the models that will, "Every Blue Horror added to this unit
+    // using the Split ability is equipped with: Coruscating Blue Flames; blue claws." (carrier), so they are on no models line)
+    const refOnly = p.type === 'unit' ? weaponProfiles(p).filter(x => /\(ref\. only\)/i.test(x.name)) : [];
+    if (refOnly.length) walk({ selections: [Object.assign({}, p, { selections: [], number: 1, profiles: refOnly })] });
     walk(p);
     for (const r of seen.values()) {
       const o = Object.assign({}, r.o); delete o.enh;
       // data.js order: group, who, n, name, hunter, values (a profile); name, who, n, values (a weapon)
-      const ord = o.group ? ['group', 'fireAll', 'who', 'n', 'name', 'hunter'] : ['name', 'who', 'n', 'hunter'];
+      if (/\(ref\. only\)/i.test(o.name || o.group || '')) { const c = carrierOf(p, o.group || o.name); if (c) o.carrier = c; else want(nm(p.name) + ' · ' + (o.group || o.name), 'carrier', 'a "(ref. only)" weapon no UNIT COMPOSITION sentence of GW’s datasheet gives to models'); }
+      const ord = o.group ? ['group', 'fireAll', 'who', 'carrier', 'n', 'name', 'hunter'] : ['name', 'who', 'carrier', 'n', 'hunter'];
       const row = {}; if (r.n > 1) o.n = r.n;
       for (const k of ord) if (o[k] !== undefined) row[k] = o[k];
       for (const k of ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D', 'kw']) if (o[k] !== undefined) row[k] = o[k];
@@ -708,10 +719,16 @@ for (const u of units) {
   // the stats row of that name), and the kwNote leaves it out
   for (const p of u._parts) {
     const W = wahaDs(nm(p.name)); if (!W || !W.ds) continue;
-    for (const [mn0, ks] of Object.entries(W.ds.modelKeywords || {})) for (const k of ks) {
+    for (const [mn0, ks] of Object.entries(W.ds.modelKeywords || {})) for (const k0 of ks) {
       let mn = mn0;
+      // (Wahapedia's last one can run into the detachment keyword after it: "BRIMSTONE HORRORS: BRIMSTONE: SHADOW LEGION")
+      const k = k0.replace(/\s*:\s*$/, '').trim(); if (!k) continue;
       if (W.ds.keywords.some(x => gwKw(x) === gwKw(k))) continue;
-      const have = u.kw.find(x => gwKw(x) === gwKw(k)); if (!have) continue;
+      let have = u.kw.find(x => gwKw(x) === gwKw(k));
+      // a keyword GW prints for some models that the export lacks (the Pink Horrors' BRIMSTONE, for the Brimstone Horrors Split adds):
+      // GW's, added and declared, as for a keyword of all models
+      if (!have) { have = k.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m0, a, b) => a + b.toUpperCase()); u.kw.push(have); u.kw.sort();
+        gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: have, bsdata: null, file: W.file }); }
       // (GW's plural, "PINK HORRORS: PINK", is the row of one such model, "Pink Horror"; no row: GW's name of the models, in title case)
       const pn = x => lc(x).replace(/rn/g, 'm'), row = u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) === pn(mn)) || u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) + 's' === pn(mn));
       if (!row) mn = mn.toLowerCase().replace(/(^|[\s/-])([a-z])/g, (m0, a, b) => a + b.toUpperCase());
@@ -719,7 +736,7 @@ for (const u of units) {
       // CHARACTER next to the Dark Apostle's, "Dark Apostle and Master of Executions", as Wahapedia names each model that has it)
       const also = u._parts.filter(p2 => p2 !== p).filter(p2 => { const W2 = wahaDs(nm(p2.name)); return W2 && W2.ds && W2.ds.keywords.some(x => gwKw(x) === gwKw(k)); }).map(p2 => typo(nm(p2.name)));
       u.kwOnly = Object.assign(u.kwOnly || {}, { [have]: [row ? row.name.replace(/ ×\d+$/, '') : mn].concat(also).join(' and ') });
-      if (u.kwNote) { const ex = u.kwNote.replace(/ comes? from .*$/, '').split(', ').filter(x => x !== have), tail = / from .*$/.exec(u.kwNote)[0]; u.kwNote = ex.length ? ex.join(', ') + (ex.length > 1 ? ' come' : ' comes') + tail : undefined; if (!u.kwNote) delete u.kwNote; }
+      if (u.kwNote) { const ex = u.kwNote.replace(/ comes? from .*$/, '').split(', ').filter(x => x !== have), tail = (/ from .*$/.exec(u.kwNote) || [' from the led ' + u.leads + '.'])[0]; u.kwNote = ex.length ? ex.join(', ') + (ex.length > 1 ? ' come' : ' comes') + tail : undefined; if (!u.kwNote) delete u.kwNote; }
       filled.push({ what: 'kwOnly ' + u.name + ': ' + have + ' (' + u.kwOnly[have] + ')', from: 'verify/.cache/waha/ds/' + W.file + ' ("' + mn + ': ' + k + '")' });
     }
   }
@@ -745,7 +762,7 @@ for (const u of units) {
     // of the export's own)
     const firstDs = wahaDs(nm(u._parts[0].name)), fromFirst = firstDs && firstDs.ds && firstDs.ds.keywords.concat(firstDs.ds.factionKeywords.map(x => 'Faction: ' + x)).some(x => gwKw(x) === gwKw(k));
     if (u._parts.length > 1 && !fromFirst) {
-      const ex = u.kwNote ? u.kwNote.replace(/ comes? from .*$/, '').split(', ') : [], tail = u.kwNote ? / from .*$/.exec(u.kwNote)[0] : ' from the ' + (u.also ? 'combined unit' : (u.support ? 'supported ' : 'led ') + u.leads) + '.';
+      const ex = u.kwNote ? u.kwNote.replace(/ comes? from .*$/, '').split(', ') : [], tail = u.kwNote ? (/ from .*$/.exec(u.kwNote) || [' from the led ' + u.leads + '.'])[0] : ' from the ' + (u.also ? 'combined unit' : (u.support ? 'supported ' : 'led ') + u.leads) + '.';
       ex.push(kk); u.kwNote = ex.join(', ') + (ex.length > 1 ? ' come' : ' comes') + tail;
     }
   }
@@ -1399,7 +1416,7 @@ for (const it of labels) {
     if (ri < 0) continue;
     // (a detachment rule's timing label written by hand, verify/sources/hand/<army>.json rules.<detachment id>.label, where derive.js's
     // reading is not the rule's: Fates in Flux's Flux tokens are spent after rolls in any phase)
-    const hl = it.kind === 'rule-timing' && Object.entries(HAND.rules || {}).find(([k, v]) => v.label && facSrc.detachments[k.split('/')[0]] && lc((k.includes('/') ? k.split('/').slice(1).join('/') : facSrc.detachments[k].rule.name)) === lc(rName));
+    const hl = it.kind === 'rule-timing' && Object.entries(HAND.rules || {}).find(([k, v]) => v.label && facSrc.detachments[k.split('/')[0]] && lc((k.includes('/') ? k.split('/').slice(1).join('/') : (facSrc.detachments[k].rule || {}).name)) === lc(rName));
     if (hl) handDone.push({ what: 'timing label of ' + rName + ': ' + JSON.stringify(hl[1].label), by: hl[1].by || 'hand (Claude)', text: (hl[1].why || '') + ' (derive.js: ' + JSON.stringify(it.derived || null) + ')' });
     const ins = it.kind === 'rule-timing' ? litKV(lab(hl ? hl[1].label : it.derived)) : 'needs:' + lit(it.derived);
     if (!ins) continue;
