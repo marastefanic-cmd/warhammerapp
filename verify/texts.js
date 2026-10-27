@@ -1277,7 +1277,9 @@ for (const a of D.armies) {
       const unitHit = nameInTitle(ds, t);
       if (!unitHit) continue;
       let hit = false, part;
-      if (t.includes(', ' + an + ' ability') || t.includes('– ' + an + ' ability') || t.includes('- ' + an + ' ability') || t.includes('– ' + an + ' wargear ability') || t.includes('- ' + an + ' wargear ability')) hit = true;
+      // (GW's title can name a plural ability in the singular: "Biovores, Seed Spore Mine Ability" for Seed Spore Mines)
+      if (/s$/.test(an) && t.endsWith(', ' + an.slice(0, -1) + ' ability')) hit = true;
+      else if (t.includes(', ' + an + ' ability') || t.includes('– ' + an + ' ability') || t.includes('- ' + an + ' ability') || t.includes('– ' + an + ' wargear ability') || t.includes('- ' + an + ' wargear ability')) hit = true;
       else if (/damaged section$/.test(t) && /^damaged/.test(an)) hit = true;
       else if (/abilities section$/.test(t) && /^Add new ability:/.test(e.instr)) { const m = /^([^:]+):\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an) { hit = true; part = m[2]; } }
       if (!hit) continue;

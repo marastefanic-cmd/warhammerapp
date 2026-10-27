@@ -54,6 +54,15 @@
   "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). New Recruit prints \"friendly TYRANIDS unit\" (verify/sources/nr/nidzillas.txt p3)."
  },
  {
+  "army": "healybois",
+  "unit": "hive-tyrant-tyrant-guard",
+  "field": "ability:Onslaught (Hive Tyrant)",
+  "app": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+  "source": "Rules Updates \"Change to:\": while a friendly tyranidsunit is within 6\" of this model, ranged weapons equipped by models in that unit have the [assault] and [lethal hits] abilities. | differs at \"…while a friendly tyranids[ unit is within 6\" of this model, ranged…]\" vs source \"…while a friendly tyranids[unit is within 6\" of this model, ranged …]\"",
+  "reason": "Typo in the Faction Pack: \"TYRANIDSunit\" has no space; the app writes \"TYRANIDS unit\". Every other word is the pack's.",
+  "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). BSData and New Recruit have \"friendly TYRANIDS unit\" (verify/sources/nr-json/healybois.json, Hive Tyrant, Onslaught)."
+ },
+ {
   "army": "purge-goes-the-foe",
   "unit": "thulia-ghuld",
   "field": "ability:Rod of the War Forge",

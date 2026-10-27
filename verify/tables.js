@@ -574,8 +574,9 @@ function build(R){
     const [sid, f] = k.split('\0'), s = sheetOf(sid);
     const all = s.all.filter(U => !(f in U.entry) && !(U.entry.over && f in U.entry.over));
     const merged = new Map(); for(const x of xs){ const m = merged.get(x.U) || { above:[], inline:[] }; m.above.push(...x.c.above); m.inline.push(...x.c.inline); merged.set(x.U, m); }
-    const cs = all.map(U => merged.get(U));
-    if(cs.every(c => c && stable(c) === stable(cs[0]))){ (s.fieldComments = s.fieldComments || {})[f] = cs[0]; continue; }
+    // (a unit a new list just added in full, with no comment on the field: the others' one comment stays on the datasheet)
+    const cs = all.map(U => merged.get(U)), said = cs.filter(Boolean);
+    if(said.length && said.every(c => stable(c) === stable(said[0]))){ (s.fieldComments = s.fieldComments || {})[f] = said[0]; continue; }
     for(const [U, c] of merged) addC(AC, [U.ai, 'units', U.ui, 'ds'], c);
   }
   // the datasheets: by faction (FACTIONS' order), then as the lists first show them

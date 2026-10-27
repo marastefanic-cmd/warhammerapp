@@ -2326,5 +2326,55 @@
   "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: \"Daemonic Allegiance\".",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "the-swarmlord-tyrant-guard",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "hive-tyrant-tyrant-guard",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "biovores",
+  "field": "kw",
+  "app": "Biovores",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "biovores",
+  "field": "kw",
+  "app": "",
+  "source": "Biovore",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Biovore; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS (no BIOVORE).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "tyrannofex",
+  "field": "stats.base",
+  "app": "Tyrannofex: 120×92mm Oval",
+  "source": "Tyrannofex: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Tyrannofex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: 120×92mm.",
+  "by": "verify/from-json.js"
  }
 ]

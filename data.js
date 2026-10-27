@@ -875,6 +875,25 @@ const FACTIONS = {
         text:'If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more **SYNAPSE** units from your army, subtract 1 from that test.' }
     ],
     detachments: {
+      // Assimilation Swarm: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'assimilation-swarm': {
+        name:'Assimilation Swarm', dispositions:['Priority Assets'], dp:2,
+        rule:{ name:'Feed the Swarm', needs:{ all:['Harvester'] }, ph:['command'], turn:'your', text:'In your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n- One model in that unit regains up to D3+1 lost wounds.\n- One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead.' },
+        enhancements:[
+          { name:'Regenerating Monstrosity', pts:20, text:'**TYRANIDS** model only (excluding **MONSTERS** models). The bearer’s unit can be regenerated up to twice per phase, instead of once.' },
+          { name:'Instinctive Defence', nr:'Instinctive Defense', pts:15, text:'**TYRANIDS** model only. While the bearer is within 6" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability.' },
+          { name:'Biophagic Flow (Aura)', pts:10, text:'**TYRANIDS** model only. While a friendly **HARVESTER** model is within 12" of the bearer, when using the Feed the Swarm ability, that **HARVESTER** model can Regenerate one friendly **TYRANIDS** unit that is within 9" of it, instead of one within 6".' },
+          { name:'Parasitic Biomorphology', pts:25, text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.' }
+        ],
+        stratagems:[
+          { id:'broodguard-impulse', gist:'Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.', gistOf:'c4da1dfa', name:'Broodguard Impulse', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Harvester'] }, when:'Any phase.', target:'One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.', effect:'Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**.' },
+          { id:'reclaim-biomass', gist:'Any phase, a TYRANIDS unit from your army is destroyed (before its last model is removed), your HARVESTER unit within 6" of it: Regenerate one friendly TYRANIDS unit within 6" of your HARVESTER unit (see Feed the Swarm).', gistOf:'a2dcbc2b', note:'FAQ (Faction Pack 1.3): “When using the Reclaim Biomass Stratagem, can the Stratagem effect be used on the unit that was just destroyed?” “No.”', name:'Reclaim Biomass', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Harvester'] }, when:'Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.', target:'One **HARVESTER** unit from your army that is within 6" of that destroyed unit.', effect:'Regenerate one friendly **TYRANIDS** unit within 6" of your **HARVESTER** unit (See Feed the Swarm).' },
+          { id:'tyrannoformed', gist:'Command phase, your HARVESTER unit within range of an objective marker you control: that objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', gistOf:'64632205', name:'Tyrannoformed', cp:1, phases:['command'], turn:'either', needs:{ all:['Harvester'] }, when:'Command phase.', target:'One **HARVESTER** unit from your army that is within range of an objective marker you control.', effect:'That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+          { id:'ablative-carapace', gist:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your HARVESTER unit as a target: until the end of the phase, its models have Feel No Pain 5+ (4+ if it is within range of an objective marker you control).', gistOf:'7c01df63', def:'Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)', defOf:'7c01df63', name:'Ablative Carapace', cp:2, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Harvester'] }, when:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.', target:'One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.' },
+          { id:'secure-biomass', gist:'Fight phase, your TYRANIDS unit not yet selected to fight: until the end of the phase, its melee weapons have [LETHAL HITS]; if it is a HARVESTER unit, its melee attacks also score a Critical Hit on an unmodified Hit roll of 5+.', gistOf:'e7920736', mod:{ kind:'melee', when:'Fight phase, not yet selected to fight, until the end of the phase', note:'[LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+)' }, readOf:'e7920736', name:'Secure Biomass', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids'] }, when:'Fight phase.', target:'One **TYRANIDS** unit from your army that has not been selected to fight this phase.', effect:'Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well.' },
+          { id:'rapacious-hunger', gist:'Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead.', gistOf:'07d01413', name:'Rapacious Hunger', cp:1, phases:['fight'], turn:'your', needs:{ all:['Faction: Tyranids'] }, when:'Your Fight phase.', target:'One **TYRANIDS** unit from your army that just destroyed an enemy unit.', effect:'Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.' }
+        ]
+      },
       // Wahapedia still prints this detachment in its codex wording (Battle-shock test, Engagement Range,
       // Normal/Advance/Fall Back move), not in the 11th-edition terms of the Talons below.
       'crusher-stampede': {
@@ -5085,6 +5104,144 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'healybois', name:'Healybois', faction:'tyranids', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Take and Hold',
+  detachments:['assimilation-swarm','talons-of-the-norn-queen'],
+  source:'New Recruit, exported 27 Oct 2026 (JSON)',
+  units:[
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'the-swarmlord-tyrant-guard', ds:['tyranids/the-swarmlord','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', warlord:true,
+      leads:'Tyrant Guard',
+      models:['1× The Swarmlord','6× Tyrant Guard'],
+      gear:[['Bone Sabres','Synaptic Pulse'],['Scything talons and rending claws']],
+      stats:[
+        { name:'The Swarmlord' },
+        { name:'Tyrant Guard ×6' }
+      ],
+      ranged:[
+        { name:'Synaptic Pulse', who:'The Swarmlord' }
+      ],
+      melee:[
+        { name:'Bone Sabres', who:'The Swarmlord' },
+        { name:'Scything talons and rending claws', who:'Tyrant Guard', n:6 }
+      ],
+      abilities:[
+        { name:'Hive Commander', who:'The Swarmlord' },
+        { name:'Malign Presence', who:'The Swarmlord' },
+        { name:'Domination of the Hive Mind', who:'The Swarmlord' },
+        { name:'Guardian Organism', who:'Tyrant Guard' }
+      ],
+      kw:['Character','Epic Hero','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse','The Swarmlord','Warlord','Infantry','Tyrant Guard'],
+      kwNote:'Infantry, Tyrant Guard come from the led Tyrant Guard.',
+      partialRules:{ 'Deadly Demise D3':'The Swarmlord' },
+      why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Tyrant Guard', ptsNote:'the points of its parts as the list has them (The Swarmlord + Tyrant Guard)' }
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', enhancement:'Instinctive Defence',
+      leads:'Tyrant Guard',
+      models:['1× Hive Tyrant','6× Tyrant Guard'],
+      gear:[['Monstrous bonesword and lash whip','Monstrous scything talons'],['Scything talons and rending claws']],
+      stats:[
+        { name:'Hive Tyrant' },
+        { name:'Tyrant Guard ×6' }
+      ],
+      melee:[
+        { name:'Monstrous bonesword and lash whip', who:'Hive Tyrant' },
+        { name:'Monstrous scything talons', who:'Hive Tyrant' },
+        { name:'Scything talons and rending claws', who:'Tyrant Guard', n:6 }
+      ],
+      abilities:[
+        { name:'Onslaught', who:'Hive Tyrant' },
+        { name:'Will of the Hive Mind', who:'Hive Tyrant' },
+        { name:'Instinctive Defence', who:'Hive Tyrant', tag:'Enhancement', ph:['charge','fight'], turn:'either', turns:{ charge:'opp' }, text:'**TYRANIDS** model only. While the bearer is within 6" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability.' },
+        { name:'Guardian Organism', who:'Tyrant Guard' }
+      ],
+      kw:['Character','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse','Infantry','Tyrant Guard'],
+      kwNote:'Infantry, Tyrant Guard come from the led Tyrant Guard.',
+      partialRules:{ 'Deadly Demise D3':'Hive Tyrant' },
+      why:{ kwNote:'leads Tyrant Guard', ptsNote:'the points of its parts as the list has them (Hive Tyrant + Tyrant Guard)' }
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'biovores', ds:'tyranids/biovores', pts:60,
+      models:['1× Biovore'],
+      gear:[['Chitin-barbed limbs','Spore mine launcher']]
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'pyrovores', ds:'tyranids/pyrovores', pts:100,
+      models:['3× Pyrovore'],
+      gear:[['Chitin-barbed limbs','Flamespurt']],
+      stats:[
+        { name:'Pyrovores ×3' }
+      ],
+      ranged:[
+        { name:'Flamespurt', n:3 }
+      ],
+      melee:[
+        { name:'Chitin-barbed limbs', n:3 }
+      ]
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'pyrovores-2', ds:'tyranids/pyrovores', pts:70,
+      models:['2× Pyrovore'],
+      gear:[['Chitin-barbed limbs','Flamespurt']],
+      stats:[
+        { name:'Pyrovores ×2' }
+      ],
+      ranged:[
+        { name:'Flamespurt', n:2 }
+      ],
+      melee:[
+        { name:'Chitin-barbed limbs', n:2 }
+      ]
+    },
+    {
+      id:'norn-assimilator-synaptoprescience', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
+      models:['1× Norn Assimilator'],
+      gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
+      stats:[
+        { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
+      ],
+      abilities:[
+        { name:'Harpoon Barbs' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Singular Purpose' },
+        { name:'Protean Purpose' },
+        { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
+      ]
+    },
+    {
+      id:'norn-assimilator-synaptoprescience-2', ds:'tyranids/norn-assimilator', pts:300, enhancement:'Synaptoprescience',
+      models:['1× Norn Assimilator'],
+      gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
+      stats:[
+        { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
+      ],
+      abilities:[
+        { name:'Harpoon Barbs' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Singular Purpose' },
+        { name:'Protean Purpose' },
+        { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
+      ]
+    },
+    {
+      id:'norn-emissary', ds:'tyranids/norn-emissary', pts:250,
+      models:['1× Norn Emissary'],
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+    },
+    {
+      id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180,
+      models:['1× Tyrannofex'],
+      gear:[['Powerful limbs','Stinger salvoes','Acid spray']]
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -6344,6 +6501,52 @@ const DATASHEETS = {
   // "Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.", which GW's Tyranids Faction Pack (14-10, the
   // newest on GW's downloads on 22 Oct 2026) does not print
   srcNote:{ at:'kw', note:'Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t' }
+},
+'tyranids/tyrant-guard':{
+  name:'Tyrant Guard', faction:'tyranids', bsId:'1645-5407-92c8-1441',
+  stats:[
+    { name:'Tyrant Guard', M:'6"', T:'8', Sv:'3+', W:'4', Ld:'8+', OC:'1', InSv:'–', base:'50mm' }
+  ],
+  melee:[
+    { name:'Scything talons and rending claws', range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Guardian Organism', def:'The CHARACTER leading this unit has Feel No Pain 5+', text:'While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability.', defOf:'08bd3950' }
+  ]
+},
+'tyranids/biovores':{
+  name:'Biovores', faction:'tyranids', bsId:'3f2c-85ec-d83c-4a2f', role:'Infantry',
+  stats:[
+    { name:'Biovore', M:'5"', T:'6', Sv:'3+', W:'5', Ld:'8+', OC:'1', InSv:'–', base:'80mm' }
+  ],
+  ranged:[
+    { name:'Spore mine launcher', range:'48"', A:'D3', BS:'4+', S:'6', AP:'-1', D:'2', kw:['BLAST','DEVASTATING WOUNDS','HEAVY','INDIRECT FIRE'] }
+  ],
+  melee:[
+    { name:'Chitin-barbed limbs', range:'Melee', A:'2', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Seed Spore Mines', tag:'Once per turn', ph:['shooting'], turn:'your', note:'FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.”', text:'Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48" of this unit and more than 8" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit.' }
+  ],
+  rules:['Deadly Demise 1','Synapse','Blast','Devastating Wounds','Heavy','Indirect Fire'],
+  kw:['Biovores','Faction: Tyranids','Great Devourer','Infantry']
+},
+'tyranids/pyrovores':{
+  name:'Pyrovores', faction:'tyranids', bsId:'d2c6-bd0b-3205-3319', role:'Infantry',
+  stats:[
+    { name:'Pyrovores', M:'5"', T:'6', Sv:'3+', W:'5', Ld:'8+', OC:'1', InSv:'–', base:'80mm' }
+  ],
+  ranged:[
+    { name:'Flamespurt', range:'12"', A:'D6+1', BS:'–', S:'6', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT','TWIN-LINKED'] }
+  ],
+  melee:[
+    { name:'Chitin-barbed limbs', range:'Melee', A:'2', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Burning Spray', ph:['shooting'], turn:'your', text:'In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**.' }
+  ],
+  rules:['Deadly Demise 1','Synapse','Ignores Cover','Torrent','Twin-linked'],
+  kw:['Faction: Tyranids','Great Devourer','Harvester','Infantry','Pyrovores']
 },
 'imperial-knights/knight-destrier':{
   name:'Knight Destrier', faction:'imperial-knights', bsId:'10d8-d702-f556-5d3c', role:'Character',
@@ -8679,6 +8882,7 @@ const BS_IDS = {
     "8d8b-a030-83d5-f4e6":"tyranids/talons-of-the-norn-queen",
     "9aba-cb08-cd38-9e01":"thousand-sons/grand-coven",
     "9db8-cf55-983f-9671":"emperors-children/coterie-of-the-conceited",
+    "bba-65f6-a4d1-66ae":"tyranids/assimilation-swarm",
     "c6ca-bde2-8304-c97c":"chaos-space-marines/devotees-of-destruction",
     "ccb7-6823-6a97-7c19":"adeptus-custodes/grav-assault-force",
     "dbe4-0a6f-4eb5-5f06":"adeptus-custodes/honoured-companions",
@@ -8776,6 +8980,15 @@ const BS_IDS = {
     "fellhammer-siege-task-force/obliterators":["2311-fa63-364-22a3|2×1db9-89c3-c7cb-2041,2×1db9-89c3-c7cb-2041/2e47-9a3-ad3e-ae4c,2×1db9-89c3-c7cb-2041/649f-d2b6-c43b-f9be"],
     "fellhammer-siege-task-force/vashtorr-the-arkifane":["dcc0-b70c-9779-e6c9|1×1a34-f1cc-ec01-ca32,1×3667-92c8-a7e5-1ccd,1×e02b-6f8f-cbee-fa79"],
     "fellhammer-siege-task-force/warpsmith":["440-a22a-eac1-b107|1×244-694c-22c-74fb,1×5762-3c1f-658e-368,1×9e5d-6700-e6d9-5719,1×d0ac-5a84-221a-3dd7,1×e806-3c87-d3d5-e71d"],
+    "healybois/biovores":["3f2c-85ec-d83c-4a2f|1×dd57-9c1f-d425-6711,1×dd57-9c1f-d425-6711/1fff-0a90-a8dd-28b5,1×dd57-9c1f-d425-6711/2d4b-61bd-f1f3-c32b"],
+    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×1173-a18c-18fb-fac9,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
+    "healybois/norn-assimilator-synaptoprescience":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
+    "healybois/norn-assimilator-synaptoprescience-2":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
+    "healybois/norn-emissary":["5720-2873-8c2c-edc3|1×c102-d98b-dc50-5b53,1×d7b3-df20-933-63b7,1×dc69-1094-613-6daf"],
+    "healybois/pyrovores":["d2c6-bd0b-3205-3319|3×c543-2551-1f2a-bcec,3×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,3×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
+    "healybois/pyrovores-2":["d2c6-bd0b-3205-3319|2×c543-2551-1f2a-bcec,2×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,2×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
+    "healybois/the-swarmlord-tyrant-guard":["13f7-1a3-eff-7393|1×7a17-4fb0-c0f5-e22,1×a30-4bad-cef5-5e55,1×ceab-62d9-31bf-7c61","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
+    "healybois/tyrannofex":["1705-379b-330d-36d4|1×5e02-c4ce-b7e6-d59,1×a87e-4f8-a6f7-15de,1×f64-8faa-ac54-73ff"],
     "infernal-lance/chaos-cerastus-knight-atrapos":["8b1d-9029-f9e1-42d9|1×4676-0c32-b62c-debd,1×7546-5742-581c-9e8b,1×f57d-be6e-77e4-bfe3"],
     "infernal-lance/chaos-cerastus-knight-lancer":["4175-82c6-8e96-bef8|1×545a-eead-e216-5939,1×c799-77ce-c706-3079"],
     "infernal-lance/knight-despoiler":["0119-8c04-435e-c782|1×005c-b2d1-4432-415a,1×3bee-8c85-68f7-e54b,1×3f41-4b71-a07b-506a,1×4268-2d76-f972-d7f5,1×4268-2d76-f972-d7f5/89c4-132e-6ad6-2a08,1×4268-2d76-f972-d7f5/f4a1-7f17-ec57-6c69,1×48a2-a603-9607-4df8,1×48a2-a603-9607-4df8/89c4-132e-6ad6-2a08,1×48a2-a603-9607-4df8/f4a1-7f17-ec57-6c69,1×4ff3-7dce-5a52-94e9,1×dfe8-cea0-8d16-db95"],
@@ -8941,6 +9154,7 @@ const BS_IDS = {
     "10f9-eb42-632e-3a6f":"Supa-glowy Fing",
     "1150-7501-d526-d373":"Incandeum",
     "116c-7dd8-92e5-f085":"Mark of the Soul Forges",
+    "1173-a18c-18fb-fac9":"Instinctive Defense",
     "1187-f3db-ea97-bada":"Reaper chainsword",
     "1189-dcd8-e3ed-7837":"Spiculus bolt launcher",
     "1267-78f1-7774-859":"Cultist Mob",
@@ -8952,6 +9166,7 @@ const BS_IDS = {
     "140d-7163-8a11-81c5":"Grot Blasta",
     "14a5-4b2-415a-c1d":"Plasma pistol",
     "1576-174e-e5d6-82ea":"Salvo launcher",
+    "1645-5407-92c8-1441":"Tyrant Guard",
     "1673-a61f-d5a2-b17c":"Bladed horn",
     "167f-5eee-fb7b-a9a9":"Maulerfiend fists",
     "1703-3edd-5eb3-fcef":"Tzaangor Enlightened",
@@ -8982,6 +9197,7 @@ const BS_IDS = {
     "1f1e-2989-4762-cf88":"Belisarius Cawl",
     "1fbe-32e7-bd69-93b5":"Force Stave",
     "1fd1-28df-182d-bfcb":"Prosperine khopesh",
+    "1fff-0a90-a8dd-28b5":"Chitin-barbed limbs",
     "2024-6ff7-2d17-938d":"Arcane Fireball",
     "202a-2f25-f692-8b36":"Gateway Unto Damnation",
     "20cf-5b7c-71d2-451d":"Kastelan Robot",
@@ -9023,6 +9239,7 @@ const BS_IDS = {
     "2ca0-73ea-2725-79c7":"Ectoplasma destructor",
     "2cd1-13f5-d59d-cc7f":"Sorcerer",
     "2ce1-75b2-4291-586e":"Incendine combustor",
+    "2d4b-61bd-f1f3-c32b":"Spore mine launcher",
     "2d4d-9623-1cea-b73a":"Combi-bolter",
     "2d5d-40b5-4ac8-cedc":"Ironstrider Ballistarius (Twin cognis autocannon)",
     "2d6e-aa3b-c28c-5ef0":"Deffkoptas",
@@ -9076,6 +9293,7 @@ const BS_IDS = {
     "3ec3-a4df-fdbf-5507":"Prosecutor Squad",
     "3f1f-49de-78f6-e59e":"Samni'arius and Spinegrinder",
     "3f27-79c1-1aea-5be7":"Dual Fists and 2 Projectors",
+    "3f2c-85ec-d83c-4a2f":"Biovores",
     "3f41-4b71-a07b-506a":"Titanic feet",
     "3f4f-efd-2d8f-e37d":"Special Issue Bolt Pistol",
     "3fcc-b6a1-399b-1a29":"Skorpius Disintegrator",
@@ -9217,6 +9435,7 @@ const BS_IDS = {
     "6836-5818-2135-a8aa":"Helm of Brazen Ire",
     "6881-277b-1f28-22f2":"Heavy Bolt Rifle",
     "68b0-c798-79a8-28f5":"Snarling Rivalry",
+    "68e6-6c48-4d98-7faa":"Flamespurt",
     "6a83-8e1f-63ef-50c3":"Squighog Boyz",
     "6a9b-8e2f-edac-fa2d":"Norn Assimilator",
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
@@ -9246,6 +9465,7 @@ const BS_IDS = {
     "7213-a7b3-4c8e-96bc":"Eldritch Vortex of E'taph",
     "723d-aaaa-3268-09e3":"Terminator Champion",
     "72b0-d52e-422e-1a82":"Havoc lascannon",
+    "72c5-1443-529a-59ad":"Scything talons and rending claws",
     "72c5-8bd0-19f5-f246":"Caestus Fist",
     "731f-2f2-7ca0-23ed":"Meganob w/ Twin Killsaw",
     "7324-e591-939b-b675":"Heavy Intercessor Squad",
@@ -9420,6 +9640,7 @@ const BS_IDS = {
     "a61b-434-6817-679a":"Herd banner",
     "a7ae-e495-683b-7c90":"Reiver Squad",
     "a7ee-9112-4e83-bc2":"Scarab Occult Terminator",
+    "a827-afc9-ca29-b723":"Tyrant Guard",
     "a879-624d-42ab-2b43":"Armoured Hull",
     "a87e-4f8-a6f7-15de":"Powerful limbs",
     "a886-5b5b-d3b2-cf38":"Necromechanic",
@@ -9501,6 +9722,7 @@ const BS_IDS = {
     "c34d-3170-c314-148e":"Pink Horror",
     "c3a6-8fab-45f0-2d45":"Exalted Sorcerer",
     "c41d-61c0-3e59-01b5":"Bolt pistol",
+    "c543-2551-1f2a-bcec":"Pyrovore",
     "c570-c6ba-c9dc-5a44":"Eradicator Squad with Melta Rifles",
     "c609-c87e-f9dd-5006":"Knight Warden",
     "c627-5d3-1420-c7f1":"Combi-bolter",
@@ -9551,6 +9773,7 @@ const BS_IDS = {
     "d24a-9b6a-e48b-2fcb":"2 lascannons",
     "d2a3-be7e-4ec8-f9f6":"Chainfist",
     "d2b8-454a-d061-b592":"Dark Apostle",
+    "d2c6-bd0b-3205-3319":"Pyrovores",
     "d379-7bdd-e3f9-9183":"Gaze of Magnus",
     "d37d-7e8f-341b-c67c":"Maulerfiend",
     "d40a-c9a6-74d5-288d":"Synaptoprescience",
@@ -9583,6 +9806,7 @@ const BS_IDS = {
     "dcc0-b70c-9779-e6c9":"Vashtorr the Arkifane",
     "dcfe-758c-4a16-1c85":"Praesidium Shield",
     "dd30-ba4c-34a4-e788":"Skullmaster",
+    "dd57-9c1f-d425-6711":"Biovore",
     "dd8d-1bc7-029f-3674":"Gore-drenched fangs",
     "de59-f65c-181a-8509":"Skitarii Rangers",
     "de8f-24f9-c543-92b7":"Gretchin",
@@ -9687,6 +9911,7 @@ const BS_IDS = {
     "10f9-eb42-632e-3a6f":1,
     "1150-7501-d526-d373":1,
     "116c-7dd8-92e5-f085":1,
+    "1173-a18c-18fb-fac9":1,
     "131b-ff57-84bb-e87a":1,
     "13f7-1a3-eff-7393":1,
     "190d-7321-6e85-5251":1,
@@ -9795,6 +10020,7 @@ const CHECKLIST = {
   "a|13ur237":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|1445rha":{"u":"fight:either"},
   "a|14a8muj":{"u":"shooting:your,fight:either"},
+  "a|14ie9b1":{"u":"shooting:your"},
   "a|14mezts":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","u":"shooting:either,fight:either","s":1},
   "a|14mp5z1":{"u":"movement:your,charge:your","a":1},
   "a|14o4o4w":{"u":"shooting:opp,fight:either"},
@@ -9990,6 +10216,7 @@ const CHECKLIST = {
   "a|5r85a":{"t":"movement:your","s":1},
   "a|5tl14a":{"u":"shooting:opp,fight:either"},
   "a|5wv1pt":{"u":"shooting:your,fight:either"},
+  "a|5zjk6y":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|611p4g":{"x":1},
   "a|65wpmk":{"u":"charge:either"},
   "a|6ahdrh":{"u":"movement:your,shooting:your"},
@@ -10005,6 +10232,7 @@ const CHECKLIST = {
   "a|82gw9o":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|85a58d":{"u":"shooting:your,fight:either"},
   "a|89p4db":{"u":"shooting:opp,fight:either"},
+  "a|8f9619":{"u":"fight:either"},
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
   "a|92qgnt":{"u":"shooting:opp"},
@@ -10059,6 +10287,7 @@ const CHECKLIST = {
   "a|hbymu9":{"t":"shooting:opp","u":"shooting:opp","s":1},
   "a|hfvzqg":{"x":1},
   "a|hqcw8c":{"u":"shooting:opp,fight:either","a":1},
+  "a|hsdi46":{"u":"shooting:opp,fight:either","g":[{"name":"Feel No Pain 5+","to":{"all":["Character"]},"while":"While a CHARACTER model is leading this unit"}]},
   "a|i0iopt":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|i0q45v":{"u":"movement:your"},
   "a|inerxb":{"u":"charge:either"},
@@ -10200,6 +10429,7 @@ const CHECKLIST = {
   "r|thousand-sons|Sorcerous Invigoration":{"u":"shooting:your"},
   "r|thousand-sons|Warpmeld Sacrifice":{"u":"shooting:either,fight:either"},
   "r|tyranids|Enraged Behemoths":{"u":"shooting:your,fight:either"},
+  "r|tyranids|Feed the Swarm":{"t":"command:your","s":1},
   "r|tyranids|Higher Imperatives":{"x":1,"o":[{"n":"Protean Purpose","t":"command:your","s":1}],"g":[{"name":"Protean Purpose","to":{"any":["Norn Emissary","Norn Assimilator"]}}]},
   "r|tyranids|Shadow in the Warp":{"t":"command:either","s":1},
   "r|tyranids|Synapse":{"u":"fight:either"},
@@ -10359,7 +10589,9 @@ const GRANTS = [
   { rule:'navigator-sounds-op-ngl · Knight Defender · Selfless Protector', grants:'Benefit of Cover', type:'ability', to:{ all:['Faction: Imperial Knights'] }, while:null, text:'Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack.' },
   { rule:'navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' },
   { rule:'tzeeeeentch · Fluxmaster · Fluxmaster', grants:'Stealth', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Stealth**.' },
-  { rule:'tzeeeeentch · Fluxmaster · Improbable Shield (Aura)', grants:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', type:'ability', to:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, while:'While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer', text:'While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' }
+  { rule:'tzeeeeentch · Fluxmaster · Improbable Shield (Aura)', grants:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', type:'ability', to:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, while:'While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer', text:'While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' },
+  { rule:'healybois · The Swarmlord · Guardian Organism', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Character'] }, while:'While a CHARACTER model is leading this unit', text:'While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability.' },
+  { rule:'healybois · Hive Tyrant · Instinctive Defence', grants:'Fights First', type:'ability', to:'this unit / model', while:'while the bearer is within 6" of one or more friendly HARVESTER units', text:'In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer\'s unit have the **Fights First** ability.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 

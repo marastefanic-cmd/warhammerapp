@@ -48,6 +48,9 @@ tyranids Neurogaunts
 tyranids Norn-Assimilator
 tyranids Norn-Emissary
 tyranids Tyrannofex
+tyranids Tyrant-Guard
+tyranids Biovores
+tyranids Pyrovores
 imperial-knights Knight-Destrier
 imperial-knights Knight-Errant
 imperial-knights Knight-Paladin

@@ -165,7 +165,7 @@ function unitSrc(u) {
   s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
   if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
   s += block('aura', u.aura) + block('guard', u.guard);
-  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + '\n    }';
+  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + (u.srcNote ? ',\n      srcNote:' + lit(u.srcNote) : '') + '\n    }';
   return s;
 }
 

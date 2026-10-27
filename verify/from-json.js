@@ -329,6 +329,8 @@ const detIds = detNames.map(n => {
     const h = (HAND.gists || {})[id + '/' + o.id];
     if (h) { o.gist = h.gist; if (h.gistOf) { const rest = Object.fromEntries(Object.entries(o).filter(([k]) => k !== 'id' && k !== 'gist')); Object.keys(rest).forEach(k => delete o[k]); o.gistOf = h.gistOf; Object.assign(o, rest); } handDone.push({ what: 'gist of ' + o.name + ' (' + n + ')', by: h.by, text: h.gist }); }
     else want('stratagem ' + o.name + ' (' + n + ')', 'gist', 'a one-line summary is the app’s own words: write it in verify/sources/hand/' + armyId + '.json (gists), marked by whom');
+    // (GW's FAQ on it from the Faction Pack, labelled as the pack's: the hand file's note, after the gist as data.js has notes)
+    if (h0.note) { const ks = Object.keys(o), at = ks.indexOf(o.gistOf ? 'gistOf' : 'gist') + 1, rest = Object.fromEntries(ks.slice(at).map(k => [k, o[k]])); ks.slice(at).forEach(k => delete o[k]); o.note = h0.note; Object.assign(o, rest); handDone.push({ what: 'note of ' + o.name + ' (' + n + ')', by: 'hand (Claude)', text: h0.note }); }
     return o;
   });
   // GW's words where Wahapedia's transcription differs (verify/sources/hand/<army>.json fixes: { at: '<detachment>/<rule|enhancement|stratagem>/<name>',
@@ -354,7 +356,10 @@ for (const id of detIds) {
 // ---------------------------------------------------------------- units
 const enhAll = () => Object.values(Object.assign({}, F ? F.detachments : {}, facSrc.detachments)).flatMap(d => d.enhancements || []);
 // (BSData names an UPGRADE enhancement with its kind: "Furious Assault (Upgrade)")
-const enhOfName = n => { const b = nm(n).replace(/\s*\((?:Upgrade|Enhancement)\)$/i, ''); return enhAll().find(e => [e.name, e.nr].filter(Boolean).some(x => lc(x) === lc(n) || lc(x) === lc(b))); };
+// (an enhancement New Recruit and BSData spell otherwise than GW, not by case alone: the hand file's spellings, { "<their name>":
+// { gw: "<GW's name>", why } }: "Instinctive Defense" for GW's "Instinctive Defence")
+const enhSpelt = n => { const h = (HAND.spellings || {})[nm(n).replace(/\s*\((?:Upgrade|Enhancement)\)$/i, '')]; return h ? h.gw : null; };
+const enhOfName = n => { const b = nm(n).replace(/\s*\((?:Upgrade|Enhancement)\)$/i, ''), g = enhSpelt(n); return enhAll().find(e => [e.name, e.nr].filter(Boolean).some(x => lc(x) === lc(n) || lc(x) === lc(b) || (g && lc(x) === lc(g)))); };
 const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];
 const byId = new Map(rootsAll.map(s => [s.id, s]));
 const leadsTo = new Map();
@@ -756,7 +761,10 @@ for (const u of units) {
     if (u.kw.some(x => gwKw(x) === gwKw(k))) continue;
     const tc = k.replace(/^Faction: /, '').toLowerCase().replace(/(^|[\s-])([a-z])/g, (m, a, b) => a + b.toUpperCase());
     const kk = (/^Faction: /.test(k) ? 'Faction: ' : '') + tc;
-    gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: kk, bsdata: null, file: u._parts.map(p => (wahaDs(nm(p.name)) || {}).file).filter(Boolean).join(', ') });
+    // (the export's keyword in the singular where GW prints the plural, BSData's "Biovore" for GW's BIOVORES: GW's in its place)
+    const sing = u.kw.find(x => gwKw(x) + 'S' === gwKw(k) && !printed.some(y => gwKw(y) === gwKw(x)));
+    if (sing) u.kw.splice(u.kw.indexOf(sing), 1);
+    gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: kk, bsdata: sing || null, file: u._parts.map(p => (wahaDs(nm(p.name)) || {}).file).filter(Boolean).join(', ') });
     u.kw.push(kk); u.kw.sort();
     // (a keyword only the datasheet of a part after the first prints, the led Pink Horrors' INFANTRY: from that unit, as the kwNote says
     // of the export's own)
@@ -1088,13 +1096,16 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
 {
   const S0 = (D.datasheets || {});
   const same = (a, b) => JSON.stringify(a === undefined ? null : a) === JSON.stringify(b === undefined ? null : b);
-  for (const u of units) {
-    if (u._parts.length !== 1) continue;
-    const p = u._parts[0], hit = Object.entries(S0).find(([, S]) => S.faction === factionId && S.bsId === lastId(p.entryId));
+  // (a unit of several parts, a leader and the unit it leads: each part whose datasheet another list has, its own rows: its stats
+  // row, the weapons and abilities that part carries (who), its Rules line kept in the unit's)
+  for (const u of units) for (const p of u._parts) {
+    const multi = u._parts.length > 1, pn = partName0(p);
+    const hit = Object.entries(S0).find(([, S]) => S.faction === factionId && S.bsId === lastId(p.entryId));
     // (another list's: a row only this list has, from an earlier run of this file, is this run's to write again)
     const other = hit && D.armies.some(a => a.id !== armyId && a.faction === factionId && a.units.some(x => x.name === hit[1].name || x.leads === hit[1].name || (x.also || []).some(c => c.name === hit[1].name)));
     if (!other) continue;
     const [key, S] = hit, note = (what, row, reading) => reusedRows.push({ unit: u.id, key, what, row, reading });
+    const mineW = r => !multi || r.who === pn;
     for (const r of u.stats) {
       const sr = (S.stats || []).find(x => x.name === r._base || x.name === r.name); if (!sr) continue;
       for (const k of ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base']) {
@@ -1104,8 +1115,11 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
         note('stats ' + r.name + ' ' + k, sr[k], mine);
         if (r.own && k in r.own) r.own[k] = sr[k]; else r[k] = sr[k];
       }
+      // (a datasheet value the row has no column for, the Norn Assimilator's InSv – under Synaptoprescience's 4+: the row's, none)
+      if (r.own) { for (const k of Object.keys(r.own)) if (!(k in sr)) delete r.own[k]; if (!Object.keys(r.own).length) delete r.own; }
     }
     for (const kind of ['ranged', 'melee']) for (const r of u[kind]) {
+      if (!mineW(r)) continue;
       const sr = (S[kind] || []).find(x => x.name === r.name && (x.group || null) === (r.group || null)); if (!sr) continue;
       for (const k of ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D']) {
         if (!(k in sr)) continue;
@@ -1116,10 +1130,14 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
       }
       if ('kw' in sr && !same([...(r.kw || [])].sort(), [...sr.kw].sort())) note(kind + ' ' + (r.group ? r.group + ' - ' : '') + r.name + ' keywords (not changed: a rule of the list may add one)', sr.kw.join(', ') || '–', (r.kw || []).join(', ') || '–');
     }
-    // abilities: the row's, in its order, then the list's own (an enhancement's)
-    const mineAbs = u.abilities.slice(), out = [];
+    // abilities: the row's, in its order, then the list's own (an enhancement's); a part's in the place its abilities had
+    const mineAbs = u.abilities.filter(a => !multi || a.who === pn), out = [];
     for (const sa of S.abilities || []) {
-      const i = mineAbs.findIndex(a => a.name === sa.name && (a.who || null) === (sa.who || null));
+      let i = mineAbs.findIndex(a => a.name === sa.name && (multi || (a.who || null) === (sa.who || null)));
+      // (the row's ability under another name, word for word the same: Wahapedia's "Unnatural Resilience" for the row's (BSData's)
+      // "Unnatural Resistance"; the row's name is kept, the difference listed)
+      const bareT = t => lc(plainBS(t)).replace(/[^a-z0-9]+/g, ' ').trim();
+      if (i < 0 && sa.text) { i = mineAbs.findIndex(a => !a._e && a.text && !(S.abilities || []).some(x => x.name === a.name) && bareT(a.text) === bareT(sa.text)); if (i >= 0) note('ability ' + sa.name + ' name', sa.name, mineAbs[i].name); }
       const a = i >= 0 ? mineAbs.splice(i, 1)[0] : null;
       for (const k of new Set(Object.keys(sa).concat(a ? Object.keys(a) : []))) {
         if (k === 'name' || k === 'who' || k.startsWith('_')) continue;
@@ -1128,19 +1146,30 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
         if (!same(a[k], sa[k])) note('ability ' + sa.name + ' ' + k, sa[k], a[k]);
       }
       if (!a) note('ability ' + sa.name, 'on the row', 'not in this reading');
-      const o = Object.assign({}, sa); if (a) for (const k of Object.keys(a)) if (k.startsWith('_')) Object.defineProperty(o, k, { value: a[k], enumerable: false, writable: true, configurable: true });
-      out.push(o); reusedAbs.add(u.name + ' · ' + sa.name);
+      const o = Object.assign({}, sa); if (multi) o.who = pn; if (a) for (const k of Object.keys(a)) if (k.startsWith('_')) Object.defineProperty(o, k, { value: a[k], enumerable: false, writable: true, configurable: true });
+      out.push(o); reusedAbs.add(u.name + ' · ' + (multi ? pn + ' · ' : '') + sa.name);
     }
     for (const a of mineAbs) { if (!a._e) note('ability ' + a.name, 'not on the row', 'in this reading'); out.push(a); }
-    u.abilities = out;
-    // the Rules line: the row's, then a rule only this list's units bring (its wargear's or enhancement's)
+    if (!multi) u.abilities = out;
+    else { const at = u.abilities.findIndex(a => a.who === pn), rest = u.abilities.filter(a => a.who !== pn); rest.splice(at < 0 ? rest.length : u.abilities.slice(0, at).filter(a => a.who !== pn).length, 0, ...out); u.abilities = rest; }
+    // the Rules line: the row's, then a rule only this list's units bring (its wargear's or enhancement's); a part's row: its rules
+    // stay in the unit's line (the other part's too)
     if (S.rules) {
       const extra = u.rules.filter(r => !S.rules.includes(r)), lost = S.rules.filter(r => !u.rules.includes(r));
       if (lost.length) note('rules', S.rules.join(', '), u.rules.join(', '));
-      u.rules = S.rules.concat(extra);
-      if (extra.length) filled.push({ what: 'Rules line of ' + u.name + ': the datasheet row’s, and ' + extra.join(', ') + ' (not on the row: this list’s own)', from: 'DATASHEETS ' + key });
+      if (!multi) {
+        u.rules = S.rules.concat(extra);
+        if (extra.length) filled.push({ what: 'Rules line of ' + u.name + ': the datasheet row’s, and ' + extra.join(', ') + ' (not on the row: this list’s own)', from: 'DATASHEETS ' + key });
+      } else if (lost.length) u.rules = uniq(u.rules.concat(lost));
     }
-    filled.push({ what: u.name + ': the facts of the datasheet row ' + key + ' (another list has it)', from: 'data.js DATASHEETS' });
+    // keywords: a keyword GW's datasheet prints that the export lacks, which the row was settled without (the Tyrannofex's FRAME,
+    // from Wahapedia's errata line GW's Faction Pack does not print: the row's srcNote says so): the row's, as for every list
+    if (!multi && S.kw) for (const d of gwDevs.filter(x => x.unit === u.id && x.kind === 'kw' && x.app && !x.bsdata && !S.kw.includes(x.app) && u.kw.includes(x.app))) {
+      note('keyword ' + d.app, 'not on the row', 'GW’s datasheet (' + d.file + ')'); u.kw.splice(u.kw.indexOf(d.app), 1); d.kept = true;
+    }
+    // (and the row's note on its sources, srcNote: the Tyrannofex's FRAME)
+    if (!multi && S.srcNote !== undefined && u.srcNote === undefined) u.srcNote = S.srcNote;
+    filled.push({ what: (multi ? u.name + ' (' + pn + ')' : u.name) + ': the facts of the datasheet row ' + key + ' (another list has it)', from: 'data.js DATASHEETS' });
   }
 }
 

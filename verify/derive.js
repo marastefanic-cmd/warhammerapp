@@ -1176,10 +1176,13 @@ function ruleTables(D){
       const before = sent.slice(0, m.index);
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
       const rs = [];
-      const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+      // (the clause just before the verb names who has it: "while the bearer is within 6" of one or more friendly HARVESTER units,
+      // models in the bearer's unit have the Fights First ability" gives it to the bearer's unit, not to the HARVESTER units)
+      const own = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i, last = before.split(/,\s*/).pop();
+      const to = own.test(before) && (!(subj && subj.run) || (/\b(?:this|the bearer'?s?) (?:unit|model)\b/i.test(last) && !(friendlyUnit(V, last + ' ', { any:true }) || {}).run)) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
       // (the condition opens the sentence, or follows the moment it is checked at: Duellist’s Hubris, "At the start of the Fight phase; if
-      // this model is not leading a unit, …")
-      const cond = (/^(?:at the (?:start|end) of [^,;]+[,;] )?((?:while|if|when|until) [^,]+)/i.exec(plain(sent)) || [])[1];
+      // this model is not leading a unit, …", or "In addition, ": Instinctive Defence)
+      const cond = (/^(?:at the (?:start|end) of [^,;]+[,;] |in addition, )?((?:while|if|when|until) [^,]+)/i.exec(plain(sent)) || [])[1];
       const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
       // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
       const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;
