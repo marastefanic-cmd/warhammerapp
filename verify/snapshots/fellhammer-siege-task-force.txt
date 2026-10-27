@@ -1253,6 +1253,9 @@ Maulerfiend D3
 Deep Strike
 Vashtorr the Arkifane
 Obliterators
+Indirect Fire
+Obliterators
+Warp Rift Firepower: In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].
 Leader
 Warpsmith · Wyredjinn
 Dark Apostle leads Nemesis Claw
@@ -4970,6 +4973,17 @@ IN THIS ARMYWarpsmith · Wyredjinn
 
 Ask about this rule
 
+######## popup rule:Indirect Fire · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+Indirect Fire
+
+Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).
+
+IN THIS ARMYObliterators (in Warp Rift Firepower)
+
+Ask about this rule
+
 ######## popup rule:LANCE · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
 CORE RULE
 
@@ -5302,6 +5316,17 @@ That unit was not set up on the battlefield this turn.
 No model in that unit has moved more than 3" this turn.
 
 IN THIS ARMYHavocs, Obliterators
+
+Ask about this rule
+
+######## popup rule:[INDIRECT FIRE] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+CORE RULE
+
+INDIRECT FIRE
+
+Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).
+
+IN THIS ARMYObliterators (in Warp Rift Firepower)
 
 Ask about this rule
 

@@ -220,7 +220,7 @@ DAEMONIC TERROR
 
 While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
 
-Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
 
 FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
 
@@ -950,7 +950,7 @@ DAEMONIC TERROR
 
 While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
 
-Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
 
 FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
 
@@ -4410,7 +4410,7 @@ DAEMONIC TERROR
 
 While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
 
-Wahapedia FAQ: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
 
 FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
 

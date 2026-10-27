@@ -81,13 +81,19 @@ PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 CHAOS DAEMONS
-1
+2
 The Exiled Legion
 1995 pts
 Blood Legion · Warptide
 PURGE THE FOE
 , CHOSEN
 RECONNAISSANCE
+Tzeeeeentch
+2000 pts
+Cavalcade of Chaos · Scintillating Legion
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
 CHAOS KNIGHTS
 2
 Infernal Lance

@@ -1,0 +1,5227 @@
+######## army · NAVIGATOR SOUNDS OP NGL Tzeeeeentch
+Chaos Daemons · 2000 / 2000 pts · Strike Force
+
+Cavalcade of Chaos · Scintillating Legion
+
+Dispositions: Disruption · Priority Assets (chosen)
+
+Overview
+Phase checklist
+Bases & proxies
+27
+Units
+11
+Stratagems
+19
+Ranged weapons
+14
+Melee weapons
+13
+Abilities
+31
+Rules
+Damage calculator
+
+New Recruit, exported 27 Oct 2026 (JSON)
+
+######## checklist · TZEEEEENTCH Phase checklist
+PHASE BY PHASE
+RESET
+Command · Your turn
+4 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Fates in Flux · Scintillating Legion
+One Head Looks Forward · Kairos Fateweaver
+Inescapable Eye · Lord of Change
+Command · Their turn
+1 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Movement · Your turn
+2 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Xirat’p’s Sorcerous Barrages · The Blue Scribes
+Movement · Their turn
+1 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Shooting · Your turn
+2 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Master of Magicks · Lord of Change×2
+Shooting · Their turn
+2 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Mischief and Confusion · The Changeling
+Charge · Your turn
+1 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Charge · Their turn
+1 to do
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+Fight · Your turn
+1 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+
+ONCE PER BATTLE
+
+Malefic Destruction · Daemon Prince of Chaos with wings
+Fight · Their turn
+1 to do · 1 once per battle
+
+TO DO NOW
+
+The Shadow of Chaos · Chaos Daemons army rule
+
+ONCE PER BATTLE
+
+Malefic Destruction · Daemon Prince of Chaos with wings
+When unclear
+2 rules
+
+RULES
+
+DAEMONIC MANIFESTATION · option of The Shadow of Chaos
+DAEMONIC TERROR · option of The Shadow of Chaos
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## pregame · TZEEEEENTCH Overview
+YOUR LIST
+WARLORD
+Kairos Fateweaver
+ENHANCE­MENTS
+Neverblade 25 pts on Daemon Prince of Chaos with wings
+Infernal Puppeteer 20 pts on Lord of Change
+Inescapable Eye 15 pts on Lord of Change
+Improbable Shield (Aura) 30 pts on Fluxmaster
+ATTACHED
+Fluxmaster leads Pink Horrors
+DETACH­MENTS
+Cavalcade of Chaos (1 DP), Scintillating Legion (2 DP)
+DISPOSI­TIONS
+Disruption · Priority Assets (chosen)
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+The Shadow of Chaos
+Any phase
+
+If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:
+
+Your deployment zone is always within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.
+
+DAEMONIC MANIFESTATION
+
+While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).
+
+DAEMONIC TERROR
+
+While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
+
+FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+
+FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
+
+Unholy Avalanche
+Cavalcade of Chaos · Your Move/Shoot/Charge
+
+If a friendly LEGIONES DAEMONICA MOUNTED unit made a fall-back move this turn, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge.
+
+APPLIES TOThe Blue Scribes, Fluxmaster · Improbable Shield (Aura)
+
+Fates in Flux
+Scintillating Legion · Any phase
+
+You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.
+
+Whenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.
+
+In your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.
+
+Designer’s Note: When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.
+
+APPLIES TOKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Kairos Fateweaver 305 pts
+The Blue Scribes 75 pts
+The Changeling 105 pts
+Daemon Prince of Chaos with wings · Neverblade 215 pts
+Lord of Change · Infernal Puppeteer 340 pts
+Lord of Change · Inescapable Eye 335 pts
+Fluxmaster + Pink Horrors 250 pts
+Flamers 65 pts each, ×3
+Tzeentch Soul Grinder 180 pts
+All of them: 2000 pts
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Malefic Destruction · Daemon Prince of Chaos with wings
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+3
+Kairos Fateweaver
+Warlord
+12"
+10
+6+
+20
+6+
+5
+4+
+305
+The Blue Scribes
+12"
+4
+6+
+6
+8+
+2
+4+
+75
+The Changeling
+6"
+3
+7+
+5
+7+
+1
+4+
+105
+CHARACTERS
+4
+Daemon Prince of Chaos with wings
+Neverblade
+12"
+9
+2+
+10
+6+
+3
+4+
+215
+Lord of Change
+Infernal Puppeteer
+12"
+10
+6+
+18
+6+
+5
+4+
+340
+Lord of Change
+Inescapable Eye
+12"
+10
+6+
+18
+6+
+5
+4+
+335
+Fluxmaster
++ Pink Horrors
+Improbable Shield (Aura)
+250
+Fluxmaster
+12"
+4
+6+
+4
+7+
+1
+4+
+Blue/Brimstone Horror (ref. only)
+6"
+3
+7+
+1
+8+
+1
+4+
+Pink Horror×10
+6"
+3
+7+
+1
+7+
+2
+4+
+INFANTRY
+3
+Flamers
+1× Pyrocaster, 2× Flamer
+9"
+4
+7+
+3
+7+
+1
+4+
+3×65
+VEHICLES
+1
+Tzeentch Soul Grinder
+8"
+11
+3+
+14
+7+
+5
+4+
+180
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Kairos Fateweaver
+Warlord
+Infernal Gateway
+➤witchfire
+24"
+D6+3
+2+
+9
+-2
+D3
+BLAST, INDIRECT FIRE, PSYCHIC
+➤focused witchfire
+24"
+D3+6
+2+
+9
+-2
+3
+BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
+Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+The Changeling
+Infernal Flames
+➤witchfire
+12"
+D6
+–
+6
+-1
+1
+IGNORES COVER, PSYCHIC, TORRENT
+➤focused witchfire
+12"
+D6+3
+–
+6
+-1
+D3
+HAZARDOUS, IGNORES COVER, PSYCHIC, TORRENT
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Daemon Prince of Chaos with wings
+Neverblade
+Infernal cannon
+24"
+6
+2+
+5
+-1
+2
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Lord of Change
+Infernal Puppeteer
+Bolt of Change
+➤witchfire
+18"
+9
+2+
+9
+-1
+1
+PSYCHIC
+➤focused witchfire
+18"
+9
+2+
+9
+-2
+3
+HAZARDOUS, PSYCHIC
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
+Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
+Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+Own aura: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Lord of Change
+Inescapable Eye
+Bolt of Change
+➤witchfire
+18"
+9
+2+
+9
+-1
+1
+PSYCHIC
+➤focused witchfire
+18"
+9
+2+
+9
+-2
+3
+HAZARDOUS, PSYCHIC
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
+Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
+Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+Own aura: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Fluxmaster
+Improbable Shield (Aura)
++ Pink Horrors
+FLUXMASTER
+Arcane Fireball
+➤witchfire
+18"
+3
+3+
+5
+-1
+D3
+PSYCHIC
+➤focused witchfire
+18"
+3
+3+
+6
+-2
+D3
+DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
+PINK HORRORS
+Coruscating Pink flames×10
+18"
+2
+3+
+4
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+18"
+2
+5+
+2
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Blue flames (ref. only)BLUE HORRORS ADDED BY SPLIT
+18"
+2
+4+
+3
+-1
+1
+PISTOL, PSYCHIC
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Flamers
+×3 units
+Flickering Flames×3
+12"
+D6
+–
+4
+-1
+1
+IGNORES COVER, PSYCHIC, TORRENT
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Tzeentch Soul Grinder
+Harvester cannon
+36"
+3
+3+
+10
+-1
+3
+Warp gaze
+48"
+D3
+3+
+12
+-2
+D6+2
+BLAST
+Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 wounds remaining)
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Kairos Fateweaver
+Warlord
+Staff of Tomorrow
+5
+3+
+8
+-2
+2D3
+PSYCHIC
+Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+The Blue Scribes
+Sharp quills
+4
+5+
+2
+0
+1
+ANTI-PSYKER 2+
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+The Changeling
+The Trickster’s Staff
+3
+4+
+4
+-1
+D3
+PSYCHIC
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Daemon Prince of Chaos with wings
+Neverblade
+Hellforged weapons
+➤strike
+7
+2+
+10
+-3
+3
+➤sweep
+15
+2+
+8
+-1
+1
+Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase: +3 A
+Selected to fight, its hellforged weapons, until the end of the phase (select one): [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] (Harbinger of Death)
+Every melee attack: +1 to hit rolls (Neverblade)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Lord of Change
+Infernal Puppeteer
+Staff of Tzeentch
+5
+3+
+6
+-1
+3
+PSYCHIC
+Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Lord of Change
+Inescapable Eye
+Staff of Tzeentch
+5
+3+
+6
+-1
+3
+PSYCHIC
+Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Fluxmaster
+Improbable Shield (Aura)
++ Pink Horrors
+FLUXMASTER
+Herald combat weapon
+3
+4+
+4
+-1
+1
+PSYCHIC
+PINK HORRORS
+Pink claws×10
+1
+4+
+3
+0
+1
+Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+2
+5+
+2
+0
+1
+Blue claws (ref. only)BLUE HORRORS ADDED BY SPLIT
+1
+5+
+3
+0
+1
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Flamers
+×3 units
+Flamer mouths×3
+3
+4+
+4
+0
+1
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Tzeentch Soul Grinder
+Iron claw
+5
+3+
+16
+-3
+D6+2
++
+Warpclaw
+6
+3+
+8
+-1
+2
+EXTRA ATTACKS
+Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 wounds remaining)
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+
+######## abilities · MELEE Abilities
+Kairos Fateweaver
+Warlord
+One Head Looks Forward
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.
+
+One Head Looks Back
+Once per turn
+Any phase
+
+Once per turn · Any phase · Either turn
+
+Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+The Blue Scribes
+P’tarix’s Sorcerous Syphon
+
+Aura
+
+While an enemy unit is within 12" of this model, each time a model in that unit makes a Psychic Attack, subtract 1 from the Wound roll.
+
+Xirat’p’s Sorcerous Barrages
+Your Movement
+
+Psychic · Movement · Your turn
+
+At the end of your Movement phase, roll one D6 for each enemy unit within 6" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.
+
+The Changeling
+Formless Horror
+
+Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.
+
+Mischief and Confusion
+Their Shooting
+
+Shooting · Their turn
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase.
+
+Daemon Prince of Chaos with wings
+Neverblade
+Malefic Destruction
+Once per battle
+Fight
+
+Once per battle · Fight · Either turn
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons.
+
+Harbinger of Death
+Fight
+
+Fight · Either turn
+
+Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+
+[LETHAL HITS]
+[PRECISION]
+[SUSTAINED HITS 1]
+Neverblade
+Enhancement
+Already in A, S, AP
+Fight
+
+Enhancement · Fight · Either turn
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Daemonic Allegiance
+Already in A
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Lord of Change
+Infernal Puppeteer
+Daemon Lord of Tzeentch
+Their Move · Your Shoot
+
+Aura · Their Movement / Your Shooting
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.
+
+Master of Magicks
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Infernal Puppeteer
+Enhancement
+Your Shooting
+
+Enhancement · Shooting · Your turn
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9" detection range until this unit has shot.
+
+Lord of Change
+Inescapable Eye
+Daemon Lord of Tzeentch
+Their Move · Your Shoot
+
+Aura · Their Movement / Your Shooting
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.
+
+Master of Magicks
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Inescapable Eye
+Enhancement
+Your Command
+
+Enhancement · Command · Your turn
+
+LEGIONES DAEMONICA TZEENTCH model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.
+
+Fluxmaster
+Improbable Shield (Aura)
++ Pink Horrors
+FLUXMASTER
+Fluxmaster
+This unit has Stealth.
+Melee attacks that target this unit have -1 to hit rolls.
+Altered Reality
+Once per battle round
+
+Psychic
+
+Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.
+
+Improbable Shield (Aura)
+Enhancement
+
+Enhancement · Aura
+
+LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.
+
+PINK HORRORS
+Split
+
+Each time a PINK HORROR or BLUE HORROR model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.
+
+FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”
+
+Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.
+
+If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.
+
+Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.
+
+FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”
+
+Flamers
+×3 units
+Bounding Leaps
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+This unit is eligible to shoot in a turn in which it Fell Back.
+
+Tzeentch Soul Grinder
+Scuttling Walker
+Your Movement
+
+Movement · Your turn
+
+Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4" or less in height as if they were not there.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Daemonic Allegiance
+
+When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below.
+
+KHORNE – This model is additionally equipped with: torrent of burning blood
+
+TZEENTCH – This model is additionally equipped with: warp gaze
+
+NURGLE – This model is additionally equipped with: phlegm bombardment
+
+SLAANESH – This model is additionally equipped with: scream of despair
+
+######## rules · ABILITIES Rules
+Chaos Daemons · Priority Assets
+ARMY RULES
+The Shadow of Chaos
+Any phase
+
+If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:
+
+Your deployment zone is always within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.
+
+DAEMONIC MANIFESTATION
+
+While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).
+
+DAEMONIC TERROR
+
+While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
+
+FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+
+FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
+
+DETACHMENTS
+CAVALCADE OF CHAOS
+Unholy Avalanche
+Detachment rule · Your Move/Shoot/Charge
+
+If a friendly LEGIONES DAEMONICA MOUNTED unit made a fall-back move this turn, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge.
+
+APPLIES TOThe Blue Scribes, Fluxmaster · Improbable Shield (Aura)
+
+Other enhancements
+2 not in this list
+Apocalyptic Steeds 10 pts
+
+LEGIONES DAEMONICA MOUNTED unit only. This unit has +1" M.
+
+Soul-Shattering Charge 10 pts
+
+LEGIONES DAEMONICA MOUNTED unit only. When this unit is selected to fight, if this unit made a charge move this turn, you can use this ability. If you do, when determining which models in this unit can fight, friendly models that are within 3" of enemy units engaged with this unit can target those enemy units.
+
+STRATAGEMSFrom Beyond the Veil, Warp-Riders, Inescapable Manifestations
+
+SCINTILLATING LEGION
+Fates in Flux
+Detachment rule · Any phase
+
+You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.
+
+Whenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.
+
+In your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.
+
+Designer’s Note: When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.
+
+APPLIES TOKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
+
+Inescapable Eye
+Enhancement · 15 pts · on Lord of Change
+
+LEGIONES DAEMONICA TZEENTCH model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.
+
+ONLord of Change
+
+Infernal Puppeteer
+Enhancement · 20 pts · on Lord of Change
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9" detection range until this unit has shot.
+
+ONLord of Change
+
+Neverblade
+Enhancement · 25 pts · on Daemon Prince of Chaos with wings
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+ONDaemon Prince of Chaos with wings
+
+Improbable Shield (Aura)
+Enhancement · 30 pts · on Fluxmaster + Pink Horrors
+
+LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.
+
+ONFluxmaster + Pink Horrors
+
+STRATAGEMSFateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade, Impossible Eclipse
+
+UNIT RULES
+Deadly Demise
+Kairos Fateweaver D6
+Daemon Prince of Chaos with wings · Neverblade D3
+Lord of Change · Infernal Puppeteer D6
+Lord of Change · Inescapable Eye D6
+Tzeentch Soul Grinder D3
+Deep Strike
+Kairos Fateweaver
+The Blue Scribes
+The Changeling
+Daemon Prince of Chaos with wings · Neverblade
+Lord of Change · Infernal Puppeteer
+Lord of Change · Inescapable Eye
+Fluxmaster + Pink Horrors
+Flamers
+Tzeentch Soul Grinder
+Feel No Pain
+Fluxmaster + Pink Horrors
+Improbable Shield (Aura): LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.
+Leader
+Fluxmaster leads Pink Horrors
+Lethal Hits
+Daemon Prince of Chaos with wings · Neverblade
+Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+[LETHAL HITS]
+[PRECISION]
+[SUSTAINED HITS 1]
+Lord of Change · Infernal Puppeteer
+Master of Magicks: In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+Lord of Change · Inescapable Eye
+Master of Magicks: In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+Lone Operative
+The Blue Scribes
+The Changeling
+Precision
+Daemon Prince of Chaos with wings · Neverblade
+Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+[LETHAL HITS]
+[PRECISION]
+[SUSTAINED HITS 1]
+Stealth
+The Changeling
+Fluxmaster + Pink Horrors
+Fluxmaster:
+This unit has Stealth.
+Melee attacks that target this unit have -1 to hit rolls.
+Sustained Hits
+Daemon Prince of Chaos with wings · Neverblade
+Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+[LETHAL HITS]
+[PRECISION]
+[SUSTAINED HITS 1]
+Lord of Change · Infernal Puppeteer
+Master of Magicks: In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+Lord of Change · Inescapable Eye
+Master of Magicks: In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+19× 32mm
+1× 40mm
+1× 60mm
+3× 100mm
+1× 160mm
+2× Large Flying Base
+
+WHAT TO WRITE ON EACH BASE
+
+Kairos Fateweaver
+1× 100mm
+Kairos Fateweaver · Warlord
+The Blue Scribes
+1× Large Flying Base
+The Blue Scribes
+The Changeling
+1× 40mm
+The Changeling
+Daemon Prince of Chaos with wings · Neverblade
+1× 60mm
+Daemon Prince of Chaos with wings · Neverblade
+Lord of Change · Infernal Puppeteer
+1× 100mm
+Lord of Change · Infernal Puppeteer
+Lord of Change · Inescapable Eye
+1× 100mm
+Lord of Change · Inescapable Eye
+Fluxmaster · Improbable Shield (Aura)
++ Pink Horrors
+1× Large Flying Base
+Fluxmaster · Improbable Shield (Aura)
+10× 32mm
+standard Coruscating Pink flames, Pink claws
+Flamers
+3 units: mark them apart (1, 2, 3)
+1× 32mm
+Pyrocaster
+2× 32mm
+standard Flamer mouths, Flickering Flames
+Tzeentch Soul Grinder
+1× 160mm
+Tzeentch Soul Grinder
+
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
+
+######## damage shooting · BASES Damage
+YOUR
+Kairos Fateweaver
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
++
+Add a group
+3.9
+of 5 destroyed
+7.8 wounds lost · wiped in 41% of games
+Infernal Gateway: focused witchfire
+2 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Kairos Fateweaver
+Infernal Gateway
+RNG
+24"
+A
+D3+6
+BS
+2+
+S
+9
+AP
+-2
+D
+3
+BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
+−41% wiped
+−3.9
+MODELS IF UNTICKED
+PICK ONE PROFILE
+witchfire
+2.5
+RNG
+24"
+A
+D6+3
+BS
+2+
+S
+9
+AP
+-2
+D
+D3
+BLAST, INDIRECT FIRE, PSYCHIC
+focused witchfire
+3.9
+BEST · 24"
+RNG
+24"
+A
+D3+6
+BS
+2+
+S
+9
+AP
+-2
+D
+3
+BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Damaged (1-7 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
+Within 6" of the Lord of Change: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
+Indirect shooting
+[INDIRECT FIRE] weapons: the target has cover, no hit re-rolls, an unmodified 1-5 fails
+if it applies
+−41% wiped
+−3
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+−41% wiped
+−3
+MODELS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−41% wiped
+−3.9
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−41% wiped
+−3.9
+MODELS
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+11% wiped
++0.3
+MODELS
+1CP Pyrogenesis
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
+if used
+no change: S11 still wounds T4 on 2+
+0
++2 S
+0
+Flux token spent
++0.6
+BEST
+NOT FOR THIS STEP, BY THE RULES (3)
+
+Nothing to count: 1CP Delirium Unmade, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (2)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Impossible Eclipse
+Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
+1CP Ficklefire
+Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Kairos Fateweaver
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
++
+Add a group
+1.8
+of 5 destroyed
+3.7 wounds lost · wiped in 1% of games
+Charged this turn
+×
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Kairos Fateweaver
+Staff of Tomorrow
+A
+5
+WS
+3+
+S
+8
+AP
+-2
+D
+2D3
+PSYCHIC
+−1.8
+MODELS IF UNTICKED
+SITUATION AND RULES
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Damaged (1-7 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+2% wiped
++0.4
+MODELS
+1CP Pyrogenesis
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
+if used
+no change: S10 still wounds T4 on 2+
+0
++2 S
+0
+Flux token spent
++0.5
+BEST
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Ficklefire (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Impossible Eclipse
+Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
+1CP Delirium Unmade
+End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Kairos Fateweaver
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
++
+Add a group
+4.7
+of 5 destroyed
+9.3 wounds lost · wiped in 79% of games
+
+Shoot 3.9 · Fight 0.8 · the charge is taken to succeed
+
+Infernal Gateway: focused witchfire
+Charged this turn
+×
+6 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Kairos Fateweaver
+Infernal Gateway
+RNG
+24"
+A
+D3+6
+BS
+2+
+S
+9
+AP
+-2
+D
+3
+BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
+−78% wiped
+−2.8
+MODELS IF UNTICKED
+PICK ONE PROFILE
+witchfire
+4.0
+RNG
+24"
+A
+D6+3
+BS
+2+
+S
+9
+AP
+-2
+D
+D3
+BLAST, INDIRECT FIRE, PSYCHIC
+focused witchfire
+4.7
+BEST · 24"
+RNG
+24"
+A
+D3+6
+BS
+2+
+S
+9
+AP
+-2
+D
+3
+BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Damaged (1-7 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
+Within 6" of the Lord of Change: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
+Indirect shooting
+[INDIRECT FIRE] weapons: the target has cover, no hit re-rolls, an unmodified 1-5 fails
+if it applies
+−69% wiped
+−2
+MODELS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−78% wiped
+−2.8
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−78% wiped
+−2.8
+MODELS
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+6% wiped
++0.1
+MODELS
+1CP Pyrogenesis
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
+if used
+no change: S11 still wounds T4 on 2+
+0
++2 S
+0
+Flux token spent
++0.2
+BEST
+NOT FOR THIS STEP, BY THE RULES (3)
+
+Nothing to count: 1CP Delirium Unmade, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (2)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Impossible Eclipse
+Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
+1CP Ficklefire
+Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Kairos Fateweaver
+
+Against what the shooting left of the target, in each game.
+
+Staff of Tomorrow
+A
+5
+WS
+3+
+S
+8
+AP
+-2
+D
+2D3
+PSYCHIC
+−38% wiped
+−0.8
+MODELS IF UNTICKED
+SITUATION AND RULES
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Damaged (1-7 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+4% wiped
++0.1
+MODELS
+1CP Pyrogenesis
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
+if used
+no change: S10 still wounds T4 on 2+
+0
++2 S
+0
+Flux token spent
++0.1
+BEST
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Ficklefire (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Impossible Eclipse
+Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
+1CP Delirium Unmade
+End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+CAVALCADE OF CHAOS
+3
+2
+CP
+From Beyond the Veil
+End of the Movement phase, from the start of the battle, your LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves: it can make an Ingress move.
+End of Movement The Blue Scribes, Fluxmaster + Pink Horrors
+1
+CP
+Warp-Riders
+Your Movement phase, when your LEGIONES DAEMONICA MOUNTED unit is selected to move: it has MOBILE.
+Your Movement The Blue Scribes, Fluxmaster + Pink Horrors
+1
+CP
+Inescapable Manifestations
+Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls).
+Their Movement The Blue Scribes, Fluxmaster + Pink Horrors
+SCINTILLATING LEGION
+6
+1
+CP
+Fateborne Nightmares
+Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA TZEENTCH unit can move through terrain features.
+Your Move/Charge Any unit
+1
+CP
+Pyrogenesis
+Your Shooting phase or the Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not yet selected to shoot or fight: until the end of the phase, +2 S to its weapons, or spend one Flux token for +3 S and +1 AP instead.
+Your Shoot · Fight Any unit
+1
+CP
+Ficklefire
+Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
+Your Shooting Any unit
+1
+CP
+Flickering Reality
+Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit.
+Fight Any unit
+1
+CP
+Delirium Unmade
+End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
+End of their Fight Any unit
+1
+CP
+Impossible Eclipse
+Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
+Any phase Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement All but The Blue Scribes
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2, Tzeentch Soul Grinder
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight All but Flamers ×3, Tzeentch Soul Grinder
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+CAVALCADE OF CHAOS
+3
+2
+CP
+From Beyond the Veil
+End of Movement The Blue Scribes, Fluxmaster + Pink Horrors
+WHEN
+
+End of the Movement phase, from the start of the battle.
+
+TARGETOne friendly LEGIONES DAEMONICA MOUNTED unit in strategic reserves.
+
+EFFECT
+
+Your unit can make an ingress move.
+
+USED BYThe Blue Scribes, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+1
+CP
+Warp-Riders
+Your Movement The Blue Scribes, Fluxmaster + Pink Horrors
+WHEN
+
+Your Movement phase, when a friendly LEGIONES DAEMONICA MOUNTED unit is selected to move.
+
+TARGETThat LEGIONES DAEMONICA MOUNTED unit.
+
+EFFECT
+
+Your unit has MOBILE.
+
+USED BYThe Blue Scribes, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+1
+CP
+Inescapable Manifestations
+Their Movement The Blue Scribes, Fluxmaster + Pink Horrors
+WHEN
+
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly LEGIONES DAEMONICA MOUNTED unit.
+
+TARGETThat LEGIONES DAEMONICA MOUNTED unit.
+
+EFFECT
+
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+
+USED BYThe Blue Scribes, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+SCINTILLATING LEGION
+6
+1
+CP
+Fateborne Nightmares
+Your Move/Charge Any unit
+WHEN
+
+Your Movement phase or your Charge phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.
+
+USED BYany unit
+
+1
+CP
+Pyrogenesis
+Your Shoot · Fight Any unit
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that has not been selected to shoot or fight that phase.
+
+EFFECT
+
+Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.
+
+USED BYany unit
+
+1
+CP
+Ficklefire
+Your Shooting Any unit
+WHEN
+
+Your Shooting phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 mortal wound after the attacking unit has finished making its attacks.
+
+USED BYany unit
+
+1
+CP
+Flickering Reality
+Fight Any unit
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.
+
+Example: If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved.
+
+USED BYany unit
+
+1
+CP
+Delirium Unmade
+End of their Fight Any unit
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that is not within Engagement Range of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two LEGIONES DAEMONICA TZEENTCH units from your army instead (including those within Engagement Range of one or more enemy units).
+
+EFFECT
+
+Remove your units from the battlefield and place them into Strategic Reserves.
+
+USED BYany unit
+
+1
+CP
+Impossible Eclipse
+Any phase Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2
+WHEN
+
+Any phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield.
+
+EFFECT
+
+Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos.
+
+USED BYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement All but The Blue Scribes
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYKairos Fateweaver, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster + Pink Horrors · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
+
+1
+CP
+Crushing Impact
+Your Charge Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2, Tzeentch Soul Grinder
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight All but Flamers ×3, Tzeentch Soul Grinder
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit kairos-fateweaver · STRATAGEMS Tzeeeeentch
+KAIROS FATEWEAVER
+305 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Kairos Fateweaver
+Infernal Gateway, Staff of Tomorrow
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Kairos Fateweaver
+100mm
+12"
+10
+6+
+20
+6+
+5
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+DAMAGED 1-7 W
+-1 TO HIT ROLLS
+([PSYCHIC] WEAPONS CAN IGNORE IT)
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Infernal Gateway
+➤witchfire
+24"
+D6+3
+2+
+9
+-2
+D3
+BLAST, INDIRECT FIRE, PSYCHIC
+➤focused witchfire
+24"
+D3+6
+2+
+9
+-2
+3
+BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Staff of Tomorrow
+5
+3+
+8
+-2
+2D3
+PSYCHIC
+ABILITIES
+One Head Looks Forward
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.
+
+One Head Looks Back
+Once per turn
+Any phase
+
+Once per turn · Any phase · Either turn
+
+Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.
+
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Rules
+Deadly Demise D6, Deep Strike, The Shadow of Chaos, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade, Impossible Eclipse
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: LEGIONES DAEMONICA
+FLY
+KAIROS FATEWEAVER
+MONSTER
+PSYKER
+TZEENTCH
+WARLORD
+Ask about this unit
+The Blue Scribes ›
+
+######## unit the-blue-scribes · KAIROS FATEWEAVER Tzeeeeentch
+THE BLUE SCRIBES
+75 PTS
+Epic Hero
+Models
+Options
+1× The Blue Scribes
+Sharp quills
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+The Blue Scribes
+Large Flying
+12"
+4
+6+
+6
+8+
+2
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Sharp quills
+4
+5+
+2
+0
+1
+ANTI-PSYKER 2+
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+ABILITIES
+P’tarix’s Sorcerous Syphon
+
+Aura
+
+While an enemy unit is within 12" of this model, each time a model in that unit makes a Psychic Attack, subtract 1 from the Wound roll.
+
+Xirat’p’s Sorcerous Barrages
+Your Movement
+
+Psychic · Movement · Your turn
+
+At the end of your Movement phase, roll one D6 for each enemy unit within 6" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.
+
+Rules
+Deep Strike, The Shadow of Chaos, Lone Operative, Unholy Avalanche, Fates in Flux
+Stratagems
+
+CAVALCADE OF CHAOS From Beyond the Veil, Warp-Riders, Inescapable Manifestations
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: LEGIONES DAEMONICA
+FLY
+MOUNTED
+THE BLUE SCRIBES
+TZEENTCH
+Ask about this unit
+‹ Kairos Fateweaver
+The Changeling ›
+
+######## unit the-changeling · THE BLUE SCRIBES Tzeeeeentch
+THE CHANGELING
+105 PTS
+Epic Hero
+Models
+Options
+1× The Changeling
+Infernal Flames, The Trickster’s Staff
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+The Changeling
+40mm
+6"
+3
+7+
+5
+7+
+1
+4+
+WHEN TARGETED
+5
+an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Infernal Flames
+➤witchfire
+12"
+D6
+–
+6
+-1
+1
+IGNORES COVER, PSYCHIC, TORRENT
+➤focused witchfire
+12"
+D6+3
+–
+6
+-1
+D3
+HAZARDOUS, IGNORES COVER, PSYCHIC, TORRENT
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+The Trickster’s Staff
+3
+4+
+4
+-1
+D3
+PSYCHIC
+ABILITIES
+Formless Horror
+
+Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.
+
+Mischief and Confusion
+Their Shooting
+
+Shooting · Their turn
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase.
+
+Rules
+The Shadow of Chaos, Deep Strike, Lone Operative, Stealth, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: LEGIONES DAEMONICA
+INFANTRY
+PSYKER
+THE CHANGELING
+TZEENTCH
+Ask about this unit
+‹ The Blue Scribes
+Daemon Prince of Chaos with wings · Neverblade ›
+
+######## unit daemon-prince-of-chaos-with-wings · THE CHANGELING Tzeeeeentch
+DAEMON PRINCE OF CHAOS WITH WINGS
+215 PTS
+Character
+Neverblade
+Models
+Options
+1× Daemon Prince of Chaos with wings (Tzeentch)
+Hellforged weapons, Infernal cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Daemon Prince of Chaos with wings
+60mm
+12"
+9
+2+
+10
+6+
+3
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Infernal cannon
+24"
+6
+2+
+5
+-1
+2
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hellforged weapons
+➤strike
+7
+2+
+10
+-3
+3
+➤sweep
+15
+2+
+8
+-1
+1
+Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase: +3 A
+Selected to fight, its hellforged weapons, until the end of the phase (select one): [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] (Harbinger of Death)
+Every melee attack: +1 to hit rolls (Neverblade)
+ABILITIES
+Malefic Destruction
+Once per battle
+Fight
+
+Once per battle · Fight · Either turn
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons.
+
+Harbinger of Death
+Fight
+
+Fight · Either turn
+
+Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+
+[LETHAL HITS]
+[PRECISION]
+[SUSTAINED HITS 1]
+Neverblade
+Enhancement
+Already in A, S, AP
+Fight
+
+Enhancement · Fight · Either turn
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Daemonic Allegiance
+Already in A
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Rules
+Deep Strike, The Shadow of Chaos, Deadly Demise D3, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade, Impossible Eclipse
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+DAEMON PRINCE OF CHAOS WITH WINGS
+FACTION: LEGIONES DAEMONICA
+FLY
+MONSTER
+TZEENTCH
+Ask about this unit
+‹ The Changeling
+Lord of Change · Infernal Puppeteer ›
+
+######## unit lord-of-change-infernal-puppeteer · DAEMON PRINCE OF CHAOS WITH WINGS Tzeeeeentch
+LORD OF CHANGE
+340 PTS
+Character
+Infernal Puppeteer
+Models
+Options
+1× Lord of Change
+Bolt of Change, Staff of Tzeentch, Rod of sorcery
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Lord of Change
+100mm
+12"
+10
+6+
+18
+6+
+5
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+DAMAGED 1-7 W
+-1 TO HIT ROLLS
+([PSYCHIC] WEAPONS CAN IGNORE IT)
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Bolt of Change
+➤witchfire
+18"
+9
+2+
+9
+-1
+1
+PSYCHIC
+➤focused witchfire
+18"
+9
+2+
+9
+-2
+3
+HAZARDOUS, PSYCHIC
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
+Own aura: +1 S (Daemon Lord of Tzeentch)
+Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Staff of Tzeentch
+5
+3+
+6
+-1
+3
+PSYCHIC
+ABILITIES
+Daemon Lord of Tzeentch
+Their Move · Your Shoot
+
+Aura · Their Movement / Your Shooting
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.
+
+Master of Magicks
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Infernal Puppeteer
+Enhancement
+Your Shooting
+
+Enhancement · Shooting · Your turn
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9" detection range until this unit has shot.
+
+Rules
+Deadly Demise D6, Deep Strike, The Shadow of Chaos, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade, Impossible Eclipse
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+FLY
+LORD OF CHANGE
+MONSTER
+PSYKER
+TZEENTCH
+Ask about this unit
+‹ Daemon Prince of Chaos with wings · Neverblade
+Lord of Change · Inescapable Eye ›
+
+######## unit lord-of-change-inescapable-eye · LORD OF CHANGE Tzeeeeentch
+LORD OF CHANGE
+335 PTS
+Character
+Inescapable Eye
+Models
+Options
+1× Lord of Change
+Bolt of Change, Staff of Tzeentch, Rod of sorcery
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Lord of Change
+100mm
+12"
+10
+6+
+18
+6+
+5
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+DAMAGED 1-7 W
+-1 TO HIT ROLLS
+([PSYCHIC] WEAPONS CAN IGNORE IT)
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Bolt of Change
+➤witchfire
+18"
+9
+2+
+9
+-1
+1
+PSYCHIC
+➤focused witchfire
+18"
+9
+2+
+9
+-2
+3
+HAZARDOUS, PSYCHIC
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
+Own aura: +1 S (Daemon Lord of Tzeentch)
+Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Staff of Tzeentch
+5
+3+
+6
+-1
+3
+PSYCHIC
+ABILITIES
+Daemon Lord of Tzeentch
+Their Move · Your Shoot
+
+Aura · Their Movement / Your Shooting
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.
+
+Master of Magicks
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Inescapable Eye
+Enhancement
+Your Command
+
+Enhancement · Command · Your turn
+
+LEGIONES DAEMONICA TZEENTCH model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.
+
+Rules
+Deadly Demise D6, Deep Strike, The Shadow of Chaos, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade, Impossible Eclipse
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+FLY
+LORD OF CHANGE
+MONSTER
+PSYKER
+TZEENTCH
+Ask about this unit
+‹ Lord of Change · Infernal Puppeteer
+Fluxmaster · Improbable Shield (Aura) ›
+
+######## unit fluxmaster-pink-horrors · LORD OF CHANGE Tzeeeeentch
+FLUXMASTER + PINK HORRORS
+250 PTS
+Character · 100 + Pink Horrors 150
+Improbable Shield (Aura)
+Models
+Options
+1× Fluxmaster
+Arcane Fireball, Herald combat weapon
+Leading Pink Horrors
+10× Pink Horror
+Coruscating Pink flames, Pink claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Fluxmaster
+Large Flying
+12"
+4
+6+
+4
+7+
+1
+4+
+Blue/Brimstone Horror (ref. only)
+25mm
+6"
+3
+7+
+1
+8+
+1
+4+
+Pink Horror×10
+32mm
+6"
+3
+7+
+1
+7+
+2
+4+
+WHEN TARGETED
+5
+FLUXMASTER Fluxmaster: This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+ALL ATTACKS · WHOLE UNIT
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+FLUXMASTER
+Arcane Fireball
+➤witchfire
+18"
+3
+3+
+5
+-1
+D3
+PSYCHIC
+➤focused witchfire
+18"
+3
+3+
+6
+-2
+D3
+DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
+PINK HORRORS
+Coruscating Pink flames×10
+18"
+2
+3+
+4
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+18"
+2
+5+
+2
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Blue flames (ref. only)BLUE HORRORS ADDED BY SPLIT
+18"
+2
+4+
+3
+-1
+1
+PISTOL, PSYCHIC
+WHOLE UNIT
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+FLUXMASTER
+Herald combat weapon
+3
+4+
+4
+-1
+1
+PSYCHIC
+PINK HORRORS
+Pink claws×10
+1
+4+
+3
+0
+1
+Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+2
+5+
+2
+0
+1
+Blue claws (ref. only)BLUE HORRORS ADDED BY SPLIT
+1
+5+
+3
+0
+1
+ABILITIES
+Fluxmaster
+- Fluxmaster
+This unit has Stealth.
+Melee attacks that target this unit have -1 to hit rolls.
+Altered Reality
+- Fluxmaster
+Once per battle round
+
+Psychic
+
+Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.
+
+Improbable Shield (Aura)
+- Fluxmaster
+Enhancement
+
+Enhancement · Aura
+
+LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.
+
+Split
+- Pink Horrors
+
+Each time a PINK HORROR or BLUE HORROR model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.
+
+FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”
+
+Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.
+- Pink Horrors
+
+If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.
+
+Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.
+
+FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”
+
+Rules
+Deep Strike, Leader, The Shadow of Chaos, Unholy Avalanche, Fates in Flux
+Stratagems
+
+CAVALCADE OF CHAOS From Beyond the Veil, Warp-Riders, Inescapable Manifestations
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE*
+CHAOS
+CHARACTER
+DAEMON
+FACTION: LEGIONES DAEMONICA
+FLUXMASTER
+FLY
+HORRORS*
+INFANTRY*
+MOUNTED
+PSYKER
+TZEENTCH
+Pink Horror only:
+PINK
+Blue Horrors only:
+BLUE
+Brimstone Horrors only:
+BRIMSTONE
+*from the led Pink Horrors
+Ask about this unit
+‹ Lord of Change · Inescapable Eye
+Flamers ›
+
+######## unit flamers · FLUXMASTER Tzeeeeentch
+FLAMERS
+65 PTS EACH
+Infantry · ×3 in list
+Models
+Options
+1× Pyrocaster
+Flamer mouths, Flickering Flames
+2× Flamer
+Flamer mouths, Flickering Flames
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Flamers×3
+32mm
+9"
+4
+7+
+3
+7+
+1
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Flickering Flames×3
+12"
+D6
+–
+4
+-1
+1
+IGNORES COVER, PSYCHIC, TORRENT
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Flamer mouths×3
+3
+4+
+4
+0
+1
+ABILITIES
+Bounding Leaps
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+This unit is eligible to shoot in a turn in which it Fell Back.
+
+Rules
+Deep Strike, The Shadow of Chaos, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: LEGIONES DAEMONICA
+FLAMERS
+FLY
+INFANTRY
+TZEENTCH
+Ask about this unit
+‹ Fluxmaster · Improbable Shield (Aura)
+Tzeentch Soul Grinder ›
+
+######## unit tzeentch-soul-grinder · FLAMERS Tzeeeeentch
+TZEENTCH SOUL GRINDER
+180 PTS
+Vehicle
+Models
+Options
+1× Tzeentch Soul Grinder
+Harvester cannon, Iron claw, Warp gaze, Warpclaw
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Soul Grinder
+160mm
+8"
+11
+3+
+14
+7+
+5
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+DAMAGED 1-5 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Harvester cannon
+36"
+3
+3+
+10
+-1
+3
+Warp gaze
+48"
+D3
+3+
+12
+-2
+D6+2
+BLAST
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Iron claw
+5
+3+
+16
+-3
+D6+2
++
+Warpclaw
+6
+3+
+8
+-1
+2
+EXTRA ATTACKS
+ABILITIES
+Scuttling Walker
+Your Movement
+
+Movement · Your turn
+
+Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4" or less in height as if they were not there.
+
+Daemonic Allegiance
+
+When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below.
+
+KHORNE – This model is additionally equipped with: torrent of burning blood
+
+TZEENTCH – This model is additionally equipped with: warp gaze
+
+NURGLE – This model is additionally equipped with: phlegm bombardment
+
+SLAANESH – This model is additionally equipped with: scream of despair
+
+Rules
+Deadly Demise D3, The Shadow of Chaos, Deep Strike, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: LEGIONES DAEMONICA
+SOUL GRINDER
+TZEENTCH
+VEHICLE
+WALKER
+Ask about this unit
+‹ Flamers
+
+######## popup ability:tzeeeeentch|Daemon Lord of Tzeentch|While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack. · TZEENTCH SOUL GRINDER Tzeeeeentch
+ABILITY · AURA · THEIR MOVEMENT / YOUR SHOOTING
+
+Daemon Lord of Tzeentch
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.
+
+UNITLord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Damaged: 1-5 wounds remaining|While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · TZEEEEENTCH Tzeeeeentch
+ABILITY
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITTzeentch Soul Grinder
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Damaged: 1-7 wounds remaining|While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · TZEEEEENTCH Tzeeeeentch
+ABILITY
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKairos Fateweaver, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Fluxmaster|- This unit has **Stealth**.
+- Melee attacks that target this unit have -1 to **hit rolls**. · TZEEEEENTCH Tzeeeeentch
+ABILITY
+
+Fluxmaster
+This unit has Stealth.
+Melee attacks that target this unit have -1 to hit rolls.
+
+UNITFluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Formless Horror|Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a **Battle-shock test**. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase. · TZEEEEENTCH Tzeeeeentch
+ABILITY
+
+Formless Horror
+
+Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.
+
+UNITThe Changeling
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Harbinger of Death|Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+- **[LETHAL HITS]**
+- **[PRECISION]**
+- **[SUSTAINED HITS 1]** · TZEEEEENTCH Tzeeeeentch
+ABILITY · FIGHT · EITHER TURN
+
+Harbinger of Death
+
+Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:
+
+[LETHAL HITS]
+[PRECISION]
+[SUSTAINED HITS 1]
+
+UNITDaemon Prince of Chaos with wings · Neverblade
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Improbable Shield (Aura)|**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**. · TZEEEEENTCH Tzeeeeentch
+ABILITY · ENHANCEMENT · AURA
+
+Improbable Shield (Aura)
+
+LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.
+
+UNITFluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Inescapable Eye|**LEGIONES DAEMONICA TZEENTCH** model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token. · TZEEEEENTCH Tzeeeeentch
+ABILITY · ENHANCEMENT · COMMAND · YOUR TURN
+
+Inescapable Eye
+
+LEGIONES DAEMONICA TZEENTCH model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.
+
+UNITLord of Change · Inescapable Eye
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Malefic Destruction|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons. · TZEEEEENTCH Tzeeeeentch
+ABILITY · ONCE PER BATTLE · FIGHT · EITHER TURN
+
+Malefic Destruction
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons.
+
+UNITDaemon Prince of Chaos with wings · Neverblade
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Master of Magicks|In your Shooting phase, select one of the following abilities: **[IGNORES COVER]**; **[LETHAL HITS]**; **[SUSTAINED HITS D3]**. Until the end of the phase, this model’s Bolt of Change has that ability. · TZEEEEENTCH Tzeeeeentch
+ABILITY · PSYCHIC · SHOOTING · YOUR TURN
+
+Master of Magicks
+
+In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
+
+UNITLord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Mischief and Confusion|At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase. · TZEEEEENTCH Tzeeeeentch
+ABILITY · SHOOTING · THEIR TURN
+
+Mischief and Confusion
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase.
+
+UNITThe Changeling
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Neverblade|**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**. · TZEEEEENTCH Tzeeeeentch
+ABILITY · ENHANCEMENT · FIGHT · EITHER TURN
+
+Neverblade
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+UNITDaemon Prince of Chaos with wings · Neverblade
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|One Head Looks Forward|At the end of your Command phase, if this model is on the battlefield, take a **Leadership test** for this model; if that test is passed, you gain 1CP. · TZEEEEENTCH Tzeeeeentch
+ABILITY · COMMAND · YOUR TURN
+
+One Head Looks Forward
+
+At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.
+
+UNITKairos Fateweaver
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Xirat’p’s Sorcerous Barrages|At the end of your Movement phase, roll one D6 for each enemy unit within 6" of this model: on a 2-3, that unit suffers 1 **mortal wound**; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds. · TZEEEEENTCH Tzeeeeentch
+ABILITY · PSYCHIC · MOVEMENT · YOUR TURN
+
+Xirat’p’s Sorcerous Barrages
+
+At the end of your Movement phase, roll one D6 for each enemy unit within 6" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.
+
+UNITThe Blue Scribes
+
+Ask about this ability
+
+######## popup enh:scintillating-legion|Improbable Shield (Aura) · TZEEEEENTCH Tzeeeeentch
+ENHANCEMENT · SCINTILLATING LEGION · 30 PTS
+
+Improbable Shield (Aura)
+
+LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.
+
+ONFluxmaster + Pink Horrors
+
+Ask about this enhancement
+
+######## popup enh:scintillating-legion|Inescapable Eye · TZEEEEENTCH Tzeeeeentch
+ENHANCEMENT · SCINTILLATING LEGION · 15 PTS
+
+Inescapable Eye
+
+LEGIONES DAEMONICA TZEENTCH model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.
+
+ONLord of Change
+
+Ask about this enhancement
+
+######## popup enh:scintillating-legion|Infernal Puppeteer · TZEEEEENTCH Tzeeeeentch
+ENHANCEMENT · SCINTILLATING LEGION · 20 PTS
+
+Infernal Puppeteer
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9" detection range until this unit has shot.
+
+ONLord of Change
+
+Ask about this enhancement
+
+######## popup enh:scintillating-legion|Neverblade · TZEEEEENTCH Tzeeeeentch
+ENHANCEMENT · SCINTILLATING LEGION · 25 PTS
+
+Neverblade
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+ONDaemon Prince of Chaos with wings
+
+Ask about this enhancement
+
+######## popup grant:["Daemonic Allegiance","daemon-prince-of-chaos-with-wings","A 6",null] · TZEEEEENTCH Tzeeeeentch
+A 6 · GRANTED BY
+
+Daemonic Allegiance
+
+datasheet ability
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","A 15",null] · TZEEEEENTCH Tzeeeeentch
+A 15 · GRANTED BY
+
+Neverblade
+
+Enhancement
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","A 7",null] · TZEEEEENTCH Tzeeeeentch
+A 7 · GRANTED BY
+
+Neverblade
+
+Enhancement
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","AP -1",null] · TZEEEEENTCH Tzeeeeentch
+AP -1 · GRANTED BY
+
+Neverblade
+
+Enhancement
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","AP -3",null] · TZEEEEENTCH Tzeeeeentch
+AP -3 · GRANTED BY
+
+Neverblade
+
+Enhancement
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","S 10",null] · TZEEEEENTCH Tzeeeeentch
+S 10 · GRANTED BY
+
+Neverblade
+
+Enhancement
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","S 8",null] · TZEEEEENTCH Tzeeeeentch
+S 8 · GRANTED BY
+
+Neverblade
+
+Enhancement
+
+LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANTI-PSYKER 2+ · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+ANTI-PSYKER 2+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYThe Blue Scribes
+
+Ask about this rule
+
+######## popup rule:Advance · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance roll · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:BLAST · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYKairos Fateweaver, Tzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:Battle-shock test · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Charge roll · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYFluxmaster · Improbable Shield (Aura)
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6 · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:Deep Strike · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:EXTRA ATTACKS · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYTzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:Engagement Range · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Fates in Flux · TZEEEEENTCH Tzeeeeentch
+SCINTILLATING LEGION DETACHMENT RULE
+
+Fates in Flux
+
+You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.
+
+Whenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.
+
+In your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.
+
+Designer’s Note: When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.
+
+IN THIS ARMYKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYFluxmaster · Improbable Shield (Aura) (in Improbable Shield (Aura))
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 4+ · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYFluxmaster · Improbable Shield (Aura) (in Improbable Shield (Aura))
+
+Ask about this rule
+
+######## popup rule:Fights First · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:HAZARDOUS · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYKairos Fateweaver, The Changeling, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura)
+
+Ask about this rule
+
+######## popup rule:Hazard roll · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYThe Changeling, Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks), Flamers
+
+Ask about this rule
+
+######## popup rule:INDIRECT FIRE · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+INDIRECT FIRE
+
+Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).
+
+IN THIS ARMYKairos Fateweaver
+
+Ask about this rule
+
+######## popup rule:Leader · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYFluxmaster · Improbable Shield (Aura)
+
+Ask about this rule
+
+######## popup rule:Leadership test · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Lethal Hits · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Lethal Hits
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death), Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks)
+
+Ask about this rule
+
+######## popup rule:Lone Operative · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYThe Blue Scribes, The Changeling
+
+Ask about this rule
+
+######## popup rule:MOBILE · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+MOBILE
+
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+Ask about this rule
+
+######## popup rule:Normal · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:PISTOL · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYFluxmaster · Improbable Shield (Aura)
+
+Ask about this rule
+
+######## popup rule:PSYCHIC · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+PSYCHIC
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYKairos Fateweaver, The Blue Scribes (in P’tarix’s Sorcerous Syphon), The Changeling, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers
+
+Ask about this rule
+
+######## popup rule:Precision · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Precision
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death)
+
+Ask about this rule
+
+######## popup rule:Psychic · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYKairos Fateweaver, The Blue Scribes (in P’tarix’s Sorcerous Syphon), The Changeling, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Stealth · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYThe Changeling, Fluxmaster · Improbable Shield (Aura) (in Fluxmaster)
+
+Ask about this rule
+
+######## popup rule:Strategic Reserves · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:Sustained Hits · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Sustained Hits
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death), Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks)
+
+Ask about this rule
+
+######## popup rule:TORRENT · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYThe Changeling, Flamers, Tzeentch Soul Grinder (in Daemonic Allegiance)
+
+Ask about this rule
+
+######## popup rule:The Shadow of Chaos · TZEEEEENTCH Tzeeeeentch
+CHAOS DAEMONS ARMY RULE
+
+The Shadow of Chaos
+
+If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:
+
+Your deployment zone is always within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.
+At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.
+
+DAEMONIC MANIFESTATION
+
+While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).
+
+DAEMONIC TERROR
+
+While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.
+
+FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? No.
+
+FAQ (Faction Pack 1.2): Does using the Insane Bravery Stratagem on a LEGIONES DAEMONICA unit mean that unit is considered to have made a battle-shock roll? Yes, it is considered to have made a successful battle-shock roll.
+
+Ask about this rule
+
+######## popup rule:Unholy Avalanche · TZEEEEENTCH Tzeeeeentch
+CAVALCADE OF CHAOS DETACHMENT RULE
+
+Unholy Avalanche
+
+If a friendly LEGIONES DAEMONICA MOUNTED unit made a fall-back move this turn, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge.
+
+IN THIS ARMYThe Blue Scribes, Fluxmaster · Improbable Shield (Aura)
+
+Ask about this rule
+
+######## popup rule:[IGNORES COVER] · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYThe Changeling, Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks), Flamers
+
+Ask about this rule
+
+######## popup rule:[LETHAL HITS] · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death), Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks)
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death)
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death), Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks)
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS D3] · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+SUSTAINED HITS D3
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Chaos with wings · Neverblade (in Harbinger of Death), Lord of Change · Infernal Puppeteer (in Master of Magicks), Lord of Change · Inescapable Eye (in Master of Magicks)
+
+Ask about this rule
+
+######## popup rule:advance move · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:battle-shocked · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:desperate escape mode · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:destroyed · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:eligible to declare a charge · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:engaged · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:fall-back move · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:hazard rolls · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:ingress move · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:command-re-roll · TZEEEEENTCH Tzeeeeentch
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · TZEEEEENTCH Tzeeeeentch
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · TZEEEEENTCH Tzeeeeentch
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
+
+Ask about this stratagem
+
+######## popup strat:delirium-unmade · TZEEEEENTCH Tzeeeeentch
+1CP · FIGHT · THEIR TURN
+
+Delirium Unmade
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that is not within Engagement Range of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two LEGIONES DAEMONICA TZEENTCH units from your army instead (including those within Engagement Range of one or more enemy units).
+
+EFFECT
+
+Remove your units from the battlefield and place them into Strategic Reserves.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · TZEEEEENTCH Tzeeeeentch
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this stratagem
+
+######## popup strat:fateborne-nightmares · TZEEEEENTCH Tzeeeeentch
+1CP · MOVEMENT / CHARGE · YOUR TURN
+
+Fateborne Nightmares
+WHEN
+
+Your Movement phase or your Charge phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:ficklefire · TZEEEEENTCH Tzeeeeentch
+1CP · SHOOTING · YOUR TURN
+
+Ficklefire
+WHEN
+
+Your Shooting phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 mortal wound after the attacking unit has finished making its attacks.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · TZEEEEENTCH Tzeeeeentch
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYKairos Fateweaver, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster + Pink Horrors · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
+
+Ask about this stratagem
+
+######## popup strat:flickering-reality · TZEEEEENTCH Tzeeeeentch
+1CP · FIGHT · EITHER TURN
+
+Flickering Reality
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.
+
+Example: If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:from-beyond-the-veil · TZEEEEENTCH Tzeeeeentch
+2CP · MOVEMENT · EITHER TURN
+
+From Beyond the Veil
+WHEN
+
+End of the Movement phase, from the start of the battle.
+
+TARGETOne friendly LEGIONES DAEMONICA MOUNTED unit in strategic reserves.
+
+EFFECT
+
+Your unit can make an ingress move.
+
+USED BYThe Blue Scribes, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · TZEEEEENTCH Tzeeeeentch
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:impossible-eclipse · TZEEEEENTCH Tzeeeeentch
+1CP · ANY PHASE · EITHER TURN
+
+Impossible Eclipse
+WHEN
+
+Any phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield.
+
+EFFECT
+
+Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos.
+
+USED BYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye
+
+Ask about this stratagem
+
+######## popup strat:inescapable-manifestations · TZEEEEENTCH Tzeeeeentch
+1CP · MOVEMENT · THEIR TURN
+
+Inescapable Manifestations
+WHEN
+
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly LEGIONES DAEMONICA MOUNTED unit.
+
+TARGETThat LEGIONES DAEMONICA MOUNTED unit.
+
+EFFECT
+
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+
+USED BYThe Blue Scribes, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · TZEEEEENTCH Tzeeeeentch
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:pyrogenesis · TZEEEEENTCH Tzeeeeentch
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Pyrogenesis
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne LEGIONES DAEMONICA TZEENTCH unit from your army that has not been selected to shoot or fight that phase.
+
+EFFECT
+
+Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · TZEEEEENTCH Tzeeeeentch
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:warp-riders · TZEEEEENTCH Tzeeeeentch
+1CP · MOVEMENT · YOUR TURN
+
+Warp-Riders
+WHEN
+
+Your Movement phase, when a friendly LEGIONES DAEMONICA MOUNTED unit is selected to move.
+
+TARGETThat LEGIONES DAEMONICA MOUNTED unit.
+
+EFFECT
+
+Your unit has MOBILE.
+
+USED BYThe Blue Scribes, Fluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this stratagem
