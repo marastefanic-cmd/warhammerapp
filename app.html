@@ -2032,6 +2032,7 @@ function dmCalc(st, A, au, tg, kind){
   const emb = dmEmbarked(au), embLines = emb ? (au.models || []).map((l, i) => i).filter(i => emb.names.has(au.models[i].replace(/^\d+× /, '').replace(/ \(.*\)$/, ''))) : [];
   const embOf = it => { const ls = linesOf(it); return ls.length > 0 && ls.every(i => embLines.includes(i)); };
   for(const it of items) if(embOf(it)) firstOff.add(key(it));
+  for(const it of items) if(it.carrier) firstOff.add(key(it));   // (models the unit does not have yet: GW's composition's carrier)
   // the models left (st.left, as the player set them): each weapon's models from the lines that carry it; a weapon whose lines do
   // not add up to its models keeps its share of the unit
   const left = isObj(st.left) ? st.left : {}, cnt = i => parseInt(au.models[i], 10) || 1, has0 = i => left[i] != null ? Math.max(0, Math.min(cnt(i), +left[i] || 0)) : cnt(i);

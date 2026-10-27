@@ -8171,7 +8171,7 @@ const DATASHEETS = {
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
-    { kind:'ranged', weapon:'Bolt of Change', when:'Your Shooting phase, until the end of the phase (select one)', note:'[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]', from:'Master of Magicks', pick:[{ name:'[IGNORES COVER]', note:'[IGNORES COVER]' },{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS D3]', note:'[SUSTAINED HITS D3]' }], readOf:'10a7c1ef' },
+    { kind:'ranged', weapon:'Bolt of Change', when:'Your Shooting phase, its Bolt of Change, until the end of the phase (select one)', note:'[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]', from:'Master of Magicks', pick:[{ name:'[IGNORES COVER]', note:'[IGNORES COVER]' },{ name:'[LETHAL HITS]', note:'[LETHAL HITS]' },{ name:'[SUSTAINED HITS D3]', note:'[SUSTAINED HITS D3]' }], readOf:'10a7c1ef' },
     { kind:'all', when:'Damaged (1-7 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-7 wounds remaining', readOf:'e6c48f12', readBy:'derive' }
   ],
   aura:[

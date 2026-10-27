@@ -1,0 +1,131 @@
+[
+ {
+  "key": "b650793ee7e92691",
+  "where": "infernal-lance · Nurglings",
+  "verdict": "ok",
+  "why": "GW Faction Pack 1.2 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt) l.2203, Nurglings: \"Mischief Makers: Each time an enemy unit (excluding Titanic units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.\" The -1 is on every melee attack of that enemy unit whatever it targets, so it is help for every unit of the list (guard, kind melee, Nurglings included). The line keeps the TITANIC exclusion, the moment (selected to fight within Engagement Range) and the duration; nothing added. Same reading as Mischief and Confusion."
+ },
+ {
+  "key": "9a56cbab23e85e9b",
+  "where": "chaos-daemons army rule · The Shadow of Chaos",
+  "verdict": "ok",
+  "why": "Unchanged rule label: \"At the start of any phase\" (FP 1.2 Shadow of Chaos); only the FAQ label in its text changed."
+ },
+ {
+  "key": "d49899fb07983b48",
+  "where": "chaos-daemons army rule · The Shadow of Chaos",
+  "verdict": "ok",
+  "why": "Either turn, as before."
+ },
+ {
+  "key": "8d5b1ba1900030fc",
+  "where": "tzeeeeentch · The Changeling",
+  "verdict": "ok",
+  "why": "GW: \"roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase\" (FP 1.2 l.1204). \"(on a D6 roll of 2-5)\" says the same, no colon to break defLine's split; faithful."
+ },
+ {
+  "key": "e4910699bf8b7ab9",
+  "where": "tzeeeeentch · Lord of Change",
+  "verdict": "fix",
+  "why": "The reading is right (GW: \"In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.\", FP 1.2 l.1151). But on screen the footnote does not say which weapon: it renders after the last ranged row, Rod of sorcery (\"Rod of sorcery … PSYCHIC | Your Shooting phase, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)\", snapshot ~l.385-393), so a player can read it as the rod's too. app.html block() puts a weapon footnote after the others and relies on its words to name the weapon (\"one weapon's footnote (x.weapon: its when names the models)\"; Paired Krumpas' when names \"Kustom Krumpa …\"; Harbinger of Death's says \"its hellforged weapons\"). Fix: verify/sources/hand/tzeeeeentch.json readings.datasheets[\"Lord of Change\"].mods[from \"Master of Magicks\"].when (lands in data.js DATASHEETS chaos-daemons/lord-of-change mods; readOf 10a7c1ef unchanged) = \"Your Shooting phase, its Bolt of Change, until the end of the phase (select one)\".",
+  "fix": {
+   "when": "Your Shooting phase, its Bolt of Change, until the end of the phase (select one)"
+  }
+ },
+ {
+  "key": "80a51828fa2da38a",
+  "where": "tzeeeeentch · Fluxmaster · Fluxmaster",
+  "verdict": "ok",
+  "why": "GW \"■ This unit has Stealth. ■ Melee attacks that target this unit have ‑1 to hit rolls.\" (FP 1.2 l.1308-1310); the def now says \"this unit\". The small FLUXMASTER label in front is the part the ability is on (app.html defLine), exactly as the signed-off \"MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP\" and \"SCARAB OCCULT TERMINATORS Rites of Coalescence: … against this unit\": with the words saying \"this unit\" it reads as source, not reach. Consistent, not misleading."
+ },
+ {
+  "key": "d835497b18412444",
+  "where": "tzeeeeentch · Fluxmaster · Split",
+  "verdict": "ok",
+  "why": "The three FAQs quoted word for word from FP 1.2 FAQS (l.3936-3956, checked by string match, including GW's \"it's\" and \"Yes\" without a full stop), and each is about Split: Split above starting strength; a model destroyed by its own [HAZARDOUS] weapon; damage other than an attack."
+ },
+ {
+  "key": "ec8fd49776a3bd0b",
+  "where": "tzeeeeentch · Fluxmaster · Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+  "verdict": "ok",
+  "why": "The other three FAQs (l.3945-3981), word for word, are about the switch to the Blue Horrors datasheet that this box rules: returning Pink Horrors to such a unit; returning above starting strength; the Blue Horrors unit's starting strength. Grouping matches the pack."
+ },
+ {
+  "key": "e4e9aaf0d39afd74",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "GW \"| PINK HORRORS: Pink |BLUE HORRORS: Blue | BRIMSTONE HORRORS: Brimstone\" (FP 1.2 l.1537-1538): all three now shown, each for its models (\"Brimstone Horrors only: BRIMSTONE\")."
+ },
+ {
+  "key": "043cbd5d982aa06d",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "No more unplaced lines: the Models box shows 1× Fluxmaster and 10× Pink Horror only, the Bases tab no \"1× … (ref. only)\" lines. The four rows carry \"BLUE/BRIMSTONE HORRORS ADDED BY SPLIT\", from GW's \"Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws. Every Brimstone Horror … Coruscating Yellow Flames; yellow claws.\" (l.1552-1556); Blue→Blue flames/claws, Brimstone→Yellow flames/claws, right pairing."
+ },
+ {
+  "key": "bd71b9434293b1d0",
+  "where": "deviations-bsdata.json · nurglings · ability.tag",
+  "verdict": "ok",
+  "why": "FP 1.2 l.2203 \"Mischief Makers:\" untagged; Wahapedia the same. GW wins over BSData's \"(Aura)\"."
+ },
+ {
+  "key": "11f7dad580a7261f",
+  "where": "deviations-bsdata.json · fluxmaster-pink-horrors · kw",
+  "verdict": "ok",
+  "why": "GW prints BRIMSTONE: FP 1.2 l.1537-1538 as well as Wahapedia."
+ },
+ {
+  "key": "695bf9f6f1472e9c",
+  "where": "deviations-nr.json · nurglings · abilities[Mischief Makers (Aura)].tag",
+  "verdict": "ok",
+  "why": "As bd71b9434293b1d0, for New Recruit's name."
+ },
+ {
+  "key": "1870b9d57264bc1e",
+  "where": "infernal-lance · Nurglings · Mischief Makers (approved 74ec1cd7b0afc248: tag \"Aura\")",
+  "verdict": "ok",
+  "why": "Re-judged correctly: no tag (GW untagged), the When targeted def replaced by a guard for every unit (see b650793ee7e92691). The diff (scratchpad/tzeentch-work/infernal-lance-snapshot.diff, identical to my own gate run) reads right: \"Aura ·\" dropped from the ability labels and popup, the guard line added on each Knight page and replacing the Nurglings' own line; the counts go up by one. Mischief Makers' TITANIC exclusion is about the attacker, so the guard rightly shows on the TITANIC Knights too."
+ },
+ {
+  "key": "860b411915a00152",
+  "where": "chaos-daemons army rule · The Shadow of Chaos · FAQ line",
+  "verdict": "ok",
+  "why": "FP 1.2 FAQS: \"Q: If there are no objective markers within No Man’s Land or within my opponent’s deployment zone, does The Shadow of Chaos affect those areas of the battlefield? A: No.\" (l.~3970): it is GW's, so \"FAQ (Faction Pack 1.2):\"."
+ },
+ {
+  "key": "68f91a153d1c6ebf",
+  "where": "tzeeeeentch · The Changeling · Mischief and Confusion guard",
+  "verdict": "ok",
+  "why": "As 8d5b1ba1900030fc: same meaning as GW's \"roll one D6: on a 2-5\"."
+ },
+ {
+  "key": "49e5f5accefd8130",
+  "where": "verify/snapshots/the-exiled-legion.txt",
+  "verdict": "ok",
+  "why": "Three relabelled lines, nothing else (diff identical to my gate run)."
+ },
+ {
+  "key": "07aeaf3999cfdd85",
+  "where": "verify/snapshots/infernal-lance.txt",
+  "verdict": "ok",
+  "why": "As 1870b9d57264bc1e."
+ },
+ {
+  "key": "a07b39132e36719c",
+  "where": "verify/snapshots/fellhammer-siege-task-force.txt",
+  "verdict": "ok",
+  "why": "Unchanged from round 1 (Indirect Fire, GW Core Rules 24.19)."
+ },
+ {
+  "key": "d65b976bf919c90d",
+  "where": "verify/snapshots/shooty.txt",
+  "verdict": "ok",
+  "why": "Unchanged from round 1."
+ },
+ {
+  "key": "02ceb78a93524311",
+  "where": "Fluxmaster When targeted line: label",
+  "verdict": "ok",
+  "why": "As 80a51828fa2da38a: label = source part, words = \"this unit\", as the Meganobz precedent."
+ }
+]

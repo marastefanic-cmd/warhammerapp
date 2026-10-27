@@ -227,7 +227,7 @@
      {
       "kind": "ranged",
       "weapon": "Bolt of Change",
-      "when": "Your Shooting phase, until the end of the phase (select one)",
+      "when": "Your Shooting phase, its Bolt of Change, until the end of the phase (select one)",
       "note": "[IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]",
       "from": "Master of Magicks",
       "pick": [
