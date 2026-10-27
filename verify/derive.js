@@ -655,7 +655,8 @@ function optionsOf(t, table){
     opts.push(...(bold.length ? bold : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line')));
   }
   // army-building limits ("**Incursion:** Up to 500 pts") are not options, and nor is a worked example ("**Example:** …", Martial Ka'tah)
-  for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text)) || /^examples?$/i.test(opts[i].name)) opts.splice(i, 1);
+  // or a designer's note ("**Designer’s Note:** When using fast dice rolling, …", Fates in Flux)
+  for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text)) || /^examples?$/i.test(opts[i].name) || /^designer['’]s note$/i.test(opts[i].name)) opts.splice(i, 1);
   return opts;
 }
 
@@ -693,7 +694,10 @@ function seqTrigger(text){
   return plain(rulesText(text)).split(/\n+/).some(par => {
     const ss = sentences(par).map(x => NOT_TIMING.reduce((y, r) => y.replace(r.re, ' '), x).replace(PAST, ' '));
     const opensAct = ss.length && SEQ.activation.test(ss[0]);
-    return ss.some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && !SEQ.activation.test(x) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(x)));
+    // (a sentence that opens with its moment, "At the start of your opponent's Shooting phase, select one enemy unit … : until the end of the
+    // phase, each time a model in that enemy unit makes an attack, …" (Mischief and Confusion): the activation after it is its effect's)
+    const opensMoment = x => /^\W*at the (?:start|end) of\b/i.test(x) && SEQ.moment.test(x) && x.search(SEQ.moment) < x.search(SEQ.activation);
+    return ss.some(x => (SEQ.moment.test(x) || SEQ.command.test(x) || SEQ.choice.test(x)) && (!SEQ.activation.test(x) || opensMoment(x)) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(x)));
   });
 }
 // a unit activation as the item's own trigger: its WHEN line; or a first sentence opening with "When" (Diabolic Power: "When this unit is

@@ -98,5 +98,15 @@
   },
   "reason": "GW's guide gives Ghazghkull Thraka's Makari a 25mm base. In 11th edition Makari is no model of the unit: the datasheet's ability \"Makari, Hoist Dat Banner!\" places a Makari token, and New Recruit lists the unit as \"1x Ghazghkull Thraka\". (A Makari model used as that token would stand on 25mm.)",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3501 (ORKS): \"Ghazghkull Thraka: Makari  25mm\"; verify/sources/nr/melee.txt line 199 and verify/sources/nr/ooga-booga.txt line 361 (\"1x Ghazghkull Thraka\"); verify/sources/nr/melee.txt lines 221-223 (\"Makari, Hoist Dat Banner!\" … \"Place one Makari token next to the unit\"); verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html (\"Makari token\")."
+ },
+ {
+  "datasheet": "chaos-daemons/pink-horrors",
+  "row": "Blue/Brimstone Horror (ref. only)",
+  "guide": {
+   "section": "CHAOS DAEMONS",
+   "entry": "Blue Horrors"
+  },
+  "reason": "The Pink Horrors datasheet's second profile is for the Blue and Brimstone Horrors its Split ability adds to the unit (GW: \"BLUE HORROR/BRIMSTONE HORROR\"). GW's base size guide has no row for them under Pink Horrors (its \"Pink Horrors  32mm\" is the unit's Pink Horror models); its Blue Horrors row is the base of a Blue Horror model, and Wahapedia's datasheet gives this profile 25mm too. Brimstone Horrors have no row of their own in the guide.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\", line 2951: \"Pink Horrors  32mm\"; verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"BLUE HORROR/BRIMSTONE HORROR (⌀25mm)\"."
  }
 ]

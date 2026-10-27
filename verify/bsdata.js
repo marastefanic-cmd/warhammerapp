@@ -762,6 +762,10 @@ function buildUnit(army, u, um, cat, force, issues) {
     const x = [...(u.ranged || []), ...(u.melee || []), ...(u.abilities || [])].find((y) => (y.group || y.name) === name) || {};
     const host = (x.who && roots.find((r) => nn(r.node.name) === nn(x.who))) || roots[roots.length - 1];
     const p = gearCandidates(host.node, ((um.gear || {})[name]) || name)[0];
+    // (a weapon profile of the unit's own entry, which no model carries: BSData's "Coruscating Blue flames (ref. only)" on Pink Horrors,
+    // counted with the unit's weapons above)
+    const ownW = (host.node.profiles || []).some((pr) => /Weapons$/.test(pr.typeName || '') && (({ group, pname }) => nn(group || pname) === nn(name))(parseWeaponName(pr.name, host.node.name)));
+    if (!p && ownW) { checked('gear'); continue; }
     if (!p) { fail('unplaced', name, '', `no BSData wargear "${name}" for ${host.node.name}`); continue; }
     addChain(host, p, Number(x.n) || 1);
   }
@@ -939,7 +943,11 @@ function grantsOf(army, u, prof, appKw) {
         // (a value BSData sets from an option the ability names: the Daemon Prince of Chaos's "Khorne" selection, and Daemonic
         // Allegiance's "If this model has the KHORNE keyword, add 2 to the Strength characteristic")
         const byWord = (a) => c.by.some((b) => b && new RegExp('\\b' + nn(b).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(flat(a.text)));
-        const hits = (u.abilities || []).filter(says);
+        let hits = (u.abilities || []).filter(says);
+        // (two that say it: the one that names the weapon, Daemonic Allegiance's "add 3 to the Attacks characteristic of this model’s
+        // infernal cannon" before Neverblade's "melee weapons")
+        const wpn = String(prof.group || prof.pname || '').toLowerCase();
+        if (hits.length > 1 && wpn) { const named = hits.filter((a) => flat(a.text).toLowerCase().includes(wpn)); if (named.length === 1) hits = named; }
         if (hits.length === 1) names.add(hits[0].name);
         else if (hits.length > 1) names.add(`(ambiguous: ${hits.map((a) => a.name).join(' / ')})`);
       }

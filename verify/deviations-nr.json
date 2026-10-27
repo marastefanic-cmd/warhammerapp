@@ -2067,5 +2067,45 @@
   "reason": "New Recruit’s export (catalogue revision 14) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3219: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/defilers-and-friends.json: Base 120x92mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "the-blue-scribes",
+  "field": "stats[The Blue Scribes].base",
+  "app": "Large Flying",
+  "source": "60mm Flying",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 60mm Flying; GW’s base size guide (Event Companion) has Large Flying. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2974: \"The Blue Scribes  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: Base 60mm Flying.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "stats[Fluxmaster].base",
+  "app": "Large Flying",
+  "source": "60mm Flying",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 60mm Flying; GW’s base size guide (Event Companion) has Large Flying. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2941: \"Fluxmaster  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: Base 60mm Flying.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "stats[Blue/Brimstone Horror (ref. only)].base",
+  "app": "25mm",
+  "source": "32mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as 32mm; verify/deviations-bases.json (declared) has 25mm. GW wins (base sizes too).",
+  "evidence": "verify/deviations-bases.json (chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only)); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927: \"Blue Horrors  25mm\"; verify/sources/nr-json/tzeeeeentch.json: Base 32mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "tzeentch-soul-grinder",
+  "field": "stats[Soul Grinder].base",
+  "app": "160mm",
+  "source": "~160mm",
+  "reason": "New Recruit’s export (catalogue revision 2) gives the base as ~160mm; GW’s base size guide (Event Companion) has 160mm. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2971: \"Soul Grinder  160mm\"; verify/sources/nr-json/tzeeeeentch.json: Base ~160mm.",
+  "by": "verify/from-json.js"
  }
 ]

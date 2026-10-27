@@ -129,6 +129,15 @@ chaos-daemons Bloodletters
 chaos-daemons Bloodcrushers
 chaos-daemons Beasts-Of-Nurgle
 chaos-daemons Flesh-Hounds
+chaos-daemons Kairos-Fateweaver
+chaos-daemons The-Blue-Scribes
+chaos-daemons The-Changeling
+chaos-daemons Daemon-Prince-Of-Chaos-With-Wings
+chaos-daemons Fluxmaster
+chaos-daemons Lord-of-Change
+chaos-daemons Pink-Horrors
+chaos-daemons Flamers
+chaos-daemons Soul-Grinder
 chaos-space-marines Vashtorr-The-Arkifane
 chaos-space-marines Dark-Apostle
 chaos-space-marines Lord-Discordant-On-Helstalker

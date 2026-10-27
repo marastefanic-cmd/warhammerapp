@@ -27,7 +27,10 @@ function make(ROOT, factionId) {
     // Wahapedia numbers a second page of a name ("Impulsor-1": the Black Templars'); a name whose only page is numbered
     // ("Wardens-of-Ultramar-1") is that page
     const num = hit ? [] : wahaLinks.filter(l => /-\d+$/.test(l) && keys(l.replace(/-\d+$/, '')).some(k => want.includes(k)));
-    return hit || (num.length === 1 ? num[0] : null) || nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-');
+    // BSData's entry for one choice of a Daemonic Allegiance datasheet, named with the god it chose ("Tzeentch Soul Grinder"): GW's one
+    // datasheet of the name without it (Soul-Grinder), when the page links no datasheet of the whole name
+    const god = /^(Khorne|Tzeentch|Nurgle|Slaanesh) (.+)$/.exec(nm(n)), godHit = !hit && !num.length && god ? wahaLinks.find(l => keys(l).some(k => keys(god[2]).includes(k))) : null;
+    return hit || (num.length === 1 ? num[0] : null) || godHit || nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-');
   }
 
 

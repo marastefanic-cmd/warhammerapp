@@ -259,9 +259,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           const ss = par.split(/(?<=[.!?])\s+/).map(z => z.replace(/\buntil the (?:start|end) of [^,.;]*/gi, ' ').replace(/\b(?:once|twice) per \w+ phase\b/gi, ' ')
             .replace(/\b(?:was|were)\b[^.;:]*?\b(?:at the )?(?:start|end) of (?:the|that) (?:turn|phase|battle round)\b/gi, ' '));
           const opensAct = ss.length && ACT.test(ss[0]);
+          // (a sentence that opens with its moment: an activation after it is its effect's, Mischief and Confusion)
+          const MOM = /\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i;
+          const opensMoment = z => /^\W*at the (?:start|end) of\b/i.test(z) && MOM.test(z) && z.search(MOM) < z.search(ACT);
           return ss.some(z => (/\b(?:start|end) of (?:the |your |your opponent['’]s |each |every |any |that |a )?(?:first |next )?(?:battle round|turn|(?:command|movement|shooting|charge|fight) phase|phase)\b/i.test(z) ||
             /\b(?:your |your opponent['’]s |the |each |either player['’]s )command phase\b/i.test(z) || /\b(?:your |your opponent['’]s |the |each |either player['’]s )?(?:movement|shooting|charge|fight) phase,?[^.]*?\b(?:you can|select|choose)\b/i.test(z)) &&
-            !ACT.test(z) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(z))); }); };
+            (!ACT.test(z) || opensMoment(z)) && (!opensAct || /\b(?:you can|select|choose)\b/i.test(z))); }); };
       const listed = (e, x, once) => !!(seqOwn(x, e) || (e && e.x && x.at) || once);
       if(document.querySelector('#view [data-strat]')) out.push(['checklist-sections', armyId, 'a stratagem is listed']);
       const ckRules = factionOf(A).armyRules.concat(detachmentsOf(A).flatMap(d => d.rule ? [d.rule].concat(d.moreRules || []) : []));
