@@ -54,6 +54,11 @@ const P = {
 };
 const PTS = '51b2-306e-1021-d207';             // BSData cost type "pts"
 const WEAPON_TYPES = ['Ranged Weapons', 'Melee Weapons'];
+// (a profile of another type with a weapon's characteristics is a weapon: the Tesseract Vault's "C'tan Powers", GW's RANGED WEAPONS
+// [C'TAN POWER]; verify/from-json.js reads them so)
+const weaponShaped = (p) => p.typeName !== 'Unit' && ['Range', 'A', 'S', 'AP', 'D'].every((k) => (p.chars || p.characteristics || []).some((c) => c.name === k)) && (p.chars || p.characteristics || []).some((c) => c.name === 'BS' || c.name === 'WS');
+const isWeaponProf = (p) => WEAPON_TYPES.includes(p.typeName) || weaponShaped(p);
+const weaponKind = (p, ch) => p.typeName === 'Ranged Weapons' || (!WEAPON_TYPES.includes(p.typeName) && !/^melee$/i.test(ch.Range || '')) ? 'ranged' : 'melee';
 
 /* ---------------------------------------------------------------------
    Normalisation (the whole list; the report quotes it)
@@ -743,6 +748,10 @@ function buildUnit(army, u, um, cat, force, issues) {
       // the models line names the bundle whose weapon the gear names (the Shield-Captain's "Paragon Blade & Praesidium Shield",
       // which holds its Eternity-pattern Paragon Blade): the place the weapon took is that bundle's one selection
       if (it.line && own.some((x, i) => i !== j && picks[i] && picks[i] !== 'same' && x.parent === it.parent && it.cands.some((q) => pathKey(q) === pathKey(picks[i])))) { picks[j] = 'same'; return; }
+      // (one selection whose profiles are separate weapons of another type, the Tesseract Vault's "C'tan Powers": each weapon the gear
+      // names is that selection's)
+      const leafOf = (q) => q[q.length - 1], shaped = (q) => { const n = leafOf(q); const ps = n ? profilesOf(n) : []; return ps.length > 1 && ps.every((p) => weaponShaped(p) && !WEAPON_TYPES.includes(p.typeName)); };
+      if (own.some((x, i) => i !== j && picks[i] && picks[i] !== 'same' && x.parent === it.parent && it.cands.some((q) => pathKey(q) === pathKey(picks[i]) && shaped(q)))) { picks[j] = 'same'; return; }
       const k = own.findIndex((x, i) => i < j && picks[i] && x.name === it.name && x.parent === it.parent);
       if (k < 0) return;
       const n = (times.get(k) || 1) + 1, leaf = picks[k][picks[k].length - 1];
@@ -840,7 +849,7 @@ function unitFacts(roots) {
   for (const s of all) {
     if (s.hidden) continue;
     for (const c of s.cats) { const ce = SRC.get(c); if (ce && !catHidden(ce, s)) { F.cats.add(nn(ce.name)); F.catWhere[nn(ce.name)] = s.where(); } }
-    const isWeapon = s.profiles.some((p) => WEAPON_TYPES.includes(p.typeName));
+    const isWeapon = s.profiles.some(isWeaponProf);
     for (const p of s.profiles) {
       if (p.hidden) continue;
       const ch = Object.fromEntries(p.chars.map((c) => [c.name, c.value]));
@@ -848,9 +857,9 @@ function unitFacts(roots) {
         let count = s.count;
         if (s.kind === 'unit') count = s.desc(false).filter((d) => d.kind === 'model' && !d.profiles.some((q) => q.typeName === 'Unit' && !q.hidden)).reduce((a, d) => a + d.count, 0) || 1;
         F.stats.push({ root: s.root, name: nn(p.name), ch, count, changes: p.changes || [], where: s.where() });
-      } else if (WEAPON_TYPES.includes(p.typeName)) {
+      } else if (isWeaponProf(p)) {
         const w = parseWeaponName(p.name, s.node.name);
-        F.weapons.push({ root: s.root, kind: p.typeName === 'Ranged Weapons' ? 'ranged' : 'melee', ...w, ch, kw: kwList(ch.Keywords), count: s.count, enh: !!s.isEnhancement, changes: p.changes || [], where: `${s.where()} › ${p.name}` });
+        F.weapons.push({ root: s.root, kind: weaponKind(p, ch), ...w, ch, kw: kwList(ch.Keywords), count: s.count, enh: !!s.isEnhancement, changes: p.changes || [], where: `${s.where()} › ${p.name}` });
       } else {
         const text = p.chars.map((c) => c.value).join('\n');
         F.abilities.push({ root: s.root, name: nn(p.name), typeName: p.typeName, text, sel: s, infoGroup: p.infoGroup || null, enh: !!s.isEnhancement, where: `${s.where()} › ${p.name}` });
@@ -877,7 +886,7 @@ function datasheetAbilities(root) {
   const out = []; const q = [[root.node, root.node.name]]; const seen = new Set();
   while (q.length) {
     const [n, w] = q.shift();
-    for (const p of profilesOf(n)) if (p.typeName && p.typeName !== 'Unit' && !WEAPON_TYPES.includes(p.typeName)) {
+    for (const p of profilesOf(n)) if (p.typeName && p.typeName !== 'Unit' && !isWeaponProf(p)) {
       out.push({ root, name: nn(p.name), typeName: p.typeName, text: (p.characteristics || []).map((c) => c.$text || '').join('\n'), where: `${w} › ${p.name} (not selected in this list)` });
     }
     for (const k of kids(n)) { const key = k.id + '|' + k.linkId; if (seen.has(key) || /Enhancements/.test(k.name)) continue; seen.add(key); q.push([k, `${w} › ${k.name}`]); }

@@ -786,7 +786,8 @@ const usedUpdates = new Set();
 // Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
 // changes the datasheet's Bloody Fury (Wahapedia, BSData and New Recruit name it so; the new text is that ability's)
 const TITLE_TYPOS = { 'chaos terminators, blood fury ability': 'chaos terminators, bloody fury ability' };
-const titleN = e => { const t = norm(e.title).replace(/['"]/g, ''); return TITLE_TYPOS[t] || t; };
+// (an ARMY RULES title naming the rule with its kind, the Necrons pack's "Reanimation Protocols Army Rule": the rule's name)
+const titleN = e => { const t = norm(e.title).replace(/['"]/g, '').replace(/ army rule$/, ''); return TITLE_TYPOS[t] || t; };
 // a datasheet name in a Rules Updates title: at its start or after a separator, not the end of a longer name
 // ("Eightbound" is not in "Exalted Eightbound, Rend and Tear Ability")
 const nameInTitle = (n, t) => new RegExp('(^|[,–-]|(?<!\\p{L}) |(?<=\\band) )' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(,| –| -|$)', 'u').test(t);

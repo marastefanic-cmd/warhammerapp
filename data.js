@@ -47,6 +47,9 @@ const RULES = {
   // with that weapon's range (the Faction Pack's Armiger Moirax: 12", Acastus Knight Asterius: 24"), so each weapon's own words, named
   // by its weapon, as its datasheet prints them; the lists have one: the Knight Defender's (Wahapedia, Knight Defender datasheet)
   'Conversion': '**Conversion beam obliterator** (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18" away from the bearer, an unmodified successful **Hit roll** of 4+ scores a Critical Hit.',
+  // [C’TAN POWER]: no core or glossary definition (GW's Core Rules, Wahapedia core rules): the keyword marks the C’tan Powers
+  // weapons of the Tesseract Vault's Powers of the C’tan (Wahapedia, Tesseract Vault datasheet), whose words are the entry, named by it
+  'C’tan Power': '**Powers of the C’tan** (Tesseract Vault): In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).',
   'Hazardous': 'Each time a unit is **selected to shoot** or **selected to fight**, after that unit has resolved all of its attacks, make a number of **hazard rolls** (06.03) for that unit equal to the number of **[HAZARDOUS]** weapons you selected in the Select Weapons step.',
   'Heavy': 'In your Shooting phase, each time an attack is made with a **[HEAVY]** weapon, add 1 to the **hit roll** if all of the following apply to the attacking unit:\n- That unit is **unengaged**.\n- That unit was not set up on the battlefield this turn.\n- No model in that unit has moved more than 3" this turn.',
   'Ignores Cover': 'Each time an attack is made with an **[IGNORES COVER]** weapon, the target cannot have the **benefit of cover** against that attack (13.08), including from rules that give a model or unit the **benefit of cover** (e.g. **Stealth**).',
@@ -110,7 +113,7 @@ const RULES = {
 
 // Which RULES entry a keyword or rule chip opens ("RAPID FIRE 4" -> "Rapid Fire").
 // where a RULES entry comes from when it is not a core rule
-const RULE_SRC = { 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing', 'Conversion':'weapon ability each datasheet defines for its own weapon (Knight Defender datasheet: conversion beam obliterator)', 'Daemonic Pact':'Chaos Daemons army rule (Legiones Daemonica allies)', 'Assigned Agents':'Imperial Agents army rule (Agents of the Imperium units in another army)' };
+const RULE_SRC = { 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing', 'Conversion':'weapon ability each datasheet defines for its own weapon (Knight Defender datasheet: conversion beam obliterator)', 'C’tan Power':'weapon keyword of the C’tan Powers weapons (Tesseract Vault datasheet: Powers of the C’tan)', 'Daemonic Pact':'Chaos Daemons army rule (Legiones Daemonica allies)', 'Assigned Agents':'Imperial Agents army rule (Agents of the Imperium units in another army)' };
 const RULE_ALIASES = [
   [/^supa-hazardous/i, 'Supa-hazardous'], [/^pulse jet move$/i, 'Pulse Jet Move'], [/^support$/i, 'Support'],
   [/^(below |at |at or below )?(starting|half)[- ]strength$/i, 'Starting Strength'], [/^towering$/i, 'Plunging Fire'], [/^(select|choosing) weapons?$/i, 'Select Weapons'],
@@ -125,7 +128,7 @@ const RULE_ALIASES = [
   [/^melta/i, 'Melta'], [/^lance/i, 'Lance'], [/^super-heavy walker/i, 'Super-Heavy Walker'],
   [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'], [/^damaged \d+$/i, 'Damaged'],
   [/^psychic$/i, 'Psychic'],
-  [/^harpooned$/i, 'Harpooned'], [/^conversion$/i, 'Conversion'], [/^daemonic pact$/i, 'Daemonic Pact'], [/^assigned agents$/i, 'Assigned Agents'],
+  [/^harpooned$/i, 'Harpooned'], [/^conversion$/i, 'Conversion'], [/^c['’]tan power$/i, 'C’tan Power'], [/^daemonic pact$/i, 'Daemonic Pact'], [/^assigned agents$/i, 'Assigned Agents'],
   [/^hazard(ous)? (roll|test)s?$/i, 'Hazard Roll'],
   [/^mortal wounds?$/i, 'Mortal Wounds'],
   [/^battle-shock/i, 'Battle-shock'],
@@ -1700,6 +1703,48 @@ const FACTIONS = {
           { id:'ruinations-bounty', gist:'Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].', gistOf:'872a02da', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability', note:'[LETHAL HITS] and [SUSTAINED HITS 1]' }, readOf:'872a02da', name:'Ruination’s Bounty', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Havocs','Obliterators'] }, when:'Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**.' },
           { id:'snare-of-fire', gist:'Your opponent’s Movement phase, an enemy unit ends a move within 8" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3".', gistOf:'388b5e8e', name:'Snare of Fire', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Havocs'] }, when:'Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly **unengaged HAVOCS** unit.', target:'That **HAVOCS** unit.', effect:'Your unit can make a **normal move** of up to D3+3".' },
           { id:'undying-hatred', gist:'Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.', gistOf:'7e2a015e', def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T', defOf:'7e2a015e', name:'Undying Hatred', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Havocs','Obliterators'] }, when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.', target:'That **HAVOCS/OBLITERATORS** unit.', effect:'Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.' }
+        ]
+      }
+    }
+  },
+  'necrons': {
+    name: 'Necrons',
+    // army rules: Wahapedia, Necrons, Army Rules (the ones the list’s units name), written by verify/from-json.js
+    armyRules: [
+      { name:'Reanimation Protocols', ph:['command'], turn:'your', text:'If your Army Faction is **NECRONS**, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its **Reanimation Protocols**:\n- When a unit’s **Reanimation Protocols** activate, that unit **heals** D3 wounds.' }
+    ],
+    detachments: {
+      // Obeisance Phalanx: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'obeisance-phalanx': {
+        name:'Obeisance Phalanx', dispositions:['Disruption'], dp:2,
+        rule:{ name:'Worthy Foes', needs:{ any:['Noble','Lychguard','Triarch'] }, ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' }, text:'In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**.', mods:[{ kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }] },
+        enhancements:[
+          { name:'Honourable Combatant', pts:10, text:'**OVERLORD** model only. Each time the bearer’s unit destroys an enemy **CHARACTER** unit, your opponent loses 1CP if they have any.' },
+          { name:'Unflinching Will', pts:20, text:'**OVERLORD** model only. The bearer’s melee weapons have the **[PRECISION]** and **[ANTI-INFANTRY 5+]** abilities.' },
+          { name:'Warrior Noble', pts:15, text:'**OVERLORD** model only. Each time a melee attack targets the bearer’s unit, subtract 1 from the **Hit roll**.' },
+          { name:'Eternal Conqueror', pts:25, text:'**OVERLORD** model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the **Hit roll**.' }
+        ],
+        stratagems:[
+          { id:'your-time-is-nigh', gist:'Any phase, just after your opponent’s WARLORD is destroyed, your NECRONS WARLORD: until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, -1 to the result.', gistOf:'0c88da83', name:'Your Time Is Nigh', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Necrons','Warlord'] }, when:'Any phase, just after your opponent’s **WARLORD** is destroyed.', target:'Your **NECRONS WARLORD**.', effect:'Until the end of the battle, each time an enemy unit takes a Battle-shock or **Leadership test**, subtract 1 from the result.' },
+          { id:'enslaved-artifice', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, readOf:'7b4f9a4d', gist:'Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+.', gistOf:'7b4f9a4d', name:'Enslaved Artifice', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Necrons'], none:['Titanic'] }, when:'Your Shooting phase or the Fight phase.', target:'One **NECRONS** unit from your army (excluding **TITANIC** units) that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
+          { id:'nanoassembly-protocols', def:'Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase', defOf:'65636b40', gist:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit.', gistOf:'65636b40', name:'Nanoassembly Protocols', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Necrons','Vehicle'] }, when:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.', target:'One **NECRONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.' },
+          { id:'sentinels-of-eternity', gist:'Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed.', gistOf:'80c9b60c', name:'Sentinels of Eternity', cp:1, phases:['fight'], turn:'either', needs:{ any:['Lychguard','Triarch Praetorians'] }, when:'Fight phase, just after an enemy unit has selected its targets.', target:'One **LYCHGUARD** or **TRIARCH PRAETORIANS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.', effect:'Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play.' },
+          { id:'suffer-no-rival', mod:{ kind:'melee', when:'Fight phase, not yet selected to fight, until the end of the phase', note:'[PRECISION]' }, readOf:'ba7f39e2', gist:'Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION].', gistOf:'ba7f39e2', name:'Suffer No Rival', cp:1, phases:['fight'], turn:'either', needs:{ any:['Lychguard','Triarch'] }, when:'Fight phase.', target:'One **LYCHGUARD** or **TRIARCH** unit from your army that has not been selected to fight this phase.', effect:'Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability.' },
+          { id:'territorial-obsession', gist:'Your Command phase, your LYCHGUARD or TRIARCH unit: until the start of your next Command phase, +1 OC for its models (+3 instead if it is a VEHICLE unit).', gistOf:'530d51d4', name:'Territorial Obsession', cp:1, phases:['command'], turn:'your', needs:{ any:['Lychguard','Triarch'] }, when:'Your Command phase.', target:'One **LYCHGUARD** or **TRIARCH** unit from your army.', effect:'Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the **VEHICLE** keyword, add 3 to the Objective Control characteristic instead.' }
+        ]
+      },
+      // The Phaeron’s Armoury: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'the-phaerons-armoury': {
+        name:'The Phaeron’s Armoury', dispositions:['Priority Assets'], dp:1,
+        rule:{ name:'Empowered Engines', needs:{ all:['Faction: Necrons','Titanic','Fly'] }, ph:['movement'], turn:'your', text:'Friendly **NECRONS TITANIC FLY** units have +6" **M**.\nThis **detachment** has the **HYPERCRYPT** tag and cannot be taken with another **HYPERCRYPT** detachment.' },
+        enhancements:[
+          { name:'Prelocational Optimiser', pts:25, text:'**NECRONS** model only. When this unit is **selected to shoot**, if this unit was set up using a Monolith’s **Eternity Gate** ability this turn, this unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- Or: **[SUSTAINED HITS 1]**.' },
+          { name:'Mortality Shroud (Aura)', pts:10, upgrade:true, text:'**OBELISK** unit only. In your opponent’s Battle-shock step, if an enemy unit within 8" of this unit is **below starting strength**, that enemy unit makes a **battle-shock roll**.' }
+        ],
+        stratagems:[
+          { id:'subsurface-quantumweave', def:'Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked', defOf:'afa23109', gist:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked.', gistOf:'afa23109', name:'Subsurface Quantumweave', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Necrons','Titanic','Fly'] }, when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **NECRONS TITANIC FLY** unit.', target:'That **NECRONS TITANIC FLY** unit.', effect:'Attacks that target your unit have -1 **AP** until that enemy unit has attacked.' },
+          { id:'particle-pulse', gist:'Start of your Shooting phase, your NECRONS TITANIC FLY unit: one visible enemy unit within 12" of it has +3" detection range.', gistOf:'90433c39', name:'Particle Pulse', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Necrons','Titanic','Fly'] }, when:'Start of your Shooting phase.', target:'One friendly **NECRONS TITANIC FLY** unit.', effect:'Select one **visible** enemy unit within 12" of your unit. That enemy unit has +3" **detection range**.' },
+          { id:'cosmic-storm', mod:{ kind:'ranged', weapon:'Tesla sphere', when:'Your Shooting phase, selected to shoot: its Tesla Sphere weapons', note:'+1 AP' }, readOf:'74f0211f', gist:'Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP.', gistOf:'74f0211f', name:'Cosmic Storm', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Obelisk','Tesseract Vault'] }, when:'Your Shooting phase, when a friendly **OBELISK**/**TESSERACT VAULT** unit is **selected to shoot**.', target:'That **OBELISK/TESSERACT VAULT** unit.', effect:'Your unit’s Tesla Sphere weapons have +1 **AP**.' }
         ]
       }
     }
@@ -5239,6 +5284,136 @@ const ARMIES = [
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180,
       models:['1× Tyrannofex'],
       gear:[['Powerful limbs','Stinger salvoes','Acid spray']]
+    }
+  ]
+},
+{
+  id:'u-w0t-m8', name:'U w0t m8?', faction:'necrons', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Priority Assets',
+  detachments:['obeisance-phalanx','the-phaerons-armoury'],
+  source:'New Recruit, exported 27 Oct 2026 (JSON)',
+  units:[
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'imotekh-the-stormlord', ds:'necrons/imotekh-the-stormlord', pts:100,
+      models:['1× Imotekh the Stormlord'],
+      gear:[['Gauntlet of Fire','Staff of the Destroyer']]
+    },
+    {
+      id:'nekrosor-ammentar', ds:'necrons/nekrosor-ammentar', pts:195,
+      models:['1× Nekrosor Ammentar (Nullstone field generator)'],
+      gear:[['Blade tail and whip coils','Enmitic disintegrators','Unmaker gauntlet']],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
+    },
+    {
+      id:'the-silent-king', ds:'necrons/the-silent-king', pts:420, warlord:true,
+      models:['1× Szarekh','2× Triarchal Menhir'],
+      gear:[['Sceptre of Eternal Glory','Staff of Stars','Weapons of the Final Triarch'],['Annihilator beam','Armoured bulk']],
+      stats:[
+        { name:'Szarekh' },
+        { name:'Triarchal Menhir ×2' }
+      ],
+      ranged:[
+        { name:'Sceptre of Eternal Glory' },
+        { name:'Staff of Stars' },
+        { name:'Annihilator beam', n:2 }
+      ],
+      melee:[
+        { name:'Weapons of the Final Triarch' },
+        { name:'Armoured bulk', n:2 }
+      ],
+      kw:['Character','Epic Hero','Faction: Necrons','The Silent King','Triarch','Vehicle','Warlord'],
+      why:{ kw:{ Warlord:'Warlord' } }
+    },
+    {
+      id:'royal-warden', ds:'necrons/royal-warden', pts:50,
+      models:['1× Royal Warden'],
+      gear:[['Close combat weapon','Relic gauss blaster']],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
+    },
+    {
+      id:'flayed-ones', ds:'necrons/flayed-ones', pts:55, copies:2,
+      models:['5× Flayed One'],
+      gear:[['Flayer claws']],
+      stats:[
+        { name:'Flayed Ones ×5' }
+      ],
+      melee:[
+        { name:'Flayer claws', n:5 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
+    },
+    {
+      id:'ophydian-destroyers', ds:'necrons/ophydian-destroyers', pts:80,
+      models:['3× Ophydian Destroyer'],
+      gear:[['Ophydian hyperphase weapons']],
+      stats:[
+        { name:'Ophydian Destroyers ×3' }
+      ],
+      melee:[
+        { name:'Ophydian hyperphase weapons', n:3 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
+    },
+    {
+      id:'canoptek-reanimator', ds:'necrons/canoptek-reanimator', pts:75,
+      models:['1× Canoptek Reanimator'],
+      gear:[['Atomiser beam','Atomiser beam','Reanimator’s claws']],
+      ranged:[
+        { name:'Atomiser beam', n:2 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
+    },
+    {
+      id:'tesseract-vault', ds:'necrons/tesseract-vault', pts:465,
+      models:['1× Tesseract Vault'],
+      gear:[['Armoured bulk','Cosmic fire','Time’s arrow','Antimatter meteor','Tesla sphere','Tesla sphere','Tesla sphere','Tesla sphere']],
+      stats:[
+        { name:'Tesseract Vault', M:'14"', from:{ M:'Empowered Engines' } }
+      ],
+      ranged:[
+        { name:'Cosmic fire' },
+        { name:'Time’s arrow' },
+        { name:'Antimatter meteor' },
+        { name:'Tesla sphere', n:4 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
+    },
+    {
+      id:'tesseract-vault-2', ds:'necrons/tesseract-vault', pts:505,
+      models:['1× Tesseract Vault'],
+      gear:[['Armoured bulk','Cosmic fire','Time’s arrow','Antimatter meteor','Tesla sphere','Tesla sphere','Tesla sphere','Tesla sphere']],
+      stats:[
+        { name:'Tesseract Vault', M:'14"', from:{ M:'Empowered Engines' } }
+      ],
+      ranged:[
+        { name:'Cosmic fire' },
+        { name:'Time’s arrow' },
+        { name:'Antimatter meteor' },
+        { name:'Tesla sphere', n:4 }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
+      ]
     }
   ]
 },
@@ -8798,6 +8973,177 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D3','Dark Pacts'],
   kw:['Chaos','Daemon','Faction: Heretic Astartes','Maulerfiend','Vehicle','Walker']
+},
+'necrons/imotekh-the-stormlord':{
+  name:'Imotekh the Stormlord', faction:'necrons', bsId:'49fd-a80d-8cc0-c76b', role:'Epic Hero',
+  stats:[
+    { name:'Imotekh the Stormlord', M:'5"', T:'5', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
+  ],
+  ranged:[
+    { name:'Gauntlet of Fire', range:'12"', A:'D6', BS:'–', S:'5', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] },
+    { name:'Staff of the Destroyer', range:'18"', A:'3', BS:'2+', S:'6', AP:'-3', D:'2', kw:[] }
+  ],
+  melee:[
+    { name:'Staff of the Destroyer', range:'Melee', A:'4', WS:'2+', S:'6', AP:'-3', D:'2', kw:['DEVASTATING WOUNDS'] }
+  ],
+  abilities:[
+    { name:'Grand Strategist', ph:['command'], turn:'your', text:'At the start of your Command phase, if this model is on the battlefield, you gain 1CP.' },
+    { name:'Lord of the Storm', tag:'Once per battle', ph:['command'], turn:'your', text:'Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 **mortal wounds**; on a 6, that enemy unit suffers D3+3 mortal wounds.' }
+  ],
+  rules:['Reanimation Protocols','Leader','Ignores Cover','Torrent','Devastating Wounds'],
+  kw:['Character','Epic Hero','Faction: Necrons','Imotekh the Stormlord','Infantry','Noble']
+},
+'necrons/nekrosor-ammentar':{
+  name:'Nekrosor Ammentar', faction:'necrons', bsId:'1d4b-a179-ae99-3283', role:'Epic Hero',
+  stats:[
+    { name:'Nekrosor Ammentar', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'6+', OC:'3', InSv:'4+', base:'80mm' }
+  ],
+  ranged:[
+    { name:'Enmitic disintegrators', range:'18"', A:'4', BS:'2+', S:'6', AP:'-2', D:'1', kw:['IGNORES COVER','PISTOL','SUSTAINED HITS 2'] }
+  ],
+  melee:[
+    { name:'Blade tail and whip coils', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-1', D:'1', kw:['EXTRA ATTACKS'] },
+    { name:'Unmaker gauntlet', range:'Melee', A:'6', WS:'2+', S:'10', AP:'-3', D:'3', kw:[] }
+  ],
+  abilities:[
+    { name:'Protective Disciples', text:'While this model is within 3" of one or more other friendly **DESTROYER CULT** units, this model has the **Lone Operative** ability.' },
+    { name:'Infectious Murder-madness', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **NECRONS** unit (excluding **MONSTER** and **TITANIC** units) is within 6" of this model, each time a model in that unit makes an attack, if that model has the **DESTROYER CULT** keyword or that enemy unit is the closest eligible target, that attack has the **[SUSTAINED HITS 1]** ability.' },
+    { name:'Prophet of Destruction', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model destroys an enemy unit, select one other friendly **DESTROYER CULT** unit within 9" of it. Until the end of the phase, each time a model in that unit makes an attack, re-roll a **Wound roll** of 1.' },
+    { name:'Nullstone Field Generator', tag:'Aura', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Necrons'], none:['Monster','Titanic'] }, when:'Within 6" of Nekrosor Ammentar: an attack by a DESTROYER CULT model, or at the closest eligible target', selfWhen:'Own aura (DESTROYER CULT)', note:'[SUSTAINED HITS 1]', from:'Infectious Murder-madness', selfAlways:true, readOf:'6507231a' },
+    { kind:'all', needs:{ all:['Faction: Necrons','Destroyer Cult'] }, when:'Picked by Nekrosor Ammentar’s Prophet of Destruction (it destroyed an enemy unit; within 9"), until the end of the phase', note:'re-roll a wound roll of 1', from:'Prophet of Destruction', notSelf:true, readOf:'3a0be7d8' }
+  ],
+  guard:[
+    { from:'Nullstone Field Generator', needs:{ all:['Faction: Necrons'] }, kind:'all', when:'Within 6" of Nekrosor Ammentar', selfWhen:'Own aura', selfAlways:true, note:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', readOf:'fed72424' }
+  ],
+  rules:['Reanimation Protocols','Deep Strike','Fights First','Extra Attacks','Ignores Cover','Pistol','Sustained Hits','Feel No Pain 5+*'],
+  kw:['Character','Destroyer Cult','Epic Hero','Faction: Necrons','Infantry','Nekrosor Ammentar']
+},
+'necrons/the-silent-king':{
+  name:'The Silent King', faction:'necrons', bsId:'7422-7fbf-8694-364c', role:'Epic Hero',
+  stats:[
+    { name:'Szarekh', M:'8"', T:'10', Sv:'2+', W:'16', Ld:'6+', OC:'6', InSv:'4+', base:'100mm' },
+    { name:'Triarchal Menhir', M:'8"', T:'10', Sv:'2+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' }
+  ],
+  ranged:[
+    { name:'Sceptre of Eternal Glory', range:'24"', A:'2', BS:'2+', S:'10', AP:'-3', D:'3', kw:['DEVASTATING WOUNDS'] },
+    { name:'Staff of Stars', range:'24"', A:'12', BS:'2+', S:'6', AP:'-1', D:'1', kw:['INDIRECT FIRE'] },
+    { name:'Annihilator beam', range:'24"', A:'1', BS:'2+', S:'14', AP:'-4', D:'6', kw:[] }
+  ],
+  melee:[
+    { name:'Weapons of the Final Triarch', range:'Melee', A:'12', WS:'2+', S:'8', AP:'-3', D:'2', kw:['LETHAL HITS'] },
+    { name:'Armoured bulk', range:'Melee', A:'1', WS:'4+', S:'4', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the **Hit roll**.', readOf:'3d1816cc' },
+    { name:'Triarch Abilities', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.' },
+    { name:'The Silent King', text:'While a friendly **NECRONS** unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.' },
+    { name:'Triarchal Menhirs', text:'If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.' },
+    { name:'Phaeron of the Stars', who:'Triarch Abilities: pick one', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.' },
+    { name:'Phaeron of the Blades', who:'Triarch Abilities: pick one', tag:'Aura', ph:['charge','fight'], turn:'either', text:'While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.' },
+    { name:'Relentless March', who:'Triarch Abilities: pick one', tag:'Aura', ph:['movement'], turn:'your', text:'While a friendly **NECRONS** unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.' },
+    { name:'Supreme Commander', text:'If this unit is in your army, it must be your Warlord.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (Szarekh 1-6 wounds left)', note:'-1 to hit rolls; Szarekh’s weapons: halve A', from:'Damaged: 1-6 wounds remaining', readOf:'3d1816cc' }
+  ],
+  aura:[
+    { kind:'all', needs:{ all:['Faction: Necrons'], none:['Monster'] }, when:'Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round', selfWhen:'Own aura, if it has Phaeron of the Stars this battle round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Phaeron of the Stars', readOf:'af071fc3' },
+    { kind:'melee', needs:{ all:['Faction: Necrons'], none:['Monster'] }, when:'Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round', selfWhen:'Own aura, if it has Phaeron of the Blades this battle round', note:'+1 S (and re-roll Charge rolls)', from:'Phaeron of the Blades', readOf:'aac367f4' }
+  ],
+  rules:['Reanimation Protocols','Deadly Demise D6+3 (Szarekh model only)','Devastating Wounds','Indirect Fire','Lethal Hits'],
+  kw:['Character','Epic Hero','Faction: Necrons','The Silent King','Triarch','Vehicle'],
+  kwOnly:{ Character:'Szarekh', 'The Silent King':'Szarekh' }
+},
+'necrons/royal-warden':{
+  name:'Royal Warden', faction:'necrons', bsId:'379b-d6a0-cd05-ef89', role:'Character',
+  stats:[
+    { name:'Royal Warden', M:'5"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Relic gauss blaster', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'2', kw:['LETHAL HITS','RAPID FIRE 2'] }
+  ],
+  melee:[
+    { name:'Close combat weapon', range:'Melee', A:'4', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Adaptive Strategy', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' }, text:'This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.' },
+    { name:'Engrammatic Logic', tag:'Once per battle', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle, at the start of any phase, you can select one friendly **NECRONS** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked.' }
+  ],
+  rules:['Leader','Reanimation Protocols','Lethal Hits','Rapid Fire'],
+  kw:['Character','Faction: Necrons','Infantry','Royal Warden']
+},
+'necrons/flayed-ones':{
+  name:'Flayed Ones', faction:'necrons', bsId:'c219-a708-f5b0-f0e7', role:'Infantry',
+  stats:[
+    { name:'Flayed Ones', M:'5"', T:'4', Sv:'4+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'28.5mm' }
+  ],
+  melee:[
+    { name:'Flayer claws', range:'Melee', A:'4', WS:'3+', S:'4', AP:'-1', D:'1', kw:['SUSTAINED HITS 1','TWIN-LINKED'] }
+  ],
+  abilities:[
+    { name:'Flesh Hunger', ph:['fight'], turn:'either', text:'Each time a model in this unit makes a melee attack, if the target of that attack is **Below Half-strength**, a successful **Hit roll** scores a Critical Hit.' }
+  ],
+  mods:[
+    { kind:'melee', when:'Target Below Half-strength', note:'a successful hit roll scores a Critical Hit', from:'Flesh Hunger', readOf:'bc6b451b' }
+  ],
+  rules:['Reanimation Protocols','Stealth','Infiltrators','Sustained Hits','Twin-linked'],
+  kw:['Faction: Necrons','Flayed Ones','Infantry']
+},
+'necrons/ophydian-destroyers':{
+  name:'Ophydian Destroyers', faction:'necrons', bsId:'c6db-9736-4d53-3ef6', role:'Infantry',
+  stats:[
+    { name:'Ophydian Destroyers', M:'10"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'–', base:'50mm' }
+  ],
+  melee:[
+    { name:'Ophydian hyperphase weapons', range:'Melee', A:'5', WS:'3+', S:'4', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Tunnelling Horrors', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
+  ],
+  rules:['Reanimation Protocols','Deep Strike'],
+  kw:['Destroyer Cult','Faction: Necrons','Infantry','Ophydian Destroyers']
+},
+'necrons/canoptek-reanimator':{
+  name:'Canoptek Reanimator', faction:'necrons', bsId:'7c45-2aab-7526-febe', role:'Vehicle',
+  stats:[
+    { name:'Canoptek Reanimator', M:'8"', T:'6', Sv:'3+', W:'6', Ld:'8+', OC:'3', InSv:'–', base:'60mm' }
+  ],
+  ranged:[
+    { name:'Atomiser beam', range:'12"', A:'3', BS:'4+', S:'6', AP:'-2', D:'1', kw:[] }
+  ],
+  melee:[
+    { name:'Reanimator’s claws', range:'Melee', A:'4', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Nanoscarab Reanimation Beam', tag:'Aura', text:'While a friendly **NECRONS** unit is within 3" of this model, each time that unit’s **Reanimation Protocols** activate, that unit **heals** an additional D3 wounds.' }
+  ],
+  rules:['Reanimation Protocols','Feel No Pain 4+'],
+  kw:['Canoptek','Faction: Necrons','Reanimator','Vehicle','Walker']
+},
+'necrons/tesseract-vault':{
+  name:'Tesseract Vault', faction:'necrons', bsId:'5451-67b5-a66c-71d2', role:'Vehicle',
+  stats:[
+    { name:'Tesseract Vault', T:'12', Sv:'2+', W:'24', Ld:'7+', OC:'8', InSv:'4+', base:'120×92mm Oval', M:'8"' }
+  ],
+  ranged:[
+    { name:'Cosmic fire', range:'18"', A:'3D6', BS:'–', S:'6', AP:'-2', D:'1', kw:['IGNORES COVER','DEVASTATING WOUNDS','TORRENT','C\'TAN POWER'] },
+    { name:'Time’s arrow', range:'24"', A:'1', BS:'2+', S:'3', AP:'-2', D:'6', kw:['ANTI-CHARACTER 4+','DEVASTATING WOUNDS','PRECISION','C\'TAN POWER'] },
+    { name:'Antimatter meteor', range:'24"', A:'D6+3', BS:'3+', S:'10', AP:'-3', D:'3', kw:['BLAST','DEVASTATING WOUNDS','INDIRECT FIRE','C\'TAN POWER'] },
+    { name:'Tesla sphere', range:'24"', A:'6', BS:'3+', S:'7', AP:'0', D:'1', kw:['SUSTAINED HITS 2'] }
+  ],
+  melee:[
+    { name:'Armoured bulk', range:'Melee', A:'6', WS:'4+', S:'8', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Damaged: 1-8 wounds remaining', damaged:'1-8', ph:['shooting'], turn:'your', text:'While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.', readOf:'0835b104' },
+    { name:'Powers of the C’tan', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).' }
+  ],
+  rules:['Reanimation Protocols','Deadly Demise D6+3','Anti','Blast','Indirect Fire','Ignores Cover','Devastating Wounds','Torrent','Precision','Sustained Hits'],
+  kw:['Faction: Necrons','Fly','Frame','Tesseract Vault','Titanic','Towering','Vehicle']
 }
 };
 // ---- end of DATASHEETS ----
@@ -8816,6 +9162,7 @@ const BS_IDS = {
     "46d8-abc8-ef3a-9f85":"chaos-knights",
     "77b9-2f66-3f9b-5cf3":"adeptus-mechanicus",
     "a55f-b7b3-6c65-a05f":"orks",
+    "b654-a18a-ea1-3bf2":"necrons",
     "b984-7317-81cc-20f":"tyranids",
     "c8da-e875-58f7-f6d6":"chaos-space-marines",
     "d265-877b-e03d-30ca":"chaos-daemons",
@@ -8831,6 +9178,7 @@ const BS_IDS = {
     "6470-c44a-45f4-3313":"detachment",
     "73c2-d0ed-3c7e-7e17":"detachment",
     "82cb-ba1-1aae-3b1d":"detachment",
+    "82f1-b597-7b06-8ba2":"detachment",
     "84c8-b821-877d-72e6":"detachment",
     "a435-b94a-eb7b-7c0c":"detachment",
     "a6ad-d379-46ee-2c24":"detachment",
@@ -8855,6 +9203,7 @@ const BS_IDS = {
     "0985-28ae-cf24-2fba":"world-eaters/butchers-of-khorne",
     "0dd1-86f6-d2a0-3aba":"chaos-daemons/cavalcade-of-chaos",
     "1558-660f-466b-a087":"world-eaters/khorne-daemonkin",
+    "163f-63bd-f2e1-5e7":"necrons/obeisance-phalanx",
     "1bb5-5aba-6c8f-7afc":"adeptus-custodes/might-of-the-moritoi",
     "1c7e-56bc-3196-b5cd":"adeptus-custodes/emperors-chosen",
     "1dc3-0d2d-7cb8-b84b":"ultramarines/terminator-storm-force",
@@ -8876,6 +9225,7 @@ const BS_IDS = {
     "6d06-9e26-0d3c-5317":"adeptus-mechanicus/eradication-cohort",
     "70d9-0c7a-6b46-65fa":"world-eaters/vessels-of-wrath",
     "7b06-be3a-9754-1bd4":"orks/runt-swarm",
+    "7e16-552d-f3a9-035f":"necrons/the-phaerons-armoury",
     "807c-9732-5465-5ca5":"orks/dread-mob",
     "812b-f056-ec50-2c3c":"chaos-knights/infernal-lance",
     "850e-bee1-4845-820d":"tyranids/crusher-stampede",
@@ -9122,6 +9472,15 @@ const BS_IDS = {
     "tzeeeeentch/the-blue-scribes":["caf1-8818-9e65-7154|1×570d-1bd7-4179-ad0e"],
     "tzeeeeentch/the-changeling":["ac75-c011-9a10-2c4a|1×1d74-d498-28a1-244e,1×6614-2033-8b5d-ac9d"],
     "tzeeeeentch/tzeentch-soul-grinder":["e1b1-146f-6f77-3a15|1×36a9-7135-9deb-5f95,1×416d-1da1-fc2c-174a,1×9f51-b187-b3bb-ffac,1×b83b-3b6-9aa7-5b3b"],
+    "u-w0t-m8/canoptek-reanimator":["7c45-2aab-7526-febe|2×3dcb-6d4a-632b-b2c5,1×4dec-6404-8188-646a"],
+    "u-w0t-m8/flayed-ones":["c219-a708-f5b0-f0e7|5×253b-c889-500a-8500,5×253b-c889-500a-8500/81b-e6a8-24bb-1f63"],
+    "u-w0t-m8/imotekh-the-stormlord":["49fd-a80d-8cc0-c76b|1×579e-7f68-433b-7072,1×e135-2748-1287-ec58"],
+    "u-w0t-m8/nekrosor-ammentar":["1d4b-a179-ae99-3283|1×5481-c090-8363-be82,1×a32a-76af-d6f9-2841,1×b50f-3d17-1d8f-ae81,1×d3ec-fd61-4989-07d5"],
+    "u-w0t-m8/ophydian-destroyers":["c6db-9736-4d53-3ef6|3×7e20-6261-2ed0-b1f,3×7e20-6261-2ed0-b1f/379d-5b8f-fa70-f892"],
+    "u-w0t-m8/royal-warden":["379b-d6a0-cd05-ef89|1×1bfa-d221-8708-c144,1×ee6b-d65-2b19-eb6b"],
+    "u-w0t-m8/tesseract-vault":["5451-67b5-a66c-71d2|4×68e9-a3fc-4ef2-b655,1×df62-ee85-5169-327e,1×f4ab-3e53-32df-d47a"],
+    "u-w0t-m8/tesseract-vault-2":["5451-67b5-a66c-71d2|4×68e9-a3fc-4ef2-b655,1×df62-ee85-5169-327e,1×f4ab-3e53-32df-d47a"],
+    "u-w0t-m8/the-silent-king":["7422-7fbf-8694-364c|1×2c98-86cf-889-2293,1×c1af-c4ce-eefa-c98d,1×c1af-c4ce-eefa-c98d/917e-24b-cc26-7a90,1×c1af-c4ce-eefa-c98d/d146-51bc-c659-9409,1×c1af-c4ce-eefa-c98d/d85e-4063-896a-f9,2×ded1-4542-58af-41c1,2×ded1-4542-58af-41c1/4faa-1c3e-80c-849d,2×ded1-4542-58af-41c1/a570-1807-bd56-a2ac"],
     "woof-woof/war-dog-brigand":["753d-4e02-eda3-4809|1×0b63-2988-ec78-7913,1×6638-278a-5331-d1ff,1×a30d-6752-d912-315e,1×b02a-a6e2-3eb4-4872,1×dfe8-cea0-8d16-db95"],
     "woof-woof/war-dog-brigand-2":["753d-4e02-eda3-4809|1×0b63-2988-ec78-7913,1×6638-278a-5331-d1ff,1×a30d-6752-d912-315e,1×dfe8-cea0-8d16-db95"],
     "woof-woof/war-dog-brigand-final-howl-aura":["753d-4e02-eda3-4809|1×0b63-2988-ec78-7913,1×3bee-8c85-68f7-e54b,1×42e1-e706-eb89-6cb6,1×6638-278a-5331-d1ff,1×a30d-6752-d912-315e,1×b02a-a6e2-3eb4-4872,1×dfe8-cea0-8d16-db95"],
@@ -9183,9 +9542,11 @@ const BS_IDS = {
     "1a98-844f-f54b-f76c":"Baleful Devolution",
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
+    "1bfa-d221-8708-c144":"Close combat weapon",
     "1c66-4903-10ca-2a27":"Ironhail Heavy Stubber",
     "1c7f-c635-a77f-9204":"Flamer mouths",
     "1d21-9b32-c427-398e":"Kustom Mega-slugga",
+    "1d4b-a179-ae99-3283":"Nekrosor Ammentar",
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
     "1d74-d498-28a1-244e":"Infernal Flames",
     "1db9-89c3-c7cb-2041":"Obliterator",
@@ -9215,6 +9576,7 @@ const BS_IDS = {
     "23e2-6d93-5012-304d":"Lash of Torment",
     "244-694c-22c-74fb":"Plasma pistol",
     "252b-cdba-84bd-3ed3":"Nob w/ Kustom Shoota and Kustom Krumpa",
+    "253b-c889-500a-8500":"Flayed One",
     "255b-146d-ca61-55fb":"Twistbray",
     "2575-9440-a8cf-1c50":"Spinnin' Blades",
     "259f-d98e-e052-ec64":"Deathwatch Terminator w/ Heavy Weapon",
@@ -9236,6 +9598,7 @@ const BS_IDS = {
     "2bb4-99f4-3659-5eda":"Gauntlets of Ultramar",
     "2c4c-5aac-b510-28ef":"Berzerker Glaive",
     "2c61-621f-9a2e-f681":"Helstalker autocannon",
+    "2c98-86cf-889-2293":"Warlord",
     "2ca0-73ea-2725-79c7":"Ectoplasma destructor",
     "2cd1-13f5-d59d-cc7f":"Sorcerer",
     "2ce1-75b2-4291-586e":"Incendine combustor",
@@ -9267,6 +9630,8 @@ const BS_IDS = {
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
     "36a9-7135-9deb-5f95":"Warpclaw",
     "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
+    "379b-d6a0-cd05-ef89":"Royal Warden",
+    "379d-5b8f-fa70-f892":"Ophydian hyperphase weapons",
     "37a7-d156-1e4c-8fe1":"Cerastus Knight Atrapos",
     "3811-a215-d4a1-d197":"Umbralefic Crystal",
     "3854-44a6-5746-d602":"Close combat weapon",
@@ -9285,6 +9650,7 @@ const BS_IDS = {
     "3cbf-631a-2bbe-6b54":"Rubric Marine w/ soulreaper cannon",
     "3d5c-4127-b923-d579":"Boltgun",
     "3d89-dec1-eaa9-47f3":"Galvanic rifle",
+    "3dcb-6d4a-632b-b2c5":"Atomiser beam",
     "3ded-7df8-ef3e-913a":"Chastiser gatling cannon",
     "3dfb-3b2a-94b-2fbe":"Chaos Predator Destructor",
     "3e4b-1a3a-8473-578c":"Hellforged weapons",
@@ -9337,6 +9703,7 @@ const BS_IDS = {
     "48fe-1424-5571-d7ee":"Bladeguard Veterans",
     "497d-e065-f5a5-5e80":"Daemon Prince of Chaos",
     "4988-d93e-5034-2b3c":"Contemptor-Galatus Dreadnought",
+    "49fd-a80d-8cc0-c76b":"Imotekh the Stormlord",
     "4a80-c791-9d9f-30c6":"Custodian Warden",
     "4aa5-24c5-89bc-7023":"Scarab Occult Sorcerer",
     "4aaa-f353-5fa5-fd92":"Smite",
@@ -9350,10 +9717,12 @@ const BS_IDS = {
     "4c53-6d36-742f-85ca":"The Emperor's Sword",
     "4dcd-5d7f-65c2-245b":"Squigosaur's jaws",
     "4dda-d9d2-153f-f294":"Hellforged weapons",
+    "4dec-6404-8188-646a":"Reanimator's claws",
     "4ea0-6b70-c17c-bc00":"Ghazghkull Thraka",
     "4eac-1303-a0d6-2827":"Legionary w/ paired accursed weapons",
     "4ecc-6aa5-da28-2c57":"Bloodletters",
     "4f12-4c0a-d156-4cf0":"Accursed weapon",
+    "4faa-1c3e-80c-849d":"Armoured bulk",
     "4fc1-2679-a110-3cd":"Avenger gatling cannon",
     "4ff3-7dce-5a52-94e9":"Bestial Aspect",
     "503b-f7be-eeeb-9e31":"Witchseeker Squad",
@@ -9364,8 +9733,10 @@ const BS_IDS = {
     "5267-88a7-c874-ba99":"Paragon Blade & Praesidium Shield",
     "5390-4445-c0f4-654b":"Legionary w/ voice eater",
     "5447-603b-27a0-7240":"Psyko-gatler",
+    "5451-67b5-a66c-71d2":"Tesseract Vault",
     "545a-eead-e216-5939":"Cerastus shock lance",
     "5474-b6fb-2b8c-ec67":"Heavy bolter",
+    "5481-c090-8363-be82":"Blade tail and whip coils",
     "54ca-fec8-f0c6-2c77":"Ectoplasma cannon and claws",
     "5514-3810-cf3e-3b23":"Memento Moritoi",
     "5541-daf-9f4a-ce3d":"Bolt pistol",
@@ -9377,6 +9748,7 @@ const BS_IDS = {
     "5720-2873-8c2c-edc3":"Norn Emissary",
     "573b-877e-5437-c3be":"Bellow of endless fury",
     "5762-3c1f-658e-368":"Melta tendril",
+    "579e-7f68-433b-7072":"Staff of the Destroyer",
     "5800-3978-370d-b573":"Daemon Prince of Chaos with wings",
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
@@ -9436,6 +9808,7 @@ const BS_IDS = {
     "6881-277b-1f28-22f2":"Heavy Bolt Rifle",
     "68b0-c798-79a8-28f5":"Snarling Rivalry",
     "68e6-6c48-4d98-7faa":"Flamespurt",
+    "68e9-a3fc-4ef2-b655":"Tesla sphere",
     "6a83-8e1f-63ef-50c3":"Squighog Boyz",
     "6a9b-8e2f-edac-fa2d":"Norn Assimilator",
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
@@ -9471,6 +9844,7 @@ const BS_IDS = {
     "7324-e591-939b-b675":"Heavy Intercessor Squad",
     "7361-7d8a-dbfc-b6e8":"Prosperine khopesh",
     "73e9-498e-2d97-e18":"Atrapos lascutter",
+    "7422-7fbf-8694-364c":"The Silent King",
     "7472-d1a5-5fbe-4052":"Flickering Flames",
     "74ce-a593-af24-5ef7":"Aemelia Minervas",
     "74f5-4553-6d71-b44c":"Force weapon",
@@ -9500,10 +9874,12 @@ const BS_IDS = {
     "7b4c-dfe0-6a0a-304a":"Lord Exultant",
     "7b4e-03d3-6b3f-6c48":"Divining spear",
     "7c36-bbb0-278-5c42":"Lascannon",
+    "7c45-2aab-7526-febe":"Canoptek Reanimator",
     "7d0f-67d3-25b-f6fe":"Kaptin",
     "7d49-39ac-d17e-63bf":"Rokkit Launcha",
     "7d7c-c212-47a3-38e4":"Trajann Valoris",
     "7dfc-efc5-a31c-a724":"Da Grabzappa",
+    "7e20-6261-2ed0-b1f":"Ophydian Destroyer",
     "7e50-4dc-fae1-c2d4":"Laspistol",
     "7e60-1733-57d1-71f3":"Eightbound",
     "7ebd-c3dc-8467-70ae":"Aviarch",
@@ -9517,6 +9893,7 @@ const BS_IDS = {
     "80c4-14b2-d02d-d289":"Nazdreg",
     "811f-e844-83ab-78a4":"Rokkit Pistol",
     "819a-63a5-f90c-7794":"Great axe of Khorne",
+    "81b-e6a8-24bb-1f63":"Flayer claws",
     "81d1-50cc-2825-7475":"Chainblade",
     "81e1-b212-69c1-308f":"Forgefiend",
     "81fb-325e-49fd-9a6f":"Servo arm",
@@ -9572,6 +9949,7 @@ const BS_IDS = {
     "90fb-6049-048b-b4d2":"Galvanic rifle",
     "9147-8824-3c93-86ed":"Inferno combi-bolter",
     "914d-7966-28d3-85fd":"Jericho-class conversion resonator",
+    "917e-24b-cc26-7a90":"Staff of Stars",
     "918b-c9ed-7af7-74df":"Vertus Praetors",
     "91b3-2e1c-e642-d213":"Custodian Guard Sodality",
     "91dc-9aad-0505-52a8":"Magnus the Red",
@@ -9627,6 +10005,7 @@ const BS_IDS = {
     "a30-4bad-cef5-5e55":"Synaptic Pulse",
     "a30d-6752-d912-315e":"Avenger chaincannon",
     "a30d-a7e8-b7d1-a55c":"Bloodreaper",
+    "a32a-76af-d6f9-2841":"Nullstone field generator",
     "a336-1346-0281-b4b2":"Destabilising Predation",
     "a343-07e9-e8f9-67f2":"Hades autocannon",
     "a3ad-1621-c20a-7e3a":"Ironstrider feet",
@@ -9635,6 +10014,7 @@ const BS_IDS = {
     "a41b-81a0-ca89-75c1":"Sir Hekhtur",
     "a453-2220-cdf7-ef10":"Aspiring Sorcerer",
     "a484-6a41-3648-bce1":"Tzaangor blades",
+    "a570-1807-bd56-a2ac":"Annihilator beam",
     "a58b-974d-14a0-ece2":"Ectoplasma cannon",
     "a5fb-aa4d-100f-e1bb":"Bolt Carbine",
     "a61b-434-6817-679a":"Herd banner",
@@ -9682,6 +10062,7 @@ const BS_IDS = {
     "b472-94bc-9482-44b6":"Skitarii Ranger w/ plasma caliver",
     "b4ca-3419-c219-f429":"Darkflame lance",
     "b4ce-a5bf-52e7-884c":"Neverblade",
+    "b50f-3d17-1d8f-ae81":"Enmitic disintegrators",
     "b53-3d5b-356b-6b0a":"Flesh Hound",
     "b541-3292-a5cc-dbeb":"Defiler",
     "b568-8a23-be6f-a14d":"Khorne Berzerker",
@@ -9713,8 +10094,10 @@ const BS_IDS = {
     "c0f6-1a61-c90f-f188":"Deffkopta",
     "c102-d98b-dc50-5b53":"Psychic tendril",
     "c1a7-616a-af3a-cdf9":"Squigstoppa",
+    "c1af-c4ce-eefa-c98d":"Szarekh",
     "c1d2-2cf5-b6bd-17fc":"Icon of Excess",
     "c214-c491-ef49-04ec":"Burning roar",
+    "c219-a708-f5b0-f0e7":"Flayed Ones",
     "c251-bd54-441-4799":"Tzaangor Shaman",
     "c26c-fe9c-e557-e706":"Grabba Dragga",
     "c282-992e-9d74-f62a":"Maulerfiend fists",
@@ -9729,6 +10112,7 @@ const BS_IDS = {
     "c62a-bc9c-37fb-2b36":"Titanic feet",
     "c6a8-0dbc-ab1b-38b5":"Tormentor w/ meltagun",
     "c6d1-e73b-9d26-5d8b":"Sorcerer in Terminator Armour",
+    "c6db-9736-4d53-3ef6":"Ophydian Destroyers",
     "c6e4-e5a5-d4be-d07c":"Mek's Toolz",
     "c70d-46dc-32da-b1a4":"Inferno bolt pistol",
     "c799-77ce-c706-3079":"Blasphemous Engine",
@@ -9767,6 +10151,7 @@ const BS_IDS = {
     "d0ac-5a84-221a-3dd7":"Wyredjinn",
     "d0cf-a582-5166-fbba":"Monstrous scything talons",
     "d137-294e-49d2-53a9":"Kustom Mega-blasta",
+    "d146-51bc-c659-9409":"Weapons of the Final Triarch",
     "d1cc-e17a-f1a1-4349":"Rendmaster on Blood Throne",
     "d231-290d-7de8-bc49":"Slaughter and Carnage",
     "d231-f7e4-f722-d987":"Slugga",
@@ -9776,6 +10161,7 @@ const BS_IDS = {
     "d2c6-bd0b-3205-3319":"Pyrovores",
     "d379-7bdd-e3f9-9183":"Gaze of Magnus",
     "d37d-7e8f-341b-c67c":"Maulerfiend",
+    "d3ec-fd61-4989-07d5":"Unmaker gauntlet",
     "d40a-c9a6-74d5-288d":"Synaptoprescience",
     "d59d-ef1-9ef8-4f44":"Cybernetica Datasmith",
     "d5fe-026f-1f46-e9c5":"Close combat weapon",
@@ -9785,6 +10171,7 @@ const BS_IDS = {
     "d7b3-df20-933-63b7":"Monstrous rending claws",
     "d7b7-a7e-ef2-783a":"Kan Klaw",
     "d813-7c6b-1dfe-e99a":"Tormentor",
+    "d85e-4063-896a-f9":"Sceptre of Eternal Glory",
     "d877-3dd3-2d5a-e092":"2 Hades autocannons",
     "d8dd-5401-5ac7-5922":"Gaius Silva",
     "d92d-2a5e-3dd9-f60f":"Twin Kastelan fist",
@@ -9811,13 +10198,16 @@ const BS_IDS = {
     "de59-f65c-181a-8509":"Skitarii Rangers",
     "de8f-24f9-c543-92b7":"Gretchin",
     "deb4-6018-b8cf-1d66":"Heavy Intercessors",
+    "ded1-4542-58af-41c1":"Triarchal Menhir",
     "df3a-0414-6edc-005a":"Kustom mega-blasta",
+    "df62-ee85-5169-327e":"Armoured bulk",
     "df80-bbdc-bd0a-3428":"Sentinel Guard Sodality",
     "dfe8-cea0-8d16-db95":"Diabolus heavy stubber",
     "dffe-86b3-59a8-fd3d":"Cultist Champion",
     "e02b-6f8f-cbee-fa79":"Vashtorr's claw",
     "e083-787f-1fff-4170":"Dok's Toolz",
     "e0c6-58cd-a822-8b84":"Kustom Mega-blasta",
+    "e135-2748-1287-ec58":"Gauntlet of Fire",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
     "e1b1-146f-6f77-3a15":"Tzeentch Soul Grinder",
     "e201-253f-1f52-e389":"Kunnin' But Brutal",
@@ -9852,6 +10242,7 @@ const BS_IDS = {
     "ed0c-e9cb-399f-a5a2":"Follow Me Ladz",
     "eddd-9b27-00c2-b0ce":"Blood-forged Armour",
     "ee6b-763b-5885-19da":"Gorechild",
+    "ee6b-d65-2b19-eb6b":"Relic gauss blaster",
     "ee84-120d-a66b-0b72":"Tzaangor blades",
     "eea3-949a-21d2-d33f":"Armoured hull",
     "eedf-6059-a15-3c86":"Questoris heavy stubber",
@@ -9877,6 +10268,7 @@ const BS_IDS = {
     "f3f0-a73b-d062-9dc6":"Cybork Boosta",
     "f401-c74a-cca8-5de3":"Runtherd",
     "f4a1-7f17-ec57-6c69":"Heavy darkflamer",
+    "f4ab-3e53-32df-d47a":"C'tan Powers",
     "f4b8-1179-de57-4d69":"Angron",
     "f51b-ebb2-a713-b492":"Blitzkannon",
     "f55d-30fe-6117-ac":"Great axe of Khorne",
@@ -10016,6 +10408,7 @@ const CHECKLIST = {
   "a|12u09c2":{"u":"charge:either"},
   "a|1348p3r":{"u":"shooting:your,fight:either"},
   "a|139ou05":{"u":"shooting:your"},
+  "a|13o0mkf":{"u":"shooting:your,fight:either"},
   "a|13tyxa7":{"none":1},
   "a|13ur237":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|1445rha":{"u":"fight:either"},
@@ -10086,6 +10479,7 @@ const CHECKLIST = {
   "a|1ea3wae":{"u":"shooting:your,fight:either"},
   "a|1efhy66":{"x":1},
   "a|1eqyc2e":{"at":"End of your opponent’s turn","s":1},
+  "a|1f3ae5d":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|1f54nl3":{"u":"movement:your,charge:either"},
   "a|1f6xmvq":{"u":"movement:your,charge:either"},
   "a|1f7qtur":{"u":"fight:either"},
@@ -10106,6 +10500,7 @@ const CHECKLIST = {
   "a|1hxono":{"u":"fight:either"},
   "a|1hzxe56":{"t":"fight:either","u":"fight:either","a":1},
   "a|1igcb72":{"x":1},
+  "a|1ihdtx":{"x":1},
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
   "a|1ilhdau":{"u":"shooting:your,fight:either","a":1},
   "a|1ill500":{"u":"movement:opp"},
@@ -10139,6 +10534,7 @@ const CHECKLIST = {
   "a|1nfdpzv":{"u":"shooting:your,fight:either"},
   "a|1nv0bem":{"at":"Start of the battle round","s":1},
   "a|1nv8bld":{"t":"command:your","s":1},
+  "a|1nwz1gg":{"u":"charge:either,fight:either"},
   "a|1o03wkj":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 4+ against Psychic Attacks and mortal wounds","to":{"all":["Faction: Legiones Daemonica","Tzeentch"]},"while":"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer"}]},
   "a|1o8wyag":{"u":"fight:either"},
   "a|1ogsbz3":{"u":"shooting:opp,fight:either"},
@@ -10150,6 +10546,7 @@ const CHECKLIST = {
   "a|1p2eunh":{"t":"shooting:your","u":"shooting:your"},
   "a|1p5y0sl":{"x":1},
   "a|1pea84f":{"x":1},
+  "a|1q03tdu":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|1q897s2":{"u":"shooting:your,fight:either"},
   "a|1qfxao4":{"t":"movement:your","u":"movement:your"},
   "a|1qoyqu0":{"u":"shooting:your"},
@@ -10160,6 +10557,7 @@ const CHECKLIST = {
   "a|1r8f5xs":{"u":"fight:either"},
   "a|1rdp754":{"u":"fight:either"},
   "a|1riztmj":{"u":"shooting:opp,fight:either"},
+  "a|1rt7zjl":{"x":1},
   "a|1rusnxu":{"u":"movement:your,shooting:your,charge:either"},
   "a|1sufx47":{"u":"shooting:your"},
   "a|1sul8lz":{"t":"movement:your","u":"charge:your"},
@@ -10170,6 +10568,7 @@ const CHECKLIST = {
   "a|1tafhr4":{"t":"fight:either","u":"fight:either","s":1},
   "a|1tds4uh":{"u":"fight:either"},
   "a|1tk2z2h":{"u":"shooting:your,fight:either"},
+  "a|1tnbi7q":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 5+ against mortal wounds and Psychic Attacks","to":{"all":["Faction: Necrons"]},"while":"While a friendly NECRONS unit is within 6\" of the bearer"}]},
   "a|1un1qw4":{"none":1},
   "a|1vdaquw":{"u":"fight:either"},
   "a|1vkotuw":{"u":"shooting:your,fight:either"},
@@ -10219,10 +10618,12 @@ const CHECKLIST = {
   "a|5zjk6y":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|611p4g":{"x":1},
   "a|65wpmk":{"u":"charge:either"},
+  "a|66uztc":{"u":"shooting:your,fight:either"},
   "a|6ahdrh":{"u":"movement:your,shooting:your"},
   "a|6azpb6":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|6jybil":{"u":"shooting:opp,fight:either"},
   "a|6q6bvm":{"u":"fight:either"},
+  "a|6qg51b":{"u":"shooting:opp"},
   "a|6re8gu":{"u":"shooting:your,fight:either"},
   "a|6t51gd":{"u":"shooting:your,fight:either"},
   "a|6x88aj":{"at":"Start of the first battle round","u":"fight:either","s":1},
@@ -10240,6 +10641,7 @@ const CHECKLIST = {
   "a|9dsaql":{"none":1},
   "a|9dx9q1":{"u":"shooting:opp,fight:either","g":[{"name":"Benefit of Cover","to":{"all":["Faction: Imperial Knights"]}}]},
   "a|9e4bul":{"u":"shooting:opp"},
+  "a|9gwdzi":{"u":"movement:your,shooting:your,charge:your"},
   "a|9ripaa":{"x":1},
   "a|acxlx0":{"u":"shooting:opp,fight:either"},
   "a|akltst":{"t":"fight:either","u":"fight:either","a":1},
@@ -10250,6 +10652,7 @@ const CHECKLIST = {
   "a|bbjspp":{"t":"movement:your","u":"movement:your","a":1},
   "a|bbuec0":{"u":"shooting:opp"},
   "a|bburpi":{"t":"shooting:your","s":1},
+  "a|bghuln":{"t":"command:your","s":1},
   "a|bqtobi":{"x":1},
   "a|bryfv4":{"t":"movement:your","f":[{"n":"riled up","r":"Waaagh!","u":"command:opp,movement:either,shooting:either,charge:either,fight:either"}],"s":1},
   "a|bwwxyk":{"u":"fight:either"},
@@ -10260,11 +10663,13 @@ const CHECKLIST = {
   "a|c9ooe5":{"u":"movement:your,charge:either"},
   "a|ccvp33":{"u":"shooting:opp,fight:either"},
   "a|ct1ind":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
+  "a|d1vzfd":{"t":"command:your","s":1},
   "a|dcqyl1":{"u":"charge:either"},
   "a|ds28tt":{"u":"fight:either"},
   "a|e1tops":{"t":"command:your","s":1},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
+  "a|e569qu":{"u":"shooting:your,fight:either"},
   "a|erffw0":{"x":1},
   "a|exlwqq":{"u":"shooting:your,fight:either"},
   "a|eyx1ad":{"u":"shooting:your"},
@@ -10280,6 +10685,7 @@ const CHECKLIST = {
   "a|ggorm6":{"u":"fight:either"},
   "a|guk5w3":{"u":"fight:either"},
   "a|gwcnrh":{"u":"charge:either"},
+  "a|gwvpxq":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "a|gy9eny":{"u":"shooting:your"},
   "a|h1b4ln":{"x":1},
   "a|h4pgmm":{"none":1},
@@ -10299,20 +10705,24 @@ const CHECKLIST = {
   "a|j4iojd":{"x":1},
   "a|j4ww0l":{"t":"command:your","s":1},
   "a|jst03m":{"u":"fight:either","a":1},
+  "a|jwhwv":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|k4qjtt":{"u":"shooting:your,fight:either"},
   "a|k6m54a":{"u":"movement:your","a":1},
+  "a|kevmhw":{"u":"shooting:your,fight:either"},
   "a|krt302":{"t":"shooting:opp","u":"shooting:opp"},
   "a|kubiv7":{"x":1},
   "a|ll49i1":{"x":1},
   "a|lvapga":{"u":"shooting:opp"},
   "a|lw737z":{"x":1},
   "a|lz9py9":{"u":"fight:either"},
+  "a|m2vnmt":{"u":"fight:either"},
   "a|m95233":{"u":"shooting:your"},
   "a|mdtmf4":{"u":"fight:either"},
   "a|mmsjz3":{"x":1},
   "a|moccsj":{"u":"shooting:your,fight:either"},
   "a|mulesq":{"u":"shooting:your"},
   "a|nde2k":{"u":"movement:your"},
+  "a|ng4iqf":{"x":1},
   "a|nyeifg":{"at":"Start of the first battle round","u":"shooting:either,fight:either","s":1},
   "a|nyeigg":{"none":1},
   "a|oa3ptj":{"u":"fight:either"},
@@ -10322,6 +10732,7 @@ const CHECKLIST = {
   "a|opohoe":{"u":"shooting:your,fight:either"},
   "a|oxs2wr":{"u":"shooting:your,fight:either","a":1},
   "a|oxtl28":{"none":1},
+  "a|plfqp9":{"x":1},
   "a|ppb9dv":{"x":1},
   "a|pyudo4":{"u":"shooting:opp"},
   "a|q18h52":{"u":"shooting:your"},
@@ -10338,6 +10749,7 @@ const CHECKLIST = {
   "a|sj1p6e":{"u":"shooting:your","a":1},
   "a|snh6gk":{"u":"shooting:your"},
   "a|ss613f":{"t":"fight:either","u":"fight:either","s":1},
+  "a|t2h0v8":{"t":"shooting:your"},
   "a|t52unt":{"u":"charge:either"},
   "a|tdsmft":{"u":"movement:your,shooting:your,charge:either"},
   "a|troxwt":{"x":1},
@@ -10356,6 +10768,7 @@ const CHECKLIST = {
   "a|vplgbc":{"u":"shooting:your,fight:either"},
   "a|vqw3bf":{"x":1},
   "a|vr3337":{"x":1},
+  "a|vuo5ol":{"u":"movement:your"},
   "a|w4du3m":{"u":"fight:either","a":1},
   "a|w8kpg3":{"u":"shooting:opp,fight:either"},
   "a|wu1dp1":{"u":"shooting:your,fight:either"},
@@ -10414,6 +10827,9 @@ const CHECKLIST = {
   "r|imperial-knights|Code Chivalric":{"x":1,"o":[{"n":"Deed 1–2","row":"Deed 1–2 · We vow to lay low the tyrant…","ends":["End of your turn","End of your opponent’s turn"],"x":1,"s":1},{"n":"Deed 3–4","row":"Deed 3–4 · We swear to reclaim the realm…","ends":["End of your opponent’s turn"],"x":1,"s":1},{"n":"Deed 5–6","row":"Deed 5–6 · We pledge to reap a great tally…","ends":["End of the battle round"],"x":1,"s":1},{"n":"Quality 1–2","row":"Quality 1–2 · …with our martial valour risen over all","u":"shooting:your,fight:either","a":1},{"n":"Quality 3–4","row":"Quality 3–4 · …and we are eager for the challenge","u":"movement:your,charge:either"},{"n":"Quality 5–6","row":"Quality 5–6 · …yet shall our legacy be unsullied","x":1}]},
   "r|imperial-knights|Knights of Legend":{"t":"command:your","s":1,"g":[{"name":"Feel No Pain 6+","to":{"all":["Faction: Imperial Knights"]}}]},
   "r|imperial-knights|Super-heavy Walker":{"u":"movement:your"},
+  "r|necrons|Empowered Engines":{"u":"movement:your"},
+  "r|necrons|Reanimation Protocols":{"t":"command:your","s":1},
+  "r|necrons|Worthy Foes":{"t":"command:your","u":"shooting:your,fight:either","s":1},
   "r|orks|Da Boss":{"at":"Start of the battle round","s":1},
   "r|orks|Dakka! Dakka! Dakka!":{"u":"shooting:your"},
   "r|orks|Displays of Savagery":{"u":"fight:either"},
@@ -10591,7 +11007,9 @@ const GRANTS = [
   { rule:'tzeeeeentch · Fluxmaster · Fluxmaster', grants:'Stealth', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Stealth**.' },
   { rule:'tzeeeeentch · Fluxmaster · Improbable Shield (Aura)', grants:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', type:'ability', to:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, while:'While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer', text:'While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' },
   { rule:'healybois · The Swarmlord · Guardian Organism', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Character'] }, while:'While a CHARACTER model is leading this unit', text:'While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability.' },
-  { rule:'healybois · Hive Tyrant · Instinctive Defence', grants:'Fights First', type:'ability', to:'this unit / model', while:'while the bearer is within 6" of one or more friendly HARVESTER units', text:'In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer\'s unit have the **Fights First** ability.' }
+  { rule:'healybois · Hive Tyrant · Instinctive Defence', grants:'Fights First', type:'ability', to:'this unit / model', while:'while the bearer is within 6" of one or more friendly HARVESTER units', text:'In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer\'s unit have the **Fights First** ability.' },
+  { rule:'u-w0t-m8 · Nekrosor Ammentar · Protective Disciples', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more other friendly DESTROYER CULT units', text:'While this model is within 3" of one or more other friendly **DESTROYER CULT** units, this model has the **Lone Operative** ability.' },
+  { rule:'u-w0t-m8 · Nekrosor Ammentar · Nullstone Field Generator', grants:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', type:'ability', to:{ all:['Faction: Necrons'] }, while:'While a friendly NECRONS unit is within 6" of the bearer', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 

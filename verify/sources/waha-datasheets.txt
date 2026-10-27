@@ -159,3 +159,11 @@ imperial-knights Knight-Defender
 imperial-agents Navigator
 emperors-children Fulgrim
 emperors-children Sorcerer
+necrons Imotekh-The-Stormlord
+necrons Nekrosor-Ammentar
+necrons The-Silent-King
+necrons Royal-Warden
+necrons Flayed-Ones
+necrons Ophydian-Destroyers
+necrons Canoptek-Reanimator
+necrons Tesseract-Vault

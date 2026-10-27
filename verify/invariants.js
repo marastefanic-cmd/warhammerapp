@@ -48,11 +48,12 @@ function run(D){
       for(const p of s.phases) if(named[p] && named[p] !== effTurn(s, p)) F('strat-turn', where, p + ': WHEN says ' + named[p] + ', listed as ' + effTurn(s, p));
     }
     // keywords: every keyword in needs is in the TARGET or WHEN; every unit keyword in TARGET is in needs
-    const kws = new Set(a.units.flatMap(u => u.kw).filter(k => !/^Faction:/.test(k)).map(k => k.toUpperCase()));
-    const boldOf = t => [...t.matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].toUpperCase().replace(/~~/g, '')).join(' | ');
-    const bold = boldOf(s.target + ' ' + s.when), boldTarget = boldOf(s.target);   // WHEN may name the enemy's keywords
     const n = s.needs || {};
     const needKws = x => !x ? [] : [].concat(x.all || [], x.any || [], x.none || [], needKws(x.unless));
+    // (and the keywords its needs name, which no unit of the list may have: TRIARCH PRAETORIANS, so its TRIARCH is not read alone)
+    const kws = new Set(a.units.flatMap(u => u.kw).concat(needKws(n)).filter(k => !/^Faction:/.test(k)).map(k => k.toUpperCase()));
+    const boldOf = t => [...t.matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].toUpperCase().replace(/~~/g, '')).join(' | ');
+    const bold = boldOf(s.target + ' ' + s.when), boldTarget = boldOf(s.target);   // WHEN may name the enemy's keywords
     for(const k of needKws(n)){
       const word = k.replace(/^Faction: /, '').toUpperCase();
       if(!bold.includes(word) && !plain(s.target + ' ' + s.when).includes(word.toLowerCase())) F('strat-needs', where, 'needs ' + k + ' but TARGET/WHEN does not name it');

@@ -59,7 +59,12 @@ const lastId = e => String(e || '').split('::').pop();
 const ptsOf = s => (s.costs || []).filter(c => c.name === 'pts').reduce((t, c) => t + (Number(c.value) || 0), 0);
 const costOf = s => ptsOf(s) + (s.selections || []).reduce((t, c) => t + costOf(c), 0);
 const WEAPON = ['Ranged Weapons', 'Melee Weapons'];
-const isWeaponSel = s => (s.profiles || []).some(p => WEAPON.includes(p.typeName));
+// (a profile of another type with a weapon's characteristics is a weapon: BSData's "C'tan Powers" profiles of the Tesseract Vault,
+// which GW's datasheet prints as RANGED WEAPONS [C'TAN POWER])
+const weaponShaped = p => p.typeName !== 'Unit' && ['Range', 'A', 'S', 'AP', 'D'].every(k => (p.characteristics || []).some(c => c.name === k)) && (p.characteristics || []).some(c => c.name === 'BS' || c.name === 'WS');
+const isWeaponProf = p => WEAPON.includes(p.typeName) || weaponShaped(p);
+const weaponKind = p => p.typeName === 'Ranged Weapons' || (!WEAPON.includes(p.typeName) && !/^melee$/i.test(((p.characteristics || []).find(c => c.name === 'Range') || {}).$text || '')) ? 'ranged' : 'melee';
+const isWeaponSel = s => (s.profiles || []).some(isWeaponProf);
 const isEnh = s => /^Enhancements/.test(s.group || '');
 const kidsOf = s => s.selections || [];
 // BSData's text markup (^^**KEYWORD**^^, **bold**) and its stray asterisks: the plain words New Recruit prints
@@ -376,7 +381,7 @@ function modelsOf(part) {
   if (part.type === 'model') return [part];
   const out = []; const walk = s => { for (const c of kidsOf(s)) { if (c.type === 'model') out.push(c); else walk(c); } }; walk(part); return out;
 }
-const weaponProfiles = s => (s.profiles || []).filter(p => WEAPON.includes(p.typeName));
+const weaponProfiles = s => (s.profiles || []).filter(isWeaponProf);
 // a weapon profile as New Recruit names it (NR.nrWeapon), read the way verify/bsdata.js reads BSData's: a "➤" profile with no
 // "Group - profile" of its own is a profile of its selection ("Melta rifle": "➤ Melta Rifle", "➤ Melta Rifle HUNTER:Monster/Vehicle";
 // "Gauntlets of Ultramar": "➤ Gauntlets of Ultramar (Overhead Smash)", whose bracket is part of its name); a profile named
@@ -505,7 +510,7 @@ function buildGroup(g, k) {
         const n = Number(c.number) || 0;
         if (c.type === 'model') { walk(c); continue; }
         for (const prof of weaponProfiles(c)) {
-          const kind = prof.typeName === 'Ranged Weapons' ? 'ranged' : 'melee';
+          const kind = weaponKind(prof);
           const w = weaponOf(prof, c), ch = Object.fromEntries(prof.characteristics.map(x => [x.name, x.$text || '']));
           const o = {};
           if (w.group) o.group = typo(w.group); else o.name = typo(w.name);
@@ -546,7 +551,7 @@ function buildGroup(g, k) {
   const abilities = [];
   for (const p of parts) {
     const tables = new Map();
-    dfs(p, s => { for (const prof of s.profiles || []) if (prof.typeName !== 'Unit' && !WEAPON.includes(prof.typeName)) { if (!tables.has(prof.typeName)) tables.set(prof.typeName, []); tables.get(prof.typeName).push({ prof, sel: s }); } });
+    dfs(p, s => { for (const prof of s.profiles || []) if (prof.typeName !== 'Unit' && !isWeaponProf(prof)) { if (!tables.has(prof.typeName)) tables.set(prof.typeName, []); tables.get(prof.typeName).push({ prof, sel: s }); } });
     const ordered = [...(tables.get('Abilities') || []).map(x => ['Abilities', x]), ...[...tables].filter(([t]) => t !== 'Abilities').flatMap(([t, xs]) => xs.map(x => [t, x]))];
     const seenAb = new Set();
     for (const [table, { prof, sel }] of ordered) {
@@ -691,6 +696,12 @@ for (const u of units) {
         ww = ds.weapons.find(x => sameKind(x) && gwName(x.name) === gwName(wn[0]) + 's') || null;
         if (ww) { gwFacts.set(u.id + '|' + kind + '|' + nm(row.name) + '|n', { gw: '1', pin: '2', nr: '2', file: where, src: 'GW’s datasheet (one profile, ' + ww.name + ', for the pair)' }); gwDevs.push({ unit: u.id, kind, row: row.name, field: 'n', app: '1', bsdata: '2', file: where }); delete row.n; }
       }
+      // (GW's plural name for N of one weapon that GW's composition counts on the model, the Tesseract Vault's "4 tesla spheres" with
+      // the profile "Tesla spheres": N weapons, as New Recruit has them; only the name is GW's, listed below as named otherwise)
+      if (!ww && row.n > 2 && !row.group && gl.length === 1 && u.gear[gl[0]].filter(x => x === row.name).length === row.n && /^1× /.test(u.models[gl[0]])) {
+        const pg = WW.wahaPage(nm(p.name), pageFac(p.name)), pl = ds.weapons.find(x => sameKind(x) && gwName(x.name) === gwName(wn[0]) + 's');
+        if (pg && pl && new RegExp('\\bequipped with:[^.]*\\b' + row.n + ' ' + lc(pl.name).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(nm(pg.P.s))) ww = pl;
+      }
       if (ww && row.hunter && / - hunter$/i.test(ww.name)) gwFacts.set(u.id + '|' + kind + '|' + nm(row.name) + '|hunter', { gw: 'true', pin: 'no Hunter profile', nr: row.name, file: where, src: 'GW’s datasheet names it ' + ww.name + ' (its Hunter profile, used against MONSTER/VEHICLE units)' });
       if (ww && nameOf(ww.name) !== nameOf(wn[0]) && !wn.slice(1).some(n => nameOf(n) === nameOf(ww.name))) gwNames.push({ unit: u.id, kind, app: row.group ? row.group + ' - ' + row.name : row.name, gw: ww.name, file: where });
       const bc = bsChars(row._pid);
@@ -725,7 +736,8 @@ for (const u of units) {
   for (const p of u._parts) {
     const W = wahaDs(nm(p.name)); if (!W || !W.ds) continue;
     for (const [mn0, ks] of Object.entries(W.ds.modelKeywords || {})) for (const k0 of ks) {
-      let mn = mn0;
+      // (GW's "SZAREKH MODEL: CHARACTER": the model Szarekh)
+      let mn = mn0.replace(/\s+model$/i, '');
       // (Wahapedia's last one can run into the detachment keyword after it: "BRIMSTONE HORRORS: BRIMSTONE: SHADOW LEGION")
       const k = k0.replace(/\s*:\s*$/, '').trim(); if (!k) continue;
       if (W.ds.keywords.some(x => gwKw(x) === gwKw(k))) continue;
@@ -786,7 +798,7 @@ function wahaSectionsOf(page) {
   const head = l => /^[A-Z][A-Z’' ]{3,}$/.test(l.replace(/\*/g, '').trim());
   const out = { core: [], army: [], abilities: [], leader: [] };
   const names = l => l.split(/,\s*(?=\*\*)|\*\*,\*\*\s*/).map(x => x.replace(/\*\*/g, '').replace(/,$/, '').trim()).filter(Boolean);
-  let seenWeapons = false, seenAbilities = false;   // (a header box is between the weapons and the first abilities section)
+  let seenWeapons = false, seenAbilities = false, seenComp = false, seenKw = false;   // (a header box is between the weapons and the first abilities section)
   for (let i = 0; i < lines.length; i++) {
     const t = lines[i].trim();
     if (/^(RANGED|MELEE) WEAPONS$/.test(t)) seenWeapons = true;
@@ -809,8 +821,12 @@ function wahaSectionsOf(page) {
     // a rule GW prints in a header box of its own, before CORE ABILITIES ("SUPREME COMMANDER" / "If this model is in your army, it must
     // be your **WARLORD**."): an ability of that name (the box's heading, in title case), as Ghazghkull Thraka's Supreme Commander
     const KNOWN = /^(RANGED WEAPONS|MELEE WEAPONS|WARGEAR OPTIONS|CORE ABILITIES|ARMY RULES|ABILITIES|PSYCHIC ABILITIES|TRANSPORT|UNIT COMPOSITION|LEADER|SUPPORT|STRATAGEMS|DETACHMENT ABILITY|WARGEAR ABILITIES|DAMAGED.*|KEYWORDS.*|FACTION KEYWORDS.*|RANGE)$/;
-    if (head(lines[i]) && !KNOWN.test(t) && t.split(/\s+/).length >= 2 && seenWeapons && !seenAbilities && lines[i + 1] && !head(lines[i + 1]) && /[a-z]/.test(lines[i + 1])) {
-      const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]); j++) tl.push(lines[j]);
+    // (and a box after the unit composition, "SUPREME COMMANDER", "TRIARCHAL MENHIRS": The Silent King's; not YOUR UNIT COSTS)
+    // (up to the datasheet's keywords: the page's glossary after them is no box)
+    if (/^UNIT COMPOSITION$/.test(t)) seenComp = true;
+    if (/^(\*\*)?(FACTION )?KEYWORDS/.test(t)) seenKw = true;
+    if (head(lines[i]) && !KNOWN.test(t) && !/^YOUR /.test(t) && t.split(/\s+/).length >= 2 && seenWeapons && (!seenAbilities || (seenComp && !seenKw)) && lines[i + 1] && !head(lines[i + 1]) && /[a-z]/.test(lines[i + 1])) {
+      const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^(\*\*)?(FACTION )?KEYWORDS/.test(lines[j].trim()); j++) tl.push(lines[j]);
       // (title case, its small words lower case: "Daemon Primarch of Slaanesh")
       const nmTc = t.toLowerCase().replace(/(^|\s)([a-z]+)/g, (m, a, w) => a + (a && /^(of|the|and|in|on|to|for|a|an)$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)));
       // (a box of named abilities, each "**Name (tag):** text": its parts, for an ability of the datasheet that selects one of them, below)
@@ -830,10 +846,15 @@ function wahaSectionsOf(page) {
   // a box of named abilities that another ability of the datasheet selects from ("select one of the abilities in the Daemon Primarch of
   // Slaanesh section": Fulgrim's DAEMON PRIMARCH OF SLAANESH): each is an ability of its own, the box's name its group (a box no ability
   // selects from stays one ability: the Daemon Prince of Chaos's Daemonic Allegiance)
-  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && new RegExp('select one of the abilities in the ' + a.name + ' section', 'i').test(x.text.replace(/\*\*/g, ''))) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
+  // (or "select one Triarch ability": The Silent King's TRIARCH ABILITIES)
+  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && selectsFrom(x.text, a.name)) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
   for (const a of out.abilities) delete a.subs;
   return out;
 }
+// an ability's words that select one of the abilities of a box: "select one of the abilities in the <box> section", or "select one
+// <box less "Abilities"> ability" (The Silent King: "select one Triarch ability (see left)" of the TRIARCH ABILITIES box)
+const selectsFrom = (text, box) => { const t = String(text).replace(/\*\*/g, ''), b = box.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp('select one of the abilities in the ' + b + ' section', 'i').test(t) || (/ abilities$/i.test(box) && new RegExp('select one ' + b.replace(/ abilities$/i, '') + ' ability\\b', 'i').test(t)); };
 // the box GW prints after a unit's composition whose heading is an ability's name ("HORRORS ARE PINK. HORRORS ARE BLUE. …", Wahapedia
 // after YOUR UNIT COSTS): its lines up to the keywords, a Designer’s Note as an italic line (as data.js writes GW's Designer’s Notes)
 function boxAfterComposition(name, pages) {
@@ -864,7 +885,7 @@ for (const u of units) {
   const used = new Set();
   // an ability of a box of named abilities that another ability selects from ("select one of the abilities in the Daemon Primarch of
   // Slaanesh section"): who '<box>: pick one', as Angron's Wrathful Presence abilities (one model: who names no part)
-  const pickOf = g => g.group && u._parts.length === 1 && gwAbs.some(x => !x.box && new RegExp('select one of the abilities in the ' + g.group + ' section', 'i').test(bare(x.text))) ? g.group + ': pick one' : null;
+  const pickOf = g => g.group && u._parts.length === 1 && gwAbs.some(x => !x.box && selectsFrom(bare(x.text), g.group)) ? g.group + ': pick one' : null;
   for (const ab of u.abilities) {
     const plain = plainBS(ab._bs);
     // an enhancement: its text from the detachment (data.js or this run's rows)
@@ -887,7 +908,9 @@ for (const u of units) {
     // Slaanesh", "… select one of the abilities in the Daemon Prince of Slaanesh section …", is GW's Daemon Primarch of Slaanesh)
     const wordsOf = t => lc(appText(t).s).replace(/[^a-z0-9+" ]/g, ' ').split(/\s+/).filter(Boolean);
     const nearly = (a, b) => { const x = wordsOf(a), y = wordsOf(b); return x.length > 8 && x.length === y.length && x.filter((w, k) => w !== y[k]).length <= 2; };
-    const g = gwAbs.find(x => !used.has(x) && textEq(x.text, plain)) || gwAbs.find(x => !used.has(x) && lc(x.name) === lc(ab.name)) || gwAbs.find(x => !used.has(x) && loose(x.name) === loose(ab.name))
+    // (GW's words but for a layout cross-reference, "select one Triarch ability (see left)": BSData leaves it out)
+    const seeL = t => String(t).replace(/ \(see (?:left|right|next page|overleaf)\)/gi, '');
+    const g = gwAbs.find(x => !used.has(x) && textEq(x.text, plain)) || gwAbs.find(x => !used.has(x) && !x.box && /\(see (?:left|right|next page|overleaf)\)/i.test(x.text) && textEq(seeL(x.text), plain)) || gwAbs.find(x => !used.has(x) && lc(x.name) === lc(ab.name)) || gwAbs.find(x => !used.has(x) && loose(x.name) === loose(ab.name))
       || gwAbs.find(x => !used.has(x) && !x.box && nearly(x.text, plain) && lc(ab.name).split(' ').filter(w => !lc(x.name).split(' ').includes(w)).length <= 1);
     // an ability of the unit itself (not of its wargear) that GW's datasheet does not print (Roboute Guilliman's "Supreme
     // Commander"): GW wins, the app leaves it out
@@ -1015,10 +1038,14 @@ if (!F) {
     ar.text = ruleLines(r.lines).join('\n');
     // a FAQ GW's Faction Pack prints about it (its Rules Updates), quoted: verify/sources/hand/<army>.json armyRules.<name>.faq, each
     // "*FAQ (Faction Pack 1.2): <question> <answer>*" (verify/texts.js checks it in the pack)
+    // GW's Faction Pack words where Wahapedia's differ (armyRules.<name>.texts: { from, to, why }, exactly once): Reanimation Protocols,
+    // whose Rules Update "Change to" has no Example paragraph
+    { const fx = ((HAND.armyRules || {})[ar.name] || {}).texts;
+      if (fx) { if (ar.text.split(fx.from).length !== 2) want('army rule ' + ar.name, 'hand file text', 'its words are not there exactly once'); else { ar.text = ar.text.replace(fx.from, fx.to); handDone.push({ what: 'GW’s words in ' + ar.name, by: 'hand (Claude)', text: fx.why }); } } }
     for (const q of ((HAND.armyRules || {})[ar.name] || {}).faq || []) { ar.text += '\n' + q; handDone.push({ what: 'FAQ on ' + ar.name, by: 'hand (Claude), quoted', text: q }); }
     // the Damage tab's reading of the rule, written by hand (verify/sources/hand/<army>.json armyRules: calcMods, both, limit)
     const ha = (HAND.armyRules || {})[ar.name];
-    if (ha) { for (const k of ['calcMods', 'both', 'limit']) if (ha[k]) ar[k] = ha[k]; handDone.push({ what: 'Damage-tab reading of ' + ar.name, by: ha.by, text: (ha.calcMods || []).map(m => m.from + ': ' + m.note).join('; ') + (ha.both ? '; both with ' + ha.both.map(b => b.strat || b.enhancement || b.ability).join(', ') : '') }); }
+    if (ha && (ha.calcMods || ha.both || ha.limit)) { for (const k of ['calcMods', 'both', 'limit']) if (ha[k]) ar[k] = ha[k]; handDone.push({ what: 'Damage-tab reading of ' + ar.name, by: ha.by, text: (ha.calcMods || []).map(m => m.from + ': ' + m.note).join('; ') + (ha.both ? '; both with ' + ha.both.map(b => b.strat || b.enhancement || b.ability).join(', ') : '') }); }
     facSrc.armyRules.push(ar);
     filled.push({ what: 'army rule ' + r.name, from: 'Wahapedia ' + factionId + '.txt (Army Rules)' });
   }
@@ -1375,6 +1402,13 @@ for (const it of labels) {
       handDone.push({ what: 'timing label of ' + at.u.name + ' · ' + at.abName + ': ' + JSON.stringify(ov), by: 'hand (Claude), a reviewer’s fix', text: 'derive.js: ' + JSON.stringify(it.derived || null) });
       continue;
     }
+  }
+  // a stratagem's needs written by hand (verify/sources/hand/<army>.json gists.<id>.needs) where derive.js reads none from its TARGET
+  // ("Your NECRONS WARLORD"; "TRIARCH PRAETORIANS", a keyword no unit of the lists has)
+  if (it.kind === 'strat-needs' && (it.status === 'not-derivable' || it.derived == null)) {
+    const sName = it.where.split(' · ').pop(), hg = Object.entries(HAND.gists || {}).find(([k, v]) => v.needs && k.split('/').pop() === slug(sName));
+    const si = hg ? d.indexOf("name:" + lit(sName) + ", cp:") : -1;
+    if (si >= 0) { const ci = d.indexOf(" when:'", si); d = d.slice(0, ci) + ' needs:' + lit(hg[1].needs) + ',' + d.slice(ci); handDone.push({ what: 'needs of ' + sName + ': ' + JSON.stringify(hg[1].needs), by: 'hand (Claude)', text: hg[1].needsWhy || '' }); continue; }
   }
   if (it.status === 'not-derivable' || it.derived == null) {
     if (it.kind === 'ability-tag') continue;   // the tag the source names ("(Aura)" in BSData's name, Wahapedia's "(Once per battle, per army)") is kept
