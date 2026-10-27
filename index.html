@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = 'b770ffdd25';</script>
+<script>window.WH_BUILD = '5f8ecc7635';</script>
 </head>
 <body>
 <style>
@@ -1049,10 +1049,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=b770ffdd25"></script>
-<script src="data.js?v=b770ffdd25"></script>
-<script src="calc.js?v=b770ffdd25"></script>
-<script src="import.js?v=b770ffdd25"></script>
+<script src="verified.js?v=5f8ecc7635"></script>
+<script src="data.js?v=5f8ecc7635"></script>
+<script src="calc.js?v=5f8ecc7635"></script>
+<script src="import.js?v=5f8ecc7635"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1410,9 +1410,13 @@ const naReason = ab => ab.na || (/bondsman/i.test(ab.tag || '') && inertRule('Bo
 // rules other units give this one (Ghazghkull's aura, the Dreadherder's re-rolls)
 function auraMods(u){
   const out = [];
+  // (the same aura from another unit is not said again where the unit's own always reaches it: an aura applies once, Core Rules 22.01;
+  // two Lords of Change's Daemon Lord of Tzeentch, as one unit's copies give it once)
+  const own = new Set((u.aura || []).filter(m => !m.notSelf && m.selfAlways && matches(m.needs, u)).map(m => m.from + '|' + m.note));
   for(const src of army().units) for(const m of src.aura || []){
     const self = src === u;
     if((self && m.notSelf) || !matches(m.needs, u)) continue;
+    if(!self && own.has(m.from + '|' + m.note)) continue;
     out.push(Object.assign({}, m, { when:self && m.selfWhen ? m.selfWhen : m.when, src }));
   }
   return out;
@@ -1459,7 +1463,7 @@ function weaponItems(list){
   for(const w of list || []){
     const last = items[items.length - 1];
     if(w.group && last && last.group === w.group && last.who === w.who) last.profiles.push(w);
-    else items.push({ group:w.group, who:w.who, n:w.n, profiles:[w] });
+    else items.push({ group:w.group, who:w.who, n:w.n, carrier:w.carrier, profiles:[w] });   // (carrier: the models GW's composition gives a weapon no model has yet)
   }
   return items;
 }
@@ -2043,6 +2047,7 @@ function dmCalc(st, A, au, tg, kind){
   const emb = dmEmbarked(au), embLines = emb ? (au.models || []).map((l, i) => i).filter(i => emb.names.has(au.models[i].replace(/^\d+× /, '').replace(/ \(.*\)$/, ''))) : [];
   const embOf = it => { const ls = linesOf(it); return ls.length > 0 && ls.every(i => embLines.includes(i)); };
   for(const it of items) if(embOf(it)) firstOff.add(key(it));
+  for(const it of items) if(it.carrier) firstOff.add(key(it));   // (models the unit does not have yet: GW's composition's carrier)
   // the models left (st.left, as the player set them): each weapon's models from the lines that carry it; a weapon whose lines do
   // not add up to its models keeps its share of the unit
   const left = isObj(st.left) ? st.left : {}, cnt = i => parseInt(au.models[i], 10) || 1, has0 = i => left[i] != null ? Math.max(0, Math.min(cnt(i), +left[i] || 0)) : cnt(i);
@@ -4777,16 +4782,18 @@ function proxyLines(u){
   }
   return lines;
 }
+// a base as GW's guide prints it: a size, or a named base ("Large Flying" -> "Large Flying Base"); "Hull" (or none): no base
+const baseShown = b => /\d/.test(b || '') ? b : b && !/^hull$/i.test(b) ? b + ' Base' : 'no base';
 function screenBases(){
   const a = army(), total = new Map();
   const units = ROLE_ORDER.flatMap(r => a.units.filter(u => roleGroup(u) === r));
   const cards = units.map(u => {
     const lines = proxyLines(u), c = u.copies || 1;
-    for(const l of lines) if(/\d/.test(l.base)) total.set(l.base, (total.get(l.base) || 0) + l.n * c);   // "Hull": no base
+    for(const l of lines) if(baseShown(l.base) !== 'no base') total.set(baseShown(l.base), (total.get(baseShown(l.base)) || 0) + l.n * c);   // "Hull": no base
     return '<div class="px"><div class="pxh">' + linkTo('unit', u.id, u.name + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '')) + (u.leads ? '<span class="tg m">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '') +
       (c > 1 ? '<span class="tg m">' + c + ' units: mark them apart (' + Array.from({ length:c }, (_, i) => i + twinFirst(u)).join(', ') + ')</span>'
         : twinOf(u) && twinOf(u).n > 1 ? '<span class="tg m">' + twinOf(u).i + ' of ' + twinOf(u).n + '</span>' : '') + '</div>' +
-      lines.map(l => '<div class="pxl"><span class="pxn">' + l.n + '× <b>' + esc(/\d/.test(l.base) ? l.base : 'no base') + '</b></span><span class="pxm' + (l.std ? ' std' : '') + '">' + esc(l.mark) +
+      lines.map(l => '<div class="pxl"><span class="pxn">' + l.n + '× <b>' + esc(baseShown(l.base)) + '</b></span><span class="pxm' + (l.std ? ' std' : '') + '">' + esc(l.mark) +
         (l.std && l.gear.length ? ' <i>' + esc(l.gear.join(', ')) + '</i>' : '') + '</span></div>').join('') +
       unplacedOf(u).map(x => '<div class="pxl"><span></span><span class="pxm">' + esc(x.n + '× ' + x.name + ': ' + x.note) + '</span></div>').join('') + '</div>';
   });

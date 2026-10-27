@@ -2805,6 +2805,14 @@
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
+   "item": "core / rule:Indirect Fire / text",
+   "field": "text",
+   "text": "Units containing one or more models with an **[INDIRECT FIRE]** weapon can shoot",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
    "item": "core / coreStratagem:command-re-roll",
    "field": "name",
    "doc": "core",
@@ -7810,6 +7818,307 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos",
+   "field": "name",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Cavalcade of Chaos 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/rule",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/enhancement:Apocalyptic Steeds",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Cavalcade of Chaos 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/enhancement:Apocalyptic Steeds",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/enhancement:Soul-Shattering Charge",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Cavalcade of Chaos 1DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/enhancement:Soul-Shattering Charge",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:from-beyond-the-veil",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (FROM BEYOND THE VEIL)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:from-beyond-the-veil",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (FROM BEYOND THE VEIL)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:from-beyond-the-veil",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (FROM BEYOND THE VEIL)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:warp-riders",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (WARP-RIDERS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:warp-riders",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (WARP-RIDERS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:warp-riders",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (WARP-RIDERS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:inescapable-manifestations",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (INESCAPABLE MANIFESTATIONS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:inescapable-manifestations",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (INESCAPABLE MANIFESTATIONS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:cavalcade-of-chaos/stratagem:inescapable-manifestations",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p120 (INESCAPABLE MANIFESTATIONS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion",
+   "field": "name",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Scintillating Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/rule",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p125-126",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Inescapable Eye",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Scintillating Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Inescapable Eye",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p125-126",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Infernal Puppeteer",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Scintillating Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Infernal Puppeteer",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p125-126",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Neverblade",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Scintillating Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Neverblade",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p125-126",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Improbable Shield (Aura)",
+   "field": "pts",
+   "doc": "waha:chaos-daemons",
+   "where": "Wahapedia chaos-daemons § Scintillating Legion 2DP",
+   "sha256": "a3db2919de77a7f96788f9c89fb53f4415e5bfdc390e888a9666141225461c19"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/enhancement:Improbable Shield (Aura)",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p125-126",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:impossible-eclipse",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (IMPOSSIBLE ECLIPSE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:impossible-eclipse",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (IMPOSSIBLE ECLIPSE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:impossible-eclipse",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (IMPOSSIBLE ECLIPSE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:pyrogenesis",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (PYROGENESIS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:pyrogenesis",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (PYROGENESIS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:pyrogenesis",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (PYROGENESIS)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:flickering-reality",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FLICKERING REALITY)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:flickering-reality",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FLICKERING REALITY)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:flickering-reality",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FLICKERING REALITY)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:fateborne-nightmares",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FATEBORNE NIGHTMARES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:fateborne-nightmares",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FATEBORNE NIGHTMARES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:fateborne-nightmares",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FATEBORNE NIGHTMARES)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:ficklefire",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FICKLEFIRE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:ficklefire",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FICKLEFIRE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:ficklefire",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (FICKLEFIRE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:delirium-unmade",
+   "field": "when",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (DELIRIUM UNMADE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:delirium-unmade",
+   "field": "target",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (DELIRIUM UNMADE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "chaos-daemons / detachment:scintillating-legion/stratagem:delirium-unmade",
+   "field": "effect",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p126 (DELIRIUM UNMADE)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
    "item": "chaos-space-marines / detachment:cult-of-the-arkifane",
    "field": "name",
    "doc": "waha:chaos-space-marines",
@@ -8596,18 +8905,18 @@
   {
    "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
    "field": "text (marked lines)",
-   "text": "*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within",
-   "doc": "wahahtml:chaos-daemons",
-   "where": "Wahapedia chaos-daemons § Chaos Daemons",
-   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+   "text": "*FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land ",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
    "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
    "field": "text (marked lines)",
-   "text": "*Wahapedia FAQ: If there are no objective markers within No Man’s Land or within",
-   "doc": "wahahtml:chaos-daemons",
-   "where": "Wahapedia chaos-daemons § Chaos Daemons",
-   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+   "text": "*FAQ (Faction Pack 1.2): If there are no objective markers within No Man’s Land ",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
    "item": "chaos-daemons / armyRule:The Shadow of Chaos / text (marked lines)",
@@ -9082,6 +9391,34 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Mysterious Guardian (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "tzeeeeentch / daemon-prince-of-chaos-with-wings / ability:Neverblade",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Neverblade (Scintillating Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "tzeeeeentch / lord-of-change-infernal-puppeteer / ability:Infernal Puppeteer",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Infernal Puppeteer (Scintillating Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "tzeeeeentch / lord-of-change-inescapable-eye / ability:Inescapable Eye",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Inescapable Eye (Scintillating Legion) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Improbable Shield (Aura)",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Improbable Shield (Aura) (Scintillating Legion) (whose source is recorded under that item)",
    "sha256": null
   },
   {
@@ -9914,6 +10251,102 @@
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
+   "field": "note",
+   "text": "When using the Pink Horrors Split ability, when adding Blue Horror models to thi",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
+   "field": "note",
+   "text": "Yes",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
+   "field": "note",
+   "text": "If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
+   "field": "note",
+   "text": "Yes.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
+   "field": "note",
+   "text": "Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is de",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "field": "note",
+   "text": "When I return models to a unit of Blue Horrors that began the battle as a unit o",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "field": "note",
+   "text": "When I return models to a unit of Blue Horrors that began the battle as a unit o",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "field": "note",
+   "text": "If a unit of Pink Horrors suffers casualties such that there are no Pink Horror ",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+   "field": "note",
+   "text": "The starting strength of that Blue Horrors unit is the same as the starting stre",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p131",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   }
  ]
 }
