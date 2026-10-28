@@ -1,0 +1,327 @@
+[
+ {
+  "key": "4819130851f98eee",
+  "where": "tzeeeeentch · Blue Horrors · Sullen Malevolence",
+  "verdict": "ok",
+  "why": "GW (Wahapedia Blue Horrors) prints “Sullen Malevolence (Aura)”; the words are GW’s."
+ },
+ {
+  "key": "64beb46b907e2c9f",
+  "where": "tzeeeeentch · Blue Horrors · Exploding Horrors",
+  "verdict": "ok",
+  "why": "“Each time this unit is selected to fight” — Fight phase, either turn."
+ },
+ {
+  "key": "e9f3236c2856365a",
+  "where": "tzeeeeentch · Blue Horrors",
+  "verdict": "ok",
+  "why": "GW’s KEYWORDS line: ALL MODELS … HORRORS; BLUE HORRORS: BLUE; BRIMSTONE HORRORS: BRIMSTONE. kwOnly matches. (After the Brimstone split the Brimstone sheet carries BRIMSTONE with no kwOnly and no BLUE; the Blue Horrors sheet keeps both as GW prints its datasheet.)"
+ },
+ {
+  "key": "408d4d3cfb2342f3",
+  "where": "tzeeeeentch · Blue Horrors",
+  "verdict": "ok",
+  "why": "Gear line is the Blue Horror’s own (Coruscating Blue flames, Blue claws); the Brimstone rows are carrier rows (“Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws”), off the models line as check.js requires."
+ },
+ {
+  "key": "703414249ce80131",
+  "where": "healybois · Spore Mines (Biovore) · Floating Death",
+  "verdict": "ok",
+  "why": "“Each time this unit or an enemy unit ends a move”: moves end in Movement, Charge and Fight (pile in/consolidate), in either turn."
+ },
+ {
+  "key": "7939ecd4e8388bd6",
+  "where": "healybois · Spore Mines (Biovore) · Bio-minefield",
+  "verdict": "ok",
+  "why": "Advance moves are made in the Movement phase; the enemy’s, so their turn."
+ },
+ {
+  "key": "4829ea272842ef44",
+  "where": "healybois · Spore Mines (Biovore)",
+  "verdict": "ok",
+  "why": "GW’s Spore Mines datasheet has no weapons; New Recruit’s reference entry lists 1 Spore Mine with none."
+ },
+ {
+  "key": "6b732e9467468fb8",
+  "where": "resolveRoster",
+  "verdict": "fix",
+  "why": "BUG (reproduced in the built app, scratch worktree, Playwright): the app moves reference sheets from a.units to a.refs at start (splitRefs), and resolveRoster only looks in a.units. Kept imports are resolved before the split and work, but an import made in the app (runImport, after the split) fails: the owner’s own Healybois export is refused with “Unit Spore Mines (Biovore) not recognized”, and an imported Tzeeeeentch comes without its Blue Horrors sheet (refs: []). The gate’s import step passes only because verify/ loads data.js unsplit.",
+  "fix": "import.js resolveRoster: before `const instances = …` add `const allOf = a => a.units.concat(a.refs || []);` and use it in instances (`facArmies.flatMap(a => allOf(a).map(u => …))`), in the inPool sort (`allOf(x.a).indexOf(x.u) - allOf(y.a).indexOf(y.u)`) and in the reference-sheet loop (`for(const r of (x.a ? allOf(x.a) : []).filter(r => r.ref && r.ref.by === x.u.id))`). The app splits refs out of a.units at start (splitRefs), so an import made in the app (runImport, after the split) never saw them."
+ },
+ {
+  "key": "840be609f54574df",
+  "where": "runImport",
+  "verdict": "fix",
+  "why": "splitRefs(A) on the result is right, but resolve (above) runs against the split D.armies and misses every reference sheet: the fix is in resolveRoster (allOf); runImport itself needs no change once resolveRoster reads a.refs.",
+  "fix": "import.js resolveRoster: before `const instances = …` add `const allOf = a => a.units.concat(a.refs || []);` and use it in instances (`facArmies.flatMap(a => allOf(a).map(u => …))`), in the inPool sort (`allOf(x.a).indexOf(x.u) - allOf(y.a).indexOf(y.u)`) and in the reference-sheet loop (`for(const r of (x.a ? allOf(x.a) : []).filter(r => r.ref && r.ref.by === x.u.id))`). The app splits refs out of a.units at start (splitRefs), so an import made in the app (runImport, after the split) never saw them."
+ },
+ {
+  "key": "36315ce2fa6a4ee0",
+  "where": "deviations-bsdata.json · blue-horrors · kw",
+  "verdict": "ok",
+  "why": "Wahapedia Blue Horrors KEYWORDS: BRIMSTONE HORRORS: BRIMSTONE. GW wins over BSData/NR."
+ },
+ {
+  "key": "cd9db9062e978b86",
+  "where": "deviations-bsdata.json · blue-horrors · kw",
+  "verdict": "ok",
+  "why": "Wahapedia Blue Horrors KEYWORDS – ALL MODELS: … HORRORS. GW wins."
+ },
+ {
+  "key": "e5c5a9dc0d47c6e3",
+  "where": "deviations-bsdata.json · spore-mines-biovore · kw",
+  "verdict": "ok",
+  "why": "Reference is New Recruit’s/BSData’s category for the reference entry, no GW keyword; dropped and declared."
+ },
+ {
+  "key": "d339e0ba77627b41",
+  "where": "spore-mines-biovore",
+  "verdict": "ok",
+  "why": "The quote is the Biovores’ Seed Spore Mines sentence word for word (check.js checks it); the Healybois Biovores are 1 model, so 1 Spore Mine, as New Recruit’s “1x Spore Mine”."
+ },
+ {
+  "key": "d12ab51d79f9444d",
+  "where": "spore-mines-biovore · Bio-minefield",
+  "verdict": "ok",
+  "why": "As 7939ecd4e8388bd6."
+ },
+ {
+  "key": "01612d60fe0b76e0",
+  "where": "spore-mines-biovore · Floating Death",
+  "verdict": "ok",
+  "why": "As 703414249ce80131."
+ },
+ {
+  "key": "8f033e391546ca29",
+  "where": "spore-mines-biovore",
+  "verdict": "ok",
+  "why": "Accurate; matches the data and the NR PDF page SPORE MINES (BIOVORE)."
+ },
+ {
+  "key": "217d924bf712efc6",
+  "where": "blue-horrors",
+  "verdict": "fix",
+  "why": "The Blue Horrors sheet itself is right (GW’s Blue Horrors datasheet from BSData b795-b936-ad61-e407, its Brimstone rows as GW’s datasheet prints them). But the reason’s “no separate Brimstone Horrors sheet” goes against the owner’s request (“a reference sheet for bleu horrors and then the third ones too”). Also the app band reads “Not in the army until Horrors are Pink… adds it: “…use the BLUE HORRORS datasheet…”” — for a datasheet switch “adds it” is wrong (see 8b4094509a6e8f74).",
+  "fix": {
+   "entry": "Blue Horrors",
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+    "quote": "If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit."
+   },
+   "why": "Reference sheet Blue Horrors: GW’s Blue Horrors datasheet (Faction Pack Chaos Daemons 1.2), which the Pink Horrors use once they contain no Pink Horror (quote), built from BSData’s Blue Horrors root entry (one Blue Horror with its weapons; what BSData shows only by a condition left out). Its Brimstone rows stay as GW prints them on this datasheet (carrier “Brimstone Horrors added by Split”, BRIMSTONE kwOnly); the Brimstone Horrors have their own sheet next to it, as the owner asked."
+  }
+ },
+ {
+  "key": "5bf53ce8f7bffc00",
+  "where": "no Brimstone Horrors sheet",
+  "verdict": "fix",
+  "why": "Answered by the owner’s request: a third sheet for the Brimstone Horrors.",
+  "fix": {
+   "app": "A separate Brimstone Horrors reference sheet (ref by fluxmaster-pink-horrors, rule Split, quote “On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.”): the BLUE HORROR/BRIMSTONE HORROR stats row as a Brimstone Horror row, Coruscating Yellow flames and Yellow claws (no “(ref. only)”, no carrier), keywords ALL MODELS + BRIMSTONE (no BLUE), the Blue Horrors datasheet’s Exploding Horrors (it selects BRIMSTONE HORROR models), from GW’s Faction Pack Blue Horrors datasheet (BSData has no Brimstone entry, only the “Blue/Brimstone Horror (ref. only)” profile 02ca-ba62-f305-1c51)"
+  }
+ },
+ {
+  "key": "da6ca8ec5d6e273a",
+  "where": "Pink Horrors “(ref. only)” rows next to the Blue Horrors sheet",
+  "verdict": "ok",
+  "why": "The Pink Horrors card’s (ref. only) rows are the models its own Split adds while the unit is still a Pink Horrors unit; keep."
+ },
+ {
+  "key": "7df6293dcaa362e5",
+  "where": "units that add units or models of another profile",
+  "verdict": "fix",
+  "why": "Scan of every unit ability, army/detachment rule, enhancement, detachment and core stratagem and core rule text in data.js (scratch script): one miss — Mucho Mutantes (Thousand Sons, Warpmeld Pact) stratagem Gift of Change: “add one TZEENTCH CHAOS SPAWN unit containing one model to your army” (target any THOUSAND SONS CHARACTER model excluding MONSTERS — Ahriman, the Exalted Sorcerer and three Tzaangor Shamans qualify). That is a new unit with its own datasheet (Chaos Spawn) the list does not have, exactly like Spore Mines. The from-json pattern (“add one new X unit to your army”) misses it too (no “new”). The owner named only the Biovores and Pink Horrors (“namely”), so ask before building; the rest of the “not” list is right (Runt Swarm Infested War Zone: identical GRETCHIN unit; Custodes Unleash the Lions: same datasheet split; returned/Reanimated models: same datasheet; Slaughterbound/Exalted Sorcerer return Bodyguard models).",
+  "fix": {
+   "found": [
+    "healybois · Biovores · Seed Spore Mines → Spore Mines (Biovore) (sheet)",
+    "tzeeeeentch · Pink Horrors · Split / Horrors are Pink → Blue Horrors (sheet; Brimstone on it)",
+    "mucho-mutantes · Warpmeld Pact stratagem Gift of Change → Tzeentch Chaos Spawn (no sheet yet: ask the owner)"
+   ],
+   "not": [
+    "orks Runt Swarm · Infested War Zone: a new GRETCHIN unit identical to the destroyed one (the same datasheet)",
+    "infernal-lance Knight Ruinator · Methodical Destruction, the-exiled-legion Karanak · Prey of the Blood God: “select one new enemy unit” (no unit added)",
+    "Necrons Reanimation Protocols and Resurrection Orb: the same models return",
+    "adeptus-custodes Lions of the Emperor · Unleash the Lions: the same datasheet split into one-model units",
+    "Slaughterbound Rage Eternal, Exalted Sorcerer Rebind Rubricae: destroyed Bodyguard models returned (the same datasheet)"
+   ]
+  }
+ },
+ {
+  "key": "dffa4af90edb70ef",
+  "where": "verify/snapshots/tzeeeeentch.txt",
+  "verdict": "ok",
+  "why": "My gate run of a499cef reproduces tzeeeeentch-snapshot.diff, shooty-snapshot.diff, healybois-snapshot.txt and u-w0t-m8-snapshot.txt byte for byte; only the explained changes. Note the snapshot also shows two of the bugs in 8b4094509a6e8f74: the Blue Horrors page’s Stratagems reads “None from Cavalcade of Chaos or Scintillating Legion.” with no CORE line, and the popup back label after it is ARMIES (titleOf finds no ref unit). With the app fix the snapshot changes again (stratagems listed on both sheets, search/ability popups)."
+ },
+ {
+  "key": "8b4094509a6e8f74",
+  "where": "app.html · splitRefs, unitById, ROLE_ORDER/roleGroup, screenUnits, nameTags, screenUnit band, unitFlip, dmUnits",
+  "verdict": "fix",
+  "why": "Counts are right: home tile (unitCount), points (pointsUsed, ref pts 0), Bases row/screen, Abilities/Ranged/Melee tabs, Rules tab, phase checklist and the Damage default pick all read a.units, which no longer holds refs. But a.units is also used where a ref must be found, and these break in the built app (reproduced with Playwright on a scratch build): (1) valid() rejects {s:\"unit\"} for a ref, so closing any popup opened on a reference page (Deep Strike, Seed Spore Mines link, a + grant), Back to it, or a reload, throws you to Home/army; titleOf gives \"\" (back label ARMIES in the snapshot). (2) The Damage tab picker (dmPicker) lists only a.units and dmPair ignores a ref st.atk, so a reference sheet is NOT selectable (dmUnits/dmSides take it, dmPair shows another unit: mismatch). (3) eligible(s).includes(u) is false for a ref: the reference page lists no stratagems at all (Spore Mines: not even CORE; Blue Horrors: “None from …”), the Damage tab would apply no stratagem mods, defenceItems no stratagem defences. (4) searchIndex/abilityIndex skip refs: showAbility of Floating Death/Bio-minefield/Sullen Malevolence opens nothing, search finds no reference sheet, Ask about a reference unit sends no context, showGrant finds no unit. Minor wording: the band “Not in the army until <rule> (<unit>) adds it: “…”” reads wrong for Blue Horrors (a datasheet switch, not an addition): suggest “Not in the army until <rule> (<unit>): “<quote>””. Minor: the Damage tab gives a reference sheet 1 model (its models line); fine as a start, the player sets models left.",
+  "fix": "app.html (all checked in a scratch worktree with the gate; only tzeeeeentch/healybois snapshots change):\n1) after `D.armies.forEach(splitRefs);` add\n   const unitsAll = a => a.units.concat(a.refs || []);\n2) titleOf: `if(c.s === 'unit') return (unitsAll(armyById(c.army) || { units:[] }).find(u => u.id === c.unit) || {}).name || '';`\n3) valid: `if(c.s === 'unit') return unitsAll(a).some(u => u.id === c.unit);`\n4) after `const eligible = …` add\n   const canTarget = (s, u, a) => unitsAll(a || army()).includes(u) && matches(s.needs, u);\n   and replace `eligible(s).includes(u)` (4×: unit mods, defenceItems, screenUnit strats ×2) with `canTarget(s, u)`, `eligible(x, L).includes(u)` (2×: dmBothVia, dmLimitOf) with `canTarget(x, u, L)`, `eligible(s).includes(au)` (3×: dmCalc calcMods, other-kind mods, other strats) with `canTarget(s, au)` (the same answer for every unit of a.units, so no other list changes)\n5) dmPair: `mine = unitsAll(me).find(u => u.id === st.atk) || me.units.find(…armed…) || me.units[0] || null` (the default pick stays an army unit)\n6) dmPicker: `… '<div class=\"list\">' + unitsAll(P.me).map(row).join('') + '</div>'`\n7) searchIndex: the three `for(const u of a.units)` loops → `for(const u of unitsAll(a))`, and the Units row sub `u.ref ? '' : u.pts + ' pts'`\n8) Ask context: `const u = unitsAll(A).find(x => x.id === r.v)` (askRefText) and `const u = unitById(v)` (the ref label); showGrant: `const u = unitById(unitId);`"
+ },
+ {
+  "key": "df7a341b542456c5",
+  "where": "import.js · resolveRoster",
+  "verdict": "fix",
+  "why": "The loop is right for verify/ (unsplit data) but in the app D.armies is already split, so neither the export’s own reference entry (Healybois: refused) nor the hand ref (Tzeeeeentch: Blue Horrors missing) is found on an in-app import. Also the imported ref.by is the source list’s unit id; correct as long as the adding unit keeps its id (it does unless two different units of that id are imported).",
+  "fix": "import.js resolveRoster: before `const instances = …` add `const allOf = a => a.units.concat(a.refs || []);` and use it in instances (`facArmies.flatMap(a => allOf(a).map(u => …))`), in the inPool sort (`allOf(x.a).indexOf(x.u) - allOf(y.a).indexOf(y.u)`) and in the reference-sheet loop (`for(const r of (x.a ? allOf(x.a) : []).filter(r => r.ref && r.ref.by === x.u.id))`). The app splits refs out of a.units at start (splitRefs), so an import made in the app (runImport, after the split) never saw them."
+ },
+ {
+  "key": "d29fc40ddcd594e0",
+  "where": "check.js · ref",
+  "verdict": "ok",
+  "why": "0 pts, the rule is an ability of a non-ref unit of the list whose words (** stripped) hold the quote. For the Brimstone sheet, by fluxmaster-pink-horrors / Split passes as is."
+ },
+ {
+  "key": "5d1e7bb5188a5ed4",
+  "where": "verify/from-json.js · reference entries and hand refs",
+  "verdict": "ok",
+  "why": "Reference category → role Reference, page by name less bracket, Reference keyword dropped; hand refs build from the BSData root with hidden/conditional profiles left out; --write of healybois and tzeeeeentch reproduces data.js (checked). The derived-ref pattern needs “new” (misses Gift of Change’s “add one TZEENTCH CHAOS SPAWN unit … to your army”; fine while that is a hand ref). The Brimstone split needs a third hand-ref form (see the report): BSData has no Brimstone Horrors entry. Note: the DATASHEETS row of a reference sheet stores role:'Reference' (chaos-daemons/blue-horrors, a real buyable datasheet, Battleline): harmless now (tables.js puts a differing role on the unit if another list buys Blue Horrors), but role Reference is a list fact; consider keeping it on the unit entry."
+ },
+ {
+  "key": "b91ced175cc7970f",
+  "where": "verify/bsdata.js · comparePoints, role",
+  "verdict": "ok",
+  "why": "A ref must have pts 0 and is out of the escalation pools, so it cannot steal a datasheet slot from a bought unit; role Reference allowed only with ref. bsdata gate PASS."
+ },
+ {
+  "key": "4ae5feb7234a30f8",
+  "where": "verify/nr.js · compareJsonArmy",
+  "verdict": "ok",
+  "why": "Only a ref the export has no entry for is skipped (Blue Horrors); the Spore Mines (Biovore) entry is still compared. nr PASS."
+ },
+ {
+  "key": "8e9eb6394797449b",
+  "where": "verify/render.js, verify/calc-test.js",
+  "verdict": "ok",
+  "why": "render.js renders refs’ pages. calc-test: `(ph === 'fight' ? u.melee : u.ranged || [])` parsed as `ph === 'fight' ? u.melee : (u.ranged || [])`, so a unit with no melee array crashed on .length; `((…) ? u.melee : u.ranged) || []` is right, and gives the same filter for every unit before (all had melee arrays). Both loops (518, 544) fixed. Note damage-node.js loads data.js unsplit, so the gate’s Damage checks see refs in a.units (last, never picked first); with the app fix (dmPair/dmPicker on unitsAll) the app and the gate agree."
+ },
+ {
+  "key": "68a30fcce77a1bb9",
+  "where": "verify/columns.json",
+  "verdict": "ok",
+  "why": "ARMIES.units.ref documented with source and checks."
+ },
+ {
+  "key": "5c35f4c1de5bb2c7",
+  "where": "DEFENCE",
+  "verdict": "ok",
+  "why": "stealth now skips “cannot have the Benefit of Cover” (Burning Spray); no other reading changed (readings PASS, 0 gaps). Optional: add the typographic “can’t ” to the lookbehind."
+ },
+ {
+  "key": "aad940bc2208271b",
+  "where": "verify/from-json.js · datasheet row reuse for each part of a led unit",
+  "verdict": "ok",
+  "why": "No existing DATASHEETS row or other list changes in data.js 35d892e..a499cef (only additions; the Improbable Shield GRANTS line differs by a trailing comma). --compare cannot show this (it exits before the reuse), so the check is the data.js diff and the tables gate (0 facts kept per list)."
+ },
+ {
+  "key": "9df30b2ddd4b50eb",
+  "where": "verify/from-json.js · row reuse: keyword, srcNote, an ability under another name, own value",
+  "verdict": "ok",
+  "why": "As described; applied to single-part units only; no other list changed."
+ },
+ {
+  "key": "75574a4325e0e811",
+  "where": "verify/from-json.js · enhancement spellings",
+  "verdict": "ok",
+  "why": "Hand spellings map only the named spelling; no other list uses it (--compare of 22 other exports identical to base except as noted)."
+ },
+ {
+  "key": "03a09542b7fd2b26",
+  "where": "verify/from-json.js · stratagem FAQ note",
+  "verdict": "ok",
+  "why": "note inserted right after gist/gistOf; texts PASS checks the quote."
+ },
+ {
+  "key": "be0868878e900ae7",
+  "where": "verify/from-json.js · singular keyword",
+  "verdict": "ok",
+  "why": "Only replaces an export keyword GW does not print whose plural GW prints; declared both ways."
+ },
+ {
+  "key": "a41824818e1792a5",
+  "where": "verify/waha-words.js · unitSrc",
+  "verdict": "ok",
+  "why": "srcNote written last; also writes ref after the head (used by the reference sheets)."
+ },
+ {
+  "key": "ed45ac341734ddbb",
+  "where": "verify/tables.js · field comments",
+  "verdict": "ok",
+  "why": "Agreeing comments stay on the datasheet when an uncommented unit is new; tables PASS, no other list’s data changed."
+ },
+ {
+  "key": "6db61a7c40623401",
+  "where": "verify/derive.js · grantRows",
+  "verdict": "ok",
+  "why": "GRANTS of other lists unchanged in data.js; derive PASS (tables not stale)."
+ },
+ {
+  "key": "1631dbd4a4e104b4",
+  "where": "verify/texts.js · Rules Updates title",
+  "verdict": "ok",
+  "why": "Singular title “Seed Spore Mine Ability” matches Seed Spore Mines only at the end of the title; texts PASS."
+ },
+ {
+  "key": "4beec6f9741aa012",
+  "where": "verify/from-json.js · weapon-shaped profiles",
+  "verdict": "ok",
+  "why": "Needs Range, A, S, AP, D and BS|WS on a non-Unit profile: only weapons have those. --compare of the other exports unchanged; bsdata PASS."
+ },
+ {
+  "key": "551ec5e20ab5cd65",
+  "where": "verify/from-json.js · plural GW weapon name counted by its composition",
+  "verdict": "ok",
+  "why": "Narrow (n>2, one models line of 1×, GW composition “equipped with: … N <plural>”)."
+ },
+ {
+  "key": "f5c2138a3e11e0a4",
+  "where": "verify/from-json.js · boxes after the composition",
+  "verdict": "ok",
+  "why": "Stops at the keywords and skips YOUR … COSTS; other exports’ --compare unchanged by it."
+ },
+ {
+  "key": "314dc511d4f36fe5",
+  "where": "verify/from-json.js · selectsFrom",
+  "verdict": "ok",
+  "why": "Correct, but it is not only the Silent King: `--compare` of shooty changes — Wazdakka Gutsmek’s “Throttlerokkit Shokka Engine Abilities” box now splits into Turbo Engine / Pulse Jet / Shokk Attack Engine with who “Throttlerokkit Shokka Engine Abilities: pick one” (Full Throttle: “select one Throttlerokkit Shokka Engine ability”), closer to data.js (who “Throttlerokkit Shokka Engine”, built from the PDF). data.js unchanged; mention it in the judgement."
+ },
+ {
+  "key": "2abc730b94ec6dc2",
+  "where": "verify/from-json.js · “(see left)”",
+  "verdict": "ok",
+  "why": "Only GW abilities whose text has the cross-reference, matched by equal words without it."
+ },
+ {
+  "key": "c589259c2284ba8d",
+  "where": "verify/from-json.js · kwOnly “<X> MODEL”",
+  "verdict": "ok",
+  "why": "Strips a trailing “ MODEL” from GW’s model-keyword head."
+ },
+ {
+  "key": "f0d044ccfe25b5ed",
+  "where": "verify/from-json.js · hand needs and army rule texts",
+  "verdict": "ok",
+  "why": "Hand needs only where derive reads none; texts { from, to } must match exactly once; the Damage-tab reading report fixed for entries with only faq/texts."
+ },
+ {
+  "key": "085408fa1f7f513b",
+  "where": "verify/texts.js · titleN",
+  "verdict": "ok",
+  "why": "Only “… army rule” titles; texts PASS."
+ },
+ {
+  "key": "9b4a5a6f82e7cf65",
+  "where": "verify/invariants.js · strat-needs",
+  "verdict": "ok",
+  "why": "Adding needs keywords to the known set lets TRIARCH PRAETORIANS be read whole; it cannot hide a TARGET keyword missing from needs. invariants PASS."
+ },
+ {
+  "key": "worthy-foes-first-run",
+  "where": "verify/from-json.js · readings, a detachment rule this run adds",
+  "verdict": "fix",
+  "why": "Cause: the readings block gives each unit the readings of every detachment rule whose needs it meets (`meets(r.needs, u)`), but a detachment this run adds comes from facSrc (Wahapedia) with no needs: they are written only later by the labels step (derive.js rule-needs on data.js as written). So on the first --write meets(undefined) is true for every unit and every U w0t m8? unit got Worthy Foes’ mods (7 units in my repro, not only Nekrosor and the Royal Warden); the rerun reads the needs from data.js. Reproduced: a499cef code + e2ab9c0 data.js → the Worthy Foes mods on 7 units; with the fix below the first --write gives a499cef’s u-w0t-m8 block and Necrons faction exactly (fingerprint stamps aside, which a rerun drops as well), and reruns of u-w0t-m8, healybois and tzeeeeentch on a499cef data.js give the same data.js as without the fix.",
+  "fix": "verify/derive.js: module.exports = { derive, ruleTables, readingsOf, vocab, tidyNeeds, … } (export vocab and tidyNeeds).\nverify/from-json.js, readings block:\n-  const { readingsOf } = require('./derive'), T = require('./tables');\n+  const { readingsOf, vocab, ruleNeeds, tidyNeeds } = require('./derive'), T = require('./tables');\n+  // (a detachment rule this run adds has no needs yet: the labels step below writes the ones verify/derive.js reads from its words, on\n+  // data.js as written; the same reading here, on data.js's other lists and this one, so a first --write gives the final readings)\n+  const fresh = r => Object.values(facSrc.detachments || {}).some(d => d.rule === r || (d.moreRules || []).includes(r));\n+  const V0 = vocab({ armies: D.armies.filter(a => a.id !== armyId).concat([{ units }]), factions: Object.assign({}, D.factions, { [factionId]: { name: ((D.factions || {})[factionId] || {}).name || typo(catName.replace(/^.* - /, '')) } }) });\n+  const needsNow = r => { if (!fresh(r) || r.needs !== undefined) return r.needs; const dn = ruleNeeds(V0, r); return dn.needs ? tidyNeeds(dn.needs) : undefined; };\n…\n-      for (const d of dets) for (const r of [d.rule].concat(d.moreRules || [])) if (r && meets(r.needs, u)) t.push(…);\n+      for (const d of dets) for (const r of [d.rule].concat(d.moreRules || [])) if (r && meets(needsNow(r), u)) t.push(…);"
+ }
+]

@@ -1,0 +1,503 @@
+[
+ {
+  "key": "c6e9b4b7c1e29380",
+  "where": "healybois · The Swarmlord · Hive Commander",
+  "verdict": "ok",
+  "why": "GW (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" On the Swarmlord's datasheet, so the Swarmlord is right; the Tyrant Guard do not have it."
+ },
+ {
+  "key": "430ecd91e529c172",
+  "where": "healybois · The Swarmlord · Malign Presence",
+  "verdict": "ok",
+  "why": "Malign Presence is on the Swarmlord's datasheet (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html); FP 1.3 Rules Updates \"The Swarmlord, Malign Presence Ability – Change to: 'Once per turn, when your opponent targets a unit from their army within 12\\\" of this model …'\" (l.659-662). Who = The Swarmlord."
+ },
+ {
+  "key": "853ae3d9f5cb1b3f",
+  "where": "healybois · The Swarmlord · Domination of the Hive Mind",
+  "verdict": "ok",
+  "why": "GW: \"Domination of the Hive Mind (Aura): While a friendly TYRANIDS unit is within 9\\\" of this model …\" (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html). The Swarmlord's ability."
+ },
+ {
+  "key": "c7af53014aa1ccac",
+  "where": "healybois · The Swarmlord · Guardian Organism",
+  "verdict": "ok",
+  "why": "GW prints Guardian Organism on the Tyrant Guard datasheet (Wahapedia verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: \"Guardian Organism: While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.\"). Who = Tyrant Guard is right (it is their ability; the benefit goes to the leader)."
+ },
+ {
+  "key": "5816d01e0fa16461",
+  "where": "healybois · Hive Tyrant · Guardian Organism",
+  "verdict": "ok",
+  "why": "\"While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability\" → \"The CHARACTER leading this unit has Feel No Pain 5+\": shortened, nothing added; the Tyrant Guard themselves get nothing, as GW says."
+ },
+ {
+  "key": "11adf23ee3d4bb5c",
+  "where": "healybois · The Swarmlord",
+  "verdict": "ok",
+  "why": "GW: Tyrant Guard KEYWORDS \"INFANTRY; GREAT DEVOURER; TYRANT GUARD\" (Wahapedia verify/.cache/waha/ds/tyranids_Tyrant-Guard.html); the Swarmlord has GREAT DEVOURER already, so INFANTRY and TYRANT GUARD are the ones that come from the led unit. New Recruit's PDF says the same (\"Infantry*, Tyrant Guard*, *from combined unit\")."
+ },
+ {
+  "key": "ba9270b7c1e60f2a",
+  "where": "healybois · The Swarmlord",
+  "verdict": "ok",
+  "why": "GW: The Swarmlord \"1 model | 210\", Tyrant Guard \"6 models | 170\" (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html, Wahapedia verify/.cache/waha/ds/tyranids_Tyrant-Guard.html); 380 in all, as New Recruit's PDF (\"380 PTS\")."
+ },
+ {
+  "key": "70e2764dfc326020",
+  "where": "healybois · The Swarmlord",
+  "verdict": "ok",
+  "why": "GW: The Swarmlord CORE ABILITIES \"Deadly Demise D3, Leader\"; Tyrant Guard has no core abilities (ARMY RULES Synapse only). So Deadly Demise D3 is the Swarmlord's only."
+ },
+ {
+  "key": "e08e57503907a1a3",
+  "where": "healybois · The Swarmlord",
+  "verdict": "ok",
+  "why": "GW: \"This model is equipped with: Synaptic pulse; bone sabres.\" and Tyrant Guard \"Every model is equipped with: scything talons and rending claws.\"; the export takes no option (NR PDF: \"Bone Sabres, Synaptic Pulse\", \"6x Tyrant Guard Scything talons and rending claws\"). Profiles match GW: Synaptic pulse 18\\\" D6+3 S5 AP-1 D2 [PSYCHIC, TORRENT]; Bone sabres A8 WS2+ S9 AP-2 D3 [TWIN-LINKED]; Scything talons and rending claws A5 WS3+ S5 AP-1 D1. Names as New Recruit."
+ },
+ {
+  "key": "bde5b62024582966",
+  "where": "healybois · Hive Tyrant · Onslaught",
+  "verdict": "ok",
+  "why": "GW: \"Onslaught (Aura, Psychic)\" on the Hive Tyrant datasheet (Wahapedia verify/.cache/waha/ds/tyranids_Hive-Tyrant.html). Who = Hive Tyrant."
+ },
+ {
+  "key": "e4dc9237b77a6f96",
+  "where": "healybois · Hive Tyrant · Will of the Hive Mind",
+  "verdict": "ok",
+  "why": "GW: Will of the Hive Mind on the Hive Tyrant datasheet (Wahapedia verify/.cache/waha/ds/tyranids_Hive-Tyrant.html), FP 1.3 \"Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability, Change to\". Who = Hive Tyrant."
+ },
+ {
+  "key": "14660dc8e0297965",
+  "where": "healybois · Hive Tyrant · Instinctive Defence",
+  "verdict": "ok",
+  "why": "FP 1.3 \"Instinctive Defence Enhancement, Change to: … when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, … models in the bearer's unit have the Fights First ability.\" Heroic Intervention is \"End of your opponent's Charge phase\" (charge, opp); Fights First works in the Fight phase of either turn. Right."
+ },
+ {
+  "key": "20650d16eeb8f0a0",
+  "where": "healybois · Hive Tyrant · Instinctive Defence",
+  "verdict": "ok",
+  "why": "An enhancement (Assimilation Swarm, \"Instinctive Defence 15 pts\", verify/.cache/waha/tyranids.txt l.257); GW prints no other tag."
+ },
+ {
+  "key": "86ce6f7481bff5e7",
+  "where": "healybois · Hive Tyrant · Instinctive Defence",
+  "verdict": "ok",
+  "why": "An enhancement is on its bearer: the Hive Tyrant (NR export: Instinctive Defense on the Hive Tyrant). \"models in the bearer's unit\" then reaches the Tyrant Guard too, as the text says."
+ },
+ {
+  "key": "263344430f6187fe",
+  "where": "healybois · Hive Tyrant · Guardian Organism",
+  "verdict": "ok",
+  "why": "As item for the Swarmlord: Guardian Organism is the Tyrant Guard's (Wahapedia verify/.cache/waha/ds/tyranids_Tyrant-Guard.html)."
+ },
+ {
+  "key": "80f5458c3da452bc",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "GW: Tyrant Guard KEYWORDS \"INFANTRY; GREAT DEVOURER; TYRANT GUARD\"; Hive Tyrant has GREAT DEVOURER (Wahapedia verify/.cache/waha/ds/tyranids_Hive-Tyrant.html). NR PDF: \"Infantry*, Tyrant Guard*, *from combined unit\"."
+ },
+ {
+  "key": "b1f56f16908f8373",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "GW: Hive Tyrant \"1 model | 195\" + Instinctive Defence 15 = 210, Tyrant Guard 6 models 170; 380 (NR PDF: Hive Tyrant 210, Tyrant Guard 170, 380 PTS). The 210 includes the enhancement, as the other lists' ptsNotes give the parts \"as the list has them\" (e.g. Fluxmaster, Shield-Captain)."
+ },
+ {
+  "key": "0a6e479af6c5fc3a",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "GW: Hive Tyrant CORE ABILITIES \"Deadly Demise D3, Leader\"; Tyrant Guard none. Right."
+ },
+ {
+  "key": "5722b75c72a17834",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "GW: \"This model is equipped with: monstrous bonesword and lash whip; monstrous scything talons.\"; no option taken (NR PDF). Profiles match GW: A6 2+ S9 AP-2 D3 [TWIN-LINKED]; A4 2+ S7 AP-2 D2 [EXTRA ATTACKS]. No ranged weapon, so none shown."
+ },
+ {
+  "key": "9fc365eb81dfd78f",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "verdict": "ok",
+  "why": "\"Once per turn, in your Shooting phase, when selected to shoot …\" (Wahapedia verify/.cache/waha/ds/tyranids_Biovores.html): your Shooting phase."
+ },
+ {
+  "key": "428fe8081a605dd7",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "verdict": "ok",
+  "why": "The text's own first words \"Once per turn\"; GW prints no tag. Nothing added."
+ },
+ {
+  "key": "e114ee07f67c514e",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "verdict": "fix",
+  "why": "The Seed Spore Mines FAQ is GW's (FP 1.3 FAQs: \"Q: When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden? A: No.\") and correctly labelled. But FP 1.3 has a second FAQ about exactly what this ability does (adds a SPORE MINES unit during the battle and sets it up): \"Q: Are Spore Mines units that are added to an army during a battle restricted by abilities that prevent Reserves from being set up within a certain range (e.g. Space Marines Infiltrators’ Omniscrambers)? A: No.\" (FP 1.3 l.763-765, the last FAQ). It is nowhere in data.js. Show everything: add it to the same note (GW's spelling \"Omniscrambers\" kept). (If the builder prefers it on the Spore Mines reference sheet, that is the other reviewer's item; it must be shown somewhere.)",
+  "fix": {
+   "note": "FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.” FAQ (Faction Pack 1.3): “Are Spore Mines units that are added to an army during a battle restricted by abilities that prevent Reserves from being set up within a certain range (e.g. Space Marines Infiltrators’ Omniscrambers)?” “No.”"
+  }
+ },
+ {
+  "key": "58693adba4c442a7",
+  "where": "healybois · Biovores",
+  "verdict": "ok",
+  "why": "GW: \"Every model is equipped with: Spore Mine launcher; chitin-barbed limbs.\" (Wahapedia verify/.cache/waha/ds/tyranids_Biovores.html). Profiles: 48\\\" D3 4+ S6 AP-1 D2 [BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE]; A2 4+ S5 AP0 D1. Names as New Recruit (\"Spore mine launcher\")."
+ },
+ {
+  "key": "985bee61c04a747f",
+  "where": "healybois · Pyrovores · Burning Spray",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase, after this unit has shot …\" (Wahapedia verify/.cache/waha/ds/tyranids_Pyrovores.html): your Shooting phase."
+ },
+ {
+  "key": "87c20578765add84",
+  "where": "healybois · Pyrovores",
+  "verdict": "ok",
+  "why": "GW: \"Every model is equipped with: flamespurt; chitin-barbed limbs.\" Flamespurt 12\\\" D6+1 S6 AP-1 D1 [IGNORES COVER, TORRENT, TWIN-LINKED]; limbs A2 4+ S5 AP0 D1 (Wahapedia verify/.cache/waha/ds/tyranids_Pyrovores.html). 2 models per unit."
+ },
+ {
+  "key": "95d5aeff41ea229c",
+  "where": "healybois · Ripper Swarms · Chitinous Horrors",
+  "verdict": "ok",
+  "why": "GW prints \"Chitinous Horrors (Aura):\" (Wahapedia verify/.cache/waha/ds/tyranids_Ripper-Swarms.html). Tagged Aura only because GW does."
+ },
+ {
+  "key": "c1606ac65cab9d30",
+  "where": "healybois · Ripper Swarms",
+  "verdict": "ok",
+  "why": "GW: \"Every model is equipped with: chitinous claws and teeth.\"; spinemaws not taken (NR PDF \"1x Ripper Swarm Chitinous claws and teeth\"). A6 5+ S2 AP0 D1 [SUSTAINED HITS 1]."
+ },
+ {
+  "key": "b930c4462e412083",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "fix",
+  "why": "Enraged Behemoths is the Crusher Stampede detachment rule (FP 1.3 Rules Updates, \"CRUSHER STAMPEDE DETACHMENT, Enraged Behemoths Detachment Rule\"). Healybois is Assimilation Swarm + Talons of the Norn Queen (NR PDF \"Detachment: Assimilation Swarm …, Talons of the Norn Queen\"); nothing in this list adds to OC. The note is nidzillas' list-caused value sitting on the shared datasheet row (data.js DATASHEETS tyranids/norn-assimilator Singular Purpose note), so here it shows a rule the list does not have. Fix: no note in Healybois; move the note from the datasheet row to nidzillas' own unit entries (a unit can differ between lists; list-caused values carry their reason). A full fix value is not possible: with the note gone this judgement no longer exists."
+ },
+ {
+  "key": "fbc86381695ae52d",
+  "where": "healybois · Norn Emissary · Singular Purpose",
+  "verdict": "fix",
+  "why": "Same as the Norn Assimilator: Enraged Behemoths (Crusher Stampede) is not in Healybois; the note comes from the shared row tyranids/norn-emissary (nidzillas'). Fix: no note in Healybois; keep it on nidzillas' units only. A full fix value is not possible: the judgement disappears."
+ },
+ {
+  "key": "7b439f39fcb63e01",
+  "where": "Assimilation Swarm rule · Feed the Swarm",
+  "verdict": "ok",
+  "why": "FP 1.3 Feed the Swarm \"Change to: 'In your Command phase, each HARVESTER unit …'\": command."
+ },
+ {
+  "key": "401a835d3ee8ad7b",
+  "where": "Assimilation Swarm rule · Feed the Swarm",
+  "verdict": "ok",
+  "why": "\"In your Command phase\": your."
+ },
+ {
+  "key": "bb3a29a11c2832af",
+  "where": "Assimilation Swarm rule · Feed the Swarm",
+  "verdict": "ok",
+  "why": "\"each HARVESTER unit from your army can Regenerate …\": the user is a HARVESTER unit (Pyrovores, Ripper Swarms, Norn Assimilators here; FP 1.3 adds HARVESTER to the Norn Assimilator). Right."
+ },
+ {
+  "key": "8b908380d05ad323",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase.\" (verify/.cache/waha/tyranids.txt, Assimilation Swarm): all five phases."
+ },
+ {
+  "key": "849d4d81ae8adc9f",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "verdict": "ok",
+  "why": "Any phase of either player's turn: either."
+ },
+ {
+  "key": "fce6529e143b53f7",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "verdict": "ok",
+  "why": "\"TARGET: One HARVESTER unit from your army that was just destroyed.\": Harvester."
+ },
+ {
+  "key": "24de29679c3cf169",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "verdict": "ok",
+  "why": "Shortened from GW's EFFECT; \"the enemy unit that destroyed it\" for \"the enemy unit that just destroyed your HARVESTER unit\"; WHEN/TARGET kept; nothing added."
+ },
+ {
+  "key": "149d05240fb831a6",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase, when a TYRANIDS unit from your army is destroyed …\": all phases."
+ },
+ {
+  "key": "1575fe86b5be36d7",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "verdict": "ok",
+  "why": "Either turn (any phase)."
+ },
+ {
+  "key": "eebec832a704da28",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "verdict": "ok",
+  "why": "\"TARGET: One HARVESTER unit from your army that is within 6\\\" of that destroyed unit.\": Harvester."
+ },
+ {
+  "key": "9b62125cef189040",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "verdict": "ok",
+  "why": "GW's words shortened, nothing added; \"(see Feed the Swarm)\" is GW's own cross-reference."
+ },
+ {
+  "key": "75038e3029821b32",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "verdict": "ok",
+  "why": "FP 1.3 FAQs: \"Q: When using the Reclaim Biomass Stratagem, can the Stratagem effect be used on the unit that was just destroyed? A: No.\" Quoted exactly, on the stratagem it concerns, labelled FAQ (Faction Pack 1.3)."
+ },
+ {
+  "key": "e1f6598411a5a5c9",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "verdict": "ok",
+  "why": "\"WHEN: Command phase.\": command."
+ },
+ {
+  "key": "4ebbce2bcd4a58bc",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "verdict": "ok",
+  "why": "GW says \"Command phase\", not \"your Command phase\": either player's. Right."
+ },
+ {
+  "key": "dc4f924058870063",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "verdict": "ok",
+  "why": "\"TARGET: One HARVESTER unit from your army …\": Harvester."
+ },
+ {
+  "key": "ae22a343ece74f47",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "verdict": "ok",
+  "why": "GW's EFFECT shortened (\"over it\" for \"over that objective marker\"), WHEN/TARGET kept, nothing added."
+ },
+ {
+  "key": "bf83f26bd91b6e90",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "verdict": "ok",
+  "why": "\"WHEN: Your opponent’s Shooting phase or the Fight phase …\": shooting, fight. (2CP, as Wahapedia; the app shows 2CP.)"
+ },
+ {
+  "key": "d043a3108e25ab1b",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "verdict": "ok",
+  "why": "Shooting only in theirs, Fight in either: either overall, with turns below."
+ },
+ {
+  "key": "fca3f1433dc566b3",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "verdict": "ok",
+  "why": "Shooting: opponent's only (\"Your opponent's Shooting phase\"); the Fight phase in either turn. Right."
+ },
+ {
+  "key": "b99d71453e9beeed",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "verdict": "ok",
+  "why": "\"TARGET: One HARVESTER unit …\": Harvester."
+ },
+ {
+  "key": "96a85e2a464bc2b6",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "verdict": "ok",
+  "why": "WHEN/EFFECT shortened: \"just after an enemy unit selected it as a target\", FNP 5+ until end of phase, 4+ within range of an objective marker you control. Nothing added."
+ },
+ {
+  "key": "c9d0b22331caf9fb",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "verdict": "ok",
+  "why": "Same content as the def, with WHEN kept in full. Right."
+ },
+ {
+  "key": "a049ba734c80ae3b",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase.\": fight."
+ },
+ {
+  "key": "af0073357700c092",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "verdict": "ok",
+  "why": "Either player's Fight phase: either."
+ },
+ {
+  "key": "588f4060de35aa0b",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "verdict": "ok",
+  "why": "\"TARGET: One TYRANIDS unit from your army …\": any Tyranids unit."
+ },
+ {
+  "key": "dfeef77d3c70d0bc",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "verdict": "ok",
+  "why": "EFFECT: \"melee weapons … have the [LETHAL HITS] ability. If your unit is a HARVESTER unit, … a successful unmodified Hit roll of 5+ scores a Critical Hit as well.\" The footnote keeps the HARVESTER condition in GW's terms; when = WHEN/TARGET/duration. Right."
+ },
+ {
+  "key": "95eaae1e6b40792b",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "verdict": "ok",
+  "why": "GW's words shortened, condition kept, nothing added."
+ },
+ {
+  "key": "48c767c2fd18cfba",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Fight phase.\": fight."
+ },
+ {
+  "key": "ed7402db57442c67",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "verdict": "ok",
+  "why": "\"Your Fight phase\": your."
+ },
+ {
+  "key": "7a5ad993e572d0ee",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "verdict": "ok",
+  "why": "\"TARGET: One TYRANIDS unit from your army that just destroyed an enemy unit.\": any Tyranids unit."
+ },
+ {
+  "key": "362cf25caa2b177d",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "verdict": "ok",
+  "why": "GW's words shortened, nothing added. (For the owner, not a fix: GW still says \"regain up to D3 lost wounds\" here while FP 1.3's Feed the Swarm now gives \"up to D3+1\"; the gist rightly quotes GW and does not reconcile them.)"
+ },
+ {
+  "key": "4742dac573f77f1c",
+  "where": "deviations-bsdata.json · the-swarmlord-tyrant-guard · rules",
+  "verdict": "ok",
+  "why": "GW's Swarmlord and Tyrant Guard datasheets print no Feel No Pain core ability (CORE ABILITIES \"Deadly Demise D3, Leader\"; Tyrant Guard ARMY RULES \"Synapse\"); FNP 5+ only comes through Guardian Organism to the leader, which the app shows. GW wins."
+ },
+ {
+  "key": "95e61da1b2e2601b",
+  "where": "deviations-bsdata.json · hive-tyrant-tyrant-guard · rules",
+  "verdict": "ok",
+  "why": "Same for the Hive Tyrant + Tyrant Guard (Wahapedia verify/.cache/waha/ds/tyranids_Hive-Tyrant.html CORE ABILITIES \"Deadly Demise D3, Leader\")."
+ },
+ {
+  "key": "8699e0c63c7076fd",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "verdict": "ok",
+  "why": "GW: \"KEYWORDS: INFANTRY; GREAT DEVOURER; BIOVORES\" (Wahapedia verify/.cache/waha/ds/tyranids_Biovores.html); NR categories \"Biovore, Faction: Tyranids, Great Devourer, Infantry\". GW wins."
+ },
+ {
+  "key": "6a2bc427e874e351",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "verdict": "ok",
+  "why": "No BIOVORE keyword on GW's datasheet. Right."
+ },
+ {
+  "key": "7f1066c15eeef172",
+  "where": "deviations-bsdata.json · ripper-swarms · kw",
+  "verdict": "ok",
+  "why": "GW: \"KEYWORDS: SWARM; GREAT DEVOURER; HARVESTER; RIPPER SWARMS\" (Wahapedia verify/.cache/waha/ds/tyranids_Ripper-Swarms.html). GW wins."
+ },
+ {
+  "key": "25281d41a2c72927",
+  "where": "deviations-bsdata.json · ripper-swarms · kw",
+  "verdict": "ok",
+  "why": "No RIPPER SWARM keyword on GW's datasheet. Right."
+ },
+ {
+  "key": "bbf4c94fe5f8e0d9",
+  "where": "deviations-bsdata.json · tyrannofex · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion l.3857 \"Tyrannofex 120x92mm Oval Base\": GW's wording (Oval) kept, × for x is typography."
+ },
+ {
+  "key": "270011bf7a4acb0b",
+  "where": "deviations-nr.json · tyrannofex · stats[Tyrannofex].base",
+  "verdict": "ok",
+  "why": "Same base, New Recruit side. Right."
+ },
+ {
+  "key": "95f01fd67795bd71",
+  "where": "deviations-texts.json · hive-tyrant-tyrant-guard · ability:Onslaught (Hive Tyrant)",
+  "verdict": "ok",
+  "why": "FP 1.3 l.665 \"‘While a friendly TYRANIDSunit is within 6\\\" of this model, ranged\": a missing space; the app's \"TYRANIDS unit\" changes no word. Right."
+ },
+ {
+  "key": "fff3e266a9d614ad",
+  "where": "assimilation-swarm · Instinctive Defence",
+  "verdict": "ok",
+  "why": "FP 1.3 l.622 \"Instinctive Defence Enhancement\", Wahapedia \"Instinctive Defence 15 pts\"; NR \"Instinctive Defense\". Enhancement names are not weapon names: GW's spelling wins, NR's kept as nr. Right."
+ },
+ {
+  "key": "b0e4e5a8cc34f795",
+  "where": "tyranids/norn-emissary · Unnatural Resistance",
+  "verdict": "not ok",
+  "why": "Q (Unnatural Resistance/Resilience). GW's Norn Emissary datasheet names it \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" (Wahapedia verify/.cache/waha/ds/tyranids_Norn-Emissary.html, ABILITIES). BSData/New Recruit's \"Unnatural Resistance … against Mortal Wounds\" is not GW's. Only weapon names follow New Recruit; ability names and words follow GW, and one datasheet, one truth means the row should carry GW's: settle tyranids/norn-emissary on name \"Unnatural Resilience\" and text \"This model has the **Feel No Pain 4+** ability against mortal wounds.\" for both lists (nidzillas too), with New Recruit's name declared as a deviation (deviations-nr/bsdata, as for Instinctive Defense). Not ok as kept; the kept-row judgement disappears once the row has GW's name, so no fix value."
+ },
+ {
+  "key": "63cac0b4ab092c61",
+  "where": "tyranids/the-swarmlord · Hive Commander, Malign Presence, Domination of the Hive Mind; tyranids/hive-tyrant · Will of the Hive Mind; tyranids/norn-assimilator, norn-emissary, tyrannofex abilities",
+  "verdict": "not ok",
+  "why": "The kept rows are not only pack-replaced codex words, markup and a full stop. Where the Faction Pack does not touch the ability, they hold BSData's words against GW's datasheet: Harpoon Barbs row \"…within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+…\" vs GW \"…within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+…\" (Wahapedia verify/.cache/waha/ds/tyranids_Norn-Assimilator.html; FP 1.3 changes only [HARPOONED]); Singular Purpose row \"…targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\" (no comma, no full stop) vs GW \"…targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" (Norn Assimilator and Norn Emissary); Hive Commander without GW's final full stop; Unnatural Resistance (item 71). Rules are quoted from GW: settle these rows on GW's words (from-json-healybois.md \"Deviations to declare\" already has the GW readings), for nidzillas too. Malign Presence and Will of the Hive Mind on the rows are FP 1.3's words (l.659-662, 681-685): those are right. Tags/labels kept: right. No single fix value (the judgement covers several rows)."
+ },
+ {
+  "key": "f70ed72fa13476f9",
+  "where": "Norn Assimilator · Toxinjecter Harpoon",
+  "verdict": "ok",
+  "why": "Q (Toxinjecter). GW prints \"Toxinjector Harpoon\" (profile) / \"toxinjector harpoon\" (composition) (Wahapedia verify/.cache/waha/ds/tyranids_Norn-Assimilator.html); New Recruit prints \"Toxinjecter Harpoon\" (NR PDF l.183/186). The owner's rule is that weapon names follow New Recruit, so keep \"Toxinjecter Harpoon\"; the values are GW's (ranged 12\\\" A2 2+ S12 AP-3 D6+1 [HARPOONED]; melee A4 2+ S12 AP-3 D6+1 [EXTRA ATTACKS]) and [HARPOONED] is FP 1.3's wording. Recommendation: keep, and (optional) show GW's spelling beside it, as the app does for Instinctive Defense, so a player can find the weapon on GW's card."
+ },
+ {
+  "key": "89f3b0c37fbaa625",
+  "where": "The Swarmlord · Designer’s Note",
+  "verdict": "not ok",
+  "why": "Q (Designer's Note). GW's Swarmlord datasheet (Wahapedia) prints, under Malign Presence (Aura): \"Designer’s Note: This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.\" FP 1.3's \"Change to\" replaces the ability's text; it does not say it removes the note. Treating the note as void because the ability's words changed is a reading of the rules, and the owner's rules are show everything, marked, and quote rather than interpret. Recommendation: show it as a note on Malign Presence, marked, e.g. \"Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”\" (on the shared Swarmlord row, so nidzillas too). Not ok as \"left out\"; the judgement changes kind, so there is no exact fix value. If the owner decides an outdated 10th-edition dataslate note is noise, leaving it out is defensible, but say so on screen (marked, not hidden)."
+ },
+ {
+  "key": "ecd62f4c5c0cfdad",
+  "where": "FAQ (Faction Pack 1.3): Hive Tyrant and Tyrant Guard vs Foul Spores",
+  "verdict": "ok",
+  "why": "Q (Foul Spores FAQ). FP 1.3 l.757-759 is a FAQ on Venomthropes' Foul Spores; no unit here has Foul Spores, and FAQs go on the ability they concern. Not shown is right. Recommendation: keep as is."
+ },
+ {
+  "key": "7bbfb2dc6d0acffb",
+  "where": "Secure Biomass footnote on every TYRANIDS unit",
+  "verdict": "ok",
+  "why": "Q (Secure Biomass footnote). GW's TARGET is any TYRANIDS unit, and the HARVESTER sentence is a condition GW states: the footnote quotes the condition rather than splitting units by keyword, so it is right on every TYRANIDS unit (the stratagem lists USED BY any unit). Recommendation: keep. (Optional: on non-HARVESTER units the bracket never applies, a per-unit variant would be shorter, but it is not wrong.)"
+ },
+ {
+  "key": "9fad60a972db599b",
+  "where": "verify/snapshots/shooty.txt (home screen)",
+  "verdict": "ok",
+  "why": "verify/out/snapshots/shooty.txt vs verify/snapshots/shooty.txt (my gate run): TYRANIDS 1 → 2, Healybois card after Nidzillas with \"Assimilation Swarm · Talons of the Norn Queen\", PRIORITY ASSETS, TAKE AND HOLD, CHOSEN (export: Force Disposition Take and Hold). The same diff also adds the Necrons U w0t m8? card, which is the other reviewer's."
+ },
+ {
+  "key": "6034910692dca61c",
+  "where": "the-swarmlord-tyrant-guard",
+  "verdict": "ok",
+  "why": "LEADER on The Swarmlord (\"This model can be attached to the following unit: TYRANT GUARD\"); Guardian Organism text as quoted. Malign Presence is FP 1.3's wording. Correct, but if item 74 is taken (show the Designer's Note), its last clause (\"… which the pack’s wording replaced: left out\") must change with it."
+ },
+ {
+  "key": "6a23873fbef9be4c",
+  "where": "hive-tyrant-tyrant-guard",
+  "verdict": "ok",
+  "why": "LEADER on the Hive Tyrant (\"TYRANT GUARD\"); Instinctive Defence as FP 1.3 prints it; Will of the Hive Mind FP 1.3 \"that use of\" (Wahapedia \"that usage of\"). Correct."
+ },
+ {
+  "key": "abb7b96a76f748de",
+  "where": "biovores",
+  "verdict": "ok",
+  "why": "FP 1.3 \"Biovores, Seed Spore Mine Ability Change 9\\\" to 8\\\".\"; Wahapedia and BSData have 8\\\". Correct."
+ },
+ {
+  "key": "1c560c6b72201fc0",
+  "where": "ripper-swarms",
+  "verdict": "ok",
+  "why": "GW keyword RIPPER SWARMS; \"Chitinous Horrors (Aura)\"; spinemaws is \"All models in this unit can each be equipped with 1 spinemaws\", not taken. Correct."
+ },
+ {
+  "key": "68b9e3d5319a1f5b",
+  "where": "pyrovores",
+  "verdict": "ok",
+  "why": "GW Pyrovores \"YOUR 1ST TO 2ND UNITS COST … 2 models | 70\" (Wahapedia verify/.cache/waha/ds/tyranids_Pyrovores.html); two units, so both are 1st–2nd. Correct."
+ },
+ {
+  "key": "ed59f8f7b0e9398e",
+  "where": "points (Healybois_2.json)",
+  "verdict": "ok",
+  "why": "Checked against GW (Wahapedia tiers): Swarmlord 210 + TG(6) 170 = 380; Hive Tyrant 195 + Instinctive Defence 15 + TG 170 = 380; Biovores 1 model 60; Pyrovores 2 models 70 ×2 (1st–2nd); Ripper Swarms 1 model 30; Norn Assimilator 1st 250 / 2nd+ 270, + Synaptoprescience 30 each = 280 / 300; Norn Emissary 1st unit 250 (own datasheet); Tyrannofex 1st–2nd 170 + acid spray 10 = 180; Spore Mines (Biovore) 0 (reference). Sum 2000 = NR PDF. Correct."
+ }
+]
