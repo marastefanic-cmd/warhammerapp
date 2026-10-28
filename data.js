@@ -5306,11 +5306,7 @@ const ARMIES = [
     {
       id:'nekrosor-ammentar', ds:'necrons/nekrosor-ammentar', pts:195,
       models:['1× Nekrosor Ammentar (Nullstone field generator)'],
-      gear:[['Blade tail and whip coils','Enmitic disintegrators','Unmaker gauntlet']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
-      ]
+      gear:[['Blade tail and whip coils','Enmitic disintegrators','Unmaker gauntlet']]
     },
     {
       id:'the-silent-king', ds:'necrons/the-silent-king', pts:420, warlord:true,
@@ -5335,11 +5331,7 @@ const ARMIES = [
     {
       id:'royal-warden', ds:'necrons/royal-warden', pts:50,
       models:['1× Royal Warden'],
-      gear:[['Close combat weapon','Relic gauss blaster']],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
-      ]
+      gear:[['Close combat weapon','Relic gauss blaster']]
     },
     {
       id:'flayed-ones', ds:'necrons/flayed-ones', pts:55, copies:2,
@@ -5350,10 +5342,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Flayer claws', n:5 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
       ]
     },
     {
@@ -5365,10 +5353,6 @@ const ARMIES = [
       ],
       melee:[
         { name:'Ophydian hyperphase weapons', n:3 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
       ]
     },
     {
@@ -5377,10 +5361,6 @@ const ARMIES = [
       gear:[['Atomiser beam','Atomiser beam','Reanimator’s claws']],
       ranged:[
         { name:'Atomiser beam', n:2 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
       ]
     },
     {
@@ -5395,10 +5375,6 @@ const ARMIES = [
         { name:'Time’s arrow' },
         { name:'Antimatter meteor' },
         { name:'Tesla sphere', n:4 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
       ]
     },
     {
@@ -5413,10 +5389,6 @@ const ARMIES = [
         { name:'Time’s arrow' },
         { name:'Antimatter meteor' },
         { name:'Tesla sphere', n:4 }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      mods:[
-        { kind:'all', when:'Vs the enemy unit you selected in your Command phase, until the start of your next Command phase', note:'+1 to wound rolls', from:'Worthy Foes', readOf:'e154369f' }
       ]
     }
   ]
@@ -9139,6 +9111,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Flesh Hunger', ph:['fight'], turn:'either', text:'Each time a model in this unit makes a melee attack, if the target of that attack is **Below Half-strength**, a successful **Hit roll** scores a Critical Hit.' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
     { kind:'melee', when:'Target Below Half-strength', note:'a successful hit roll scores a Critical Hit', from:'Flesh Hunger', readOf:'bc6b451b' }
   ],
