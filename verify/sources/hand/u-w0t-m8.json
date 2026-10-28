@@ -1,5 +1,9 @@
 {
  "_about": "What verify/from-json.js cannot fill mechanically for u-w0t-m8, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). fixes: GW's Faction Pack words where Wahapedia's transcription differs. units: per unit entry, GW's Faction Pack words where Wahapedia's transcription of an ability differs (texts), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
+ "caseNames": [
+  "Chittering Swarm"
+ ],
+ "caseNamesWhy": "GW’s capitalisation of these ability names, as Wahapedia’s datasheet prints them (“Chittering swarm”), where New Recruit’s differs only in case: the coordinator’s ruling (review result-necrons-2.json 58091bdff27d1efc, result-round3.json c60849479677392f); every other name keeps New Recruit’s casing",
  "fixes": [
   {
    "at": "the-phaerons-armoury/enhancement/Relocational Optimiser",

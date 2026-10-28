@@ -2458,6 +2458,26 @@
   "by": "verify/from-json.js"
  },
  {
+  "army": "mucho-mutantes",
+  "unit": "chaos-spawn",
+  "field": "kw",
+  "app": "Chaos Spawn",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword CHAOS SPAWN; BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "mucho-mutantes",
+  "unit": "chaos-spawn",
+  "field": "kw",
+  "app": "",
+  "source": "Spawn",
+  "reason": "BSData at the pin (Chaos - Thousand Sons catalogue revision 17) gives the unit the category Spawn; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS (no SPAWN).",
+  "by": "verify/from-json.js"
+ },
+ {
   "army": "u-w0t-m8",
   "unit": "the-silent-king",
   "field": "ability",
@@ -2815,26 +2835,6 @@
   "source": "",
   "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "mucho-mutantes",
-  "unit": "chaos-spawn",
-  "field": "kw",
-  "app": "Chaos Spawn",
-  "source": "",
-  "reason": "GW’s datasheet has the keyword CHAOS SPAWN; BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "mucho-mutantes",
-  "unit": "chaos-spawn",
-  "field": "kw",
-  "app": "",
-  "source": "Spawn",
-  "reason": "BSData at the pin (Chaos - Thousand Sons catalogue revision 17) gives the unit the category Spawn; GW’s datasheet does not print that keyword. GW wins.",
-  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS (no SPAWN).",
   "by": "verify/from-json.js"
  }
 ]

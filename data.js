@@ -8752,7 +8752,7 @@ const DATASHEETS = {
     { name:'Yellow claws', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Exploding Horrors', ph:['fight'], turn:'either', note:'Designer’s Note (GW’s Pink Horrors datasheet, Wahapedia): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
+    { name:'Exploding Horrors', ph:['fight'], turn:'either', note:'Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
   ],
   rules:['Deep Strike','Infiltrators','The Shadow of Chaos','Psychic','Pistol'],
   kw:['Battleline','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch']
