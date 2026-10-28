@@ -3957,6 +3957,13 @@ const ARMIES = [
       melee:[
         { name:'Close combat weapon', n:2 }
       ]
+    },
+    {
+      id:'chaos-spawn', ds:'thousand-sons/chaos-spawn', role:'Reference', pts:0,
+      ref:{ rule:'Gift of Change', quote:'At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units.', strat:'gift-of-change' },
+      models:['1× Chaos Spawn'],
+      gear:[['Hideous Mutations']],
+      why:{ role:{ Reference:'a reference sheet (ref)' } }
     }
   ]
 },
@@ -5154,10 +5161,18 @@ const ARMIES = [
       why:{ kw:{ Tzeentch:'Daemonic Allegiance: Tzeentch' } }
     },
     {
-      id:'blue-horrors', ds:'chaos-daemons/blue-horrors', pts:0,
+      id:'blue-horrors', ds:'chaos-daemons/blue-horrors', role:'Reference', pts:0,
       ref:{ by:'fluxmaster-pink-horrors', rule:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', quote:'If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.' },
       models:['1× Blue Horror'],
-      gear:[['Coruscating Blue flames','Blue claws']]
+      gear:[['Coruscating Blue flames','Blue claws']],
+      why:{ role:{ Reference:'a reference sheet (ref)' } }
+    },
+    {
+      id:'brimstone-horrors', ds:'chaos-daemons/brimstone-horrors', role:'Reference', pts:0,
+      ref:{ by:'fluxmaster-pink-horrors', rule:'Split', quote:'On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.', of:'Blue Horrors' },
+      models:['1× Brimstone Horror'],
+      gear:[['Coruscating Yellow flames','Yellow claws']],
+      why:{ role:{ Reference:'a reference sheet (ref)' } }
     }
   ]
 },
@@ -5290,10 +5305,11 @@ const ARMIES = [
     },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'spore-mines-biovore', ds:'tyranids/spore-mines-biovore', pts:0,
+      id:'spore-mines-biovore', ds:'tyranids/spore-mines-biovore', role:'Reference', pts:0,
       ref:{ by:'biovores', rule:'Seed Spore Mines', quote:'If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48" of this unit and more than 8" horizontally away from all enemy units.' },
       models:['1× Spore Mine'],
-      gear:[[]]
+      gear:[[]],
+      why:{ role:{ Reference:'a reference sheet (ref)' } }
     }
   ]
 },
@@ -6564,6 +6580,20 @@ const DATASHEETS = {
     { name:'Prophesied Doom', ph:['charge'], turn:'either', text:'Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.' }
   ]
 },
+'thousand-sons/chaos-spawn':{
+  name:'Chaos Spawn', faction:'thousand-sons', bsId:'60de-4c77-95e1-1337',
+  stats:[
+    { name:'Chaos Spawn', M:'8"', T:'5', Sv:'4+', W:'4', Ld:'7+', OC:'1', InSv:'5+', base:'50mm' }
+  ],
+  melee:[
+    { name:'Hideous Mutations', range:'Melee', A:'D6+2', WS:'4+', S:'5', AP:'-1', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Regenerating Monstrosities', ph:['command'], turn:'either', text:'At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds.' }
+  ],
+  rules:['Feel No Pain 5+'],
+  kw:['Beast','Chaos','Chaos Spawn','Faction: Thousand Sons','Mutant','Spawn','Tzeentch']
+},
 'tyranids/the-swarmlord':{
   name:'The Swarmlord', faction:'tyranids', bsId:'13f7-1a3-eff-7393', role:'Epic Hero',
   stats:[
@@ -6762,7 +6792,7 @@ const DATASHEETS = {
   kw:['Faction: Tyranids','Great Devourer','Harvester','Ripper Swarms','Swarm']
 },
 'tyranids/spore-mines-biovore':{
-  name:'Spore Mines (Biovore)', faction:'tyranids', bsId:'80c2-aecc-5b59-7345', role:'Reference',
+  name:'Spore Mines (Biovore)', faction:'tyranids', bsId:'80c2-aecc-5b59-7345',
   stats:[
     { name:'Spore Mine', M:'4"', T:'1', Sv:'7+', W:'1', Ld:'8+', OC:'0', InSv:'–', base:'25mm' }
   ],
@@ -8689,7 +8719,7 @@ const DATASHEETS = {
   kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Vehicle','Walker']
 },
 'chaos-daemons/blue-horrors':{
-  name:'Blue Horrors', faction:'chaos-daemons', bsId:'b795-b936-ad61-e407', role:'Reference',
+  name:'Blue Horrors', faction:'chaos-daemons', bsId:'b795-b936-ad61-e407',
   stats:[
     { name:'Blue Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'8+', OC:'1', InSv:'4+', base:'25mm' }
   ],
@@ -8709,6 +8739,25 @@ const DATASHEETS = {
   rules:['Deep Strike','Infiltrators','The Shadow of Chaos','Psychic','Pistol'],
   kw:['Battleline','Blue','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch'],
   kwOnly:{ Blue:'Blue Horror', Brimstone:'Brimstone Horrors' }
+},
+'chaos-daemons/brimstone-horrors':{
+  name:'Brimstone Horrors', faction:'chaos-daemons',
+  stats:[
+    { name:'Brimstone Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'8+', OC:'1', InSv:'4+', base:'25mm' }
+  ],
+  ranged:[
+    { name:'Coruscating Yellow flames', range:'18"', A:'2', BS:'5+', S:'2', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Yellow claws', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Split', text:'Each time a **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one **BRIMSTONE HORROR** model to this unit.' },
+    { name:'Sullen Malevolence', tag:'Aura', text:'While an enemy unit is within 6" of this unit, if this unit contains one or more **BLUE HORROR** models, worsen the Leadership characteristic of models in that enemy unit by 1.' },
+    { name:'Exploding Horrors', ph:['fight'], turn:'either', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
+  ],
+  rules:['Deep Strike','Infiltrators','The Shadow of Chaos','Psychic','Pistol'],
+  kw:['Battleline','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch']
 },
 'chaos-space-marines/vashtorr-the-arkifane':{
   name:'Vashtorr the Arkifane', faction:'chaos-space-marines', bsId:'dcc0-b70c-9779-e6c9', role:'Epic Hero',
@@ -9483,6 +9532,7 @@ const BS_IDS = {
     "melee/nazdreg-meganobz":["80c4-14b2-d02d-d289|1×0955-1e48-ac34-156f,1×b27b-4fee-2644-a355","7067-34f4-5272-e05f|5×731f-2f2-7ca0-23ed,5×731f-2f2-7ca0-23ed/b46a-4885-3b28-428b"],
     "melee/squighog-boyz":["6a83-8e1f-63ef-50c3|3×954d-5938-64d8-597c,3×954d-5938-64d8-597c/5efb-f61f-fdb6-a7d7,3×954d-5938-64d8-597c/8a8f-5ceb-8a0a-6c6c,3×954d-5938-64d8-597c/fa30-43a8-57eb-a82e,1×99c8-e37d-ae6d-a8ba,1×99c8-e37d-ae6d-a8ba/aecd-6ba5-5558-fee2,1×99c8-e37d-ae6d-a8ba/d231-f7e4-f722-d987,1×99c8-e37d-ae6d-a8ba/fa30-43a8-57eb-a82e"],
     "mucho-mutantes/ahriman-tzaangor-enlightened-with-fatecaster-greatbows":["3bfa-bf00-b5ed-cc81|1×570a-6d55-51ee-9fc7,1×93c8-9c05-8892-b481,1×c70d-46dc-32da-b1a4","8b9f-917f-37c1-99c3|5×414e-b8ff-7132-48c7,5×414e-b8ff-7132-48c7/23a5-d6be-b617-1565,5×414e-b8ff-7132-48c7/8097-77df-1ed5-1e1a,1×6cc8-d237-eec9-d038,1×6cc8-d237-eec9-d038/23a5-d6be-b617-1565,1×6cc8-d237-eec9-d038/8097-77df-1ed5-1e1a"],
+    "mucho-mutantes/chaos-spawn":["60de-4c77-95e1-1337|1×7502-b778-b920-3f68,1×7502-b778-b920-3f68/9c5c-1cac-6b3f-7a01"],
     "mucho-mutantes/daemon-prince-of-tzeentch-with-wings":["66f4-929e-1769-f277|1×2313-45a2-28ff-c81a,1×7205-f4fe-f064-0edf,1×ca9c-de3c-61e1-31"],
     "mucho-mutantes/exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows":["1724-8c9c-c385-16c6|1×6633-5a38-bd55-b080,1×74f5-4553-6d71-b44c,1×aac1-5b0f-4802-1628,1×c70d-46dc-32da-b1a4","8b9f-917f-37c1-99c3|5×414e-b8ff-7132-48c7,5×414e-b8ff-7132-48c7/23a5-d6be-b617-1565,5×414e-b8ff-7132-48c7/8097-77df-1ed5-1e1a,1×6cc8-d237-eec9-d038,1×6cc8-d237-eec9-d038/23a5-d6be-b617-1565,1×6cc8-d237-eec9-d038/8097-77df-1ed5-1e1a"],
     "mucho-mutantes/magnus-the-red":["91dc-9aad-0505-52a8|1×9916-8701-bbbd-780e,1×a021-c1a0-c35c-f10f,1×b114-2c55-f1b6-6f98,1×d379-7bdd-e3f9-9183"],
@@ -9901,6 +9951,7 @@ const BS_IDS = {
     "5f80-3d00-6e4d-cfaf":"Heavy Intercessor Sergeant",
     "6084-9fb5-76d2-8487":"Beastchoppa",
     "60c9-9f30-7dc8-2b63":"Malefic Curse",
+    "60de-4c77-95e1-1337":"Chaos Spawn",
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
     "6155-c404-a228-cb72":"Bolt Rifle",
     "615e-5655-130f-d14a":"Plasma executor",
@@ -9978,6 +10029,7 @@ const BS_IDS = {
     "7472-d1a5-5fbe-4052":"Flickering Flames",
     "74ce-a593-af24-5ef7":"Aemelia Minervas",
     "74f5-4553-6d71-b44c":"Force weapon",
+    "7502-b778-b920-3f68":"Chaos Spawn",
     "753d-4e02-eda3-4809":"War Dog Brigand",
     "7546-5742-581c-9e8b":"Graviton singularity cannon",
     "75ce-5ce7-0a6e-a876":"Blade of Endless Bloodshed",
@@ -10110,6 +10162,7 @@ const BS_IDS = {
     "9a9f-3dab-02c0-8be7":"Paired Krumpas",
     "9ad3-083a-577b-56b0":"Hellforged weapons",
     "9b72-9f8a-9554-43d4":"Pyrocaster",
+    "9c5c-1cac-6b3f-7a01":"Hideous Mutations",
     "9c89-2141-493-1a45":"Impaler chainglaive",
     "9cc3-1188-9678-0ee1":"Combi-bolter",
     "9cea-2e7-8711-11bf":"Hellfyre missile rack",
@@ -10651,6 +10704,7 @@ const CHECKLIST = {
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
   "a|1ilhdau":{"u":"shooting:your,fight:either","a":1},
   "a|1j6lbpi":{"u":"shooting:opp,fight:either"},
+  "a|1j8sgg6":{"t":"command:either"},
   "a|1j9160m":{"t":"command:your","s":1},
   "a|1jln2xs":{"u":"shooting:your"},
   "a|1jnojq8":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","u":"shooting:either,fight:either","s":1},

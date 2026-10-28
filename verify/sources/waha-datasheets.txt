@@ -174,3 +174,4 @@ necrons Technomancer
 necrons Immortals
 necrons Canoptek-Scarab-Swarms
 necrons Canoptek-Spyders
+thousand-sons Chaos-Spawn

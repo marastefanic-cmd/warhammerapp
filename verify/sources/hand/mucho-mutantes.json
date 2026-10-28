@@ -1,0 +1,9 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for mucho-mutantes, written by hand and read by it on every run. The list itself was not written by verify/from-json.js: only its reference sheets are (node verify/from-json.js verify/sources/nr-json/mucho-mutantes.json mucho-mutantes --write --refs). refs: a reference sheet the export has no entry for, built from the BSData root entry of that name; its reason (ref) read from the list's words by verify/from-json.js.",
+ "refs": [
+  {
+   "entry": "Chaos Spawn",
+   "why": "Reference sheet Chaos Spawn (the owner asked for it): the Warpmeld Pact stratagem Gift of Change adds “one TZEENTCH CHAOS SPAWN unit containing one model” to the army when a THOUSAND SONS CHARACTER model (excluding MONSTERS) is destroyed: GW’s Chaos Spawn datasheet of the Thousand Sons (Wahapedia thousand-sons/Chaos-Spawn: KEYWORDS BEAST, CHAOS, TZEENTCH, MUTANT, CHAOS SPAWN; FACTION KEYWORDS THOUSAND SONS), built from BSData’s Chaos Spawn root entry, one model. No points, not counted; marked with the stratagem (ref.strat), as no one unit of the list adds it."
+  }
+ ]
+}
