@@ -1,0 +1,14 @@
+[
+ {
+  "key": "a9a3374549723ba7",
+  "where": "events and top bar (a16770e)",
+  "verdict": "ok",
+  "why": "All three fixes are as I proposed them. The Undo function returns null; Playwright on the built index.html: unstar in Favorites gives the toast 'Removed from Favorites' + Undo, and after Undo no second toast is shown (no 'Ticks restored') and wh-favs is [healybois, shooty] again. The star's focus is put back after rerender with CSS.escape: Space on the melee star in All lists stars it and focus stays on it, now aria-pressed=true and :focus-visible. 'Removed from Favorites' fits on one line at 320px. No page errors."
+ },
+ {
+  "key": "8082af7a761df122",
+  "where": "verify/render.js homeChecks (a16770e)",
+  "verdict": "ok",
+  "why": "tap() uses page.isVisible and fails with the named check 'home-tap' instead of crashing. The new checks home-fav-undo (toast text, Undo stars it again, no 'Ticks' toast) and home-fav-stale (['gone', id] counts 1) cover what was missing. I put the old Undo function (no return null) back in a copy of the app: the run fails with home-fav-undo · Undo · {\"toast\":\"Ticks restored\"}, so the check catches the bug. Full gate on a16770e: every step passes except snapshots (shooty.txt only), and its diff is identical to the 895c9a7 one."
+ }
+]
