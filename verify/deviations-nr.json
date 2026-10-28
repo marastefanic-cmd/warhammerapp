@@ -9,33 +9,6 @@
   "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it."
  },
  {
-  "army": "melee",
-  "unit": "nazdreg-meganobz",
-  "field": "abilities[Nazdreg's Know-wotz | Nazdreg].text",
-  "app": "This unit has Deep Strike. This unit's ranged attacks have [IGNORES COVER].",
-  "source": "This unit has Deep Strike This unit's ranged attacks have [IGNORES COVER].",
-  "reason": "Typo in New Recruit and BSData (no full stop after \"Deep Strike\") that GW's wording does not have; the app follows the official wording.",
-  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg: \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/melee.txt line 60."
- },
- {
-  "army": "melee",
-  "unit": "mozrog-skragbad",
-  "field": "abilities[Da Bigger Dey Iz…].text",
-  "app": "This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.",
-  "source": "This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.",
-  "reason": "Typo in New Recruit and BSData (\"wounds rolls\") that GW's wording does not have; the app follows the official wording.",
-  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Mozrog-Skragbad: \"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" New Recruit: verify/sources/nr/melee.txt line 277."
- },
- {
-  "army": "melee",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "from[ranged Kustom Mega-blasta | Big Mek in Mega Armour]",
-  "app": "{\"IGNORES COVER\":\"More Dakka\"}",
-  "source": "New Recruit marks \"(Kustom Force Field)\" as applied",
-  "reason": "New Recruit shows BSData's annotation: Kustom Force Field appends the label \"Kustom Force Field\" to every ranged weapon profile of the unit and changes none of its values (the force field protects the unit; it does not change its weapons). The app marks only values a rule changes.",
-  "evidence": "BSData Orks.json, Kustom Force Field (6b9e-c6ae-2626-45c9): modifier { affects: self.entries.group.recursive.profiles.Ranged Weapons, field: annotation, type: append, value: \"Kustom Force Field\" }. The profile is the same with and without it: melee.txt line 166-168 (24\" 3 4+ 9 -2 3, HAZARDOUS, IGNORES COVER) and shooty.txt lines 318-320 (the shooty Big Mek in Mega Armour, no force field)."
- },
- {
   "army": "nidzillas",
   "unit": "hive-tyrant",
   "field": "abilities[Monstrous Nemesis].text",
@@ -232,51 +205,6 @@
   "where": "verify/sources/nr/pubstomper.txt p9",
   "reason": "Typo in every source: the text ends with a closing quote mark that opens nowhere (New Recruit and GW's Faction Pack all print it). The app leaves the stray mark out.",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 331-338 (Defiler datasheet): \"Destroyer of Futures (Once per phase, per unit): You can target this unit with the Counteroffensive stratagem, ... That use does not prevent any uses of that stratagem on other units this phase.’\" (the same stray mark); verify/sources/nr/pubstomper.txt line 346: \"That use does not prevent any uses of that stratagem on other units this phase.'\""
- },
- {
-  "army": "ooga-booga",
-  "unit": "nazdreg-meganobz",
-  "field": "abilities[Nazdreg's Know-wotz | Nazdreg].text",
-  "app": "This unit has Deep Strike. This unit's ranged attacks have [IGNORES COVER].",
-  "source": "This unit has Deep Strike This unit's ranged attacks have [IGNORES COVER].",
-  "reason": "Typo in New Recruit and BSData (no full stop after \"Deep Strike\") that GW's wording does not have; the app follows the official wording, as the melee list's Nazdreg does.",
-  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg: \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/ooga-booga.txt lines 72-73."
- },
- {
-  "army": "ooga-booga",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "from[ranged Kombi-weapon - Point Blank | Meganobz]",
-  "app": "{\"ASSAULT\":\"Dakka! Dakka! Dakka!\"}",
-  "source": "New Recruit marks \"(More Dakka)\" as applied",
-  "reason": "New Recruit names More Dakka on the Meganobz' Kombi-weapon but its profile does not have More Dakka's [IGNORES COVER]: BSData's Big Mek in Mega Armour appends the label \"More Dakka\" to every ranged profile of the attached unit and [IGNORES COVER] only to the Big Mek's own profiles (the Big Mek datasheet gives both to the whole attached unit, and New Recruit prints [IGNORES COVER] on the Nobz' Kombi-rokkit). More Dakka reads \"This unit's ranged attacks have: [IGNORES COVER]\", and an ability that affects a unit applies to every model in an attached unit (Core Rules 19.04). The app keeps New Recruit's profile, marks nothing as applied that the profile does not have, and shows [IGNORES COVER] as a footnote for the whole unit (mods, from More Dakka).",
-  "evidence": "verify/sources/nr/ooga-booga.txt lines 317-327 (\"Kombi-weapon - Point Blank (More Dakka, Dakka! Dakka! Dakka!) (x5) - Meganobz\", keywords without IGNORES COVER) and lines 165-171 (the Nobz' Kombi-rokkit, \"(More Dakka, …)\" with IGNORES COVER); BSData Orks.json, Big Mek in Mega Armour (95e9-6da3-5e75-2566), modifier group \"More Dakka attached unit modifiers\": annotation \"More Dakka\" on self.entries.group.recursive.profiles.Ranged Weapons, keyword \"IGNORES COVER\" on self.entries.recursive.profiles.Ranged Weapons; Big Mek (fbee-427a-1c46-f621): both on self.entries.group.recursive; Core Rules (verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt lines 3182-3185, 19.04): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"."
- },
- {
-  "army": "ooga-booga",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "from[ranged Kombi-weapon - Kill Shot | Meganobz]",
-  "app": "{\"ASSAULT\":\"Dakka! Dakka! Dakka!\"}",
-  "source": "New Recruit marks \"(More Dakka)\" as applied",
-  "reason": "New Recruit names More Dakka on the Meganobz' Kombi-weapon but its profile does not have More Dakka's [IGNORES COVER]: BSData's Big Mek in Mega Armour appends the label \"More Dakka\" to every ranged profile of the attached unit and [IGNORES COVER] only to the Big Mek's own profiles (the Big Mek datasheet gives both to the whole attached unit, and New Recruit prints [IGNORES COVER] on the Nobz' Kombi-rokkit). More Dakka reads \"This unit's ranged attacks have: [IGNORES COVER]\", and an ability that affects a unit applies to every model in an attached unit (Core Rules 19.04). The app keeps New Recruit's profile, marks nothing as applied that the profile does not have, and shows [IGNORES COVER] as a footnote for the whole unit (mods, from More Dakka).",
-  "evidence": "verify/sources/nr/ooga-booga.txt lines 317-327 (\"Kombi-weapon - Kill Shot (More Dakka, Dakka! Dakka! Dakka!) (x5) - Meganobz\", keywords without IGNORES COVER) and lines 165-171 (the Nobz' Kombi-rokkit, \"(More Dakka, …)\" with IGNORES COVER); BSData Orks.json, Big Mek in Mega Armour (95e9-6da3-5e75-2566), modifier group \"More Dakka attached unit modifiers\": annotation \"More Dakka\" on self.entries.group.recursive.profiles.Ranged Weapons, keyword \"IGNORES COVER\" on self.entries.recursive.profiles.Ranged Weapons; Big Mek (fbee-427a-1c46-f621): both on self.entries.group.recursive; Core Rules (verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt lines 3182-3185, 19.04): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"."
- },
- {
-  "army": "ooga-booga",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "from[ranged Kombi-weapon - Shoota | Meganobz]",
-  "app": "{\"ASSAULT\":\"Dakka! Dakka! Dakka!\"}",
-  "source": "New Recruit marks \"(More Dakka)\" as applied",
-  "reason": "New Recruit names More Dakka on the Meganobz' Kombi-weapon but its profile does not have More Dakka's [IGNORES COVER]: BSData's Big Mek in Mega Armour appends the label \"More Dakka\" to every ranged profile of the attached unit and [IGNORES COVER] only to the Big Mek's own profiles (the Big Mek datasheet gives both to the whole attached unit, and New Recruit prints [IGNORES COVER] on the Nobz' Kombi-rokkit). More Dakka reads \"This unit's ranged attacks have: [IGNORES COVER]\", and an ability that affects a unit applies to every model in an attached unit (Core Rules 19.04). The app keeps New Recruit's profile, marks nothing as applied that the profile does not have, and shows [IGNORES COVER] as a footnote for the whole unit (mods, from More Dakka).",
-  "evidence": "verify/sources/nr/ooga-booga.txt lines 317-327 (\"Kombi-weapon - Shoota (More Dakka, Dakka! Dakka! Dakka!) (x5) - Meganobz\", keywords without IGNORES COVER) and lines 165-171 (the Nobz' Kombi-rokkit, \"(More Dakka, …)\" with IGNORES COVER); BSData Orks.json, Big Mek in Mega Armour (95e9-6da3-5e75-2566), modifier group \"More Dakka attached unit modifiers\": annotation \"More Dakka\" on self.entries.group.recursive.profiles.Ranged Weapons, keyword \"IGNORES COVER\" on self.entries.recursive.profiles.Ranged Weapons; Big Mek (fbee-427a-1c46-f621): both on self.entries.group.recursive; Core Rules (verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.txt lines 3182-3185, 19.04): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"."
- },
- {
-  "army": "ooga-booga",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "abilities[Supa-glowy Fing | Big Mek in Mega Armour].text",
-  "app": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model's ranged attacks have: [ANTI-INFANTRY 4+]. [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].",
-  "source": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model's ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].",
-  "reason": "New Recruit's text has a typo (a brace and no full stop after [ANTI-INFANTRY 4+]); the app has the enhancement's wording as the rules publish it, as the shooty list's Big Mek in Mega Armour does.",
-  "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it. New Recruit: verify/sources/nr/ooga-booga.txt lines 340-344."
  },
  {
   "army": "super-terminators",
@@ -1699,36 +1627,6 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3498 (\"Deffkoptas  75x42mm Oval Base\"); verify/sources/nr/shooty.txt line 410 (Base 75x42mm)."
  },
  {
-  "army": "melee",
-  "unit": "deffkoptas",
-  "field": "stats[Deffkoptas].base",
-  "app": "75x42mm Oval",
-  "source": "75x42mm",
-  "where": "verify/sources/nr/melee.txt p9",
-  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; New Recruit (BSData) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3498 (\"Deffkoptas  75x42mm Oval Base\"); verify/sources/nr/melee.txt line 342 (Base 75x42mm)."
- },
- {
-  "army": "melee",
-  "unit": "squighog-boyz",
-  "field": "stats[Nob on Smasha Squig].base",
-  "app": "90x52.5mm Oval",
-  "source": "90x52.5mm",
-  "where": "verify/sources/nr/melee.txt p10",
-  "reason": "GW’s base size guide prints the base as an oval, \"90x52.5mm Oval Base\"; New Recruit (BSData) gives 90x52.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3528 (\"Squighog Boyz: Nob on Smasha Squig  90x52.5mm Oval Base\"); verify/sources/nr/melee.txt line 376 (Base 90x52.5mm)."
- },
- {
-  "army": "melee",
-  "unit": "squighog-boyz",
-  "field": "stats[Squighog Boyz].base",
-  "app": "75x42mm Oval",
-  "source": "75x42mm",
-  "where": "verify/sources/nr/melee.txt p10",
-  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; New Recruit (BSData) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3527 (\"Squighog Boyz  75x42mm Oval Base\"); verify/sources/nr/melee.txt line 377 (Base 75x42mm)."
- },
- {
   "army": "princes",
   "unit": "lord-on-juggernaut-khorne-berzerkers",
   "field": "stats[Lord on Juggernaut].base",
@@ -2255,6 +2153,16 @@
   "source": "~160mm",
   "reason": "New Recruit’s export (catalogue revision 2) gives the base as ~160mm; GW’s base size guide (Event Companion) has 160mm. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2971: \"Soul Grinder  160mm\"; verify/sources/nr-json/tzeeeeentch.json: Base ~160mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
+  "unit": "deffkoptas",
+  "field": "stats[Deffkoptas].base",
+  "app": "75×42mm Oval",
+  "source": "75x42mm",
+  "reason": "New Recruit’s export (catalogue revision 8) gives the base as 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: Base 75x42mm.",
   "by": "verify/from-json.js"
  }
 ]

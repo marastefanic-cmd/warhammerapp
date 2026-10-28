@@ -223,6 +223,22 @@ const FACTIONS = {
     // Wahapedia also lists Unstable Energies (ORKS PSYKER units) and Special Move Types; Pulse Jet Move,
     // which Wazdakka uses, is in the glossary (RULES, with RULE_SRC); the others are left out.
     detachments: {
+      // Brute Bosses: Wahapedia (the codex), written by verify/from-json.js; gists AI-written (see the report)
+      'brute-bosses': {
+        name:'Brute Bosses', dispositions:['Purge the Foe'], dp:1,
+        rule:{ name:'’Ard as Nails', needs:{ all:['Warboss'] }, ph:['command','movement','shooting','charge','fight'], turn:'either', text:'When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield.' },
+        enhancements:[
+          { name:'Surly as a Squiggoth', pts:25, text:'**INFANTRY WARBOSS** model only. (Once per battle, per army) At the end of a phase in which this model is **destroyed**, roll one D6:\n- On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining.' },
+          { name:'Brutal But Kunnin’', pts:30, text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' },
+          { name:'Blitzboss', pts:20, text:'**WARBOSS** model only. A **TRANSPORT** unit (excluding **WALKER** units) this unit is embarked within has:\n- +2" **M**.\n- 5+ **InSv**.' },
+          { name:'Proper Killy', pts:15, text:'**WARBOSS** model only. This model can re-roll **hit rolls** of 1.' },
+          { name:'Morgog’s Finkin’ Cap', pts:50, text:'**WARBOSS** model only. (Once per battle, per army) At the end of your opponent’s Movement phase, if this unit is **unengaged**, this unit can make a **normal move** of:\n- Up to D6".\n- If this unit is **riled up**, you can re-roll that D6.' },
+          { name:'Da Gobshot Thunderbuss', pts:20, text:'**WARBOSS** model only. This model has the following weapon:\nDa Gobshot Thunderbuss: 24" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]' }
+        ],
+        stratagems:[
+
+        ]
+      },
       // Bully Boyz and Runt Swarm: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack);
       // enhancement pts and UPGRADE marks from Wahapedia, matching BSData
       'bully-boyz': {
@@ -344,44 +360,6 @@ const FACTIONS = {
             when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
             target:'That **ORKS INFANTRY** unit.',
             effect:'Your unit’s ranged attacks have **[SUSTAINED HITS 1]**.' }
-        ]
-      },
-      'war-horde': {
-        name:'War Horde', dispositions:['Purge the Foe','Take and Hold'], dp:3,
-        rule:{ name:'Get Stuck In', ph:['fight'], turn:'either', needs:{ all:['Faction: Orks'] },
-          text:'Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**.' },
-        enhancements:[
-          { name:'Headwoppa’s Killchoppa', pts:15, text:'**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.', mods:[{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP', from:'Headwoppa’s Killchoppa', readOf:'c965af8e', readBy:'derive' }] },
-          { name:'Da Boss is Watchin’', pts:25, text:'**ORKS** model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is **riled up** until the start of your next turn.' },
-          { name:'Kunnin’ But Brutal', pts:20, text:'**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**.' },
-          { name:'Follow Me Ladz', pts:20, text:'**ORKS** model only. This unit has +2" **M**.' }
-        ],
-        stratagems:[
-          { id:'breakin-heads', gist:'Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.', gistOf:'7a31ce90', name:'Breakin’ Heads', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Orks','Infantry'], attached:true },
-            when:'Any phase, when a friendly **attached ORKS INFANTRY** unit becomes **battle-shocked**.',
-            target:'That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.',
-            effect:'Roll one D3:\n- Your unit suffers a number of **mortal wounds** equal to the result.\n- Your unit is no longer **battle-shocked**.' },
-          { id:'hit-em-harder', gist:'Your unit’s melee attacks have [LETHAL HITS].', gistOf:'8f79aca5', name:'Hit ’Em Harder', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks'] },
-            mod:{ kind:'melee', when:'Fight phase', note:'[LETHAL HITS]' }, readOf:'8f79aca5',
-            when:'Fight phase, when a friendly **ORKS** unit is **selected to fight**.',
-            target:'That **ORKS** unit.',
-            effect:'Your unit’s melee attacks have **[LETHAL HITS]**.' },
-          { id:'orks-is-never-beaten', gist:'An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.', gistOf:'ff252f09', name:'Orks Is Never Beaten', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks'], none:['Titanic'] },
-            when:'Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).',
-            target:'That **ORKS** unit.',
-            effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
-          { id:'mow-em-down', gist:'Your unit made a charge move this turn: its melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.', gistOf:'b60d067f', name:'Mow ’Em Down', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks','Vehicle'], none:['Walker'] },
-            when:'Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.',
-            target:'That **ORKS VEHICLE** unit.',
-            effect:'Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**).' },
-          { id:'fungus-fuel-injection', gist:'Your unit has +2" M.', gistOf:'fb9e2724', name:'Fungus-fuel Injection', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Orks'], any:['Mounted','Vehicle'] },
-            when:'Your Movement phase, when a friendly **ORKS MOUNTED**/**VEHICLE** unit is **selected to move**.',
-            target:'That **ORKS MOUNTED**/**VEHICLE** unit.',
-            effect:'Your unit has +2" **M**.' },
-          { id:'close-range-dakka', gist:'Your unit’s ranged attacks have [RAPID FIRE 1], or +1 to the value of a [RAPID FIRE] they already have.', gistOf:'221896b5', name:'Close-range Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks'] },
-            when:'Your Shooting phase, when a friendly **ORKS** unit is **selected to shoot**.',
-            target:'That **ORKS** unit.',
-            effect:'Your unit’s ranged attacks have:\n- **[RAPID FIRE 1]**.\n- Or: If that attack already has **[RAPID FIRE]**, +1 to the value of that **[RAPID FIRE]** (e.g. **[RAPID FIRE 1]** becomes **[RAPID FIRE 2]**).' }
         ]
       },
       'wreckas': {
@@ -1993,201 +1971,6 @@ const ARMIES = [
   ]
 },
 {
-  id:'melee', name:'Melee', faction:'orks', points:2000, pointsUsed:2000,
-  battleSize:'Strike Force', disposition:'Purge the Foe',
-  detachments:['war-horde'],
-  source:'New Recruit, exported 20 Oct 2026',
-  units:[
-    {
-      id:'ghazghkull-thraka', ds:'orks/ghazghkull-thraka', pts:290, warlord:true,
-      models:['1× Ghazghkull Thraka'],
-      gear:[['Adamantine ’Eadbutt','Gork’s Klaw','Mork’s Roar']],
-      melee:[
-        { name:'Adamantine ’Eadbutt', kw:['DEVASTATING WOUNDS','EXTRA ATTACKS','PRECISION','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Gork’s Klaw', kw:['CLEAVE 2','DEVASTATING WOUNDS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss','Warlord'],
-      why:{ kw:{ Warlord:'Warlord' } }
-    },
-    {
-      id:'mozrog-skragbad', ds:'orks/mozrog-skragbad', pts:170,
-      models:['1× Mozrog Skragbad'],
-      gear:[['Big Chompa’s Jaws','Gutrippa','Thump Gun']],
-      melee:[
-        { name:'Big Chompa’s Jaws', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Hunter', kw:['LETHAL HITS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Standard', kw:['CLEAVE 1','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ]
-    },
-    {
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'nazdreg-meganobz', ds:['orks/nazdreg','orks/meganobz'], role:'Epic Hero', pts:365, ptsNote:'165 + Meganobz 200',
-      leads:'Meganobz',
-      models:['1× Nazdreg','5× Meganob w/ Twin Killsaw'],
-      gear:[['Kustom Blasta X','Moonchewa'],['Twin Killsaw']],
-      stats:[
-        { name:'Nazdreg' },
-        { name:'Meganob ×5' }
-      ],
-      ranged:[
-        { name:'Skorcha', who:'Nazdreg', kw:['BLAST 1','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
-        { name:'Gatler', who:'Nazdreg', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
-        { name:'Shoota', who:'Nazdreg', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } }
-      ],
-      melee:[
-        { name:'Kustom Blasta X', who:'Nazdreg', kw:['CLEAVE 1','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Moonchewa', who:'Nazdreg', kw:['CLEAVE 1','TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Twin Killsaw', who:'Meganobz', n:5, kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      abilities:[
-        { name:'Nazdreg’s Know-wotz', who:'Nazdreg' },
-        { name:'Supreme Kunnin’', who:'Nazdreg' },
-        { name:'Intimidating Motivation', who:'Nazdreg' },
-        { name:'Krumpin’ Time', who:'Meganobz' },
-        { name:'Arrogant Invulnerability', who:'Meganobz' }
-      ],
-      rules:['Waaagh!','Leader','Da Boss','Deep Strike'],
-      kw:['Character','Epic Hero','Faction: Orks','Infantry','Mega Armour','Nazdreg','Warboss','Explosives','Meganobz'],
-      kwNote:'Explosives, Meganobz come from the led Meganobz.',
-      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Nazdreg + Meganobz)' }
-    },
-    {
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'beastboss-on-squigosaur-headwoppas-killchoppa', ds:'orks/beastboss-on-squigosaur', short:'Beastboss', pts:155, enhancement:'Headwoppa’s Killchoppa',
-      models:['1× Beastboss on Squigosaur'],
-      gear:[['Beastchoppa','Slugga','Squigosaur’s jaws','Thump Gun']],
-      melee:[
-        { name:'Hunter', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Standard', kw:['CLEAVE 1','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Squigosaur’s jaws', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      abilities:[
-        { name:'Thundering Stampede' },
-        { name:'Boss of da Hunt' },
-        { name:'Keep Huntin’!' },
-        { name:'Headwoppa’s Killchoppa', tag:'Enhancement', ph:['fight'], turn:'either', text:'**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.' }
-      ]
-    },
-    {
-      id:'big-mek-painboy-nobz', ds:['orks/big-mek','orks/painboy','orks/nobz'], role:'Character', pts:405, ptsNote:'120 + Painboy 45 + Nobz 240', enhancement:'Kunnin’ But Brutal',
-      leads:'Nobz',
-      also:[
-        { name:'Painboy', support:true }
-      ],
-      models:['1× Big Mek','1× Painboy','8× Nob w/ Kustom Shoota and Kustom Krumpa','2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)'],
-      gear:[['Kustom mega-blasta','Drilla'],['’Urty syringe','Dok’s Toolz'],['Kustom Krumpa','Kustom Shoota'],['Kustom Krumpa']],
-      stats:[
-        { name:'Big Mek' },
-        { name:'Painboy' },
-        { name:'Nob ×10' }
-      ],
-      ranged:[
-        { name:'Kustom mega-blasta', who:'Big Mek', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'More Dakka' } },
-        { name:'Kustom Shoota', who:'Nobz', n:8, kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER'], from:{ 'IGNORES COVER':'More Dakka' } }
-      ],
-      melee:[
-        { name:'Drilla', who:'Big Mek', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'’Urty syringe', who:'Painboy', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS: INFANTRY','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Dok’s Toolz', who:'Painboy', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Kustom Krumpa', who:'Nobz', n:10, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      abilities:[
-        { name:'Shokk-boosta', who:'Big Mek' },
-        { name:'More Dakka', who:'Big Mek' },
-        { name:'Kunnin’ But Brutal', who:'Big Mek', tag:'Enhancement', ph:['movement','shooting','charge'], turn:'your', text:'**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**.' },
-        { name:'Crude Surgery', who:'Painboy' },
-        { name:'Catch Dat Red Bit', who:'Painboy' },
-        { name:'Ammo Runts', who:'Nobz' },
-        { name:'Get Out da Way!', who:'Nobz' },
-        { name:'Paired Krumpas', who:'Nobz' }
-      ],
-      rules:['Waaagh!','Leader','Support'],
-      kw:['Big Mek','Character','Explosives','Faction: Orks','Infantry','Painboy','Nobz'],
-      kwNote:'Painboy, Nobz come from the combined unit.',
-      why:{ kwNote:'leads Nobz (with Painboy)', ptsNote:'the points of its parts as the list has them (Big Mek + Painboy + Nobz)' }
-    },
-    {
-      id:'big-mek-in-mega-armour-meganobz', ds:['orks/big-mek-in-mega-armour','orks/meganobz'], pts:310, ptsNote:'110 + Meganobz 200', enhancement:'Follow Me Ladz',
-      leads:'Meganobz',
-      models:['1× Big Mek in Mega Armour (Kustom Force Field)','5× Meganob w/ Twin Killsaw'],
-      gear:[['Kustom Mega-blasta','Power Klaw'],['Twin Killsaw']],
-      stats:[
-        { name:'Big Mek in Mega Armour', M:'7"', InSv:'4+*', from:{ M:'Follow Me Ladz' }, why:{ InSv:'Kustom Force Field' } },
-        { name:'Meganob ×5', M:'7"', InSv:'4+*', from:{ M:'Follow Me Ladz' }, why:{ InSv:'Kustom Force Field' } }
-      ],
-      ranged:[
-        { name:'Kustom Mega-blasta', who:'Big Mek in Mega Armour', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'More Dakka' } }
-      ],
-      melee:[
-        { name:'Power Klaw', who:'Big Mek in Mega Armour', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Twin Killsaw', who:'Meganobz', n:5, kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      abilities:[
-        { name:'Fix Dat Armour Up', who:'Big Mek in Mega Armour' },
-        { name:'More Dakka', who:'Big Mek in Mega Armour' },
-        { name:'Follow Me Ladz', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'**ORKS** model only. This unit has +2" **M**.' },
-        { name:'Kustom Force Field', who:'Big Mek in Mega Armour' },
-        { name:'Krumpin’ Time', who:'Meganobz' },
-        { name:'Arrogant Invulnerability', who:'Meganobz' }
-      ],
-      kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
-      kwNote:'Meganobz comes from the led Meganobz.',
-      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
-    },
-    {
-      id:'gretchin', ds:'orks/gretchin', pts:45, copies:2,
-      models:['10× Gretchin'],
-      gear:[['Grot Blasta','Scavenged Shivs']],
-      stats:[
-        { name:'Gretchin ×10' }
-      ],
-      ranged:[
-        { name:'Grot Blasta', n:10 }
-      ],
-      melee:[
-        { name:'Scavenged Shivs', n:10, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ]
-    },
-    {
-      id:'deffkoptas', ds:'orks/deffkoptas', pts:85,
-      models:['2× Deffkopta','1× Deffkopta w/ Kustom mega-blasta'],
-      gear:[['Choppa','Rokkit Launcha','Slugga','Spinnin’ Blades'],['Choppa','Kustom Mega-blasta','Slugga','Spinnin’ Blades']],
-      stats:[
-        { name:'Deffkoptas ×3' }
-      ],
-      ranged:[
-        { name:'Busta', n:2 },
-        { name:'Blasta', n:2 },
-        { name:'Slugga', n:3 },
-        { name:'Kustom Mega-blasta' }
-      ],
-      melee:[
-        { name:'Choppa', n:3, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Spinnin’ Blades', n:3, kw:['CLEAVE 1','HAZARDOUS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ]
-    },
-    {
-      id:'squighog-boyz', ds:'orks/squighog-boyz', pts:130,
-      models:['1× Nob on Smasha Squig','3× Squighog Boy'],
-      gear:[['Big Choppa','Slugga','Squig Jaws'],['Saddlegit’s Shiv','Squig Jaws','Stikka']],
-      stats:[
-        { name:'Nob on Smasha Squig' },
-        { name:'Squighog Boyz ×3' }
-      ],
-      ranged:[
-        { name:'Slugga' },
-        { name:'Saddlegit’s Shiv', n:3 },
-        { name:'Stikka', n:3 }
-      ],
-      melee:[
-        { name:'Big Choppa', kw:['ANTI-MONSTER/VEHICLE 4+','CLEAVE 2','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Squig Jaws', n:4, kw:['EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Stikka', n:3, kw:['ANTI-MONSTER/VEHICLE 4+','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ]
-    }
-  ]
-},
-{
   id:'princes', name:'Princes', faction:'world-eaters', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Purge the Foe',
   detachments:['berzerker-warband','vessels-of-wrath'],
@@ -2917,183 +2700,6 @@ const ARMIES = [
         { name:'Invulnerable Save (5+*)' },
         { name:'Sanctuary', tag:'Enhancement', def:'Sanctuary: 5+ invulnerable save', text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.', defOf:'5b60c82a' }
       ]
-    }
-  ]
-},
-{
-  id:'ooga-booga', name:'Ooga booga', faction:'orks', points:2000, pointsUsed:2000,
-  battleSize:'Strike Force', disposition:'Purge the Foe',
-  detachments:['bully-boyz','runt-swarm','shoota-boyz'],
-  source:'New Recruit, exported 20 Oct 2026',
-  units:[
-    {
-      id:'ghazghkull-thraka', ds:'orks/ghazghkull-thraka', pts:290, warlord:true,
-      models:['1× Ghazghkull Thraka'],
-      gear:[['Adamantine ’Eadbutt','Gork’s Klaw','Mork’s Roar']],
-      ranged:[
-        { name:'Point Blank', kw:['CLOSE-QUARTERS','TORRENT','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Aimed', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 4','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss','Warlord'],
-      why:{ kw:{ Warlord:'Warlord' } }
-    },
-    {
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'nazdreg-meganobz', ds:['orks/nazdreg','orks/meganobz'], role:'Epic Hero', pts:365, ptsNote:'165 + Meganobz 200',
-      leads:'Meganobz',
-      models:['1× Nazdreg','5× Meganob w/ Twin Killsaw'],
-      gear:[['Kustom Blasta X','Moonchewa'],['Twin Killsaw']],
-      stats:[
-        { name:'Nazdreg' },
-        { name:'Meganob ×5' }
-      ],
-      ranged:[
-        { name:'Skorcha', who:'Nazdreg', kw:['BLAST 1','TORRENT','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Gatler', who:'Nazdreg', kw:['HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Shoota', who:'Nazdreg', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz', ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      melee:[
-        { name:'Kustom Blasta X', who:'Nazdreg', kw:['CLEAVE 1','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
-        { name:'Moonchewa', who:'Nazdreg', kw:['CLEAVE 1','TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
-        { name:'Twin Killsaw', who:'Meganobz', n:5, kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }
-      ],
-      abilities:[
-        { name:'Nazdreg’s Know-wotz', who:'Nazdreg' },
-        { name:'Supreme Kunnin’', who:'Nazdreg' },
-        { name:'Intimidating Motivation', who:'Nazdreg' },
-        { name:'Krumpin’ Time', who:'Meganobz' },
-        { name:'Arrogant Invulnerability', who:'Meganobz' }
-      ],
-      rules:['Waaagh!','Leader','Da Boss','Deep Strike'],
-      kw:['Character','Epic Hero','Faction: Orks','Infantry','Mega Armour','Nazdreg','Warboss','Explosives','Meganobz'],
-      kwNote:'Explosives, Meganobz come from the led Meganobz.',
-      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Nazdreg + Meganobz)' }
-    },
-    {
-      id:'zodgrod-wortsnagga-runtherd-gretchin', ds:['orks/zodgrod-wortsnagga','orks/runtherd','orks/gretchin'], role:'Epic Hero', pts:150, ptsNote:'50 + Runtherd 10 + Gretchin 90', upgrade:'Extra Sneaky',
-      leads:'Gretchin',
-      also:[
-        { name:'Runtherd', support:true }
-      ],
-      models:['1× Zodgrod Wortsnagga','1× Runtherd','20× Gretchin'],
-      gear:[['Da Grabzappa','Squigstoppa'],['Runtherd’s Toolz','Slugga'],['Grot Blasta','Scavenged Shivs']],
-      stats:[
-        { name:'Zodgrod Wortsnagga' },
-        { name:'Runtherd' },
-        { name:'Gretchin ×20' }
-      ],
-      ranged:[
-        { name:'Squigstoppa', who:'Zodgrod Wortsnagga', kw:['ANTI-MONSTER/VEHICLE 4+','CLOSE-QUARTERS','DEVASTATING WOUNDS: MONSTER/VEHICLE','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Slugga', who:'Runtherd', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Grot Blasta', who:'Gretchin', n:20, kw:['CLOSE-QUARTERS','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      melee:[
-        { name:'Da Grabzappa', who:'Zodgrod Wortsnagga' },
-        { name:'Runtherd’s Toolz', who:'Runtherd' },
-        { name:'Scavenged Shivs', who:'Gretchin', n:20, A:'2', WS:'4+', S:'3', from:{ A:'Super Runts', WS:'Super Runts', S:'Super Runts' } }
-      ],
-      abilities:[
-        { name:'Super Runts', who:'Zodgrod Wortsnagga' },
-        { name:'That’ll Learn Ya', who:'Runtherd' },
-        { name:'Downtrodden', who:'Gretchin' },
-        { name:'Thievin’ Scavengers', who:'Gretchin' },
-        { name:'Extra Sneaky', who:'Gretchin', tag:'Upgrade', def:'-3" detection range', text:'**GRETCHIN** unit only. This unit has -3" **detection range**.', defOf:'10b55c47' }
-      ],
-      rules:['Waaagh!','Leader','Support'],
-      kw:['Character','Epic Hero','Faction: Orks','Infantry','Runtherd','Zodgrod Wortsnagga','Battleline','Gretchin','Grots'],
-      kwNote:'Battleline, Gretchin, Grots come from the combined unit.',
-      why:{ kw:{ Battleline:'Sneaky Little Gitz' }, kwNote:'leads Gretchin (with Runtherd)', ptsNote:'the points of its parts as the list has them (Zodgrod Wortsnagga + Runtherd + Gretchin)' }
-    },
-    {
-      id:'big-mek-painboy-nobz', ds:['orks/big-mek','orks/painboy','orks/nobz'], role:'Character', pts:385, copies:2, ptsNote:'100 + Painboy 45 + Nobz 240',
-      leads:'Nobz',
-      also:[
-        { name:'Painboy', support:true }
-      ],
-      models:['1× Big Mek','1× Painboy','8× Nob w/ Kombi-rokkit and Kustom Krumpa','2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)'],
-      gear:[['Kustom mega-blasta','Drilla'],['’Urty syringe','Dok’s Toolz'],['Kombi-rokkit','Kustom Krumpa'],['Kustom Krumpa']],
-      stats:[
-        { name:'Big Mek' },
-        { name:'Painboy' },
-        { name:'Nob ×10' }
-      ],
-      ranged:[
-        { name:'Kustom mega-blasta', who:'Big Mek', kw:['HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Busta Rokkit', who:'Nobz', n:8, kw:['IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Shoota', who:'Nobz', n:8, kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 1','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      melee:[
-        { name:'Drilla', who:'Big Mek', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
-        { name:'’Urty syringe', who:'Painboy', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS: INFANTRY','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
-        { name:'Dok’s Toolz', who:'Painboy', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
-        { name:'Kustom Krumpa', who:'Nobz', n:10, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }
-      ],
-      abilities:[
-        { name:'Shokk-boosta', who:'Big Mek' },
-        { name:'More Dakka', who:'Big Mek' },
-        { name:'Crude Surgery', who:'Painboy' },
-        { name:'Catch Dat Red Bit', who:'Painboy' },
-        { name:'Ammo Runts', who:'Nobz' },
-        { name:'Get Out da Way!', who:'Nobz' },
-        { name:'Paired Krumpas', who:'Nobz' }
-      ],
-      rules:['Waaagh!','Leader','Support'],
-      kw:['Big Mek','Character','Explosives','Faction: Orks','Infantry','Painboy','Nobz'],
-      kwNote:'Painboy, Nobz come from the combined unit.',
-      why:{ kwNote:'leads Nobz (with Painboy)', ptsNote:'the points of its parts as the list has them (Big Mek + Painboy + Nobz)' }
-    },
-    {
-      id:'big-mek-in-mega-armour-meganobz', ds:['orks/big-mek-in-mega-armour','orks/meganobz'], pts:290, ptsNote:'115 + Meganobz 175', enhancement:'Supa-glowy Fing',
-      leads:'Meganobz',
-      models:['1× Big Mek in Mega Armour','5× Meganob w/ Kombi-weapon and Power Klaw'],
-      gear:[['Kustom Mega-blasta','Power Klaw','Tellyport Blasta'],['Kombi-weapon','Power Klaw']],
-      stats:[
-        { name:'Big Mek in Mega Armour' },
-        { name:'Meganob ×5' }
-      ],
-      ranged:[
-        { name:'Kustom Mega-blasta', who:'Big Mek in Mega Armour', kw:['HAZARDOUS','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing', 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Tellyport Blasta', who:'Big Mek in Mega Armour', kw:['BLAST 1','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing', 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Point Blank', who:'Meganobz', n:5, kw:['BLAST 1','TORRENT','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Kill Shot', who:'Meganobz', n:5, kw:['ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Shoota', who:'Meganobz', n:5, kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 1','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      melee:[
-        { name:'Power Klaw', who:'Big Mek in Mega Armour', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
-        { name:'Power Klaw', who:'Meganobz', n:5, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }
-      ],
-      abilities:[
-        { name:'Fix Dat Armour Up', who:'Big Mek in Mega Armour' },
-        { name:'More Dakka', who:'Big Mek in Mega Armour' },
-        { name:'Supa-glowy Fing', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.' },
-        { name:'Krumpin’ Time', who:'Meganobz' },
-        { name:'Arrogant Invulnerability', who:'Meganobz' }
-      ],
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // More Dakka's [IGNORES COVER] is printed on the Big Mek's weapons only: BSData gives it to the leader's own
-      // profiles while it labels the Meganobz' Kombi-weapon "(More Dakka)" too; the rule is for the whole attached
-      // unit (Core Rules 19.04), so the Meganobz' profile stays as printed and the footnote says it
-      mods:[{ kind:'ranged', when:'Every ranged attack', note:'[IGNORES COVER]', from:'More Dakka', always:true, readOf:'37fca761', listWhy:'the Meganobz it leads in this list carry ranged weapons (their Kombi-weapons): More Dakka gives the whole attached unit [IGNORES COVER] (“This unit’s ranged attacks have”), which BSData marks only on the Big Mek’s own weapons' },'More Dakka','Krumpin’ Time'],
-      rules:['Waaagh!','Leader','Supa-hazardous'],
-      kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
-      kwNote:'Meganobz comes from the led Meganobz.',
-      why:{ rules:{ 'Supa-hazardous':'Supa-glowy Fing' }, mods:{ 'More Dakka':'the Meganobz it leads in this list carry ranged weapons (their Kombi-weapons): More Dakka gives the whole attached unit [IGNORES COVER] (“This unit’s ranged attacks have”), which BSData marks only on the Big Mek’s own weapons' }, kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Big Mek in Mega Armour + Meganobz)' }
-    },
-    {
-      id:'gretchin', ds:'orks/gretchin', role:'Battleline', pts:45, copies:3,
-      models:['10× Gretchin'],
-      gear:[['Grot Blasta','Scavenged Shivs']],
-      stats:[
-        { name:'Gretchin ×10' }
-      ],
-      ranged:[
-        { name:'Grot Blasta', n:10, kw:['CLOSE-QUARTERS','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
-      ],
-      melee:[
-        { name:'Scavenged Shivs', n:10 }
-      ],
-      kw:['Battleline','Faction: Orks','Gretchin','Grots','Infantry'],
-      why:{ kw:{ Battleline:'Sneaky Little Gitz' }, role:{ Battleline:'Sneaky Little Gitz' } }
     }
   ]
 },
@@ -5457,6 +5063,201 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'simple-but-effective', name:'Simple but effective', faction:'orks', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Purge the Foe',
+  detachments:['brute-bosses','bully-boyz','runt-swarm'],
+  source:'New Recruit, exported 28 Oct 2026 (JSON)',
+  units:[
+    {
+      id:'ghazghkull-thraka', ds:'orks/ghazghkull-thraka', pts:290, warlord:true,
+      models:['1× Ghazghkull Thraka'],
+      gear:[['Adamantine ’Eadbutt','Gork’s Klaw','Mork’s Roar']],
+      kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss','Warlord'],
+      why:{ kw:{ Warlord:'Warlord' } }
+    },
+    {
+      id:'mozrog-skragbad', ds:'orks/mozrog-skragbad', pts:170,
+      models:['1× Mozrog Skragbad'],
+      gear:[['Big Chompa’s Jaws','Gutrippa','Thump Gun']]
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'nazdreg-meganobz', ds:['orks/nazdreg','orks/meganobz'], role:'Epic Hero', pts:340, ptsNote:'165 + Meganobz 175',
+      leads:'Meganobz',
+      models:['1× Nazdreg','5× Meganob w/ Kombi-weapon and Power Klaw'],
+      gear:[['Kustom Blasta X','Moonchewa'],['Kombi-weapon','Power Klaw']],
+      stats:[
+        { name:'Nazdreg' },
+        { name:'Meganob ×5' }
+      ],
+      ranged:[
+        { name:'Skorcha', who:'Nazdreg', kw:['BLAST 1','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { name:'Gatler', who:'Nazdreg', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { name:'Shoota', who:'Nazdreg', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { name:'Point Blank', who:'Meganobz', n:5, kw:['BLAST 1','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { name:'Kill Shot', who:'Meganobz', n:5, kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { name:'Shoota', who:'Meganobz', n:5, kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 1','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } }
+      ],
+      melee:[
+        { name:'Kustom Blasta X', who:'Nazdreg', kw:['CLEAVE 1','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
+        { name:'Moonchewa', who:'Nazdreg', kw:['CLEAVE 1','TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
+        { name:'Power Klaw', who:'Meganobz', n:5, kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }
+      ],
+      abilities:[
+        { name:'Nazdreg’s Know-wotz', who:'Nazdreg' },
+        { name:'Supreme Kunnin’', who:'Nazdreg' },
+        { name:'Intimidating Motivation', who:'Nazdreg' },
+        { name:'Krumpin’ Time', who:'Meganobz' },
+        { name:'Arrogant Invulnerability', who:'Meganobz' }
+      ],
+      rules:['Waaagh!','Leader','Da Boss','Deep Strike'],
+      kw:['Character','Epic Hero','Faction: Orks','Infantry','Mega Armour','Nazdreg','Warboss','Explosives','Meganobz'],
+      kwNote:'Explosives, Meganobz come from the led Meganobz.',
+      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Nazdreg + Meganobz)' }
+    },
+    {
+      id:'zodgrod-wortsnagga-runtherd-gretchin', ds:['orks/zodgrod-wortsnagga','orks/runtherd','orks/gretchin'], role:'Epic Hero', pts:150, ptsNote:'50 + Runtherd 10 + Gretchin 90', upgrade:'Extra Sneaky',
+      leads:'Gretchin',
+      also:[
+        { name:'Runtherd', support:true }
+      ],
+      models:['1× Zodgrod Wortsnagga','1× Runtherd','20× Gretchin'],
+      gear:[['Da Grabzappa','Squigstoppa'],['Runtherd’s Toolz','Slugga'],['Grot Blasta','Scavenged Shivs']],
+      stats:[
+        { name:'Zodgrod Wortsnagga' },
+        { name:'Runtherd' },
+        { name:'Gretchin ×20' }
+      ],
+      ranged:[
+        { name:'Squigstoppa', who:'Zodgrod Wortsnagga' },
+        { name:'Slugga', who:'Runtherd' },
+        { name:'Grot Blasta', who:'Gretchin', n:20 }
+      ],
+      melee:[
+        { name:'Da Grabzappa', who:'Zodgrod Wortsnagga' },
+        { name:'Runtherd’s Toolz', who:'Runtherd' },
+        { name:'Scavenged Shivs', who:'Gretchin', n:20, A:'2', WS:'4+', S:'3', from:{ A:'Super Runts', WS:'Super Runts', S:'Super Runts' } }
+      ],
+      abilities:[
+        { name:'Super Runts', who:'Zodgrod Wortsnagga' },
+        { name:'That’ll Learn Ya', who:'Runtherd' },
+        { name:'Downtrodden', who:'Gretchin' },
+        { name:'Thievin’ Scavengers', who:'Gretchin' },
+        { name:'Extra Sneaky', who:'Gretchin', tag:'Upgrade', def:'-3" detection range', text:'**GRETCHIN** unit only. This unit has -3" **detection range**.', defOf:'10b55c47' }
+      ],
+      rules:['Waaagh!','Leader','Support'],
+      kw:['Character','Epic Hero','Faction: Orks','Infantry','Runtherd','Zodgrod Wortsnagga','Battleline','Gretchin','Grots'],
+      kwNote:'Battleline, Gretchin, Grots come from the combined unit.',
+      why:{ kw:{ Battleline:'Sneaky Little Gitz' }, kwNote:'leads Gretchin (with Runtherd)', ptsNote:'the points of its parts as the list has them (Zodgrod Wortsnagga + Runtherd + Gretchin)' }
+    },
+    {
+      id:'beastboss-on-squigosaur', ds:'orks/beastboss-on-squigosaur', pts:170, enhancement:'Brutal But Kunnin’',
+      models:['1× Beastboss on Squigosaur'],
+      gear:[['Beastchoppa','Slugga','Squigosaur’s jaws','Thump Gun']],
+      melee:[
+        { name:'Hunter', D:'D6+1', from:{ D:'Brutal But Kunnin’' } },
+        { name:'Standard', D:'3', from:{ D:'Brutal But Kunnin’' } },
+        { name:'Squigosaur’s jaws', D:'4', from:{ D:'Brutal But Kunnin’' } }
+      ],
+      abilities:[
+        { name:'Thundering Stampede' },
+        { name:'Boss of da Hunt' },
+        { name:'Keep Huntin’!' },
+        { name:'Brutal But Kunnin’', tag:'Enhancement', ph:['fight'], turn:'either', text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' }
+      ]
+    },
+    {
+      id:'big-mek-dakkarig', ds:'orks/big-mek-dakkarig', pts:160, copies:2,
+      models:['1× Big Mek Dakkarig'],
+      gear:[['Blitzkannon','Multi-busta Launcha','Stompy Feet']]
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'warboss-in-mega-armour-meganobz', ds:['orks/warboss-in-mega-armour','orks/meganobz'], role:'Character', pts:375, ptsNote:'135 + Meganobz 240', enhancement:'Da Gobshot Thunderbuss',
+      leads:'Meganobz',
+      models:['1× Warboss in Mega Armour','6× Meganob w/ Twin Killsaw'],
+      gear:[['Da Gobshot Thunderbuss','’Uge Choppa','Big Shoota'],['Twin Killsaw']],
+      stats:[
+        { name:'Warboss in Mega Armour' },
+        { name:'Meganob ×6' }
+      ],
+      ranged:[
+        { name:'Da Gobshot Thunderbuss', who:'Warboss in Mega Armour', enh:true },
+        { name:'Big Shoota', who:'Warboss in Mega Armour' }
+      ],
+      melee:[
+        { name:'’Uge Choppa', who:'Warboss in Mega Armour', kw:['CLEAVE 2','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } },
+        { name:'Twin Killsaw', who:'Meganobz', n:6, kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }
+      ],
+      abilities:[
+        { name:'Krushin’ Impetus', who:'Warboss in Mega Armour' },
+        { name:'Intimidating Motivation', who:'Warboss in Mega Armour' },
+        { name:'Da Gobshot Thunderbuss', who:'Warboss in Mega Armour', tag:'Enhancement', text:'**WARBOSS** model only. This model has the following weapon:\nDa Gobshot Thunderbuss: 24" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]' },
+        { name:'Krumpin’ Time', who:'Meganobz' },
+        { name:'Arrogant Invulnerability', who:'Meganobz' }
+      ],
+      rules:['Da Boss','Leader','Waaagh!'],
+      kw:['Character','Faction: Orks','Infantry','Mega Armour','Warboss','Warboss in Mega Armour','Explosives','Meganobz'],
+      kwNote:'Explosives, Meganobz come from the led Meganobz.',
+      why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Warboss in Mega Armour + Meganobz)' }
+    },
+    {
+      id:'gretchin', ds:'orks/gretchin', role:'Battleline', pts:55, upgrade:'Extra Sneaky',
+      models:['10× Gretchin'],
+      gear:[['Grot Blasta','Scavenged Shivs']],
+      stats:[
+        { name:'Gretchin ×10' }
+      ],
+      ranged:[
+        { name:'Grot Blasta', n:10 }
+      ],
+      melee:[
+        { name:'Scavenged Shivs', n:10 }
+      ],
+      abilities:[
+        { name:'Downtrodden' },
+        { name:'Thievin’ Scavengers' },
+        { name:'Extra Sneaky', tag:'Upgrade', def:'-3" detection range', text:'**GRETCHIN** unit only. This unit has -3" **detection range**.', defOf:'10b55c47' }
+      ],
+      kw:['Battleline','Faction: Orks','Gretchin','Grots','Infantry'],
+      why:{ kw:{ Battleline:'Sneaky Little Gitz' }, role:{ Battleline:'Sneaky Little Gitz' } }
+    },
+    {
+      id:'gretchin-2', ds:'orks/gretchin', role:'Battleline', pts:45,
+      models:['10× Gretchin'],
+      gear:[['Grot Blasta','Scavenged Shivs']],
+      stats:[
+        { name:'Gretchin ×10' }
+      ],
+      ranged:[
+        { name:'Grot Blasta', n:10 }
+      ],
+      melee:[
+        { name:'Scavenged Shivs', n:10 }
+      ],
+      kw:['Battleline','Faction: Orks','Gretchin','Grots','Infantry'],
+      why:{ kw:{ Battleline:'Sneaky Little Gitz' }, role:{ Battleline:'Sneaky Little Gitz' } }
+    },
+    {
+      id:'deffkoptas', ds:'orks/deffkoptas', pts:85,
+      models:['3× Deffkopta'],
+      gear:[['Choppa','Rokkit Launcha','Slugga','Spinnin’ Blades']],
+      stats:[
+        { name:'Deffkoptas ×3' }
+      ],
+      ranged:[
+        { name:'Busta', n:3 },
+        { name:'Blasta', n:3 },
+        { name:'Slugga', n:3 }
+      ],
+      melee:[
+        { name:'Choppa', n:3 },
+        { name:'Spinnin’ Blades', n:3 }
+      ]
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -5523,8 +5324,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Fix Dat Armour Up', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'In your Command phase, this unit **heals** 3 wounds.\n*Place a Grot Oiler token next to the unit, removing it when this ability is used.*' },
-    { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
-    { name:'Kustom Force Field', def:'4+ InSv against ranged attacks', text:'This unit has 4+ **InSv** against ranged attacks.', defOf:'e9dead84' }
+    { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
@@ -5642,8 +5442,7 @@ const DATASHEETS = {
   ranged:[
     { name:'Busta', group:'Rokkit Launcha', range:'24"', A:'2', BS:'5+', S:'10', AP:'-2', D:'3', kw:['LETHAL HITS'] },
     { name:'Blasta', group:'Rokkit Launcha', range:'24"', A:'2', BS:'5+', S:'4', AP:'0', D:'1', kw:['BLAST 2'] },
-    { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] },
-    { name:'Kustom Mega-blasta', range:'24"', A:'3', BS:'5+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','LETHAL HITS'] }
+    { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] }
   ],
   melee:[
     { name:'Choppa', range:'Melee', A:'3', WS:'4+', S:'5', AP:'-1', D:'1', kw:[] },
@@ -5717,9 +5516,9 @@ const DATASHEETS = {
     { name:'Thump Gun', range:'18"', A:'3', BS:'5+', S:'6', AP:'0', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+'] }
   ],
   melee:[
-    { name:'Big Chompa’s Jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'4' },
-    { name:'Hunter', group:'Gutrippa', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6+1' },
-    { name:'Standard', group:'Gutrippa', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'2' }
+    { name:'Big Chompa’s Jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'4', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS'] },
+    { name:'Hunter', group:'Gutrippa', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6+1', kw:['LETHAL HITS'] },
+    { name:'Standard', group:'Gutrippa', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'2', kw:['CLEAVE 1'] }
   ],
   abilities:[
     { name:'Beast Snagga Following', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.', defOf:'951ba989' },
@@ -5764,8 +5563,8 @@ const DATASHEETS = {
     { name:'Shoota', group:'Kombi-weapon', range:'18"', A:'2', BS:'5+', S:'4', AP:'0', D:'1' }
   ],
   melee:[
-    { name:'Twin Killsaw', range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3' },
-    { name:'Power Klaw', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2' }
+    { name:'Power Klaw', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2' },
+    { name:'Twin Killsaw', range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3' }
   ],
   abilities:[
     { name:'Krumpin’ Time', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
@@ -5773,6 +5572,36 @@ const DATASHEETS = {
   ],
   mods:[
     { kind:'melee', when:'Riled up, Fight phase', cond:'riled', note:'+1 to hit rolls', from:'Krumpin’ Time', readOf:'0ad3bcc2' }
+  ]
+},
+'orks/zodgrod-wortsnagga':{
+  name:'Zodgrod Wortsnagga', faction:'orks', bsId:'ce45-db08-3795-18a9',
+  stats:[
+    { name:'Zodgrod Wortsnagga', M:'6"', T:'5', Sv:'5+', W:'5', Ld:'7+', OC:'1', InSv:'6+', base:'50mm' }
+  ],
+  ranged:[
+    { name:'Squigstoppa', range:'12"', A:'1', BS:'5+', S:'4', AP:'-1', D:'1', kw:['ANTI-MONSTER/VEHICLE 4+','CLOSE-QUARTERS','DEVASTATING WOUNDS: MONSTER/VEHICLE'] }
+  ],
+  melee:[
+    { name:'Da Grabzappa', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Super Runts', text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.', riled:true, readOf:'b65d65b6' }
+  ]
+},
+'orks/runtherd':{
+  name:'Runtherd', faction:'orks', bsId:'f401-c74a-cca8-5de3',
+  stats:[
+    { name:'Runtherd', M:'6"', T:'5', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] }
+  ],
+  melee:[
+    { name:'Runtherd’s Toolz', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'That’ll Learn Ya', tag:'Once per battle round, per unit', text:'When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- This unit is no longer **battle-shocked**.' }
   ]
 },
 'orks/beastboss-on-squigosaur':{
@@ -5785,9 +5614,9 @@ const DATASHEETS = {
     { name:'Thump Gun', range:'18"', A:'3', BS:'5+', S:'6', AP:'0', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+'] }
   ],
   melee:[
-    { name:'Hunter', group:'Beastchoppa', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6' },
-    { name:'Standard', group:'Beastchoppa', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', D:'2' },
-    { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'3' }
+    { name:'Hunter', group:'Beastchoppa', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', kw:[], D:'D6' },
+    { name:'Standard', group:'Beastchoppa', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', kw:['CLEAVE 1'], D:'2' },
+    { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS'], D:'3' }
   ],
   abilities:[
     { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'either', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
@@ -5797,118 +5626,21 @@ const DATASHEETS = {
   rules:['Da Boss','Waaagh!','Feel No Pain 5+'],
   kw:['Beast Snagga','Beastboss on Squigosaur','Character','Faction: Orks','Monster','Warboss']
 },
-'orks/big-mek':{
-  name:'Big Mek', faction:'orks', bsId:'fbee-427a-1c46-f621',
+'orks/warboss-in-mega-armour':{
+  name:'Warboss in Mega Armour', faction:'orks', bsId:'494b-11ce-5af-5b50',
   stats:[
-    { name:'Big Mek', M:'6"', T:'5', Sv:'3+', W:'6', Ld:'7+', OC:'1', InSv:'–', base:'50mm' }
+    { name:'Warboss in Mega Armour', M:'5"', T:'7', Sv:'2+', W:'7', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
   ranged:[
-    { name:'Kustom mega-blasta', range:'24"', A:'3', BS:'4+', S:'9', AP:'-2', D:'3' }
+    { name:'Da Gobshot Thunderbuss', range:'24"', A:'6', BS:'4+', S:'7', AP:'-2', D:'2', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 6'] },
+    { name:'Big Shoota', range:'36"', A:'3', BS:'4+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2'] }
   ],
   melee:[
-    { name:'Drilla', range:'Melee', A:'3', WS:'3+', S:'12', AP:'-3', D:'3' }
+    { name:'’Uge Choppa', range:'Melee', A:'5', WS:'2+', S:'12', AP:'-2', D:'3' }
   ],
   abilities:[
-    { name:'Shokk-boosta', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- This unit can change that **advance roll** to a 6.\n- This unit can move through all types of model.\n- When this unit ends that **advance move**, make a **hazard roll** for each model in this unit.' },
-    { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' }
-  ],
-  // abilities that change this unit's attacks, shown inside its weapon tables
-  mods:[
-    { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'More Dakka', readOf:'37fca761', readBy:'derive' }
-  ]
-},
-'orks/painboy':{
-  name:'Painboy', faction:'orks', bsId:'7669-1442-2c0b-e0c9',
-  stats:[
-    { name:'Painboy', M:'6"', T:'5', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
-  ],
-  melee:[
-    { name:'’Urty syringe', range:'Melee', A:'1', WS:'3+', S:'2', AP:'0', D:'D6' },
-    { name:'Dok’s Toolz', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2' }
-  ],
-  abilities:[
-    { name:'Crude Surgery', ph:['command'], turn:'your', text:'In your Command phase, this unit **heals** 3 wounds.' },
-    { name:'Catch Dat Red Bit', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.\n*Place a Grot Orderly token next to the unit, removing it when this ability is used.*' }
-  ]
-},
-'orks/nobz':{
-  name:'Nobz', faction:'orks', bsId:'b16a-7132-3f8a-abe5',
-  stats:[
-    { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
-  ],
-  ranged:[
-    { name:'Kustom Shoota', range:'18"', A:'4', BS:'5+', S:'4', AP:'0', D:'1' },
-    { name:'Busta Rokkit', group:'Kombi-rokkit', range:'24"', A:'1', BS:'5+', S:'10', AP:'-2', D:'3' },
-    { name:'Shoota', group:'Kombi-rokkit', range:'18"', A:'2', BS:'5+', S:'4', AP:'0', D:'1' }
-  ],
-  melee:[
-    { name:'Kustom Krumpa', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2' }
-  ],
-  abilities:[
-    { name:'Ammo Runts', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.\n*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.*' },
-    { name:'Get Out da Way!', ph:['charge'], turn:'either', text:'While making a **charge move**, this unit can move through models (excluding **MONSTER/VEHICLE** models).' },
-    { name:'Paired Krumpas', text:'Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**.' }
-  ],
-  mods:[
-    { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts', readOf:'4967f30b' },
-    { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas', always:true, readOf:'2ed08b87' }
-  ]
-},
-'orks/squighog-boyz':{
-  name:'Squighog Boyz', faction:'orks', bsId:'6a83-8e1f-63ef-50c3', role:'Mounted',
-  stats:[
-    { name:'Nob on Smasha Squig', M:'10"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'90×52.5mm Oval' },
-    { name:'Squighog Boyz', M:'10"', T:'6', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm Oval' }
-  ],
-  ranged:[
-    { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] },
-    { name:'Saddlegit’s Shiv', range:'9"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['ASSAULT'] },
-    { name:'Stikka', range:'9"', A:'1', BS:'5+', S:'5', AP:'-1', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+','ASSAULT'] }
-  ],
-  melee:[
-    { name:'Big Choppa', range:'Melee', A:'4', WS:'3+', S:'7', AP:'-1', D:'2' },
-    { name:'Squig Jaws', range:'Melee', A:'3', WS:'4+', S:'6', AP:'-1', D:'2' },
-    { name:'Stikka', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-1', D:'2' }
-  ],
-  abilities:[
-    { name:'Brutal Impact', ph:['fight'], turn:'either', text:'If this unit made a **charge move** this turn, this unit’s attacks have +1 **D**.' },
-    { name:'Bomb Squig', tag:'Once per battle, per unit', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place one Bomb Squig token next to the unit, removing it after this ability is used.*' }
-  ],
-  // abilities that change this unit's attacks, shown inside its weapon tables
-  mods:[
-    { kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 D', from:'Brutal Impact', readOf:'27a9e0f6' }
-  ],
-  rules:['Waaagh!'],
-  kw:['Beast Snagga','Explosives','Faction: Orks','Mobile','Mounted','Squighog Boyz']
-},
-'orks/zodgrod-wortsnagga':{
-  name:'Zodgrod Wortsnagga', faction:'orks', bsId:'ce45-db08-3795-18a9',
-  stats:[
-    { name:'Zodgrod Wortsnagga', M:'6"', T:'5', Sv:'5+', W:'5', Ld:'7+', OC:'1', InSv:'6+', base:'50mm' }
-  ],
-  ranged:[
-    { name:'Squigstoppa', range:'12"', A:'1', BS:'5+', S:'4', AP:'-1', D:'1' }
-  ],
-  melee:[
-    { name:'Da Grabzappa', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
-  ],
-  abilities:[
-    { name:'Super Runts', riled:true, text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.', readOf:'b65d65b6' }
-  ]
-},
-'orks/runtherd':{
-  name:'Runtherd', faction:'orks', bsId:'f401-c74a-cca8-5de3',
-  stats:[
-    { name:'Runtherd', M:'6"', T:'5', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
-  ],
-  ranged:[
-    { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1' }
-  ],
-  melee:[
-    { name:'Runtherd’s Toolz', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
-  ],
-  abilities:[
-    { name:'That’ll Learn Ya', tag:'Once per battle round, per unit', text:'When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**.' }
+    { name:'Krushin’ Impetus', ph:['charge'], turn:'either', text:'When this unit ends a **charge move**, you can select one enemy unit **engaged** with this unit. If you do, roll one D6 for each model in this unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**.' },
+    { name:'Intimidating Motivation', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' }
   ]
 },
 'world-eaters/kharn-the-betrayer':{
@@ -9366,6 +9098,7 @@ const BS_IDS = {
   },
   detachments:{
     "0985-28ae-cf24-2fba":"world-eaters/butchers-of-khorne",
+    "09b2-b286-7608-d613":"orks/brute-bosses",
     "0dd1-86f6-d2a0-3aba":"chaos-daemons/cavalcade-of-chaos",
     "1558-660f-466b-a087":"world-eaters/khorne-daemonkin",
     "163f-63bd-f2e1-5e7":"necrons/obeisance-phalanx",
@@ -9377,7 +9110,6 @@ const BS_IDS = {
     "357d-d51b-f001-a33d":"chaos-daemons/warptide",
     "385f-36b3-f98d-9735":"adeptus-custodes/dread-host",
     "3b75-a700-050c-06f5":"adeptus-custodes/lions-of-the-emperor",
-    "496c-ddb9-3e71-e0b3":"orks/war-horde",
     "4b17-a73a-7a0a-a265":"orks/bully-boyz",
     "4b8b-16b7-091d-7b6f":"thousand-sons/ritual-of-regeneration",
     "4e8e-50db-0d32-423c":"imperial-knights/freeblade-company",
@@ -9520,15 +9252,6 @@ const BS_IDS = {
     "lite-knights/trajann-valoris-allarus-custodians":["7d7c-c212-47a3-38e4|1×0574-f558-2957-584f,1×5622-c756-d3e8-85ae,1×b330-bad6-ea21-ecb","c8a6-a4c5-703e-b717|1×59ef-1bf3-f681-c8ae,2×fab4-d437-6e07-eb33,2×fab4-d437-6e07-eb33/4863-f443-2b45-e18b,2×fab4-d437-6e07-eb33/94b3-ef7f-f71f-c86e"],
     "lite-knights/witchseeker-squad":["503b-f7be-eeeb-9e31|4×9fdd-e31a-5f28-85ea,4×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,4×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
     "lite-knights/witchseeker-squad-2":["503b-f7be-eeeb-9e31|5×9fdd-e31a-5f28-85ea,5×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,5×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
-    "melee/beastboss-on-squigosaur-headwoppas-killchoppa":["a8b7-351-d911-a4d6|1×109a-db29-c4a5-f826,1×40fb-e485-dca0-cb12,1×4dcd-5d7f-65c2-245b,1×6084-9fb5-76d2-8487,1×d231-f7e4-f722-d987"],
-    "melee/big-mek-in-mega-armour-meganobz":["95e9-6da3-5e75-2566|1×6b9e-c6ae-2626-45c9,1×e0c6-58cd-a822-8b84,1×ed0c-e9cb-399f-a5a2,1×f65e-dc30-e7c0-7e47","7067-34f4-5272-e05f|5×731f-2f2-7ca0-23ed,5×731f-2f2-7ca0-23ed/b46a-4885-3b28-428b"],
-    "melee/big-mek-painboy-nobz":["fbee-427a-1c46-f621|1×673b-c3e-6682-ae28,1×df3a-0414-6edc-005a,1×e201-253f-1f52-e389","7669-1442-2c0b-e0c9|1×96d6-846e-edd3-332f,1×e083-787f-1fff-4170","b16a-7132-3f8a-abe5|8×252b-cdba-84bd-3ed3,8×252b-cdba-84bd-3ed3/392a-657c-8bfe-a1e6,8×252b-cdba-84bd-3ed3/8bba-d0bf-1102-2131,2×cff4-311e-b386-0879,2×cff4-311e-b386-0879/392a-657c-8bfe-a1e6,2×cff4-311e-b386-0879/9a9f-3dab-02c0-8be7"],
-    "melee/deffkoptas":["2d6e-aa3b-c28c-5ef0|1×484b-6da4-9390-33ae,1×484b-6da4-9390-33ae/2575-9440-a8cf-1c50,1×484b-6da4-9390-33ae/89b1-3250-5148-c69f,1×484b-6da4-9390-33ae/d137-294e-49d2-53a9,1×484b-6da4-9390-33ae/d231-f7e4-f722-d987,2×c0f6-1a61-c90f-f188,2×c0f6-1a61-c90f-f188/2575-9440-a8cf-1c50,2×c0f6-1a61-c90f-f188/7d49-39ac-d17e-63bf,2×c0f6-1a61-c90f-f188/89b1-3250-5148-c69f,2×c0f6-1a61-c90f-f188/d231-f7e4-f722-d987"],
-    "melee/ghazghkull-thraka":["4ea0-6b70-c17c-bc00|1×07b7-836e-524b-7227,1×4325-5811-1915-3c15,1×7f5-23ea-19ab-176,1×8b5-898c-f79b-5a9c"],
-    "melee/gretchin":["de8f-24f9-c543-92b7|10×43dd-f974-3fc8-8abc,10×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,10×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704"],
-    "melee/mozrog-skragbad":["b42b-ea0-38f1-6300|1×109a-db29-c4a5-f826,1×2ace-f88f-3405-d191,1×2fec-7b95-a5df-f688"],
-    "melee/nazdreg-meganobz":["80c4-14b2-d02d-d289|1×0955-1e48-ac34-156f,1×b27b-4fee-2644-a355","7067-34f4-5272-e05f|5×731f-2f2-7ca0-23ed,5×731f-2f2-7ca0-23ed/b46a-4885-3b28-428b"],
-    "melee/squighog-boyz":["6a83-8e1f-63ef-50c3|3×954d-5938-64d8-597c,3×954d-5938-64d8-597c/5efb-f61f-fdb6-a7d7,3×954d-5938-64d8-597c/8a8f-5ceb-8a0a-6c6c,3×954d-5938-64d8-597c/fa30-43a8-57eb-a82e,1×99c8-e37d-ae6d-a8ba,1×99c8-e37d-ae6d-a8ba/aecd-6ba5-5558-fee2,1×99c8-e37d-ae6d-a8ba/d231-f7e4-f722-d987,1×99c8-e37d-ae6d-a8ba/fa30-43a8-57eb-a82e"],
     "mucho-mutantes/ahriman-tzaangor-enlightened-with-fatecaster-greatbows":["3bfa-bf00-b5ed-cc81|1×570a-6d55-51ee-9fc7,1×93c8-9c05-8892-b481,1×c70d-46dc-32da-b1a4","8b9f-917f-37c1-99c3|5×414e-b8ff-7132-48c7,5×414e-b8ff-7132-48c7/23a5-d6be-b617-1565,5×414e-b8ff-7132-48c7/8097-77df-1ed5-1e1a,1×6cc8-d237-eec9-d038,1×6cc8-d237-eec9-d038/23a5-d6be-b617-1565,1×6cc8-d237-eec9-d038/8097-77df-1ed5-1e1a"],
     "mucho-mutantes/chaos-spawn":["60de-4c77-95e1-1337|1×7502-b778-b920-3f68,1×7502-b778-b920-3f68/9c5c-1cac-6b3f-7a01"],
     "mucho-mutantes/daemon-prince-of-tzeentch-with-wings":["66f4-929e-1769-f277|1×2313-45a2-28ff-c81a,1×7205-f4fe-f064-0edf,1×ca9c-de3c-61e1-31"],
@@ -9561,12 +9284,6 @@ const BS_IDS = {
     "nidzillas/norn-emissary-destabilising-predation":["5720-2873-8c2c-edc3|1×a336-1346-0281-b4b2,1×c102-d98b-dc50-5b53,1×d7b3-df20-933-63b7,1×dc69-1094-613-6daf"],
     "nidzillas/the-swarmlord":["13f7-1a3-eff-7393|1×7a17-4fb0-c0f5-e22,1×a30-4bad-cef5-5e55"],
     "nidzillas/tyrannofex":["1705-379b-330d-36d4|1×5e02-c4ce-b7e6-d59,1×a87e-4f8-a6f7-15de,1×f64-8faa-ac54-73ff"],
-    "ooga-booga/big-mek-in-mega-armour-meganobz":["95e9-6da3-5e75-2566|1×10f9-eb42-632e-3a6f,1×82cc-4b0b-8e55-bf48,1×e0c6-58cd-a822-8b84,1×f65e-dc30-e7c0-7e47","7067-34f4-5272-e05f|5×cdad-e2e0-9db3-93fc,5×cdad-e2e0-9db3-93fc/ce61-585b-aea7-18fc,5×cdad-e2e0-9db3-93fc/f65e-dc30-e7c0-7e47"],
-    "ooga-booga/big-mek-painboy-nobz":["fbee-427a-1c46-f621|1×673b-c3e-6682-ae28,1×df3a-0414-6edc-005a","7669-1442-2c0b-e0c9|1×96d6-846e-edd3-332f,1×e083-787f-1fff-4170","b16a-7132-3f8a-abe5|2×cff4-311e-b386-0879,2×cff4-311e-b386-0879/392a-657c-8bfe-a1e6,2×cff4-311e-b386-0879/9a9f-3dab-02c0-8be7,8×e4b1-2a15-2843-283a,8×e4b1-2a15-2843-283a/32ab-c37c-b71f-8415,8×e4b1-2a15-2843-283a/392a-657c-8bfe-a1e6"],
-    "ooga-booga/ghazghkull-thraka":["4ea0-6b70-c17c-bc00|1×07b7-836e-524b-7227,1×4325-5811-1915-3c15,1×7f5-23ea-19ab-176,1×8b5-898c-f79b-5a9c"],
-    "ooga-booga/gretchin":["de8f-24f9-c543-92b7|10×43dd-f974-3fc8-8abc,10×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,10×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704"],
-    "ooga-booga/nazdreg-meganobz":["80c4-14b2-d02d-d289|1×0955-1e48-ac34-156f,1×b27b-4fee-2644-a355","7067-34f4-5272-e05f|5×731f-2f2-7ca0-23ed,5×731f-2f2-7ca0-23ed/b46a-4885-3b28-428b"],
-    "ooga-booga/zodgrod-wortsnagga-runtherd-gretchin":["ce45-db08-3795-18a9|1×7dfc-efc5-a31c-a724,1×c1a7-616a-af3a-cdf9","f401-c74a-cca8-5de3|1×aa3c-6662-6bf0-6a7e,1×d231-f7e4-f722-d987","de8f-24f9-c543-92b7|20×43dd-f974-3fc8-8abc,20×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,20×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704,1×8ba4-a299-ac96-fbc5"],
     "princes/chaos-rhino":["e849-ce40-ee43-7623|1×9cc3-1188-9678-0ee1,1×f76c-0f51-ad33-c118"],
     "princes/daemon-prince-of-khorne-berzerker-glaive":["40c5-9ebd-6d42-2855|1×2c4c-5aac-b510-28ef,1×3e4b-1a3a-8473-578c,1×f132-71e1-81e2-5074"],
     "princes/daemon-prince-of-khorne-helm-of-brazen-ire":["40c5-9ebd-6d42-2855|1×3e4b-1a3a-8473-578c,1×6836-5818-2135-a8aa,1×9754-481c-c292-a1f9,1×f132-71e1-81e2-5074"],
@@ -9603,6 +9320,16 @@ const BS_IDS = {
     "shooty/mek-tankbustas":["3b2-8c11-616a-1005|1×1d21-9b32-c427-398e,1×c6e4-e5a5-d4be-d07c","dadc-d370-ef10-853c|1×3697-d01c-ebcd-835d,2×3697-d01c-ebcd-835d/7819-56c3-cf02-6cdb,1×3697-d01c-ebcd-835d/9707-82cf-9501-fb43,4×40b3-1364-acb9-c1eb,4×40b3-1364-acb9-c1eb/7819-56c3-cf02-6cdb,4×40b3-1364-acb9-c1eb/9707-82cf-9501-fb43,1×cdd4-c8f7-bc72-9af0,2×cdd4-c8f7-bc72-9af0/811f-e844-83ab-78a4,1×cdd4-c8f7-bc72-9af0/8fca-90dd-a784-b5c0"],
     "shooty/warboss":["2efc-c4b3-2ecc-5a37|1×8b5-898c-f79b-5a9c,1×8bba-d0bf-1102-2131,1×d034-cadd-41e5-dc21"],
     "shooty/wazdakka":["2ab7-ab71-0af4-5d39|1×5447-603b-27a0-7240,1×6739-941d-5e71-b461,1×c26c-fe9c-e557-e706,1×ef63-b27a-c026-19f2"],
+    "simple-but-effective/beastboss-on-squigosaur":["a8b7-351-d911-a4d6|1×109a-db29-c4a5-f826,1×1a5d-7811-73df-2724,1×4dcd-5d7f-65c2-245b,1×6084-9fb5-76d2-8487,1×d231-f7e4-f722-d987"],
+    "simple-but-effective/big-mek-dakkarig":["78a7-cf35-aa8d-c420|1×47f0-7e05-a4aa-2cef,1×6feb-277f-7f31-504a,1×f51b-ebb2-a713-b492"],
+    "simple-but-effective/deffkoptas":["2d6e-aa3b-c28c-5ef0|3×c0f6-1a61-c90f-f188,3×c0f6-1a61-c90f-f188/2575-9440-a8cf-1c50,3×c0f6-1a61-c90f-f188/7d49-39ac-d17e-63bf,3×c0f6-1a61-c90f-f188/89b1-3250-5148-c69f,3×c0f6-1a61-c90f-f188/d231-f7e4-f722-d987"],
+    "simple-but-effective/ghazghkull-thraka":["4ea0-6b70-c17c-bc00|1×07b7-836e-524b-7227,1×4325-5811-1915-3c15,1×7f5-23ea-19ab-176,1×8b5-898c-f79b-5a9c"],
+    "simple-but-effective/gretchin":["de8f-24f9-c543-92b7|10×43dd-f974-3fc8-8abc,10×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,10×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704,1×8ba4-a299-ac96-fbc5"],
+    "simple-but-effective/gretchin-2":["de8f-24f9-c543-92b7|10×43dd-f974-3fc8-8abc,10×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,10×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704"],
+    "simple-but-effective/mozrog-skragbad":["b42b-ea0-38f1-6300|1×109a-db29-c4a5-f826,1×2ace-f88f-3405-d191,1×2fec-7b95-a5df-f688"],
+    "simple-but-effective/nazdreg-meganobz":["80c4-14b2-d02d-d289|1×0955-1e48-ac34-156f,1×b27b-4fee-2644-a355","7067-34f4-5272-e05f|5×cdad-e2e0-9db3-93fc,5×cdad-e2e0-9db3-93fc/ce61-585b-aea7-18fc,5×cdad-e2e0-9db3-93fc/f65e-dc30-e7c0-7e47"],
+    "simple-but-effective/warboss-in-mega-armour-meganobz":["494b-11ce-5af-5b50|1×1776-bf60-6198-7d1d,1×7142-4c07-8072-8474,1×dfb9-6a5b-f638-73d9","7067-34f4-5272-e05f|6×731f-2f2-7ca0-23ed,6×731f-2f2-7ca0-23ed/b46a-4885-3b28-428b"],
+    "simple-but-effective/zodgrod-wortsnagga-runtherd-gretchin":["ce45-db08-3795-18a9|1×7dfc-efc5-a31c-a724,1×c1a7-616a-af3a-cdf9","f401-c74a-cca8-5de3|1×aa3c-6662-6bf0-6a7e,1×d231-f7e4-f722-d987","de8f-24f9-c543-92b7|20×43dd-f974-3fc8-8abc,20×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,20×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704,1×8ba4-a299-ac96-fbc5"],
     "standard/angron":["f4b8-1179-de57-4d69|1×3f1f-49de-78f6-e59e,1×9754-481c-c292-a1f9"],
     "standard/chaos-rhino":["e849-ce40-ee43-7623|1×9cc3-1188-9678-0ee1,1×f76c-0f51-ad33-c118"],
     "standard/eightbound":["9435-1f44-7e5b-d510|1×6f2c-fc26-53bc-34bd,1×6f2c-fc26-53bc-34bd/adff-65e7-4566-084b,2×7e60-1733-57d1-71f3,2×7e60-1733-57d1-71f3/f8bc-c08c-22f0-8ebb"],
@@ -9702,6 +9429,7 @@ const BS_IDS = {
     "1703-3edd-5eb3-fcef":"Tzaangor Enlightened",
     "1705-379b-330d-36d4":"Tyrannofex",
     "1724-8c9c-c385-16c6":"Exalted Sorcerer on Disc of Tzeentch",
+    "1776-bf60-6198-7d1d":"Da Gobshot Thunderbuss",
     "183e-f3bb-3ce6-7b55":"Flawless Blades",
     "18b0-8c2-173f-5":"Bolt pistol",
     "18e2-a849-ff3e-fe3":"Brutal assault weapon",
@@ -9711,6 +9439,7 @@ const BS_IDS = {
     "197b-3dd4-bc46-2ef7":"Astropathic Blast",
     "1a34-f1cc-ec01-ca32":"Warlord",
     "1a43-6f35-30bd-ec50":"Spore Mine",
+    "1a5d-7811-73df-2724":"Brutal But Kunnin'",
     "1a98-844f-f54b-f76c":"Baleful Devolution",
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
@@ -9748,7 +9477,6 @@ const BS_IDS = {
     "23ce-dba1-8242-532d":"Two excruciator cannons",
     "23e2-6d93-5012-304d":"Lash of Torment",
     "244-694c-22c-74fb":"Plasma pistol",
-    "252b-cdba-84bd-3ed3":"Nob w/ Kustom Shoota and Kustom Krumpa",
     "253b-c889-500a-8500":"Flayed One",
     "255b-146d-ca61-55fb":"Twistbray",
     "2575-9440-a8cf-1c50":"Spinnin' Blades",
@@ -9792,7 +9520,6 @@ const BS_IDS = {
     "2f59-b41c-83be-4efe":"Arc scourge",
     "2fec-7b95-a5df-f688":"Gutrippa",
     "307d-0ce0-fcf0-9100":"Dishonoured w/ paired manglers",
-    "32ab-c37c-b71f-8415":"Kombi-rokkit",
     "32bc-0724-a7cf-f17c":"Paired accursed weapons",
     "33e2-4ee8-2e10-3e47":"Battle-lust",
     "3449-7dac-6ac8-5d51":"Khârn the Betrayer",
@@ -9814,7 +9541,6 @@ const BS_IDS = {
     "38fb-1df5-8eb6-fdf6":"Khorne Berzerker Champion",
     "390e-706b-a059-378b":"Deathwatch Terminator Squad",
     "3924-3f8-745d-7097":"Dreadherder",
-    "392a-657c-8bfe-a1e6":"Kustom Krumpa",
     "3a22-1796-8a64-6d3b":"Goremonger w/ chainblade",
     "3a9a-05a5-41e6-7e70":"Ceramite Fists",
     "3add-49b6-5cd3-586f":"Bolt pistol",
@@ -9842,7 +9568,6 @@ const BS_IDS = {
     "407b-a252-25b0-0cf4":"Broad spectrum data-tether",
     "40b3-1364-acb9-c1eb":"Tankbusta w/ Busta Rokkit Launcha",
     "40c5-9ebd-6d42-2855":"Daemon Prince of Khorne",
-    "40fb-e485-dca0-cb12":"Headwoppa's Killchoppa",
     "414e-b8ff-7132-48c7":"Enlightened",
     "416d-1da1-fc2c-174a":"Harvester cannon",
     "4175-82c6-8e96-bef8":"Chaos Cerastus Knight Lancer",
@@ -9870,12 +9595,12 @@ const BS_IDS = {
     "47e1-9e86-8a80-66e1":"Plasma pistol",
     "47f0-7e05-a4aa-2cef":"Multi-busta Launcha",
     "4848-c7ef-a65f-d15c":"Juggernaut's bladed horn",
-    "484b-6da4-9390-33ae":"Deffkopta w/ Kustom mega-blasta",
     "4858-7bde-a8d4-e7da":"Cawl's Omnissian axe",
     "4863-f443-2b45-e18b":"Balistus grenade launcher",
     "48a2-a603-9607-4df8":"Gatling cannon and flamer",
     "48de-a40a-2252-66c":"Force weapon",
     "48fe-1424-5571-d7ee":"Bladeguard Veterans",
+    "494b-11ce-5af-5b50":"Warboss in Mega Armour",
     "497d-e065-f5a5-5e80":"Daemon Prince of Chaos",
     "4988-d93e-5034-2b3c":"Contemptor-Galatus Dreadnought",
     "49fd-a80d-8cc0-c76b":"Imotekh the Stormlord",
@@ -9942,7 +9667,6 @@ const BS_IDS = {
     "5d80-129-8ba7-4730":"Interceptor lance",
     "5e02-c4ce-b7e6-d59":"Stinger salvoes",
     "5e8b-2f7f-6ef5-42e3":"Alpha combat weapon",
-    "5efb-f61f-fdb6-a7d7":"Stikka",
     "5f0c-f31c-26ba-4f2a":"Armoured limbs",
     "5f1f-f3bb-d6dd-6714":"Heavy weapon",
     "5f23-4d6-f2f9-5973":"Flamers",
@@ -9976,7 +9700,6 @@ const BS_IDS = {
     "666c-57c1-9f31-fd7d":"Power fist",
     "66f4-929e-1769-f277":"Daemon Prince of Tzeentch with wings",
     "6739-941d-5e71-b461":"Speeding Bulk and Flaming Exhaust",
-    "673b-c3e-6682-ae28":"Drilla",
     "67d3-0a50-aa82-c444":"Twin Onager heavy phosphor blaster",
     "6814-ce42-4b23-72a9":"Prosecutor",
     "6821-a4bf-a017-4487":"Lucia Vestha",
@@ -9985,10 +9708,8 @@ const BS_IDS = {
     "68b0-c798-79a8-28f5":"Snarling Rivalry",
     "68e6-6c48-4d98-7faa":"Flamespurt",
     "68e9-a3fc-4ef2-b655":"Tesla sphere",
-    "6a83-8e1f-63ef-50c3":"Squighog Boyz",
     "6a9b-8e2f-edac-fa2d":"Norn Assimilator",
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
-    "6b9e-c6ae-2626-45c9":"Kustom Force Field",
     "6bdb-2665-95ec-fcde":"Phosphor blaster",
     "6c87-24f8-cd1c-c3c8":"Immortal",
     "6cc8-d237-eec9-d038":"Aviarch",
@@ -10007,6 +9728,7 @@ const BS_IDS = {
     "7067-34f4-5272-e05f":"Meganobz",
     "70b4-8523-6b7c-1b0a":"Freedom's Hand",
     "7135-8430-eb02-ded4":"Thulia Ghuld",
+    "7142-4c07-8072-8474":"Big Shoota",
     "7193-1dfe-7721-ecbd":"War Dog autocannon",
     "71c9-b10b-b55f-483e":"Slaughterbound",
     "71d9-9dc2-2b9a-6db3":"Skarbrand",
@@ -10033,7 +9755,6 @@ const BS_IDS = {
     "75ce-5ce7-0a6e-a876":"Blade of Endless Bloodshed",
     "762a-30ef-ed85-945e":"Lasher tendrils",
     "7664-c6bb-fce5-f057":"Havoc Champion",
-    "7669-1442-2c0b-e0c9":"Painboy",
     "7685-1ab3-8d12-fac7":"Shield Dome",
     "76d8-2228-b6cb-2d36":"Force weapon",
     "7793-9fa8-84f7-3454":"Bladed limbs",
@@ -10108,7 +9829,6 @@ const BS_IDS = {
     "89c4-132e-6ad6-2a08":"Despoiler gatling cannon",
     "8a1b-35-5c24-d81c":"Herald combat weapon",
     "8a59-c996-8ae9-8bd6":"Icon of Excess",
-    "8a8f-5ceb-8a0a-6c6c":"Saddlegit's Shiv",
     "8ad7-4a78-859d-2305":"Storm Shield",
     "8ae1-aa47-e1d1-1b31":"Chaos Rhino",
     "8b1d-9029-f9e1-42d9":"Chaos Cerastus Knight Atrapos",
@@ -10146,18 +9866,14 @@ const BS_IDS = {
     "946c-d784-c8be-f21":"Havocs",
     "94b3-ef7f-f71f-c86e":"Castellan Axe",
     "952c-7df4-87e1-6303":"Accursed crozius",
-    "954d-5938-64d8-597c":"Squighog Boy",
     "95e9-6da3-5e75-2566":"Big Mek in Mega Armour",
     "9610-b148-8433-93b8":"Custodian Wardens",
-    "96d6-846e-edd3-332f":"'Urty syringe",
     "9707-82cf-9501-fb43":"Gitstikka",
     "9754-481c-c292-a1f9":"Warlord",
     "98ba-1a51-57f5-38fc":"Voice eater",
     "9916-8701-bbbd-780e":"Blade of Magnus",
     "9932-3d2b-1e47-d53b":"Exalted Eightbound",
     "996-bd56-400b-a51e":"Divining spear Enlightened",
-    "99c8-e37d-ae6d-a8ba":"Nob on Smasha Squig",
-    "9a9f-3dab-02c0-8be7":"Paired Krumpas",
     "9ad3-083a-577b-56b0":"Hellforged weapons",
     "9b72-9f8a-9554-43d4":"Pyrocaster",
     "9c5c-1cac-6b3f-7a01":"Hideous Mutations",
@@ -10223,7 +9939,6 @@ const BS_IDS = {
     "ad65-d3cb-c677-7cb3":"Warlord",
     "adff-65e7-4566-084b":"Chainblades",
     "ae78-f3d8-6cf0-6a89":"Hellfyre missile rack",
-    "aecd-6ba5-5558-fee2":"Big Choppa",
     "af48-0e3e-56f5-f5b1":"Close combat weapon",
     "afb2-86ce-eb1a-b453":"Legionary w/ accursed weapon",
     "b005-ca60-ce5b-89c7":"Rubric Marine w/ warpflamer",
@@ -10234,7 +9949,6 @@ const BS_IDS = {
     "b0b9-9511-44c1-b272":"Combi-bolter, chainfist",
     "b114-2c55-f1b6-6f98":"Tzeentch's Firestorm",
     "b12c-308b-9920-b09a":"Close combat weapon",
-    "b16a-7132-3f8a-abe5":"Nobz",
     "b1cf-c5-5121-92a4":"Scarab Occult Terminators",
     "b1eb-9d70-dfc2-208b":"Dreadspear",
     "b27b-4fee-2644-a355":"Kustom Blasta X",
@@ -10336,12 +10050,10 @@ const BS_IDS = {
     "ce61-585b-aea7-18fc":"Kombi-weapon",
     "ceab-62d9-31bf-7c61":"Warlord",
     "cf57-33c7-551b-fa36":"2 ectoplasma cannons",
-    "cff4-311e-b386-0879":"Nob w/ Kustom Krumpa and Paired Krumpas",
     "d009-9bd9-59a1-9119":"Exalted Eightbound Champion",
     "d034-cadd-41e5-dc21":"Kustom Choppa",
     "d0ac-5a84-221a-3dd7":"Wyredjinn",
     "d0cf-a582-5166-fbba":"Monstrous scything talons",
-    "d137-294e-49d2-53a9":"Kustom Mega-blasta",
     "d146-51bc-c659-9409":"Weapons of the Final Triarch",
     "d1cc-e17a-f1a1-4349":"Rendmaster on Blood Throne",
     "d231-290d-7de8-bc49":"Slaughter and Carnage",
@@ -10390,23 +10102,20 @@ const BS_IDS = {
     "de8f-24f9-c543-92b7":"Gretchin",
     "deb4-6018-b8cf-1d66":"Heavy Intercessors",
     "ded1-4542-58af-41c1":"Triarchal Menhir",
-    "df3a-0414-6edc-005a":"Kustom mega-blasta",
     "df62-ee85-5169-327e":"Armoured bulk",
     "df80-bbdc-bd0a-3428":"Sentinel Guard Sodality",
+    "dfb9-6a5b-f638-73d9":"'Uge Choppa",
     "dfe8-cea0-8d16-db95":"Diabolus heavy stubber",
     "dffe-86b3-59a8-fd3d":"Cultist Champion",
     "e02b-6f8f-cbee-fa79":"Vashtorr's claw",
-    "e083-787f-1fff-4170":"Dok's Toolz",
     "e0c6-58cd-a822-8b84":"Kustom Mega-blasta",
     "e135-2748-1287-ec58":"Gauntlet of Fire",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
     "e1b1-146f-6f77-3a15":"Tzeentch Soul Grinder",
-    "e201-253f-1f52-e389":"Kunnin' But Brutal",
     "e390-b58b-db9-816":"Lucius the Eternal",
     "e403-3a9-279e-41b7":"Nurglings",
     "e452-08be-33e6-3864":"Daemon Prince of Slaanesh with Wings",
     "e456-0afc-9b42-226c":"Infractors",
-    "e4b1-2a15-2843-283a":"Nob w/ Kombi-rokkit and Kustom Krumpa",
     "e4b2-478b-a217-f999":"Skitarii Ranger Alpha",
     "e4da-4f2d-19c3-416b":"Martial Signatum Amplificator",
     "e4f0-79-126a-ac41":"Hellblade",
@@ -10430,7 +10139,6 @@ const BS_IDS = {
     "ebfb-d2a4-5280-a6e6":"Gore-stained Veterans",
     "ec72-f024-4283-0558":"Lord on Juggernaut",
     "ecbb-dff6-492a-16f6":"Nostraman chainblade",
-    "ed0c-e9cb-399f-a5a2":"Follow Me Ladz",
     "eddd-9b27-00c2-b0ce":"Blood-forged Armour",
     "ee6b-763b-5885-19da":"Gorechild",
     "ee6b-d65-2b19-eb6b":"Relic gauss blaster",
@@ -10479,11 +10187,9 @@ const BS_IDS = {
     "f88c-344d-d603-5622":"Dark Disciple",
     "f8bc-c08c-22f0-8ebb":"Chainblades",
     "f909-00c7-8ba4-018a":"Khorne Berzerkers",
-    "fa30-43a8-57eb-a82e":"Squig Jaws",
     "fab4-d437-6e07-eb33":"Allarus Custodian",
     "fb26-6d89-aa65-fb7e":"Panoply of the Cursed Knights",
     "fbad-4487-a8bc-9ef0":"Collar of Khorne",
-    "fbee-427a-1c46-f621":"Big Mek",
     "fc2d-063a-a9fa-968f":"Frag bombard",
     "fcdc-51d3-89ab-f5b6":"The Slayer Sword",
     "fd31-64a2-b20f-f0bc":"Flesh Hounds",
@@ -10499,7 +10205,9 @@ const BS_IDS = {
     "1173-a18c-18fb-fac9":1,
     "131b-ff57-84bb-e87a":1,
     "13f7-1a3-eff-7393":1,
+    "1776-bf60-6198-7d1d":1,
     "190d-7321-6e85-5251":1,
+    "1a5d-7811-73df-2724":1,
     "1f1e-2989-4762-cf88":1,
     "202a-2f25-f692-8b36":1,
     "217d-4d10-bad0-1d6e":3,
@@ -10513,7 +10221,6 @@ const BS_IDS = {
     "3811-a215-d4a1-d197":1,
     "3924-3f8-745d-7097":1,
     "3bfa-bf00-b5ed-cc81":1,
-    "40fb-e485-dca0-cb12":1,
     "42e1-e706-eb89-6cb6":1,
     "44f2-27ca-fad5-70ad":1,
     "4676-0c32-b62c-debd":1,
@@ -10565,12 +10272,10 @@ const BS_IDS = {
     "d40a-c9a6-74d5-288d":3,
     "d6e9-169c-3b2a-ee09":1,
     "dcc0-b70c-9779-e6c9":1,
-    "e201-253f-1f52-e389":1,
     "e390-b58b-db9-816":1,
     "e4da-4f2d-19c3-416b":1,
     "e584-f803-7858-05bc":1,
     "ebfb-d2a4-5280-a6e6":3,
-    "ed0c-e9cb-399f-a5a2":1,
     "eddd-9b27-00c2-b0ce":1,
     "f3f0-a73b-d062-9dc6":1,
     "f4b8-1179-de57-4d69":1,
@@ -10602,7 +10307,6 @@ const CHECKLIST = {
   "a|128j63r":{"u":"shooting:your"},
   "a|12opamt":{"u":"shooting:your,fight:either"},
   "a|12u09c2":{"u":"charge:either"},
-  "a|1348p3r":{"u":"shooting:your,fight:either"},
   "a|139ou05":{"u":"shooting:your"},
   "a|13o0mkf":{"u":"shooting:your,fight:either"},
   "a|13tyxa7":{"none":1},
@@ -10617,7 +10321,6 @@ const CHECKLIST = {
   "a|14wwtkh":{"x":1},
   "a|14wxe1s":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 5+ against mortal wounds and Psychic Attacks","to":{"all":["Faction: Necrons"]},"while":"While a friendly NECRONS unit is within 6\" of the bearer"}]},
   "a|1507i5y":{"t":"fight:either","s":1},
-  "a|150yh6m":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|15f64aw":{"u":"shooting:your,fight:either"},
   "a|15iiwia":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
   "a|15ro202":{"u":"shooting:your,charge:either"},
@@ -10629,7 +10332,6 @@ const CHECKLIST = {
   "a|16oy7t8":{"u":"shooting:your,fight:either"},
   "a|16vjj2d":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|16w10ps":{"u":"shooting:opp,fight:either"},
-  "a|174iuu5":{"x":1},
   "a|176aeuw":{"u":"fight:either"},
   "a|179ecxi":{"x":1,"o":[{"n":"Fanatical Devotion","u":"movement:your,shooting:your,charge:your"},{"n":"Adaptive Tactics","u":"movement:your,shooting:your,charge:your"},{"n":"The Fires of Mars","x":1}]},
   "a|17acewe":{"t":"command:your","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
@@ -10666,12 +10368,12 @@ const CHECKLIST = {
   "a|1d2sdct":{"x":1},
   "a|1d6egtn":{"u":"shooting:your,fight:either"},
   "a|1d760q0":{"u":"shooting:your,fight:either"},
+  "a|1de8og0":{"x":1},
   "a|1dmypck":{"x":1},
   "a|1dnu4iv":{"none":1},
   "a|1do0k8j":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|1dpgjmz":{"u":"shooting:your,charge:either,fight:either"},
   "a|1dsr6i9":{"t":"fight:either","s":1},
-  "a|1dsy1ve":{"t":"movement:your","u":"movement:your","a":1},
   "a|1dv9ky4":{"t":"movement:your","u":"movement:your"},
   "a|1ea364m":{"u":"shooting:opp,fight:either"},
   "a|1ea3wae":{"u":"shooting:your,fight:either"},
@@ -10688,7 +10390,6 @@ const CHECKLIST = {
   "a|1g2iw40":{"t":"command:your","s":1},
   "a|1g4mmx6":{"t":"movement:your","u":"movement:your,shooting:your"},
   "a|1g7swxv":{"t":"movement:opp","u":"movement:opp"},
-  "a|1gau6yx":{"u":"movement:your"},
   "a|1gbehvd":{"u":"shooting:opp"},
   "a|1gg1hfo":{"u":"shooting:your,fight:either"},
   "a|1h42m7":{"t":"shooting:your","u":"shooting:your","s":1},
@@ -10727,9 +10428,9 @@ const CHECKLIST = {
   "a|1mlxswk":{"none":1},
   "a|1ms0gwk":{"t":"movement:opp","u":"movement:opp"},
   "a|1n6jx36":{"t":"shooting:your","u":"shooting:your"},
-  "a|1nd78rp":{"u":"charge:either"},
   "a|1neh4ut":{"u":"shooting:opp,fight:either"},
   "a|1nfdpzv":{"u":"shooting:your,fight:either"},
+  "a|1noka0i":{"x":1},
   "a|1nv0bem":{"at":"Start of the battle round","s":1},
   "a|1nwz1gg":{"u":"charge:either,fight:either"},
   "a|1o03wkj":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 4+ against Psychic Attacks and mortal wounds","to":{"all":["Faction: Legiones Daemonica","Tzeentch"]},"while":"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer"}]},
@@ -10745,7 +10446,6 @@ const CHECKLIST = {
   "a|1pea84f":{"x":1},
   "a|1q03tdu":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|1q897s2":{"u":"shooting:your,fight:either"},
-  "a|1qfxao4":{"t":"movement:your","u":"movement:your"},
   "a|1qlxfpn":{"t":"command:your","s":1},
   "a|1qoyqu0":{"u":"shooting:your"},
   "a|1qqyaef":{"t":"shooting:opp","u":"shooting:opp","s":1},
@@ -10810,7 +10510,6 @@ const CHECKLIST = {
   "a|52ik6r":{"t":"command:your","s":1},
   "a|5cu3n5":{"u":"fight:either"},
   "a|5ffkd6":{"u":"movement:your"},
-  "a|5fmbqx":{"u":"fight:either"},
   "a|5pzucl":{"u":"shooting:opp"},
   "a|5r85a":{"t":"movement:your","s":1},
   "a|5tl14a":{"u":"shooting:opp,fight:either"},
@@ -10827,7 +10526,6 @@ const CHECKLIST = {
   "a|6t51gd":{"u":"shooting:your,fight:either"},
   "a|6x88aj":{"at":"Start of the first battle round","u":"fight:either","s":1},
   "a|70om4s":{"u":"shooting:opp,fight:either","g":[{"name":"Feel No Pain","to":{"all":["Cybernetica Datasmith"]},"while":"While a CYBERNETICA DATASMITH model is leading this unit"}]},
-  "a|73bjkb":{"u":"shooting:opp"},
   "a|7n1mj3":{"u":"shooting:your,fight:either"},
   "a|7odqal":{"x":1},
   "a|82gw9o":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
@@ -10868,9 +10566,7 @@ const CHECKLIST = {
   "a|d6arlc":{"x":1},
   "a|dcqyl1":{"u":"charge:either"},
   "a|dlqzcc":{"x":1},
-  "a|ds28tt":{"u":"fight:either"},
   "a|e1tops":{"t":"command:your","s":1},
-  "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
   "a|ekf7wl":{"u":"movement:your"},
   "a|erffw0":{"x":1},
@@ -10901,12 +10597,10 @@ const CHECKLIST = {
   "a|i0q45v":{"u":"movement:your"},
   "a|inerxb":{"u":"charge:either"},
   "a|io1qy9":{"u":"shooting:opp"},
-  "a|iuc24i":{"u":"command:your"},
   "a|iv04nt":{"u":"shooting:opp,fight:either"},
   "a|j2qj5o":{"x":1},
   "a|j4crxj":{"u":"shooting:opp,fight:either"},
   "a|j4iojd":{"x":1},
-  "a|j4ww0l":{"t":"command:your","s":1},
   "a|jst03m":{"u":"fight:either","a":1},
   "a|jwhwv":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|k4qjtt":{"u":"shooting:your,fight:either"},
@@ -10914,9 +10608,11 @@ const CHECKLIST = {
   "a|k82erx":{"t":"command:your","s":1},
   "a|krt302":{"t":"shooting:opp","u":"shooting:opp"},
   "a|kubiv7":{"x":1},
+  "a|l8edc":{"u":"fight:either"},
   "a|ll49i1":{"x":1},
   "a|lvapga":{"u":"shooting:opp"},
   "a|lw737z":{"x":1},
+  "a|ly28ua":{"u":"charge:either","a":1},
   "a|lz9py9":{"u":"fight:either"},
   "a|m2vnmt":{"u":"fight:either"},
   "a|m95233":{"u":"shooting:your"},
@@ -11038,12 +10734,12 @@ const CHECKLIST = {
   "r|orks|Da Boss":{"at":"Start of the battle round","s":1},
   "r|orks|Dakka! Dakka! Dakka!":{"u":"shooting:your"},
   "r|orks|Displays of Savagery":{"u":"fight:either"},
-  "r|orks|Get Stuck In":{"u":"fight:either"},
   "r|orks|Sneaky Little Gitz":{"u":"movement:your"},
   "r|orks|Try Dat Button!":{"t":"shooting:your,fight:either","u":"shooting:your,fight:either","o":[{"n":"1–2","row":"1–2"},{"n":"3–4","row":"3–4"},{"n":"5–6","row":"5–6"}]},
   "r|orks|Waaagh!":{"u":"movement:your,shooting:either,charge:your,fight:either"},
   "r|orks|War Cry":{"t":"command:either","f":[{"n":"riled up","r":"Waaagh!","u":"command:either,movement:either,shooting:either,charge:either,fight:either"}],"s":1},
   "r|orks|Wreckin’ and Lootin’":{"t":"shooting:your","u":"shooting:your"},
+  "r|orks|’Ard as Nails":{"u":"fight:either"},
   "r|thousand-sons|Cabal of Sorcerers":{"t":"shooting:your","u":"shooting:your","s":1,"o":[{"n":"Destiny’s Ruin","row":"Destiny’s Ruin (Psychic) · Warp Charge 5","u":"shooting:your"},{"n":"Temporal Surge","row":"Temporal Surge (Psychic) · Warp Charge 6","u":"shooting:your,charge:your"},{"n":"Doombolt","row":"Doombolt (Psychic) · Warp Charge 7","u":"shooting:your"},{"n":"Twist of Fate","row":"Twist of Fate (Psychic) · Warp Charge 9","u":"shooting:your"}]},
   "r|thousand-sons|Kindred Sorcery":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Imbued Manifestation","row":"Imbued Manifestation"},{"n":"Psychic Maelstrom","row":"Psychic Maelstrom","u":"shooting:your,fight:either"},{"n":"Wrath of the Immaterium","row":"Wrath of the Immaterium"}]},
   "r|thousand-sons|Pact of Sorcery":{"x":1},
@@ -11171,10 +10867,6 @@ const GRANTS = [
   { rule:'Chaos Space Marines · Cult of the Arkifane rule · Soul Forge Boons', grants:'DAEMON', type:'keyword or weapon ability', to:{ all:['Faction: Heretic Astartes','Vehicle'] }, while:null, text:'**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.' },
   { rule:'Chaos Space Marines · Cult of the Arkifane rule · Soul Forge Boons', grants:'SOUL FORGE', type:'keyword or weapon ability', to:{ all:['Faction: Heretic Astartes'], any:['Vehicle','Lord Discordant','Vashtorr the Arkifane'] }, while:null, text:'**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.' },
   { rule:'shooty · Big Mek Dakkarig · Dreadherder', grants:'Lone Operative', type:'ability', to:'this unit / model', while:null, text:'- This model has **Lone Operative**.' },
-  { rule:'melee · Ghazghkull Thraka · Da Grand Warlord’s Ladz', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
-  { rule:'melee · Mozrog Skragbad · Beast Snagga Following', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
-  { rule:'melee · Nazdreg · Nazdreg’s Know-wotz', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike**.' },
-  { rule:'melee · Beastboss on Squigosaur · Boss of da Hunt', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
   { rule:'princes · Daemon Prince of Khorne · Lord of Murder', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units', text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
   { rule:'princes · Slaughterbound · Lord of the Eightbound', grants:'Deep Strike', type:'ability', to:'this unit / model', while:'If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step', text:'If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6"** abilities.' },
   { rule:'pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' },
@@ -11215,17 +10907,21 @@ const GRANTS = [
   { rule:'healybois · Hive Tyrant · Instinctive Defence', grants:'Fights First', type:'ability', to:'this unit / model', while:'while the bearer is within 6" of one or more friendly HARVESTER units', text:'In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer\'s unit have the **Fights First** ability.' },
   { rule:'u-w0t-m8 · Technomancer · Rites of Reanimation', grants:'Feel No Pain', type:'ability', to:'this unit / model', while:'While this model is leading a unit', text:'While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability.' },
   { rule:'u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array', grants:'Feel No Pain', type:'ability', to:{ all:['Faction: Necrons','Vehicle'] }, while:'While a friendly NECRONS VEHICLE unit is within 6" of the bearer', text:'While a friendly **NECRONS VEHICLE** unit is within 6" of the bearer, that unit has the **Feel No Pain** 6+ ability.' },
-  { rule:'u-w0t-m8 · Canoptek Spyders · Gloom Prism', grants:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', type:'ability', to:{ all:['Faction: Necrons'] }, while:'While a friendly NECRONS unit is within 6" of the bearer', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
+  { rule:'u-w0t-m8 · Canoptek Spyders · Gloom Prism', grants:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', type:'ability', to:{ all:['Faction: Necrons'] }, while:'While a friendly NECRONS unit is within 6" of the bearer', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' },
+  { rule:'simple-but-effective · Ghazghkull Thraka · Da Grand Warlord’s Ladz', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
+  { rule:'simple-but-effective · Mozrog Skragbad · Beast Snagga Following', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+  { rule:'simple-but-effective · Nazdreg · Nazdreg’s Know-wotz', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike**.' },
+  { rule:'simple-but-effective · Beastboss on Squigosaur · Boss of da Hunt', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','ref','leads','support','also','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','ref','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
-  ranged:['group','fireAll','name','who','n','carrier','hunter','range','A','BS','S','AP','D','kw','own','from'],
+  ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','damaged','embarked','na','ph','riled','turn','turns','note','def','text','defOf','readOf']
+  abilities:['name','who','tag','at','damaged','embarked','na','ph','turn','turns','note','def','text','riled','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

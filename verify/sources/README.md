@@ -6,14 +6,12 @@ Everything the app states as a fact is checked against these, mechanically, befo
 | file | from | sha256 of the original PDF |
 |---|---|---|
 | nr/shooty.txt | Me shooty yer booty - New Recruit.pdf | 4c0e5befd172eeb489137b8e7efa4e4d3f5041a0111eacec7e7a5e0ed10e4781 |
-| nr/melee.txt | Melee - New Recruit.pdf (exported 20 Oct 2026) | 689e9cdeb600f2dfa65c3d7bc2384868023ff433a76bc80fddb09bec2b322e2b |
 | nr/princes.txt | Princes - New Recruit.pdf (exported 10/20/26) | 4eba3b82e8394b6399aab4f52181adea6f7ee65dd65822760337e09e8a82da01 |
 | nr/standard.txt | Standard - New Recruit.pdf (exported 10/20/26) | 2d8e076d90a5b88ef273f8c3aa2f193558c06e6389c9543d675d68de177db682 |
 | nr/pubstomper.txt | Pubstomper - New Recruit.pdf (exported 10/23/26) | bec846a15746097c173c294eecbbbd4ad98e0c4c2871b1b2b0aec3c3d1985894 |
 | nr/nidzillas.txt | Nidzillas - New Recruit.pdf (exported 10/20/26) | ad75f4a9330b068a61ffbf91be435a4dfb147407644d4905a78d662f21096a90 |
 | nr/6-bigs.txt | 6 bigs - New Recruit.pdf (exported 10/20/26) | f96e523666f068900c1f8325e1aabf6e98a4c16c0da338345f997e368566b77b |
 | nr/4-megas-and-a-destrier.txt | 4 megas and a destrier - New Recruit.pdf (exported 10/20/26) | 1a924485e7e0448c6d299eb983a9d6ed0dfbbebdee695a119e374ca57b7a3cf3 |
-| nr/ooga-booga.txt | Ooga booga - New Recruit.pdf (exported 10/20/26) | a2b11ffbb14e2e0aaaea7b4ea69dcae654486992c0f34240dcc1893b4d698c4d |
 | nr/super-terminators.txt | Super Terminators - New Recruit.pdf (exported 10/20/26) | 00f2317c6bef15df77ae952c90414ce0da1294a42efb347c89e6fff733666069 |
 | nr/purge-goes-the-foe.txt | Purge goes the Foe - New Recruit.pdf (exported 10/20/26) | cdcdfe52576d558f460e7d9b6afe4076e0aa4f12e6dd6d84b53646217ff5f392 |
 | nr/infernal-lance.txt | Infernal Lance - New Recruit.pdf (exported 10/22/26) | 1674d10be857de4ad27ca37f7a706182ac5da166681c4b308f83974391dc094b |

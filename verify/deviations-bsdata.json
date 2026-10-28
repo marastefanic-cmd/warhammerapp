@@ -9,42 +9,6 @@
   "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it. NR prints the typo (verify/sources/nr/shooty.txt)."
  },
  {
-  "army": "melee",
-  "unit": "mozrog-skragbad",
-  "field": "ability.text",
-  "app": "Da Bigger Dey Iz…: This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.",
-  "source": "This unit's melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wounds rolls**.",
-  "reason": "BSData (and so New Recruit) has the typo \"wounds rolls\"; the app has \"wound rolls\".",
-  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Mozrog-Skragbad: \"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" New Recruit prints the typo too (verify/sources/nr/melee.txt line 277)."
- },
- {
-  "army": "melee",
-  "unit": "nazdreg-meganobz",
-  "field": "ability.text",
-  "app": "Nazdreg’s Know-wotz: - This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.",
-  "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
-  "reason": "BSData (and New Recruit) drops the full stop after \"Deep Strike\"; the app keeps it.",
-  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg: \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/melee.txt line 60."
- },
- {
-  "army": "melee",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "stats.InSv",
-  "app": "Big Mek in Mega Armour: 4+*",
-  "source": "Big Mek in Mega Armour: ",
-  "reason": "Kustom Force Field gives the attached unit 4+ InSv against ranged attacks; BSData writes it as a replace modifier setting InSv to \"4+*\", which New Recruit applies and this check does not. The app shows New Recruit's 4+*, and the unit's \"When targeted\" line says what the * means (Kustom Force Field: 4+ InSv against ranged attacks).",
-  "evidence": "BSData Orks.json, Big Mek in Mega Armour › Kustom Force Field (id 6b9e-c6ae-2626-45c9): modifier group \"Kustom Force Field attached unit modifiers\" replaces the InSv characteristic (55a7-5b54-c60d-11dc) of the root entry's Unit profiles with \"4+*\", one modifier without an arg and one with arg \"-\"; this check applies a replace only where its arg occurs. New Recruit prints the result: verify/sources/nr/melee.txt lines 163-164 (\"… 1 4+* 40mm\")."
- },
- {
-  "army": "melee",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "stats.InSv",
-  "app": "Meganob ×5: 4+*",
-  "source": "Meganob: ",
-  "reason": "Kustom Force Field gives the attached unit 4+ InSv against ranged attacks; BSData writes it as a replace modifier setting InSv to \"4+*\", which New Recruit applies and this check does not. The app shows New Recruit's 4+*, and the unit's \"When targeted\" line says what the * means (Kustom Force Field: 4+ InSv against ranged attacks).",
-  "evidence": "BSData Orks.json, Big Mek in Mega Armour › Kustom Force Field (id 6b9e-c6ae-2626-45c9): modifier group \"Kustom Force Field attached unit modifiers\" replaces the InSv characteristic (55a7-5b54-c60d-11dc) of the root entry's Unit profiles with \"4+*\", one modifier without an arg and one with arg \"-\"; this check applies a replace only where its arg occurs. New Recruit prints the result: verify/sources/nr/melee.txt lines 163-164 (\"… 1 4+* 40mm\")."
- },
- {
   "army": "nidzillas",
   "unit": "hive-tyrant",
   "field": "ability.text",
@@ -178,24 +142,6 @@
   "source": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do: \n- That use is ‑1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.'",
   "reason": "Typo in every source: the text ends with a closing quote mark that opens nowhere (BSData and GW's Faction Pack all print it). The app leaves the stray mark out.",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 331-338 (Defiler datasheet): \"Destroyer of Futures (Once per phase, per unit): You can target this unit with the Counteroffensive stratagem, ... That use does not prevent any uses of that stratagem on other units this phase.’\" (the same stray mark); verify/sources/nr/pubstomper.txt line 346: \"That use does not prevent any uses of that stratagem on other units this phase.'\""
- },
- {
-  "army": "ooga-booga",
-  "unit": "nazdreg-meganobz",
-  "field": "ability.text",
-  "app": "Nazdreg’s Know-wotz: - This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.",
-  "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
-  "reason": "BSData (and New Recruit) drops the full stop after \"Deep Strike\"; the app keeps it, as the melee list's Nazdreg does.",
-  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg (verify/.cache/waha/ds/orks_Nazdreg.html): \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/ooga-booga.txt lines 72-73."
- },
- {
-  "army": "ooga-booga",
-  "unit": "big-mek-in-mega-armour-meganobz",
-  "field": "ability.text",
-  "app": "Supa-glowy Fing: **ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.",
-  "source": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+}**\n\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.",
-  "reason": "BSData (and so New Recruit) has a typo (a brace and no full stop after [ANTI-INFANTRY 4+]); the app has the enhancement's wording as the rules publish it, as the shooty list's Big Mek in Mega Armour does.",
-  "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it. NR prints the typo: verify/sources/nr/ooga-booga.txt lines 340-344."
  },
  {
   "army": "super-terminators",
@@ -1649,36 +1595,6 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3498 (\"Deffkoptas  75x42mm Oval Base\"); verify/.cache/bsdata/Orks.json line 427 (Deffkoptas, Base 75x42mm)."
  },
  {
-  "army": "melee",
-  "unit": "deffkoptas",
-  "field": "stats.base",
-  "app": "Deffkoptas ×3: 75×42mm Oval",
-  "source": "Deffkoptas: 75x42mm",
-  "where": "Deffkoptas › Deffkopta",
-  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; BSData (Deffkoptas) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3498 (\"Deffkoptas  75x42mm Oval Base\"); verify/.cache/bsdata/Orks.json line 427 (Deffkoptas, Base 75x42mm)."
- },
- {
-  "army": "melee",
-  "unit": "squighog-boyz",
-  "field": "stats.base",
-  "app": "Nob on Smasha Squig: 90×52.5mm Oval",
-  "source": "Nob on Smasha Squig: 90x52.5mm",
-  "where": "Squighog Boyz › Nob on Smasha Squig",
-  "reason": "GW’s base size guide prints the base as an oval, \"90x52.5mm Oval Base\"; BSData (Nob on Smasha Squig) gives 90x52.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3528 (\"Squighog Boyz: Nob on Smasha Squig  90x52.5mm Oval Base\"); verify/.cache/bsdata/Orks.json line 18394 (Nob on Smasha Squig, Base 90x52.5mm)."
- },
- {
-  "army": "melee",
-  "unit": "squighog-boyz",
-  "field": "stats.base",
-  "app": "Squighog Boyz ×3: 75×42mm Oval",
-  "source": "Squighog Boyz: 75x42mm",
-  "where": "Squighog Boyz › Squighog Boy",
-  "reason": "GW’s base size guide prints the base as an oval, \"75x42mm Oval Base\"; BSData (Squighog Boyz) gives 75x42mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3527 (\"Squighog Boyz  75x42mm Oval Base\"); verify/.cache/bsdata/Orks.json line 18483 (Squighog Boyz, Base 75x42mm)."
- },
- {
   "army": "princes",
   "unit": "lord-on-juggernaut-khorne-berzerkers",
   "field": "stats.base",
@@ -2835,6 +2751,46 @@
   "source": "",
   "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
+  "unit": "mozrog-skragbad",
+  "field": "ability.text",
+  "app": "Da Bigger Dey Iz…: This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.",
+  "source": "This unit's melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wounds rolls**.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Mozrog-Skragbad.html: \"This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
+  "unit": "nazdreg-meganobz",
+  "field": "ability.text",
+  "app": "Nazdreg’s Know-wotz: - This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.",
+  "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"- This unit has Deep Strike - This unit's ranged attacks have [IGNORES COVER].\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Nazdreg.html: \"- This unit has Deep Strike. - This unit's ranged attacks have [IGNORES COVER].\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
+  "unit": "zodgrod-wortsnagga-runtherd-gretchin",
+  "field": "ability.text",
+  "app": "That’ll Learn Ya: When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- This unit is no longer **battle-shocked**.",
+  "source": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: - That number of G…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Runtherd.html: \"When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: - That number of Gretchin models in this unit are destroyed. - This unit is no longer battle-shocked.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
+  "unit": "deffkoptas",
+  "field": "stats.base",
+  "app": "Deffkoptas ×3: 75×42mm Oval",
+  "source": "Deffkoptas: 75x42mm",
+  "reason": "BSData at the pin (Xenos - Orks catalogue revision 8) has Deffkoptas: 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval; New Recruit’s export (catalogue revision 8) has 75×42mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: 75×42mm.",
   "by": "verify/from-json.js"
  }
 ]

@@ -1,0 +1,60 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for simple-but-effective, written by hand and read by it on every run (from-json.js --write gives the same data.js again). rules: a detachment rule’s timing label where derive.js’s reading is not the rule’s. units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf) and why (the reasons for what the list shows). Only what GW tags (Aura) is an aura (Core Rules 22.01). Orks have no GW Faction Pack: the codex as Wahapedia transcribes it is GW’s words. Each is a judgement verify/helpers.js lists for sign-off.",
+ "keptRows": [
+  "orks/ghazghkull-thraka",
+  "orks/mozrog-skragbad",
+  "orks/nazdreg",
+  "orks/meganobz",
+  "orks/zodgrod-wortsnagga",
+  "orks/runtherd",
+  "orks/beastboss-on-squigosaur"
+ ],
+ "keptRowsWhy": "The owner retired the lists Melee and Ooga booga for this one (“remove Melee Orks list and Ooga Booga lists, this is the new ultimate melee orks list”): these datasheet rows were theirs and are now this list’s alone; their signed-off facts (words, labels, When targeted lines, notes) stay the app’s, as for a row another list has (from-json.js keptRows).",
+ "rules": {
+  "brute-bosses": {
+   "by": "hand (Claude)",
+   "label": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "why": "’Ard as Nails: “When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase …”: a WARBOSS model can be destroyed in any phase of either turn (shooting, the Fight phase, mortal wounds) and the rule names none; derive.js reads only “selected to fight” (the Fight phase). As Fates in Flux (Tzeeeeentch)."
+  }
+ },
+ "units": {
+  "zodgrod-wortsnagga-runtherd-gretchin": {
+   "defs": {
+    "Extra Sneaky": {
+     "by": "AI (Claude)",
+     "def": "-3\" detection range",
+     "defOf": "10b55c47"
+    }
+   },
+   "why": "Zodgrod Wortsnagga leads the 20 Gretchin, the Runtherd supports them (the export’s associations; GW’s LEADER: GRETCHIN, the Runtherd’s SUPPORT: GRETCHIN). Super Runts (“This unit is riled up”, “This unit’s Scavenged Shivs weapons have +1 A, WS and S”): the attached unit, Core Rules 19.04. Extra Sneaky (Runt Swarm, UPGRADE: GRETCHIN unit only) is the Gretchin’s. That’ll Learn Ya in GW’s words (“This unit is no longer battle-shocked”; BSData: “That unit”)."
+  },
+  "gretchin": {
+   "defs": {
+    "Extra Sneaky": {
+     "by": "AI (Claude)",
+     "def": "-3\" detection range",
+     "defOf": "10b55c47"
+    }
+   },
+   "why": "Ten Gretchin with the Extra Sneaky upgrade (Runt Swarm, UPGRADE, “GRETCHIN unit only”; the export gives it to two Gretchin units, this one and Zodgrod’s): 45 + 10 pts. The other ten Gretchin (gretchin-2) have none."
+  },
+  "nazdreg-meganobz": {
+   "why": "Nazdreg leads five Meganobz with Kombi-weapons and Power Klaws (the export’s association; GW’s LEADER: MEGANOBZ). Nazdreg’s Know-wotz (“This unit has Deep Strike”, “This unit’s ranged attacks have [IGNORES COVER]”) is for the attached unit (Core Rules 19.04): every model has Deep Strike (no partialRules), the Meganobz’ Kombi-weapon profiles carry [IGNORES COVER] as BSData applies it. Displays of Savagery (Bully Boyz: MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1]) on every melee weapon of the attached unit (it has MEGANOBZ). 175 pts: GW’s price of five Meganobz (1st to 2nd units)."
+  },
+  "warboss-in-mega-armour-meganobz": {
+   "why": "The Warboss in Mega Armour leads six Meganobz with Twin Killsaws (the export’s association; GW’s LEADER: MEGANOBZ). Da Gobshot Thunderbuss (Brute Bosses, WARBOSS model only): “This model has the following weapon”: a ranged weapon of the Warboss (enh), checked against the enhancement’s profile. Twin Killsaw: New Recruit’s name for GW’s Twin Killsaws (“replaced with 1 Twin Killsaws”), one on each Meganob. Krushin’ Impetus: one D6 for each model of the attached unit engaged with that enemy unit (“each model in this unit”, Core Rules 19.04). Displays of Savagery on every melee weapon (MEGANOBZ). 115 pts (1st to 2nd units) + 20; Meganobz 210 (six, 1st to 2nd units) + 30 (Twin Killsaws, 5 each)."
+  },
+  "beastboss-on-squigosaur": {
+   "why": "Brutal But Kunnin’ (Brute Bosses, WARBOSS model only: the Beastboss on Squigosaur is WARBOSS): “This model’s melee attacks have +1 D”: every melee weapon of the one model, the Squigosaur’s jaws too (the datasheet’s values kept as its own). Thump Gun: GW’s wargear option (“This model can be equipped with 1 Thump Gun”), taken. Thundering Stampede is GW’s (Aura). 140 pts (1st to 2nd units) + 30."
+  }
+ }
+}

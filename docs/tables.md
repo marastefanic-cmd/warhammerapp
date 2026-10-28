@@ -64,7 +64,7 @@ order (the Atrapos's Bringer of Justice before its Damaged line), its entry hold
 readings of that name: `mods:['Macro-extinction Protocols','Bringer of Justice','Damaged: 1-10 Wounds Remaining']`; `null`: none.
 What is the list's own stays on its entry with its reason: which unit it leads (`why.kwNote`), the points of its parts
 (`why.ptsNote`), a reading of a row only the list has, and a reading the list has otherwise for a reason of the list: its
-`listWhy` (hidden, signed off as `unit-reading-why`) names it, and it does not count against the row's reading (ooga-booga's
+`listWhy` (hidden, signed off as `unit-reading-why`) names it, and it does not count against the row's reading (the retired Ooga booga's
 More Dakka [IGNORES COVER] for the Meganobz' Kombi-weapons). A reading changes a weapon's values by what its rule adds (`set:{A:'+3'}`,
 Possessed Lord), not by a total that bakes in the list's other grants; a one-off the player uses (once per battle) is not shown in
 the weapon's numbers, only in the footnotes under the weapons (the app's `oneOffMod`).

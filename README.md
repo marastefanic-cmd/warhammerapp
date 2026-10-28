@@ -1,7 +1,7 @@
 # Kunnin’ Kodex
 
 A phone-first Warhammer 40,000 (11th edition, matched play) reference for the owner's army lists:
-**Me shooty yer’ booty** (Orks: Dread Mob, Shoota Boyz, Wreckas) and **Melee** (Orks: War Horde),
+**Me shooty yer’ booty** (Orks: Dread Mob, Shoota Boyz, Wreckas) and **Simple but effective** (Orks: Brute Bosses, Bully Boyz, Runt Swarm),
 2000 pts each. It shows each list's datasheets, stratagems and rules in their official wording, made
 searchable, and adds no rule interpretations of its own. The app opens on a picker of the lists
 (with more than two lists: filters by faction, detachment and disposition, kept on the phone; Random

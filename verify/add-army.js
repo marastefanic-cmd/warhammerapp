@@ -4,7 +4,7 @@
    node verify/add-army.js <list.pdf> [--id <armyId>] [--reuse <file.js>[,<file.js>]] [--dry]
 
    1. the PDF's text (pdftotext -layout) -> verify/sources/nr/<armyId>.txt, its sha256 -> verify/sources/README.md
-      (armyId: --id, or the list's name in the PDF, "Ooga booga" -> ooga-booga)
+      (armyId: --id, or the list's name in the PDF, "Simple but effective" -> simple-but-effective)
    2. its faction -> verify/sources/factions.json (Wahapedia page, BSData catalogue, GW Faction Pack from
       verify/sources/gw-downloads.json), then sh verify/fetch.sh for whatever is missing
    3. stops here if data.js lacks the faction or one of its detachments: those are transcribed first
