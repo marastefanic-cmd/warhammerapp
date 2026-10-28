@@ -80,6 +80,12 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
+   "id": "pack:necrons",
+   "label": "GW Faction Pack Necrons",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.pdf",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -150,6 +156,12 @@
    "label": "Wahapedia chaos-space-marines (text)",
    "file": "verify/.cache/waha/chaos-space-marines.txt",
    "sha256": "f3d1727c0a5e2a70240ead57059371c60aa382f4489788b80f8bc921e51b6dea"
+  },
+  {
+   "id": "waha:necrons",
+   "label": "Wahapedia necrons (text)",
+   "file": "verify/.cache/waha/necrons.txt",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
   },
   {
    "id": "wahahtml:orks",
@@ -224,6 +236,12 @@
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
+   "id": "wahahtml:necrons",
+   "label": "Wahapedia necrons",
+   "file": "verify/.cache/waha/necrons.html",
+   "sha256": "3781907ddd28ebe643406fe554eefa0cf042edf817e41063a81364923e648e11"
+  },
+  {
    "id": "wahahtml:core",
    "label": "Wahapedia core rules",
    "file": "verify/.cache/waha/core.html",
@@ -240,6 +258,90 @@
    "label": "Packet core stratagems (Wahapedia print, 10/3/26)",
    "file": "verify/sources/packet/core-stratagems.txt",
    "sha256": "93d9392450c955b6d0146657a4e2f9b08e15e41ed2f12e9e007a519a55e7f61b"
+  },
+  {
+   "id": "wahads:orks_Ghazghkull-Thraka",
+   "label": "Wahapedia datasheet Ghazghkull-Thraka",
+   "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
+   "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
+  },
+  {
+   "id": "wahads:tyranids_The-Swarmlord",
+   "label": "Wahapedia datasheet The-Swarmlord",
+   "file": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html",
+   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+  },
+  {
+   "id": "wahads:tyranids_Norn-Assimilator",
+   "label": "Wahapedia datasheet Norn-Assimilator",
+   "file": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html",
+   "sha256": "ea08993f4dbbe6f3dcf278511cc413c25427beab56c17b07ed70c4576ebbcd00"
+  },
+  {
+   "id": "wahads:tyranids_Norn-Emissary",
+   "label": "Wahapedia datasheet Norn-Emissary",
+   "file": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html",
+   "sha256": "940dc80272af05ef77fe03d5d39456e74d949bf35e96a2f6044db8f6187cbfbb"
+  },
+  {
+   "id": "wahads:adeptus-mechanicus_Belisarius-Cawl",
+   "label": "Wahapedia datasheet Belisarius-Cawl",
+   "file": "verify/.cache/waha/ds/adeptus-mechanicus_Belisarius-Cawl.html",
+   "sha256": "69e7ff841ef9950e313fa5769323765f0f78cfe29b4e5dc2f8bbedcdcaefd63e"
+  },
+  {
+   "id": "wahads:adeptus-mechanicus_Thulia-Ghuld",
+   "label": "Wahapedia datasheet Thulia-Ghuld",
+   "file": "verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html",
+   "sha256": "d62d1402063399b5d3f771966d95b9170ae0f10330d752e77390e7658a16ff88"
+  },
+  {
+   "id": "wahads:adeptus-custodes_Allarus-Custodians",
+   "label": "Wahapedia datasheet Allarus-Custodians",
+   "file": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html",
+   "sha256": "9da98a472be2742df0b74b244ea25b29eae5a235e65bed814e7b1f7f71352549"
+  },
+  {
+   "id": "wahads:adeptus-custodes_Trajann-Valoris",
+   "label": "Wahapedia datasheet Trajann-Valoris",
+   "file": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html",
+   "sha256": "98201c144766b7aec46fa5816063b06ac04cae56c0d5d190c7a3b312caffe91a"
+  },
+  {
+   "id": "wahads:ultramarines_Roboute-Guilliman",
+   "label": "Wahapedia datasheet Roboute-Guilliman",
+   "file": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html",
+   "sha256": "446633518083122dd761b5b8a592d73257e4615e24814637c7172e3ca7344159"
+  },
+  {
+   "id": "wahads:chaos-daemons_Fluxmaster",
+   "label": "Wahapedia datasheet Fluxmaster",
+   "file": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html",
+   "sha256": "dd5dffe0d10e4cdb5daf0bb0f4a78955ce256a113cdcdc7d5526605efb6bde5a"
+  },
+  {
+   "id": "wahads:chaos-daemons_Pink-Horrors",
+   "label": "Wahapedia datasheet Pink-Horrors",
+   "file": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html",
+   "sha256": "8591132469f85503fb25901fb2ae63dd1371d73c119a8a688cc4c0b10d770925"
+  },
+  {
+   "id": "wahads:chaos-daemons_Blue-Horrors",
+   "label": "Wahapedia datasheet Blue-Horrors",
+   "file": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html",
+   "sha256": "3045cec655906a7503919a514482efbf3fcfa3b670fda98ae8cd290a7db2f809"
+  },
+  {
+   "id": "wahads:tyranids_Tyrant-Guard",
+   "label": "Wahapedia datasheet Tyrant-Guard",
+   "file": "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html",
+   "sha256": "aee0cda9a3eb64719f306bae4632e43df2eec600f0e8ea812c92f8c8ebf80939"
+  },
+  {
+   "id": "wahads:tyranids_Biovores",
+   "label": "Wahapedia datasheet Biovores",
+   "file": "verify/.cache/waha/ds/tyranids_Biovores.html",
+   "sha256": "edfb23d4a4677ef219bc407b5823d46430a3dd241a27cbac09cb0c59fb6a8ebb"
   }
  ],
  "texts": [
@@ -5459,6 +5561,202 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
+   "item": "tyranids / detachment:assimilation-swarm",
+   "field": "name",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p19, Rules Updates: ASSIMILATION SWARM DETACHMENT / Feed the Swarm Detachment Rule",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Regenerating Monstrosity",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Regenerating Monstrosity",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Instinctive Defence",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Instinctive Defence / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p19, Rules Updates: ASSIMILATION SWARM DETACHMENT / Instinctive Defence Enhancement",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Biophagic Flow (Aura)",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Biophagic Flow (Aura)",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Parasitic Biomorphology",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/enhancement:Parasitic Biomorphology",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:broodguard-impulse",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (BROODGUARD IMPULSE)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:broodguard-impulse",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (BROODGUARD IMPULSE)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:broodguard-impulse",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (BROODGUARD IMPULSE)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:reclaim-biomass",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (RECLAIM BIOMASS)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:reclaim-biomass",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (RECLAIM BIOMASS)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:reclaim-biomass",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (RECLAIM BIOMASS)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:tyrannoformed",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (TYRANNOFORMED)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:tyrannoformed",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (TYRANNOFORMED)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:tyrannoformed",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (TYRANNOFORMED)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:ablative-carapace",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (ABLATIVE CARAPACE)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:ablative-carapace",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (ABLATIVE CARAPACE)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:ablative-carapace",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (ABLATIVE CARAPACE)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:secure-biomass",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (SECURE BIOMASS)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:secure-biomass",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (SECURE BIOMASS)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:secure-biomass",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (SECURE BIOMASS)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:rapacious-hunger",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (RAPACIOUS HUNGER)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:rapacious-hunger",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (RAPACIOUS HUNGER)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:rapacious-hunger",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Assimilation Swarm 2DP (RAPACIOUS HUNGER)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica",
    "field": "name",
    "doc": "waha:adeptus-mechanicus",
@@ -8420,6 +8718,307 @@
    "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
   },
   {
+   "item": "necrons / detachment:obeisance-phalanx",
+   "field": "name",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p29, Rules Updates: OBEISANCE PHALANX DETACHMENT / Worthy Foes Detachment Rule",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Honourable Combatant",
+   "field": "pts",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Honourable Combatant",
+   "field": "text",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Unflinching Will",
+   "field": "pts",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Unflinching Will",
+   "field": "text",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Warrior Noble",
+   "field": "pts",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Warrior Noble",
+   "field": "text",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Eternal Conqueror",
+   "field": "pts",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/enhancement:Eternal Conqueror",
+   "field": "text",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:your-time-is-nigh",
+   "field": "when",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (YOUR TIME IS NIGH)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:your-time-is-nigh",
+   "field": "target",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (YOUR TIME IS NIGH)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:your-time-is-nigh",
+   "field": "effect",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (YOUR TIME IS NIGH)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:enslaved-artifice",
+   "field": "when",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (ENSLAVED ARTIFICE)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:enslaved-artifice",
+   "field": "target",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (ENSLAVED ARTIFICE)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:enslaved-artifice",
+   "field": "effect",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (ENSLAVED ARTIFICE)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:nanoassembly-protocols",
+   "field": "when",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (NANOASSEMBLY PROTOCOLS)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:nanoassembly-protocols",
+   "field": "target",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (NANOASSEMBLY PROTOCOLS)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:nanoassembly-protocols",
+   "field": "effect",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (NANOASSEMBLY PROTOCOLS)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:sentinels-of-eternity",
+   "field": "when",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (SENTINELS OF ETERNITY)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:sentinels-of-eternity",
+   "field": "target",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (SENTINELS OF ETERNITY)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:sentinels-of-eternity",
+   "field": "effect",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (SENTINELS OF ETERNITY)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:suffer-no-rival",
+   "field": "when",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (SUFFER NO RIVAL)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:suffer-no-rival",
+   "field": "target",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (SUFFER NO RIVAL)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:suffer-no-rival",
+   "field": "effect",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (SUFFER NO RIVAL)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:territorial-obsession",
+   "field": "when",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (TERRITORIAL OBSESSION)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:territorial-obsession / target (Rules Updates)",
+   "field": "target (Rules Updates)",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p29, Rules Updates: OBEISANCE PHALANX DETACHMENT / Territorial Obsession Stratagem, Target Section",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:obeisance-phalanx/stratagem:territorial-obsession",
+   "field": "effect",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Obeisance Phalanx 2DP (TERRITORIAL OBSESSION)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury",
+   "field": "name",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § The Phaeron's Armoury 1DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/rule",
+   "field": "text",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/enhancement:Prelocational Optimiser",
+   "field": "pts",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § The Phaeron's Armoury 1DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/enhancement:Prelocational Optimiser",
+   "field": "text",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/enhancement:Mortality Shroud (Aura)",
+   "field": "pts",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § The Phaeron's Armoury 1DP",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/enhancement:Mortality Shroud (Aura)",
+   "field": "text",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:subsurface-quantumweave",
+   "field": "when",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (SUBSURFACE QUANTUMWEAVE)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:subsurface-quantumweave",
+   "field": "target",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (SUBSURFACE QUANTUMWEAVE)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:subsurface-quantumweave",
+   "field": "effect",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (SUBSURFACE QUANTUMWEAVE)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:particle-pulse",
+   "field": "when",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (PARTICLE PULSE)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:particle-pulse",
+   "field": "target",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (PARTICLE PULSE)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:particle-pulse",
+   "field": "effect",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (PARTICLE PULSE)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:cosmic-storm",
+   "field": "when",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (COSMIC STORM)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:cosmic-storm",
+   "field": "target",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (COSMIC STORM)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "necrons / detachment:the-phaerons-armoury/stratagem:cosmic-storm",
+   "field": "effect",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p4 (COSMIC STORM)",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -8974,6 +9573,20 @@
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
+   "item": "necrons / armyRule:Reanimation Protocols",
+   "field": "text",
+   "doc": "waha:necrons",
+   "where": "Wahapedia necrons § Army Rules (Reanimation Protocols)",
+   "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
+  },
+  {
+   "item": "necrons / armyRule:Reanimation Protocols / text",
+   "field": "text",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p29, Rules Updates: ARMY RULES / Reanimation Protocols Army Rule",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -9422,6 +10035,48 @@
    "sha256": null
   },
   {
+   "item": "healybois / hive-tyrant-tyrant-guard / ability:Instinctive Defence",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Instinctive Defence (Assimilation Swarm) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "healybois / norn-assimilator-synaptoprescience / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "healybois / norn-assimilator-synaptoprescience / ability:Synaptoprescience",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "healybois / norn-assimilator-synaptoprescience-2 / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "healybois / norn-assimilator-synaptoprescience-2 / ability:Synaptoprescience",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "healybois / norn-emissary / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
    "field": "ability:The Betrayer (Khârn the Betrayer)",
    "doc": "pack:world-eaters",
@@ -9765,6 +10420,48 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
+   "item": "healybois / the-swarmlord-tyrant-guard / ability:Malign Presence (The Swarmlord)",
+   "field": "ability:Malign Presence (The Swarmlord)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / The Swarmlord, Malign Presence Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "healybois / hive-tyrant-tyrant-guard / ability:Onslaught (Hive Tyrant)",
+   "field": "ability:Onslaught (Hive Tyrant)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "healybois / hive-tyrant-tyrant-guard / ability:Will of the Hive Mind (Hive Tyrant)",
+   "field": "ability:Will of the Hive Mind (Hive Tyrant)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "healybois / biovores / ability:Seed Spore Mines",
+   "field": "ability:Seed Spore Mines",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Biovores, Seed Spore Mine Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "u-w0t-m8 / ophydian-destroyers / ability:Tunnelling Horrors",
+   "field": "ability:Tunnelling Horrors",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p30, Rules Updates: DATASHEETS / Ophydian Destroyers, Tunnelling Horrors Ability",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
+   "item": "u-w0t-m8 / canoptek-reanimator / ability:Nanoscarab Reanimation Beam",
+   "field": "ability:Nanoscarab Reanimation Beam",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p30, Rules Updates: DATASHEETS / Canoptek Reanimator, Nanoscarab Reanimation Beam Ability",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
+  },
+  {
    "item": "purge-goes-the-foe / belisarius-cawl / rules",
    "field": "rules",
    "doc": "pack:adeptus-mechanicus",
@@ -9798,6 +10495,13 @@
    "doc": "pack:chaos-space-marines",
    "where": "GW Faction Pack Chaos Space Marines PDF p38, Rules Updates: DATASHEETS / Master of Executions, Core Abilities Section",
    "sha256": "237a44973f019f0bf72def98f747a0fcf2d5644a559b815a64987bdb468a7cf9"
+  },
+  {
+   "item": "u-w0t-m8 / technomancer-immortals / rules",
+   "field": "rules",
+   "doc": "pack:necrons",
+   "where": "GW Faction Pack Necrons PDF p30, Rules Updates: DATASHEETS / Chronomancer, Geomancer, Orikan The Diviner, Plasmancer, Psychomancer, Technomancer – Core Abilities Section",
+   "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
   },
   {
    "item": "core / rule:Harpooned / text",
@@ -10077,6 +10781,22 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:reclaim-biomass",
+   "field": "note",
+   "text": "When using the Reclaim Biomass Stratagem, can the Stratagem effect be used on th",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:assimilation-swarm/stratagem:reclaim-biomass",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
    "field": "note",
    "text": "If I target a unit with the Auto-divinatory Targeting Stratagem while the Protec",
@@ -10117,6 +10837,14 @@
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
+   "item": "nidzillas / the-swarmlord / ability:Malign Presence",
+   "field": "note",
+   "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
+   "doc": "wahads:tyranids_The-Swarmlord",
+   "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
+   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+  },
+  {
    "item": "nidzillas / norn-assimilator-synaptoprescience / ability:Singular Purpose",
    "field": "note",
    "text": "add 2 to the Objective Control characteristic",
@@ -10128,9 +10856,9 @@
    "item": "nidzillas / norn-assimilator-synaptoprescience / ability:Singular Purpose",
    "field": "note",
    "text": "an Objective Control characteristic of 15",
-   "doc": "data.js",
-   "where": "the text of the item the note is on",
-   "sha256": null
+   "doc": "wahads:tyranids_Norn-Assimilator",
+   "where": "Wahapedia datasheet Norn-Assimilator § Tyranids – Norn Assimilator",
+   "sha256": "ea08993f4dbbe6f3dcf278511cc413c25427beab56c17b07ed70c4576ebbcd00"
   },
   {
    "item": "nidzillas / norn-assimilator-synaptoprescience-2 / ability:Singular Purpose",
@@ -10144,9 +10872,9 @@
    "item": "nidzillas / norn-assimilator-synaptoprescience-2 / ability:Singular Purpose",
    "field": "note",
    "text": "an Objective Control characteristic of 15",
-   "doc": "data.js",
-   "where": "the text of the item the note is on",
-   "sha256": null
+   "doc": "wahads:tyranids_Norn-Assimilator",
+   "where": "Wahapedia datasheet Norn-Assimilator § Tyranids – Norn Assimilator",
+   "sha256": "ea08993f4dbbe6f3dcf278511cc413c25427beab56c17b07ed70c4576ebbcd00"
   },
   {
    "item": "nidzillas / norn-emissary-destabilising-predation / ability:Singular Purpose",
@@ -10160,9 +10888,9 @@
    "item": "nidzillas / norn-emissary-destabilising-predation / ability:Singular Purpose",
    "field": "note",
    "text": "an Objective Control characteristic of 15",
-   "doc": "data.js",
-   "where": "the text of the item the note is on",
-   "sha256": null
+   "doc": "wahads:tyranids_Norn-Emissary",
+   "where": "Wahapedia datasheet Norn-Emissary § Tyranids – Norn Emissary",
+   "sha256": "940dc80272af05ef77fe03d5d39456e74d949bf35e96a2f6044db8f6187cbfbb"
   },
   {
    "item": "nidzillas / norn-emissary / ability:Singular Purpose",
@@ -10176,9 +10904,9 @@
    "item": "nidzillas / norn-emissary / ability:Singular Purpose",
    "field": "note",
    "text": "an Objective Control characteristic of 15",
-   "doc": "data.js",
-   "where": "the text of the item the note is on",
-   "sha256": null
+   "doc": "wahads:tyranids_Norn-Emissary",
+   "where": "Wahapedia datasheet Norn-Emissary § Tyranids – Norn Emissary",
+   "sha256": "940dc80272af05ef77fe03d5d39456e74d949bf35e96a2f6044db8f6187cbfbb"
   },
   {
    "item": "ooga-booga / ghazghkull-thraka / ability:Supreme Commander",
@@ -10347,6 +11075,54 @@
    "doc": "pack:chaos-daemons",
    "where": "PDF p131",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "tzeeeeentch / brimstone-horrors / ability:Exploding Horrors",
+   "field": "note",
+   "text": "While this unit contains one or more PINK HORROR models, the Sullen Malevolence ",
+   "doc": "pack:chaos-daemons",
+   "where": "PDF p55",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "healybois / the-swarmlord-tyrant-guard / ability:Malign Presence",
+   "field": "note",
+   "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
+   "doc": "wahads:tyranids_The-Swarmlord",
+   "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
+   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+  },
+  {
+   "item": "healybois / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidde",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "healybois / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "healybois / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "Are Spore Mines units that are added to an army during a battle restricted by ab",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "healybois / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   }
  ]
 }
