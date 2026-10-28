@@ -1167,7 +1167,7 @@ if (flag('--compare')) {
     pool.splice(pool.indexOf(m), 1);
     // a difference the export's reading already has, or one GW's documents made (base guide, datasheet): listed apart
     const raw = readOf.get(u) || {}, eq = (x, y) => JSON.stringify(clean(x) || null) === JSON.stringify(clean(y) || null);
-    for (const k of F2) { const a = clean(m[k]), b = clean(u[k]); if (!eq(a, b)) (eq(a, raw[k]) ? gwOut : out).push(m.id + '.' + k + ':\n    data.js ' + JSON.stringify(a) + '\n    export  ' + JSON.stringify(b)); }
+    for (const k of F2) { const hk = k === 'kwNote' ? ((HAND.units || {})[m.id] || {}).kwNote : undefined, a = clean(m[k]), b = clean(hk !== undefined ? hk : u[k]); if (!eq(a, b)) (eq(a, raw[k]) ? gwOut : out).push(m.id + '.' + k + ':\n    data.js ' + JSON.stringify(a) + '\n    export  ' + JSON.stringify(b)); }
     const an = m.abilities.map(a => [a.who || '', a.name, a.tag || ''].join('|')), bn = u.abilities.map(a => [a.who || '', a.name, a.tag || ''].join('|'));
     if (JSON.stringify(an) !== JSON.stringify(bn)) out.push(m.id + '.abilities (who|name|tag):\n    data.js ' + JSON.stringify(an) + '\n    export  ' + JSON.stringify(bn));
     for (const ab of u.abilities) { const x = m.abilities.find(y => y.name === ab.name && (y.who || '') === (ab.who || '')); if (x && x.text !== ab.text) out.push(m.id + '.abilities[' + ab.name + '].text:\n    data.js ' + JSON.stringify(x.text) + '\n    export  ' + JSON.stringify(ab.text)); }

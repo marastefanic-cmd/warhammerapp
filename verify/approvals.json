@@ -2891,6 +2891,12 @@
   "at": "2026-10-21",
   "why": "\"While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll\": said shorter, nothing added."
  },
+ "2b4cc294d60bd968": {
+  "verdict": "ok",
+  "by": "review:orks-2",
+  "at": "2026-10-28",
+  "why": "The note is unchanged and is the Wahapedia core rules 25.04 sentence. The key changed only because the source’s other abilities now carry GW’s spelling, “Prophet of da Great Waaagh!”."
+ },
  "2b667666ee6c3162": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -3202,6 +3208,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks\": shortened only; the moment (\"Start of the Fight phase\") is the row's tag and INFANTRY is in who can use it."
+ },
+ "31841bcac812a69b": {
+  "verdict": "ok",
+  "by": "review:orks-2",
+  "at": "2026-10-28",
+  "why": "The aura reading is unchanged (melee, needs ORKS, within 6\", own aura always, +1 to hit/+1 to wound, readOf 86a5e4c3); only its `from` follows the rename. calc: dm.calc gives the same two groups with the mod from “Prophet of da Great Waaagh!”, and 7.78 at 20k sims, seed 7 (exact value 7.8378)."
  },
  "318986ebbe649754": {
   "verdict": "ok",
@@ -4084,6 +4096,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Command/Movement/Shooting are “your”, the Fight phase ka’tahs (“Start of the Fight phase”, “Fight phase”) are either player’s: turn either."
+ },
+ "3e2e5b5fe0bc9bda": {
+  "verdict": "ok",
+  "by": "review:orks-2",
+  "at": "2026-10-28",
+  "why": "Aura is GW’s own tag: “Prophet of da Great Waaagh! (Aura)” (Wahapedia datasheet). Wahapedia orks_Ghazghkull-Thraka.html prints “Prophet of da Great Waaagh! (Aura):” (one occurrence)."
  },
  "3e2fa51f1861fa0a": {
   "verdict": "ok",
@@ -14314,6 +14332,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "The new summary, “Every model can shoot with one or more of its guns”, is 04.01 (“You can select one or more ranged weapons that model has”). It is used only when every per-model sentence is the plain ‘Can shoot with one or both / one or more of these’ form. The rest is list facts: which models line carries which weapons, the one-model carrier names, ×N counts, and leader vs bodyguard lines (19.04). The one rule problem sits in useSentence (see that item)."
+ },
+ "e34e4429847c1e62": {
+  "verdict": "ok",
+  "by": "review:orks-2",
+  "at": "2026-10-28",
+  "why": "Fight, either turn. The text is “that unit’s melee attacks have +1 to hit/+1 to wound”, and melee attacks are made only in the Fight phase. The label is the same as before the rename, and derive agrees (the agreed label is under GW’s name; derive reports 487 agreed labels hold)."
  },
  "e35d0ff5c26a2ab2": {
   "verdict": "ok",
