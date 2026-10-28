@@ -1,0 +1,32 @@
+[
+ {
+  "key": "8f53a88353dae469",
+  "where": "favorites, list rows, orders, home and folder screens",
+  "verdict": "ok",
+  "why": "wh-favs read through store (try/catch); non-arrays and non-strings dropped (tested {\"x\":1}, 'not json', [\"gone-list\",\"shooty\",42,null] -> Favorites 1, no error). favLists() filters D.armies, so ids of lists that leave the app (the two Ork lists) never count or render; they stay in storage harmlessly and come back starred if the same id returns — keeping them is right (a stale import that is re-imported keeps its id). App ids are data.js slugs, stable unless a list is renamed with a new id. listDate parses 'exported 17 Oct 2026' and en-GB 'imported 3 Sept 2026' ([a-z]* takes the t); every app list has a date (render.js fails otherwise), an unparseable one sorts last (0). Ties: D.armies index desc, so the later-added/imported list first (mutation dropping the tie-break fails home-sort and import-same). By faction: bands reuse .rgh, factions A-Z, lists A-Z within (6 bigs/4 megas swap in the snapshot is that). Faction added to the detail line only when not banded: needed. Screens at 390/320 x 3 themes: no overflow; star 44px wide x full row height."
+ },
+ {
+  "key": "5cddc60d43abe3bb",
+  "where": "router: folders as screens",
+  "verdict": "ok",
+  "why": "Playwright on built index.html: reload on All lists stays there, Back -> home; reload on a list opened from Favorites keeps history, Back -> Favorites. Only a relaunch rebuilt from wh-last (restore() via parentOf) puts home under the list (open question 1). history.state {s:'favs',d:0} reload works; one-list app (armies trimmed to healybois): history/wh-last on favs or lists both open the army, no star in the top bar. calm() includes folders: correct, they hold nothing to lose. Mutation removing isFolder from valid() makes the gate crash in homeChecks (caught, though as a crash; see render.js item)."
+ },
+ {
+  "key": "a9a3374549723ba7",
+  "where": "events and top bar",
+  "verdict": "fix",
+  "why": "1) Bug: Undo after unstarring in Favorites shows a second toast 'Ticks restored' (data-undo handler app.html:5588 toasts unless the undo fn returns null; the fn at app.html:5476 returns undefined). Reproduced. Fix: () => { setFav(a.id, true); rerender(); return null; }. 2) Accessibility: a star tap in a folder rerenders #view, so focus drops to <body> (tested with keyboard Space: aria-pressed change never announced, next Tab starts from the top). Fix at app.html:5475 after rerender(): const b = document.querySelector('#view [data-fav=\"' + CSS.escape(a.id) + '\"]'); if(b) b.focus({ preventScroll:true }); 3) Minor: the toast 'Removed Me shooty yer’ booty from Favorites' wraps to 4 lines at 320px; 'Removed from Favorites' is enough (the row just vanished). Otherwise right: Random scoped (60 rolls in Favorites with an Orks filter saved: only the two favorites; All lists honours the filter, 3 of 26), filters not shown in Favorites, star on Find redraws the top bar only and labels 'Favorite: <name>' with aria-pressed, removing an import drops its star. Storage blocked (getter throws): every screen works, no errors; star and order taps silently do nothing, as filters already do."
+ },
+ {
+  "key": "c136b6edfe04de93",
+  "where": "styles and icons",
+  "verdict": "ok",
+  "why": "Lucide star/folder as the other symbols; fill via --star-fill so the filled star follows --accent in paper/gunmetal/waaagh. .srt is 36px tall like the existing .rnd beside it (same row, consistent; below 44 but the pre-existing pattern). Focus ring: global :focus-visible 2px accent applies to .fav and .srt (verified; the -10px margin leaves 6px to the edge, the ring fits). No other selectors touched."
+ },
+ {
+  "key": "8082af7a761df122",
+  "where": "verify/render.js homeChecks",
+  "verdict": "fix",
+  "why": "The checks bite: dropping the newest tie-break fails home-sort 'new' + import-same; removing the Find star fails home-fav x3; folders not valid() -> 'render crashed' (page.click 30s timeout on the hidden sheet's [data-sortv]). Two small fixes: (a) render.js:57 tap() tests page.$ only, so a hidden element crashes the run instead of failing: use if(!await page.isVisible(q)). (b) nothing checks the Undo toast, which let the 'Ticks restored' bug through: after the Find-star part, star id again, go favs, tap its star, tap '#toast [data-undo]', expect wh-favs [id] and #toast text not /Ticks/. Not covered and acceptable: Random scoping, stale ids (one line would do: store.set('wh-favs', ['gone', id]) -> home count 1)."
+ }
+]

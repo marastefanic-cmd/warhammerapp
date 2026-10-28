@@ -5472,8 +5472,8 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-sort')){ showSort(); return; }
   if(ds.sortv){ store.set('wh-home-sort', ds.sortv); closeSheet(); rerender(); return; }
   if(ds.fav){ const a = armyById(ds.fav); if(!a) return; const on = !isFav(a); setFav(a.id, on);
-    if(cur.s === 'army') renderTop(); else rerender();
-    if(!on && cur.s === 'favs') toastUndo('Removed ' + a.name + ' from Favorites', () => { setFav(a.id, true); rerender(); });
+    if(cur.s === 'army') renderTop(); else { rerender(); const b = document.querySelector('#view [data-fav="' + CSS.escape(a.id) + '"]'); if(b) b.focus({ preventScroll:true }); }
+    if(!on && cur.s === 'favs') toastUndo('Removed from Favorites', () => { setFav(a.id, true); rerender(); return null; });
     return; }
   if(el.hasAttribute('data-ask')){ askFresh(); openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }

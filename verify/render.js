@@ -54,7 +54,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   //   reload; the folder screens come back on a reload, with their Back
   const homeChecks = async () => {
     // (a tap right after a screen change is dropped; nothing there to tap is a failure, and the checks go on)
-    const tap = async q => { await page.waitForTimeout(400); if(!await page.$(q)){ fail('home-folders', '', q, 'nothing there to tap'); return; } await page.click(q); await page.waitForTimeout(200); };
+    const tap = async q => { await page.waitForTimeout(400); if(!await page.isVisible(q)){ fail('home-tap', '', q, 'nothing visible there to tap'); return; } await page.click(q); await page.waitForTimeout(200); };
     await page.evaluate(() => { localStorage.removeItem('wh-favs'); localStorage.removeItem('wh-home-sort'); hideSheet(); go({ s:'home' }); });
     const h = await page.evaluate(() => [...document.querySelectorAll('#view [data-folder]')].map(b => b.dataset.folder + ':' + b.querySelector('.c').textContent));
     if(h.join() !== 'favs:0,lists:' + armies.length) fail('home-folders', '', 'home', h.join());
@@ -81,6 +81,20 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await tap('#top [data-fav]');
     const fs2 = await page.evaluate(() => ({ on:($('#top [data-fav]') || { getAttribute:() => 'none' }).getAttribute('aria-pressed'), kept:localStorage.getItem('wh-favs') }));
     if(fs2.on !== 'false' || fs2.kept !== '[]') fail('home-fav', '', 'unstarred on Find', JSON.stringify(fs2));
+    // - home-fav-undo: unstarred in Favorites, the list leaves it with an Undo; Undo stars it again, with no other toast
+    await page.evaluate(id => { store.set('wh-favs', [id]); hideSheet(); go({ s:'home' }); go({ s:'favs' }); }, id);
+    await tap(`#view [data-fav="${id}"]`);
+    const un = await page.evaluate(() => ({ kept:localStorage.getItem('wh-favs'), toast:$('#toast').innerText, rows:document.querySelectorAll('#view .arow').length }));
+    if(un.kept !== '[]' || !/Removed from Favorites/.test(un.toast) || un.rows) fail('home-fav-undo', '', 'unstarred in Favorites', JSON.stringify(un));
+    await page.waitForTimeout(400); if(await page.isVisible('#toast [data-undo]')) await page.click('#toast [data-undo]'); else fail('home-fav-undo', '', 'Undo', 'no Undo in the toast');
+    await page.waitForTimeout(200);
+    const ud = await page.evaluate(() => ({ kept:localStorage.getItem('wh-favs'), toast:$('#toast').classList.contains('show') ? $('#toast').innerText : '', rows:[...document.querySelectorAll('#view .arow')].map(r => r.dataset.army).join() }));
+    if(ud.kept !== JSON.stringify([id]) || /Ticks/.test(ud.toast) || ud.rows !== id) fail('home-fav-undo', '', 'Undo', JSON.stringify(ud));
+    // - home-fav-stale: a kept star of a list no longer in the app is not counted or shown
+    await page.evaluate(id => { store.set('wh-favs', ['gone', id]); hideSheet(); go({ s:'home' }); }, id);
+    const sc = await page.evaluate(() => (document.querySelector('#view [data-folder="favs"] .c') || {}).textContent);
+    if(sc !== '1') fail('home-fav-stale', '', 'a star of a list that left the app', 'Favorites count ' + sc);
+    await page.evaluate(() => { localStorage.removeItem('wh-favs'); hideSheet(); go({ s:'home' }); });
     // the orders
     const dateOf = src => { const m = /(\d{1,2}) ([A-Za-z]{3})[a-z]* (\d{4})/.exec(src || ''); return m ? Date.parse(m[1] + ' ' + m[2] + ' ' + m[3] + ' UTC') : 0; };
     const meta = await page.evaluate(() => WH_DATA.armies.map((a, i) => ({ id:a.id, name:a.name, src:a.source, f:factionOf(a).name, i })));
