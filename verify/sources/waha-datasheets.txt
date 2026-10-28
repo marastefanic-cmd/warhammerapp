@@ -170,3 +170,7 @@ necrons Flayed-Ones
 necrons Ophydian-Destroyers
 necrons Canoptek-Reanimator
 necrons Tesseract-Vault
+necrons Technomancer
+necrons Immortals
+necrons Canoptek-Scarab-Swarms
+necrons Canoptek-Spyders

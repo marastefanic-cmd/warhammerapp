@@ -103,9 +103,6 @@
    },
    "why": "The Silent King: Szarekh and two Triarchal Menhirs, all present from the start (GW’s UNIT COMPOSITION: 1 Szarekh, 2 Triarchal Menhirs); if Szarekh is destroyed the Menhirs are too (Triarchal Menhirs). Keywords as GW’s Faction Pack 1.3 changes them: ALL MODELS VEHICLE, EPIC HERO, TRIARCH; SZAREKH MODEL CHARACTER, THE SILENT KING (kwOnly). Triarch Abilities: GW’s ability (BSData: Voice of the Triarch) selects one of the three abilities of GW’s TRIARCH ABILITIES box at the start of each battle round (Wrathful Presence’s layout, Angron); each is an (Aura) of Szarekh’s, shown with who “Triarch Abilities: pick one”; Relentless March in the pack’s words. Supreme Commander: GW’s box, not in BSData. The Silent King: GW prints it without (Aura) (BSData tags it), Leadership only: no reading. Damaged: Szarekh’s weapons have their Attacks halved and the unit’s attacks -1 to hit: a footnote. Worthy Foes: TRIARCH, so its +1 to wound applies."
   },
-  "nekrosor-ammentar": {
-   "why": "GW’s Faction Pack Necrons 1.3 prints the datasheet in full (enmitic disintegrators [SUSTAINED HITS 2], as BSData). Infectious Murder-madness (Aura): [SUSTAINED HITS 1] for friendly NECRONS units (excluding MONSTER and TITANIC units) within 6\", for an attack by a DESTROYER CULT model or at the closest eligible target; its own unit is DESTROYER CULT (22.01: an aura affects its own unit). Nullstone Field Generator (Aura, wargear): Feel No Pain 5+ against mortal wounds and Psychic Attacks for friendly NECRONS units within 6\", its own included: a guard. Prophet of Destruction is not tagged (Aura): what it gives one other DESTROYER CULT unit (re-roll a Wound roll of 1, until the end of the phase, after Nekrosor destroys an enemy unit) is written as what this unit gives others, for that one picked unit (as Spirit Thief). Protective Disciples: Lone Operative while within 3\" of another friendly DESTROYER CULT unit (the Ophydian Destroyers)."
-  },
   "ophydian-destroyers": {
    "why": "Plasmacyte: GW’s wargear option (\"For every 3 models in this unit, this unit can have 1 Plasmacyte\") this list did not take (the export has no Plasmacyte), so the Plasmacyte ability and its Designer’s Note are left out. Tunnelling Horrors in GW’s Faction Pack 1.3 words (as Wahapedia and BSData)."
   },
@@ -132,64 +129,15 @@
    }
   },
   "imotekh-the-stormlord": {
-   "why": "Imotekh leads no unit in this list (Leader: IMMORTALS, LYCHGUARD, NECRON WARRIORS; none taken). NOBLE: Worthy Foes applies."
+   "why": "Imotekh leads no unit in this list (Leader: IMMORTALS, LYCHGUARD, NECRON WARRIORS): the export attaches him to none, the Immortals included (the Technomancer supports them). NOBLE: Worthy Foes applies."
   },
   "royal-warden": {
-   "why": "The Royal Warden leads no unit in this list (Leader: IMMORTALS, NECRON WARRIORS; none taken): Adaptive Strategy (\"This model’s unit\") is its own."
+   "why": "The Royal Warden leads no unit in this list (Leader: IMMORTALS, NECRON WARRIORS): the export attaches it to none, the Immortals included (the Technomancer supports them); Adaptive Strategy (\"This model’s unit\") is its own. Adaptive Strategy is labelled your Movement, Shooting and Charge phases (verify/derive.js): Fall Back and Advance are moves of your own Movement phase (Core Rules 09.02, 09.07), so its unit cannot have Fallen Back or Advanced in the opponent's Movement phase (Fire Overwatch); as the signed-off Bounding Leaps and Elevated Strider (review result-necrons.json 231348fb544bd6eb)."
   }
  },
  "readings": {
   "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, a detachment rule), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf). A datasheet not here: verify/derive.js's derived readings.",
   "datasheets": {
-   "Nekrosor Ammentar": {
-    "aura": [
-     {
-      "kind": "all",
-      "needs": {
-       "all": [
-        "Faction: Necrons"
-       ],
-       "none": [
-        "Monster",
-        "Titanic"
-       ]
-      },
-      "when": "Within 6\" of Nekrosor Ammentar: an attack by a DESTROYER CULT model, or at the closest eligible target",
-      "selfWhen": "Own aura (DESTROYER CULT)",
-      "note": "[SUSTAINED HITS 1]",
-      "from": "Infectious Murder-madness",
-      "selfAlways": true
-     },
-     {
-      "kind": "all",
-      "needs": {
-       "all": [
-        "Faction: Necrons",
-        "Destroyer Cult"
-       ]
-      },
-      "when": "Picked by Nekrosor Ammentar’s Prophet of Destruction (it destroyed an enemy unit; within 9\"), until the end of the phase",
-      "note": "re-roll a wound roll of 1",
-      "from": "Prophet of Destruction",
-      "notSelf": true
-     }
-    ],
-    "guard": [
-     {
-      "from": "Nullstone Field Generator",
-      "needs": {
-       "all": [
-        "Faction: Necrons"
-       ]
-      },
-      "kind": "all",
-      "when": "Within 6\" of Nekrosor Ammentar",
-      "selfWhen": "Own aura",
-      "selfAlways": true,
-      "note": "Feel No Pain 5+ against mortal wounds and Psychic Attacks"
-     }
-    ]
-   },
    "The Silent King": {
     "aura": [
      {

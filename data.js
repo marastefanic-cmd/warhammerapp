@@ -5295,18 +5295,13 @@ const ARMIES = [
   id:'u-w0t-m8', name:'U w0t m8?', faction:'necrons', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Priority Assets',
   detachments:['obeisance-phalanx','the-phaerons-armoury'],
-  source:'New Recruit, exported 27 Oct 2026 (JSON)',
+  source:'New Recruit, exported 28 Oct 2026 (JSON)',
   units:[
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
       id:'imotekh-the-stormlord', ds:'necrons/imotekh-the-stormlord', pts:100,
       models:['1× Imotekh the Stormlord'],
       gear:[['Gauntlet of Fire','Staff of the Destroyer']]
-    },
-    {
-      id:'nekrosor-ammentar', ds:'necrons/nekrosor-ammentar', pts:195,
-      models:['1× Nekrosor Ammentar (Nullstone field generator)'],
-      gear:[['Blade tail and whip coils','Enmitic disintegrators','Unmaker gauntlet']]
     },
     {
       id:'the-silent-king', ds:'necrons/the-silent-king', pts:420, warlord:true,
@@ -5334,7 +5329,34 @@ const ARMIES = [
       gear:[['Close combat weapon','Relic gauss blaster']]
     },
     {
-      id:'flayed-ones', ds:'necrons/flayed-ones', pts:55, copies:2,
+      id:'technomancer-immortals', ds:['necrons/technomancer','necrons/immortals'], role:'Character', pts:145, ptsNote:'80 + Immortals 65',
+      leads:'Immortals', support:true,
+      models:['1× Technomancer','5× Immortal'],
+      gear:[['Staff of light'],['Close combat weapon','Gauss blaster']],
+      stats:[
+        { name:'Technomancer' },
+        { name:'Immortals ×5' }
+      ],
+      ranged:[
+        { name:'Staff of light', who:'Technomancer' },
+        { name:'Gauss blaster', who:'Immortals', n:5 }
+      ],
+      melee:[
+        { name:'Staff of light', who:'Technomancer' },
+        { name:'Close combat weapon', who:'Immortals', n:5 }
+      ],
+      abilities:[
+        { name:'Rites of Reanimation', who:'Technomancer' },
+        { name:'Technomancer', who:'Technomancer' },
+        { name:'Implacable Eradication', who:'Immortals' }
+      ],
+      rules:['Support','Reanimation Protocols','Lethal Hits'],
+      kw:['Character','Cryptek','Faction: Necrons','Fly','Infantry','Technomancer','Battleline','Immortals'],
+      kwNote:'Battleline, Immortals come from the supported Immortals.',
+      why:{ kwNote:'supports Immortals', ptsNote:'the points of its parts as the list has them (Technomancer + Immortals)' }
+    },
+    {
+      id:'flayed-ones', ds:'necrons/flayed-ones', pts:55,
       models:['5× Flayed One'],
       gear:[['Flayer claws']],
       stats:[
@@ -5356,11 +5378,30 @@ const ARMIES = [
       ]
     },
     {
+      id:'canoptek-scarab-swarms', ds:'necrons/canoptek-scarab-swarms', pts:40,
+      models:['3× Canoptek Scarab Swarm'],
+      gear:[['Feeder mandibles']],
+      stats:[
+        { name:'Canoptek Scarab Swarms ×3' }
+      ],
+      melee:[
+        { name:'Feeder mandibles', n:3 }
+      ]
+    },
+    {
       id:'canoptek-reanimator', ds:'necrons/canoptek-reanimator', pts:75,
       models:['1× Canoptek Reanimator'],
       gear:[['Atomiser beam','Atomiser beam','Reanimator’s claws']],
       ranged:[
         { name:'Atomiser beam', n:2 }
+      ]
+    },
+    {
+      id:'canoptek-spyders', ds:'necrons/canoptek-spyders', pts:65,
+      models:['1× Canoptek Spyder (Fabricator claw array, Gloom prism)'],
+      gear:[['Automaton claws','Particle beamer','Particle beamer']],
+      ranged:[
+        { name:'Particle beamer', n:2 }
       ]
     },
     {
@@ -9017,34 +9058,6 @@ const DATASHEETS = {
   rules:['Reanimation Protocols','Leader','Ignores Cover','Torrent','Devastating Wounds'],
   kw:['Character','Epic Hero','Faction: Necrons','Imotekh the Stormlord','Infantry','Noble']
 },
-'necrons/nekrosor-ammentar':{
-  name:'Nekrosor Ammentar', faction:'necrons', bsId:'1d4b-a179-ae99-3283', role:'Epic Hero',
-  stats:[
-    { name:'Nekrosor Ammentar', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'6+', OC:'3', InSv:'4+', base:'80mm' }
-  ],
-  ranged:[
-    { name:'Enmitic disintegrators', range:'18"', A:'4', BS:'2+', S:'6', AP:'-2', D:'1', kw:['IGNORES COVER','PISTOL','SUSTAINED HITS 2'] }
-  ],
-  melee:[
-    { name:'Blade tail and whip coils', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-1', D:'1', kw:['EXTRA ATTACKS'] },
-    { name:'Unmaker gauntlet', range:'Melee', A:'6', WS:'2+', S:'10', AP:'-3', D:'3', kw:[] }
-  ],
-  abilities:[
-    { name:'Protective Disciples', text:'While this model is within 3" of one or more other friendly **DESTROYER CULT** units, this model has the **Lone Operative** ability.' },
-    { name:'Infectious Murder-madness', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **NECRONS** unit (excluding **MONSTER** and **TITANIC** units) is within 6" of this model, each time a model in that unit makes an attack, if that model has the **DESTROYER CULT** keyword or that enemy unit is the closest eligible target, that attack has the **[SUSTAINED HITS 1]** ability.' },
-    { name:'Prophet of Destruction', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model destroys an enemy unit, select one other friendly **DESTROYER CULT** unit within 9" of it. Until the end of the phase, each time a model in that unit makes an attack, re-roll a **Wound roll** of 1.' },
-    { name:'Nullstone Field Generator', tag:'Aura', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
-  ],
-  aura:[
-    { kind:'all', needs:{ all:['Faction: Necrons'], none:['Monster','Titanic'] }, when:'Within 6" of Nekrosor Ammentar: an attack by a DESTROYER CULT model, or at the closest eligible target', selfWhen:'Own aura (DESTROYER CULT)', note:'[SUSTAINED HITS 1]', from:'Infectious Murder-madness', selfAlways:true, readOf:'6507231a' },
-    { kind:'all', needs:{ all:['Faction: Necrons','Destroyer Cult'] }, when:'Picked by Nekrosor Ammentar’s Prophet of Destruction (it destroyed an enemy unit; within 9"), until the end of the phase', note:'re-roll a wound roll of 1', from:'Prophet of Destruction', notSelf:true, readOf:'3a0be7d8' }
-  ],
-  guard:[
-    { from:'Nullstone Field Generator', needs:{ all:['Faction: Necrons'] }, kind:'all', when:'Within 6" of Nekrosor Ammentar', selfWhen:'Own aura', selfAlways:true, note:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', readOf:'fed72424' }
-  ],
-  rules:['Reanimation Protocols','Deep Strike','Fights First','Extra Attacks','Ignores Cover','Pistol','Sustained Hits','Feel No Pain 5+*'],
-  kw:['Character','Destroyer Cult','Epic Hero','Faction: Necrons','Infantry','Nekrosor Ammentar']
-},
 'necrons/the-silent-king':{
   name:'The Silent King', faction:'necrons', bsId:'7422-7fbf-8694-364c', role:'Epic Hero',
   stats:[
@@ -9094,11 +9107,42 @@ const DATASHEETS = {
     { name:'Close combat weapon', range:'Melee', A:'4', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Adaptive Strategy', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' }, text:'This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.' },
+    { name:'Adaptive Strategy', ph:['movement','shooting','charge'], turn:'your', text:'This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.' },
     { name:'Engrammatic Logic', tag:'Once per battle', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle, at the start of any phase, you can select one friendly **NECRONS** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked.' }
   ],
   rules:['Leader','Reanimation Protocols','Lethal Hits','Rapid Fire'],
   kw:['Character','Faction: Necrons','Infantry','Royal Warden']
+},
+'necrons/technomancer':{
+  name:'Technomancer', faction:'necrons', bsId:'852a-ba39-e93f-6b62',
+  stats:[
+    { name:'Technomancer', M:'10"', T:'4', Sv:'4+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'50mm' }
+  ],
+  ranged:[
+    { name:'Staff of light', range:'18"', A:'3', BS:'4+', S:'5', AP:'-2', D:'1', kw:[] }
+  ],
+  melee:[
+    { name:'Staff of light', range:'Melee', A:'2', WS:'4+', S:'5', AP:'-2', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Rites of Reanimation', text:'While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability.' },
+    { name:'Technomancer', ph:['movement'], turn:'your', text:'At the end of your Movement phase, you can select one friendly **NECRONS** model within 6" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.' }
+  ]
+},
+'necrons/immortals':{
+  name:'Immortals', faction:'necrons', bsId:'f81-b23c-e183-39d7',
+  stats:[
+    { name:'Immortals', M:'5"', T:'5', Sv:'3+', W:'1', Ld:'7+', OC:'2', InSv:'–', base:'32mm' }
+  ],
+  ranged:[
+    { name:'Gauss blaster', range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['LETHAL HITS'] }
+  ],
+  melee:[
+    { name:'Close combat weapon', range:'Melee', A:'2', WS:'3+', S:'4', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Implacable Eradication', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.' }
+  ]
 },
 'necrons/flayed-ones':{
   name:'Flayed Ones', faction:'necrons', bsId:'c219-a708-f5b0-f0e7', role:'Infantry',
@@ -9132,6 +9176,21 @@ const DATASHEETS = {
   rules:['Reanimation Protocols','Deep Strike'],
   kw:['Destroyer Cult','Faction: Necrons','Infantry','Ophydian Destroyers']
 },
+'necrons/canoptek-scarab-swarms':{
+  name:'Canoptek Scarab Swarms', faction:'necrons', bsId:'259b-a8e3-928f-1d0c', role:'Swarm',
+  stats:[
+    { name:'Canoptek Scarab Swarms', M:'10"', T:'2', Sv:'6+', W:'4', Ld:'8+', OC:'0', InSv:'–', base:'40mm' }
+  ],
+  melee:[
+    { name:'Feeder mandibles', range:'Melee', A:'6', WS:'5+', S:'2', AP:'0', D:'1', kw:['LETHAL HITS'] }
+  ],
+  abilities:[
+    { name:'Self-destruction', ph:['fight'], turn:'either', text:'At the start of the Fight phase, if this unit is within **Engagement Range** of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a **VEHICLE**. On a 2-5, that unit suffers D3 **mortal wounds**; on a 6+, that unit suffers 3 mortal wounds.' },
+    { name:'Chittering Swarm', text:'While an enemy unit is within **Engagement Range** of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6" of one or more friendly **CRYPTEK** models, the Objective Control characteristic of models in this unit is 1.' }
+  ],
+  rules:['Reanimation Protocols','Lethal Hits'],
+  kw:['Canoptek','Faction: Necrons','Fly','Scarab Swarms','Swarm']
+},
 'necrons/canoptek-reanimator':{
   name:'Canoptek Reanimator', faction:'necrons', bsId:'7c45-2aab-7526-febe', role:'Vehicle',
   stats:[
@@ -9148,6 +9207,25 @@ const DATASHEETS = {
   ],
   rules:['Reanimation Protocols','Feel No Pain 4+'],
   kw:['Canoptek','Faction: Necrons','Reanimator','Vehicle','Walker']
+},
+'necrons/canoptek-spyders':{
+  name:'Canoptek Spyders', faction:'necrons', bsId:'cae9-5277-87f4-54b8', role:'Vehicle',
+  stats:[
+    { name:'Canoptek Spyder', M:'5"', T:'7', Sv:'3+', W:'6', Ld:'8+', OC:'2', InSv:'–', base:'60mm' }
+  ],
+  ranged:[
+    { name:'Particle beamer', range:'18"', A:'D6', BS:'3+', S:'6', AP:'0', D:'1', kw:['BLAST','DEVASTATING WOUNDS'] }
+  ],
+  melee:[
+    { name:'Automaton claws', range:'Melee', A:'5', WS:'4+', S:'8', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Canoptek Swarm', ph:['command'], turn:'your', text:'In your Command phase, select one friendly **CANOPTEK SCARAB SWARM** unit within 6" of this unit. One destroyed model is returned to that **CANOPTEK SCARAB SWARM** unit for each **SPYDER** model in this unit.' },
+    { name:'Fabricator Claw Array', tag:'Aura', text:'While a friendly **NECRONS VEHICLE** unit is within 6" of the bearer, that unit has the **Feel No Pain** 6+ ability.' },
+    { name:'Gloom Prism', tag:'Aura', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
+  ],
+  rules:['Reanimation Protocols','Deadly Demise 1','Blast','Devastating Wounds'],
+  kw:['Canoptek','Faction: Necrons','Fly','Spyders','Vehicle']
 },
 'necrons/tesseract-vault':{
   name:'Tesseract Vault', faction:'necrons', bsId:'5451-67b5-a66c-71d2', role:'Vehicle',
@@ -9500,11 +9578,13 @@ const BS_IDS = {
     "tzeeeeentch/the-changeling":["ac75-c011-9a10-2c4a|1×1d74-d498-28a1-244e,1×6614-2033-8b5d-ac9d"],
     "tzeeeeentch/tzeentch-soul-grinder":["e1b1-146f-6f77-3a15|1×36a9-7135-9deb-5f95,1×416d-1da1-fc2c-174a,1×9f51-b187-b3bb-ffac,1×b83b-3b6-9aa7-5b3b"],
     "u-w0t-m8/canoptek-reanimator":["7c45-2aab-7526-febe|2×3dcb-6d4a-632b-b2c5,1×4dec-6404-8188-646a"],
+    "u-w0t-m8/canoptek-scarab-swarms":["259b-a8e3-928f-1d0c|3×207-e45f-bfde-3f41,3×207-e45f-bfde-3f41/bb5a-5eb3-1bd4-e813"],
+    "u-w0t-m8/canoptek-spyders":["cae9-5277-87f4-54b8|1×7002-4a34-6e5-7a50,1×7002-4a34-6e5-7a50/1141-4991-58b-8d13,1×7002-4a34-6e5-7a50/2701-3ce4-f0e-fd9d,1×7002-4a34-6e5-7a50/a797-f585-4ad5-d786,2×7002-4a34-6e5-7a50/a797-f585-4ad5-d786/cba8-5b8b-824-30b6,1×7002-4a34-6e5-7a50/bf18-cd0a-a37f-b62b"],
     "u-w0t-m8/flayed-ones":["c219-a708-f5b0-f0e7|5×253b-c889-500a-8500,5×253b-c889-500a-8500/81b-e6a8-24bb-1f63"],
     "u-w0t-m8/imotekh-the-stormlord":["49fd-a80d-8cc0-c76b|1×579e-7f68-433b-7072,1×e135-2748-1287-ec58"],
-    "u-w0t-m8/nekrosor-ammentar":["1d4b-a179-ae99-3283|1×5481-c090-8363-be82,1×a32a-76af-d6f9-2841,1×b50f-3d17-1d8f-ae81,1×d3ec-fd61-4989-07d5"],
     "u-w0t-m8/ophydian-destroyers":["c6db-9736-4d53-3ef6|3×7e20-6261-2ed0-b1f,3×7e20-6261-2ed0-b1f/379d-5b8f-fa70-f892"],
     "u-w0t-m8/royal-warden":["379b-d6a0-cd05-ef89|1×1bfa-d221-8708-c144,1×ee6b-d65-2b19-eb6b"],
+    "u-w0t-m8/technomancer-immortals":["852a-ba39-e93f-6b62|1×49fe-eee5-a977-311","f81-b23c-e183-39d7|5×6c87-24f8-cd1c-c3c8,5×6c87-24f8-cd1c-c3c8/cc7c-74ca-3bb6-926f,5×6c87-24f8-cd1c-c3c8/d967-31ed-9604-3098"],
     "u-w0t-m8/tesseract-vault":["5451-67b5-a66c-71d2|4×68e9-a3fc-4ef2-b655,1×df62-ee85-5169-327e,1×f4ab-3e53-32df-d47a"],
     "u-w0t-m8/tesseract-vault-2":["5451-67b5-a66c-71d2|4×68e9-a3fc-4ef2-b655,1×df62-ee85-5169-327e,1×f4ab-3e53-32df-d47a"],
     "u-w0t-m8/the-silent-king":["7422-7fbf-8694-364c|1×2c98-86cf-889-2293,1×c1af-c4ce-eefa-c98d,1×c1af-c4ce-eefa-c98d/917e-24b-cc26-7a90,1×c1af-c4ce-eefa-c98d/d146-51bc-c659-9409,1×c1af-c4ce-eefa-c98d/d85e-4063-896a-f9,2×ded1-4542-58af-41c1,2×ded1-4542-58af-41c1/4faa-1c3e-80c-849d,2×ded1-4542-58af-41c1/a570-1807-bd56-a2ac"],
@@ -9538,6 +9618,7 @@ const BS_IDS = {
     "10d8-d702-f556-5d3c":"Knight Destrier",
     "10f6-ffca-ae38-250e":"Paired accursed weapons",
     "10f9-eb42-632e-3a6f":"Supa-glowy Fing",
+    "1141-4991-58b-8d13":"Automaton claws",
     "1150-7501-d526-d373":"Incandeum",
     "116c-7dd8-92e5-f085":"Mark of the Soul Forges",
     "1173-a18c-18fb-fac9":"Instinctive Defense",
@@ -9574,7 +9655,6 @@ const BS_IDS = {
     "1c66-4903-10ca-2a27":"Ironhail Heavy Stubber",
     "1c7f-c635-a77f-9204":"Flamer mouths",
     "1d21-9b32-c427-398e":"Kustom Mega-slugga",
-    "1d4b-a179-ae99-3283":"Nekrosor Ammentar",
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
     "1d74-d498-28a1-244e":"Infernal Flames",
     "1db9-89c3-c7cb-2041":"Obliterator",
@@ -9590,6 +9670,7 @@ const BS_IDS = {
     "1fff-0a90-a8dd-28b5":"Chitin-barbed limbs",
     "2024-6ff7-2d17-938d":"Arcane Fireball",
     "202a-2f25-f692-8b36":"Gateway Unto Damnation",
+    "207-e45f-bfde-3f41":"Canoptek Scarab Swarm",
     "20cf-5b7c-71d2-451d":"Kastelan Robot",
     "217a-9e22-3821-27e9":"Chainblades",
     "217d-4d10-bad0-1d6e":"Supa-snazz Dakka",
@@ -9608,7 +9689,9 @@ const BS_IDS = {
     "253b-c889-500a-8500":"Flayed One",
     "255b-146d-ca61-55fb":"Twistbray",
     "2575-9440-a8cf-1c50":"Spinnin' Blades",
+    "259b-a8e3-928f-1d0c":"Canoptek Scarab Swarms",
     "259f-d98e-e052-ec64":"Deathwatch Terminator w/ Heavy Weapon",
+    "2701-3ce4-f0e-fd9d":"Fabricator claw array",
     "273-38fa-249e-3aa4":"Stormspear rocket pod",
     "279e-62d4-bff1-141":"Chaos Predator Annihilator",
     "27b4-53af-ee1b-688a":"Fleshmetal Fusion",
@@ -9733,6 +9816,7 @@ const BS_IDS = {
     "497d-e065-f5a5-5e80":"Daemon Prince of Chaos",
     "4988-d93e-5034-2b3c":"Contemptor-Galatus Dreadnought",
     "49fd-a80d-8cc0-c76b":"Imotekh the Stormlord",
+    "49fe-eee5-a977-311":"Staff of light",
     "4a80-c791-9d9f-30c6":"Custodian Warden",
     "4aa5-24c5-89bc-7023":"Scarab Occult Sorcerer",
     "4aaa-f353-5fa5-fd92":"Smite",
@@ -9765,7 +9849,6 @@ const BS_IDS = {
     "5451-67b5-a66c-71d2":"Tesseract Vault",
     "545a-eead-e216-5939":"Cerastus shock lance",
     "5474-b6fb-2b8c-ec67":"Heavy bolter",
-    "5481-c090-8363-be82":"Blade tail and whip coils",
     "54ca-fec8-f0c6-2c77":"Ectoplasma cannon and claws",
     "5514-3810-cf3e-3b23":"Memento Moritoi",
     "5541-daf-9f4a-ce3d":"Bolt pistol",
@@ -9843,6 +9926,7 @@ const BS_IDS = {
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
     "6b9e-c6ae-2626-45c9":"Kustom Force Field",
     "6bdb-2665-95ec-fcde":"Phosphor blaster",
+    "6c87-24f8-cd1c-c3c8":"Immortal",
     "6cc8-d237-eec9-d038":"Aviarch",
     "6cd8-62e0-c6e4-74b3":"Visionary",
     "6d28-ca9d-79a5-063a":"Disciple of Khorne",
@@ -9854,6 +9938,7 @@ const BS_IDS = {
     "6f81-4538-a414-251e":"Jakhals",
     "6fd1-efa4-7787-db82":"Plasma pistol",
     "6feb-277f-7f31-504a":"Stompy Feet",
+    "7002-4a34-6e5-7a50":"Canoptek Spyder",
     "7044-bf1-f949-c32d":"Bladeguard Veteran Squad",
     "7067-34f4-5272-e05f":"Meganobz",
     "70b4-8523-6b7c-1b0a":"Freedom's Hand",
@@ -9943,6 +10028,7 @@ const BS_IDS = {
     "8488-2efe-825f-a403":"Neurogaunt Nodebeast",
     "84c0-f59d-901a-e94f":"Canis Rex",
     "8519-75f2-2df8-8610":"Neo-volkite Pistol",
+    "852a-ba39-e93f-6b62":"Technomancer",
     "8555-148a-0e35-4749":"Adrathic Desolator, 1 Fist and 1 Projectors",
     "86c9-46db-4de-4a5d":"Thermal cannon",
     "8719-8732-d0be-c527":"Exalted Eightbound",
@@ -10038,7 +10124,6 @@ const BS_IDS = {
     "a30-4bad-cef5-5e55":"Synaptic Pulse",
     "a30d-6752-d912-315e":"Avenger chaincannon",
     "a30d-a7e8-b7d1-a55c":"Bloodreaper",
-    "a32a-76af-d6f9-2841":"Nullstone field generator",
     "a336-1346-0281-b4b2":"Destabilising Predation",
     "a343-07e9-e8f9-67f2":"Hades autocannon",
     "a3ad-1621-c20a-7e3a":"Ironstrider feet",
@@ -10051,6 +10136,7 @@ const BS_IDS = {
     "a58b-974d-14a0-ece2":"Ectoplasma cannon",
     "a5fb-aa4d-100f-e1bb":"Bolt Carbine",
     "a61b-434-6817-679a":"Herd banner",
+    "a797-f585-4ad5-d786":"Two particle beamers",
     "a7ae-e495-683b-7c90":"Reiver Squad",
     "a7ee-9112-4e83-bc2":"Scarab Occult Terminator",
     "a827-afc9-ca29-b723":"Tyrant Guard",
@@ -10096,7 +10182,6 @@ const BS_IDS = {
     "b4ca-3419-c219-f429":"Darkflame lance",
     "b4ce-a5bf-52e7-884c":"Neverblade",
     "b506-5bce-64c6-51b0":"Blue Horror",
-    "b50f-3d17-1d8f-ae81":"Enmitic disintegrators",
     "b53-3d5b-356b-6b0a":"Flesh Hound",
     "b541-3292-a5cc-dbeb":"Defiler",
     "b568-8a23-be6f-a14d":"Khorne Berzerker",
@@ -10115,6 +10200,7 @@ const BS_IDS = {
     "b87a-5121-1c03-894f":"Bloodhunter",
     "b93c-a0a7-1c46-66c4":"Skitarii Ranger w/ arc rifle",
     "b99-af3a-9728-26ad":"Coruscating Pink flames",
+    "bb5a-5eb3-1bd4-e813":"Feeder mandibles",
     "bc1-73c2-c18-8687":"Heavy Intercessor w/Heavy Bolter",
     "bc2f-662f-58e7-5fef":"Daemonic Icon",
     "bd01-88b9-7d60-b49a":"Excruciator cannon",
@@ -10122,6 +10208,7 @@ const BS_IDS = {
     "bd6c-8683-8bc4-962d":"Kastelan Robots",
     "beb2-89f6-847c-52bf":"Sentinel blade",
     "bebc-8637-c456-1c0f":"Flickering Flames",
+    "bf18-cd0a-a37f-b62b":"Gloom prism",
     "bfb1-7512-e1a3-9fa2":"Impulsor",
     "c089-546a-0546-3537":"Two excruciator cannons",
     "c0a2-eb65-6d34-5bc6":"Knight Ruinator",
@@ -10162,11 +10249,14 @@ const BS_IDS = {
     "ca9e-52d-14-a439":"Bladeguard Veteran Sergeant",
     "caa-f869-3cbd-b48e":"Warlord",
     "caa2-e441-2c31-454":"Infernal cannon",
+    "cae9-5277-87f4-54b8":"Canoptek Spyders",
     "caf1-8818-9e65-7154":"The Blue Scribes",
     "cb16-d239-4f7a-91be":"Power fist",
     "cb31-e496-08de-77d4":"Sanctuary",
+    "cba8-5b8b-824-30b6":"Particle beamer",
     "cc2c-abb5-1cb7-d195":"Dainal Kornelius",
     "cc5a-e1bc-3dd8-f367":"Bringer of Justice",
+    "cc7c-74ca-3bb6-926f":"Gauss blaster",
     "ccae-b5f1-8787-4c7d":"Bloodmaster",
     "cd60-e6ca-4de4-bf07":"Blade of the Laer",
     "cdad-e2e0-9db3-93fc":"Meganob w/ Kombi-weapon and Power Klaw",
@@ -10196,7 +10286,6 @@ const BS_IDS = {
     "d2c6-bd0b-3205-3319":"Pyrovores",
     "d379-7bdd-e3f9-9183":"Gaze of Magnus",
     "d37d-7e8f-341b-c67c":"Maulerfiend",
-    "d3ec-fd61-4989-07d5":"Unmaker gauntlet",
     "d40a-c9a6-74d5-288d":"Synaptoprescience",
     "d59d-ef1-9ef8-4f44":"Cybernetica Datasmith",
     "d5fe-026f-1f46-e9c5":"Close combat weapon",
@@ -10212,6 +10301,7 @@ const BS_IDS = {
     "d92d-2a5e-3dd9-f60f":"Twin Kastelan fist",
     "d941-c4cd-8b82-c453":"Heavy Bolter",
     "d956-a7af-5c96-2577":"Conversion beam obliterator",
+    "d967-31ed-9604-3098":"Close combat weapon",
     "d9a6-8dbd-2c01-862b":"Lastrum storm bolter",
     "d9ca-c6b0-ba9c-b6c8":"Arachnus Blaze Carronade",
     "d9f5-2270-b9b2-8060":"Icon of Flame",
@@ -10318,6 +10408,7 @@ const BS_IDS = {
     "f6b2-238a-4613-a59f":"Malefic Curse",
     "f70d-d0cb-5cb8-3be9":"Autopistol",
     "f76c-0f51-ad33-c118":"Armoured tracks",
+    "f81-b23c-e183-39d7":"Immortals",
     "f831-6dfb-6b1b-8112":"Thunder Hammer & Storm Shield",
     "f88c-344d-d603-5622":"Dark Disciple",
     "f8bc-c08c-22f0-8ebb":"Chainblades",
@@ -10443,6 +10534,7 @@ const CHECKLIST = {
   "a|11p632b":{"u":"shooting:your"},
   "a|11rkasx":{"u":"shooting:your"},
   "a|128j63r":{"u":"shooting:your"},
+  "a|12opamt":{"u":"shooting:your,fight:either"},
   "a|12u09c2":{"u":"charge:either"},
   "a|1348p3r":{"u":"shooting:your,fight:either"},
   "a|139ou05":{"u":"shooting:your"},
@@ -10457,6 +10549,8 @@ const CHECKLIST = {
   "a|14o4o4w":{"u":"shooting:opp,fight:either"},
   "a|14uvstu":{"x":1},
   "a|14wwtkh":{"x":1},
+  "a|14wxe1s":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 5+ against mortal wounds and Psychic Attacks","to":{"all":["Faction: Necrons"]},"while":"While a friendly NECRONS unit is within 6\" of the bearer"}]},
+  "a|1507i5y":{"t":"fight:either","s":1},
   "a|150yh6m":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|15f64aw":{"u":"shooting:your,fight:either"},
   "a|15iiwia":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
@@ -10587,6 +10681,7 @@ const CHECKLIST = {
   "a|1q03tdu":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|1q897s2":{"u":"shooting:your,fight:either"},
   "a|1qfxao4":{"t":"movement:your","u":"movement:your"},
+  "a|1qlxfpn":{"t":"command:your","s":1},
   "a|1qoyqu0":{"u":"shooting:your"},
   "a|1qqyaef":{"t":"shooting:opp","u":"shooting:opp","s":1},
   "a|1qrfvgq":{"u":"movement:your"},
@@ -10607,7 +10702,6 @@ const CHECKLIST = {
   "a|1tafhr4":{"t":"fight:either","u":"fight:either","s":1},
   "a|1tds4uh":{"u":"fight:either"},
   "a|1tk2z2h":{"u":"shooting:your,fight:either"},
-  "a|1tnbi7q":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 5+ against mortal wounds and Psychic Attacks","to":{"all":["Faction: Necrons"]},"while":"While a friendly NECRONS unit is within 6\" of the bearer"}]},
   "a|1un1qw4":{"none":1},
   "a|1vdaquw":{"u":"fight:either"},
   "a|1vkotuw":{"u":"shooting:your,fight:either"},
@@ -10621,6 +10715,7 @@ const CHECKLIST = {
   "a|1wv7bdk":{"u":"shooting:opp,fight:either"},
   "a|1x39w6b":{"at":"Start of the first battle round","u":"shooting:your,fight:either","s":1},
   "a|1xdif4o":{"t":"charge:your","s":1},
+  "a|1xgsjyu":{"t":"movement:your","s":1},
   "a|1xu3p8v":{"u":"movement:opp"},
   "a|1xwtgtp":{"t":"shooting:your,fight:either","s":1},
   "a|1xz08zy":{"t":"shooting:your"},
@@ -10662,7 +10757,6 @@ const CHECKLIST = {
   "a|6azpb6":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|6jybil":{"u":"shooting:opp,fight:either"},
   "a|6q6bvm":{"u":"fight:either"},
-  "a|6qg51b":{"u":"shooting:opp"},
   "a|6re8gu":{"u":"shooting:your,fight:either"},
   "a|6t51gd":{"u":"shooting:your,fight:either"},
   "a|6x88aj":{"at":"Start of the first battle round","u":"fight:either","s":1},
@@ -10674,6 +10768,7 @@ const CHECKLIST = {
   "a|85a58d":{"u":"shooting:your,fight:either"},
   "a|89p4db":{"u":"shooting:opp,fight:either"},
   "a|8f9619":{"u":"fight:either"},
+  "a|8j9nf0":{"x":1},
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
   "a|8yl01e":{"u":"fight:either","a":1},
@@ -10711,7 +10806,6 @@ const CHECKLIST = {
   "a|e1tops":{"t":"command:your","s":1},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
-  "a|e569qu":{"u":"shooting:your,fight:either"},
   "a|ekf7wl":{"u":"movement:your"},
   "a|erffw0":{"x":1},
   "a|exlwqq":{"u":"shooting:your,fight:either"},
@@ -10751,7 +10845,6 @@ const CHECKLIST = {
   "a|jwhwv":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|k4qjtt":{"u":"shooting:your,fight:either"},
   "a|k6m54a":{"u":"movement:your","a":1},
-  "a|kevmhw":{"u":"shooting:your,fight:either"},
   "a|krt302":{"t":"shooting:opp","u":"shooting:opp"},
   "a|kubiv7":{"x":1},
   "a|ll49i1":{"x":1},
@@ -10773,6 +10866,7 @@ const CHECKLIST = {
   "a|og823m":{"u":"movement:your,shooting:your"},
   "a|ohqcma":{"t":"command:your","s":1},
   "a|opohoe":{"u":"shooting:your,fight:either"},
+  "a|os01q1":{"u":"shooting:opp,fight:either","g":[{"name":"Feel No Pain","to":{"all":["Faction: Necrons","Vehicle"]},"while":"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer"}]},
   "a|oxs2wr":{"u":"shooting:your,fight:either","a":1},
   "a|oxtl28":{"none":1},
   "a|plfqp9":{"x":1},
@@ -10790,6 +10884,7 @@ const CHECKLIST = {
   "a|s206db":{"u":"movement:your,charge:your"},
   "a|sctta1":{"x":1},
   "a|sj1p6e":{"u":"shooting:your","a":1},
+  "a|sloufl":{"u":"shooting:opp,fight:either"},
   "a|snh6gk":{"u":"shooting:your"},
   "a|ss613f":{"t":"fight:either","u":"fight:either","s":1},
   "a|t2h0v8":{"t":"shooting:your"},
@@ -10978,8 +11073,8 @@ const RULE_OPTIONS = [
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Mantra of Discipline', text:'This model has the **BATTLELINE** keyword and has the following ability:', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Binharic Courage (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Shroudpsalm (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
-  { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'Fanatical Devotion', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' } }, phases:{ ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' } } },
-  { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'Adaptive Tactics', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' } }, phases:{ ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'either' } } },
+  { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'Fanatical Devotion', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['movement','shooting','charge'], turn:'your' } },
+  { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'Adaptive Tactics', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['movement','shooting','charge'], turn:'your' } },
   { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'The Fires of Mars', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.', found:'"**Name:** effect"', explicit:false, trigger:null, used:null, phases:null },
   { rule:'purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols', option:'Protector Protocol', text:'Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['shooting'], turn:'your' }, phases:{ ph:['command','shooting'], turn:'your' } },
   { rule:'purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols', option:'Conqueror Protocol', text:'Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['fight'], turn:'either' }, phases:{ ph:['command','fight'], turn:'either', turns:{ command:'your' } } },
@@ -11051,8 +11146,9 @@ const GRANTS = [
   { rule:'tzeeeeentch · Fluxmaster · Improbable Shield (Aura)', grants:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', type:'ability', to:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, while:'While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer', text:'While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' },
   { rule:'healybois · The Swarmlord · Guardian Organism', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Character'] }, while:'While a CHARACTER model is leading this unit', text:'While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability.' },
   { rule:'healybois · Hive Tyrant · Instinctive Defence', grants:'Fights First', type:'ability', to:'this unit / model', while:'while the bearer is within 6" of one or more friendly HARVESTER units', text:'In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer\'s unit have the **Fights First** ability.' },
-  { rule:'u-w0t-m8 · Nekrosor Ammentar · Protective Disciples', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more other friendly DESTROYER CULT units', text:'While this model is within 3" of one or more other friendly **DESTROYER CULT** units, this model has the **Lone Operative** ability.' },
-  { rule:'u-w0t-m8 · Nekrosor Ammentar · Nullstone Field Generator', grants:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', type:'ability', to:{ all:['Faction: Necrons'] }, while:'While a friendly NECRONS unit is within 6" of the bearer', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
+  { rule:'u-w0t-m8 · Technomancer · Rites of Reanimation', grants:'Feel No Pain', type:'ability', to:'this unit / model', while:'While this model is leading a unit', text:'While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability.' },
+  { rule:'u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array', grants:'Feel No Pain', type:'ability', to:{ all:['Faction: Necrons','Vehicle'] }, while:'While a friendly NECRONS VEHICLE unit is within 6" of the bearer', text:'While a friendly **NECRONS VEHICLE** unit is within 6" of the bearer, that unit has the **Feel No Pain** 6+ ability.' },
+  { rule:'u-w0t-m8 · Canoptek Spyders · Gloom Prism', grants:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', type:'ability', to:{ all:['Faction: Necrons'] }, while:'While a friendly NECRONS unit is within 6" of the bearer', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 

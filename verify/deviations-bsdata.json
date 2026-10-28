@@ -2430,9 +2430,19 @@
  {
   "army": "u-w0t-m8",
   "unit": "the-silent-king",
+  "field": "ability",
+  "app": "",
+  "source": "Voice of the Triarch",
+  "reason": "GW names the ability Triarch Abilities, BSData at the pin (Xenos - Necrons catalogue revision 28) Voice of the Triarch. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Triarch Abilities\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "the-silent-king",
   "field": "ability.text",
   "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
-  "source": "While a friendly ^^**Necrons**^^ unit (excluding ^^**Monster^^** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+  "source": "At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has that ability.",
   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has th…\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.\".",
   "by": "verify/from-json.js"
@@ -2469,12 +2479,32 @@
  },
  {
   "army": "u-w0t-m8",
-  "unit": "the-silent-king",
-  "field": "ability",
+  "unit": "technomancer-immortals",
+  "field": "ability.text",
+  "app": "Technomancer: At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+  "source": "At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html: \"At the end of your Movement phase, you can select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "technomancer-immortals",
+  "field": "rules",
   "app": "",
-  "source": "Voice of the Triarch",
-  "reason": "GW names the ability Triarch Abilities, BSData at the pin (Xenos - Necrons catalogue revision 28) Voice of the Triarch. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Triarch Abilities\".",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 28) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html, verify/.cache/waha/ds/necrons_Immortals.html: CORE ABILITIES / ARMY RULES \"Support, Reanimation Protocols\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "canoptek-spyders",
+  "field": "ability.text",
+  "app": "Fabricator Claw Array: While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability.",
+  "source": "While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Spyders.html: \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.\".",
   "by": "verify/from-json.js"
  },
  {
