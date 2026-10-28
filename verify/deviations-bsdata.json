@@ -2350,6 +2350,16 @@
  {
   "army": "healybois",
   "unit": "the-swarmlord-tyrant-guard",
+  "field": "ability.text",
+  "app": "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+  "source": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "the-swarmlord-tyrant-guard",
   "field": "rules",
   "app": "",
   "source": "Feel No Pain 5+",
@@ -2409,6 +2419,76 @@
  },
  {
   "army": "healybois",
+  "unit": "norn-assimilator-synaptoprescience",
+  "field": "ability.text",
+  "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "norn-assimilator-synaptoprescience",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "norn-assimilator-synaptoprescience-2",
+  "field": "ability.text",
+  "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "norn-assimilator-synaptoprescience-2",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "norn-emissary",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "norn-emissary",
+  "field": "ability",
+  "app": "Unnatural Resilience",
+  "source": "",
+  "reason": "GW names the ability Unnatural Resilience, BSData at the pin (Xenos - Tyranids catalogue revision 3) Unnatural Resistance. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "norn-emissary",
+  "field": "ability",
+  "app": "",
+  "source": "Unnatural Resistance",
+  "reason": "GW names the ability Unnatural Resilience, BSData at the pin (Xenos - Tyranids catalogue revision 3) Unnatural Resistance. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
   "unit": "tyrannofex",
   "field": "stats.base",
   "app": "Tyrannofex: 120×92mm Oval",
@@ -2426,6 +2506,116 @@
   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Reference; GW’s datasheet does not print that keyword. GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: KEYWORDS (no REFERENCE).",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "the-swarmlord",
+  "field": "ability.text",
+  "app": "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+  "source": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-assimilator-synaptoprescience",
+  "field": "ability.text",
+  "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-assimilator-synaptoprescience",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-assimilator-synaptoprescience-2",
+  "field": "ability.text",
+  "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-assimilator-synaptoprescience-2",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-emissary-destabilising-predation",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-emissary-destabilising-predation",
+  "field": "ability",
+  "app": "Unnatural Resilience",
+  "source": "",
+  "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\"",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-emissary-destabilising-predation",
+  "field": "ability",
+  "app": "",
+  "source": "Unnatural Resistance",
+  "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\"",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-emissary",
+  "field": "ability.text",
+  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-emissary",
+  "field": "ability",
+  "app": "Unnatural Resilience",
+  "source": "",
+  "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\"",
+  "by": "hand (Claude)"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "norn-emissary",
+  "field": "ability",
+  "app": "",
+  "source": "Unnatural Resistance",
+  "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\"",
+  "by": "hand (Claude)"
  },
  {
   "army": "u-w0t-m8",

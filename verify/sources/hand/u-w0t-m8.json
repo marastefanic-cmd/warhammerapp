@@ -133,6 +133,21 @@
   },
   "royal-warden": {
    "why": "The Royal Warden leads no unit in this list (Leader: IMMORTALS, NECRON WARRIORS): the export attaches it to none, the Immortals included (the Technomancer supports them); Adaptive Strategy (\"This model’s unit\") is its own. Adaptive Strategy is labelled your Movement, Shooting and Charge phases (verify/derive.js): Fall Back and Advance are moves of your own Movement phase (Core Rules 09.02, 09.07), so its unit cannot have Fallen Back or Advanced in the opponent's Movement phase (Fire Overwatch); as the signed-off Bounding Leaps and Elevated Strider (review result-necrons.json 231348fb544bd6eb)."
+  },
+  "technomancer-immortals": {
+   "defs": {
+    "Rites of Reanimation": {
+     "by": "AI (Claude)",
+     "def": "While the Technomancer leads this unit: Feel No Pain 5+ for its models"
+    }
+   },
+   "why": "The Technomancer supports the Immortals (SUPPORT on GW’s Technomancer datasheet: CANOPTEK WRAITHS, IMMORTALS, NECRON WARRIORS; the export’s “Supporting” association); a support unit leads its bodyguard as a leader does (Core Rules, Leader/Support), so Rites of Reanimation (“While this model is leading a unit”) gives the Immortals and itself Feel No Pain 5+. Technomancer (the ability): at the end of your Movement phase one friendly NECRONS model within 6\" regains up to D3 lost wounds. Implacable Eradication: re-roll a Wound roll of 1, the whole Wound roll against an enemy unit within range of an objective marker. 80 pts: GW’s price of a 1st Technomancer; Immortals 65 (5 models)."
+  },
+  "canoptek-spyders": {
+   "why": "One Canoptek Spyder (65 pts, GW’s 1 model) with its fabricator claw array, gloom prism and two particle beamers (GW’s wargear options). Fabricator Claw Array (Aura): Feel No Pain 6+ for friendly NECRONS VEHICLE units within 6\", its own included; Gloom Prism (Aura): Feel No Pain 5+ against mortal wounds and Psychic Attacks for friendly NECRONS units within 6\", its own included. Canoptek Swarm returns destroyed models to a CANOPTEK SCARAB SWARM unit (models of that unit’s own datasheet: no reference sheet)."
+  },
+  "canoptek-scarab-swarms": {
+   "why": "Three Canoptek Scarab Swarms (40 pts, GW’s 3 models). Chittering swarm (GW’s capitalisation; New Recruit: Chittering Swarm): enemy units in Engagement Range -1 OC (minimum 1); OC 1 within 6\" of a friendly CRYPTEK model (the Technomancer). Self-destruction at the start of the Fight phase."
   }
  },
  "readings": {
@@ -187,6 +202,64 @@
       "when": "Target Below Half-strength",
       "note": "a successful hit roll scores a Critical Hit",
       "from": "Flesh Hunger"
+     }
+    ]
+   },
+   "Immortals": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "Every attack",
+      "note": "re-roll wound rolls of 1",
+      "from": "Implacable Eradication",
+      "always": true,
+      "calc": {
+       "rrWound": "1s"
+      }
+     },
+     {
+      "kind": "all",
+      "when": "Target within range of an objective marker",
+      "cond": "targetObjective",
+      "note": "re-roll the wound roll",
+      "from": "Implacable Eradication",
+      "calc": {
+       "rrWound": "all"
+      }
+     }
+    ]
+   },
+   "Canoptek Spyders": {
+    "guard": [
+     {
+      "from": "Fabricator Claw Array",
+      "needs": {
+       "all": [
+        "Faction: Necrons",
+        "Vehicle"
+       ]
+      },
+      "kind": "all",
+      "when": "Within 6\" of a Canoptek Spyder with a fabricator claw array",
+      "selfWhen": "Own aura",
+      "selfAlways": true,
+      "note": "Feel No Pain 6+",
+      "calc": {
+       "fnp": 6
+      }
+     },
+     {
+      "from": "Gloom Prism",
+      "needs": {
+       "all": [
+        "Faction: Necrons"
+       ]
+      },
+      "kind": "all",
+      "when": "Within 6\" of a Canoptek Spyder with a gloom prism",
+      "selfWhen": "Own aura",
+      "selfAlways": true,
+      "note": "Feel No Pain 5+ against mortal wounds and Psychic Attacks"
      }
     ]
    }

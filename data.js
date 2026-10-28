@@ -874,7 +874,7 @@ const FACTIONS = {
         text:'If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.', mods:[{ kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse', readOf:'2910ec76' }] },
       // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
       { name:'Shadow in the Warp', tag:'Once per battle', ph:['command'], turn:'either',
-        note:'Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”',
+        note:'FAQ (Faction Pack 1.3): “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”',
         text:'If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more **SYNAPSE** units from your army, subtract 1 from that test.' }
     ],
     detachments: {
@@ -2744,7 +2744,7 @@ const ARMIES = [
       abilities:[
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Singular Purpose' },
+        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
         { name:'Protean Purpose' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
@@ -2759,7 +2759,7 @@ const ARMIES = [
       abilities:[
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Singular Purpose' },
+        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
         { name:'Protean Purpose' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
@@ -2774,11 +2774,11 @@ const ARMIES = [
         { name:'neuroblast', kw:['BLAST','PSYCHIC','ANTI-CHARACTER 2+'], from:{ 'ANTI-CHARACTER 2+':'Destabilising Predation' } }
       ],
       abilities:[
-        { name:'Singular Purpose' },
+        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
         { name:'Damaged: 1-5 Wounds Remaining' },
         { name:'Protean Purpose' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' },
-        { name:'Unnatural Resistance' }
+        { name:'Unnatural Resilience' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Anti','Extra Attacks','Melta','Blast','Psychic'],
       why:{ rules:{ Anti:'Destabilising Predation' } }
@@ -2786,7 +2786,13 @@ const ARMIES = [
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:270,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
+      abilities:[
+        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Protean Purpose' },
+        { name:'Unnatural Resilience' }
+      ]
     },
     {
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180, copies:2,
@@ -5329,6 +5335,7 @@ const ARMIES = [
       gear:[['Close combat weapon','Relic gauss blaster']]
     },
     {
+      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'technomancer-immortals', ds:['necrons/technomancer','necrons/immortals'], role:'Character', pts:145, ptsNote:'80 + Immortals 65',
       leads:'Immortals', support:true,
       models:['1× Technomancer','5× Immortal'],
@@ -6569,8 +6576,8 @@ const DATASHEETS = {
     { name:'Bone Sabres', range:'Melee', A:'8', WS:'2+', S:'9', AP:'-2', D:'3', kw:['TWIN-LINKED'] }
   ],
   abilities:[
-    { name:'Hive Commander', ph:['command'], turn:'your', text:'At the start of your Command phase, if this model is on the battlefield, you gain 1CP' },
-    { name:'Malign Presence', tag:'Aura · Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.' },
+    { name:'Hive Commander', ph:['command'], turn:'your', text:'At the start of your Command phase, if this model is on the battlefield, you gain 1CP.' },
+    { name:'Malign Presence', tag:'Aura · Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', note:'Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.' },
     { name:'Domination of the Hive Mind', tag:'Aura', text:'While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**.' }
   ],
   aura:[
@@ -6626,15 +6633,15 @@ const DATASHEETS = {
     { name:'Toxinjecter Harpoon', range:'Melee', A:'4', WS:'2+', S:'12', AP:'-3', D:'D6+1', kw:['EXTRA ATTACKS'] }
   ],
   abilities:[
-    { name:'Harpoon Barbs', tag:'Once per turn', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
+    { name:'Harpoon Barbs', tag:'Once per turn', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.' },
     { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
-    { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.', defOf:'f285866f' },
+    { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.', defOf:'9bba7ef7' },
     { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
     { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining', readOf:'59b4c593', readBy:'derive' },
-    { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle', readOf:'f285866f' }
+    { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle', readOf:'9bba7ef7' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Harpooned','Extra Attacks'],
   kw:['Faction: Tyranids','Great Devourer','Harvester','Monster','Norn Assimilator','Synapse']
@@ -6654,15 +6661,15 @@ const DATASHEETS = {
     { name:'Monstrous scything talons', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'3', kw:[] }
   ],
   abilities:[
-    { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.', defOf:'f285866f' },
+    { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.', defOf:'9bba7ef7' },
     { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
     { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
-    { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.', defOf:'ece97c50' }
+    { name:'Unnatural Resilience', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against **mortal wounds**.', defOf:'e92c7403' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
   mods:[
     { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining', readOf:'59b4c593', readBy:'derive' },
-    { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle', readOf:'f285866f' }
+    { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose', lasts:'battle', readOf:'9bba7ef7' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic'],
   kw:['Faction: Tyranids','Great Devourer','Monster','Norn Emissary','Psyker','Synapse']
@@ -6718,7 +6725,7 @@ const DATASHEETS = {
     { name:'Chitin-barbed limbs', range:'Melee', A:'2', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Seed Spore Mines', tag:'Once per turn', ph:['shooting'], turn:'your', note:'FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.”', text:'Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48" of this unit and more than 8" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit.' }
+    { name:'Seed Spore Mines', tag:'Once per turn', ph:['shooting'], turn:'your', note:'FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.” FAQ (Faction Pack 1.3): “Are Spore Mines units that are added to an army during a battle restricted by abilities that prevent Reserves from being set up within a certain range (e.g. Space Marines Infiltrators’ Omniscrambers)?” “No.”', text:'Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48" of this unit and more than 8" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit.' }
   ],
   rules:['Deadly Demise 1','Synapse','Blast','Devastating Wounds','Heavy','Indirect Fire'],
   kw:['Biovores','Faction: Tyranids','Great Devourer','Infantry']
@@ -9125,7 +9132,7 @@ const DATASHEETS = {
     { name:'Staff of light', range:'Melee', A:'2', WS:'4+', S:'5', AP:'-2', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Rites of Reanimation', text:'While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability.' },
+    { name:'Rites of Reanimation', def:'While the Technomancer leads this unit: Feel No Pain 5+ for its models', text:'While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability.', defOf:'7edd7a78' },
     { name:'Technomancer', ph:['movement'], turn:'your', text:'At the end of your Movement phase, you can select one friendly **NECRONS** model within 6" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.' }
   ]
 },
@@ -9142,6 +9149,10 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Implacable Eradication', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.' }
+  ],
+  mods:[
+    { kind:'all', when:'Every attack', note:'re-roll wound rolls of 1', from:'Implacable Eradication', always:true, calc:{ rrWound:'1s' }, readOf:'08bbc719' },
+    { kind:'all', when:'Target within range of an objective marker', cond:'targetObjective', note:'re-roll the wound roll', from:'Implacable Eradication', calc:{ rrWound:'all' }, readOf:'08bbc719' }
   ]
 },
 'necrons/flayed-ones':{
@@ -9223,6 +9234,10 @@ const DATASHEETS = {
     { name:'Canoptek Swarm', ph:['command'], turn:'your', text:'In your Command phase, select one friendly **CANOPTEK SCARAB SWARM** unit within 6" of this unit. One destroyed model is returned to that **CANOPTEK SCARAB SWARM** unit for each **SPYDER** model in this unit.' },
     { name:'Fabricator Claw Array', tag:'Aura', text:'While a friendly **NECRONS VEHICLE** unit is within 6" of the bearer, that unit has the **Feel No Pain** 6+ ability.' },
     { name:'Gloom Prism', tag:'Aura', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' }
+  ],
+  guard:[
+    { from:'Fabricator Claw Array', needs:{ all:['Faction: Necrons','Vehicle'] }, kind:'all', when:'Within 6" of a Canoptek Spyder with a fabricator claw array', selfWhen:'Own aura', selfAlways:true, note:'Feel No Pain 6+', calc:{ fnp:6 }, readOf:'46bede05' },
+    { from:'Gloom Prism', needs:{ all:['Faction: Necrons'] }, kind:'all', when:'Within 6" of a Canoptek Spyder with a gloom prism', selfWhen:'Own aura', selfAlways:true, note:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', readOf:'fed72424' }
   ],
   rules:['Reanimation Protocols','Deadly Demise 1','Blast','Devastating Wounds'],
   kw:['Canoptek','Faction: Necrons','Fly','Spyders','Vehicle']
@@ -10635,7 +10650,6 @@ const CHECKLIST = {
   "a|1ihdtx":{"x":1},
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
   "a|1ilhdau":{"u":"shooting:your,fight:either","a":1},
-  "a|1ill500":{"u":"movement:opp"},
   "a|1j6lbpi":{"u":"shooting:opp,fight:either"},
   "a|1j9160m":{"t":"command:your","s":1},
   "a|1jln2xs":{"u":"shooting:your"},
@@ -10665,7 +10679,6 @@ const CHECKLIST = {
   "a|1neh4ut":{"u":"shooting:opp,fight:either"},
   "a|1nfdpzv":{"u":"shooting:your,fight:either"},
   "a|1nv0bem":{"at":"Start of the battle round","s":1},
-  "a|1nv8bld":{"t":"command:your","s":1},
   "a|1nwz1gg":{"u":"charge:either,fight:either"},
   "a|1o03wkj":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either","g":[{"name":"Feel No Pain 4+ against Psychic Attacks and mortal wounds","to":{"all":["Faction: Legiones Daemonica","Tzeentch"]},"while":"While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer"}]},
   "a|1o8wyag":{"u":"fight:either"},
@@ -10693,6 +10706,7 @@ const CHECKLIST = {
   "a|1rqmfkd":{"x":1},
   "a|1rt7zjl":{"x":1},
   "a|1rusnxu":{"u":"movement:your,shooting:your,charge:either"},
+  "a|1sn2pk9":{"u":"movement:opp","a":1},
   "a|1sufx47":{"u":"shooting:your"},
   "a|1sul8lz":{"t":"movement:your","u":"charge:your"},
   "a|1susps1":{"u":"shooting:your"},
@@ -10845,6 +10859,7 @@ const CHECKLIST = {
   "a|jwhwv":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|k4qjtt":{"u":"shooting:your,fight:either"},
   "a|k6m54a":{"u":"movement:your","a":1},
+  "a|k82erx":{"t":"command:your","s":1},
   "a|krt302":{"t":"shooting:opp","u":"shooting:opp"},
   "a|kubiv7":{"x":1},
   "a|ll49i1":{"x":1},
@@ -10859,7 +10874,6 @@ const CHECKLIST = {
   "a|mulesq":{"u":"shooting:your"},
   "a|nde2k":{"u":"movement:your"},
   "a|ng4iqf":{"x":1},
-  "a|nyeifg":{"at":"Start of the first battle round","u":"shooting:either,fight:either","s":1},
   "a|nyeigg":{"none":1},
   "a|oa3ptj":{"u":"fight:either"},
   "a|oasam8":{"x":1},
@@ -10877,6 +10891,7 @@ const CHECKLIST = {
   "a|q6x8t0":{"t":"command:your","s":1},
   "a|qdc23c":{"u":"shooting:your,fight:either"},
   "a|qnn5ht":{"t":"movement:your","f":[{"n":"riled up","r":"Waaagh!","u":"command:opp,movement:either,shooting:either,charge:either,fight:either"}]},
+  "a|qv69q0":{"at":"Start of the first battle round","u":"shooting:either,fight:either","s":1},
   "a|qz95px":{"u":"shooting:your"},
   "a|r7358w":{"x":1},
   "a|rqqtzc":{"x":1},
@@ -10884,6 +10899,7 @@ const CHECKLIST = {
   "a|s206db":{"u":"movement:your,charge:your"},
   "a|sctta1":{"x":1},
   "a|sj1p6e":{"u":"shooting:your","a":1},
+  "a|sj36dg":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
   "a|sloufl":{"u":"shooting:opp,fight:either"},
   "a|snh6gk":{"u":"shooting:your"},
   "a|ss613f":{"t":"fight:either","u":"fight:either","s":1},
@@ -10896,7 +10912,6 @@ const CHECKLIST = {
   "a|u86jue":{"t":"shooting:your","s":1},
   "a|uc39pe":{"u":"fight:either","f":[{"n":"riled up","r":"Waaagh!","x":1}]},
   "a|udum88":{"u":"shooting:your,fight:either"},
-  "a|uv4iz0":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},
   "a|uwea7i":{"x":1},
   "a|v2j916":{"t":"shooting:your","s":1},
   "a|v9g10a":{"u":"movement:your,charge:either"},
@@ -11113,7 +11128,7 @@ const GRANTS = [
   { rule:'pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike** until the start of your next Shooting phase.' },
   { rule:'nidzillas · Neurogaunts · Neurocytes', grants:'SYNAPSE', type:'keyword or weapon ability', to:'this unit / model', while:'While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units)', text:'While this unit is within **Synapse Range** of your friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.' },
   { rule:'nidzillas · Norn Assimilator · Singular Purpose', grants:'Feel No Pain 5+', type:'ability', to:'this unit / model', while:'Until the end of the battle', text:'Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
-  { rule:'nidzillas · Norn Emissary · Unnatural Resistance', grants:'Feel No Pain 4+ against Mortal Wounds', type:'ability', to:'this unit / model', while:null, text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' },
+  { rule:'nidzillas · Norn Emissary · Unnatural Resilience', grants:'Feel No Pain 4+ against mortal wounds', type:'ability', to:'this unit / model', while:null, text:'This model has the **Feel No Pain 4+** ability against **mortal wounds**.' },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Mantra of Discipline', grants:'BATTLELINE', type:'keyword or weapon ability', to:'this unit / model', while:'Mantra of Discipline active', text:'This model has the **BATTLELINE** keyword and has the following ability:' },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Shroudpsalm (Aura)', grants:'Stealth', type:'ability', to:{ all:['Faction: Adeptus Mechanicus'] }, while:'Shroudpsalm (Aura) active; While a friendly ADEPTUS MECHANICUS unit is within 6" of this model', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.' },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Mechanicus Bodyguard', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
@@ -11154,7 +11169,7 @@ const GRANTS = [
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','ref','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','ref','leads','support','also','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
