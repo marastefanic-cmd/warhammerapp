@@ -5329,7 +5329,8 @@ function pickOptions(ab, u){
   if(!m || !u) return { section:'', list:[] };
   // ("select one Triarch ability": the box GW names TRIARCH ABILITIES, who "Triarch Abilities: pick one")
   const sec = norm(m[1]), secs = [sec, sec + ' abilities'], under = u.abilities.filter(x => x !== ab && x.who && secs.includes(norm(x.who.replace(/: pick one$/i, ''))));
-  return { section:m[1], list:under.length ? under : u.abilities.filter(x => x !== ab && norm(x.name) === sec) };
+  // (the heading: GW's name of the box the options sit under, "Triarch Abilities", where the text names it otherwise)
+  return { section:under.length ? under[0].who.replace(/: pick one$/i, '') : m[1], list:under.length ? under : u.abilities.filter(x => x !== ab && norm(x.name) === sec) };
 }
 function showEnhancement(key){
   const [did, name] = key.split('|');

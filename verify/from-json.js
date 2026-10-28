@@ -984,7 +984,9 @@ for (const u of units) {
     if (g.tag && ab.tag) ab.tag = ab.tag.split(' · ').map(x => lc(x) === lc(g.tag) ? g.tag : x).join(' · ');
     if (g.tag && !(ab.tag || '').split(' · ').includes(g.tag)) { ab.tag = ab.tag ? ab.tag + ' · ' + g.tag : g.tag; filled.push({ what: 'tag ' + u.name + ' · ' + g.name + ': ' + g.tag, from: g.file + ' (the ability’s name)' }); }
     if (!textEq(g.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: typo(g.name), app: g.text, bsdata: plain, why: 'Wahapedia’s datasheet (the codex) words it otherwise than BSData', file: g.file });
-    if (lc(typo(g.name)) !== lc(ab.name)) { devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: typo(g.name), app: typo(g.name), bsdata: ab.name, why: 'GW’s name for the ability (Wahapedia’s datasheet); BSData names it ' + ab.name, file: g.file }); ab.name = typo(g.name); }
+    // (GW's capitalisation too, "Chittering swarm" for New Recruit's "Chittering Swarm": GW's name, as Wahapedia prints it; a Damaged
+    // band keeps New Recruit's "Damaged: 1-5 Wounds Remaining", as the signed-off lists have it)
+    if (g.damaged ? lc(typo(g.name)) !== lc(ab.name) : typo(g.name) !== ab.name) { devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: typo(g.name), app: typo(g.name), bsdata: ab.name, why: 'GW’s name for the ability (Wahapedia’s datasheet); BSData names it ' + ab.name, file: g.file }); ab.name = typo(g.name); }
   }
   u.abilities = u.abilities.filter(a => !a._drop);
   // a rule GW prints in a header box of its own that BSData's entry does not have (the Daemon Prince of Chaos's Daemonic Allegiance):
@@ -1139,7 +1141,8 @@ if (flag('--compare')) {
     if (JSON.stringify(an) !== JSON.stringify(bn)) out.push(m.id + '.abilities (who|name|tag):\n    data.js ' + JSON.stringify(an) + '\n    export  ' + JSON.stringify(bn));
     for (const ab of u.abilities) { const x = m.abilities.find(y => y.name === ab.name && (y.who || '') === (ab.who || '')); if (x && x.text !== ab.text) out.push(m.id + '.abilities[' + ab.name + '].text:\n    data.js ' + JSON.stringify(x.text) + '\n    export  ' + JSON.stringify(ab.text)); }
   }
-  for (const x of pool) out.push(x.id + ': in data.js, not in the export');
+  // (a reference sheet of models on another sheet's datasheet, ref.of: built after this comparison, from that sheet)
+  for (const x of pool) if (!(x.ref && x.ref.of)) out.push(x.id + ': in data.js, not in the export');
   console.log('# ' + armyId + ': ' + units.length + ' units from the export; ' + out.length + ' difference(s) in the reading; ' + gwOut.length + ' more from GW’s documents\n' + out.map(x => '- ' + x).join('\n') +
     (gwOut.length ? '\n## from GW’s documents (base size guide, datasheet), where data.js has the export’s value\n' + gwOut.map(x => '- ' + x).join('\n') : ''));
   process.exit(0);
@@ -1298,6 +1301,8 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     if (h.statsEvidence) for (const [k, v] of Object.entries(vals)) handStats.push({ unit: uid, row: rn, field: k, value: v, from: (vals0.from || {})[k], why: h.why, evidence: h.statsEvidence });
   }
   // keywords a rule of the list gives that BSData's entry and the export lack (the Forgefiend's SOUL FORGE: Soul Forge Boons)
+  // (and a category of BSData's GW's datasheet does not print, kw.drop: the Chaos Spawn's SPAWN; verify/bsdata.js's difference is declared below)
+  for (const k of (h.kw || {}).drop || []) { const i = u.kw.indexOf(k); if (i < 0) { want(uid + ' · ' + k, 'hand file kw.drop', 'no keyword of this name'); continue; } u.kw.splice(i, 1); handDone.push({ what: 'keyword ' + k + ' of ' + u.name + ' left out', by: 'hand (Claude)', text: h.kw.why }); }
   for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); u.kw.sort(); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
 }
 // ---------------------------------------------------------------- the readings (docs/tables.md, Readings)
@@ -1373,9 +1378,11 @@ for (const u of units) if (u._ref) {
   else want(u.name, 'reference sheet', 'no ability of the list’s units adds a unit of its keywords: write units.' + u.id + '.ref in the hand file');
 }
 // a reference sheet of models GW prints on another reference sheet's datasheet, with no datasheet (nor BSData entry) of their own
-// (the hand file's refs: { of, name, model, carrier, dropKw, ref }): the Brimstone Horrors, on GW's Blue Horrors datasheet ("Every
-// Brimstone Horror added to this unit using the Split ability is equipped with: …"): that datasheet's profile, abilities and rules,
-// the weapons of its carrier line, its keywords but the other models' (BLUE); listed after the sheet it is from
+// (the hand file's refs: { of, name, model, carrier, dropKw, abilities, notes, ref }): the Brimstone Horrors, on GW's Blue Horrors
+// datasheet ("Every Brimstone Horror added to this unit using the Split ability is equipped with: …"): that datasheet's profile and
+// rules, the abilities about these models (abilities: their names; GW's Split and Sullen Malevolence are about BLUE HORROR models),
+// a note on one (notes: { ability: note }, GW's Designer's Note), the weapons of its carrier line, its keywords but the other models'
+// (BLUE); listed after the sheet it is from
 for (const h of (HAND.refs || []).filter(x => x.of)) {
   const src = units.find(x => x._ref && x.name === h.of);
   if (!src) { want(h.name, 'reference sheet', 'no reference sheet ' + h.of + ' in this list to build it from'); continue; }
@@ -1383,8 +1390,9 @@ for (const h of (HAND.refs || []).filter(x => x.of)) {
   const ranged = rows('ranged'), melee = rows('melee');
   if (!ranged.length && !melee.length) { want(h.name, 'reference sheet', 'no weapon of ' + h.of + ' has the carrier "' + h.carrier + '"'); continue; }
   const u = { id: slug(h.name), name: h.name, role: 'Reference', pts: 0, ref: h.ref, models: ['1× ' + h.model], gear: [ranged.concat(melee).map(w => w.name)],
-    stats: [Object.assign(JSON.parse(JSON.stringify(src.stats[0])), { name: h.model })], ranged, melee, abilities: JSON.parse(JSON.stringify(src.abilities)),
+    stats: [Object.assign(JSON.parse(JSON.stringify(src.stats[0])), { name: h.model })], ranged, melee, abilities: JSON.parse(JSON.stringify(src.abilities.filter(a => !h.abilities || h.abilities.includes(a.name)))),
     rules: src.rules.slice(), kw: src.kw.filter(k => !(h.dropKw || []).includes(k)) };
+  for (const [an, note] of Object.entries(h.notes || {})) { const ab = u.abilities.find(a => a.name === an); if (!ab) { want(h.name + ' · ' + an, 'hand file note', 'no ability of this name'); continue; } const t = ab.text; delete ab.text; ab.note = note; ab.text = t; }
   hide(u, { _ref: true, _at: src._at }); u._parts = [];
   units.splice(units.indexOf(src) + 1, 0, u);
   handDone.push({ what: 'reference sheet ' + h.name + ' (from ' + h.of + ')', by: 'hand (Claude)', text: JSON.stringify(h.ref) });

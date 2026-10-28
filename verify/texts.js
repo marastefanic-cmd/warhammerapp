@@ -1409,13 +1409,17 @@ function nearLine(n, src) {
 // (its rule or stratagem, the unit's abilities), which the other checks verify.
 const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k)));   // GW's first
 // (and, for a note on a unit's ability, the unit's Wahapedia datasheets: a Designer's Note GW prints under an ability, verify/.cache/waha/ds)
+// (a page is "<faction>_<Datasheet>.html" as verify/fetch.sh names it from sources/waha-datasheets.txt: the list's faction first, then
+// its Wahapedia id in sources/factions.json, then any other, an ally's)
+const WAHA_ID = (() => { try { return Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(path.join(VERIFY, 'sources', 'factions.json'), 'utf8'))).filter(([k, v]) => k[0] !== '_' && v && v.waha).map(([k, v]) => [k, v.waha])); } catch (e) { return {}; } })();
 const dsDocIds = (faction, names) => {
   const dir = path.join(CACHE, 'waha', 'ds'), key = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
-  const want = new Set(names.filter(Boolean).map(key)), out = [];
-  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
-    if (!f.startsWith(faction + '_') || !f.endsWith('.html') || !want.has(key(f.slice(faction.length + 1, -5)))) continue;
+  const want = new Set(names.filter(Boolean).map(key)), out = [], pre = [faction, WAHA_ID[faction]].filter(Boolean);
+  const files = (fs.existsSync(dir) ? fs.readdirSync(dir) : []).filter(f => f.endsWith('.html') && f.includes('_') && want.has(key(f.slice(f.indexOf('_') + 1, -5))));
+  const rank = f => { const i = pre.indexOf(f.slice(0, f.indexOf('_'))); return i < 0 ? pre.length : i; };
+  for (const f of files.sort((a, b) => rank(a) - rank(b))) {
     const id = 'wahads:' + f.slice(0, -5);
-    if (!DOCS[id]) loadWahaHtml(id, path.join(dir, f), 'Wahapedia datasheet ' + f.slice(faction.length + 1, -5));
+    if (!DOCS[id]) loadWahaHtml(id, path.join(dir, f), 'Wahapedia datasheet ' + f.slice(f.indexOf('_') + 1, -5));
     out.push(id);
   }
   return out;
@@ -1449,7 +1453,9 @@ for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities 
   const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
   // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
   const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.flatMap(d => detRules_(d).map(r => r.text)));
-  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own, dsDocIds(a.faction, [u.name, u.leads].concat((u.also || []).map(c => c.name))));
+  // (a reference sheet's: also the sheet it is from and the unit whose rule adds it, the Pink Horrors' Designer's Note on the Brimstone Horrors)
+  const by = u.ref && a.units.find(x => x.id === u.ref.by), names = x => [x.name, x.leads].concat((x.also || []).map(c => c.name));
+  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own, dsDocIds(a.faction, names(u).concat(u.ref ? [u.ref.of] : [], by ? names(by) : [])));
 }
 
 /* ------------------------------------------------------------------ deviations, output, provenance */

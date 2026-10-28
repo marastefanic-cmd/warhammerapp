@@ -304,7 +304,10 @@ function resolveRoster(j, D, opt){
     const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);
   }
   // (and one a stratagem of the imported detachments adds, ref.strat: Gift of Change's Chaos Spawn, from an app list of those detachments)
-  for(const a of pool) for(const r of allOf(a).filter(r => r.ref && r.ref.strat && dets.some(k => ((FAC.detachments[k] || {}).stratagems || []).some(s => s.id === r.ref.strat)))){
+  // (and only when an imported unit is one it can target: Gift of Change's THOUSAND SONS CHARACTER excluding MONSTERS)
+  const has = (x, k) => (x.kw || []).some(y => y.toLowerCase() === k.toLowerCase()), can = (nd, x) => !nd || ((nd.all || []).every(k => has(x, k)) && (!nd.any || nd.any.some(k => has(x, k))) && !(nd.none || []).some(k => has(x, k)));
+  const stOf = id => dets.map(k => ((FAC.detachments[k] || {}).stratagems || []).find(s => s.id === id)).find(Boolean);
+  for(const a of pool) for(const r of allOf(a).filter(r => r.ref && r.ref.strat && stOf(r.ref.strat) && units.some(x => !x.ref && can(stOf(r.ref.strat).needs, x)))){
     if(units.some(u => u.ref && u.name === r.name && u.ref.strat === r.ref.strat)) continue;
     const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);
   }

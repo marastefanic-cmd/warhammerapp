@@ -134,6 +134,9 @@ function check(file){
         const st = detachmentsOf(a).flatMap(d => d.stratagems || []).find(x => x.id === u.ref.strat);
         if(!st || st.name !== u.ref.rule) P(where, 'ref names no stratagem of the list’s detachments:', u.ref.strat + ' · ' + u.ref.rule);
         else if(!String(st.effect || '').replace(/\*\*/g, '').includes(u.ref.quote)) P(where, 'ref quote is not in the EFFECT of', u.ref.rule);
+        // (and a unit of the list it can target: Gift of Change, a THOUSAND SONS CHARACTER model excluding MONSTERS)
+        const has = (x, k) => (x.kw || []).some(y => y.toLowerCase() === k.toLowerCase()), can = (n, x) => !n || ((n.all || []).every(k => has(x, k)) && (!n.any || n.any.some(k => has(x, k))) && !(n.none || []).some(k => has(x, k)));
+        if(st && !a.units.some(x => !x.ref && can(st.needs, x))) P(where, 'no unit of the list can be the target of', u.ref.rule);
         if(u.ref.by) P(where, 'a stratagem’s reference sheet names a unit too:', u.ref.by);
       }
       else if(u.ref){

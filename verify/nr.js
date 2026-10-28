@@ -717,8 +717,9 @@ function compareArmy(D, A, nr, out, srcFile) {
     pool.splice(pool.indexOf(c[0]), 1);
     pairs.push([nu, c[0]]);
   }
-  // (a reference sheet New Recruit's PDF does not print, built from BSData's datasheet: verify/from-json.js --refs, the hand file's refs)
-  for (const u of pool) { if (u.ref) continue; chk('units'); fail(u.id, 'unit', u.name + ' ' + u.pts, null); }
+  // (a reference sheet New Recruit's PDF cannot print: one a stratagem adds, ref.strat, or one of models on another sheet's datasheet,
+  // ref.of; a reference entry New Recruit has, Spore Mines (Biovore), must be in the PDF)
+  for (const u of pool) { if (u.ref && (u.ref.strat || u.ref.of)) continue; chk('units'); fail(u.id, 'unit', u.name + ' ' + u.pts, null); }
 
   // roster (page 1): who leads whom, the points of each part, copies, role, model counts
   const roster = nr.roster.map(r => Object.assign({ used: false }, r));
