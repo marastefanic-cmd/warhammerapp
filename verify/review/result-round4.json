@@ -1,0 +1,26 @@
+[
+ {
+  "key": "840be609f54574df",
+  "where": "runImport",
+  "verdict": "ok",
+  "why": "The pending judgement (verify/out/helpers-todo.json at 3cb8c3f, its only item) is runImport with D.armies.push(splitRefs(A)): correct. My round-1 “fix” was for the resolve it calls; the fix went into import.js resolveRoster (allOf), and runImport itself needed no change. Built-app checks in rounds 2–3: live imports of Healybois, Tzeeeeentch and Mucho Mutantes bring their reference sheets."
+ },
+ {
+  "key": "d2928b5fe462675e",
+  "where": "tzeeeeentch · Brimstone Horrors · Exploding Horrors",
+  "verdict": "ok",
+  "why": "Label now “Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet)”; the words are GW’s Faction Pack Chaos Daemons text (Pink Horrors datasheet). r4 snapshots differ from r3 only in this line (tzeeeeentch 3763); the other five are identical."
+ },
+ {
+  "key": "r4-from-json-caseNames",
+  "where": "verify/from-json.js · caseNames (45e80e7) + verify/sources/hand/u-w0t-m8.json",
+  "verdict": "ok",
+  "why": "GW’s casing only for names the hand file lists (Chittering Swarm → Chittering swarm); --compare of big-demons-baby, fellhammer, melee, ooga-booga, pubstomper, purge-goes-the-foe, shooty and u-w0t-m8 at 3cb8c3f equals 8529288’s again (no rename on a future rebuild)."
+ },
+ {
+  "key": "r4-texts-dsDocIds",
+  "where": "verify/texts.js · dsDocIds per name (45e80e7)",
+  "verdict": "ok",
+  "why": "Per datasheet name, the list faction’s and its Wahapedia id’s pages when any exist, another faction’s only as fallback (ally); as proposed. Builder’s gate texts PASS."
+ }
+]
