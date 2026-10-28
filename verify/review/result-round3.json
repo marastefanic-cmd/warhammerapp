@@ -1,0 +1,121 @@
+[
+ {
+  "key": "d80e098a127f360b",
+  "where": "tzeeeeentch · Brimstone Horrors · Exploding Horrors",
+  "verdict": "fix",
+  "why": "The words are GW’s, word for word: GW’s own Faction Pack Chaos Daemons (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-…txt lines 1562-1565, Pink Horrors datasheet, under HORRORS ARE PINK…) prints “Designer’s Note: While this unit contains one or more Pink Horror models, the Sullen Malevolence and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit.” (keywords upper-cased as the app writes them). Only the label is off: it is GW’s document, not just Wahapedia, and texts.js already finds the quote there first (ALL_DOCS before the Wahapedia pages). Label it as the list’s other Faction Pack quotes are labelled.",
+  "fix": {
+   "note": "Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”"
+  }
+ },
+ {
+  "key": "14546918c4058389",
+  "where": "tzeeeeentch · Brimstone Horrors · abilities",
+  "verdict": "fix",
+  "why": "Exploding Horrors only is right (Split and Sullen Malevolence are about BLUE HORROR models); the note’s label as d80e098a127f360b.",
+  "fix": {
+   "abilities": [
+    "Exploding Horrors"
+   ],
+   "note": "Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”"
+  }
+ },
+ {
+  "key": "eeac500374b68245",
+  "where": "pickOptions",
+  "verdict": "ok",
+  "why": "Heading is the options’ who less “: pick one” when the who-match found them, else the text’s words. Only the Silent King’s heading changed (“TO PICK FROM: TRIARCH ABILITIES”); Angron/Fulgrim/Wazdakka headings are unchanged (no other snapshot changed)."
+ },
+ {
+  "key": "a76b3176c30a8b21",
+  "where": "resolveRoster",
+  "verdict": "ok",
+  "why": "The ref.strat sheet comes only when an imported non-reference unit meets the stratagem’s needs (all/any/none; unless/rule/attached are not read — none of Gift of Change’s, and the effect is only to bring a sheet more often). Live import of the Mucho Mutantes export still brings chaos-spawn (gate import PASS)."
+ },
+ {
+  "key": "be66113a27322e84",
+  "where": "deviations-bsdata.json · canoptek-scarab-swarms · ability",
+  "verdict": "ok",
+  "why": "Applied as the coordinator ruled (Wahapedia’s casing as GW’s): data.js DATASHEETS necrons/canoptek-scarab-swarms has “Chittering swarm”, no “Chittering Swarm” left in data.js or the hand files; deviation evidence the Wahapedia page."
+ },
+ {
+  "key": "21054c79d9a96dfc",
+  "where": "deviations-bsdata.json · canoptek-scarab-swarms · ability",
+  "verdict": "ok",
+  "why": "The BSData-name half of the same rename, declared."
+ },
+ {
+  "key": "9c952d7ed5b6c277",
+  "where": "deviations-bsdata.json · chaos-spawn · kw",
+  "verdict": "ok",
+  "why": "GW KEYWORDS: BEAST; CHAOS; TZEENTCH; MUTANT; CHAOS SPAWN. SPAWN left out and declared."
+ },
+ {
+  "key": "289f26aa2817bb20",
+  "where": "mucho-mutantes · Chaos Spawn · SPAWN",
+  "verdict": "ok",
+  "why": "data.js row thousand-sons/chaos-spawn kw has no Spawn; the snapshot loses SPAWN only. (--compare mucho-mutantes now lists chaos-spawn.kw with Spawn: --compare runs before the hand kw.drop; cosmetic, like its ranged [] line.)"
+ },
+ {
+  "key": "489ffbf222fb5542",
+  "where": "DATASHEETS necrons/canoptek-scarab-swarms · Chittering swarm",
+  "verdict": "ok",
+  "why": "As be66113a27322e84."
+ },
+ {
+  "key": "f4ba4659d146893f",
+  "where": "verify/from-json.js · --compare",
+  "verdict": "ok",
+  "why": "--compare tzeeeeentch no longer reports brimstone-horrors (7 differences, as before the sheet)."
+ },
+ {
+  "key": "be2a4b38ff14d247",
+  "where": "verify/from-json.js · of-sheets",
+  "verdict": "ok",
+  "why": "abilities filter and notes (want when the ability is missing); --write tzeeeeentch reproduces data.js."
+ },
+ {
+  "key": "e732db59bdd3e901",
+  "where": "verify/from-json.js · hand kw.drop",
+  "verdict": "ok",
+  "why": "kw.drop removes a named keyword (want if absent) before readings; --write --refs mucho-mutantes reproduces data.js; bsdata PASS with the declaration."
+ },
+ {
+  "key": "c60849479677392f",
+  "where": "verify/from-json.js · GW's ability name",
+  "verdict": "fix",
+  "why": "Mechanically right for Chittering swarm, but the claim “only Fellhammer’s next rebuild would change” is wrong. --compare of all 24 exports at ffb0449 vs 8529288 shows the rule renaming signed-off abilities in 7 lists: big-demons-baby (Forwards, For Blood! → Forwards, for Blood!), melee and ooga-booga (Prophet of Da Great Waaagh! → Prophet of da Great Waaagh!), pubstomper (Herd banner → Herd Banner), purge-goes-the-foe (Broad spectrum data-tether → Broad Spectrum Data-tether), shooty (Might is Right → Might Is Right), fellhammer (Voice eater → Voice Eater). Wahapedia’s casing goes both ways, so the rule is no consistency rule; and a rename on a rebuild also renames the shared DATASHEETS row (the reuse step writes GW’s name, gwName), moves CHECKLIST keys and makes approvals and hand-file entries keyed by the old name stale. data.js is unchanged now, so nothing is wrong yet. Recommendation: do not rebuild Fellhammer alone. Either make the case-only rename explicit per list (fix below: only names a hand file lists), which keeps every other list’s rebuild stable; or, if the owner wants Wahapedia’s casing everywhere, sweep all 7 lists (+ their shared rows) in one change with declarations, not one at a time.",
+  "fix": "verify/from-json.js:989: `const caseGW = new Set((HAND.caseNames || []).map(nm));` and `if (g.damaged || !caseGW.has(nm(ab.name)) ? lc(typo(g.name)) !== lc(ab.name) : typo(g.name) !== ab.name) { … }`, with verify/sources/hand/u-w0t-m8.json `\"caseNames\": [\"Chittering Swarm\"]` (why: the coordinator’s ruling, Wahapedia’s casing as GW’s). --compare of the other 23 exports then equals 8529288’s again."
+ },
+ {
+  "key": "e45027f7388b082a",
+  "where": "app.html · pickOptions heading",
+  "verdict": "ok",
+  "why": "As eeac500374b68245."
+ },
+ {
+  "key": "3c607f82fd1b3719",
+  "where": "verify/texts.js · dsDocIds",
+  "verdict": "fix",
+  "why": "Order is right, but the order does not limit anything: every page of a wanted name, of any faction, is passed to locate(), so a note on a list’s unit can be “found” on a same-named datasheet of another faction (Chaos Spawn exists for several Chaos factions, Daemon Princes, Lords of Change). Pages are only of the unit’s own names (unit, leader, also, ref.of, the adding unit), so it cannot match another unit of the same faction; the risk is the same name in another faction. Use another faction’s page only when the list’s faction (or its Wahapedia id) has none of that name (the ally case the comment means).",
+  "fix": "verify/texts.js dsDocIds, after `const rank = …`: `const byName = new Map(); for (const f of files) { const k = key(f.slice(f.indexOf('_') + 1, -5)); if (!byName.has(k)) byName.set(k, []); byName.get(k).push(f); }` and loop over `[...byName.values()].flatMap(fs => { const own = fs.filter(f => rank(f) < pre.length); return (own.length ? own : fs).sort((a, b) => rank(a) - rank(b)); })` instead of `files.sort(…)`. (Gate texts unchanged: the Brimstone note is found in the Faction Pack first anyway.)"
+ },
+ {
+  "key": "b73cd49097cb5b4b",
+  "where": "verify/nr.js · PDF compare",
+  "verdict": "ok",
+  "why": "Only ref.strat and ref.of are skipped; Spore Mines (Biovore) must be in the PDF. nr PASS."
+ },
+ {
+  "key": "1d164f087642e8e6",
+  "where": "check.js + import.js · ref.strat",
+  "verdict": "ok",
+  "why": "check.js: a non-reference unit meeting all/any/none of the stratagem’s needs (Mucho Mutantes: Ahriman, Exalted Sorcerer, Shamans); import.js the same test. Fine; unless/rule/attached not read (none used by Gift of Change)."
+ },
+ {
+  "key": "r3-gate",
+  "where": "gate ffb0449",
+  "verdict": "ok",
+  "why": "Full node verify/run.js on ffb0449 (scratch worktree, cache two-cache): every step passes except snapshots (healybois, mucho-mutantes, nidzillas, shooty, tzeeeeentch, u-w0t-m8) and helpers (198 to check). The six snapshots equal two-work/r3/*-snapshot.txt byte for byte; against r2 only tzeeeeentch (Brimstone: Split/Sullen Malevolence out, note in), u-w0t-m8 (Chittering swarm ×2, TO PICK FROM: TRIARCH ABILITIES) and mucho-mutantes (SPAWN out) changed. --write of u-w0t-m8, tzeeeeentch, healybois and --write --refs of mucho-mutantes reproduce data.js (u-w0t-m8 only drops fingerprint stamps, as every rerun does). --compare: see c60849479677392f."
+ }
+]
