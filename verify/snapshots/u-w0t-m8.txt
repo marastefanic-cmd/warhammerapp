@@ -1,0 +1,4859 @@
+######## army · HEALYBOIS U w0t m8?
+Necrons · 2000 / 2000 pts · Strike Force
+
+Obeisance Phalanx · The Phaeron’s Armoury
+
+Dispositions: Disruption · Priority Assets (chosen)
+
+Overview
+Phase checklist
+Bases & proxies
+26
+Units
+11
+Stratagems
+19
+Ranged weapons
+18
+Melee weapons
+13
+Abilities
+27
+Rules
+Damage calculator
+
+New Recruit, exported 28 Oct 2026 (JSON)
+
+######## checklist · U W0T M8? Phase checklist
+PHASE BY PHASE
+RESET
+Start of the battle round
+1 to do
+
+TO DO NOW
+
+Triarch Abilities · The Silent King
+Command · Your turn
+4 to do · 2 once per battle
+
+TO DO NOW
+
+Reanimation Protocols · Necrons army rule
+Worthy Foes · Obeisance Phalanx
+Grand Strategist · Imotekh the Stormlord
+Canoptek Swarm · Canoptek Spyders
+
+ONCE PER BATTLE
+
+Lord of the Storm · Imotekh the Stormlord
+Engrammatic Logic · Royal Warden
+Command · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Movement · Your turn
+1 to do · 2 active · 1 once per battle
+
+TO DO NOW
+
+Technomancer · Technomancer
+
+ACTIVE NOW
+
+Relentless March (Triarch Abilities) · The Silent King
+Tunnelling Horrors · Ophydian Destroyers
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Movement · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Shooting · Your turn
+2 active · 1 once per battle
+
+ACTIVE NOW
+
+Worthy Foes · Obeisance Phalanx
+Phaeron of the Stars (Triarch Abilities) · The Silent King
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Shooting · Their turn
+1 once per battle
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Charge · Your turn
+1 active · 1 once per battle
+
+ACTIVE NOW
+
+Phaeron of the Blades (Triarch Abilities) · The Silent King
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Charge · Their turn
+1 active · 1 once per battle
+
+ACTIVE NOW
+
+Phaeron of the Blades (Triarch Abilities) · The Silent King
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Fight · Your turn
+1 to do · 3 active · 1 once per battle
+
+TO DO NOW
+
+Self-destruction · Canoptek Scarab Swarms
+
+ACTIVE NOW
+
+Worthy Foes · Obeisance Phalanx
+Phaeron of the Stars (Triarch Abilities) · The Silent King
+Phaeron of the Blades (Triarch Abilities) · The Silent King
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+Fight · Their turn
+1 to do · 3 active · 1 once per battle
+
+TO DO NOW
+
+Self-destruction · Canoptek Scarab Swarms
+
+ACTIVE NOW
+
+Worthy Foes · Obeisance Phalanx
+Phaeron of the Stars (Triarch Abilities) · The Silent King
+Phaeron of the Blades (Triarch Abilities) · The Silent King
+
+ONCE PER BATTLE
+
+Engrammatic Logic · Royal Warden
+End of your opponent’s turn
+1 to do
+
+TO DO NOW
+
+Tunnelling Horrors · Ophydian Destroyers
+
+Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## pregame · U W0T M8? Overview
+YOUR LIST
+WARLORD
+The Silent King
+ATTACHED
+Technomancer supports Immortals
+DETACH­MENTS
+Obeisance Phalanx (2 DP), The Phaeron’s Armoury (1 DP)
+DISPOSI­TIONS
+Disruption · Priority Assets (chosen)
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Reanimation Protocols
+Your Command
+
+If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols:
+
+When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.
+Worthy Foes
+Obeisance Phalanx · Your Command/Shoot · Fight
+
+In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack that targets that unit, add 1 to the Wound roll.
+
+APPLIES TOImotekh the Stormlord, The Silent King
+
+Empowered Engines
+The Phaeron’s Armoury · Your Movement
+
+Friendly NECRONS TITANIC FLY units have +6" M.
+
+This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
+
+APPLIES TOTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Ophydian Destroyers 80 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+INFILTRATORS
+Flayed Ones Infiltrators
+START OF THE BATTLE AND THE BATTLE ROUNDS
+EVERY ROUND
+Triarch Abilities · The Silent King
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Lord of the Storm · Imotekh the Stormlord
+Engrammatic Logic · Royal Warden
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+2
+Imotekh the Stormlord
+5"
+5
+2+
+6
+6+
+1
+4+
+100
+The Silent King
+Warlord
+420
+Szarekh
+8"
+10
+2+
+16
+6+
+6
+4+
+Triarchal Menhir×2
+8"
+10
+2+
+5
+6+
+1
+4+
+CHARACTERS
+2
+Royal Warden
+5"
+5
+3+
+4
+6+
+1
+–
+50
+Technomancer
++ Immortals
+145
+Technomancer
+10"
+4
+4+
+4
+6+
+1
+–
+Immortals×5
+5"
+5
+3+
+1
+7+
+2
+–
+INFANTRY
+2
+Flayed Ones
+×5
+5"
+4
+4+
+1
+7+
+1
+–
+55
+Ophydian Destroyers
+×3
+10"
+5
+4+
+3
+7+
+2
+–
+80
+SWARMS
+1
+Canoptek Scarab Swarms
+×3
+10"
+2
+6+
+4
+8+
+0
+–
+40
+VEHICLES
+4
+Canoptek Reanimator
+8"
+6
+3+
+6
+8+
+3
+–
+75
+Canoptek Spyders
+5"
+7
+3+
+6
+8+
+2
+–
+65
+Tesseract Vault
+1 of 2
+14"
+12
+2+
+24
+7+
+8
+4+
+465
+Tesseract Vault
+2 of 2
+14"
+12
+2+
+24
+7+
+8
+4+
+505
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Imotekh the Stormlord
+Gauntlet of Fire
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Staff of the Destroyer
+18"
+3
+2+
+6
+-3
+2
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+The Silent King
+Warlord
+Sceptre of Eternal GlorySZAREKH
+24"
+2
+2+
+10
+-3
+3
+DEVASTATING WOUNDS
+Staff of StarsSZAREKH
+24"
+12
+2+
+6
+-1
+1
+INDIRECT FIRE
+Annihilator beam×2
+24"
+1
+2+
+14
+-4
+6
+Damaged (Szarekh 1-6 wounds left): -1 to hit rolls; Szarekh’s weapons: halve A (Damaged: 1-6 wounds remaining)
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
+Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Royal Warden
+Relic gauss blaster
+24"
+2
+3+
+5
+-1
+2
+LETHAL HITS, RAPID FIRE 2
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Technomancer
++ Immortals
+TECHNOMANCER
+Staff of light
+18"
+3
+4+
+5
+-2
+1
+IMMORTALS
+Gauss blaster×5
+24"
+2
+3+
+5
+-1
+1
+LETHAL HITS
+Every attack: re-roll wound rolls of 1 (Implacable Eradication)
+Target within range of an objective marker: re-roll the wound roll (Implacable Eradication)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Canoptek Reanimator
+Atomiser beam×2
+12"
+3
+4+
+6
+-2
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Canoptek Spyders
+Particle beamer×2
+18"
+D6
+3+
+6
+0
+1
+BLAST, DEVASTATING WOUNDS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Tesseract Vault
+1 of 2
+Cosmic fire
+18"
+3D6
+–
+6
+-2
+1
+IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER
+Time’s arrow
+24"
+1
+2+
+3
+-2
+6
+ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
+1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+Tesseract Vault
+2 of 2
+Cosmic fire
+18"
+3D6
+–
+6
+-2
+1
+IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER
+Time’s arrow
+24"
+1
+2+
+3
+-2
+6
+ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
+1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Imotekh the Stormlord
+Staff of the Destroyer
+4
+2+
+6
+-3
+2
+DEVASTATING WOUNDS
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+The Silent King
+Warlord
+Weapons of the Final TriarchSZAREKH
+12
+2+
+8
+-3
+2
+LETHAL HITS
+Armoured bulk×2
+1
+4+
+4
+0
+1
+Damaged (Szarekh 1-6 wounds left): -1 to hit rolls; Szarekh’s weapons: halve A (Damaged: 1-6 wounds remaining)
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
+Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Own aura, if it has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Suffer No Rival: [PRECISION], Fight phase, not yet selected to fight, until the end of the phase
+Royal Warden
+Close combat weapon
+4
+3+
+5
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Technomancer
++ Immortals
+TECHNOMANCER
+Staff of light
+2
+4+
+5
+-2
+1
+IMMORTALS
+Close combat weapon×5
+2
+3+
+4
+0
+1
+Every attack: re-roll wound rolls of 1 (Implacable Eradication)
+Target within range of an objective marker: re-roll the wound roll (Implacable Eradication)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Flayed Ones
+Flayer claws×5
+4
+3+
+4
+-1
+1
+SUSTAINED HITS 1, TWIN-LINKED
+Target Below Half-strength: a successful hit roll scores a Critical Hit (Flesh Hunger)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Ophydian Destroyers
+Ophydian hyperphase weapons×3
+5
+3+
+4
+-2
+2
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Canoptek Scarab Swarms
+Feeder mandibles×3
+6
+5+
+2
+0
+1
+LETHAL HITS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Canoptek Reanimator
+Reanimator’s claws
+4
+4+
+5
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Canoptek Spyders
+Automaton claws
+5
+4+
+8
+-2
+2
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+Tesseract Vault
+1 of 2
+Armoured bulk
+6
+4+
+8
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Tesseract Vault
+2 of 2
+Armoured bulk
+6
+4+
+8
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+
+######## abilities · MELEE Abilities
+Imotekh the Stormlord
+Grand Strategist
+Your Command
+
+Command · Your turn
+
+At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
+
+Lord of the Storm
+Once per battle
+Your Command
+
+Once per battle · Command · Your turn
+
+Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
+
+The Silent King
+Warlord
+Damaged: 1-6 wounds remaining
+
+While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll.
+
+Triarch Abilities
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
+
+The Silent King
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.
+
+Triarchal Menhirs
+
+If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.
+
+Supreme Commander
+
+If this unit is in your army, it must be your Warlord.
+
+TRIARCH ABILITIES: PICK ONE
+Phaeron of the Stars
+Their Move · Your Shoot · Fight
+
+Aura · Their Movement / Your Shooting / Fight (either turn)
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+Phaeron of the Blades
+Charge/Fight
+
+Aura · Charge / Fight · Either turn
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
+
+Relentless March
+Your Movement
+
+Aura · Movement · Your turn
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.
+
+Royal Warden
+Adaptive Strategy
+Your Move/Shoot/Charge
+
+Movement / Shooting / Charge · Your turn
+
+This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+
+Engrammatic Logic
+Once per battle
+Any phase
+
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly NECRONS unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+
+Technomancer
++ Immortals
+TECHNOMANCER
+Rites of Reanimation
+
+While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.
+
+Technomancer
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, you can select one friendly NECRONS model within 6" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.
+
+IMMORTALS
+Implacable Eradication
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.
+
+Flayed Ones
+Flesh Hunger
+Fight
+
+Fight · Either turn
+
+Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful Hit roll scores a Critical Hit.
+
+Ophydian Destroyers
+Tunnelling Horrors
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Canoptek Scarab Swarms
+Self-destruction
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, if this unit is within Engagement Range of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a VEHICLE. On a 2-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds.
+
+Chittering swarm
+
+While an enemy unit is within Engagement Range of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6" of one or more friendly CRYPTEK models, the Objective Control characteristic of models in this unit is 1.
+
+Canoptek Reanimator
+Nanoscarab Reanimation Beam
+
+Aura
+
+While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.
+
+Canoptek Spyders
+Canoptek Swarm
+Your Command
+
+Command · Your turn
+
+In your Command phase, select one friendly CANOPTEK SCARAB SWARM unit within 6" of this unit. One destroyed model is returned to that CANOPTEK SCARAB SWARM unit for each SPYDER model in this unit.
+
+Fabricator Claw Array
+
+Aura
+
+While a friendly NECRONS VEHICLE unit is within 6" of the bearer, that unit has the Feel No Pain 6+ ability.
+
+Gloom Prism
+
+Aura
+
+While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.
+
+Tesseract Vault
+1 of 2
+Damaged: 1-8 wounds remaining
+Your Shooting
+
+Shooting · Your turn
+
+While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
+
+Powers of the C’tan
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+Tesseract Vault
+2 of 2
+Damaged: 1-8 wounds remaining
+Your Shooting
+
+Shooting · Your turn
+
+While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
+
+Powers of the C’tan
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+######## rules · ABILITIES Rules
+Necrons · Priority Assets
+ARMY RULES
+Reanimation Protocols
+Your Command
+
+If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols:
+
+When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.
+DETACHMENTS
+OBEISANCE PHALANX
+Worthy Foes
+Detachment rule · Your Command/Shoot · Fight
+
+In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack that targets that unit, add 1 to the Wound roll.
+
+APPLIES TOImotekh the Stormlord, The Silent King
+
+Other enhancements
+4 not in this list
+Honourable Combatant 10 pts
+
+OVERLORD model only. Each time the bearer’s unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any.
+
+Unflinching Will 20 pts
+
+OVERLORD model only. The bearer’s melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities.
+
+Warrior Noble 15 pts
+
+OVERLORD model only. Each time a melee attack targets the bearer’s unit, subtract 1 from the Hit roll.
+
+Eternal Conqueror 25 pts
+
+OVERLORD model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll.
+
+STRATAGEMSTerritorial Obsession, Enslaved Artifice, Nanoassembly Protocols, Suffer No Rival, Your Time Is Nigh, Sentinels of Eternity (no unit in this list)
+
+THE PHAERON’S ARMOURY
+Empowered Engines
+Detachment rule · Your Movement
+
+Friendly NECRONS TITANIC FLY units have +6" M.
+
+This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
+
+APPLIES TOTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Other enhancements
+2 not in this list
+Prelocational Optimiser 25 pts
+
+NECRONS model only. When this unit is selected to shoot, if this unit was set up using a Monolith’s Eternity Gate ability this turn, this unit’s ranged attacks have:
+
+[LETHAL HITS].
+Or: [SUSTAINED HITS 1].
+Mortality Shroud (Aura) 10 pts
+
+OBELISK unit only. In your opponent’s Battle-shock step, if an enemy unit within 8" of this unit is below starting strength, that enemy unit makes a battle-shock roll.
+
+STRATAGEMSSubsurface Quantumweave, Particle Pulse, Cosmic Storm
+
+UNIT RULES
+Deadly Demise
+The Silent King D6+3 (Szarekh model only)
+Canoptek Spyders 1
+Tesseract Vault (1 of 2) D6+3
+Tesseract Vault (2 of 2) D6+3
+Deep Strike
+Ophydian Destroyers
+Feel No Pain
+Technomancer + Immortals
+Rites of Reanimation: While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.
+Canoptek Reanimator 4+
+Canoptek Spyders
+Fabricator Claw Array: While a friendly NECRONS VEHICLE unit is within 6" of the bearer, that unit has the Feel No Pain 6+ ability.
+Gloom Prism: While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.
+Infiltrators
+Flayed Ones
+Leader
+Imotekh the Stormlord
+Royal Warden
+Psychic
+Canoptek Spyders
+Gloom Prism: While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.
+Stealth
+Flayed Ones
+Support
+Technomancer supports Immortals
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+5× 28.5mm
+6× 32mm
+4× 40mm
+6× 50mm
+2× 60mm
+1× 100mm
+2× 120×92mm Oval
+
+WHAT TO WRITE ON EACH BASE
+
+Imotekh the Stormlord
+1× 40mm
+Imotekh the Stormlord
+The Silent King
+1× 100mm
+Szarekh · Sceptre of Eternal Glory + Staff of Stars + Weapons of the Final Triarch
+2× 50mm
+standard Annihilator beam, Armoured bulk
+Royal Warden
+1× 32mm
+Royal Warden
+Technomancer
++ Immortals
+1× 50mm
+Technomancer
+5× 32mm
+standard Close combat weapon, Gauss blaster
+Flayed Ones
+5× 28.5mm
+standard Flayer claws
+Ophydian Destroyers
+3× 50mm
+standard Ophydian hyperphase weapons
+Canoptek Scarab Swarms
+3× 40mm
+standard Feeder mandibles
+Canoptek Reanimator
+1× 60mm
+Canoptek Reanimator
+Canoptek Spyders
+1× 60mm
+Canoptek Spyder
+Tesseract Vault
+1 of 2
+1× 120×92mm Oval
+Tesseract Vault
+Tesseract Vault
+2 of 2
+1× 120×92mm Oval
+Tesseract Vault
+
+From the New Recruit list: model counts and loadouts per model, base sizes from GW’s base size guide (Event Companion; Wahapedia’s datasheet where it has none).
+
+######## damage shooting · BASES Damage
+YOUR
+Imotekh the Stormlord
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
++
+Add a group
+1.7
+of 5 destroyed
+3.5 wounds lost · wiped in <1% of games
+Nothing ticked: the datasheets as printed
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Imotekh the Stormlord
+Gauntlet of Fire
+RNG
+12"
+A
+D6
+BS
+–
+S
+5
+AP
+-1
+D
+1
+IGNORES COVER, TORRENT
+−0.3
+MODELS IF UNTICKED
+Staff of the Destroyer
+RNG
+18"
+A
+3
+BS
+2+
+S
+6
+AP
+-3
+D
+2
+−1.4
+MODELS IF UNTICKED
+SITUATION AND RULES
+Phaeron of the Stars (The Silent King)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+if it applies
++0.6
+MODELS
+Worthy Foes
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
+if it applies
++0.5
+MODELS
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: already hits on 2+
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−0.3
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+−1.1
+MODELS
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS
++0.4
+MODELS
+1CP Enslaved Artifice
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Imotekh the Stormlord
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
++
+Add a group
+1.9
+of 5 destroyed
+3.8 wounds lost · wiped in <1% of games
+Charged this turn
+×
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Imotekh the Stormlord
+Staff of the Destroyer
+A
+4
+WS
+2+
+S
+6
+AP
+-3
+D
+2
+DEVASTATING WOUNDS
+−1.9
+MODELS IF UNTICKED
+SITUATION AND RULES
+Phaeron of the Stars (The Silent King)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+if it applies
++0.7
+MODELS
+Worthy Foes
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
+if it applies
++0.5
+MODELS
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS
++0.5
+MODELS
+1CP Enslaved Artifice
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Phaeron of the Blades
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Imotekh the Stormlord
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
++
+Add a group
+3.6
+of 5 destroyed
+7.1 wounds lost · wiped in 28% of games
+
+Shoot 1.73 · Fight 1.82 · the charge is taken to succeed
+
+Charged this turn
+×
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Imotekh the Stormlord
+Gauntlet of Fire
+RNG
+12"
+A
+D6
+BS
+–
+S
+5
+AP
+-1
+D
+1
+IGNORES COVER, TORRENT
+−9% wiped
+−0.3
+MODELS IF UNTICKED
+Staff of the Destroyer
+RNG
+18"
+A
+3
+BS
+2+
+S
+6
+AP
+-3
+D
+2
+−25% wiped
+−1.3
+MODELS IF UNTICKED
+SITUATION AND RULES
+Phaeron of the Stars (The Silent King)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+if it applies
++16% wiped
++0.5
+MODELS
+Worthy Foes
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
+if it applies
++12% wiped
++0.4
+MODELS
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: already hits on 2+
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−6% wiped
+−0.2
+MODELS
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+11% wiped
++0.3
+MODELS
+1CP Enslaved Artifice
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Imotekh the Stormlord
+
+Against what the shooting left of the target, in each game.
+
+Staff of the Destroyer
+A
+4
+WS
+2+
+S
+6
+AP
+-3
+D
+2
+DEVASTATING WOUNDS
+−28% wiped
+−1.8
+MODELS IF UNTICKED
+SITUATION AND RULES
+Phaeron of the Stars (The Silent King)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+if it applies
++19% wiped
++0.6
+MODELS
+Worthy Foes
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
+if it applies
++12% wiped
++0.4
+MODELS
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+STRATAGEMS
+with their CP
+1CP Command Re-roll
+Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+if used
+BEST · MOST MODELS+13% wiped
++0.4
+MODELS
+1CP Enslaved Artifice
+Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+if used
+0
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Phaeron of the Blades
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+OBEISANCE PHALANX
+6
+1
+CP
+Territorial Obsession
+Your Command phase, your LYCHGUARD or TRIARCH unit: until the start of your next Command phase, +1 OC for its models (+3 instead if it is a VEHICLE unit).
+Your Command The Silent King
+1
+CP
+Enslaved Artifice
+Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+.
+Your Shoot · Fight All but Tesseract Vault ×2
+1
+CP
+Nanoassembly Protocols
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit.
+Their Shoot · Fight The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
+1
+CP
+Suffer No Rival
+Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION].
+Fight The Silent King
+1
+CP
+Your Time Is Nigh
+Any phase, just after your opponent’s WARLORD is destroyed, your NECRONS WARLORD: until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, -1 to the result.
+Any phase The Silent King
+1
+CP
+Sentinels of Eternity
+Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed.
+Fight No unit in this list can use it (needs LYCHGUARD OR TRIARCH PRAETORIANS)
+THE PHAERON’S ARMOURY
+3
+1
+CP
+Subsurface Quantumweave
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
+Their Shoot · Fight Tesseract Vault ×2
+1
+CP
+Particle Pulse
+Start of your Shooting phase, your NECRONS TITANIC FLY unit: one visible enemy unit within 12" of it has +3" detection range.
+Start of your Shooting Tesseract Vault ×2
+1
+CP
+Cosmic Storm
+Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP.
+Your Shooting Tesseract Vault ×2
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Canoptek Reanimator, Canoptek Spyders
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+OBEISANCE PHALANX
+6
+1
+CP
+Territorial Obsession
+Your Command The Silent King
+WHEN
+
+Your Command phase.
+
+TARGETOne LYCHGUARD or TRIARCH unit from your army.
+
+EFFECT
+
+Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the VEHICLE keyword, add 3 to the Objective Control characteristic instead.
+
+USED BYThe Silent King
+
+1
+CP
+Enslaved Artifice
+Your Shoot · Fight All but Tesseract Vault ×2
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne NECRONS unit from your army (excluding TITANIC units) that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator, Canoptek Spyders
+
+1
+CP
+Nanoassembly Protocols
+Their Shoot · Fight The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne NECRONS VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYThe Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+1
+CP
+Suffer No Rival
+Fight The Silent King
+WHEN
+
+Fight phase.
+
+TARGETOne LYCHGUARD or TRIARCH unit from your army that has not been selected to fight this phase.
+
+EFFECT
+
+Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.
+
+USED BYThe Silent King
+
+1
+CP
+Your Time Is Nigh
+Any phase The Silent King
+WHEN
+
+Any phase, just after your opponent’s WARLORD is destroyed.
+
+TARGETYour NECRONS WARLORD.
+
+EFFECT
+
+Until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.
+
+USED BYThe Silent King
+
+1
+CP
+Sentinels of Eternity
+Fight No unit in this list can use it (needs LYCHGUARD OR TRIARCH PRAETORIANS)
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne LYCHGUARD or TRIARCH PRAETORIANS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play.
+
+USED BYno unit in this list (needs LYCHGUARD OR TRIARCH PRAETORIANS)
+
+THE PHAERON’S ARMOURY
+3
+1
+CP
+Subsurface Quantumweave
+Their Shoot · Fight Tesseract Vault ×2
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly NECRONS TITANIC FLY unit.
+
+TARGETThat NECRONS TITANIC FLY unit.
+
+EFFECT
+
+Attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+1
+CP
+Particle Pulse
+Start of your Shooting Tesseract Vault ×2
+WHEN
+
+Start of your Shooting phase.
+
+TARGETOne friendly NECRONS TITANIC FLY unit.
+
+EFFECT
+
+Select one visible enemy unit within 12" of your unit. That enemy unit has +3" detection range.
+
+USED BYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+1
+CP
+Cosmic Storm
+Your Shooting Tesseract Vault ×2
+WHEN
+
+Your Shooting phase, when a friendly OBELISK/TESSERACT VAULT unit is selected to shoot.
+
+TARGETThat OBELISK/TESSERACT VAULT unit.
+
+EFFECT
+
+Your unit’s Tesla Sphere weapons have +1 AP.
+
+USED BYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Canoptek Reanimator, Canoptek Spyders
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Canoptek Reanimator, Canoptek Spyders
+
+1
+CP
+Crushing Impact
+Your Charge The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYThe Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator
+
+1
+CP
+Epic Challenge
+Fight Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit imotekh-the-stormlord · STRATAGEMS U w0t m8?
+IMOTEKH THE STORMLORD
+100 PTS
+Epic Hero
+Models
+Options
+1× Imotekh the Stormlord
+Gauntlet of Fire, Staff of the Destroyer
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Imotekh the Stormlord
+40mm
+5"
+5
+2+
+6
+6+
+1
+4+
+WHEN TARGETED
+1
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+ALL ATTACKS
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Gauntlet of Fire
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Staff of the Destroyer
+18"
+3
+2+
+6
+-3
+2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Staff of the Destroyer
+4
+2+
+6
+-3
+2
+DEVASTATING WOUNDS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Grand Strategist
+Your Command
+
+Command · Your turn
+
+At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
+
+Lord of the Storm
+Once per battle
+Your Command
+
+Once per battle · Command · Your turn
+
+Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
+
+Rules
+Reanimation Protocols, Leader, Worthy Foes
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+CHARACTER
+EPIC HERO
+FACTION: NECRONS
+IMOTEKH THE STORMLORD
+INFANTRY
+NOBLE
+Ask about this unit
+The Silent King ›
+
+######## unit the-silent-king · IMOTEKH THE STORMLORD U w0t m8?
+THE SILENT KING
+420 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Szarekh
+Sceptre of Eternal Glory, Staff of Stars, Weapons of the Final Triarch
+2× Triarchal Menhir
+Annihilator beam, Armoured bulk
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Szarekh
+100mm
+8"
+10
+2+
+16
+6+
+6
+4+
+Triarchal Menhir×2
+50mm
+8"
+10
+2+
+5
+6+
+1
+4+
+WHEN TARGETED
+3
+1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
+Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+DAMAGED 1-6 W
+-1 TO HIT ROLLS; SZAREKH’S WEAPONS: HALVE A
+ALL ATTACKS
+Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
+Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Sceptre of Eternal GlorySZAREKH
+24"
+2
+2+
+10
+-3
+3
+DEVASTATING WOUNDS
+Staff of StarsSZAREKH
+24"
+12
+2+
+6
+-1
+1
+INDIRECT FIRE
+Annihilator beam×2
+24"
+1
+2+
+14
+-4
+6
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Weapons of the Final TriarchSZAREKH
+12
+2+
+8
+-3
+2
+LETHAL HITS
+Armoured bulk×2
+1
+4+
+4
+0
+1
+Own aura, if it has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX · FIGHT PHASE
+1CP Suffer No Rival: [PRECISION], not yet selected to fight, until the end of the phase
+ABILITIES
+Triarch Abilities
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
+
+The Silent King
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.
+
+Triarchal Menhirs
+
+If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.
+
+Supreme Commander
+
+If this unit is in your army, it must be your Warlord.
+
+Phaeron of the Stars
+- Triarch Abilities: pick one
+Their Move · Your Shoot · Fight
+
+Aura · Their Movement / Your Shooting / Fight (either turn)
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+Phaeron of the Blades
+- Triarch Abilities: pick one
+Charge/Fight
+
+Aura · Charge / Fight · Either turn
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
+
+Relentless March
+- Triarch Abilities: pick one
+Your Movement
+
+Aura · Movement · Your turn
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.
+
+Rules
+Reanimation Protocols, Deadly Demise D6+3 (Szarekh model only), Worthy Foes
+Stratagems
+
+OBEISANCE PHALANX Territorial Obsession, Enslaved Artifice, Nanoassembly Protocols, Suffer No Rival, Your Time Is Nigh
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+EPIC HERO
+FACTION: NECRONS
+TRIARCH
+VEHICLE
+WARLORD
+Szarekh only:
+CHARACTER
+THE SILENT KING
+Ask about this unit
+‹ Imotekh the Stormlord
+Royal Warden ›
+
+######## unit royal-warden · THE SILENT KING U w0t m8?
+ROYAL WARDEN
+50 PTS
+Character
+Models
+Options
+1× Royal Warden
+Close combat weapon, Relic gauss blaster
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Royal Warden
+32mm
+5"
+5
+3+
+4
+6+
+1
+–
+WHEN TARGETED
+1
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+ALL ATTACKS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Relic gauss blaster
+24"
+2
+3+
+5
+-1
+2
+LETHAL HITS, RAPID FIRE 2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Close combat weapon
+4
+3+
+5
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Adaptive Strategy
+Your Move/Shoot/Charge
+
+Movement / Shooting / Charge · Your turn
+
+This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+
+Engrammatic Logic
+Once per battle
+Any phase
+
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly NECRONS unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+
+Rules
+Leader, Reanimation Protocols
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+CHARACTER
+FACTION: NECRONS
+INFANTRY
+ROYAL WARDEN
+Ask about this unit
+‹ The Silent King
+Technomancer ›
+
+######## unit technomancer-immortals · ROYAL WARDEN U w0t m8?
+TECHNOMANCER + IMMORTALS
+145 PTS
+Character · 80 + Immortals 65
+Models
+Options
+1× Technomancer
+Staff of light
+Supporting Immortals
+5× Immortal
+Close combat weapon, Gauss blaster
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Technomancer
+50mm
+10"
+4
+4+
+4
+6+
+1
+–
+Immortals×5
+32mm
+5"
+5
+3+
+1
+7+
+2
+–
+WHEN TARGETED
+2
+TECHNOMANCER While the Technomancer leads this unit: Feel No Pain 5+ for its models
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+ALL ATTACKS · WHOLE UNIT
+Every attack: re-roll wound rolls of 1 (Implacable Eradication)
+Target within range of an objective marker: re-roll the wound roll (Implacable Eradication)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+TECHNOMANCER
+Staff of light
+18"
+3
+4+
+5
+-2
+1
+IMMORTALS
+Gauss blaster×5
+24"
+2
+3+
+5
+-1
+1
+LETHAL HITS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+TECHNOMANCER
+Staff of light
+2
+4+
+5
+-2
+1
+IMMORTALS
+Close combat weapon×5
+2
+3+
+4
+0
+1
+WHOLE UNIT
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Rites of Reanimation
+- Technomancer
+
+While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.
+
+Technomancer
+- Technomancer
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, you can select one friendly NECRONS model within 6" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.
+
+Implacable Eradication
+- Immortals
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.
+
+Rules
+Support, Reanimation Protocols
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+CHARACTER
+CRYPTEK
+FACTION: NECRONS
+FLY
+INFANTRY
+TECHNOMANCER
+BATTLELINE*
+IMMORTALS*
+*from the supported Immortals
+Ask about this unit
+‹ Royal Warden
+Flayed Ones ›
+
+######## unit flayed-ones · TECHNOMANCER U w0t m8?
+FLAYED ONES
+55 PTS
+Infantry
+Models
+Options
+5× Flayed One
+Flayer claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Flayed Ones×5
+28.5mm
+5"
+4
+4+
+1
+7+
+1
+–
+WHEN TARGETED
+1
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Flayer claws×5
+4
+3+
+4
+-1
+1
+SUSTAINED HITS 1, TWIN-LINKED
+Target Below Half-strength: a successful hit roll scores a Critical Hit (Flesh Hunger)
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+ABILITIES
+Flesh Hunger
+Fight
+
+Fight · Either turn
+
+Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful Hit roll scores a Critical Hit.
+
+Rules
+Reanimation Protocols, Stealth, Infiltrators
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+FACTION: NECRONS
+FLAYED ONES
+INFANTRY
+Ask about this unit
+‹ Technomancer
+Ophydian Destroyers ›
+
+######## unit ophydian-destroyers · FLAYED ONES U w0t m8?
+OPHYDIAN DESTROYERS
+80 PTS
+Infantry
+Models
+Options
+3× Ophydian Destroyer
+Ophydian hyperphase weapons
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Ophydian Destroyers×3
+50mm
+10"
+5
+4+
+3
+7+
+2
+–
+WHEN TARGETED
+1
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Ophydian hyperphase weapons×3
+5
+3+
+4
+-2
+2
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+ABILITIES
+Tunnelling Horrors
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Rules
+Reanimation Protocols, Deep Strike
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+DESTROYER CULT
+FACTION: NECRONS
+INFANTRY
+OPHYDIAN DESTROYERS
+Ask about this unit
+‹ Flayed Ones
+Canoptek Scarab Swarms ›
+
+######## unit canoptek-scarab-swarms · OPHYDIAN DESTROYERS U w0t m8?
+CANOPTEK SCARAB SWARMS
+40 PTS
+Swarm
+Models
+Options
+3× Canoptek Scarab Swarm
+Feeder mandibles
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Canoptek Scarab Swarms×3
+40mm
+10"
+2
+6+
+4
+8+
+0
+–
+WHEN TARGETED
+1
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Feeder mandibles×3
+6
+5+
+2
+0
+1
+LETHAL HITS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+ABILITIES
+Self-destruction
+Fight
+
+Fight · Either turn
+
+At the start of the Fight phase, if this unit is within Engagement Range of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a VEHICLE. On a 2-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds.
+
+Chittering swarm
+
+While an enemy unit is within Engagement Range of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6" of one or more friendly CRYPTEK models, the Objective Control characteristic of models in this unit is 1.
+
+Rules
+Reanimation Protocols
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+CANOPTEK
+FACTION: NECRONS
+FLY
+SCARAB SWARMS
+SWARM
+Ask about this unit
+‹ Ophydian Destroyers
+Canoptek Reanimator ›
+
+######## unit canoptek-reanimator · CANOPTEK SCARAB SWARMS U w0t m8?
+CANOPTEK REANIMATOR
+75 PTS
+Vehicle
+Models
+Options
+1× Canoptek Reanimator
+2× Atomiser beam, Reanimator’s claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Canoptek Reanimator
+60mm
+8"
+6
+3+
+6
+8+
+3
+–
+WHEN TARGETED
+4
+Feel No Pain 4+
+1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
+Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+ALL ATTACKS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Atomiser beam×2
+12"
+3
+4+
+6
+-2
+1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Reanimator’s claws
+4
+4+
+5
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Nanoscarab Reanimation Beam
+
+Aura
+
+While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.
+
+Rules
+Reanimation Protocols, Feel No Pain 4+
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice, Nanoassembly Protocols
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+CANOPTEK
+FACTION: NECRONS
+REANIMATOR
+VEHICLE
+WALKER
+Ask about this unit
+‹ Canoptek Scarab Swarms
+Canoptek Spyders ›
+
+######## unit canoptek-spyders · CANOPTEK REANIMATOR U w0t m8?
+CANOPTEK SPYDERS
+65 PTS
+Vehicle
+Models
+Options
+1× Canoptek Spyder (Fabricator claw array, Gloom prism)
+Automaton claws, 2× Particle beamer
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Canoptek Spyder
+60mm
+5"
+7
+3+
+6
+8+
+2
+–
+WHEN TARGETED
+3
+1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
+Own aura: Feel No Pain 6+ (Fabricator Claw Array)
+Own aura: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+ALL ATTACKS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+STRATAGEMS · OBEISANCE PHALANX
+1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Particle beamer×2
+18"
+D6
+3+
+6
+0
+1
+BLAST, DEVASTATING WOUNDS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Automaton claws
+5
+4+
+8
+-2
+2
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Canoptek Swarm
+Your Command
+
+Command · Your turn
+
+In your Command phase, select one friendly CANOPTEK SCARAB SWARM unit within 6" of this unit. One destroyed model is returned to that CANOPTEK SCARAB SWARM unit for each SPYDER model in this unit.
+
+Fabricator Claw Array
+
+Aura
+
+While a friendly NECRONS VEHICLE unit is within 6" of the bearer, that unit has the Feel No Pain 6+ ability.
+
+Gloom Prism
+
+Aura
+
+While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.
+
+Rules
+Reanimation Protocols, Deadly Demise 1
+Stratagems
+
+OBEISANCE PHALANX Enslaved Artifice, Nanoassembly Protocols
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffensive, Command Re-roll
+
+None from The Phaeron’s Armoury.
+
+Keywords
+CANOPTEK
+FACTION: NECRONS
+FLY
+SPYDERS
+VEHICLE
+Ask about this unit
+‹ Canoptek Reanimator
+Tesseract Vault (1 of 2) ›
+
+######## unit tesseract-vault · CANOPTEK SPYDERS U w0t m8?
+TESSERACT VAULT
+465 PTS
+Vehicle
+1 of 2
+Models
+Options
+1× Tesseract Vault
+Armoured bulk, Cosmic fire, Time’s arrow, Antimatter meteor, 4× Tesla sphere
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tesseract Vault
+120×92mm Oval
+14"
+12
+2+
+24
+7+
+8
+4+
+WHEN TARGETED
+4
+1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
+1CP Subsurface Quantumweave: Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked
+Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+DAMAGED 1-8 W
+SEE THE RULE
+ALL ATTACKS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Cosmic fire
+18"
+3D6
+–
+6
+-2
+1
+IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER
+Time’s arrow
+24"
+1
+2+
+3
+-2
+6
+ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
+1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured bulk
+6
+4+
+8
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Powers of the C’tan
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+Rules
+Reanimation Protocols, Deadly Demise D6+3, Empowered Engines
+Stratagems
+
+OBEISANCE PHALANX Nanoassembly Protocols
+
+THE PHAERON’S ARMOURY Subsurface Quantumweave, Particle Pulse, Cosmic Storm
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Counteroffensive, Command Re-roll
+
+Keywords
+FACTION: NECRONS
+FLY
+FRAME
+TESSERACT VAULT
+TITANIC
+TOWERING
+VEHICLE
+Ask about this unit
+‹ Canoptek Spyders
+Tesseract Vault (2 of 2) ›
+
+######## unit tesseract-vault-2 · TESSERACT VAULT U w0t m8?
+TESSERACT VAULT
+505 PTS
+Vehicle
+2 of 2
+Models
+Options
+1× Tesseract Vault
+Armoured bulk, Cosmic fire, Time’s arrow, Antimatter meteor, 4× Tesla sphere
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tesseract Vault
+120×92mm Oval
+14"
+12
+2+
+24
+7+
+8
+4+
+WHEN TARGETED
+4
+1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
+1CP Subsurface Quantumweave: Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked
+Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
+Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+DAMAGED 1-8 W
+SEE THE RULE
+ALL ATTACKS
+Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Cosmic fire
+18"
+3D6
+–
+6
+-2
+1
+IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER
+Time’s arrow
+24"
+1
+2+
+3
+-2
+6
+ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
+1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured bulk
+6
+4+
+8
+0
+1
+Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+ABILITIES
+Powers of the C’tan
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+Rules
+Reanimation Protocols, Deadly Demise D6+3, Empowered Engines
+Stratagems
+
+OBEISANCE PHALANX Nanoassembly Protocols
+
+THE PHAERON’S ARMOURY Subsurface Quantumweave, Particle Pulse, Cosmic Storm
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Counteroffensive, Command Re-roll
+
+Keywords
+FACTION: NECRONS
+FLY
+FRAME
+TESSERACT VAULT
+TITANIC
+TOWERING
+VEHICLE
+Ask about this unit
+‹ Tesseract Vault (1 of 2)
+
+######## popup ability:u-w0t-m8|Canoptek Swarm|In your Command phase, select one friendly **CANOPTEK SCARAB SWARM** unit within 6" of this unit. One destroyed model is returned to that **CANOPTEK SCARAB SWARM** unit for each **SPYDER** model in this unit. · TESSERACT VAULT U w0t m8?
+ABILITY · COMMAND · YOUR TURN
+
+Canoptek Swarm
+
+In your Command phase, select one friendly CANOPTEK SCARAB SWARM unit within 6" of this unit. One destroyed model is returned to that CANOPTEK SCARAB SWARM unit for each SPYDER model in this unit.
+
+UNITCanoptek Spyders
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Damaged: 1-6 wounds remaining|While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the **Hit roll**. · U W0T M8? U w0t m8?
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll.
+
+UNITThe Silent King
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Damaged: 1-8 wounds remaining|While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two. · U W0T M8? U w0t m8?
+ABILITY · SHOOTING · YOUR TURN
+
+Damaged: 1-8 wounds remaining
+
+While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
+
+UNITTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Engrammatic Logic|Once per battle, at the start of any phase, you can select one friendly **NECRONS** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked. · U W0T M8? U w0t m8?
+ABILITY · ONCE PER BATTLE · ANY PHASE · EITHER TURN
+
+Engrammatic Logic
+
+Once per battle, at the start of any phase, you can select one friendly NECRONS unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+
+UNITRoyal Warden
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Fabricator Claw Array|While a friendly **NECRONS VEHICLE** unit is within 6" of the bearer, that unit has the **Feel No Pain** 6+ ability. · U W0T M8? U w0t m8?
+ABILITY · AURA
+
+Fabricator Claw Array
+
+While a friendly NECRONS VEHICLE unit is within 6" of the bearer, that unit has the Feel No Pain 6+ ability.
+
+UNITCanoptek Spyders
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Flesh Hunger|Each time a model in this unit makes a melee attack, if the target of that attack is **Below Half-strength**, a successful **Hit roll** scores a Critical Hit. · U W0T M8? U w0t m8?
+ABILITY · FIGHT · EITHER TURN
+
+Flesh Hunger
+
+Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful Hit roll scores a Critical Hit.
+
+UNITFlayed Ones
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Gloom Prism|While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**. · U W0T M8? U w0t m8?
+ABILITY · AURA
+
+Gloom Prism
+
+While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.
+
+UNITCanoptek Spyders
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Grand Strategist|At the start of your Command phase, if this model is on the battlefield, you gain 1CP. · U W0T M8? U w0t m8?
+ABILITY · COMMAND · YOUR TURN
+
+Grand Strategist
+
+At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
+
+UNITImotekh the Stormlord
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Implacable Eradication|Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead. · U W0T M8? U w0t m8?
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Implacable Eradication
+
+Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.
+
+UNITTechnomancer + Immortals
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Lord of the Storm|Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 **mortal wounds**; on a 6, that enemy unit suffers D3+3 mortal wounds. · U W0T M8? U w0t m8?
+ABILITY · ONCE PER BATTLE · COMMAND · YOUR TURN
+
+Lord of the Storm
+
+Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
+
+UNITImotekh the Stormlord
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Phaeron of the Blades|While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack. · U W0T M8? U w0t m8?
+ABILITY · AURA · CHARGE / FIGHT · EITHER TURN
+
+Phaeron of the Blades
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
+
+UNITThe Silent King
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Phaeron of the Stars|While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1. · U W0T M8? U w0t m8?
+ABILITY · AURA · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Phaeron of the Stars
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+UNITThe Silent King
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Relentless March|While a friendly **NECRONS** unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit. · U W0T M8? U w0t m8?
+ABILITY · AURA · MOVEMENT · YOUR TURN
+
+Relentless March
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.
+
+UNITThe Silent King
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Rites of Reanimation|While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability. · U W0T M8? U w0t m8?
+ABILITY
+
+Rites of Reanimation
+
+While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.
+
+UNITTechnomancer + Immortals
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Self-destruction|At the start of the Fight phase, if this unit is within **Engagement Range** of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a **VEHICLE**. On a 2-5, that unit suffers D3 **mortal wounds**; on a 6+, that unit suffers 3 mortal wounds. · U W0T M8? U w0t m8?
+ABILITY · FIGHT · EITHER TURN
+
+Self-destruction
+
+At the start of the Fight phase, if this unit is within Engagement Range of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a VEHICLE. On a 2-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds.
+
+UNITCanoptek Scarab Swarms
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Technomancer|At the end of your Movement phase, you can select one friendly **NECRONS** model within 6" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn. · U W0T M8? U w0t m8?
+ABILITY · MOVEMENT · YOUR TURN
+
+Technomancer
+
+At the end of your Movement phase, you can select one friendly NECRONS model within 6" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.
+
+UNITTechnomancer + Immortals
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Triarch Abilities|At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability. · U W0T M8? U w0t m8?
+ABILITY · START OF THE BATTLE ROUND
+
+Triarch Abilities
+
+At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
+
+TO PICK FROM: TRIARCH ABILITIES
+
+Phaeron of the Stars Aura
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+Phaeron of the Blades Aura
+
+While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
+
+Relentless March Aura
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.
+
+UNITThe Silent King
+
+Ask about this ability
+
+######## popup ability:u-w0t-m8|Tunnelling Horrors|At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:
+- Place this unit in **strategic reserves**.
+- This unit must make an **ingress move** in your next Movement phase (including in your first turn). · U W0T M8? U w0t m8?
+ABILITY · END OF YOUR OPPONENT’S TURN
+
+Tunnelling Horrors
+
+At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+UNITOphydian Destroyers
+
+Ask about this ability
+
+######## popup grant:["Empowered Engines","tesseract-vault","M 14\"",null] · U W0T M8? U w0t m8?
+M 14" · GRANTED BY
+
+Empowered Engines
+
+The Phaeron’s Armoury detachment rule
+
+Friendly NECRONS TITANIC FLY units have +6" M.
+
+This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Empowered Engines","tesseract-vault-2","M 14\"",null] · U W0T M8? U w0t m8?
+M 14" · GRANTED BY
+
+Empowered Engines
+
+The Phaeron’s Armoury detachment rule
+
+Friendly NECRONS TITANIC FLY units have +6" M.
+
+This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANTI-CHARACTER 4+ · U W0T M8? U w0t m8?
+CORE RULE
+
+ANTI-CHARACTER 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Advance roll · U W0T M8? U w0t m8?
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:BLAST · U W0T M8? U w0t m8?
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYCanoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · U W0T M8? U w0t m8?
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Below Half-strength · U W0T M8? U w0t m8?
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:C'TAN POWER · U W0T M8? U w0t m8?
+WEAPON KEYWORD OF THE C’TAN POWERS WEAPONS (TESSERACT VAULT DATASHEET: POWERS OF THE C’TAN)
+
+C'TAN POWER
+
+Powers of the C’tan (Tesseract Vault): In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+Ask about this rule
+
+######## popup rule:Charge roll · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · U W0T M8? U w0t m8?
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYImotekh the Stormlord, The Silent King, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · U W0T M8? U w0t m8?
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYThe Silent King, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Deadly Demise 1 · U W0T M8? U w0t m8?
+CORE RULE
+
+Deadly Demise 1
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYThe Silent King, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6+3 · U W0T M8? U w0t m8?
+CORE RULE
+
+Deadly Demise D6+3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYThe Silent King, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6+3 (Szarekh model only) · U W0T M8? U w0t m8?
+CORE RULE
+
+Deadly Demise D6+3 (Szarekh model only)
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYThe Silent King, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Deep Strike · U W0T M8? U w0t m8?
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYOphydian Destroyers
+
+Ask about this rule
+
+######## popup rule:Empowered Engines · U W0T M8? U w0t m8?
+THE PHAERON’S ARMOURY DETACHMENT RULE
+
+Empowered Engines
+
+Friendly NECRONS TITANIC FLY units have +6" M.
+
+This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
+
+IN THIS ARMYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Engagement Range · U W0T M8? U w0t m8?
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · U W0T M8? U w0t m8?
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTechnomancer (in Rites of Reanimation), Canoptek Reanimator, Canoptek Spyders (in Fabricator Claw Array, Gloom Prism)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 4+ · U W0T M8? U w0t m8?
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTechnomancer (in Rites of Reanimation), Canoptek Reanimator, Canoptek Spyders (in Fabricator Claw Array, Gloom Prism)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · U W0T M8? U w0t m8?
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTechnomancer (in Rites of Reanimation), Canoptek Reanimator, Canoptek Spyders (in Fabricator Claw Array, Gloom Prism)
+
+Ask about this rule
+
+######## popup rule:Fights First · U W0T M8? U w0t m8?
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:Hazard roll · U W0T M8? U w0t m8?
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · U W0T M8? U w0t m8?
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYImotekh the Stormlord, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:INDIRECT FIRE · U W0T M8? U w0t m8?
+CORE RULE
+
+INDIRECT FIRE
+
+Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).
+
+IN THIS ARMYThe Silent King, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Infiltrators · U W0T M8? U w0t m8?
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYFlayed Ones
+
+Ask about this rule
+
+######## popup rule:LETHAL HITS · U W0T M8? U w0t m8?
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYThe Silent King, Royal Warden, Technomancer, Canoptek Scarab Swarms
+
+Ask about this rule
+
+######## popup rule:Leader · U W0T M8? U w0t m8?
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYImotekh the Stormlord, Royal Warden
+
+Ask about this rule
+
+######## popup rule:Leadership test · U W0T M8? U w0t m8?
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:PRECISION · U W0T M8? U w0t m8?
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Plunging Fire · U W0T M8? U w0t m8?
+CORE RULE
+
+Plunging Fire
+
+Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the BS characteristic of that attack by 1:
+
+The attacking model is on a section of a terrain feature that is 3" or more in height.
+The attacking model has the TOWERING keyword and the target unit is within 12".
+
+23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
+
+Ask about this rule
+
+######## popup rule:Psychic · U W0T M8? U w0t m8?
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYCanoptek Spyders (in Gloom Prism)
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 2 · U W0T M8? U w0t m8?
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYRoyal Warden
+
+Ask about this rule
+
+######## popup rule:Reanimation Protocols · U W0T M8? U w0t m8?
+NECRONS ARMY RULE
+
+Reanimation Protocols
+
+If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols:
+
+When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.
+Ask about this rule
+
+######## popup rule:Resolve a charge · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · U W0T M8? U w0t m8?
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYFlayed Ones, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 2 · U W0T M8? U w0t m8?
+CORE RULE
+
+SUSTAINED HITS 2
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYFlayed Ones, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:Stealth · U W0T M8? U w0t m8?
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYFlayed Ones
+
+Ask about this rule
+
+######## popup rule:Support · U W0T M8? U w0t m8?
+CORE RULE
+
+Support
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYTechnomancer
+
+Ask about this rule
+
+######## popup rule:TORRENT · U W0T M8? U w0t m8?
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYImotekh the Stormlord, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:TWIN-LINKED · U W0T M8? U w0t m8?
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYFlayed Ones
+
+Ask about this rule
+
+######## popup rule:Worthy Foes · U W0T M8? U w0t m8?
+OBEISANCE PHALANX DETACHMENT RULE
+
+Worthy Foes
+
+In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack that targets that unit, add 1 to the Wound roll.
+
+IN THIS ARMYImotekh the Stormlord, The Silent King
+
+Ask about this rule
+
+######## popup rule:[ANTI-INFANTRY 5+] · U W0T M8? U w0t m8?
+CORE RULE
+
+ANTI-INFANTRY 5+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:[LETHAL HITS] · U W0T M8? U w0t m8?
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYThe Silent King, Royal Warden, Technomancer, Canoptek Scarab Swarms
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · U W0T M8? U w0t m8?
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · U W0T M8? U w0t m8?
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYFlayed Ones, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this rule
+
+######## popup rule:advance move · U W0T M8? U w0t m8?
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · U W0T M8? U w0t m8?
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:below starting strength · U W0T M8? U w0t m8?
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · U W0T M8? U w0t m8?
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · U W0T M8? U w0t m8?
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:engaged · U W0T M8? U w0t m8?
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:ingress move · U W0T M8? U w0t m8?
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · U W0T M8? U w0t m8?
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · U W0T M8? U w0t m8?
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · U W0T M8? U w0t m8?
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · U W0T M8? U w0t m8?
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · U W0T M8? U w0t m8?
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:command-re-roll · U W0T M8? U w0t m8?
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:cosmic-storm · U W0T M8? U w0t m8?
+1CP · SHOOTING · YOUR TURN
+
+Cosmic Storm
+WHEN
+
+Your Shooting phase, when a friendly OBELISK/TESSERACT VAULT unit is selected to shoot.
+
+TARGETThat OBELISK/TESSERACT VAULT unit.
+
+EFFECT
+
+Your unit’s Tesla Sphere weapons have +1 AP.
+
+USED BYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · U W0T M8? U w0t m8?
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · U W0T M8? U w0t m8?
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYThe Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this stratagem
+
+######## popup strat:enslaved-artifice · U W0T M8? U w0t m8?
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Enslaved Artifice
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne NECRONS unit from your army (excluding TITANIC units) that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator, Canoptek Spyders
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · U W0T M8? U w0t m8?
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · U W0T M8? U w0t m8?
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Canoptek Reanimator, Canoptek Spyders
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · U W0T M8? U w0t m8?
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYImotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · U W0T M8? U w0t m8?
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:nanoassembly-protocols · U W0T M8? U w0t m8?
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Nanoassembly Protocols
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne NECRONS VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYThe Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this stratagem
+
+######## popup strat:particle-pulse · U W0T M8? U w0t m8?
+1CP · SHOOTING · YOUR TURN
+
+Particle Pulse
+WHEN
+
+Start of your Shooting phase.
+
+TARGETOne friendly NECRONS TITANIC FLY unit.
+
+EFFECT
+
+Select one visible enemy unit within 12" of your unit. That enemy unit has +3" detection range.
+
+USED BYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · U W0T M8? U w0t m8?
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:sentinels-of-eternity · U W0T M8? U w0t m8?
+1CP · FIGHT · EITHER TURN
+
+Sentinels of Eternity
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne LYCHGUARD or TRIARCH PRAETORIANS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play.
+
+USED BYno unit in this list (needs LYCHGUARD OR TRIARCH PRAETORIANS)
+
+Ask about this stratagem
+
+######## popup strat:subsurface-quantumweave · U W0T M8? U w0t m8?
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Subsurface Quantumweave
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly NECRONS TITANIC FLY unit.
+
+TARGETThat NECRONS TITANIC FLY unit.
+
+EFFECT
+
+Attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYTesseract Vault (1 of 2), Tesseract Vault (2 of 2)
+
+Ask about this stratagem
+
+######## popup strat:suffer-no-rival · U W0T M8? U w0t m8?
+1CP · FIGHT · EITHER TURN
+
+Suffer No Rival
+WHEN
+
+Fight phase.
+
+TARGETOne LYCHGUARD or TRIARCH unit from your army that has not been selected to fight this phase.
+
+EFFECT
+
+Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.
+
+USED BYThe Silent King
+
+Ask about this stratagem
+
+######## popup strat:territorial-obsession · U W0T M8? U w0t m8?
+1CP · COMMAND · YOUR TURN
+
+Territorial Obsession
+WHEN
+
+Your Command phase.
+
+TARGETOne LYCHGUARD or TRIARCH unit from your army.
+
+EFFECT
+
+Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. If your unit has the VEHICLE keyword, add 3 to the Objective Control characteristic instead.
+
+USED BYThe Silent King
+
+Ask about this stratagem
+
+######## popup strat:your-time-is-nigh · U W0T M8? U w0t m8?
+1CP · ANY PHASE · EITHER TURN
+
+Your Time Is Nigh
+WHEN
+
+Any phase, just after your opponent’s WARLORD is destroyed.
+
+TARGETYour NECRONS WARLORD.
+
+EFFECT
+
+Until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.
+
+USED BYThe Silent King
+
+Ask about this stratagem
