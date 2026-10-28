@@ -972,7 +972,7 @@ for (const u of units) {
       want(u.name + ' · ' + ab.name, 'ability', 'not among the Wahapedia datasheet’s abilities (by its words or its name): ' + (w ? 'BSData’s words, marked up from the page' : 'BSData’s plain words kept'));
       continue;
     }
-    used.add(g);
+    used.add(g); hide(ab, { _gw: g.file });
     ab.text = g.text;
     if (g.damaged) ab.damaged = g.damaged;
     // (Aura) is only what GW tags so (Core Rules 22.01): BSData's "One Head Looks Back (Aura)" is GW's One Head Looks Back, untagged
@@ -1153,7 +1153,18 @@ if (flag('--compare')) {
 // a rule of the list gives (the row's `own` value is then the datasheet's), an enhancement's ability, a rule only the list's wargear or
 // enhancement brings (Hunter’s Eye's Ignores Cover). Where the two readings differ, the row's value is kept and the difference is
 // listed in the report ("Kept from the datasheet row"): a fact to settle on the datasheet, for every list that has it.
+// GW's words where Wahapedia's transcription of an ability differs (the hand file's units.<id>.texts: { <ability>: { from, to, why } }),
+// exactly once: before a datasheet row another list has is compared with this reading (the Faction Pack's words on both)
+for (const [uid, h] of Object.entries(HAND.units || {})) {
+  const u = units.find(x => x.id === uid); if (!u) continue;
+  for (const [an, fx] of Object.entries(h.texts || {})) {
+    const ab = u.abilities.find(a => a.name === an);
+    if (!ab || String(ab.text).split(fx.from).length !== 2) { want(uid + ' · ' + an, 'hand file text', 'its words "' + fx.from + '" are not there exactly once'); continue; }
+    ab.text = ab.text.replace(fx.from, fx.to); handDone.push({ what: 'GW’s words in ' + u.name + ' · ' + an + ': "' + fx.to + '"', by: 'hand (Claude)', text: fx.why });
+  }
+}
 const reusedRows = [];        // { unit, what, row, reading }
+const gwRows = [];            // { unit, key, what, row, gw }: GW's value where the row has another (the row is to be settled on it)
 const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, which the labels step below leaves as they are
 {
   const S0 = (D.datasheets || {});
@@ -1197,19 +1208,29 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
     for (const sa of S.abilities || []) {
       let i = mineAbs.findIndex(a => a.name === sa.name && (multi || (a.who || null) === (sa.who || null)));
       // (the row's ability under another name, word for word the same: Wahapedia's "Unnatural Resilience" for the row's (BSData's)
-      // "Unnatural Resistance"; the row's name is kept, the difference listed)
+      // "Unnatural Resistance"; GW's name, below, else the row's is kept and the difference listed)
       const bareT = t => lc(plainBS(t)).replace(/[^a-z0-9]+/g, ' ').trim();
-      if (i < 0 && sa.text) { i = mineAbs.findIndex(a => !a._e && a.text && !(S.abilities || []).some(x => x.name === a.name) && bareT(a.text) === bareT(sa.text)); if (i >= 0) note('ability ' + sa.name + ' name', sa.name, mineAbs[i].name); }
+      if (i < 0 && sa.text) { i = mineAbs.findIndex(a => !a._e && a.text && !(S.abilities || []).some(x => x.name === a.name) && bareT(a.text) === bareT(sa.text)); if (i >= 0 && !mineAbs[i]._gw) note('ability ' + sa.name + ' name', sa.name, mineAbs[i].name); }
       const a = i >= 0 ? mineAbs.splice(i, 1)[0] : null;
+      // (GW's name and words, where this reading has them from GW's datasheet and the row has others, BSData's: GW's, for the row too;
+      // markup alone, ** **, keeps the row's)
+      const gwName = a && a._gw && a.name !== sa.name, gwText = a && a._gw && a.text !== undefined && String(a.text).replace(/\*\*/g, '') !== String(sa.text || '').replace(/\*\*/g, '');
       for (const k of new Set(Object.keys(sa).concat(a ? Object.keys(a) : []))) {
-        if (k === 'name' || k === 'who' || k.startsWith('_')) continue;
+        if (k === 'name' || k === 'who' || k.startsWith('_') || (k === 'text' && gwText)) continue;
         // (labels and When targeted lines come later in this run, from derive.js and the hand file: only a value it has is compared)
         if (!a || (a[k] === undefined && !['text', 'tag', 'damaged'].includes(k))) continue;
         if (!same(a[k], sa[k])) note('ability ' + sa.name + ' ' + k, sa[k], a[k]);
       }
       if (!a) note('ability ' + sa.name, 'on the row', 'not in this reading');
-      const o = Object.assign({}, sa); if (multi) o.who = pn; if (a) for (const k of Object.keys(a)) if (k.startsWith('_')) Object.defineProperty(o, k, { value: a[k], enumerable: false, writable: true, configurable: true });
-      out.push(o); reusedAbs.add(u.name + ' · ' + (multi ? pn + ' · ' : '') + sa.name);
+      const o = Object.assign({}, sa); if (multi) o.who = pn;
+      if (gwName) { o.name = a.name; gwRows.push({ unit: u.id, key, what: 'ability ' + sa.name + ' name', row: sa.name, gw: a.name }); }
+      if (gwText) { o.text = a.text; gwRows.push({ unit: u.id, key, what: 'ability ' + a.name + ' text', row: sa.text, gw: a.text }); }
+      // (a note that names another list's detachment rule, Singular Purpose's "With Enraged Behemoths’ …": that list's, not carried)
+      if (o.note) { const F1 = (D.factions || {})[factionId] || {}, mine = new Set(army.detachments);
+        const theirs = Object.entries(F1.detachments || {}).filter(([id]) => !mine.has(id)).flatMap(([, x]) => [x.rule].concat(x.moreRules || []).filter(Boolean).map(r => r.name));
+        const by = theirs.find(n => n && o.note.includes(n)); if (by) { note('ability ' + sa.name + ' note (' + by + ', another list’s detachment rule: not carried)', o.note, a ? a.note : undefined); delete o.note; } }
+      if (a) for (const k of Object.keys(a)) if (k.startsWith('_')) Object.defineProperty(o, k, { value: a[k], enumerable: false, writable: true, configurable: true });
+      out.push(o); reusedAbs.add(u.name + ' · ' + (multi ? pn + ' · ' : '') + o.name);
     }
     for (const a of mineAbs) { if (!a._e) note('ability ' + a.name, 'not on the row', 'in this reading'); out.push(a); }
     if (!multi) u.abilities = out;
@@ -1249,12 +1270,7 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     const t = ab.text; delete ab.text; ab.def = d.def; ab.text = t; if (d.defOf) ab.defOf = d.defOf;
     handDone.push({ what: 'When targeted line of ' + u.name + ' · ' + an, by: d.by, text: d.def });
   }
-  // GW's words where Wahapedia's transcription of an ability differs (texts: { <ability>: { from, to, why } }), exactly once
-  for (const [an, fx] of Object.entries(h.texts || {})) {
-    const ab = u.abilities.find(a => a.name === an);
-    if (!ab || String(ab.text).split(fx.from).length !== 2) { want(uid + ' · ' + an, 'hand file text', 'its words "' + fx.from + '" are not there exactly once'); continue; }
-    ab.text = ab.text.replace(fx.from, fx.to); handDone.push({ what: 'GW’s words in ' + u.name + ' · ' + an + ': "' + fx.to + '"', by: 'hand (Claude)', text: fx.why });
-  }
+  // (GW's words where Wahapedia's transcription differs, texts: applied before the datasheet rows are compared, above)
   // why an ability does nothing in this list, when that is certain (na: { <ability>: why }: the Destrier's Thundercharge without its weapons)
   for (const [an, why] of Object.entries(h.na || {})) {
     const ab = u.abilities.find(a => a.name === an);
@@ -1376,6 +1392,8 @@ const report = () => ['# ' + army.name + ' (' + armyId + ') from its New Recruit
   '', '## BSData entries at the pin that differ from GW, where the export already has GW’s value (' + gwFixed.length + ')', '', ...gwFixed.map(x => '- ' + x),
   '', '## Weapons BSData (and New Recruit) name otherwise than GW’s datasheet (' + gwNames.length + ')', '', 'The app keeps New Recruit’s name (the name the export carries); the values are checked against GW’s profile of this name.', '', ...gwNames.map(x => '- ' + x.unit + ' ' + x.kind + ': ' + x.app + ' (GW: ' + x.gw + ', ' + x.file + ')'),
   '', '## Written by hand (' + handDone.length + ', from verify/sources/hand/' + armyId + '.json)', '', ...handDone.map(h => '- ' + h.what + ' — ' + h.by + ': ' + h.text),
+  '', '## GW’s words where the datasheet row had others (' + gwRows.length + ')', '', 'A datasheet another list has, whose row had BSData’s name or words: GW’s (Wahapedia’s datasheet), written for this list; the row is to be settled on them (every list that has it), and BSData’s and New Recruit’s declared.', '',
+  ...gwRows.map(x => '- ' + x.unit + ' (' + x.key + ') · ' + x.what + ': row ' + JSON.stringify(x.row) + ', GW ' + JSON.stringify(x.gw)),
   '', '## Kept from the datasheet row (' + reusedRows.length + ')', '', 'A datasheet another list has: the row’s value is the app’s (docs/tables.md, one datasheet, one truth); this run read the sources otherwise. Settle each on the datasheet, for every list that has it.', '',
   ...reusedRows.map(x => '- ' + x.unit + ' · ' + x.what + ': row ' + JSON.stringify(x.row) + ', this reading ' + JSON.stringify(x.reading)),
   '', '## Not filled mechanically (' + todo.length + ')', '',

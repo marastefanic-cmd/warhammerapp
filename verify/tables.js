@@ -400,6 +400,13 @@ function build(R){
   // the list's only where lists differ: a value an ability of the unit gives (Kustom Force Field: 4+* InSv), a weapon ability
   // on the Rules line from the wargear taken
   const rowWhy = (o, f) => {
+    // (an ability's note that names a detachment rule of the list, Singular Purpose's "With Enraged Behemoths’ …" in Crusher Stampede:
+    // the list's, not the datasheet's)
+    if(o.kind === 'abilities' && f === 'note'){
+      const F = (R.factions || {})[o.U.a.faction] || {}, note = String(o.r.note || '');
+      const names = o.U.a.detachments.flatMap(d => { const x = (F.detachments || {})[d] || {}; return [x.rule].concat(x.moreRules || []).filter(Boolean).map(r => r.name); });
+      return names.find(n => n && note.includes(n)) || null;
+    }
     if(o.kind !== 'stats' || f !== 'InSv') return null;
     const v = String(o.r[f] || '').replace('*', '');
     if(!/^\d\+$/.test(v)) return null;
