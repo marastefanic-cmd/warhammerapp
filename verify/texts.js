@@ -1408,13 +1408,25 @@ function nearLine(n, src) {
 // documents or Wahapedia, a piece at a time where it leaves words out ("…"), or in the text of the item the note is on
 // (its rule or stratagem, the unit's abilities), which the other checks verify.
 const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k)));   // GW's first
-function checkQuotes(army, unit, note, own) {
+// (and, for a note on a unit's ability, the unit's Wahapedia datasheets: a Designer's Note GW prints under an ability, verify/.cache/waha/ds)
+const dsDocIds = (faction, names) => {
+  const dir = path.join(CACHE, 'waha', 'ds'), key = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
+  const want = new Set(names.filter(Boolean).map(key)), out = [];
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
+    if (!f.startsWith(faction + '_') || !f.endsWith('.html') || !want.has(key(f.slice(faction.length + 1, -5)))) continue;
+    const id = 'wahads:' + f.slice(0, -5);
+    if (!DOCS[id]) loadWahaHtml(id, path.join(dir, f), 'Wahapedia datasheet ' + f.slice(faction.length + 1, -5));
+    out.push(id);
+  }
+  return out;
+};
+function checkQuotes(army, unit, note, own, extra) {
   for (const m of String(note || '').matchAll(/“([^”]+)”/g)) {
     for (const piece of m[1].split(/…|\.\.\./)) {
       const n = norm(stripMarkup(piece)).replace(/^[\s.,;:]+|[\s,;:]+$/g, '');
       if (!/[a-z0-9]/.test(n)) continue;
       count('noteQuote');
-      const r = locate(n, ALL_DOCS);
+      const r = locate(n, ALL_DOCS) || (extra && extra.length ? locate(n, extra) : null);
       if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) }); continue; }
       if (own.some(t => normField(t).includes(n))) { prov.push({ item: army + ' / ' + unit, field: 'note', doc: 'data.js', file: 'data.js', sha256: null, where: 'the text of the item the note is on', text: piece.trim().slice(0, 80) }); continue; }
       fail('noteQuote', army, unit, 'note', m[0], 'quoted words not in any source, nor in the text the note is on: "' + piece.trim() + '"' + (nearest(n, ALL_DOCS).text ? ' | ' + nearest(n, ALL_DOCS).text : ''), '');
@@ -1437,7 +1449,7 @@ for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities 
   const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
   // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
   const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.flatMap(d => detRules_(d).map(r => r.text)));
-  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own);
+  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own, dsDocIds(a.faction, [u.name, u.leads].concat((u.also || []).map(c => c.name))));
 }
 
 /* ------------------------------------------------------------------ deviations, output, provenance */
