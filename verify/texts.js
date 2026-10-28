@@ -1417,7 +1417,10 @@ const dsDocIds = (faction, names) => {
   const want = new Set(names.filter(Boolean).map(key)), out = [], pre = [faction, WAHA_ID[faction]].filter(Boolean);
   const files = (fs.existsSync(dir) ? fs.readdirSync(dir) : []).filter(f => f.endsWith('.html') && f.includes('_') && want.has(key(f.slice(f.indexOf('_') + 1, -5))));
   const rank = f => { const i = pre.indexOf(f.slice(0, f.indexOf('_'))); return i < 0 ? pre.length : i; };
-  for (const f of files.sort((a, b) => rank(a) - rank(b))) {
+  // (per name: the list's faction's and its Wahapedia id's pages when there are any, else another faction's, an ally's: a Chaos
+  // Spawn or Daemon Prince of another faction is not this unit's datasheet)
+  const byName = new Map(); for (const f of files) { const k = key(f.slice(f.indexOf('_') + 1, -5)); if (!byName.has(k)) byName.set(k, []); byName.get(k).push(f); }
+  for (const f of [...byName.values()].flatMap(grp => { const own = grp.filter(x => rank(x) < pre.length); return (own.length ? own : grp).sort((a, b) => rank(a) - rank(b)); })) {
     const id = 'wahads:' + f.slice(0, -5);
     if (!DOCS[id]) loadWahaHtml(id, path.join(dir, f), 'Wahapedia datasheet ' + f.slice(f.indexOf('_') + 1, -5));
     out.push(id);

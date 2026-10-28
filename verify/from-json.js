@@ -142,6 +142,8 @@ const WAHA = (FJ[factionId] || {}).waha || factionId;
 const WW = require('./waha-words')(ROOT, factionId);
 // a reference entry of the export (New Recruit's "Spore Mines (Biovore)", category Reference: the profile of a unit a rule of the list
 // adds to the army, 0 pts): its datasheet page is the one of its name less the bracket (Spore-Mines)
+// the ability names the hand file has GW's (Wahapedia's) capitalisation for (caseNames), where it differs only in case
+const caseGW = new Set((HAND.caseNames || []).map(nm));
 const isRefSel = s => (s.categories || []).some(c => c.name === 'Reference');
 const REF_NAMES = new Set((FORCE.selections || []).filter(isRefSel).map(s => nm(s.name)));
 const refBase = n => REF_NAMES.has(nm(n)) ? nm(n).replace(/\s*\([^()]*\)$/, '') : n;
@@ -984,9 +986,9 @@ for (const u of units) {
     if (g.tag && ab.tag) ab.tag = ab.tag.split(' · ').map(x => lc(x) === lc(g.tag) ? g.tag : x).join(' · ');
     if (g.tag && !(ab.tag || '').split(' · ').includes(g.tag)) { ab.tag = ab.tag ? ab.tag + ' · ' + g.tag : g.tag; filled.push({ what: 'tag ' + u.name + ' · ' + g.name + ': ' + g.tag, from: g.file + ' (the ability’s name)' }); }
     if (!textEq(g.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: typo(g.name), app: g.text, bsdata: plain, why: 'Wahapedia’s datasheet (the codex) words it otherwise than BSData', file: g.file });
-    // (GW's capitalisation too, "Chittering swarm" for New Recruit's "Chittering Swarm": GW's name, as Wahapedia prints it; a Damaged
-    // band keeps New Recruit's "Damaged: 1-5 Wounds Remaining", as the signed-off lists have it)
-    if (g.damaged ? lc(typo(g.name)) !== lc(ab.name) : typo(g.name) !== ab.name) { devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: typo(g.name), app: typo(g.name), bsdata: ab.name, why: 'GW’s name for the ability (Wahapedia’s datasheet); BSData names it ' + ab.name, file: g.file }); ab.name = typo(g.name); }
+    // (GW's capitalisation too, only for a name the hand file lists, caseNames: "Chittering swarm" for New Recruit's "Chittering
+    // Swarm", as Wahapedia prints it; Wahapedia's casing goes both ways, so every other name and a Damaged band keep New Recruit's)
+    if (g.damaged || !caseGW.has(nm(ab.name)) ? lc(typo(g.name)) !== lc(ab.name) : typo(g.name) !== ab.name) { devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: typo(g.name), app: typo(g.name), bsdata: ab.name, why: 'GW’s name for the ability (Wahapedia’s datasheet); BSData names it ' + ab.name, file: g.file }); ab.name = typo(g.name); }
   }
   u.abilities = u.abilities.filter(a => !a._drop);
   // a rule GW prints in a header box of its own that BSData's entry does not have (the Daemon Prince of Chaos's Daemonic Allegiance):
