@@ -1404,4 +1404,4 @@ if(require.main === module){
   if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
   process.exit(drift.length || items.tablesStale || ckStale ? 1 : 0);
 }
-module.exports = { derive, ruleTables, readingsOf, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };

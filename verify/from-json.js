@@ -1294,7 +1294,12 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
 // written in the old form; verify/tables.js --write then keeps each reading on its row (two lists reading one rule otherwise: listed).
 {
   const HR = HAND.readings || {}, READ = ['mods', 'aura', 'guard'], F0 = (D.factions || {})[factionId] || facSrc || {};
-  const { readingsOf } = require('./derive'), T = require('./tables');
+  const { readingsOf, vocab, ruleNeeds, tidyNeeds } = require('./derive'), T = require('./tables');
+  // (a detachment rule this run adds has no needs yet: the labels step below writes the ones verify/derive.js reads from its words, on
+  // data.js as written; the same reading here, on data.js's other lists and this one, so a first --write gives the final readings)
+  const fresh = r => Object.values(facSrc.detachments || {}).some(d => d.rule === r || (d.moreRules || []).includes(r));
+  const V0 = vocab({ armies: D.armies.filter(a => a.id !== armyId).concat([{ units }]), factions: Object.assign({}, D.factions, { [factionId]: { name: ((D.factions || {})[factionId] || {}).name || typo(catName.replace(/^.* - /, '')) } }) });
+  const needsNow = r => { if (!fresh(r) || r.needs !== undefined) return r.needs; const dn = ruleNeeds(V0, r); return dn.needs ? tidyNeeds(dn.needs) : undefined; };
   const nmR = s => String(s).toLowerCase().replace(/[’‘]/g, "'"), hasN = (l, x) => (l || []).some(y => nmR(y) === nmR(x));
   const meets = (n, u) => !n || (!n.all || n.all.every(k => hasN(u.kw, k))) && (!n.any || n.any.some(k => hasN(u.kw, k))) && !(n.none || []).some(k => hasN(u.kw, k)) && (!n.rule || n.rule.some(r => hasN(u.rules, r)));
   const dsRow = name => Object.values(D.datasheets || {}).find(S => S.faction === factionId && S.name === nm(name));
@@ -1321,7 +1326,7 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
         for (const [text, name] of texts) { if (have.some(m => m.from === name)) continue; const d = readingsOf(text, name); if (d) t.push(...d.mods.map(m => Object.assign({}, m, { readOf: T.fp(text), readBy: 'derive' }))); }
       });
       if (enh) t.push(...pick((HR.enhancements || {})[enh.name], enh, kind));
-      for (const d of dets) for (const r of [d.rule].concat(d.moreRules || [])) if (r && meets(r.needs, u)) t.push(...pick((HR.rules || {})[r.name], r, kind));
+      for (const d of dets) for (const r of [d.rule].concat(d.moreRules || [])) if (r && meets(needsNow(r), u)) t.push(...pick((HR.rules || {})[r.name], r, kind));
       const mine = h[kind];
       const list = mine === null ? [] : !mine ? t : mine.some(x => typeof x === 'string') ? mine.flatMap(x => typeof x === 'string' ? t.filter(m => m.from === x) : [x]) : t.concat(mine);
       if (list.length) u[kind] = JSON.parse(JSON.stringify(list)); else delete u[kind];
