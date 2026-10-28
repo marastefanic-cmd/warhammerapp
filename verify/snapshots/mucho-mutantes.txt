@@ -357,6 +357,18 @@ Sekhetar Robots
 1
 5+
 85
+REFERENCE
+1
+Chaos Spawn
+Reference
+8"
+5
+4+
+4
+7+
+1
+5+
+–
 
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
 Magnus the Red
@@ -3611,11 +3623,82 @@ VEHICLE
 WALKER
 Ask about this unit
 ‹ Tzaangors
+Chaos Spawn ›
+
+######## unit chaos-spawn · SEKHETAR ROBOTS Mucho Mutantes
+CHAOS SPAWN
+–
+Not in the army until Gift of Change (1CP): “At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units.”
+Reference
+Models
+Options
+1× Chaos Spawn
+Hideous Mutations
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Spawn
+50mm
+8"
+5
+4+
+4
+7+
+1
+5+
+WHEN TARGETED
+2
+Feel No Pain 5+
+Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hideous Mutations
+D6+2
+4+
+5
+-1
+2
+ABILITIES
+Regenerating Monstrosities
+Command
+
+Command · Either turn
+
+At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds.
+
+Rules
+Feel No Pain 5+
+Stratagems
+
+WARPMELD PACT Touched by Tzeentch, Twisted Mirage, Deranged Ferocity
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Ritual of Regeneration.
+
+Keywords
+BEAST
+CHAOS
+CHAOS SPAWN
+FACTION: THOUSAND SONS
+MUTANT
+TZEENTCH
+Ask about this unit
+‹ Sekhetar Robots
 
 ######## popup ability:mucho-mutantes|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
 - It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
 - Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.
-- Until the end of the turn, it is not eligible to declare a charge. · SEKHETAR ROBOTS Mucho Mutantes
+- Until the end of the turn, it is not eligible to declare a charge. · CHAOS SPAWN Mucho Mutantes
 ABILITY · PSYCHIC · MOVEMENT / SHOOTING / CHARGE · YOUR TURN
 
 Aetherstride

@@ -140,7 +140,7 @@ Each time a model in that unit makes a melee attack, add 1 to the Strength chara
 Shadow in the Warp
 Once per battle · Command
 
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+FAQ (Faction Pack 1.3): “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
 
 If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
 
@@ -590,7 +590,7 @@ Your Command
 
 Command · Your turn
 
-At the start of your Command phase, if this model is on the battlefield, you gain 1CP
+At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
 
 Malign Presence
 Once per turn
@@ -599,6 +599,8 @@ Any phase
 Aura · Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
+
+Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”
 
 Domination of the Hive Mind
 
@@ -647,7 +649,7 @@ Their Movement
 
 Once per turn · Movement · Their turn
 
-Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
 
 Damaged: 1-5 Wounds Remaining
 
@@ -660,7 +662,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -690,7 +692,7 @@ Their Movement
 
 Once per turn · Movement · Their turn
 
-Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
 
 Damaged: 1-5 Wounds Remaining
 
@@ -703,7 +705,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -733,7 +735,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -757,9 +759,9 @@ Enhancement
 
 NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
 
-Unnatural Resistance
+Unnatural Resilience
 
-This model has the Feel No Pain 4+ ability against Mortal Wounds.
+This model has the Feel No Pain 4+ ability against mortal wounds.
 
 Norn Emissary
 Singular Purpose
@@ -769,7 +771,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -786,9 +788,9 @@ Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
-Unnatural Resistance
+Unnatural Resilience
 
-This model has the Feel No Pain 4+ ability against Mortal Wounds.
+This model has the Feel No Pain 4+ ability against mortal wounds.
 
 Tyrannofex
 ×2 units
@@ -817,7 +819,7 @@ Each time a model in that unit makes a melee attack, add 1 to the Strength chara
 Shadow in the Warp
 Once per battle · Command
 
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+FAQ (Faction Pack 1.3): “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
 
 If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
 
@@ -894,22 +896,22 @@ Tyrannofex D6
 Feel No Pain
 Norn Assimilator · Synaptoprescience (1 of 2)
 Singular Purpose: At the start of the first battle round, select one of the following:
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 Norn Assimilator · Synaptoprescience (2 of 2)
 Singular Purpose: At the start of the first battle round, select one of the following:
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 Norn Emissary · Destabilising Predation
 Singular Purpose: At the start of the first battle round, select one of the following:
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-Unnatural Resistance: This model has the Feel No Pain 4+ ability against Mortal Wounds.
+Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.
 Norn Emissary
 Singular Purpose: At the start of the first battle round, select one of the following:
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-Unnatural Resistance: This model has the Feel No Pain 4+ ability against Mortal Wounds.
+Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.
 Leader
 The Swarmlord
 Hive Tyrant · Monstrous Nemesis
@@ -2281,7 +2283,7 @@ Your Command
 
 Command · Your turn
 
-At the start of your Command phase, if this model is on the battlefield, you gain 1CP
+At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
 
 Malign Presence
 Once per turn
@@ -2290,6 +2292,8 @@ Any phase
 Aura · Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
+
+Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”
 
 Domination of the Hive Mind
 
@@ -2587,7 +2591,7 @@ Their Movement
 
 Once per turn · Movement · Their turn
 
-Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
 
 Singular Purpose
 Start of the first battle round
@@ -2596,7 +2600,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -2728,7 +2732,7 @@ Their Movement
 
 Once per turn · Movement · Their turn
 
-Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
 
 Singular Purpose
 Start of the first battle round
@@ -2737,7 +2741,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -2887,7 +2891,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -2907,9 +2911,9 @@ Enhancement
 
 NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
 
-Unnatural Resistance
+Unnatural Resilience
 
-This model has the Feel No Pain 4+ ability against Mortal Wounds.
+This model has the Feel No Pain 4+ ability against mortal wounds.
 
 Rules
 Deadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives
@@ -3039,7 +3043,7 @@ Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -3052,9 +3056,9 @@ Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
-Unnatural Resistance
+Unnatural Resilience
 
-This model has the Feel No Pain 4+ ability against Mortal Wounds.
+This model has the Feel No Pain 4+ ability against mortal wounds.
 
 Rules
 Deadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives
@@ -3204,12 +3208,12 @@ UNITThe Swarmlord
 
 Ask about this ability
 
-######## popup ability:nidzillas|Hive Commander|At the start of your Command phase, if this model is on the battlefield, you gain 1CP · NIDZILLAS Nidzillas
+######## popup ability:nidzillas|Hive Commander|At the start of your Command phase, if this model is on the battlefield, you gain 1CP. · NIDZILLAS Nidzillas
 ABILITY · COMMAND · YOUR TURN
 
 Hive Commander
 
-At the start of your Command phase, if this model is on the battlefield, you gain 1CP
+At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
 
 UNITThe Swarmlord
 
@@ -3260,7 +3264,7 @@ UNITTyrannofex
 Ask about this ability
 
 ######## popup ability:nidzillas|Singular Purpose|At the start of the first battle round, select one of the following:
-- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.
 - Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15. · NIDZILLAS Nidzillas
 ABILITY · START OF THE FIRST BATTLE ROUND
 
@@ -3268,7 +3272,7 @@ Singular Purpose
 
 At the start of the first battle round, select one of the following:
 
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
@@ -3277,12 +3281,12 @@ UNITNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptop
 
 Ask about this ability
 
-######## popup ability:nidzillas|Unnatural Resistance|This model has the **Feel No Pain 4+** ability against Mortal Wounds. · NIDZILLAS Nidzillas
+######## popup ability:nidzillas|Unnatural Resilience|This model has the **Feel No Pain 4+** ability against **mortal wounds**. · NIDZILLAS Nidzillas
 ABILITY
 
-Unnatural Resistance
+Unnatural Resilience
 
-This model has the Feel No Pain 4+ ability against Mortal Wounds.
+This model has the Feel No Pain 4+ ability against mortal wounds.
 
 UNITNorn Emissary · Destabilising Predation, Norn Emissary
 
@@ -3875,7 +3879,7 @@ Shadow in the Warp
 
 If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
 
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+FAQ (Faction Pack 1.3): “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
 
 Ask about this rule
 

@@ -305,6 +305,28 @@ Tzeentch Soul Grinder
 5
 4+
 180
+REFERENCE
+2
+Blue Horrors
+Reference
+6"
+3
+7+
+1
+8+
+1
+4+
+–
+Brimstone Horrors
+Reference
+6"
+3
+7+
+1
+8+
+1
+4+
+–
 
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
 Kairos Fateweaver
@@ -3543,8 +3565,226 @@ VEHICLE
 WALKER
 Ask about this unit
 ‹ Flamers
+Blue Horrors ›
 
-######## popup ability:tzeeeeentch|Daemon Lord of Tzeentch|While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack. · TZEENTCH SOUL GRINDER Tzeeeeentch
+######## unit blue-horrors · TZEENTCH SOUL GRINDER Tzeeeeentch
+BLUE HORRORS
+–
+Not in the army until Horrors are Pink. Horrors are Blue. Where once there was one, now there are two. (Fluxmaster + Pink Horrors): “If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.”
+Reference
+Models
+Options
+1× Blue Horror
+Coruscating Blue flames, Blue claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Blue Horror
+25mm
+6"
+3
+7+
+1
+8+
+1
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Coruscating Yellow flames (ref. only), Coruscating Blue flames · all pistols
+Range
+A
+BS
+S
+AP
+D
+Coruscating Blue flames
+18"
+2
+4+
+3
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+18"
+2
+5+
+2
+-1
+1
+PISTOL, PSYCHIC
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Blue claws
+1
+5+
+3
+0
+1
+Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+2
+5+
+2
+0
+1
+ABILITIES
+Split
+
+Each time a BLUE HORROR model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one BRIMSTONE HORROR model to this unit.
+
+Sullen Malevolence
+
+Aura
+
+While an enemy unit is within 6" of this unit, if this unit contains one or more BLUE HORROR models, worsen the Leadership characteristic of models in that enemy unit by 1.
+
+Exploding Horrors
+Fight
+
+Fight · Either turn
+
+Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more BRIMSTONE HORROR models in this unit. For each BRIMSTONE HORROR model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound.
+
+Rules
+Deep Strike, Infiltrators, The Shadow of Chaos, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+BATTLELINE
+CHAOS
+DAEMON
+FACTION: LEGIONES DAEMONICA
+HORRORS
+INFANTRY
+TZEENTCH
+Blue Horror only:
+BLUE
+Brimstone Horrors only:
+BRIMSTONE
+Ask about this unit
+‹ Tzeentch Soul Grinder
+Brimstone Horrors ›
+
+######## unit brimstone-horrors · BLUE HORRORS Tzeeeeentch
+BRIMSTONE HORRORS
+–
+Not in the army until Split (Fluxmaster + Pink Horrors): “On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.”
+Reference
+Models
+Options
+1× Brimstone Horror
+Coruscating Yellow flames, Yellow claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Brimstone Horror
+25mm
+6"
+3
+7+
+1
+8+
+1
+4+
+WHEN TARGETED
+4
+1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
+Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
+Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
+Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+ALL ATTACKS
+STRATAGEMS · SCINTILLATING LEGION
+1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Coruscating Yellow flames
+18"
+2
+5+
+2
+-1
+1
+PISTOL, PSYCHIC
+Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Yellow claws
+2
+5+
+2
+0
+1
+ABILITIES
+Exploding Horrors
+Fight
+
+Fight · Either turn
+
+Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more BRIMSTONE HORROR models in this unit. For each BRIMSTONE HORROR model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound.
+
+Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”
+
+Rules
+Deep Strike, Infiltrators, The Shadow of Chaos, Fates in Flux
+Stratagems
+
+SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Cavalcade of Chaos.
+
+Keywords
+BATTLELINE
+BRIMSTONE
+CHAOS
+DAEMON
+FACTION: LEGIONES DAEMONICA
+HORRORS
+INFANTRY
+TZEENTCH
+Ask about this unit
+‹ Blue Horrors
+
+######## popup ability:tzeeeeentch|Daemon Lord of Tzeentch|While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack. · BRIMSTONE HORRORS Tzeeeeentch
 ABILITY · AURA · THEIR MOVEMENT / YOUR SHOOTING
 
 Daemon Lord of Tzeentch
@@ -3615,6 +3855,22 @@ Each time this model is selected to fight, select one of the following abilities
 [SUSTAINED HITS 1]
 
 UNITDaemon Prince of Chaos with wings · Neverblade
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.|If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.
+*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.* · TZEEEEENTCH Tzeeeeentch
+ABILITY
+
+Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.
+
+If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.
+
+Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.
+
+FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return Pink Horrors to that unit?” “No.” FAQ (Faction Pack 1.2): “When I return models to a unit of Blue Horrors that began the battle as a unit of Pink Horrors, can I return models to that unit to bring it above the starting strength of that unit of Pink Horrors?” “No.” FAQ (Faction Pack 1.2): “If a unit of Pink Horrors suffers casualties such that there are no Pink Horror models left, and it then uses the Blue Horrors datasheet, what is the starting strength of that Blue Horrors unit?” “The starting strength of that Blue Horrors unit is the same as the starting strength of the original Pink Horrors unit when it was added to your army list.”
+
+UNITFluxmaster + Pink Horrors · Improbable Shield (Aura)
 
 Ask about this ability
 
@@ -3692,6 +3948,19 @@ One Head Looks Forward
 At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.
 
 UNITKairos Fateweaver
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Split|Each time a **PINK HORROR** or **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a **PINK HORROR**, add two **BLUE HORROR** models to this unit, and if it was a **BLUE HORROR**, add one **BRIMSTONE HORROR** model to this unit. · TZEEEEENTCH Tzeeeeentch
+ABILITY
+
+Split
+
+Each time a PINK HORROR or BLUE HORROR model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.
+
+FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”
+
+UNITFluxmaster + Pink Horrors · Improbable Shield (Aura)
 
 Ask about this ability
 
@@ -4128,6 +4397,15 @@ INDIRECT FIRE
 Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).
 
 IN THIS ARMYKairos Fateweaver
+
+Ask about this rule
+
+######## popup rule:Infiltrators · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
 
 Ask about this rule
 

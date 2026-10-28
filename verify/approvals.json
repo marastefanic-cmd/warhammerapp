@@ -13159,9 +13159,9 @@
  },
  "d2928b5fe462675e": {
   "verdict": "ok",
-  "by": "review:round3 (its fix)",
+  "by": "review:round4",
   "at": "2026-10-28",
-  "why": "The words are GW’s, word for word: GW’s own Faction Pack Chaos Daemons (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-…txt lines 1562-1565, Pink Horrors datasheet, under HORRORS ARE PINK…) prints “Designer’s Note: While this unit contains one or more Pink Horror models, the Sullen Malevolence and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit.” (keywords upper-cased as the app writes them). Only the label is off: it is GW’s document, not just Wahapedia, and texts.js already finds the quote there first (ALL_DOCS before the Wahapedia pages). Label it as the list’s other Faction Pack quotes are labelled."
+  "why": "Label now “Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet)”; the words are GW’s Faction Pack Chaos Daemons text (Pink Horrors datasheet). r4 snapshots differ from r3 only in this line (tzeeeeentch 3763); the other five are identical."
  },
  "d29b57f95b6fbbd9": {
   "verdict": "ok",
@@ -15760,5 +15760,11 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "GW IK Faction Pack \"VERSION 1.2\" prints \"FACTION: Code Chivalric, Super-heavy Walker\" on its datasheets. The Codex text (Wahapedia, Codex: Imperial Knights army rules) differs from 24.35 (\"excluding TITANIC models\" vs \"including MONSTER/VEHICLE ... MOBILE keyword\"). Neither 22.02 (\"faction abilities (also known as army rules)\") nor the Universal Rules Updates 1.1 settles which applies, so \"the sources don't say which applies\" is a both-readings note that picks neither."
+ },
+ "840be609f54574df": {
+  "verdict": "ok",
+  "by": "review:round4",
+  "at": "2026-10-28",
+  "why": "The pending judgement (verify/out/helpers-todo.json at 3cb8c3f, its only item) is runImport with D.armies.push(splitRefs(A)): correct. My round-1 “fix” was for the resolve it calls; the fix went into import.js resolveRoster (allOf), and runImport itself needed no change. Built-app checks in rounds 2–3: live imports of Healybois, Tzeeeeentch and Mucho Mutantes bring their reference sheets."
  }
 }
