@@ -581,7 +581,7 @@ function buildGroup(g, k) {
       const o = Object.assign({}, r.o);
       // data.js order: group, who, n, name, hunter, values (a profile); name, who, n, values (a weapon)
       if (/\(ref\. only\)/i.test(o.name || o.group || '')) { const c = carrierOf(p, o.group || o.name); if (c) o.carrier = c; else want(nm(p.name) + ' · ' + (o.group || o.name), 'carrier', 'a "(ref. only)" weapon no UNIT COMPOSITION sentence of GW’s datasheet gives to models'); }
-      const ord = o.group ? ['group', 'fireAll', 'who', 'carrier', 'n', 'name', 'hunter'] : ['name', 'who', 'carrier', 'n', 'hunter', 'enh'];
+      const ord = o.group ? ['group', 'fireAll', 'who', 'carrier', 'n', 'name', 'hunter', 'enh'] : ['name', 'who', 'carrier', 'n', 'hunter', 'enh'];
       const row = {}; if (r.n > 1) o.n = r.n;
       for (const k of ord) if (o[k] !== undefined) row[k] = o[k];
       for (const k of ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D', 'kw']) if (o[k] !== undefined) row[k] = o[k];
@@ -616,7 +616,7 @@ function buildGroup(g, k) {
     // an enhancement BSData gives no ability profile, only the weapon it gives (Da Gobshot Thunderbuss: “This model has the following
     // weapon”): its ability all the same, the detachment's words (shown as every enhancement is; its weapon is on the weapon rows)
     dfs(p, s => { const e = isEnh(s) ? enhOfName(nm(s.name)) : null;
-      if (e && !abilities.some(a => a._e === e)) { const o = { name: typo(e.name) }; if (named) o.who = partName(p); o.tag = e.upgrade ? 'Upgrade' : 'Enhancement'; o._bs = null; o._e = e; o._part = p; hide(o, { _sel: s }); abilities.push(o); } });
+      if (e && !abilities.some(a => a._e === e)) { const o = { name: typo(e.name) }; if (named) o.who = partName(p); o.tag = (e.upgrade ? 'Upgrade' : 'Enhancement') + (/\(Aura\)$/.test(e.name) ? ' · Aura' : ''); o._bs = null; o._e = e; o._part = p; hide(o, { _sel: s }); abilities.push(o); } });
   }
   // the Rules line and the keywords
   const rules = [];
@@ -1322,6 +1322,8 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     const t = ab.text; delete ab.text; ab.note = note; ab.text = t;
     handDone.push({ what: 'note on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: note });
   }
+  // the keywords note where its reasons are more than the parts' (kwNote: a keyword a rule of the list gives, Sneaky Little Gitz' BATTLELINE)
+  if (h.kwNote) { u.kwNote = h.kwNote; handDone.push({ what: 'kwNote of ' + u.name + ': ' + h.kwNote, by: 'hand (Claude)', text: h.why || '' }); }
   for (const [rn, vals0] of Object.entries(h.stats || {})) {
     const r = u.stats.find(x => x.name.replace(/ ×\d+$/, '') === rn);
     if (!r) { want(uid + ' · ' + rn, 'hand file stats', 'no stats row of this name'); continue; }

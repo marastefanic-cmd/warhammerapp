@@ -2755,6 +2755,26 @@
  },
  {
   "army": "simple-but-effective",
+  "unit": "ghazghkull-thraka",
+  "field": "ability",
+  "app": "Prophet of da Great Waaagh!",
+  "source": "",
+  "reason": "GW names the ability Prophet of da Great Waaagh!, BSData at the pin (Xenos - Orks catalogue revision 8) Prophet of Da Great Waaagh!. GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html: \"Prophet of da Great Waaagh!\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
+  "unit": "ghazghkull-thraka",
+  "field": "ability",
+  "app": "",
+  "source": "Prophet of Da Great Waaagh! (Aura)",
+  "reason": "GW names the ability Prophet of da Great Waaagh!, BSData at the pin (Xenos - Orks catalogue revision 8) Prophet of Da Great Waaagh!. GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html: \"Prophet of da Great Waaagh!\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "simple-but-effective",
   "unit": "mozrog-skragbad",
   "field": "ability.text",
   "app": "Da Bigger Dey Iz…: This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.",

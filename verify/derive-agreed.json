@@ -2680,6 +2680,81 @@
    ],
    "turn": "opp"
   },
-  "ability-tag | mucho-mutantes · Sekhetar Robots · Prophetic Sentinels": "Once per turn"
+  "ability-tag | mucho-mutantes · Sekhetar Robots · Prophetic Sentinels": "Once per turn",
+  "ability-timing | simple-but-effective · Ghazghkull Thraka · Supreme Commander": {},
+  "ability-timing | simple-but-effective · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Ghazghkull Thraka · Prophet of da Great Waaagh!": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Mozrog Skragbad · One Last Kill": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Mozrog Skragbad · Da Bigger Dey Iz…": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Supreme Kunnin’": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Intimidating Motivation": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Meganobz · Krumpin’ Time": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Beastboss on Squigosaur · Thundering Stampede": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Beastboss on Squigosaur · Keep Huntin’!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Deffkoptas · Aerial Manoover": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | simple-but-effective · Deffkoptas · Deff from Above": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Downtrodden": {},
+  "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Thievin’ Scavengers": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Extra Sneaky": "Upgrade"
  }
 }

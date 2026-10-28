@@ -417,10 +417,10 @@ const app = [
   ['models left: the weapons of the models set', () => dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{}, left:{ 2:5 } }).weapons.find(c => /Snazzgun/.test(c.k)).n, 6, 0],
   ['models left: none of a line, none of its weapons', () => (c => +(!c.ticked.some(x => /Kustom Mega-slugga/.test(x.k)) && c.weapons.find(x => /Kustom Mega-slugga/.test(x.k)).n === 0))(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{}, left:{ 0:0 } })), 1],
   // ---- the attacker's own rules, as before ----
-  // Prophet of Da Great Waaagh!: Ghazghkull is always within his own aura (22.01): +1 to hit and wound, ticked; at Mozrog as set (W10,
+  // Prophet of da Great Waaagh!: Ghazghkull is always within his own aura (22.01): +1 to hit and wound, ticked; at Mozrog as set (W10,
   // Feel No Pain 5+), played out: 7.84 wounds lost (Simple but effective: no detachment rule adds to his attacks; an independent
   // simulation, 400,000 battles: 7.84. Melee's War Horde gave [SUSTAINED HITS 1] too: 8.5, the reviewer's then)
-  ['own aura: Prophet of Da Great Waaagh!, wounds lost', () => C.run(Object.assign({}, dm.calc({ army:'simple-but-effective', ph:'fight', atk:'ghazghkull-thraka', typed:cp(MOZROG) }).input, { sims:20000, seed:7 })).dmg, 7.84],
+  ['own aura: Prophet of da Great Waaagh!, wounds lost', () => C.run(Object.assign({}, dm.calc({ army:'simple-but-effective', ph:'fight', atk:'ghazghkull-thraka', typed:cp(MOZROG) }).input, { sims:20000, seed:7 })).dmg, 7.84],
   // Bringers of Change (always: re-roll wound rolls of 1): the Exalted Sorcerer's Rubric Marines' Warpflamers 3 × D6 = 10.5 torrent hits × (2/6 + 1/6 × 2/6) (S4 vs T5) = 4.08
   // wounds; the working multiplies out as shown (the reviewer's Warpflamers: 10.5, not 11)
   ['steps: 3.5 × 3 = 10.5, then 10.5 × 14/36 = 4.08', () => +(w => w.includes('× 3 = 10.5') && w.includes('10.5 × (2/6 + 1/6 × 2/6 = 14/36) = 4.08'))(C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:cp(BERZ) }).input).groups.flatMap(g => g.steps.map(x => x.t)).join('\n')), 1],

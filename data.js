@@ -5148,7 +5148,7 @@ const ARMIES = [
       ],
       rules:['Waaagh!','Leader','Support'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Runtherd','Zodgrod Wortsnagga','Battleline','Gretchin','Grots'],
-      kwNote:'Battleline, Gretchin, Grots come from the combined unit.',
+      kwNote:'Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm).',
       why:{ kw:{ Battleline:'Sneaky Little Gitz' }, kwNote:'leads Gretchin (with Runtherd)', ptsNote:'the points of its parts as the list has them (Zodgrod Wortsnagga + Runtherd + Gretchin)' }
     },
     {
@@ -5183,7 +5183,7 @@ const ARMIES = [
         { name:'Meganob ×6' }
       ],
       ranged:[
-        { name:'Da Gobshot Thunderbuss', who:'Warboss in Mega Armour', enh:true },
+        { name:'Da Gobshot Thunderbuss', who:'Warboss in Mega Armour', enh:true, range:'24"', A:'6', BS:'4+', S:'7', AP:'-2', D:'2', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 6'] },
         { name:'Big Shoota', who:'Warboss in Mega Armour' }
       ],
       melee:[
@@ -5499,10 +5499,10 @@ const DATASHEETS = {
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
     { name:'Makari, Hoist Dat Banner!', tag:'Once per battle, per army', ph:['movement'], turn:'your', text:'In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*' },
     { name:'Da Grand Warlord’s Ladz', def:'Lone Operative while within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.', defOf:'b7669049' },
-    { name:'Prophet of Da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**.' }
+    { name:'Prophet of da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**.' }
   ],
   aura:[
-    { kind:'melee', needs:{ all:['Faction: Orks'] }, when:'Within 6" of Ghazghkull', selfWhen:'Own aura', note:'+1 to hit, +1 to wound', from:'Prophet of Da Great Waaagh!', selfAlways:true, readOf:'86a5e4c3' }
+    { kind:'melee', needs:{ all:['Faction: Orks'] }, when:'Within 6" of Ghazghkull', selfWhen:'Own aura', note:'+1 to hit, +1 to wound', from:'Prophet of da Great Waaagh!', selfAlways:true, readOf:'86a5e4c3' }
   ],
   rules:['Waaagh!','Da Boss'],
   kw:['Character','Epic Hero','Explosives','Faction: Orks','Ghazghkull Thraka','Infantry','Warboss']
@@ -5632,7 +5632,6 @@ const DATASHEETS = {
     { name:'Warboss in Mega Armour', M:'5"', T:'7', Sv:'2+', W:'7', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
   ranged:[
-    { name:'Da Gobshot Thunderbuss', range:'24"', A:'6', BS:'4+', S:'7', AP:'-2', D:'2', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 6'] },
     { name:'Big Shoota', range:'36"', A:'3', BS:'4+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2'] }
   ],
   melee:[
@@ -10354,6 +10353,7 @@ const CHECKLIST = {
   "a|1a6vmbs":{"none":1},
   "a|1a92pxq":{"u":"shooting:your"},
   "a|1ahrcer":{"x":1},
+  "a|1auad6w":{"u":"fight:either"},
   "a|1b0bosi":{"t":"shooting:your","u":"shooting:your"},
   "a|1b583l5":{"u":"shooting:opp,fight:either"},
   "a|1b88y45":{"t":"command:your","s":1},
@@ -10453,7 +10453,6 @@ const CHECKLIST = {
   "a|1r09x76":{"x":1},
   "a|1r1uvjb":{"x":1},
   "a|1r8f5xs":{"u":"fight:either"},
-  "a|1rdp754":{"u":"fight:either"},
   "a|1riztmj":{"u":"shooting:opp,fight:either"},
   "a|1rqmfkd":{"x":1},
   "a|1rt7zjl":{"x":1},

@@ -1,0 +1,233 @@
+[
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-note",
+  "where": "simple-but-effective · Ghazghkull Thraka · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Makari, Hoist Dat Banner!: In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*",
+    "Da Grand Warlord’s Ladz: While this unit is within 3\" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.",
+    "Prophet of da Great Waaagh!: While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+   ],
+   "listRules": [
+    "Waaagh!",
+    "War Cry",
+    "Da Boss",
+    "’Ard as Nails",
+    "Displays of Savagery",
+    "Sneaky Little Gitz"
+   ]
+  },
+  "key": "2b4cc294d60bd968"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-timing",
+  "where": "simple-but-effective · Ghazghkull Thraka · Prophet of da Great Waaagh!",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Prophet of da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "e34e4429847c1e62"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-tag",
+  "where": "simple-but-effective · Ghazghkull Thraka · Prophet of da Great Waaagh!",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Prophet of da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "3e2e5b5fe0bc9bda"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-aura",
+  "where": "simple-but-effective · Ghazghkull Thraka",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ]
+   },
+   "when": "Within 6\" of Ghazghkull",
+   "selfWhen": "Own aura",
+   "note": "+1 to hit, +1 to wound",
+   "from": "Prophet of da Great Waaagh!",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Prophet of da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "31841bcac812a69b"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · ghazghkull-thraka · ability",
+  "judgement": {
+   "app": "Prophet of da Great Waaagh!",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW names the ability Prophet of da Great Waaagh!, BSData at the pin (Xenos - Orks catalogue revision 8) Prophet of Da Great Waaagh!. GW wins.",
+   "evidence": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html: \"Prophet of da Great Waaagh!\"."
+  },
+  "key": "60a0eaaaf7a39c93"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · ghazghkull-thraka · ability",
+  "judgement": {
+   "app": "",
+   "source": "Prophet of Da Great Waaagh! (Aura)"
+  },
+  "source": {
+   "reason": "GW names the ability Prophet of da Great Waaagh!, BSData at the pin (Xenos - Orks catalogue revision 8) Prophet of Da Great Waaagh!. GW wins.",
+   "evidence": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html: \"Prophet of da Great Waaagh!\"."
+  },
+  "key": "648408c68a6f38e4"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-why",
+  "where": "gretchin",
+  "judgement": {
+   "why": "Ten Gretchin with the Extra Sneaky upgrade (Runt Swarm, UPGRADE, “GRETCHIN unit only”; the export gives it to two Gretchin units, this one and Zodgrod’s): 45 + 10 pts. Legal: Core Rules 25.04 (Wahapedia) lets an army include “up to three of the same Upgrade … (the second and third instances of the same Upgrade do not count towards the total number of enhancements in your army, but you must still spend the stated points cost each time)”, and an attached unit can be given an Upgrade (FAQ). The other ten Gretchin (gretchin-2) have none."
+  },
+  "source": {
+   "file": "verify/sources/hand/simple-but-effective.json units.gretchin.why (not shown in the app); the review’s fix b0e115b73574bb09, word for word"
+  },
+  "key": "50e68ab82c925c74"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-kwNote",
+  "where": "simple-but-effective · Zodgrod Wortsnagga (hand kwNote)",
+  "judgement": {
+   "kwNote": "Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm)."
+  },
+  "source": {
+   "reason": "the review’s fix d525781aec977e97: GW’s Gretchin keywords are INFANTRY, GROTS; BATTLELINE is Sneaky Little Gitz’s (Runt Swarm). Set by the new hand field units.<id>.kwNote. On screen: BATTLELINE no longer starred, the footnote reads “*from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm)”.",
+   "file": "verify/sources/hand/simple-but-effective.json"
+  },
+  "key": "e2a6f57973d09791"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "case-names",
+  "where": "caseNames",
+  "judgement": {
+   "caseNames": [
+    "Prophet of Da Great Waaagh!"
+   ],
+   "why": "GW’s capitalisation of the ability, as Wahapedia’s Ghazghkull Thraka datasheet prints it (“Prophet of da Great Waaagh! (Aura)”), where New Recruit’s and BSData’s differ only in case (“Prophet of Da Great Waaagh!”): the review’s ruling (result-orks-data.json 9b257408614449af; ability names follow GW, as Chittering swarm in U w0t m8?)"
+  },
+  "source": {
+   "reason": "the review’s 9b257408614449af: GW prints “Prophet of da Great Waaagh! (Aura)”; the Ghazghkull row’s ability and its aura row’s from renamed; BSData’s/New Recruit’s “Da” declared (deviations-bsdata.json, two entries); the calc-test case renamed; the agreed timing label added under GW’s name",
+   "evidence": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html"
+  },
+  "key": "d6bd1ad7b814c7b7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/tables.js:296",
+  "judgement": {
+   "code": "if((kind === 'abilities' && /\\b(Enhancement|Upgrade)\\b/.test(r.tag || '')) || ((kind === 'ranged' || kind === 'melee') && r.enh)) part = -1;   // the list's choice, not the datasheet's (an enhancement's ability, or the weapon it gives: Da Gobshot Thunderbuss) — the review's fix; after tables.js --write the weapon row is in full on the simple-but-effective entry (enh:true) and DATASHEETS orks/warboss-in-mega-armour.ranged has Big Shoota only"
+  },
+  "source": {
+   "file": "verify/tables.js:296"
+  },
+  "key": "d31b0cd2ecaa6e3f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · enhancement without an ability profile",
+  "judgement": {
+   "code": "o.tag = (e.upgrade ? 'Upgrade' : 'Enhancement') + (/\\(Aura\\)$/.test(e.name) ? ' · Aura' : '');  (as the profile path)"
+  },
+  "source": {
+   "file": "verify/from-json.js · enhancement without an ability profile"
+  },
+  "key": "24d4c2c58791ad5a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · weapon row order",
+  "judgement": {
+   "code": "const ord = o.group ? ['group', 'fireAll', 'who', 'carrier', 'n', 'name', 'hunter', 'enh'] : ['name', 'who', 'carrier', 'n', 'hunter', 'enh'];"
+  },
+  "source": {
+   "file": "verify/from-json.js · weapon row order"
+  },
+  "key": "43328c1b4a30dca1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · hand kwNote",
+  "judgement": {
+   "code": "if (h.kwNote) { u.kwNote = h.kwNote; handDone.push(...) }  (hand file units.<id>.kwNote: the keywords note where its reasons are more than the parts’)"
+  },
+  "source": {
+   "file": "verify/from-json.js · hand kwNote"
+  },
+  "key": "2589f25d1e597949"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/calc-test.js",
+  "judgement": {
+   "code": "the case renamed “own aura: Prophet of da Great Waaagh!, wounds lost” (and its comment); expected 7.84 unchanged"
+  },
+  "source": {
+   "file": "verify/calc-test.js"
+  },
+  "key": "c884bbe4127d0e10"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "docs/tables.md :24, :26–27, :40",
+  "judgement": {
+   "code": "the review’s replacements (examples from rows that remain: Zodgrod + Runtherd + Gretchin, Twin Killsaw, Meganob ×6; the retired Melee’s Kustom Force Field)"
+  },
+  "source": {
+   "file": "docs/tables.md :24, :26–27, :40"
+  },
+  "key": "5f2b99e92dee56f8"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/derive-agreed.json",
+  "judgement": {
+   "code": "the review’s 15 agreed labels of the kept rows added under simple-but-effective keys (Prophet’s under GW’s name “Prophet of da Great Waaagh!”); node verify/derive.js: 487 agreed labels hold"
+  },
+  "source": {
+   "file": "verify/derive-agreed.json"
+  },
+  "key": "c039987024c104b9"
+ }
+]

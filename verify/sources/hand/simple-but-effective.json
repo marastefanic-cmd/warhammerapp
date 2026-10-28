@@ -1,5 +1,9 @@
 {
  "_about": "What verify/from-json.js cannot fill mechanically for simple-but-effective, written by hand and read by it on every run (from-json.js --write gives the same data.js again). rules: a detachment rule’s timing label where derive.js’s reading is not the rule’s. units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf) and why (the reasons for what the list shows). Only what GW tags (Aura) is an aura (Core Rules 22.01). Orks have no GW Faction Pack: the codex as Wahapedia transcribes it is GW’s words. Each is a judgement verify/helpers.js lists for sign-off.",
+ "caseNames": [
+  "Prophet of Da Great Waaagh!"
+ ],
+ "caseNamesWhy": "GW’s capitalisation of the ability, as Wahapedia’s Ghazghkull Thraka datasheet prints it (“Prophet of da Great Waaagh! (Aura)”), where New Recruit’s and BSData’s differ only in case (“Prophet of Da Great Waaagh!”): the review’s ruling (result-orks-data.json 9b257408614449af; ability names follow GW, as Chittering swarm in U w0t m8?)",
  "keptRows": [
   "orks/ghazghkull-thraka",
   "orks/mozrog-skragbad",
@@ -35,7 +39,8 @@
      "defOf": "10b55c47"
     }
    },
-   "why": "Zodgrod Wortsnagga leads the 20 Gretchin, the Runtherd supports them (the export’s associations; GW’s LEADER: GRETCHIN, the Runtherd’s SUPPORT: GRETCHIN). Super Runts (“This unit is riled up”, “This unit’s Scavenged Shivs weapons have +1 A, WS and S”): the attached unit, Core Rules 19.04. Extra Sneaky (Runt Swarm, UPGRADE: GRETCHIN unit only) is the Gretchin’s. That’ll Learn Ya in GW’s words (“This unit is no longer battle-shocked”; BSData: “That unit”)."
+   "why": "Zodgrod Wortsnagga leads the 20 Gretchin, the Runtherd supports them (the export’s associations; GW’s LEADER: GRETCHIN, the Runtherd’s SUPPORT: GRETCHIN). Super Runts (“This unit is riled up”, “This unit’s Scavenged Shivs weapons have +1 A, WS and S”): the attached unit, Core Rules 19.04. Extra Sneaky (Runt Swarm, UPGRADE: GRETCHIN unit only) is the Gretchin’s. That’ll Learn Ya in GW’s words (“This unit is no longer battle-shocked”; BSData: “That unit”).",
+   "kwNote": "Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm)."
   },
   "gretchin": {
    "defs": {
@@ -45,7 +50,7 @@
      "defOf": "10b55c47"
     }
    },
-   "why": "Ten Gretchin with the Extra Sneaky upgrade (Runt Swarm, UPGRADE, “GRETCHIN unit only”; the export gives it to two Gretchin units, this one and Zodgrod’s): 45 + 10 pts. The other ten Gretchin (gretchin-2) have none."
+   "why": "Ten Gretchin with the Extra Sneaky upgrade (Runt Swarm, UPGRADE, “GRETCHIN unit only”; the export gives it to two Gretchin units, this one and Zodgrod’s): 45 + 10 pts. Legal: Core Rules 25.04 (Wahapedia) lets an army include “up to three of the same Upgrade … (the second and third instances of the same Upgrade do not count towards the total number of enhancements in your army, but you must still spend the stated points cost each time)”, and an attached unit can be given an Upgrade (FAQ). The other ten Gretchin (gretchin-2) have none."
   },
   "nazdreg-meganobz": {
    "why": "Nazdreg leads five Meganobz with Kombi-weapons and Power Klaws (the export’s association; GW’s LEADER: MEGANOBZ). Nazdreg’s Know-wotz (“This unit has Deep Strike”, “This unit’s ranged attacks have [IGNORES COVER]”) is for the attached unit (Core Rules 19.04): every model has Deep Strike (no partialRules), the Meganobz’ Kombi-weapon profiles carry [IGNORES COVER] as BSData applies it. Displays of Savagery (Bully Boyz: MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1]) on every melee weapon of the attached unit (it has MEGANOBZ). 175 pts: GW’s price of five Meganobz (1st to 2nd units)."

@@ -335,6 +335,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.\""
  },
+ "051597da8c842978": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "\"WARBOSS model only … This model has the following weapon\": the bearer is the Warboss in Mega Armour (KEYWORDS \"… MEGA ARMOUR ; WARBOSS\"); export: Da Gobshot Thunderbuss under the Warboss in Mega Armour. Affects only that model (19.04 \"a specified model … from an enhancement\")."
+ },
  "051c02d6904c2331": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -358,6 +364,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back.”"
+ },
+ "054ca8ca7c67047f": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW: Zodgrod 50, Runtherd 10 (single costs), Gretchin \"20 models 80\"; Extra Sneaky 10 (Runt Swarm). 50 + 10 + 80 + 10 = 150 = export. \"Gretchin 90\" folds the upgrade into the part that bears it, the same convention as \"135 + Meganobz 240\" (Warboss 115 + Da Gobshot 20; Meganobz 210 + Twin Killsaws 30); the Overview and the unit header name Extra Sneaky separately, so nothing is hidden."
  },
  "0552feb28e72a019": {
   "verdict": "ok",
@@ -737,11 +749,23 @@
   "at": "2026-10-16",
   "why": "Ranged attacks only; every unit is TITANIC so none can Fire Overwatch (\"excluding TITANIC units\"), leaving only your Shooting phase."
  },
+ "0a072c0ffb39754b": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Nazdreg.html): \"Supreme Kunnin’ (Once per phase, per army): In your opponent’s Movement phase …\" Nazdreg’s ability; tag and text match."
+ },
  "0a3bad53e44646aa": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Keeps the WHEN/TARGET (just after an enemy unit selects your unit as a target) and “until the end of the phase … models in your unit”."
+ },
+ "0a463ce793318a37": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW: Warboss in Mega Armour \"YOUR 1ST TO 2ND UNITS COST 1 model 115\" + Da Gobshot Thunderbuss 20 = 135; Meganobz \"6 models 210\" (1st to 2nd units) + \"per Twin Killsaws 5\" × 6 = 30 → 240. Export: 115 + 20; 210 incl. Twin Killsaw 30."
  },
  "0a46878ac578653c": {
   "verdict": "ok",
@@ -1144,6 +1168,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Either turn."
+ },
+ "10c1d6f02b919de5": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "That’ll Learn Ya is on the Runtherd datasheet (orks_Runtherd.html), not Zodgrod’s or the Gretchin’s; who = Runtherd. A support unit’s \"this unit\" applies to the attached unit (19.04), so \"this unit contains 4+ Gretchin models\" reads on the 20 Gretchin."
  },
  "10c2d18b4fd4b92e": {
   "verdict": "ok",
@@ -1630,6 +1660,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "More Dakka: \"This unit’s ranged attacks have: [IGNORES COVER]\". It is a datasheet ability (Wahapedia ABILITIES, not wargear). Core 19.04: \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; FAQ: \"A rule that applies to ’this/that unit’ … applies to all models in an attached unit\". So the Meganobz' Kombi-weapon has it too, and NR prints it on the Nobz' Kombi-rokkit in the Big Mek unit. NR leaves it off the Meganobz' profiles, so the footnote is needed. It says the rule's words and nothing more. It also covers the Big Mek's two weapons, which already print it, but a keyword does not stack, so nothing is added twice. (19.04 also says it lasts only while the Big Mek is alive; the app adds that caveat nowhere for leader abilities.)"
+ },
+ "195478eaec494c2b": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "Wahapedia orks.txt l.557-575 (Brute Bosses Enhancements): \"Da Gobshot Thunderbuss 20 pts — WARBOSS model only. This model has the following weapon:\" + profile. An enhancement, not an upgrade (no UPGRADE mark): tag \"Enhancement\"."
  },
  "197cc70fbfc60904": {
   "verdict": "ok",
@@ -3551,6 +3587,12 @@
   "at": "2026-10-16",
   "why": "Only the Knights' unit rule; 24.35."
  },
+ "378576006c62377e": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Warboss-In-Mega-Armour.html): \"When this unit ends a charge move …\". Charge moves are made in your Charge phase and, via Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge with your unit\", core.txt l.850-855), in theirs: Charge · Either turn is right. Unit-activation trigger, so not in the checklist — correct."
+ },
  "379fe01808b72849": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -4174,6 +4216,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "Start of every battle round and attacks in either player's turn."
+ },
+ "40571c5ee8273154": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW: Nazdreg \"YOUR UNIT COSTS 1 model 165\"; Meganobz \"YOUR 1ST TO 2ND UNITS COST … 5 models 175\" (this list’s Meganobz units are its 1st and 2nd). Export: Nazdreg 165, Meganobz 175."
  },
  "408d4d3cfb2342f3": {
   "verdict": "ok",
@@ -5597,6 +5645,12 @@
   "at": "2026-10-24",
   "why": "\"at the start of any phase\": every phase, either turn."
  },
+ "583188066aaadfd7": {
+  "verdict": "ok",
+  "by": "review:orks-data (its fix)",
+  "at": "2026-10-28",
+  "why": "The displayed note says BATTLELINE comes \"from the combined unit\", but GW’s Gretchin datasheet keywords are \"INFANTRY ; GROTS\" (orks_Gretchin.html: no BATTLELINE); BATTLELINE is Runt Swarm’s: \"Sneaky Little Gitz: Friendly GRETCHIN units have BATTLELINE.\" (verify/.cache/waha/orks.txt l.181). The entry’s own why already says kw Battleline: Sneaky Little Gitz, so the shown note contradicts it. A list-caused value carries its reason: say so on screen."
+ },
  "5834a3f7790a87ec": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -5926,6 +5980,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It keeps every condition: once per battle, used at the start of a phase, 3+ invulnerable save until the end of the phase. The words are GW’s."
+ },
+ "5d252859381fcf8e": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Nazdreg.html): \"Intimidating Motivation (Once per battle round, per army): In your Movement phase, at the start or end of this unit’s move …\" Nazdreg’s. (The Warboss in Mega Armour has the same ability on its own datasheet.)"
  },
  "5d40d366f2de81ee": {
   "verdict": "ok",
@@ -6533,6 +6593,12 @@
   "at": "2026-10-24",
   "why": "Shield-Captain: Eternity-pattern Paragon Blade (6 2+ 10 -3 3 Precision), no ranged weapon (Pyrithite Spear replaced). 3 Sentinel Guard: Sentinel Blade ranged 12\" A4 2+ S5 -1 2 Assault, Close-quarters; melee A5 2+ S6 -2 2. Matches Wahapedia and NR."
  },
+ "67b08b1ddd0ff3f8": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW: \"This model is equipped with: 1 Big Shoota; 1 ’Uge Choppa.\" (no wargear options) + Da Gobshot Thunderbuss from the enhancement; Meganobz: \"Any number of models can each have their Power Klaw and Kustom Shoota replaced with 1 Twin Killsaws\" → Twin Killsaws only, no ranged weapon. Export: 6× Meganob w/ Twin Killsaw. Profiles: Big Shoota 36\" A3 BS4+ S5 AP0 D1 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2]; ’Uge Choppa A5 WS2+ S12 AP-2 D3 [CLEAVE 2]; Twin Killsaws A3 WS4+ S10 AP-2 D3 [TWIN-LINKED] — all match. (Where the Gobshot profile lives: question 52.)"
+ },
  "67b6147bab7ca864": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -6665,6 +6731,12 @@
   "at": "2026-10-24",
   "why": "\"Each time this model is selected to shoot\": their Movement (overwatch) + your Shooting."
  },
+ "69b9d2085c12011d": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW: Nazdreg \"equipped with: 1 Kustom Blasta X; 1 Moonchewa\", three Kustom Blasta X ranged profiles plus a Kustom Blasta X melee profile; Meganobz \"Kustom Shoota replaced with 1 Kombi-weapon\" (Point Blank / Kill Shot / Shoota) + Power Klaw. Export: 5× Meganob w/ Kombi-weapon and Power Klaw. Profiles checked against orks_Nazdreg.html / orks_Meganobz.html: all values match."
+ },
  "69eb9442c2c155d8": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -6712,6 +6784,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "The leader’s ability."
+ },
+ "6b14d6f4886af7ee": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "Arrogant Invulnerability is Meganobz’ (orks_Meganobz.html)."
  },
  "6b272278ca840600": {
   "verdict": "ok",
@@ -6766,6 +6844,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "NR: “Spiculus bolt launcher, Dual Fists and 2 Projectors (Dual Caestus Fists, 2x Twin Neutronium Cascade Projectors)”; Wahapedia default: “1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors”."
+ },
+ "6c7c574a796b879b": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "Krushin’ Impetus is on the Warboss in Mega Armour datasheet (not Meganobz’); who = Warboss in Mega Armour. \"each model in this unit\" counts the Meganobz too (19.04), as the why says."
  },
  "6c93107162208ccd": {
   "verdict": "ok",
@@ -7277,6 +7361,12 @@
   "at": "2026-10-23",
   "why": "Malign Trickery is on the Tzaangor Enlightened with Fatecaster Greatbows datasheet (Wahapedia), the led unit."
  },
+ "75514117213ff390": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "Warboss in Mega Armour keywords \"INFANTRY ; CHARACTER ; MEGA ARMOUR ; WARBOSS\" (no EXPLOSIVES); Meganobz \"INFANTRY ; EXPLOSIVES ; MEGA ARMOUR\" + MEGANOBZ. Explosives, Meganobz from the led unit — right."
+ },
  "755306fabd8612bb": {
   "verdict": "ok",
   "by": "review:defilers2",
@@ -7360,6 +7450,12 @@
   "by": "review:pubstomper",
   "at": "2026-10-23",
   "why": "\"In your Command phase\": Command, your turn."
+ },
+ "769304b1ab610471": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Warboss-In-Mega-Armour.html): \"Intimidating Motivation (Once per battle round, per army): …\" on the Warboss in Mega Armour’s datasheet."
  },
  "76a73133dbb46638": {
   "verdict": "ok",
@@ -8177,6 +8273,12 @@
   "at": "2026-10-21",
   "why": "NR lists Martial Signatum Amplificator in the Datasmith’s options. It is an Eradication Cohort enhancement (Faction Pack v1.4), and the 35 pts are Wahapedia’s 20 plus 15."
  },
+ "840be609f54574df": {
+  "verdict": "ok",
+  "by": "review:round4",
+  "at": "2026-10-28",
+  "why": "The pending judgement (verify/out/helpers-todo.json at 3cb8c3f, its only item) is runImport with D.armies.push(splitRefs(A)): correct. My round-1 “fix” was for the resolve it calls; the fix went into import.js resolveRoster (allOf), and runImport itself needed no change. Built-app checks in rounds 2–3: live imports of Healybois, Tzeeeeentch and Mucho Mutantes bring their reference sheets."
+ },
  "840bea3c449dc633": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -8464,6 +8566,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "NR princes p4 Categories: \"... Slaughterbound, Exalted Eightbound*, *from combined unit\", and the unit leads Exalted Eightbound (\"• Leading: Exalted Eightbound\"). Renaming the stats row \"Exalted Eightbound ×3\" (1 Champion + 2 Exalted Eightbound) changes nothing the note rests on."
+ },
+ "8928525c2d65a6ed": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (Wahapedia verify/.cache/waha/ds/orks_Nazdreg.html): \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" on Nazdreg’s datasheet. Who = Nazdreg; applies to the attached unit (Core Rules 19.04), which the weapon tables show."
  },
  "892b7f06aeaa2155": {
   "verdict": "ok",
@@ -8879,6 +8987,12 @@
   "at": "2026-10-17",
   "why": "The bold term in Supa-glowy Fing is “[SUPA-HAZARDOUS]”. It opens the Supa-hazardous entry, whose text is the definition Wahapedia prints with that enhancement (“[SUPA-HAZARDOUS]: Each time a unit is selected to shoot …”)."
  },
+ "8e81ceef3ecec3f2": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Meganobz.html): \"Krumpin’ Time: In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.\" On the Meganobz datasheet, so who = Meganobz; the app shows it on the whole unit’s melee (Core Rules 19.04, bodyguard ability applies to every model)."
+ },
  "8e89f9663256daee": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -9112,6 +9226,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Ranged attacks: their Movement + your Shooting."
+ },
+ "93197bac2c3325d4": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "Brutal But Kunnin’: \"WARBOSS model only. This model’s melee attacks have +1 D.\" (orks.txt l.545). Melee attacks are made in the Fight phase, either player’s; the app labels melee-only bonuses the same way elsewhere (Da Bigger Dey Iz… \"Fight · Either turn\", Displays of Savagery \"Fight\", Prophet \"Aura · Fight · Either turn\"). Not in the phase checklist (no fixed-moment trigger) — correct. See question 50."
  },
  "93438fec8dafc616": {
   "verdict": "ok",
@@ -13463,6 +13583,12 @@
   "at": "2026-10-28",
   "why": "FNP 5+ only against mortal wounds and Psychic Attacks, so no calc value; NECRONS within 6\", its own unit included."
  },
+ "d77f81abe6356794": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Runtherd.html): \"That’ll Learn Ya (Once per battle round, per unit): …\". Tag exact."
+ },
  "d7a721e5a0f770f0": {
   "verdict": "ok",
   "by": "review:gists",
@@ -13901,6 +14027,12 @@
   "at": "2026-10-28",
   "why": "Literal shortening."
  },
+ "df273dd1df765a77": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "Krumpin’ Time is Meganobz’ (orks_Meganobz.html)."
+ },
  "df2cf5e4debd42ac": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -14008,6 +14140,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "TARGET “One IMPERIAL KNIGHTS unit from your army that was just destroyed” = “Your unit just destroyed”; EFFECT “Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6” = the rest. “Any phase” is the row’s tag."
+ },
+ "e071a7c006c846ed": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW keywords: Nazdreg \"INFANTRY; CHARACTER; EPIC HERO; MEGA ARMOUR; WARBOSS\" (orks_Nazdreg.html); Meganobz \"INFANTRY; EXPLOSIVES; MEGA ARMOUR\" (orks_Meganobz.html) + datasheet name MEGANOBZ. Explosives and Meganobz are the only ones from the led unit."
  },
  "e078d9d809463497": {
   "verdict": "ok",
@@ -14854,6 +14992,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Fight phase in either turn; the shooting override is item 6ecf5696f4195e16."
+ },
+ "ee3048e6d8bc3d4e": {
+  "verdict": "ok",
+  "by": "review:orks-data",
+  "at": "2026-10-28",
+  "why": "GW (orks_Meganobz.html): \"Arrogant Invulnerability: Attacks that target this unit have -1 AP.\" Meganobz’ ability; applies to the whole attached unit (19.04)."
  },
  "ee3a97454cc6d7d9": {
   "verdict": "ok",
@@ -15760,11 +15904,5 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "GW IK Faction Pack \"VERSION 1.2\" prints \"FACTION: Code Chivalric, Super-heavy Walker\" on its datasheets. The Codex text (Wahapedia, Codex: Imperial Knights army rules) differs from 24.35 (\"excluding TITANIC models\" vs \"including MONSTER/VEHICLE ... MOBILE keyword\"). Neither 22.02 (\"faction abilities (also known as army rules)\") nor the Universal Rules Updates 1.1 settles which applies, so \"the sources don't say which applies\" is a both-readings note that picks neither."
- },
- "840be609f54574df": {
-  "verdict": "ok",
-  "by": "review:round4",
-  "at": "2026-10-28",
-  "why": "The pending judgement (verify/out/helpers-todo.json at 3cb8c3f, its only item) is runImport with D.armies.push(splitRefs(A)): correct. My round-1 “fix” was for the resolve it calls; the fix went into import.js resolveRoster (allOf), and runImport itself needed no change. Built-app checks in rounds 2–3: live imports of Healybois, Tzeeeeentch and Mucho Mutantes bring their reference sheets."
  }
 }
