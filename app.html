@@ -2043,6 +2043,9 @@ function dmCalc(st, A, au, tg, kind){
   const embOf = it => { const ls = linesOf(it); return ls.length > 0 && ls.every(i => embLines.includes(i)); };
   for(const it of items) if(embOf(it)) firstOff.add(key(it));
   for(const it of items) if(it.carrier) firstOff.add(key(it));   // (models the unit does not have yet: GW's composition's carrier)
+  // a weapon the model selects a few of each phase ([C’TAN POWER]: Powers of the C’tan, "up to two different C’tan Powers weapons",
+  // one while Damaged): the first two start ticked, the others unticked, the player's pick as for a model's melee weapons
+  if(ranged){ const pw = items.filter(it => it.profiles.some(p => (p.kw || []).some(k => /^C['’]TAN POWER$/i.test(k)))); pw.slice(2).forEach(it => firstOff.add(key(it))); }
   // the models left (st.left, as the player set them): each weapon's models from the lines that carry it; a weapon whose lines do
   // not add up to its models keeps its share of the unit
   const left = isObj(st.left) ? st.left : {}, cnt = i => parseInt(au.models[i], 10) || 1, has0 = i => left[i] != null ? Math.max(0, Math.min(cnt(i), +left[i] || 0)) : cnt(i);
@@ -5322,7 +5325,8 @@ function showAbility(key){
 function pickOptions(ab, u){
   const m = /\bselect one of the abilities in the (.+?) section\b/i.exec(ab.text) || /\bselect one ([^.,;]+?) ability\b/i.exec(ab.text);
   if(!m || !u) return { section:'', list:[] };
-  const sec = norm(m[1]), under = u.abilities.filter(x => x !== ab && x.who && norm(x.who.replace(/: pick one$/i, '')) === sec);
+  // ("select one Triarch ability": the box GW names TRIARCH ABILITIES, who "Triarch Abilities: pick one")
+  const sec = norm(m[1]), secs = [sec, sec + ' abilities'], under = u.abilities.filter(x => x !== ab && x.who && secs.includes(norm(x.who.replace(/: pick one$/i, ''))));
   return { section:m[1], list:under.length ? under : u.abilities.filter(x => x !== ab && norm(x.name) === sec) };
 }
 function showEnhancement(key){
