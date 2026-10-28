@@ -673,6 +673,9 @@ function buildRoster(army, MAP, issues) {
   // units, every copy
   const built = [];
   for (const u of army.units) {
+    // (a reference sheet of models GW prints on another sheet's datasheet, ref.of: the Brimstone Horrors on the Blue Horrors': no BSData
+    // entry of its own; that sheet's entry is checked as that sheet)
+    if (u.ref && u.ref.of) continue;
     const um = (MAP.units || {})[`${army.id}/${u.id}`] || {};
     const copies = [];
     for (let c = 0; c < (u.copies || 1); c++) copies.push(buildUnit(army, u, um, cat, force, c === 0 ? issues : []));

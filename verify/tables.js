@@ -374,6 +374,8 @@ function build(R){
       const ab = k && !(why.kw && why.kw[k]) && (u.abilities || []).find(y => y.name === 'Daemonic Allegiance' && (y.text || '').includes('**' + k.toUpperCase() + '**'));
       if(ab) put('kw', k, ab.name + ': ' + g[1]); }
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
+    // (a reference sheet's role, Reference, is the list's: the datasheet is a buyable one, Blue Horrors' Battleline)
+    if(u.ref && u.role === 'Reference') put('role', 'Reference', 'a reference sheet (ref)');
     const own = ownAbilities(u);
     for(const r of u.rules || []){
       if(nativeRule(r)) continue;   // (a rule the datasheet itself has: the Sorcerer in Terminator Armour's Deep Strike, not Umbralefic Crystal's)

@@ -717,7 +717,8 @@ function compareArmy(D, A, nr, out, srcFile) {
     pool.splice(pool.indexOf(c[0]), 1);
     pairs.push([nu, c[0]]);
   }
-  for (const u of pool) { chk('units'); fail(u.id, 'unit', u.name + ' ' + u.pts, null); }
+  // (a reference sheet New Recruit's PDF does not print, built from BSData's datasheet: verify/from-json.js --refs, the hand file's refs)
+  for (const u of pool) { if (u.ref) continue; chk('units'); fail(u.id, 'unit', u.name + ' ' + u.pts, null); }
 
   // roster (page 1): who leads whom, the points of each part, copies, role, model counts
   const roster = nr.roster.map(r => Object.assign({ used: false }, r));

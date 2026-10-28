@@ -303,6 +303,11 @@ function resolveRoster(j, D, opt){
     if(units.some(u => u.ref && u.name === r.name && u.ref.by === r.ref.by)) continue;
     const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);
   }
+  // (and one a stratagem of the imported detachments adds, ref.strat: Gift of Change's Chaos Spawn, from an app list of those detachments)
+  for(const a of pool) for(const r of allOf(a).filter(r => r.ref && r.ref.strat && dets.some(k => ((FAC.detachments[k] || {}).stratagems || []).some(s => s.id === r.ref.strat)))){
+    if(units.some(u => u.ref && u.name === r.name && u.ref.strat === r.ref.strat)) continue;
+    const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);
+  }
   const name = typo(nn(R.name)) || 'Imported list';
   const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,
     points:limit || (battleSize && T.limits[battleSize]) || null, pointsUsed:total, battleSize, disposition, detachments:dets };

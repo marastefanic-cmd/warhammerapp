@@ -4602,8 +4602,10 @@ function screenUnit(){
   const ally = /^Allies: (.+)$/.exec(u.role || ''), allyRule = ally && (faction().allies || {})[ally[1]];
   if(allyRule && ruleFor(allyRule)) meta.push('In this army through ' + linkTo('rule', allyRule, allyRule) + ' (' + esc(ally[1]) + ')');
   // a reference sheet: not in the army until the rule that adds it, named and quoted (no points, in no count)
+  // (or the stratagem that adds it, strat: Gift of Change's Chaos Spawn, its CP)
   const refBy = u.ref && army().units.find(x => x.id === u.ref.by), refAb = refBy && refBy.abilities.find(x => x.name === u.ref.rule);
-  if(u.ref) meta.push('Not in the army until ' + (refAb ? linkTo('ability', abilityKey(refAb), u.ref.rule) : esc(u.ref.rule)) + (refBy ? ' (' + linkTo('unit', refBy.id, unitLabel(refBy)) + ')' : '') + ': “' + esc(u.ref.quote) + '”');
+  const refSt = u.ref && u.ref.strat && allStratagems().find(x => x.id === u.ref.strat);
+  if(u.ref) meta.push('Not in the army until ' + (refAb ? linkTo('ability', abilityKey(refAb), u.ref.rule) : refSt ? linkTo('strat', refSt.id, u.ref.rule) + ' (' + esc(refSt.cp) + 'CP)' : esc(u.ref.rule)) + (refBy ? ' (' + linkTo('unit', refBy.id, unitLabel(refBy)) + ')' : '') + ': “' + esc(u.ref.quote) + '”');
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + (u.ref ? '–' : esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')) + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports

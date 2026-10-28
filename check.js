@@ -128,7 +128,15 @@ function check(file){
       }
       if(u.enhancement && !detachmentsOf(a).some(d => d.enhancements.some(e => e.name === u.enhancement))) P(where, 'enhancement not in its detachments:', u.enhancement);
       // a reference sheet (ref): no points, and the rule that adds it is an ability of a unit of the list whose words hold the quote
-      if(u.ref){
+      // (or, strat, a stratagem of its detachments whose EFFECT holds it: Gift of Change's Chaos Spawn)
+      if(u.ref && u.ref.strat){
+        if(u.pts) P(where, 'a reference sheet has points:', u.pts);
+        const st = detachmentsOf(a).flatMap(d => d.stratagems || []).find(x => x.id === u.ref.strat);
+        if(!st || st.name !== u.ref.rule) P(where, 'ref names no stratagem of the list’s detachments:', u.ref.strat + ' · ' + u.ref.rule);
+        else if(!String(st.effect || '').replace(/\*\*/g, '').includes(u.ref.quote)) P(where, 'ref quote is not in the EFFECT of', u.ref.rule);
+        if(u.ref.by) P(where, 'a stratagem’s reference sheet names a unit too:', u.ref.by);
+      }
+      else if(u.ref){
         if(u.pts) P(where, 'a reference sheet has points:', u.pts);
         const by = a.units.find(x => x.id === u.ref.by), ab = by && (by.abilities || []).find(x => x.name === u.ref.rule);
         if(!ab) P(where, 'ref names no ability of the list:', u.ref.by + ' · ' + u.ref.rule);
