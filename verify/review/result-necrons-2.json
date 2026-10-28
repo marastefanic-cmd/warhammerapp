@@ -1,0 +1,185 @@
+[
+ {
+  "key": "4e06e9e417cfc177",
+  "where": "u-w0t-m8 · Royal Warden · Adaptive Strategy",
+  "verdict": "ok",
+  "why": "Fall Back is only possible in your own Movement phase: Core Rules 09.02 (the active player moves units) and 09.07 (fall-back move). This is the fix from result-necrons.json 231348fb544bd6eb, now derived by derive.js."
+ },
+ {
+  "key": "982a2afa7f04b8fd",
+  "where": "u-w0t-m8 · Technomancer · Rites of Reanimation",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Technomancer.html: Rites of Reanimation is the Technomancer's ability. Under Core 19.04 a leader/support ability applies to the whole attached unit; the snapshot's When targeted line is for the whole unit."
+ },
+ {
+  "key": "fdb2beb01f8bca58",
+  "where": "u-w0t-m8 · Technomancer · Rites of Reanimation",
+  "verdict": "ok",
+  "why": "\"While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.\" A support unit leads its bodyguard (Core 19.01: Leader or Support \"allow such units to lead other friendly units\"), and the export's Supporting association attaches it, so the condition holds and the models include the Technomancer itself. The def quotes it, nothing added."
+ },
+ {
+  "key": "d896abf1ee7c58ac",
+  "where": "u-w0t-m8 · Technomancer · Technomancer",
+  "verdict": "ok",
+  "why": "\"At the end of your Movement phase\": a fixed moment, on the checklist as To do under Movement · Your turn. The label now sits on the Technomancer ability, not on Rites of Reanimation (fixed). \"Each model can only be selected … once per turn\" is rightly not a once-per tag."
+ },
+ {
+  "key": "bc8d90a98271ea5a",
+  "where": "u-w0t-m8 · Technomancer · Technomancer",
+  "verdict": "ok",
+  "why": "The Technomancer datasheet's own ability."
+ },
+ {
+  "key": "59588ffcd8dacdd9",
+  "where": "u-w0t-m8 · Technomancer · Implacable Eradication",
+  "verdict": "ok",
+  "why": "\"Each time a model in this unit makes an attack\": the derived convention (Fire Overwatch in their Movement phase, your Shooting phase, either Fight phase), as on the other \"makes an attack\" abilities."
+ },
+ {
+  "key": "bcfa7e9a7f2ab46c",
+  "where": "u-w0t-m8 · Technomancer · Implacable Eradication",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Immortals.html ability. Under Core 19.04 a bodyguard ability applies to every model of the attached unit, the Technomancer included, and the app shows it under ALL ATTACKS · WHOLE UNIT."
+ },
+ {
+  "key": "7fafc7db3ad168b6",
+  "where": "u-w0t-m8 · Technomancer",
+  "verdict": "ok",
+  "why": "\"re-roll a Wound roll of 1\" on every attack, always, with calc rrWound 1s. It covers the whole attached unit (19.04), which the app shows as ALL ATTACKS · WHOLE UNIT, so the Staff of light gets it too."
+ },
+ {
+  "key": "01e6c4a19e689f9e",
+  "where": "u-w0t-m8 · Technomancer",
+  "verdict": "ok",
+  "why": "\"If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead\": a condition (targetObjective), with a full re-roll replacing the 1s re-roll. Literal."
+ },
+ {
+  "key": "984935833326c7e3",
+  "where": "u-w0t-m8 · Technomancer",
+  "verdict": "ok",
+  "why": "Core 19.03: \"An attached unit has all of the keywords of all of its component units.\" The Immortals are INFANTRY; BATTLELINE; IMMORTALS (Wahapedia ds/necrons_Immortals.html), and the Technomancer is INFANTRY; CHARACTER; CRYPTEK; FLY; TECHNOMANCER."
+ },
+ {
+  "key": "91d9ff4d7da70aeb",
+  "where": "u-w0t-m8 · Technomancer",
+  "verdict": "ok",
+  "why": "Wahapedia: Technomancer \"YOUR 1ST UNIT COSTS 80\" (2nd+ 90) and Immortals 5 models 65, which matches the export (80 + 65)."
+ },
+ {
+  "key": "54fcd9a5d24751a4",
+  "where": "u-w0t-m8 · Technomancer",
+  "verdict": "ok",
+  "why": "GW: the Technomancer \"is equipped with: staff of light\" (18\" A3 4+ S5 -2 D1; melee A2 4+ S5 -2 D1), and every Immortal \"gauss blaster; close combat weapon\" (24\" A2 3+ S5 -1 D1 [LETHAL HITS]; CCW A2 3+ S4 0 D1). The export has 5× gauss blaster and no tesla carbines."
+ },
+ {
+  "key": "ef46eb6d0425dc01",
+  "where": "u-w0t-m8 · Canoptek Scarab Swarms · Self-destruction",
+  "verdict": "ok",
+  "why": "\"At the start of the Fight phase\": the Fight phase of either turn, on the checklist as To do in both."
+ },
+ {
+  "key": "52947dff81738878",
+  "where": "u-w0t-m8 · Canoptek Scarab Swarms",
+  "verdict": "ok",
+  "why": "3 Canoptek Scarab Swarms; \"Every model is equipped with: feeder mandibles\" (A6 5+ S2 0 D1 [LETHAL HITS]). Stats M10\" T2 Sv6+ W4 Ld8+ OC0 and base 40mm (Event Companion l.3416) match."
+ },
+ {
+  "key": "3eb361cf00c4152a",
+  "where": "u-w0t-m8 · Canoptek Spyders · Canoptek Swarm",
+  "verdict": "ok",
+  "why": "\"In your Command phase, select one friendly CANOPTEK SCARAB SWARM unit\": a choice in your Command phase, on the checklist as To do. It returns destroyed models to the Scarab Swarms unit, so they are that unit's own datasheet's models, already in the list, and no reference sheet is needed. The returned models are not counted as present (none are destroyed at the start)."
+ },
+ {
+  "key": "5956ecc50db47459",
+  "where": "u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array",
+  "verdict": "ok",
+  "why": "GW prints \"Fabricator Claw Array (Aura)\" (Wahapedia ds/necrons_Canoptek-Spyders.html)."
+ },
+ {
+  "key": "3189e32d20bc6359",
+  "where": "u-w0t-m8 · Canoptek Spyders · Gloom Prism",
+  "verdict": "ok",
+  "why": "GW prints \"Gloom Prism (Aura)\"."
+ },
+ {
+  "key": "31c8f870904f0f99",
+  "where": "u-w0t-m8 · Canoptek Spyders",
+  "verdict": "ok",
+  "why": "Friendly NECRONS VEHICLE within 6\" have FNP 6+, and the Spyder is a VEHICLE (keywords VEHICLE; FLY; CANOPTEK; SPYDERS), so selfAlways is right and calc fnp 6 is literal. It reaches the Silent King, Reanimator and Tesseract Vaults, not the Technomancer + Immortals."
+ },
+ {
+  "key": "d774751ff73cb46a",
+  "where": "u-w0t-m8 · Canoptek Spyders",
+  "verdict": "ok",
+  "why": "FNP 5+ only against mortal wounds and Psychic Attacks, so no calc value; NECRONS within 6\", its own unit included."
+ },
+ {
+  "key": "0a97f1e7479987ac",
+  "where": "u-w0t-m8 · Canoptek Spyders",
+  "verdict": "ok",
+  "why": "GW: \"Every model is equipped with: automaton claws\"; wargear \"Any number of models can each be equipped with 2 particle beamers / 1 fabricator claw array / 1 gloom prism\". The export takes all three. Particle beamer 18\" D6 3+ S6 0 D1 [BLAST, DEVASTATING WOUNDS] ×2; claws A5 4+ S8 -2 D2; base 60mm (Event Companion l.3417); 1 model 65 pts."
+ },
+ {
+  "key": "1267afb03f479ca9",
+  "where": "deviations-bsdata.json · the-silent-king · ability.text",
+  "verdict": "ok",
+  "why": "This is result-necrons.json's fix: the source is now BSData's Voice of the Triarch text (2be5-77b0-af86-2bd0), with its NBSPs."
+ },
+ {
+  "key": "89eff9c8e5cab9be",
+  "where": "deviations-bsdata.json · technomancer-immortals · ability.text",
+  "verdict": "ok",
+  "why": "GW (Wahapedia ds/necrons_Technomancer.html): \"you can select\"; BSData: \"select\". GW wins."
+ },
+ {
+  "key": "7b4f229e5e703506",
+  "where": "deviations-bsdata.json · technomancer-immortals · rules",
+  "verdict": "ok",
+  "why": "GW prints no Feel No Pain on either datasheet (Technomancer CORE ABILITIES \"Support\", Immortals none); the FNP 5+ comes from Rites of Reanimation, and the app shows it under Feel No Pain through that ability. BSData's unit-level rule is declared."
+ },
+ {
+  "key": "e29c617cb4541108",
+  "where": "deviations-bsdata.json · canoptek-spyders · ability.text",
+  "verdict": "ok",
+  "why": "GW: \"that unit has the Feel No Pain 6+ ability\"; BSData: \"models in that unit have\". GW wins."
+ },
+ {
+  "key": "8ee89b08b5ece30b",
+  "where": "u-w0t-m8 · newer export (U_w0t_m8_2.json)",
+  "verdict": "ok",
+  "why": "Export (verify/sources/nr-json/u-w0t-m8.json): every unit and price as listed, total costs 2000. The only association is Supporting (Technomancer → Immortals). Wahapedia prices: Imotekh 100, Silent King 420, Royal Warden 50, Technomancer 80 (1st), Immortals 65 (5), Flayed Ones 55 (5), Ophydian 80 (1st to 2nd), Scarab Swarms 40 (3), Reanimator 75, Spyders 65 (1), Tesseract Vault 465/505. Bases match the Event Companion (Technomancer 50mm, Immortals 32mm, Scarabs 40mm, Spyder 60mm)."
+ },
+ {
+  "key": "aad07081124f7a50",
+  "where": "u-w0t-m8 · Imotekh the Stormlord, Royal Warden",
+  "verdict": "ok",
+  "why": "The export has no Leader association for Imotekh or the Royal Warden, so both are their own units. The reasons in the hand file are right (LEADER lists from Wahapedia)."
+ },
+ {
+  "key": "27c32b58b9353162",
+  "where": "u-w0t-m8 · Immortals · Implacable Eradication",
+  "verdict": "ok",
+  "why": "Literal reading of both sentences."
+ },
+ {
+  "key": "b8eb72b914ab6e3f",
+  "where": "u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array, Gloom Prism",
+  "verdict": "ok",
+  "why": "Both are (Aura) in GW; the guards quote the text. Own unit included (22.01)."
+ },
+ {
+  "key": "33a35d494ddd0442",
+  "where": "u-w0t-m8 · Technomancer · Rites of Reanimation",
+  "verdict": "ok",
+  "why": "Literal; the support-unit leading follows from Core 19.01."
+ },
+ {
+  "key": "58091bdff27d1efc",
+  "where": "u-w0t-m8 · Canoptek Scarab Swarms · Chittering Swarm",
+  "verdict": "fix",
+  "why": "GW (Wahapedia ds/necrons_Canoptek-Scarab-Swarms.html) prints \"Chittering swarm:\". GW wins on ability names, as with Triarch Abilities over Voice of the Triarch, and the unit's own hand reason already says \"Chittering swarm (GW’s capitalisation; New Recruit: Chittering Swarm)\", while data.js necrons/canoptek-scarab-swarms has name:'Chittering Swarm'. Change the row's name to 'Chittering swarm' (keeping New Recruit's name only for matching the export, as other renamed abilities do). The exact wording of the new judgement string is the builder's: approve.js can match this fix only if it is generated as written here, so treat it as \"name: Chittering swarm\".",
+  "fix": {
+   "name": "Chittering swarm (GW’s capitalisation, as Wahapedia prints it; New Recruit/BSData: Chittering Swarm)"
+  }
+ }
+]
