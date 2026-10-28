@@ -46,6 +46,58 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   if(main) fs.rmSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true, force:true });
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
 
+  // ---- the home screen's folders ----
+  // - home-folders: home is two rows, Favorites and All lists, each with its count; a tap opens the folder; Back returns home
+  // - home-fav: a list's star in All lists adds it to Favorites (kept on this phone, over a reload) and stays in All lists, starred; the star
+  //   on its Find screen says so and takes it off again; nothing is starred at first; an empty Favorites says how to add one
+  // - home-sort: each order puts All lists in it (newest: by the date in its source line, A to Z by name, by faction under bands), kept over a
+  //   reload; the folder screens come back on a reload, with their Back
+  const homeChecks = async () => {
+    // (a tap right after a screen change is dropped; nothing there to tap is a failure, and the checks go on)
+    const tap = async q => { await page.waitForTimeout(400); if(!await page.$(q)){ fail('home-folders', '', q, 'nothing there to tap'); return; } await page.click(q); await page.waitForTimeout(200); };
+    await page.evaluate(() => { localStorage.removeItem('wh-favs'); localStorage.removeItem('wh-home-sort'); hideSheet(); go({ s:'home' }); });
+    const h = await page.evaluate(() => [...document.querySelectorAll('#view [data-folder]')].map(b => b.dataset.folder + ':' + b.querySelector('.c').textContent));
+    if(h.join() !== 'favs:0,lists:' + armies.length) fail('home-folders', '', 'home', h.join());
+    await tap('#view [data-folder="favs"]');
+    const e = await page.evaluate(() => ({ s:cur.s, t:$('#top').innerText, rows:document.querySelectorAll('#view .arow').length, hint:/No favorites yet/.test($('#view').innerText), link:!!document.querySelector('#view [data-folder="lists"]') }));
+    if(e.s !== 'favs' || !/Favorites/.test(e.t) || e.rows || !e.hint || !e.link) fail('home-fav', '', 'empty Favorites', JSON.stringify(e));
+    await tap('#view [data-folder="lists"]');
+    const id = armies[armies.length - 1].id;
+    await tap(`#view [data-fav="${id}"]`);
+    const st = await page.evaluate(id => ({ kept:localStorage.getItem('wh-favs'), on:(document.querySelector(`#view [data-fav="${id}"]`) || { getAttribute:() => 'none' }).getAttribute('aria-pressed'), still:!!document.querySelector(`#view [data-army="${id}"]`) }), id);
+    if(st.kept !== JSON.stringify([id]) || st.on !== 'true' || !st.still) fail('home-fav', '', 'star in All lists', JSON.stringify(st));
+    await page.reload(); await page.evaluate(() => document.fonts.ready);
+    const re = await page.evaluate(() => ({ s:cur.s, back:($('#top [data-back]') || {}).textContent || '' }));
+    if(re.s !== 'lists' || re.back !== 'Armies') fail('home-sort', '', 'reload on All lists', JSON.stringify(re));
+    await tap('#top [data-back]');
+    const hb = await page.evaluate(() => ({ s:cur.s, favs:(document.querySelector('#view [data-folder="favs"] .c') || {}).textContent }));
+    if(hb.s !== 'home' || hb.favs !== '1') fail('home-folders', '', 'Back from All lists', JSON.stringify(hb));
+    await tap('#view [data-folder="favs"]');
+    const fv = await page.evaluate(() => [...document.querySelectorAll('#view .arow')].map(r => r.dataset.army));
+    if(fv.join() !== id) fail('home-fav', '', 'Favorites with one', fv.join());
+    await tap(`#view [data-army="${id}"]`);
+    const fs1 = await page.evaluate(() => { const b = $('#top [data-fav]'); return b ? b.getAttribute('aria-pressed') : 'none'; });
+    if(fs1 !== 'true') fail('home-fav', '', 'the star on Find', fs1);
+    await tap('#top [data-fav]');
+    const fs2 = await page.evaluate(() => ({ on:($('#top [data-fav]') || { getAttribute:() => 'none' }).getAttribute('aria-pressed'), kept:localStorage.getItem('wh-favs') }));
+    if(fs2.on !== 'false' || fs2.kept !== '[]') fail('home-fav', '', 'unstarred on Find', JSON.stringify(fs2));
+    // the orders
+    const dateOf = src => { const m = /(\d{1,2}) ([A-Za-z]{3})[a-z]* (\d{4})/.exec(src || ''); return m ? Date.parse(m[1] + ' ' + m[2] + ' ' + m[3] + ' UTC') : 0; };
+    const meta = await page.evaluate(() => WH_DATA.armies.map((a, i) => ({ id:a.id, name:a.name, src:a.source, f:factionOf(a).name, i })));
+    const want = {
+      new:meta.slice().sort((x, y) => dateOf(y.src) - dateOf(x.src) || y.i - x.i).map(x => x.id),
+      az:meta.slice().sort((x, y) => x.name.localeCompare(y.name, 'en', { sensitivity:'base' })).map(x => x.id),
+      faction:meta.slice().sort((x, y) => x.f.localeCompare(y.f) || x.name.localeCompare(y.name, 'en', { sensitivity:'base' })).map(x => x.id) };
+    if(meta.some(x => !dateOf(x.src))) fail('home-sort', '', 'newest', 'a list without a date in its source line: ' + meta.filter(x => !dateOf(x.src)).map(x => x.id).join(', '));
+    await page.evaluate(() => { hideSheet(); go({ s:'lists' }); });
+    for(const k of ['az', 'faction', 'new']){
+      await tap('#view [data-sort]'); await tap(`#sheetIn [data-sortv="${k}"]`);
+      const got = await page.evaluate(() => ({ ids:[...document.querySelectorAll('#view .arow')].map(r => r.dataset.army), bands:document.querySelectorAll('#view .rgh').length, kept:localStorage.getItem('wh-home-sort'), sheet:$('#sheetHost').hidden }));
+      if(got.ids.join() !== want[k].join() || got.kept !== JSON.stringify(k) || !got.sheet || (k === 'faction') !== got.bands > 0) fail('home-sort', '', k, JSON.stringify(got));
+    }
+    await page.evaluate(() => { localStorage.removeItem('wh-favs'); localStorage.removeItem('wh-home-sort'); hideSheet(); go({ s:'home' }); });
+  };
+
   // VERIFY_LISTS=a,b: only those lists' screens (a check run by hand, e.g. that the same build renders the same text again; run.js
   // renders every list)
   const only = (process.env.VERIFY_LISTS || '').split(',').filter(Boolean);
@@ -71,7 +123,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
-      if(label !== 'home' && label !== 'settings' && !/^popup import/.test(label) && !r.tabs)   // (the import sheet opens on the home screen)
+      if(!/^home\b/.test(label) && label !== 'settings' && !/^popup (import|order)/.test(label) && !r.tabs)   // (the import sheet opens on the home screen)
       fail('tabs', a.id, label, 'no tab bar');
       if(r.unnamed.length) fail('tabs-named', a.id, label, 'tabs (icons only) without a name for screen readers: ' + r.unnamed.join(', '));
       // the data version changes with every release: the snapshot keeps a placeholder
@@ -92,6 +144,13 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       r.links.forEach(l => links.add(l));
     };
     if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`);
+      // its two folders: Favorites (none at first, then two lists starred), All lists in each order, and the order's sheet
+      await take('home favorites (none)', `() => { hideSheet(); go({ s:'home' }); go({ s:'favs' }); }`);
+      for(const [k, n] of [['new', 'newest first'], ['az', 'a to z'], ['faction', 'by faction']]) await take('home all lists (' + n + ')', `() => { store.set('wh-home-sort', '${k}'); hideSheet(); go({ s:'home' }); go({ s:'lists' }); }`);
+      await take('popup order', `() => { hideSheet(); go({ s:'home' }); go({ s:'lists' }); showSort(); }`);
+      await take('home favorites (two)', `() => { const ids = ['shooty', 'healybois'].filter(armyById); store.set('wh-favs', ids.length === 2 ? ids : WH_DATA.armies.slice(0, 2).map(x => x.id)); store.set('wh-home-sort', 'az'); hideSheet(); go({ s:'home' }); go({ s:'favs' }); }`);
+      await take('home (two favorites)', `() => { hideSheet(); go({ s:'home' }); }`);
+      await homeChecks();
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
@@ -738,8 +797,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const e of $('#sheetIn').querySelectorAll('*')){ const b = e.getBoundingClientRect(); if(b.width && (b.right > r.right + 0.5 || b.left < r.left - 0.5)) { bad.push((e.className || e.tagName) + ' wider than the sheet'); break; } }
       return bad; });
     await page.evaluate(() => { hideSheet(); go({ s:'home' }); });
-    const row = await page.evaluate(() => { const b = document.querySelector('#view [data-import]'); const l = b && b.closest('.list'), last = [...document.querySelectorAll('#view .armies .arow')].pop();
-      return !b ? 'no row' : !(last && last.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? 'not under the armies' : /Import a list from New Recruit/.test(b.textContent) ? '' : 'says ' + b.textContent; });
+    const row = await page.evaluate(() => { const b = document.querySelector('#view [data-import]'); const l = b && b.closest('.list'), last = [...document.querySelectorAll('#view [data-folder]')].pop();
+      return !b ? 'no row' : !(last && last.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? 'not under the folders' : /Import a list from New Recruit/.test(b.textContent) ? '' : 'says ' + b.textContent; });
     if(row) fail('import-row', L, 'home', row);
     await page.waitForTimeout(400);   // (a tap right after a screen change is taken as a double tap and dropped)
     await page.click('#view [data-import]'); await page.waitForTimeout(300);
@@ -757,14 +816,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const yes = await page.evaluate(() => ({ cur:plain(cur), kept:JSON.parse(localStorage.getItem('wh-imported') || '[]').map(x => x.id), sheet:$('#sheetHost').hidden }));
     const id = yes.cur.army;
     if(yes.cur.s !== 'army' || !/^import-/.test(id || '') || yes.kept.join() !== id || !yes.sheet) fail('import-opens', L, '6 bigs', JSON.stringify(yes));
-    // kept over a reload, under its faction on the home screen, and every screen as the app's own list's
+    // kept over a reload, under its faction in All lists (and first by newest: imported today), and every screen as the app's own list's
     await page.reload(); await page.evaluate(() => document.fonts.ready);
     const same = await page.evaluate(([id, orig]) => { const out = [], A = armyById(id); if(!A) return ['not there after a reload'];
       const txt = (s, a, x) => { hideSheet(); go(Object.assign({ s, army:a }, x || {})); document.querySelectorAll('#view details').forEach(d => d.open = true); return $('#view').innerText; };
       const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '') : t.replace(/New Recruit, exported [^\n]*/, '');
       for(const s of ['army', 'pregame', 'checklist', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
       for(const u of armyById(orig).units) if(txt('unit', orig, { unit:u.id }) !== txt('unit', id, { unit:u.id })) out.push('unit ' + u.id + ' differs');
-      hideSheet(); go({ s:'home' });
+      store.set('wh-home-sort', 'new'); hideSheet(); go({ s:'lists' });
+      const first = (document.querySelector('#view .arow') || {}).dataset; if(!first || first.army !== id) out.push('not first in All lists by newest');
+      store.set('wh-home-sort', 'faction'); hideSheet(); go({ s:'lists' });
       const rows = [...document.querySelectorAll('#view .arow')].filter(r => r.dataset.army === id || r.dataset.army === orig).map(r => r.closest('.list').previousElementSibling.textContent);
       if(rows.length !== 2 || rows[0] !== rows[1]) out.push('home rows: ' + rows.join(' | '));
       return out; }, [id, '6-bigs']);
