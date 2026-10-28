@@ -1,0 +1,230 @@
+[
+ {
+  "army": "tzeeeeentch",
+  "kind": "ability-note",
+  "where": "tzeeeeentch · Brimstone Horrors · Exploding Horrors",
+  "judgement": {
+   "note": "Designer’s Note (GW’s Pink Horrors datasheet, Wahapedia): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”"
+  },
+  "source": {
+   "ability": "Exploding Horrors",
+   "text": "Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.",
+   "others": [],
+   "listRules": [
+    "The Shadow of Chaos",
+    "Unholy Avalanche",
+    "Fates in Flux"
+   ]
+  },
+  "key": "d80e098a127f360b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "pickOptions",
+  "judgement": {
+   "code": "function pickOptions(ab, u){\n  const m = /\\bselect one of the abilities in the (.+?) section\\b/i.exec(ab.text) || /\\bselect one ([^.,;]+?) ability\\b/i.exec(ab.text);\n  if(!m || !u) return { section:'', list:[] };\n  // (\"select one Triarch ability\": the box GW names TRIARCH ABILITIES, who \"Triarch Abilities: pick one\")\n  const sec = norm(m[1]), secs = [sec, sec + ' abilities'], under = u.abilities.filter(x => x !== ab && x.who && secs.includes(norm(x.who.replace(/: pick one$/i, ''))));\n  // (the heading: GW's name of the box the options sit under, \"Triarch Abilities\", where the text names it otherwise)\n  return { section:under.length ? under[0].who.replace(/: pick one$/i, '') : m[1], list:under.length ? under : u.abilities.filter(x => x !== ab && norm(x.name) === sec) };\n}"
+  },
+  "source": {
+   "implements": "the options a \"select one of the abilities in the X section\" / \"select one X ability\" asks for: the unit's abilities printed under that section, or the ability named X that lists them"
+  },
+  "key": "eeac500374b68245"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resolveRoster",
+  "judgement": {
+   "code": "function resolveRoster(j, D, opt){\n  const errors = [], err = m => { if(!errors.includes(m)) errors.push(m); };\n  const fail = () => ({ ok:false, errors });\n  if(!D.bsIds){ err('this version of the app cannot import lists'); return fail(); }\n  // the tables without a prototype: an export's id such as \"constructor\" or \"toString\" is no key of them\n  const T = {}; for(const k of Object.keys(D.bsIds)) T[k] = Object.assign(Object.create(null), D.bsIds[k]);\n  const R = j.roster;\n  if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }\n  const F = R.forces[0];\n  const sels = F.selections || [];\n  const fac = T.factions[F.catalogueId];\n  const top = sels.filter(s => s.type === 'upgrade'), roots = sels.filter(s => s.type !== 'upgrade');\n  if(!fac){\n    // nothing of an unknown faction can resolve: name it, and what adding it would take\n    err('faction ' + String(F.catalogueName || F.catalogueId || '?').split(' - ').pop() + ' not recognized');\n    for(const t of top) for(const c of t.selections || []) if(t.name === 'Detachment' || c.group === 'Detachment') err('detachment ' + nn(c.name) + ' not recognized');\n    for(const s of roots) err('unit ' + nn(s.name) + ' not recognized');\n    return fail();\n  }\n  const FAC = D.factions[fac];\n\n  /* the list: one battle size, one detachment selection, one Force Disposition, config; every top-level selection is one of\n     these or holds no list content (Show/Hide Options and rules references, whose own choices must be known ones too) */\n  let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};\n  const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };\n  for(const t of top){\n    const id = lastId(t.entryId), kids = t.selections || [];\n    if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }\n    if(T.info[id]){\n      for(const c of kids) if(!T.infoKids[lastId(c.entryId)] || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');\n      continue;\n    }\n    if(T.config[id]){\n      const key = T.config[id];\n      if(key in config){ err('selection ' + nn(t.name) + ' twice not recognized'); continue; }\n      const odd = kids.filter(c => T.configKids[lastId(c.entryId)] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1);\n      for(const c of odd) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');\n      if(!odd.length && kids.length) config[key] = kids.map(c => typo(nn(c.name))).join(', ');\n      continue;\n    }\n    const kind = T.roots[id];\n    if(!kind){ err('selection ' + nn(t.name) + ' not recognized'); continue; }\n    if(seen[kind]){ err(KIND[kind] + ' selection ' + nn(t.name) + ' twice not recognized'); continue; }\n    seen[kind] = true;\n    for(const c of kids){\n      const cid = lastId(c.entryId), nm = nn(c.name);\n      const once = Number(c.number) === 1 && !(c.selections || []).length;\n      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }\n      if(kind === 'disposition' && T.dispositions[cid] === nm && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }\n      const d = kind === 'detachment' && T.detachments[cid], dk = d && d.split('/');\n      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }\n      err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');\n    }\n  }\n  if(!battleSize && !errors.some(e => /^battle size/.test(e))) err('battle size not recognized (the export names none)');\n  if(!dets.length && !errors.some(e => /^detachment/.test(e))) err('detachment not recognized (the export names none)');\n  // the points limit is the battle size's (BSData), not the export's word for it (an export can name none: no costLimits)\n  const limit = pts(R.costLimits), total = pts(R.costs);\n  if(battleSize && (R.costLimits || []).length && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');\n  if(battleSize && total > T.limits[battleSize]) err('points total ' + total + ' not recognized: over the ' + battleSize + ' limit of ' + T.limits[battleSize] + ' pts');\n  if(disposition && dets.length){\n    const allowed = new Set(dets.flatMap(k => FAC.detachments[k].dispositions || []));\n    if(!allowed.has(disposition)) err('disposition ' + disposition + ' not recognized for ' + and(dets.map(k => FAC.detachments[k].name)));\n  }\n  if(!disposition && !errors.some(e => /^disposition/.test(e))) err('disposition not recognized (the export names none)');\n\n  /* units: each bodyguard with the characters attached to it (New Recruit's Leading / Supporting) */\n  const byId = new Map(roots.map(s => [s.id, s]));\n  const leadsTo = new Map();\n  for(const s of roots) for(const a of s.associations || []) if(a.type === 'outgoing' && a.action === 'group'){\n    if(!byId.has(a.to)){ err('leader attachment of ' + nn(s.name) + ' not recognized (what it ' + (a.name === 'Supporting' ? 'supports' : 'leads') + ' is not a unit of the list)'); continue; }\n    if(leadsTo.has(s)){ err('leader attachment of ' + nn(s.name) + ' to two units not recognized'); continue; }\n    leadsTo.set(s, byId.get(a.to));\n  }\n  const groups = [], groupOf = new Map();\n  for(const s of roots){\n    if(leadsTo.has(s)) continue;\n    const g = { parts:[s], body:s }; groups.push(g); groupOf.set(s, g);\n  }\n  for(const [s, b] of leadsTo){ const g = groupOf.get(b); if(!g || leadsTo.has(b)){ err('leader attachment of ' + nn(s.name) + ' to ' + nn(b.name) + ' not recognized'); continue; } g.parts.unshift(s); }\n  for(const g of groups) g.at = Math.min(...g.parts.map(p => roots.indexOf(p)));\n  groups.sort((a, b) => a.at - b.at);\n\n  // the lists of this faction; a unit is taken only from one with the same detachments, config and battle size\n  const ctxKey = (d, c, b) => d.slice().sort().join('+') + '|' + JSON.stringify(Object.keys(c).sort().map(k => [k, c[k]])) + '|' + b;\n  const mine = ctxKey(dets, config, battleSize);\n  const facArmies = D.armies.filter(a => a.faction === fac && !a.imported && T.units[a.id + '/' + (a.units[0] || {}).id]);\n  const pool = facArmies.filter(a => ctxKey(a.detachments, a.config || {}, a.battleSize) === mine);\n  // (a list's units and its reference sheets: the app moves these to a.refs at start, verify/ and an export's entry see both)\n  const allOf = a => a.units.concat(a.refs || []);\n  const instances = facArmies.flatMap(a => allOf(a).map(u => ({ a, u, sigs:(T.units[a.id + '/' + u.id] || []).slice().sort() })));\n  const partSigs = instances.flatMap(x => x.sigs);\n  if(!errors.length && !pool.length) err('detachment' + (dets.length > 1 ? 's ' : ' ') + and(dets.map(k => FAC.detachments[k].name)) + (Object.keys(config).length ? ' with ' + Object.entries(config).map(([k, v]) => k + ' ' + v).join(', ') : '') +\n    ' not recognized: the app’s ' + FAC.name + ' lists have ' + and([...new Set(facArmies.map(a => a.detachments.map(k => FAC.detachments[k].name).join(' + ') + (a.config ? ' (' + Object.entries(a.config).map(([k, v]) => k + ' ' + v).join(', ') + ')' : '')))]));\n\n  const label = g => g.parts.map(p => nn(p.name)).join(' + ');\n  const costOf = s => pts(s.costs) + (s.selections || []).reduce((t, c) => t + costOf(c), 0);\n  // the names an export's selections carry must be BSData's (an entry renamed in the export is not that entry)\n  const namesOk = (s, unit) => {\n    let ok = true;\n    const walk = (x, isRoot) => {\n      const id = lastId(x.entryId);\n      if(T.names[id] !== undefined && T.names[id] !== nn(x.name)){ ok = false; err(isRoot ? 'unit ' + nn(x.name) + ' not recognized' : (/^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + (isRoot ? '' : ' on unit ' + unit) + ' not recognized'); }\n      for(const c of x.selections || []) walk(c, false);\n    };\n    walk(s, true); return ok;\n  };\n  // why one part matches nothing: what it has that the closest part of the same datasheet the app has does not\n  const explainPart = (p, unit, pool) => {\n    const rid = lastId(p.entryId), sig = sigOf(p);\n    const same = [...new Set((pool || partSigs).filter(s => s.startsWith(rid + '|')))];\n    if(!same.length || T.names[rid] !== nn(p.name)){ err('unit ' + nn(p.name) + ' not recognized'); return; }\n    const mineE = entries(sig);\n    const best = same.map(s => { const e = entries(s); return { e, d:mineE.filter(x => !e.includes(x)).length + e.filter(x => !mineE.includes(x)).length }; }).sort((a, b) => a.d - b.d)[0];\n    const byPath = new Map(); const walk = (x, path) => { for(const c of x.selections || []){ const k = (path ? path + '/' : '') + lastId(c.entryId); byPath.set(k, c); walk(c, k); } }; walk(p, '');\n    const extra = mineE.filter(x => !best.e.includes(x));\n    for(const x of extra){\n      const n = x.slice(0, x.indexOf('×')), path = x.slice(x.indexOf('×') + 1), c = byPath.get(path) || {};\n      const nm = nn(c.name || T.names[path.split('/').pop()] || path);\n      if(nm === 'Warlord') err(n !== '1' ? 'warlord ×' + n + ' on unit ' + unit + ' not recognized' : 'warlord ' + unit + ' not recognized (the app has no such unit as Warlord in this faction)');\n      else if(/^Enhancements/.test(c.group || '')) err('enhancement ' + nm + ' not recognized (on ' + unit + ')');\n      else err('option ' + (n !== '1' || c.type === 'model' ? n + '× ' : '') + nm + ' on unit ' + unit + ' not recognized');\n    }\n    // what the app's has that the export does not (an item whose count differs is named above)\n    const pathOf = x => x.slice(x.indexOf('×') + 1), extraPaths = new Set(extra.map(pathOf));\n    const miss = best.e.filter(x => !mineE.includes(x) && !extraPaths.has(pathOf(x))).map(x => T.names[pathOf(x).split('/').pop()] || pathOf(x));\n    if(miss.length) err('unit ' + unit + ' without ' + and([...new Set(miss)]) + ' not recognized');\n  };\n\n  // match every group; the list most of them come from is preferred, then data.js order\n  const want = groups.map(g => g.parts.map(sigOf).sort());\n  const sameSigs = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);\n  const cands = want.map(w => instances.filter(x => sameSigs(x.sigs, w)));\n  const score = new Map(pool.map(a => [a, cands.filter(c => c.some(x => x.a === a)).length]));\n  const order = pool.slice().sort((a, b) => score.get(b) - score.get(a) || D.armies.indexOf(a) - D.armies.indexOf(b));\n  const used = new Map(), picks = [];\n  groups.forEach((g, i) => {\n    const unit = label(g);\n    if(!g.parts.every(p => namesOk(p, nn(p.name)))) return;\n    for(const p of g.parts) if(Number(p.number) !== 1) err('unit ' + nn(p.name) + ' ×' + p.number + ' not recognized');\n    // an option holding models (\"8 chainblades\") is taken once: its models carry the count\n    const holders = x => { for(const c of x.selections || []){ if(c.type !== 'model' && (c.selections || []).some(y => y.type === 'model') && Number(c.number) !== 1) err('option ' + c.number + '× ' + nn(c.name) + ' on unit ' + unit + ' not recognized'); holders(c); } };\n    g.parts.forEach(holders);\n    const before = errors.length;\n    const c = cands[i];\n    if(!c.length){\n      // the closest unit of the same datasheets (the same leader on the same bodyguard): what differs from it\n      const rids = g.parts.map(p => lastId(p.entryId)).sort().join(' ');\n      const like = instances.filter(x => x.sigs.map(s => s.slice(0, s.indexOf('|'))).sort().join(' ') === rids);\n      if(like.length){\n        const mineS = want[i], diff = x => mineS.filter(s => !x.sigs.includes(s)).length;\n        const best = like.slice().sort((x, y) => (pool.includes(y.a) - pool.includes(x.a)) || diff(x) - diff(y))[0];   // a usable list's first\n        g.parts.forEach(p => { if(!best.sigs.includes(sigOf(p))) explainPart(p, nn(p.name), best.sigs); });\n        if(errors.length === before) err('leader attachment ' + unit + ' not recognized (the app has these parts, but not together like this)');\n        return;\n      }\n      const known = g.parts.map(p => partSigs.includes(sigOf(p)));\n      if(known.every(Boolean)) err(g.parts.length > 1 ? 'leader attachment ' + unit + ' not recognized (the app has them, but not attached like this)' : 'unit ' + unit + ' on its own not recognized (the app has it only in an attached unit)');\n      else g.parts.forEach((p, k) => { if(!known[k]) explainPart(p, nn(p.name)); });\n      return;\n    }\n    const inPool = c.filter(x => pool.includes(x.a)).sort((x, y) => order.indexOf(x.a) - order.indexOf(y.a) || allOf(x.a).indexOf(x.u) - allOf(y.a).indexOf(y.u));\n    if(!inPool.length){\n      if(pool.length) err('unit ' + unit + ' not recognized with ' + and(dets.map(k => FAC.detachments[k].name)) + ': the app has it only in ' + and([...new Set(c.map(x => x.a.name))]) + ' (' + and([...new Set(c.map(x => x.a.detachments.map(k => FAC.detachments[k].name).join(' + ')))]) + ')');\n      return;\n    }\n    const cost = g.parts.reduce((t, p) => t + costOf(p), 0);\n    const priced = inPool.filter(x => x.u.pts === cost);\n    if(!priced.length){ err('points of unit ' + unit + ' not recognized: ' + cost + ' pts in the export, ' + inPool[0].u.pts + ' in the app'); return; }\n    const pick = priced.find(x => (used.get(x.u) || 0) < (x.u.copies || 1)) || priced[0];\n    used.set(pick.u, (used.get(pick.u) || 0) + 1);\n    picks.push(Object.assign({}, pick));\n  });\n  // the list as a whole: at most one Warlord, and each entry no more often than BSData allows per list (an enhancement once, an\n  // Epic Hero once); a unit the app has may be taken more often than a list of the app takes it, as long as these hold\n  if(!errors.length){\n    const wl = picks.filter(x => x.u.warlord);\n    // (none only as a list of the app has none: the owner's 4 megas and a destrier, as New Recruit printed it)\n    if(wl.length > 1 || (!wl.length && !pool.some(a => !a.units.some(u => u.warlord)))) err('warlord not recognized: ' + (wl.length ? wl.length + ' units are the Warlord (' + and(wl.map(x => x.u.name)) + ')' : 'no unit is the Warlord'));\n    // how many of each entry the list takes, against BSData's max per list (an enhancement once, an Epic Hero once)\n    const n = new Map(), walk = (x, isRoot) => { const id = lastId(x.entryId); n.set(id, { x, n:((n.get(id) || {}).n || 0) + Number(x.number), isRoot }); for(const c of x.selections || []) walk(c, false); };\n    roots.forEach(r => walk(r, true));\n    for(const [id, { x, n:k, isRoot }] of n) if(T.maxPerList[id] !== undefined && k > T.maxPerList[id])\n      err((isRoot ? 'unit ' : /^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + ' ×' + k + ' not recognized (BSData allows ' + T.maxPerList[id] + ' per list)');\n  }\n  if(!errors.length){\n    const sum = picks.reduce((t, x) => t + x.u.pts, 0);\n    if(sum !== total) err('points total ' + total + ' not recognized: the units add up to ' + sum);\n  }\n  if(errors.length) return fail();\n\n  /* the list: each unit as data.js has it, a unit taken more than once as its copies */\n  // in the order verify/import-nr.js gives a list: role, then units without a leader, then the roster's order\n  const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];\n  const roleAt = r => ROLES.includes(r) ? ROLES.indexOf(r) : ROLES.length;\n  picks.forEach((x, k) => { x.k = k; });\n  picks.sort((a, b) => (roleAt(a.u.role) - roleAt(b.u.role)) || ((a.u.leads ? 1 : 0) - (b.u.leads ? 1 : 0)) || (a.k - b.k));\n  // (the same unit of two of the app's lists, field for field, is one unit with its copies)\n  const units = [], seenIds = new Set(), made = new Map(), same = u => JSON.stringify(Object.assign({}, u, { copies:undefined }));\n  for(const x of picks){\n    const key = same(x.u);\n    if(made.has(key)){ const u = made.get(key); u.copies = (u.copies || 1) + 1; continue; }\n    const u = clone(x.u); delete u.copies;\n    let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++;\n    u.id = id; seenIds.add(id); made.set(key, u); units.push(u);\n  }\n  // reference sheets (ref): a unit of the app's list that a rule of an imported unit adds later (the Pink Horrors' Blue Horrors) comes\n  // with that unit, last, when the export has no entry of its own for it\n  for(const x of picks) for(const r of (x.a ? allOf(x.a) : []).filter(r => r.ref && r.ref.by === x.u.id)){\n    if(units.some(u => u.ref && u.name === r.name && u.ref.by === r.ref.by)) continue;\n    const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);\n  }\n  // (and one a stratagem of the imported detachments adds, ref.strat: Gift of Change's Chaos Spawn, from an app list of those detachments)\n  // (and only when an imported unit is one it can target: Gift of Change's THOUSAND SONS CHARACTER excluding MONSTERS)\n  const has = (x, k) => (x.kw || []).some(y => y.toLowerCase() === k.toLowerCase()), can = (nd, x) => !nd || ((nd.all || []).every(k => has(x, k)) && (!nd.any || nd.any.some(k => has(x, k))) && !(nd.none || []).some(k => has(x, k)));\n  const stOf = id => dets.map(k => ((FAC.detachments[k] || {}).stratagems || []).find(s => s.id === id)).find(Boolean);\n  for(const a of pool) for(const r of allOf(a).filter(r => r.ref && r.ref.strat && stOf(r.ref.strat) && units.some(x => !x.ref && can(stOf(r.ref.strat).needs, x)))){\n    if(units.some(u => u.ref && u.name === r.name && u.ref.strat === r.ref.strat)) continue;\n    const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);\n  }\n  const name = typo(nn(R.name)) || 'Imported list';\n  const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,\n    points:limit || (battleSize && T.limits[battleSize]) || null, pointsUsed:total, battleSize, disposition, detachments:dets };\n  if(Object.keys(config).length) army.config = config;\n  army.source = 'New Recruit, imported ' + (opt.date || new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }));\n  army.units = units;\n  army.imported = true;\n  return { ok:true, army };\n}"
+  },
+  "source": {
+   "implements": "the list import (import.js): a New Recruit JSON export becomes a list only when its faction, its one battle size (its points limit BSData's for it, and the total within it), its one detachment selection (each detachment once), its one Force Disposition (one its detachments allow), its config (Code Chivalric, known choices) and every other top-level selection (Show/Hide Options, rules references, with known choices only) are what data.js has, and every unit, with the characters attached to it (New Recruit's Leading/Supporting), has the BSData signature (signature) of a unit of a data.js list with the same faction, detachments, config and battle size, the same BSData names and the same points (BS_IDS, written by verify/import-ids.js); an option holding models is taken once; then the list as a whole: at most one Warlord (none only as a list of the app has none), each entry no more often than BSData's max per list that no modifier changes (an enhancement once, an Epic Hero once), the units adding up to the total; then the units are copied as data.js has them (a unit taken again as its copies; import-nr.js's order: role, units without a leader, the roster's order); otherwise nothing is imported and every item not recognized is listed (and a group the closest unit explains no difference of is still refused)"
+  },
+  "key": "a76b3176c30a8b21"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · canoptek-scarab-swarms · ability",
+  "judgement": {
+   "app": "Chittering swarm",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW names the ability Chittering swarm, BSData at the pin (Xenos - Necrons catalogue revision 28) Chittering Swarm. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Scarab-Swarms.html: \"Chittering swarm\"."
+  },
+  "key": "be66113a27322e84"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · canoptek-scarab-swarms · ability",
+  "judgement": {
+   "app": "",
+   "source": "Chittering Swarm"
+  },
+  "source": {
+   "reason": "GW names the ability Chittering swarm, BSData at the pin (Xenos - Necrons catalogue revision 28) Chittering Swarm. GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Scarab-Swarms.html: \"Chittering swarm\"."
+  },
+  "key": "21054c79d9a96dfc"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · chaos-spawn · kw",
+  "judgement": {
+   "app": "",
+   "source": "Spawn"
+  },
+  "source": {
+   "reason": "BSData at the pin (Chaos - Thousand Sons catalogue revision 17) gives the unit the category Spawn; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS (no SPAWN)."
+  },
+  "key": "9c952d7ed5b6c277"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · --compare",
+  "judgement": {
+   "change": "a reference sheet with ref.of (built after the comparison) is not reported as “in data.js, not in the export”"
+  },
+  "source": {
+   "diff": "git show ae780bd -- verify/from-json.js",
+   "why": "review result-reference-2.json e069726a4291d580"
+  },
+  "key": "f4ba4659d146893f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · of-sheets",
+  "judgement": {
+   "change": "hand refs abilities (names kept) and notes ({ ability: note })"
+  },
+  "source": {
+   "diff": "git show ae780bd -- verify/from-json.js",
+   "why": "review result-reference-2.json 59706f38a09ef485"
+  },
+  "key": "be2a4b38ff14d247"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · hand kw.drop",
+  "judgement": {
+   "change": "a BSData category GW's datasheet does not print is left out by the hand file; bsdata.js's difference is declared by from-json's existing GW-keyword branch"
+  },
+  "source": {
+   "diff": "git show ae780bd -- verify/from-json.js",
+   "why": "review result-reference-2.json 7f36fcfe233fe050"
+  },
+  "key": "e732db59bdd3e901"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · GW's ability name",
+  "judgement": {
+   "change": "a case-only difference from GW's name now takes GW's (Chittering swarm), except a Damaged band (New Recruit's “Wounds Remaining” kept as signed off). --compare of the other from-json lists: only Fellhammer's next rebuild would change, Nemesis Claw “Voice eater” → GW's “Voice Eater” (data.js unchanged now)"
+  },
+  "source": {
+   "diff": "git show ae780bd -- verify/from-json.js",
+   "why": "review result-necrons-2.json 58091bdff27d1efc"
+  },
+  "key": "c60849479677392f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · pickOptions heading",
+  "judgement": {
+   "change": "“To pick from” names the box of the options' who (Triarch Abilities) instead of the text's words (Triarch); see the snapshot diffs for every heading that changed"
+  },
+  "source": {
+   "diff": "git show ae780bd -- app.html"
+  },
+  "key": "e45027f7388b082a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/texts.js · dsDocIds",
+  "judgement": {
+   "change": "Wahapedia pages by file prefix: the list's faction, then its Wahapedia id (sources/factions.json), then any (an ally's); for a reference sheet also the sheet it is from and the adding unit's pages (the Pink Horrors' Designer's Note). Note: verify/fetch.sh names pages by the app's faction id (emperors-children_, ultramarines_), not the Wahapedia id"
+  },
+  "source": {
+   "diff": "git show ae780bd -- verify/texts.js",
+   "why": "review result-reference-2.json 5833fec32c0a2f8e"
+  },
+  "key": "3c607f82fd1b3719"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/nr.js · PDF compare",
+  "judgement": {
+   "change": "only a reference sheet the PDF cannot print (ref.strat, ref.of) is skipped"
+  },
+  "source": {
+   "diff": "git show ae780bd -- verify/nr.js",
+   "why": "review result-reference-2.json 4cb23fd86f091ab9"
+  },
+  "key": "b73cd49097cb5b4b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "check.js + import.js · ref.strat",
+  "judgement": {
+   "change": "a stratagem's sheet also needs a (non-reference) unit of the list its TARGET needs allow; import brings it only then"
+  },
+  "source": {
+   "diff": "git show ae780bd -- check.js import.js",
+   "why": "review result-reference-2.json e5c28f0a410c3cef"
+  },
+  "key": "1d164f087642e8e6"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ref",
+  "where": "tzeeeeentch · Brimstone Horrors · abilities",
+  "judgement": {
+   "abilities": [
+    "Exploding Horrors"
+   ],
+   "note": "Designer’s Note (GW’s Pink Horrors datasheet, Wahapedia): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”"
+  },
+  "source": {
+   "gw": "Wahapedia chaos-daemons_Pink-Horrors.html (Designer’s Note); chaos-daemons_Blue-Horrors.html (Split, Sullen Malevolence: BLUE HORROR models)"
+  },
+  "key": "14546918c4058389"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "kw",
+  "where": "mucho-mutantes · Chaos Spawn · SPAWN",
+  "judgement": {
+   "kw": "left out (declared: app \"\", BSData \"Spawn\")"
+  },
+  "source": {
+   "gw": "Wahapedia thousand-sons_Chaos-Spawn.html KEYWORDS: BEAST; CHAOS; TZEENTCH; MUTANT; CHAOS SPAWN"
+  },
+  "key": "289f26aa2817bb20"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "name",
+  "where": "DATASHEETS necrons/canoptek-scarab-swarms · Chittering swarm",
+  "judgement": {
+   "name": "Chittering swarm"
+  },
+  "source": {
+   "gw": "Wahapedia necrons_Canoptek-Scarab-Swarms.html",
+   "declared": "deviations-bsdata.json (BSData/New Recruit: Chittering Swarm)"
+  },
+  "key": "489ffbf222fb5542"
+ }
+]
