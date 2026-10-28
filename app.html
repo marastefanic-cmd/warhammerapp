@@ -1061,6 +1061,10 @@ if(window.WH_IMPORT) for(const x of importedKept()){
   if(r.ok && !D.armies.some(a => a.id === r.army.id)) D.armies.push(r.army);
   else importStale.push({ id:x.id, name:String(x.name || 'Imported list'), date:x.date, errors:r.ok ? ['a list with this id is already in the app'] : r.errors });
 }
+// reference sheets (a unit entry with ref: what a rule of the list adds to the battle later, the Biovores' Spore Mines): not units of
+// the army, so out of every count, total and list of units; shown last in the Units list and on a page of their own
+const splitRefs = a => { if(a.refs) return a; a.refs = a.units.filter(u => u.ref); a.units = a.units.filter(u => !u.ref); return a; };
+D.armies.forEach(splitRefs);
 let ONLY = D.armies.length === 1 ? D.armies[0] : null;   // one list: the app opens straight into it
 try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier version
 
@@ -1121,11 +1125,11 @@ function themePicker(){
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
 const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
-const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Allies','Other'];
+const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Allies','Other','Reference'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
-  'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other' };
+  'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other', 'Reference':'Reference' };
 // a unit's group in the Units list: its role, an allied unit's under Allies (New Recruit's role "Allies: Legiones Daemonica")
-const roleGroup = u => ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
+const roleGroup = u => u.ref ? 'Reference' : ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
 const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Phase checklist' };
 const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
@@ -1197,7 +1201,7 @@ function abilityTicks(ab, u){
 const copyKey = (ab, u, i) => 'a:' + ab.name + '|' + u.id + ((u.copies || 1) > 1 ? '.' + i : '');
 // the units in the order of the Units list, for ‹ › on a datasheet
 function unitFlip(u){
-  const order = ROLE_ORDER.flatMap(r => army().units.filter(x => roleGroup(x) === r));
+  const order = ROLE_ORDER.flatMap(r => army().units.concat(army().refs || []).filter(x => roleGroup(x) === r));
   const i = order.indexOf(u), prev = order[i - 1], next = order[i + 1];
   const b = (x, cls, label) => x ? '<button class="flip ' + cls + '" data-flip="' + esc(x.id) + '">' + label + '</button>' : '<span></span>';
   return '<div class="flips">' + b(prev, 'p', '‹ ' + esc(shortName(prev || {}))) + b(next, 'n', esc(shortName(next || {})) + ' ›') + '</div>';
@@ -1313,7 +1317,7 @@ const factionOf = a => D.factions[a.faction];
 const faction = () => factionOf(army());
 const detachmentsOf = a => a.detachments.map(id => Object.assign({ id }, factionOf(a).detachments[id])).filter(d => d.name);
 const detachments = () => detachmentsOf(army());
-const unitById = id => army().units.find(u => u.id === id);
+const unitById = id => army().units.find(u => u.id === id) || (army().refs || []).find(u => u.id === id);
 const hasKw = (u, k) => u.kw.some(x => x.toLowerCase() === k.toLowerCase());
 function matches(n, u){
   if(!n) return true;
@@ -1458,6 +1462,7 @@ const unplacedOf = u => (u.unplaced || []).map(name => { const x = [...(u.ranged
   const n = +x.n || 1; return { name, n, note:'New Recruit lists ' + (n > 1 ? 'them' : 'it') + ' for the ' + (x.who || u.name) + ', not which model' + (n > 1 ? 's carry them' : ' carries it') }; });
 function nameTags(u, opts){
   const t = [];
+  if(u.ref) t.push('<span class="tg m">Reference</span>');
   if(u.warlord) t.push('<span class="tg">Warlord' + (u.warlordOn ? ' (' + esc(u.warlordOn) + ')' : '') + '</span>');
   if(u.enhancement) t.push('<span class="tg">' + esc(u.enhancement + (u.enhOn ? ' (' + u.enhOn + ')' : '')) + '</span>');
   if(u.leads && !(opts && opts.noLeads)) t.push('<span class="tg m">+ ' + esc(partsAfter(u).join(' + ')) + '</span>');
@@ -1671,7 +1676,7 @@ function runImport(text){
   A.id = id;
   try { store.set(IMPORT_KEY, importedKept().concat([{ id, name:A.name, date, json:WH_IMPORT.slim(json) }])); } catch(e){}
   const saved = importedKept().some(x => x.id === id);
-  D.armies.push(A); ONLY = D.armies.length === 1 ? D.armies[0] : null;
+  D.armies.push(splitRefs(A)); ONLY = D.armies.length === 1 ? D.armies[0] : null;
   hideSheet(); go({ s:'army', army:id }, 'sheet');
   toast(saved ? 'Imported ' + A.name : 'Imported ' + A.name + ' for now: this phone could not keep it');
 }
@@ -1876,7 +1881,8 @@ function dmReach(u, it, m, sc){
 // the models of a unit that are not on the battlefield yet (an ability's embarked mark: Sir Hekhtur while Canis Rex lives) and why, quoted
 const dmEmbarked = u => { const ab = (u.abilities || []).find(a => a.embarked); return ab ? { names:new Set([ab.embarked.model]), until:ab.embarked.until, ab,
   quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' } : null; };
-const dmUnits = (a, kind) => a.units.filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
+// (a reference sheet's unit after the army's: selectable, never the one picked first)
+const dmUnits = (a, kind) => a.units.concat(a.refs || []).filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
 // the two sides: your unit (this list) and the target set by hand
 function dmSides(st){
   const A = dmMe(), kind = st.ph === 'fight' ? 'melee' : 'ranged', atks = dmUnits(A, kind);
@@ -4135,7 +4141,7 @@ function rowCounts(u){
 }
 function screenUnits(){
   const a = army(), groups = {};
-  for(const u of a.units){ const r = roleGroup(u); (groups[r] = groups[r] || []).push(u); }
+  for(const u of a.units.concat(a.refs || [])){ const r = roleGroup(u); (groups[r] = groups[r] || []).push(u); }
   return ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
@@ -4150,7 +4156,7 @@ function screenUnits(){
     const tags = nameTags(u, { noLeads:true, noCopies:true });   // how many of it: on the points ("2×215")
     return '<button class="urow' + (subs ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + lead +
       (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads && !subs ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : apart ? '<span class="meta">' + esc(apart) + '</span>' : '') + '</span>' +
-      (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + (u.copies > 1 ? esc(u.copies) + '×' : '') + esc(u.pts) + '</span>' +
+      (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + (u.ref ? '–' : (u.copies > 1 ? esc(u.copies) + '×' : '') + esc(u.pts)) + '</span>' +
       (subs ? u.stats.map(s => '<span class="sn">' + subName(s) + '</span>' + statCells(s)).join('') : '') + '</button>';
   }).join('') + '</div>').join('');
 }
@@ -4584,11 +4590,14 @@ function screenUnit(){
     .concat(helpedBy(u).filter(s => !eligible(s).includes(u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
   const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
   const tgKey = 'tg|' + cur.army + '|' + u.id;
-  const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
+  const meta = (u.ref ? [] : [esc(u.role)]).concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   // an allied unit: the rule that brings it into this army (the faction's allies: Assigned Agents, Daemonic Pact), once, as its reason
   const ally = /^Allies: (.+)$/.exec(u.role || ''), allyRule = ally && (faction().allies || {})[ally[1]];
   if(allyRule && ruleFor(allyRule)) meta.push('In this army through ' + linkTo('rule', allyRule, allyRule) + ' (' + esc(ally[1]) + ')');
-  const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
+  // a reference sheet: not in the army until the rule that adds it, named and quoted (no points, in no count)
+  const refBy = u.ref && army().units.find(x => x.id === u.ref.by), refAb = refBy && refBy.abilities.find(x => x.name === u.ref.rule);
+  if(u.ref) meta.push('Not in the army until ' + (refAb ? linkTo('ability', abilityKey(refAb), u.ref.rule) : esc(u.ref.rule)) + (refBy ? ' (' + linkTo('unit', refBy.id, unitLabel(refBy)) + ')' : '') + ' adds it: “' + esc(u.ref.quote) + '”');
+  const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + (u.ref ? '–' : esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')) + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports
   const cs = charsOf(u);

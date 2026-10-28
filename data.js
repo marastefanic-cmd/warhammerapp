@@ -5146,6 +5146,12 @@ const ARMIES = [
       gear:[['Harvester cannon','Iron claw','Warp gaze','Warpclaw']],
       kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Tzeentch','Vehicle','Walker'],
       why:{ kw:{ Tzeentch:'Daemonic Allegiance: Tzeentch' } }
+    },
+    {
+      id:'blue-horrors', ds:'chaos-daemons/blue-horrors', pts:0,
+      ref:{ by:'fluxmaster-pink-horrors', rule:'Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.', quote:'If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.' },
+      models:['1× Blue Horror'],
+      gear:[['Coruscating Blue flames','Blue claws']]
     }
   ]
 },
@@ -5217,22 +5223,7 @@ const ARMIES = [
     },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'pyrovores', ds:'tyranids/pyrovores', pts:100,
-      models:['3× Pyrovore'],
-      gear:[['Chitin-barbed limbs','Flamespurt']],
-      stats:[
-        { name:'Pyrovores ×3' }
-      ],
-      ranged:[
-        { name:'Flamespurt', n:3 }
-      ],
-      melee:[
-        { name:'Chitin-barbed limbs', n:3 }
-      ]
-    },
-    {
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'pyrovores-2', ds:'tyranids/pyrovores', pts:70,
+      id:'pyrovores', ds:'tyranids/pyrovores', pts:70, copies:2,
       models:['2× Pyrovore'],
       gear:[['Chitin-barbed limbs','Flamespurt']],
       stats:[
@@ -5244,6 +5235,12 @@ const ARMIES = [
       melee:[
         { name:'Chitin-barbed limbs', n:2 }
       ]
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'ripper-swarms', ds:'tyranids/ripper-swarms', pts:30,
+      models:['1× Ripper Swarm'],
+      gear:[['Chitinous claws and teeth']]
     },
     {
       id:'norn-assimilator-synaptoprescience', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
@@ -5284,6 +5281,13 @@ const ARMIES = [
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180,
       models:['1× Tyrannofex'],
       gear:[['Powerful limbs','Stinger salvoes','Acid spray']]
+    },
+    {
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      id:'spore-mines-biovore', ds:'tyranids/spore-mines-biovore', pts:0,
+      ref:{ by:'biovores', rule:'Seed Spore Mines', quote:'If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48" of this unit and more than 8" horizontally away from all enemy units.' },
+      models:['1× Spore Mine'],
+      gear:[[]]
     }
   ]
 },
@@ -6722,6 +6726,32 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise 1','Synapse','Ignores Cover','Torrent','Twin-linked'],
   kw:['Faction: Tyranids','Great Devourer','Harvester','Infantry','Pyrovores']
+},
+'tyranids/ripper-swarms':{
+  name:'Ripper Swarms', faction:'tyranids', bsId:'1de2-b57b-aa0a-1f0d', role:'Swarm',
+  stats:[
+    { name:'Ripper Swarm', M:'6"', T:'2', Sv:'6+', W:'4', Ld:'8+', OC:'0', InSv:'–', base:'40mm' }
+  ],
+  melee:[
+    { name:'Chitinous claws and teeth', range:'Melee', A:'6', WS:'5+', S:'2', AP:'0', D:'1', kw:['SUSTAINED HITS 1'] }
+  ],
+  abilities:[
+    { name:'Chitinous Horrors', tag:'Aura', text:'While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit.' }
+  ],
+  rules:['Deep Strike','Synapse','Sustained Hits'],
+  kw:['Faction: Tyranids','Great Devourer','Harvester','Ripper Swarms','Swarm']
+},
+'tyranids/spore-mines-biovore':{
+  name:'Spore Mines (Biovore)', faction:'tyranids', bsId:'80c2-aecc-5b59-7345', role:'Reference',
+  stats:[
+    { name:'Spore Mine', M:'4"', T:'1', Sv:'7+', W:'1', Ld:'8+', OC:'0', InSv:'–', base:'25mm' }
+  ],
+  abilities:[
+    { name:'Floating Death', ph:['movement','charge','fight'], turn:'either', text:'Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds.' },
+    { name:'Bio-minefield', ph:['movement'], turn:'opp', text:'Enemy units cannot start or end an **Advance move** within 6" of this unit.' }
+  ],
+  rules:['Deep Strike','Synapse'],
+  kw:['Beast','Faction: Tyranids','Fly','Great Devourer','Spore Mines']
 },
 'imperial-knights/knight-destrier':{
   name:'Knight Destrier', faction:'imperial-knights', bsId:'10d8-d702-f556-5d3c', role:'Character',
@@ -8638,6 +8668,28 @@ const DATASHEETS = {
   rules:['Deadly Demise D3','The Shadow of Chaos','Deep Strike','Blast','Extra Attacks'],
   kw:['Chaos','Daemon','Faction: Legiones Daemonica','Soul Grinder','Vehicle','Walker']
 },
+'chaos-daemons/blue-horrors':{
+  name:'Blue Horrors', faction:'chaos-daemons', bsId:'b795-b936-ad61-e407', role:'Reference',
+  stats:[
+    { name:'Blue Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'8+', OC:'1', InSv:'4+', base:'25mm' }
+  ],
+  ranged:[
+    { name:'Coruscating Yellow flames (ref. only)', carrier:'Brimstone Horrors added by Split', range:'18"', A:'2', BS:'5+', S:'2', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] },
+    { name:'Coruscating Blue flames', range:'18"', A:'2', BS:'4+', S:'3', AP:'-1', D:'1', kw:['PISTOL','PSYCHIC'] }
+  ],
+  melee:[
+    { name:'Yellow claws (ref. only)', carrier:'Brimstone Horrors added by Split', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] },
+    { name:'Blue claws', range:'Melee', A:'1', WS:'5+', S:'3', AP:'0', D:'1', kw:[] }
+  ],
+  abilities:[
+    { name:'Split', text:'Each time a **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one **BRIMSTONE HORROR** model to this unit.' },
+    { name:'Sullen Malevolence', tag:'Aura', text:'While an enemy unit is within 6" of this unit, if this unit contains one or more **BLUE HORROR** models, worsen the Leadership characteristic of models in that enemy unit by 1.' },
+    { name:'Exploding Horrors', ph:['fight'], turn:'either', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
+  ],
+  rules:['Deep Strike','Infiltrators','The Shadow of Chaos','Psychic','Pistol'],
+  kw:['Battleline','Blue','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch'],
+  kwOnly:{ Blue:'Blue Horror', Brimstone:'Brimstone Horrors' }
+},
 'chaos-space-marines/vashtorr-the-arkifane':{
   name:'Vashtorr the Arkifane', faction:'chaos-space-marines', bsId:'dcc0-b70c-9779-e6c9', role:'Epic Hero',
   stats:[
@@ -9335,8 +9387,9 @@ const BS_IDS = {
     "healybois/norn-assimilator-synaptoprescience":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
     "healybois/norn-assimilator-synaptoprescience-2":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
     "healybois/norn-emissary":["5720-2873-8c2c-edc3|1×c102-d98b-dc50-5b53,1×d7b3-df20-933-63b7,1×dc69-1094-613-6daf"],
-    "healybois/pyrovores":["d2c6-bd0b-3205-3319|3×c543-2551-1f2a-bcec,3×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,3×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
-    "healybois/pyrovores-2":["d2c6-bd0b-3205-3319|2×c543-2551-1f2a-bcec,2×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,2×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
+    "healybois/pyrovores":["d2c6-bd0b-3205-3319|2×c543-2551-1f2a-bcec,2×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,2×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
+    "healybois/ripper-swarms":["1de2-b57b-aa0a-1f0d|1×7242-c911-e611-551e,1×7242-c911-e611-551e/f5e3-ad89-8888-4bd4"],
+    "healybois/spore-mines-biovore":["80c2-aecc-5b59-7345|1×1a43-6f35-30bd-ec50"],
     "healybois/the-swarmlord-tyrant-guard":["13f7-1a3-eff-7393|1×7a17-4fb0-c0f5-e22,1×a30-4bad-cef5-5e55,1×ceab-62d9-31bf-7c61","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
     "healybois/tyrannofex":["1705-379b-330d-36d4|1×5e02-c4ce-b7e6-d59,1×a87e-4f8-a6f7-15de,1×f64-8faa-ac54-73ff"],
     "infernal-lance/chaos-cerastus-knight-atrapos":["8b1d-9029-f9e1-42d9|1×4676-0c32-b62c-debd,1×7546-5742-581c-9e8b,1×f57d-be6e-77e4-bfe3"],
@@ -9463,6 +9516,7 @@ const BS_IDS = {
     "the-exiled-legion/skarbrand":["7998-d0a-baa4-e8b3|1×13f1-2794-34e7-4bd6,1×573b-877e-5437-c3be,1×d231-290d-7de8-bc49"],
     "the-exiled-legion/skullmaster-bloodcrushers":["dd30-ba4c-34a4-e788|1×2eac-78bf-beb7-bfea,1×4848-c7ef-a65f-d15c,1×87ae-e092-2e5d-16a6","2f31-9132-b703-5fd8|1×47bc-4cb8-5ff6-e208,2×8876-fc4f-a6a0-5df,2×8876-fc4f-a6a0-5df/4848-c7ef-a65f-d15c,2×8876-fc4f-a6a0-5df/e4f0-79-126a-ac41,1×b87a-5121-1c03-894f,1×b87a-5121-1c03-894f/4848-c7ef-a65f-d15c,1×b87a-5121-1c03-894f/e4f0-79-126a-ac41,1×bc2f-662f-58e7-5fef"],
     "the-exiled-legion/skulltaker-bloodletters":["8872-785a-1efa-7ca1|1×fcdc-51d3-89ab-f5b6","4ecc-6aa5-da28-2c57|1×47bc-4cb8-5ff6-e208,1×65ae-c95a-cd9e-f0b0,1×a30d-a7e8-b7d1-a55c,1×a30d-a7e8-b7d1-a55c/e4f0-79-126a-ac41,1×bc2f-662f-58e7-5fef,9×f20e-ff73-5f0c-9970,9×f20e-ff73-5f0c-9970/e4f0-79-126a-ac41"],
+    "tzeeeeentch/blue-horrors":["b795-b936-ad61-e407|1×b506-5bce-64c6-51b0,1×b506-5bce-64c6-51b0/82df-455-2fe4-57ea,1×b506-5bce-64c6-51b0/8427-8fbe-c12f-a0a4"],
     "tzeeeeentch/daemon-prince-of-chaos-with-wings":["5800-3978-370d-b573|1×347c-42b8-a58c-176c,1×4dda-d9d2-153f-f294,1×9383-3f2f-50cd-1e7a,1×b4ce-a5bf-52e7-884c"],
     "tzeeeeentch/flamers":["5f23-4d6-f2f9-5973|2×9280-14a0-f54-ebfb,2×9280-14a0-f54-ebfb/1c7f-c635-a77f-9204,2×9280-14a0-f54-ebfb/bebc-8637-c456-1c0f,1×9b72-9f8a-9554-43d4,1×9b72-9f8a-9554-43d4/7472-d1a5-5fbe-4052,1×9b72-9f8a-9554-43d4/fec2-85a0-1492-9c0e"],
     "tzeeeeentch/fluxmaster-pink-horrors":["eba5-8a7a-fc5b-d7ec|1×2024-6ff7-2d17-938d,1×8a1b-35-5c24-d81c,1×d6e9-169c-3b2a-ee09","e7b8-aa40-6da7-778e|10×c34d-3170-c314-148e,10×c34d-3170-c314-148e/5afb-65ea-e6fc-f8e8,10×c34d-3170-c314-148e/b99-af3a-9728-26ad"],
@@ -9539,6 +9593,7 @@ const BS_IDS = {
     "1911-226b-90f1-d420":"Disruptor missile launcher",
     "197b-3dd4-bc46-2ef7":"Astropathic Blast",
     "1a34-f1cc-ec01-ca32":"Warlord",
+    "1a43-6f35-30bd-ec50":"Spore Mine",
     "1a98-844f-f54b-f76c":"Baleful Devolution",
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
@@ -9550,6 +9605,7 @@ const BS_IDS = {
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
     "1d74-d498-28a1-244e":"Infernal Flames",
     "1db9-89c3-c7cb-2041":"Obliterator",
+    "1de2-b57b-aa0a-1f0d":"Ripper Swarms",
     "1de9-b138-28a1-9c4b":"Flash Gitz",
     "1e16-0387-abcf-0e9a":"Phoenix power spear",
     "1e27-a6de-3840-a050":"Knight Crusader",
@@ -9837,6 +9893,7 @@ const BS_IDS = {
     "7212-7cc9-ec49-72b8":"Nurgling Swarm",
     "7213-a7b3-4c8e-96bc":"Eldritch Vortex of E'taph",
     "723d-aaaa-3268-09e3":"Terminator Champion",
+    "7242-c911-e611-551e":"Ripper Swarm",
     "72b0-d52e-422e-1a82":"Havoc lascannon",
     "72c5-1443-529a-59ad":"Scything talons and rending claws",
     "72c5-8bd0-19f5-f246":"Caestus Fist",
@@ -9890,6 +9947,7 @@ const BS_IDS = {
     "7f72-9cd7-e0a6-39fa":"Demolisher cannon",
     "806e-b30b-3bcd-71c3":"Infernal Puppeteer",
     "8097-77df-1ed5-1e1a":"Fatecaster greatbow",
+    "80c2-aecc-5b59-7345":"Spore Mines (Biovore)",
     "80c4-14b2-d02d-d289":"Nazdreg",
     "811f-e844-83ab-78a4":"Rokkit Pistol",
     "819a-63a5-f90c-7794":"Great axe of Khorne",
@@ -9899,10 +9957,12 @@ const BS_IDS = {
     "81fb-325e-49fd-9a6f":"Servo arm",
     "82ba-6095-1f1f-202d":"Close combat weapon",
     "82cc-4b0b-8e55-bf48":"Tellyport Blasta",
+    "82df-455-2fe4-57ea":"Blue claws",
     "8309-f4fd-e530-94ec":"Force-orb cane",
     "8331-d762-2987-76a":"Cultist w/ autopistol and brutal assault weapon",
     "836c-fa5c-db9d-7566":"Storm Bolters",
     "83a1-feb8-d495-aa28":"Heavy Bolt Pistol",
+    "8427-8fbe-c12f-a0a4":"Coruscating Blue flames",
     "8436-cec1-e65a-d1a7":"Karanak",
     "8440-a7a8-b859-2ac3":"Bolt of Change",
     "8441-8356-5e7c-69ee":"Knight Paladin",
@@ -10062,6 +10122,7 @@ const BS_IDS = {
     "b472-94bc-9482-44b6":"Skitarii Ranger w/ plasma caliver",
     "b4ca-3419-c219-f429":"Darkflame lance",
     "b4ce-a5bf-52e7-884c":"Neverblade",
+    "b506-5bce-64c6-51b0":"Blue Horror",
     "b50f-3d17-1d8f-ae81":"Enmitic disintegrators",
     "b53-3d5b-356b-6b0a":"Flesh Hound",
     "b541-3292-a5cc-dbeb":"Defiler",
@@ -10075,6 +10136,7 @@ const BS_IDS = {
     "b74a-d992-b5eb-23ff":"Close combat weapon",
     "b77f-43c5-91b6-7da7":"Shearing claws",
     "b793-b77e-9e49-d397":"Wardens of Ultramar",
+    "b795-b936-ad61-e407":"Blue Horrors",
     "b7a3-bfbd-1464-141d":"Omnispex",
     "b83b-3b6-9aa7-5b3b":"Iron claw",
     "b87a-5121-1c03-894f":"Bloodhunter",
@@ -10274,6 +10336,7 @@ const BS_IDS = {
     "f55d-30fe-6117-ac":"Great axe of Khorne",
     "f57d-be6e-77e4-bfe3":"Atrapos lascutter",
     "f5b9-50c8-5c60-d8ea":"Tzaangors",
+    "f5e3-ad89-8888-4bd4":"Chitinous claws and teeth",
     "f606-38ce-2ada-4fbd":"Snazzgun",
     "f60b-c058-268e-5e87":"Blood Herald",
     "f64-8faa-ac54-73ff":"Acid spray",
@@ -10344,6 +10407,7 @@ const BS_IDS = {
     "7b41-35aa-3265-14d7":1,
     "7d7c-c212-47a3-38e4":1,
     "806e-b30b-3bcd-71c3":1,
+    "80c2-aecc-5b59-7345":1,
     "80c4-14b2-d02d-d289":1,
     "8436-cec1-e65a-d1a7":1,
     "87ae-e092-2e5d-16a6":1,
@@ -10400,6 +10464,7 @@ const CHECKLIST = {
   "a|10pf8qz":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|10x19q4":{"x":1},
   "a|119ongz":{"x":1},
+  "a|11jvlv5":{"u":"movement:opp"},
   "a|11lueh2":{"x":1},
   "a|11n13i4":{"t":"shooting:opp","u":"shooting:opp"},
   "a|11p632b":{"u":"shooting:your"},
@@ -10557,6 +10622,7 @@ const CHECKLIST = {
   "a|1r8f5xs":{"u":"fight:either"},
   "a|1rdp754":{"u":"fight:either"},
   "a|1riztmj":{"u":"shooting:opp,fight:either"},
+  "a|1rqmfkd":{"x":1},
   "a|1rt7zjl":{"x":1},
   "a|1rusnxu":{"u":"movement:your,shooting:your,charge:either"},
   "a|1sufx47":{"u":"shooting:your"},
@@ -10630,12 +10696,14 @@ const CHECKLIST = {
   "a|70om4s":{"u":"shooting:opp,fight:either","g":[{"name":"Feel No Pain","to":{"all":["Cybernetica Datasmith"]},"while":"While a CYBERNETICA DATASMITH model is leading this unit"}]},
   "a|73bjkb":{"u":"shooting:opp"},
   "a|7n1mj3":{"u":"shooting:your,fight:either"},
+  "a|7odqal":{"x":1},
   "a|82gw9o":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|85a58d":{"u":"shooting:your,fight:either"},
   "a|89p4db":{"u":"shooting:opp,fight:either"},
   "a|8f9619":{"u":"fight:either"},
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
+  "a|8yl01e":{"u":"fight:either","a":1},
   "a|92qgnt":{"u":"shooting:opp"},
   "a|97frp":{"u":"shooting:either","a":1},
   "a|9dsaql":{"none":1},
@@ -10664,12 +10732,14 @@ const CHECKLIST = {
   "a|ccvp33":{"u":"shooting:opp,fight:either"},
   "a|ct1ind":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "a|d1vzfd":{"t":"command:your","s":1},
+  "a|d6arlc":{"x":1},
   "a|dcqyl1":{"u":"charge:either"},
   "a|ds28tt":{"u":"fight:either"},
   "a|e1tops":{"t":"command:your","s":1},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
   "a|e301xa":{"x":1},
   "a|e569qu":{"u":"shooting:your,fight:either"},
+  "a|ekf7wl":{"u":"movement:your"},
   "a|erffw0":{"x":1},
   "a|exlwqq":{"u":"shooting:your,fight:either"},
   "a|eyx1ad":{"u":"shooting:your"},
@@ -11015,7 +11085,7 @@ const GRANTS = [
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','ref','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','mods','aura','guard','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],

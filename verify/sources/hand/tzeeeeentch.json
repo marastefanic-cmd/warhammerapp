@@ -314,5 +314,16 @@
     ]
    }
   }
- }
+ },
+ "refs": [
+  {
+   "entry": "Blue Horrors",
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+    "quote": "If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit."
+   },
+   "why": "Reference sheet Blue Horrors: GW’s Blue Horrors datasheet (Faction Pack Chaos Daemons 1.2 prints it), which the Pink Horrors use once they contain no Pink Horror (“If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.”), built from BSData’s Blue Horrors root entry (one Blue Horror with its weapons; what BSData shows only by a condition, the Shadow Legion’s Penumbral Puppetry and Stealth, left out). It carries the Brimstone Horrors too: GW gives them no datasheet of their own, only the BLUE HORROR/BRIMSTONE HORROR profile (one stats row, 25mm), Coruscating Yellow Flames and yellow claws (“Every Brimstone Horror added to this unit using the Split ability is equipped with: …”, the carrier line) and BRIMSTONE (kwOnly). So no separate Brimstone Horrors sheet: it would repeat these rows under a datasheet GW does not print. The Pink Horrors card keeps its signed-off “(ref. only)” rows (the Blue and Brimstone Horrors its own Split adds while Pink Horrors remain)."
+  }
+ ]
 }

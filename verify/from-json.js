@@ -138,6 +138,12 @@ const newFactionEntry = !factionId;
 if (!factionId) factionId = slug(catName.replace(/^.* - /, ''));
 const WAHA = (FJ[factionId] || {}).waha || factionId;
 const WW = require('./waha-words')(ROOT, factionId);
+// a reference entry of the export (New Recruit's "Spore Mines (Biovore)", category Reference: the profile of a unit a rule of the list
+// adds to the army, 0 pts): its datasheet page is the one of its name less the bracket (Spore-Mines)
+const isRefSel = s => (s.categories || []).some(c => c.name === 'Reference');
+const REF_NAMES = new Set((FORCE.selections || []).filter(isRefSel).map(s => nm(s.name)));
+const refBase = n => REF_NAMES.has(nm(n)) ? nm(n).replace(/\s*\([^()]*\)$/, '') : n;
+{ const a0 = WW.wahaAddress, p0 = WW.wahaPage; WW.wahaAddress = n => a0(refBase(n)); WW.wahaPage = (n, f) => p0(refBase(n), f); }
 // an allied unit (its primary category New Recruit's "Allies: Imperial Agents") has its datasheet under its own faction's Wahapedia
 // pages and its base size in that faction's section of GW's base size guide: sources/factions.json names the faction (the list's
 // faction's "allies", as verify/import-nr.js reads them). It does not have its own faction's army rules (the owner's ruling: a unit
@@ -373,6 +379,28 @@ const groups = [];
 for (const s of rootsAll) if (!leadsTo.has(s)) groups.push({ chars: [], body: s, at: rootsAll.indexOf(s) });
 for (const [s, l] of leadsTo) { const g = groups.find(x => x.body === l.body); if (g) g.chars.push({ s, support: l.support }); else want(nm(s.name), 'leader attachment', 'what it leads is not a unit of the list'); }
 for (const g of groups) { g.chars.sort((a, b) => rootsAll.indexOf(a.s) - rootsAll.indexOf(b.s)); g.at = Math.min(g.at, ...g.chars.map(c => rootsAll.indexOf(c.s))); }
+// a reference sheet the export has no entry for (verify/sources/hand/<army>.json refs: { entry, ref }): GW's datasheet of models a rule
+// of the list adds (the Pink Horrors' Blue Horrors datasheet, "use the BLUE HORRORS datasheet for this unit"), built from the BSData root
+// entry of that name as the export would carry it: one model of each model entry with its weapons, its profiles and rules (what
+// GW's datasheet does not print is left out below, as for every unit)
+const refSel = (e, n) => {
+  // (what BSData hides unless a modifier shows it, a detachment's Penumbral Puppetry: left out, as New Recruit's export leaves it)
+  // (and what a modifier hides or shows by a condition, the Shadow Legion's Penumbral Puppetry and Stealth: not the datasheet's own)
+  const shown = l => !l.hidden && !(l.modifiers || []).concat(...(l.modifierGroups || []).map(g => g.modifiers || [])).some(m => m.field === 'hidden');
+  const prof = x => (x.profiles || []).filter(shown).concat((x.infoLinks || []).filter(l => l.type === 'profile' && shown(l)).map(l => bsGet(l.targetId)).filter(p => p && shown(p)))
+    .map(p => ({ id: p.id, name: p.name, typeName: p.typeName, typeId: p.typeId, characteristics: (p.characteristics || []).map(c => ({ name: c.name, typeId: c.typeId, $text: c.$text })) }));
+  const rul = x => (x.rules || []).filter(shown).concat((x.infoLinks || []).filter(l => l.type === 'rule' && shown(l)).map(l => bsGet(l.targetId)).filter(r => r && shown(r))).map(r => ({ id: r.id, name: r.name, description: r.description }));
+  const o = { id: 'ref:' + e.id, name: e.name, entryId: e.id, type: e.type, number: n, categories: (e.categoryLinks || []).map(c => ({ name: (bsGet(c.targetId) || {}).name || c.name, primary: !!c.primary, entryId: c.targetId })), profiles: prof(e), rules: rul(e), selections: [] };
+  for (const m of (e.selectionEntries || []).filter(x => x.type === 'model')) { const ms = refSel(m, 1); ms.selections = (m.selectionEntries || []).filter(x => x.type === 'upgrade').map(x => refSel(x, 1)); o.selections.push(ms); }
+  return o;
+};
+const refHands = (HAND.refs || []).filter(h => h.entry);
+for (const h of refHands) {
+  const e = [...BS.values()].find(o => (o.type === 'unit' || o.type === 'model') && o.name === h.entry && o.categoryLinks);
+  if (!e) { want(h.entry, 'reference sheet', 'no BSData root entry of this name'); continue; }
+  const sel = refSel(e, 1); hide(sel, { _refHand: h });
+  groups.push({ chars: [], body: sel, at: 1e6 + refHands.indexOf(h) });
+}
 
 // the selections of a part, depth first: model selections, wargear, weapons, enhancement, Warlord
 const dfs = (s, f, d = 0) => { f(s, d); for (const c of kidsOf(s)) dfs(c, f, d + 1); };
@@ -602,7 +630,14 @@ let units = groups.map(buildGroup);
   units = out;
   for (const u of units) if (u.copies) { const c = u.copies; delete u.copies; const o = {}; for (const [k, v] of Object.entries(u)) { o[k] = v; if (k === 'pts') o.copies = c; } Object.keys(u).forEach(k => delete u[k]); Object.assign(u, o); }
 }
-units.sort((a, b) => (ROLES.indexOf(a.role) + 1 || 99) - (ROLES.indexOf(b.role) + 1 || 99) || ((a.leads ? 1 : 0) - (b.leads ? 1 : 0)) || (a._at - b._at));
+// a reference entry (category Reference) and a reference sheet of the hand file: the role New Recruit lists it under, Reference;
+// New Recruit's "Reference" category is no keyword of GW's (declared); listed last, as New Recruit lists it
+for (const u of units) if (isRefSel(u._parts[0]) || u._parts[0]._refHand) {
+  hide(u, { _ref: true }); if (u._parts[0]._refHand) hide(u, { _refHand: u._parts[0]._refHand });
+  u.role = 'Reference';
+  u.kw = u.kw.filter(k => k !== 'Reference');
+}
+units.sort((a, b) => (a._ref ? 1 : 0) - (b._ref ? 1 : 0) || (ROLES.indexOf(a.role) + 1 || 99) - (ROLES.indexOf(b.role) + 1 || 99) || ((a.leads ? 1 : 0) - (b.leads ? 1 : 0)) || (a._at - b._at));
 for (const u of units) {
   let id = [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).map(slug).join('-');
   if (units.some(x => x !== u && slug(x.name) === slug(u.name) && (x.leads || null) === (u.leads || null))) id += u.enhancement ? '-' + slug(u.enhancement) : '';
@@ -1294,6 +1329,17 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     }
   }
   for (const [k, by] of Object.entries(HR)) if (k !== '_about') for (const [n, r] of Object.entries(by)) handDone.push({ what: 'readings of ' + n + ' (' + k + ')', by: 'hand (Claude)', text: READ.flatMap(kd => (r[kd] || []).map(m => m.from + ': ' + m.note)).join('; ') });
+}
+// a reference sheet's reason (ref: { by, rule, quote }): the ability of a unit of the list whose words add a unit of its keyword to the
+// army ("you can add one new SPORE MINES unit to your army", Seed Spore Mines), quoted as GW prints it
+for (const u of units) if (u._ref) {
+  const hit = units.filter(x => !x._ref).flatMap(x => x.abilities.map(a => ({ x, a }))).map(({ x, a }) => {
+    const sent = bare(a.text || '').split(/(?<=\.)\s+/).find(t => { const m = /\badd (?:one|a|an|\d+|D\d) new ([A-Z][A-Z’' -]+?) units? to your army\b/.exec(t); return m && u.kw.some(k => gwKw(k) === gwKw(m[1])); });
+    return sent ? { by: x.id, rule: a.name, quote: sent } : null; }).find(Boolean);
+  const hr = u._refHand ? u._refHand.ref : ((HAND.units || {})[u.id] || {}).ref;
+  if (hr) { u.ref = hr; handDone.push({ what: 'reference sheet ' + u.name, by: 'hand (Claude)', text: JSON.stringify(hr) }); }
+  else if (hit) { u.ref = hit; filled.push({ what: 'reference sheet ' + u.name + ': added by ' + hit.rule + ' (' + hit.by + ')', from: 'the ability’s words: "' + hit.quote + '"' }); }
+  else want(u.name, 'reference sheet', 'no ability of the list’s units adds a unit of its keywords: write units.' + u.id + '.ref in the hand file');
 }
 const abOrder = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];
 for (const u of units) { for (const ab of u.abilities) { delete ab._bs; delete ab._e; delete ab._part; } delete u._parts; }

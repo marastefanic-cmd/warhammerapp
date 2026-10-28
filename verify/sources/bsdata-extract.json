@@ -74277,6 +74277,14 @@
      "type": "selectionEntry"
     },
     {
+     "name": "Ripper Swarms",
+     "id": "cbe1-73ce-de38-219e",
+     "hidden": false,
+     "import": true,
+     "targetId": "1de2-b57b-aa0a-1f0d",
+     "type": "selectionEntry"
+    },
+    {
      "name": "Biovores",
      "id": "b6ef-5582-5c2c-c917",
      "hidden": false,
@@ -74331,6 +74339,14 @@
      "hidden": false,
      "import": true,
      "targetId": "6a9b-8e2f-edac-fa2d",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Spore Mines (Biovore)",
+     "id": "8106-c7cc-f5d1-57a5",
+     "hidden": false,
+     "import": true,
+     "targetId": "80c2-aecc-5b59-7345",
      "type": "selectionEntry"
     }
    ],
@@ -81767,9 +81783,196 @@
        ]
       }
      ]
+    },
+    {
+     "name": "Spore Mines (Biovore)",
+     "id": "80c2-aecc-5b59-7345",
+     "comment": "Reference version for spawned units",
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Spore Mines",
+       "id": "6420-3000-a320-2673",
+       "primary": false,
+       "targetId": "51f8-b488-5f21-c390"
+      },
+      {
+       "name": "Beast",
+       "id": "7b31-b679-3788-e8a1",
+       "primary": false,
+       "targetId": "4c3e-9310-a516-3590"
+      },
+      {
+       "name": "Fly",
+       "id": "f609-808b-7470-aac9",
+       "primary": false,
+       "targetId": "c619-2086-bbcf-69c9"
+      },
+      {
+       "name": "Great Devourer",
+       "id": "94fc-57d4-d03c-c9ef",
+       "primary": false,
+       "targetId": "7850-cc5a-c191-b80d"
+      },
+      {
+       "name": "Faction: Tyranids",
+       "id": "1f7a-c1a0-40d2-1b1c",
+       "primary": false,
+       "targetId": "d1d8-6ae0-1be7-e9e"
+      },
+      {
+       "name": "Reference",
+       "id": "f0a9-e331-7de5-b2de",
+       "hidden": false,
+       "primary": true,
+       "targetId": "eef1-be80-500a-edfc"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "de24-50cd-bdaf-76e1",
+       "field": "selections",
+       "includeChildForces": true,
+       "includeChildSelections": true,
+       "scope": "roster",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Floating Death",
+       "id": "3c06-8fff-4990-3214",
+       "hidden": false,
+       "targetId": "d7bb-5382-f348-1d3f",
+       "type": "profile"
+      },
+      {
+       "name": "Bio-minefield",
+       "id": "2bc1-09a8-ead8-f6b4",
+       "hidden": false,
+       "targetId": "374e-ed33-a96f-a014",
+       "type": "profile"
+      },
+      {
+       "name": "Deep Strike",
+       "id": "8352-4ffe-7c89-fa6b",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      },
+      {
+       "name": "Synapse",
+       "id": "3353-f03d-9898-0611",
+       "hidden": false,
+       "targetId": "86aa-437f-260b-5cad",
+       "type": "rule"
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "hidden",
+       "type": "set",
+       "value": true,
+       "conditions": [
+        {
+         "childId": "cf46-6271-340e-cf05",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "lessThan",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Spore Mine",
+       "id": "1a43-6f35-30bd-ec50",
+       "hidden": false,
+       "import": true,
+       "type": "model",
+       "constraints": [
+        {
+         "id": "74f8-3421-a199-04ae",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 1
+        },
+        {
+         "id": "169e-9572-01b8-83eb",
+         "field": "selections",
+         "includeChildSelections": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 3
+        }
+       ],
+       "infoLinks": [
+        {
+         "name": "Spore Mine",
+         "id": "6d9d-8f66-5062-1ca5",
+         "hidden": false,
+         "targetId": "84d8-d3ab-da07-7449",
+         "type": "profile"
+        }
+       ]
+      }
+     ]
     }
    ],
    "sharedProfiles": [
+    {
+     "name": "Bio-minefield",
+     "id": "374e-ed33-a96f-a014",
+     "hidden": false,
+     "typeId": "9cc3-6d83-4dd3-9b64",
+     "typeName": "Abilities",
+     "characteristics": [
+      {
+       "name": "Description",
+       "$text": "Enemy units cannot start or end an Advance move within 6\" of this unit.",
+       "typeId": "9b8f-694b-e5e-b573"
+      }
+     ]
+    },
     {
      "name": "Singular Purpose",
      "id": "286e-4c57-b171-2344",
@@ -81781,6 +81984,69 @@
        "name": "Description",
        "$text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
        "typeId": "9b8f-694b-e5e-b573"
+      }
+     ]
+    },
+    {
+     "name": "Floating Death",
+     "id": "d7bb-5382-f348-1d3f",
+     "hidden": false,
+     "typeId": "9cc3-6d83-4dd3-9b64",
+     "typeName": "Abilities",
+     "characteristics": [
+      {
+       "name": "Description",
+       "$text": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds.",
+       "typeId": "9b8f-694b-e5e-b573"
+      }
+     ]
+    },
+    {
+     "name": "Spore Mine",
+     "id": "84d8-d3ab-da07-7449",
+     "hidden": false,
+     "typeId": "c547-1836-d8a-ff4f",
+     "typeName": "Unit",
+     "characteristics": [
+      {
+       "name": "M",
+       "$text": "4\"",
+       "typeId": "e703-ecb6-5ce7-aec1"
+      },
+      {
+       "name": "T",
+       "$text": "1",
+       "typeId": "d29d-cf75-fc2d-34a4"
+      },
+      {
+       "name": "Sv",
+       "$text": "7+",
+       "typeId": "450-a17e-9d5e-29da"
+      },
+      {
+       "name": "W",
+       "$text": "1",
+       "typeId": "750a-a2ec-90d3-21fe"
+      },
+      {
+       "name": "LD",
+       "$text": "8+",
+       "typeId": "58d2-b879-49c7-43bc"
+      },
+      {
+       "name": "OC",
+       "$text": "0",
+       "typeId": "bef7-942a-1a23-59f8"
+      },
+      {
+       "name": "InSv",
+       "$text": "",
+       "typeId": "55a7-5b54-c60d-11dc"
+      },
+      {
+       "name": "Base",
+       "$text": "25mm",
+       "typeId": "nr-base-size"
       }
      ]
     }
@@ -81799,6 +82065,11 @@
     {
      "name": "Pyrovores",
      "id": "7420-596c-147a-5799",
+     "hidden": false
+    },
+    {
+     "name": "Spore Mines",
+     "id": "51f8-b488-5f21-c390",
      "hidden": false
     },
     {
@@ -185731,6 +186002,11 @@
      "hidden": false
     },
     {
+     "name": "Reference",
+     "id": "eef1-be80-500a-edfc",
+     "hidden": false
+    },
+    {
      "name": "Dreadnought",
      "id": "c97c-376-e2e0-1dd2",
      "hidden": false
@@ -199937,6 +200213,14 @@
      "hidden": false,
      "import": true,
      "targetId": "a018-ca33-afd0-be83",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "Blue Horrors",
+     "id": "dccc-c115-75ce-2805",
+     "hidden": false,
+     "import": true,
+     "targetId": "b795-b936-ad61-e407",
      "type": "selectionEntry"
     },
     {
@@ -215824,6 +216108,906 @@
      ]
     },
     {
+     "name": "Blue Horrors",
+     "id": "b795-b936-ad61-e407",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Faction: Legiones Daemonica",
+       "id": "b554-c5d4-42d2-87f0",
+       "hidden": false,
+       "primary": false,
+       "targetId": "571f-ec3a-a5a2-751a"
+      },
+      {
+       "name": "Infantry",
+       "id": "cf60-bcc2-336a-6083",
+       "hidden": false,
+       "primary": false,
+       "targetId": "cf47-a0d7-7207-29dc"
+      },
+      {
+       "name": "Battleline",
+       "id": "6f1e-bf95-f9a7-5633",
+       "hidden": false,
+       "primary": true,
+       "targetId": "e338-111e-d0c6-b687"
+      },
+      {
+       "name": "Chaos",
+       "id": "4863-f91c-ec11-5f85",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "Daemon",
+       "id": "cfc0-481c-804-6ada",
+       "hidden": false,
+       "primary": false,
+       "targetId": "9c0e-7e25-4580-e439"
+      },
+      {
+       "name": "Tzeentch",
+       "id": "3c23-b3d5-ca0c-f3",
+       "hidden": false,
+       "primary": false,
+       "targetId": "b188-114f-6ba5-79a1"
+      },
+      {
+       "name": "Tzeentch Battleline",
+       "id": "660-d803-99a3-a0d2",
+       "primary": false,
+       "targetId": "a83e-ba41-7d03-5b2d"
+      },
+      {
+       "name": "Shadow Legion",
+       "id": "5a68-a12b-67e6-d0d3",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4df3-beae-010c-9087"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "e8b6-ebeb-25c4-8f3",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 6
+      },
+      {
+       "id": "5b51-5e18-5483-535c",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "7d27-0787-205b-7ea7",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "7768-6a2d-90d5-2b21",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      },
+      {
+       "id": "1b05-0c24-ca30-b1fe",
+       "field": "associations",
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 125
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Crusade",
+       "id": "fa39-825e-4b01-4a39",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "82a2-545c-7f11-ed88",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Enhancements",
+       "id": "0c81-306b-abaf-4e81",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "2bcc-3ba1-d5c8-350e",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deep Strike",
+       "id": "4444-c8b7-26f7-cb35",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule"
+      },
+      {
+       "name": "Infiltrators",
+       "id": "212e-7126-76a7-4813",
+       "hidden": false,
+       "targetId": "c05d-f4c3-f091-4938",
+       "type": "rule"
+      },
+      {
+       "name": "The Shadow of Chaos",
+       "id": "6007-abbf-8622-6d67",
+       "hidden": false,
+       "targetId": "a312-a2f1-e1c0-30ed",
+       "type": "rule"
+      },
+      {
+       "name": "Warp Rifts",
+       "id": "2af6-9ce1-8388-e1f",
+       "hidden": false,
+       "targetId": "877e-cc0c-8a1d-be46",
+       "type": "rule"
+      },
+      {
+       "name": "Penumbral Puppetry",
+       "id": "9f53-e1c8-ea5a-a2ca",
+       "hidden": false,
+       "targetId": "36f2-466c-a396-051c",
+       "type": "profile"
+      },
+      {
+       "name": "Stealth",
+       "id": "c389-04ba-39da-ceaf",
+       "hidden": false,
+       "targetId": "bec5-4288-34a6-ccfa",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "hidden",
+         "type": "set",
+         "value": true,
+         "conditions": [
+          {
+           "childId": "5063-25bd-d22e-665b",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "roster",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "5b51-5e18-5483-535c",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "7d27-0787-205b-7ea7",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "7768-6a2d-90d5-2b21",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "hidden",
+       "type": "set",
+       "value": true,
+       "conditions": [
+        {
+         "id": "31b5-14ac-b901-dde2",
+         "childId": "1248-8642-b42f-1dca",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "lessThan",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "e1ea-71b9-f0ef-d788",
+       "conditions": [
+        {
+         "childId": "d265-877b-e03d-30ca",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "primary-catalogue",
+         "shared": true,
+         "type": "notInstanceOf",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "e8b6-ebeb-25c4-8f3",
+       "type": "set",
+       "value": 4,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Split",
+       "id": "9a61-ce0-47eb-892c",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "Each time a ^^Blue Horror^^ model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one ^^Brimstone Horror^^ model to this unit.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Sullen Malevolence (Aura)",
+       "id": "c1d-3ede-fb1b-bcc9",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "While an enemy unit is within 6\" of this unit, if this unit contains one or more ^^Blue Horror^^ models, worsen the Leadership characteristic of models in that enemy unit by 1.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Exploding Horrors",
+       "id": "290-cc05-6c1b-c26",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more ^^Brimstone Horror^^ models in this unit. For each ^^Brimstone Horror^^ model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      },
+      {
+       "name": "Coruscating Yellow flames (ref. only)",
+       "id": "c2af-56a-2d33-82e0",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "18\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "2",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "5+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "2",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-1",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Pistol, Psychic",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      },
+      {
+       "name": "Yellow claws (ref. only)",
+       "id": "823d-4ae2-9691-b49d",
+       "hidden": false,
+       "typeId": "8a40-4aaa-c780-9046",
+       "typeName": "Melee Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "Melee",
+         "typeId": "914c-b413-91e3-a132"
+        },
+        {
+         "name": "A",
+         "$text": "2",
+         "typeId": "2337-daa1-6682-b110"
+        },
+        {
+         "name": "WS",
+         "$text": "5+",
+         "typeId": "95d1-95f-45b4-11d6"
+        },
+        {
+         "name": "S",
+         "$text": "2",
+         "typeId": "ab33-d393-96ce-ccba"
+        },
+        {
+         "name": "AP",
+         "$text": "0",
+         "typeId": "41a0-1301-112a-e2f2"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "3254-9fe6-d824-513e"
+        },
+        {
+         "name": "Keywords",
+         "typeId": "893f-9000-ccf7-648e"
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Blue Horror",
+       "id": "b506-5bce-64c6-51b0",
+       "collective": false,
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "type": "model",
+       "categoryLinks": [
+        {
+         "name": "Blue",
+         "id": "87c4-b4b5-9c51-914d",
+         "hidden": false,
+         "primary": false,
+         "targetId": "ddad-e1d6-b68a-4aa8"
+        }
+       ],
+       "constraints": [
+        {
+         "id": "1574-da59-9ca5-178d",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 10
+        },
+        {
+         "id": "d925-b7f8-9b7f-d70e",
+         "field": "selections",
+         "includeChildForces": false,
+         "includeChildSelections": false,
+         "percentValue": false,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 10
+        }
+       ],
+       "costs": [
+        {
+         "name": "pts",
+         "typeId": "51b2-306e-1021-d207",
+         "value": 0
+        }
+       ],
+       "profiles": [
+        {
+         "name": "Blue Horror",
+         "id": "d24e-a587-4bd6-5f30",
+         "hidden": false,
+         "typeId": "c547-1836-d8a-ff4f",
+         "typeName": "Unit",
+         "characteristics": [
+          {
+           "name": "M",
+           "$text": "6\"",
+           "typeId": "e703-ecb6-5ce7-aec1"
+          },
+          {
+           "name": "T",
+           "$text": "3",
+           "typeId": "d29d-cf75-fc2d-34a4"
+          },
+          {
+           "name": "Sv",
+           "$text": "7+",
+           "typeId": "450-a17e-9d5e-29da"
+          },
+          {
+           "name": "W",
+           "$text": "1",
+           "typeId": "750a-a2ec-90d3-21fe"
+          },
+          {
+           "name": "LD",
+           "$text": "8+",
+           "typeId": "58d2-b879-49c7-43bc"
+          },
+          {
+           "name": "OC",
+           "$text": "1",
+           "typeId": "bef7-942a-1a23-59f8"
+          },
+          {
+           "name": "InSv",
+           "$text": "4+",
+           "typeId": "55a7-5b54-c60d-11dc"
+          },
+          {
+           "name": "Base",
+           "$text": "25mm",
+           "typeId": "nr-base-size"
+          }
+         ]
+        }
+       ],
+       "selectionEntries": [
+        {
+         "name": "Coruscating Blue flames",
+         "id": "8427-8fbe-c12f-a0a4",
+         "collective": true,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "categoryLinks": [
+          {
+           "name": "Psychic Weapon",
+           "id": "6586-34d6-8e49-3667",
+           "hidden": false,
+           "primary": false,
+           "targetId": "4546-4a0c-b3be-e84c"
+          }
+         ],
+         "constraints": [
+          {
+           "id": "a1b1-4e50-9fda-d66f",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "b4c7-ba31-715d-3b89",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "0aac-2788-510f-7dfd",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Psychic",
+           "id": "2f77-6e96-645b-d5c5",
+           "hidden": false,
+           "targetId": "e9c4-2bb8-12ee-cd1b",
+           "type": "rule"
+          },
+          {
+           "name": "Pistol",
+           "id": "62c9-ee97-cc60-62dc",
+           "hidden": false,
+           "targetId": "8bf7-8812-923d-29e4",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Coruscating Blue flames",
+           "id": "e860-6cea-9d60-aef9",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "18\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "2",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "4+",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "3",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-1",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "1",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Pistol, Psychic",
+             "typeId": "7f1b-8591-2fcf-d01c"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Blue claws",
+         "id": "82df-455-2fe4-57ea",
+         "collective": true,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "3389-3bed-1cf9-44bd",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "c531-ae5c-4fcc-2e5c",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "2c4a-8417-0dfd-2875",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Blue claws",
+           "id": "ede5-af41-743a-10bc",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "1",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "5+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "3",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "0",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "1",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "Pink Horrors",
      "id": "e7b8-aa40-6da7-778e",
      "collective": false,
@@ -225728,6 +226912,490 @@
      ]
     },
     {
+     "name": "Ripper Swarms",
+     "id": "1de2-b57b-aa0a-1f0d",
+     "hidden": false,
+     "import": true,
+     "type": "unit",
+     "categoryLinks": [
+      {
+       "name": "Ripper Swarm",
+       "id": "9ccb-598-6042-f1ae",
+       "primary": false,
+       "targetId": "472-dea9-70ef-a8e4"
+      },
+      {
+       "name": "Swarm",
+       "id": "849d-dbc9-c194-fd16",
+       "primary": true,
+       "targetId": "b00b-5bae-444f-964e"
+      },
+      {
+       "name": "Great Devourer",
+       "id": "e607-37d1-a868-e7f2",
+       "primary": false,
+       "targetId": "7850-cc5a-c191-b80d"
+      },
+      {
+       "name": "Faction: Tyranids",
+       "id": "89e2-f78a-680a-f1b3",
+       "primary": false,
+       "targetId": "d1d8-6ae0-1be7-e9e"
+      },
+      {
+       "name": "Harvester",
+       "id": "3f3b-faea-6e8e-c9fa",
+       "primary": false,
+       "targetId": "8258-a58e-7cf0-a2c3"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "97cf-8b07-e800-2e35",
+       "field": "selections",
+       "includeChildSelections": true,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 30
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Warlord",
+       "id": "0873-17ec-1fb4-899b",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "ceab-62d9-31bf-7c61",
+       "type": "selectionEntry",
+       "modifiers": [
+        {
+         "field": "hidden",
+         "type": "set",
+         "value": true,
+         "conditionGroups": [
+          {
+           "type": "or",
+           "conditions": [
+            {
+             "childId": "1d6e-2579-8e7f-1ed4",
+             "field": "selections",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "notInstanceOf",
+             "value": 1
+            },
+            {
+             "childId": "9cfd-1c32-585f-7d5c",
+             "field": "selections",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Chitinous Horrors (Aura)",
+       "id": "5272-0302-af63-9158",
+       "hidden": false,
+       "targetId": "533-9226-7e51-ee0",
+       "type": "profile"
+      },
+      {
+       "name": "Deep Strike",
+       "id": "3ca5-d590-80cf-4ca4",
+       "hidden": false,
+       "targetId": "7cb5-dd6b-dd87-ad3b",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "hidden",
+         "type": "set",
+         "value": true,
+         "conditions": [
+          {
+           "childId": "1d6e-2579-8e7f-1ed4",
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "scope": "force",
+           "shared": true,
+           "type": "instanceOf",
+           "value": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Synapse",
+       "id": "701e-696-940-8d2e",
+       "hidden": false,
+       "targetId": "86aa-437f-260b-5cad",
+       "type": "rule"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Boarding Actions modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "hidden",
+         "type": "set",
+         "value": true,
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "1d6e-2579-8e7f-1ed4",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            },
+            {
+             "childId": "0f40-fb6c-49f7-9541",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "lessThan",
+             "value": 1
+            },
+            {
+             "childId": "cbfd-453f-6288-6157",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "lessThan",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "97cf-8b07-e800-2e35",
+         "type": "set",
+         "value": 1,
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "1d6e-2579-8e7f-1ed4",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            },
+            {
+             "childId": "0f40-fb6c-49f7-9541",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "97cf-8b07-e800-2e35",
+         "type": "set",
+         "value": 3,
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "1d6e-2579-8e7f-1ed4",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            },
+            {
+             "childId": "cbfd-453f-6288-6157",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "set",
+       "value": 40,
+       "conditions": [
+        {
+         "childId": "model",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "1de2-b57b-aa0a-1f0d",
+         "shared": true,
+         "type": "equalTo",
+         "value": 2
+        }
+       ]
+      },
+      {
+       "field": "51b2-306e-1021-d207",
+       "type": "set",
+       "value": 50,
+       "conditions": [
+        {
+         "childId": "model",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "1de2-b57b-aa0a-1f0d",
+         "shared": true,
+         "type": "atLeast",
+         "value": 3
+        }
+       ]
+      },
+      {
+       "field": "97cf-8b07-e800-2e35",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "747a-c6a9-6f4f-7f09",
+       "conditions": [
+        {
+         "childId": "3bdf-a114-5035-c6ac",
+         "field": "selections",
+         "scope": "primary-catalogue",
+         "shared": true,
+         "type": "instanceOf",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "selectionEntries": [
+      {
+       "name": "Ripper Swarm",
+       "id": "7242-c911-e611-551e",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "type": "model",
+       "constraints": [
+        {
+         "id": "787-2337-ccc2-c523",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "parent",
+         "shared": true,
+         "type": "min",
+         "value": 1
+        },
+        {
+         "id": "22f0-ad84-6f9c-20b1",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "parent",
+         "shared": true,
+         "type": "max",
+         "value": 3
+        }
+       ],
+       "entryLinks": [
+        {
+         "name": "Chitinous claws and teeth",
+         "id": "c0bc-a7f5-6e10-03a5",
+         "collective": true,
+         "hidden": false,
+         "targetId": "f5e3-ad89-8888-4bd4",
+         "type": "selectionEntry",
+         "constraints": [
+          {
+           "id": "e072-9b3a-24e5-7fa0",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "6395-bebf-710b-1a5e",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ]
+        }
+       ],
+       "infoLinks": [
+        {
+         "name": "Ripper Swarm",
+         "id": "06a7-ba31-c975-9a8c",
+         "hidden": false,
+         "targetId": "fdd3-f5cd-d338-974c",
+         "type": "profile"
+        }
+       ],
+       "modifierGroups": [
+        {
+         "comment": "Boarding Actions modifiers",
+         "type": "and",
+         "modifiers": [
+          {
+           "field": "787-2337-ccc2-c523",
+           "type": "set",
+           "value": 3,
+           "conditions": [
+            {
+             "childId": "1d6e-2579-8e7f-1ed4",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "force",
+             "shared": true,
+             "type": "instanceOf",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "selectionEntryGroups": [
+        {
+         "name": "Spinemaw",
+         "id": "cb7d-94a7-d02c-7aae",
+         "hidden": false,
+         "constraints": [
+          {
+           "id": "3812-b2f6-9721-53ca",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Spinemaw",
+           "id": "cf82-1352-6bba-70cf",
+           "collective": true,
+           "hidden": false,
+           "targetId": "3849-e3e0-4d2d-a259",
+           "type": "selectionEntry",
+           "constraints": [
+            {
+             "id": "1ea7-867d-7380-af4f",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "parent",
+             "shared": true,
+             "type": "max",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "Stranglethorn cannon",
      "id": "b9ec-cb81-44f6-49",
      "collective": false,
@@ -226325,6 +227993,132 @@
        "id": "73f9-655d-1321-73d2",
        "description": "Each time a ranged attack targets a **^^Great Devourer^^** unit from your army, if the attacking model is not within 6\" of that unit, subtract 1 from the Hit roll.",
        "hidden": false
+      }
+     ]
+    },
+    {
+     "name": "Spinemaw",
+     "id": "3849-e3e0-4d2d-a259",
+     "collective": true,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "infoLinks": [
+      {
+       "name": "Pistol",
+       "id": "fc28-ae00-65f7-9161",
+       "hidden": false,
+       "targetId": "8bf7-8812-923d-29e4",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Spinemaw",
+       "id": "ab41-fe74-24c7-1b48",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "6\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "4",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "5+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "3",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "0",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Pistol",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Chitinous claws and teeth",
+     "id": "f5e3-ad89-8888-4bd4",
+     "collective": true,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "infoLinks": [
+      {
+       "name": "Sustained Hits",
+       "id": "de0a-505d-c465-5ab4",
+       "hidden": false,
+       "targetId": "1897-c22c-9597-12b1",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Chitinous claws and teeth",
+       "id": "82ab-174c-7668-94",
+       "hidden": false,
+       "typeId": "8a40-4aaa-c780-9046",
+       "typeName": "Melee Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "Melee",
+         "typeId": "914c-b413-91e3-a132"
+        },
+        {
+         "name": "A",
+         "$text": "6",
+         "typeId": "2337-daa1-6682-b110"
+        },
+        {
+         "name": "WS",
+         "$text": "5+",
+         "typeId": "95d1-95f-45b4-11d6"
+        },
+        {
+         "name": "S",
+         "$text": "2",
+         "typeId": "ab33-d393-96ce-ccba"
+        },
+        {
+         "name": "AP",
+         "$text": "0",
+         "typeId": "41a0-1301-112a-e2f2"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "3254-9fe6-d824-513e"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Sustained Hits 1",
+         "typeId": "893f-9000-ccf7-648e"
+        }
+       ]
       }
      ]
     }
@@ -237892,6 +239686,69 @@
      ]
     },
     {
+     "name": "Chitinous Horrors (Aura)",
+     "id": "533-9226-7e51-ee0",
+     "hidden": false,
+     "typeId": "9cc3-6d83-4dd3-9b64",
+     "typeName": "Abilities",
+     "characteristics": [
+      {
+       "name": "Description",
+       "$text": "While an enemy unit is within Engagement Range of this unit, halve the Objective Control characteristic of models in that enemy unit.",
+       "typeId": "9b8f-694b-e5e-b573"
+      }
+     ]
+    },
+    {
+     "name": "Ripper Swarm",
+     "id": "fdd3-f5cd-d338-974c",
+     "hidden": false,
+     "typeId": "c547-1836-d8a-ff4f",
+     "typeName": "Unit",
+     "characteristics": [
+      {
+       "name": "M",
+       "$text": "6\"",
+       "typeId": "e703-ecb6-5ce7-aec1"
+      },
+      {
+       "name": "T",
+       "$text": "2",
+       "typeId": "d29d-cf75-fc2d-34a4"
+      },
+      {
+       "name": "Sv",
+       "$text": "6+",
+       "typeId": "450-a17e-9d5e-29da"
+      },
+      {
+       "name": "W",
+       "$text": "4",
+       "typeId": "750a-a2ec-90d3-21fe"
+      },
+      {
+       "name": "LD",
+       "$text": "8+",
+       "typeId": "58d2-b879-49c7-43bc"
+      },
+      {
+       "name": "OC",
+       "$text": "0",
+       "typeId": "bef7-942a-1a23-59f8"
+      },
+      {
+       "name": "InSv",
+       "$text": "",
+       "typeId": "55a7-5b54-c60d-11dc"
+      },
+      {
+       "name": "Base",
+       "$text": "40mm",
+       "typeId": "nr-base-size"
+      }
+     ]
+    },
+    {
      "name": "Protean Purpose",
      "id": "8632-ccbf-8430-3428",
      "hidden": false,
@@ -237984,6 +239841,11 @@
     {
      "name": "Endless Multitude",
      "id": "c5eb-961b-14b1-ae50",
+     "hidden": false
+    },
+    {
+     "name": "Ripper Swarm",
+     "id": "472-dea9-70ef-a8e4",
      "hidden": false
     },
     {

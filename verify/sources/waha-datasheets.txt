@@ -51,6 +51,8 @@ tyranids Tyrannofex
 tyranids Tyrant-Guard
 tyranids Biovores
 tyranids Pyrovores
+tyranids Ripper-Swarms
+tyranids Spore-Mines
 imperial-knights Knight-Destrier
 imperial-knights Knight-Errant
 imperial-knights Knight-Paladin
@@ -141,6 +143,7 @@ chaos-daemons Lord-of-Change
 chaos-daemons Pink-Horrors
 chaos-daemons Flamers
 chaos-daemons Soul-Grinder
+chaos-daemons Blue-Horrors
 chaos-space-marines Vashtorr-The-Arkifane
 chaos-space-marines Dark-Apostle
 chaos-space-marines Lord-Discordant-On-Helstalker

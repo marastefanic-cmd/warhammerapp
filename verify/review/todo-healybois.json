@@ -498,30 +498,6 @@
     ]
    ],
    "weapons": [
-    "×3 · Flamespurt",
-    "×3 · Chitin-barbed limbs"
-   ]
-  },
-  "source": {
-   "models": [
-    "3× Pyrovore"
-   ],
-   "leads": null
-  },
-  "key": "b95e53c5bdc8d1b8"
- },
- {
-  "army": "healybois",
-  "kind": "unit-weapons",
-  "where": "healybois · Pyrovores",
-  "judgement": {
-   "gear": [
-    [
-     "Chitin-barbed limbs",
-     "Flamespurt"
-    ]
-   ],
-   "weapons": [
     "×2 · Flamespurt",
     "×2 · Chitin-barbed limbs"
    ]
@@ -533,6 +509,41 @@
    "leads": null
   },
   "key": "87c20578765add84"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Ripper Swarms · Chitinous Horrors",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Chitinous Horrors",
+   "text": "While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit."
+  },
+  "key": "95d5aeff41ea229c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Ripper Swarms",
+  "judgement": {
+   "gear": [
+    [
+     "Chitinous claws and teeth"
+    ]
+   ],
+   "weapons": [
+    "Chitinous claws and teeth"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Ripper Swarm"
+   ],
+   "leads": null
+  },
+  "key": "c1606ac65cab9d30"
  },
  {
   "army": "healybois",
@@ -1114,6 +1125,34 @@
  {
   "army": "healybois",
   "kind": "deviation",
+  "where": "deviations-bsdata.json · ripper-swarms · kw",
+  "judgement": {
+   "app": "Ripper Swarms",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword RIPPER SWARMS; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS."
+  },
+  "key": "7f1066c15eeef172"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · ripper-swarms · kw",
+  "judgement": {
+   "app": "",
+   "source": "Ripper Swarm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Ripper Swarm; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS (no RIPPER SWARM)."
+  },
+  "key": "25281d41a2c72927"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
   "where": "deviations-bsdata.json · tyrannofex · stats.base",
   "judgement": {
    "app": "Tyrannofex: 120×92mm Oval",
@@ -1166,42 +1205,6 @@
    "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 622 (\"Instinctive Defence Enhancement / Change to:\"); verify/.cache/waha/tyranids.txt line 257 (\"- Instinctive Defence 15 pts\"); verify/sources/nr-json/healybois.json: \"Instinctive Defense\""
   },
   "key": "fff3e266a9d614ad"
- },
- {
-  "army": "healybois",
-  "kind": "unit-why",
-  "where": "the-swarmlord-tyrant-guard",
-  "judgement": {
-   "why": "The Swarmlord leads the Tyrant Guard (LEADER on both GW datasheets: The Swarmlord can be attached to TYRANT GUARD). Guardian Organism gives Feel No Pain 5+ to the CHARACTER leading the Tyrant Guard only, not to the Tyrant Guard. Malign Presence: GW’s Faction Pack Tyranids 1.3 words (Rules Updates, Change to), as the Swarmlord’s datasheet row has them (Wahapedia still prints the codex’s “If this model is your WARLORD …” and a Designer’s Note about the June 2024 Balance Dataslate’s Lord of Deceit, which the pack’s wording replaced: left out)."
-  },
-  "source": {
-   "file": "verify/sources/hand/healybois.json units.the-swarmlord-tyrant-guard.why (the reasons the hand pass records; not shown in the app)"
-  },
-  "key": "8021ffecc3c4175b"
- },
- {
-  "army": "healybois",
-  "kind": "unit-why",
-  "where": "hive-tyrant-tyrant-guard",
-  "judgement": {
-   "why": "The Hive Tyrant leads the Tyrant Guard (LEADER on both GW datasheets). Instinctive Defence (GW’s spelling; New Recruit: Instinctive Defense) is on the Hive Tyrant: while it is within 6\" of one or more friendly HARVESTER units, models in its unit (the Hive Tyrant and the Tyrant Guard) have Fights First, and Heroic Intervention on this unit is -1 CP. Will of the Hive Mind: GW’s Faction Pack Tyranids 1.3 words (“that use of”), as the Hive Tyrant’s datasheet row has them (Wahapedia: “that usage of”)."
-  },
-  "source": {
-   "file": "verify/sources/hand/healybois.json units.hive-tyrant-tyrant-guard.why (the reasons the hand pass records; not shown in the app)"
-  },
-  "key": "7679420efd4f5c3b"
- },
- {
-  "army": "healybois",
-  "kind": "unit-why",
-  "where": "biovores",
-  "judgement": {
-   "why": "Seed Spore Mines: 8\" as GW’s Faction Pack Tyranids 1.3 (Rules Updates: “Change 9\" to 8\".”), as BSData and Wahapedia have it. The SPORE MINES unit it adds is not in this list."
-  },
-  "source": {
-   "file": "verify/sources/hand/healybois.json units.biovores.why (the reasons the hand pass records; not shown in the app)"
-  },
-  "key": "f6e991a3e996e73c"
  },
  {
   "army": "healybois",
@@ -1280,30 +1283,6 @@
    "evidence": "data.js assimilation-swarm/secure-biomass"
   },
   "key": "7bbfb2dc6d0acffb"
- },
- {
-  "army": "healybois",
-  "kind": "points",
-  "where": "points: Norn Assimilator 250 + 270, Pyrovores 100 + 70, Tyrannofex 170",
-  "judgement": {
-   "app": {
-    "Norn Assimilator": [
-     280,
-     300
-    ],
-    "Pyrovores": [
-     100,
-     70
-    ],
-    "Tyrannofex": 180,
-    "Norn Emissary": 250
-   }
-  },
-  "source": {
-   "reason": "The export’s points: Norn Assimilator 250 (1st unit) and 270 (2nd+ unit) each + Synaptoprescience 30; Pyrovores 3 models 100, 2 models 70 (1st to 2nd units); Tyrannofex 170 (1st to 2nd units) + acid spray 10; Norn Emissary 250 (1st unit); Hive Tyrant 195 + Instinctive Defence 15; Tyrant Guard 6 models 170; Biovores 1 model 60; The Swarmlord 210: as Wahapedia’s tables (the bsdata step passes on points).",
-   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, tyranids_Pyrovores.html, tyranids_Tyrannofex.html, tyranids_Norn-Emissary.html, tyranids_Tyrant-Guard.html, tyranids_Biovores.html, tyranids_Hive-Tyrant.html, tyranids_The-Swarmlord.html"
-  },
-  "key": "7bae585ab9a1d3da"
  },
  {
   "army": "shooty",
@@ -1425,5 +1404,91 @@
    "diff": "git diff cf2ce3a cad3896 -- verify/texts.js"
   },
   "key": "1631dbd4a4e104b4"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "the-swarmlord-tyrant-guard",
+  "judgement": {
+   "why": "The Swarmlord leads the Tyrant Guard (LEADER on both GW datasheets: The Swarmlord can be attached to TYRANT GUARD). Guardian Organism gives Feel No Pain 5+ to the CHARACTER leading the Tyrant Guard only, not to the Tyrant Guard. Malign Presence: GW’s Faction Pack Tyranids 1.3 words (Rules Updates, Change to), as the Swarmlord’s datasheet row has them (Wahapedia still prints the codex’s “If this model is your WARLORD …” and a Designer’s Note about the June 2024 Balance Dataslate’s Lord of Deceit, which the pack’s wording replaced: left out)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.the-swarmlord-tyrant-guard.why (not shown in the app)"
+  },
+  "key": "6034910692dca61c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "hive-tyrant-tyrant-guard",
+  "judgement": {
+   "why": "The Hive Tyrant leads the Tyrant Guard (LEADER on both GW datasheets). Instinctive Defence (GW’s spelling; New Recruit: Instinctive Defense) is on the Hive Tyrant: while it is within 6\" of one or more friendly HARVESTER units, models in its unit (the Hive Tyrant and the Tyrant Guard) have Fights First, and Heroic Intervention on this unit is -1 CP. Will of the Hive Mind: GW’s Faction Pack Tyranids 1.3 words (“that use of”), as the Hive Tyrant’s datasheet row has them (Wahapedia: “that usage of”)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.hive-tyrant-tyrant-guard.why (not shown in the app)"
+  },
+  "key": "6a23873fbef9be4c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "biovores",
+  "judgement": {
+   "why": "Seed Spore Mines: 8\" as GW’s Faction Pack Tyranids 1.3 (Rules Updates: “Change 9\" to 8\".”), as BSData and Wahapedia have it. The SPORE MINES unit it adds is the reference sheet Spore Mines (Biovore) (New Recruit’s reference entry)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.biovores.why (not shown in the app)"
+  },
+  "key": "abb7b96a76f748de"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "ripper-swarms",
+  "judgement": {
+   "why": "Ripper Swarms: GW’s keyword RIPPER SWARMS (BSData “Ripper Swarm”, declared); Chitinous Horrors (Aura) halves the OC of enemy units in Engagement Range: no attack or defence numbers, no reading. Spinemaws: a wargear option not taken."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.ripper-swarms.why (not shown in the app)"
+  },
+  "key": "1c560c6b72201fc0"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "pyrovores",
+  "judgement": {
+   "why": "Two units of two Pyrovores (copies:2), 70 pts each (GW: 2 models 70, 1st to 2nd units)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.pyrovores.why (not shown in the app)"
+  },
+  "key": "68b9e3d5319a1f5b"
+ },
+ {
+  "army": "healybois",
+  "kind": "points",
+  "where": "points (Healybois_2.json)",
+  "judgement": {
+   "app": {
+    "Norn Assimilator": [
+     280,
+     300
+    ],
+    "Pyrovores": "70 ×2",
+    "Tyrannofex": 180,
+    "Norn Emissary": 250,
+    "Hive Tyrant + Tyrant Guard": 380,
+    "The Swarmlord + Tyrant Guard": 380,
+    "Biovores": 60,
+    "Ripper Swarms": 30,
+    "Spore Mines (Biovore)": 0
+   }
+  },
+  "source": {
+   "reason": "The newer export: two units of 2 Pyrovores (70 each, 1st to 2nd units), Ripper Swarms 1 model 30, the rest as before (Norn Assimilator 250/270 + Synaptoprescience 30, Tyrannofex 170 + acid spray 10, Hive Tyrant 195 + Instinctive Defence 15); 2000 in all. New Recruit’s PDF prints the totals with enhancements and wargear (Hive Tyrant 210, Norn Assimilators 280/300, Tyrannofex 180): the same.",
+   "evidence": "verify/sources/nr-json/healybois.json; scratchpad/two-work/Healybois-NR.txt; verify/.cache/waha/ds/tyranids_Pyrovores.html, tyranids_Ripper-Swarms.html"
+  },
+  "key": "ed59f8f7b0e9398e"
  }
 ]

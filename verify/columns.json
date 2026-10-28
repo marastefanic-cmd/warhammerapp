@@ -837,6 +837,10 @@
      "source": "newrecruit",
      "note": "the Warlord, when not the first character"
     },
+    "ref": {
+     "source": "hand",
+     "note": "a reference sheet: a unit or models a rule of the list adds to the battle (not in the army until then; no points, not counted): by (the unit), rule (its ability), quote (GW's words, which check.js finds in that ability); from New Recruit's reference entry (category Reference) or the hand file's refs (verify/from-json.js)"
+    },
     "upgrade": {
      "source": "newrecruit",
      "note": "an UPGRADE enhancement the bodyguard has (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"

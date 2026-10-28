@@ -1085,7 +1085,8 @@ function compareUnit(army, u, F, fail) {
   /* role: the primary category of the (leader's) datasheet */
   checked('keywords');
   const prim = F.roots[0].primary && SRC.get(F.roots[0].primary);
-  if (nn(u.role) !== nn(prim && prim.name)) fail('role', u.role, prim ? prim.name : '', `${F.roots[0].where()}: primary category`);
+  // (a reference sheet is listed under Reference, as New Recruit lists its reference entries)
+  if (nn(u.role) !== nn(prim && prim.name) && !(u.ref && u.role === 'Reference')) fail('role', u.role, prim ? prim.name : '', `${F.roots[0].where()}: primary category`);
   /* keywords */
   const appKw = new Set((u.kw || []).map(nn));
   for (const k of appKw) { checked('keywords'); if (!F.cats.has(k)) fail('kw', k, '', `not a category of ${F.roots.map(rootName).join(' / ')}`); }
@@ -1142,7 +1143,10 @@ function compareUnit(army, u, F, fail) {
    order, so the check looks for an order that makes every copy match.
 --------------------------------------------------------------------- */
 function unitCost(roots) { let t = 0; for (const r of roots) for (const s of r.desc(true)) t += costOf(s); return t; }
-function comparePoints(army, built, failArmy) {
+function comparePoints(army, built0, failArmy) {
+  // (a reference sheet, ref: a unit a rule of the list adds later, not in the army: no points, and no place in the datasheet's escalation)
+  for (const b of built0.filter((x) => x.u.ref)) { checked('points'); if (b.u.pts !== 0) failArmy(b.u.id, 'pts', String(b.u.pts), '0', 'a reference sheet has no points'); }
+  const built = built0.filter((x) => !x.u.ref);
   const pools = new Map();               // datasheet entry id → roots in roster order
   for (const b of built) for (const c of b.copies) for (const r of c.roots) { const k = r.node.id; if (!pools.has(k)) pools.set(k, []); pools.get(k).push(r); }
   const slots = []; for (const b of built) b.copies.forEach((c, i) => slots.push({ b, c, i }));

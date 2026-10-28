@@ -295,6 +295,12 @@ function resolveRoster(j, D, opt){
     let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++;
     u.id = id; seenIds.add(id); made.set(key, u); units.push(u);
   }
+  // reference sheets (ref): a unit of the app's list that a rule of an imported unit adds later (the Pink Horrors' Blue Horrors) comes
+  // with that unit, last, when the export has no entry of its own for it
+  for(const x of picks) for(const r of (x.a ? x.a.units : []).filter(r => r.ref && r.ref.by === x.u.id)){
+    if(units.some(u => u.ref && u.name === r.name && u.ref.by === r.ref.by)) continue;
+    const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);
+  }
   const name = typo(nn(R.name)) || 'Imported list';
   const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,
     points:limit || (battleSize && T.limits[battleSize]) || null, pointsUsed:total, battleSize, disposition, detachments:dets };

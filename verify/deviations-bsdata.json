@@ -2188,196 +2188,6 @@
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2203 (Nurglings datasheet): \"Mischief Makers: Each time an enemy unit (excluding Titanic …\"; verify/.cache/waha/ds/chaos-daemons_Nurglings.html: \"Mischief Makers:\" (no tag)."
  },
  {
-  "army": "tzeeeeentch",
-  "unit": "kairos-fateweaver",
-  "field": "ability.tag",
-  "app": "One Head Looks Back: Once per turn",
-  "source": "One Head Looks Back (Aura)",
-  "reason": "GW’s datasheet prints One Head Looks Back without a tag (no \"(Aura)\"); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) name it \"One Head Looks Back (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Kairos-Fateweaver.html: \"One Head Looks Back:\" (no tag).",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "the-blue-scribes",
-  "field": "stats.base",
-  "app": "The Blue Scribes: Large Flying",
-  "source": "The Blue Scribes: 60mm Flying",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has The Blue Scribes: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2974: \"The Blue Scribes  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "the-changeling",
-  "field": "ability.text",
-  "app": "Mischief and Confusion: At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.",
-  "source": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll o…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_The-Changeling.html: \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the H…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "daemon-prince-of-chaos-with-wings",
-  "field": "ability.text",
-  "app": "Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
-  "source": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model's hellforged weapons have that ability: - [LETHAL HITS] - [PRECISION] - [SUSTAINED HITS 1]\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "daemon-prince-of-chaos-with-wings",
-  "field": "ability",
-  "app": "Daemonic Allegiance",
-  "source": "",
-  "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Daemonic Allegiance\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "stats.base",
-  "app": "Fluxmaster: Large Flying",
-  "source": "Fluxmaster: 60mm Flying",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Fluxmaster: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2941: \"Fluxmaster  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "stats.base",
-  "app": "Blue/Brimstone Horror (ref. only): 25mm",
-  "source": "Blue/Brimstone Horror (ref. only): 32mm",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Blue/Brimstone Horror (ref. only): 32mm; verify/deviations-bases.json (declared) has 25mm; New Recruit’s export (catalogue revision 2) has 32mm. GW wins.",
-  "evidence": "verify/deviations-bases.json (chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only)); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927: \"Blue Horrors  25mm\"; verify/sources/nr-json/tzeeeeentch.json: 32mm.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "ability.text",
-  "app": "Altered Reality: Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
-  "source": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the resul…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html: \"Once per battle round, after a Hit roll, a Wound roll, or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "ability.text",
-  "app": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.: If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*",
-  "source": "If, at any point, this unit contains no ^^Pink Horrors^^ models, use the ^^Blue Horrors^^ datasheet for this unit. \n\n\n_Designer’s Note: While this unit contains one or more ^^Pink Horrors^^ models, the Cackling Horrors and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._",
-  "reason": "The app has GW’s words: GW’s datasheet (Wahapedia) prints the box Horrors are Pink. Horrors are Blue. Where once there was one, now there are two. otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer's N…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit. *Designer's Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "kw",
-  "app": "Brimstone",
-  "source": "",
-  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "kw",
-  "app": "Horrors",
-  "source": "",
-  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, chaos-daemons_Pink-Horrors.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "rules",
-  "app": "",
-  "source": "Stealth",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the unit Stealth; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: CORE ABILITIES / ARMY RULES \"Deep Strike, Leader, The Shadow of Chaos\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "tzeentch-soul-grinder",
-  "field": "stats.base",
-  "app": "Soul Grinder: 160mm",
-  "source": "Soul Grinder: ~160mm",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Soul Grinder: ~160mm; GW’s base size guide (Event Companion) has 160mm; New Recruit’s export (catalogue revision 2) has ~160mm. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2971: \"Soul Grinder  160mm\"; verify/sources/nr-json/tzeeeeentch.json: ~160mm.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "tzeentch-soul-grinder",
-  "field": "ability",
-  "app": "Daemonic Allegiance",
-  "source": "",
-  "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: \"Daemonic Allegiance\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "the-swarmlord-tyrant-guard",
-  "field": "rules",
-  "app": "",
-  "source": "Feel No Pain 5+",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "hive-tyrant-tyrant-guard",
-  "field": "rules",
-  "app": "",
-  "source": "Feel No Pain 5+",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "biovores",
-  "field": "kw",
-  "app": "Biovores",
-  "source": "",
-  "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "biovores",
-  "field": "kw",
-  "app": "",
-  "source": "Biovore",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Biovore; GW’s datasheet does not print that keyword. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS (no BIOVORE).",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "tyrannofex",
-  "field": "stats.base",
-  "app": "Tyrannofex: 120×92mm Oval",
-  "source": "Tyrannofex: 120x92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Tyrannofex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: 120×92mm.",
-  "by": "verify/from-json.js"
- },
- {
   "army": "u-w0t-m8",
   "unit": "the-silent-king",
   "field": "ability.text",
@@ -2525,6 +2335,246 @@
   "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "kairos-fateweaver",
+  "field": "ability.tag",
+  "app": "One Head Looks Back: Once per turn",
+  "source": "One Head Looks Back (Aura)",
+  "reason": "GW’s datasheet prints One Head Looks Back without a tag (no \"(Aura)\"); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) name it \"One Head Looks Back (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Kairos-Fateweaver.html: \"One Head Looks Back:\" (no tag).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "the-blue-scribes",
+  "field": "stats.base",
+  "app": "The Blue Scribes: Large Flying",
+  "source": "The Blue Scribes: 60mm Flying",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has The Blue Scribes: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2974: \"The Blue Scribes  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "the-changeling",
+  "field": "ability.text",
+  "app": "Mischief and Confusion: At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.",
+  "source": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll o…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_The-Changeling.html: \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the H…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "daemon-prince-of-chaos-with-wings",
+  "field": "ability.text",
+  "app": "Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
+  "source": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model's hellforged weapons have that ability: - [LETHAL HITS] - [PRECISION] - [SUSTAINED HITS 1]\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "daemon-prince-of-chaos-with-wings",
+  "field": "ability",
+  "app": "Daemonic Allegiance",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Daemonic Allegiance\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "stats.base",
+  "app": "Fluxmaster: Large Flying",
+  "source": "Fluxmaster: 60mm Flying",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Fluxmaster: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2941: \"Fluxmaster  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "stats.base",
+  "app": "Blue/Brimstone Horror (ref. only): 25mm",
+  "source": "Blue/Brimstone Horror (ref. only): 32mm",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Blue/Brimstone Horror (ref. only): 32mm; verify/deviations-bases.json (declared) has 25mm; New Recruit’s export (catalogue revision 2) has 32mm. GW wins.",
+  "evidence": "verify/deviations-bases.json (chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only)); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927: \"Blue Horrors  25mm\"; verify/sources/nr-json/tzeeeeentch.json: 32mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "ability.text",
+  "app": "Altered Reality: Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
+  "source": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the resul…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html: \"Once per battle round, after a Hit roll, a Wound roll, or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "ability.text",
+  "app": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.: If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*",
+  "source": "If, at any point, this unit contains no ^^Pink Horrors^^ models, use the ^^Blue Horrors^^ datasheet for this unit. \n\n\n_Designer’s Note: While this unit contains one or more ^^Pink Horrors^^ models, the Cackling Horrors and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._",
+  "reason": "The app has GW’s words: GW’s datasheet (Wahapedia) prints the box Horrors are Pink. Horrors are Blue. Where once there was one, now there are two. otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer's N…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit. *Designer's Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "kw",
+  "app": "Brimstone",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "kw",
+  "app": "Horrors",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, chaos-daemons_Pink-Horrors.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "fluxmaster-pink-horrors",
+  "field": "rules",
+  "app": "",
+  "source": "Stealth",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the unit Stealth; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 2) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: CORE ABILITIES / ARMY RULES \"Deep Strike, Leader, The Shadow of Chaos\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "tzeentch-soul-grinder",
+  "field": "stats.base",
+  "app": "Soul Grinder: 160mm",
+  "source": "Soul Grinder: ~160mm",
+  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has Soul Grinder: ~160mm; GW’s base size guide (Event Companion) has 160mm; New Recruit’s export (catalogue revision 2) has ~160mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2971: \"Soul Grinder  160mm\"; verify/sources/nr-json/tzeeeeentch.json: ~160mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "tzeentch-soul-grinder",
+  "field": "ability",
+  "app": "Daemonic Allegiance",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: \"Daemonic Allegiance\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "blue-horrors",
+  "field": "kw",
+  "app": "Brimstone",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "tzeeeeentch",
+  "unit": "blue-horrors",
+  "field": "kw",
+  "app": "Horrors",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "the-swarmlord-tyrant-guard",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "hive-tyrant-tyrant-guard",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "biovores",
+  "field": "kw",
+  "app": "Biovores",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "biovores",
+  "field": "kw",
+  "app": "",
+  "source": "Biovore",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Biovore; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS (no BIOVORE).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "ripper-swarms",
+  "field": "kw",
+  "app": "Ripper Swarms",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword RIPPER SWARMS; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "ripper-swarms",
+  "field": "kw",
+  "app": "",
+  "source": "Ripper Swarm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Ripper Swarm; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS (no RIPPER SWARM).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "tyrannofex",
+  "field": "stats.base",
+  "app": "Tyrannofex: 120×92mm Oval",
+  "source": "Tyrannofex: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Tyrannofex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "spore-mines-biovore",
+  "field": "kw",
+  "app": "",
+  "source": "Reference",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Reference; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: KEYWORDS (no REFERENCE).",
   "by": "verify/from-json.js"
  }
 ]

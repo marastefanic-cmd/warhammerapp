@@ -127,6 +127,14 @@ function check(file){
         for(const w of weapons) if(w.carrier && u.gear.some(g => g.includes(w.group || w.name))) P(where, 'a weapon with a carrier is also on a models line:', w.group || w.name);
       }
       if(u.enhancement && !detachmentsOf(a).some(d => d.enhancements.some(e => e.name === u.enhancement))) P(where, 'enhancement not in its detachments:', u.enhancement);
+      // a reference sheet (ref): no points, and the rule that adds it is an ability of a unit of the list whose words hold the quote
+      if(u.ref){
+        if(u.pts) P(where, 'a reference sheet has points:', u.pts);
+        const by = a.units.find(x => x.id === u.ref.by), ab = by && (by.abilities || []).find(x => x.name === u.ref.rule);
+        if(!ab) P(where, 'ref names no ability of the list:', u.ref.by + ' · ' + u.ref.rule);
+        else if(!String(ab.text).replace(/\*\*/g, '').includes(u.ref.quote)) P(where, 'ref quote is not in the words of', u.ref.rule);
+        if(by && by.ref) P(where, 'ref is added by another reference sheet:', u.ref.by);
+      }
       for(const ab of u.abilities || []) timing(ab, where + ' ability ' + ab.name);
       // (by name and who: two parts of an attached unit can each have an ability of the same name, the Shield-Captain's and the
       // Sentinel Guard's Praesidium Shield)
