@@ -264,89 +264,6 @@
     "Infantry"
    ]
   },
-  "strat-timing | Orks · War Horde · Breakin’ Heads": {
-   "ph": [
-    "command",
-    "movement",
-    "shooting",
-    "charge",
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "strat-needs | Orks · War Horde · Breakin’ Heads": {
-   "all": [
-    "Faction: Orks",
-    "Infantry"
-   ],
-   "attached": true
-  },
-  "strat-timing | Orks · War Horde · Hit ’Em Harder": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "strat-needs | Orks · War Horde · Hit ’Em Harder": {
-   "all": [
-    "Faction: Orks"
-   ]
-  },
-  "strat-timing | Orks · War Horde · Orks Is Never Beaten": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "strat-needs | Orks · War Horde · Orks Is Never Beaten": {
-   "all": [
-    "Faction: Orks"
-   ],
-   "none": [
-    "Titanic"
-   ]
-  },
-  "strat-timing | Orks · War Horde · Mow ’Em Down": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "strat-needs | Orks · War Horde · Mow ’Em Down": {
-   "all": [
-    "Faction: Orks",
-    "Vehicle"
-   ],
-   "none": [
-    "Walker"
-   ]
-  },
-  "strat-timing | Orks · War Horde · Fungus-fuel Injection": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "strat-needs | Orks · War Horde · Fungus-fuel Injection": {
-   "all": [
-    "Faction: Orks"
-   ],
-   "any": [
-    "Mounted",
-    "Vehicle"
-   ]
-  },
-  "strat-timing | Orks · War Horde · Close-range Dakka": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "strat-needs | Orks · War Horde · Close-range Dakka": {
-   "all": [
-    "Faction: Orks"
-   ]
-  },
   "strat-timing | Orks · Wreckas · Drive-by Bustin’": {
    "ph": [
     "shooting"
@@ -1477,17 +1394,6 @@
     "Infantry"
    ]
   },
-  "rule-timing | Orks · War Horde rule · Get Stuck In": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "rule-needs | Orks · War Horde rule · Get Stuck In": {
-   "all": [
-    "Faction: Orks"
-   ]
-  },
   "rule-needs | Orks · Wreckas rule · Wreckin’ and Lootin’": {
    "any": [
     "Breaka Boyz",
@@ -1830,143 +1736,6 @@
     "movement": "opp",
     "shooting": "your"
    }
-  },
-  "ability-timing | melee · Ghazghkull Thraka · Supreme Commander": {},
-  "ability-timing | melee · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Mozrog Skragbad · One Last Kill": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Mozrog Skragbad · Da Bigger Dey Iz…": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Nazdreg · Nazdreg · Supreme Kunnin’": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "opp"
-  },
-  "ability-timing | melee · Nazdreg · Nazdreg · Intimidating Motivation": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Nazdreg · Meganobz · Krumpin’ Time": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Beastboss on Squigosaur · Thundering Stampede": {
-   "ph": [
-    "charge"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Beastboss on Squigosaur · Keep Huntin’!": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Beastboss on Squigosaur · Headwoppa’s Killchoppa": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-tag | melee · Beastboss on Squigosaur · Headwoppa’s Killchoppa": "Enhancement",
-  "ability-timing | melee · Big Mek · Big Mek · Shokk-boosta": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-tag | melee · Big Mek · Big Mek · Kunnin’ But Brutal": "Enhancement",
-  "ability-timing | melee · Big Mek · Painboy · Crude Surgery": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Big Mek · Painboy · Catch Dat Red Bit": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Big Mek · Nobz · Ammo Runts": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Big Mek · Nobz · Get Out da Way!": {
-   "ph": [
-    "charge"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Big Mek in Mega Armour · Big Mek in Mega Armour · Fix Dat Armour Up": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-tag | melee · Big Mek in Mega Armour · Big Mek in Mega Armour · Follow Me Ladz": "Enhancement",
-  "ability-timing | melee · Big Mek in Mega Armour · Meganobz · Krumpin’ Time": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Gretchin · Downtrodden": {},
-  "ability-timing | melee · Gretchin · Thievin’ Scavengers": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Deffkoptas · Aerial Manoover": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "opp"
-  },
-  "ability-timing | melee · Deffkoptas · Deff from Above": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Squighog Boyz · Brutal Impact": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | melee · Squighog Boyz · Bomb Squig": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
   },
   "ability-timing | princes · Khârn the Betrayer · Khârn the Betrayer · Legendary Killer": {
    "ph": [
@@ -2514,95 +2283,6 @@
    "turn": "your"
   },
   "ability-tag | 4-megas-and-a-destrier · Knight Destrier · Sanctuary": "Enhancement",
-  "ability-timing | ooga-booga · Ghazghkull Thraka · Supreme Commander": {},
-  "ability-timing | ooga-booga · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | ooga-booga · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | ooga-booga · Nazdreg · Nazdreg · Supreme Kunnin’": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "opp"
-  },
-  "ability-timing | ooga-booga · Nazdreg · Nazdreg · Intimidating Motivation": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | ooga-booga · Nazdreg · Meganobz · Krumpin’ Time": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | ooga-booga · Zodgrod Wortsnagga · Gretchin · Downtrodden": {},
-  "ability-timing | ooga-booga · Zodgrod Wortsnagga · Gretchin · Thievin’ Scavengers": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-tag | ooga-booga · Zodgrod Wortsnagga · Gretchin · Extra Sneaky": "Upgrade",
-  "ability-timing | ooga-booga · Big Mek · Big Mek · Shokk-boosta": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | ooga-booga · Big Mek · Painboy · Crude Surgery": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | ooga-booga · Big Mek · Painboy · Catch Dat Red Bit": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | ooga-booga · Big Mek · Nobz · Ammo Runts": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | ooga-booga · Big Mek · Nobz · Get Out da Way!": {
-   "ph": [
-    "charge"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | ooga-booga · Big Mek in Mega Armour · Big Mek in Mega Armour · Fix Dat Armour Up": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-tag | ooga-booga · Big Mek in Mega Armour · Big Mek in Mega Armour · Supa-glowy Fing": "Enhancement",
-  "ability-timing | ooga-booga · Big Mek in Mega Armour · Meganobz · Krumpin’ Time": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | ooga-booga · Gretchin · Downtrodden": {},
-  "ability-timing | ooga-booga · Gretchin · Thievin’ Scavengers": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "your"
-  },
   "ability-timing | super-terminators · Angron · Reborn in Blood": {
    "at": "Start of the battle round",
    "ph": [
@@ -3000,6 +2680,81 @@
    ],
    "turn": "opp"
   },
-  "ability-tag | mucho-mutantes · Sekhetar Robots · Prophetic Sentinels": "Once per turn"
+  "ability-tag | mucho-mutantes · Sekhetar Robots · Prophetic Sentinels": "Once per turn",
+  "ability-timing | simple-but-effective · Ghazghkull Thraka · Supreme Commander": {},
+  "ability-timing | simple-but-effective · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Ghazghkull Thraka · Prophet of da Great Waaagh!": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Mozrog Skragbad · One Last Kill": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Mozrog Skragbad · Da Bigger Dey Iz…": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Supreme Kunnin’": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Intimidating Motivation": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Meganobz · Krumpin’ Time": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Beastboss on Squigosaur · Thundering Stampede": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | simple-but-effective · Beastboss on Squigosaur · Keep Huntin’!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Deffkoptas · Aerial Manoover": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | simple-but-effective · Deffkoptas · Deff from Above": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Downtrodden": {},
+  "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Thievin’ Scavengers": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Extra Sneaky": "Upgrade"
  }
 }

@@ -1,0 +1,99 @@
+[
+ {
+  "key": "2b4cc294d60bd968",
+  "where": "simple-but-effective · Ghazghkull Thraka · Supreme Commander",
+  "verdict": "ok",
+  "why": "The note is unchanged and is the Wahapedia core rules 25.04 sentence. The key changed only because the source’s other abilities now carry GW’s spelling, “Prophet of da Great Waaagh!”."
+ },
+ {
+  "key": "e34e4429847c1e62",
+  "where": "simple-but-effective · Ghazghkull Thraka · Prophet of da Great Waaagh!",
+  "verdict": "ok",
+  "why": "Fight, either turn. The text is “that unit’s melee attacks have +1 to hit/+1 to wound”, and melee attacks are made only in the Fight phase. The label is the same as before the rename, and derive agrees (the agreed label is under GW’s name; derive reports 487 agreed labels hold)."
+ },
+ {
+  "key": "3e2e5b5fe0bc9bda",
+  "where": "simple-but-effective · Ghazghkull Thraka · Prophet of da Great Waaagh!",
+  "verdict": "ok",
+  "why": "Aura is GW’s own tag: “Prophet of da Great Waaagh! (Aura)” (Wahapedia datasheet). Wahapedia orks_Ghazghkull-Thraka.html prints “Prophet of da Great Waaagh! (Aura):” (one occurrence)."
+ },
+ {
+  "key": "31841bcac812a69b",
+  "where": "simple-but-effective · Ghazghkull Thraka",
+  "verdict": "ok",
+  "why": "The aura reading is unchanged (melee, needs ORKS, within 6\", own aura always, +1 to hit/+1 to wound, readOf 86a5e4c3); only its `from` follows the rename. calc: dm.calc gives the same two groups with the mod from “Prophet of da Great Waaagh!”, and 7.78 at 20k sims, seed 7 (exact value 7.8378)."
+ },
+ {
+  "key": "60a0eaaaf7a39c93",
+  "where": "deviations-bsdata.json · ghazghkull-thraka · ability",
+  "verdict": "ok",
+  "why": "GW’s name against BSData’s case-only difference, declared like U w0t m8?’s Chittering swarm pair (an app entry, then a source entry). Wahapedia orks_Ghazghkull-Thraka.html prints “Prophet of da Great Waaagh! (Aura):” (one occurrence)."
+ },
+ {
+  "key": "648408c68a6f38e4",
+  "where": "deviations-bsdata.json · ghazghkull-thraka · ability",
+  "verdict": "ok",
+  "why": "The source half of the pair: BSData’s profile “Prophet of Da Great Waaagh! (Aura)”, as for Chittering Swarm. bsdata passes with 282 deviations used, 0 failures."
+ },
+ {
+  "key": "50e68ab82c925c74",
+  "where": "gretchin",
+  "verdict": "ok",
+  "why": "Word for word the data reviewer’s fix b0e115b73574bb09. Checked against verify/.cache/waha/core.txt: line 1490 (“up to three of the same Upgrade … must still spend the stated points cost each time”) and the FAQ at 1462-1464 (“Can an attached unit be given an Upgrade? Yes.”). Zodgrod is an EPIC HERO with no enhancement, so the “Upgrade and an enhancement” FAQ (1465-1467) does not bar it."
+ },
+ {
+  "key": "e2a6f57973d09791",
+  "where": "simple-but-effective · Zodgrod Wortsnagga (hand kwNote)",
+  "verdict": "ok",
+  "why": "GW’s Gretchin keywords are INFANTRY, GROTS, and BATTLELINE is Sneaky Little Gitz’s (Runt Swarm), as the entry’s why.kw already says. On screen (snapshot lines 3045-3048), app.html:4585’s “X come from …” parse stars Gretchin and Grots and leaves BATTLELINE plain. The footnote reads “*from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm)”. This matches the builder’s render diff, whose only other change is the Prophet rename."
+ },
+ {
+  "key": "d6bd1ad7b814c7b7",
+  "where": "caseNames",
+  "verdict": "ok",
+  "why": "Same mechanism and convention as u-w0t-m8.json (“Chittering Swarm”, New Recruit’s spelling, listed; data.js shows GW’s “Chittering swarm”). from-json.js:1015 tests caseGW.has(nm(ab.name)) on New Recruit’s name, so listing NR’s spelling is right. No “Prophet of Da” is left outside the hand file, the deviations, one old approval’s why and the raw exports. nr passes (case-insensitive, as for Chittering)."
+ },
+ {
+  "key": "d31b0cd2ecaa6e3f",
+  "where": "verify/tables.js:296",
+  "verdict": "ok",
+  "why": "Applied as given. data.js: the entry has the full Gobshot row with enh:true, and DATASHEETS orks/warboss-in-mega-armour.ranged has Big Shoota only. tables passes (--write gives the same lists), and the screens show no change."
+ },
+ {
+  "key": "24d4c2c58791ad5a",
+  "where": "verify/from-json.js · enhancement without an ability profile",
+  "verdict": "ok",
+  "why": "verify/from-json.js:619 as given (the same as the profile path at :594). No output changes: --compare of shooty and u-w0t-m8 gives the same counts as before."
+ },
+ {
+  "key": "43328c1b4a30dca1",
+  "where": "verify/from-json.js · weapon row order",
+  "verdict": "ok",
+  "why": "verify/from-json.js:584 as given. No current output changes."
+ },
+ {
+  "key": "2589f25d1e597949",
+  "where": "verify/from-json.js · hand kwNote",
+  "verdict": "fix",
+  "why": "from-json.js:1325 sets u.kwNote from the hand file, and --write gives data.js’s note. But --compare (from-json.js:1156-1180) exits before the hand file’s unit columns are applied, and kwNote is one of the compared fields (F2). So every `--compare simple-but-effective` now reports a false difference: “zodgrod-wortsnagga-runtherd-gretchin.kwNote: data.js ‘Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm).’ / export ‘Battleline, Gretchin, Grots come from the combined unit.’”. This is the same kind of false difference as the reference-sheet one fixed in result-reference-2 (e069726a4291d580). It is minor and does not affect the gate.",
+  "fix": "verify/from-json.js:1170 `for (const k of F2) { const hk = k === 'kwNote' ? ((HAND.units || {})[m.id] || {}).kwNote : undefined, a = clean(m[k]), b = clean(hk !== undefined ? hk : u[k]); if (!eq(a, b)) (eq(a, raw[k]) ? gwOut : out).push(m.id + '.' + k + ':\\n    data.js ' + JSON.stringify(a) + '\\n    export  ' + JSON.stringify(b)); }` (the hand file’s kwNote is the reading’s, as --write applies it)"
+ },
+ {
+  "key": "c884bbe4127d0e10",
+  "where": "verify/calc-test.js",
+  "verdict": "ok",
+  "why": "Only the case name and comment changed; the expected 7.84 is unchanged and right (exact 7.8378; the engine gives 7.78 at 20k sims, seed 7, within the 0.235 margin). calc: 308/308."
+ },
+ {
+  "key": "5f2b99e92dee56f8",
+  "where": "docs/tables.md :24, :26–27, :40",
+  "verdict": "ok",
+  "why": "Exactly the review’s replacements. Every example names a row that is in data.js (Zodgrod + Runtherd + Gretchin, the Meganobz’ Twin Killsaw n:6 with Displays of Savagery, Meganob ×6), and the Kustom Force Field example is marked as the retired Melee’s."
+ },
+ {
+  "key": "c039987024c104b9",
+  "where": "verify/derive-agreed.json",
+  "verdict": "ok",
+  "why": "The 15 labels are added, Prophet’s under “Prophet of da Great Waaagh!” (no stale “Da” key). The gate gives “derive: 487 agreed labels hold”, with no missing items reported."
+ }
+]

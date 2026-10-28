@@ -293,7 +293,7 @@ function build(R){
       if(!Array.isArray(u[kind])) continue;
       U.rows[kind] = u[kind].map((r, k) => {
         let part = 0;
-        if(kind === 'abilities' && /\b(Enhancement|Upgrade)\b/.test(r.tag || '')) part = -1;   // the list's choice, not the datasheet's
+        if((kind === 'abilities' && /\b(Enhancement|Upgrade)\b/.test(r.tag || '')) || ((kind === 'ranged' || kind === 'melee') && r.enh)) part = -1;   // the list's choice, not the datasheet's (an enhancement's ability, or the weapon it gives: Da Gobshot Thunderbuss)
         else if(U.multi){
           if(kind === 'stats'){ const i = names.indexOf(baseName(r.name)); part = i >= 0 ? i : partByGear(u, names, baseName(r.name)); }
           else { part = names.indexOf(r.who); if(part < 0){ part = -1; notes.push(a.id + '/' + u.id + ' ' + kind + ' ' + r.name + ': its who (' + r.who + ') names no part of the unit; kept as the list\'s own row'); } }

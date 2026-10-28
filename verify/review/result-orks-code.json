@@ -1,0 +1,159 @@
+[
+ {
+  "key": "8ff087e5583d481e",
+  "where": "verify/from-json.js · partialRules",
+  "verdict": "ok",
+  "why": "verify/from-json.js:1076-1080: when the one part that has a core rule gives it with “This unit has …” (Nazdreg’s Know-wotz: “This unit has **Deep Strike**”), the attached unit has it (Core Rules 19.04), so no partialRules. The test is narrow (has.length === 1, an ability whose who is that part, “this unit has … <rule>”), sits beside the existing “this model has the” exemption and logs a filled line. --compare of all 22 other exports is byte-identical to main’s from-json (no list changes)."
+ },
+ {
+  "key": "448f51574907fa85",
+  "where": "verify/from-json.js · enhText",
+  "verdict": "ok",
+  "why": "verify/from-json.js:282-292: Wahapedia’s “Da Gobshot Thunderbuss LETHAL HITS: non-MONSTER/VEHICLE RAPID FIRE 6” splits at the first token run that is a weapon ability the app’s weapons already have (case-sensitive, so title-case name words never match), giving “Da Gobshot Thunderbuss: 24\" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]”, as data.js:236 holds and texts.js passes. Traced by hand on the tokens. Note (not a fix): kwBase is read from data.js itself, so a keyword no weapon in data.js has yet (say a new list’s first [ONE SHOT]) would stay in the name; the enhancement-weapon lookup (from-json.js:764) then finds no line and want() reports it, so it fails loudly, not silently. --compare of the other 22 exports unchanged."
+ },
+ {
+  "key": "a1900170decfafa5",
+  "where": "verify/from-json.js · enhancement weapons",
+  "verdict": "fix",
+  "why": "Correct as far as it goes: isEnh(c) (was isEnh(s), the parent, never an Enhancements selection), so enh is now set and kept (bsdata.js:1036 already compared w.enh with BSData’s, and passes). The weapon goes on its model’s gear line (from-json.js:445). It is checked against the detachment’s weapon line (from-json.js:764-767). The ability shows where BSData has no ability profile (from-json.js:617-620), with no BSData text deviation (_bs null, from-json.js:957), and texts.js:1238-1245 checks its words against the enhancement. Other 22 exports unchanged. Three gaps. (1) The real one, and the builder’s question 8107cd783dcc5a90: tables.js treats the enhancement’s weapon as a datasheet fact, so DATASHEETS 'orks/warboss-in-mega-armour'.ranged now carries Da Gobshot Thunderbuss (data.js:5635). GW’s datasheet has no such weapon, and any later entry for that datasheet without its own ranged rows would get it (“An entry without one kind of rows has all of its datasheet’s”). The ability of the same enhancement is the list’s own (tables.js:296), so the weapon should be too. (2) The fallback ability drops GW’s “(Aura)” tag that the profile path adds (from-json.js:594). (3) A grouped enhancement weapon (several profiles) loses enh, because the group order has no 'enh' (from-json.js:584); bsdata.js would then fail it. (2) and (3) are tested: no output changes today.",
+  "fix": "verify/tables.js:296 `if((kind === 'abilities' && /\\b(Enhancement|Upgrade)\\b/.test(r.tag || '')) || ((kind === 'ranged' || kind === 'melee') && r.enh)) part = -1;   // the list's choice, not the datasheet's (an enhancement's ability, or the weapon it gives: Da Gobshot Thunderbuss)`, then `node verify/tables.js --write`: the weapon row moves in full onto the simple-but-effective entry (`{ name:'Da Gobshot Thunderbuss', who:'Warboss in Mega Armour', enh:true, range:'24\"', A:'6', BS:'4+', S:'7', AP:'-2', D:'2', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 6'] }`) and leaves DATASHEETS 'orks/warboss-in-mega-armour'.ranged (Big Shoota only). Tested in a worktree: resolved D.armies byte-identical; check, tables, fingerprints, invariants, derive, bsdata, nr, import and helpers (24 to check, same keys) all as on fc78c00. verify/from-json.js:619 `o.tag = (e.upgrade ? 'Upgrade' : 'Enhancement') + (/\\(Aura\\)$/.test(e.name) ? ' · Aura' : '');` (as line 594). verify/from-json.js:584 `const ord = o.group ? ['group', 'fireAll', 'who', 'carrier', 'n', 'name', 'hunter', 'enh'] : ['name', 'who', 'carrier', 'n', 'hunter', 'enh'];`."
+ },
+ {
+  "key": "8107cd783dcc5a90",
+  "where": "question · Da Gobshot Thunderbuss on the Warboss in Mega Armour datasheet row",
+  "verdict": "fix",
+  "why": "Not on the datasheet row: it is the enhancement’s weapon, the list’s choice, like the enhancement’s ability (already kept off the row by tables.js:296). On the row, any later list with a Warboss in Mega Armour and no ranged rows of its own would show and calculate it. The one-line tables.js change moves it onto the entry, with no change to any resolved list (tested).",
+  "fix": "verify/tables.js:296 `if((kind === 'abilities' && /\\b(Enhancement|Upgrade)\\b/.test(r.tag || '')) || ((kind === 'ranged' || kind === 'melee') && r.enh)) part = -1;   // the list's choice, not the datasheet's (an enhancement's ability, or the weapon it gives: Da Gobshot Thunderbuss)`, then `node verify/tables.js --write`: the weapon row moves in full onto the simple-but-effective entry (`{ name:'Da Gobshot Thunderbuss', who:'Warboss in Mega Armour', enh:true, range:'24\"', A:'6', BS:'4+', S:'7', AP:'-2', D:'2', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 6'] }`) and leaves DATASHEETS 'orks/warboss-in-mega-armour'.ranged (Big Shoota only). Tested in a worktree: resolved D.armies byte-identical; check, tables, fingerprints, invariants, derive, bsdata, nr, import and helpers (24 to check, same keys) all as on fc78c00."
+ },
+ {
+  "key": "f9d995e297dd8f60",
+  "where": "verify/from-json.js · GW’s plural weapon name",
+  "verdict": "ok",
+  "why": "verify/from-json.js:756-760 only sets ww (the GW profile to check against). It never touches row.n and writes no gwFacts/gwDevs 'n' entry, so there is no n:1 halving. It needs every gear line with the weapon to carry it exactly once, and GW’s composition to say “1 <plural>” (“replaced with 1 Twin Killsaws”; \\b1 does not match “11”). The ×2-on-one-model case keeps its own earlier branch (from-json.js:741-745, the only n:1). data.js: Twin Killsaw n:6 on the Meganobz (data.js:5190), values checked against GW, named otherwise (gwNames). Other exports unchanged."
+ },
+ {
+  "key": "a4d70468029d72ae",
+  "where": "verify/from-json.js · keptRows",
+  "verdict": "ok",
+  "why": "verify/from-json.js:1216: a row the hand file lists is reused as when another list has it. The 7 keptRows (ghazghkull-thraka, mozrog-skragbad, nazdreg, meganobz, zodgrod-wortsnagga, runtherd, beastboss-on-squigosaur) are exactly the rows simple-but-effective uses that on main only melee/ooga-booga used. The rows it shares with shooty (gretchin, deffkoptas, big-mek-dakkarig) need no entry, and warboss-in-mega-armour is new. Cosmetic: the filled line still says “(another list has it)” (from-json.js:1286)."
+ },
+ {
+  "key": "cd70a8ee4287701f",
+  "where": "verify/bsdata.js · compareUnit",
+  "verdict": "ok",
+  "why": "verify/bsdata.js:1076 skips the “no BSData ability” failure only for an Enhancement-tagged ability with no candidate and a BSData weapon flagged enh at the same root whose path names the enhancement. The weapon itself is still checked (bsdata.js:1036, including enh), and its words by texts.js. bsdata passes: 16365 facts, 0 failures."
+ },
+ {
+  "key": "38e4a3f5b879ee4b",
+  "where": "verify/invariants.js · strat-needs",
+  "verdict": "ok",
+  "why": "verify/invariants.js:58-59: inside TARGET only, “that **X**” is masked when WHEN names X (Grot Shields: “within 3\" of that **ORKS INFANTRY** unit” is the unit being shot, named in WHEN). The needs→TARGET/WHEN direction still uses the full text (bold). Every list passes invariants (0 failures); the comment’s claim fits (Simple but effective has non-INFANTRY units, Ghazghkull aside)."
+ },
+ {
+  "key": "39d1ac7cf920d351",
+  "where": "verify/calc-test.js · own aura: Prophet of Da Great Waaagh!",
+  "verdict": "ok",
+  "why": "Inputs dumped from dm.calc({army:'simple-but-effective', ph:'fight', atk:'ghazghkull-thraka', typed:MOZROG}): Gork’s Klaw 7A WS2+ S14 AP-3 D4 [CLEAVE 2, DEVASTATING WOUNDS], Adamantine ’Eadbutt 1A WS2+ S14 AP-2 D3+3 [DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION]. The only mod is Prophet’s +1 hit/+1 wound (no detachment rule adds anything). Target T9 Sv3+ InSv4+ W10 FNP5+. Exact calculation (convolution, no simulation): per attack P(damage) = 5/6 × (1/6 crit-wound mortal + 4/6 × 1/2 failed 4++) = 5/12, each damage point kept on FNP 2/3, then E[min(10, Σ)] = 7.8378 (uncapped 9.17). The expected 7.84 is right; the engine gives 7.78 at the case’s 20,000 sims, seed 7, and 7.82-7.84 at 200,000 (seeds 7, 1, 2, 3), so it is within the 0.235 margin. The other four repointed cases (Kustom Blasta X, the turn, Fight charge, [TORRENT] snap) use nazdreg-meganobz, which simple-but-effective has with the Kustom Blasta X. calc: 308/308."
+ },
+ {
+  "key": "9b257408614449af",
+  "where": "keptRows",
+  "verdict": "ok",
+  "why": "Checked against main (04bf8d1) ARMIES: each of the 7 rows was used only by melee and/or ooga-booga (beastboss, mozrog: melee; zodgrod, runtherd: ooga-booga; ghazghkull, nazdreg, meganobz: both) and is used now only by simple-but-effective. No row it needs is missing from the list, and none is there needlessly."
+ },
+ {
+  "key": "6859e44f0fa3080b",
+  "where": "removal of melee and ooga-booga",
+  "verdict": "fix",
+  "why": "The removal is complete and correct. ARMIES, sources, README rows, snapshots, War Horde (detachment, BS_IDS, CHECKLIST, GRANTS) are gone. Every DATASHEETS row on fc78c00 is used by a remaining list. The 4 removed rows (big-mek, painboy, nobz, squighog-boyz) were used only by melee/ooga-booga on main (checked across every ARMIES array, reference sheets and allies included), and import-test passes all 23 exports. Kustom Force Field: shooty’s Big Mek in Mega Armour takes Supa-glowy Fing, Kustom Mega-blasta, Power Klaw, Tellyport Blasta (nr/shooty.txt:314, no KFF), so the row without it is right. The shooty entry is unchanged, as is the shooty snapshot apart from the home screen. The only changes to shared rows are KFF and the Deffkoptas’ unused Kustom Mega-blasta (melee’s third Deffkopta). Deviations: the 9 BSData and 11 NR removed are all army melee/ooga-booga. Derive-agreed: all 60 removed are melee/ooga-booga/War Horde. Approvals: all 106 removed were live on main only for melee (64) and ooga-booga (42), none is used on fc78c00, and no other list’s judgement disappeared. 4 approvals stale on main (Cooking’s Brute Bosses: ’Ard as Nails ph/turn/needs, Brutal But Kunnin’ tag) are live again, by matching content key. donors.txt: 3cb8c3f is an ancestor of main, and its melee/ooga-booga/War Horde/removed rows are byte-identical to 04bf8d1’s. Left over: (1) docs/tables.md:24, :26-27 and :40 still use removed rows as examples (big-mek/painboy/nobz, the Nobz’ Kustom Shoota, ’Nob ×10’, Kustom Force Field). (2) The derive guard lost the 15 agreed labels of rows that stayed (Ghazghkull 3, Mozrog 2, Nazdreg 3, Beastboss 2, Zodgrod’s Gretchin 3, Deffkoptas 2). All 15 are identical today under simple-but-effective keys, and keptRows promises that the rows’ signed-off labels stay the app’s. (3) app.html:4159 comment names Squighog Boyz’ Nob (comment only; optional, as it changes the verified hash).",
+  "fix": {
+   "docs/tables.md:24": "An attached unit names each part: `ds:['orks/zodgrod-wortsnagga','orks/runtherd','orks/gretchin']` (leader, other characters,",
+   "docs/tables.md:26-27": "`{ name:'Twin Killsaw', who:'Meganobz', n:6, kw:[…], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }` (a stats row by its\nmodel's name, `'Meganob ×6'`). An entry without one kind of rows has all of its datasheet's. A row the datasheet does",
+   "docs/tables.md:40": "Anti); and, only where lists differ, a value an ability of the unit's wargear gives (the retired Melee's Kustom Force Field 4+* InSv) or a",
+   "verify/derive-agreed.json items (add, then node verify/derive.js: 487 agreed labels hold)": {
+    "ability-timing | simple-but-effective · Ghazghkull Thraka · Supreme Commander": {},
+    "ability-timing | simple-but-effective · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
+     "ph": [
+      "movement"
+     ],
+     "turn": "your"
+    },
+    "ability-timing | simple-but-effective · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
+     "ph": [
+      "fight"
+     ],
+     "turn": "either"
+    },
+    "ability-timing | simple-but-effective · Mozrog Skragbad · One Last Kill": {
+     "ph": [
+      "fight"
+     ],
+     "turn": "either"
+    },
+    "ability-timing | simple-but-effective · Mozrog Skragbad · Da Bigger Dey Iz…": {
+     "ph": [
+      "fight"
+     ],
+     "turn": "either"
+    },
+    "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Supreme Kunnin’": {
+     "ph": [
+      "movement"
+     ],
+     "turn": "opp"
+    },
+    "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Intimidating Motivation": {
+     "ph": [
+      "movement"
+     ],
+     "turn": "your"
+    },
+    "ability-timing | simple-but-effective · Nazdreg · Meganobz · Krumpin’ Time": {
+     "ph": [
+      "fight"
+     ],
+     "turn": "either"
+    },
+    "ability-timing | simple-but-effective · Beastboss on Squigosaur · Thundering Stampede": {
+     "ph": [
+      "charge"
+     ],
+     "turn": "either"
+    },
+    "ability-timing | simple-but-effective · Beastboss on Squigosaur · Keep Huntin’!": {
+     "ph": [
+      "movement"
+     ],
+     "turn": "your"
+    },
+    "ability-timing | simple-but-effective · Deffkoptas · Aerial Manoover": {
+     "ph": [
+      "fight"
+     ],
+     "turn": "opp"
+    },
+    "ability-timing | simple-but-effective · Deffkoptas · Deff from Above": {
+     "ph": [
+      "shooting"
+     ],
+     "turn": "your"
+    },
+    "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Downtrodden": {},
+    "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Thievin’ Scavengers": {
+     "ph": [
+      "movement"
+     ],
+     "turn": "your"
+    },
+    "ability-tag | simple-but-effective · Zodgrod Wortsnagga · Gretchin · Extra Sneaky": "Upgrade"
+   },
+   "app.html:4159 (optional)": "    // more than one stats row (an attached unit, Canis Rex and Sir Hekhtur): one line per row, under the name,"
+  }
+ },
+ {
+  "key": "69ac4fbc1b5a3f4e",
+  "where": "verify/snapshots",
+  "verdict": "ok",
+  "why": "Full gate on fc78c00 (own worktree, verify/.cache → two-cache): every step PASS except snapshots (princes, shooty, simple-but-effective changed/new; melee.txt and ooga-booga.txt deleted in the commit) and helpers (2214 judgements, 24 to check = exactly todo-orks’ 24 helper items, 438 stale). Diffs against main’s committed snapshots: princes line 1 back label MELEE → ME SHOOTY YER’ BOOTY. super-terminators line 1 OOGA BOOGA → 4 MEGAS AND A DESTRIER. shooty only the home picker (ORKS 3 → 2; Melee and its War Horde/dispositions lines out; Ooga booga → Simple but effective, detachments ‘Bully Boyz · Runt Swarm · Shoota Boyz’ → ‘Brute Bosses · Bully Boyz · Runt Swarm’, its 2000 pts / PRIORITY ASSETS / PURGE THE FOE lines unchanged). simple-but-effective.txt (5627 lines) is identical to the builder’s render and has no War Horde/Ooga/Squighog/Painboy/KFF/undefined/NaN. Its back label is U W0T M8? (the list is last in ARMIES). Every other snapshot is unchanged. from-json --compare of all 22 other exports is byte-identical between main and fc78c00."
+ }
+]

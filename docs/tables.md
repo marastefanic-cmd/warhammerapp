@@ -21,10 +21,10 @@ the gate fails on a column that is not there.
 
 A unit entry: `{ id, ds:'orks/warboss', pts, models, gear, enhancement, warlord, copies, leads, also, kwNote, ptsNote, why, … }`
 (and `mods` / `aura` / `guard` only for what is the list's own: see Readings).
-An attached unit names each part: `ds:['orks/big-mek','orks/painboy','orks/nobz']` (leader, other characters,
+An attached unit names each part: `ds:['orks/zodgrod-wortsnagga','orks/runtherd','orks/gretchin']` (leader, other characters,
 bodyguard). Its rows (`stats`, `ranged`, `melee`, `abilities`) name a datasheet row and add the list's own fields:
-`{ name:'Kustom Shoota', who:'Nobz', n:8, kw:[…], from:{ 'IGNORES COVER':'More Dakka' } }` (a stats row by its
-model's name, `'Nob ×10'`). An entry without one kind of rows has all of its datasheet's. A row the datasheet does
+`{ name:'Twin Killsaw', who:'Meganobz', n:6, kw:[…], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }` (a stats row by its
+model's name, `'Meganob ×6'`). An entry without one kind of rows has all of its datasheet's. A row the datasheet does
 not have (an enhancement's ability) is the list's own, in full. `null`: the list has none of it. `of`: which part of
 an attached unit a row is from, when its `who` does not say.
 
@@ -37,7 +37,7 @@ the list, the entry (or its row) holds the list's value and `why` names the reas
 changed: `why:{ kw:{ Warlord:'Warlord', Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }`. `--write` derives
 the reasons: the Warlord keyword; a keyword a rule in force gives (`GRANTS`: Sneaky Little Gitz, Warpmeld Sacrifice, Marked
 Prey); a rule an enhancement or upgrade names (Augury Uplink's Feel No Pain 5+, Destabilising Predation's [ANTI-…] as
-Anti); and, only where lists differ, a value an ability of the unit's wargear gives (Kustom Force Field's 4+* InSv) or a
+Anti); and, only where lists differ, a value an ability of the unit's wargear gives (the retired Melee's Kustom Force Field 4+* InSv) or a
 weapon ability of the weapons it took. A difference with no reason is a conflict: the datasheet leaves the fact out, each
 list keeps its value in `over`, and `verify/out/tables.md` lists it, until it is fixed at the source (GW's wording,
 Wahapedia's bold). There are none today.
@@ -64,7 +64,7 @@ order (the Atrapos's Bringer of Justice before its Damaged line), its entry hold
 readings of that name: `mods:['Macro-extinction Protocols','Bringer of Justice','Damaged: 1-10 Wounds Remaining']`; `null`: none.
 What is the list's own stays on its entry with its reason: which unit it leads (`why.kwNote`), the points of its parts
 (`why.ptsNote`), a reading of a row only the list has, and a reading the list has otherwise for a reason of the list: its
-`listWhy` (hidden, signed off as `unit-reading-why`) names it, and it does not count against the row's reading (ooga-booga's
+`listWhy` (hidden, signed off as `unit-reading-why`) names it, and it does not count against the row's reading (the retired Ooga booga's
 More Dakka [IGNORES COVER] for the Meganobz' Kombi-weapons). A reading changes a weapon's values by what its rule adds (`set:{A:'+3'}`,
 Possessed Lord), not by a total that bakes in the list's other grants; a one-off the player uses (once per battle) is not shown in
 the weapon's numbers, only in the footnotes under the weapons (the app's `oneOffMod`).

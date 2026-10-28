@@ -1071,6 +1071,9 @@ function compareUnit(army, u, F, fail) {
       if (w) { cands = [w]; renamed = w; }
     }
     checked('abilities');
+    // (an enhancement BSData gives only as the weapon it gives, Da Gobshot Thunderbuss: no ability profile; its weapon is checked with
+    // the weapons, its words against the detachment by verify/texts.js)
+    if (!cands.length && isEnh && F.weapons.some((w) => w.enh && (!whoRoot || w.root === whoRoot) && nn(w.where).includes(nn(spelt || a.name)))) continue;
     if (!cands.length) { fail('ability', a.name, '', `no BSData ability "${a.name}"${a.who ? ' for ' + a.who : ''}${isEnh ? ' (enhancement)' : ''}${a.na ? ' (looked in the whole datasheet)' : ''}`); continue; }
     const best = cands.find((b) => nt(b.text) === nt(a.text)) || cands[0];
     usedA.add(best);

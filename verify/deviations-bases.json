@@ -87,8 +87,8 @@
    "section": "ORKS",
    "entry": "Gretchin: Runtherd"
   },
-  "reason": "GW's guide gives the Runtherd of a Gretchin unit a 32mm base. In these lists the Gretchin units have no Runtherd model (New Recruit: \"10x Gretchin\"): the Runtherd is a datasheet of its own that supports Gretchin (ooga-booga's Zodgrod Wortsnagga + Runtherd + Gretchin unit, on 32mm, matched to this row).",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3504 (ORKS): \"Gretchin: Runtherd  32mm\"; verify/sources/nr/shooty.txt line 384, verify/sources/nr/melee.txt line 315, verify/sources/nr/ooga-booga.txt line 399 (\"10x Gretchin\"); verify/sources/nr/ooga-booga.txt line 100 (\"1x Runtherd\", its own unit, \"Supporting: Gretchin\"); verify/.cache/waha/ds/orks_Gretchin.html lines 1530 (\"10-20 Gretchin models\") and 1551 (supported by RUNTHERD)."
+  "reason": "GW's guide gives the Runtherd of a Gretchin unit a 32mm base. In these lists the Gretchin units have no Runtherd model (New Recruit: \"10x Gretchin\"): the Runtherd is a datasheet of its own that supports Gretchin (Simple but effective's Zodgrod Wortsnagga + Runtherd + Gretchin unit, on 32mm, matched to this row).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3504 (ORKS): \"Gretchin: Runtherd  32mm\"; verify/sources/nr/shooty.txt line 384 (\"10x Gretchin\"); verify/sources/nr-json/simple-but-effective.json (Gretchin units of 20 and 10 models; the Runtherd its own selection, association \"Supporting\" a Gretchin unit); verify/.cache/waha/ds/orks_Gretchin.html lines 1530 (\"10-20 Gretchin models\") and 1551 (supported by RUNTHERD)."
  },
  {
   "datasheet": "orks/ghazghkull-thraka",
@@ -97,7 +97,7 @@
    "entry": "Ghazghkull Thraka: Makari"
   },
   "reason": "GW's guide gives Ghazghkull Thraka's Makari a 25mm base. In 11th edition Makari is no model of the unit: the datasheet's ability \"Makari, Hoist Dat Banner!\" places a Makari token, and New Recruit lists the unit as \"1x Ghazghkull Thraka\". (A Makari model used as that token would stand on 25mm.)",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3501 (ORKS): \"Ghazghkull Thraka: Makari  25mm\"; verify/sources/nr/melee.txt line 199 and verify/sources/nr/ooga-booga.txt line 361 (\"1x Ghazghkull Thraka\"); verify/sources/nr/melee.txt lines 221-223 (\"Makari, Hoist Dat Banner!\" … \"Place one Makari token next to the unit\"); verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html (\"Makari token\")."
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3501 (ORKS): \"Ghazghkull Thraka: Makari  25mm\"; verify/sources/nr-json/simple-but-effective.json (Ghazghkull Thraka: one model, no Makari model; its ability \"Makari, Hoist Dat Banner!\" … \"Place one Makari token next to the unit\"); verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html (\"Makari token\")."
  },
  {
   "datasheet": "chaos-daemons/pink-horrors",

@@ -1,0 +1,957 @@
+[
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-note",
+  "where": "simple-but-effective · Ghazghkull Thraka · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Makari, Hoist Dat Banner!: In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*",
+    "Da Grand Warlord’s Ladz: While this unit is within 3\" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.",
+    "Prophet of Da Great Waaagh!: While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+   ],
+   "listRules": [
+    "Waaagh!",
+    "War Cry",
+    "Da Boss",
+    "’Ard as Nails",
+    "Displays of Savagery",
+    "Sneaky Little Gitz"
+   ]
+  },
+  "key": "1231fadb13f1d2b2"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Nazdreg · Nazdreg’s Know-wotz",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Nazdreg’s Know-wotz",
+   "text": "- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**."
+  },
+  "key": "8928525c2d65a6ed"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Nazdreg · Supreme Kunnin’",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Supreme Kunnin’",
+   "text": "In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6\".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5\"."
+  },
+  "key": "0a072c0ffb39754b"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Nazdreg · Intimidating Motivation",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "5d252859381fcf8e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Nazdreg · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "8e81ceef3ecec3f2"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Nazdreg · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "ee3048e6d8bc3d4e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-kwNote",
+  "where": "simple-but-effective · Nazdreg",
+  "judgement": {
+   "kwNote": "Explosives, Meganobz come from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kombi-weapon Kill Shot 1 -2 3 IGNORES COVER",
+    "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "e071a7c006c846ed"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-ptsNote",
+  "where": "simple-but-effective · Nazdreg",
+  "judgement": {
+   "ptsNote": "165 + Meganobz 175"
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kombi-weapon Kill Shot 1 -2 3 IGNORES COVER",
+    "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "40571c5ee8273154"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-weapons",
+  "where": "simple-but-effective · Nazdreg",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Blasta X",
+     "Moonchewa"
+    ],
+    [
+     "Kombi-weapon",
+     "Power Klaw"
+    ]
+   ],
+   "weapons": [
+    "Nazdreg · Kustom Blasta X · Skorcha",
+    "Nazdreg · Kustom Blasta X · Gatler",
+    "Nazdreg · Kustom Blasta X · Shoota",
+    "Meganobz · ×5 · Kombi-weapon · Point Blank",
+    "Meganobz · ×5 · Kombi-weapon · Kill Shot",
+    "Meganobz · ×5 · Kombi-weapon · Shoota",
+    "Nazdreg · Kustom Blasta X",
+    "Nazdreg · Moonchewa",
+    "Meganobz · ×5 · Power Klaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "69b9d2085c12011d"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-tag",
+  "where": "simple-but-effective · Zodgrod Wortsnagga · That’ll Learn Ya",
+  "judgement": {
+   "tag": "Once per battle round, per unit"
+  },
+  "source": {
+   "ability": "That’ll Learn Ya",
+   "text": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- This unit is no longer **battle-shocked**."
+  },
+  "key": "d77f81abe6356794"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Zodgrod Wortsnagga · That’ll Learn Ya",
+  "judgement": {
+   "who": "Runtherd",
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "That’ll Learn Ya",
+   "text": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- This unit is no longer **battle-shocked**."
+  },
+  "key": "10c1d6f02b919de5"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-kwNote",
+  "where": "simple-but-effective · Zodgrod Wortsnagga",
+  "judgement": {
+   "kwNote": "Battleline, Gretchin, Grots come from the combined unit."
+  },
+  "source": {
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ],
+   "stats": [
+    "Zodgrod Wortsnagga W5 OC1",
+    "Runtherd W3 OC1",
+    "Gretchin ×20 W1 OC1"
+   ],
+   "weapons": [
+    "Squigstoppa 1 -1 1 ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS, DEVASTATING WOUNDS: MONSTER/VEHICLE",
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE",
+    "Grot Blasta 1 0 1 CLOSE-QUARTERS",
+    "Da Grabzappa 5 -2 2",
+    "Runtherd’s Toolz 3 0 1",
+    "Scavenged Shivs 2 0 1"
+   ]
+  },
+  "key": "d525781aec977e97"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-ptsNote",
+  "where": "simple-but-effective · Zodgrod Wortsnagga",
+  "judgement": {
+   "ptsNote": "50 + Runtherd 10 + Gretchin 90"
+  },
+  "source": {
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ],
+   "stats": [
+    "Zodgrod Wortsnagga W5 OC1",
+    "Runtherd W3 OC1",
+    "Gretchin ×20 W1 OC1"
+   ],
+   "weapons": [
+    "Squigstoppa 1 -1 1 ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS, DEVASTATING WOUNDS: MONSTER/VEHICLE",
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE",
+    "Grot Blasta 1 0 1 CLOSE-QUARTERS",
+    "Da Grabzappa 5 -2 2",
+    "Runtherd’s Toolz 3 0 1",
+    "Scavenged Shivs 2 0 1"
+   ]
+  },
+  "key": "054ca8ca7c67047f"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-timing",
+  "where": "simple-but-effective · Beastboss on Squigosaur · Brutal But Kunnin’",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Brutal But Kunnin’",
+   "text": "**WARBOSS** model only. This model’s melee attacks have +1 **D**."
+  },
+  "key": "93197bac2c3325d4"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-timing",
+  "where": "simple-but-effective · Warboss in Mega Armour · Krushin’ Impetus",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Krushin’ Impetus",
+   "text": "When this unit ends a **charge move**, you can select one enemy unit **engaged** with this unit. If you do, roll one D6 for each model in this unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "378576006c62377e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Warboss in Mega Armour · Krushin’ Impetus",
+  "judgement": {
+   "who": "Warboss in Mega Armour",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krushin’ Impetus",
+   "text": "When this unit ends a **charge move**, you can select one enemy unit **engaged** with this unit. If you do, roll one D6 for each model in this unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "6c7c574a796b879b"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Warboss in Mega Armour · Intimidating Motivation",
+  "judgement": {
+   "who": "Warboss in Mega Armour",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "769304b1ab610471"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-tag",
+  "where": "simple-but-effective · Warboss in Mega Armour · Da Gobshot Thunderbuss",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Da Gobshot Thunderbuss",
+   "text": "**WARBOSS** model only. This model has the following weapon:\nDa Gobshot Thunderbuss: 24\" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]"
+  },
+  "key": "195478eaec494c2b"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Warboss in Mega Armour · Da Gobshot Thunderbuss",
+  "judgement": {
+   "who": "Warboss in Mega Armour",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Da Gobshot Thunderbuss",
+   "text": "**WARBOSS** model only. This model has the following weapon:\nDa Gobshot Thunderbuss: 24\" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]"
+  },
+  "key": "051597da8c842978"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Warboss in Mega Armour · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "df273dd1df765a77"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-who",
+  "where": "simple-but-effective · Warboss in Mega Armour · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "6b14d6f4886af7ee"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-kwNote",
+  "where": "simple-but-effective · Warboss in Mega Armour",
+  "judgement": {
+   "kwNote": "Explosives, Meganobz come from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Warboss in Mega Armour W7 OC1",
+    "Meganob ×6 W3 OC1"
+   ],
+   "weapons": [
+    "Da Gobshot Thunderbuss 6 -2 2 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6",
+    "Big Shoota 3 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2",
+    "’Uge Choppa 5 -2 3 CLEAVE 2, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "75514117213ff390"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-ptsNote",
+  "where": "simple-but-effective · Warboss in Mega Armour",
+  "judgement": {
+   "ptsNote": "135 + Meganobz 240"
+  },
+  "source": {
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Warboss in Mega Armour W7 OC1",
+    "Meganob ×6 W3 OC1"
+   ],
+   "weapons": [
+    "Da Gobshot Thunderbuss 6 -2 2 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6",
+    "Big Shoota 3 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2",
+    "’Uge Choppa 5 -2 3 CLEAVE 2, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "0a463ce793318a37"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-weapons",
+  "where": "simple-but-effective · Warboss in Mega Armour",
+  "judgement": {
+   "gear": [
+    [
+     "Da Gobshot Thunderbuss",
+     "’Uge Choppa",
+     "Big Shoota"
+    ],
+    [
+     "Twin Killsaw"
+    ]
+   ],
+   "weapons": [
+    "Warboss in Mega Armour · Da Gobshot Thunderbuss",
+    "Warboss in Mega Armour · Big Shoota",
+    "Warboss in Mega Armour · ’Uge Choppa",
+    "Meganobz · ×6 · Twin Killsaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "67b08b1ddd0ff3f8"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · mozrog-skragbad · ability.text",
+  "judgement": {
+   "app": "Da Bigger Dey Iz…: This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.",
+   "source": "This unit's melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wounds rolls**."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/orks_Mozrog-Skragbad.html: \"This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\"."
+  },
+  "key": "feac60f63eb01eee"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · nazdreg-meganobz · ability.text",
+  "judgement": {
+   "app": "Nazdreg’s Know-wotz: - This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.",
+   "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"- This unit has Deep Strike - This unit's ranged attacks have [IGNORES COVER].\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/orks_Nazdreg.html: \"- This unit has Deep Strike. - This unit's ranged attacks have [IGNORES COVER].\"."
+  },
+  "key": "5f2dc239636f3620"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · zodgrod-wortsnagga-runtherd-gretchin · ability.text",
+  "judgement": {
+   "app": "That’ll Learn Ya: When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- This unit is no longer **battle-shocked**.",
+   "source": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: - That number of G…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/orks_Runtherd.html: \"When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: - That number of Gretchin models in this unit are destroyed. - This unit is no longer battle-shocked.\"."
+  },
+  "key": "c42dad7e093c8e34"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · deffkoptas · stats.base",
+  "judgement": {
+   "app": "Deffkoptas ×3: 75×42mm Oval",
+   "source": "Deffkoptas: 75x42mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Orks catalogue revision 8) has Deffkoptas: 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval; New Recruit’s export (catalogue revision 8) has 75×42mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: 75×42mm."
+  },
+  "key": "0a63f1d399e3bb3d"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "deviation",
+  "where": "deviations-nr.json · deffkoptas · stats[Deffkoptas].base",
+  "judgement": {
+   "app": "75×42mm Oval",
+   "source": "75x42mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 8) gives the base as 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: Base 75x42mm."
+  },
+  "key": "afae88864fb7355b"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-why",
+  "where": "zodgrod-wortsnagga-runtherd-gretchin",
+  "judgement": {
+   "why": "Zodgrod Wortsnagga leads the 20 Gretchin, the Runtherd supports them (the export’s associations; GW’s LEADER: GRETCHIN, the Runtherd’s SUPPORT: GRETCHIN). Super Runts (“This unit is riled up”, “This unit’s Scavenged Shivs weapons have +1 A, WS and S”): the attached unit, Core Rules 19.04. Extra Sneaky (Runt Swarm, UPGRADE: GRETCHIN unit only) is the Gretchin’s. That’ll Learn Ya in GW’s words (“This unit is no longer battle-shocked”; BSData: “That unit”)."
+  },
+  "source": {
+   "file": "verify/sources/hand/simple-but-effective.json units.zodgrod-wortsnagga-runtherd-gretchin.why (not shown in the app)"
+  },
+  "key": "75e2cd7138f125a3"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-why",
+  "where": "gretchin",
+  "judgement": {
+   "why": "Ten Gretchin with the Extra Sneaky upgrade (Runt Swarm, UPGRADE, “GRETCHIN unit only”; the export gives it to two Gretchin units, this one and Zodgrod’s): 45 + 10 pts. The other ten Gretchin (gretchin-2) have none."
+  },
+  "source": {
+   "file": "verify/sources/hand/simple-but-effective.json units.gretchin.why (not shown in the app)"
+  },
+  "key": "b0e115b73574bb09"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-why",
+  "where": "nazdreg-meganobz",
+  "judgement": {
+   "why": "Nazdreg leads five Meganobz with Kombi-weapons and Power Klaws (the export’s association; GW’s LEADER: MEGANOBZ). Nazdreg’s Know-wotz (“This unit has Deep Strike”, “This unit’s ranged attacks have [IGNORES COVER]”) is for the attached unit (Core Rules 19.04): every model has Deep Strike (no partialRules), the Meganobz’ Kombi-weapon profiles carry [IGNORES COVER] as BSData applies it. Displays of Savagery (Bully Boyz: MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1]) on every melee weapon of the attached unit (it has MEGANOBZ). 175 pts: GW’s price of five Meganobz (1st to 2nd units)."
+  },
+  "source": {
+   "file": "verify/sources/hand/simple-but-effective.json units.nazdreg-meganobz.why (not shown in the app)"
+  },
+  "key": "1a152bd0e8954ea2"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-why",
+  "where": "warboss-in-mega-armour-meganobz",
+  "judgement": {
+   "why": "The Warboss in Mega Armour leads six Meganobz with Twin Killsaws (the export’s association; GW’s LEADER: MEGANOBZ). Da Gobshot Thunderbuss (Brute Bosses, WARBOSS model only): “This model has the following weapon”: a ranged weapon of the Warboss (enh), checked against the enhancement’s profile. Twin Killsaw: New Recruit’s name for GW’s Twin Killsaws (“replaced with 1 Twin Killsaws”), one on each Meganob. Krushin’ Impetus: one D6 for each model of the attached unit engaged with that enemy unit (“each model in this unit”, Core Rules 19.04). Displays of Savagery on every melee weapon (MEGANOBZ). 115 pts (1st to 2nd units) + 20; Meganobz 210 (six, 1st to 2nd units) + 30 (Twin Killsaws, 5 each)."
+  },
+  "source": {
+   "file": "verify/sources/hand/simple-but-effective.json units.warboss-in-mega-armour-meganobz.why (not shown in the app)"
+  },
+  "key": "dc1a2a51e420c5cd"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "unit-why",
+  "where": "beastboss-on-squigosaur",
+  "judgement": {
+   "why": "Brutal But Kunnin’ (Brute Bosses, WARBOSS model only: the Beastboss on Squigosaur is WARBOSS): “This model’s melee attacks have +1 D”: every melee weapon of the one model, the Squigosaur’s jaws too (the datasheet’s values kept as its own). Thump Gun: GW’s wargear option (“This model can be equipped with 1 Thump Gun”), taken. Thundering Stampede is GW’s (Aura). 140 pts (1st to 2nd units) + 30."
+  },
+  "source": {
+   "file": "verify/sources/hand/simple-but-effective.json units.beastboss-on-squigosaur.why (not shown in the app)"
+  },
+  "key": "3370e1ecdc597584"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "rule-ph",
+  "where": "orks · Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "label": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   }
+  },
+  "source": {
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**: …",
+   "reason": "’Ard as Nails: “When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase …”: a WARBOSS model can be destroyed in any phase of either turn (shooting, the Fight phase, mortal wounds) and the rule names none; derive.js reads only “selected to fight” (the Fight phase). As Fates in Flux (Tzeeeeentch).",
+   "derived": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "file": "verify/sources/hand/simple-but-effective.json rules.brute-bosses"
+  },
+  "key": "55270d50a1e85920"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "kept-row",
+  "where": "keptRows",
+  "judgement": {
+   "keptRows": [
+    "orks/ghazghkull-thraka",
+    "orks/mozrog-skragbad",
+    "orks/nazdreg",
+    "orks/meganobz",
+    "orks/zodgrod-wortsnagga",
+    "orks/runtherd",
+    "orks/beastboss-on-squigosaur"
+   ]
+  },
+  "source": {
+   "reason": "The owner retired the lists Melee and Ooga booga for this one (“remove Melee Orks list and Ooga Booga lists, this is the new ultimate melee orks list”): these datasheet rows were theirs and are now this list’s alone; their signed-off facts (words, labels, When targeted lines, notes) stay the app’s, as for a row another list has (from-json.js keptRows).",
+   "file": "verify/sources/hand/simple-but-effective.json keptRows; verify/from-json.js (code item)"
+  },
+  "key": "9b257408614449af"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "gw-words",
+  "where": "orks/runtherd · That’ll Learn Ya",
+  "judgement": {
+   "from": "- That unit is no longer **battle-shocked**.",
+   "to": "- This unit is no longer **battle-shocked**."
+  },
+  "source": {
+   "reason": "GW’s datasheet (Wahapedia, the codex; Orks have no Faction Pack) prints “This unit is no longer battle-shocked”; BSData and the row (Ooga booga’s, signed off with BSData’s word) “That unit”. The row now has GW’s words (its only list is Simple but effective); BSData’s declared in deviations-bsdata.json (simple-but-effective · zodgrod-wortsnagga-runtherd-gretchin · ability.text).",
+   "evidence": "verify/.cache/waha/ds/orks_Runtherd.html"
+  },
+  "key": "e4622f871fe1d11e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "points",
+  "where": "points (Simple_but_effective_2.json)",
+  "judgement": {
+   "app": {
+    "Ghazghkull Thraka": 290,
+    "Mozrog Skragbad": 170,
+    "Nazdreg + Meganobz": "165 + 175",
+    "Zodgrod Wortsnagga + Runtherd + Gretchin": "50 + 10 + 80 + Extra Sneaky 10",
+    "Beastboss on Squigosaur": "140 + Brutal But Kunnin’ 30",
+    "Big Mek Dakkarig": "160 ×2",
+    "Warboss in Mega Armour + Meganobz": "115 + Da Gobshot Thunderbuss 20 + 210 + Twin Killsaws 30",
+    "Gretchin (Extra Sneaky)": "45 + 10",
+    "Gretchin": 45,
+    "Deffkoptas": 85,
+    "total": 2000
+   }
+  },
+  "source": {
+   "reason": "GW’s YOUR UNIT COSTS: Ghazghkull 290, Mozrog 170, Nazdreg 165, Zodgrod 50, Runtherd 10 (single cost); Beastboss on Squigosaur 140 and Warboss in Mega Armour 115 (1st to 2nd units); Big Mek Dakkarig 160 (1st to 2nd units; this list has two); Meganobz 5 models 175, 6 models 210 (1st to 2nd units; two units); wargear Twin Killsaws 5 per model (6 × 5 = 30); Gretchin 10 models 45, 20 models 80; Deffkoptas 3 models 85 (1st to 2nd units). Enhancements (Wahapedia faction page): Brutal But Kunnin’ 30, Da Gobshot Thunderbuss 20 (Brute Bosses), Extra Sneaky 10 (Runt Swarm, UPGRADE, on two Gretchin units). Every value is the export’s; 2000 of 2000.",
+   "evidence": "verify/sources/nr-json/simple-but-effective.json; verify/.cache/waha/ds/orks_*.html (UNIT COMPOSITION); verify/.cache/waha/orks.txt (Brute Bosses, Runt Swarm)"
+  },
+  "key": "efd9e46c0e031b1e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "detachment",
+  "where": "orks/brute-bosses (new)",
+  "judgement": {
+   "dp": 1,
+   "dispositions": [
+    "Purge the Foe"
+   ],
+   "rule": "’Ard as Nails",
+   "enhancements": [
+    "Surly as a Squiggoth 25",
+    "Brutal But Kunnin’ 30",
+    "Blitzboss 20",
+    "Proper Killy 15",
+    "Morgog’s Finkin’ Cap 50",
+    "Da Gobshot Thunderbuss 20"
+   ],
+   "stratagems": []
+  },
+  "source": {
+   "reason": "Wahapedia orks.txt “######## Brute Bosses 1DP”: the rule and six enhancements, no stratagems printed; Force Dispositions from BSData (verify/dispositions.js). Da Gobshot Thunderbuss’s weapon table written as one line “Da Gobshot Thunderbuss: 24\" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]” (code item enhText). Orks have no GW Faction Pack.",
+   "evidence": "verify/.cache/waha/orks.txt lines 535-580"
+  },
+  "key": "20d97a725ae0a83e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "removal",
+  "where": "lists melee and ooga-booga (the owner: “remove Melee Orks list and Ooga Booga lists, this is the new ultimate melee orks list”)",
+  "judgement": {
+   "removed": {
+    "armies": [
+     "melee (Melee, War Horde)",
+     "ooga-booga (Ooga booga)"
+    ],
+    "sources": [
+     "verify/sources/nr/melee.txt",
+     "verify/sources/nr/ooga-booga.txt",
+     "verify/sources/nr-json/melee.json",
+     "verify/sources/nr-json/ooga-booga.json",
+     "verify/sources/README.md rows nr/melee.txt, nr/ooga-booga.txt"
+    ],
+    "snapshots": [
+     "verify/snapshots/melee.txt",
+     "verify/snapshots/ooga-booga.txt"
+    ],
+    "faction": [
+     "orks detachment war-horde (Get Stuck In; Headwoppa’s Killchoppa, Da Boss is Watchin’, Kunnin’ But Brutal, Follow Me Ladz; six stratagems) and its BS_IDS row"
+    ],
+    "datasheets": [
+     "orks/big-mek",
+     "orks/painboy",
+     "orks/nobz",
+     "orks/squighog-boyz",
+     "orks/big-mek-in-mega-armour ability Kustom Force Field (Melee’s Big Mek only)",
+     "unused weapon rows tables.js dropped (Deffkoptas row’s Kustom Mega-blasta)"
+    ],
+    "bsIds": "every melee/… and ooga-booga/… row; ids only they used (verify/from-json.js rewrites the table)",
+    "deviations": "9 in deviations-bsdata.json and 11 in deviations-nr.json (army melee or ooga-booga); deviations-bases.json: two reasons/evidence rewritten to cite Simple but effective (the Runtherd and Makari rows are still needed)",
+    "deriveAgreed": "60 items of melee / ooga-booga in verify/derive-agreed.json",
+    "approvals": "106 approvals no judgement uses any more (stale only after the removal; 442 stale before it are left as they were)",
+    "calcTest": "five cases on army melee now on simple-but-effective (Kustom Blasta X, Prophet of Da Great Waaagh!, the turn, Fight charge, [TORRENT] snap shooting)",
+    "docs": "README.md, docs/tables.md, verify/add-army.js comment",
+    "kept": "verify/review files of the two lists (history, as for Cooking, Hurrdurr, oioioi); verify/sources/donors.txt gains 3cb8c3f (the last revision with them) for verify/add-army.js"
+   }
+  },
+  "source": {
+   "reason": "Rows still used by another list kept (orks/warboss, orks/big-mek-in-mega-armour, orks/gretchin, orks/deffkoptas, orks/big-mek-dakkarig: Me shooty yer’ booty); rows only this list now uses kept with their signed-off facts (keptRows)"
+  },
+  "key": "6859e44f0fa3080b"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots",
+  "judgement": {
+   "new": "simple-but-effective.txt",
+   "deleted": [
+    "melee.txt",
+    "ooga-booga.txt"
+   ],
+   "changed": {
+    "shooty.txt": "home screen only: ORKS 3 → 2, Melee and Ooga booga out, Simple but effective in",
+    "princes.txt": "its back label (the list before it): MELEE → ME SHOOTY YER’ BOOTY",
+    "super-terminators.txt": "its back label: OOGA BOOGA → 4 MEGAS AND A DESTRIER"
+   }
+  },
+  "source": {
+   "file": "scratchpad/orks-work/*-vs-wt-two.diff (against wt-two’s render)"
+  },
+  "key": "69ac4fbc1b5a3f4e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · partialRules",
+  "judgement": {
+   "code": "no partialRules when the part that has the rule gives it to the whole unit (“This unit has Deep Strike”: Nazdreg’s Know-wotz; a leader’s “this unit” is the attached unit, 19.04)"
+  },
+  "source": {
+   "file": "verify/from-json.js · partialRules"
+  },
+  "key": "8ff087e5583d481e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · enhText",
+  "judgement": {
+   "code": "an enhancement’s weapon line: Wahapedia’s “name KEYWORDS” line split at the first weapon ability the app’s weapons have (“Da Gobshot Thunderbuss: … [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]”; was “Da Gobshot Thunderbuss LETHAL HITS: … RAPID FIRE 6: … []”)"
+  },
+  "source": {
+   "file": "verify/from-json.js · enhText"
+  },
+  "key": "448f51574907fa85"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · enhancement weapons",
+  "judgement": {
+   "code": "isEnh(c) (was isEnh(s), the parent: never true), enh kept on the weapon row (data.js field enh, verify/bsdata.js checks it), the weapon on its model’s gear line, GW check against the enhancement’s weapon line, and the enhancement’s ability where BSData gives it no ability profile (no BSData text deviation then)"
+  },
+  "source": {
+   "file": "verify/from-json.js · enhancement weapons"
+  },
+  "key": "a1900170decfafa5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · GW’s plural weapon name",
+  "judgement": {
+   "code": "“Twin Killsaws” (GW, “replaced with 1 Twin Killsaws”) matched for New Recruit’s Twin Killsaw, one on each model: values checked, New Recruit’s name kept, listed as named otherwise"
+  },
+  "source": {
+   "file": "verify/from-json.js · GW’s plural weapon name"
+  },
+  "key": "f9d995e297dd8f60"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · keptRows",
+  "judgement": {
+   "code": "a datasheet row named in the hand file’s keptRows is reused as when another list has it (a row taken over from a retired list keeps its signed-off facts)"
+  },
+  "source": {
+   "file": "verify/from-json.js · keptRows"
+  },
+  "key": "a4d70468029d72ae"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/bsdata.js · compareUnit",
+  "judgement": {
+   "code": "an Enhancement-tagged ability BSData has only as the weapon it gives (no ability profile) is not a failure"
+  },
+  "source": {
+   "file": "verify/bsdata.js · compareUnit"
+  },
+  "key": "cd70a8ee4287701f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/invariants.js · strat-needs",
+  "judgement": {
+   "code": "a TARGET’s “that **X** unit” naming the unit WHEN names is not the target’s keyword (Grot Shields: needs GRETCHIN, not ORKS INFANTRY); before, Ooga booga passed only because every unit of it was INFANTRY"
+  },
+  "source": {
+   "file": "verify/invariants.js · strat-needs"
+  },
+  "key": "38e4a3f5b879ee4b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/calc-test.js · own aura: Prophet of Da Great Waaagh!",
+  "judgement": {
+   "code": "repointed from melee to simple-but-effective; expected 7.84 (independent 400,000-battle simulation: Gork’s Klaw 7 + ’Eadbutt 1 attacks, hit 2+, wound 2+ (S14 vs T9 3+, +1), [DEVASTATING WOUNDS] on 6, InSv 4+, Feel No Pain 5+, W10 cap); the engine gives 7.78 (margin 0.235)"
+  },
+  "source": {
+   "file": "verify/calc-test.js · own aura: Prophet of Da Great Waaagh!"
+  },
+  "key": "39d1ac7cf920d351"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "question",
+  "where": "’Ard as Nails label",
+  "judgement": {
+   "question": "Any phase, either turn (hand label, as Fates in Flux), or no label (“names no phase”, as Sneaky Little Gitz)? derive.js gives the Fight phase only."
+  },
+  "source": {},
+  "key": "549df19307be497e"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "question",
+  "where": "Brutal But Kunnin’ label",
+  "judgement": {
+   "question": "derive.js labels it Fight · Either turn (“melee attacks”); left as derived. Fine, or no label (an always-on bonus)?"
+  },
+  "source": {},
+  "key": "5a526cf74ea51fca"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "question",
+  "where": "Extra Sneaky on two units",
+  "judgement": {
+   "question": "New Recruit takes the UPGRADE on two Gretchin units (0.5 Enhancements each); shown on both, as the export has it. GW’s limit on UPGRADE enhancements is not checked by the app."
+  },
+  "source": {},
+  "key": "881c0df905266a16"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "question",
+  "where": "Da Gobshot Thunderbuss on the Warboss in Mega Armour datasheet row",
+  "judgement": {
+   "question": "tables.js keeps the enhancement weapon’s profile on the row (the entry marks it enh:true); a later list’s Warboss in Mega Armour without the enhancement would not show it (entries list their weapons). Acceptable?"
+  },
+  "source": {},
+  "key": "8107cd783dcc5a90"
+ }
+]
