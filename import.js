@@ -179,7 +179,9 @@ function resolveRoster(j, D, opt){
   const mine = ctxKey(dets, config, battleSize);
   const facArmies = D.armies.filter(a => a.faction === fac && !a.imported && T.units[a.id + '/' + (a.units[0] || {}).id]);
   const pool = facArmies.filter(a => ctxKey(a.detachments, a.config || {}, a.battleSize) === mine);
-  const instances = facArmies.flatMap(a => a.units.map(u => ({ a, u, sigs:(T.units[a.id + '/' + u.id] || []).slice().sort() })));
+  // (a list's units and its reference sheets: the app moves these to a.refs at start, verify/ and an export's entry see both)
+  const allOf = a => a.units.concat(a.refs || []);
+  const instances = facArmies.flatMap(a => allOf(a).map(u => ({ a, u, sigs:(T.units[a.id + '/' + u.id] || []).slice().sort() })));
   const partSigs = instances.flatMap(x => x.sigs);
   if(!errors.length && !pool.length) err('detachment' + (dets.length > 1 ? 's ' : ' ') + and(dets.map(k => FAC.detachments[k].name)) + (Object.keys(config).length ? ' with ' + Object.entries(config).map(([k, v]) => k + ' ' + v).join(', ') : '') +
     ' not recognized: the app’s ' + FAC.name + ' lists have ' + and([...new Set(facArmies.map(a => a.detachments.map(k => FAC.detachments[k].name).join(' + ') + (a.config ? ' (' + Object.entries(a.config).map(([k, v]) => k + ' ' + v).join(', ') + ')' : '')))]));
@@ -250,7 +252,7 @@ function resolveRoster(j, D, opt){
       else g.parts.forEach((p, k) => { if(!known[k]) explainPart(p, nn(p.name)); });
       return;
     }
-    const inPool = c.filter(x => pool.includes(x.a)).sort((x, y) => order.indexOf(x.a) - order.indexOf(y.a) || x.a.units.indexOf(x.u) - y.a.units.indexOf(y.u));
+    const inPool = c.filter(x => pool.includes(x.a)).sort((x, y) => order.indexOf(x.a) - order.indexOf(y.a) || allOf(x.a).indexOf(x.u) - allOf(y.a).indexOf(y.u));
     if(!inPool.length){
       if(pool.length) err('unit ' + unit + ' not recognized with ' + and(dets.map(k => FAC.detachments[k].name)) + ': the app has it only in ' + and([...new Set(c.map(x => x.a.name))]) + ' (' + and([...new Set(c.map(x => x.a.detachments.map(k => FAC.detachments[k].name).join(' + ')))]) + ')');
       return;
@@ -297,7 +299,7 @@ function resolveRoster(j, D, opt){
   }
   // reference sheets (ref): a unit of the app's list that a rule of an imported unit adds later (the Pink Horrors' Blue Horrors) comes
   // with that unit, last, when the export has no entry of its own for it
-  for(const x of picks) for(const r of (x.a ? x.a.units : []).filter(r => r.ref && r.ref.by === x.u.id)){
+  for(const x of picks) for(const r of (x.a ? allOf(x.a) : []).filter(r => r.ref && r.ref.by === x.u.id)){
     if(units.some(u => u.ref && u.name === r.name && u.ref.by === r.ref.by)) continue;
     const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);
   }

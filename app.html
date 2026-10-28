@@ -1065,6 +1065,8 @@ if(window.WH_IMPORT) for(const x of importedKept()){
 // the army, so out of every count, total and list of units; shown last in the Units list and on a page of their own
 const splitRefs = a => { if(a.refs) return a; a.refs = a.units.filter(u => u.ref); a.units = a.units.filter(u => !u.ref); return a; };
 D.armies.forEach(splitRefs);
+// a list's units and its reference sheets: what a page, a popup, the search or the Damage tab can show (never a count or total)
+const unitsAll = a => a.units.concat(a.refs || []);
 let ONLY = D.armies.length === 1 ? D.armies[0] : null;   // one list: the app opens straight into it
 try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier version
 
@@ -1232,7 +1234,7 @@ function titleOf(c){
   if(c.s === 'settings') return 'Settings';
   if(c.s === 'strats') return 'Stratagems';
   if(c.s === 'army') return (armyById(c.army) || {}).name || '';
-  if(c.s === 'unit') return ((armyById(c.army) || { units:[] }).units.find(u => u.id === c.unit) || {}).name || '';
+  if(c.s === 'unit') return (unitsAll(armyById(c.army) || { units:[] }).find(u => u.id === c.unit) || {}).name || '';
   return SCREEN_TITLE[c.s] || '';
 }
 const backTitle = c => c ? BACK_TITLE[c.s] || titleOf(c) : '';
@@ -1242,7 +1244,7 @@ function valid(c){
   if(c.s === 'settings') return !c.army || !!armyById(c.army);
   const a = armyById(c.army);
   if(!a) return false;
-  if(c.s === 'unit') return a.units.some(u => u.id === c.unit);
+  if(c.s === 'unit') return unitsAll(a).some(u => u.id === c.unit);
   return c.s === 'army' || hasOwn(SCREEN_TITLE, c.s);
 }
 // mode: push (default) | 'sheet' (replaces an open popup's entry) | 'replace' (no history to go back to)
@@ -1331,6 +1333,8 @@ function matches(n, u){
   return true;
 }
 const eligible = (s, a) => (a || army()).units.filter(u => matches(s.needs, u));
+// (one unit: a reference sheet too, the Spore Mines a stratagem can target once they are on the battlefield)
+const canTarget = (s, u, a) => unitsAll(a || army()).includes(u) && matches(s.needs, u);
 // a stratagem whose TARGET is another unit of the list but whose effect changes this unit's attacks (help: Daemonic Fury, a BLOOD
 // LEGIONS target and the WORLD EATERS unit within 6" it selects), as shield is for the defence
 const helpedBy = (u, a) => allStratagems(a).filter(s => s.help && matches(s.help.to, u) && (a || army()).units.some(x => x !== u && matches(s.help.by, x)));
@@ -1423,7 +1427,7 @@ function unitMods(u, kind){
     if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
   }
   if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });
-  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod))
+  const strat = allStratagems().filter(s => s.mod && canTarget(s, u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod))
     .concat(helpedBy(u).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.help.mod)));
   return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
 }
@@ -1977,7 +1981,7 @@ function dmBothVia(L, u, both){
   const out = [];
   for(const b of both || []){
     if(b.enhancement && (u.enhancement === b.enhancement || u.upgrade === b.enhancement)) out.push(b.enhancement);
-    if(b.strat){ const s = allStratagems(L).find(x => x.id === b.strat && eligible(x, L).includes(u)); if(s) out.push(s.name + ' (' + s.cp + 'CP)'); }
+    if(b.strat){ const s = allStratagems(L).find(x => x.id === b.strat && canTarget(x, u, L)); if(s) out.push(s.name + ' (' + s.cp + 'CP)'); }
     if(b.ability && matches(b.needs, u) && L.units.some(x => x.abilities.some(ab => ab.name === b.ability))) out.push(b.part + ' (' + b.of + '’s ' + b.ability + ')');
   }
   return out;
@@ -1990,7 +1994,7 @@ function dmLimitOf(L, u, lim){
   let n = lim.n; const also = [];
   for(const m of lim.more || []){
     if(m.rule && inArmy(L, () => unitDetRules(u)).some(r => r.name === m.rule)){ n += m.n || 1; continue; }
-    if(m.strat){ const s = allStratagems(L).find(x => x.id === m.strat && eligible(x, L).includes(u)); if(s) also.push('one more with ' + s.name + ' (' + s.cp + 'CP)'); }
+    if(m.strat){ const s = allStratagems(L).find(x => x.id === m.strat && canTarget(x, u, L)); if(s) also.push('one more with ' + s.name + ' (' + s.cp + 'CP)'); }
     if(m.enhancement && (u.enhancement === m.enhancement || u.upgrade === m.enhancement)) also.push('every one with ' + m.enhancement);
   }
   return { n, why:'only ' + ['no', 'one', 'two', 'three', 'four'][n] + ' ' + lim.what + ' active at once' + (also.length ? ' (' + also.join('; ') + ')' : '') };
@@ -2145,14 +2149,14 @@ function dmCalc(st, A, au, tg, kind){
     rules.push(decide(Object.assign(dmRuleOf(m, st), { k, help:m.help ? m.rule : '' })));
   }
   // a stratagem's own reading for this tab (calcMods on a stratagem: Command Re-roll's one die, once in the phase; never ticked for you)
-  for(const s of inArmy(A, () => allStratagems().filter(s => s.calcMods && eligible(s).includes(au)))) for(const cm of s.calcMods.filter(m => m.kind === kind || m.kind === 'all')){
+  for(const s of inArmy(A, () => allStratagems().filter(s => s.calcMods && canTarget(s, au)))) for(const cm of s.calcMods.filter(m => m.kind === kind || m.kind === 'all')){
     const m = Object.assign({ from:s.name, strat:s.id, cp:s.cp }, cm), k = 'm:' + [m.from, m.when, m.note].join('|');
     if(seen.has(k)) continue; seen.add(k);
     rules.push(decide(Object.assign(dmRuleOf(m, st), { k })));
   }
   // the attacker's stratagems for the other kind of attack (a Shooting phase one in a fight): unticked, the reason said, the
   // player's to count anyway (their numbers on these weapons, as if it were that phase)
-  for(const s of inArmy(A, () => allStratagems().filter(s => s.mod && eligible(s).includes(au) && !(s.mod.kind === kind || s.mod.kind === 'all')))){
+  for(const s of inArmy(A, () => allStratagems().filter(s => s.mod && canTarget(s, au) && !(s.mod.kind === kind || s.mod.kind === 'all')))){
     const m = Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod), k = 'm:' + [m.from, m.when, m.note].join('|');
     if(seen.has(k)) continue; seen.add(k);
     const r = decide(Object.assign(dmRuleOf(m, st), { k }));
@@ -2279,7 +2283,7 @@ function dmCalc(st, A, au, tg, kind){
   // what they do (and, in another phase or turn, with that)
   const strats = [];
   const counted = new Set(rules.filter(r => r.m.strat).map(r => r.m.strat));
-  for(const s of inArmy(A, () => allStratagems().filter(s => eligible(s).includes(au)))){
+  for(const s of inArmy(A, () => allStratagems().filter(s => canTarget(s, au)))){
     const at = s.phases.filter(p => PH[p]);
     if(counted.has(s.id) || !at.length) continue;
     // the unit's own protection is not in this attack (def, or the numbers of one: defCalc, defPick)
@@ -2397,7 +2401,7 @@ function dmHowLines(c, st, r0, plan){
 }
 // the pair as the screen shows it: your unit (this list, the one picked or the first with weapons) and the target set by hand
 function dmPair(st){
-  const me = dmMe(), mine = me.units.find(u => u.id === st.atk) || me.units.find(u => dmArmed(u, 'ranged') || dmArmed(u, 'melee')) || me.units[0] || null;
+  const me = dmMe(), mine = unitsAll(me).find(u => u.id === st.atk) || me.units.find(u => dmArmed(u, 'ranged') || dmArmed(u, 'melee')) || me.units[0] || null;
   return { me, mine, A:me, au:mine, tg:dmTypedVals(st), tu:dmTarget(st), ready:!!mine && (dmArmed(mine, 'ranged') || dmArmed(mine, 'melee')), armed:dmArmed };
 }
 const dmArmed = (u, kind) => !!u && ((kind === 'ranged' ? u.ranged : u.melee) || []).length > 0;
@@ -3613,7 +3617,7 @@ function dmPicker(){
   const row = u => { const armed = dmArmed(u, 'ranged') || dmArmed(u, 'melee'), sub = dmUnitSub(u, P.me) + (armed ? '' : ' · no weapons');
     return '<button class="row" data-dmunit="' + esc(u.id) + '"><span class="rb"><b>' + esc(dmName(u, P.me)) + '</b><span>' + esc(sub) + '</span></span>' +
       (u === P.mine ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>'; };
-  openSheet(P.me.name, 'Your unit', '<div class="list">' + P.me.units.map(row).join('') + '</div>');
+  openSheet(P.me.name, 'Your unit', '<div class="list">' + unitsAll(P.me).map(row).join('') + '</div>');
 }
 // the answer card says what it is about once it is pinned under the top bar (the sentence has scrolled away)
 // a tap never moves the row under the finger: the row tapped is kept where it was on the screen through the redraw, and through
@@ -3770,7 +3774,7 @@ async function askAcctBase(a, tools){
 let askRefs = [];
 const askRefBtn = (k, v, what) => '<button class="askref" data-askref="' + esc(k + '|' + v) + '"><svg class="ic" aria-hidden="true"><use href="#i-ask"/></svg>Ask about this ' + what + '</button>';
 function askRefLabel(k, v){
-  if(k === 'unit'){ const u = army().units.find(x => x.id === v); return u ? unitLabel(u) : v; }
+  if(k === 'unit'){ const u = unitById(v); return u ? unitLabel(u) : v; }
   if(k === 'strat'){ const st = allStratagems().find(x => x.id === v); return st ? st.name : v; }
   if(k === 'ability'){ searchIndex(); const e = abilityIndex.get(v); return e ? e.ab.name : v; }
   if(k === 'rule'){ const r = ruleFor(v); return r ? r.name : v; }
@@ -3781,7 +3785,7 @@ function askRefText(r){
   const A = armyById(r.army) || army();
   return inArmy(A, () => {
     const from = ' (from ' + A.name + ')';
-    if(r.k === 'unit'){ const u = A.units.find(x => x.id === r.v); return u ? 'Unit' + from + ':\n' + unitText(u) : ''; }
+    if(r.k === 'unit'){ const u = unitsAll(A).find(x => x.id === r.v); return u ? 'Unit' + from + ':\n' + unitText(u) : ''; }
     if(r.k === 'strat'){ const st = allStratagems().find(x => x.id === r.v); return st ? 'Stratagem' + from + ': ' + st.name + ' (' + st.cp + 'CP, ' + st.src + '). WHEN: ' + st.when + ' TARGET: ' + st.target + ' EFFECT: ' + st.effect.replace(/\n/g, ' ') + (st.note ? ' NOTE: ' + st.note : '') : ''; }
     if(r.k === 'ability'){ searchIndex(); const e = abilityIndex.get(r.v); return e ? 'Ability' + from + ': ' + e.ab.name + (e.ab.tag ? ' (' + e.ab.tag + ')' : '') + ', on ' + e.units.map(unitLabel).join(', ') + ':\n' + e.ab.text : ''; }
     if(r.k === 'rule'){ const x = ruleFor(r.v); return x ? 'Rule' + from + ': ' + x.name + ' (' + x.src + '):\n' + x.text + (x.table ? '\n' + x.table.map(t => t.join(': ')).join('\n') : '') : ''; }
@@ -3994,17 +3998,17 @@ function searchIndex(){
   if(indexCache.has(a.id)) return indexCache.get(a.id);
   const out = [];
   const add = e => { e.hay += ' ' + norm(e.title).replace(/[\s-]/g, ''); out.push(e); };
-  for(const u of a.units){
+  for(const u of unitsAll(a)){
     const st = u.stats.map(s => ['t' + s.T, 'w' + s.W, 'm' + s.M, 'sv' + s.Sv, 'base ' + s.base].join(' ')).join(' ');
     add({ kind:'Units', title:u.name, s1:u.stats.map(statLineText).join(' / '),
-      sub:[u.role, u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? attachText(u) : ''].filter(Boolean).join(' · '),
+      sub:[u.role, u.ref ? '' : u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? attachText(u) : ''].filter(Boolean).join(' · '),
       hay:hay(u.name, u.short, u.role, u.kw.join(' '), u.models.join(' '), u.enhancement, u.warlord ? 'warlord' : '', unitRules(u).join(' '),
         u.abilities.map(ab => ab.def).join(' '), st, 'stats save toughness wounds move leadership', u.stats.some(s => s.InSv !== '–') ? 'invulnerable' : ''),
       act:{ unit:u.id } });
   }
   // weapons: identical profiles on twin units are listed once
   const wmap = new Map();
-  for(const u of a.units) for(const kind of ['ranged','melee']) for(const w of u[kind] || []){
+  for(const u of unitsAll(a)) for(const kind of ['ranged','melee']) for(const w of u[kind] || []){
     const title = w.group ? w.group + ' – ' + w.name : w.name;
     const s1 = weaponStatText(w, kind);
     const key = title + '|' + s1 + '|' + u.name;
@@ -4018,7 +4022,7 @@ function searchIndex(){
     e.sub = e.units.map(shortName).join(', ') + (e.who && e.who !== e.units[0].name ? ' (' + e.who + ')' : '') + (e.kws.length ? ' · ' + e.kws.join(', ') : '') +
       (e.vm ? ' · ' + Object.entries(e.vm.set).map(([k, v]) => k + ' ' + v).join(' ') + ' ' + e.vm.when : '');
   }
-  for(const u of a.units) for(const ab of u.abilities){
+  for(const u of unitsAll(a)) for(const ab of u.abilities){
     const key = abilityKey(ab);
     if(abilityIndex.has(key)){ abilityIndex.get(key).units.push(u); continue; }
     const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, 'ability', ab.text, ab.tag, ab.who, ab.def, u.name), act:{ ability:key } };
@@ -4518,7 +4522,7 @@ function defenceItems(u, ph, opts){
   for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)
   // (who, name: the model of an attached unit the ability is on, for the datasheet's line)
   for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });
-  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
+  for(const s of allStratagems()) if(s.def && canTarget(s, u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
   if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))
     out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });
   // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,
@@ -4586,8 +4590,8 @@ function kwStars(u){
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const strats = allStratagems().filter(s => eligible(s).includes(u))   // every one it can be the target of
-    .concat(helpedBy(u).filter(s => !eligible(s).includes(u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
+  const strats = allStratagems().filter(s => canTarget(s, u))   // every one it can be the target of
+    .concat(helpedBy(u).filter(s => !canTarget(s, u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
   const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
   const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = (u.ref ? [] : [esc(u.role)]).concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
@@ -4596,7 +4600,7 @@ function screenUnit(){
   if(allyRule && ruleFor(allyRule)) meta.push('In this army through ' + linkTo('rule', allyRule, allyRule) + ' (' + esc(ally[1]) + ')');
   // a reference sheet: not in the army until the rule that adds it, named and quoted (no points, in no count)
   const refBy = u.ref && army().units.find(x => x.id === u.ref.by), refAb = refBy && refBy.abilities.find(x => x.name === u.ref.rule);
-  if(u.ref) meta.push('Not in the army until ' + (refAb ? linkTo('ability', abilityKey(refAb), u.ref.rule) : esc(u.ref.rule)) + (refBy ? ' (' + linkTo('unit', refBy.id, unitLabel(refBy)) + ')' : '') + ' adds it: “' + esc(u.ref.quote) + '”');
+  if(u.ref) meta.push('Not in the army until ' + (refAb ? linkTo('ability', abilityKey(refAb), u.ref.rule) : esc(u.ref.rule)) + (refBy ? ' (' + linkTo('unit', refBy.id, unitLabel(refBy)) + ')' : '') + ': “' + esc(u.ref.quote) + '”');
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + (u.ref ? '–' : esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')) + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports
@@ -5287,7 +5291,7 @@ function grantSource(name, u){
 }
 function showGrant(names, unitId, what, kw){
   // the rule that grants it is the headline; the keyword's own rule follows, smaller
-  const u = army().units.find(x => x.id === unitId);
+  const u = unitById(unitId);
   const gs = names.map(n => grantSource(n, u));
   const src = gs.map(g => { const st = allStratagems().find(x => x.name === g.name);
     return '<div class="gsrc">' + (gs.length > 1 ? '<p class="gh"><b>' + esc(g.name) + '</b></p>' : '') + (g.what ? '<p class="gw2">' + esc(g.what) + '</p>' : '') +
