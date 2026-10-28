@@ -1439,7 +1439,8 @@ const abAt = it => {
   const u = D.armies.find(a => a.id === armyId).units.find(x => x.name === uName.replace(/ \[.*\]$/, '') && (!/\[/.test(uName) || x.id === /\[(.*)\]/.exec(uName)[1]));
   if (!u) return null;
   const us = d.indexOf("      id:'" + u.id + "',", aStart());
-  return { u, abName, ai: d.indexOf("{ name:" + lit(abName), us) };
+  // (in its abilities: a model row of the same name, the Technomancer's "Technomancer" ability, comes first in its stats)
+  return { u, abName, ai: d.indexOf("{ name:" + lit(abName), d.indexOf('      abilities:[', us)) };
 };
 for (const it of labels) {
   // (an ability of a datasheet row another list has: its labels are the row's, kept as they are)
@@ -1484,7 +1485,7 @@ for (const it of labels) {
     const [, uName, ...rest] = it.where.split(' · '); const abName = rest[rest.length - 1].replace(/ #\d+$/, '');
     const u = D.armies.find(a => a.id === armyId).units.find(x => x.name === uName.replace(/ \[.*\]$/, '') && (!/\[/.test(uName) || x.id === /\[(.*)\]/.exec(uName)[1]));
     const us = d.indexOf("      id:'" + u.id + "',", aStart());
-    const ai = d.indexOf("{ name:" + lit(abName), us);
+    const ai = d.indexOf("{ name:" + lit(abName), d.indexOf('      abilities:[', us));
     const after = d.indexOf(', ', ai + 8 + lit(abName).length) ;
     // after name (and who, tag): insert the labels before text
     // (before its When targeted line when it has one: data.js's order is ph, turn, turns, def, text)
