@@ -260,12 +260,6 @@
    "sha256": "93d9392450c955b6d0146657a4e2f9b08e15e41ed2f12e9e007a519a55e7f61b"
   },
   {
-   "id": "wahads:orks_Ghazghkull-Thraka",
-   "label": "Wahapedia datasheet Ghazghkull-Thraka",
-   "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
-   "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
-  },
-  {
    "id": "wahads:tyranids_The-Swarmlord",
    "label": "Wahapedia datasheet The-Swarmlord",
    "file": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html",
@@ -342,6 +336,12 @@
    "label": "Wahapedia datasheet Biovores",
    "file": "verify/.cache/waha/ds/tyranids_Biovores.html",
    "sha256": "edfb23d4a4677ef219bc407b5823d46430a3dd241a27cbac09cb0c59fb6a8ebb"
+  },
+  {
+   "id": "wahads:orks_Ghazghkull-Thraka",
+   "label": "Wahapedia datasheet Ghazghkull-Thraka",
+   "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
+   "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
   }
  ],
  "texts": [
@@ -3524,199 +3524,101 @@
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde",
+   "item": "orks / detachment:brute-bosses",
    "field": "name",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/rule",
+   "item": "orks / detachment:brute-bosses/rule",
    "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
+   "item": "orks / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
    "field": "pts",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
+   "item": "orks / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
    "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Da Boss is Watchin’",
+   "item": "orks / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
    "field": "pts",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Da Boss is Watchin’",
+   "item": "orks / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
    "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Kunnin’ But Brutal",
+   "item": "orks / detachment:brute-bosses/enhancement:Blitzboss",
    "field": "pts",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Kunnin’ But Brutal",
+   "item": "orks / detachment:brute-bosses/enhancement:Blitzboss",
    "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Follow Me Ladz",
+   "item": "orks / detachment:brute-bosses/enhancement:Proper Killy",
    "field": "pts",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/enhancement:Follow Me Ladz",
+   "item": "orks / detachment:brute-bosses/enhancement:Proper Killy",
    "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/stratagem:breakin-heads",
-   "field": "when",
+   "item": "orks / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
+   "field": "pts",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/stratagem:breakin-heads",
-   "field": "target",
+   "item": "orks / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
+   "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/stratagem:breakin-heads",
-   "field": "effect",
+   "item": "orks / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
+   "field": "pts",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "orks / detachment:war-horde/stratagem:hit-em-harder",
-   "field": "when",
+   "item": "orks / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
+   "field": "text",
    "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:hit-em-harder",
-   "field": "target",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:hit-em-harder",
-   "field": "effect",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:orks-is-never-beaten",
-   "field": "when",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:orks-is-never-beaten",
-   "field": "target",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:orks-is-never-beaten",
-   "field": "effect",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:mow-em-down",
-   "field": "when",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:mow-em-down",
-   "field": "target",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:mow-em-down",
-   "field": "effect",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:fungus-fuel-injection",
-   "field": "when",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:fungus-fuel-injection",
-   "field": "target",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:fungus-fuel-injection",
-   "field": "effect",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:close-range-dakka",
-   "field": "when",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:close-range-dakka",
-   "field": "target",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
-   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
-  },
-  {
-   "item": "orks / detachment:war-horde/stratagem:close-range-dakka",
-   "field": "effect",
-   "doc": "waha:orks",
-   "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
@@ -9615,27 +9517,6 @@
    "sha256": null
   },
   {
-   "item": "melee / beastboss-on-squigosaur-headwoppas-killchoppa / ability:Headwoppa’s Killchoppa",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Headwoppa’s Killchoppa (War Horde) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "melee / big-mek-painboy-nobz / ability:Kunnin’ But Brutal",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Kunnin’ But Brutal (War Horde) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "melee / big-mek-in-mega-armour-meganobz / ability:Follow Me Ladz",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Follow Me Ladz (War Horde) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
    "item": "princes / daemon-prince-of-khorne-helm-of-brazen-ire / ability:Helm of Brazen Ire",
    "field": "text",
    "doc": "data.js",
@@ -9766,20 +9647,6 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Sanctuary (Freeblade Company) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "ooga-booga / zodgrod-wortsnagga-runtherd-gretchin / ability:Extra Sneaky",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Extra Sneaky (Runt Swarm) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "ooga-booga / big-mek-in-mega-armour-meganobz / ability:Supa-glowy Fing",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Supa-glowy Fing (Shoota Boyz) (whose source is recorded under that item)",
    "sha256": null
   },
   {
@@ -10074,6 +9941,34 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "simple-but-effective / zodgrod-wortsnagga-runtherd-gretchin / ability:Extra Sneaky",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Extra Sneaky (Runt Swarm) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "simple-but-effective / beastboss-on-squigosaur / ability:Brutal But Kunnin’",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Brutal But Kunnin’ (Brute Bosses) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "simple-but-effective / warboss-in-mega-armour-meganobz / ability:Da Gobshot Thunderbuss",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Da Gobshot Thunderbuss (Brute Bosses) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "simple-but-effective / gretchin / ability:Extra Sneaky",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Extra Sneaky (Runt Swarm) (whose source is recorded under that item)",
    "sha256": null
   },
   {
@@ -10829,14 +10724,6 @@
    "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
   },
   {
-   "item": "melee / ghazghkull-thraka / ability:Supreme Commander",
-   "field": "note",
-   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
-  },
-  {
    "item": "nidzillas / the-swarmlord / ability:Malign Presence",
    "field": "note",
    "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
@@ -10907,14 +10794,6 @@
    "doc": "wahads:tyranids_Norn-Emissary",
    "where": "Wahapedia datasheet Norn-Emissary § Tyranids – Norn Emissary",
    "sha256": "940dc80272af05ef77fe03d5d39456e74d949bf35e96a2f6044db8f6187cbfbb"
-  },
-  {
-   "item": "ooga-booga / ghazghkull-thraka / ability:Supreme Commander",
-   "field": "note",
-   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "purge-goes-the-foe / belisarius-cawl / ability:Supreme Commander",
@@ -11123,6 +11002,14 @@
    "doc": "core",
    "where": "PDF p88",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "simple-but-effective / ghazghkull-thraka / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   }
  ]
 }

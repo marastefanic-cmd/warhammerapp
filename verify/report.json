@@ -1,6 +1,6 @@
 {
- "hash": "014b0fef1a8ab65a6b40d12f14011cb1ebbaf08a1cc1b2299b65ce18371983ea",
- "at": "2026-10-28T12:27:31.606Z",
+ "hash": "29705b5dc75b7a4f6f6b59f6897925787672f021a5efb4f9d23418f0dc278623",
+ "at": "2026-10-28T15:04:46.952Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,11 +9,11 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 218 unit entries in 26 lists over 172 datasheets, 74 rule options, 64 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 213 unit entries in 25 lists over 169 datasheets, 74 rule options, 64 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 281 of 281 AI-written values (gist, def) and 250 of 250 readings (20 derived) match the text they were written or read from"
+   "summary": "fingerprints: 274 of 274 AI-written values (gist, def) and 244 of 244 readings (19 derived) match the text they were written or read from"
   },
   "readings": {
    "ok": true,
@@ -25,15 +25,15 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 532 agreed labels hold; 303 differ, 200 not derivable (not failing; verify/out/derive.md)"
+   "summary": "derive: 487 agreed labels hold; 290 differ, 192 not derivable (not failing; verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
-   "summary": "choice: 69 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
+   "summary": "choice: 68 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 17018 facts checked against BSData b4dc3f4 (clone) {\"gear\":1198,\"stats\":2592,\"weapons\":8090,\"abilities\":1552,\"keywords\":1867,\"rules\":1113,\"grants\":305,\"points\":300,\"extract\":1}; 285 deviations used; 0 failures"
+   "summary": "bsdata: 16364 facts checked against BSData b4dc3f4 (clone) {\"gear\":1153,\"stats\":2484,\"weapons\":7790,\"abilities\":1476,\"keywords\":1824,\"rules\":1100,\"grants\":248,\"points\":288,\"extract\":1}; 282 deviations used; 0 failures"
   },
   "dispositions": {
    "ok": true,
@@ -41,15 +41,15 @@
   },
   "bases": {
    "ok": true,
-   "summary": "bases: 289 model rows in 26 lists have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 13 by a declaration in verify/deviations-bases.json, 4 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
+   "summary": "bases: 277 model rows in 25 lists have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 12 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 12846 facts checked (army 206, units 141, roster 598, pts 282, copies 141, models 141, enhancement 282, warlord 282, leads 423, gear 248, stats 1702, ranged 2598, from 171, melee 2364, abilities 1346, kw 200, rules 1405, glossary 316); 210 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11234 facts checked (army 185, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1493, ranged 2259, from 71, melee 2007, abilities 1154, kw 172, rules 1333, glossary 298); 200 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 4622 checked facts, 19 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 4483 checked facts, 19 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "calc": {
    "ok": true,
@@ -57,15 +57,15 @@
   },
   "import": {
    "ok": true,
-   "summary": "import: 24 of 24 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 170 checks, 0 failures"
+   "summary": "import: 23 of 23 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 165 checks, 0 failures"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3314 screens and popups, 1924 helper texts, 0 failures"
+   "summary": "render at 390px: 3170 screens and popups, 1870 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3314 screens and popups, 1924 helper texts, 0 failures"
+   "summary": "render at 320px: 3170 screens and popups, 1870 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -73,7 +73,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 2292 judgements, 2292 approved, 0 to check, 442 stale approvals"
+   "summary": "helpers: 2214 judgements, 2214 approved, 0 to check, 441 stale approvals"
   }
  }
 }
