@@ -554,6 +554,18 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .rnd{display:inline-flex; align-items:center; gap:6px; min-height:36px; margin:0 -4px 0 0; padding:0 6px; font:700 13.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .rnd .ic{width:18px; height:18px}
 .rnd:active{opacity:.6}
+/* a list's row with its star (Favorites): the row and the star are two buttons side by side */
+.arw{display:flex; align-items:stretch; border-bottom:1px solid var(--line)}
+.arw > .row{flex:1; min-width:0; border-bottom:0}
+.fav{flex:none; width:44px; display:grid; place-items:center; margin-right:-10px; color:var(--muted)}
+.fav svg{width:22px; height:22px}
+.fav.on, .icon-btn.fav.on{color:var(--accent); --star-fill:currentColor}
+.fav:active{opacity:.6}
+.icon-btn.fav{width:44px; color:var(--fg)}
+.hll{display:flex; align-items:center; min-width:0}
+.srt{display:inline-flex; align-items:center; gap:3px; min-height:36px; margin-left:-2px; padding:0 2px}
+.srt .chev{color:var(--muted)}
+.srt:active{opacity:.6}
 .hfl .row{padding-right:4px}
 .hfl .row[disabled]{opacity:.4}
 .hfl .row .ic{width:20px; height:20px}
@@ -1013,6 +1025,8 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /> <circle cx="12" cy="12" r="3" /></g></symbol>
     <symbol id="i-import" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /> <path d="m8 11 4 4 4-4" /> <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" /></g></symbol>
     <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path style="fill:var(--star-fill, none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></symbol>
   </defs>
 </svg>
 
@@ -1132,6 +1146,9 @@ const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battl
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other', 'Reference':'Reference' };
 // a unit's group in the Units list: its role, an allied unit's under Allies (New Recruit's role "Allies: Legiones Daemonica")
 const roleGroup = u => u.ref ? 'Reference' : ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
+// the home screen's two folders: the lists starred on this phone, and every list
+const FOLDER_TITLE = { favs:'Favorites', lists:'All lists' };
+const isFolder = s => s === 'favs' || s === 'lists';
 const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Phase checklist' };
 const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
@@ -1215,7 +1232,7 @@ function unitFlip(u){
 let cur = { s:'home', d:0 };
 const plain = c => ({ s:c.s, army:c.army, unit:c.unit, d:c.d || 0, from:c.from, root:c.root });
 const sameScreen = (a, b) => a && b && a.s === b.s && a.army === b.army && a.unit === b.unit;
-const calm = c => c.s === 'home' || c.s === 'army' || c.s === 'settings';   // screens where an update reload loses nothing
+const calm = c => c.s === 'home' || isFolder(c.s) || c.s === 'army' || c.s === 'settings';   // screens where an update reload loses nothing
 // the open folds of the screen, by position (a screen renders the same each time), and putting them back
 const openFolds = () => [...document.querySelectorAll('#view details')].map((d, i) => d.open ? i : -1).filter(i => i >= 0);
 const reopen = list => { const all = document.querySelectorAll('#view details'); for(const i of list || []) if(all[i]) all[i].open = true; };
@@ -1224,6 +1241,7 @@ const toSpot = st => { reopen(st && st.open); scrollTo(0, (st && st.y) || 0); };
 function parentOf(c){
   if(c.s === 'unit') return { s:'units', army:c.army };
   if(c.s === 'home') return null;
+  if(isFolder(c.s)) return { s:'home' };
   if(c.s === 'settings') return c.army ? { s:'army', army:c.army } : { s:'home' };
   if(isTab(c.s)) return ONLY ? null : { s:'home' };
   if(c.s === 'bases') return { s:'pregame', army:c.army };
@@ -1231,6 +1249,7 @@ function parentOf(c){
 }
 function titleOf(c){
   if(c.s === 'home') return 'Armies';
+  if(isFolder(c.s)) return FOLDER_TITLE[c.s];
   if(c.s === 'settings') return 'Settings';
   if(c.s === 'strats') return 'Stratagems';
   if(c.s === 'army') return (armyById(c.army) || {}).name || '';
@@ -1240,7 +1259,7 @@ function titleOf(c){
 const backTitle = c => c ? BACK_TITLE[c.s] || titleOf(c) : '';
 function valid(c){
   if(!c || !c.s) return false;
-  if(c.s === 'home') return true;
+  if(c.s === 'home' || isFolder(c.s)) return true;
   if(c.s === 'settings') return !c.army || !!armyById(c.army);
   const a = armyById(c.army);
   if(!a) return false;
@@ -1550,6 +1569,7 @@ function renderTop(){
   const up = cur.s !== 'home' && parentOf(cur);   // a tab's first screen has none when the app holds one list
   if(cur.s !== 'home'){
     if(up) left = '<button class="back" data-back><svg aria-hidden="true"><use href="#i-back"/></svg><span>' + esc(cur.from || backTitle(up)) + '</span></button>';
+    if(cur.s === 'army' && !ONLY && army()) right = favBtn(army(), 'icon-btn fav');
     if(cur.army && cur.s !== 'army' && cur.s !== 'settings') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
   else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
@@ -1575,26 +1595,65 @@ const DISP_ORDER = ['Disruption', 'Priority Assets', 'Purge the Foe', 'Take and 
 const dispsOf = a => { const all = new Set(detachmentsOf(a).flatMap(d => d.dispositions || [])); if(a.disposition) all.add(a.disposition);
   return DISP_ORDER.filter(x => all.has(x)).concat([...all].filter(x => !DISP_ORDER.includes(x))); };
 const dispText = a => dispsOf(a).map(x => esc(x) + (x === a.disposition ? ' <span class="from">(chosen)</span>' : '')).join(' · ');
-/* ---------- screen: armies ---------- */
-// each army: its own (silly) name, then tags saying what it is
-const armyRow = a => '<button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
-  '<span class="adet"><span>' + detachmentsOf(a).map(d => esc(d.name)).join(' · ') + '</span></span>' +
-  '<span class="adisp tags">' + dispsOf(a).map(x => '<span class="t d' + (x === a.disposition ? ' on' : '') + '">' + esc(x) + (x === a.disposition ? '<span class="vh">, chosen</span>' : '') + '</span>').join('') + '</span></span>' + arrow + '</button>';
-// the lists grouped by faction (factions A to Z, lists in their own order), each under a band as the Units list's roles
+/* ---------- screen: armies ----------
+   Home holds two folders: Favorites (the lists starred on this phone) and All lists (every list, with the filters).
+   Both show the lists in the order chosen there (newest, A to Z, or by faction), kept on this phone. */
+// favorites: list ids starred on this phone (none at first); a list that left the app is not shown
+const FAV_KEY = 'wh-favs';
+const favIds = () => { const v = store.get(FAV_KEY, []); return Array.isArray(v) ? v.filter(x => typeof x === 'string') : []; };
+const isFav = a => favIds().includes(a.id);
+const favLists = () => D.armies.filter(isFav);
+function setFav(id, on){ const f = favIds().filter(x => x !== id); if(on) f.push(id); store.set(FAV_KEY, f); }
+const favBtn = (a, cls) => { const on = isFav(a);
+  return '<button class="' + (cls || 'fav') + (on ? ' on' : '') + '" data-fav="' + esc(a.id) + '" aria-pressed="' + on + '" aria-label="Favorite: ' + esc(a.name) + '"><svg aria-hidden="true"><use href="#i-star"/></svg></button>'; };
+// each army: its own (silly) name, then tags saying what it is (in a list not grouped by faction, its faction first), then its star
+const armyRow = (a, withFaction) => '<div class="arw"><button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
+  '<span class="adet"><span>' + (withFaction ? [factionOf(a).name] : []).concat(detachmentsOf(a).map(d => d.name)).map(esc).join(' · ') + '</span></span>' +
+  '<span class="adisp tags">' + dispsOf(a).map(x => '<span class="t d' + (x === a.disposition ? ' on' : '') + '">' + esc(x) + (x === a.disposition ? '<span class="vh">, chosen</span>' : '') + '</span>').join('') + '</span></span>' + arrow + '</button>' + favBtn(a) + '</div>';
+// the order of a folder: newest (the date New Recruit exported it, or the day it was imported: "exported 17 Oct 2026"; the same day,
+// the one added to the app later first), A to Z, or by faction (factions A to Z, each under a band as the Units list's roles, lists A to Z)
+const SORTS = [['new', 'Newest first'], ['az', 'A to Z'], ['faction', 'By faction']];
+const homeSort = () => { const v = store.get('wh-home-sort'); return SORTS.some(([k]) => k === v) ? v : 'new'; };
+const MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+const listDate = a => { const m = /(\d{1,2}) ([A-Za-z]{3})[a-z]* (\d{4})/.exec(a.source || ''); const i = m ? MONTHS.indexOf(m[2].toLowerCase()) : -1;
+  return i < 0 ? 0 : Date.UTC(+m[3], i, +m[1]); };
+const byName = (x, y) => x.name.localeCompare(y.name, 'en', { sensitivity:'base' });
 function armyGroups(list){
   const g = new Map();
   for(const a of list){ const f = factionOf(a).name; if(!g.has(f)) g.set(f, []); g.get(f).push(a); }
   return [...g.keys()].sort((x, y) => x.localeCompare(y)).map(f => '<h2 class="rgh"><span>' + esc(f) + '</span><span class="c">' + g.get(f).length + '</span></h2>' +
-    '<div class="list ul">' + g.get(f).map(armyRow).join('') + '</div>').join('');
+    '<div class="list ul">' + g.get(f).sort(byName).map(a => armyRow(a)).join('') + '</div>').join('');
 }
+function armyList(list){
+  const k = homeSort();
+  if(k === 'faction') return armyGroups(list);
+  const at = new Map(D.armies.map((a, i) => [a, i]));
+  const order = list.slice().sort(k === 'az' ? byName : (x, y) => listDate(y) - listDate(x) || at.get(y) - at.get(x));
+  return '<div class="list">' + order.map(a => armyRow(a, true)).join('') + '</div>';
+}
+// home: the two folders, each with how many lists it holds, then the import and how the app is checked
 function screenHome(){
-  const all = D.armies, f = homeFilter(), shown = all.filter(a => hfMatch(a, f));
-  return (all.length > 2 ? homeFilters(f) : '') +
-    '<div class="hlh"><div class="lbl grp-h">Your armies' + (shown.length < all.length ? ' <span class="hfn">' + shown.length + ' of ' + all.length + '</span>' : '') + '</div>' +
-    (shown.length > 1 ? '<button class="rnd" data-roll><svg class="ic" aria-hidden="true"><use href="#i-dice"/></svg>Random</button>' : '') + '</div>' +
-    (shown.length ? '<div class="armies">' + armyGroups(shown) + '</div>'
-      : '<p class="note">No army has all of these. <button class="link" data-hfclear>Clear the filters</button></p>') +
+  const row = (s, ic, n) => '<button class="row" data-folder="' + s + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span class="rb"><b>' + FOLDER_TITLE[s] + '</b></span>' +
+    '<span class="c">' + n + '</span>' + arrow + '</button>';
+  return '<div class="hlh"><div class="lbl grp-h">Your armies</div></div><div class="list">' + row('favs', 'i-star', favLists().length) + row('lists', 'i-folder', D.armies.length) + '</div>' +
     importRow() + verifiedLine() + (INSTALLED ? '' : '<p class="note">' + installText() + '</p>');
+}
+// a folder: its order (a button saying which, opening the three), Random, its lists; All lists has the filters too
+function screenFolder(s){
+  const favs = s === 'favs', all = favs ? favLists() : D.armies, f = favs ? {} : homeFilter(), shown = all.filter(a => hfMatch(a, f));
+  if(favs && !all.length) return '<p class="note">No favorites yet. Tap the star next to a list in <button class="link" data-folder="lists">All lists</button> to keep it here as well.</p>';
+  const sortLabel = SORTS.find(([k]) => k === homeSort())[1];
+  return (!favs && all.length > 2 ? homeFilters(f) : '') +
+    '<div class="hlh"><span class="hll">' + (shown.length > 1 ? '<button class="srt" data-sort aria-label="Order: ' + sortLabel + '"><span class="lbl grp-h">' + sortLabel + '</span>' + chev + '</button>' : '') +
+    (shown.length < all.length ? '<span class="lbl grp-h hfn">' + shown.length + ' of ' + all.length + '</span>' : '') + '</span>' +
+    (shown.length > 1 ? '<button class="rnd" data-roll="' + s + '"><svg class="ic" aria-hidden="true"><use href="#i-dice"/></svg>Random</button>' : '') + '</div>' +
+    (shown.length ? '<div class="armies">' + armyList(shown) + '</div>'
+      : '<p class="note">No army has all of these. <button class="link" data-hfclear>Clear the filters</button></p>');
+}
+function showSort(){
+  const k = homeSort();
+  openSheet('Show lists', 'Order', '<div class="list hfl">' + SORTS.map(([v, label]) => '<button class="row hfo' + (v === k ? ' on' : '') + '" data-sortv="' + v + '" aria-pressed="' + (v === k) + '"><span class="rb"><b>' + label + '</b></span>' +
+    (v === k ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '<span class="ic"></span>') + '</button>').join('') + '</div>');
 }
 
 // home filters: one faction, one detachment, one disposition at a time, kept on this phone
@@ -1626,15 +1685,15 @@ function showHomeFilter(k){
 }
 
 // random army: a reel of names that slows down and stops on one of the lists the filters show
-function rollArmy(){
-  const pool = D.armies.filter(a => hfMatch(a, homeFilter()));
+function rollArmy(folder){
+  const pool = folder === 'favs' ? favLists() : D.armies.filter(a => hfMatch(a, homeFilter()));
   if(pool.length < 2) return;
   const pick = pool[Math.floor(Math.random() * pool.length)], H = 64;
   const reel = Array.from({ length:26 }, (_, i) => pool[(Math.floor(Math.random() * pool.length) + i) % pool.length]);
   reel.push(pick, pool[(pool.indexOf(pick) + 1) % pool.length]);   // the pick, with a name under it
   const item = a => '<div class="ri"><b>' + esc(a.name) + '</b><span>' + esc(factionOf(a).name) + '</span></div>';
   openSheet('', 'Random army', '<div class="reel" aria-hidden="true"><div class="rs">' + item(pool[pool.length - 1]) + reel.map(item).join('') + '</div></div>' +
-    '<p class="rres" aria-live="polite"></p><div class="racts" hidden><button class="btn" data-army="' + esc(pick.id) + '">Open ' + esc(pick.name) + '</button><button class="btn2" data-roll>Roll again</button></div>');
+    '<p class="rres" aria-live="polite"></p><div class="racts" hidden><button class="btn" data-army="' + esc(pick.id) + '">Open ' + esc(pick.name) + '</button><button class="btn2" data-roll="' + esc(folder || 'lists') + '">Roll again</button></div>');
   const strip = $('#sheetIn .rs'), stopAt = -(reel.length - 2) * H;   // the pick sits in the middle row
   const done = () => { $('#sheetIn .reel').classList.add('hit'); $('#sheetIn .rres').textContent = pick.name + ' · ' + factionOf(pick).name; $('#sheetIn .racts').hidden = false; };
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){ strip.style.transform = 'translateY(' + stopAt + 'px)'; done(); return; }
@@ -5187,12 +5246,13 @@ function screenRules(){
 
 /* ---------- render ---------- */
 function render(){
-  if(cur.s === 'home' && ONLY) cur = Object.assign(plain(cur), { s:'army', army:ONLY.id });
+  if((cur.s === 'home' || isFolder(cur.s)) && ONLY) cur = Object.assign(plain(cur), { s:'army', army:ONLY.id });
   tabMemo[memoKey(cur.army, tabOf(cur.s))] = plain(cur);
   renderTop();
   const v = $('#view'), s = cur.s;
   let sub = '', bot = '';
   if(s === 'home') v.innerHTML = screenHome();
+  else if(isFolder(s)) v.innerHTML = screenFolder(s);
   else if(s === 'army') v.innerHTML = screenArmy();
   else if(s === 'units'){ v.innerHTML = screenUnits(); sub = unitsSubbar(); }
   else if(s === 'unit') v.innerHTML = screenUnit() + (unitById(cur.unit) ? unitFlip(unitById(cur.unit)) : '');
@@ -5400,14 +5460,21 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-impgo')){ runImport(($('#impText') || {}).value); return; }
   if(ds.impstale){ showStale(ds.impstale); return; }
   if(ds.imprm){ askRemove(ds.imprm); return; }
-  if(ds.imprmyes){ removeImported(ds.imprmyes); return; }
+  if(ds.imprmyes){ if(favIds().includes(ds.imprmyes)) setFav(ds.imprmyes, false); removeImported(ds.imprmyes); return; }   // (its star goes too)
   if(ds.imprmno){ const h = $('#impRm'); if(h){ h.innerHTML = impRmBtn(ds.imprmno); h.querySelector('button').focus({ preventScroll:true }); } return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
   if(ds.hf){ const i = ds.hf.indexOf('|'), k = ds.hf.slice(0, i), v = ds.hf.slice(i + 1), f = homeFilter();
     if(v) f[k] = v; else delete f[k];
     store.set('wh-home-filter', f); closeSheet(); rerender(); return; }
   if(el.hasAttribute('data-hfclear')){ store.set('wh-home-filter', {}); rerender(); return; }
-  if(el.hasAttribute('data-roll')){ rollArmy(); return; }
+  if(el.hasAttribute('data-roll')){ rollArmy(ds.roll); return; }
+  if(ds.folder){ go({ s:ds.folder }, isFolder(cur.s) ? 'replace' : undefined); return; }   // (from empty Favorites: All lists in its place, Back still goes home)
+  if(el.hasAttribute('data-sort')){ showSort(); return; }
+  if(ds.sortv){ store.set('wh-home-sort', ds.sortv); closeSheet(); rerender(); return; }
+  if(ds.fav){ const a = armyById(ds.fav); if(!a) return; const on = !isFav(a); setFav(a.id, on);
+    if(cur.s === 'army') renderTop(); else { rerender(); const b = document.querySelector('#view [data-fav="' + CSS.escape(a.id) + '"]'); if(b) b.focus({ preventScroll:true }); }
+    if(!on && cur.s === 'favs') toastUndo('Removed from Favorites', () => { setFav(a.id, true); rerender(); return null; });
+    return; }
   if(el.hasAttribute('data-ask')){ askFresh(); openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
   if(el.hasAttribute('data-askcopy')){ askCopy(); return; }
