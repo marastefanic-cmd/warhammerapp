@@ -2298,16 +2298,6 @@
   "by": "hand (Claude)"
  },
  {
-  "army": "mucho-mutantes",
-  "unit": "chaos-spawn",
-  "field": "kw",
-  "app": "Chaos Spawn",
-  "source": "",
-  "reason": "GW’s datasheet has the keyword CHAOS SPAWN; BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
   "army": "healybois",
   "unit": "the-swarmlord-tyrant-guard",
   "field": "ability.text",
@@ -2465,6 +2455,206 @@
   "source": "Reference",
   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Reference; GW’s datasheet does not print that keyword. GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: KEYWORDS (no REFERENCE).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "the-silent-king",
+  "field": "ability",
+  "app": "",
+  "source": "Voice of the Triarch",
+  "reason": "GW names the ability Triarch Abilities, BSData at the pin (Xenos - Necrons catalogue revision 28) Voice of the Triarch. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Triarch Abilities\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "the-silent-king",
+  "field": "ability.text",
+  "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
+  "source": "At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has that ability.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has th…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "the-silent-king",
+  "field": "ability.tag",
+  "app": "The Silent King: ",
+  "source": "The Silent King (Aura)",
+  "reason": "GW’s datasheet prints The Silent King without a tag (no \"(Aura)\"); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) name it \"The Silent King (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"The Silent King:\" (no tag).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "the-silent-king",
+  "field": "ability.text",
+  "app": "Phaeron of the Blades: While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+  "source": "While a friendly ^^**Necrons^^** (excluding ^^**Monster^^** units) unit is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly Necrons (excluding Monster units) unit is within 6\" of this unit's Szarekh model, you can re-roll Charg…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit's Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "the-silent-king",
+  "field": "ability",
+  "app": "Supreme Commander",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "technomancer-immortals",
+  "field": "ability.text",
+  "app": "Technomancer: At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+  "source": "At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html: \"At the end of your Movement phase, you can select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "technomancer-immortals",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 28) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html, verify/.cache/waha/ds/necrons_Immortals.html: CORE ABILITIES / ARMY RULES \"Support, Reanimation Protocols\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "canoptek-scarab-swarms",
+  "field": "ability",
+  "app": "Chittering swarm",
+  "source": "",
+  "reason": "GW names the ability Chittering swarm, BSData at the pin (Xenos - Necrons catalogue revision 28) Chittering Swarm. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Scarab-Swarms.html: \"Chittering swarm\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "canoptek-scarab-swarms",
+  "field": "ability",
+  "app": "",
+  "source": "Chittering Swarm",
+  "reason": "GW names the ability Chittering swarm, BSData at the pin (Xenos - Necrons catalogue revision 28) Chittering Swarm. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Scarab-Swarms.html: \"Chittering swarm\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "canoptek-spyders",
+  "field": "ability.text",
+  "app": "Fabricator Claw Array: While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability.",
+  "source": "While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Spyders.html: \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault",
+  "field": "stats.base",
+  "app": "Tesseract Vault: 120×92mm Oval",
+  "source": "Tesseract Vault: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault",
+  "field": "ranged.kw",
+  "app": "Cosmic fire: C'TAN POWER, DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+  "source": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has DEVASTATING WOUNDS, IGNORES COVER, TORRENT; GW’s datasheet (the new codex, as Wahapedia transcribes it) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; New Recruit’s export (catalogue revision 28) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Cosmic fire kw IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: IGNORES COVER, DEVASTATING WOUNDS, TORRENT.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault",
+  "field": "ranged.kw",
+  "app": "Time's arrow: ANTI-CHARACTER 4+, C'TAN POWER, DEVASTATING WOUNDS, PRECISION",
+  "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault",
+  "field": "ranged.kw",
+  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault",
+  "field": "ability.text",
+  "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+  "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault-2",
+  "field": "stats.base",
+  "app": "Tesseract Vault: 120×92mm Oval",
+  "source": "Tesseract Vault: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault-2",
+  "field": "ranged.kw",
+  "app": "Cosmic fire: C'TAN POWER, DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+  "source": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has DEVASTATING WOUNDS, IGNORES COVER, TORRENT; GW’s datasheet (the new codex, as Wahapedia transcribes it) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; New Recruit’s export (catalogue revision 28) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Cosmic fire kw IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: IGNORES COVER, DEVASTATING WOUNDS, TORRENT.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault-2",
+  "field": "ranged.kw",
+  "app": "Time's arrow: ANTI-CHARACTER 4+, C'TAN POWER, DEVASTATING WOUNDS, PRECISION",
+  "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault-2",
+  "field": "ranged.kw",
+  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault-2",
+  "field": "ability.text",
+  "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+  "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2628,183 +2818,23 @@
   "by": "verify/from-json.js"
  },
  {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
-  "field": "ability",
-  "app": "",
-  "source": "Voice of the Triarch",
-  "reason": "GW names the ability Triarch Abilities, BSData at the pin (Xenos - Necrons catalogue revision 28) Voice of the Triarch. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Triarch Abilities\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
-  "field": "ability.text",
-  "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
-  "source": "At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has that ability.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has th…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
-  "field": "ability.tag",
-  "app": "The Silent King: ",
-  "source": "The Silent King (Aura)",
-  "reason": "GW’s datasheet prints The Silent King without a tag (no \"(Aura)\"); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) name it \"The Silent King (Aura)\". Only what GW tags (Aura) is an aura (Core Rules 22.01). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"The Silent King:\" (no tag).",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
-  "field": "ability.text",
-  "app": "Phaeron of the Blades: While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
-  "source": "While a friendly ^^**Necrons^^** (excluding ^^**Monster^^** units) unit is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly Necrons (excluding Monster units) unit is within 6\" of this unit's Szarekh model, you can re-roll Charg…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit's Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
-  "field": "ability",
-  "app": "Supreme Commander",
+  "army": "mucho-mutantes",
+  "unit": "chaos-spawn",
+  "field": "kw",
+  "app": "Chaos Spawn",
   "source": "",
-  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) do not have it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Supreme Commander\".",
+  "reason": "GW’s datasheet has the keyword CHAOS SPAWN; BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
  {
-  "army": "u-w0t-m8",
-  "unit": "technomancer-immortals",
-  "field": "ability.text",
-  "app": "Technomancer: At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
-  "source": "At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html: \"At the end of your Movement phase, you can select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "technomancer-immortals",
-  "field": "rules",
+  "army": "mucho-mutantes",
+  "unit": "chaos-spawn",
+  "field": "kw",
   "app": "",
-  "source": "Feel No Pain 5+",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 28) has it too). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html, verify/.cache/waha/ds/necrons_Immortals.html: CORE ABILITIES / ARMY RULES \"Support, Reanimation Protocols\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "canoptek-spyders",
-  "field": "ability.text",
-  "app": "Fabricator Claw Array: While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability.",
-  "source": "While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Spyders.html: \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "stats.base",
-  "app": "Tesseract Vault: 120×92mm Oval",
-  "source": "Tesseract Vault: 120x92mm",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "ranged.kw",
-  "app": "Cosmic fire: C'TAN POWER, DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
-  "source": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has DEVASTATING WOUNDS, IGNORES COVER, TORRENT; GW’s datasheet (the new codex, as Wahapedia transcribes it) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; New Recruit’s export (catalogue revision 28) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Cosmic fire kw IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: IGNORES COVER, DEVASTATING WOUNDS, TORRENT.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "ranged.kw",
-  "app": "Time's arrow: ANTI-CHARACTER 4+, C'TAN POWER, DEVASTATING WOUNDS, PRECISION",
-  "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "ranged.kw",
-  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "ability.text",
-  "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "stats.base",
-  "app": "Tesseract Vault: 120×92mm Oval",
-  "source": "Tesseract Vault: 120x92mm",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "ranged.kw",
-  "app": "Cosmic fire: C'TAN POWER, DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
-  "source": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has DEVASTATING WOUNDS, IGNORES COVER, TORRENT; GW’s datasheet (the new codex, as Wahapedia transcribes it) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; New Recruit’s export (catalogue revision 28) has IGNORES COVER, DEVASTATING WOUNDS, TORRENT. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Cosmic fire kw IGNORES COVER, DEVASTATING WOUNDS, TORRENT, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: IGNORES COVER, DEVASTATING WOUNDS, TORRENT.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "ranged.kw",
-  "app": "Time's arrow: ANTI-CHARACTER 4+, C'TAN POWER, DEVASTATING WOUNDS, PRECISION",
-  "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "ranged.kw",
-  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "ability.text",
-  "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
+  "source": "Spawn",
+  "reason": "BSData at the pin (Chaos - Thousand Sons catalogue revision 17) gives the unit the category Spawn; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS (no SPAWN).",
   "by": "verify/from-json.js"
  }
 ]

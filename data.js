@@ -6592,7 +6592,7 @@ const DATASHEETS = {
     { name:'Regenerating Monstrosities', ph:['command'], turn:'either', text:'At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds.' }
   ],
   rules:['Feel No Pain 5+'],
-  kw:['Beast','Chaos','Chaos Spawn','Faction: Thousand Sons','Mutant','Spawn','Tzeentch']
+  kw:['Beast','Chaos','Chaos Spawn','Faction: Thousand Sons','Mutant','Tzeentch']
 },
 'tyranids/the-swarmlord':{
   name:'The Swarmlord', faction:'tyranids', bsId:'13f7-1a3-eff-7393', role:'Epic Hero',
@@ -8752,9 +8752,7 @@ const DATASHEETS = {
     { name:'Yellow claws', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Split', text:'Each time a **BLUE HORROR** model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one **BRIMSTONE HORROR** model to this unit.' },
-    { name:'Sullen Malevolence', tag:'Aura', text:'While an enemy unit is within 6" of this unit, if this unit contains one or more **BLUE HORROR** models, worsen the Leadership characteristic of models in that enemy unit by 1.' },
-    { name:'Exploding Horrors', ph:['fight'], turn:'either', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
+    { name:'Exploding Horrors', ph:['fight'], turn:'either', note:'Designer’s Note (GW’s Pink Horrors datasheet, Wahapedia): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
   ],
   rules:['Deep Strike','Infiltrators','The Shadow of Chaos','Psychic','Pistol'],
   kw:['Battleline','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch']
@@ -9246,7 +9244,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Self-destruction', ph:['fight'], turn:'either', text:'At the start of the Fight phase, if this unit is within **Engagement Range** of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a **VEHICLE**. On a 2-5, that unit suffers D3 **mortal wounds**; on a 6+, that unit suffers 3 mortal wounds.' },
-    { name:'Chittering Swarm', text:'While an enemy unit is within **Engagement Range** of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6" of one or more friendly **CRYPTEK** models, the Objective Control characteristic of models in this unit is 1.' }
+    { name:'Chittering swarm', text:'While an enemy unit is within **Engagement Range** of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6" of one or more friendly **CRYPTEK** models, the Objective Control characteristic of models in this unit is 1.' }
   ],
   rules:['Reanimation Protocols','Lethal Hits'],
   kw:['Canoptek','Faction: Necrons','Fly','Scarab Swarms','Swarm']
@@ -10836,7 +10834,6 @@ const CHECKLIST = {
   "a|85a58d":{"u":"shooting:your,fight:either"},
   "a|89p4db":{"u":"shooting:opp,fight:either"},
   "a|8f9619":{"u":"fight:either"},
-  "a|8j9nf0":{"x":1},
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
   "a|8yl01e":{"u":"fight:either","a":1},
@@ -10870,6 +10867,7 @@ const CHECKLIST = {
   "a|d1vzfd":{"t":"command:your","s":1},
   "a|d6arlc":{"x":1},
   "a|dcqyl1":{"u":"charge:either"},
+  "a|dlqzcc":{"x":1},
   "a|ds28tt":{"u":"fight:either"},
   "a|e1tops":{"t":"command:your","s":1},
   "a|e2sl0e":{"u":"movement:your,shooting:your,charge:your"},
