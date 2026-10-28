@@ -1,0 +1,1494 @@
+[
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · The Swarmlord · Hive Commander",
+  "judgement": {
+   "who": "The Swarmlord",
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Hive Commander",
+   "text": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP"
+  },
+  "key": "c6e9b4b7c1e29380"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · The Swarmlord · Malign Presence",
+  "judgement": {
+   "who": "The Swarmlord",
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP."
+  },
+  "key": "430ecd91e529c172"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · The Swarmlord · Domination of the Hive Mind",
+  "judgement": {
+   "who": "The Swarmlord",
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Domination of the Hive Mind",
+   "text": "While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**."
+  },
+  "key": "853ae3d9f5cb1b3f"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · The Swarmlord · Guardian Organism",
+  "judgement": {
+   "who": "Tyrant Guard",
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Guardian Organism",
+   "text": "While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+  },
+  "key": "c7af53014aa1ccac"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-def",
+  "where": "healybois · Hive Tyrant · Guardian Organism",
+  "judgement": {
+   "def": "The CHARACTER leading this unit has Feel No Pain 5+"
+  },
+  "source": {
+   "ability": "Guardian Organism",
+   "text": "While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+  },
+  "key": "5816d01e0fa16461"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-kwNote",
+  "where": "healybois · The Swarmlord",
+  "judgement": {
+   "kwNote": "Infantry, Tyrant Guard come from the led Tyrant Guard."
+  },
+  "source": {
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ],
+   "stats": [
+    "The Swarmlord W10 OC3",
+    "Tyrant Guard ×6 W4 OC1"
+   ],
+   "weapons": [
+    "Synaptic Pulse D6+3 -1 2 PSYCHIC, TORRENT",
+    "Bone Sabres 8 -2 3 TWIN-LINKED",
+    "Scything talons and rending claws 5 -1 1"
+   ]
+  },
+  "key": "11adf23ee3d4bb5c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-ptsNote",
+  "where": "healybois · The Swarmlord",
+  "judgement": {
+   "ptsNote": "210 + Tyrant Guard 170"
+  },
+  "source": {
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ],
+   "stats": [
+    "The Swarmlord W10 OC3",
+    "Tyrant Guard ×6 W4 OC1"
+   ],
+   "weapons": [
+    "Synaptic Pulse D6+3 -1 2 PSYCHIC, TORRENT",
+    "Bone Sabres 8 -2 3 TWIN-LINKED",
+    "Scything talons and rending claws 5 -1 1"
+   ]
+  },
+  "key": "ba9270b7c1e60f2a"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-partialRules",
+  "where": "healybois · The Swarmlord",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "The Swarmlord"
+   }
+  },
+  "source": {
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Shadow in the Warp",
+    "Synapse",
+    "Leader",
+    "Twin-linked",
+    "Torrent"
+   ],
+   "abilities": [
+    "The Swarmlord · Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP",
+    "The Swarmlord · Malign Presence: Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.",
+    "The Swarmlord · Domination of the Hive Mind: While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**.",
+    "Tyrant Guard · Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ]
+  },
+  "key": "70e2764dfc326020"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · The Swarmlord",
+  "judgement": {
+   "gear": [
+    [
+     "Bone Sabres",
+     "Synaptic Pulse"
+    ],
+    [
+     "Scything talons and rending claws"
+    ]
+   ],
+   "weapons": [
+    "The Swarmlord · Synaptic Pulse",
+    "The Swarmlord · Bone Sabres",
+    "Tyrant Guard · ×6 · Scything talons and rending claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ],
+   "leads": "Tyrant Guard"
+  },
+  "key": "e08e57503907a1a3"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · Hive Tyrant · Onslaught",
+  "judgement": {
+   "who": "Hive Tyrant",
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "bde5b62024582966"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · Hive Tyrant · Will of the Hive Mind",
+  "judgement": {
+   "who": "Hive Tyrant",
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Will of the Hive Mind",
+   "text": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+  },
+  "key": "e4dc9237b77a6f96"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-timing",
+  "where": "healybois · Hive Tyrant · Instinctive Defence",
+  "judgement": {
+   "ph": [
+    "charge",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "charge": "opp"
+   }
+  },
+  "source": {
+   "ability": "Instinctive Defence",
+   "text": "**TYRANIDS** model only. While the bearer is within 6\" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability."
+  },
+  "key": "14660dc8e0297965"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Hive Tyrant · Instinctive Defence",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Instinctive Defence",
+   "text": "**TYRANIDS** model only. While the bearer is within 6\" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability."
+  },
+  "key": "20650d16eeb8f0a0"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · Hive Tyrant · Instinctive Defence",
+  "judgement": {
+   "who": "Hive Tyrant",
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Instinctive Defence",
+   "text": "**TYRANIDS** model only. While the bearer is within 6\" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability."
+  },
+  "key": "86ce6f7481bff5e7"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · Hive Tyrant · Guardian Organism",
+  "judgement": {
+   "who": "Tyrant Guard",
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Guardian Organism",
+   "text": "While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+  },
+  "key": "263344430f6187fe"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-kwNote",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "kwNote": "Infantry, Tyrant Guard come from the led Tyrant Guard."
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "stats": [
+    "Hive Tyrant W10 OC3",
+    "Tyrant Guard ×6 W4 OC1"
+   ],
+   "weapons": [
+    "Monstrous bonesword and lash whip 6 -2 3 TWIN-LINKED",
+    "Monstrous scything talons 4 -2 2 EXTRA ATTACKS",
+    "Scything talons and rending claws 5 -1 1"
+   ]
+  },
+  "key": "80f5458c3da452bc"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-ptsNote",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "ptsNote": "210 + Tyrant Guard 170"
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "stats": [
+    "Hive Tyrant W10 OC3",
+    "Tyrant Guard ×6 W4 OC1"
+   ],
+   "weapons": [
+    "Monstrous bonesword and lash whip 6 -2 3 TWIN-LINKED",
+    "Monstrous scything talons 4 -2 2 EXTRA ATTACKS",
+    "Scything talons and rending claws 5 -1 1"
+   ]
+  },
+  "key": "b1f56f16908f8373"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-partialRules",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "Hive Tyrant"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Shadow in the Warp",
+    "Synapse",
+    "Leader",
+    "Twin-linked",
+    "Extra Attacks"
+   ],
+   "abilities": [
+    "Hive Tyrant · Onslaught: While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+    "Hive Tyrant · Will of the Hive Mind: Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+    "Hive Tyrant · Instinctive Defence: **TYRANIDS** model only. While the bearer is within 6\" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability.",
+    "Tyrant Guard · Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ]
+  },
+  "key": "0a6e479af6c5fc3a"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "gear": [
+    [
+     "Monstrous bonesword and lash whip",
+     "Monstrous scything talons"
+    ],
+    [
+     "Scything talons and rending claws"
+    ]
+   ],
+   "weapons": [
+    "Hive Tyrant · Monstrous bonesword and lash whip",
+    "Hive Tyrant · Monstrous scything talons",
+    "Tyrant Guard · ×6 · Scything talons and rending claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "leads": "Tyrant Guard"
+  },
+  "key": "5722b75c72a17834"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-timing",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Seed Spore Mines",
+   "text": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit."
+  },
+  "key": "9fc365eb81dfd78f"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "judgement": {
+   "tag": "Once per turn"
+  },
+  "source": {
+   "ability": "Seed Spore Mines",
+   "text": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit."
+  },
+  "key": "428fe8081a605dd7"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-note",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.”"
+  },
+  "source": {
+   "ability": "Seed Spore Mines",
+   "text": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit.",
+   "others": [],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Feed the Swarm",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "e114ee07f67c514e"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Biovores",
+  "judgement": {
+   "gear": [
+    [
+     "Chitin-barbed limbs",
+     "Spore mine launcher"
+    ]
+   ],
+   "weapons": [
+    "Spore mine launcher",
+    "Chitin-barbed limbs"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Biovore"
+   ],
+   "leads": null
+  },
+  "key": "58693adba4c442a7"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-timing",
+  "where": "healybois · Pyrovores · Burning Spray",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Burning Spray",
+   "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**."
+  },
+  "key": "985bee61c04a747f"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Pyrovores",
+  "judgement": {
+   "gear": [
+    [
+     "Chitin-barbed limbs",
+     "Flamespurt"
+    ]
+   ],
+   "weapons": [
+    "×2 · Flamespurt",
+    "×2 · Chitin-barbed limbs"
+   ]
+  },
+  "source": {
+   "models": [
+    "2× Pyrovore"
+   ],
+   "leads": null
+  },
+  "key": "87c20578765add84"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Ripper Swarms · Chitinous Horrors",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Chitinous Horrors",
+   "text": "While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit."
+  },
+  "key": "95d5aeff41ea229c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Ripper Swarms",
+  "judgement": {
+   "gear": [
+    [
+     "Chitinous claws and teeth"
+    ]
+   ],
+   "weapons": [
+    "Chitinous claws and teeth"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Ripper Swarm"
+   ],
+   "leads": null
+  },
+  "key": "c1606ac65cab9d30"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-note",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Synaptoprescience: **NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Feed the Swarm",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "b930c4462e412083"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-note",
+  "where": "healybois · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Unnatural Resistance: This model has the **Feel No Pain 4+** ability against Mortal Wounds."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Feed the Swarm",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "fbc86381695ae52d"
+ },
+ {
+  "army": "healybois",
+  "kind": "rule-ph",
+  "where": "Assimilation Swarm rule · Feed the Swarm",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Feed the Swarm",
+   "text": "In your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n- One model in that unit regains up to D3+1 lost wounds.\n- One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead."
+  },
+  "key": "7b439f39fcb63e01"
+ },
+ {
+  "army": "healybois",
+  "kind": "rule-turn",
+  "where": "Assimilation Swarm rule · Feed the Swarm",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Feed the Swarm",
+   "text": "In your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n- One model in that unit regains up to D3+1 lost wounds.\n- One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead."
+  },
+  "key": "401a835d3ee8ad7b"
+ },
+ {
+  "army": "healybois",
+  "kind": "rule-needs",
+  "where": "Assimilation Swarm rule · Feed the Swarm",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Harvester"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Feed the Swarm",
+   "text": "In your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n- One model in that unit regains up to D3+1 lost wounds.\n- One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead."
+  },
+  "key": "bb3a29a11c2832af"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-phases",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Broodguard Impulse",
+   "text": "WHEN: Any phase.\nTARGET: One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**."
+  },
+  "key": "8b908380d05ad323"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turn",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Broodguard Impulse",
+   "text": "WHEN: Any phase.\nTARGET: One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**."
+  },
+  "key": "849d4d81ae8adc9f"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-needs",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Harvester"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Broodguard Impulse",
+   "text": "WHEN: Any phase.\nTARGET: One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**."
+  },
+  "key": "fce6529e143b53f7"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-gist",
+  "where": "Assimilation Swarm · Broodguard Impulse",
+  "judgement": {
+   "gist": "Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll."
+  },
+  "source": {
+   "stratagem": "Broodguard Impulse",
+   "text": "WHEN: Any phase.\nTARGET: One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**."
+  },
+  "key": "24de29679c3cf169"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-phases",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Reclaim Biomass",
+   "text": "WHEN: Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.\nTARGET: One **HARVESTER** unit from your army that is within 6\" of that destroyed unit.\nEFFECT: Regenerate one friendly **TYRANIDS** unit within 6\" of your **HARVESTER** unit (See Feed the Swarm)."
+  },
+  "key": "149d05240fb831a6"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turn",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Reclaim Biomass",
+   "text": "WHEN: Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.\nTARGET: One **HARVESTER** unit from your army that is within 6\" of that destroyed unit.\nEFFECT: Regenerate one friendly **TYRANIDS** unit within 6\" of your **HARVESTER** unit (See Feed the Swarm)."
+  },
+  "key": "1575fe86b5be36d7"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-needs",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Harvester"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Reclaim Biomass",
+   "text": "WHEN: Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.\nTARGET: One **HARVESTER** unit from your army that is within 6\" of that destroyed unit.\nEFFECT: Regenerate one friendly **TYRANIDS** unit within 6\" of your **HARVESTER** unit (See Feed the Swarm)."
+  },
+  "key": "eebec832a704da28"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-gist",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "judgement": {
+   "gist": "Any phase, a TYRANIDS unit from your army is destroyed (before its last model is removed), your HARVESTER unit within 6\" of it: Regenerate one friendly TYRANIDS unit within 6\" of your HARVESTER unit (see Feed the Swarm)."
+  },
+  "source": {
+   "stratagem": "Reclaim Biomass",
+   "text": "WHEN: Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.\nTARGET: One **HARVESTER** unit from your army that is within 6\" of that destroyed unit.\nEFFECT: Regenerate one friendly **TYRANIDS** unit within 6\" of your **HARVESTER** unit (See Feed the Swarm)."
+  },
+  "key": "9b62125cef189040"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-note",
+  "where": "Assimilation Swarm · Reclaim Biomass",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): “When using the Reclaim Biomass Stratagem, can the Stratagem effect be used on the unit that was just destroyed?” “No.”"
+  },
+  "source": {
+   "stratagem": "Reclaim Biomass",
+   "text": "WHEN: Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.\nTARGET: One **HARVESTER** unit from your army that is within 6\" of that destroyed unit.\nEFFECT: Regenerate one friendly **TYRANIDS** unit within 6\" of your **HARVESTER** unit (See Feed the Swarm)."
+  },
+  "key": "75038e3029821b32"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-phases",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Tyrannoformed",
+   "text": "WHEN: Command phase.\nTARGET: One **HARVESTER** unit from your army that is within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "e1f6598411a5a5c9"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turn",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Tyrannoformed",
+   "text": "WHEN: Command phase.\nTARGET: One **HARVESTER** unit from your army that is within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "4ebbce2bcd4a58bc"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-needs",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Harvester"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Tyrannoformed",
+   "text": "WHEN: Command phase.\nTARGET: One **HARVESTER** unit from your army that is within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "dc4f924058870063"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-gist",
+  "where": "Assimilation Swarm · Tyrannoformed",
+  "judgement": {
+   "gist": "Command phase, your HARVESTER unit within range of an objective marker you control: that objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase."
+  },
+  "source": {
+   "stratagem": "Tyrannoformed",
+   "text": "WHEN: Command phase.\nTARGET: One **HARVESTER** unit from your army that is within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "ae22a343ece74f47"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-phases",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Ablative Carapace",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
+  },
+  "key": "bf83f26bd91b6e90"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turn",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Ablative Carapace",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
+  },
+  "key": "d043a3108e25ab1b"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turns",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Ablative Carapace",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
+  },
+  "key": "fca3f1433dc566b3"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-needs",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Harvester"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Ablative Carapace",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
+  },
+  "key": "b99d71453e9beeed"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-def",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "judgement": {
+   "def": "Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)"
+  },
+  "source": {
+   "stratagem": "Ablative Carapace",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
+  },
+  "key": "96a85e2a464bc2b6"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-gist",
+  "where": "Assimilation Swarm · Ablative Carapace",
+  "judgement": {
+   "gist": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your HARVESTER unit as a target: until the end of the phase, its models have Feel No Pain 5+ (4+ if it is within range of an objective marker you control)."
+  },
+  "source": {
+   "stratagem": "Ablative Carapace",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 5+** ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
+  },
+  "key": "c9d0b22331caf9fb"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-phases",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Secure Biomass",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well."
+  },
+  "key": "a049ba734c80ae3b"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turn",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Secure Biomass",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well."
+  },
+  "key": "af0073357700c092"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-needs",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Secure Biomass",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well."
+  },
+  "key": "588f4060de35aa0b"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-mod",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Fight phase, not yet selected to fight, until the end of the phase",
+    "note": "[LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+)"
+   }
+  },
+  "source": {
+   "stratagem": "Secure Biomass",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well."
+  },
+  "key": "dfeef77d3c70d0bc"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-gist",
+  "where": "Assimilation Swarm · Secure Biomass",
+  "judgement": {
+   "gist": "Fight phase, your TYRANIDS unit not yet selected to fight: until the end of the phase, its melee weapons have [LETHAL HITS]; if it is a HARVESTER unit, its melee attacks also score a Critical Hit on an unmodified Hit roll of 5+."
+  },
+  "source": {
+   "stratagem": "Secure Biomass",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well."
+  },
+  "key": "95eaae1e6b40792b"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-phases",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Rapacious Hunger",
+   "text": "WHEN: Your Fight phase.\nTARGET: One **TYRANIDS** unit from your army that just destroyed an enemy unit.\nEFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead."
+  },
+  "key": "48c767c2fd18cfba"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-turn",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Rapacious Hunger",
+   "text": "WHEN: Your Fight phase.\nTARGET: One **TYRANIDS** unit from your army that just destroyed an enemy unit.\nEFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead."
+  },
+  "key": "ed7402db57442c67"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-needs",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rapacious Hunger",
+   "text": "WHEN: Your Fight phase.\nTARGET: One **TYRANIDS** unit from your army that just destroyed an enemy unit.\nEFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead."
+  },
+  "key": "7a5ad993e572d0ee"
+ },
+ {
+  "army": "healybois",
+  "kind": "strat-gist",
+  "where": "Assimilation Swarm · Rapacious Hunger",
+  "judgement": {
+   "gist": "Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead."
+  },
+  "source": {
+   "stratagem": "Rapacious Hunger",
+   "text": "WHEN: Your Fight phase.\nTARGET: One **TYRANIDS** unit from your army that just destroyed an enemy unit.\nEFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead."
+  },
+  "key": "362cf25caa2b177d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "DEFENCE",
+  "judgement": {
+   "code": "const DEFENCE = [\n  { id:'fnp',      re:/feel no pain \\d\\+/i, said:/feel no pain|FNP|\"fnp\"/i },\n  { id:'invuln',   re:/\\d\\+\\*? ?(?:invulnerable save|insv)\\b/i, said:/invulnerable|InSv|\\bINV\\b/i },\n  { id:'sv-set',   re:/\\b(?:has|have) an? save characteristic of \\d\\+/i, said:/\\b\\d\\+ (?:save|Sv)\\b|\\bSv\\b|save characteristic|\"sv\"/i },\n  { id:'s-vs',     re:new RegExp('(?:targets? ' + SELF + '|allocated to ' + SELF + ')[^.]*?(?:-1 strength\\\\b|subtract 1 from the strength characteristic)', 'i'), said:/-1 S\\b|-1 Strength/i },\n  { id:'save+1',   re:/\\+1 to (?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)|add (?:1|one) to (?:the |its |any |an )?(?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)/i, said:/\\+1 to (?:armou?r )?sav|\\bsave\\b|\"sv\"/i },\n  { id:'stealth',  re:/\\b(?<!cannot |can't |can not )(?:has|have|gains?) (?:the )?(?:stealth|benefit of cover)\\b/i, said:/stealth|\"stealth\"|benefit of cover/i },\n  { id:'dmg-1',    re:new RegExp('(?:allocated to ' + SELF + '|made against (?:' + SELF + '|this [A-Z]+\\\\b)|attacks? (?:that )?targets? ' + SELF + '|attacks? allocated to ' + SELF + '|targets? a friendly [^.,]*?(?:unit|model)\\\\b)[^.]*?(?:subtract 1 from the damage|reduce the damage characteristic[^.]*? by 1\\\\b|-1 d\\\\b|-1 damage\\\\b)', 'i'), said:/-1 D\\b|-1 Damage|damage/i },\n  { id:'dmg-half', re:new RegExp('(?:allocated to ' + SELF + '|made against ' + SELF + '|targets? ' + SELF + ')[^.]*?halve the damage', 'i'), said:/halve|half/i },\n  { id:'dmg-0',    re:/change the damage characteristic of that attack to 0/i, said:/damage[^|]* to 0|\"dmg\":0/i },\n  { id:'hit-vs',   re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? (?:targets? |(?:is|are) made against )' + SELF + '[^.]*?(?:subtract 1 from (?:the|that attack[\\\\u2019\\\\x27]s) hit roll|-1 to hit)', 'i'), said:/-1 to (?:the )?hit/i },\n  // an enemy unit's attacks made worse (Reorder Reality, Mischief Makers): a defence of the units it attacks\n  { id:'enemy-hit-1', re:/\\benemy (?:unit|model)s?\\b[^.]*?(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)|(?:subtract 1 from (?:the|that attack[’']s) hit roll|-1 to hit)[^.]*?\\benemy (?:unit|model)/i, said:/-1 to (?:the )?hit/i },\n  { id:'wound-vs', re:new RegExp('(?:an attack|attacks|a ranged attack|a melee attack|ranged attacks|melee attacks)(?: that)? (?:targets? |(?:is|are) made against )' + SELF + '[^.]*?(?:subtract 1 from the wound roll|-1 to wound)', 'i'), said:/-1 to (?:the )?wound/i },\n  { id:'ap-worse', re:new RegExp('targets? ' + SELF + '[^.]*?(?:worsen the (?:armou?r penetration|ap)\\\\b|-1 ap\\\\b)', 'i'), said:/-1 AP|worsen the AP|\\bAP\\b/i },\n  { id:'t+',       re:/\\b(?:add (?:1|one) to (?:the |its |this model[’']s |the bearer[’']s )?toughness characteristic|\\+1 (?:t|toughness)\\b)/i, said:/toughness|\\+1 T\\b|\\| T\\b/i },\n];"
+  },
+  "source": {
+   "implements": "verify/readings.js: the defences read from the words (Feel No Pain, invulnerable save or InSv, +1 to save rolls, Stealth granted, -1 Damage / -1 D of an attack allocated to or made against the unit, Damage 0, -1 to hit / wound or -1 AP / worse AP against attacks that target it, an enemy unit's -1 to hit; not \"this unit's …\", \"the bearer's …\", \"an enemy model\") and how its \"When targeted\" reading says each"
+  },
+  "key": "5c35f4c1de5bb2c7"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-swarmlord-tyrant-guard · rules",
+  "judgement": {
+   "app": "",
+   "source": "Feel No Pain 5+"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\"."
+  },
+  "key": "4742dac573f77f1c"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · hive-tyrant-tyrant-guard · rules",
+  "judgement": {
+   "app": "",
+   "source": "Feel No Pain 5+"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\"."
+  },
+  "key": "95e61da1b2e2601b"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "judgement": {
+   "app": "Biovores",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS."
+  },
+  "key": "8699e0c63c7076fd"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "judgement": {
+   "app": "",
+   "source": "Biovore"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Biovore; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS (no BIOVORE)."
+  },
+  "key": "6a2bc427e874e351"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · ripper-swarms · kw",
+  "judgement": {
+   "app": "Ripper Swarms",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword RIPPER SWARMS; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS."
+  },
+  "key": "7f1066c15eeef172"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · ripper-swarms · kw",
+  "judgement": {
+   "app": "",
+   "source": "Ripper Swarm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Ripper Swarm; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS (no RIPPER SWARM)."
+  },
+  "key": "25281d41a2c72927"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tyrannofex · stats.base",
+  "judgement": {
+   "app": "Tyrannofex: 120×92mm Oval",
+   "source": "Tyrannofex: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Tyrannofex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: 120×92mm."
+  },
+  "key": "bbf4c94fe5f8e0d9"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-nr.json · tyrannofex · stats[Tyrannofex].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: Base 120x92mm."
+  },
+  "key": "270011bf7a4acb0b"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-texts.json · hive-tyrant-tyrant-guard · ability:Onslaught (Hive Tyrant)",
+  "judgement": {
+   "app": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+   "source": "Rules Updates \"Change to:\": while a friendly tyranidsunit is within 6\" of this model, ranged weapons equipped by models in that unit have the [assault] and [lethal hits] abilities. | differs at \"…while a friendly tyranids[ unit is within 6\" of this model, ranged…]\" vs source \"…while a friendly tyranids[unit is within 6\" of this model, ranged …]\""
+  },
+  "source": {
+   "reason": "Typo in the Faction Pack: \"TYRANIDSunit\" has no space; the app writes \"TYRANIDS unit\". Every other word is the pack's.",
+   "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). BSData and New Recruit have \"friendly TYRANIDS unit\" (verify/sources/nr-json/healybois.json, Hive Tyrant, Onslaught)."
+  },
+  "key": "95f01fd67795bd71"
+ },
+ {
+  "army": "healybois",
+  "kind": "enh-spelling",
+  "where": "assimilation-swarm · Instinctive Defence",
+  "judgement": {
+   "name": "Instinctive Defence",
+   "nr": "Instinctive Defense"
+  },
+  "source": {
+   "reason": "New Recruit and BSData spell it “Instinctive Defense”; GW’s Faction Pack Tyranids 1.3 (Instinctive Defence Enhancement, Change to) and Wahapedia print “Instinctive Defence”. The app has GW’s name, the export’s spelling as nr.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 622 (\"Instinctive Defence Enhancement / Change to:\"); verify/.cache/waha/tyranids.txt line 257 (\"- Instinctive Defence 15 pts\"); verify/sources/nr-json/healybois.json: \"Instinctive Defense\""
+  },
+  "key": "fff3e266a9d614ad"
+ },
+ {
+  "army": "healybois",
+  "kind": "kept-row",
+  "where": "tyranids/norn-emissary · Unnatural Resistance",
+  "judgement": {
+   "app": "Unnatural Resistance (the row’s, BSData’s and New Recruit’s name, as nidzillas has it)"
+  },
+  "source": {
+   "reason": "GW’s Norn Emissary datasheet on Wahapedia names it “Unnatural Resilience” (the same words: “This model has the Feel No Pain 4+ ability against mortal wounds.”); one datasheet, one truth: the row other lists share keeps its name and words; from-json.js matched the two by their words. Settle on the row for both lists (GW’s name would change nidzillas too).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html; verify/out/from-json-healybois.md (Kept from the datasheet row)"
+  },
+  "key": "b0e4e5a8cc34f795"
+ },
+ {
+  "army": "healybois",
+  "kind": "kept-row",
+  "where": "tyranids/the-swarmlord · Hive Commander, Malign Presence, Domination of the Hive Mind; tyranids/hive-tyrant · Will of the Hive Mind; tyranids/norn-assimilator, norn-emissary, tyrannofex abilities",
+  "judgement": {
+   "app": "the rows’ words, tags and labels as nidzillas has them"
+  },
+  "source": {
+   "reason": "The rows other lists share are kept; where this run read Wahapedia otherwise (codex words GW’s Faction Pack 1.3 replaced: Malign Presence, Will of the Hive Mind’s “usage”; markup; a full stop), the difference is listed, not written. Malign Presence and Will of the Hive Mind on the rows are the pack’s words.",
+   "evidence": "verify/out/from-json-healybois.md, “Kept from the datasheet row (25)”"
+  },
+  "key": "63cac0b4ab092c61"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "Norn Assimilator · Toxinjecter Harpoon",
+  "judgement": {
+   "app": "Toxinjecter Harpoon (New Recruit’s name, the shared row’s)"
+  },
+  "source": {
+   "reason": "Weapon names follow New Recruit; GW’s datasheet (Wahapedia) spells it “toxinjector harpoon”. Not a GW check failure of values: its profile is the row nidzillas has (Harpooned per Faction Pack 1.3).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html (UNIT COMPOSITION: “toxinjector harpoon”)"
+  },
+  "key": "f70ed72fa13476f9"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "The Swarmlord · Designer’s Note",
+  "judgement": {
+   "app": "left out"
+  },
+  "source": {
+   "reason": "Wahapedia prints a Designer’s Note under the codex Malign Presence (“This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024”). GW’s Faction Pack 1.3 replaced Malign Presence; BSData and the export have no such note; the shared Swarmlord row has none.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html; verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt (The Swarmlord, Malign Presence Ability, Change to)"
+  },
+  "key": "89f3b0c37fbaa625"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "FAQ (Faction Pack 1.3): Hive Tyrant and Tyrant Guard vs Foul Spores",
+  "judgement": {
+   "app": "not shown"
+  },
+  "source": {
+   "reason": "“Does an Attached unit containing a Hive Tyrant and Tyrant Guard receive the Stealth ability from a Venomthrope’s Foul Spores ability? No. The unit has the MONSTER keyword and the ability excludes MONSTERS.” The FAQ is on Foul Spores, which no unit of this list has; FAQs go on the ability they concern, so it is not shown.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 757-759"
+  },
+  "key": "ecd62f4c5c0cfdad"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "Secure Biomass footnote on every TYRANIDS unit",
+  "judgement": {
+   "app": "[LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), on every unit that can use it (TYRANIDS)"
+  },
+  "source": {
+   "reason": "The stratagem targets any TYRANIDS unit; its second sentence is for HARVESTER units only, so the footnote states that condition as GW does rather than splitting by unit. No calc (the Damage tab lists it as not counted).",
+   "evidence": "data.js assimilation-swarm/secure-biomass"
+  },
+  "key": "7bbfb2dc6d0acffb"
+ },
+ {
+  "army": "shooty",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt (home screen)",
+  "judgement": {
+   "change": "TYRANIDS 1 → 2; the Healybois card (2000 pts, Assimilation Swarm · Talons of the Norn Queen, PRIORITY ASSETS, TAKE AND HOLD, CHOSEN) after Nidzillas."
+  },
+  "source": {
+   "reason": "The home screen lists every list.",
+   "evidence": "scratchpad/two-work/shooty-snapshot.diff"
+  },
+  "key": "9fad60a972db599b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · datasheet row reuse for each part of a led unit",
+  "judgement": {
+   "change": "A datasheet row another list has is reused for every part of a unit (The Swarmlord and the Hive Tyrant leading Tyrant Guard), not only single-part units: that part’s stats rows, its weapons (who) and abilities (who, in the place its abilities had); the row’s rules stay in the unit’s line; the labels of the part’s abilities are the row’s. Before, the attached units’ new reading rewrote the shared Swarmlord/Hive Tyrant rows (nidzillas would have changed)."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/from-json.js"
+  },
+  "key": "aad940bc2208271b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · row reuse: keyword, srcNote, an ability under another name, own value",
+  "judgement": {
+   "change": "For a single-part unit: a GW keyword the export lacks that the row was settled without (Tyrannofex FRAME) is left out as on the row, and the row’s srcNote is kept; an ability the row has under another name with the same words (Unnatural Resistance / Resilience) takes the row’s; a datasheet value the row has no column for (Norn Assimilator own InSv –) is dropped."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/from-json.js"
+  },
+  "key": "9df30b2ddd4b50eb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · enhancement spellings",
+  "judgement": {
+   "change": "verify/sources/hand/<army>.json spellings { \"<New Recruit name>\": { gw, why } }: an enhancement New Recruit spells otherwise than GW, not only by case (Instinctive Defense), is GW’s enhancement, its export spelling written as nr."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/from-json.js"
+  },
+  "key": "75574a4325e0e811"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · stratagem FAQ note",
+  "judgement": {
+   "change": "verify/sources/hand/<army>.json gists.<id>.note: GW’s FAQ on a stratagem (Reclaim Biomass, Faction Pack 1.3), written after its gist as data.js has notes; texts.js checks its quotes."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/from-json.js"
+  },
+  "key": "03a09542b7fd2b26"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · singular keyword",
+  "judgement": {
+   "change": "A keyword of the export GW does not print, whose plural GW prints and the export lacks (BSData “Biovore”, GW BIOVORES), is replaced by GW’s; both declared."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/from-json.js"
+  },
+  "key": "be0868878e900ae7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/waha-words.js · unitSrc",
+  "judgement": {
+   "change": "srcNote is written when a unit has one (only from the row reuse above)."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/waha-words.js"
+  },
+  "key": "a41824818e1792a5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/tables.js · field comments",
+  "judgement": {
+   "change": "A comment on a datasheet field stays on the datasheet when the units that carry a comment agree and a unit just added in full has none (the Tyrannofex keyword comment); data.js of HEAD is unchanged by it (checked: tables.js --write gives the same bytes)."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/tables.js"
+  },
+  "key": "ed45ac341734ddbb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/derive.js · grantRows",
+  "judgement": {
+   "change": "GRANTS: a condition after “In addition, ” is kept (while the bearer is within 6\" of one or more friendly HARVESTER units); a grant whose clause before the verb names this unit / model / the bearer’s unit, with no keyword unit there, goes to this unit / model (Instinctive Defence: Fights First for the bearer’s unit, not the HARVESTER units). No other list’s GRANTS changed (checked)."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/derive.js"
+  },
+  "key": "6db61a7c40623401"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/texts.js · Rules Updates title",
+  "judgement": {
+   "change": "A DATASHEETS update whose title names an ability in the singular (“Biovores, Seed Spore Mine Ability”) matches the ability Seed Spore Mines, so “Change 9\" to 8\".” is checked on its text (8\") instead of failing as unmatched."
+  },
+  "source": {
+   "diff": "git diff cf2ce3a cad3896 -- verify/texts.js"
+  },
+  "key": "1631dbd4a4e104b4"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "the-swarmlord-tyrant-guard",
+  "judgement": {
+   "why": "The Swarmlord leads the Tyrant Guard (LEADER on both GW datasheets: The Swarmlord can be attached to TYRANT GUARD). Guardian Organism gives Feel No Pain 5+ to the CHARACTER leading the Tyrant Guard only, not to the Tyrant Guard. Malign Presence: GW’s Faction Pack Tyranids 1.3 words (Rules Updates, Change to), as the Swarmlord’s datasheet row has them (Wahapedia still prints the codex’s “If this model is your WARLORD …” and a Designer’s Note about the June 2024 Balance Dataslate’s Lord of Deceit, which the pack’s wording replaced: left out)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.the-swarmlord-tyrant-guard.why (not shown in the app)"
+  },
+  "key": "6034910692dca61c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "hive-tyrant-tyrant-guard",
+  "judgement": {
+   "why": "The Hive Tyrant leads the Tyrant Guard (LEADER on both GW datasheets). Instinctive Defence (GW’s spelling; New Recruit: Instinctive Defense) is on the Hive Tyrant: while it is within 6\" of one or more friendly HARVESTER units, models in its unit (the Hive Tyrant and the Tyrant Guard) have Fights First, and Heroic Intervention on this unit is -1 CP. Will of the Hive Mind: GW’s Faction Pack Tyranids 1.3 words (“that use of”), as the Hive Tyrant’s datasheet row has them (Wahapedia: “that usage of”)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.hive-tyrant-tyrant-guard.why (not shown in the app)"
+  },
+  "key": "6a23873fbef9be4c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "biovores",
+  "judgement": {
+   "why": "Seed Spore Mines: 8\" as GW’s Faction Pack Tyranids 1.3 (Rules Updates: “Change 9\" to 8\".”), as BSData and Wahapedia have it. The SPORE MINES unit it adds is the reference sheet Spore Mines (Biovore) (New Recruit’s reference entry)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.biovores.why (not shown in the app)"
+  },
+  "key": "abb7b96a76f748de"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "ripper-swarms",
+  "judgement": {
+   "why": "Ripper Swarms: GW’s keyword RIPPER SWARMS (BSData “Ripper Swarm”, declared); Chitinous Horrors (Aura) halves the OC of enemy units in Engagement Range: no attack or defence numbers, no reading. Spinemaws: a wargear option not taken."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.ripper-swarms.why (not shown in the app)"
+  },
+  "key": "1c560c6b72201fc0"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "pyrovores",
+  "judgement": {
+   "why": "Two units of two Pyrovores (copies:2), 70 pts each (GW: 2 models 70, 1st to 2nd units)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.pyrovores.why (not shown in the app)"
+  },
+  "key": "68b9e3d5319a1f5b"
+ },
+ {
+  "army": "healybois",
+  "kind": "points",
+  "where": "points (Healybois_2.json)",
+  "judgement": {
+   "app": {
+    "Norn Assimilator": [
+     280,
+     300
+    ],
+    "Pyrovores": "70 ×2",
+    "Tyrannofex": 180,
+    "Norn Emissary": 250,
+    "Hive Tyrant + Tyrant Guard": 380,
+    "The Swarmlord + Tyrant Guard": 380,
+    "Biovores": 60,
+    "Ripper Swarms": 30,
+    "Spore Mines (Biovore)": 0
+   }
+  },
+  "source": {
+   "reason": "The newer export: two units of 2 Pyrovores (70 each, 1st to 2nd units), Ripper Swarms 1 model 30, the rest as before (Norn Assimilator 250/270 + Synaptoprescience 30, Tyrannofex 170 + acid spray 10, Hive Tyrant 195 + Instinctive Defence 15); 2000 in all. New Recruit’s PDF prints the totals with enhancements and wargear (Hive Tyrant 210, Norn Assimilators 280/300, Tyrannofex 180): the same.",
+   "evidence": "verify/sources/nr-json/healybois.json; scratchpad/two-work/Healybois-NR.txt; verify/.cache/waha/ds/tyranids_Pyrovores.html, tyranids_Ripper-Swarms.html"
+  },
+  "key": "ed59f8f7b0e9398e"
+ }
+]

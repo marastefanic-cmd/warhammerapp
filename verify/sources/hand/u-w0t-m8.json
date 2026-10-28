@@ -1,0 +1,293 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for u-w0t-m8, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). fixes: GW's Faction Pack words where Wahapedia's transcription differs. units: per unit entry, GW's Faction Pack words where Wahapedia's transcription of an ability differs (texts), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
+ "caseNames": [
+  "Chittering Swarm"
+ ],
+ "caseNamesWhy": "GW’s capitalisation of these ability names, as Wahapedia’s datasheet prints them (“Chittering swarm”), where New Recruit’s differs only in case: the coordinator’s ruling (review result-necrons-2.json 58091bdff27d1efc, result-round3.json c60849479677392f); every other name keeps New Recruit’s casing",
+ "fixes": [
+  {
+   "at": "the-phaerons-armoury/enhancement/Relocational Optimiser",
+   "field": "name",
+   "from": "Relocational Optimiser",
+   "to": "Prelocational Optimiser",
+   "why": "GW Faction Pack Necrons 1.3, The Phaeron’s Armoury, ENHANCEMENTS: \"PRELOCATIONAL OPTIMISER\" (BSData: \"Prelocational Optimiser\"; Wahapedia: \"Relocational Optimiser\")"
+  },
+  {
+   "at": "the-phaerons-armoury/enhancement/Mortality Shroud (Aura)",
+   "field": "text",
+   "from": "is **below **starting** strength**,",
+   "to": "is **below starting strength**,",
+   "why": "Markup only: Wahapedia's page nests its bold (\"**below **starting** strength**\"), which the app would show broken; GW Faction Pack Necrons 1.3 prints \"if an enemy unit within 8\" of this unit is below starting strength\" (the words are unchanged)"
+  }
+ ],
+ "gists": {
+  "obeisance-phalanx/your-time-is-nigh": {
+   "by": "AI (Claude)",
+   "gist": "Any phase, just after your opponent’s WARLORD is destroyed, your NECRONS WARLORD: until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, -1 to the result.",
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Warlord"
+    ]
+   },
+   "needsWhy": "TARGET: “Your NECRONS WARLORD.” (derive.js reads a unit from “… unit from your army”)"
+  },
+  "obeisance-phalanx/enslaved-artifice": {
+   "by": "AI (Claude)",
+   "gist": "Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+.",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase",
+    "note": "a Critical Hit on an unmodified hit roll of 5+",
+    "calc": {
+     "critHit": 5
+    }
+   }
+  },
+  "obeisance-phalanx/nanoassembly-protocols": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit.",
+   "def": "Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase"
+  },
+  "obeisance-phalanx/sentinels-of-eternity": {
+   "by": "AI (Claude)",
+   "gist": "Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed.",
+   "needs": {
+    "any": [
+     "Lychguard",
+     "Triarch Praetorians"
+    ]
+   },
+   "needsWhy": "TARGET: “One LYCHGUARD or TRIARCH PRAETORIANS unit from your army …”: TRIARCH PRAETORIANS is one keyword (the Triarch Praetorians datasheet), not TRIARCH; no unit of the list has either (The Silent King is TRIARCH)"
+  },
+  "obeisance-phalanx/suffer-no-rival": {
+   "by": "AI (Claude)",
+   "gist": "Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION].",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "melee",
+    "when": "Fight phase, not yet selected to fight, until the end of the phase",
+    "note": "[PRECISION]"
+   }
+  },
+  "obeisance-phalanx/territorial-obsession": {
+   "by": "AI (Claude)",
+   "gist": "Your Command phase, your LYCHGUARD or TRIARCH unit: until the start of your next Command phase, +1 OC for its models (+3 instead if it is a VEHICLE unit)."
+  },
+  "the-phaerons-armoury/subsurface-quantumweave": {
+   "by": "AI (Claude)",
+   "gist": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked.",
+   "def": "Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked"
+  },
+  "the-phaerons-armoury/particle-pulse": {
+   "by": "AI (Claude)",
+   "gist": "Start of your Shooting phase, your NECRONS TITANIC FLY unit: one visible enemy unit within 12\" of it has +3\" detection range."
+  },
+  "the-phaerons-armoury/cosmic-storm": {
+   "by": "AI (Claude)",
+   "gist": "Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP.",
+   "mod": {
+    "by": "hand (Claude)",
+    "kind": "ranged",
+    "weapon": "Tesla sphere",
+    "when": "Your Shooting phase, selected to shoot: its Tesla Sphere weapons",
+    "note": "+1 AP"
+   }
+  }
+ },
+ "units": {
+  "the-silent-king": {
+   "texts": {
+    "Relentless March": {
+     "from": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, add 2\"",
+     "to": "While a friendly **NECRONS** unit is within 6\" of this unit’s Szarekh model, add 2\"",
+     "why": "GW Faction Pack Necrons 1.3, Rules Updates, The Silent King: \"Bringer of Unity Ability: Change to ‘Relentless March (Aura): While a friendly NECRONS unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit.’\" (Wahapedia: \"(excluding MONSTER units)\"; BSData has the pack’s words)"
+    }
+   },
+   "why": "The Silent King: Szarekh and two Triarchal Menhirs, all present from the start (GW’s UNIT COMPOSITION: 1 Szarekh, 2 Triarchal Menhirs); if Szarekh is destroyed the Menhirs are too (Triarchal Menhirs). Keywords as GW’s Faction Pack 1.3 changes them: ALL MODELS VEHICLE, EPIC HERO, TRIARCH; SZAREKH MODEL CHARACTER, THE SILENT KING (kwOnly). Triarch Abilities: GW’s ability (BSData: Voice of the Triarch) selects one of the three abilities of GW’s TRIARCH ABILITIES box at the start of each battle round (Wrathful Presence’s layout, Angron); each is an (Aura) of Szarekh’s, shown with who “Triarch Abilities: pick one”; Relentless March in the pack’s words. Supreme Commander: GW’s box, not in BSData. The Silent King: GW prints it without (Aura) (BSData tags it), Leadership only: no reading. Damaged: Szarekh’s weapons have their Attacks halved and the unit’s attacks -1 to hit: a footnote. Worthy Foes: TRIARCH, so its +1 to wound applies."
+  },
+  "ophydian-destroyers": {
+   "why": "Plasmacyte: GW’s wargear option (\"For every 3 models in this unit, this unit can have 1 Plasmacyte\") this list did not take (the export has no Plasmacyte), so the Plasmacyte ability and its Designer’s Note are left out. Tunnelling Horrors in GW’s Faction Pack 1.3 words (as Wahapedia and BSData)."
+  },
+  "tesseract-vault": {
+   "why": "Powers of the C’tan: in your Shooting phase, when selected to shoot, it selects up to two different C’tan Powers weapons (one while Damaged); GW prints them as RANGED WEAPONS with [C’TAN POWER] (BSData’s profiles of the type \"C'tan Powers\", read as weapons): shown as three ranged weapons, the choice is the ability’s, not a pick-one or all-fire group. Tesla sphere: GW’s composition gives 4 tesla spheres (the profile named “Tesla spheres”), New Recruit 4× Tesla sphere: four weapons of A 6. M 14\": Empowered Engines (The Phaeron’s Armoury: friendly NECRONS TITANIC FLY units have +6\" M), the datasheet’s 8\" kept as its own value. Damaged: 1-8 wounds remaining is labelled your Shooting phase (its words: only one C’tan Powers weapon “in your Shooting phase”); a Damaged band otherwise gets no label.",
+   "labels": {
+    "Damaged: 1-8 wounds remaining": {
+     "ph": [
+      "shooting"
+     ],
+     "turn": "your"
+    }
+   }
+  },
+  "tesseract-vault-2": {
+   "why": "As the other Tesseract Vault (the same datasheet); 505 pts, GW’s price of a 2nd+ unit.",
+   "labels": {
+    "Damaged: 1-8 wounds remaining": {
+     "ph": [
+      "shooting"
+     ],
+     "turn": "your"
+    }
+   }
+  },
+  "imotekh-the-stormlord": {
+   "why": "Imotekh leads no unit in this list (Leader: IMMORTALS, LYCHGUARD, NECRON WARRIORS): the export attaches him to none, the Immortals included (the Technomancer supports them). NOBLE: Worthy Foes applies."
+  },
+  "royal-warden": {
+   "why": "The Royal Warden leads no unit in this list (Leader: IMMORTALS, NECRON WARRIORS): the export attaches it to none, the Immortals included (the Technomancer supports them); Adaptive Strategy (\"This model’s unit\") is its own. Adaptive Strategy is labelled your Movement, Shooting and Charge phases (verify/derive.js): Fall Back and Advance are moves of your own Movement phase (Core Rules 09.02, 09.07), so its unit cannot have Fallen Back or Advanced in the opponent's Movement phase (Fire Overwatch); as the signed-off Bounding Leaps and Elevated Strider (review result-necrons.json 231348fb544bd6eb)."
+  },
+  "technomancer-immortals": {
+   "defs": {
+    "Rites of Reanimation": {
+     "by": "AI (Claude)",
+     "def": "While the Technomancer leads this unit: Feel No Pain 5+ for its models"
+    }
+   },
+   "why": "The Technomancer supports the Immortals (SUPPORT on GW’s Technomancer datasheet: CANOPTEK WRAITHS, IMMORTALS, NECRON WARRIORS; the export’s “Supporting” association); a support unit leads its bodyguard as a leader does (Core Rules, Leader/Support), so Rites of Reanimation (“While this model is leading a unit”) gives the Immortals and itself Feel No Pain 5+. Technomancer (the ability): at the end of your Movement phase one friendly NECRONS model within 6\" regains up to D3 lost wounds. Implacable Eradication: re-roll a Wound roll of 1, the whole Wound roll against an enemy unit within range of an objective marker. 80 pts: GW’s price of a 1st Technomancer; Immortals 65 (5 models)."
+  },
+  "canoptek-spyders": {
+   "why": "One Canoptek Spyder (65 pts, GW’s 1 model) with its fabricator claw array, gloom prism and two particle beamers (GW’s wargear options). Fabricator Claw Array (Aura): Feel No Pain 6+ for friendly NECRONS VEHICLE units within 6\", its own included; Gloom Prism (Aura): Feel No Pain 5+ against mortal wounds and Psychic Attacks for friendly NECRONS units within 6\", its own included. Canoptek Swarm returns destroyed models to a CANOPTEK SCARAB SWARM unit (models of that unit’s own datasheet: no reference sheet)."
+  },
+  "canoptek-scarab-swarms": {
+   "why": "Three Canoptek Scarab Swarms (40 pts, GW’s 3 models). Chittering swarm (GW’s capitalisation; New Recruit: Chittering Swarm): enemy units in Engagement Range -1 OC (minimum 1); OC 1 within 6\" of a friendly CRYPTEK model (the Technomancer). Self-destruction at the start of the Fight phase."
+  }
+ },
+ "readings": {
+  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, a detachment rule), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf). A datasheet not here: verify/derive.js's derived readings.",
+  "datasheets": {
+   "The Silent King": {
+    "aura": [
+     {
+      "kind": "all",
+      "needs": {
+       "all": [
+        "Faction: Necrons"
+       ],
+       "none": [
+        "Monster"
+       ]
+      },
+      "when": "Within 6\" of Szarekh, if The Silent King has Phaeron of the Stars this battle round",
+      "selfWhen": "Own aura, if it has Phaeron of the Stars this battle round",
+      "note": "re-roll hit rolls of 1 and wound rolls of 1",
+      "from": "Phaeron of the Stars"
+     },
+     {
+      "kind": "melee",
+      "needs": {
+       "all": [
+        "Faction: Necrons"
+       ],
+       "none": [
+        "Monster"
+       ]
+      },
+      "when": "Within 6\" of Szarekh, if The Silent King has Phaeron of the Blades this battle round",
+      "selfWhen": "Own aura, if it has Phaeron of the Blades this battle round",
+      "note": "+1 S (and re-roll Charge rolls)",
+      "from": "Phaeron of the Blades"
+     }
+    ],
+    "mods": [
+     {
+      "kind": "all",
+      "when": "Damaged (Szarekh 1-6 wounds left)",
+      "note": "-1 to hit rolls; Szarekh’s weapons: halve A",
+      "from": "Damaged: 1-6 wounds remaining"
+     }
+    ]
+   },
+   "Flayed Ones": {
+    "mods": [
+     {
+      "kind": "melee",
+      "when": "Target Below Half-strength",
+      "note": "a successful hit roll scores a Critical Hit",
+      "from": "Flesh Hunger"
+     }
+    ]
+   },
+   "Immortals": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "Every attack",
+      "note": "re-roll wound rolls of 1",
+      "from": "Implacable Eradication",
+      "always": true,
+      "calc": {
+       "rrWound": "1s"
+      }
+     },
+     {
+      "kind": "all",
+      "when": "Target within range of an objective marker",
+      "cond": "targetObjective",
+      "note": "re-roll the wound roll",
+      "from": "Implacable Eradication",
+      "calc": {
+       "rrWound": "all"
+      }
+     }
+    ]
+   },
+   "Canoptek Spyders": {
+    "guard": [
+     {
+      "from": "Fabricator Claw Array",
+      "needs": {
+       "all": [
+        "Faction: Necrons",
+        "Vehicle"
+       ]
+      },
+      "kind": "all",
+      "when": "Within 6\" of a Canoptek Spyder with a fabricator claw array",
+      "selfWhen": "Own aura",
+      "selfAlways": true,
+      "note": "Feel No Pain 6+",
+      "calc": {
+       "fnp": 6
+      }
+     },
+     {
+      "from": "Gloom Prism",
+      "needs": {
+       "all": [
+        "Faction: Necrons"
+       ]
+      },
+      "kind": "all",
+      "when": "Within 6\" of a Canoptek Spyder with a gloom prism",
+      "selfWhen": "Own aura",
+      "selfAlways": true,
+      "note": "Feel No Pain 5+ against mortal wounds and Psychic Attacks"
+     }
+    ]
+   }
+  },
+  "rules": {
+   "Worthy Foes": {
+    "mods": [
+     {
+      "kind": "all",
+      "when": "Vs the enemy unit you selected in your Command phase, until the start of your next Command phase",
+      "note": "+1 to wound rolls",
+      "from": "Worthy Foes"
+     }
+    ]
+   }
+  }
+ },
+ "armyRules": {
+  "Reanimation Protocols": {
+   "texts": {
+    "from": "\n**Example:** A unit of Lokhust Destroyers (which have a Wounds characteristic of 3) activates its Reanimation Protocols. The unit had a Starting Strength of 3, but currently contains 2 models, and one of those models has lost 1 wound. A 3 is rolled to see how many wounds are reanimated. The first of these reanimated wounds restores the wounded Lokhust Destroyer back to 3 wounds. The second of these reanimated wounds returns the destroyed Lokhust Destroyer to the battlefield with 1 wound remaining. The third of these reanimated wounds restores one of the remaining lost wounds to the same Lokhust Destroyer that was just returned. The unit now contains 3 models, two of which have 3 wounds remaining and one of which has 2 wounds remaining.",
+    "to": "",
+    "why": "GW Faction Pack Necrons 1.3, Rules Updates, Reanimation Protocols Army Rule, “Change to:” the two paragraphs (“If your Army Faction is NECRONS, at the end of your Command phase, … that unit heals D3 wounds.”), with no Example; Wahapedia still prints the codex’s Example after its errata box."
+   }
+  }
+ }
+}

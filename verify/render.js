@@ -41,7 +41,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   const IMPORT_FILE = path.join(ROOT, 'verify/sources/nr-json/6-bigs.json');
   const IMPORT_BAD = (j => { j.roster.forces[0].selections.find(x => x.name === 'Knight Errant').name = 'Knight Errant Mk II'; return j; })(JSON.parse(fs.readFileSync(IMPORT_FILE, 'utf8')));
   const fail = (check, army, where, detail) => failures.push({ check, army, where, detail });
-  const armies = await page.evaluate(() => WH_DATA.armies.map(a => ({ id:a.id, units:a.units.map(u => u.id) })));
+  const armies = await page.evaluate(() => WH_DATA.armies.map(a => ({ id:a.id, units:a.units.concat(a.refs || []).map(u => u.id) })));
   // a fresh folder each run, so a list that left the app leaves no old snapshot behind
   if(main) fs.rmSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true, force:true });
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
@@ -174,7 +174,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const res = await page.evaluate(armyId => {
       const out = [], A = WH_DATA.armies.find(x => x.id === armyId);
       hideSheet(); go({ s:'army', army:armyId });
-      const onceOf = ab => { const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec((ab.tag || '') + ' ' + (ab.text || '')); return m && m[0].toLowerCase(); };
+      // (not a limit on what the ability selects, "Each model can only be selected for this ability once per turn": the Technomancer's
+      // use is not limited, the app's onceTag shows none)
+      const onceOf = ab => { const m = /(?<!\bselected for this ability )once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec((ab.tag || '') + ' ' + (ab.text || '')); return m && m[0].toLowerCase(); };
       for(const u of A.units){
         go({ s:'unit', army:armyId, unit:u.id });
         document.querySelectorAll('#view details').forEach(d => d.open = true);

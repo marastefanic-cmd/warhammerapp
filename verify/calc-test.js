@@ -515,7 +515,7 @@ const asSet = u => { const s = u.stats[0], n = / ×(\d+)$/.exec(s.name); return 
 {
   const A = dm.D.armies, pick = (l, n) => l.slice(0, n);
   let i = 0;
-  for(const a of A) for(const b of A) if(a !== b) for(const ph of ['shooting', 'fight']) for(const au of pick(a.units.filter(u => (ph === 'fight' ? u.melee : u.ranged || []).length), 2)) for(const tu of pick(b.units, 2)) for(const state of ['start', 'all', 'none']){
+  for(const a of A) for(const b of A) if(a !== b) for(const ph of ['shooting', 'fight']) for(const au of pick(a.units.filter(u => ((ph === 'fight' ? u.melee : u.ranged) || []).length), 2)) for(const tu of pick(b.units, 2)) for(const state of ['start', 'all', 'none']){
     if((i++ % 11) !== 0) continue;   // a fixed sample, the same every run
     const s = { army:a.id, ph, atk:au.id, typed:asSet(tu), on:{} };
     const c0 = dm.calc(s);
@@ -541,7 +541,7 @@ const asSet = u => { const s = u.stats[0], n = / ×(\d+)$/.exec(s.name); return 
 {
   const A = dm.D.armies;
   let i = 0;
-  for(const a of A) for(const b of A) if(a !== b) for(const tu of b.units) for(const ph of ['shooting', 'fight']) for(const au of a.units.filter(u => (ph === 'fight' ? u.melee : u.ranged || []).length).slice(0, 2)){
+  for(const a of A) for(const b of A) if(a !== b) for(const tu of b.units) for(const ph of ['shooting', 'fight']) for(const au of a.units.filter(u => ((ph === 'fight' ? u.melee : u.ranged) || []).length).slice(0, 2)){
     const t = asSet(tu); if(t.W !== 1) continue;
     const c = dm.calc({ army:a.id, ph, atk:au.id, typed:t });
     if(!c || !c.input.groups.length || (i++ % 3) !== 0) continue;

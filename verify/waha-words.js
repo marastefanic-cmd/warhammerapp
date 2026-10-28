@@ -158,6 +158,8 @@ const block = (key, rows) => rows && rows.length ? '      ' + key + ':[\n' + row
 function unitSrc(u) {
   const head = ['id', 'name', 'short', 'role', 'pts', 'copies', 'ptsNote', 'enhancement', 'enhOn', 'upgrade', 'warlord', 'warlordOn'].filter(k => u[k] !== undefined).map(k => k + ':' + lit(u[k])).join(', ');
   let s = '    {\n      ' + head + ',\n';
+  // (a reference sheet: what adds it to the army)
+  if (u.ref) s += '      ref:' + lit(u.ref) + ',\n';
   if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + (u.also ? ', also:' + lit(u.also) : '') + ',\n';
   s += '      models:' + lit(u.models) + ',\n' + (u.unplaced ? '      unplaced:' + lit(u.unplaced) + ',\n' : '') + '      gear:' + lit(u.gear) + ',\n';
   const AB = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'note', 'def', 'na', 'text'];   // an ability's fields in data.js's order
@@ -165,7 +167,7 @@ function unitSrc(u) {
   s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
   if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
   s += block('aura', u.aura) + block('guard', u.guard);
-  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + '\n    }';
+  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + (u.srcNote ? ',\n      srcNote:' + lit(u.srcNote) : '') + '\n    }';
   return s;
 }
 

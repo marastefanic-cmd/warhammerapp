@@ -786,7 +786,8 @@ const usedUpdates = new Set();
 // Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
 // changes the datasheet's Bloody Fury (Wahapedia, BSData and New Recruit name it so; the new text is that ability's)
 const TITLE_TYPOS = { 'chaos terminators, blood fury ability': 'chaos terminators, bloody fury ability' };
-const titleN = e => { const t = norm(e.title).replace(/['"]/g, ''); return TITLE_TYPOS[t] || t; };
+// (an ARMY RULES title naming the rule with its kind, the Necrons pack's "Reanimation Protocols Army Rule": the rule's name)
+const titleN = e => { const t = norm(e.title).replace(/['"]/g, '').replace(/ army rule$/, ''); return TITLE_TYPOS[t] || t; };
 // a datasheet name in a Rules Updates title: at its start or after a separator, not the end of a longer name
 // ("Eightbound" is not in "Exalted Eightbound, Rend and Tear Ability")
 const nameInTitle = (n, t) => new RegExp('(^|[,–-]|(?<!\\p{L}) |(?<=\\band) )' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(,| –| -|$)', 'u').test(t);
@@ -1277,7 +1278,9 @@ for (const a of D.armies) {
       const unitHit = nameInTitle(ds, t);
       if (!unitHit) continue;
       let hit = false, part;
-      if (t.includes(', ' + an + ' ability') || t.includes('– ' + an + ' ability') || t.includes('- ' + an + ' ability') || t.includes('– ' + an + ' wargear ability') || t.includes('- ' + an + ' wargear ability')) hit = true;
+      // (GW's title can name a plural ability in the singular: "Biovores, Seed Spore Mine Ability" for Seed Spore Mines)
+      if (/s$/.test(an) && t.endsWith(', ' + an.slice(0, -1) + ' ability')) hit = true;
+      else if (t.includes(', ' + an + ' ability') || t.includes('– ' + an + ' ability') || t.includes('- ' + an + ' ability') || t.includes('– ' + an + ' wargear ability') || t.includes('- ' + an + ' wargear ability')) hit = true;
       else if (/damaged section$/.test(t) && /^damaged/.test(an)) hit = true;
       else if (/abilities section$/.test(t) && /^Add new ability:/.test(e.instr)) { const m = /^([^:]+):\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an) { hit = true; part = m[2]; } }
       if (!hit) continue;
@@ -1405,13 +1408,32 @@ function nearLine(n, src) {
 // documents or Wahapedia, a piece at a time where it leaves words out ("…"), or in the text of the item the note is on
 // (its rule or stratagem, the unit's abilities), which the other checks verify.
 const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k)));   // GW's first
-function checkQuotes(army, unit, note, own) {
+// (and, for a note on a unit's ability, the unit's Wahapedia datasheets: a Designer's Note GW prints under an ability, verify/.cache/waha/ds)
+// (a page is "<faction>_<Datasheet>.html" as verify/fetch.sh names it from sources/waha-datasheets.txt: the list's faction first, then
+// its Wahapedia id in sources/factions.json, then any other, an ally's)
+const WAHA_ID = (() => { try { return Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(path.join(VERIFY, 'sources', 'factions.json'), 'utf8'))).filter(([k, v]) => k[0] !== '_' && v && v.waha).map(([k, v]) => [k, v.waha])); } catch (e) { return {}; } })();
+const dsDocIds = (faction, names) => {
+  const dir = path.join(CACHE, 'waha', 'ds'), key = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
+  const want = new Set(names.filter(Boolean).map(key)), out = [], pre = [faction, WAHA_ID[faction]].filter(Boolean);
+  const files = (fs.existsSync(dir) ? fs.readdirSync(dir) : []).filter(f => f.endsWith('.html') && f.includes('_') && want.has(key(f.slice(f.indexOf('_') + 1, -5))));
+  const rank = f => { const i = pre.indexOf(f.slice(0, f.indexOf('_'))); return i < 0 ? pre.length : i; };
+  // (per name: the list's faction's and its Wahapedia id's pages when there are any, else another faction's, an ally's: a Chaos
+  // Spawn or Daemon Prince of another faction is not this unit's datasheet)
+  const byName = new Map(); for (const f of files) { const k = key(f.slice(f.indexOf('_') + 1, -5)); if (!byName.has(k)) byName.set(k, []); byName.get(k).push(f); }
+  for (const f of [...byName.values()].flatMap(grp => { const own = grp.filter(x => rank(x) < pre.length); return (own.length ? own : grp).sort((a, b) => rank(a) - rank(b)); })) {
+    const id = 'wahads:' + f.slice(0, -5);
+    if (!DOCS[id]) loadWahaHtml(id, path.join(dir, f), 'Wahapedia datasheet ' + f.slice(f.indexOf('_') + 1, -5));
+    out.push(id);
+  }
+  return out;
+};
+function checkQuotes(army, unit, note, own, extra) {
   for (const m of String(note || '').matchAll(/“([^”]+)”/g)) {
     for (const piece of m[1].split(/…|\.\.\./)) {
       const n = norm(stripMarkup(piece)).replace(/^[\s.,;:]+|[\s,;:]+$/g, '');
       if (!/[a-z0-9]/.test(n)) continue;
       count('noteQuote');
-      const r = locate(n, ALL_DOCS);
+      const r = locate(n, ALL_DOCS) || (extra && extra.length ? locate(n, extra) : null);
       if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) }); continue; }
       if (own.some(t => normField(t).includes(n))) { prov.push({ item: army + ' / ' + unit, field: 'note', doc: 'data.js', file: 'data.js', sha256: null, where: 'the text of the item the note is on', text: piece.trim().slice(0, 80) }); continue; }
       fail('noteQuote', army, unit, 'note', m[0], 'quoted words not in any source, nor in the text the note is on: "' + piece.trim() + '"' + (nearest(n, ALL_DOCS).text ? ' | ' + nearest(n, ALL_DOCS).text : ''), '');
@@ -1434,7 +1456,9 @@ for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities 
   const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
   // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
   const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.flatMap(d => detRules_(d).map(r => r.text)));
-  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own);
+  // (a reference sheet's: also the sheet it is from and the unit whose rule adds it, the Pink Horrors' Designer's Note on the Brimstone Horrors)
+  const by = u.ref && a.units.find(x => x.id === u.ref.by), names = x => [x.name, x.leads].concat((x.also || []).map(c => c.name));
+  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own, dsDocIds(a.faction, names(u).concat(u.ref ? [u.ref.of] : [], by ? names(by) : [])));
 }
 
 /* ------------------------------------------------------------------ deviations, output, provenance */

@@ -227,7 +227,9 @@ function usedIn(text, ctx, trig){
   if(afterCharge && reasons.some(r => r.rule === 'any-attack' || r.rule === 'weapons-have')) reasons.push({ rule:'after-charge', match:afterCharge[0] });
   // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger; one that lasts "until the end of the turn" is
   // triggered in that turn, even when derive.js reads no trigger in its words: Shudderblink's [ASSAULT] after an advance move)
-  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t)){
+  // (not one that holds only "in a turn in which it Fell Back/Advanced": both are moves of your own Movement phase, Core Rules 09.02,
+  // 09.07, so never in the opponent's turn, when Fire Overwatch is used)
+  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
       const w = explicitTiming(cs.when.split(/[.:]/)[0]);
@@ -1176,10 +1178,13 @@ function ruleTables(D){
       const before = sent.slice(0, m.index);
       const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
       const rs = [];
-      const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+      // (the clause just before the verb names who has it: "while the bearer is within 6" of one or more friendly HARVESTER units,
+      // models in the bearer's unit have the Fights First ability" gives it to the bearer's unit, not to the HARVESTER units)
+      const own = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i, last = before.split(/,\s*/).pop();
+      const to = own.test(before) && (!(subj && subj.run) || (/\b(?:this|the bearer'?s?) (?:unit|model)\b/i.test(last) && !(friendlyUnit(V, last + ' ', { any:true }) || {}).run)) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
       // (the condition opens the sentence, or follows the moment it is checked at: Duellist’s Hubris, "At the start of the Fight phase; if
-      // this model is not leading a unit, …")
-      const cond = (/^(?:at the (?:start|end) of [^,;]+[,;] )?((?:while|if|when|until) [^,]+)/i.exec(plain(sent)) || [])[1];
+      // this model is not leading a unit, …", or "In addition, ": Instinctive Defence)
+      const cond = (/^(?:at the (?:start|end) of [^,;]+[,;] |in addition, )?((?:while|if|when|until) [^,]+)/i.exec(plain(sent)) || [])[1];
       const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
       // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
       const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;
@@ -1401,4 +1406,4 @@ if(require.main === module){
   if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
   process.exit(drift.length || items.tablesStale || ckStale ? 1 : 0);
 }
-module.exports = { derive, ruleTables, readingsOf, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };

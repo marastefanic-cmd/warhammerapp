@@ -54,6 +54,11 @@ const P = {
 };
 const PTS = '51b2-306e-1021-d207';             // BSData cost type "pts"
 const WEAPON_TYPES = ['Ranged Weapons', 'Melee Weapons'];
+// (a profile of another type with a weapon's characteristics is a weapon: the Tesseract Vault's "C'tan Powers", GW's RANGED WEAPONS
+// [C'TAN POWER]; verify/from-json.js reads them so)
+const weaponShaped = (p) => p.typeName !== 'Unit' && ['Range', 'A', 'S', 'AP', 'D'].every((k) => (p.chars || p.characteristics || []).some((c) => c.name === k)) && (p.chars || p.characteristics || []).some((c) => c.name === 'BS' || c.name === 'WS');
+const isWeaponProf = (p) => WEAPON_TYPES.includes(p.typeName) || weaponShaped(p);
+const weaponKind = (p, ch) => p.typeName === 'Ranged Weapons' || (!WEAPON_TYPES.includes(p.typeName) && !/^melee$/i.test(ch.Range || '')) ? 'ranged' : 'melee';
 
 /* ---------------------------------------------------------------------
    Normalisation (the whole list; the report quotes it)
@@ -668,6 +673,9 @@ function buildRoster(army, MAP, issues) {
   // units, every copy
   const built = [];
   for (const u of army.units) {
+    // (a reference sheet of models GW prints on another sheet's datasheet, ref.of: the Brimstone Horrors on the Blue Horrors': no BSData
+    // entry of its own; that sheet's entry is checked as that sheet)
+    if (u.ref && u.ref.of) continue;
     const um = (MAP.units || {})[`${army.id}/${u.id}`] || {};
     const copies = [];
     for (let c = 0; c < (u.copies || 1); c++) copies.push(buildUnit(army, u, um, cat, force, c === 0 ? issues : []));
@@ -743,6 +751,10 @@ function buildUnit(army, u, um, cat, force, issues) {
       // the models line names the bundle whose weapon the gear names (the Shield-Captain's "Paragon Blade & Praesidium Shield",
       // which holds its Eternity-pattern Paragon Blade): the place the weapon took is that bundle's one selection
       if (it.line && own.some((x, i) => i !== j && picks[i] && picks[i] !== 'same' && x.parent === it.parent && it.cands.some((q) => pathKey(q) === pathKey(picks[i])))) { picks[j] = 'same'; return; }
+      // (one selection whose profiles are separate weapons of another type, the Tesseract Vault's "C'tan Powers": each weapon the gear
+      // names is that selection's)
+      const leafOf = (q) => q[q.length - 1], shaped = (q) => { const n = leafOf(q); const ps = n ? profilesOf(n) : []; return ps.length > 1 && ps.every((p) => weaponShaped(p) && !WEAPON_TYPES.includes(p.typeName)); };
+      if (own.some((x, i) => i !== j && picks[i] && picks[i] !== 'same' && x.parent === it.parent && it.cands.some((q) => pathKey(q) === pathKey(picks[i]) && shaped(q)))) { picks[j] = 'same'; return; }
       const k = own.findIndex((x, i) => i < j && picks[i] && x.name === it.name && x.parent === it.parent);
       if (k < 0) return;
       const n = (times.get(k) || 1) + 1, leaf = picks[k][picks[k].length - 1];
@@ -840,7 +852,7 @@ function unitFacts(roots) {
   for (const s of all) {
     if (s.hidden) continue;
     for (const c of s.cats) { const ce = SRC.get(c); if (ce && !catHidden(ce, s)) { F.cats.add(nn(ce.name)); F.catWhere[nn(ce.name)] = s.where(); } }
-    const isWeapon = s.profiles.some((p) => WEAPON_TYPES.includes(p.typeName));
+    const isWeapon = s.profiles.some(isWeaponProf);
     for (const p of s.profiles) {
       if (p.hidden) continue;
       const ch = Object.fromEntries(p.chars.map((c) => [c.name, c.value]));
@@ -848,9 +860,9 @@ function unitFacts(roots) {
         let count = s.count;
         if (s.kind === 'unit') count = s.desc(false).filter((d) => d.kind === 'model' && !d.profiles.some((q) => q.typeName === 'Unit' && !q.hidden)).reduce((a, d) => a + d.count, 0) || 1;
         F.stats.push({ root: s.root, name: nn(p.name), ch, count, changes: p.changes || [], where: s.where() });
-      } else if (WEAPON_TYPES.includes(p.typeName)) {
+      } else if (isWeaponProf(p)) {
         const w = parseWeaponName(p.name, s.node.name);
-        F.weapons.push({ root: s.root, kind: p.typeName === 'Ranged Weapons' ? 'ranged' : 'melee', ...w, ch, kw: kwList(ch.Keywords), count: s.count, enh: !!s.isEnhancement, changes: p.changes || [], where: `${s.where()} › ${p.name}` });
+        F.weapons.push({ root: s.root, kind: weaponKind(p, ch), ...w, ch, kw: kwList(ch.Keywords), count: s.count, enh: !!s.isEnhancement, changes: p.changes || [], where: `${s.where()} › ${p.name}` });
       } else {
         const text = p.chars.map((c) => c.value).join('\n');
         F.abilities.push({ root: s.root, name: nn(p.name), typeName: p.typeName, text, sel: s, infoGroup: p.infoGroup || null, enh: !!s.isEnhancement, where: `${s.where()} › ${p.name}` });
@@ -877,7 +889,7 @@ function datasheetAbilities(root) {
   const out = []; const q = [[root.node, root.node.name]]; const seen = new Set();
   while (q.length) {
     const [n, w] = q.shift();
-    for (const p of profilesOf(n)) if (p.typeName && p.typeName !== 'Unit' && !WEAPON_TYPES.includes(p.typeName)) {
+    for (const p of profilesOf(n)) if (p.typeName && p.typeName !== 'Unit' && !isWeaponProf(p)) {
       out.push({ root, name: nn(p.name), typeName: p.typeName, text: (p.characteristics || []).map((c) => c.$text || '').join('\n'), where: `${w} › ${p.name} (not selected in this list)` });
     }
     for (const k of kids(n)) { const key = k.id + '|' + k.linkId; if (seen.has(key) || /Enhancements/.test(k.name)) continue; seen.add(key); q.push([k, `${w} › ${k.name}`]); }
@@ -1049,10 +1061,20 @@ function compareUnit(army, u, F, fail) {
     const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name) || (spelt && (x === nn(spelt) || splitAbilityName(x).base === nn(spelt))));
     let cands = pool.filter(nameOk);
     if (!cands.length && a.na) cands = F.roots.flatMap((r) => datasheetAbilities(r)).filter(nameOk);
+    // (a name that is only BSData's profile type of several abilities, "Triarch Abilities", is none of them: the app's ability of that
+    // name is the one BSData words alike under another name, Voice of the Triarch, its name reported as BSData's other ability)
+    let renamed = null;
+    if (cands.length > 1 && cands.every((b) => b.name !== nn(a.name) && splitAbilityName(b.name).base !== nn(a.name))) {
+      const words = (t) => new Set(nt(t).toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean));
+      const alike = (x, y) => { const A = words(x), B = words(y); let k = 0; for (const w of A) if (B.has(w)) k++; return k / Math.max(1, new Set([...A, ...B]).size); };
+      const w = pool.filter((b) => !cands.includes(b) && b.typeName === 'Abilities' && alike(b.text, a.text) >= 0.8)[0];
+      if (w) { cands = [w]; renamed = w; }
+    }
     checked('abilities');
     if (!cands.length) { fail('ability', a.name, '', `no BSData ability "${a.name}"${a.who ? ' for ' + a.who : ''}${isEnh ? ' (enhancement)' : ''}${a.na ? ' (looked in the whole datasheet)' : ''}`); continue; }
     const best = cands.find((b) => nt(b.text) === nt(a.text)) || cands[0];
     usedA.add(best);
+    if (renamed) { checked('abilities'); fail('ability', '', renamed.name, `${renamed.where}: BSData's name of the app's ${a.name}`); }
     const bname = names(best).find((x) => x === nn(a.name)) || best.name;
     if (bname !== nn(a.name)) {
       checked('abilities');
@@ -1076,7 +1098,8 @@ function compareUnit(army, u, F, fail) {
   /* role: the primary category of the (leader's) datasheet */
   checked('keywords');
   const prim = F.roots[0].primary && SRC.get(F.roots[0].primary);
-  if (nn(u.role) !== nn(prim && prim.name)) fail('role', u.role, prim ? prim.name : '', `${F.roots[0].where()}: primary category`);
+  // (a reference sheet is listed under Reference, as New Recruit lists its reference entries)
+  if (nn(u.role) !== nn(prim && prim.name) && !(u.ref && u.role === 'Reference')) fail('role', u.role, prim ? prim.name : '', `${F.roots[0].where()}: primary category`);
   /* keywords */
   const appKw = new Set((u.kw || []).map(nn));
   for (const k of appKw) { checked('keywords'); if (!F.cats.has(k)) fail('kw', k, '', `not a category of ${F.roots.map(rootName).join(' / ')}`); }
@@ -1133,7 +1156,10 @@ function compareUnit(army, u, F, fail) {
    order, so the check looks for an order that makes every copy match.
 --------------------------------------------------------------------- */
 function unitCost(roots) { let t = 0; for (const r of roots) for (const s of r.desc(true)) t += costOf(s); return t; }
-function comparePoints(army, built, failArmy) {
+function comparePoints(army, built0, failArmy) {
+  // (a reference sheet, ref: a unit a rule of the list adds later, not in the army: no points, and no place in the datasheet's escalation)
+  for (const b of built0.filter((x) => x.u.ref)) { checked('points'); if (b.u.pts !== 0) failArmy(b.u.id, 'pts', String(b.u.pts), '0', 'a reference sheet has no points'); }
+  const built = built0.filter((x) => !x.u.ref);
   const pools = new Map();               // datasheet entry id → roots in roster order
   for (const b of built) for (const c of b.copies) for (const r of c.roots) { const k = r.node.id; if (!pools.has(k)) pools.set(k, []); pools.get(k).push(r); }
   const slots = []; for (const b of built) b.copies.forEach((c, i) => slots.push({ b, c, i }));

@@ -374,6 +374,8 @@ function build(R){
       const ab = k && !(why.kw && why.kw[k]) && (u.abilities || []).find(y => y.name === 'Daemonic Allegiance' && (y.text || '').includes('**' + k.toUpperCase() + '**'));
       if(ab) put('kw', k, ab.name + ': ' + g[1]); }
     if(why.kw && why.kw.Battleline && u.role === 'Battleline') put('role', 'Battleline', why.kw.Battleline);
+    // (a reference sheet's role, Reference, is the list's: the datasheet is a buyable one, Blue Horrors' Battleline)
+    if(u.ref && u.role === 'Reference') put('role', 'Reference', 'a reference sheet (ref)');
     const own = ownAbilities(u);
     for(const r of u.rules || []){
       if(nativeRule(r)) continue;   // (a rule the datasheet itself has: the Sorcerer in Terminator Armour's Deep Strike, not Umbralefic Crystal's)
@@ -400,6 +402,13 @@ function build(R){
   // the list's only where lists differ: a value an ability of the unit gives (Kustom Force Field: 4+* InSv), a weapon ability
   // on the Rules line from the wargear taken
   const rowWhy = (o, f) => {
+    // (an ability's note that names a detachment rule of the list, Singular Purpose's "With Enraged Behemoths’ …" in Crusher Stampede:
+    // the list's, not the datasheet's)
+    if(o.kind === 'abilities' && f === 'note'){
+      const F = (R.factions || {})[o.U.a.faction] || {}, note = String(o.r.note || '');
+      const names = o.U.a.detachments.flatMap(d => { const x = (F.detachments || {})[d] || {}; return [x.rule].concat(x.moreRules || []).filter(Boolean).map(r => r.name); });
+      return names.find(n => n && note.includes(n)) || null;
+    }
     if(o.kind !== 'stats' || f !== 'InSv') return null;
     const v = String(o.r[f] || '').replace('*', '');
     if(!/^\d\+$/.test(v)) return null;
@@ -574,8 +583,9 @@ function build(R){
     const [sid, f] = k.split('\0'), s = sheetOf(sid);
     const all = s.all.filter(U => !(f in U.entry) && !(U.entry.over && f in U.entry.over));
     const merged = new Map(); for(const x of xs){ const m = merged.get(x.U) || { above:[], inline:[] }; m.above.push(...x.c.above); m.inline.push(...x.c.inline); merged.set(x.U, m); }
-    const cs = all.map(U => merged.get(U));
-    if(cs.every(c => c && stable(c) === stable(cs[0]))){ (s.fieldComments = s.fieldComments || {})[f] = cs[0]; continue; }
+    // (a unit a new list just added in full, with no comment on the field: the others' one comment stays on the datasheet)
+    const cs = all.map(U => merged.get(U)), said = cs.filter(Boolean);
+    if(said.length && said.every(c => stable(c) === stable(said[0]))){ (s.fieldComments = s.fieldComments || {})[f] = said[0]; continue; }
     for(const [U, c] of merged) addC(AC, [U.ai, 'units', U.ui, 'ds'], c);
   }
   // the datasheets: by faction (FACTIONS' order), then as the lists first show them

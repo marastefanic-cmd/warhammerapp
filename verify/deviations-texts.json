@@ -54,6 +54,15 @@
   "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). New Recruit prints \"friendly TYRANIDS unit\" (verify/sources/nr/nidzillas.txt p3)."
  },
  {
+  "army": "healybois",
+  "unit": "hive-tyrant-tyrant-guard",
+  "field": "ability:Onslaught (Hive Tyrant)",
+  "app": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+  "source": "Rules Updates \"Change to:\": while a friendly tyranidsunit is within 6\" of this model, ranged weapons equipped by models in that unit have the [assault] and [lethal hits] abilities. | differs at \"…while a friendly tyranids[ unit is within 6\" of this model, ranged…]\" vs source \"…while a friendly tyranids[unit is within 6\" of this model, ranged …]\"",
+  "reason": "Typo in the Faction Pack: \"TYRANIDSunit\" has no space; the app writes \"TYRANIDS unit\". Every other word is the pack's.",
+  "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). BSData and New Recruit have \"friendly TYRANIDS unit\" (verify/sources/nr-json/healybois.json, Hive Tyrant, Onslaught)."
+ },
+ {
   "army": "purge-goes-the-foe",
   "unit": "thulia-ghuld",
   "field": "ability:Rod of the War Forge",
@@ -142,5 +151,23 @@
   "source": "(no part of it found) | sentences not found: [\"onslaught: retinue units 3, character units 3, requisitioned units 2\"]",
   "reason": "A table written as lines: Wahapedia prints Assigned Agents' limits as a table (BATTLE SIZE | RETINUE UNITS | CHARACTER UNITS | REQUISITIONED UNITS, a row per battle size); the app writes each row as one line, the battle size, then each column's heading and its number. No number or heading changed.",
   "evidence": "verify/.cache/waha/imperial-agents.html, Army Rules, Assigned Agents (text: verify/.cache/waha/imperial-agents.txt lines 22-25: \"BATTLE SIZE RETINUE UNITS CHARACTER UNITS REQUISITIONED UNITS / Incursion 1 1 1 / Strike Force 2 2 1 / Onslaught 3 3 2\"). GW's Imperial Agents Faction Pack does not reprint the army rule."
+ },
+ {
+  "army": "core",
+  "unit": "rule:C’tan Power",
+  "field": "text",
+  "app": "**Powers of the C’tan** (Tesseract Vault): In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
+  "source": "…matches up to \"powers of the \" then source has: \"warp, thousand sons sorcerers infuse vehicles with empyric energies to render them even deadlier. when: your shooting ph\" | sentences not found: [\"powers of the c'tan (tesseract vault): in your shooting phase, when this model is selected to shoot, first select up to two different c'tan powers weapons (see left).\",\"until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other c'tan powers weapon you did not select in this way this phase).\"]",
+  "reason": "[C’TAN POWER] has no core-rules or glossary definition (GW's Core Rules, the Universal Rules Updates and Wahapedia's core rules have none): GW's Tesseract Vault datasheet prints it on its three C’tan Powers weapons (Antimatter Meteor, Cosmic Fire, Time’s Arrow), which its Powers of the C’tan ability selects. So the glossary entry gives that ability's words, named by it (\"Powers of the C’tan (Tesseract Vault):\", the app's label), as the Conversion entry does. GW's Faction Pack Necrons 1.3 does not reprint the Tesseract Vault datasheet; the Wahapedia Tesseract Vault datasheet (the codex) is the only source of these words, which texts.js does not search for glossary entries.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: RANGED WEAPONS \"Antimatter Meteor [blast, devastating wounds, indirect fire, c'tan power]\", \"Cosmic Fire [ignores cover, devastating wounds, torrent, c'tan power]\", \"Time’s Arrow [anti-character 4+, devastating wounds, precision, c'tan power]\"; ABILITIES \"Powers of the C'tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C'tan Powers weapon you did not select in this way this phase).\""
+ },
+ {
+  "army": "necrons",
+  "unit": "detachment:the-phaerons-armoury/enhancement:Prelocational Optimiser",
+  "field": "pts",
+  "app": "25",
+  "source": "not on Wahapedia (the only source with points)",
+  "reason": "GW's Faction Pack Necrons 1.3 names the enhancement Prelocational Optimiser (as BSData does) and prints no points; Wahapedia, the only source with points, names it \"Relocational Optimiser\" at 25 pts, the points the app has (BSData: Prelocational Optimiser, 25 pts). Not in this list.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt, The Phaeron’s Armoury, ENHANCEMENTS: \"PRELOCATIONAL OPTIMISER\"; verify/.cache/waha/necrons.txt (The Phaeron's Armoury 1DP): \"- Relocational Optimiser 25 pts\"; verify/.cache/bsdata/Necrons.json: \"Prelocational Optimiser\", cost 25."
  }
 ]

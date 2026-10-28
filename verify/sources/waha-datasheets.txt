@@ -48,6 +48,11 @@ tyranids Neurogaunts
 tyranids Norn-Assimilator
 tyranids Norn-Emissary
 tyranids Tyrannofex
+tyranids Tyrant-Guard
+tyranids Biovores
+tyranids Pyrovores
+tyranids Ripper-Swarms
+tyranids Spore-Mines
 imperial-knights Knight-Destrier
 imperial-knights Knight-Errant
 imperial-knights Knight-Paladin
@@ -138,6 +143,7 @@ chaos-daemons Lord-of-Change
 chaos-daemons Pink-Horrors
 chaos-daemons Flamers
 chaos-daemons Soul-Grinder
+chaos-daemons Blue-Horrors
 chaos-space-marines Vashtorr-The-Arkifane
 chaos-space-marines Dark-Apostle
 chaos-space-marines Lord-Discordant-On-Helstalker
@@ -156,3 +162,16 @@ imperial-knights Knight-Defender
 imperial-agents Navigator
 emperors-children Fulgrim
 emperors-children Sorcerer
+necrons Imotekh-The-Stormlord
+necrons Nekrosor-Ammentar
+necrons The-Silent-King
+necrons Royal-Warden
+necrons Flayed-Ones
+necrons Ophydian-Destroyers
+necrons Canoptek-Reanimator
+necrons Tesseract-Vault
+necrons Technomancer
+necrons Immortals
+necrons Canoptek-Scarab-Swarms
+necrons Canoptek-Spyders
+thousand-sons Chaos-Spawn

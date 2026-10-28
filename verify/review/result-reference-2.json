@@ -1,0 +1,207 @@
+[
+ {
+  "key": "a578f61fccf83ee2",
+  "where": "mucho-mutantes · Chaos Spawn · Regenerating Monstrosities",
+  "verdict": "ok",
+  "why": "“At the start of each player’s Command phase”: Command, either turn (GW, Wahapedia thousand-sons_Chaos-Spawn)."
+ },
+ {
+  "key": "979731f08da0113d",
+  "where": "mucho-mutantes · Chaos Spawn",
+  "verdict": "ok",
+  "why": "GW: “Every model is equipped with: hideous mutations.” One melee profile D6+2 4+ 5 -1 2; no ranged weapons. (--compare shows chaos-spawn.ranged undefined vs []: cosmetic.)"
+ },
+ {
+  "key": "ff205dd581520bc3",
+  "where": "tzeeeeentch · Brimstone Horrors",
+  "verdict": "ok",
+  "why": "GW’s carrier line: “Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws.” Rows without “(ref. only)” and carrier, as a sheet of those models should be."
+ },
+ {
+  "key": "e12a1305f3a3b8dd",
+  "where": "unitMods",
+  "verdict": "ok",
+  "why": "canTarget in place of eligible(s).includes(u): same for every unit of a.units, adds reference sheets (my round-1 patch, applied as given)."
+ },
+ {
+  "key": "de4652d23ad428a5",
+  "where": "defenceItems",
+  "verdict": "ok",
+  "why": "As unitMods: stratagem defences now on reference pages (Brimstone page shows Flickering Reality)."
+ },
+ {
+  "key": "6a5d7b80e8185526",
+  "where": "showGrant",
+  "verdict": "ok",
+  "why": "unitById finds reference sheets."
+ },
+ {
+  "key": "6cdd6362c75e6427",
+  "where": "pickOptions",
+  "verdict": "ok",
+  "why": "“select one Triarch ability” matches who “Triarch Abilities: pick one” via sec + “ abilities”; the old match (sec) still first, so Daemon Primarch boxes unchanged (no other list’s snapshot changed)."
+ },
+ {
+  "key": "5586b16229387514",
+  "where": "resolveRoster",
+  "verdict": "ok",
+  "why": "allOf in instances, the inPool sort and the ref loop, plus the ref.strat loop. Built app (Playwright, scratch worktree): live import of the Mucho Mutantes export gives refs [chaos-spawn], Tzeeeeentch [blue-horrors, brimstone-horrors]; Healybois import works. Minor: the ref.strat sheet comes with any import of those detachments even when no unit could be the stratagem’s target (Gift of Change needs a THOUSAND SONS CHARACTER, excluding MONSTERS); acceptable."
+ },
+ {
+  "key": "f47f5831d74eb213",
+  "where": "deviations-bsdata.json · chaos-spawn · kw",
+  "verdict": "ok",
+  "why": "Wahapedia KEYWORDS: BEAST; CHAOS; TZEENTCH; MUTANT; CHAOS SPAWN. GW wins."
+ },
+ {
+  "key": "7c55e84a49d19c29",
+  "where": "deviations-bases.json · chaos-daemons/brimstone-horrors · Brimstone Horror",
+  "verdict": "ok",
+  "why": "GW prints no Brimstone Horrors datasheet; the Blue Horrors datasheet’s one profile (⌀25mm) is theirs too, and the guide’s “Blue Horrors 25mm” row (line 2927) is the right one to compare."
+ },
+ {
+  "key": "fb592ac1f029d9cb",
+  "where": "app.html · unitsAll, canTarget (reviewer's patch)",
+  "verdict": "ok",
+  "why": "Applied exactly as my patch; full gate on 8529288 passes all but snapshots/helpers; built-app checks (popup close on a ref page stays, Floating Death popup opens, Damage picker lists refs) pass."
+ },
+ {
+  "key": "0b262eaa6fb7d0e2",
+  "where": "import.js · resolveRoster allOf (reviewer's patch)",
+  "verdict": "ok",
+  "why": "As 5586b16229387514."
+ },
+ {
+  "key": "32f0a0c5394a095d",
+  "where": "app.html · screenUnit band",
+  "verdict": "ok",
+  "why": "Reads right for all four: “Not in the army until Gift of Change (1CP): “…””, “Split (Fluxmaster + Pink Horrors): …”, the Blue Horrors datasheet switch with no “adds it”."
+ },
+ {
+  "key": "931a58d29ad70e59",
+  "where": "verify/from-json.js · readings, a detachment rule this run adds (reviewer's patch) + verify/derive.js exports vocab, tidyNeeds",
+  "verdict": "ok",
+  "why": "My round-1 fix, applied verbatim (from-json.js readings block, derive.js exports)."
+ },
+ {
+  "key": "069af20779d3c763",
+  "where": "verify/derive.js · Fire Overwatch modifier",
+  "verdict": "ok",
+  "why": "“in a turn in which it Fell Back/Advanced” can only be your turn (Fall Back and Advance are moves of your Movement phase), so no Fire Overwatch use; derive PASS, no stored label changed."
+ },
+ {
+  "key": "76fc6c5daaf14002",
+  "where": "verify/bsdata.js · ability pairing",
+  "verdict": "ok",
+  "why": "Only when every candidate is named after the profile type and none matches the app’s name; it reports the renaming as a failure to declare (declared). bsdata PASS."
+ },
+ {
+  "key": "7b76044d17ca9e7f",
+  "where": "verify/from-json.js · timing labels",
+  "verdict": "ok",
+  "why": "Searching from the unit’s “abilities:[” avoids the stats row of the same name. It assumes every unit has an abilities block when it has a labelled ability, which holds."
+ },
+ {
+  "key": "7714e9fc9d5bf2a1",
+  "where": "app.html · pickOptions",
+  "verdict": "ok",
+  "why": "As 6cdd6362c75e6427."
+ },
+ {
+  "key": "e8cd9a29973ad225",
+  "where": "app.html · dmCalc defaults",
+  "verdict": "ok",
+  "why": "Only items with a [C’TAN POWER] profile; the first two ticked, rest unticked. Consistent with “up to two different C’tan Powers weapons”; Tesseract Vault stays 4×A6 (owner)."
+ },
+ {
+  "key": "6a478d54eb74f6cb",
+  "where": "verify/from-json.js · shared datasheet rows",
+  "verdict": "ok",
+  "why": "--compare of nidzillas and healybois lose exactly the Hive Commander/Harpoon Barbs/Singular Purpose/Unnatural Resilience differences (GW’s words now in data.js); all 19 other exports’ --compare identical to a499cef. New nidzillas deviations (11 bsdata, 11 nr) are those words declared. Note the gwText test ignores ** only: a row whose words differ by markup and punctuation goes to GW’s words, which is the intent."
+ },
+ {
+  "key": "eb4490ce30c5179a",
+  "where": "verify/tables.js · rowWhy note",
+  "verdict": "ok",
+  "why": "Note naming one of the list’s own detachment rules stays on the entry (Enraged Behemoths on Nidzillas only); role Reference on entries, no role on the four DATASHEETS rows (checked)."
+ },
+ {
+  "key": "5833fec32c0a2f8e",
+  "where": "verify/texts.js · noteQuote",
+  "verdict": "ok",
+  "why": "Wahapedia datasheets are searched after GW’s documents, only for notes on a unit’s abilities. Minor: dsDocIds filters files by the app faction id (a.faction); a faction whose Wahapedia id differs (sources/factions.json waha) would find no page — use that id for robustness."
+ },
+ {
+  "key": "e069726a4291d580",
+  "where": "verify/from-json.js · reference sheets",
+  "verdict": "fix",
+  "why": "Detection, keyword phrases, stratagem refs, of-sheets and --refs are right (Mucho Mutantes and Tzeeeeentch reproduce data.js). Two fixes: (1) the of-sheet builder runs after --compare exits, so `--compare tzeeeeentch` now reports “brimstone-horrors: in data.js, not in the export” (a false difference); (2) the of-sheet copies every ability of the sheet it is from, so the Brimstone sheet carries Split and Sullen Malevolence, which are about BLUE HORROR models (see question 3).",
+  "fix": "verify/from-json.js:1142 `for (const x of pool) if (!(x.ref && x.ref.of)) out.push(x.id + ': in data.js, not in the export');` (an of-sheet is built from another sheet, never read from the export). verify/from-json.js:1386 `abilities: JSON.parse(JSON.stringify(src.abilities.filter(a => !h.abilities || h.abilities.includes(a.name))))` with the hand ref of Brimstone Horrors given `\"abilities\": [\"Exploding Horrors\"]` (verify/sources/hand/tzeeeeentch.json refs[1])."
+ },
+ {
+  "key": "b7770578aeb097f7",
+  "where": "verify/bsdata.js · ref.of",
+  "verdict": "ok",
+  "why": "An of-sheet has no BSData entry; its source sheet (Blue Horrors) is fully checked; pts 0 checked by check.js."
+ },
+ {
+  "key": "4cb23fd86f091ab9",
+  "where": "verify/nr.js · PDF compare",
+  "verdict": "ok",
+  "why": "Any unmatched ref is skipped. Optional narrowing: skip only refs the PDF cannot print (strat or of, or a hand ref with entry), so a missing NR reference entry (Spore Mines (Biovore)) would still fail."
+ },
+ {
+  "key": "e5c28f0a410c3cef",
+  "where": "check.js · ref.strat",
+  "verdict": "ok",
+  "why": "Stratagem of the list’s detachments, name equals rule, EFFECT holds the quote, no by. Optional: also require a unit of the list the stratagem can target (eligible(st, a).length)."
+ },
+ {
+  "key": "3b5a8cce85a8bee6",
+  "where": "import.js · ref.strat",
+  "verdict": "ok",
+  "why": "As 5586b16229387514."
+ },
+ {
+  "key": "59706f38a09ef485",
+  "where": "tzeeeeentch · Brimstone Horrors",
+  "verdict": "fix",
+  "why": "Profile, weapons, keywords (no BLUE), base and ref are right. The abilities are not: GW’s Split (“Each time a BLUE HORROR model in this unit is destroyed …”) and Sullen Malevolence (“if this unit contains one or more BLUE HORROR models”) are about the Blue Horrors; only Exploding Horrors (“select one or more BRIMSTONE HORROR models in this unit”) concerns Brimstone Horrors, and only once the unit uses the Blue Horrors datasheet (Designer’s Note: “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”).",
+  "fix": {
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Split",
+    "quote": "On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.",
+    "of": "Blue Horrors"
+   },
+   "sheet": "GW's Blue Horrors profile as Brimstone Horror (25mm), Coruscating Yellow flames, Yellow claws, Exploding Horrors only (the Blue Horrors' Split and Sullen Malevolence are on the Blue Horrors sheet), the Blue Horrors' rules, keywords without BLUE"
+  }
+ },
+ {
+  "key": "7f36fcfe233fe050",
+  "where": "mucho-mutantes · Chaos Spawn",
+  "verdict": "fix",
+  "why": "Profile, weapon, ability, Feel No Pain, base and stratagem ref match GW (Wahapedia thousand-sons_Chaos-Spawn: M8 T5 Sv4+ W4 Ld7+ OC1 InSv5+, ⌀50mm). Keyword SPAWN: GW’s KEYWORDS are BEAST; CHAOS; TZEENTCH; MUTANT; CHAOS SPAWN — no SPAWN. GW is the truth, as with New Recruit’s Reference category on the Spore Mines (dropped and declared).",
+  "fix": {
+   "ref": {
+    "rule": "Gift of Change",
+    "strat": "gift-of-change",
+    "quote": "At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units."
+   },
+   "sheet": "1 Chaos Spawn: M8\" T5 Sv4+ W4 Ld7+ OC1 InSv5+ 50mm, Hideous Mutations, Regenerating Monstrosities, Feel No Pain 5+",
+   "kw": "Beast, Chaos, Chaos Spawn, Faction: Thousand Sons, Mutant, Tzeentch (BSData’s category Spawn dropped, GW prints no SPAWN: declared in deviations-bsdata.json, app \"\", source \"Spawn\")"
+  }
+ },
+ {
+  "key": "c800e1c92eb4e0f3",
+  "where": "role Reference on the list's entries (blue-horrors, brimstone-horrors, spore-mines-biovore, chaos-spawn)",
+  "verdict": "ok",
+  "why": "Checked in data.js 8529288: role Reference on the four list entries, none on the DATASHEETS rows."
+ },
+ {
+  "key": "r2-gate",
+  "where": "gate 8529288",
+  "verdict": "ok",
+  "why": "Full node verify/run.js on 8529288 (scratch worktree, cache two-cache): every step passes except snapshots (healybois, mucho-mutantes, nidzillas, shooty, tzeeeeentch, u-w0t-m8) and helpers (197 to check). The six snapshots equal two-work/r2/*-snapshot.txt byte for byte. --compare of all 24 exports vs a499cef: identical except healybois/nidzillas (GW words, explained), mucho-mutantes (+chaos-spawn, ranged [] vs undefined), tzeeeeentch (false “brimstone-horrors not in the export”, fix in e069726a4291d580), u-w0t-m8 (new export). Deviations: added only for nidzillas, healybois, u-w0t-m8, mucho-mutantes (+1 base for brimstone-horrors), one u-w0t-m8 entry replaced; no other list touched."
+ }
+]

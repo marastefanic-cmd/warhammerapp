@@ -20,7 +20,8 @@
      defence      what protects the unit, or the unit it is given to: Feel No Pain, an invulnerable save, -1 Damage to an attack
                   allocated to it, Damage 0, -1 to hit / wound or worse AP against attacks that target it (DEFENCE). Said by its
                   "When targeted" readings: def, calcDef, defCalc, a guard line, the Feel No Pain on its Rules line, a marked InSv.
-                  "An attack that targets this unit's …", "the bearer's …", "allocated to an enemy model" are not defences.
+                  "An attack that targets this unit's …", "the bearer's …", "allocated to an enemy model" are not defences, nor
+                  a cover the target "cannot have" (Burning Spray).
    Also read: a qualified bracket ("[LETHAL HITS: non-MONSTER/VEHICLE]") or a bare one after have / has ("have Sustained Hits 1"),
    "improve the Strength / AP / Damage", "+1 Damage", a re-roll of the Damage roll; defences "-1 D", "-1 AP" or "worsen the AP" on
    attacks that target it, "has 4+ InSv", "subtract 1 from the Damage" (of an attack allocated to or made against it), "subtract 1
@@ -103,7 +104,7 @@ const DEFENCE = [
   { id:'sv-set',   re:/\b(?:has|have) an? save characteristic of \d\+/i, said:/\b\d\+ (?:save|Sv)\b|\bSv\b|save characteristic|"sv"/i },
   { id:'s-vs',     re:new RegExp('(?:targets? ' + SELF + '|allocated to ' + SELF + ')[^.]*?(?:-1 strength\\b|subtract 1 from the strength characteristic)', 'i'), said:/-1 S\b|-1 Strength/i },
   { id:'save+1',   re:/\+1 to (?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)|add (?:1|one) to (?:the |its |any |an )?(?:armou?r )?sav(?:e|ing) (?:rolls?|throws?)/i, said:/\+1 to (?:armou?r )?sav|\bsave\b|"sv"/i },
-  { id:'stealth',  re:/\b(?:has|have|gains?) (?:the )?(?:stealth|benefit of cover)\b/i, said:/stealth|"stealth"|benefit of cover/i },
+  { id:'stealth',  re:/\b(?<!cannot |can't |can not )(?:has|have|gains?) (?:the )?(?:stealth|benefit of cover)\b/i, said:/stealth|"stealth"|benefit of cover/i },
   { id:'dmg-1',    re:new RegExp('(?:allocated to ' + SELF + '|made against (?:' + SELF + '|this [A-Z]+\\b)|attacks? (?:that )?targets? ' + SELF + '|attacks? allocated to ' + SELF + '|targets? a friendly [^.,]*?(?:unit|model)\\b)[^.]*?(?:subtract 1 from the damage|reduce the damage characteristic[^.]*? by 1\\b|-1 d\\b|-1 damage\\b)', 'i'), said:/-1 D\b|-1 Damage|damage/i },
   { id:'dmg-half', re:new RegExp('(?:allocated to ' + SELF + '|made against ' + SELF + '|targets? ' + SELF + ')[^.]*?halve the damage', 'i'), said:/halve|half/i },
   { id:'dmg-0',    re:/change the damage characteristic of that attack to 0/i, said:/damage[^|]* to 0|"dmg":0/i },

@@ -717,7 +717,9 @@ function compareArmy(D, A, nr, out, srcFile) {
     pool.splice(pool.indexOf(c[0]), 1);
     pairs.push([nu, c[0]]);
   }
-  for (const u of pool) { chk('units'); fail(u.id, 'unit', u.name + ' ' + u.pts, null); }
+  // (a reference sheet New Recruit's PDF cannot print: one a stratagem adds, ref.strat, or one of models on another sheet's datasheet,
+  // ref.of; a reference entry New Recruit has, Spore Mines (Biovore), must be in the PDF)
+  for (const u of pool) { if (u.ref && (u.ref.strat || u.ref.of)) continue; chk('units'); fail(u.id, 'unit', u.name + ' ' + u.pts, null); }
 
   // roster (page 1): who leads whom, the points of each part, copies, role, model counts
   const roster = nr.roster.map(r => Object.assign({ used: false }, r));
@@ -962,6 +964,8 @@ function compareJsonArmy(D, A, J, out, where) {
   for (const s of sels) if (s.type !== 'upgrade') { const m = bases.get(nm(s.name)) || new Map(); walk(s, m); bases.set(nm(s.name), m); }
   out.checked.army = (out.checked.army || 0) + 1;
   for (const u of A.units) {
+    // (a reference sheet the export has no entry for, built from BSData's datasheet: verify/from-json.js, the hand file's refs)
+    if (u.ref && !bases.has(nm(u.name))) continue;
     const parts = [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).map(nm);
     for (const r of u.stats || []) {
       out.checked.stats = (out.checked.stats || 0) + 1;

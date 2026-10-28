@@ -108,5 +108,15 @@
   },
   "reason": "The Pink Horrors datasheet's second profile is for the Blue and Brimstone Horrors its Split ability adds to the unit (GW: \"BLUE HORROR/BRIMSTONE HORROR\"). GW's base size guide has no row for them under Pink Horrors (its \"Pink Horrors  32mm\" is the unit's Pink Horror models); its Blue Horrors row is the base of a Blue Horror model, and Wahapedia's datasheet gives this profile 25mm too. Brimstone Horrors have no row of their own in the guide.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\", line 2951: \"Pink Horrors  32mm\"; verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"BLUE HORROR/BRIMSTONE HORROR (⌀25mm)\"."
+ },
+ {
+  "datasheet": "chaos-daemons/brimstone-horrors",
+  "row": "Brimstone Horror",
+  "guide": {
+   "section": "CHAOS DAEMONS",
+   "entry": "Blue Horrors"
+  },
+  "reason": "The Brimstone Horrors reference sheet is built from GW’s Blue Horrors datasheet (GW prints no Brimstone Horrors datasheet; its one profile, “Blue Horrors (⌀25mm)”, is the Brimstone Horror’s too); GW’s base size guide has the Blue Horrors row, so that row’s base is compared.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\"; verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: \"Blue Horrors (⌀25mm)\"."
  }
 ]

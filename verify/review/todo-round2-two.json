@@ -1,0 +1,1769 @@
+[
+ {
+  "army": "healybois",
+  "kind": "ability-timing",
+  "where": "healybois · The Swarmlord · Hive Commander",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Hive Commander",
+   "text": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP."
+  },
+  "key": "4fc062dc79f566c8"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · The Swarmlord · Malign Presence",
+  "judgement": {
+   "note": "Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”"
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.",
+   "others": [
+    "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+    "Domination of the Hive Mind: While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "4b90eae5a7c50f46"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-timing",
+  "where": "healybois · Norn Assimilator · Harpoon Barbs",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Harpoon Barbs",
+   "text": "Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**."
+  },
+  "key": "323bdc3d4abc9ac4"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Norn Assimilator · Harpoon Barbs",
+  "judgement": {
+   "tag": "Once per turn"
+  },
+  "source": {
+   "ability": "Harpoon Barbs",
+   "text": "Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**."
+  },
+  "key": "0644cc8affb188cd"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-timing",
+  "where": "healybois · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "435073e428709ab5"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-def",
+  "where": "healybois · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "def": "If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "87c890b26afb2943"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Synaptoprescience: **NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "1ad9908ed05fda87"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-footnote",
+  "where": "healybois · Norn Emissary",
+  "judgement": {
+   "kind": "all",
+   "when": "If its Singular Purpose is an enemy unit, vs that unit",
+   "note": "re-roll hit rolls and wound rolls",
+   "from": "Singular Purpose",
+   "lasts": "battle"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "aed0021373d706eb"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Destabilising Predation: **NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.",
+    "Unnatural Resilience: This model has the **Feel No Pain 4+** ability against **mortal wounds**."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "c7b7e8dc5ed0f198"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-def",
+  "where": "healybois · Norn Emissary · Unnatural Resilience",
+  "judgement": {
+   "def": "Feel No Pain 4+ against mortal wounds"
+  },
+  "source": {
+   "ability": "Unnatural Resilience",
+   "text": "This model has the **Feel No Pain 4+** ability against **mortal wounds**."
+  },
+  "key": "0acd02dcc3df2cb0"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Unnatural Resilience: This model has the **Feel No Pain 4+** ability against **mortal wounds**."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "08fc9949ab80c704"
+ },
+ {
+  "army": "healybois",
+  "kind": "rule-note",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”"
+  },
+  "source": {
+   "rule": "Shadow in the Warp",
+   "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
+  },
+  "key": "9d42b7739258fbac"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing",
+  "where": "mucho-mutantes · Chaos Spawn · Regenerating Monstrosities",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Regenerating Monstrosities",
+   "text": "At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds."
+  },
+  "key": "a578f61fccf83ee2"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-weapons",
+  "where": "mucho-mutantes · Chaos Spawn",
+  "judgement": {
+   "gear": [
+    [
+     "Hideous Mutations"
+    ]
+   ],
+   "weapons": [
+    "Hideous Mutations"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Chaos Spawn"
+   ],
+   "leads": null
+  },
+  "key": "979731f08da0113d"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "unit-weapons",
+  "where": "tzeeeeentch · Brimstone Horrors",
+  "judgement": {
+   "gear": [
+    [
+     "Coruscating Yellow flames",
+     "Yellow claws"
+    ]
+   ],
+   "weapons": [
+    "Coruscating Yellow flames",
+    "Yellow claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Brimstone Horror"
+   ],
+   "leads": null
+  },
+  "key": "ff205dd581520bc3"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · The Swarmlord · Hive Commander",
+  "judgement": {
+   "who": "The Swarmlord",
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Hive Commander",
+   "text": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP."
+  },
+  "key": "b6dd40bd34cfb2f1"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-note",
+  "where": "healybois · The Swarmlord · Malign Presence",
+  "judgement": {
+   "note": "Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”"
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.",
+   "others": [
+    "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+    "Domination of the Hive Mind: While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**.",
+    "Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Feed the Swarm",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "3fd8e394c32d61db"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-partialRules",
+  "where": "healybois · The Swarmlord",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "The Swarmlord"
+   }
+  },
+  "source": {
+   "models": [
+    "1× The Swarmlord",
+    "6× Tyrant Guard"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Shadow in the Warp",
+    "Synapse",
+    "Leader",
+    "Twin-linked",
+    "Torrent"
+   ],
+   "abilities": [
+    "The Swarmlord · Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+    "The Swarmlord · Malign Presence: Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.",
+    "The Swarmlord · Domination of the Hive Mind: While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**.",
+    "Tyrant Guard · Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ]
+  },
+  "key": "8205ad6312076aa6"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-note",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.” FAQ (Faction Pack 1.3): “Are Spore Mines units that are added to an army during a battle restricted by abilities that prevent Reserves from being set up within a certain range (e.g. Space Marines Infiltrators’ Omniscrambers)?” “No.”"
+  },
+  "source": {
+   "ability": "Seed Spore Mines",
+   "text": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit.",
+   "others": [],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Feed the Swarm",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "3c8da7783ff1ff34"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Royal Warden · Adaptive Strategy",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Adaptive Strategy",
+   "text": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+  },
+  "key": "4e06e9e417cfc177"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-who",
+  "where": "u-w0t-m8 · Technomancer · Rites of Reanimation",
+  "judgement": {
+   "who": "Technomancer",
+   "models": [
+    "1× Technomancer",
+    "5× Immortal"
+   ]
+  },
+  "source": {
+   "ability": "Rites of Reanimation",
+   "text": "While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability."
+  },
+  "key": "982a2afa7f04b8fd"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-def",
+  "where": "u-w0t-m8 · Technomancer · Rites of Reanimation",
+  "judgement": {
+   "def": "While the Technomancer leads this unit: Feel No Pain 5+ for its models"
+  },
+  "source": {
+   "ability": "Rites of Reanimation",
+   "text": "While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability."
+  },
+  "key": "fdb2beb01f8bca58"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Technomancer · Technomancer",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Technomancer",
+   "text": "At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn."
+  },
+  "key": "d896abf1ee7c58ac"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-who",
+  "where": "u-w0t-m8 · Technomancer · Technomancer",
+  "judgement": {
+   "who": "Technomancer",
+   "models": [
+    "1× Technomancer",
+    "5× Immortal"
+   ]
+  },
+  "source": {
+   "ability": "Technomancer",
+   "text": "At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn."
+  },
+  "key": "bc8d90a98271ea5a"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Technomancer · Implacable Eradication",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Implacable Eradication",
+   "text": "Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "59588ffcd8dacdd9"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-who",
+  "where": "u-w0t-m8 · Technomancer · Implacable Eradication",
+  "judgement": {
+   "who": "Immortals",
+   "models": [
+    "1× Technomancer",
+    "5× Immortal"
+   ]
+  },
+  "source": {
+   "ability": "Implacable Eradication",
+   "text": "Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "bcfa7e9a7f2ab46c"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-footnote",
+  "where": "u-w0t-m8 · Technomancer",
+  "judgement": {
+   "kind": "all",
+   "when": "Every attack",
+   "note": "re-roll wound rolls of 1",
+   "from": "Implacable Eradication",
+   "always": true,
+   "calc": {
+    "rrWound": "1s"
+   }
+  },
+  "source": {
+   "ability": "Implacable Eradication",
+   "text": "Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "7fafc7db3ad168b6"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-footnote",
+  "where": "u-w0t-m8 · Technomancer",
+  "judgement": {
+   "kind": "all",
+   "when": "Target within range of an objective marker",
+   "cond": "targetObjective",
+   "note": "re-roll the wound roll",
+   "from": "Implacable Eradication",
+   "calc": {
+    "rrWound": "all"
+   }
+  },
+  "source": {
+   "ability": "Implacable Eradication",
+   "text": "Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "01e6c4a19e689f9e"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-kwNote",
+  "where": "u-w0t-m8 · Technomancer",
+  "judgement": {
+   "kwNote": "Battleline, Immortals come from the supported Immortals."
+  },
+  "source": {
+   "models": [
+    "1× Technomancer",
+    "5× Immortal"
+   ],
+   "stats": [
+    "Technomancer W4 OC1",
+    "Immortals ×5 W1 OC2"
+   ],
+   "weapons": [
+    "Staff of light 3 -2 1",
+    "Gauss blaster 2 -1 1 LETHAL HITS",
+    "Staff of light 2 -2 1",
+    "Close combat weapon 2 0 1"
+   ]
+  },
+  "key": "984935833326c7e3"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-ptsNote",
+  "where": "u-w0t-m8 · Technomancer",
+  "judgement": {
+   "ptsNote": "80 + Immortals 65"
+  },
+  "source": {
+   "models": [
+    "1× Technomancer",
+    "5× Immortal"
+   ],
+   "stats": [
+    "Technomancer W4 OC1",
+    "Immortals ×5 W1 OC2"
+   ],
+   "weapons": [
+    "Staff of light 3 -2 1",
+    "Gauss blaster 2 -1 1 LETHAL HITS",
+    "Staff of light 2 -2 1",
+    "Close combat weapon 2 0 1"
+   ]
+  },
+  "key": "91d9ff4d7da70aeb"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Technomancer",
+  "judgement": {
+   "gear": [
+    [
+     "Staff of light"
+    ],
+    [
+     "Close combat weapon",
+     "Gauss blaster"
+    ]
+   ],
+   "weapons": [
+    "Technomancer · Staff of light",
+    "Immortals · ×5 · Gauss blaster",
+    "Technomancer · Staff of light",
+    "Immortals · ×5 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Technomancer",
+    "5× Immortal"
+   ],
+   "leads": "Immortals"
+  },
+  "key": "54fcd9a5d24751a4"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Canoptek Scarab Swarms · Self-destruction",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Self-destruction",
+   "text": "At the start of the Fight phase, if this unit is within **Engagement Range** of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a **VEHICLE**. On a 2-5, that unit suffers D3 **mortal wounds**; on a 6+, that unit suffers 3 mortal wounds."
+  },
+  "key": "ef46eb6d0425dc01"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Canoptek Scarab Swarms",
+  "judgement": {
+   "gear": [
+    [
+     "Feeder mandibles"
+    ]
+   ],
+   "weapons": [
+    "×3 · Feeder mandibles"
+   ]
+  },
+  "source": {
+   "models": [
+    "3× Canoptek Scarab Swarm"
+   ],
+   "leads": null
+  },
+  "key": "52947dff81738878"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-timing",
+  "where": "u-w0t-m8 · Canoptek Spyders · Canoptek Swarm",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Canoptek Swarm",
+   "text": "In your Command phase, select one friendly **CANOPTEK SCARAB SWARM** unit within 6\" of this unit. One destroyed model is returned to that **CANOPTEK SCARAB SWARM** unit for each **SPYDER** model in this unit."
+  },
+  "key": "3eb361cf00c4152a"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Fabricator Claw Array",
+   "text": "While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability."
+  },
+  "key": "5956ecc50db47459"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "ability-tag",
+  "where": "u-w0t-m8 · Canoptek Spyders · Gloom Prism",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Gloom Prism",
+   "text": "While a friendly **NECRONS** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**."
+  },
+  "key": "3189e32d20bc6359"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-guard",
+  "where": "u-w0t-m8 · Canoptek Spyders",
+  "judgement": {
+   "from": "Fabricator Claw Array",
+   "needs": {
+    "all": [
+     "Faction: Necrons",
+     "Vehicle"
+    ]
+   },
+   "kind": "all",
+   "when": "Within 6\" of a Canoptek Spyder with a fabricator claw array",
+   "selfWhen": "Own aura",
+   "selfAlways": true,
+   "note": "Feel No Pain 6+",
+   "calc": {
+    "fnp": 6
+   }
+  },
+  "source": {
+   "ability": "Fabricator Claw Array",
+   "text": "While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability."
+  },
+  "key": "31c8f870904f0f99"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-guard",
+  "where": "u-w0t-m8 · Canoptek Spyders",
+  "judgement": {
+   "from": "Gloom Prism",
+   "needs": {
+    "all": [
+     "Faction: Necrons"
+    ]
+   },
+   "kind": "all",
+   "when": "Within 6\" of a Canoptek Spyder with a gloom prism",
+   "selfWhen": "Own aura",
+   "selfAlways": true,
+   "note": "Feel No Pain 5+ against mortal wounds and Psychic Attacks"
+  },
+  "source": {
+   "ability": "Gloom Prism",
+   "text": "While a friendly **NECRONS** unit is within 6\" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**."
+  },
+  "key": "d774751ff73cb46a"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "unit-weapons",
+  "where": "u-w0t-m8 · Canoptek Spyders",
+  "judgement": {
+   "gear": [
+    [
+     "Automaton claws",
+     "Particle beamer",
+     "Particle beamer"
+    ]
+   ],
+   "weapons": [
+    "×2 · Particle beamer",
+    "Automaton claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Canoptek Spyder (Fabricator claw array, Gloom prism)"
+   ],
+   "leads": null
+  },
+  "key": "0a97f1e7479987ac"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "unitMods",
+  "judgement": {
+   "code": "function unitMods(u, kind){\n  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)))\n    .concat(unitDetParts(u).filter(x => x.part.mod).map(x => Object.assign({ from:x.rule.name, rule:x.rule.name }, x.part.mod)));\n  for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){\n    const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];\n    if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });\n  }\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12\" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });\n  const strat = allStratagems().filter(s => s.mod && canTarget(s, u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod))\n    .concat(helpedBy(u).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.help.mod)));\n  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');\n}"
+  },
+  "source": {
+   "implements": "which footnotes a unit gets: its own, detachment rules matching its keywords (and the parts of a detachment rule whose needs it meets), auras, stratagems it is eligible for, and those another unit of the list is the target of whose effect changes its attacks (helpedBy); Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)"
+  },
+  "key": "e12a1305f3a3b8dd"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph, opts){\n  const out = [];\n  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line\n  // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, \"Feel No Pain 5+ against mortal\n  // wounds\"); New Recruit's starred \"Feel No Pain 5+*\" is that one, so it is not said again without its condition\n  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && hasRule(u, r.name));\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: the one model that has it, partialRules)\n  for(const r of armyDefs) if(!(ph && r.defPh && !r.defPh.includes(ph))) out.push({ t:r.def, a:'rule', v:r.name });   // (defPh: Kaptaris, the Fight phase only)\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)\n  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });\n  for(const s of allStratagems()) if(s.def && canTarget(s, u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))\n    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });\n  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,\n  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit\n  // (one line for the same help from several units: the three Anathema Psykana units' Psychic Null)\n  // (a guard GW tags (Aura) covers its own unit too, as an aura does (22.01): selfWhen / selfAlways, said with selfWhen: Prince of Darkness)\n  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []){\n    const self = src === u;\n    if((self && !(g.selfWhen || g.selfAlways)) || !matches(g.needs, u)) continue;\n    const t = (self && g.selfWhen ? g.selfWhen : g.when) + ': ' + g.note;\n    if(!out.some(x => x.guard && x.t === t)) out.push({ t, a:'unit', v:src.id, guard:g });\n  }\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah's Blessing, Necromechanic)"
+  },
+  "key": "de4652d23ad428a5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "showGrant",
+  "judgement": {
+   "code": "function showGrant(names, unitId, what, kw){\n  // the rule that grants it is the headline; the keyword's own rule follows, smaller\n  const u = unitById(unitId);\n  const gs = names.map(n => grantSource(n, u));\n  const src = gs.map(g => { const st = allStratagems().find(x => x.name === g.name);\n    return '<div class=\"gsrc\">' + (gs.length > 1 ? '<p class=\"gh\"><b>' + esc(g.name) + '</b></p>' : '') + (g.what ? '<p class=\"gw2\">' + esc(g.what) + '</p>' : '') +\n    textWithTable(g) + (st ? '<p class=\"note\">Not the ' + esc(st.cp) + 'CP ' + esc(st.name) + ' stratagem, which has the same name.</p>' : '') + '</div>'; }).join('');\n  const r = kw ? ruleFor(kw) : null;\n  const own = r ? '<div class=\"gown\"><p class=\"gh\"><b>' + esc(r.name) + '</b> <span class=\"tg m\">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') + '</div>' : '';\n  // a stat New Recruit prints without the rule applied (data.js printed: the Knight Destrier's 5+* InSv, before Sanctuary)\n  const sk = { M:'M', T:'T', SV:'Sv', W:'W', LD:'Ld', OC:'OC', INV:'InSv' }[String(what).split(' ')[0]], pr = !kw && u && sk ? (u.stats.find(x => x.printed && x.printed[sk] && [].concat((x.from || {})[sk] || []).some(n => names.includes(n))) || {}).printed : null;\n  openSheet(esc(what) + ' · granted by', gs.map(g => g.name).join(' + '), src + '<p class=\"note\">' + (pr ? 'Already in the value shown; New Recruit and BSData print ' + esc(pr[sk]) + ' here.' : (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').') + '</p>' + own);\n}"
+  },
+  "source": {
+   "implements": "\"Granted by\": a value or keyword that a rule of the list already changed (from BSData's modifiers, checked against New Recruit's \"(…)\" marks): the rule's text, and that the value shown includes it"
+  },
+  "key": "6a5d7b80e8185526"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "pickOptions",
+  "judgement": {
+   "code": "function pickOptions(ab, u){\n  const m = /\\bselect one of the abilities in the (.+?) section\\b/i.exec(ab.text) || /\\bselect one ([^.,;]+?) ability\\b/i.exec(ab.text);\n  if(!m || !u) return { section:'', list:[] };\n  // (\"select one Triarch ability\": the box GW names TRIARCH ABILITIES, who \"Triarch Abilities: pick one\")\n  const sec = norm(m[1]), secs = [sec, sec + ' abilities'], under = u.abilities.filter(x => x !== ab && x.who && secs.includes(norm(x.who.replace(/: pick one$/i, ''))));\n  return { section:m[1], list:under.length ? under : u.abilities.filter(x => x !== ab && norm(x.name) === sec) };\n}"
+  },
+  "source": {
+   "implements": "the options a \"select one of the abilities in the X section\" / \"select one X ability\" asks for: the unit's abilities printed under that section, or the ability named X that lists them"
+  },
+  "key": "6cdd6362c75e6427"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resolveRoster",
+  "judgement": {
+   "code": "function resolveRoster(j, D, opt){\n  const errors = [], err = m => { if(!errors.includes(m)) errors.push(m); };\n  const fail = () => ({ ok:false, errors });\n  if(!D.bsIds){ err('this version of the app cannot import lists'); return fail(); }\n  // the tables without a prototype: an export's id such as \"constructor\" or \"toString\" is no key of them\n  const T = {}; for(const k of Object.keys(D.bsIds)) T[k] = Object.assign(Object.create(null), D.bsIds[k]);\n  const R = j.roster;\n  if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }\n  const F = R.forces[0];\n  const sels = F.selections || [];\n  const fac = T.factions[F.catalogueId];\n  const top = sels.filter(s => s.type === 'upgrade'), roots = sels.filter(s => s.type !== 'upgrade');\n  if(!fac){\n    // nothing of an unknown faction can resolve: name it, and what adding it would take\n    err('faction ' + String(F.catalogueName || F.catalogueId || '?').split(' - ').pop() + ' not recognized');\n    for(const t of top) for(const c of t.selections || []) if(t.name === 'Detachment' || c.group === 'Detachment') err('detachment ' + nn(c.name) + ' not recognized');\n    for(const s of roots) err('unit ' + nn(s.name) + ' not recognized');\n    return fail();\n  }\n  const FAC = D.factions[fac];\n\n  /* the list: one battle size, one detachment selection, one Force Disposition, config; every top-level selection is one of\n     these or holds no list content (Show/Hide Options and rules references, whose own choices must be known ones too) */\n  let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};\n  const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };\n  for(const t of top){\n    const id = lastId(t.entryId), kids = t.selections || [];\n    if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }\n    if(T.info[id]){\n      for(const c of kids) if(!T.infoKids[lastId(c.entryId)] || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');\n      continue;\n    }\n    if(T.config[id]){\n      const key = T.config[id];\n      if(key in config){ err('selection ' + nn(t.name) + ' twice not recognized'); continue; }\n      const odd = kids.filter(c => T.configKids[lastId(c.entryId)] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1);\n      for(const c of odd) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');\n      if(!odd.length && kids.length) config[key] = kids.map(c => typo(nn(c.name))).join(', ');\n      continue;\n    }\n    const kind = T.roots[id];\n    if(!kind){ err('selection ' + nn(t.name) + ' not recognized'); continue; }\n    if(seen[kind]){ err(KIND[kind] + ' selection ' + nn(t.name) + ' twice not recognized'); continue; }\n    seen[kind] = true;\n    for(const c of kids){\n      const cid = lastId(c.entryId), nm = nn(c.name);\n      const once = Number(c.number) === 1 && !(c.selections || []).length;\n      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }\n      if(kind === 'disposition' && T.dispositions[cid] === nm && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }\n      const d = kind === 'detachment' && T.detachments[cid], dk = d && d.split('/');\n      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }\n      err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');\n    }\n  }\n  if(!battleSize && !errors.some(e => /^battle size/.test(e))) err('battle size not recognized (the export names none)');\n  if(!dets.length && !errors.some(e => /^detachment/.test(e))) err('detachment not recognized (the export names none)');\n  // the points limit is the battle size's (BSData), not the export's word for it (an export can name none: no costLimits)\n  const limit = pts(R.costLimits), total = pts(R.costs);\n  if(battleSize && (R.costLimits || []).length && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');\n  if(battleSize && total > T.limits[battleSize]) err('points total ' + total + ' not recognized: over the ' + battleSize + ' limit of ' + T.limits[battleSize] + ' pts');\n  if(disposition && dets.length){\n    const allowed = new Set(dets.flatMap(k => FAC.detachments[k].dispositions || []));\n    if(!allowed.has(disposition)) err('disposition ' + disposition + ' not recognized for ' + and(dets.map(k => FAC.detachments[k].name)));\n  }\n  if(!disposition && !errors.some(e => /^disposition/.test(e))) err('disposition not recognized (the export names none)');\n\n  /* units: each bodyguard with the characters attached to it (New Recruit's Leading / Supporting) */\n  const byId = new Map(roots.map(s => [s.id, s]));\n  const leadsTo = new Map();\n  for(const s of roots) for(const a of s.associations || []) if(a.type === 'outgoing' && a.action === 'group'){\n    if(!byId.has(a.to)){ err('leader attachment of ' + nn(s.name) + ' not recognized (what it ' + (a.name === 'Supporting' ? 'supports' : 'leads') + ' is not a unit of the list)'); continue; }\n    if(leadsTo.has(s)){ err('leader attachment of ' + nn(s.name) + ' to two units not recognized'); continue; }\n    leadsTo.set(s, byId.get(a.to));\n  }\n  const groups = [], groupOf = new Map();\n  for(const s of roots){\n    if(leadsTo.has(s)) continue;\n    const g = { parts:[s], body:s }; groups.push(g); groupOf.set(s, g);\n  }\n  for(const [s, b] of leadsTo){ const g = groupOf.get(b); if(!g || leadsTo.has(b)){ err('leader attachment of ' + nn(s.name) + ' to ' + nn(b.name) + ' not recognized'); continue; } g.parts.unshift(s); }\n  for(const g of groups) g.at = Math.min(...g.parts.map(p => roots.indexOf(p)));\n  groups.sort((a, b) => a.at - b.at);\n\n  // the lists of this faction; a unit is taken only from one with the same detachments, config and battle size\n  const ctxKey = (d, c, b) => d.slice().sort().join('+') + '|' + JSON.stringify(Object.keys(c).sort().map(k => [k, c[k]])) + '|' + b;\n  const mine = ctxKey(dets, config, battleSize);\n  const facArmies = D.armies.filter(a => a.faction === fac && !a.imported && T.units[a.id + '/' + (a.units[0] || {}).id]);\n  const pool = facArmies.filter(a => ctxKey(a.detachments, a.config || {}, a.battleSize) === mine);\n  // (a list's units and its reference sheets: the app moves these to a.refs at start, verify/ and an export's entry see both)\n  const allOf = a => a.units.concat(a.refs || []);\n  const instances = facArmies.flatMap(a => allOf(a).map(u => ({ a, u, sigs:(T.units[a.id + '/' + u.id] || []).slice().sort() })));\n  const partSigs = instances.flatMap(x => x.sigs);\n  if(!errors.length && !pool.length) err('detachment' + (dets.length > 1 ? 's ' : ' ') + and(dets.map(k => FAC.detachments[k].name)) + (Object.keys(config).length ? ' with ' + Object.entries(config).map(([k, v]) => k + ' ' + v).join(', ') : '') +\n    ' not recognized: the app’s ' + FAC.name + ' lists have ' + and([...new Set(facArmies.map(a => a.detachments.map(k => FAC.detachments[k].name).join(' + ') + (a.config ? ' (' + Object.entries(a.config).map(([k, v]) => k + ' ' + v).join(', ') + ')' : '')))]));\n\n  const label = g => g.parts.map(p => nn(p.name)).join(' + ');\n  const costOf = s => pts(s.costs) + (s.selections || []).reduce((t, c) => t + costOf(c), 0);\n  // the names an export's selections carry must be BSData's (an entry renamed in the export is not that entry)\n  const namesOk = (s, unit) => {\n    let ok = true;\n    const walk = (x, isRoot) => {\n      const id = lastId(x.entryId);\n      if(T.names[id] !== undefined && T.names[id] !== nn(x.name)){ ok = false; err(isRoot ? 'unit ' + nn(x.name) + ' not recognized' : (/^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + (isRoot ? '' : ' on unit ' + unit) + ' not recognized'); }\n      for(const c of x.selections || []) walk(c, false);\n    };\n    walk(s, true); return ok;\n  };\n  // why one part matches nothing: what it has that the closest part of the same datasheet the app has does not\n  const explainPart = (p, unit, pool) => {\n    const rid = lastId(p.entryId), sig = sigOf(p);\n    const same = [...new Set((pool || partSigs).filter(s => s.startsWith(rid + '|')))];\n    if(!same.length || T.names[rid] !== nn(p.name)){ err('unit ' + nn(p.name) + ' not recognized'); return; }\n    const mineE = entries(sig);\n    const best = same.map(s => { const e = entries(s); return { e, d:mineE.filter(x => !e.includes(x)).length + e.filter(x => !mineE.includes(x)).length }; }).sort((a, b) => a.d - b.d)[0];\n    const byPath = new Map(); const walk = (x, path) => { for(const c of x.selections || []){ const k = (path ? path + '/' : '') + lastId(c.entryId); byPath.set(k, c); walk(c, k); } }; walk(p, '');\n    const extra = mineE.filter(x => !best.e.includes(x));\n    for(const x of extra){\n      const n = x.slice(0, x.indexOf('×')), path = x.slice(x.indexOf('×') + 1), c = byPath.get(path) || {};\n      const nm = nn(c.name || T.names[path.split('/').pop()] || path);\n      if(nm === 'Warlord') err(n !== '1' ? 'warlord ×' + n + ' on unit ' + unit + ' not recognized' : 'warlord ' + unit + ' not recognized (the app has no such unit as Warlord in this faction)');\n      else if(/^Enhancements/.test(c.group || '')) err('enhancement ' + nm + ' not recognized (on ' + unit + ')');\n      else err('option ' + (n !== '1' || c.type === 'model' ? n + '× ' : '') + nm + ' on unit ' + unit + ' not recognized');\n    }\n    // what the app's has that the export does not (an item whose count differs is named above)\n    const pathOf = x => x.slice(x.indexOf('×') + 1), extraPaths = new Set(extra.map(pathOf));\n    const miss = best.e.filter(x => !mineE.includes(x) && !extraPaths.has(pathOf(x))).map(x => T.names[pathOf(x).split('/').pop()] || pathOf(x));\n    if(miss.length) err('unit ' + unit + ' without ' + and([...new Set(miss)]) + ' not recognized');\n  };\n\n  // match every group; the list most of them come from is preferred, then data.js order\n  const want = groups.map(g => g.parts.map(sigOf).sort());\n  const sameSigs = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);\n  const cands = want.map(w => instances.filter(x => sameSigs(x.sigs, w)));\n  const score = new Map(pool.map(a => [a, cands.filter(c => c.some(x => x.a === a)).length]));\n  const order = pool.slice().sort((a, b) => score.get(b) - score.get(a) || D.armies.indexOf(a) - D.armies.indexOf(b));\n  const used = new Map(), picks = [];\n  groups.forEach((g, i) => {\n    const unit = label(g);\n    if(!g.parts.every(p => namesOk(p, nn(p.name)))) return;\n    for(const p of g.parts) if(Number(p.number) !== 1) err('unit ' + nn(p.name) + ' ×' + p.number + ' not recognized');\n    // an option holding models (\"8 chainblades\") is taken once: its models carry the count\n    const holders = x => { for(const c of x.selections || []){ if(c.type !== 'model' && (c.selections || []).some(y => y.type === 'model') && Number(c.number) !== 1) err('option ' + c.number + '× ' + nn(c.name) + ' on unit ' + unit + ' not recognized'); holders(c); } };\n    g.parts.forEach(holders);\n    const before = errors.length;\n    const c = cands[i];\n    if(!c.length){\n      // the closest unit of the same datasheets (the same leader on the same bodyguard): what differs from it\n      const rids = g.parts.map(p => lastId(p.entryId)).sort().join(' ');\n      const like = instances.filter(x => x.sigs.map(s => s.slice(0, s.indexOf('|'))).sort().join(' ') === rids);\n      if(like.length){\n        const mineS = want[i], diff = x => mineS.filter(s => !x.sigs.includes(s)).length;\n        const best = like.slice().sort((x, y) => (pool.includes(y.a) - pool.includes(x.a)) || diff(x) - diff(y))[0];   // a usable list's first\n        g.parts.forEach(p => { if(!best.sigs.includes(sigOf(p))) explainPart(p, nn(p.name), best.sigs); });\n        if(errors.length === before) err('leader attachment ' + unit + ' not recognized (the app has these parts, but not together like this)');\n        return;\n      }\n      const known = g.parts.map(p => partSigs.includes(sigOf(p)));\n      if(known.every(Boolean)) err(g.parts.length > 1 ? 'leader attachment ' + unit + ' not recognized (the app has them, but not attached like this)' : 'unit ' + unit + ' on its own not recognized (the app has it only in an attached unit)');\n      else g.parts.forEach((p, k) => { if(!known[k]) explainPart(p, nn(p.name)); });\n      return;\n    }\n    const inPool = c.filter(x => pool.includes(x.a)).sort((x, y) => order.indexOf(x.a) - order.indexOf(y.a) || allOf(x.a).indexOf(x.u) - allOf(y.a).indexOf(y.u));\n    if(!inPool.length){\n      if(pool.length) err('unit ' + unit + ' not recognized with ' + and(dets.map(k => FAC.detachments[k].name)) + ': the app has it only in ' + and([...new Set(c.map(x => x.a.name))]) + ' (' + and([...new Set(c.map(x => x.a.detachments.map(k => FAC.detachments[k].name).join(' + ')))]) + ')');\n      return;\n    }\n    const cost = g.parts.reduce((t, p) => t + costOf(p), 0);\n    const priced = inPool.filter(x => x.u.pts === cost);\n    if(!priced.length){ err('points of unit ' + unit + ' not recognized: ' + cost + ' pts in the export, ' + inPool[0].u.pts + ' in the app'); return; }\n    const pick = priced.find(x => (used.get(x.u) || 0) < (x.u.copies || 1)) || priced[0];\n    used.set(pick.u, (used.get(pick.u) || 0) + 1);\n    picks.push(Object.assign({}, pick));\n  });\n  // the list as a whole: at most one Warlord, and each entry no more often than BSData allows per list (an enhancement once, an\n  // Epic Hero once); a unit the app has may be taken more often than a list of the app takes it, as long as these hold\n  if(!errors.length){\n    const wl = picks.filter(x => x.u.warlord);\n    // (none only as a list of the app has none: the owner's 4 megas and a destrier, as New Recruit printed it)\n    if(wl.length > 1 || (!wl.length && !pool.some(a => !a.units.some(u => u.warlord)))) err('warlord not recognized: ' + (wl.length ? wl.length + ' units are the Warlord (' + and(wl.map(x => x.u.name)) + ')' : 'no unit is the Warlord'));\n    // how many of each entry the list takes, against BSData's max per list (an enhancement once, an Epic Hero once)\n    const n = new Map(), walk = (x, isRoot) => { const id = lastId(x.entryId); n.set(id, { x, n:((n.get(id) || {}).n || 0) + Number(x.number), isRoot }); for(const c of x.selections || []) walk(c, false); };\n    roots.forEach(r => walk(r, true));\n    for(const [id, { x, n:k, isRoot }] of n) if(T.maxPerList[id] !== undefined && k > T.maxPerList[id])\n      err((isRoot ? 'unit ' : /^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + ' ×' + k + ' not recognized (BSData allows ' + T.maxPerList[id] + ' per list)');\n  }\n  if(!errors.length){\n    const sum = picks.reduce((t, x) => t + x.u.pts, 0);\n    if(sum !== total) err('points total ' + total + ' not recognized: the units add up to ' + sum);\n  }\n  if(errors.length) return fail();\n\n  /* the list: each unit as data.js has it, a unit taken more than once as its copies */\n  // in the order verify/import-nr.js gives a list: role, then units without a leader, then the roster's order\n  const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];\n  const roleAt = r => ROLES.includes(r) ? ROLES.indexOf(r) : ROLES.length;\n  picks.forEach((x, k) => { x.k = k; });\n  picks.sort((a, b) => (roleAt(a.u.role) - roleAt(b.u.role)) || ((a.u.leads ? 1 : 0) - (b.u.leads ? 1 : 0)) || (a.k - b.k));\n  // (the same unit of two of the app's lists, field for field, is one unit with its copies)\n  const units = [], seenIds = new Set(), made = new Map(), same = u => JSON.stringify(Object.assign({}, u, { copies:undefined }));\n  for(const x of picks){\n    const key = same(x.u);\n    if(made.has(key)){ const u = made.get(key); u.copies = (u.copies || 1) + 1; continue; }\n    const u = clone(x.u); delete u.copies;\n    let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++;\n    u.id = id; seenIds.add(id); made.set(key, u); units.push(u);\n  }\n  // reference sheets (ref): a unit of the app's list that a rule of an imported unit adds later (the Pink Horrors' Blue Horrors) comes\n  // with that unit, last, when the export has no entry of its own for it\n  for(const x of picks) for(const r of (x.a ? allOf(x.a) : []).filter(r => r.ref && r.ref.by === x.u.id)){\n    if(units.some(u => u.ref && u.name === r.name && u.ref.by === r.ref.by)) continue;\n    const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);\n  }\n  // (and one a stratagem of the imported detachments adds, ref.strat: Gift of Change's Chaos Spawn, from an app list of those detachments)\n  for(const a of pool) for(const r of allOf(a).filter(r => r.ref && r.ref.strat && dets.some(k => ((FAC.detachments[k] || {}).stratagems || []).some(s => s.id === r.ref.strat)))){\n    if(units.some(u => u.ref && u.name === r.name && u.ref.strat === r.ref.strat)) continue;\n    const u = clone(r); let id = u.id, k = 2; while(seenIds.has(id)) id = u.id + '-' + k++; u.id = id; seenIds.add(id); units.push(u);\n  }\n  const name = typo(nn(R.name)) || 'Imported list';\n  const army = { id:opt.id || 'import-' + (name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'list'), name, faction:fac,\n    points:limit || (battleSize && T.limits[battleSize]) || null, pointsUsed:total, battleSize, disposition, detachments:dets };\n  if(Object.keys(config).length) army.config = config;\n  army.source = 'New Recruit, imported ' + (opt.date || new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }));\n  army.units = units;\n  army.imported = true;\n  return { ok:true, army };\n}"
+  },
+  "source": {
+   "implements": "the list import (import.js): a New Recruit JSON export becomes a list only when its faction, its one battle size (its points limit BSData's for it, and the total within it), its one detachment selection (each detachment once), its one Force Disposition (one its detachments allow), its config (Code Chivalric, known choices) and every other top-level selection (Show/Hide Options, rules references, with known choices only) are what data.js has, and every unit, with the characters attached to it (New Recruit's Leading/Supporting), has the BSData signature (signature) of a unit of a data.js list with the same faction, detachments, config and battle size, the same BSData names and the same points (BS_IDS, written by verify/import-ids.js); an option holding models is taken once; then the list as a whole: at most one Warlord (none only as a list of the app has none), each entry no more often than BSData's max per list that no modifier changes (an enhancement once, an Epic Hero once), the units adding up to the total; then the units are copied as data.js has them (a unit taken again as its copies; import-nr.js's order: role, units without a leader, the roster's order); otherwise nothing is imported and every item not recognized is listed (and a group the closest unit explains no difference of is still refused)"
+  },
+  "key": "5586b16229387514"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-swarmlord · ability.text",
+  "judgement": {
+   "app": "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+   "source": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP"
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\"."
+  },
+  "key": "33d3e7ecb2d55a38"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "judgement": {
+   "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "6d270e5c7ab71cca"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "23b76b7ee2aa67c7"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "judgement": {
+   "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "6d270e5c7ab71cca"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "23b76b7ee2aa67c7"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary-destabilising-predation · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "951ff46e261f64fb"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary-destabilising-predation · ability",
+  "judgement": {
+   "app": "Unnatural Resilience",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "0a33f9337a958169"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary-destabilising-predation · ability",
+  "judgement": {
+   "app": "",
+   "source": "Unnatural Resistance"
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "a31ff07cc9152a75"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData at the pin (Xenos - Tyranids catalogue). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "951ff46e261f64fb"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "judgement": {
+   "app": "Unnatural Resilience",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "0a33f9337a958169"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "judgement": {
+   "app": "",
+   "source": "Unnatural Resistance"
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); BSData at the pin (Xenos - Tyranids catalogue) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "a31ff07cc9152a75"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · chaos-spawn · kw",
+  "judgement": {
+   "app": "Chaos Spawn",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword CHAOS SPAWN; BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/thousand-sons_Chaos-Spawn.html: KEYWORDS."
+  },
+  "key": "f47f5831d74eb213"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-swarmlord-tyrant-guard · ability.text",
+  "judgement": {
+   "app": "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+   "source": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP"
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\"."
+  },
+  "key": "72b30696683debd5"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "judgement": {
+   "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "3743c47f537bedbd"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "34069907f5f68094"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "judgement": {
+   "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "3743c47f537bedbd"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "34069907f5f68094"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "6de1537e57caedfd"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "judgement": {
+   "app": "Unnatural Resilience",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience, BSData at the pin (Xenos - Tyranids catalogue revision 3) Unnatural Resistance. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience\"."
+  },
+  "key": "64722b48ff2b51ce"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "judgement": {
+   "app": "",
+   "source": "Unnatural Resistance"
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience, BSData at the pin (Xenos - Tyranids catalogue revision 3) Unnatural Resistance. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience\"."
+  },
+  "key": "e7fe898ad7db2307"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-silent-king · ability.text",
+  "judgement": {
+   "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
+   "source": "At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has that ability."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has th…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.\"."
+  },
+  "key": "1267afb03f479ca9"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · technomancer-immortals · ability.text",
+  "judgement": {
+   "app": "Technomancer: At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+   "source": "At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html: \"At the end of your Movement phase, you can select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.\"."
+  },
+  "key": "89eff9c8e5cab9be"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · technomancer-immortals · rules",
+  "judgement": {
+   "app": "",
+   "source": "Feel No Pain 5+"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 28) has it too). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html, verify/.cache/waha/ds/necrons_Immortals.html: CORE ABILITIES / ARMY RULES \"Support, Reanimation Protocols\"."
+  },
+  "key": "7b4f229e5e703506"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · canoptek-spyders · ability.text",
+  "judgement": {
+   "app": "Fabricator Claw Array: While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability.",
+   "source": "While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Spyders.html: \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.\"."
+  },
+  "key": "e29c617cb4541108"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · the-swarmlord · abilities[Hive Commander].text",
+  "judgement": {
+   "app": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+   "source": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP"
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\"."
+  },
+  "key": "a3da50a4f052fa0b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience · abilities[Harpoon Barbs].text",
+  "judgement": {
+   "app": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "bb1cec1769ec5a30"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience · abilities[Singular Purpose].text",
+  "judgement": {
+   "app": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound…\"."
+  },
+  "key": "b9cf26e94e02ff31"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience-2 · abilities[Harpoon Barbs].text",
+  "judgement": {
+   "app": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "bb1cec1769ec5a30"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience-2 · abilities[Singular Purpose].text",
+  "judgement": {
+   "app": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound…\"."
+  },
+  "key": "b9cf26e94e02ff31"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-emissary-destabilising-predation · abilities[Singular Purpose].text",
+  "judgement": {
+   "app": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound…\"."
+  },
+  "key": "716d3673e992914b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-emissary-destabilising-predation · abilities[Unnatural Resistance]",
+  "judgement": {
+   "app": null,
+   "source": "present"
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); New Recruit’s PDF export (verify/sources/nr/nidzillas.txt) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "08f7d0e93e5b0dfa"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-emissary-destabilising-predation · abilities[Unnatural Resilience]",
+  "judgement": {
+   "app": "present",
+   "source": null
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); New Recruit’s PDF export (verify/sources/nr/nidzillas.txt) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "c70d8fc4a797bf5b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-emissary · abilities[Singular Purpose].text",
+  "judgement": {
+   "app": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than New Recruit’s PDF export (verify/sources/nr/nidzillas.txt). GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound…\"."
+  },
+  "key": "716d3673e992914b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-emissary · abilities[Unnatural Resistance]",
+  "judgement": {
+   "app": null,
+   "source": "present"
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); New Recruit’s PDF export (verify/sources/nr/nidzillas.txt) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "08f7d0e93e5b0dfa"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "deviation",
+  "where": "deviations-nr.json · norn-emissary · abilities[Unnatural Resilience]",
+  "judgement": {
+   "app": "present",
+   "source": null
+  },
+  "source": {
+   "reason": "GW names the ability Unnatural Resilience (“This model has the Feel No Pain 4+ ability against mortal wounds.”); New Recruit’s PDF export (verify/sources/nr/nidzillas.txt) names it Unnatural Resistance. GW wins (review result-healybois.json 63cac0b4ab092c61, b0e4e5a8cc34f795: the shared datasheet row settled on GW’s words, for every list that has it).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "c70d8fc4a797bf5b"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "deviation",
+  "where": "deviations-bases.json · chaos-daemons/brimstone-horrors · Brimstone Horror",
+  "judgement": {},
+  "source": {
+   "reason": "The Brimstone Horrors reference sheet is built from GW’s Blue Horrors datasheet (GW prints no Brimstone Horrors datasheet; its one profile, “Blue Horrors (⌀25mm)”, is the Brimstone Horror’s too); GW’s base size guide has the Blue Horrors row, so that row’s base is compared.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\"; verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: \"Blue Horrors (⌀25mm)\"."
+  },
+  "key": "7c55e84a49d19c29"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · unitsAll, canTarget (reviewer's patch)",
+  "judgement": {
+   "change": "a reference sheet is found wherever a page, popup, search, Ask, the Damage tab or a stratagem looks for a unit (never in a count or total); in-app import resolves reference entries"
+  },
+  "source": {
+   "diff": "git show 6d0eb9f -- app.html",
+   "why": "review result-reference.json 6b732e9467468fb8, 8b4094509a6e8f74"
+  },
+  "key": "fb592ac1f029d9cb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "import.js · resolveRoster allOf (reviewer's patch)",
+  "judgement": {
+   "change": "the export's reference entry and a hand ref are found in a.refs too (the app splits them at start)"
+  },
+  "source": {
+   "diff": "git show 6d0eb9f -- import.js",
+   "why": "review result-reference.json df7a341b542456c5"
+  },
+  "key": "0b262eaa6fb7d0e2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · screenUnit band",
+  "judgement": {
+   "change": "“Not in the army until <rule> (<unit>): “<quote>”” (no “adds it”, a datasheet switch reads right); for a stratagem's sheet the stratagem is linked with its CP"
+  },
+  "source": {
+   "diff": "git show 6d0eb9f 1c1b183 -- app.html",
+   "why": "review result-reference.json 8b4094509a6e8f74"
+  },
+  "key": "32f0a0c5394a095d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · readings, a detachment rule this run adds (reviewer's patch) + verify/derive.js exports vocab, tidyNeeds",
+  "judgement": {
+   "change": "a first --write gives the final readings (the Worthy Foes footnote only on units its needs name)"
+  },
+  "source": {
+   "diff": "git show 437fdd1",
+   "why": "review result-reference.json worthy-foes-first-run"
+  },
+  "key": "931a58d29ad70e59"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/derive.js · Fire Overwatch modifier",
+  "judgement": {
+   "change": "no Fire Overwatch (opponent's Movement) for an always-on effect that holds only “in a turn in which it Fell Back/Advanced” (both moves of your own Movement phase, Core Rules 09.02, 09.07). Derived labels it changes: Royal Warden Adaptive Strategy {ph:[movement,shooting,charge],turn:your} (now as reviewed); Bounding Leaps and Elevated Strider now agree with their signed-off labels; Thulia Ghuld's Icon of War and Thrill Seekers still differ from their stored labels (stored unchanged). No stored label changed."
+  },
+  "source": {
+   "diff": "git show 55a872e",
+   "why": "review result-necrons.json 231348fb544bd6eb"
+  },
+  "key": "069af20779d3c763"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/bsdata.js · ability pairing",
+  "judgement": {
+   "change": "an app ability named after BSData's profile type of several abilities (Triarch Abilities) pairs with the BSData ability worded alike under another name (Voice of the Triarch, word overlap ≥ 0.8), reported as BSData's other ability name; the Silent King's ability.text deviation now has Voice of the Triarch's words as its source"
+  },
+  "source": {
+   "diff": "git show a09efc5",
+   "why": "review result-necrons.json 3f54fb21ed75d36f"
+  },
+  "key": "76fc6c5daaf14002"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · timing labels",
+  "judgement": {
+   "change": "a label is written on the ability row, searched from the unit's abilities:[ (the Technomancer's “Technomancer” ability; a stats row of the same name came first and the label landed on Rites of Reanimation)"
+  },
+  "source": {
+   "diff": "git show 6b785bc"
+  },
+  "key": "7b76044d17ca9e7f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · pickOptions",
+  "judgement": {
+   "change": "“select one Triarch ability” matches who “Triarch Abilities: pick one” (section + “ abilities”): the three Triarch abilities show under To pick from and Active now. Only the Silent King has such a who."
+  },
+  "source": {
+   "diff": "git show 6c056ea -- app.html",
+   "why": "review result-necrons.json 29695b14ad9b97f7"
+  },
+  "key": "7714e9fc9d5bf2a1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "app.html · dmCalc defaults",
+  "judgement": {
+   "change": "a model's [C’TAN POWER] weapons: the first two start ticked, the third unticked (Powers of the C’tan: up to two different, one while Damaged); the player ticks as for a model's melee weapons"
+  },
+  "source": {
+   "diff": "git show 6c056ea -- app.html",
+   "why": "review result-necrons.json c7e609c0b62cf026"
+  },
+  "key": "e8cd9a29973ad225"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · shared datasheet rows",
+  "judgement": {
+   "change": "where this reading has an ability's name or words from GW's datasheet (Wahapedia) and the row has others (BSData's), GW's are written (listed in the report as GW’s words where the row had others; markup alone keeps the row's); hand texts (Faction Pack words) are applied before the comparison; a row note naming another list's detachment rule is not carried"
+  },
+  "source": {
+   "diff": "git show 8031621 -- verify/from-json.js",
+   "why": "review result-healybois.json 63cac0b4ab092c61, b930c4462e412083"
+  },
+  "key": "6a478d54eb74f6cb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/tables.js · rowWhy note",
+  "judgement": {
+   "change": "an ability's note naming a detachment rule of the list (Enraged Behemoths) is that list's (kept on its entry with why), not the datasheet's; and a reference sheet's role Reference is the list's (why.role)"
+  },
+  "source": {
+   "diff": "git show 8031621 1c1b183 -- verify/tables.js",
+   "why": "review result-healybois.json b930c4462e412083; result-reference.json 5d1e7bb5188a5ed4"
+  },
+  "key": "eb4490ce30c5179a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/texts.js · noteQuote",
+  "judgement": {
+   "change": "a quote in a note on a unit's ability may be found in the unit's Wahapedia datasheet pages (verify/.cache/waha/ds), after GW's documents: the Swarmlord's Designer's Note"
+  },
+  "source": {
+   "diff": "git show df242c1"
+  },
+  "key": "5833fec32c0a2f8e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · reference sheets",
+  "judgement": {
+   "change": "detection without “new” and with “containing …” (“add one TZEENTCH CHAOS SPAWN unit containing one model to your army”), a keyword phrase as the unit's keywords one after another, and the list's detachments' stratagems (ref.strat, no by); hand refs { of, name, model, carrier, dropKw, ref }: a sheet of models GW prints on another reference sheet's datasheet (Brimstone Horrors); --refs: only a list's reference sheets are written (a list not built by from-json)"
+  },
+  "source": {
+   "diff": "git show 1c1b183 -- verify/from-json.js",
+   "why": "review result-reference.json 7df6293dcaa362e5, 5bf53ce8f7bffc00"
+  },
+  "key": "e069726a4291d580"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/bsdata.js · ref.of",
+  "judgement": {
+   "change": "a reference sheet with ref.of is not built (no BSData entry of its own; the sheet it is from is checked)"
+  },
+  "source": {
+   "diff": "git show 1c1b183 -- verify/bsdata.js"
+  },
+  "key": "b7770578aeb097f7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/nr.js · PDF compare",
+  "judgement": {
+   "change": "a reference sheet New Recruit's PDF does not print is not an unmatched unit"
+  },
+  "source": {
+   "diff": "git show 1c1b183 -- verify/nr.js"
+  },
+  "key": "4cb23fd86f091ab9"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "check.js · ref.strat",
+  "judgement": {
+   "change": "a stratagem's reference sheet: the stratagem is of the list's detachments, its EFFECT holds the quote, no by"
+  },
+  "source": {
+   "diff": "git show 1c1b183 -- check.js"
+  },
+  "key": "e5c28f0a410c3cef"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "import.js · ref.strat",
+  "judgement": {
+   "change": "an imported list gets a stratagem's reference sheet when its detachments have that stratagem"
+  },
+  "source": {
+   "diff": "git show 1c1b183 -- import.js"
+  },
+  "key": "3b5a8cce85a8bee6"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "list",
+  "where": "u-w0t-m8 · newer export (U_w0t_m8_2.json)",
+  "judgement": {
+   "units": [
+    "Imotekh the Stormlord 100",
+    "The Silent King 420 (Warlord)",
+    "Royal Warden 50",
+    "Technomancer 80 supporting Immortals 65 (145)",
+    "Flayed Ones 55",
+    "Ophydian Destroyers 80",
+    "Canoptek Scarab Swarms 40",
+    "Canoptek Reanimator 75",
+    "Canoptek Spyders 65",
+    "Tesseract Vault 465",
+    "Tesseract Vault 505"
+   ],
+   "total": 2000,
+   "out": "Nekrosor Ammentar, one Flayed Ones"
+  },
+  "source": {
+   "gw": "Wahapedia necrons Technomancer (1st 80), Immortals (5: 65), Canoptek Scarab Swarms (3: 40), Canoptek Spyders (1: 65); the export's Supporting association: Technomancer → Immortals; Imotekh and the Royal Warden attached to nothing"
+  },
+  "key": "8ee89b08b5ece30b"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "why",
+  "where": "u-w0t-m8 · Imotekh the Stormlord, Royal Warden",
+  "judgement": {
+   "lead": "nothing (the export attaches neither; the Immortals are supported by the Technomancer)"
+  },
+  "source": {
+   "gw": "LEADER: Imotekh IMMORTALS, LYCHGUARD, NECRON WARRIORS; Royal Warden IMMORTALS, NECRON WARRIORS"
+  },
+  "key": "aad07081124f7a50"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "readings",
+  "where": "u-w0t-m8 · Immortals · Implacable Eradication",
+  "judgement": {
+   "mods": [
+    "every attack: re-roll wound rolls of 1 (rrWound 1s)",
+    "target within range of an objective marker (cond targetObjective): re-roll the wound roll"
+   ]
+  },
+  "source": {
+   "text": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "27c32b58b9353162"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "readings",
+  "where": "u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array, Gloom Prism",
+  "judgement": {
+   "guard": [
+    "Fabricator Claw Array: friendly NECRONS VEHICLE within 6\", own included: Feel No Pain 6+",
+    "Gloom Prism: friendly NECRONS within 6\", own included: Feel No Pain 5+ against mortal wounds and Psychic Attacks"
+   ]
+  },
+  "source": {
+   "text": "GW: both (Aura)"
+  },
+  "key": "b8eb72b914ab6e3f"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "def",
+  "where": "u-w0t-m8 · Technomancer · Rites of Reanimation",
+  "judgement": {
+   "def": "While the Technomancer leads this unit: Feel No Pain 5+ for its models"
+  },
+  "source": {
+   "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. (A support unit leads its bodyguard, Core Rules Leader/Support.)"
+  },
+  "key": "33a35d494ddd0442"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "name",
+  "where": "u-w0t-m8 · Canoptek Scarab Swarms · Chittering Swarm",
+  "judgement": {
+   "name": "Chittering Swarm (New Recruit's/BSData's capitalisation; GW prints “Chittering swarm”)"
+  },
+  "source": {
+   "why": "kept as from-json matched it (case only)"
+  },
+  "key": "58091bdff27d1efc"
+ },
+ {
+  "army": "healybois",
+  "kind": "note",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "judgement": {
+   "note": "both FP 1.3 FAQs (lose hidden: No; restricted by Reserves range abilities, e.g. Omniscrambers: No)"
+  },
+  "source": {
+   "gw": "Faction Pack Tyranids 1.3, FAQs, lines 716-718 and 763-766"
+  },
+  "key": "e56ee07eb05e5766"
+ },
+ {
+  "army": "tyranids",
+  "kind": "row",
+  "where": "DATASHEETS tyranids/norn-assimilator, tyranids/norn-emissary · Singular Purpose note",
+  "judgement": {
+   "note": "on Nidzillas' four Norn entries only (why: Enraged Behemoths), not on the rows (Healybois has no Crusher Stampede)"
+  },
+  "source": {
+   "review": "result-healybois.json b930c4462e412083, fbc86381695ae52d"
+  },
+  "key": "e8f320006a749ee4"
+ },
+ {
+  "army": "tyranids",
+  "kind": "row",
+  "where": "DATASHEETS tyranids/norn-emissary · Unnatural Resilience",
+  "judgement": {
+   "name": "Unnatural Resilience",
+   "text": "This model has the **Feel No Pain 4+** ability against **mortal wounds**."
+  },
+  "source": {
+   "gw": "Wahapedia tyranids_Norn-Emissary.html",
+   "declared": "Nidzillas: deviations-bsdata/nr (BSData/New Recruit: Unnatural Resistance)"
+  },
+  "key": "cf0f6eb66daca899"
+ },
+ {
+  "army": "tyranids",
+  "kind": "row",
+  "where": "DATASHEETS · Harpoon Barbs, Singular Purpose (×2 rows), Hive Commander",
+  "judgement": {
+   "text": "GW's words (Wahapedia datasheets): Harpoon Barbs “…of this model is selected to Fall Back, roll one D6: on a 2+…”; Singular Purpose “…targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.”; Hive Commander's full stop"
+  },
+  "source": {
+   "declared": "Nidzillas: 11 deviations-bsdata and 11 deviations-nr entries (by hand); Healybois: from-json's"
+  },
+  "key": "adbd7322590c9ab3"
+ },
+ {
+  "army": "tyranids",
+  "kind": "note",
+  "where": "DATASHEETS tyranids/the-swarmlord · Malign Presence",
+  "judgement": {
+   "note": "Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”"
+  },
+  "source": {
+   "review": "result-healybois.json 89f3b0c37fbaa625 (the reviewer's wording)"
+  },
+  "key": "591097b19d49206a"
+ },
+ {
+  "army": "tyranids",
+  "kind": "note",
+  "where": "FACTIONS tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "note": "label “FAQ (Faction Pack 1.3):” (was “Wahapedia FAQ:”)"
+  },
+  "source": {
+   "gw": "Faction Pack Tyranids 1.3, FAQs, lines 709-711"
+  },
+  "key": "21534e228c73a0de"
+ },
+ {
+  "army": "healybois",
+  "kind": "hand",
+  "where": "healybois hand texts · Malign Presence, Will of the Hive Mind",
+  "judgement": {
+   "texts": "the Faction Pack 1.3 words written over Wahapedia's codex words (as the rows already had them)"
+  },
+  "source": {
+   "gw": "Faction Pack Tyranids 1.3, Rules Updates, lines 659-663, 681-686"
+  },
+  "key": "15941e4b76065ceb"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "ref",
+  "where": "tzeeeeentch · Brimstone Horrors",
+  "judgement": {
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Split",
+    "quote": "On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.",
+    "of": "Blue Horrors"
+   },
+   "sheet": "GW's Blue Horrors profile as Brimstone Horror (25mm), Coruscating Yellow flames, Yellow claws, the Blue Horrors' abilities and rules, keywords without BLUE"
+  },
+  "source": {
+   "gw": "Wahapedia chaos-daemons_Blue-Horrors.html (carrier line, KEYWORDS); no Wahapedia/GW/BSData Brimstone Horrors datasheet; base: deviations-bases.json (the guide's Blue Horrors row)"
+  },
+  "key": "59706f38a09ef485"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ref",
+  "where": "mucho-mutantes · Chaos Spawn",
+  "judgement": {
+   "ref": {
+    "rule": "Gift of Change",
+    "strat": "gift-of-change",
+    "quote": "At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units."
+   },
+   "sheet": "1 Chaos Spawn: M8\" T5 Sv4+ W4 Ld7+ OC1 InSv5+ 50mm, Hideous Mutations, Regenerating Monstrosities, Feel No Pain 5+",
+   "kw": "Beast, Chaos, Chaos Spawn, Faction: Thousand Sons, Mutant, Spawn (BSData's category, GW prints no SPAWN: kept, as from-json keeps export categories), Tzeentch"
+  },
+  "source": {
+   "gw": "Wahapedia thousand-sons_Chaos-Spawn.html; BSData Chaos Spawn root 60de-4c77-95e1-1337"
+  },
+  "key": "7f36fcfe233fe050"
+ },
+ {
+  "army": "reference",
+  "kind": "role",
+  "where": "role Reference on the list's entries (blue-horrors, brimstone-horrors, spore-mines-biovore, chaos-spawn)",
+  "judgement": {
+   "rows": "no role on these DATASHEETS rows (the Blue Horrors' Battleline is not written: no list buys one)"
+  },
+  "source": {
+   "review": "result-reference.json 5d1e7bb5188a5ed4"
+  },
+  "key": "c800e1c92eb4e0f3"
+ }
+]

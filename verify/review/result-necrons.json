@@ -1,0 +1,842 @@
+[
+ {
+  "key": "3a422637d7e0bf34",
+  "where": "u-w0t-m8 · Imotekh the Stormlord · Grand Strategist",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Imotekh-The-Stormlord.html: \"At the start of your Command phase … you gain 1CP\": your Command phase, a fixed moment (checklist Command · Your turn)."
+ },
+ {
+  "key": "48d07d7c40cae33f",
+  "where": "u-w0t-m8 · Imotekh the Stormlord · Lord of the Storm",
+  "verdict": "ok",
+  "why": "\"Once per battle, at the end of your Command phase\": your Command phase."
+ },
+ {
+  "key": "2136052a4edee021",
+  "where": "u-w0t-m8 · Imotekh the Stormlord · Lord of the Storm",
+  "verdict": "ok",
+  "why": "GW opens the ability with \"Once per battle,\" – the tag repeats its words."
+ },
+ {
+  "key": "29b4ac3952ac46c9",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, Worthy Foes \"Change to:\" NOBLE, LYCHGUARD or TRIARCH; The Silent King is TRIARCH (FP keywords change: ALL MODELS: VEHICLE, EPIC HERO, TRIARCH). Footnote quotes the duration (until the start of your next Command phase) and +1 to wound."
+ },
+ {
+  "key": "989378cc924063dc",
+  "where": "u-w0t-m8 · Imotekh the Stormlord",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Imotekh-The-Stormlord.html: \"equipped with: Gauntlet of Fire; Staff of the Destroyer\"; the Staff has a ranged (18\" A3 2+ S6 -3 D2) and a melee profile (A4 2+ S6 -3 D2 [DEVASTATING WOUNDS]); Gauntlet 12\" D6 – S5 -1 D1 [IGNORES COVER, TORRENT]: all match."
+ },
+ {
+  "key": "d74087b626bdc15f",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Infectious Murder-madness",
+  "verdict": "ok",
+  "why": "\"each time a model in that unit makes an attack\": derived convention (derive.js overwatch modifier, signed off on the Maulerfiend/Defiler \"makes an attack\" labels): Fire Overwatch (their Movement), your Shooting, either Fight."
+ },
+ {
+  "key": "910e7cf906253883",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Infectious Murder-madness",
+  "verdict": "ok",
+  "why": "GW prints \"Infectious Murder-madness (Aura)\" (FP 1.3 Nekrosor datasheet l.1012)."
+ },
+ {
+  "key": "4417ee82e418ac67",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Prophet of Destruction",
+  "verdict": "ok",
+  "why": "\"Each time this model destroys an enemy unit … until the end of the phase … makes an attack\": wherever Nekrosor can destroy a unit and the other unit attack in the same phase; same derived convention (derive.js overwatch modifier, signed off on the Maulerfiend/Defiler \"makes an attack\" labels): Fire Overwatch (their Movement), your Shooting, either Fight."
+ },
+ {
+  "key": "78d5d5e43076e64d",
+  "where": "u-w0t-m8 · Nekrosor Ammentar · Nullstone Field Generator",
+  "verdict": "ok",
+  "why": "GW prints \"Nullstone Field Generator (Aura)\" (FP 1.3 l.1008, WARGEAR ABILITIES)."
+ },
+ {
+  "key": "feb461b10521b285",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "verdict": "ok",
+  "why": "Quotes GW: friendly NECRONS (excluding MONSTER and TITANIC), within 6\", DESTROYER CULT model or closest eligible target, [SUSTAINED HITS 1]. Nekrosor is DESTROYER CULT (keywords FP l.1022), so selfAlways is right (22.01 aura includes own unit). The Tesseract Vaults (TITANIC) rightly lack it in the snapshot."
+ },
+ {
+  "key": "29cd143236c33dbb",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "verdict": "ok",
+  "why": "\"select one other friendly DESTROYER CULT unit within 9\"\" → notSelf, needs Destroyer Cult; \"Until the end of the phase … re-roll a Wound roll of 1\". Only the Ophydian Destroyers get it in the snapshot (Flayed Ones are not DESTROYER CULT, ds/necrons_Flayed-Ones keywords INFANTRY; FLAYED ONES)."
+ },
+ {
+  "key": "4e2a8f897d90fde5",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "verdict": "ok",
+  "why": "FNP 5+ against mortal wounds and Psychic Attacks, friendly NECRONS within 6\" of the bearer, own unit included (Aura)."
+ },
+ {
+  "key": "64866327d69875e8",
+  "where": "u-w0t-m8 · Nekrosor Ammentar",
+  "verdict": "ok",
+  "why": "GW: \"equipped with: enmitic disintegrators; Unmaker Gauntlet; blade tail and whip coils; nullstone field generator\" (FP l.1036-1037); profiles match (18\" A4 2+ S6 -2 D1 [IGNORES COVER, PISTOL, SUSTAINED HITS 2]; blade tail A6 2+ S6 -1 D1 [EXTRA ATTACKS]; Unmaker A6 2+ S10 -3 D3). Names as New Recruit (\"Unmaker gauntlet\")."
+ },
+ {
+  "key": "b03d000b946ed639",
+  "where": "u-w0t-m8 · The Silent King · Damaged: 1-6 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: \"DAMAGED: 1-6 WOUNDS REMAINING … this unit’s Szarekh model\" and Szarekh W16 (Wahapedia ds/necrons_The-Silent-King.html)."
+ },
+ {
+  "key": "67bcaeb0448f90e9",
+  "where": "u-w0t-m8 · The Silent King · Triarch Abilities",
+  "verdict": "ok",
+  "why": "\"At the start of the battle round\": shown under Start of the battle round, same as the signed-off Wrathful Presence (Angron) and Unearthly Power (Magnus)."
+ },
+ {
+  "key": "d1a51d2db951ad32",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Stars",
+  "verdict": "ok",
+  "why": "\"makes an attack\": derived convention (derive.js overwatch modifier, signed off on the Maulerfiend/Defiler \"makes an attack\" labels): Fire Overwatch (their Movement), your Shooting, either Fight."
+ },
+ {
+  "key": "3727661804f149bf",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Stars",
+  "verdict": "ok",
+  "why": "GW prints \"Phaeron of the Stars (Aura)\" in the TRIARCH ABILITIES box (Wahapedia ds/necrons_The-Silent-King.html)."
+ },
+ {
+  "key": "29695b14ad9b97f7",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Stars",
+  "verdict": "ok",
+  "why": "GW prints it in the TRIARCH ABILITIES box picked by Triarch Abilities: \"Triarch Abilities: pick one\" names GW's box, layout as Wrathful Presence. NOTE (code): app.html pickOptions() reads \"select one Triarch ability\" as section \"Triarch\", which does not equal \"triarch abilities\", so the three options are NOT linked: missing from the checklist's Active now (and the \"(Triarch Abilities)\" selector name) and from the Triarch Abilities sheet's \"To pick from\" (snapshot: no Active now line for any of them). The who is right; the matcher needs fixing."
+ },
+ {
+  "key": "4e14b2b88d57854d",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Blades",
+  "verdict": "ok",
+  "why": "Charge rolls (Charge phase, either turn as derive.js reads charge moves) and melee attacks (Fight phase either turn)."
+ },
+ {
+  "key": "bb58444c5235a52d",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Blades",
+  "verdict": "ok",
+  "why": "GW prints \"Phaeron of the Blades (Aura)\"."
+ },
+ {
+  "key": "db9e0d48d5ea0d7f",
+  "where": "u-w0t-m8 · The Silent King · Phaeron of the Blades",
+  "verdict": "ok",
+  "why": "As item Phaeron of the Stars (who right; see the pickOptions code bug)."
+ },
+ {
+  "key": "a6056f11be1de31f",
+  "where": "u-w0t-m8 · The Silent King · Relentless March",
+  "verdict": "ok",
+  "why": "+2\" Move characteristic: M is used only by normal, advance and fall-back moves (Core Rules 09.05-09.07), made in your Movement phase."
+ },
+ {
+  "key": "552b4e47b5c5e653",
+  "where": "u-w0t-m8 · The Silent King · Relentless March",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates: \"Relentless March (Aura): …\"."
+ },
+ {
+  "key": "a3dc271167a9e577",
+  "where": "u-w0t-m8 · The Silent King · Relentless March",
+  "verdict": "ok",
+  "why": "As item Phaeron of the Stars (who right; see the pickOptions code bug)."
+ },
+ {
+  "key": "394b1f6b308d9f53",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "Quotes GW: Szarekh 1-6 wounds: halve A of that model's weapons; each time this unit makes an attack -1 to the Hit roll."
+ },
+ {
+  "key": "7a249c267573eaa1",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "NECRONS excluding MONSTER, within 6\" of Szarekh, conditional on the round's pick; re-roll hit 1 and wound 1. Tesseract Vault (VEHICLE TITANIC, not MONSTER) rightly gets it."
+ },
+ {
+  "key": "0592328ddd1d0477",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "Melee attacks +1 S, and the Charge re-roll carried in the note; NECRONS excluding MONSTER."
+ },
+ {
+  "key": "44159cade111f908",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, The Silent King Keywords: \"– SZAREKH MODEL: CHARACTER, THE SILENT KING\"."
+ },
+ {
+  "key": "14c69e5e53a98c17",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "GW: \"Szarekh is equipped with: Sceptre of Eternal Glory; Staff of Stars; Weapons of the Final Triarch. Every Triarchal Menhir is equipped with: annihilator beam; armoured bulk.\" 2 Menhirs → ×2 of each; profiles match (Annihilator beam 24\" A1 2+ S14 -4 D6; Sceptre 24\" A2 2+ S10 -3 D3 [DW]; Staff 24\" A12 2+ S6 -1 D1 [IF]; Final Triarch A12 2+ S8 -3 D2 [LH]; bulk A1 4+ S4 0 D1)."
+ },
+ {
+  "key": "231348fb544bd6eb",
+  "where": "u-w0t-m8 · Royal Warden · Adaptive Strategy",
+  "verdict": "fix",
+  "why": "Fall Back is only possible in your own Movement phase: the active player moves units (Core Rules 09.02) and \"Fall-back move\" is one of its move types (09.07). In the opponent's Movement phase (Fire Overwatch) this unit cannot have \"Fell Back\" that turn, so turns.movement \"either\" is unreachable. Same as the signed-off Bounding Leaps / Elevated Strider ({ph:[movement,shooting], turn:your}). It comes from derive.js's Overwatch modifier (\"eligible to shoot\" read as always-on). The fix needs a hand label in verify/sources/hand/u-w0t-m8.json units.royal-warden.labels[\"Adaptive Strategy\"], or a derive.js change (code: the same applies to Icon of War's Adaptive Tactics/Fanatical Devotion).",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your"
+  }
+ },
+ {
+  "key": "df6226869b55952d",
+  "where": "u-w0t-m8 · Royal Warden · Engrammatic Logic",
+  "verdict": "ok",
+  "why": "\"Once per battle, at the start of any phase\": every phase, either turn."
+ },
+ {
+  "key": "d578c6e3838f752b",
+  "where": "u-w0t-m8 · Royal Warden · Engrammatic Logic",
+  "verdict": "ok",
+  "why": "GW opens \"Once per battle,\" – tag repeats its words."
+ },
+ {
+  "key": "1079cc66dd360a3e",
+  "where": "u-w0t-m8 · Royal Warden",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Royal-Warden.html: \"relic gauss blaster; close combat weapon\"; 24\" A2 3+ S5 -1 D2 [LETHAL HITS, RAPID FIRE 2]; CCW A4 3+ S5 0 D1."
+ },
+ {
+  "key": "f1b70eb72fc5529a",
+  "where": "u-w0t-m8 · Flayed Ones · Flesh Hunger",
+  "verdict": "ok",
+  "why": "\"makes a melee attack\": Fight phase, either turn."
+ },
+ {
+  "key": "d2cf4d136e615a7e",
+  "where": "u-w0t-m8 · Flayed Ones",
+  "verdict": "ok",
+  "why": "Quotes GW: target Below Half-strength → a successful Hit roll scores a Critical Hit (melee)."
+ },
+ {
+  "key": "1f6eb5801f795659",
+  "where": "u-w0t-m8 · Flayed Ones",
+  "verdict": "ok",
+  "why": "5 Flayed Ones, \"Every model is equipped with: flayer claws\"; A4 3+ S4 -1 D1 [SUSTAINED HITS 1, TWIN-LINKED]."
+ },
+ {
+  "key": "523551777a3de990",
+  "where": "u-w0t-m8 · Ophydian Destroyers · Tunnelling Horrors",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates wording; \"At the end of your opponent’s turn\" (fight · opp, at: End of your opponent’s turn) + \"ingress move in your next Movement phase\" (movement · your); same shape as the signed-off Mysterious Guardian."
+ },
+ {
+  "key": "10667cef329f1806",
+  "where": "u-w0t-m8 · Ophydian Destroyers",
+  "verdict": "ok",
+  "why": "3 Ophydian Destroyers, \"Every model is equipped with: Ophydian hyperphase weapons\"; A5 3+ S4 -2 D2."
+ },
+ {
+  "key": "4993763f59ebd53c",
+  "where": "u-w0t-m8 · Canoptek Reanimator · Nanoscarab Reanimation Beam",
+  "verdict": "ok",
+  "why": "GW prints \"Nanoscarab Reanimation Beam (Aura)\"; text is FP 1.3's \"Change to\" (3\", heals an additional D3)."
+ },
+ {
+  "key": "8a0a16b322e41cef",
+  "where": "u-w0t-m8 · Canoptek Reanimator",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Canoptek-Reanimator.html: \"equipped with: 2 atomiser beams; Reanimator’s claws\" (singular profile Atomiser beam → ×2 is right); 12\" A3 4+ S6 -2 D1; claws A4 4+ S5 0 D1."
+ },
+ {
+  "key": "d81cd95ab0fa9583",
+  "where": "u-w0t-m8 · Tesseract Vault · Damaged: 1-8 wounds remaining",
+  "verdict": "ok",
+  "why": "Its words name \"your Shooting phase\" (hand label, declared)."
+ },
+ {
+  "key": "9907b15cbefaac8b",
+  "where": "u-w0t-m8 · Tesseract Vault · Damaged: 1-8 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: DAMAGED: 1-8 WOUNDS REMAINING, W24."
+ },
+ {
+  "key": "82ec5e546587a35e",
+  "where": "u-w0t-m8 · Tesseract Vault · Powers of the C’tan",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase, when this model is selected to shoot\": your Shooting phase."
+ },
+ {
+  "key": "90135ce6b36d3068",
+  "where": "u-w0t-m8 · Tesseract Vault",
+  "verdict": "ok",
+  "why": "GW: \"4 tesla spheres; armoured bulk\" + the three [C’TAN POWER] ranged profiles; Tesla 24\" A6 3+ S7 0 D1 [SUSTAINED HITS 2]; Cosmic Fire 18\" 3D6 – S6 -2 D1; Time’s Arrow 24\" A1 2+ S3 -2 D6; Antimatter Meteor 24\" D6+3 3+ S10 -3 D3; bulk A6 4+ S8 0 D1. ×4 follows the owner's rule (n:1 only for ×2 plural on one model; \"other counts follow GW\": 4). See the question answer."
+ },
+ {
+  "key": "5259c8834fd3690e",
+  "where": "necrons army rule · Reanimation Protocols",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates \"Change to\": \"at the end of your Command phase\"."
+ },
+ {
+  "key": "970252e6a0171776",
+  "where": "necrons army rule · Reanimation Protocols",
+  "verdict": "ok",
+  "why": "\"your Command phase\"."
+ },
+ {
+  "key": "b957515c4f8e3b70",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "verdict": "ok",
+  "why": "\"In your Command phase, select …\" then attacks: Command, Shooting, Fight. (No Overwatch: it has a trigger, and the checklist excludes stratagem-only phases.)"
+ },
+ {
+  "key": "8d3193b8ca8ea379",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "verdict": "ok",
+  "why": "Your Command phase."
+ },
+ {
+  "key": "daba4cf241d0cd36",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "verdict": "ok",
+  "why": "Melee attacks in either Fight phase within \"until the start of your next Command phase\"."
+ },
+ {
+  "key": "ebaa1eef2e1e0be1",
+  "where": "Obeisance Phalanx rule · Worthy Foes",
+  "verdict": "ok",
+  "why": "FP 1.3: \"NOBLE, LYCHGUARD or TRIARCH unit\". Applies to Imotekh (NOBLE) and The Silent King (TRIARCH) only; Nekrosor (INFANTRY, CHARACTER, EPIC HERO, DESTROYER CULT) and the Royal Warden (INFANTRY, CHARACTER, ROYAL WARDEN) are neither – the committed snapshot shows APPLIES TO Imotekh the Stormlord, The Silent King and the footnote on those two only."
+ },
+ {
+  "key": "65e0ffa662ea0cbb",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "verdict": "ok",
+  "why": "WHEN: \"Any phase\" – all five."
+ },
+ {
+  "key": "d253f74fd448c2b6",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "verdict": "ok",
+  "why": "Any phase, either turn."
+ },
+ {
+  "key": "f10a1faf78d9b7ca",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "verdict": "ok",
+  "why": "TARGET \"Your NECRONS WARLORD\"."
+ },
+ {
+  "key": "486b0faf4502e769",
+  "where": "Obeisance Phalanx · Your Time Is Nigh",
+  "verdict": "ok",
+  "why": "Restates WHEN/TARGET/EFFECT; nothing added."
+ },
+ {
+  "key": "d123f0fdd6de9b6d",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase or the Fight phase\"."
+ },
+ {
+  "key": "01ea4a2610578db7",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "Fight phase either turn."
+ },
+ {
+  "key": "12359279c306764e",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase\"."
+ },
+ {
+  "key": "af4072e5d4cd2846",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "\"NECRONS unit … (excluding TITANIC units)\": the Tesseract Vaults rightly lack it."
+ },
+ {
+  "key": "702a230267ae7949",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "\"an unmodified Hit roll of 5+ scores a Critical Hit\", until the end of the phase; critHit 5 is literal."
+ },
+ {
+  "key": "df1edca14fb50e2e",
+  "where": "Obeisance Phalanx · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "b311defc10401675",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase or the Fight phase\"."
+ },
+ {
+  "key": "5940a85519013ee3",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "verdict": "ok",
+  "why": "Either turn (Fight)."
+ },
+ {
+  "key": "9881e83dbf846c59",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase\"."
+ },
+ {
+  "key": "993a861e97930670",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "verdict": "ok",
+  "why": "\"NECRONS VEHICLE unit\" (Silent King, Reanimator, Tesseract Vaults)."
+ },
+ {
+  "key": "34e810a3aed68421",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "verdict": "ok",
+  "why": "-1 Damage to each attack allocated, until the end of the phase; WHEN kept."
+ },
+ {
+  "key": "fec5fcb9949c23dc",
+  "where": "Obeisance Phalanx · Nanoassembly Protocols",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "1e8fcb1e54334782",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "verdict": "ok",
+  "why": "\"Fight phase\"."
+ },
+ {
+  "key": "1c4150ad94f52315",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "verdict": "ok",
+  "why": "Either turn."
+ },
+ {
+  "key": "68489cef026ae922",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "verdict": "ok",
+  "why": "\"LYCHGUARD or TRIARCH PRAETORIANS\": TRIARCH PRAETORIANS is a keyword of its own; no unit here has it."
+ },
+ {
+  "key": "c8f4738e93b0f02b",
+  "where": "Obeisance Phalanx · Sentinels of Eternity",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "b3a089cb83677130",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "verdict": "ok",
+  "why": "\"Fight phase\"."
+ },
+ {
+  "key": "3cd6cd2ed1272a23",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "verdict": "ok",
+  "why": "Either turn."
+ },
+ {
+  "key": "9440364a0ccaae4f",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "verdict": "ok",
+  "why": "\"LYCHGUARD or TRIARCH\" (The Silent King)."
+ },
+ {
+  "key": "e6738ded2430cedf",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "verdict": "ok",
+  "why": "Melee weapons have [PRECISION] until the end of the phase."
+ },
+ {
+  "key": "838b3b469f784a77",
+  "where": "Obeisance Phalanx · Suffer No Rival",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "07cf4c6dfd116728",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "verdict": "ok",
+  "why": "\"Your Command phase.\""
+ },
+ {
+  "key": "5d481e796c416692",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "verdict": "ok",
+  "why": "Your turn."
+ },
+ {
+  "key": "074a00cf4d047b82",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "verdict": "ok",
+  "why": "FP 1.3 errata TARGET: \"One LYCHGUARD or TRIARCH unit from your army.\""
+ },
+ {
+  "key": "a5921e17368191dc",
+  "where": "Obeisance Phalanx · Territorial Obsession",
+  "verdict": "ok",
+  "why": "+1 OC, +3 for a VEHICLE unit (The Silent King is VEHICLE)."
+ },
+ {
+  "key": "31fe496ec07811db",
+  "where": "The Phaeron’s Armoury rule · Empowered Engines",
+  "verdict": "ok",
+  "why": "+6\" M: M is used only by normal, advance and fall-back moves (Core Rules 09.05-09.07; a charge move's maximum distance is the charge roll, 2D6, l.1649-1666), all in your Movement phase. The label is right; the todo's remark that it also counts for charges is not."
+ },
+ {
+  "key": "584e74acd6871090",
+  "where": "The Phaeron’s Armoury rule · Empowered Engines",
+  "verdict": "ok",
+  "why": "Your turn (Movement)."
+ },
+ {
+  "key": "83424b9a3fec2d9a",
+  "where": "The Phaeron’s Armoury rule · Empowered Engines",
+  "verdict": "ok",
+  "why": "\"NECRONS TITANIC FLY\" (the Tesseract Vaults: kw VEHICLE; TITANIC; FLY; FRAME; TOWERING)."
+ },
+ {
+  "key": "74ce66c9df94fffb",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase or the Fight phase\"."
+ },
+ {
+  "key": "7243279696f7001e",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "verdict": "ok",
+  "why": "Either (Fight)."
+ },
+ {
+  "key": "26d60d5b52c19f00",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "verdict": "ok",
+  "why": "Opponent's Shooting."
+ },
+ {
+  "key": "9cbf99bce63d1efd",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "verdict": "ok",
+  "why": "\"NECRONS TITANIC FLY\"."
+ },
+ {
+  "key": "3610e758647396e4",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "verdict": "ok",
+  "why": "-1 AP until that enemy unit has attacked; quoted."
+ },
+ {
+  "key": "59a9cc6e72b3a218",
+  "where": "The Phaeron’s Armoury · Subsurface Quantumweave",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "c8566a6b08194fe5",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "verdict": "ok",
+  "why": "\"Start of your Shooting phase\"."
+ },
+ {
+  "key": "c89f6043cc9f90d5",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "verdict": "ok",
+  "why": "Your turn."
+ },
+ {
+  "key": "531d0432d9a7c4a7",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "verdict": "ok",
+  "why": "\"NECRONS TITANIC FLY\"."
+ },
+ {
+  "key": "2715c3f6dc208cf9",
+  "where": "The Phaeron’s Armoury · Particle Pulse",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "1882de1670eb70e9",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase, when … selected to shoot\"."
+ },
+ {
+  "key": "048c759fbd47d068",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "verdict": "ok",
+  "why": "Your turn."
+ },
+ {
+  "key": "663d98f74bc45619",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "verdict": "ok",
+  "why": "\"OBELISK/TESSERACT VAULT\"."
+ },
+ {
+  "key": "6018aeed36448653",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "verdict": "ok",
+  "why": "\"Your unit’s Tesla Sphere weapons have +1 AP\": only the tesla sphere rows."
+ },
+ {
+  "key": "56f3b611ec7b78a0",
+  "where": "The Phaeron’s Armoury · Cosmic Storm",
+  "verdict": "ok",
+  "why": "Literal shortening."
+ },
+ {
+  "key": "aae633f79726f457",
+  "where": "/^c['’]tan power$/i",
+  "verdict": "ok",
+  "why": "[C’TAN POWER] is printed on the three C’tan Powers weapons (Wahapedia: plain keyword, no tooltip/definition); opening the selecting ability is the declared Conversion precedent."
+ },
+ {
+  "key": "3f54fb21ed75d36f",
+  "where": "deviations-bsdata.json · the-silent-king · ability.text",
+  "verdict": "fix",
+  "why": "The app value is right (GW words). The recorded BSData \"source\" is wrong: it is the text of Phaeron of the Stars (BSData profile 2feb-ae85-c8e0-9f61), not of the ability this row compares. BSData's counterpart is \"Voice of the Triarch\" (2be5-77b0-af86-2bd0): \"At the start of the battle round, select one[NBSP]Triarch ability. Until the start of the next battle round,[NBSP]this unit has that ability.\" (NBSPs as BSData has them, as the other Silent King sources keep them). Code: from-json.js paired the renamed ability with the wrong BSData row (deviations-bsdata.json is written by from-json.js, so fix the pairing rather than hand-edit).",
+  "fix": {
+   "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
+   "source": "At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has that ability."
+  }
+ },
+ {
+  "key": "206f92515a2143c8",
+  "where": "deviations-bsdata.json · the-silent-king · ability.tag",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_The-Silent-King.html prints \"The Silent King:\" without (Aura); BSData/NR tag it. GW wins."
+ },
+ {
+  "key": "720977ccd909caa5",
+  "where": "deviations-bsdata.json · the-silent-king · ability.text",
+  "verdict": "ok",
+  "why": "App has GW's words (BSData misplaces \"unit\")."
+ },
+ {
+  "key": "5a6f316eff1d74a3",
+  "where": "deviations-bsdata.json · the-silent-king · ability",
+  "verdict": "ok",
+  "why": "GW box SUPREME COMMANDER: \"If this unit is in your army, it must be your Warlord.\""
+ },
+ {
+  "key": "45350d7d440a1c82",
+  "where": "deviations-bsdata.json · the-silent-king · ability",
+  "verdict": "ok",
+  "why": "GW names it Triarch Abilities."
+ },
+ {
+  "key": "1535622de65748db",
+  "where": "deviations-bsdata.json · tesseract-vault · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion l.3458 \"Tesseract Vault 120x92mm Oval Base\"; app’s \"120×92mm Oval\" is the app's convention for every oval base (data.js has 11 such)."
+ },
+ {
+  "key": "0e9f9408a35bbf0d",
+  "where": "deviations-bsdata.json · tesseract-vault · ranged.kw",
+  "verdict": "ok",
+  "why": "Wahapedia (GW codex) adds [C'TAN POWER]; BSData/NR lack it."
+ },
+ {
+  "key": "1603e3114485d331",
+  "where": "deviations-bsdata.json · tesseract-vault · ranged.kw",
+  "verdict": "ok",
+  "why": "Same as Cosmic fire."
+ },
+ {
+  "key": "4724f93a4be88b52",
+  "where": "deviations-bsdata.json · tesseract-vault · ranged.kw",
+  "verdict": "ok",
+  "why": "Same as Cosmic fire."
+ },
+ {
+  "key": "ecb737948af18e29",
+  "where": "deviations-bsdata.json · tesseract-vault · ability.text",
+  "verdict": "ok",
+  "why": "GW words \"two … (see left)\"."
+ },
+ {
+  "key": "1535622de65748db",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · stats.base",
+  "verdict": "ok",
+  "why": "As tesseract-vault."
+ },
+ {
+  "key": "0e9f9408a35bbf0d",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ranged.kw",
+  "verdict": "ok",
+  "why": "As tesseract-vault."
+ },
+ {
+  "key": "1603e3114485d331",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ranged.kw",
+  "verdict": "ok",
+  "why": "As tesseract-vault."
+ },
+ {
+  "key": "4724f93a4be88b52",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ranged.kw",
+  "verdict": "ok",
+  "why": "As tesseract-vault."
+ },
+ {
+  "key": "ecb737948af18e29",
+  "where": "deviations-bsdata.json · tesseract-vault-2 · ability.text",
+  "verdict": "ok",
+  "why": "As tesseract-vault."
+ },
+ {
+  "key": "cf016a75a4129a51",
+  "where": "deviations-nr.json · tesseract-vault · stats[Tesseract Vault].base",
+  "verdict": "ok",
+  "why": "Event Companion l.3458."
+ },
+ {
+  "key": "cf016a75a4129a51",
+  "where": "deviations-nr.json · tesseract-vault-2 · stats[Tesseract Vault].base",
+  "verdict": "ok",
+  "why": "Event Companion l.3458."
+ },
+ {
+  "key": "2e6c4e1500f10870",
+  "where": "the-phaerons-armoury/enhancement/Relocational Optimiser",
+  "verdict": "ok",
+  "why": "FP 1.3 l.147: \"PRELOCATIONAL OPTIMISER\"."
+ },
+ {
+  "key": "78ad722ca93d6616",
+  "where": "the-phaerons-armoury/enhancement/Mortality Shroud (Aura)",
+  "verdict": "ok",
+  "why": "Markup only; FP l.165-174 words unchanged."
+ },
+ {
+  "key": "c683655aaa427ca8",
+  "where": "the-silent-king · Relentless March",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, The Silent King: Relentless March (Aura) without \"(excluding MONSTER units)\"."
+ },
+ {
+  "key": "d9382bbc6e2ac463",
+  "where": "the-silent-king",
+  "verdict": "ok",
+  "why": "Every claim checked against Wahapedia ds/necrons_The-Silent-King.html and FP 1.3 (composition, Triarchal Menhirs, keywords change, Supreme Commander, The Silent King untagged, Damaged)."
+ },
+ {
+  "key": "ba71f8f7c43cfc0f",
+  "where": "nekrosor-ammentar",
+  "verdict": "ok",
+  "why": "Every claim checked against FP 1.3 l.994-1044."
+ },
+ {
+  "key": "51cfd282b8e83977",
+  "where": "ophydian-destroyers",
+  "verdict": "ok",
+  "why": "Wahapedia: \"For every 3 models in this unit, this unit can have 1 Plasmacyte\"; the export has none, so the Plasmacyte ability does not apply; the reason is carried."
+ },
+ {
+  "key": "6c9363a70494e06d",
+  "where": "tesseract-vault · Damaged: 1-8 wounds remaining",
+  "verdict": "ok",
+  "why": "Its own words (\"in your Shooting phase\")."
+ },
+ {
+  "key": "41838ee1825c6f49",
+  "where": "tesseract-vault",
+  "verdict": "ok",
+  "why": "Checked: composition, [C’TAN POWER], M 8\"+6\" = 14\" from Empowered Engines (Tesseract Vault is NECRONS TITANIC FLY)."
+ },
+ {
+  "key": "6c9363a70494e06d",
+  "where": "tesseract-vault-2 · Damaged: 1-8 wounds remaining",
+  "verdict": "ok",
+  "why": "As tesseract-vault."
+ },
+ {
+  "key": "60b54c8b12e9ce13",
+  "where": "tesseract-vault-2",
+  "verdict": "ok",
+  "why": "Wahapedia: YOUR 2ND+ UNIT COSTS 505."
+ },
+ {
+  "key": "ff1f7e1a999dfc3a",
+  "where": "imotekh-the-stormlord",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Imotekh-The-Stormlord.html Leader: IMMORTALS, LYCHGUARD, NECRON WARRIORS; none in the export (no attachment). NOBLE keyword."
+ },
+ {
+  "key": "4633093eb1aaba9d",
+  "where": "royal-warden",
+  "verdict": "ok",
+  "why": "Wahapedia ds/necrons_Royal-Warden.html Leader: IMMORTALS, NECRON WARRIORS; none in the export. Not NOBLE."
+ },
+ {
+  "key": "3b320b43aef2ca65",
+  "where": "necrons army rule · Reanimation Protocols",
+  "verdict": "ok",
+  "why": "FP 1.3 \"Change to:\" replaces the rule with the two paragraphs (no Example)."
+ },
+ {
+  "key": "8de88f59078fe9cb",
+  "where": "obeisance-phalanx/your-time-is-nigh",
+  "verdict": "ok",
+  "why": "TARGET: \"Your NECRONS WARLORD.\""
+ },
+ {
+  "key": "05d8031ac7817f5d",
+  "where": "obeisance-phalanx/sentinels-of-eternity",
+  "verdict": "ok",
+  "why": "TARGET \"LYCHGUARD or TRIARCH PRAETORIANS\"."
+ },
+ {
+  "key": "c3de0979e8c51161",
+  "where": "RULES · C’tan Power (alias /^c['’]tan power$/i)",
+  "verdict": "ok",
+  "why": "Quotes Powers of the C’tan; GW defines [C’TAN POWER] nowhere (FP, Wahapedia)."
+ },
+ {
+  "key": "9615314d5a04cfcf",
+  "where": "points: Tesseract Vault 465 + 505, Ophydian Destroyers 80, Flayed Ones 55 ×2",
+  "verdict": "ok",
+  "why": "Wahapedia: Imotekh 100, Nekrosor 195, Silent King 420 (3 models), Royal Warden 50, Flayed Ones 5 models 55 (each), Ophydian Destroyers 3 models 80 (1st to 2nd units; 3rd+ 90), Canoptek Reanimator 75, Tesseract Vault 465 (1st) / 505 (2nd+). Total 2000; matches the export."
+ },
+ {
+  "key": "cdd799ada3f5b02e",
+  "where": "Tesseract Vault · Tesla sphere ×4",
+  "verdict": "ok",
+  "why": "GW (Wahapedia ds/necrons_Tesseract-Vault): wargear \"This model is equipped with: 4 tesla spheres; armoured bulk.\"; one profile \"Tesla spheres [SUSTAINED HITS 2] 24\" A6 3+ S7 0 D1\". GW does not print A24, nor say the four share one profile. The owner's rule limits the plural-name n:1 reading to ×2 on one model; \"other counts follow GW\", and GW's count is 4. BSData/NR have 4× A6, and Cosmic Storm speaks of \"Tesla Sphere weapons\" (plural). Recommendation: keep ×4 (24 attacks). Note for the owner: the Maulerfiend argument (\"2 magma cutters\" + plural profile = one) would, by the same logic, give 6 attacks here; the rule as written decides it for 4."
+ },
+ {
+  "key": "c7e609c0b62cf026",
+  "where": "Tesseract Vault · C’tan Powers as three ungrouped weapons",
+  "verdict": "ok",
+  "why": "GW prints the three C’tan Powers as ordinary RANGED WEAPONS rows with [C’TAN POWER], beside the tesla spheres, and the choice (\"up to two different\", one while Damaged) is in Powers of the C’tan (see left). That is neither \"pick one\" nor \"all fire\", so no group is GW's presentation; the [C’TAN POWER] tag opens the selecting rule. Recommendation: keep. Check that the Damage tab does not count all three by default."
+ },
+ {
+  "key": "ab501b6aa5a9da74",
+  "where": "“(see left)” kept",
+  "verdict": "ok",
+  "why": "Owner: rules quoted, never interpreted. Both texts are GW's (ds/necrons_The-Silent-King, ds/necrons_Tesseract-Vault) and BSData's variant is declared. Recommendation: keep \"(see left)\" as printed."
+ },
+ {
+  "key": "52c08a1d4650ad5f",
+  "where": "Imotekh and the Royal Warden lead nothing",
+  "verdict": "ok",
+  "why": "Export: Imotekh, Royal Warden and every other unit are top-level selections with no attachment; the list has no Immortals, Lychguard or Necron Warriors. Snapshot shows both as their own units; Adaptive Strategy (\"This model’s unit\") is the Warden's own."
+ },
+ {
+  "key": "2b9f661e24299b82",
+  "where": "Empowered Engines label",
+  "verdict": "ok",
+  "why": "Right: see Empowered Engines (M is used only in your Movement phase; it does not change charge distance, which is 2D6)."
+ },
+ {
+  "key": "7eb5c599f28cdab9",
+  "where": "verify/snapshots/shooty.txt (home screen)",
+  "verdict": "ok",
+  "why": "shooty diff: NECRONS 1 group with U w0t m8?, 2000 pts, both detachments, DISRUPTION / PRIORITY ASSETS, CHOSEN."
+ }
+]

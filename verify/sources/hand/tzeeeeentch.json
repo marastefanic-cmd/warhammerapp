@@ -314,5 +314,38 @@
     ]
    }
   }
- }
+ },
+ "refs": [
+  {
+   "entry": "Blue Horrors",
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+    "quote": "If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit."
+   },
+   "why": "Reference sheet Blue Horrors: GW’s Blue Horrors datasheet (Faction Pack Chaos Daemons 1.2 prints it), which the Pink Horrors use once they contain no Pink Horror (“If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit.”), built from BSData’s Blue Horrors root entry (one Blue Horror with its weapons; what BSData shows only by a condition, the Shadow Legion’s Penumbral Puppetry and Stealth, left out). It keeps GW’s Brimstone rows as GW’s datasheet prints them (Coruscating Yellow Flames and yellow claws: “Every Brimstone Horror added to this unit using the Split ability is equipped with: …”, the carrier line; BRIMSTONE kwOnly). The Pink Horrors card keeps its signed-off “(ref. only)” rows (the Blue and Brimstone Horrors its own Split adds while Pink Horrors remain)."
+  },
+  {
+   "of": "Blue Horrors",
+   "name": "Brimstone Horrors",
+   "model": "Brimstone Horror",
+   "carrier": "Brimstone Horrors added by Split",
+   "dropKw": [
+    "Blue"
+   ],
+   "abilities": [
+    "Exploding Horrors"
+   ],
+   "notes": {
+    "Exploding Horrors": "Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”"
+   },
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Split",
+    "quote": "On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.",
+    "of": "Blue Horrors"
+   },
+   "why": "Reference sheet Brimstone Horrors (the owner asked for one): GW prints no Brimstone Horrors datasheet; its models are on GW’s Blue Horrors datasheet, which the sheet is built from: that datasheet’s one profile (BLUE HORRORS, 25mm, the Brimstone Horror’s too), the weapons of its carrier line (“Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws.”), its rules, and of its abilities only Exploding Horrors (“… select one or more BRIMSTONE HORROR models in this unit …”; GW’s Split and Sullen Malevolence are about BLUE HORROR models), with GW’s Designer’s Note from the Pink Horrors datasheet (Sullen Malevolence and Exploding Horrors do not apply while the unit contains a PINK HORROR), its keywords but BLUE (“BLUE HORRORS: BLUE”; “BRIMSTONE HORRORS: BRIMSTONE”). The Pink Horrors’ Split adds them (“… if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.”). No BSData entry of its own: verify/bsdata.js does not build it (ref.of: the Blue Horrors sheet’s entry is checked as that sheet); verify/texts.js checks it against the Blue Horrors page."
+  }
+ ]
 }

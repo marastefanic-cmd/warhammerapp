@@ -1,0 +1,320 @@
+[
+ {
+  "key": "4fc062dc79f566c8",
+  "where": "healybois · The Swarmlord · Hive Commander",
+  "verdict": "ok",
+  "why": "\"At the start of your Command phase\": command, your. GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop)."
+ },
+ {
+  "key": "4b90eae5a7c50f46",
+  "where": "nidzillas · The Swarmlord · Malign Presence",
+  "verdict": "ok",
+  "why": "Wahapedia (verify/.cache/waha/ds/tyranids_The-Swarmlord.html) prints under Malign Presence (Aura): \"Designer’s Note: This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.\" Quoted exactly, marked as printed under the codex wording FP 1.3 replaced (l.659-662): my round-1 wording. Same on the shared row for both lists."
+ },
+ {
+  "key": "323bdc3d4abc9ac4",
+  "where": "healybois · Norn Assimilator · Harpoon Barbs",
+  "verdict": "ok",
+  "why": "An enemy unit is selected to Fall Back in its own Movement phase: movement, opp (as signed off). GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]."
+ },
+ {
+  "key": "0644cc8affb188cd",
+  "where": "healybois · Norn Assimilator · Harpoon Barbs",
+  "verdict": "ok",
+  "why": "The text's own first words \"Once per turn\"; no (Aura) on GW's card. GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]."
+ },
+ {
+  "key": "435073e428709ab5",
+  "where": "healybois · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "Unchanged label on GW's words: chosen at the start of the first battle round, in force for the rest of the battle (FNP 5+ against attacks, re-rolls when it attacks, OC 15). GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only)."
+ },
+ {
+  "key": "87c890b26afb2943",
+  "where": "healybois · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "\"Select one objective marker. … it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15\": shortened, nothing added. GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only)."
+ },
+ {
+  "key": "1ad9908ed05fda87",
+  "where": "nidzillas · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, Crusher Stampede, Enraged Behemoths: \"…while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.\" Nidzillas is Crusher Stampede + Talons of the Norn Queen, so the note is list-caused and now sits on its unit entry with why {note:\"Enraged Behemoths\"} (data.js l.2747/2762/2777/2791); it states the open order-of-modifiers question rather than deciding it. Healybois no longer shows it (snapshot: 0 matches for \"Enraged\")."
+ },
+ {
+  "key": "aed0021373d706eb",
+  "where": "healybois · Norn Emissary",
+  "verdict": "ok",
+  "why": "\"Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\": kind all, lasts battle, nothing added. GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only)."
+ },
+ {
+  "key": "c7b7e8dc5ed0f198",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, Crusher Stampede, Enraged Behemoths: \"…while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.\" Nidzillas is Crusher Stampede + Talons of the Norn Queen, so the note is list-caused and now sits on its unit entry with why {note:\"Enraged Behemoths\"} (data.js l.2747/2762/2777/2791); it states the open order-of-modifiers question rather than deciding it. Healybois no longer shows it (snapshot: 0 matches for \"Enraged\")."
+ },
+ {
+  "key": "0acd02dcc3df2cb0",
+  "where": "healybois · Norn Emissary · Unnatural Resilience",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" Def shortened, nothing added."
+ },
+ {
+  "key": "08fc9949ab80c704",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, Crusher Stampede, Enraged Behemoths: \"…while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.\" Nidzillas is Crusher Stampede + Talons of the Norn Queen, so the note is list-caused and now sits on its unit entry with why {note:\"Enraged Behemoths\"} (data.js l.2747/2762/2777/2791); it states the open order-of-modifiers question rather than deciding it. Healybois no longer shows it (snapshot: 0 matches for \"Enraged\")."
+ },
+ {
+  "key": "9d42b7739258fbac",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "verdict": "ok",
+  "why": "FP 1.3 FAQs l.709-711: \"Q: Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem? A: No. Insane Bravery can only be used in your Command phase.\" Quoted exactly, labelled FAQ (Faction Pack 1.3) as the owner's rule says."
+ },
+ {
+  "key": "b6dd40bd34cfb2f1",
+  "where": "healybois · The Swarmlord · Hive Commander",
+  "verdict": "ok",
+  "why": "On the Swarmlord's datasheet, not Tyrant Guard's. GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop)."
+ },
+ {
+  "key": "3fd8e394c32d61db",
+  "where": "healybois · The Swarmlord · Malign Presence",
+  "verdict": "ok",
+  "why": "Wahapedia (verify/.cache/waha/ds/tyranids_The-Swarmlord.html) prints under Malign Presence (Aura): \"Designer’s Note: This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.\" Quoted exactly, marked as printed under the codex wording FP 1.3 replaced (l.659-662): my round-1 wording. Same on the shared row for both lists."
+ },
+ {
+  "key": "8205ad6312076aa6",
+  "where": "healybois · The Swarmlord",
+  "verdict": "ok",
+  "why": "GW: The Swarmlord CORE ABILITIES \"Deadly Demise D3, Leader\"; Tyrant Guard none. Unchanged."
+ },
+ {
+  "key": "3c8da7783ff1ff34",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "verdict": "ok",
+  "why": "Exactly my round-1 fix: both FP 1.3 FAQs (\"…does my unit lose hidden? A: No.\" and \"Are Spore Mines units that are added to an army during a battle restricted by abilities that prevent Reserves from being set up within a certain range (e.g. Space Marines Infiltrators’ Omniscrambers)? A: No.\", l.763-765), GW's spelling kept."
+ },
+ {
+  "key": "33d3e7ecb2d55a38",
+  "where": "deviations-bsdata.json · the-swarmlord · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop). BSData/New Recruit drop the full stop (NR nidzillas.txt l.38). GW wins; declared right."
+ },
+ {
+  "key": "6d270e5c7ab71cca",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. BSData/New Recruit: \"…of this unit is chosen to Fall Back, roll one D6; on a 2+…\" (NR nidzillas.txt l.117ff). Declared right."
+ },
+ {
+  "key": "23b76b7ee2aa67c7",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "6d270e5c7ab71cca",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. BSData/New Recruit: \"…of this unit is chosen to Fall Back, roll one D6; on a 2+…\" (NR nidzillas.txt l.117ff). Declared right."
+ },
+ {
+  "key": "23b76b7ee2aa67c7",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "951ff46e261f64fb",
+  "where": "deviations-bsdata.json · norn-emissary-destabilising-predation · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "0a33f9337a958169",
+  "where": "deviations-bsdata.json · norn-emissary-destabilising-predation · ability",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "a31ff07cc9152a75",
+  "where": "deviations-bsdata.json · norn-emissary-destabilising-predation · ability",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "951ff46e261f64fb",
+  "where": "deviations-bsdata.json · norn-emissary · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "0a33f9337a958169",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "a31ff07cc9152a75",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "72b30696683debd5",
+  "where": "deviations-bsdata.json · the-swarmlord-tyrant-guard · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop). BSData/New Recruit drop the full stop (NR nidzillas.txt l.38). GW wins; declared right."
+ },
+ {
+  "key": "3743c47f537bedbd",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. BSData/New Recruit: \"…of this unit is chosen to Fall Back, roll one D6; on a 2+…\" (NR nidzillas.txt l.117ff). Declared right."
+ },
+ {
+  "key": "34069907f5f68094",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "3743c47f537bedbd",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. BSData/New Recruit: \"…of this unit is chosen to Fall Back, roll one D6; on a 2+…\" (NR nidzillas.txt l.117ff). Declared right."
+ },
+ {
+  "key": "34069907f5f68094",
+  "where": "deviations-bsdata.json · norn-assimilator-synaptoprescience-2 · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "6de1537e57caedfd",
+  "where": "deviations-bsdata.json · norn-emissary · ability.text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "64722b48ff2b51ce",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "e7fe898ad7db2307",
+  "where": "deviations-bsdata.json · norn-emissary · ability",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "a3da50a4f052fa0b",
+  "where": "deviations-nr.json · the-swarmlord · abilities[Hive Commander].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop). BSData/New Recruit drop the full stop (NR nidzillas.txt l.38). GW wins; declared right."
+ },
+ {
+  "key": "bb1cec1769ec5a30",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience · abilities[Harpoon Barbs].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. BSData/New Recruit: \"…of this unit is chosen to Fall Back, roll one D6; on a 2+…\" (NR nidzillas.txt l.117ff). Declared right."
+ },
+ {
+  "key": "b9cf26e94e02ff31",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience · abilities[Singular Purpose].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "bb1cec1769ec5a30",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience-2 · abilities[Harpoon Barbs].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. BSData/New Recruit: \"…of this unit is chosen to Fall Back, roll one D6; on a 2+…\" (NR nidzillas.txt l.117ff). Declared right."
+ },
+ {
+  "key": "b9cf26e94e02ff31",
+  "where": "deviations-nr.json · norn-assimilator-synaptoprescience-2 · abilities[Singular Purpose].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "716d3673e992914b",
+  "where": "deviations-nr.json · norn-emissary-destabilising-predation · abilities[Singular Purpose].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "08f7d0e93e5b0dfa",
+  "where": "deviations-nr.json · norn-emissary-destabilising-predation · abilities[Unnatural Resistance]",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "c70d8fc4a797bf5b",
+  "where": "deviations-nr.json · norn-emissary-destabilising-predation · abilities[Unnatural Resilience]",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "716d3673e992914b",
+  "where": "deviations-nr.json · norn-emissary · abilities[Singular Purpose].text",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). BSData/New Recruit lack the comma and full stop (NR nidzillas.txt l.123, 159, 198, 237). Declared right."
+ },
+ {
+  "key": "08f7d0e93e5b0dfa",
+  "where": "deviations-nr.json · norn-emissary · abilities[Unnatural Resistance]",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "c70d8fc4a797bf5b",
+  "where": "deviations-nr.json · norn-emissary · abilities[Unnatural Resilience]",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" BSData/New Recruit name it Unnatural Resistance (NR nidzillas.txt l.212, l.248). The name pair (app Resilience / source Resistance) is declared right."
+ },
+ {
+  "key": "e56ee07eb05e5766",
+  "where": "healybois · Biovores · Seed Spore Mines",
+  "verdict": "ok",
+  "why": "Both FAQs are on Seed Spore Mines (FP 1.3 FAQs); see the ability-note item."
+ },
+ {
+  "key": "e8f320006a749ee4",
+  "where": "DATASHEETS tyranids/norn-assimilator, tyranids/norn-emissary · Singular Purpose note",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates, Crusher Stampede, Enraged Behemoths: \"…while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.\" Nidzillas is Crusher Stampede + Talons of the Norn Queen, so the note is list-caused and now sits on its unit entry with why {note:\"Enraged Behemoths\"} (data.js l.2747/2762/2777/2791); it states the open order-of-modifiers question rather than deciding it. Healybois no longer shows it (snapshot: 0 matches for \"Enraged\")."
+ },
+ {
+  "key": "cf0f6eb66daca899",
+  "where": "DATASHEETS tyranids/norn-emissary · Unnatural Resilience",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\" Row name and text now GW's; Nidzillas' BSData/NR names declared (deviations-bsdata/nr), Healybois' by from-json."
+ },
+ {
+  "key": "adbd7322590c9ab3",
+  "where": "DATASHEETS · Harpoon Barbs, Singular Purpose (×2 rows), Hive Commander",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html): \"Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\" The app text now is GW's word for word (markup only); FP 1.3 changes only [HARPOONED]. GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only). GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop). Nidzillas: 11 deviations-bsdata + 11 deviations-nr entries counted (todo items for the-swarmlord, norn-assimilator-synaptoprescience(-2), norn-emissary(-destabilising-predation)), matching the snapshot diff."
+ },
+ {
+  "key": "591097b19d49206a",
+  "where": "DATASHEETS tyranids/the-swarmlord · Malign Presence",
+  "verdict": "ok",
+  "why": "Wahapedia (verify/.cache/waha/ds/tyranids_The-Swarmlord.html) prints under Malign Presence (Aura): \"Designer’s Note: This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.\" Quoted exactly, marked as printed under the codex wording FP 1.3 replaced (l.659-662): my round-1 wording. Shown on both lists (healybois snapshot l.628, nidzillas diff). The Swarmlord why in the hand file was updated with it. Q6: from-json-healybois.md lists it both under \"Written by hand\" (l.64) and, stale, under \"Not filled mechanically … add by hand if the unit has it\" (l.102). Fine for the data; cosmetic only: from-json could drop the l.102 line once a hand note quotes the Wahapedia text."
+ },
+ {
+  "key": "21534e228c73a0de",
+  "where": "FACTIONS tyranids army rule · Shadow in the Warp",
+  "verdict": "ok",
+  "why": "Label now \"FAQ (Faction Pack 1.3):\" (FP 1.3 l.709-711); both lists' snapshots show it."
+ },
+ {
+  "key": "15941e4b76065ceb",
+  "where": "healybois hand texts · Malign Presence, Will of the Hive Mind",
+  "verdict": "ok",
+  "why": "FP 1.3 Rules Updates l.659-662 (Malign Presence \"Change to\") and l.681-685 (Will of the Hive Mind \"Change to\", \"that use of\"): the hand texts are the pack's words, as the rows have them."
+ }
+]
