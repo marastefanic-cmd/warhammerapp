@@ -227,7 +227,9 @@ function usedIn(text, ctx, trig){
   if(afterCharge && reasons.some(r => r.rule === 'any-attack' || r.rule === 'weapons-have')) reasons.push({ rule:'after-charge', match:afterCharge[0] });
   // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger; one that lasts "until the end of the turn" is
   // triggered in that turn, even when derive.js reads no trigger in its words: Shudderblink's [ASSAULT] after an advance move)
-  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t)){
+  // (not one that holds only "in a turn in which it Fell Back/Advanced": both are moves of your own Movement phase, Core Rules 09.02,
+  // 09.07, so never in the opponent's turn, when Fire Overwatch is used)
+  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
       const w = explicitTiming(cs.when.split(/[.:]/)[0]);
