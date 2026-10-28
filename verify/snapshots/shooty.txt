@@ -44,27 +44,346 @@ Put it on your home screen: Safari → Share → Add to Home Screen.
 Data (version)
 
 ######## home · KK Kunnin’ Kodex
+YOUR ARMIES
+Favorites
+0
+All lists
+25
+Import a list from New Recruit
+Its JSON export
+Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
+
+Put it on your home screen: Safari → Share → Add to Home Screen.
+
+######## home favorites (none) · ARMIES Favorites
+No favorites yet. Tap the star next to a list in All lists to keep it here as well.
+
+######## home all lists (newest first) · ARMIES All lists
 FACTION
 DETACHMENT
 DISPOSITION
-YOUR ARMIES
+NEWEST FIRST
 RANDOM
-ADEPTUS CUSTODES
-3
-Lite Knights
+Simple but effective
 2000 pts
-Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
+Orks · Brute Bosses · Bully Boyz · Runt Swarm
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+U w0t m8?
+2000 pts
+Necrons · Obeisance Phalanx · The Phaeron’s Armoury
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
+Healybois
+2000 pts
+Tyranids · Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
-RECONNAISSANCE
+Tzeeeeentch
+2000 pts
+Chaos Daemons · Cavalcade of Chaos · Scintillating Legion
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
+Defilers and friends
+2000 pts
+Emperor’s Children · Coterie of the Conceited
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Navigator sounds op ngl
+2000 pts
+Imperial Knights · Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Dread Host
+2000 pts
+Adeptus Custodes · Dread Host · Honoured Companions · Lions of the Emperor
+DISRUPTION
+, CHOSEN
+PURGE THE FOE
+TAKE AND HOLD
 Emperor’s Chosen
 2000 pts
-Emperor’s Chosen · Honoured Companions · Lions of the Emperor
+Adeptus Custodes · Emperor’s Chosen · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
 PRIORITY ASSETS
 TAKE AND HOLD
+Fellhammer Siege Task Force
+1995 pts
+Chaos Space Marines · Cult of the Arkifane · Devotees of Destruction
+PRIORITY ASSETS
+, CHOSEN
+The Exiled Legion
+1995 pts
+Chaos Daemons · Blood Legion · Warptide
+PURGE THE FOE
+, CHOSEN
+RECONNAISSANCE
+Nerf when
+2000 pts
+Ultramarines · Assault Brethren · Deathwatch Support · Terminator Storm Force
+DISRUPTION
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+Lite Knights
+2000 pts
+Adeptus Custodes · Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+RECONNAISSANCE
+Mucho Mutantes
+2000 pts
+Thousand Sons · Ritual of Regeneration · Warpmeld Pact
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
+Big demons baby
+2000 pts
+World Eaters · Khorne Daemonkin · Vessels of Wrath
+PRIORITY ASSETS
+, CHOSEN
+RECONNAISSANCE
+Pubstomper
+2000 pts
+Thousand Sons · Grand Coven
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
+Woof Woof
+2000 pts
+Chaos Knights · Houndpack Lance · Hunting Warpack
+RECONNAISSANCE
+, CHOSEN
+Infernal Lance
+2000 pts
+Chaos Knights · Infernal Lance
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Purge goes the Foe
+2000 pts
+Adeptus Mechanicus · Cohort Cybernetica · Eradication Cohort
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
+Super Terminators
+2000 pts
+World Eaters · Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
+TAKE AND HOLD
+, CHOSEN
+4 megas and a destrier
+2000 pts
+Imperial Knights · Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+6 bigs
+2000 pts
+Imperial Knights · Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Nidzillas
+2000 pts
+Tyranids · Crusher Stampede · Talons of the Norn Queen
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
+Standard
+2000 pts
+World Eaters · Berzerker Warband · Vessels of Wrath
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Princes
+2000 pts
+World Eaters · Berzerker Warband · Vessels of Wrath
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Me shooty yer’ booty
+2000 pts
+Orks · Dread Mob · Shoota Boyz · Wreckas
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+
+######## home all lists (a to z) · ARMIES All lists
+FACTION
+DETACHMENT
+DISPOSITION
+A TO Z
+RANDOM
+4 megas and a destrier
+2000 pts
+Imperial Knights · Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+6 bigs
+2000 pts
+Imperial Knights · Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Big demons baby
+2000 pts
+World Eaters · Khorne Daemonkin · Vessels of Wrath
+PRIORITY ASSETS
+, CHOSEN
+RECONNAISSANCE
+Defilers and friends
+2000 pts
+Emperor’s Children · Coterie of the Conceited
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Dread Host
+2000 pts
+Adeptus Custodes · Dread Host · Honoured Companions · Lions of the Emperor
+DISRUPTION
+, CHOSEN
+PURGE THE FOE
+TAKE AND HOLD
+Emperor’s Chosen
+2000 pts
+Adeptus Custodes · Emperor’s Chosen · Honoured Companions · Lions of the Emperor
+DISRUPTION
+, CHOSEN
+PRIORITY ASSETS
+TAKE AND HOLD
+Fellhammer Siege Task Force
+1995 pts
+Chaos Space Marines · Cult of the Arkifane · Devotees of Destruction
+PRIORITY ASSETS
+, CHOSEN
+Healybois
+2000 pts
+Tyranids · Assimilation Swarm · Talons of the Norn Queen
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+Infernal Lance
+2000 pts
+Chaos Knights · Infernal Lance
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Lite Knights
+2000 pts
+Adeptus Custodes · Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+RECONNAISSANCE
+Me shooty yer’ booty
+2000 pts
+Orks · Dread Mob · Shoota Boyz · Wreckas
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Mucho Mutantes
+2000 pts
+Thousand Sons · Ritual of Regeneration · Warpmeld Pact
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
+Navigator sounds op ngl
+2000 pts
+Imperial Knights · Freeblade Company
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Nerf when
+2000 pts
+Ultramarines · Assault Brethren · Deathwatch Support · Terminator Storm Force
+DISRUPTION
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+Nidzillas
+2000 pts
+Tyranids · Crusher Stampede · Talons of the Norn Queen
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
+Princes
+2000 pts
+World Eaters · Berzerker Warband · Vessels of Wrath
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Pubstomper
+2000 pts
+Thousand Sons · Grand Coven
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
+Purge goes the Foe
+2000 pts
+Adeptus Mechanicus · Cohort Cybernetica · Eradication Cohort
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
+Simple but effective
+2000 pts
+Orks · Brute Bosses · Bully Boyz · Runt Swarm
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Standard
+2000 pts
+World Eaters · Berzerker Warband · Vessels of Wrath
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+Super Terminators
+2000 pts
+World Eaters · Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
+TAKE AND HOLD
+, CHOSEN
+The Exiled Legion
+1995 pts
+Chaos Daemons · Blood Legion · Warptide
+PURGE THE FOE
+, CHOSEN
+RECONNAISSANCE
+Tzeeeeentch
+2000 pts
+Chaos Daemons · Cavalcade of Chaos · Scintillating Legion
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
+U w0t m8?
+2000 pts
+Necrons · Obeisance Phalanx · The Phaeron’s Armoury
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
+Woof Woof
+2000 pts
+Chaos Knights · Houndpack Lance · Hunting Warpack
+RECONNAISSANCE
+, CHOSEN
+
+######## home all lists (by faction) · ARMIES All lists
+FACTION
+DETACHMENT
+DISPOSITION
+BY FACTION
+RANDOM
+ADEPTUS CUSTODES
+3
 Dread Host
 2000 pts
 Dread Host · Honoured Companions · Lions of the Emperor
@@ -72,6 +391,20 @@ DISRUPTION
 , CHOSEN
 PURGE THE FOE
 TAKE AND HOLD
+Emperor’s Chosen
+2000 pts
+Emperor’s Chosen · Honoured Companions · Lions of the Emperor
+DISRUPTION
+, CHOSEN
+PRIORITY ASSETS
+TAKE AND HOLD
+Lite Knights
+2000 pts
+Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+RECONNAISSANCE
 ADEPTUS MECHANICUS
 1
 Purge goes the Foe
@@ -124,13 +457,13 @@ PURGE THE FOE
 , CHOSEN
 IMPERIAL KNIGHTS
 3
-6 bigs
+4 megas and a destrier
 2000 pts
 Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
-4 megas and a destrier
+6 bigs
 2000 pts
 Freeblade Company
 PRIORITY ASSETS
@@ -151,53 +484,47 @@ DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 ORKS
-3
+2
 Me shooty yer’ booty
 2000 pts
 Dread Mob · Shoota Boyz · Wreckas
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
-Melee
+Simple but effective
 2000 pts
-War Horde
-PURGE THE FOE
-, CHOSEN
-TAKE AND HOLD
-Ooga booga
-2000 pts
-Bully Boyz · Runt Swarm · Shoota Boyz
+Brute Bosses · Bully Boyz · Runt Swarm
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 THOUSAND SONS
 2
-Pubstomper
-2000 pts
-Grand Coven
-DISRUPTION
-PRIORITY ASSETS
-, CHOSEN
 Mucho Mutantes
 2000 pts
 Ritual of Regeneration · Warpmeld Pact
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
+Pubstomper
+2000 pts
+Grand Coven
+DISRUPTION
+PRIORITY ASSETS
+, CHOSEN
 TYRANIDS
 2
-Nidzillas
-2000 pts
-Crusher Stampede · Talons of the Norn Queen
-PURGE THE FOE
-, CHOSEN
-TAKE AND HOLD
 Healybois
 2000 pts
 Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
+Nidzillas
+2000 pts
+Crusher Stampede · Talons of the Norn Queen
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 ULTRAMARINES
 1
 Nerf when
@@ -209,6 +536,12 @@ TAKE AND HOLD
 , CHOSEN
 WORLD EATERS
 4
+Big demons baby
+2000 pts
+Khorne Daemonkin · Vessels of Wrath
+PRIORITY ASSETS
+, CHOSEN
+RECONNAISSANCE
 Princes
 2000 pts
 Berzerker Warband · Vessels of Wrath
@@ -227,12 +560,37 @@ Berzerker Warband · Butchers of Khorne
 PURGE THE FOE
 TAKE AND HOLD
 , CHOSEN
-Big demons baby
+
+######## popup order · ARMIES All lists
+SHOW LISTS
+
+Order
+Newest first
+A to Z
+By faction
+
+######## home favorites (two) · ARMIES Favorites
+A TO Z
+RANDOM
+Healybois
 2000 pts
-Khorne Daemonkin · Vessels of Wrath
+Tyranids · Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
+TAKE AND HOLD
 , CHOSEN
-RECONNAISSANCE
+Me shooty yer’ booty
+2000 pts
+Orks · Dread Mob · Shoota Boyz · Wreckas
+PRIORITY ASSETS
+PURGE THE FOE
+, CHOSEN
+
+######## home (two favorites) · KK Kunnin’ Kodex
+YOUR ARMIES
+Favorites
+2
+All lists
+25
 Import a list from New Recruit
 Its JSON export
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
