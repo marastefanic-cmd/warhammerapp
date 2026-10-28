@@ -1058,10 +1058,20 @@ function compareUnit(army, u, F, fail) {
     const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name) || (spelt && (x === nn(spelt) || splitAbilityName(x).base === nn(spelt))));
     let cands = pool.filter(nameOk);
     if (!cands.length && a.na) cands = F.roots.flatMap((r) => datasheetAbilities(r)).filter(nameOk);
+    // (a name that is only BSData's profile type of several abilities, "Triarch Abilities", is none of them: the app's ability of that
+    // name is the one BSData words alike under another name, Voice of the Triarch, its name reported as BSData's other ability)
+    let renamed = null;
+    if (cands.length > 1 && cands.every((b) => b.name !== nn(a.name) && splitAbilityName(b.name).base !== nn(a.name))) {
+      const words = (t) => new Set(nt(t).toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean));
+      const alike = (x, y) => { const A = words(x), B = words(y); let k = 0; for (const w of A) if (B.has(w)) k++; return k / Math.max(1, new Set([...A, ...B]).size); };
+      const w = pool.filter((b) => !cands.includes(b) && b.typeName === 'Abilities' && alike(b.text, a.text) >= 0.8)[0];
+      if (w) { cands = [w]; renamed = w; }
+    }
     checked('abilities');
     if (!cands.length) { fail('ability', a.name, '', `no BSData ability "${a.name}"${a.who ? ' for ' + a.who : ''}${isEnh ? ' (enhancement)' : ''}${a.na ? ' (looked in the whole datasheet)' : ''}`); continue; }
     const best = cands.find((b) => nt(b.text) === nt(a.text)) || cands[0];
     usedA.add(best);
+    if (renamed) { checked('abilities'); fail('ability', '', renamed.name, `${renamed.where}: BSData's name of the app's ${a.name}`); }
     const bname = names(best).find((x) => x === nn(a.name)) || best.name;
     if (bname !== nn(a.name)) {
       checked('abilities');
