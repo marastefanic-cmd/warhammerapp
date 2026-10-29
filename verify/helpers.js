@@ -20,7 +20,8 @@ const FP_KEYS = require('./tables').FP_KEYS;
 // an army or detachment rule's judgements, the same way: its columns written for the app (coreTwin aside, it has an item of its own;
 // mods, aura and guard aside, signed as the unit footnote, aura and guard items of the units they reach)
 const RULE_KEYS = (T => [...new Set(['FACTIONS.armyRules', 'FACTIONS.detachments.rule', 'FACTIONS.detachments.moreRules'].flatMap(t => Object.entries(T[t].columns)
-  .filter(([c, x]) => !['coreTwin', 'mods', 'aura', 'guard'].includes(c) && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
+  .filter(([c, x]) => !['coreTwin', 'mods', 'aura', 'guard'].includes(c) && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))].concat('tag'))(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
+// (tag too: New Recruit's for most rules, but the app's own where it says more, Relentless Rage's "Already in A")
 const STRAT_KEYS = (T => [...new Set(['CORE_STRATAGEMS', 'FACTIONS.detachments.stratagems'].flatMap(t => Object.entries(T[t].columns)
   .filter(([c, x]) => c !== 'id' && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
 
@@ -102,7 +103,7 @@ function items(D, appSource){
       // where the sources disagree about the unit (Wahapedia's Tyrannofex FRAME, Sir Hekhtur's own datasheet), marked on its datasheet
       if(u.srcNote) add(a.id, 'unit-srcNote', w, { srcNote:u.srcNote }, { models:u.models, kw:u.kw });
       // a reference sheet (not in the army until a rule or stratagem adds it): the rule it cites and its quote
-      if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, u, { from:u.ref.rule || u.ref.strat }));
+      if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, a.units.find(x => x.id === u.ref.by) || u, { from:u.ref.rule || u.ref.strat }));
       // weapons: which model has which, how many, and the multi-profile groups
       // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)
       add(a.id, 'unit-weapons', w, { gear:u.gear, unplaced:u.unplaced, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
@@ -133,7 +134,7 @@ function items(D, appSource){
   for(const [re, k] of D.ruleAliases) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
   for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
   // the allies a faction may take (FACTIONS.allies: the role New Recruit prints → the rule that brings them in), against those rules
-  for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || '')) });
+  for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || f.armyRules.concat(Object.values(f.detachments).flatMap(detRules_)).filter(r => r.name === n).map(r => r.text).join('\n'))) });
   // a sentence verify/readings.js reads as a bonus with no reading, declared no numeric bonus after all (readings-gaps.json
   // status:'not-applicable', with its why): that declaration, against the ability's words
   for(const [k, g] of Object.entries(readJSON(path.join(ROOT, 'verify/readings-gaps.json'), {}))) if(g && g.status === 'not-applicable')
