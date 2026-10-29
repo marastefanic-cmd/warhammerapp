@@ -74,15 +74,15 @@
     },
     "phases": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "when": {
      "source": "gw",
@@ -216,19 +216,19 @@
     },
     "ph": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "at": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
      "source": "derived",
@@ -366,19 +366,19 @@
     },
     "ph": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "at": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
      "source": "derived",
@@ -483,19 +483,19 @@
     },
     "ph": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "at": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
      "source": "derived",
@@ -604,15 +604,15 @@
     },
     "phases": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "when": {
      "source": "gw",
@@ -1167,19 +1167,19 @@
     },
     "ph": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "at": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "def": {
      "source": "ai",
@@ -1795,19 +1795,19 @@
     },
     "ph": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turn": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "at": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "def": {
      "source": "ai",

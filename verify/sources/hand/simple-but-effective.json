@@ -1,5 +1,5 @@
 {
- "_about": "What verify/from-json.js cannot fill mechanically for simple-but-effective, written by hand and read by it on every run (from-json.js --write gives the same data.js again). rules: a detachment rule’s timing label where derive.js’s reading is not the rule’s. units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf) and why (the reasons for what the list shows). Only what GW tags (Aura) is an aura (Core Rules 22.01). Orks have no GW Faction Pack: the codex as Wahapedia transcribes it is GW’s words. Each is a judgement verify/helpers.js lists for sign-off.",
+ "_about": "What verify/from-json.js cannot fill mechanically for simple-but-effective, written by hand and read by it on every run (from-json.js --write gives the same data.js again). units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf) and why (the reasons for what the list shows). Only what GW tags (Aura) is an aura (Core Rules 22.01). Orks have no GW Faction Pack: the codex as Wahapedia transcribes it is GW’s words. Each is a judgement verify/helpers.js lists for sign-off.",
  "caseNames": [
   "Prophet of Da Great Waaagh!"
  ],
@@ -14,22 +14,6 @@
   "orks/beastboss-on-squigosaur"
  ],
  "keptRowsWhy": "The owner retired the lists Melee and Ooga booga for this one (“remove Melee Orks list and Ooga Booga lists, this is the new ultimate melee orks list”): these datasheet rows were theirs and are now this list’s alone; their signed-off facts (words, labels, When targeted lines, notes) stay the app’s, as for a row another list has (from-json.js keptRows).",
- "rules": {
-  "brute-bosses": {
-   "by": "hand (Claude)",
-   "label": {
-    "ph": [
-     "command",
-     "movement",
-     "shooting",
-     "charge",
-     "fight"
-    ],
-    "turn": "either"
-   },
-   "why": "’Ard as Nails: “When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase …”: a WARBOSS model can be destroyed in any phase of either turn (shooting, the Fight phase, mortal wounds) and the rule names none; derive.js reads only “selected to fight” (the Fight phase). As Fates in Flux (Tzeeeeentch)."
-  }
- },
  "units": {
   "zodgrod-wortsnagga-runtherd-gretchin": {
    "defs": {

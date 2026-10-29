@@ -2,9 +2,6 @@
  "_about": "What verify/from-json.js cannot fill mechanically for defilers-and-friends, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). The list was built from its New Recruit PDF (verify/sources/nr/defilers-and-friends.txt) and is rebuilt from the owner’s newer JSON exports (25 Oct 2026, then Defilers_and_friends_2.json: Lucius the Eternal, a Sorcerer, two Maulerfiends and a Chaos Rhino in place of Fulgrim and one Daemon Prince); the hand work of the units that stay is carried over as signed off, and the readings of the units that come back (Lucius the Eternal and Flawless Blades, the Maulerfiend) are the ones the PDF-built list had, signed off then. Coterie of the Conceited is in data.js already (its gists, mods, defs and the rule’s footnote stay there: no gists or rules here). units: per unit entry, its abilities’ When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01: none of this list gives friendly units anything). Each is a judgement verify/helpers.js lists for sign-off.",
  "units": {
   "lucius-the-eternal-flawless-blades": {
-   "labels": {
-    "A Challenge Worthy of Skill": {}
-   },
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did. A Challenge Worthy of Skill (“Each time this model makes an attack”) reaches Lucius’s weapons only; Daemonic Patrons (“a model in this unit”) every melee attack of the attached unit (Core Rules 19.04)."
   },
   "daemon-prince-of-slaanesh-with-wings": {
@@ -23,14 +20,6 @@
      "by": "AI (Claude)",
      "def": "while this model is leading a unit: models in that unit have the Benefit of Cover against ranged attacks",
      "defOf": "bbaa8f1f"
-    }
-   },
-   "labels": {
-    "Wracking Agonies": {
-     "ph": [
-      "shooting"
-     ],
-     "turn": "your"
     }
    },
    "why": "Pledges to the Dark Prince (the Coterie of the Conceited detachment rule): its 5+ Pact point bonus is for melee weapons, so each EMPEROR’S CHILDREN unit carries it as its own melee footnote (the rule’s own footnote has the bonuses for all attacks), as the PDF-built list did. Warped Interference works only while the Sorcerer leads a unit, and the export attaches it to none: its When targeted line keeps the condition (no Damage-tab reading, which would give the cover whether or not it leads). Wracking Agonies works on enemy units: no footnote."

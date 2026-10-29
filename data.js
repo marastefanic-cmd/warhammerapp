@@ -337,7 +337,7 @@ const FACTIONS = {
       // Shoota Boyz and Wreckas: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack)
       'shoota-boyz': {
         name:'Shoota Boyz', dispositions:['Purge the Foe'], dp:1,
-        rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp' }, needs:{ all:['Faction: Orks','Infantry'] },
+        rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Orks','Infantry'] },
           mod:{ kind:'ranged', when:'Riled up', cond:'riled', note:'+3" range' }, readOf:'48632a72',
           text:'Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3" **R**.' },
         enhancements:[
@@ -1094,7 +1094,7 @@ const FACTIONS = {
     // army rules: Wahapedia, Emperor’s Children, Army Rules (the Faction Pack 1.3 prints no army rule and its Rules Updates change none)
     armyRules: [
       // Wahapedia prints “another units charge” (no apostrophe); New Recruit prints “another unit's charge”
-      { name:'Thrill Seekers', ph:['shooting','charge'], turn:'your',
+      { name:'Thrill Seekers', ph:['movement','shooting','charge'], turn:'your',
         text:'If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within **Engagement Range** of at the start of the turn.\n- It cannot target a unit that was the target of another units charge or attack this phase.' },
       { name:'Pact of Excess',
         text:'When mustering your army, unless specifically stated otherwise, you cannot select **LEGIONS OF EXCESS** as your Army Faction.' }
@@ -1240,8 +1240,8 @@ const FACTIONS = {
       // (Animalistic Rage's When, Harrying Hounds' Target), which Wahapedia's text already has
       'houndpack-lance': {
         name:'Houndpack Lance', dispositions:['Reconnaissance'], dp:2,
-        // ph/turn: the unit is selected at the start of your Command phase; the attack bonus is the footnote of every WAR DOG unit
-        rule:{ name:'Marked Prey', ph:['command'], turn:'your', needs:{ all:['War Dog'] },
+        // the attack bonus is also the footnote of every WAR DOG unit
+        rule:{ name:'Marked Prey', ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' }, needs:{ all:['War Dog'] },
           mod:{ kind:'all', lasts:'round', when:'Target is the unit selected at the start of your Command phase, visible to the attacking model', note:'[SUSTAINED HITS 1]' }, readOf:'14b1ad41',
           text:'At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**.' },
         enhancements:[
@@ -6210,7 +6210,7 @@ const DATASHEETS = {
     { name:'sweep', group:'Shearing claws', range:'Melee', A:'10', WS:'3+', S:'6', AP:'-2', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
+    { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
     // every source ends the text with a stray closing quote mark (’); the app leaves it out
     { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp', text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
     { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' }
@@ -6893,9 +6893,8 @@ const DATASHEETS = {
     { name:'sweep', group:'Rod of the War Forge', range:'Melee', A:'12', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
   ],
   abilities:[
-    // the three abilities Rod of the War Forge selects from: shooting and declaring a charge after an Advance or a
-    // Fall Back (your Shooting and Charge phases), and both Imperatives (attacks in either player's Fight phase too)
-    { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'either', turns:{ command:'your', movement:'opp', charge:'your' }, note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”', text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
+    // the three abilities Rod of the War Forge selects from (its phase tags: Rod of the War Forge's and the three options', label-section)
+    { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'your', note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”', turns:{ movement:'either', fight:'either' }, text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
     { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.', defOf:'a15f3d7e' },
     { name:'Secutor of Olympus', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.' },
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your Warlord.' },
@@ -10402,7 +10401,7 @@ const CHECKLIST = {
   "a|1ihdtx":{"x":1},
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
   "a|1ilhdau":{"u":"shooting:your,fight:either","a":1},
-  "a|1j6lbpi":{"u":"shooting:opp,fight:either"},
+  "a|1j6lbpi":{"u":"shooting:opp"},
   "a|1j8sgg6":{"t":"command:either"},
   "a|1j9160m":{"t":"command:your","s":1},
   "a|1jln2xs":{"u":"shooting:your"},
@@ -10920,7 +10919,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','damaged','embarked','na','ph','turn','turns','note','def','text','riled','defOf','readOf']
+  abilities:['name','who','tag','at','damaged','embarked','na','ph','turn','note','def','turns','text','riled','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the
