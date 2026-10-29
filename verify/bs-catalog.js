@@ -61,6 +61,8 @@ function staticHidden(x, listChoice){
     if(!cs.length) h = v;
     // (a condition on a list's choice, an enhancement or the Warlord taken on the unit, a detachment, is the list's, whatever its scope)
     else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope) && !(listChoice && listChoice(c.childId)))) h = false;
+    // hidden unless the list took something (a detachment's ability on the unit, Shadow Legion's, Legion of Excess's): no datasheet's own
+    else if(v && !h && !(m.conditionGroups || []).length && cs.every(c => (['force', 'roster'].includes(c.scope) || (listChoice && listChoice(c.childId))) && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0)))) h = true;
   }
   return h;
 }
@@ -152,7 +154,8 @@ function load(ROOT, catalogueName, opts){
     return out;
   }
   // ---- profiles and rules of an entry (its own, its links', an info group's)
-  const shown = x => x && !x.hidden;
+  // (a profile's or rule's "hidden" modifiers too: shown only under a list's choice, it is none of the datasheet's)
+  const shown = x => x && !hiddenStatic(x);
   function info(node){
     const profiles = [], rules = [];
     const take = n => {

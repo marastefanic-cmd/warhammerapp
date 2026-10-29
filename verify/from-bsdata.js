@@ -172,6 +172,14 @@ function build() {
     rows[id] = rowOf(u, root, C, E);
   }
   const packApplied = applyPack(rows);
+  // GW's words where Wahapedia's transcription differs (the hand file's texts: { "<datasheet id>": { "<ability>": { from, to, why } } },
+  // exactly once, as a list's hand file has them): the Faction Pack prints the datasheet in full (verify/texts.js packDatasheet)
+  const handApplied = [];
+  for (const [id, by] of Object.entries(HAND().texts || {})) for (const [an, fx] of Object.entries(by)) {
+    const ab = ((rows[id] || {}).abilities || []).find(a => a.name === an);
+    if (!ab || String(ab.text).split(fx.from).length !== 2) throw new Error('verify/sources/hand/catalog-' + faction + '.json texts ' + id + ' · ' + an + ': its words "' + fx.from + '" are not there exactly once');
+    const was = ab.text; ab.text = ab.text.replace(fx.from, fx.to); handApplied.push({ id, field: 'ability[' + an + '].text', app: ab.text, was, why: fx.why });
+  }
   // the GW-over-BSData differences, with their evidence: the deviations to declare (as verify/from-json.js declares a list's)
   const devs = [];
   for (const d of E.gwDevs) devs.push({ unit: d.unit, kind: d.kind, row: d.row || null, field: d.field, gw: d.app, bsdata: d.bsdata === 'undefined' ? null : d.bsdata, file: d.file, det: d.det || null });
@@ -189,7 +197,7 @@ function build() {
   const cat = { _about: 'The ' + C.cat.name + ' catalogue as verify/from-bsdata.js reads it from BSData (wh40k-11e at the pin) with GW’s datasheets over it (verify/from-json.js): every current datasheet (no Legends, no Crusade, no Crucible: verify/bs-catalog.js FILTER), one DATASHEETS row each. Written by `node verify/from-bsdata.js ' + faction + ' --write`; verify/tables.js --write puts every row into DATASHEETS (a row a list has keeps the list’s signed-off facts, and gets the catalogue’s rows it lacks); the gate step catalog (verify/catalog.js) checks it is what the sources give. Do not edit.',
     faction, bsdata: { catalogue: C.cat.name, revision: C.cat.revision, pin },
     counts: { datasheets: Object.keys(rows).length, detachments: detachments.length, excluded: excluded.length },
-    datasheets: rows, detachments: detachments.map(d => ({ name: typo(d.name), bsId: d.entry.id, rules: d.rules.map(typo) })), detachmentRows, excluded, weaponNames: E.gwNames, packApplied, modelNames: Object.entries(HAND().modelNames || {}).map(([bs, x]) => ({ bsdata: bs, gw: x.gw, kind: x.kind })) };
+    datasheets: rows, detachments: detachments.map(d => ({ name: typo(d.name), bsId: d.entry.id, rules: d.rules.map(typo) })), detachmentRows, excluded, weaponNames: E.gwNames, packApplied, handApplied, modelNames: Object.entries(HAND().modelNames || {}).map(([bs, x]) => ({ bsdata: bs, gw: x.gw, kind: x.kind })) };
   return { C, E, cat, devs, datasheets, detachments, excluded };
 }
 

@@ -69,6 +69,9 @@ function filterTest() {
     [{ hidden: true, modifierGroups: [{ comment: 'Crusade modifiers', modifiers: [hm(false)] }] }, true]];
   // (shown on the unit's own condition, but the condition is a list's choice: an enhancement taken on the unit)
   hcases.push([{ hidden: true, modifiers: [hm(false, [{ scope: 'self', childId: 'enh-1', type: 'atLeast', value: 1 }])] }, true, id => id === 'enh-1']);
+  // (shown only when the list took a detachment: a detachment's ability on the unit, BSData's Shadow Legion / Legion of Excess profiles)
+  hcases.push([{ hidden: false, modifiers: [hm(true, [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }])] }, true]);
+  hcases.push([{ hidden: false, modifiers: [hm(true, [{ scope: 'force', childId: 'det-1', type: 'equalTo', value: 0 }])] }, true]);
   hcases.forEach(([x, want, lc0], i) => { if (H(x, lc0) !== want) fails.push('filter: hidden case ' + (i + 1) + ' (' + JSON.stringify(x) + ') is ' + H(x, lc0) + ', want ' + want); });
   // inside a datasheet: BSData's Crusade group, Weapon Modifications, Crusade Relic Upgrades are no options
   for (const n of ['Crusade', 'Weapon Modifications', 'Crusade Relic Upgrades', 'Battle Scars', 'Codex Crusade Relics']) if (!BC.CRUSADE.test(n)) fails.push('filter: the group ' + n + ' is not read as Crusade');
@@ -129,10 +132,12 @@ function bsReading(sel, C) {
   const walk = s => {
     for (const p of s.profiles || []) {
       if (p.typeName === 'Unit') {
-        const ch = Object.fromEntries(p.characteristics.map(c => [c.name, c.$text || ''])), n = typo(NR.nrStatName(p.name, []).name);
+        const ch = Object.fromEntries(p.characteristics.map(c => [c.name, c.$text || ''])), sn = NR.nrStatName(p.name, []), n = typo(sn.name + (sn.parens.includes('ref. only') ? ' (ref. only)' : ''));
         out.stats[n] = { M: cellV(ch.M), T: cellV(ch.T), Sv: cellV(ch.Sv), W: cellV(ch.W), Ld: cellV(ch.LD), OC: cellV(ch.OC), InSv: cellV(ch.InSv), base: cellV(ch.Base).replace(/(\d)x(\d)/g, '$1×$2') };
       } else if (isWeaponProf(p)) {
         const w = NR.nrWeapon({ name: p.name }, []), kind = weaponKind(p);
+        // (BSData's "Coruscating Blue flames (ref. only)" keeps its mark, as verify/from-json.js's row does)
+        if (/\(ref\. only\)/i.test(p.name) && !/\(ref\. only\)/i.test(w.name)) w.name += ' (ref. only)';
         if (!w.group && /^\s*➤/.test(p.name) && (s.profiles || []).filter(isWeaponProf).length > 1) w.group = nm(s.name);
         const ch = Object.fromEntries(p.characteristics.map(c => [c.name, c.$text || '']));
         const key = typo(w.name) + (w.group ? ' (' + typo(w.group) + ')' : '');
@@ -213,14 +218,17 @@ function declarations(root, faction, r) {
       const sm = /^stats\[(.*)\]$/.exec(d.field), typoOf = sm && (d.source ? MN[d.source] : Object.entries(MN).map(([k, v]) => Object.assign({ bs: k }, v)).find(v => v.gw === d.app));
       // (a value the Faction Pack's Rules Updates gave the row, verify/from-bsdata.js applyPack)
       const pk = (r.cat.packApplied || []).find(x => x.id === id && (x.field === d.field || (x.field === 'kw' && d.field === 'kw' && x.app === d.app)));
-      if (pk) { reason = 'GW’s Faction Pack, Rules Updates: "' + pk.title + '" — ' + pk.instr + (pk.field.endsWith('.text') ? '' : ' ' + pk.app) + '; ' + pinS + ' has ' + (d.source == null ? 'none' : JSON.stringify(d.source)) + '. GW wins.'; evidence = pk.where + '.'; }
+      const hk = !pk && (r.cat.handApplied || []).find(x => x.id === id && x.field === d.field);
+      if (hk) { reason = hk.why + '. GW wins (verify/sources/hand/catalog-' + faction + '.json texts).'; evidence = (hk.why.match(/verify\/\.cache\/\S+/) || ['the Faction Pack named in the reason'])[0] + '.'; }
+      else if (pk) { reason = 'GW’s Faction Pack, Rules Updates: "' + pk.title + '" — ' + pk.instr + (pk.field.endsWith('.text') ? '' : ' ' + pk.app) + '; ' + pinS + ' has ' + (d.source == null ? 'none' : JSON.stringify(d.source)) + '. GW wins.'; evidence = pk.where + '.'; }
       else if (sm && typoOf && (typoOf.kind === 'typo')) { reason = typoOf.why + '. GW wins (as for every misprint; verify/sources/hand/catalog-' + faction + '.json modelNames).'; evidence = typoOf.evidence + '.'; }
       else if (d.field === 'points') {
         reason = 'GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): ' + d.app + '; ' + pinS + ': ' + d.source + ' (' + costsDiff(row.points, bsPts).join('; ') + '). GW wins.';
         evidence = (G.files || [])[0] + ': ' + costsText(row.points) + '.';
       } else if ((m = /^(stats|ranged|melee)\[(.*?)(?: \((.*)\))?\]\.(\w+)$/.exec(d.field))) {
         const kind = m[1] === 'stats' ? (m[4] === 'base' ? 'base' : 'stats') : m[1];
-        const g = gd.find(x => x.kind === kind && (x.row === m[2] || x.row === m[3] || x.row === (m[3] ? m[3] + ' - ' + m[2] : m[2])) && x.field === m[4]);
+        // (a stat row two of whose profiles GW's datasheet prints once, "Bloodcrushers ×2": the row's name)
+        const g = gd.find(x => { const xr = String(x.row).replace(/ ×\d+$/, ''); return x.kind === kind && (xr === m[2] || xr === m[3] || (m[3] && xr === m[2] + ' (' + m[3] + ')') || xr === (m[3] ? m[3] + ' - ' + m[2] : m[2])) && x.field === m[4]; });
         if (g) { reason = pinS + ' has ' + (d.source || 'none') + '; ' + (kind === 'base' ? 'GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none,' : 'GW’s datasheet (the codex, as Wahapedia transcribes it)') + ' has ' + g.app + '. GW wins.'; evidence = g.file; }
       } else if (d.field === 'kw') {
         const g = gd.find(x => x.kind === 'kw' && ((d.app && x.app === d.app) || (!d.app && x.bsdata === d.source)));
@@ -405,7 +413,7 @@ function main() {
         checked.texts++;
         const w = a.name === 'Leader' ? words(a.text).replace(/^this model can be attached to the following units /, '') : words(a.text);
         // (words the Faction Pack's Rules Updates gave it, verify/from-bsdata.js applyPack: verify/texts.js checks them against the pack)
-        if ((cat.packApplied || []).some(x => x.id === id && x.field === 'ability[' + a.name + '].text')) continue;
+        if ((cat.packApplied || []).concat(cat.handApplied || []).some(x => x.id === id && x.field === 'ability[' + a.name + '].text')) continue;
         if (!hay.includes(w)) fail('texts', id + ' · ' + a.name + ': its words are not on ' + pg.file + (pack ? ' nor in ' + pack.file : ''));
       }
     }

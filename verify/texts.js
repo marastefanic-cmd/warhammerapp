@@ -951,7 +951,8 @@ for (const fk of FACTIONS) {
     for (const e of det.enhancements || []) {
       const I = U + '/enhancement:' + e.name;
       const se = srcEnh.find(x => norm(x.name) === norm(e.name));
-      const we = W.enh.find(x => norm(x.name) === norm(e.name));
+      // (Wahapedia can leave GW's (Aura) tag out of an enhancement's name: "Cankerblight", GW's "CANKERBLIGHT (AURA)")
+      const we = W.enh.find(x => norm(x.name) === norm(e.name)) || W.enh.find(x => norm(x.name) === norm(e.name.replace(/\s*\(Aura\)$/i, '')));
       count('detachment');
       if (!se) { fail('detachment', army, I, 'name', e.name, 'not an enhancement of ' + det.name + ' in ' + (pack ? pack.where : W.where), ''); continue; }
       count('detachment');
