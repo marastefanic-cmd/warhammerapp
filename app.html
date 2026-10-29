@@ -2553,7 +2553,10 @@ function dmCalc(st, A, au, tg, kind){
   // (its boxes, read from the Damaged ability's words: data.js BOXES)
   const dmgOn = [], nc = B.nc.slice();
   for(const ab of damaged){
-    const o = dmBoxesOf(DM_KEY.a(ab)) || {}, bs = (o.b || []).filter(b => (b.kind === kind || b.kind === 'all') && dmHasFx(b.fx));
+    // (a band for weapons by name, Skarbrand's Slaughter and Carnage: in a step with such a weapon; one for the other kind of attack: not here)
+    const wIn = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; return weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []).some(it => dmReach(au, it, { from:ab.name, ab, src:au }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    const o = dmBoxesOf(DM_KEY.a(ab)) || {}, fxB = (o.b || []).filter(b => dmHasFx(b.fx)), bs = fxB.filter(b => (b.kind === kind || b.kind === 'all') && wIn(b));
+    if(fxB.length && !bs.length) continue;
     if(!bs.length){ nc.push({ side:'a', grp:'unit', name:ab.name, text:'“' + dmQuoteOf(o.nc && o.nc[0] ? o.nc[0].quote : ab.text) + '”', why:(o.nc && o.nc[0] ? o.nc[0].why + ': ' : '') + 'not counted in the Damage tab' }); continue; }
     if(box('damaged', ab.name, WH_EFFECTS.fxLabel(bs.flatMap(b => b.fx)))) for(const b of bs) dmgOn.push({ m:{ from:ab.name, ab, src:au, box:b }, e:WH_EFFECTS.toMod(b.fx), sc:{ scope:b.scope || {} } }); }
 
@@ -2654,7 +2657,7 @@ function dmHowLines(c, st, r0, plan){
     L.push(['A re-roll of one die (01.05.02, 04.03)', 'a rule that lets you re-roll one hit, wound or Damage roll leaves which one to you. The calculator re-rolls the first failed hit or wound roll it can go to (never a die already re-rolled: 01.05.02), and the first Damage roll below the dice’s average that leaves the model it hits with wounds left; the mortal wounds of [DEVASTATING WOUNDS] are not re-rolled. When one can go to several weapons, it resolves them most valuable first (the damage one attack does on average: 04.03 lets the attacker pick the order), so it goes where a success is worth the most; the working says how often each weapon gets it. The same rule on several weapons is one re-roll for the unit.' +
       (ph ? ' Command Re-roll can be used once in the phase (15.01): it is shared by the attacks of that phase (Shoot and Fight are different phases); here it goes to this unit’s attacks.' : '') +
       (af ? ' Advanced Firepower does not say how often: the calculator gives the unit one of each each time it shoots.' : '') +
-      (cc ? ' Code Chivalric’s Quality gives one to each model with it, each time it is selected to shoot or fight: the calculator gives the unit one.' : '')]); }
+      (cc ? ' Code Chivalric’s Quality (“Each time this model is selected to shoot or fight”), like Magna Imperator (“When a friendly ADEPTUS CUSTODES unit is selected to attack”) and Seething Hatred: one of each for the unit each time it is selected, shared by its weapons, most valuable first.' : '')]); }
   L.push(['Not counted', 'a rule whose effect the calculator does not play (Fights First, mortal wounds of its own) is listed with its words; when one of the Modifiers says the same thing, “Count it by hand” sets that modifier for this step, as your own call.']);
   L.push(['A fact of the table', 'saying one holds (charged, riled up, on an objective, remained stationary, the closest target) ticks every rule of this step whose condition it is, for the unit it is about; each can still be unticked by itself, and a stratagem with that condition is never ticked for you.']);
   L.push(['Shoot, Fight, Both', 'Shoot is the shooting alone, Fight the fight alone (“Charged this turn” as you say). Both plays the shooting, then the charge, then the fight, in the same games: the fight meets what the shooting left. The charge is taken to be made, not rolled: “Charged this turn” is ticked for the fight (untick it for a fight with no charge move; a unit that shot with close-quarters shooting is engaged and cannot declare one, 10.06). Fights First and which models are in engagement range are not played: every model left takes part. What the target does back and what the unit loses are not played: the calculator shows the damage dealt.']);
@@ -3649,11 +3652,15 @@ function dmLeverRow(C, x){
     const words = (mark ? mark + ' · ' : '') + (r.label ? r.label + (r.pills ? '' : ': ') : '') + (r.pills ? '' : WH_EFFECTS.fxLabel(r.fx));
     const sc0 = (r.sc && r.sc.scope) || {}, bu0 = C.plan.beats[C.plan.k].atk.u;
     const one = sc0.models === 'one' && modelCount(bu0) > 1 ? ' · one model only: counted for the weapons of one model' : '';
+    // (the models its words name: CHARACTER models, or the others; a re-roll of one die: how often, in GW's words, BOXES pool)
+    const who = sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '';
+    const PL = { selected:'one for the unit each time it is selected to shoot or fight, its weapons most valuable first', phase:'once in the phase', turn:'once per turn', round:'once per battle round' };
+    const pool = r.m.box && r.m.box.pool && r.m.box.pool !== 'phase' ? ' · ' + PL[r.m.box.pool] : '';
     const bu = bu0, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while “' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + '” holds (above)' : '') : '';
     const counted = '', lead = '';
     // a re-roll of one die, ticked: which weapons it goes to (the working's exact averages; the unit's re-rolls of one die together)
     const went = r.on && r.e && ['oneHit', 'oneWound', 'oneDmg', 'oneEither', 'oneAny'].some(k => r.e[k]) ? dmOneWent(C.M, r.m.from) : '';
-    const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '') + went);
+    const sub = esc(words + counted + one + who + pool + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '') + went);
     return dmRowHtml(C, x, title, sub, '', dmPills(C, x)); }
   // (Both: the rules it switches on in either part, the fight's said as such)
   if(x.fact){ const kids = (C.all || C.levers).filter(y => y.underFact === x.id && y.x);

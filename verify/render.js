@@ -263,7 +263,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         const want = DM_GROUPS.slice(0, 4).map(g => g[1]); for(let i = 0; i < parts; i++) if(heads.slice(i * 4, i * 4 + 4).join('|') !== want.join('|')) bad.push('groups: ' + heads.join(', '));
         const cust = [...document.querySelectorAll('#dmList details.dmcust')];
         if(cust.length !== parts) bad.push(cust.length + ' Custom modifiers groups for ' + parts + ' parts');
-        for(const c of cust){ const n = c.querySelectorAll('[data-dmlv*="r:u:"]').length; if(n !== WH_EFFECTS.CUSTOM.length) bad.push('Custom modifiers: ' + n + ' of ' + WH_EFFECTS.CUSTOM.length); }
+        for(const c of cust){ const n = c.querySelectorAll('[data-dmlv*="r:u:"]').length; if(n && n !== WH_EFFECTS.CUSTOM.length)   // (drawn once opened: the opening is checked below, damage-modifiers)
+           bad.push('Custom modifiers: ' + n + ' of ' + WH_EFFECTS.CUSTOM.length); }
         for(const e of document.querySelectorAll('#dmList .dmlv[data-dmlv*="r:"]')){ const n = [e.closest('[data-dmgrp]'), e.closest('details.dmcust')].filter(Boolean).length; if(n !== 1) bad.push(e.dataset.dmlv + ' in ' + n + ' groups'); }
         return bad; });
       if(!custFolded) grp.unshift('Custom modifiers not folded');

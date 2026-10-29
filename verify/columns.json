@@ -2288,6 +2288,10 @@
     "reach": {
      "source": "derived",
      "note": "an aura's units (GW tags it Aura): the friendly units its words reach, literal keywords"
+    },
+    "both": {
+     "source": "derived",
+     "note": "another rule's two options at once for the units it reaches (\"the Conqueror Imperative and Protector Imperative are both active for that unit\", Icon of War): names, quote, reach, mark, opt, lasts, read by verify/effects-extract.js"
     }
    }
   },
@@ -2353,6 +2357,10 @@
     "tableRows": {
      "source": "derived",
      "note": "the box is its rule's table, a pick of its rows (one tick for the rule)"
+    },
+    "pool": {
+     "source": "derived",
+     "note": "a re-roll of one die: how often, read from GW's words by closed patterns (selected: each time the unit is selected to shoot or fight, one for the unit; phase, turn, round)"
     }
    }
   }

@@ -103,6 +103,9 @@ function condsOf(V, sOrig, leadOrig, opts){
     if(/^if (?:you|it|they) do(?:es)?\b|^if any of the following apply\b/.test(cn)) continue;
     // (an "if" whose consequence is a cost, not this effect: "if that test is failed, that unit suffers D3 mortal wounds")
     if(/^,?\s*(?:that unit|this unit|your unit|it|that model|this model) suffers\b/i.test(pc.slice(m.index + cl.length))) continue;
+    // (a clause that defines a term: "while a TYRANIDS unit … is within 6" of … SYNAPSE models, that TYRANIDS unit is said to be within
+    // Synapse Range": the next clause names it)
+    if(/^,?\s*that [^.]*? is said to be\b/i.test(pc.slice(m.index + cl.length))) continue;
     // (a word the sentence defines first: "that model is damaged: while damaged, …")
     { const w = /^while (\w+)$/.exec(cn); if(w && new RegExp('\\bis ' + w[1] + '\\b').test(norm(pc))) continue; }
     if(Object.entries(COND).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(re => re.test(cn) || re.test(norm(cl + ' ' + pc.slice(m.index + cl.length, m.index + cl.length + 60)))))) continue;
@@ -309,6 +312,15 @@ function extract(src, ctx){
     { const hm = /^\d+\+$/.test(u.sec || '') && /\bhow many ([A-Za-z' ]+?) you have\b/.exec(plainCase(src.text || '')); if(hm) box.opt = u.sec + ' ' + hm[1]; }
     if(u.or) box.or = true;
     if(u.pickLead) box.pickLead = true;
+    // a re-roll of one die: how often, in GW's words (closed patterns): each time the unit is selected to shoot or fight ("Each time this
+    // model is selected to shoot or fight", "When a friendly ADEPTUS CUSTODES unit is selected to attack"): one for the unit's attacks,
+    // shared by its weapons; once per turn, once per battle round, once in the phase (Command Re-roll, 15.01)
+    if(fx.some(([id]) => /^one/.test(id))){ const t = norm([u.s, u.lead || '', u.prevS || '', u.ctx || ''].join(' '));
+      const pool = fx.some(([id]) => id === 'oneAnyPhase') ? 'phase' : /\bonce per turn\b/.test(t) ? 'turn' : /\bonce per battle round\b/.test(t) ? 'round'
+        : /\beach time (?:this|that) (?:model|unit) is selected to (?:shoot|fight|shoot or fight)\b|\bis selected to (?:attack|shoot|fight|shoot or fight)\b|\bwhen resolving those attacks\b/.test(t) ? 'selected' : '';
+      if(pool) box.pool = pool; }
+    // (its tag, the database's: "Once per battle")
+    if(/\bonce per battle\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerBattle')) on.unshift(['oncePerBattle', true]);
     box.grp = u.grp; box.bullet = u.bullet;
     // (one sentence for two kinds of attack: "weapons equipped by that model have [LETHAL HITS], and melee weapons equipped by that model
     // have [LANCE]": a box for each)
@@ -340,7 +352,9 @@ function shape(list, src){
     if(/\byou can instead select the\b/.test(n) && b.fx.length){ const prevB = out[out.length - 1]; if(prevB && prevB.pick){ prevB.pick.push({ name:E.fxLabel(b.fx), fx:b.fx, quote:b.quote }); b.merged = true; } }
     else if((/\bselect (?:either )?the \[[^\]]+\](?: or|,) /.test(n) || /\bselect one of the following abilities: \[/.test(n)) && b.fx.length > 1){ b.pick = b.fx.map(f => ({ name:FX[f[0]].label(f[1]), fx:[f], quote:b.quote })); b.fx = []; }
     else if(/, or [^.]*\binstead\b/.test(n)){ const [x, y] = b.quote.split(/, or /); const fa = findFx(norm(x)).fx, fb = findFx(norm(y)).fx;
-      if(fa.length && fb.length){ b.pick = [{ name:E.fxLabel(fa), fx:fa, quote:x }, { name:E.fxLabel(fb), fx:fb, quote:y }]; b.fx = []; } }
+      // (its own first step, when it has no effect: "spend one Flux token and add 3 to …")
+      const pre = /^(.+?) and (?=(?:add|improve|subtract|re-roll)\b)/i.exec(y), pon = pre && !findFx(norm(pre[1])).fx.length ? [['q', plainCase(pre[1])]] : [];
+      if(fa.length && fb.length){ b.pick = [{ name:E.fxLabel(fa), fx:fa, quote:x }, Object.assign({ name:E.fxLabel(fb), fx:fb, quote:y }, pon.length ? { on:pon } : {})]; b.fx = []; } }
     if(!b.merged) out.push(b);
   }
   // bullets of one list ("this model's melee attacks have: - +3 A. - +2 S.") with no conditions of their own: one box
@@ -401,6 +415,8 @@ function shape(list, src){
   for(const b of final){
     if(lm && b.opt) b.limit = { n:['one', 'two', 'three'].indexOf(lm[1]) + 1, what:plainCase(lm[2]).replace(/^./, c => c.toUpperCase()) };
     if(b.on.length && b.on.every(x => x[0] === 'q' && /^If (?:you|it) do(?:es)?/.test(x[1]))) b.on = [];
+    // (one option left of a list that picks one, the other about attacks against the unit: its lead says it is a choice)
+    if(b.pickLead && !b.pick && b.lead && !b.on.some(x => x[0] === 'q')) b.on.push(['q', plainCase(b.lead).replace(/:\s*$/, '')]);
     for(const k of ['grp', 'bullet', 'or', 'pickLead', 'merged']) delete b[k];
     if(b.quotes){ b.quote = b.quotes.join('\n'); delete b.quotes; }
   }

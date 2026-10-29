@@ -57,7 +57,7 @@ for(const [key, o] of Object.entries(T)){
     const qn = E.norm(b.quote), found = String(b.quote).split('\n').map(q => q.replace(/^-\s+/, '')).flatMap(q => X.findFx(E.norm(q)).fx.concat(b.lead ? X.findFx(E.norm(b.lead + ' ' + q)).fx : []));
     for(const [id, p] of b.fx || []) if(!found.some(([i2, p2]) => i2 === id && String(p2) === String(p))) fail('G3', where, id + ' ' + p + ' is not in its quote “' + String(b.quote).slice(0, 80) + '”');
     // G5: conditions on their words
-    const ctxT = E.norm([b.quote, b.lead || '', src.when || '', src.target || '', src.table ? M.ruleText(src) : src.text || '', src.tagText || ''].join(' '));
+    const ctxT = E.norm([b.quote, b.lead || '', src.when || '', src.target || '', src.table ? M.ruleText(src) : src.text || '', src.tagText || '', src.tag || ''].join(' '));
     for(const [id, p] of b.on || []){
       const c = E.COND[id]; if(!c) continue;
       if(c.pats.length && !c.pats.some(re => re.test(ctxT))) fail('G5', where, 'condition ' + id + ' has no words in its source');
@@ -75,7 +75,7 @@ for(const [key, o] of Object.entries(T)){
 stats.boxes = nBox; stats.picks = nPill; stats.sources = Object.keys(T).length;
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
-{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf']),
+{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool']),
     PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw']), LIMIT_KEYS = new Set(['n', 'what']),
     PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));

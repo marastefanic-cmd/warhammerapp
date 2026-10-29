@@ -370,6 +370,14 @@ const fxCases = [
   // roll for all), S each time it is required (60 wound rolls at S3+D3 vs T4: a binomial's sd √(60 × .611 × .389) = 3.78)
   ['fx:a D3: rolled for each weapon (sd of the attacks)', () => C.run({ groups:[g({ n:10, mods:[fxm('a', 'D3')] })], target:T4, ctx:{}, sims:20000, seed:11, moments:true }).groups[0].sd.attacks, Math.sqrt(10 * 2 / 3), 0.15],
   ['fx:s D3: rolled for each wound roll (sd of the wounds)', () => C.run({ groups:[g({ n:60, S:3, kw:['TORRENT'], mods:[fxm('s', 'D3')] })], target:T4, ctx:{}, sims:20000, seed:11, moments:true }).groups[0].sd.wounds, Math.sqrt(60 * (11 / 18) * (7 / 18)), 0.2],
+  // a re-roll of one Hit roll for the unit (Code Chivalric, Magna Imperator: one each time the unit is selected), two weapons of one
+  // attack each at 4+: it goes to the more valuable weapon first (04.03), so that one's miss takes it (1/2), the other's only when the
+  // first hit (1/2 × 1/2)
+  ['pool: two weapons, the most valuable first (its share)', () => C.explain({ groups:[g({ name:'pistol', S:3 }), g({ name:'cannon', S:8, AP:-2, D:3 })].map(x => Object.assign(x, { mods:[fxm('oneHit', true)] })), target:T4, ctx:{} }).groups[1].one.hit, 1 / 2],
+  ['pool: two weapons, the other one second', () => C.explain({ groups:[g({ name:'pistol', S:3 }), g({ name:'cannon', S:8, AP:-2, D:3 })].map(x => Object.assign(x, { mods:[fxm('oneHit', true)] })), target:T4, ctx:{} }).groups[0].one.hit, 1 / 4],
+  // one for the unit, not one for each model: 3 models of one attack at 4+, a re-roll of one Hit roll is used when any misses (7/8), not
+  // 3 × 1/2
+  ['pool: for the unit, not for each model', () => C.explain({ groups:[g({ n:3, mods:[fxm('oneHit', true)] })], target:T4, ctx:{} }).groups[0].one.hit, 7 / 8],
   // two critical-hit values together: the lowest counts (a critical on 5+ beats 6+)
   ['fx:critHit: two values, the lowest', () => FXC.toMod([['critHit', 6], ['critHit', 5], ['critHit', 6]]).critHit, 5, 0],
   ['fx:ap +1: unsaved', () => ex1([g({ n:60, S:8, kw:['TORRENT'], mods:[fxm('ap', 1)] })], { T:4, models:[big(100, 10, 4)] }).unsaved, 50 * 4 / 6],
@@ -939,6 +947,12 @@ cases.push(['Command Re-roll: a stratagem box, not ticked for you; ticked: one o
 cases.push(['the Caladius with Advanced Firepower: the working and the dice agree', () => { const r = box(cp(CAL), 'Advanced Firepower'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true }, typed:{ n:1, T:10, W:1e6, Sv:3 } }));
   const x = C.explain(c.input), p = C.run(Object.assign({}, c.input, { sims:20000, seed:3 })); return Math.abs(x.total.dmg - p.dmg) / x.total.dmg; }, 0, 0.02]);
 
+// Command Re-roll ticked: one die of the step's rolls (GW's Core Rules: a Hit, Wound or Damage roll among the rolls it lists, "select one
+// of those dice to re-roll"), however many weapons and models: the re-rolls used, all together, at most one
+cases.push(['Command Re-roll: one die for the step', () => { const r = box(cp(CAL), 'Command Re-roll'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true } })), x = C.explain(c.input);
+  const used = x.groups.reduce((t, gr) => t + (gr.one ? gr.one.hit + gr.one.wound + gr.one.dmg : 0), 0); return +(used > 0 && used <= 1 + 1e-9); }, 1]);
+// the box says how often, in GW's words: Code Chivalric's Quality, one for the unit each time it is selected
+cases.push(['Code Chivalric: one for the unit each time it is selected (BOXES pool)', () => +Object.values(dm.D.boxes).some(o => o.n === 'Code Chivalric' && o.b.some(b => b.pool === 'selected' && b.fx.some(f => f[0] === 'oneHit'))), 1]);
 // the working spends a re-roll of one die as the dice do (the review's cases): a Damage re-roll only on a roll that leaves the model
 // alive (none against W1 models), so it stays for nothing else; hits, wounds, what gets through and each re-roll's use agree within
 // the dice's noise (5 standard errors of 40,000 games; the re-rolls' use within 0.01)

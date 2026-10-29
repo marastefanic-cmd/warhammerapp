@@ -104,7 +104,7 @@ const COND = {
   onObjective:{ label:() => 'Within range of an objective', pats:[/\b(?:this|that|a friendly [a-z ]+) unit is within range of an objective\b/] },
   targetObjectiveNotYours:{ fact:'targetObjectiveNotYours', label:() => 'The target on an objective marker you do not control', pats:[/\bobjective marker you do not control\b/] },
   targetObjective:{ fact:'targetObjective', label:() => 'The target within range of an objective marker',
-    pats:[/\btargets? (?:a |an enemy )?units? (?:with)?in range of (?:one or more )?objective markers?\b/, /\b(?:that enemy unit|target of that attack is an enemy unit) (?:is )?within range of an objective marker\b/, /\btarget of (?:that attack|those attacks) is within range of an objective\b/] },
+    pats:[/\btarget(?:s|ing)? (?:a |an enemy |enemy )?units? (?:with)?in range of (?:one or more )?objective markers?\b/, /\b(?:that enemy unit|target of that attack is an enemy unit) (?:is )?within range of an objective marker\b/, /\btarget of (?:that attack|those attacks) is within range of an objective\b/] },
   closest18:{ fact:'closest18', label:() => 'The target is the closest eligible target within 18"', pats:[/\bclosest eligible target within 18"/] },
   closest:{ fact:'closest', label:() => 'The target is the closest eligible target', pats:[/\bclosest eligible target\b(?! within)/] },
   belowHalf:{ label:() => 'Below Half-strength', pats:[/\b(?:this model|this unit|that model's unit|your unit|that unit|it|this model) is (?:also )?below half-strength\b/, /\bbelow half-strength, (?:that unit's|you can)/] },
