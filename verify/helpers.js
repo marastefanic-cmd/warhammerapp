@@ -70,7 +70,6 @@ function items(D, appSource){
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
-        if(ab.ph || ab.turn || ab.at) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns, at:ab.at }, src);
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
         if(ab.who) add(a.id, 'ability-who', w + ' · ' + ab.name, { who:ab.who, models:u.models }, src);
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
