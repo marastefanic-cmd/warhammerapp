@@ -1070,6 +1070,8 @@ function columnsInData(src){
   }
   for(const s of Object.values(S)){ add('DATASHEETS', s); for(const k of ROWS.concat(READ)) (s[k] || []).forEach(r => add('DATASHEETS.' + k, r)); }
   (D.ruleOptions || []).forEach(r => add('RULE_OPTIONS', r)); (D.grants || []).forEach(r => add('GRANTS', r));
+  // the Damage tab's boxes (verify/effects-migrate.js --write) and each box's columns
+  for(const o of Object.values(D.boxes || {})){ add('BOXES', o); (o.b || []).forEach(b => add('BOXES.b', b)); }
   add('BS_IDS', D.bsIds);
   return Object.fromEntries(Object.entries(T).map(([k, v]) => [k, [...v]]));
 }

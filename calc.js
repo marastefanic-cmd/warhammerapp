@@ -13,7 +13,11 @@
    run(input) → result
      input.groups  [{ name, n (models with the weapon), A, skill ('4+'), S, AP, D, range ('24"' | 'Melee'), kw:[weapon keywords],
                       from:{ field or keyword: rule name(s) }   values the printed weapon already includes (never added twice),
-                      mods:[{ from (rule name), hit, wound, a, s, ap, d, range (inches), rrHit, rrWound ('1s'|'all'),
+                      mods:[{ from (rule name), hit, wound, a, s (a number, or a dice roll: 'D3', rolled once for the
+                              weapon's attacks in each game), ap, d, range (inches), rrHit, rrWound ('1s'|'all'), rrDmg ('all': each
+                              Damage roll below the dice's average that leaves the model with wounds left is re-rolled),
+                              anti ({ kw:[keywords], non, v, assume }: [ANTI-X v+] a rule gives; assume: the target has it, the player's
+                              box), indirect ([INDIRECT FIRE] a rule gives),
                               critHit, critWound, sus ('1'), lethal, dev, ignoresCover, lance, twin, precision,
                               ignoreHitMods, set:{ A|S|AP|D|BS: '10' or '+6' }, strat (a stratagem's id),
                               oneHit, oneWound, oneDmg (re-roll one Hit / Wound / Damage roll), oneEither (one Hit or Wound roll),
@@ -143,7 +147,8 @@ const WOUND_WHY = { 2:'S at least twice T', 3:'S greater than T', 4:'S equal to 
 
 // a rule's keyword (on a mod) as the keyword it gives
 const MOD_KW = { sus:v => 'SUSTAINED HITS ' + up(v), lethal:() => 'LETHAL HITS', dev:() => 'DEVASTATING WOUNDS', ignoresCover:() => 'IGNORES COVER',
-  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1), hazardous:() => 'HAZARDOUS', heavy:() => 'HEAVY' };
+  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1), hazardous:() => 'HAZARDOUS', heavy:() => 'HEAVY',
+  indirect:() => 'INDIRECT FIRE', anti:v => v && !v.assume ? 'ANTI-' + (v.non ? 'NON-' : '') + [].concat(v.kw).map(up).join('/') + ' ' + v.v + '+' : '' };
 const NUM = { a:'A', s:'S', ap:'AP', d:'D' };
 // a rule that re-rolls one die (01.05.02 Re-rolls: "a dice can never be re-rolled more than once"): the rolls each one can go to
 // (h: a Hit roll, w: a Wound roll, d: a Damage roll)
@@ -167,6 +172,7 @@ function prep(g, X){
   for(const m of mods){
     for(const [key, f] of Object.entries(MOD_KW)) if(m[key]){
       const t = f(m[key]);
+      if(!t) continue;
       if(credited(t, m)){ skipped.push({ from:m.from, key:t }); continue; }
       inst.push({ t, src:srcName(m) }); applied.push({ from:m.from || '', key:t });
     }
@@ -174,8 +180,11 @@ function prep(g, X){
   const k = keywords(inst, X.tkw);
   // where a keyword comes from: the rule that gives it here, or the rule the printed weapon already has it from (from)
   k.from = key => k.src[key] || [].concat(from[k.text[key]] || []).join(' and ');
+  // (a dice roll, "add D3 to the Attacks characteristic": rolled once for the weapon's attacks in each game, its average in the working)
+  const rolls = { a:[], s:[] };
   const sum = (key, field) => { let t = 0; for(const m of mods){ if(!m[key]) continue;
     if(credited(field, m)){ skipped.push({ from:m.from, key:field }); continue; }
+    if(typeof m[key] === 'string' && /d/i.test(m[key])){ const d = dice(m[key]); (rolls[key] || []).push(d); applied.push({ from:m.from || '', key:field }); why[key].push({ v:diceMean(d), dice:up(m[key]), src:srcName(m) }); continue; }
     t += +m[key]; applied.push({ from:m.from || '', key:field }); why[key].push({ v:+m[key], src:srcName(m) }); } return t; };
   const best = key => { let v = '', src = ''; for(const m of mods) if(m[key] && (v !== 'all')){ if(m[key] === 'all' || !v){ v = m[key]; src = srcName(m); } } return { v, src }; };
   const low = (key, d) => { let v = d, src = ''; for(const m of mods) if(m[key] && +m[key] < v){ v = +m[key]; src = srcName(m); } return { v, src }; };
@@ -239,11 +248,16 @@ function prep(g, X){
   const s0 = sS.base != null ? num(sS.base) : num(g.S);
   const ap0 = sAP.base != null ? num(sAP.base) : num(g.AP);
   const D = dice(sD.base != null ? sD.base : g.D);
-  const cH = low('critHit', RULE.critHit), cW = low('critWound', RULE.critWound);
+  const cH = low('critHit', RULE.critHit);
+  // [ANTI-X Y+] a rule gives, the target taken to have X (the player's box): a critical wound on Y+ (24.03)
+  let cW = low('critWound', RULE.critWound);
+  for(const m of mods) if(m.anti && m.anti.assume && +m.anti.v < cW.v){ const t = 'ANTI-' + (m.anti.non ? 'NON-' : '') + [].concat(m.anti.kw).map(up).join('/') + ' ' + m.anti.v + '+';
+    if(credited(t, m)){ skipped.push({ from:m.from, key:t }); continue; } cW = { v:+m.anti.v, src:'[' + t + '] (24.03), ' + srcName(m) }; applied.push({ from:m.from || '', key:t }); }
+  const rrDmg = best('rrDmg');
   const G = {
     name:g.name, n:Math.max(0, +g.n || (g.n === 0 ? 0 : 1)), out, notes, applied, skipped, k, why, half, rangeIn, r0, from, indirect, noRr, ignoreSrc, one,
     A0:sA.base != null ? sA.base : g.A, skill0, S0:s0, AP0:ap0 || 0, D0:sD.base != null ? sD.base : g.D, blastN:X.total,
-    A:dice(sA.base != null ? sA.base : g.A), aPlus,
+    A:dice(sA.base != null ? sA.base : g.A), aPlus, aDice:rolls.a, sDice:rolls.s, rrDmg:rrDmg.v, rrDmgSrc:rrDmg.src,
     rapid:k.rapid && half ? k.rapid : null, melta:k.melta && half ? k.melta : null,
     // [BLAST]/[CLEAVE]: the models that were in the target unit at Select Targets, before any of these attacks
     extra:((k.blast || 0) + (k.cleave || 0)) * Math.floor(X.total / 5), extraPer:(k.blast || 0) + (k.cleave || 0),
@@ -265,7 +279,7 @@ function prep(g, X){
 }
 // attacks that resolve alike are gathered together (identical attacks, 04.03)
 const sigOf = (G, prec) => JSON.stringify([G.bs, G.hitMod, G.critHit, G.rrHit, G.torrent, G.snap, G.fail, G.S, G.woundMod, G.critWound, G.rrWound,
-  G.AP, G.D, G.dPlus, G.melta, G.sus, G.lethal, G.dev, prec && G.precision]);
+  G.AP, G.D, G.dPlus, G.melta, G.sus, G.lethal, G.dev, prec && G.precision, G.rrDmg, G.aDice, G.sDice]);
 
 // the attacker's choices the rules leave open (re-rolls, [LETHAL HITS]): the one worth more on average against the
 // model the attacks meet first. A failed roll is always re-rolled when a rule allows it; a successful one only to look
@@ -454,7 +468,10 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf, left){
     let T = 0, charAlive = false, bgAlive = false;
     for(const M of models) if(M.w > 0){ if(M.row.char) charAlive = true; if(M.row.bodyguard) bgAlive = true; }
     for(const M of models) if(M.w > 0 && (!attached || !bgAlive || M.row.bodyguard)) T = Math.max(T, M.row.T || +S.Tdefault || 1);
-    const P = charAlive ? G : G2, g = P[b.members[0]];
+    const P = charAlive ? G : G2, g0 = P[b.members[0]];
+    // a dice roll added to S or A ("add D3 to the Attacks and Strength characteristics"): rolled once for these attacks in this game
+    const sRoll = g0.sDice && g0.sDice.length ? g0.sDice.reduce((t, d) => t + roll(d, R), 0) : 0, aRoll = g0.aDice && g0.aDice.length ? g0.aDice.reduce((t, d) => t + roll(d, R), 0) : 0;
+    const g = sRoll ? Object.assign({}, g0, { S:Math.max(RULE.minS, g0.S + sRoll) }) : g0;
     // [PRECISION]: the picked CHARACTER's group is the current one until these attacks end or it is destroyed (24.28)
     const precG = precOn && g.precision ? () => { for(const gi of chOrder) if(groups[gi].name === ctx.precision){ const M = pickIn(gi); if(M) return M; } return null; } : null;
     const now = () => (precG && precG()) || current();
@@ -462,7 +479,7 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf, left){
     // gather the attack dice: A per weapon (at least 1), + [RAPID FIRE] at half range, + [BLAST]/[CLEAVE]
     atk.n = 0;
     for(const mi of b.members){ const x = P[mi], n = nOf ? nOf[mi] : x.n, extra = extraOf ? extraOf[mi] : x.extra;
-      for(let i = 0; i < n; i++){ const a = Math.max(RULE.minA, roll(x.A, R) + x.aPlus) + (x.rapid ? roll(x.rapid, R) : 0) + extra; for(let j = 0; j < a; j++) put(atk, mi); sum[mi].attacks += a; } }
+      for(let i = 0; i < n; i++){ const a = Math.max(RULE.minA, roll(x.A, R) + x.aPlus + aRoll) + (x.rapid ? roll(x.rapid, R) : 0) + extra; for(let j = 0; j < a; j++) put(atk, mi); sum[mi].attacks += a; } }
     // hit rolls (05.01)
     const hr = u => g.snap ? (u === RULE.snapHit ? 1 : 0) : (u === 1 || u < g.fail) ? 0 : u >= g.critHit ? 2 : u + g.hitMod >= g.bs ? 1 : 0;
     hits.n = 0; auto.n = 0;
@@ -506,7 +523,11 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf, left){
         let dr = roll(g.D, R);
         const mr = g.melta ? roll(g.melta, R) : 0;
         let dmg = Math.max(RULE.minDamage, dr + g.dPlus + mr - (tm.dMinus || 0));   // D cannot be less than 1
-        if(one && use.d.length && dr < g.Dmean && dmg < M.w && take(use.d)){ sum[mi].oneD++; dr = roll(g.D, R); dmg = Math.max(RULE.minDamage, dr + g.dPlus + mr - (tm.dMinus || 0)); }
+        // a rule that re-rolls Damage rolls: one below the dice's average whose damage leaves the model with wounds left is re-rolled
+        // (as a re-roll of one Damage roll is spent); a die is never re-rolled twice (01.05.02)
+        let rrD = false;
+        if(g.rrDmg && g.D.n && dr < g.Dmean && dmg < M.w){ rrD = true; dr = roll(g.D, R); dmg = Math.max(RULE.minDamage, dr + g.dPlus + mr - (tm.dMinus || 0)); }
+        if(!rrD && one && use.d.length && dr < g.Dmean && dmg < M.w && take(use.d)){ sum[mi].oneD++; dr = roll(g.D, R); dmg = Math.max(RULE.minDamage, dr + g.dPlus + mr - (tm.dMinus || 0)); }
         sum[mi].dmg += hurt(M, dmg, false);
       }
     }
@@ -750,7 +771,8 @@ function play(input){
 function resolve(input){
   const S = setup(input);
   return { groups:S.G.map(x => Object.assign({ out:x.out, notes:x.notes, applied:x.applied, skipped:x.skipped, bs:x.bs, hitMod:x.hitMod, woundMod:x.woundMod, S:x.S, AP:x.AP, rrHit:x.rrHit, rrWound:x.rrWound, psychic:x.psychic, psychicKw:!!x.k.psychic, dev:x.dev, rangeIn:x.rangeIn, lethal:x.lethal, precision:x.precision,
-      critHit:x.critHit, critWound:x.critWound, sus:x.sus, torrent:x.torrent, D:x.D, dPlus:x.dPlus, A:x.A, aPlus:x.aPlus, rapid:x.rapid, melta:x.melta, extra:x.extra, half:x.half, n:x.n }, x.one.length ? { one:x.one } : {})),
+      critHit:x.critHit, critWound:x.critWound, sus:x.sus, torrent:x.torrent, D:x.D, dPlus:x.dPlus, A:x.A, aPlus:x.aPlus, rapid:x.rapid, melta:x.melta, extra:x.extra, half:x.half, n:x.n,
+      rrDmg:x.rrDmg, hazRolls:x.hazRolls, indirect:x.indirect, aDice:x.aDice, sDice:x.sDice }, x.one.length ? { one:x.one } : {})),
     alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), orders:ordersOf(S.groups).length, capped:!!ordersOf(S.groups).capped, batches:S.batches.map(b => b.members),
     pool:S.pool.map(e => ({ kind:e.kind, n:e.n, src:e.src, phase:e.phase, users:[...e.users] })) };
 }
@@ -919,7 +941,7 @@ function explain(input, orderIdx){
   const firstRow = S.rows[S.groups[order[0]].rows[0]];
   const precRow = S.precOn ? S.rows.find(r => r.char && r.name === ctx.precision) : null;
   const skillKey = ctx.ranged ? 'BS' : 'WS';
-  const out = S.G.map((G, i) => {
+  const exOne = (G, i) => {
     if(G.out || !G.n) return { attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, dmgCap:0, out:G.out, steps:[] };
     const row = G.precision && precRow ? precRow : firstRow, M = { row, w:row.W };
     const T = T0, pl = plan(G, T, M, tm), st = [], k = G.k, why = G.why;
@@ -929,11 +951,11 @@ function explain(input, orderIdx){
     // half range, from the range after the rules that change it
     const halfTxt = G.rangeIn == null ? '' : G.rangeIn / 2 + '"' + (why.range.length ? ' (range ' + G.r0 + '"' + why.range.map(x => ' ' + sgn(x.v) + '" ' + x.src).join('') + ' = ' + G.rangeIn + '")' : '');
     // attacks (04.03): A per weapon (at least 1), + [RAPID FIRE] within half range, + [BLAST]/[CLEAVE]
-    const pa = pmf(G.A), aEach = ex(pa, v => Math.max(RULE.minA, v + G.aPlus)), rapid = G.rapid ? diceMean(G.rapid) : 0;
+    const pa = (G.aDice || []).reduce((p, d) => conv(p, pmf(d)), pmf(G.A)), aEach = ex(pa, v => Math.max(RULE.minA, v + G.aPlus)), rapid = G.rapid ? diceMean(G.rapid) : 0;
     const attacks = G.n * (aEach + rapid + G.extra);
     // a die reads as a die: "A3" is 3 attacks, "A D6+2" a roll; "Damage: 3" is 3, "Damage: D3+2" a roll (never "DD3")
-    let t = String(G.A0) + (why.set.A ? ' (' + why.set.A + ')' : inc('A')) + why.a.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
-    if(G.A.n || why.a.length) t += ' = ' + fx(aEach) + (G.A.n ? ' on average' : '') + (G.aPlus < 0 ? ' (at least 1)' : '');
+    let t = String(G.A0) + (why.set.A ? ' (' + why.set.A + ')' : inc('A')) + why.a.map(x => ' ' + (x.dice ? '+' + x.dice + ' (rolled once for these attacks)' : sgn(x.v)) + ' (' + x.src + ')').join('');
+    if(G.A.n || why.a.length) t += ' = ' + fx(aEach) + (G.A.n || (G.aDice || []).length ? ' on average' : '') + (G.aPlus < 0 ? ' (at least 1)' : '');
     t += ' × ' + fx(G.n) + ' = ' + fx(G.n * aEach);
     if(rapid) t += '; [' + k.text.rapid + '] within half range (' + halfTxt + ', 24.30' + kf('rapid') + '): +' + fx(rapid) + ' × ' + fx(G.n) + ' → ' + fx(G.n * (aEach + rapid));
     if(G.extra){ const kw = [k.blast ? '[' + k.text.blast + '] (24.05)' : '', k.cleave ? '[' + k.text.cleave + '] (24.06, all its attacks at this one unit)' : ''].filter(Boolean).join(' and ');
@@ -972,7 +994,7 @@ function explain(input, orderIdx){
     const wr = oneRoll(wcls, G.rrWound, pl.fishW);
     const devC = G.dev ? toWound * wr.p[2] : 0, normal = toWound * (wr.p[1] + (G.dev ? 0 : wr.p[2])) + auto;
     {
-      const parts = [], sMods = why.s.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
+      const parts = [], sMods = why.s.map(x => ' ' + (x.dice ? '+' + x.dice + ' (rolled once for these attacks: here ' + sgn(G.S - G.S0 - why.s.filter(y => !y.dice).reduce((t, y) => t + y.v, 0)) + ', each roll weighted by its chance)' : sgn(x.v)) + ' (' + x.src + ')').join('');
       parts.push(G.S0 == null ? 'no S: S1 (02.04.01)' : 'S' + G.S0 + (why.set.S ? ' (' + why.set.S + ')' : inc('S')) + sMods + (sMods ? ' = ' + G.S : '') + (G.S0 + why.s.reduce((t, x) => t + x.v, 0) < 1 ? ' (at least 1)' : ''));
       const tNote = attached ? (S.rows.some(r => r.bodyguard && r.T) ? ' (the bodyguard models’ highest, 19.02)' : '') : S.rows.length > 1 && new Set(S.rows.map(r => r.T)).size > 1 ? ' (the highest in the unit, 05.02.01)' : '';
       const tRow = S.rows.find(r => (!attached || r.bodyguard) && r.T === T);
@@ -1006,8 +1028,15 @@ function explain(input, orderIdx){
       st.push({ k:'unsaved', t:sv2 });
     }
     // damage (05.04): D after its modifiers (at least 1); Feel No Pain for each wound (24.12)
-    const pd = conv(pmf(G.D), G.melta ? pmf(G.melta) : new Map([[0, 1]]));
-    const dN = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinus || 0))), dM = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinusChar || 0)));
+    // (re-rolled Damage rolls, rrDmg: a roll below the dice's average whose damage leaves the model with wounds left, rolled again; the
+    // mortal wounds of [DEVASTATING WOUNDS] are not a Damage roll of an allocated attack: as rolled)
+    const pd0 = conv(pmf(G.D), G.melta ? pmf(G.melta) : new Map([[0, 1]]));
+    const pd = !(G.rrDmg && G.D.n) ? pd0 : (() => { const r = new Map(), pD = pmf(G.D), pm = G.melta ? pmf(G.melta) : new Map([[0, 1]]);
+      for(const [m, y] of pm) for(const [v, w] of pD){
+        if(v < G.Dmean - 1e-9 && Math.max(RULE.minDamage, v + G.dPlus + m - (tm.dMinus || 0)) < row.W) for(const [u, x] of pD) r.set(u + m, (r.get(u + m) || 0) + w * y * x);
+        else r.set(v + m, (r.get(v + m) || 0) + w * y); }
+      return r; })();
+    const dN = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinus || 0))), dM = ex(pd0, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinusChar || 0)));
     const fnp = Math.min(row.fnp || 7, tm.fnp || 7), fnpM = Math.min(fnp, row.fnpMortal || 7, tm.fnpMortal || 7);
     const keep = x => x <= 6 ? (x - 1) / 6 : 1;
     const dmgN = unsaved * dN * keep(fnp), dmgM = devC * dM * keep(fnpM);
@@ -1017,6 +1046,7 @@ function explain(input, orderIdx){
     {
       const parts = [String(G.D0) + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ', and +' + diceText(G.melta) + ' with [' + k.text.melta + '] (within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
       for(const x of why.d.filter(x => x.target)) parts.push(sgn(x.v) + ' Damage (' + x.src + ')');
+      if(G.rrDmg && G.D.n) parts.push('Damage rolls below the dice’s average that leave the model with wounds left re-rolled (' + G.rrDmgSrc + ')');
       if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : fx(dN) + ' each') + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (D cannot be less than 1, 02.02.01)' : ''));
       const fsrc = fnp < 7 ? (row.fnp === fnp && row.fnpSrc ? row.fnpSrc : tsrc.fnp || 'the target') : '';
       if(fnp < 7) parts.push('Feel No Pain ' + fnp + '+ (' + fsrc + ', 24.12): ' + (7 - fnp) + '/6 of the wounds ignored');
@@ -1031,12 +1061,24 @@ function explain(input, orderIdx){
     // (as the dice spend it, attackOnce: a roll below the dice's average whose damage leaves the model it hits with wounds left; here the
     // model the attacks meet first, with all its wounds, as the working takes every attack to find one)
     const pD = pmf(G.D), pm = G.melta ? pmf(G.melta) : new Map([[0, 1]]);
-    const val = (v, m) => Math.max(RULE.minDamage, v + G.dPlus + m - (tm.dMinus || 0)), ok = (v, m) => v < G.Dmean - 1e-9 && val(v, m) < row.W;
+    const val = (v, m) => Math.max(RULE.minDamage, v + G.dPlus + m - (tm.dMinus || 0)), ok = (v, m) => !G.rrDmg && v < G.Dmean - 1e-9 && val(v, m) < row.W;
     const qd = ex(pm, m => ex(pD, v => ok(v, m) ? 1 : 0));
     const gainOf = f => !qd ? 0 : ex(pm, m => ex(pD, v => ok(v, m) ? ex(pD, u => f(val(u, m))) - f(val(v, m)) : 0)) / qd;
     aux[i] = { G, hr, wr, pl, sf, qd, n:normal, kw:wr.p, gainD:gainOf(v => v) * keep(fnp), gainCap:gainOf(v => Math.min(row.W, v * keep(fnp))),
       perN:dN * keep(fnp), perM:dM * keep(fnpM), capN:capOf(tm.dMinus || 0, keep(fnp)), capM:capOf(tm.dMinusChar || 0, keep(fnpM)) };
     return { attacks, hits:toWound + auto, wounds:normal + devC, unsaved, mortals:devC, dmg:dmgN + dmgM, dmgCap, out:'', steps:st };
+  };
+  // a dice roll added to S ("add D3 to the … Strength characteristics"), rolled once for these attacks: each result worked out, weighted
+  // by its chance (the working shown is the one of the middle result)
+  const NUMS = ['attacks', 'hits', 'wounds', 'unsaved', 'mortals', 'dmg', 'dmgCap'];
+  const out = S.G.map((G, i) => {
+    if(!(G.sDice && G.sDice.length) || G.out || !G.n) return exOne(G, i);
+    const dist = [...G.sDice.reduce((p, d) => conv(p, pmf(d)), new Map([[0, 1]]))].sort((a, b) => a[0] - b[0]);
+    const mid = dist[Math.floor((dist.length - 1) / 2)][0];
+    let shown = null, auxMid = null; const acc = Object.fromEntries(NUMS.map(k => [k, 0]));
+    for(const [v, w] of dist){ const r = exOne(Object.assign({}, G, { S:Math.max(RULE.minS, G.S + v), sDice:[] }), i); for(const k of NUMS) acc[k] += w * (r[k] || 0); if(v === mid){ shown = r; auxMid = aux[i]; } }
+    aux[i] = auxMid;
+    return Object.assign({}, shown, acc);
   });
   // the re-rolls of one die: weapon by weapon in the order they are resolved, from the chance of each way the weapons before it left them
   if(S.pool.length){

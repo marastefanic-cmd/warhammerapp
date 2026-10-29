@@ -28,7 +28,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());   // the app ships its own fonts
   // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
   // this build passed, so the screens and their snapshots do not depend on how the previous run went
-  const build = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
+  const build = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
   const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }] };
   await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
@@ -181,6 +181,17 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         go({ s:'damage', army:id }); }, [a.id, ph]);
       await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 });
       await take('damage ' + ph, `() => {}`);
+      // the five groups, in order (Army rules, Unit rules, From other units in your list, Stratagems, Custom modifiers), in each part of
+      // the list; every rule box in exactly one of them; the Custom modifiers folded, each of effects.js's once
+      const grp = await page.evaluate(() => { const bad = [], parts = document.querySelectorAll('#dmList .dmpart').length || 1;
+        const heads = [...document.querySelectorAll('#dmList .dmh3')].map(h => h.firstChild.textContent.trim()).filter(t => DM_GROUPS.some(g => g[1] === t));
+        const want = DM_GROUPS.slice(0, 4).map(g => g[1]); for(let i = 0; i < parts; i++) if(heads.slice(i * 4, i * 4 + 4).join('|') !== want.join('|')) bad.push('groups: ' + heads.join(', '));
+        const cust = [...document.querySelectorAll('#dmList details.dmcust')];
+        if(cust.length !== parts) bad.push(cust.length + ' Custom modifiers groups for ' + parts + ' parts');
+        for(const c of cust){ if(c.open) bad.push('Custom modifiers not folded'); const n = c.querySelectorAll('[data-dmlv*="r:u:"]').length; if(n !== WH_EFFECTS.CUSTOM.length) bad.push('Custom modifiers: ' + n + ' of ' + WH_EFFECTS.CUSTOM.length); }
+        for(const e of document.querySelectorAll('#dmList .dmlv[data-dmlv*="r:"]')){ const n = [e.closest('[data-dmgrp]'), e.closest('details.dmcust')].filter(Boolean).length; if(n !== 1) bad.push(e.dataset.dmlv + ' in ' + n + ' groups'); }
+        return bad; });
+      if(grp.length) fail('damage-groups', a.id, ph, grp.slice(0, 5).join('; '));
     }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
     await screen('strats', { open:true });     // every stratagem, unfolded
@@ -451,8 +462,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             if(g.from !== w.from) out.push(['damage-bonus-twice', u.id, g.name + ': the weapon’s pre-applied values are not passed to the calculator']);
             for(const x of c.R.groups[i].applied) if([].concat((w.from || {})[x.key] || []).includes(x.from)) out.push(['damage-bonus-twice', u.id, g.name + ': ' + x.key + ' from ' + x.from + ' added again']);
             for(const m of g.mods){ const r = c.rules.find(x => x.on && x.m.from === m.from); if(!r) continue;
-              if(r.m.weapon && r.m.weapon !== itemName(it)) out.push(['damage-mod-scope', u.id, m.from + ' (for ' + r.m.weapon + ') reaches ' + g.name]);
-              if(r.m.who && r.m.who !== (it.who || '')) out.push(['damage-mod-scope', u.id, m.from + ' (for ' + r.m.who + ') reaches ' + g.name]); }
+              const sc = (r.sc && r.sc.scope) || {}, nm = itemName(it).toLowerCase();
+              if(sc.weapon && !it.profiles.some(p => [p.name, it.group, itemName(it)].some(x => String(x || '').toLowerCase().replace(/[’']/g, "'").startsWith(sc.weapon)))) out.push(['damage-mod-scope', u.id, m.from + ' (for ' + sc.weapon + ') reaches ' + g.name]);
+              if(sc.models === 'model' && r.m.ab && r.m.ab.who && u.leads && r.m.ab.who !== (it.who || '')) out.push(['damage-mod-scope', u.id, m.from + ' (for ' + r.m.ab.who + ') reaches ' + g.name]); }
           });
         }
       }
@@ -714,11 +726,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.evaluate(() => document.querySelector('[data-dmgrm="0"]').click()); await page.waitForTimeout(600);
     const rm = await page.evaluate(() => ({ n:document.querySelectorAll('#dmTgt .dwv[role="spinbutton"]').length, prec:!!document.querySelector('[data-dmtt="prec"]'), more:dmTypedVals(dmState()).more.length }));
     if(rm.n !== 6 || rm.prec || rm.more) fail('damage-groups', A, 'the group removed', JSON.stringify(rm));
-    // the modifiers, folded under one row that says what is set: +1 to hit set, said there and as a chip
-    await page.evaluate(() => { const d = document.querySelector('#dmList .dmmanf'); d.open = true; d.scrollIntoView({ block:'center' }); }); await page.waitForTimeout(300);
-    await page.click('[data-dmman="hit|1"]'); await settled();
-    const md = await page.evaluate(() => ({ sum:document.querySelector('#dmList .dmmanf > summary').textContent, chip:[...document.querySelectorAll('#dmAns .dmchip')].map(c => c.textContent).join(' | ') }));
-    if(!/Modifiers · Hit \+1/.test(md.sum) || !/Hit \+1/.test(md.chip)) fail('damage-modifiers', A, '+1 to hit', JSON.stringify(md));
+    // the custom modifiers, folded under one row that says how many are ticked: +1 to Hit rolls ticked, said there and as a chip
+    await page.evaluate(() => { const d = document.querySelector('#dmList .dmcust'); d.scrollIntoView({ block:'center' }); d.querySelector('summary').click(); }); await settled(); await page.waitForTimeout(300);
+    await page.click('[data-dmlv="r:u:hit:1"]'); await settled();
+    const md = await page.evaluate(() => ({ sum:document.querySelector('#dmList .dmcust > summary').textContent, chip:[...document.querySelectorAll('#dmAns .dmchip')].map(c => c.textContent).join(' | ') }));
+    if(!/Custom modifiers · 1 ticked/.test(md.sum) || !/Custom: \+1 to Hit rolls/.test(md.chip)) fail('damage-modifiers', A, '+1 to Hit rolls', JSON.stringify(md));
     // the models left of your unit: one wheel for each models line, folded; one fewer said in its row
     const many = await page.evaluate(() => { for(const u of armyById(WH_DATA.armies[0].id).units) if(u.models.length > 1 && (u.ranged || []).length) return u.id; return null; });
     if(many){ await open('', [A, many], { fold:{ left:true } });

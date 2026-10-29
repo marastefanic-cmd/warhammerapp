@@ -441,7 +441,8 @@ function mergeNeeds(a, b){
 
 function stratNeeds(V, s){
   const reasons = [];
-  const target = norm(s.target), when = norm(s.when).split(/\n/)[0];
+  // (words GW's errata struck out, "~~WAR DOG CHARACTER~~", are not the TARGET any more)
+  const target = norm(String(s.target).replace(/~~[^~]*~~\s*\/?\s*/g, '')), when = norm(s.when).split(/\n/)[0];
   const first = target.split(/(?<=\.)\s+/)[0];
   let unit = friendlyUnit(V, first, { any:true });
   if(!unit) return { how:'none', reasons:[{ rule:'no-unit', match:clip(plain(first)) }] };
@@ -1407,3 +1408,5 @@ if(require.main === module){
   process.exit(drift.length || items.tablesStale || ckStale ? 1 : 0);
 }
 module.exports = { derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+// (the keyword-phrase readers, for verify/effects-extract.js: who a rule's sentence reaches, which targets it names)
+Object.assign(module.exports, { norm, plain, prepBold, parseRun, friendlyUnit, needsOf, tokens, excluded, RUN });

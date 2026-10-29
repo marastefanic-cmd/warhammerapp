@@ -306,13 +306,90 @@ cases.push(['hazard: [HAZARDOUS] and [SUPA-HAZARDOUS] on one weapon: three rolls
 cases.push(['hazard: [SUPA-HAZARDOUS] only when it shoots', () => pl([{ side:1, hazard:{ mw:1 }, self:one10, input:{ groups:[g({ name:'blasta', n:1, S:8, kw:['TORRENT', 'HAZARDOUS', 'SUPA-HAZARDOUS'] })], target:tenW1(), ctx:{} } }]).beats[0].hazard.rolls, 1, 0]);
 cases.push(['hazard: no roll when the unit did not attack', () => pl([{ side:1, hazard:{ mw:3, rolls:1 }, self:one10, input:{ groups:[g({ name:'gun', n:1, S:8, kw:['TORRENT'], carry:[[5, 1]] })], target:tenW1() } }]).beats[0].hazard.rolls, 0, 0]);
 
+// ---- the effects catalogue (effects.js): every effect a box or a custom modifier can have, as its mod, against values worked out by
+// hand (verify/evidence.js G8: a case named 'fx:<id>' for each). The exact averages (explain) unless the dice are the point ----
+const FXC = require('../effects.js');
+const fxm = (id, p) => FXC.toMod([[id, p]]);
+const ex1 = (gr, target, ctx) => C.explain({ groups:gr, target, ctx:ctx || {} }).groups[0];
+const T4 = { T:4, models:[big(100, 10)] }, BIGW = { T:4, models:[big(1, 100000)] };
+const fxCases = [
+  // +1 to hit at 4+: 60 attacks, 40 hits; -1: 20
+  ['fx:hit +1: hits', () => ex1([g({ n:60, mods:[fxm('hit', 1)] })], T4).hits, 40],
+  ['fx:hit -1: hits', () => ex1([g({ n:60, mods:[fxm('hit', -1)] })], T4).hits, 20],
+  // +1 to wound, S4 vs T4 (4+ → 3+), 60 [TORRENT] hits: 40
+  ['fx:wound +1: wounds', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('wound', 1)] })], T4).wounds, 40],
+  // re-roll one: one attack at 4+ re-rolling its failed hit roll: 1/2 + 1/2 × 1/2
+  ['fx:oneHit: hits', () => ex1([g({ mods:[fxm('oneHit', true)] })], T4).hits, 0.75],
+  ['fx:oneWound: wounds', () => ex1([g({ kw:['TORRENT'], mods:[fxm('oneWound', true)] })], T4).wounds, 0.75],
+  // one Damage roll of D6 below 3.5 re-rolled: (1/2 × 3.5 + 1/2 × 5) × 5/6 (S8 vs T4: 2+), no save
+  ['fx:oneDmg: damage', () => ex1([g({ S:8, D:'D6', kw:['TORRENT'], mods:[fxm('oneDmg', true)] })], BIGW).dmg, (0.5 * 3.5 + 0.5 * 5) * 5 / 6],
+  // a hit or a wound roll, a hit, wound or Damage roll, and Command Re-roll's (once in the phase): one [TORRENT] attack, its wound roll
+  ['fx:oneEither: wounds', () => ex1([g({ kw:['TORRENT'], mods:[fxm('oneEither', true)] })], T4).wounds, 0.75],
+  ['fx:oneAny: wounds', () => ex1([g({ kw:['TORRENT'], mods:[fxm('oneAny', true)] })], T4).wounds, 0.75],
+  ['fx:oneAnyPhase: wounds, once in the phase', () => +(ex1([g({ kw:['TORRENT'], mods:[fxm('oneAnyPhase', true)] })], T4).wounds === 0.75 && fxm('oneAnyPhase', true).phase === true), 1, 0],
+  // re-rolls of the whole roll and of 1s: 60 at 4+
+  ['fx:rrHit1: hits', () => ex1([g({ n:60, mods:[fxm('rrHit1', true)] })], T4).hits, 60 * (0.5 + 1 / 12)],
+  ['fx:rrHit: hits', () => ex1([g({ n:60, mods:[fxm('rrHit', true)] })], T4).hits, 45],
+  ['fx:rrWound1: wounds', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('rrWound1', true)] })], T4).wounds, 60 * (0.5 + 1 / 12)],
+  ['fx:rrWound: wounds', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('rrWound', true)] })], T4).wounds, 45],
+  // re-roll Damage rolls (new): every D6 below 3.5 re-rolled: 60 × 5/6 wounds × (1/2 × 3.5 + 1/2 × 5)
+  ['fx:rrDmg: damage', () => ex1([g({ n:60, S:8, D:'D6', kw:['TORRENT'], mods:[fxm('rrDmg', true)] })], BIGW).dmg, 50 * 4.25],
+  ['fx:rrDmg: played out', () => run([g({ n:60, S:8, D:'D6', kw:['TORRENT'], mods:[fxm('rrDmg', true)] })], BIGW).dmg, 50 * 4.25],
+  // a D3 Damage the same: 1 (below 2) re-rolled: 1/3 × 2 + 2/3 × 2.5 = 2.33
+  ['fx:rrDmg: D3', () => ex1([g({ n:60, S:8, D:'D3', kw:['TORRENT'], mods:[fxm('rrDmg', true)] })], BIGW).dmg, 50 * (1 / 3 * 2 + 1 / 3 * 2 + 1 / 3 * 3)],
+  // a Critical Hit on 5+ with [SUSTAINED HITS 1]: 30 hits + 20 extra
+  ['fx:critHit 5: hits', () => ex1([g({ n:60, kw:['SUSTAINED HITS 1'], mods:[fxm('critHit', 5)] })], T4).hits, 50],
+  // a Critical Wound on 5+ with [DEVASTATING WOUNDS]: 20 of 60 [TORRENT] hits are mortals
+  ['fx:critWound 5: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWound', 5)] })], T4).mortals, 20],
+  // the weapon abilities a rule gives
+  ['fx:lethal: wounds', () => ex1([g({ n:20, mods:[fxm('lethal', true)] })], { T:8, models:[big(20, 10)] }).wounds, 20 / 6 + 20 / 3 / 6],
+  ['fx:dev: mortals', () => ex1([g({ n:36, D:2, kw:['TORRENT'], mods:[fxm('dev', true)] })], { T:4, models:[big(200, 10, 2)] }).mortals, 6],
+  ['fx:twin: wounds', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('twin', true)] })], T4).wounds, 45],
+  ['fx:lance: wounds after a charge', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('lance', true)] })], T4, { charged:true }).wounds, 40],
+  ['fx:precision: the attacks are [PRECISION]', () => +C.resolve({ groups:[g({ mods:[fxm('precision', true)] })], target:T4, ctx:{} }).groups[0].precision, 1, 0],
+  ['fx:ignoresCover: hits in cover', () => ex1([g({ n:60, mods:[fxm('ignoresCover', true)] })], T4, { ranged:true, cover:true }).hits, 30],
+  ['fx:heavy: hits, remained stationary', () => ex1([g({ n:60, mods:[fxm('heavy', true)] })], T4, { ranged:true, heavy:true }).hits, 40],
+  ['fx:hazardous: one hazard roll', () => C.resolve({ groups:[g({ mods:[fxm('hazardous', true)] })], target:T4, ctx:{} }).groups[0].hazRolls, 1, 0],
+  // [INDIRECT FIRE] a rule gives (new): indirect shooting, an unmodified 1-5 fails: 10 of 60 hit
+  ['fx:indirect: hits, indirect shooting', () => ex1([g({ n:60, mods:[fxm('indirect', true)] })], T4, { ranged:true, indirect:'1-5' }).hits, 10],
+  ['fx:sus 1: hits', () => ex1([g({ n:30, mods:[fxm('sus', '1')] })], T4).hits, 20],
+  ['fx:sus D3: hits', () => ex1([g({ n:30, mods:[fxm('sus', 'D3')] })], T4).hits, 15 + 5 * 2],
+  ['fx:cleave 1: attacks', () => ex1([g({ A:'3', mods:[fxm('cleave', 1)] })], { T:4, models:[big(16, 10)] }).attacks, 6],
+  // [ANTI-X 4+] a rule gives (new), the target taken to have X (its box): with [DEVASTATING WOUNDS], S4 vs T8: 4+ critical, 30 mortals
+  ['fx:anti VEHICLE 4+: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[Object.assign({}, fxm('anti', 'VEHICLE 4+'), { anti:Object.assign({}, fxm('anti', 'VEHICLE 4+').anti, { assume:true }) })] })], { T:8, models:[big(100, 10)] }).mortals, 30],
+  ['fx:anti: unticked target, no critical wound on 4+', () => C.resolve({ groups:[g({ mods:[fxm('anti', 'VEHICLE 4+')] })], target:{ T:8, models:[big(100, 10)] }, ctx:{} }).groups[0].critWound, 6, 0],
+  // characteristics: +1 A (10 × A2 → 30), +D3 A (new: 10 × (1 + 2) on average), +1 S (S5 vs T5: 4+), +D3 S (new: S3 + D3 vs T4, each roll a third:
+  // 4+, 3+, 3+), +1 AP (Sv 4+ → 5+: 4/6 of 50 fail), +1 D (D2, 50 wounds: 100)
+  ['fx:a +1: attacks', () => ex1([g({ n:10, A:'2', mods:[fxm('a', 1)] })], T4).attacks, 30],
+  ['fx:a D3: attacks', () => ex1([g({ n:10, mods:[fxm('a', 'D3')] })], T4).attacks, 30],
+  ['fx:a D3: played out', () => run([g({ n:10, mods:[fxm('a', 'D3')] })], T4).groups[0].attacks, 30],
+  ['fx:s +1: wounds', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('s', 1)] })], { T:5, models:[big(100, 10)] }).wounds, 30],
+  ['fx:s D3: wounds', () => ex1([g({ n:60, S:3, kw:['TORRENT'], mods:[fxm('s', 'D3')] })], T4).wounds, 60 * (1 / 2 + 2 / 3 + 2 / 3) / 3],
+  ['fx:s D3: played out', () => run([g({ n:60, S:3, kw:['TORRENT'], mods:[fxm('s', 'D3')] })], T4).groups[0].wounds, 60 * (1 / 2 + 2 / 3 + 2 / 3) / 3],
+  ['fx:ap +1: unsaved', () => ex1([g({ n:60, S:8, kw:['TORRENT'], mods:[fxm('ap', 1)] })], { T:4, models:[big(100, 10, 4)] }).unsaved, 50 * 4 / 6],
+  ['fx:d +1: damage', () => ex1([g({ n:60, S:8, kw:['TORRENT'], mods:[fxm('d', 1)] })], BIGW).dmg, 100],
+  // "improve the Strength, Armour Penetration and Damage characteristics of that attack by 1" (Blood Throne): three effects at once
+  ['fx:s, ap, d +1 at once: damage', () => ex1([g({ n:60, S:3, kw:['TORRENT'], mods:[FXC.toMod([['s', 1], ['ap', 1], ['d', 1]])] })], { T:4, models:[big(1, 100000, 4)] }).dmg, 60 / 2 * 4 / 6 * 2],
+  ['fx:aSet 6: attacks', () => ex1([g({ mods:[fxm('aSet', 6)] })], T4).attacks, 6],
+  ['fx:bsSet 3: hits', () => ex1([g({ n:60, skill:'5+', mods:[fxm('bsSet', 3)] })], T4, { ranged:true }).hits, 40],
+  ['fx:skill 1: hits', () => ex1([g({ n:60, mods:[fxm('skill', 1)] })], T4, { ranged:true }).hits, 40],
+  ['fx:range +6: range', () => C.resolve({ groups:[g({ range:'24"', mods:[fxm('range', 6)] })], target:T4, ctx:{ ranged:true } }).groups[0].rangeIn, 30, 0],
+  ['fx:ignoreHitMods: hits, its -1 ignored', () => ex1([g({ n:60, mods:[fxm('hit', -1), fxm('ignoreHitMods', true)] })], T4).hits, 30],
+  // a weapon ability that changes no numbers: no mod at all (the box says "no effect in these numbers")
+  ['fx:assault: no mod', () => Object.keys(fxm('assault', true)).length, 0, 0],
+  ['fx:pistol: no mod', () => Object.keys(fxm('pistol', true)).length, 0, 0],
+];
+for(const x of fxCases) cases.push(x);
+
 // ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): your unit at the target set by hand ----
 const dm = require('./damage-node')();
-const LK = 'm:Legendary Killer|While Khârn leads this unit|re-roll hit rolls of 1 and wound rolls of 1';
+// (a box by its rule and what it does: the boxes are keyed by their source and place in it, data.js BOXES)
 const exact = (s, k) => { const c = dm.calc(s); return C.explain(c.input).total[k || 'dmg']; };
-const box = (s, from) => dm.calc(s).rules.find(x => x.m.from === from) || {};
-const boxN = (s, from, note) => dm.calc(s).rules.find(x => x.m.from === from && x.m.note === note) || {};
-const DAKKA = 'm:Dakka! Dakka! Dakka!|Riled up|+3" range';
+const box = (s, from, pred) => dm.calc(s).rules.find(x => x.m.from === from && (!pred || pred(x))) || {};
+const boxE = (s, from, e) => box(s, from, x => JSON.stringify(x.e) === JSON.stringify(e));
+const strat = (s, from) => box(s, from, x => !!x.m.strat);
+const LKs = { army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }, LK = box(LKs, 'Legendary Killer').k;
+const DAKKA = box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{} }, 'Dakka! Dakka! Dakka!', x => !!x.e.range).k;
 const cp = x => JSON.parse(JSON.stringify(x));   // (the state is the one passed: each case its own copy)
 // targets set by hand as the old matchups' units were: a Knight Paladin (T11, Sv 3+, 5+ InSv against ranged attacks, Feel No Pain 6+,
 // W26), Mozrog Skragbad (T9, Sv 3+, InSv 4+, Feel No Pain 5+, W10), Khorne Berzerkers (T5, Sv 3+, W2)
@@ -333,10 +410,11 @@ const app = [
   ['the target as set: a fresh one is 5 × T4 Sv 3+ W2', () => +(t => [t.n, t.T, t.Sv, t.W, t.InSv, t.fnp, +t.cover, +t.dm1].join() === '5,4,3,2,0,0,0,0')(dm.app.dmTypedVals({ typed:{} })), 1],
   ['the target as set: no Sv 1+, InSv 7+ or Models 0', () => +(t => [t.n, t.Sv, t.InSv, t.fnp].join() === '5,0,0,0')(dm.app.dmTypedVals({ typed:{ n:0, Sv:1, InSv:7, fnp:9 } })), 1],
   ['the target as set: no keywords', () => dm.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{} }).input.target.kw.length, 0, 0],
-  // an army rule's Damage marks reach the units whose Rules line names it, with either apostrophe (New Recruit prints "Martial
-  // Ka'tah", the army rule is "Martial Ka’tah"): a Telemon's fight has Dacatarai and Rendax, its shooting Salvus, each a box of its own
-  ['Martial Ka’tah: a Telemon’s fight has Dacatarai and Rendax', () => +['Dacatarai', 'Rendax'].every(f => !!box({ army:'lite-knights', ph:'fight', atk:'telemon-heavy-dreadnought', typed:{} }, f).m), 1],
-  ['Martial Ka’tah: a Telemon’s shooting has Salvus', () => +!!box({ army:'lite-knights', ph:'shooting', atk:'telemon-heavy-dreadnought', typed:{} }, 'Salvus').m, 1],
+  // an army rule reaches the units whose Rules line names it, with either apostrophe (New Recruit prints "Martial Ka'tah", the army rule
+  // is "Martial Ka’tah"): a Telemon's fight has Dacatarai and Rendax (one box, a pick: "select one of the ka’tah abilities presented
+  // below"), its shooting Salvus
+  ['Martial Ka’tah: a Telemon’s fight has Dacatarai and Rendax', () => +((b => !!b.pills && b.pills.map(p => p[0]).join() === 'Dacatarai,Rendax')(box({ army:'lite-knights', ph:'fight', atk:'telemon-heavy-dreadnought', typed:{} }, 'Martial Ka’tah'))), 1],
+  ['Martial Ka’tah: a Telemon’s shooting has Salvus', () => +((b => !!b.pills && b.pills.map(p => p[0]).join() === 'Salvus')(box({ army:'lite-knights', ph:'shooting', atk:'telemon-heavy-dreadnought', typed:{} }, 'Martial Ka’tah'))), 1],
   // ---- a rule about the target's keywords is a box you tick; one about its T is read from the T set ----
   // Blitz Dem Gitz! (+6 A to the Blitzkannon "excluding MONSTER/VEHICLE units", always): unticked to start with; ticked at a Knight
   // Paladin set by hand: 8 + 6 = 14 attacks × 3/6 (BS 4+) × 2/6 (S7 vs T11: 5+) × 4/6 (AP -2: Sv 5+, as its InSv) × D2 × 5/6 = 2.59 (not
@@ -346,17 +424,18 @@ const app = [
     const c = dm.calc(s); return +!c.rules.find(r => r.m.from === 'Blitz Dem Gitz!').over * C.explain(c.input).groups[0].dmg; }, 14 * 3 / 6 * 2 / 6 * 4 / 6 * 2 * 5 / 6],
   ['the target’s keywords: Blitz Dem Gitz! not ticked', () => C.explain(dm.calc({ army:'shooty', ph:'shooting', atk:'dakkarig-boosta', typed:cp(KNIGHT) }).input).groups[0].dmg, 8 * 3 / 6 * 2 / 6 * 4 / 6 * 2 * 5 / 6],
   // a stratagem is never ticked for the player (Kustom Dakka, vs non-MONSTER/VEHICLE targets)
-  ['a stratagem starts unticked', () => +(b => !b.on && b.state === 'choice')(box({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka')), 1],
-  // Spiteful Power Trip (+1 to hit vs units with no T 7+ models, always): ticked for you at T4, ruled out at T7 (yours to count anyway)
-  ['the target’s T: Spiteful Power Trip ticked for you at T4', () => (b => +(b.state === 'on' && b.on && /T4/.test(b.why)))(box({ army:'shooty', ph:'shooting', atk:'killa-kans', typed:{ T:4 } }, 'Spiteful Power Trip')), 1],
+  ['a stratagem starts unticked', () => +(b => !b.on && b.state === 'choice')(strat({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka')), 1],
+  // Spiteful Power Trip (+1 to hit vs units with no T 7+ models): unticked at T4 like every box (the owner's decision), ruled out at T7
+  // (yours to count anyway)
+  ['the target’s T: Spiteful Power Trip unticked at T4, a box', () => (b => +(b.state === 'choice' && !b.on))(box({ army:'shooty', ph:'shooting', atk:'killa-kans', typed:{ T:4 } }, 'Spiteful Power Trip')), 1],
   ['the target’s T: Spiteful Power Trip ruled out at T7', () => (b => +(b.state === 'out' && !b.on && /no T 7\+ model/.test(b.why)))(box({ army:'shooty', ph:'shooting', atk:'killa-kans', typed:{ T:7 } }, 'Spiteful Power Trip')), 1],
   // Hunter of Souls: re-roll 1s against a CHARACTER unit, the whole hit and wound roll against a PSYKER CHARACTER unit: two boxes.
   // Hellforged weapons A6 WS 2+ S9 D4 at a T5 target with no save: hits 6 × (5/6 + 1/6 × 5/6) = 6 × 35/36 either way (only a 1 fails);
   // wounds 3+: (4/6 + 1/6 × 4/6 = 28/36) with the first, (4/6 + 2/6 × 4/6 = 32/36) with the second
   ['the target’s keywords: Hunter of Souls (CHARACTER) ticked', () => { const s = { army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{ n:1, T:5, W:30, Sv:0 } };
-    s.on = { [boxN(s, 'Hunter of Souls', 're-roll hit rolls of 1 and wound rolls of 1').k]:true }; return exact(s); }, 6 * 35 / 36 * 28 / 36 * 4],
+    s.on = { [boxE(s, 'Hunter of Souls', { rrHit:'1s', rrWound:'1s' }).k]:true }; return exact(s); }, 6 * 35 / 36 * 28 / 36 * 4],
   ['the target’s keywords: Hunter of Souls (PSYKER CHARACTER) ticked', () => { const s = { army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{ n:1, T:5, W:30, Sv:0 } };
-    s.on = { [boxN(s, 'Hunter of Souls', 're-roll the hit roll and the wound roll').k]:true }; return exact(s); }, 6 * 35 / 36 * 32 / 36 * 4],
+    s.on = { [boxE(s, 'Hunter of Souls', { rrHit:'all', rrWound:'all' }).k]:true }; return exact(s); }, 6 * 35 / 36 * 32 / 36 * 4],
   ['the target’s keywords: Hunter of Souls, both unticked to start with', () => +dm.calc({ army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{} }).rules.filter(r => r.m.from === 'Hunter of Souls').every(r => r.state === 'choice' && !r.on), 1],
   // Bringer of Justice (+1 to the bearer's melee hit rolls, always) and Macro-extinction Protocols' two parts ticked, at a Knight
   // Paladin set by hand (melee: no InSv): Atrapos lascutter WS 3+ +2 → 2+: 8 × 5/6 + 8/6 [SUSTAINED HITS 1] = 8 hits × 5/6 (S14 vs T11:
@@ -367,9 +446,9 @@ const app = [
   // two boxes, unticked. 3 Chainblades, A6 WS 3+: 18 × 4/6, or 5/6 with the first; S8 vs T9: 5+ (2/6), or 4+ (3/6) with the second;
   // Sv 3+ AP-2: 5+, 4/6 fail; D2
   ['Beacons of Rage: unticked', () => exact({ army:'princes', ph:'fight', atk:'eightbound', typed:{ n:10, T:9, W:1, Sv:3 } }), 18 * 4 / 6 * 2 / 6 * 4 / 6 * 2],
-  ['Beacons of Rage: +1 to hit ticked', () => { const s = { army:'princes', ph:'fight', atk:'eightbound', typed:{ n:10, T:9, W:1, Sv:3 } }; s.on = { [boxN(s, 'Beacons of Rage', '+1 to hit').k]:true }; return exact(s); }, 18 * 5 / 6 * 2 / 6 * 4 / 6 * 2],
+  ['Beacons of Rage: +1 to hit ticked', () => { const s = { army:'princes', ph:'fight', atk:'eightbound', typed:{ n:10, T:9, W:1, Sv:3 } }; s.on = { [boxE(s, 'Beacons of Rage', { hit:1 }).k]:true }; return exact(s); }, 18 * 5 / 6 * 2 / 6 * 4 / 6 * 2],
   ['Beacons of Rage: both ticked', () => { const s = { army:'princes', ph:'fight', atk:'eightbound', typed:{ n:10, T:9, W:1, Sv:3 } };
-    s.on = { [boxN(s, 'Beacons of Rage', '+1 to hit').k]:true, [boxN(s, 'Beacons of Rage', '+1 to wound rolls').k]:true }; return exact(s); }, 18 * 5 / 6 * 3 / 6 * 4 / 6 * 2],
+    s.on = { [boxE(s, 'Beacons of Rage', { hit:1 }).k]:true, [boxE(s, 'Beacons of Rage', { wound:1 }).k]:true }; return exact(s); }, 18 * 5 / 6 * 3 / 6 * 4 / 6 * 2],
   // ---- a weapon's ability limited to some targets: a box under the weapon, unticked ----
   ['limited ability: [LETHAL HITS: non-MONSTER/VEHICLE] unticked, no [LETHAL HITS]', () => +!dm.calc({ army:'shooty', ph:'shooting', atk:'wazdakka', typed:{} }).input.groups.some(g => g.kw.includes('LETHAL HITS')), 1],
   ['limited ability: ... ticked, [LETHAL HITS]', () => { const s = { army:'shooty', ph:'shooting', atk:'wazdakka', typed:{} }, x = dm.calc(s).weapons.find(c => c.lim.length).lim[0]; s.on = { [x.k]:true };
@@ -394,7 +473,7 @@ const app = [
   // ---- the Kustom Blasta X: its three profiles all fire (fireAll), each its own weapon ----
   ['Kustom Blasta X: every profile fires', () => (W => +(W.length === 3 && W.every(c => c.on && c.ps.length === 1)))(dm.calc({ army:'simple-but-effective', ph:'shooting', atk:'nazdreg-meganobz', typed:{} }).weapons.filter(c => /^Kustom Blasta X – /.test(c.label))), 1],
   // ---- one stratagem on a unit in a phase (15.01): a second one ticked is counted by you ----
-  ['two stratagems in one phase: the second counted by you', () => { const s = { army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, c0 = dm.calc(s), a = c0.rules.find(r => r.m.from === 'Kustom Dakka').k, b = c0.rules.find(r => r.m.from === 'Glowin’ Dakka').k;
+  ['two stratagems in one phase: the second counted by you', () => { const s = { army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, c0 = dm.calc(s), a = c0.rules.find(r => r.m.from === 'Kustom Dakka' && r.m.strat).k, b = c0.rules.find(r => r.m.from === 'Glowin’ Dakka').k;
     s.on = { [a]:true, [b]:true }; const c = dm.calc(s), A = c.rules.find(r => r.k === a), B = c.rules.find(r => r.k === b);
     return +(A.on && !A.over && B.on && B.over && /15\.01/.test(B.extra) && C.explain(c.input).groups.some(x => x.steps.some(t => /Glowin’ Dakka \(counted by you\)/.test(t.t)))); }, 1],
   // ---- close-quarters shooting (10.06) and an engaged MONSTER/VEHICLE target (17.03) ----
@@ -417,20 +496,23 @@ const app = [
   ['models left: the weapons of the models set', () => dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{}, left:{ 2:5 } }).weapons.find(c => /Snazzgun/.test(c.k)).n, 6, 0],
   ['models left: none of a line, none of its weapons', () => (c => +(!c.ticked.some(x => /Kustom Mega-slugga/.test(x.k)) && c.weapons.find(x => /Kustom Mega-slugga/.test(x.k)).n === 0))(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{}, left:{ 0:0 } })), 1],
   // ---- the attacker's own rules, as before ----
-  // Prophet of da Great Waaagh!: Ghazghkull is always within his own aura (22.01): +1 to hit and wound, ticked; at Mozrog as set (W10,
+  // Prophet of da Great Waaagh!: Ghazghkull is always within his own aura (22.01): +1 to hit and wound, a box (ticked here); at Mozrog as set (W10,
   // Feel No Pain 5+), played out: 7.84 wounds lost (Simple but effective: no detachment rule adds to his attacks; an independent
   // simulation, 400,000 battles: 7.84. Melee's War Horde gave [SUSTAINED HITS 1] too: 8.5, the reviewer's then)
-  ['own aura: Prophet of da Great Waaagh!, wounds lost', () => C.run(Object.assign({}, dm.calc({ army:'simple-but-effective', ph:'fight', atk:'ghazghkull-thraka', typed:cp(MOZROG) }).input, { sims:20000, seed:7 })).dmg, 7.84],
-  // Bringers of Change (always: re-roll wound rolls of 1): the Exalted Sorcerer's Rubric Marines' Warpflamers 3 × D6 = 10.5 torrent hits × (2/6 + 1/6 × 2/6) (S4 vs T5) = 4.08
+  ['own aura: Prophet of da Great Waaagh!, wounds lost', () => { const s = { army:'simple-but-effective', ph:'fight', atk:'ghazghkull-thraka', typed:cp(MOZROG) }; s.on = { [box(s, 'Prophet of da Great Waaagh!').k]:true };
+    return C.run(Object.assign({}, dm.calc(s).input, { sims:20000, seed:7 })).dmg; }, 7.84],
+  // Bringers of Change (re-roll wound rolls of 1, a box ticked here): the Exalted Sorcerer's Rubric Marines' Warpflamers 3 × D6 = 10.5 torrent hits × (2/6 + 1/6 × 2/6) (S4 vs T5) = 4.08
   // wounds; the working multiplies out as shown (the reviewer's Warpflamers: 10.5, not 11)
-  ['steps: 3.5 × 3 = 10.5, then 10.5 × 14/36 = 4.08', () => +(w => w.includes('× 3 = 10.5') && w.includes('10.5 × (2/6 + 1/6 × 2/6 = 14/36) = 4.08'))(C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:cp(BERZ) }).input).groups.flatMap(g => g.steps.map(x => x.t)).join('\n')), 1],
-  ['Bringers of Change: re-roll 1s, always', () => (c => C.explain(c.input).groups.find(g => g.steps[0].t.includes('× 3 = 10.5')).dmg)(dm.calc({ army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } })), 10.5 * 21 / 36],
-  ['Bringers of Change: objective box, re-roll the wound roll', () => { const s = { army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } }; s.on = { [boxN(s, 'Bringers of Change', 're-roll the wound roll').k]:true };
+  ['steps: 3.5 × 3 = 10.5, then 10.5 × 14/36 = 4.08', () => { const s = { army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:cp(BERZ) }; s.on = { [boxE(s, 'Bringers of Change', { rrWound:'1s' }).k]:true };
+    return +(w => w.includes('× 3 = 10.5') && w.includes('10.5 × (2/6 + 1/6 × 2/6 = 14/36) = 4.08'))(C.explain(dm.calc(s).input).groups.flatMap(g => g.steps.map(x => x.t)).join('\n')); }, 1],
+  ['Bringers of Change: re-roll 1s', () => { const s = { army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } }; s.on = { [boxE(s, 'Bringers of Change', { rrWound:'1s' }).k]:true };
+    return (c => C.explain(c.input).groups.find(g => g.steps[0].t.includes('× 3 = 10.5')).dmg)(dm.calc(s)); }, 10.5 * 21 / 36],
+  ['Bringers of Change: objective box, re-roll the wound roll', () => { const s = { army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } }; s.on = { [boxE(s, 'Bringers of Change', { rrWound:'all' }).k]:true };
     return (c => C.explain(c.input).groups.find(g => g.steps[0].t.includes('× 3 = 10.5')).dmg)(dm.calc(s)); }, 10.5 * 27 / 36],
   // Kindred Sorcery: one of three abilities, picked: Psychic Maelstrom (+1 to wound with Psychic weapons) ticked: the Daemon Prince's
   // Hellforged weapons (A6 WS 2+ S9 D4, [PSYCHIC]) at a T5 target, no save: 6 × 5/6 = 5 hits × 5/6 (3+ → 2+) × 4
-  ['Kindred Sorcery: the picked ability counts', () => { const s = { army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{ n:1, T:5, W:30, Sv:0 }, val:{ 'pick:Kindred Sorcery':'Psychic Maelstrom' } };
-    s.on = { [box(s, 'Kindred Sorcery').k]:true }; return exact(s); }, 5 * 5 / 6 * 4],
+  ['Kindred Sorcery: the picked ability counts', () => { const s = { army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{ n:1, T:5, W:30, Sv:0 } }, b = box(s, 'Kindred Sorcery');
+    s.on = { [b.k]:true }; s.val = { [b.pillKey]:'Psychic Maelstrom' }; return exact(s); }, 5 * 5 / 6 * 4],
   ['Kindred Sorcery: a pick, not greyed as range-only', () => +(box({ army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{} }, 'Kindred Sorcery').state === 'choice'), 1],
   // after the unit is destroyed, a later weapon's attacks are lost: Khârn + Berzerkers fight 10 models set as Gretchin (T2, Sv 6+, W1):
   // the eviscerators (last) find the unit already gone in nearly every game, and their row says so
@@ -469,8 +551,9 @@ const app = [
     return +(r.state === 'out' && !r.on && /Shooting phase only/.test(r.why) && x.on && x.over && C.explain(c.input).groups.some(g => g.steps.some(t => /Kustom Dakka \(counted by you\)/.test(t.t)))); }, 1],
   // Murderous Imperative, a pick of two: Conqueror (re-roll wound rolls of 1). 7 galvanic rifles × 2 at T4 Sv 4+: 14 × 3/6 = 7 hits
   // × (3/6 + 1/6 × 3/6) × 3/6 fail = 2.04
-  ['a pick: Murderous Imperative, Conqueror', () => { const s = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4 }, val:{ 'pick:Murderous Imperative':'Conqueror' } };
-    s.on = { [box(s, 'Murderous Imperative').k]:true }; return C.explain(dm.calc(s).input).groups[0].dmg; }, 14 * 3 / 6 * 21 / 36 * 3 / 6],
+  // (two boxes, as GW's two lines: "If the Protector Imperative is active …", "If the Conqueror Imperative is active …")
+  ['Murderous Imperative, Conqueror', () => { const s = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4 } };
+    s.on = { [boxE(s, 'Murderous Imperative', { rrWound:'1s' }).k]:true }; return C.explain(dm.calc(s).input).groups[0].dmg; }, 14 * 3 / 6 * 21 / 36 * 3 / 6],
   ['a pick: Unshackled Wrath is a choice now', () => +(box({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} }, 'Unshackled Wrath').state === 'choice'), 1],
   // help from another unit of the list: Clever Know-wotz (the Mek's), offered to the Big Mek Dakkarig unticked, named with its giver;
   // ticked, +1 to hit: the Blitzkannon at a Knight Paladin set by hand 8 × 4/6 (BS 4+ → 3+) × 2/6 × 4/6 × 2 × 5/6 = 1.98
@@ -490,9 +573,16 @@ const app = [
   // T4: 5+, no change: 6 × 2/6 = 2
   ['-1 to wound when S is greater than T: S5 vs T4', () => run([g({ n:12, S:5 })], { T:4, models:[big(20, 10)], mod:{ woundMinusSgt:1 } }).groups[0].wounds, 3],
   ['-1 to wound when S is greater than T: S3 vs T4 unchanged', () => run([g({ n:12, S:3 })], { T:4, models:[big(20, 10)], mod:{ woundMinusSgt:1 } }).groups[0].wounds, 2],
-  // the modifiers set by hand: hit, wound, AP and Damage, re-rolls; counted with no rule's name. +1 to hit and AP +1 for the Grot Blastas
-  // at 10 T3 W1 Sv 5+ models: 10 × 4/6 × 3/6 × 5/6 (AP-1: Sv 6+)
-  ['modifiers set by hand: +1 to hit, AP +1', () => exact({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5 }, man:{ hit:1, ap:1 } }), 10 * 4 / 6 * 3 / 6 * 5 / 6],
+  // the custom modifiers (effects.js CUSTOM): plain boxes, no rule's; +1 to Hit and +1 AP for the Grot Blastas at 10 T3 W1 Sv 5+ models:
+  // 10 × 4/6 × 3/6 × 5/6 (AP-1: Sv 6+); every one of them a box once, unticked, in its group; each ticked alone changes the result as
+  // its catalogue mod says (the engine with that mod by hand)
+  ['custom modifiers: +1 to Hit, +1 AP', () => exact({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5 }, on:{ 'u:hit:1':true, 'u:ap:1':true } }), 10 * 4 / 6 * 3 / 6 * 5 / 6],
+  ['custom modifiers: every one once, unticked, in its group', () => (c => +(FXC.CUSTOM.every(([id, p]) => c.rules.filter(r => r.k === 'u:' + id + ':' + p && r.grp === 'custom' && !r.on && r.state === 'choice').length === 1) && c.rules.filter(r => r.grp === 'custom').length === FXC.CUSTOM.length))(dm.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{} })), 1],
+  ['custom modifiers: each changes the result as the engine says', () => { const s0 = { army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:2, Sv:3 } }, c0 = dm.calc(s0), bad = [];
+    for(const [id, p] of FXC.CUSTOM){ const c = dm.calc(Object.assign({}, s0, { on:{ ['u:' + id + ':' + p]:true } }));
+      const want = C.explain(Object.assign({}, c0.input, { groups:c0.input.groups.map(g => Object.assign({}, g, { mods:g.mods.concat([Object.assign({ from:'by hand' }, FXC.toMod([[id, p]]))]) })) })).total.dmg;
+      if(Math.abs(C.explain(c.input).total.dmg - want) > 1e-9) bad.push(id); }
+    return bad.length; }, 0, 0],
 ];
 for(const x of app) cases.push(x);
 
@@ -639,8 +729,8 @@ cases.push(['a new turn in the mode shown, when the unit can play it', () => { c
 // shooting (within 6" said) is ticked in their fight (+1 AP there), and the fight can untick it for itself
 const KAS = { army:'purge-goes-the-foe', atk:'cybernetica-datasmith-kastelan-robots', typed:cp(BERZ), facts:{ me:{ mine:{ battleline6:true } } } };
 const DOCK = memo(() => dm.plan(Object.assign({ turn:{ me:MT('both') } }, cp(KAS))).beats[0].M.rules.find(r => r.m.from === 'Doctrina Imperatives'));
-const kas = more => dm.plan(Object.assign({ turn:{ me:MT('both') }, ch:Object.assign({ 'me:shoot':{ on:{ [DOCK().k]:true }, val:{ [DOCK().pillKey]:'Conqueror' } } }, more || {}) }, cp(KAS)));
-cases.push(['a tick that lasts: carried into the fight', () => (x => +(!!x && x.on && x.pick === 'Conqueror' && !!x.carried && x.carried.from === 'Shoot'))(kas().beats[1].M.rules.find(r => r.m.from === 'Doctrina Imperatives')), 1]);
+const kas = more => dm.plan(Object.assign({ turn:{ me:MT('both') }, ch:Object.assign({ 'me:shoot':{ on:{ [DOCK().k]:true }, val:{ [DOCK().pillKey]:'Conqueror Imperative' } } }, more || {}) }, cp(KAS)));
+cases.push(['a tick that lasts: carried into the fight', () => (x => +(!!x && x.on && x.pick === 'Conqueror Imperative' && !!x.carried && x.carried.from === 'Shoot'))(kas().beats[1].M.rules.find(r => r.m.from === 'Doctrina Imperatives')), 1]);
 cases.push(['a tick that lasts: the fight’s +1 AP', () => (p => p.beats[1].M.R.groups[0].AP - kas({ 'me:fight':{ on:{ [DOCK().k]:false } } }).beats[1].M.R.groups[0].AP)(kas()), -1, 0]);
 cases.push(['a tick that lasts: unticked in the fight alone', () => (p => +(!p.beats[1].M.rules.find(r => r.k === DOCK().k).on && p.beats[0].M.rules.find(r => r.k === DOCK().k).on))(kas({ 'me:fight':{ on:{ [DOCK().k]:false } } })), 1]);
 // Clever Know-wotz (oneModel) on a unit of 6 Killa Kans: +1 to hit for one model's weapons: of 12 Kill Shot attacks the 2 of one Kan
@@ -652,8 +742,8 @@ cases.push(['Clever Know-wotz: one model’s weapons', () => { const s = { army:
 cases.push(['the pair on an objective: one fact for both units', () => { const s = { army:'shooty', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, facts:{ me:{ pair:{ objective:true } } } };
   const p = dm.plan(s), st = dm.app.dmState(), f = dm.app.dmLevers(st, dm.app.dmPlan(st)).filter(l => l.fact === 'objective');
   return +(f.length === 1 && f[0].unitWho === 'pair' && f[0].on && ['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => p.beats[0].M.rules.find(r => r.m.from === n).on)); }, 1]);
-// Khârn's Legendary Killer (while he leads the unit) ticked for you
-cases.push(['Legendary Killer: ticked for you', () => (r => +(!!r && r.on && r.state === 'on'))(dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }).rules.find(r => r.k === LK)), 1]);
+// Khârn's Legendary Killer (while he leads the unit): a box, unticked like every box (the owner's decision, 29 Oct 2026), its condition said
+cases.push(['Legendary Killer: a box, unticked, “While leading a unit”', () => (r => +(!!r && !r.on && r.state === 'choice' && /While leading a unit/.test(r.label)))(dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }).rules.find(r => r.k === LK)), 1]);
 // a step added after it moves nothing: Khârn's Shoot is the same with the fight after it
 const same = (x, y) => +(JSON.stringify(x) === JSON.stringify(y));
 const KHF = turn => turnOf({ army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:5, T:6, W:3, Sv:2 }, turn:{ me:turn } });
@@ -676,11 +766,11 @@ const later = (() => { const all = process.argv.includes('--later-all'), r9 = v 
 cases.push(['the turn: a later step never moves an earlier one (' + later.pairs + ' pairs, ' + later.compared + ' steps compared; moved)', () => later.bad.length, 0, 0]);
 // Try Dat Button!: one D6, one result; two D6, two different results (the owner's reading of "keep re-rolling duplicate results"): the
 // picks are the three results and the three pairs, no choice of the dice, no hazard roll counted (the calculator shows damage dealt)
-const TDB = 'm:Try Dat Button!|Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6)|1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)';
+const TDBr = box({ army:'shooty', ph:'shooting', atk:'dakkarig-boosta', typed:{} }, 'Try Dat Button!'), TDB = TDBr.k;
 const dak = pick => dm.plan({ army:'shooty', atk:'dakkarig-boosta', typed:cp(BERZ), turn:{ me:MT('shoot') },
-  ch:pick ? { 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':pick } } } : {} });
+  ch:pick ? { 'me:shoot':{ on:{ [TDB]:true }, val:{ [TDBr.pillKey]:pick } } } : {} });
 cases.push(['Try Dat Button!: the three results and the three pairs, nothing else to pick', () => (r => +(r.pills.map(p => p[0]).join('|') === '1–2|3–4|5–6|1–2 and 3–4|1–2 and 5–6|3–4 and 5–6' && !r.dice))(dak('1–2').beats[0].M.rules.find(r => r.k === TDB)), 1]);
-cases.push(['Try Dat Button!: the picks named by their effect (kept under their dice results)', () => +(['1–2', '3–4', '5–6', '1–2 and 3–4', '1–2 and 5–6', '3–4 and 5–6'].map(k => dak(k).beats[0].M.rules.find(r => r.k === TDB).pickLabel).join('|') === '+1 A|+2 S|+1 AP|+1 A & +2 S|+1 A & +1 AP|+2 S & +1 AP'), 1]);
+cases.push(['Try Dat Button!: the picks are its table’s rows (GW’s), their effects from the rows’ words', () => +(['1–2', '3–4', '5–6', '1–2 and 3–4', '1–2 and 5–6', '3–4 and 5–6'].map(k => (r => FXC.fxLabel(r.m.box.pick.find(p => p.name === r.pick).fx))(dak(k).beats[0].M.rules.find(r => r.k === TDB))).join('|') === '+1 A|+2 S|+1 AP|+1 A, +2 S|+1 A, +1 AP|+2 S, +1 AP'), 1]);
 cases.push(['Try Dat Button!, two results: both counted (+1 A and +1 AP)', () => (a => (b => +(b.R.groups.every((g, i) => g.out || Math.abs(g.AP) === Math.abs(a.R.groups[i].AP) + 1) && C.explain(b.input).total.attacks > C.explain(a.input).total.attacks))(dak('1–2 and 5–6').beats[0].M))(dak('').beats[0].M), 1]);
 cases.push(['Try Dat Button!, two D6: no hazard roll named', () => (M => +(!M.sit.some(x => x.k === 'c:hazard') && !M.nc.some(x => /^Hazard rolls/.test(x.name))))(dak('1–2 and 5–6').beats[0].M), 1]);
 cases.push(['Try Dat Button!, one D6: no hazard roll to name', () => +!dak('5–6').beats[0].M.nc.some(x => /^Hazard rolls/.test(x.name)), 1]);
@@ -695,10 +785,16 @@ cases.push(['the measures: damage dealt only', () => (x => +(!('own' in x.a) && 
 // Both: a shooting choice measured on the total (the Snazzguns unticked: the shooting's models and what the fight then meets)
 cases.push(['Both: a shooting choice, measured on the total', () => (x => +(x.d.v < -1 && x.d.good === false))(effOf(Object.assign({ turn:{ me:MT('both') } }, FGS), 'shoot/w:ranged:Snazzgun|Flash Gitz')), 1]);
 // Unshackled Wrath's "All three": more destroyed; its [HAZARDOUS] is not counted (damage dealt only): good news
-cases.push(['Unshackled Wrath, All three: more destroyed, its hazard not counted', () => (d => +(d.v > 0 && d.good === true && !('trade' in d)))(effOf({ army:'purge-goes-the-foe', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'k:m:Unshackled Wrath|Your Shooting phase|[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]|All three').d), 1]);
+const UWr = strat({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} }, 'Unshackled Wrath');
+cases.push(['Unshackled Wrath, all three: more destroyed, its hazard not counted', () => (d => +(d.v > 0 && d.good === true && !('trade' in d)))(effOf({ army:'purge-goes-the-foe', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'k:' + UWr.k + '|' + UWr.pills[2][0]).d), 1]);
+// a stratagem used on another unit of the list whose words reach yours: from other units in your list, marked as its words say (Daemonic
+// Fury on a BLOOD LEGIONS unit selects a WORLD EATERS unit: Angron's [LANCE]; Honoured Interred's aura on a DREADNOUGHT: Trajann's re-roll)
+cases.push(['from other units: Daemonic Fury for Angron, selected, [LANCE]', () => (r => +(r.m.grp === 'other' && r.m.mark === 'selected' && r.e.lance === true))(box({ army:'big-demons-baby', ph:'fight', atk:'angron', typed:{} }, 'Daemonic Fury', x => !!x.e.lance)), 1]);
+cases.push(['from other units: Honoured Interred for Trajann, an aura, re-roll hit rolls of 1', () => (r => +(r.m.grp === 'other' && r.m.mark === 'aura' && r.e.rrHit === '1s'))(box({ army:'lite-knights', ph:'fight', atk:'trajann-valoris-allarus-custodians', typed:{} }, 'Honoured Interred')), 1]);
+cases.push(['a rule the list printed into the weapons is not counted again (Relentless Rage, +1 A on the profile)', () => +dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }).nc.some(x => x.name === 'Relentless Rage' && /already in its weapons/.test(x.why)), 1]);
 // your unit changed: a tick whose rule still applies is kept (Kustom Dakka, Tankbustas → Flash Gitz: the same turn as picked so); one
 // with no rule for the new unit is dropped and said (Try Dat Button!, the Big Mek Dakkarig's), in a step out of the turn too
-const KD = 'm:Kustom Dakka|Your Shooting phase, vs non-MONSTER/VEHICLE targets|+1 to wound rolls';
+const KD = strat({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka').k;
 const order = (s0, id, s1) => { dm.plan(cp(s0)); const st = dm.app.dmState(), r = dm.app.dmSetUnit(st, id); const a = dm.app.dmIn(dm.app.dmPlan(st), 300), b = dm.app.dmIn(dm.plan(cp(s1)), 300); return { same:JSON.stringify(a) === JSON.stringify(b), r }; };
 const FGL = { army:'shooty', atk:'mek-flashgitz', typed:cp(BERZ), turn:{ me:{ shoot:true } }, ch:{ 'me:shoot':{ on:{ [KD]:true } } } };
 cases.push(['your unit changed: a tick whose rule still applies is kept', () => +order(Object.assign({}, FGL, { atk:'mek-tankbustas' }), 'mek-flashgitz', FGL).same, 1]);
@@ -729,25 +825,25 @@ cases.push(['Grot Shields: 5 Gretchin stop the first 5 hits only', () => SH([], 
 // ---- the army rules' reading: Doctrina Imperatives, the Blessings of Khorne, the Rituals; Code Chivalric; Fire Overwatch ----
 const SR = { army:'purge-goes-the-foe', atk:'skitarii-rangers', typed:{ n:5, T:5, W:2, Sv:4 }, ph:'shooting' };
 const DOC = s => dm.calc(s).rules.find(r => r.m.from === 'Doctrina Imperatives') || {};
-const docOn = (s, pick, more) => { const k = DOC(cp(s)).k; return dm.calc(Object.assign(cp(s), { on:Object.assign({ [k]:true }, more || {}), val:{ 'pick:Doctrina Imperatives':pick } })); };
+const docOn = (s, pick, more) => { const d = DOC(cp(s)); return dm.calc(Object.assign(cp(s), { on:Object.assign({ [d.k]:true }, more || {}), val:{ [d.pillKey]:pick + ' Imperative' } })); };
 cases.push(['Doctrina Imperatives: offered, never ticked for you', () => +(DOC(cp(SR)).state === 'choice' && !DOC(cp(SR)).on), 1]);
 cases.push(['Doctrina Imperatives: Protector improves BS by 1 and gives [HEAVY] (its box shown)', () => { const c = docOn(SR, 'Protector'), w = c.R.groups[0];
   return +(w.bs === (parseInt(c.groups[0].skill, 10) - 1) && c.sit.some(x => x.k === 'c:heavy')); }, 1]);
 cases.push(['Doctrina Imperatives: Conqueror +1 AP for a BATTLELINE unit by itself', () => { const a = dm.calc(cp(SR)).R.groups[0].AP, b = docOn(SR, 'Conqueror').R.groups[0].AP; return a - b; }, 1, 0]);
 const IS = { army:'purge-goes-the-foe', atk:'ironstrider-ballistarii', typed:{ n:5, T:5, W:2, Sv:4 }, ph:'shooting' };
 cases.push(['Doctrina Imperatives: Conqueror +1 AP only with the BATTLELINE fact (an Ironstrider)', () => { const a = docOn(IS, 'Conqueror').R.groups[0].AP, b = docOn(Object.assign(cp(IS), { fx:{ battleline6:true } }), 'Conqueror').R.groups[0].AP; return a - b; }, 1, 0]);
-cases.push(['Doctrina Imperatives: Both for Cawl is counted by you (nothing makes both active for him)', () => { const r = docOn({ army:'purge-goes-the-foe', atk:'belisarius-cawl', typed:{}, ph:'shooting' }, 'Both').rules.find(x => x.m.from === 'Doctrina Imperatives'); return +(r.over && /only with Omnicogitator/.test(r.extra)); }, 1]);
-cases.push(['Doctrina Imperatives: Both for an Ironstrider, with Transcendent Cogitation', () => { const r = docOn(IS, 'Both').rules.find(x => x.m.from === 'Doctrina Imperatives'); return +(!r.over && r.via.some(v => /Transcendent Cogitation/.test(v))); }, 1]);
-cases.push(['Doctrina Imperatives: Auto-divinatory Targeting and Protector: BS 2+ (the FAQ)', () => { const k = DOC(cp(IS)).k, adt = dm.calc(cp(IS)).rules.find(r => r.m.from === 'Auto-divinatory Targeting').k;
-  return dm.calc(Object.assign(cp(IS), { on:{ [k]:true, [adt]:true }, val:{ 'pick:Doctrina Imperatives':'Protector' } })).R.groups[0].bs; }, 2, 0]);
-cases.push(['Murderous Imperative follows the Doctrina pick (Conqueror: wound rolls of 1), ticked with it, no pick of its own', () => { const c = docOn(SR, 'Conqueror'), m = c.rules.find(r => r.m.from === 'Murderous Imperative');
-  return +(m.on && m.state === 'on' && m.e.rrWound === '1s' && !m.e.rrHit && !m.pills); }, 1]);
+// (its picks are its table's rows, GW's words: no "Both", which only other rules give; the player counts the other one with Custom modifiers)
+cases.push(['Doctrina Imperatives: its picks are its two Imperatives', () => +(DOC(cp(SR)).pills.map(p => p[0]).join() === 'Protector Imperative,Conqueror Imperative'), 1]);
+cases.push(['Doctrina Imperatives: Auto-divinatory Targeting and Protector: BS 2+ (the FAQ)', () => { const d = DOC(cp(IS)), adt = dm.calc(cp(IS)).rules.find(r => r.m.from === 'Auto-divinatory Targeting').k;
+  return dm.calc(Object.assign(cp(IS), { on:{ [d.k]:true, [adt]:true }, val:{ [d.pillKey]:'Protector Imperative' } })).R.groups[0].bs; }, 2, 0]);
+cases.push(['Murderous Imperative: two boxes, as its two lines, each saying its Imperative', () => { const ms = dm.calc(cp(SR)).rules.filter(r => r.m.from === 'Murderous Imperative');
+  return +(ms.length === 2 && ms.some(m => m.e.rrHit === '1s' && /Protector Imperative is active/.test(m.label)) && ms.some(m => m.e.rrWound === '1s' && /Conqueror Imperative is active/.test(m.label)) && ms.every(m => !m.on)); }, 1]);
 // the Blessings of Khorne: each its own tick; two at once, a third counted by you; Decapitating Strikes (vs INFANTRY) a box like any other
 const KB = { army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{}, ph:'fight' };
-const bless = s => dm.calc(cp(s)).rules.filter(r => r.m.limit);
+const bless = s => dm.calc(cp(s)).rules.filter(r => r.m.limit);   // (each a row of the Blessings of Khorne, "activate up to two")
 cases.push(['Blessings of Khorne: three ticked, the third counted by you', () => { const on = {}; for(const r of bless(KB)) on[r.k] = true; const c = dm.calc(Object.assign(cp(KB), { on }));
   return c.rules.filter(r => r.m.limit && r.over).length * 10 + c.rules.filter(r => r.m.limit && r.on && !r.over).length; }, 12, 0]);
-cases.push(['Blessings of Khorne: Decapitating Strikes is a box (the target’s keywords)', () => +(dm.calc(cp(KB)).rules.find(r => r.m.from === 'Decapitating Strikes').state === 'choice'), 1]);
+cases.push(['Blessings of Khorne: Decapitating Strikes is a box (the target’s keywords)', () => +(dm.calc(cp(KB)).rules.find(r => /^Decapitating Strikes/.test(r.label)).state === 'choice'), 1]);
 // Total Carnage (its models destroyed before they fought, fighting back) is not played: not offered in a fight
 cases.push(['Total Carnage: not offered in a fight', () => +!dm.plan({ army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{}, turn:{ me:MT('fight') } }).beats[0].M.rules.some(r => r.m.onDeath), 1]);
 // Fire Overwatch for a TITANIC unit: ruled out (15.08), the player's to count anyway; [TORRENT] in snap shooting: no reading to pick
@@ -763,8 +859,10 @@ cases.push(['Code Chivalric (Quality 1–2): a box for a Knight, not in Not coun
   return +(!!r && r.state === 'choice' && !r.on && !c.nc.some(x => /^Code Chivalric/.test(x.name))); }, 1]);
 cases.push(['Code Chivalric (Quality 1–2): ticked, one hit roll and one wound roll re-rolled', () => { const k = dm.calc(cp(KP)).rules.find(x => x.m.from === 'Code Chivalric').k, c = dm.calc(Object.assign(cp(KP), { on:{ [k]:true } }));
   return +(c.R.pool.length === 2 && c.R.pool.every(e => e.n === 1 && !e.phase && /^Code Chivalric/.test(e.src)) && c.R.pool.map(e => e.kind).sort().join() === 'h,w'); }, 1]);
-cases.push(['Destiny’s Ruin: help for a THOUSAND SONS unit, 10+ re-rolls every hit roll', () => { const s = { army:'pubstomper', atk:'tzaangors', typed:{}, ph:'shooting' }, r = dm.calc(cp(s)).rules.find(x => x.m.from === 'Destiny’s Ruin');
-  return +(!!r && !!r.help && dm.calc(Object.assign(cp(s), { on:{ [r.k]:true }, val:{ 'pick:Destiny’s Ruin':'Result 10+' } })).R.groups.every(g => g.out || g.rrHit === 'all')); }, 1]);
+// (a Ritual of the Cabal of Sorcerers reaches every THOUSAND SONS model of the army, its words: "each time a THOUSAND SONS or SCINTILLATING
+// LEGIONS model from your army makes an attack that targets that unit"; its 10+ result a box of its own, as its sentence)
+cases.push(['Destiny’s Ruin: for a THOUSAND SONS unit, 10+ re-rolls every hit roll', () => { const s = { army:'pubstomper', atk:'tzaangors', typed:{}, ph:'shooting' }, r = dm.calc(cp(s)).rules.find(x => x.m.from === 'Cabal of Sorcerers' && /Destiny’s Ruin/.test(x.label) && /10\+/.test(x.label));
+  return +(!!r && dm.calc(Object.assign(cp(s), { on:{ [r.k]:true } })).R.groups.every(g => g.out || g.rrHit === 'all')); }, 1]);
 // Both: the charge taken as made ("Charged this turn" ticked for the fight, said why); unticked, the fight with no charge move; with
 // close-quarters shooting no charge (it is engaged: 10.06)
 const KT = (turn, ch) => dm.plan({ army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:5, T:6, W:3, Sv:2 }, turn:{ me:turn }, ch:ch || {} });
@@ -817,12 +915,12 @@ cases.push(['once in the phase: the second beat of the shooting', () => pl([pb('
 cases.push(['once in the phase: the fight has it again', () => pl([pb('shooting', PH), pb('fight', PH)]).beats[1].groups[0].hits, 0.75, 0.015]);
 cases.push(['each attack sequence: the second beat has its own', () => pl([pb('shooting', [{ from:'M', oneHit:1 }]), pb('shooting', [{ from:'M', oneHit:1 }])]).beats[1].groups[0].hits, 0.75, 0.015]);
 cases.push(['a re-roll of one die: which weapon used it (played)', () => twoW().groups[1].one.hit, 0.5, 0.015]);
-// the rules that now count, as the screen reads them: Magna Imperator (always: ticked for you), Advanced Firepower (vs MONSTER/VEHICLE:
+// the rules that now count, as the screen reads them: Magna Imperator (a box: every box starts unticked), Advanced Firepower (vs MONSTER/VEHICLE:
 // a box), Seething Hatred (a hit or a wound roll), Command Re-roll (a stratagem, once in the phase: never ticked for you)
 const LK2 = { army:'lite-knights', atk:'trajann-valoris-allarus-custodians', typed:{}, ph:'shooting' }, CAL = { army:'lite-knights', atk:'caladius-annihilator-grav-tank', typed:{}, ph:'shooting' };
-cases.push(['Magna Imperator: ticked for you, one hit and one wound roll', () => { const r = box(cp(LK2), 'Magna Imperator'); return +(r.state === 'on' && r.on && r.e.oneHit === 1 && r.e.oneWound === 1); }, 1]);
+cases.push(['Magna Imperator: a box, unticked (the owner: every box starts unticked), one hit and one wound roll', () => { const r = box(cp(LK2), 'Magna Imperator'); return +(r.state === 'choice' && !r.on && r.e.oneHit === 1 && r.e.oneWound === 1); }, 1]);
 cases.push(['Advanced Firepower: a box (the target’s keywords), one hit, wound and Damage roll', () => { const r = box(cp(CAL), 'Advanced Firepower'); return +(r.state === 'choice' && !r.on && r.e.oneHit && r.e.oneWound && r.e.oneDmg); }, 1]);
-cases.push(['Seething Hatred: ticked for you, one hit or wound roll', () => { const r = box({ army:'infernal-lance', atk:'knight-despoiler', typed:{}, ph:'shooting' }, 'Seething Hatred'); return +(r.state === 'on' && r.on && r.e.oneEither === 1); }, 1]);
+cases.push(['Seething Hatred: a box, unticked, one hit or wound roll', () => { const r = box({ army:'infernal-lance', atk:'knight-despoiler', typed:{}, ph:'shooting' }, 'Seething Hatred'); return +(r.state === 'choice' && !r.on && r.e.oneEither === 1); }, 1]);
 cases.push(['Command Re-roll: a stratagem box, not ticked for you; ticked: one of any roll, once in the phase', () => { const r = box(cp(CAL), 'Command Re-roll'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true } }));
   return +(r.state === 'choice' && !r.on && !!r.m.strat && c.R.pool.some(e => e.kind === 'hwd' && e.phase)); }, 1]);
 cases.push(['the Caladius with Advanced Firepower: the working and the dice agree', () => { const r = box(cp(CAL), 'Advanced Firepower'), c = dm.calc(Object.assign(cp(CAL), { on:{ [r.k]:true }, typed:{ n:1, T:10, W:1e6, Sv:3 } }));
