@@ -857,7 +857,9 @@ function derive(D){
   const src = require('./tables').oldForm(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
   const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   // the app's own matches(), so "selects the same units" means what the app does
-  const matches = new Function('hasKw', appFunctions(html).matches + '\nreturn matches;')((u, k) => u.kw.some(x => norm(x).toLowerCase() === norm(k).toLowerCase()));
+  // (with its hasRule, for needs that name a rule: the unit's Rules line, as app.html's hasRule reads it, names alike in case and apostrophe)
+  const ruleN = r => String(r || '').toLowerCase().replace(/[’‘]/g, "'");
+  const matches = new Function('hasKw', 'hasRule', appFunctions(html).matches + '\nreturn matches;')((u, k) => u.kw.some(x => norm(x).toLowerCase() === norm(k).toLowerCase()), (u, r) => (u.rules || []).some(x => ruleN(x) === ruleN(r)));
   const ctx = { core:D.coreStratagems };
   const items = [];
   const add = it => items.push(it);

@@ -2164,5 +2164,15 @@
   "reason": "New Recruit’s export (catalogue revision 8) gives the base as 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: Base 75x42mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "neurogaunts",
+  "field": "abilities[Neurocytes].text",
+  "app": "While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.",
+  "source": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.",
+  "where": "verify/sources/nr/nidzillas.txt p4",
+  "reason": "New Recruit (from BSData) prints Neurocytes with \"your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) prints \"a friendly TYRANIDS unit\". The app has GW’s words (a GW-backed correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\"; verify/sources/nr/nidzillas.txt p4: \"… of your friendly Tyranids unit …\"."
  }
 ]

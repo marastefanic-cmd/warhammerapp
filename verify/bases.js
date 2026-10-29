@@ -26,7 +26,7 @@ const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.j
 const DEVF = 'verify/deviations-bases.json';
 const DEVS = JSON.parse(fs.readFileSync(path.join(ROOT, DEVF), 'utf8'));
 // the forms GW's guide prints, as the app writes them
-const FORM = /^(\d+(\.\d+)?mm|\d+(\.\d+)?×\d+(\.\d+)?mm Oval|Hull|(Large|Small) Flying)$/;
+const FORM = /^(\d+(\.\d+)?mm|\d+(\.\d+)?×\d+(\.\d+)?mm Oval|Hull|(Large|Small) Flying|Unique)$/;
 const baseName = n => String(n).replace(/ ×\d+$/, '');
 
 const guide = G.guide();

@@ -708,7 +708,9 @@ for (const u of units) {
       const STATK = ['M', 'T', 'SV', 'W', 'LD', 'OC', 'INSV'], same = ds.profiles.every(x => STATK.every(k => x[k] === ds.profiles[0][k]));
       // (and BSData's "Blue/Brimstone Horror (ref. only)" for GW's "BLUE HORROR/BRIMSTONE HORROR")
       const pair = x => lc(x).replace(/\s*\(ref\. only\)$/, '').replace(/^([a-z]+)\/([a-z]+) ([a-z]+)$/, '$1 $3/$2 $3');
-      const wp = ds.profiles.find(x => x.name && lc(x.name) === lc(row._base)) || ds.profiles.find(x => x.name && pn(x.name) === pn(row._base)) || ds.profiles.find(x => x.name && pair(x.name) === pair(row._base)) || (ds.profiles.length === 1 || (ds.profiles.length && same) ? ds.profiles[0] : null);
+      // (a profile BSData names otherwise than GW, the hand file's profileNames: { "<BSData's>": "<GW's>" }, "Ravener" for GW's "Raveners")
+      const gwP = (HAND.profileNames || {})[row._base];
+      const wp = (gwP && ds.profiles.find(x => x.name && lc(x.name) === lc(gwP))) || ds.profiles.find(x => x.name && lc(x.name) === lc(row._base)) || ds.profiles.find(x => x.name && pn(x.name) === pn(row._base)) || ds.profiles.find(x => x.name && pair(x.name) === pair(row._base)) || (ds.profiles.length === 1 || (ds.profiles.length && same) ? ds.profiles[0] : null);
       const bc = bsChars(row._pid);
       if (!wp || !bc) { want(u.name + ' · ' + row.name, 'GW check of the stat row', wp ? 'no BSData profile' : 'no Wahapedia profile of this name'); continue; }
       const MAP = { M: ['M', 'M'], T: ['T', 'T'], Sv: ['SV', 'Sv'], W: ['W', 'W'], Ld: ['LD', 'LD'], OC: ['OC', 'OC'], InSv: ['INSV', 'InSv'] };

@@ -4,8 +4,17 @@
   {
    "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
    "kind": "rule-needs",
-   "derived": { "all": ["Faction: Anathema Psykana", "Character"] },
-   "correct": { "all": ["Faction: Anathema Psykana"] },
+   "derived": {
+    "all": [
+     "Faction: Anathema Psykana",
+     "Character"
+    ]
+   },
+   "correct": {
+    "all": [
+     "Faction: Anathema Psykana"
+    ]
+   },
    "why": "first-unit takes the mustering bullet (\"When mustering your army, you can select a friendly ANATHEMA PSYKANA CHARACTER model to be your WARLORD\"). The rule's in-game part, Creeping Dread (Aura), is given to \"Friendly ANATHEMA PSYKANA units\" (derive.js's own grant reading: to {all:[Faction: Anathema Psykana]}); PROSECUTOR SQUAD (BATTLELINE) is Anathema Psykana too. With Character the rule reaches only the Knight-Centura.",
    "rule": "first-unit (and kw-all) skip a sentence that starts \"When mustering your army\": it says who can be chosen before the battle, not which units the rule reaches",
    "source": "data.js FACTIONS adeptus-custodes · null-maiden-vigil · rule (Wahapedia adeptus-custodes, Null Maiden Vigil 1DP)",
@@ -14,8 +23,20 @@
   {
    "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
    "kind": "rule-timing",
-   "derived": { "ph": ["movement", "shooting", "fight"], "turn": "either" },
-   "correct": { "ph": ["movement", "shooting"] },
+   "derived": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "correct": {
+    "ph": [
+     "movement",
+     "shooting"
+    ]
+   },
    "why": "GW: \"ranged attacks that target that unit … have -1 to wound rolls\", and Favoured ka'tah SALVUS \"Your unit's ranged attacks have +6\" R\". Nothing of it is in the Fight phase: the generic targeted rule matched \"attacks that target that unit\" although the attacks are ranged (derive.js's own Additional Effect reading gives movement and shooting).",
    "rule": "\"ranged attacks that target\" is read as targeted-ranged (the opponent's Shooting phase, and Fire Overwatch in its Movement phase), not targeted",
    "source": "data.js FACTIONS adeptus-custodes · aquilan-shield · rule",
@@ -24,11 +45,103 @@
   {
    "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
    "kind": "rule-timing",
-   "derived": { "ph": ["movement", "shooting", "fight"], "turn": "either", "turns": { "movement": "your", "shooting": "opp" } },
-   "correct": { "ph": ["fight"], "turn": "either" },
+   "derived": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "your",
+     "shooting": "opp"
+    }
+   },
+   "correct": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
    "why": "The mirror case of Gilded Guardians: \"melee attacks that target that unit … have -1 to wound rolls\", and Favoured ka'tah KAPTARIS's Additional Effect (an enemy unit engaged with your unit makes a battle-shock roll): only melee, the Fight phase.",
    "rule": "\"melee attacks that target\" is read as targeted-melee (the Fight phase), not targeted",
    "source": "data.js FACTIONS adeptus-custodes · shadowkeepers · rule"
+  },
+  {
+   "where": "Tyranids · Synaptic Nexus · Irresistible Will",
+   "kind": "strat-needs",
+   "derived": {
+    "any": [
+     "Synapse",
+     "Synapse"
+    ]
+   },
+   "correct": {
+    "all": [
+     "Synapse"
+    ]
+   },
+   "why": "TARGET: \"One SYNAPSE unit from your army … and one enemy unit within 24\" of and visible to the SYNAPSE unit\": the second SYNAPSE names the same unit again; needs list it twice under any.",
+   "rule": "a keyword named again in the TARGET (\"… of the SYNAPSE unit\") is the same unit, not an alternative: no duplicate, all",
+   "source": "data.js FACTIONS tyranids (a catalogue detachment, verify/from-bsdata.js tyranids), Wahapedia tyranids"
+  },
+  {
+   "where": "Tyranids · Vanguard Onslaught rule · Questing Tendrils",
+   "kind": "rule-timing",
+   "derived": {
+    "ph": [
+     "movement"
+    ],
+    "turn": "your"
+   },
+   "correct": {
+    "ph": [
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "why": "\"… are eligible to charge in a turn in which they Fell Back / Advanced\": the rule is used when the unit declares a charge (the Charge phase); the Fall Back and Advance are what it allows, not when it is used.",
+   "rule": "\"eligible to charge in a turn in which they …\" is used in the Charge phase (the moves it names are its condition)",
+   "source": "data.js FACTIONS tyranids (a catalogue detachment, verify/from-bsdata.js tyranids), Wahapedia tyranids"
+  },
+  {
+   "where": "Tyranids · Warrior Bioform Onslaught rule · Leader-beasts",
+   "kind": "rule-timing",
+   "derived": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "your",
+     "shooting": "opp"
+    }
+   },
+   "correct": {},
+   "why": "The rule gives keywords (TYRANID WARRIORS, BATTLELINE) and \"5+ InSv\": always on, no phase. derive.js reads the InSv as \"targeted\" (attacks against it in the opponent's Shooting phase, the Fight phase and Fire Overwatch).",
+   "rule": "an always-on keyword or invulnerable-save grant (\"have 5+ InSv\", \"have: KEYWORD\") gives no timing label, as for an ability that protects the unit",
+   "source": "data.js FACTIONS tyranids (a catalogue detachment, verify/from-bsdata.js tyranids), Wahapedia tyranids"
+  },
+  {
+   "where": "Tyranids · Subterranean Assault rule · Surprise Assault",
+   "kind": "rule-needs",
+   "derived": {
+    "any": [
+     "Faction: Tyranids",
+     "Mawloc",
+     "Trygon"
+    ]
+   },
+   "correct": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "why": "\"Each time a TYRANIDS model from your army makes an attack, re-roll a Hit roll of 1.\" reaches every TYRANIDS unit; the later bullets (BURROWER units, MAWLOC/TRYGON) are parts of the same rule for some of them, not alternatives to TYRANIDS.",
+   "rule": "the rule's first unit keyword with \"from your army\" decides needs; later bullets naming narrower keywords are parts, not an any",
+   "source": "data.js FACTIONS tyranids (a catalogue detachment, verify/from-bsdata.js tyranids), Wahapedia tyranids"
   }
  ]
 }

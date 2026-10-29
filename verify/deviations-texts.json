@@ -169,5 +169,25 @@
   "source": "not on Wahapedia (the only source with points)",
   "reason": "GW's Faction Pack Necrons 1.3 names the enhancement Prelocational Optimiser (as BSData does) and prints no points; Wahapedia, the only source with points, names it \"Relocational Optimiser\" at 25 pts, the points the app has (BSData: Prelocational Optimiser, 25 pts). Not in this list.",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt, The Phaeron’s Armoury, ENHANCEMENTS: \"PRELOCATIONAL OPTIMISER\"; verify/.cache/waha/necrons.txt (The Phaeron's Armoury 1DP): \"- Relocational Optimiser 25 pts\"; verify/.cache/bsdata/Necrons.json: \"Prelocational Optimiser\", cost 25."
+ },
+ {
+  "army": "tyranids",
+  "unit": "detachment:warrior-bioform-onslaught/rule",
+  "field": "text",
+  "app": "- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n- **TYRANID WARRIORS**.\n- **BATTLELINE**.\n- **TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**.",
+  "source": "matches the less authoritative Wahapedia text, not the Faction Pack: source: \"the hive mind has spawned entire swarms of tyranid warriors upon this battlefield, adapting them to be tougher as well as more numerous, and thus to serve as better conduits for its will. friendly tyranid warriors with ranged bio-weapons/tyranid warriors with melee bio-weapons units have: tyranid warriors. battleline.\" | the app text differs before \"….\": app \"d tyranid prime models from your army have 5+ insv\" vs source \"o-weapons units have: tyranid warriors. battleline\"",
+  "where": "GW Faction Pack Tyranids PDF p4",
+  "reason": "The Faction Pack prints the Leader-beasts rule with two levels of bullets (▪ for its two points, ▫ for the two keywords the first gives), across two columns of page 4; verify/texts.js reads the pack's text only up to the second level and so misses the second ▪ point. Every word of the app's text is the pack's (lines 128-138, including \"▪ TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.\") and Wahapedia's, which verify/texts.js matches word for word. A catalogue detachment (verify/from-bsdata.js tyranids).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 118-138 (WARRIOR BIOFORM ONSLAUGHT, DETACHMENT RULES, LEADER-BEASTS); verify/.cache/waha/tyranids.txt, Warrior Bioform Onslaught 1DP."
+ },
+ {
+  "army": "tyranids",
+  "unit": "detachment:subterranean-assault",
+  "field": "source",
+  "app": "Subterranean Assault",
+  "source": "detachment Subterranean Assault is in the contents but no page starts with its name",
+  "where": "GW Faction Pack Tyranids",
+  "reason": "The Faction Pack's Subterranean Assault page prints the detachment's name broken over two lines (\"SUBTERRANEAN\" / \"ASSAULT\"), so verify/texts.js finds no page that starts with it; the app's detachment is checked against Wahapedia's (the codex), as for every detachment the pack does not print. A catalogue detachment (verify/from-bsdata.js tyranids).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 165-166: \"SUBTERRANEAN\" / \"ASSAULT\"; line 15 (contents): \"Subterranean Assault … 5\"."
  }
 ]

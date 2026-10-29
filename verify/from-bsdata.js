@@ -83,7 +83,8 @@ function rowOf(u, root, C, E) {
   // (one row per profile: the same weapon on two models of the datasheet is one row)
   const uniqRows = rs => { const seen = new Set(); return rs.filter(r => { const k = JSON.stringify(r); if (seen.has(k)) return false; seen.add(k); return true; }); };
   row.ranged = uniqRows(u.ranged.map(weapon)); row.melee = uniqRows(u.melee.map(weapon));
-  const ab = a => { const o = { name: a.name }; if (a.who) o.who = a.who; if (a.tag) o.tag = a.tag; if (a.damaged) o.damaged = a.damaged; o.text = a.text; return o; };
+  // (no reading column: damaged, the Damage tab's band, is a reading, written with the AI layers; the ability's name says the band)
+  const ab = a => { const o = { name: a.name }; if (a.who) o.who = a.who; if (a.tag) o.tag = a.tag; o.text = a.text; return o; };
   row.abilities = u.abilities.map(ab);
   // Leader / Support: the units GW's datasheet (its LEADER or SUPPORT section) lets this model be attached to, as the lists' rows print
   // it, in the place of BSData's ability of that name (whose list is the previous codex's: GW wins)
@@ -99,7 +100,12 @@ function rowOf(u, root, C, E) {
   }
   for (const k of ['ranged', 'melee']) if (!row[k].length) delete row[k];
   if (!row.abilities.length) delete row.abilities;
-  row.rules = u.rules; row.kw = u.kw;
+  // (an army rule GW prints for one model of the unit, "Shadow In The Warp (Ravener Prime only)": the faction's army rule, and the
+  // model that has it, partialRules, as the lists write a rule only one model has)
+  const AR = ((loadD().factions || {})[faction] || {}).armyRules || [];
+  row.rules = u.rules.map(r => { const m = /^(.+?) \((.+) only\)$/.exec(r); if (!m) return r; const ar = AR.find(x => lc(x.name) === lc(m[1]));
+    (row.partialRules = row.partialRules || {})[ar ? ar.name : m[1]] = m[2]; return ar ? ar.name : m[1]; });
+  row.kw = u.kw;
   if (u.kwOnly) row.kwOnly = u.kwOnly;
   // what only BSData gives: points per model count (and what else changes them), the models, the wargear choices
   // points: GW's costs as its datasheet prints them (Wahapedia), else BSData's in the same shape; a difference is declared (catalog.js)
@@ -107,6 +113,51 @@ function rowOf(u, root, C, E) {
   const gw = pg ? CAT.gwCosts(WW.markup(pg.tokens, pg.P, 0, pg.P.s.length - 1).split('\n')) : null;
   row.points = gw || CAT.bsCosts(C.points(root), C.options(root)); row.composition = C.composition(root).map(c => Object.assign({}, c, { model: mname(c.model) })); row.options = C.options(root).map(o => Object.assign({}, o, { on: mname(o.on) }));
   return row;
+}
+
+// ---------------------------------------------------------------- GW's Faction Pack over the codex: its datasheet Rules Updates
+// (Wahapedia's datasheet pages carry most of them, not all: the Swarmlord's Malign Presence). Each update verify/texts.js reads from the
+// pack (--updates) whose title names datasheets and what it changes is applied where the row's words are not yet the pack's: an
+// ability's new text ("<datasheets>, <ability> Ability" / "Change to:"), a value in it ("Change 9\" to 8\"."), a keyword added
+// ("<datasheets> – Keywords Section" / "Add 'X'."), a weapon value ("<datasheet>, Ranged Weapons, <weapon>" / "Change S to '9'."). Each is
+// recorded (packApplied) and declared as GW's over BSData; verify/texts.js checks every row against the pack as for a list.
+const squashW = t => lc(String(t || '').replace(/\*\*/g, '')).replace(/[^a-z0-9]/g, '');
+// (the pack's text as the app writes it: its lines joined, bullets as "- ", its capitals bold as GW prints keywords)
+const packText = t => String(t).split('\n').map(l => l.trim()).reduce((o, l) => /^[▪■]/.test(l) ? o.concat('- ' + l.replace(/^[▪■]\s*/, '')) : o.length ? (o[o.length - 1] += ' ' + l, o) : [l], [])
+  .join('\n').replace(/\b([A-Z][A-Z’'-]+(?:[ /][A-Z][A-Z’'-]+)*)\b/g, (m0, w) => w.length > 1 && /[A-Z]{2}/.test(w) ? '**' + w + '**' : w).replace(/\s+([.,;:])/g, '$1');
+function applyPack(rows) {
+  const r = spawnSync(process.execPath, [path.join(ROOT, 'verify/texts.js'), '--updates', faction], { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 26 });
+  let ups = []; try { ups = JSON.parse(r.stdout || '[]'); } catch (e) { return []; }
+  const applied = [], named = (row, list) => list.some(n => lc(n) === lc(row.name) || lc(n) === lc(row.name) + 's' || lc(n) + 's' === lc(row.name));
+  for (const e of ups.filter(x => x.section === 'DATASHEETS')) {
+    const t = String(e.title).trim(), instr = String(e.instr).trim();
+    let m;
+    if ((m = /^(.+?)(?:,| –| -) Keywords(?: Section)?$/i.exec(t)) && (m = Object.assign(m, { add: /^Add ['‘]([^'’]+)['’]\.?$/i.exec(instr) })).add) {
+      const list = m[1].split(/,\s*/), k = m.add[1].toLowerCase().replace(/(^|[\s-])([a-z])/g, (x, a, b) => a + b.toUpperCase());
+      for (const [id, row] of Object.entries(rows)) if (named(row, list) && !row.kw.some(x => lc(x) === lc(k))) { row.kw = row.kw.concat(k).sort(); applied.push({ id, field: 'kw', app: k, title: t, instr, where: e.where }); }
+      continue;
+    }
+    if ((m = /^(.+?)(?:,| –| -) Ranged Weapons, (.+)$|^(.+?)(?:,| –| -) Melee Weapons, (.+)$/i.exec(t))) {
+      const ds = (m[1] || m[3]).split(/,\s*/), wn = m[2] || m[4], kind = m[1] ? 'ranged' : 'melee', ch = /^Change (\w+) to ['‘]?([^'’]+?)['’]?\.?$/.exec(instr);
+      if (!ch) continue;
+      for (const [id, row] of Object.entries(rows)) if (named(row, ds)) for (const w of row[kind] || []) if (lc(w.name) === lc(wn) && ch[1] in w && w[ch[1]] !== ch[2]) { const was = w[ch[1]]; w[ch[1]] = ch[2]; applied.push({ id, field: kind + '[' + w.name + (w.group ? ' (' + w.group + ')' : '') + '].' + ch[1], app: ch[2], was, title: t, instr, where: e.where }); }
+      continue;
+    }
+    if ((m = /^(.+?)(?:,| –| -) ([^,–]+?) [Aa]bility$/.exec(t))) {
+      const ds = m[1].split(/,\s*/), an = m[2].trim();
+      for (const [id, row] of Object.entries(rows)) if (named(row, ds)) for (const ab of row.abilities || []) {
+        if (lc(ab.name) !== lc(an) && lc(ab.name) !== lc(an) + 's' && lc(ab.name) + 's' !== lc(an)) continue;
+        if (/^Change to:/.test(instr) && e.newText) {
+          let nt = packText(e.newText); const head = /^([^:(]+?)(?:\s*\(([^)]*)\))?:\s*([\s\S]*)$/.exec(nt.replace(/\*\*/g, ''));
+          if (head && lc(head[1]) === lc(ab.name)) nt = nt.replace(/^[^:]*:\s*/, '');
+          if (squashW(nt) !== squashW(ab.text)) { const was = ab.text; ab.text = nt; applied.push({ id, field: 'ability[' + ab.name + '].text', app: nt, was, title: t, instr, where: e.where }); }
+        } else if ((m = /^Change (.+?) to (.+?)\.$/.exec(instr))) {
+          if (ab.text.split(m[1]).length === 2) { const was = ab.text; ab.text = ab.text.replace(m[1], m[2]); applied.push({ id, field: 'ability[' + ab.name + '].text', app: ab.text, was, title: t, instr, where: e.where }); }
+        }
+      }
+    }
+  }
+  return applied;
 }
 
 function build() {
@@ -120,6 +171,7 @@ function build() {
     if (rows[id]) throw new Error('two catalogue datasheets have the id ' + id);
     rows[id] = rowOf(u, root, C, E);
   }
+  const packApplied = applyPack(rows);
   // the GW-over-BSData differences, with their evidence: the deviations to declare (as verify/from-json.js declares a list's)
   const devs = [];
   for (const d of E.gwDevs) devs.push({ unit: d.unit, kind: d.kind, row: d.row || null, field: d.field, gw: d.app, bsdata: d.bsdata === 'undefined' ? null : d.bsdata, file: d.file, det: d.det || null });
@@ -137,7 +189,7 @@ function build() {
   const cat = { _about: 'The ' + C.cat.name + ' catalogue as verify/from-bsdata.js reads it from BSData (wh40k-11e at the pin) with GW’s datasheets over it (verify/from-json.js): every current datasheet (no Legends, no Crusade, no Crucible: verify/bs-catalog.js FILTER), one DATASHEETS row each. Written by `node verify/from-bsdata.js ' + faction + ' --write`; verify/tables.js --write puts every row into DATASHEETS (a row a list has keeps the list’s signed-off facts, and gets the catalogue’s rows it lacks); the gate step catalog (verify/catalog.js) checks it is what the sources give. Do not edit.',
     faction, bsdata: { catalogue: C.cat.name, revision: C.cat.revision, pin },
     counts: { datasheets: Object.keys(rows).length, detachments: detachments.length, excluded: excluded.length },
-    datasheets: rows, detachments: detachments.map(d => ({ name: typo(d.name), bsId: d.entry.id, rules: d.rules.map(typo) })), detachmentRows, excluded, weaponNames: E.gwNames, modelNames: Object.entries(HAND().modelNames || {}).map(([bs, x]) => ({ bsdata: bs, gw: x.gw, kind: x.kind })) };
+    datasheets: rows, detachments: detachments.map(d => ({ name: typo(d.name), bsId: d.entry.id, rules: d.rules.map(typo) })), detachmentRows, excluded, weaponNames: E.gwNames, packApplied, modelNames: Object.entries(HAND().modelNames || {}).map(([bs, x]) => ({ bsdata: bs, gw: x.gw, kind: x.kind })) };
   return { C, E, cat, devs, datasheets, detachments, excluded };
 }
 

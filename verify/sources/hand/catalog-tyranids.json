@@ -1,0 +1,21 @@
+{
+ "_about": "The faction catalogue import (verify/from-bsdata.js tyranids) reads BSData's whole Tyranids catalogue through verify/from-json.js as the export catalog-tyranids; this is its hand file. weaponNames: a weapon BSData names otherwise than GW's datasheet (Wahapedia) by more than verify/from-json.js's spelling rules can tell, so that GW's profile is found and its values checked; the app keeps BSData's name (New Recruit's, which the lists' signed-off rows and the in-app import use). profileNames: the same for a model profile. modelNames: a model (stats row) BSData misprints (typo: GW's name, declared) or names otherwise (kept, listed). fixes: GW's words where Wahapedia's transcription of a detachment differs ({ at:\"<detachment>/<kind>/<name>\", field, from, to, why }, exactly once), as for a list (verify/from-json.js).",
+ "weaponNames": {
+  "Genestealers claws and talons": "Genestealer claws and talons",
+  "Distendible jaw": "Distensible jaw",
+  "Sporocyst bio-weapon": "Sporocyst bio-weapons",
+  "Toxinjecter Harpoon": "Toxinjector Harpoon"
+ },
+ "profileNames": {
+  "Ravener": "Raveners"
+ },
+ "fixes": [
+  {
+   "at": "unending-swarm/stratagem/Synaptic Goading",
+   "field": "effect",
+   "from": "the closest enemy unit].",
+   "to": "the closest enemy unit).",
+   "why": "Wahapedia closes the bracket with \"]\"; GW's Faction Pack Tyranids (Rules Updates: Unending Swarm Detachment, Synaptic Goading Stratagem, When and Effect Sections) prints \"(instead of as close as possible to the closest enemy unit).\""
+  }
+ ]
+}

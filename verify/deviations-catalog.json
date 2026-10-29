@@ -1,0 +1,34 @@
+[
+ {
+  "datasheet": "tyranids/tyrannofex",
+  "what": "kw",
+  "reason": "The lists' row (Nidzillas, Healybois, signed off) leaves FRAME out: its srcNote, \"Wahapedia also lists FRAME (from its errata); GW's Faction Pack (14-10) and BSData don't\". The catalogue row is Wahapedia's datasheet, which prints FRAME. DATASHEETS keeps the lists' row; which is GW's is the srcNote's open question, for the owner.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; data.js DATASHEETS tyranids/tyrannofex srcNote; verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt: no Tyrannofex keywords update."
+ },
+ {
+  "datasheet": "tyranids/norn-emissary",
+  "what": "rules",
+  "reason": "The lists' Rules line has Feel No Pain, from Unnatural Resilience (\"This model has the Feel No Pain 4+ ability against mortal wounds\"), as New Recruit prints it; GW's datasheet prints no Feel No Pain under CORE ABILITIES, so the catalogue's Rules line has none. The lists' row is kept.",
+  "evidence": "verify/sources/nr/nidzillas.txt (Norn Emissary, Rules line); verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES \"Deadly Demise D6\", ABILITIES \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+ },
+ {
+  "datasheet": "tyranids/norn-emissary",
+  "what": "abilities Protean Purpose: not in the catalogue",
+  "reason": "Protean Purpose is the ability the Talons of the Norn Queen detachment rule gives (\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: …\"), not the datasheet's own: both lists take that detachment, so their row holds it; the catalogue row (the datasheet alone) does not.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 84-88 (Talons of the Norn Queen, Detachment Rules, Higher Imperatives); ARMIES nidzillas, healybois: detachment talons-of-the-norn-queen.",
+  "lists": [
+   "nidzillas",
+   "healybois"
+  ]
+ },
+ {
+  "datasheet": "tyranids/norn-assimilator",
+  "what": "abilities Protean Purpose: not in the catalogue",
+  "reason": "Protean Purpose is the ability the Talons of the Norn Queen detachment rule gives (\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: …\"), not the datasheet's own: both lists take that detachment, so their row holds it; the catalogue row (the datasheet alone) does not.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 84-88 (Talons of the Norn Queen, Detachment Rules, Higher Imperatives); ARMIES nidzillas, healybois: detachment talons-of-the-norn-queen.",
+  "lists": [
+   "nidzillas",
+   "healybois"
+  ]
+ }
+]

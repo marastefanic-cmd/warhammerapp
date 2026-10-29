@@ -779,11 +779,24 @@ if (process.argv.includes('--debug-dets')) {
 
 /* ------------------------------------------------------------------ factions: helpers */
 const armiesOf = fk => D.armies.filter(a => a.faction === fk);
+// the DATASHEETS rows no list has (a faction catalogue's, verify/from-bsdata.js), one list per faction, army "catalog": the Faction Pack's
+// datasheet updates are checked on them as on a list's units
+const CATALOG = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(DATA, 'utf8')), listed = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || [])))), by = {};
+  for (const [sid, S] of Object.entries(R.S ? R.S.value : {})) { if (listed.has(sid)) continue; (by[S.faction] = by[S.faction] || { id: 'catalog', faction: S.faction, detachments: [], units: [] }).units.push({ id: sid, name: S.name, abilities: S.abilities || [], rules: S.rules || [], kw: S.kw || [], partialRules: S.partialRules }); }
+  return Object.values(by); })();
+const armiesPlus = fk => armiesOf(fk).concat(CATALOG.filter(a => a.faction === fk));
 const armyIdsOf = fk => fk;   // faction rules are reported under the faction, so adding a list of it changes no report line
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
 // (the detachments whose words are checked: the lists', and every one a faction catalogue added, verify/from-bsdata.js)
 const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read')))];
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
+// --updates <faction>: the Faction Pack's Rules Updates as read here, as JSON (verify/from-bsdata.js applies the datasheet ones to a
+// faction catalogue's rows; this file then checks them as for a list)
+if (process.argv.includes('--updates')) {
+  const fk = process.argv[process.argv.indexOf('--updates') + 1];
+  process.stdout.write(JSON.stringify((UPD[fk] || []).map(e => ({ section: e.section, title: e.title, instr: e.instr, newText: e.newText, where: e.where })), null, 1) + '\n');
+  process.exit(0);
+}
 const usedUpdates = new Set();
 // Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
 // changes the datasheet's Bloody Fury (Wahapedia, BSData and New Recruit name it so; the new text is that ability's)
@@ -1271,7 +1284,7 @@ for (const a of D.armies) {
 // The datasheet name an ability belongs to: its "who" (a model of an attached unit) or the unit's name.
 // A who that names a choice on the unit's own datasheet ("Wrathful Presence: pick one") is not another datasheet.
 const dsName = (u, ab) => (ab.who && !/: pick one$/.test(ab.who)) ? ab.who : u.name;
-for (const a of D.armies) {
+for (const a of D.armies.concat(CATALOG)) {
   const fk = a.faction;
   const upd = UPD[fk].filter(e => e.section === 'DATASHEETS');
   for (const u of a.units) for (const ab of u.abilities || []) {
@@ -1297,7 +1310,7 @@ for (const a of D.armies) {
 }
 // "<datasheets> – Faction Abilities section" (or Core Abilities) "Add 'X'.": each of those datasheets in the lists has X
 // in its unit's rules list (Adeptus Mechanicus: Doctrina Imperatives on Belisarius Cawl, Cybernetica Datasmith, …)
-for (const a of D.armies) {
+for (const a of D.armies.concat(CATALOG)) {
   for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /abilities section$/.test(titleN(x)))) {
     // (or "Remove 'Leader', add 'Support'.": it has the one added and not the one removed)
     const rm = /^Remove ['‘]([^'’]+)['’], add ['‘]([^'’]+)['’]\.?$/i.exec(e.instr);
@@ -1313,6 +1326,19 @@ for (const a of D.armies) {
         // (the removed one: not on that datasheet, unless another part of the unit has it itself)
         if (rm && (u.partialRules || {})[rm[1]] === n) fail('packUpdate', a.id, u.id, 'rules (' + n + ')', (u.rules || []).join(', '), 'Rules Updates: "' + e.instr + '"', e.where);
       }
+    }
+  }
+}
+// "<datasheets> – Keywords Section" "Add 'X'.": each of those datasheets (a list's unit, a catalogue row) has the keyword X
+// (Tyranids: "Mawloc, Raveners, Trygon – Keywords Section / Add 'VANGUARD INVADER'.")
+for (const a of D.armies.concat(CATALOG)) {
+  for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /keywords(?: section)?$/.test(titleN(x)))) {
+    const m = /^Add ['‘]([^'’]+)['’]\.?$/i.exec(String(e.instr).trim()); if (!m) continue;
+    const t = titleN(e);
+    for (const u of a.units) {
+      if (!nameInTitle(nameN(u.name), t)) continue;
+      usedUpdates.add(e); count('packUpdate');
+      if (!(u.kw || []).some(k => norm(k) === norm(m[1]) || norm(k) === norm('Faction: ' + m[1]))) fail('packUpdate', a.id, u.id, 'kw', (u.kw || []).join(', '), 'Rules Updates: "' + e.title + ': ' + e.instr + '"', e.where);
     }
   }
 }
@@ -1359,8 +1385,8 @@ function enhNames(a) { const f = D.factions[a.faction]; return new Set(a.detachm
 /* ------------------------------------------------------------------ Rules Updates that concern the lists but matched no app text */
 for (const fk of FACTIONS) {
   const army = armyIdsOf(fk);
-  const dets = usedDetachments(fk).map(id => D.factions[fk].detachments[id]).filter(Boolean).map(d => norm(d.name + ' detachment'));
-  const names = new Set(); for (const a of armiesOf(fk)) for (const u of a.units) { names.add(nameN(u.name)); for (const ab of u.abilities || []) if (ab.who) names.add(nameN(ab.who)); }
+  const dets = checkedDetachments(fk).map(id => D.factions[fk].detachments[id]).filter(Boolean).map(d => norm(d.name + ' detachment'));
+  const names = new Set(); for (const a of armiesPlus(fk)) for (const u of a.units) { names.add(nameN(u.name)); for (const ab of u.abilities || []) if (ab.who) names.add(nameN(ab.who)); }
   for (const e of UPD[fk]) {
     if (usedUpdates.has(e)) continue;
     const t = titleN(e);
@@ -1369,7 +1395,7 @@ for (const fk of FACTIONS) {
     // a wargear ability is on a unit only with that wargear: its update concerns the list only when a unit has the ability
     // (Jakhals without an Icon of Khorne)
     const wg = / - (.+) wargear ability$/.exec(t);
-    if (concerns && wg && !armiesOf(fk).some(a => a.units.some(u => (u.abilities || []).some(ab => nameN(ab.name) === wg[1])))) concerns = false;
+    if (concerns && wg && !armiesPlus(fk).some(a => a.units.some(u => (u.abilities || []).some(ab => nameN(ab.name) === wg[1])))) concerns = false;
     if (!concerns) continue;
     // a datasheet update for an ability the list's unit does not have (another datasheet of the same name) is fine only if no unit has that ability
     count('packUpdate');

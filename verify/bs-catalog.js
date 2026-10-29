@@ -26,6 +26,10 @@
      crucible   the name ends in "[Crucible]" or a category is "Crucible" (GW's Crucible characters, hidden in BSData until
                 "Show Crucible Characters" is picked: built by Crucible rules, not a datasheet GW prints; no Wahapedia page)
      config     not a unit or model entry, or its primary category is Configuration
+     reference  primary category Reference: New Recruit's reference copy of a datasheet another rule adds ("Spore Mines (Biovore)"), the
+                datasheet being a root entry of its own
+     boarding-actions  a detachment whose rules muster a Boarding Patrol (Mustering A Boarding Patrol, Forming Boarding Squads): a
+                Boarding Actions detachment, another game mode (Wahapedia lists them under Boarding Actions)
      ally       a datasheet with none of the faction's Faction keywords (factions.json catalogFactions): another faction's, which the
                 catalogue (or a library it imports root entries from) offers as an ally */
 'use strict';
@@ -48,14 +52,15 @@ const PTS = '51b2-306e-1021-d207';
 // datasheet's own option; one whose conditions are of the force or roster (a detachment, an enhancement, a battle size) is a list's
 // choice, and the option stays as the entry says
 const condList = m => [].concat(m.conditions || [], ...((m.conditionGroups || []).map(function g(x){ return [].concat(x.conditions || [], ...((x.conditionGroups || []).map(g)), ...((x.localConditionGroups || []).flatMap(y => y.conditions || []))); })));
-function staticHidden(x){
+function staticHidden(x, listChoice){
   if(!x) return false;
   let h = !!x.hidden;
   const mods = [].concat(x.modifiers || [], ...((x.modifierGroups || []).filter(g => !/crusade/i.test(g.comment || '')).map(g => [].concat(g.modifiers || []).map(m => Object.assign({}, m, { conditions:[].concat(g.conditions || [], m.conditions || []), conditionGroups:[].concat(g.conditionGroups || [], m.conditionGroups || []) }))))).filter(m => m.field === 'hidden' && m.type === 'set');
   for(const m of mods){
     const v = m.value === true || m.value === 'true', cs = condList(m);
     if(!cs.length) h = v;
-    else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope))) h = false;
+    // (a condition on a list's choice, an enhancement or the Warlord taken on the unit, a detachment, is the list's, whatever its scope)
+    else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope) && !(listChoice && listChoice(c.childId)))) h = false;
   }
   return h;
 }
@@ -89,6 +94,9 @@ function load(ROOT, catalogueName, opts){
     const cats = catsOf(l, e);
     for(const F of FILTER) if(F.test(e, l, cats)) return { kind:F.kind, why:F.why };
     if(!e || !['unit', 'model'].includes(e.type)) return { kind:'config', why:'not a unit or model entry' };
+    // (New Recruit's reference copy of a datasheet another rule adds, "Spore Mines (Biovore)": primary category Reference; the datasheet
+    // is its own root entry)
+    { const pr = [].concat((l && l.categoryLinks) || [], e.categoryLinks || []).find(c => c.primary); if(pr && /^Reference$/i.test(catName(pr.targetId) || nameOf(pr))) return { kind:'reference', why:'primary category Reference: New Recruit’s reference copy of a datasheet that is a root entry of its own' }; }
     const prim = [].concat((l && l.categoryLinks) || [], e.categoryLinks || []).find(c => c.primary);
     if(prim && /^Configuration$/i.test(catName(prim.targetId) || nameOf(prim))) return { kind:'config', why:'its primary category is Configuration' };
     return { kind:'datasheet', why:'a unit or model entry, not Legends, Crusade or Crucible' };
@@ -119,7 +127,12 @@ function load(ROOT, catalogueName, opts){
   // ---- the children of an entry, as options: entries, links and groups (a group's children carry its name)
   const resolve = l => l.targetId ? get(l.targetId) : l;
   // statically hidden: hidden itself, and no modifier that shows it (a "hidden = false" modifier under a condition: shown only then)
-  const hiddenStatic = staticHidden;
+  // the list's choices: every entry of an Enhancements group, of the Detachment entry, the Warlord (an option shown by one is no datasheet option)
+  let LC = null;
+  const listChoice = id => { if(!LC){ LC = new Set(); const take = o => { if(Array.isArray(o)){ o.forEach(take); return; } if(!o || typeof o !== 'object') return; if(o.id) LC.add(o.id); if(o.targetId) LC.add(o.targetId); for(const k in o) if(o[k] && typeof o[k] === 'object') take(o[k]); };
+    for(const o of BS.values()) if((/^Enhancements\b/i.test(nameOf(o)) && (o.selectionEntries || o.entryLinks || o.selectionEntryGroups)) || ((nameOf(o) === 'Detachment' || nameOf(o) === 'Warlord') && o.type === 'upgrade')) take(o); }
+    return LC.has(id); };
+  const hiddenStatic = x => staticHidden(x, listChoice);
   const skipped = (x, l) => { const e = resolve(x); return !e || hiddenStatic(x) || hiddenStatic(e) || CRUSADE.test(nameOf(x)) || CRUSADE.test(nameOf(e)) || FILTER.some(F => F.kind !== 'crusade' && F.test(e, x.targetId ? x : null, catsOf(x, e))); };
   function children(node){
     const out = [];
@@ -186,7 +199,9 @@ function load(ROOT, catalogueName, opts){
       for(const x of [].concat(node.selectionEntries || [], node.entryLinks || [], node.selectionEntryGroups || [])){
         const e = resolve(x); if(!e) continue;
         if(x.type === 'selectionEntryGroup' || (node.selectionEntryGroups || []).includes(x)){ walk(e, nameOf(e)); continue; }
-        const c = classify(Object.assign({}, e, { type:'unit' }), x.targetId ? x : null);
+        const c0 = classify(Object.assign({}, e, { type:'unit' }), x.targetId ? x : null), rn = info(e).rules.map(r => r.name);
+        // (a Boarding Actions detachment, another game than Warhammer 40,000 matched play: its rules muster a Boarding Patrol)
+        const c = c0.kind === 'datasheet' && rn.some(n => /^(Mustering A Boarding Patrol|Forming Boarding Squads)$/i.test(n)) ? { kind:'boarding-actions', why:'a Boarding Actions detachment (its rules: Mustering A Boarding Patrol / Forming Boarding Squads): another game mode, not matched play' } : c0;
         out.push({ entry:e, link:x.targetId ? x : null, name:nameOf(e), group, kind:c.kind === 'datasheet' ? (hiddenStatic(x) || hiddenStatic(e) ? 'hidden' : 'detachment') : c.kind, why:c.kind === 'datasheet' ? (hiddenStatic(x) || hiddenStatic(e) ? 'hidden in BSData' : 'a detachment of the catalogue') : c.why,
           rules:info(e).rules.map(r => r.name) });
       }
