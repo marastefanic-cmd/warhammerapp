@@ -619,12 +619,12 @@ ARMIES
 FACTIONS
 13 rows
 army rules 29
-detachments 40
-↳ stratagems 166
-↳ enhancements 115
+detachments 59
+↳ stratagems 253
+↳ enhancements 173
 faction
 DATASHEETS
-169 rows
+261 rows
 ds
 RULES
 66 rows
@@ -632,9 +632,9 @@ rules
 RULE_ALIASES 70
 RULE_SRC 6
 CONCEPTS 20
-GRANTS 64
-RULE_OPTIONS 74
-CHECKLIST 470
+GRANTS 75
+RULE_OPTIONS 89
+CHECKLIST 492
 rule / key → a rule or an ability
 CORE_STRATAGEMS
 10 · used by every list
@@ -651,7 +651,7 @@ AI READING the numbers and conditions behind the footnotes, the “When targeted
 
 HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
 
-Of the 556 columns of the tables: Mechanical 269 · AI summary 2 · AI reading 230 · Hand 55.
+Of the 562 columns of the tables: Mechanical 275 · AI summary 2 · AI reading 230 · Hand 55.
 
 ARMIES
 25 rows · 213 unit entries · one row per list
@@ -796,7 +796,7 @@ AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, r
 HAND listWhy
 
 DATASHEETS
-169 rows · one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
+261 rows · one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
 
 KEY“faction/name”, the id an entry’s ds names
 
@@ -835,34 +835,34 @@ abilities
 4 rows: Full Throttle, Turbo Engine, Pulse Jet, Shokk Attack Engine
 WAHAPEDIA
 Every column and where it comes from
-146 columns, with 7 inner tables
-DATASHEETS 169 rows
+150 columns, with 7 inner tables
+DATASHEETS 261 rows
 
-MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia)
+MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
 
 AI READING mods, aura, guard
 
 HAND kwOnly, partialRules, srcNote
 
-DATASHEETS.stats 190 rows
+DATASHEETS.stats 286 rows
 
 a datasheet's model profiles
 
 MECHANICAL name (New Recruit), M (New Recruit), T (New Recruit), Sv (New Recruit), W (New Recruit), Ld (New Recruit), OC (New Recruit), InSv (New Recruit), base (New Recruit), baseWith (GW)
 
-DATASHEETS.ranged 294 rows
+DATASHEETS.ranged 422 rows
 
 a datasheet's ranged weapon profiles
 
 MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
 
-DATASHEETS.melee 256 rows
+DATASHEETS.melee 401 rows
 
 a datasheet's melee weapon profiles
 
 MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
 
-DATASHEETS.abilities 405 rows
+DATASHEETS.abilities 629 rows
 
 a datasheet's abilities
 
@@ -990,7 +990,7 @@ defOf
 263b4efe
 COMPUTED
 Every column and where it comes from
-156 columns, with 7 inner tables
+158 columns, with 7 inner tables
 FACTIONS 13 rows
 
 MECHANICAL name (GW), armyRules (GW), detachments (GW)
@@ -1007,13 +1007,13 @@ AI READING calcNc, calcMods, calcDefs, limit, both, mod, def, parts, statNote, m
 
 HAND needs, coreTwin, note, tableAt, missing
 
-FACTIONS.detachments 40 rows
+FACTIONS.detachments 59 rows
 
 a faction's detachments
 
-MECHANICAL name (GW), dispositions (BSData), dp (GW), rule (GW), moreRules (GW), enhancements (GW), stratagems (GW)
+MECHANICAL name (GW), dispositions (BSData), dp (GW), rule (GW), moreRules (GW), enhancements (GW), stratagems (GW), nr (BSData), aiStatus (computed)
 
-FACTIONS.detachments.rule 40 rows
+FACTIONS.detachments.rule 59 rows
 
 a detachment's rule
 
@@ -1023,7 +1023,7 @@ AI READING calcNc, calcMods, calcDefs, limit, both, mod, def, parts, statNote, m
 
 HAND needs, coreTwin, note, tableAt, missing
 
-FACTIONS.detachments.moreRules 1 row
+FACTIONS.detachments.moreRules 4 rows
 
 a detachment's further rule (moreRules), with the columns of its first
 
@@ -1033,7 +1033,7 @@ AI READING calcNc, calcMods, calcDefs, limit, both, mod, def, parts, statNote, m
 
 HAND needs, coreTwin, note, tableAt, missing
 
-FACTIONS.detachments.stratagems 166 rows
+FACTIONS.detachments.stratagems 253 rows
 
 a detachment's stratagems
 
@@ -1045,7 +1045,7 @@ AI READING limit, defCalc, def, mod, shield, help, defPick, react, weaponKw, las
 
 HAND needs, note, cpNote
 
-FACTIONS.detachments.enhancements 115 rows
+FACTIONS.detachments.enhancements 173 rows
 
 a detachment's enhancements
 
@@ -1189,9 +1189,9 @@ CONCEPTS 20 rows
 MECHANICAL term (GW)
 
 GRANTS
-64 rows · a rule or option giving units an ability or keyword
+75 rows · a rule or option giving units an ability or keyword
 
-RULE→ an army rule (4) or detachment rule (14) in FACTIONS, or a unit’s ability (46) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (4) or detachment rule (25) in FACTIONS, or a unit’s ability (46) in a list (ARMIES → DATASHEETS)
 
 ONE ROW
 
@@ -1215,14 +1215,14 @@ text
 COMPUTED
 Every column and where it comes from
 7 columns
-GRANTS 64 rows
+GRANTS 75 rows
 
 MECHANICAL rule (computed), option (computed), grants (computed), type (computed), to (computed), while (computed), text (computed)
 
 RULE_OPTIONS
-74 rows · the options inside a rule or ability, each with the phases its words give
+89 rows · the options inside a rule or ability, each with the phases its words give
 
-RULE→ an army rule (37) or detachment rule (23) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (37) or detachment rule (38) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
 
 ONE ROW
 
@@ -1252,14 +1252,14 @@ ph: shooting, fight; turn: either; turns: shooting: your
 COMPUTED
 Every column and where it comes from
 8 columns
-RULE_OPTIONS 74 rows
+RULE_OPTIONS 89 rows
 
 MECHANICAL rule (computed), option (computed), text (computed), found (computed), explicit (computed), trigger (computed), used (computed), phases (computed)
 
 CHECKLIST
-470 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+492 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
 
-R|FACTION|NAME→ an army or detachment rule in FACTIONS (70)
+R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
 
 A|FINGERPRINT→ an ability, by a fingerprint of its name and words (400), in DATASHEETS
 
@@ -1303,7 +1303,7 @@ dispositions
 5 ids
 BSDATA
 detachments
-40 ids
+59 ids
 BSDATA
 config
 1 id

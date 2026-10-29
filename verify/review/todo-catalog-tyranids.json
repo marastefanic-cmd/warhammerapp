@@ -1,0 +1,1940 @@
+[
+ {
+  "army": "catalog-tyranids",
+  "kind": "code",
+  "where": "verify/bs-catalog.js FILTER kinds reference and boarding-actions; staticHidden listChoice",
+  "judgement": {
+   "code": "verify/bs-catalog.js: { const pr = [].concat((l && l.categoryLinks) || [], e.categoryLinks || []).find(c => c.primary); if(pr && /^Reference$/i.test(catName(pr.targetId) || nameOf(pr))) return { kind:'reference', why:'primary category Reference: New Recruit’s reference copy of a datasheet that is a root entry of its own' }; }\nverify/bs-catalog.js: boarding-actions  a detachment whose rules muster a Boarding Patrol (Mustering A Boarding Patrol, Forming Boarding Squads): a\n// the list's choices: every entry of an Enhancements group, of the Detachment entry, the Warlord (an option shown by one is no datasheet option)\n  let LC = null;\n  const listChoice = id => { if(!LC){ LC = new Set(); const take = o => { if(Array.isArray(o)){ o.forEach(take); return; } if(!o || typeof o !== 'object') return; if(o.id) LC.add(o.id); if(o.targetId) LC.add(o.targetId); for(const k in o) if(o[k] && typeof o[k] === 'object') take(o[k]); };\n    for(const o of BS.values()) if((/^Enhancements\\b/i.test(nameOf(o)) && (o.selectionEntries || o.entryLinks || o.selectionEntryGroups)) || ((nameOf(o) === 'Detachment' || nameOf(o) === 'Warlord') && o.type === 'upgrade')) take(o); }\n    return LC.has(id); };\n  const hiddenStatic = x => staticHidden(x, listChoice);"
+  },
+  "source": {
+   "implements": "New Recruit's reference copies and Boarding Actions detachments left out; an option a list's choice (an enhancement, the Warlord, a detachment) shows is no datasheet option (the Custodes reviewer's note), tested"
+  },
+  "key": "831fb493118cecde"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "code",
+  "where": "verify/from-bsdata.js applyPack (the Faction Pack's Rules Updates on the catalogue rows)",
+  "judgement": {
+   "code": "// (Wahapedia's datasheet pages carry most of them, not all: the Swarmlord's Malign Presence). Each update verify/texts.js reads from the\n// pack (--updates) whose title names datasheets and what it changes is applied where the row's words are not yet the pack's: an\n// ability's new text (\"<datasheets>, <ability> Ability\" / \"Change to:\"), a value in it (\"Change 9\\\" to 8\\\".\"), a keyword added\n// (\"<datasheets> – Keywords Section\" / \"Add 'X'.\"), a weapon value (\"<datasheet>, Ranged Weapons, <weapon>\" / \"Change S to '9'.\"). Each is\n// recorded (packApplied) and declared as GW's over BSData; verify/texts.js checks every row against the pack as for a list.\nconst squashW = t => lc(String(t || '').replace(/\\*\\*/g, '')).replace(/[^a-z0-9]/g, '');\n// (the pack's text as the app writes it: its lines joined, bullets as \"- \", its capitals bold as GW prints keywords)\nconst packText = t => String(t).split('\\n').map(l => l.trim()).reduce((o, l) => /^[▪■]/.test(l) ? o.concat('- ' + l.replace(/^[▪■]\\s*/, '')) : o.length ? (o[o.length - 1] += ' ' + l, o) : [l], [])\n  .join('\\n').replace(/\\b([A-Z][A-Z’'-]+(?:[ /][A-Z][A-Z’'-]+)*)\\b/g, (m0, w) => w.length > 1 && /[A-Z]{2}/.test(w) ? '**' + w + '**' : w).replace(/\\s+([.,;:])/g, '$1');\nfunction applyPack(rows) {\n  const r = spawnSync(process.execPath, [path.join(ROOT, 'verify/texts.js'), '--updates', faction], { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 26 });\n  let ups = []; try { ups = JSON.parse(r.stdout || '[]'); } catch (e) { return []; }\n  const applied = [], named = (row, list) => list.some(n => lc(n) === lc(row.name) || lc(n) === lc(row.name) + 's' || lc(n) + 's' === lc(row.name));\n  for (const e of ups.filter(x => x.section === 'DATASHEETS')) {\n    const t = String(e.title).trim(), instr = String(e.instr).trim();\n    let m;\n    if ((m = /^(.+?)(?:,| –| -) Keywords(?: Section)?$/i.exec(t)) && (m = Object.assign(m, { add: /^Add ['‘]([^'’]+)['’]\\.?$/i.exec(instr) })).add) {\n      const list = m[1].split(/,\\s*/), k = m.add[1].toLowerCase().replace(/(^|[\\s-])([a-z])/g, (x, a, b) => a + b.toUpperCase());\n      for (const [id, row] of Object.entries(rows)) if (named(row, list) && !row.kw.some(x => lc(x) === lc(k))) { row.kw = row.kw.concat(k).sort(); applied.push({ id, field: 'kw', app: k, title: t, instr, where: e.where }); }\n      continue;\n    }\n    if ((m = /^(.+?)(?:,| –| -) Ranged Weapons, (.+)$|^(.+?)(?:,| –| -) Melee Weapons, (.+)$/i.exec(t))) {\n      const ds = (m[1] || m[3]).split(/,\\s*/), wn = m[2] || m[4], kind = m[1] ? 'ranged' : 'melee', ch = /^Change (\\w+) to ['‘]?([^'’]+?)['’]?\\.?$/.exec(instr);\n      if (!ch) continue;\n      for (const [id, row] of Object.entries(rows)) if (named(row, ds)) for (const w of row[kind] || []) if (lc(w.name) === lc(wn) && ch[1] in w && w[ch[1]] !== ch[2]) { const was = w[ch[1]]; w[ch[1]] = ch[2]; applied.push({ id, field: kind + '[' + w.name + (w.group ? ' (' + w.group + ')' : '') + '].' + ch[1], app: ch[2], was, title: t, instr, where: e.where }); }\n      continue;\n    }\n    if ((m = /^(.+?)(?:,| –| -) ([^,–]+?) [Aa]bility$/.exec(t))) {\n      const ds = m[1].split(/,\\s*/), an = m[2].trim();\n      for (const [id, row] of Object.entries(rows)) if (named(row, ds)) for (const ab of row.abilities || []) {\n        if (lc(ab.name) !== lc(an) && lc(ab.name) !== lc(an) + 's' && lc(ab.name) + 's' !== lc(an)) continue;\n        if (/^Change to:/.test(instr) && e.newText) {\n          let nt = packText(e.newText); const head = /^([^:(]+?)(?:\\s*\\(([^)]*)\\))?:\\s*([\\s\\S]*)$/.exec(nt.replace(/\\*\\*/g, ''));\n          if (head && lc(head[1]) === lc(ab.name)) nt = nt.replace(/^[^:]*:\\s*/, '');\n          if (squashW(nt) !== squashW(ab.text)) { const was = ab.text; ab.text = nt; applied.push({ id, field: 'ability[' + ab.name + '].text', app: nt, was, title: t, instr, where: e.where }); }\n        } else if ((m = /^Change (.+?) to (.+?)\\.$/.exec(instr))) {\n          if (ab.text.split(m[1]).length === 2) { const was = ab.text; ab.text = ab.text.replace(m[1], m[2]); applied.push({ id, field: 'ability[' + ab.name + '].text', app: ab.text, was, title: t, instr, where: e.where }); }\n        }\n      }\n    }\n  }\n  return applied;\n}\n\nfunction build() {\n  const { C, datasheets, detachments, excluded, roster } = readCatalogue();\n  const E = emit(roster);\n  const byEntry = new Map(datasheets.map(r => [r.entry.id, r]));\n  const rows = {};\n  for (const u of E.units) {\n    const root = byEntry.get(u.parts[0].entryId);\n    const id = faction + '/' + slug(u.name);\n    if (rows[id]) throw new Error('two catalogue datasheets have the id ' + id);\n    rows[id] = rowOf(u, root, C, E);\n  }\n  const packApplied = applyPack(rows);"
+  },
+  "source": {
+   "implements": "GW's Faction Pack Rules Updates (ability Change to / Change X to Y, Keywords Add, weapon changes) applied to the rows, each recorded (packApplied) and declared"
+  },
+  "key": "f0d44829f9a23635"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "code",
+  "where": "verify/texts.js --updates and the catalogue pseudo-armies (pack checks on catalogue rows; keywords section)",
+  "judgement": {
+   "code": "verify/texts.js: if (process.argv.includes('--updates')) {\nverify/texts.js: const CATALOG = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(DATA, 'utf8')), listed = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || [])))), by = {};\nverify/texts.js: const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read')))];"
+  },
+  "source": {
+   "implements": "every catalogue row and detachment checked against GW's Faction Pack as a list's are"
+  },
+  "key": "2bdb299b262c8d09"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "code",
+  "where": "verify/derive.js: hasRule in the needs matcher (no label rule changed)",
+  "judgement": {
+   "code": "verify/derive.js: const ruleN = r => String(r || '').toLowerCase().replace(/[’‘]/g, \"'\");"
+  },
+  "source": {
+   "implements": "a needs with \"rule\" crashed derive (ReferenceError hasRule); the matcher now gets it. No label rule, no per-name change"
+  },
+  "key": "78b270341f1f2964"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "code",
+  "where": "verify/from-bsdata.js partialRules for \"X (Model only)\" rules; damaged column dropped from rows",
+  "judgement": {
+   "code": "verify/from-bsdata.js: // model that has it, partialRules, as the lists write a rule only one model has)"
+  },
+  "source": {
+   "implements": "rules only some models of a datasheet have, named as the faction's army rule"
+  },
+  "key": "7ed2425f412eeeda"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "data",
+  "where": "left out by the filter (42)",
+  "judgement": {
+   "excluded": [
+    "config: Detachment",
+    "legends: Barbed Hierodule [Legends]",
+    "legends: Scythed Hierodule [Legends]",
+    "legends: Dimachaeron [Legends]",
+    "legends: Sky-slasher Swarms [Legends]",
+    "legends: Malanthrope [Legends]",
+    "config: Show/Hide Options",
+    "crusade: Order of Battle",
+    "crucible: Node Organism [Crucible]",
+    "crucible: Prime Organism [Crucible]",
+    "crucible: Macro Organism [Crucible]",
+    "reference: Spore Mines (Biovore)",
+    "reference: Ripper Swarms (Parasite of Mortrex)",
+    "reference: Mucolid Spores (Sporocyst)",
+    "reference: Spore Mines (Harpy)",
+    "legends: Aegis Defence Line with Weapon Emplacement [Legends]",
+    "legends: Ambull [Legends]",
+    "legends: Bastion [Legends]",
+    "legends: Firestorm Redoubt [Legends]",
+    "legends: Fortress of Redemption [Legends]",
+    "legends: Guardian Drone [Legends]",
+    "legends: Macro-cannon Aquila Strongpoint [Legends]",
+    "legends: Plasma Obliterator [Legends]",
+    "legends: Primaris Redoubt [Legends]",
+    "legends: Skyshield Landing Pad [Legends]",
+    "legends: Spindle Drones [Legends]",
+    "legends: The Archivist [Legends]",
+    "legends: Vengeance Weapon Battery [Legends]",
+    "legends: Void Shield Generator [Legends]",
+    "legends: Vortex Missile Strongpoint [Legends]",
+    "legends: Wall of Martyrs Bunker [Legends]",
+    "legends: Wall of Martyrs Defence Emplacement [Legends]",
+    "legends: Wall of Martyrs Defence Line [Legends]",
+    "legends: Imperial Fortress Walls [Legends]",
+    "legends: Castellum Stronghold [Legends]",
+    "ally: Sentry Gun",
+    "ally: Searchlight",
+    "ally: Breaching Robot",
+    "detachment: other-mode: Tyranid Attack",
+    "detachment: other-mode: Boarding Swarm",
+    "detachment: other-mode: Biotide",
+    "detachment: other-mode: Infestation Swarm"
+   ]
+  },
+  "source": {
+   "reason": "verify/bs-catalog.js FILTER: the owner's standing rule (matched play at 2000 pts; no Legends, Crusade, Crucible, other game modes); allies are other factions' datasheets"
+  },
+  "key": "cbd95e13d0b5c8db"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "data",
+  "where": "counts",
+  "judgement": {
+   "datasheets": 52,
+   "detachments": 10,
+   "newDetachments": 7
+  },
+  "source": {
+   "reason": "every current datasheet of the filtered BSData set; Wahapedia's faction page lists the same range (see the report)"
+  },
+  "key": "0eb476e534e529ed"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "weapon-name",
+  "where": "BSData Genestealers claws and talons",
+  "judgement": {
+   "gw": "Genestealer claws and talons"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html"
+  },
+  "key": "203a59952d6e65a9"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "weapon-name",
+  "where": "BSData Distendible jaw",
+  "judgement": {
+   "gw": "Distensible jaw"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/tyranids_Mawloc.html"
+  },
+  "key": "2eb1358d98c311ae"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "weapon-name",
+  "where": "BSData Sporocyst bio-weapon",
+  "judgement": {
+   "gw": "Sporocyst bio-weapons"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html"
+  },
+  "key": "adc4f19f97fc330f"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "weapon-name",
+  "where": "BSData Toxinjecter Harpoon",
+  "judgement": {
+   "gw": "Toxinjector Harpoon"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html"
+  },
+  "key": "8704ed8ce31274c3"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "profile-name",
+  "where": "BSData profile Ravener",
+  "judgement": {
+   "gw": "Raveners"
+  },
+  "source": {
+   "reason": "GW's name for the stat row"
+  },
+  "key": "dc694277cde25734"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "hand-fix",
+  "where": "unending-swarm/stratagem/Synaptic Goading · effect",
+  "judgement": {
+   "from": "the closest enemy unit].",
+   "to": "the closest enemy unit)."
+  },
+  "source": {
+   "why": "Wahapedia closes the bracket with \"]\"; GW's Faction Pack Tyranids (Rules Updates: Unending Swarm Detachment, Synaptic Goading Stratagem, When and Effect Sections) prints \"(instead of as close as possible to the closest enemy unit).\""
+  },
+  "key": "e1f2d926f8a15051"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "pack-update",
+  "where": "tyranids/winged-hive-tyrant · ability[Will of the Hive Mind].text",
+  "judgement": {
+   "app": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the **CP** cost of that use of that Stratagem by 1CP."
+  },
+  "source": {
+   "instr": "Change to:",
+   "title": "Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability"
+  },
+  "key": "f6d0c0c325a5fd13"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "pack-update",
+  "where": "tyranids/hive-tyrant · ability[Will of the Hive Mind].text",
+  "judgement": {
+   "app": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the **CP** cost of that use of that Stratagem by 1CP."
+  },
+  "source": {
+   "instr": "Change to:",
+   "title": "Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability"
+  },
+  "key": "54a5e4852cd45ca7"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "pack-update",
+  "where": "tyranids/the-swarmlord · ability[Malign Presence].text",
+  "judgement": {
+   "app": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the **CP** cost of that use of that stratagem by 1CP."
+  },
+  "source": {
+   "instr": "Change to:",
+   "title": "The Swarmlord, Malign Presence Ability",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / The Swarmlord, Malign Presence Ability"
+  },
+  "key": "80b6d8f11c6377c9"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "deviations",
+  "where": "verify/deviations-bsdata.json army \"catalog\", tyranids (123, written mechanically with GW evidence)",
+  "judgement": {
+   "byField": {
+    "ability[].text": 18,
+    "rules": 60,
+    "stats[].base": 15,
+    "kw": 10,
+    "points": 17,
+    "ability[]": 1,
+    "ranged[].kw": 1,
+    "ability[].name": 1
+   },
+   "nonText": [
+    "the-swarmlord rules: \"Deadly Demise D3\" over null",
+    "the-swarmlord rules: null over \"Deadly Demise\"",
+    "old-one-eye stats[Old One Eye].base: \"105×70mm Oval\" over \"105×70mm\"",
+    "old-one-eye rules: \"Feel No Pain 5+\" over null",
+    "old-one-eye rules: null over \"Feel No Pain\"",
+    "the-red-terror kw: \"Burrower\" over null",
+    "winged-hive-tyrant rules: \"Deadly Demise D3\" over null",
+    "winged-hive-tyrant rules: null over \"Deadly Demise\"",
+    "hive-tyrant rules: \"Deadly Demise D3\" over null",
+    "hive-tyrant rules: null over \"Deadly Demise\"",
+    "tervigon stats[Tervigon].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "tervigon rules: \"Deadly Demise D6\" over null",
+    "tervigon rules: null over \"Deadly Demise\"",
+    "broodlord stats[Broodlord].base: \"75×42mm Oval\" over \"75×42mm\"",
+    "broodlord rules: \"Scouts 8\\\"\" over null",
+    "broodlord rules: null over \"Scouts\"",
+    "hyperadapted-raveners rules: null over \"Sustained Hits\"",
+    "tyranid-prime-with-lash-whip rules: null over \"Sustained Hits\"",
+    "termagants points: \"any copy: 10 55 · 20 110\" over \"any copy: 10 55 · 11 110 · 12 110 · 13 110 · 14 110 · 15 110 · 16 110 · 17 110 · 18 110 · 19 110 · 20 110 · 21 110 · 22 110 · 23 110 · 24 110 · 25 110 · 26 110\"",
+    "hormagaunts points: \"any copy: 10 70 · 20 120\" over \"any copy: 10 70 · 11 120 · 12 120 · 13 120 · 14 120 · 15 120 · 16 120 · 17 120 · 18 120 · 19 120 · 20 120\"",
+    "gargoyles points: \"any copy: 10 75 · 20 150\" over \"any copy: 10 75 · 11 150 · 12 150 · 13 150 · 14 150 · 15 150 · 16 150 · 17 150 · 18 150 · 19 150 · 20 150\"",
+    "gargoyles stats[Gargoyles].base: \"Small Flying\" over \"32mm Flying\"",
+    "gargoyles rules: null over \"Stealth\"",
+    "tyrannocyte kw: \"Frame\" over null",
+    "tyrannocyte rules: \"Deadly Demise D3\" over null",
+    "tyrannocyte rules: null over \"Deadly Demise\"",
+    "tyranid-warriors-with-ranged-bio-weapons points: \"any copy: 3 60 · 6 120\" over \"any copy: 3 60 · 4 120 · 5 120 · 6 120\"",
+    "tyranid-warriors-with-ranged-bio-weapons rules: null over \"Stealth\"",
+    "tyranid-warriors-with-melee-bio-weapons points: \"any copy: 3 75 · 6 150\" over \"any copy: 3 75 · 4 150 · 5 150 · 6 150\"",
+    "tyranid-warriors-with-melee-bio-weapons rules: null over \"Stealth\"",
+    "tyrant-guard points: \"any copy: 3 80 · 6 170\" over \"any copy: 3 80 · 4 170 · 5 170 · 6 170\"",
+    "pyrovores rules: \"Deadly Demise 1\" over null",
+    "pyrovores rules: null over \"Deadly Demise\"",
+    "venomthropes points: \"any copy: 3 55 · 6 110\" over \"any copy: 3 55 · 4 110 · 5 110 · 6 110\"",
+    "von-ryans-leapers points: \"any copy: 3 55 · 6 105\" over \"any copy: 3 55 · 4 105 · 5 105 · 6 105\"",
+    "neurogaunts points: \"any copy: 11 45 · 21 90 · 22 90\" over \"any copy: 11 45 · 12 90 · 13 90 · 14 90 · 15 90 · 16 90 · 17 90 · 18 90 · 19 90 · 20 90 · 21 90\"",
+    "zoanthropes points: \"any copy: 3 90 · 6 190\" over \"any copy: 3 90 · 4 190 · 5 190 · 6 190\"",
+    "biovores kw: \"Biovores\" over null",
+    "biovores kw: null over \"Biovore\"",
+    "biovores rules: \"Deadly Demise 1\" over null",
+    "biovores rules: null over \"Deadly Demise\"",
+    "hive-guard points: \"1-2: 3 80 · 6 160; 3+: 3 90 · 6 170\" over \"1-2: 3 80 · 4 160 · 5 160 · 6 160 · 7 160 · 8 160 · 9 160 · 10 160 · 11 160 · 12 160; 3+: 3 90 · 4 170 · 5 170 · 6 170 · 7 170 · 8 170 · 9 170 · 10 170 · 11 170 · 12 170\"",
+    "barbgaunts points: \"any copy: 5 50 · 10 100\" over \"any copy: 5 50 · 6 100 · 7 100 · 8 100 · 9 100 · 10 100\"",
+    "genestealers points: \"1-2: 5 75 · 10 140; 3+: 5 85 · 10 150\" over \"1-2: 5 75 · 6 140 · 7 140 · 8 140 · 9 140 · 10 140; 3+: 5 85 · 6 150 · 7 150 · 8 150 · 9 150 · 10 150\"",
+    "genestealers rules: \"Scouts 8\\\"\" over null",
+    "genestealers rules: null over \"Scouts\"",
+    "genestealers rules: null over \"Stealth\"",
+    "raveners rules: null over \"Stealth\"",
+    "spore-mines points: \"any copy: 3 55 · 6 110\" over \"any copy: 3 55 · 4 110 · 5 110 · 6 110\"",
+    "mucolid-spores points: \"any copy: 1 30 · 2 60\" over \"any copy: 1 0 · 2 0\"",
+    "ripper-swarms kw: \"Ripper Swarms\" over null",
+    "ripper-swarms kw: null over \"Ripper Swarm\"",
+    "toxicrene stats[Toxicrene].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "toxicrene ability[Damaged: 1-5 Wounds Remaining]: null over \"Damaged: 1-5 Wounds Remaining\"",
+    "toxicrene kw: \"Frame\" over null",
+    "toxicrene rules: \"Deadly Demise D3\" over null",
+    "toxicrene rules: null over \"Deadly Demise\"",
+    "maleceptor stats[Maleceptor].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "maleceptor rules: \"Deadly Demise D3\" over null",
+    "maleceptor rules: null over \"Deadly Demise\"",
+    "haruspex stats[Haruspex].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "haruspex rules: \"Deadly Demise D3\" over null",
+    "haruspex rules: null over \"Deadly Demise\"",
+    "mawloc stats[Mawloc].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "mawloc kw: \"Burrower\" over null",
+    "trygon stats[Trygon].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "trygon kw: \"Burrower\" over null",
+    "exocrine stats[Exocrine].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "exocrine rules: \"Deadly Demise D3\" over null",
+    "exocrine rules: null over \"Deadly Demise\"",
+    "carnifexes points: \"any copy: 1 90 · 2 180\" over \"any copy: 1 0 · 2 0\"",
+    "carnifexes stats[Carnifex].base: \"105×70mm Oval\" over \"105×70mm\"",
+    "carnifexes rules: \"Deadly Demise 1\" over null",
+    "carnifexes rules: null over \"Deadly Demise\"",
+    "screamer-killer rules: \"Deadly Demise 1\" over null",
+    "screamer-killer rules: null over \"Deadly Demise\"",
+    "tyrannofex points: \"1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20\" over \"1-2: 1 170; 3+: 1 180; wargear: Rupture cannon 20\"",
+    "tyrannofex stats[Tyrannofex].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "tyrannofex kw: \"Frame\" over null",
+    "tyrannofex rules: \"Deadly Demise D6\" over null",
+    "tyrannofex rules: null over \"Deadly Demise\"",
+    "harpy stats[Harpy].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "harpy rules: \"Deadly Demise D3\" over null",
+    "harpy rules: null over \"Deadly Demise\"",
+    "hive-crone stats[Hive Crone].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "hive-crone rules: \"Deadly Demise D3\" over null",
+    "hive-crone rules: null over \"Deadly Demise\"",
+    "sporocyst ranged[Sporocyst bio-weapon].kw: \"\" over \"HIVE DEFENCES\"",
+    "sporocyst rules: \"Deadly Demise D3\" over null",
+    "sporocyst rules: null over \"Deadly Demise\"",
+    "psychophage stats[Psychophage].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "psychophage rules: \"Deadly Demise 1\" over null",
+    "psychophage rules: \"Feel No Pain 5+\" over null",
+    "psychophage rules: null over \"Deadly Demise\"",
+    "psychophage rules: null over \"Feel No Pain\"",
+    "harridan rules: \"Deadly Demise 2D6\" over null",
+    "harridan rules: null over \"Deadly Demise\"",
+    "hierophant rules: \"Deadly Demise 2D6\" over null",
+    "hierophant rules: null over \"Deadly Demise\"",
+    "norn-emissary ability[Unnatural Resilience].name: \"Unnatural Resilience\" over \"Unnatural Resistance\"",
+    "norn-emissary rules: \"Deadly Demise D6\" over null",
+    "norn-emissary rules: null over \"Deadly Demise\"",
+    "norn-emissary rules: null over \"Feel No Pain\"",
+    "norn-assimilator rules: \"Deadly Demise D6\" over null",
+    "norn-assimilator rules: null over \"Deadly Demise\""
+   ]
+  },
+  "source": {
+   "reason": "each is GW's value where BSData at the pin differs; check a sample against the cached pages"
+  },
+  "key": "5a891ffe8975963d"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "catalog-vs-list",
+  "where": "tyranids/tyrannofex · kw",
+  "judgement": {
+   "lists": null
+  },
+  "source": {
+   "reason": "The lists' row (Nidzillas, Healybois, signed off) leaves FRAME out: its srcNote, \"Wahapedia also lists FRAME (from its errata); GW's Faction Pack (14-10) and BSData don't\". The catalogue row is Wahapedia's datasheet, which prints FRAME. DATASHEETS keeps the lists' row; which is GW's is the srcNote's open question, for the owner.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; data.js DATASHEETS tyranids/tyrannofex srcNote; verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt: no Tyrannofex keywords update."
+  },
+  "key": "1fd9e36830f8d663"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "catalog-vs-list",
+  "where": "tyranids/norn-emissary · rules",
+  "judgement": {
+   "lists": null
+  },
+  "source": {
+   "reason": "The lists' Rules line has Feel No Pain, from Unnatural Resilience (\"This model has the Feel No Pain 4+ ability against mortal wounds\"), as New Recruit prints it; GW's datasheet prints no Feel No Pain under CORE ABILITIES, so the catalogue's Rules line has none. The lists' row is kept.",
+   "evidence": "verify/sources/nr/nidzillas.txt (Norn Emissary, Rules line); verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES \"Deadly Demise D6\", ABILITIES \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+  },
+  "key": "a3a9dc47bb13d722"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "catalog-vs-list",
+  "where": "tyranids/norn-emissary · abilities Protean Purpose: not in the catalogue",
+  "judgement": {
+   "lists": [
+    "nidzillas",
+    "healybois"
+   ]
+  },
+  "source": {
+   "reason": "Protean Purpose is the ability the Talons of the Norn Queen detachment rule gives (\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: …\"), not the datasheet's own: both lists take that detachment, so their row holds it; the catalogue row (the datasheet alone) does not.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 84-88 (Talons of the Norn Queen, Detachment Rules, Higher Imperatives); ARMIES nidzillas, healybois: detachment talons-of-the-norn-queen."
+  },
+  "key": "a52897b68b14733c"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "catalog-vs-list",
+  "where": "tyranids/norn-assimilator · abilities Protean Purpose: not in the catalogue",
+  "judgement": {
+   "lists": [
+    "nidzillas",
+    "healybois"
+   ]
+  },
+  "source": {
+   "reason": "Protean Purpose is the ability the Talons of the Norn Queen detachment rule gives (\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: …\"), not the datasheet's own: both lists take that detachment, so their row holds it; the catalogue row (the datasheet alone) does not.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 84-88 (Talons of the Norn Queen, Detachment Rules, Higher Imperatives); ARMIES nidzillas, healybois: detachment talons-of-the-norn-queen."
+  },
+  "key": "a19cdd2159d98514"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Invasion Fleet",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Hyper-adaptations",
+     "at": "Start of the first battle round",
+     "ph": [
+      "command",
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "your"
+     },
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "rapid-regeneration",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "adrenal-surge",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "death-frenzy",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "overrun",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "predatory-imperative",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "endless-swarm",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "e484aa567e801d82"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Synaptic Nexus",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Synaptic Imperatives",
+     "at": "Start of the battle round",
+     "ph": [
+      "command"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "the-smothering-shadow",
+     "phases": [
+      "command",
+      "movement",
+      "shooting",
+      "charge",
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Synapse"
+      ]
+     }
+    },
+    {
+     "id": "synaptic-channelling",
+     "phases": [
+      "command"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Synapse"
+      ]
+     }
+    },
+    {
+     "id": "irresistible-will",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "your"
+     },
+     "needs": {
+      "any": [
+       "Synapse",
+       "Synapse"
+      ]
+     }
+    },
+    {
+     "id": "reinforced-hive-node",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Synapse"
+      ]
+     }
+    },
+    {
+     "id": "imperative-dominance",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "override-instincts",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "19546243d327a48c"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Unending Swarm",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Insurmountable Odds",
+     "ph": [
+      "shooting"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "synaptic-goading",
+     "phases": [
+      "command",
+      "movement",
+      "shooting",
+      "charge",
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    },
+    {
+     "id": "unending-waves",
+     "phases": [
+      "command",
+      "movement",
+      "shooting",
+      "charge",
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    },
+    {
+     "id": "teeming-masses",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    },
+    {
+     "id": "swarming-masses",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "your"
+     },
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    },
+    {
+     "id": "bounding-advance",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    },
+    {
+     "id": "preservation-imperative",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Endless Multitude"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "52967749aabc6ab0"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Vanguard Onslaught",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Questing Tendrils",
+     "ph": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "rule": [
+       "Questing Tendrils"
+      ]
+     }
+    },
+    {
+     "rule": "Vanguard Prime"
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "surprise-assault",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "your"
+     },
+     "needs": {
+      "all": [
+       "Vanguard Invader"
+      ]
+     }
+    },
+    {
+     "id": "assassin-beasts",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Vanguard Invader",
+       "Infantry"
+      ]
+     }
+    },
+    {
+     "id": "seeded-broods",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "hypersensory-scillia",
+     "phases": [
+      "movement"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Vanguard Invader"
+      ]
+     }
+    },
+    {
+     "id": "unseen-lurkers",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Vanguard Invader"
+      ]
+     }
+    },
+    {
+     "id": "invisible-hunter",
+     "phases": [
+      "fight"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Vanguard Invader"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "eaaa7262d1823b46"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Warrior Bioform Onslaught",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Leader-beasts",
+     "needs": {
+      "any": [
+       "Tyranid Warriors With Ranged Bio-Weapons",
+       "Tyranid Warriors With Melee Bio-Weapons",
+       "Tyranid Warriors",
+       "Tyranid Prime With Lash Whip",
+       "Winged Tyranid Prime"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "alien-physiology",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Tyranid Warriors"
+      ]
+     }
+    },
+    {
+     "id": "synaptic-micronodes",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Tyranid Warriors"
+      ]
+     }
+    },
+    {
+     "id": "parasitic-payload",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Tyranid Warriors"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "db5a8d24a0398eae"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Subterranean Assault",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Surprise Assault",
+     "ph": [
+      "movement",
+      "shooting",
+      "fight"
+     ],
+     "turn": "your",
+     "turns": {
+      "fight": "either"
+     },
+     "needs": {
+      "any": [
+       "Faction: Tyranids",
+       "Mawloc",
+       "Trygon"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "adaptive-optimisation",
+     "phases": [
+      "command"
+     ],
+     "turn": "either",
+     "needs": {
+      "any": [
+       "Mawloc",
+       "Trygon"
+      ]
+     }
+    },
+    {
+     "id": "replenishing-swarms",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "enfilading-emergence",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "tunnel-network",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    },
+    {
+     "id": "swarming-assault",
+     "phases": [
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Tyranids",
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "retreat-below",
+     "phases": [
+      "fight"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "904f0d4eedee6447"
+ },
+ {
+  "army": "catalog-tyranids",
+  "kind": "detachment-labels",
+  "where": "tyranids · Ambush Predators",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Mindhunger",
+     "needs": {
+      "any": [
+       "Deathleaper",
+       "Lictor",
+       "Neurolictor"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "counterpredation",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "any": [
+       "Deathleaper",
+       "Lictor",
+       "Neurolictor",
+       "Von Ryan's Leapers"
+      ]
+     }
+    },
+    {
+     "id": "hypersensory-adaptations",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "your",
+     "needs": {
+      "any": [
+       "Deathleaper",
+       "Lictor",
+       "Neurolictor",
+       "Von Ryan's Leapers"
+      ]
+     }
+    },
+    {
+     "id": "scanner-gheist",
+     "phases": [
+      "fight"
+     ],
+     "turn": "opp",
+     "needs": {
+      "any": [
+       "Deathleaper",
+       "Lictor",
+       "Neurolictor"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "afbf31aef51c09d9"
+ },
+ {
+  "army": "catalog",
+  "kind": "unit-kwOnly",
+  "where": "catalog · tyranids/hyperadapted-raveners",
+  "judgement": {
+   "kwOnly": {
+    "Character": "Ravener Prime",
+    "Synapse": "Ravener Prime"
+   }
+  },
+  "source": {
+   "kw": [
+    "Burrowers",
+    "Character",
+    "Faction: Tyranids",
+    "Great Devourer",
+    "Hyperadapted Raveners",
+    "Infantry",
+    "Synapse",
+    "Vanguard Invader"
+   ],
+   "rules": [
+    "Deep Strike",
+    "Synapse",
+    "Leader",
+    "Shadow in the Warp",
+    "Anti",
+    "Twin-linked",
+    "Ignores Cover",
+    "Assault",
+    "Torrent"
+   ]
+  },
+  "key": "af4677a8e1483126"
+ },
+ {
+  "army": "catalog",
+  "kind": "unit-partialRules",
+  "where": "catalog · tyranids/hyperadapted-raveners",
+  "judgement": {
+   "partialRules": {
+    "Shadow in the Warp": "Ravener Prime"
+   }
+  },
+  "source": {
+   "kw": [
+    "Burrowers",
+    "Character",
+    "Faction: Tyranids",
+    "Great Devourer",
+    "Hyperadapted Raveners",
+    "Infantry",
+    "Synapse",
+    "Vanguard Invader"
+   ],
+   "rules": [
+    "Deep Strike",
+    "Synapse",
+    "Leader",
+    "Shadow in the Warp",
+    "Anti",
+    "Twin-linked",
+    "Ignores Cover",
+    "Assault",
+    "Torrent"
+   ]
+  },
+  "key": "aed4eec55bd87427"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Invasion Fleet rule · Hyper-adaptations",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Hyper-adaptations",
+   "text": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle:\nSwarming Instincts\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.\nHyper-aggression\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.\nHive Predators\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability."
+  },
+  "key": "0d4cee7588b38d24"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Invasion Fleet · Rapid Regeneration",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rapid Regeneration",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability. If your unit is within Synapse Range of your army, models in your unit have the Feel No Pain 5+ ability instead."
+  },
+  "key": "62cae39d7aa5f54e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Invasion Fleet · Adrenal Surge",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Adrenal Surge",
+   "text": "WHEN: Fight phase.\nTARGET: Up to two **TYRANIDS** units from your army that are within Synapse Range of your army and are eligible to fight, or one other **TYRANIDS** unit from your army that is eligible to fight.\nEFFECT: Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "3d46933deeb3f72a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Invasion Fleet · Death Frenzy",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Death Frenzy",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+  },
+  "key": "f8ab970fe12f3379"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Invasion Fleet · Overrun",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Overrun",
+   "text": "WHEN: Fight phase, just before a **TYRANIDS** unit from your army Consolidates.\nTARGET: That **TYRANIDS** unit.\nEFFECT: Until the end of the phase, each time your unit Consolidates, models in it can move an additional 3\" as long as your unit can end that move within **Engagement Range** of one or more enemy units. If your unit is within Synapse Range of your army and not within Engagement Range of any enemy units, instead of making that **Consolidation move**, it can make a **Normal move** of up to 6\"."
+  },
+  "key": "35568c58e6cfd212"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Invasion Fleet · Predatory Imperative",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Predatory Imperative",
+   "text": "WHEN: Your Command phase.\nTARGET: Up to two **TYRANIDS** units from your army that are within Synapse Range of your army, or one other **TYRANIDS** unit from your army.\nEFFECT: Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.\nRESTRICTIONS: You cannot select the same Hyper-adaptation you selected at the start of the first battle round."
+  },
+  "key": "c5461d0942903459"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Invasion Fleet · Endless Swarm",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Endless Swarm",
+   "text": "WHEN: Your Command phase.\nTARGET: Up to two **ENDLESS MULTITUDE** units from your army that are within Synapse Range of your army, or one other **ENDLESS MULTITUDE** unit from your army.\nEFFECT: You can return up to D3+3 destroyed models to each of the selected units."
+  },
+  "key": "087eca4164327fe3"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Synaptic Nexus rule · Synaptic Imperatives",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Synaptic Imperatives",
+   "text": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a **TYRANIDS** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n- **Synaptic Augmentation:** While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n- **Surging Vitality:** While this unit is within Synapse Range of your army, add 1 to **Advance** and **Charge rolls** made for this unit.\n- **Goaded to Slaughter:** While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "b901fdd610e26bd7"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Synaptic Nexus · The Smothering Shadow",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Synapse"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "The Smothering Shadow",
+   "text": "WHEN: Any phase, just after an enemy unit fails a **Battle-shock test**.\nTARGET: One **SYNAPSE** unit from your army within 12\" of that enemy unit.\nEFFECT: Roll six D6: for each 3+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "6ed7bedcb8edc9d4"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Synaptic Nexus · Synaptic Channelling",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Synapse"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Synaptic Channelling",
+   "text": "WHEN: Command phase.\nTARGET: One **SYNAPSE** unit from your army.\nEFFECT: Until the end of the turn, while a friendly **TYRANIDS** unit is within 9\" of the selected unit, that unit is within Synapse Range of your army."
+  },
+  "key": "dc69f79751438465"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Synaptic Nexus · Irresistible Will",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Synapse",
+     "Synapse"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Irresistible Will",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **SYNAPSE** unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24\" of and visible to the **SYNAPSE** unit.\nEFFECT: Until the end of the phase, each time a friendly **TYRANIDS** model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your **SYNAPSE** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "bbd8cb9754b75625"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Synaptic Nexus · Reinforced Hive Node",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Synapse"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Reinforced Hive Node",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **SYNAPSE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "f738756895aa1b62"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Synaptic Nexus · Imperative Dominance",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Imperative Dominance",
+   "text": "WHEN: Your Command phase.\nTARGET: One **TYRANIDS** unit from your army that is within Synapse Range of your army.\nEFFECT: Select one Synaptic Imperative, even if you have already selected that imperative this battle. Until the start of your next Command phase, that Synaptic Imperative is active for your unit instead of any other Synaptic Imperative that is active for your army."
+  },
+  "key": "c7d9d551e8182ab2"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Synaptic Nexus · Override Instincts",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Override Instincts",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **TYRANIDS** unit from your army that is within Synapse Range of your army and made a **Fall Back move** this phase.\nEFFECT: Your unit is eligible to shoot and declare a charge this turn."
+  },
+  "key": "4e322e886783aa57"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Unending Swarm rule · Insurmountable Odds",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Insurmountable Odds",
+   "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly **ENDLESS MULTITUDE** unit was **destroyed** as a result of those attacks, that friendly unit can make a **surge move** of up to D6\"."
+  },
+  "key": "f36f39bae94d6beb"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Unending Swarm · Synaptic Goading",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Synaptic Goading",
+   "text": "WHEN: Any phase, just before an **ENDLESS MULTITUDE** unit from your army that is within Synapse Range of your army makes a **surge move**.\nTARGET: That **ENDLESS MULTITUDE** unit.\nEFFECT: When making that **surge move**, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making **surge moves** still apply."
+  },
+  "key": "9bdf32447c4045aa"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Unending Swarm · Unending Waves",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unending Waves",
+   "text": "WHEN: Any phase.\nTARGET: One **ENDLESS MULTITUDE** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Add a new unit to your army identical to your destroyed unit, in **Strategic Reserves**, at its Starting Strength.\nRESTRICTIONS: Any destroyed **CHARACTER** units that were **attached** to your unit are not returned. You can only use this Stratagem once per battle."
+  },
+  "key": "14fd3e85e3d02a08"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Unending Swarm · Teeming Masses",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Teeming Masses",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **ENDLESS MULTITUDE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, subtract 1 from the **Hit roll**."
+  },
+  "key": "83326bf32075d844"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Unending Swarm · Swarming Masses",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Swarming Masses",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **ENDLESS MULTITUDE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** ability, and If your unit contains 15 or more models, each time a model in your unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "56c9d1068a9125af"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Unending Swarm · Bounding Advance",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Bounding Advance",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **ENDLESS MULTITUDE** unit from your army.\nEFFECT: Until the end of the phase, each time your unit Advances, do not make an **Advance roll**. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit."
+  },
+  "key": "8807ec417fe383d5"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Unending Swarm · Preservation Imperative",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Endless Multitude"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Preservation Imperative",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **ENDLESS MULTITUDE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, your unit is treated as containing fewer than five models for the purpose of the **[BLAST]** ability."
+  },
+  "key": "19eeea6d75c93049"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Vanguard Onslaught rule · Questing Tendrils",
+  "judgement": {
+   "needs": {
+    "rule": [
+     "Questing Tendrils"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Questing Tendrils",
+   "text": "**TYRANIDS** units with this ability are eligible to charge in a turn in which they Fell Back. **VANGUARD INVADER** units with this ability are eligible to charge in a turn in which they Advanced."
+  },
+  "key": "b2d6b5a613f14cfe"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Vanguard Onslaught · Surprise Assault",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Vanguard Invader"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Surprise Assault",
+   "text": "WHEN: Your Shooting phase or the Fight phase, just after a **VANGUARD INVADER** unit from your army has selected its targets.\nTARGET: That **VANGUARD INVADER** unit.\nEFFECT: Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a **Battle-shock test**. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**. If the Battle-shock test was failed, add 1 to the **Wound roll** as well."
+  },
+  "key": "13fd125e65443c34"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Vanguard Onslaught · Assassin Beasts",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Vanguard Invader",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Assassin Beasts",
+   "text": "WHEN: Fight phase.\nTARGET: One **VANGUARD INVADER INFANTRY** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+  },
+  "key": "defa274ed5f89239"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Vanguard Onslaught · Seeded Broods",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Seeded Broods",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **TYRANIDS** unit from your army that is in Reserves, or up to two **VANGUARD INVADER** units from your army that are in Reserves.\nEFFECT: Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is."
+  },
+  "key": "e3cff3528bc2eadf"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Vanguard Onslaught · Hypersensory Scillia",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Vanguard Invader"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Hypersensory Scillia",
+   "text": "WHEN: Your opponent’s Movement phase, just after an enemy unit ends a **Normal**, **Advance** or **Fall Back move**.\nTARGET: Up to two **VANGUARD INVADER** units from your army that are within 8\" of that enemy unit, or one other **TYRANIDS INFANTRY** unit from your army that is within 8\" of that enemy unit.\nEFFECT: Those selected units can each make a **Normal move** of up to 6\".\nRESTRICTIONS: You cannot target units that are within **Engagement Range** of one or more enemy units."
+  },
+  "key": "63b5d023c9106f29"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Vanguard Onslaught · Unseen Lurkers",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Vanguard Invader"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unseen Lurkers",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **VANGUARD INVADER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the **Lone Operative** ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks."
+  },
+  "key": "162557ecdd499676"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Vanguard Onslaught · Invisible Hunter",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Vanguard Invader"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Invisible Hunter",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: Up to two **VANGUARD INVADER** units from your army, or one **TYRANIDS INFANTRY** unit from your army.\nEFFECT: Remove the targeted units from the battlefield and place them into **Strategic Reserves**.\nRESTRICTIONS: The targeted units must be more than 3\" away from all enemy units."
+  },
+  "key": "f92e63e16463c810"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Warrior Bioform Onslaught rule · Leader-beasts",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Tyranid Warriors With Ranged Bio-Weapons",
+     "Tyranid Warriors With Melee Bio-Weapons",
+     "Tyranid Warriors",
+     "Tyranid Prime With Lash Whip",
+     "Winged Tyranid Prime"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Leader-beasts",
+   "text": "- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n- **TYRANID WARRIORS**.\n- **BATTLELINE**.\n- **TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**."
+  },
+  "key": "3f5ae99ce78af82a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Warrior Bioform Onslaught · Alien Physiology",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tyranid Warriors"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Alien Physiology",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **TYRANID WARRIORS** unit.\nTARGET: That **TYRANID WARRIORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "0e513baf550ef923"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Warrior Bioform Onslaught · Synaptic Micronodes",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tyranid Warriors"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Synaptic Micronodes",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One friendly **TYRANID WARRIORS** unit.\nEFFECT: Select one **objective** your unit is controlling. That **objective** is **secured**."
+  },
+  "key": "5447f6d89083ec27"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Warrior Bioform Onslaught · Parasitic Payload",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tyranid Warriors"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Parasitic Payload",
+   "text": "WHEN: Your Shooting phase, when a friendly **TYRANID WARRIORS** unit is **selected to shoot**.\nTARGET: That **TYRANID WARRIORS** unit.\nEFFECT: Your unit’s ranged attacks have **[IGNORE COVER]**."
+  },
+  "key": "23132c7a093ab1ae"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Subterranean Assault rule · Surprise Assault",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Faction: Tyranids",
+     "Mawloc",
+     "Trygon"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Surprise Assault",
+   "text": "Each time a **TYRANIDS** model from your army makes an attack, re-roll a **Hit roll** of 1.\nEach time a **BURROWER** unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units.\nIn the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units.\nIf an enemy model (excluding **AIRCRAFT**) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.\nKEYWORDS\n**MAWLOC** and **TRYGON** units from your army have the **BURROWER** keyword.\nIn the Muster Armies step, you can select up to 2 **TRYGON** models from your army. The selected units gain the **CHARACTER** keyword.\n**Designer’s Note:** This means that the selected models can be given Enhancements and one of them can be selected as your **WARLORD**."
+  },
+  "key": "14d8bcebdc947d65"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Subterranean Assault · Adaptive Optimisation",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Mawloc",
+     "Trygon"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Adaptive Optimisation",
+   "text": "WHEN: Command phase.\nTARGET: One **MAWLOC** or **TRYGON** unit from your army.\nEFFECT: Until the start of your next Command phase, your unit has the **SYNAPSE** keyword."
+  },
+  "key": "d3fc3158b20f74cc"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Subterranean Assault · Replenishing Swarms",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Replenishing Swarms",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **TYRANIDS** unit from your army, wholly within 9\" of one or more Tunnel Markers you placed.\nEFFECT: One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead."
+  },
+  "key": "f24e9f9137515014"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Subterranean Assault · Enfilading Emergence",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Enfilading Emergence",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One **TYRANIDS** unit from your army that was set up as Reinforcements this turn.\nEFFECT: Until the end of your next Fight phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** and **[IGNORES COVER]** abilities."
+  },
+  "key": "80a14da70962b006"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Subterranean Assault · Tunnel Network",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Tunnel Network",
+   "text": "WHEN: End of your Movement phase.\nTARGET: One **TYRANIDS** unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units."
+  },
+  "key": "bba0b6e9ab022c56"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Subterranean Assault · Swarming Assault",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Swarming Assault",
+   "text": "WHEN: Your Charge phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was set up as Reinforcements this turn.\nEFFECT: Until the end of the phase, friendly **TYRANIDS** units within 6\" of your unit can re-roll **Charge rolls**."
+  },
+  "key": "b5e9e7b4c0dcbf9e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Subterranean Assault · Retreat Below",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Retreat Below",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **TYRANIDS** unit or up to two **BURROWER** units from your army that are not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "6008621561949fcc"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Ambush Predators rule · Mindhunger",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Deathleaper",
+     "Lictor",
+     "Neurolictor"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Mindhunger",
+   "text": "- Friendly **DEATHLEAPER**/**LICTOR**/**NEUROLICTOR** units have **Deep Strike**.\n- Friendly **LICTOR/NEUROLICTOR** units’ attacks that target a **CHARACTER** unit can re-roll **hit rolls** of 1."
+  },
+  "key": "1d3b64dee2e40b0d"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Ambush Predators · Counterpredation",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Deathleaper",
+     "Lictor",
+     "Neurolictor",
+     "Von Ryan's Leapers"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Counterpredation",
+   "text": "WHEN: Fight phase, when a friendly **DEATHLEAPER**/**LICTOR**/ **NEUROLICTOR**/**VON RYAN’S LEAPERS** unit is **selected to fight**.\nTARGET: That **DEATHLEAPER/LICTOR/NEUROLICTOR/VON RYAN’S LEAPERS** unit.\nEFFECT: Your unit’s attacks that target a **hidden** unit have +1 **S** and **AP**."
+  },
+  "key": "e58797ee9fe14b7c"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Ambush Predators · Hypersensory Adaptations",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Deathleaper",
+     "Lictor",
+     "Neurolictor",
+     "Von Ryan's Leapers"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Hypersensory Adaptations",
+   "text": "WHEN: Start of your Shooting phase.\nTARGET: One friendly **DEATHLEAPER**/**LICTOR**/**NEUROLICTOR**/**VON RYAN’S LEAPERS** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. That enemy unit has +6\" **detection range**."
+  },
+  "key": "2ed313ae2ac161aa"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Tyranids · Ambush Predators · Scanner Gheist",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Deathleaper",
+     "Lictor",
+     "Neurolictor"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Scanner Gheist",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One friendly **unengaged DEATHLEAPER**/**LICTOR**/ **NEUROLICTOR** unit.\nEFFECT: Place your unit in **strategic reserves**."
+  },
+  "key": "5dde267c50b6cf60"
+ }
+]
