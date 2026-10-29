@@ -141,13 +141,15 @@ const AFTER_CHARGE = USED_MODIFIERS[0];
 // what a label leaves out (a label is the phase tags on an ability or rule row; the checklist and RULE_OPTIONS read table 1 without these)
 const LABEL_RULES = [
   { id:'label-damaged', why:'a Damaged band ("While this model has 1-N wounds remaining, …"): shown by its damaged chip and footnote; its label is only a phase its words name ("… only one of the C\'tan Powers weapons in your Shooting phase"), else none' },
-  { id:'label-own-target', why:'"makes a ranged attack that targets X" / "ranged attacks that target X" (the closest eligible target, a unit on an objective): a bonus for the targets the unit picks in its own Shooting phase; not added for Fire Overwatch, whose target is the enemy unit that just moved' },
+  { id:'label-own-target', why:'"makes a ranged attack that targets X" / "ranged attacks that target X" (the closest eligible target, a unit on an objective): a bonus for the targets the unit picks in its own Shooting phase, as the signed-off lists label it; Fire Overwatch is not added. (A labelling choice, not a Core Rules limit: snap shooting, 15.09, can target any visible eligible enemy unit within 24", but hits only on an unmodified 6 and cannot re-roll hit rolls, so a hit bonus does nothing there)' },
   { id:'label-named-weapons', why:'a weapon ability given to weapons the unit\'s datasheet names ("its hellforged weapons have the [DEVASTATING WOUNDS] ability", "its Dark Blessing has the [SUSTAINED HITS D3] ability"): the phase of those weapons, your Shooting phase for ranged ones, the Fight phase for melee ones (not "weapons have": both)' },
   { id:'label-those-attacks', why:'"Each time this model is selected to shoot or fight, you can re-roll one Hit roll … when resolving those attacks": the attacks of that activation, your Shooting phase and the Fight phase; not added for Fire Overwatch' },
   { id:'label-options', why:'the options of a rule or ability: written in its own lines ("**Name:** effect", a bullet "**Name**" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not "**Additional Effect:**", which is no choice); set out as a table or under headings of their own, each row\'s phases are added (from its own WHEN, else the item\'s trigger: Martial Ka\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\'s ranged attacks when it lasts "until the start of your next Command phase" (Kindred Sorcery); not a table of abilities the units "gain" (Doctrina Imperatives, Harbingers of Dread: each unit\'s sheet has them). A detachment\'s KEYWORDS section is left out (army building)' },
   { id:'label-assault', why:'[ASSAULT] given to ranged attacks or weapons: they shoot after an Advance move, your Movement phase too' },
   { id:'label-at-choice', why:'"At the start of your Command phase" is shown as the moment only for a rule with options chosen then (Martial Ka\'tah, Combat Doctrines)' },
   { id:'label-select-ability', why:'"select one Throttlerokkit Shokka Engine ability": the phases of the unit\'s abilities of that kind (whose name ends as it does: "… Engine")' },
+  { id:'label-section', why:'a section of options another ability of the unit selects from ("In your Command phase, select one of the abilities in the Icon of War section": Rod of the War Forge), its text only its options ("**Fanatical Devotion:** …"): the selecting ability\'s trigger and its options\' readings together' },
+  { id:'label-favoured', why:'"**Favoured ka\'tah: SALVUS**" / "**Additional Effect:** …": the additional effect is granted when that ka\'tah ability is used (Martial Ka\'tah), so it is read as that option\'s WHEN (Salvus: your Shooting phase, no Fire Overwatch; Kaptaris: the start of the Fight phase), not from its own words' },
   { id:'label-no-defence', why:'a protection (a save, Feel No Pain, -1 to wound against it, Lone Operative; a text opening "Each time / When an enemy unit … targets this model"): shown by its When targeted line, not by phase tags; an item that only protects has no label. Not a protection that is an option to select ("- Select one objective marker …": Singular Purpose) or that an enemy unit selected to shoot or fight triggers (Warpmeld Sacrifice)' },
 ];
 // the unit's weapons a clause gives a weapon ability to ("… have the [X] ability", "… has [X]"), by profile name or group (W: { ranged, melee }
@@ -165,11 +167,11 @@ const EVERY = Object.fromEntries(PH.map(p => [p, 'either']));
 function EVERY_MOVE(){ return { movement:'either', charge:'either', fight:'either' }; }
 const ROLL_KINDS = /\b(advance roll|hit roll|wound roll|damage roll|saving throw|hazardous test|charge roll|battle-shock test)s?\b/gi;
 const LABEL_SENTENCE = [
-  { id:'label-other-unit', re:/^while a unit is\b/i, ph:{}, skip:true,
+  { id:'label-other-unit', re:/^while a unit is ([a-z][a-z ]*?)(?=,| subtract\b| add\b| it\b| that\b)/i, state:true, ph:{}, skip:true,
     why:'"While a unit is wracked with agonies, subtract 2" from its Move characteristic …": what the item does to another unit it selected, not when the item is used' },
   { id:'label-move-each', re:/\bthis unit or an enemy unit ends a move\b/i, ph:EVERY_MOVE(), skip:true,
     why:'"each time this unit or an enemy unit ends a move": any move of either player (Normal, Advance, Fall Back, charge, pile-in, consolidation): the Movement, Charge and Fight phases of both turns' },
-  { id:'label-enemy-cannot-move', re:/^enemy units? cannot [^.]*?\bmove\b/i, ph:{ movement:'opp' }, skip:true,
+  { id:'label-enemy-cannot-move', re:/^enemy units? cannot [^.]*?\b(?:normal|advance|fall[- ]back) moves?\b/i, ph:{ movement:'opp' }, skip:true,
     why:'"Enemy units cannot start or end an Advance move …": the enemy\'s moves, your opponent\'s Movement phase' },
   { id:'label-model-destroyed', first:true, re:/^when a friendly [^.]*?\bmodel is destroyed\b/i, ph:EVERY, skip:true,
     why:'the text opens "When a friendly X model is destroyed": a model can be destroyed in any phase of either turn' },
@@ -181,6 +183,8 @@ const LABEL_SENTENCE = [
     why:'"each time the bearer\'s unit destroys an enemy unit": with its attacks, your Shooting phase and the Fight phase' },
   { id:'label-named-roll', re:/\bmake an? ([A-Z][\w'’]*(?: (?:of )?[A-Z][\w'’]*)*) roll\b/, named:'trigger',
     why:'"each time you make a Blessings of Khorne roll": when that rule\'s roll is made (its trigger and moment)' },
+  { id:'label-named-option', re:/\bthe ([A-Z][\w'’]*(?: [A-Z][\w'’]*)*)(?: and (?:the )?([A-Z][\w'’]*(?: [A-Z][\w'’]*)*))? (?:is|are)(?: both)? active for\b/, option:true, skip:true,
+    why:'"the Conqueror Imperative and Protector Imperative are both active for that unit": what those options of another rule do (their rows in RULE_OPTIONS)' },
   { id:'label-named-move', re:/\bmakes? an? ([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) move\b/, named:'all',
     why:'"each time that unit makes a Blood Surge move": the phases of the ability of that name' },
 ];
@@ -240,7 +244,11 @@ function usedIn(text, ctx, trig){
       for(const r of LABEL_SENTENCE){
         const m = r.re.exec(sent); if(!m) continue;
         if(r.first && sent !== sentences(t)[0]) continue;
+        if(r.state && !new RegExp('\\bthat (?:enemy )?unit is ' + m[1].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(t)) continue;   // (a state the item put on a unit it selected)
         let ph = r.ph;
+        if(r.option){ const os = [m[1], m[2]].filter(Boolean).map(n => ctx.option && ctx.option(n)).filter(Boolean); if(!os.length) continue;
+          ph = {}; for(const o of os){ const ou = o.used || o.phases; if(ou) for(const [p, v] of Object.entries(storedMap(ou))) addPh(ph, p, v);
+            if(o.used && o.used.ph && o.used.ph.includes('shooting') && (o.used.turns && o.used.turns.shooting || o.used.turn) === 'your') shoots = true; } }
         if(r.named){ const other = ctx.named && (ctx.named(m[1]) || (r.named === 'all' && ctx.armyAbility && ctx.armyAbility(m[1]))); if(!other) continue;
           const w = r.named === 'trigger' ? explicitTiming(other, { rule:true, label:true }) : timing(other, Object.assign({}, ctx, { named:null, table:null }));
           if(!w || !w.ph || !Object.keys(w.ph).length) continue; ph = w.ph; if(w.at && r.named === 'trigger') labelAt = w.at; }
@@ -369,15 +377,33 @@ function timing(text, ctx){
   // a label: the item's own words, without the options written in them (each option is used as the item's choice says: label-options)
   // a label: a detachment's KEYWORDS section (what units it musters with which keywords) is army building, not when the rule is used
   if(ctx && ctx.label && /\nKEYWORDS\n/.test(norm(text))) text = norm(text).replace(/\nKEYWORDS\n[\s\S]*$/, '');
+  // a label: the Additional Effect of a Favoured ka'tah ("**Favoured ka’tah: SALVUS**" / "**Additional Effect:** Your unit’s ranged attacks
+  // have +6" R") is in force when that ka'tah ability is used: the phases of that option's WHEN (Salvus: "Your Shooting phase, when a friendly
+  // readied unit is selected to shoot"), not its own words' (no Fire Overwatch) (label-favoured)
+  let favoured = null;
+  if(ctx && ctx.label && ctx.option){ const m = /^\*\*Favoured ka['’]tah: ([^*\n]+)\*\*[ \t]*\n\*\*Additional Effect:\*\*[^\n]*(?:\n- [^\n]*)*/im.exec(norm(text)), o = m && ctx.option(m[1].trim());
+    if(o && o.trigger && o.trigger.ph){ favoured = { o, m:m[0] }; text = norm(text).replace(m[0], ''); } }
   const full = text, opts = ctx && ctx.label ? optionsOf(rulesText(text), ctx.table).filter(o => !/^additional effects?$/i.test(o.name)) : [];
   if(ctx && ctx.label && opts.some(o => !TABLE_LIKE.test(o.how))) text = withoutOptions(text, ctx.table);
   const trig = explicitTiming(text, ctx && (ctx.rule || ctx.label) ? { rule:!!ctx.rule, label:!!ctx.label } : undefined);
   const used = usedIn(text, ctx, trig);
   // a label: "select one Throttlerokkit Shokka Engine ability": the phases of the unit's abilities of that kind (named "… Engine") (label-select-ability)
   { const m = ctx && ctx.label && ctx.abilities && /\bselect one ([A-Z][\w'’-]*(?: [A-Z][\w'’-]*)*) ability\b/.exec(plain(rulesText(text)));
-    const head = m && m[1].split(' ').pop().toLowerCase(), kin = m ? ctx.abilities.filter(a => plain(a.text) !== plain(full) && plain(a.name).split(' ').pop().toLowerCase() === head) : [];
+    const head = m && m[1].split(' ').pop().toLowerCase(), kin = m ? ctx.abilities.filter(a => plain(a.text) !== plain(full) && (a.who ? norm(a.who).toLowerCase() === norm(m[1]).toLowerCase() : plain(a.name).split(' ').pop().toLowerCase() === head)) : [];
     for(const a of kin){ const w = timing(a.text, Object.assign({}, ctx, { named:null, table:null, abilities:null })); for(const [p, v] of Object.entries(w.ph || {})) addPh(used.ph, p, v); }
     if(kin.length) used.reasons.push({ rule:'label-select-ability', match:m[0] + ' → ' + kin.map(a => a.name).join(', ') }); }
+  // a label: a section of options another ability of the unit selects from ("In your Command phase, select one of the abilities in the
+  // Icon of War section": Rod of the War Forge), made only of its options written in their own lines ("**Fanatical Devotion:** …"): the
+  // selecting ability's trigger and its options' readings together (label-section)
+  { const sec = ctx && ctx.label && ctx.self && opts.length && opts.every(o => !TABLE_LIKE.test(o.how))
+      && !opts.reduce((r, o) => r.split(plain(o.name) + ':').join(''), plain(text)).replace(/[\s-]/g, '')
+      && (ctx.abilities || []).find(a => a.name !== ctx.self && new RegExp('\\bselect one of the abilities in the ' + ctx.self.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ' section\\b', 'i').test(plain(a.text)));
+    const bt = sec && explicitTiming(sec.text, { label:true });
+    if(bt){ for(const [p, v] of Object.entries(bt.ph)) addPh(used.ph, p, v); used.reasons.push({ rule:'label-section', match:'selected by ' + sec.name + ' → ' + JSON.stringify(bt.ph).replace(/"/g, '') });
+      for(const o of opts){ const w = timing(o.text, Object.assign({}, ctx, { table:null, self:null }));
+        for(const [p, v] of Object.entries(w.ph || {})) addPh(used.ph, p, v);
+        used.reasons.push({ rule:'label-section', match:o.name + ' → ' + JSON.stringify(w.ph || {}).replace(/"/g, '') }); } } }
+  if(favoured){ const fp = storedMap(favoured.o.trigger); for(const [p, v] of Object.entries(fp)) addPh(used.ph, p, v); used.reasons.push({ rule:'label-favoured', match:clip(plain(favoured.m), 60) + ' → ' + favoured.o.option + ' ' + JSON.stringify(fp).replace(/"/g, '') }); }
   if(ctx && ctx.label && opts.some(o => !TABLE_LIKE.test(o.how))) used.reasons.push({ rule:'label-options', match:'without its options: ' + opts.filter(o => !TABLE_LIKE.test(o.how)).map(o => o.name).join(', ') });
   // a label: a table of options (Rituals, ka'tah abilities, Blessings of Khorne): each row's phases, from its own WHEN or the item's trigger
   // (not a table of abilities units gain, "all units … gain the relevant abilities shown below" (Doctrina Imperatives), "each unit … gains
@@ -1059,7 +1085,7 @@ function derive(D){
       .concat(Object.values(f.detachments).flatMap(d => detRules(d).map(r => ({ r, where:f.name + ' · ' + d.name + ' rule · ' + r.name, det:true }))));
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
-      timingItem('rule-timing', where, r, r.text, { comments }, { core:D.coreStratagems, rule:true, table:r.table });
+      timingItem('rule-timing', where, r, r.text, { comments }, { core:D.coreStratagems, rule:true, table:r.table, option:n => (D.ruleOptions || []).find(o => o.rule.startsWith(f.name + ' ') && norm(o.option).toLowerCase() === norm(n).toLowerCase()) || null });
       { const own = withoutOptions(r.text, r.table), ce = ckEntry(timing(own, ckCtx({ core:D.coreStratagems, rule:true })), own), fo = inForce(own, f, r.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; { const oc = optCover(r.text, own, r.table, ce.x && r.at ? { at:r.at } : ce); if(oc) ce.oc = oc; } ckPut('r|' + fk + '|' + r.name, ce); }
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
@@ -1093,7 +1119,7 @@ function derive(D){
         seen[where] = (seen[where] || 0) + 1; if(seen[where] > 1) where += ' #' + seen[where];
         const comments = commentsNear(src, ab.name);
         const wNames = rows => [...new Set((rows || []).flatMap(w => [w.name, w.group]).filter(Boolean))];
-        const actx = { core:D.coreStratagems, abilities:u.abilities, armyAbility:n => ((a.units.flatMap(x => x.abilities)).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase()) || {}).text || null, weapons:{ ranged:wNames(u.ranged), melee:wNames(u.melee) }, named:n => {
+        const actx = { core:D.coreStratagems, self:ab.name, option:n => (D.ruleOptions || []).find(o => o.rule.startsWith(f.name + ' ') && norm(o.option).toLowerCase() === norm(n).toLowerCase()) || null, abilities:u.abilities, armyAbility:n => ((a.units.flatMap(x => x.abilities)).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase()) || {}).text || null, weapons:{ ranged:wNames(u.ranged), melee:wNames(u.melee) }, named:n => {
           const o = u.abilities.find(x => x !== ab && norm(x.name).toLowerCase() === norm(n).toLowerCase());
           if(o) return o.text;
           const r = f.armyRules.concat(a.detachments.flatMap(id => detRules(f.detachments[id]))).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());

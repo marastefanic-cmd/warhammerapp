@@ -2280,6 +2280,16 @@
     "Gretchin"
    ]
   },
+  "rule-timing | Orks · Shoota Boyz rule · Dakka! Dakka! Dakka!": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
   "rule-needs | Orks · Shoota Boyz rule · Dakka! Dakka! Dakka!": {
    "all": [
     "Faction: Orks",
@@ -2496,6 +2506,14 @@
     "Skitarii"
    ]
   },
+  "rule-timing | Emperor’s Children army rule · Thrill Seekers": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your"
+  },
   "rule-timing | Emperor’s Children · Coterie of the Conceited rule · Pledges to the Dark Prince": {
    "at": "Start of the battle round",
    "ph": [
@@ -2538,6 +2556,17 @@
    "all": [
     "Faction: Chaos Knights"
    ]
+  },
+  "rule-timing | Chaos Knights · Houndpack Lance rule · Marked Prey": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "either"
+   }
   },
   "rule-needs | Chaos Knights · Houndpack Lance rule · Marked Prey": {
    "all": [
@@ -3472,6 +3501,12 @@
    ],
    "turn": "opp"
   },
+  "ability-timing | pubstomper · Defiler · Scuttling Walker": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
   "ability-timing | pubstomper · Defiler · Destroyer of Futures": {
    "ph": [
     "fight"
@@ -3813,6 +3848,20 @@
    "turn": "your"
   },
   "ability-timing | purge-goes-the-foe · Belisarius Cawl · Supreme Commander": {},
+  "ability-timing | purge-goes-the-foe · Thulia Ghuld · Icon of War": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "movement": "either",
+    "fight": "either"
+   }
+  },
   "ability-timing | purge-goes-the-foe · Thulia Ghuld · Mechanicus Bodyguard": {},
   "ability-timing | purge-goes-the-foe · Thulia Ghuld · Secutor of Olympus": {
    "ph": [

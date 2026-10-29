@@ -28,30 +28,6 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: move-own)"
   },
-  "rule-timing | Orks · Shoota Boyz rule · Dakka! Dakka! Dakka!": {
-   "of": "48632a72",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting"
-    ],
-    "turn": "either",
-    "turns": {
-     "shooting": "your"
-    }
-   },
-   "signedOff": {
-    "ph": [
-     "movement",
-     "shooting"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp"
-    }
-   },
-   "why": "the program reads {ph:[movement,shooting],turn:either,turns:{shooting:your}}, not the signed-off label: no rule in verify/derive.js gives it from these words without changing other signed-off labels; the label is removed (no hand label)"
-  },
   "rule-timing | Imperial Knights army rule · Code Chivalric": {
    "of": "d6596020",
    "reading": {
@@ -111,46 +87,6 @@
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
-  "rule-timing | Emperor’s Children army rule · Thrill Seekers": {
-   "of": "917817cb",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "charge"
-    ],
-    "turn": "your"
-   },
-   "signedOff": {
-    "ph": [
-     "shooting",
-     "charge"
-    ],
-    "turn": "your"
-   },
-   "why": "the program reads {ph:[movement,shooting,charge],turn:your}, not the signed-off label: no rule in verify/derive.js gives it from these words without changing other signed-off labels; the label is removed (no hand label)"
-  },
-  "rule-timing | Chaos Knights · Houndpack Lance rule · Marked Prey": {
-   "of": "14b1ad41",
-   "reading": {
-    "ph": [
-     "command",
-     "shooting",
-     "fight"
-    ],
-    "turn": "your",
-    "turns": {
-     "fight": "either"
-    }
-   },
-   "signedOff": {
-    "ph": [
-     "command"
-    ],
-    "turn": "your"
-   },
-   "why": "the program reads {ph:[command,shooting,fight],turn:your,turns:{fight:either}}, not the signed-off label: no rule in verify/derive.js gives it from these words without changing other signed-off labels; the label is removed (no hand label)"
   },
   "rule-timing | Adeptus Custodes · Might of the Moritoi rule · Moritoi Ancients": {
    "of": "fb6c3146",
@@ -320,23 +256,6 @@
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: weapons-have, overwatch)"
-  },
-  "ability-timing | pubstomper · Defiler · Scuttling Walker": {
-   "of": "0d888309",
-   "reading": {
-    "ph": [
-     "movement"
-    ],
-    "turn": "your"
-   },
-   "signedOff": {
-    "ph": [
-     "movement",
-     "shooting"
-    ],
-    "turn": "your"
-   },
-   "why": "the program reads {ph:[movement],turn:your}, not the signed-off label: no rule in verify/derive.js gives it from these words without changing other signed-off labels; the label is removed (no hand label)"
   },
   "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Destabilising Predation": {
    "of": "0429754d",
