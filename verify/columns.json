@@ -1153,10 +1153,6 @@
      "source": "ai-reading",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
-    "embarked": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
-    },
     "defAlways": {
      "source": "ai-reading",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
@@ -1195,7 +1191,7 @@
     },
     "readOf": {
      "source": "derived",
-     "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, embarked, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+     "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
     }
    }
   },
@@ -1757,10 +1753,6 @@
      "source": "ai-reading",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
-    "embarked": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
-    },
     "defAlways": {
      "source": "ai-reading",
      "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
@@ -1795,7 +1787,7 @@
     },
     "readOf": {
      "source": "derived",
-     "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, embarked, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+     "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
     }
    }
   },

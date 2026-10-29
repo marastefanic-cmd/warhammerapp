@@ -32,7 +32,8 @@ const weaponNames = u => [...new Set([].concat(u.ranged || [], u.melee || []).fl
 function coreText(D, name){
   if(D.rules[name]) return D.rules[name];
   const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1];
-  return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : null;
+  // (its value in its words: "Damaged 4" is "equal to or less than 4", the form "Damaged X" its rule says it always takes)
+  return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k].replace(/\bequal to or less than X\b/g, 'equal to or less than ' + /\d+/.exec(name)[0]) : null;
 }
 function sources(D){
   const out = new Map();
@@ -62,7 +63,8 @@ function sources(D){
   for(const s of D.coreStratagems) put(KEY.strat(s), { type:'strat', name:s.name, when:s.when, target:s.target, effect:s.effect, text:stratText(s) });
   return out;
 }
-// every source's boxes: { b (the boxes), nc (sentences of rare mechanics, not counted), reach (an aura's units) }, only where there is one
+// every source's boxes: { b (the boxes), nc (sentences of rare mechanics, not counted), reach (an aura's units), both (another rule's two
+// options at once for the units it reaches) }, only where there is one
 function build(D){
   const V = Dv.vocab(D), T = {};
   for(const [key, s] of sources(D)){
@@ -73,6 +75,7 @@ function build(D){
     if(r.boxes.length) o.b = r.boxes;
     if(r.nc.length) o.nc = r.nc;
     if(r.reach && /\baura\b/i.test(s.tag || '')) o.reach = r.reach;
+    if(r.both && r.both.length) o.both = r.both;
     if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
   }
   return T;

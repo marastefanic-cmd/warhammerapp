@@ -54,7 +54,7 @@ for(const [key, o] of Object.entries(T)){
     // G2: verbatim (the lines of a bullet list, each)
     for(const q of String(b.quote || '').split('\n').concat(b.lead ? b.lead.split('\n') : [])) if(!text.includes(flat(q).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not GW’s words: “' + q.slice(0, 80) + '”');
     // G3: the effects are the quote's (or the line's it completes)
-    const qn = E.norm(b.quote), found = String(b.quote).split('\n').flatMap(q => X.findFx(E.norm(q)).fx.concat(b.lead ? X.findFx(E.norm(b.lead + ' ' + q)).fx : []));
+    const qn = E.norm(b.quote), found = String(b.quote).split('\n').map(q => q.replace(/^-\s+/, '')).flatMap(q => X.findFx(E.norm(q)).fx.concat(b.lead ? X.findFx(E.norm(b.lead + ' ' + q)).fx : []));
     for(const [id, p] of b.fx || []) if(!found.some(([i2, p2]) => i2 === id && String(p2) === String(p))) fail('G3', where, id + ' ' + p + ' is not in its quote “' + String(b.quote).slice(0, 80) + '”');
     // G5: conditions on their words
     const ctxT = E.norm([b.quote, b.lead || '', src.when || '', src.target || '', src.table ? M.ruleText(src) : src.text || '', src.tagText || ''].join(' '));
@@ -73,6 +73,20 @@ for(const [key, o] of Object.entries(T)){
   for(const x of o.nc || []) if(!text.includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
 }
 stats.boxes = nBox; stats.picks = nPill; stats.sources = Object.keys(T).length;
+// G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
+// fails), in what the words give (T) and in data.js BOXES alike
+{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf']),
+    PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw']), LIMIT_KEYS = new Set(['n', 'what']),
+    PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
+  const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));
+  for(const [name, TT] of [['the words', T], ['data.js BOXES', D.boxes || {}]]) for(const [key, o] of Object.entries(TT)){ const where = key + ' ' + (o.n || '') + ' (' + name + ')';
+    const bad = [];
+    bad.push(...extra(o, SRC_KEYS));
+    for(const b of o.b || []){ bad.push(...extra(b, BOX_KEYS), ...extra(b.scope, SCOPE_KEYS), ...extra(b.limit, LIMIT_KEYS), ...extra(b.part, PART_KEYS));
+      for(const p of b.pick || []) bad.push(...extra(p, PICK_KEYS), ...extra(p.part, PART_KEYS)); }
+    for(const x of o.nc || []) bad.push(...extra(x, NC_KEYS));
+    for(const x of o.both || []){ bad.push(...extra(x, BOTH_KEYS)); if(!flat(S.get(key) ? S.get(key).text || '' : '').includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) bad.push('both: not GW’s words'); }
+    if(bad.length) fail('G1', where, 'fields no script writes: ' + [...new Set(bad)].join(', ')); } }
 
 // ---- G4: every effect the sentences state is in a box (or not counted) ----
 for(const [key, src] of S){
@@ -104,9 +118,10 @@ for(const f of Object.values(D.factions)){
 }
 for(const s of D.coreStratagems) if(s.calcMods) fail('G6', 'Core · ' + s.name, 'keeps calcMods');
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
-  const dm = (html.split('/* ---------- screen: damage ----------')[1] || '').split('\nfunction screenDamage(')[0];
+  // (the whole Damage tab: its boxes, its screen and its drawing, up to the rules questions)
+  const dm = (html.split('/* ---------- screen: damage ----------')[1] || '').split('/* ---------- rules questions (Claude)')[0];
   if(/\bdmEffects\b|\bdmScope\b|\bdmByHand\b|WH_EFFECTS\.norm\b|\.extract\(/.test(dm)) fail('G6', 'app.html', 'the Damage tab reads a rule’s words at run time (dmEffects, dmScope, dmByHand, the extractor)');
-  for(const [re, what] of [[/\bm\.note\b/, 'a reading’s note'], [/\bm\.when\b/, 'a reading’s when'], [/\bm\.calc\b/, 'a reading’s calc'], [/\.calcMods\b/, 'calcMods']]) if(re.test(dm)) fail('G6', 'app.html', 'the Damage tab reads ' + what);
+  for(const [re, what] of [[/\bm\.note\b/, 'a reading’s note'], [/\bm\.when\b/, 'a reading’s when'], [/\bm\.calc\b/, 'a reading’s calc'], [/\.calcMods\b/, 'calcMods'], [/\b(?:au|u|x|src)\.(?:mods|aura|help|shield|readOf|calcDef|defCalc)\b/, 'a unit’s readings (mods, aura, help, shield, calcDef, defCalc)'], [/\.damaged\b|\.embarked\b/, 'an ability’s damaged or embarked reading']]) if(re.test(dm)) fail('G6', 'app.html', 'the Damage tab reads ' + what);
   if(!/<script src="effects\.js"><\/script>/.test(html)) fail('G6', 'app.html', 'effects.js is not loaded'); }
 
 // ---- G7: BOXES is what the words give ----
@@ -124,9 +139,9 @@ const GROUPS = new Set(dm.app.DM_GROUPS.map(g => g[0]));
 // as one X unit from your army, "One **A** or **B C** unit" with each bold run one keyword, "(excluding **A B** units)" a bold run one
 // keyword when its words are not each one
 const titleCase = s => s.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m, a, b) => a + b.toUpperCase());
-const spanKw = span => { const w = span.trim(), all = Dv.tokens(V, w); return all.every(k => V.get(String(k).replace(/^Faction: /, '').toLowerCase())) ? all : [titleCase(w)]; };
+const spanKw = span => { const w = span.trim(), all = Dv.tokens(V, w); return all.length && all.every(k => V.get(String(k).replace(/^Faction: /, '').toLowerCase())) ? all : [titleCase(w)]; };   // (a keyword no unit of the faction has, Wahapedia's struck MONSTER: its own word)
 function targetNeeds(s){
-  let t = String(s.target).replace(/~~[^~]*~~\s*\/?\s*/g, '').replace(/\bUnit\b/g, 'unit').replace(/^Your (\*\*[^*]+\*\*)\.?$/, 'One $1 unit from your army.');
+  let t = String(s.target).replace(/~~([^~*]+)~~/g, '**$1**').replace(/~~/g, '').replace(/\bUnit\b/g, 'unit').replace(/^Your (\*\*[^*]+\*\*)\.?$/, 'One $1 unit from your army.');
   const s2 = Object.assign({}, s, { target:t });
   let r = Dv.stratNeeds(V, s2);
   const first = t.split(/(?<=\.)\s+/)[0];
@@ -175,6 +190,37 @@ for(const a of D.armies) for(const u of a.units){
     // (and its not-counted list: each in one group)
     for(const x of c.nc) if(x.grp && !GROUPS.has(x.grp)){ groupBad++; fail('groups', a.id + '/' + u.id + '/' + ph, x.name + ': not counted, in no group'); } }
 }
+// sources: for every list × unit, the army, unit and other-units groups have exactly the sources the database gives, worked out here
+// from data.js alone: the unit's own abilities (not its Damaged bands) and the core rules of its weapons and Rules line that have boxes;
+// the army rules on its Rules line (or a detachment rule of the list gives it: GRANTS; or an army rule of the list whose box reaches it)
+// and the detachment rules whose needs it meets; the other units' abilities whose boxes reach it (or GW tags (Aura) and their reach meets)
+const hasK = (u, k) => u.kw.some(x => x.toLowerCase() === String(k).toLowerCase());
+const meetsN = (n, u) => !n || ((!n.all || n.all.every(k => hasK(u, k))) && (!n.any || n.any.some(k => hasK(u, k))) && (!n.none || !n.none.some(k => hasK(u, k))) && (!n.unless || !meetsN(n.unless, u)));
+const rn = x => String(x).toLowerCase().replace(/[’']/g, "'");
+const boxOf = k => (D.boxes || {})[k];
+function wantSources(a, u){
+  const F = D.factions[a.faction], dets = a.detachments.map(id => F.detachments[id]).filter(Boolean), detR = dets.flatMap(d => (d.rule ? [d.rule] : []).concat(d.moreRules || []));
+  const own = r => (u.rules || []).some(x => rn(x) === rn(r.name)), granted = r => (D.grants || []).some(g => g.type === 'ability' && g.grants === r.name && g.to && meetsN(g.to, u) && detR.some(d => String(g.rule).endsWith('· ' + d.name)));
+  const reachB = (o, x) => ((o || {}).b || []).some(b => b.reach && meetsN(b.reach, x));
+  const army = new Set(), unit = new Set(), other = new Set();
+  for(const r of F.armyRules || []) if(own(r) || granted(r) || (a.units.some(x => (x.rules || []).some(y => rn(y) === rn(r.name))) && reachB(boxOf(M.KEY.rule(r)), u))) army.add(r.name);
+  for(const r of detR) if(r.needs && meetsN(r.needs, u)) army.add(r.name);
+  for(const ab of u.abilities || []) if(!/^Damaged: /i.test(ab.name)) unit.add(ab.name);
+  for(const w of [].concat(u.ranged || [], u.melee || [])) for(const k of w.kw || []){ const n = Object.keys(D.rules).find(r => r.toLowerCase() === String(k).toLowerCase()); if(n && boxOf(M.KEY.core(n, D.rules[n]))) unit.add(n); }
+  for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = M.coreText(D, r); if(t && boxOf(M.KEY.core(r, t))) unit.add(r); }
+  const ownKeys = new Set((u.abilities || []).map(ab => M.KEY.ability(ab)));
+  for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const k = M.KEY.ability(ab), o = boxOf(k); if(!o || ownKeys.has(k)) continue;
+    if(reachB(o, u) || (/\baura\b/i.test(ab.tag || '') && o.reach && meetsN(o.reach, u))) other.add(ab.name); }
+  return { army, unit, other };
+}
+let srcBad = 0;
+for(const a of D.armies) for(const u of a.units){
+  const want = wantSources(a, u), got = { army:new Set(), unit:new Set(), other:new Set() };
+  for(const x of dm.app.inArmy(a, () => dm.app.dmSources(a, u))) if(got[x.grp] && !(x.grp === 'other' && x.strat)) got[x.grp].add(x.name);
+  for(const g of ['army', 'unit', 'other']){ const miss = [...want[g]].filter(n => !got[g].has(n)), extra = [...got[g]].filter(n => !want[g].has(n));
+    if(miss.length || extra.length){ srcBad++; fail('sources', a.id + '/' + u.id + ' ' + g, 'missing ' + miss.join(', ') + '; extra ' + extra.join(', ')); } }
+}
+stats.sourcesChecked = D.armies.reduce((t, a) => t + a.units.length, 0);
 // bite: one stratagem's needs changed on purpose must make the check above fail
 { const a = D.armies[0], u = a.units[0], s = dm.app.inArmy(a, () => dm.app.allStratagems()).find(x => x.needs && Object.keys(x.needs).length && x.src !== 'Core');
   const real = D.factions[a.faction].detachments[a.detachments.find(id => (D.factions[a.faction].detachments[id].stratagems || []).some(y => y.id === s.id))].stratagems.find(y => y.id === s.id);
@@ -188,7 +234,7 @@ stats.strats = allStrats.length; stats.unparsed = unparsed; stats.needsDiffer = 
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/evidence.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G8); ' +
+console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G8); the army, unit and other-units groups of ' + stats.sourcesChecked + ' units as the database gives them; ' +
   stats.strats + ' stratagems read from their TARGET, shown for ' + stats.units + ' units exactly as their keywords meet it (' + stats.bite + ')');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

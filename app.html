@@ -2134,7 +2134,7 @@ const dmReaches = (x, u) => !x || matches(x, u);
 const dmGrantOf = (A, u, name) => { const rs = inArmy(A, () => detachments().flatMap(d => detRules(d))).map(r => r.name);
   return (D.grants || []).find(g => g.type === 'ability' && g.grants === name && isObj(g.to) && matches(g.to, u) && rs.some(n => String(g.rule).endsWith('· ' + n))) || null; };
 // a core rule with its value in its name (Damaged 5): its glossary entry, with the name
-const dmCoreText = name => { if(D.rules[name]) return D.rules[name]; const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1]; return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : null; };
+const dmCoreText = name => { if(D.rules[name]) return D.rules[name]; const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1]; return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k].replace(/\bequal to or less than X\b/g, 'equal to or less than ' + /\d+/.exec(name)[0]) : null; };   // (as verify/effects-migrate.js coreText)
 // every source of boxes for your unit, by group: the army rules on its Rules line (or a detachment rule gives it) and the detachment
 // rules whose needs it meets; its own abilities (its enhancement's, its attached parts'), the core weapon abilities of its weapons;
 // the abilities of the other units of the list whose boxes reach it (an aura GW tags (Aura), a unit another unit selects); the
@@ -2144,7 +2144,9 @@ const dmCoreText = name => { if(D.rules[name]) return D.rules[name]; const k = (
 const dmBakedOf = (au, name) => [...new Set([].concat(au.ranged || [], au.melee || []).flatMap(w => Object.entries(w.from || {}).filter(([, v]) => String(v).split(/\s*,\s*/).includes(name)).map(([k]) => String(k).toUpperCase())))];
 const DM_STAT_OF = { a:['A'], s:['S'], d:['D'], ap:['AP'], skill:['WS', 'BS'] };
 const dmBaked = (keys, id, p) => { if(!keys || !keys.length) return false; if(DM_STAT_OF[id]) return DM_STAT_OF[id].some(k => keys.includes(k));
-  const l = String(WH_EFFECTS.fxLabel([[id, p]])).replace(/^\[|\]$/g, '').toUpperCase(); return !!l && keys.some(k => k.startsWith(l) || l.startsWith(k)); };
+  // (a keyword against the weapon's keywords only: +S printed in is no [SUSTAINED HITS], +D no [DEVASTATING WOUNDS])
+  const l = String(WH_EFFECTS.fxLabel([[id, p]])).replace(/^\[|\]$/g, '').toUpperCase(), kws = keys.filter(k => !/^(?:A|S|D|AP|WS|BS)$/.test(k));
+  return !!l && kws.some(k => k.startsWith(l) || l.startsWith(k)); };
 function dmSources(A, au){
   const F = factionOf(A), out = [], seen = new Set();
   const put = x => { const k = x.grp + '|' + x.key; if(seen.has(k)) return; seen.add(k); const bk = dmBakedOf(au, x.name); if(bk.length) x.baked = bk; out.push(x); };
@@ -2154,7 +2156,7 @@ function dmSources(A, au){
     const reach = !own && !g && A.units.some(x => hasRule(x, r.name)) && ((dmBoxesOf(DM_KEY.r(r)) || {}).b || []).some(b => b.reach && dmReaches(b.reach, au));
     if(own || g || reach) put({ grp:'army', name:r.name, rule:r.name, key:DM_KEY.r(r), text:dmRuleText(r), ar:r, via:g, reachOnly:reach }); }
   for(const r of inArmy(A, () => unitDetRules(au))) put({ grp:'army', name:r.name, rule:r.name, key:DM_KEY.r(r), text:dmRuleText(r) });
-  for(const ab of au.abilities || []) if(!ab.damaged) put({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), text:ab.text, ab, src:au });
+  for(const ab of au.abilities || []) if(!/^Damaged: /i.test(ab.name)) put({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), text:ab.text, ab, src:au });
   for(const w of [].concat(au.ranged || [], au.melee || [])) for(const k of w.kw || []){ const n = Object.keys(D.rules).find(r => r.toLowerCase() === String(k).toLowerCase());
     if(n && dmBoxesOf(DM_KEY.c(n, D.rules[n]))) put({ grp:'unit', name:n, key:DM_KEY.c(n, D.rules[n]), text:D.rules[n], core:true }); }
   for(const r of au.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = dmCoreText(r); if(t && dmBoxesOf(DM_KEY.c(r, t))) put({ grp:'unit', name:r, key:DM_KEY.c(r, t), text:t, core:true }); }
@@ -2192,11 +2194,24 @@ function dmBoxRule(S, b, i, st){
   const part = parts.length ? { cond:dmFactOf(parts[0].part.on), picks:parts.map(p => p.name), calc:E.toMod(parts[0].part.fx), note:E.fxLabel(parts[0].part.fx) } : null;
   const m = { from:S.name, rule:S.rule || '', strat:S.strat || '', cp:S.cp, src:S.src || null, ab:S.ab || null, ar:S.ar || null, kind:b.kind, box:b, on, grp:S.grp, lasts:b.lasts || '',
     baked:fx.length < fx0.length ? S.baked : null, cond:dmFactOf(on), vs:dmVsOf(on), limit:b.limit ? S.name + '|limit' : '', limitOf:b.limit || null, part, mark:S.grp === 'other' ? (S.aura ? 'aura' : b.mark === 'selected' ? 'selected' : 'friendly') : '' };
-  return { k:'m:' + S.name + '|' + (b.tableRows ? 'rows' : i) + (S.grp === 'strat' ? '|s' : ''), m, e, fx, fx0, sc:{ scope:b.scope || {} }, grp:S.grp, label:E.condLabel(on),
+  return { k:'m:' + S.name + '|' + (b.tableRows ? 'rows' : i) + (S.grp === 'strat' ? '|s' : ''), m, e, fx, fx0, sc:{ scope:b.scope || {} }, grp:S.grp, label:E.condLabel(m.mark === 'selected' ? on.filter(x => x[0] !== 'selected') : on),   // (the mark says "Selected by it" already)
+   
     pills:b.pick ? b.pick.map(p => [p.name, p === ch]) : null, pillKey:pk, note0:'', pick:ch ? ch.name : '', pickLabel:ch ? ch.name : '', dice:null, diceKey:'' };
 }
 // every box of your unit for these attacks (kind), and what of its sources has none (nc: shown with GW's words, "not counted in the Damage
 // tab"); a stratagem's boxes for the other kind of attack too (other: ruled out here, the player's to count anyway)
+// a pick of two options at once where another ability of the list says so for this unit ("the Conqueror Imperative and Protector
+// Imperative are both active for that unit": Icon of War's The Fires of Mars, BOXES both, for the SKITARII or THULIA GHULD unit it
+// selects): a pill of both, their effects together, with its words
+function dmBothOf(A, au, b){
+  if(!b.pick) return b;
+  const add = [];
+  for(const x of A.units) for(const ab of x.abilities || []){ const o = dmBoxesOf(DM_KEY.a(ab)); if(!o || !o.both) continue;
+    for(const g of o.both){ const ps = g.names.map(n => b.pick.find(p => p.name === n)); if(ps.some(p => !p) || !dmReaches(g.reach, au)) continue;
+      const part = ps.find(p => p.part);
+      add.push(Object.assign({ name:g.names.join(' and ') + ' (' + ab.name + (g.opt ? ': ' + g.opt : '') + ')', fx:ps.flatMap(p => p.fx), quote:g.quote, on:[['selected', true]] }, part ? { part:part.part } : {})); } }
+  return add.length ? Object.assign({}, b, { pick:b.pick.concat(add) }) : b;
+}
 function dmBoxRules(A, au, kind, st){
   const rules = [], other = [], nc = [], ncText = 'not counted in the Damage tab';
   for(const S of dmSources(A, au)){
@@ -2207,7 +2222,7 @@ function dmBoxRules(A, au, kind, st){
     // (a box for weapons by name or keyword is in a step with such a weapon: Moment Shackle's Watcher's Axe is not in the shooting)
     const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
       return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
-    for(const [b, i] of counted){ const r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
+    for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
     if(counted.length || S.reachOnly) continue;
     // (another unit's ability is in the list only when it reaches this unit: an aura GW tags (Aura) with nothing counted)
     const q = o.nc && o.nc.length ? o.nc[0] : null, noFx = mine.find(([b]) => !b.pick && b.fx.length);
@@ -2242,8 +2257,14 @@ function dmReach(u, it, m, sc){
   return n;
 }
 // the models of a unit that are not on the battlefield yet (an ability's embarked mark: Sir Hekhtur while Canis Rex lives) and why, quoted
-const dmEmbarked = u => { const ab = (u.abilities || []).find(a => a.embarked); return ab ? { names:new Set([ab.embarked.model]), until:ab.embarked.until, ab,
-  quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' } : null; };
+// read from GW's words by one fixed pattern: "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a
+// destroyed Transport" (Using Sir Hekhtur): "this model" is the unit's other model, not on the battlefield while that one lives
+const DM_EMBARKED = /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\b/;
+const dmEmbarked = u => { for(const ab of u.abilities || []){ const m = DM_EMBARKED.exec(String(ab.text || '').replace(/\*\*/g, '')); if(!m) continue;
+    const names = (u.models || []).map(l => String(l).replace(/^\d+×\s*/, '')).filter(n => n !== m[1]);
+    if(names.length !== 1 || !(u.models || []).some(l => String(l).replace(/^\d+×\s*/, '') === m[1])) continue;
+    return { names:new Set(names), until:m[1], ab, quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' }; }
+  return null; };
 // (a reference sheet's unit after the army's: selectable, never the one picked first)
 const dmUnits = (a, kind) => a.units.concat(a.refs || []).filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
 // the two sides: your unit (this list) and the target set by hand
@@ -2408,7 +2429,7 @@ function dmCalc(st, A, au, tg, kind){
   // ---- the attacker's boxes: its army rules, its own rules, what other units of the list give it, its stratagems (dmBoxRules), and
   // the custom modifiers ----
   // a Damaged band and Plunging Fire are in the situation; [LANCE] comes from the weapon's keyword
-  const damaged = au.abilities.filter(ab => ab.damaged);
+  const damaged = au.abilities.filter(ab => /^Damaged: /i.test(ab.name));
   const rules = [], seen = new Set();
   // a fact of the table holds when the player says so (st.fx, with what follows from it); BATTLELINE by the unit's keyword
   const fx = isObj(st.fx) ? st.fx : {}, fxWhy = isObj(st.fxWhy) ? st.fxWhy : {};
@@ -3603,13 +3624,16 @@ function dmListPart(C, score){
   for(const [g, title] of DM_GROUPS){
     const rows = C.levers.filter(x => x.r && x.grp === g && x.sec !== 'pill'), ins = rows.filter(x => !x.out), outs = rows.filter(x => x.out);
     if(g === 'custom'){ const n = rows.filter(x => x.on).length;
-      h += '<details class="dmfold dmcust" data-dmfold="custom"' + (st.fold.custom ? ' open' : '') + '><summary><span>' + title + ' · ' + (n ? n + ' ticked' : 'none') + '</span>' + chev + '</summary>' +
+      h += '<details class="dmfold dmcust" data-dmfold="custom" data-dmlazy' + (st.fold.custom ? ' open' : '') + '><summary><span>' + title + ' · ' + (n ? n + ' ticked' : 'none') + '</span>' + chev + '</summary>' +
         // (drawn only when open: the folded group is one line, its 25 rows drawn when it is opened)
         (st.fold.custom ? '<p class="note">Plain effects, no rule’s: for anything the boxes above do not cover. Each counts for every weapon ticked.</p>' + rows.map(x => dmLeverRow(C, x)).join('') : '') + '</details>';
       continue; }
     const ncs = M.nc.filter(x => (x.grp || 'unit') === g);
     h += '<section class="dmsec" data-dmgrp="' + g + '"><h3 class="dmh3">' + title + (g === 'strat' ? ' <small>with their CP</small>' : '') + '</h3>' +
-      (ins.length ? ranked(ins).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None that change these numbers.</p>') + outs.map(x => dmLeverRow(C, x)).join('') +
+      (ins.length ? ranked(ins).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None that change these numbers.</p>') +
+      // (what the rules rule out in this step, folded as on main: its rows drawn once the fold is opened, the player's to count anyway)
+      (outs.length ? (ko => '<details class="dmfold dmouts" data-dmfold="outs-' + g + '" data-dmlazy' + (ko ? ' open' : '') + '><summary><span>Not for this step, by the rules (' + outs.length + ')' +
+        (outs.some(x => x.on) ? ' · ' + outs.filter(x => x.on).length + ' counted by you' : ' · yours to count anyway') + '</span>' + chev + '</summary>' + (ko ? outs.map(x => dmLeverRow(C, x)).join('') : '') + '</details>')(st.fold['outs-' + g] || (st.fold.outs && st.fold['outs-' + g] !== false)) : '') +
       (ncs.length ? '<details class="dmfold dmncf"' + (ncId ? ' id="dmNc"' : '') + ' data-dmfold="nc-' + g + '"' + (st.fold['nc-' + g] || (st.fold.nc && st.fold['nc-' + g] !== false) ? ' open' : '') + '><summary><span>Not counted in the Damage tab (' + ncs.length + ')</span>' + chev + '</summary>' +
         ncs.map(x => '<div class="dmncr"><b' + (x.s && x.s.id ? ' class="rl" role="button" tabindex="0" data-strat="' + esc(x.s.id) + '"' : '') + '>' + esc(x.name) + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small></div>').join('') + '</details>' : '') + '</section>';
     if(ncs.length) ncId = false;
@@ -5749,7 +5773,7 @@ document.addEventListener('toggle', e => {
   if(!d.dataset) return;
   if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession();   // the Damage tab's folds stay as left
     if(DM_CTX) DM_CTX.st.fold[d.dataset.dmfold] = d.open;   // (and in the screen's copy, which a list drawn again in the background draws from)
-    if(d.dataset.dmfold === 'custom' && d.open && !d.querySelector('[data-dmlv^="r:u:"]')){ dmRedrawKeep(); if(DM_CTX) dmFill(DM_CTX); }   // (once: a group drawn open says so too)   // (the custom modifiers' rows, drawn and worked out once their group is open)
+    if(d.open && d.hasAttribute('data-dmlazy') && !d.querySelector('[data-dmlv]')){ dmRedrawKeep(); if(DM_CTX) dmFill(DM_CTX); }   // (a fold whose rows are drawn once open: the custom modifiers, what the rules rule out; once: a fold drawn open has them)   // (the custom modifiers' rows, drawn and worked out once their group is open)
     if(d.open) for(const w of d.querySelectorAll('.dwv[data-wh]')) w.scrollTop = +w.dataset.i * WH_ROW;   // (a wheel drawn folded takes its row once shown)
     return; }
   if(d.dataset.ckfold){ if(d.open) openStrats.add(d.dataset.ckfold); else openStrats.delete(d.dataset.ckfold); saveSession(); return; }   // a Phase checklist fold

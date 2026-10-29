@@ -366,6 +366,12 @@ const fxCases = [
   ['fx:s +1: wounds', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('s', 1)] })], { T:5, models:[big(100, 10)] }).wounds, 30],
   ['fx:s D3: wounds', () => ex1([g({ n:60, S:3, kw:['TORRENT'], mods:[fxm('s', 'D3')] })], T4).wounds, 60 * (1 / 2 + 2 / 3 + 2 / 3) / 3],
   ['fx:s D3: played out', () => run([g({ n:60, S:3, kw:['TORRENT'], mods:[fxm('s', 'D3')] })], T4).groups[0].wounds, 60 * (1 / 2 + 2 / 3 + 2 / 3) / 3],
+  // 02.02.03: A rolled for each weapon (10 models, +D3: per game the attacks' sd is √(10 × 2/3) = 2.58, not 10 × 0.82 = 8.2 as one
+  // roll for all), S each time it is required (60 wound rolls at S3+D3 vs T4: a binomial's sd √(60 × .611 × .389) = 3.78)
+  ['fx:a D3: rolled for each weapon (sd of the attacks)', () => C.run({ groups:[g({ n:10, mods:[fxm('a', 'D3')] })], target:T4, ctx:{}, sims:20000, seed:11, moments:true }).groups[0].sd.attacks, Math.sqrt(10 * 2 / 3), 0.15],
+  ['fx:s D3: rolled for each wound roll (sd of the wounds)', () => C.run({ groups:[g({ n:60, S:3, kw:['TORRENT'], mods:[fxm('s', 'D3')] })], target:T4, ctx:{}, sims:20000, seed:11, moments:true }).groups[0].sd.wounds, Math.sqrt(60 * (11 / 18) * (7 / 18)), 0.2],
+  // two critical-hit values together: the lowest counts (a critical on 5+ beats 6+)
+  ['fx:critHit: two values, the lowest', () => FXC.toMod([['critHit', 6], ['critHit', 5], ['critHit', 6]]).critHit, 5, 0],
   ['fx:ap +1: unsaved', () => ex1([g({ n:60, S:8, kw:['TORRENT'], mods:[fxm('ap', 1)] })], { T:4, models:[big(100, 10, 4)] }).unsaved, 50 * 4 / 6],
   ['fx:d +1: damage', () => ex1([g({ n:60, S:8, kw:['TORRENT'], mods:[fxm('d', 1)] })], BIGW).dmg, 100],
   // "improve the Strength, Armour Penetration and Damage characteristics of that attack by 1" (Blood Throne): three effects at once
@@ -792,6 +798,13 @@ cases.push(['Unshackled Wrath, all three: more destroyed, its hazard not counted
 cases.push(['from other units: Daemonic Fury for Angron, selected, [LANCE]', () => (r => +(r.m.grp === 'other' && r.m.mark === 'selected' && r.e.lance === true))(box({ army:'big-demons-baby', ph:'fight', atk:'angron', typed:{} }, 'Daemonic Fury', x => !!x.e.lance)), 1]);
 cases.push(['from other units: Honoured Interred for Trajann, an aura, re-roll hit rolls of 1', () => (r => +(r.m.grp === 'other' && r.m.mark === 'aura' && r.e.rrHit === '1s'))(box({ army:'lite-knights', ph:'fight', atk:'trajann-valoris-allarus-custodians', typed:{} }, 'Honoured Interred')), 1]);
 cases.push(['a rule the list printed into the weapons is not counted again (Relentless Rage, +1 A on the profile)', () => +dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }).nc.some(x => x.name === 'Relentless Rage' && /already in its weapons/.test(x.why)), 1]);
+// Doctrina Imperatives' both at once, GW's words (Thulia Ghuld's Icon of War, The Fires of Mars: "the Conqueror Imperative and Protector
+// Imperative are both active for that unit"): a pill for the SKITARII or THULIA GHULD units it selects, both rows' effects together
+const DOCB = memo(() => box({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} }, 'Doctrina Imperatives'));
+cases.push(['Doctrina: the both pill, from Icon of War', () => +((DOCB().pills || []).some(p => /^Conqueror Imperative and Protector Imperative \(Icon of War: The Fires of Mars\)$/.test(p[0]))), 1]);
+cases.push(['Doctrina: the both pill counts both rows', () => (r => { const p = r.pills.find(x => /^Conqueror Imperative and Protector Imperative/.test(x[0]))[0]; const c = dm.calc({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{}, on:{ [r.k]:true }, val:{ [r.pillKey]:p } }).rules.find(x => x.k === r.k);
+  return +(!!c.e.heavy && c.e.skill === 1 && c.e.ap === 1); })(DOCB()), 1]);   // ([ASSAULT]: no effect in these numbers; +1 AP: the Conqueror's part, a BATTLELINE unit)
+cases.push(['Doctrina: no both pill for a unit the Icon of War cannot select (Belisarius Cawl: no SKITARII or THULIA GHULD)', () => +!dm.calc({ army:'purge-goes-the-foe', ph:'shooting', atk:'belisarius-cawl', typed:{} }).rules.some(r => r.m.from === 'Doctrina Imperatives' && (r.pills || []).some(p => / and /.test(p[0]))), 1]);
 // your unit changed: a tick whose rule still applies is kept (Kustom Dakka, Tankbustas → Flash Gitz: the same turn as picked so); one
 // with no rule for the new unit is dropped and said (Try Dat Button!, the Big Mek Dakkarig's), in a step out of the turn too
 const KD = strat({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka').k;
@@ -833,7 +846,7 @@ cases.push(['Doctrina Imperatives: Conqueror +1 AP for a BATTLELINE unit by itse
 const IS = { army:'purge-goes-the-foe', atk:'ironstrider-ballistarii', typed:{ n:5, T:5, W:2, Sv:4 }, ph:'shooting' };
 cases.push(['Doctrina Imperatives: Conqueror +1 AP only with the BATTLELINE fact (an Ironstrider)', () => { const a = docOn(IS, 'Conqueror').R.groups[0].AP, b = docOn(Object.assign(cp(IS), { fx:{ battleline6:true } }), 'Conqueror').R.groups[0].AP; return a - b; }, 1, 0]);
 // (its picks are its table's rows, GW's words: no "Both", which only other rules give; the player counts the other one with Custom modifiers)
-cases.push(['Doctrina Imperatives: its picks are its two Imperatives', () => +(DOC(cp(SR)).pills.map(p => p[0]).join() === 'Protector Imperative,Conqueror Imperative'), 1]);
+cases.push(['Doctrina Imperatives: its picks are its two Imperatives, and both at once where Icon of War selects the unit', () => +(DOC(cp(SR)).pills.map(p => p[0]).join() === 'Protector Imperative,Conqueror Imperative,Conqueror Imperative and Protector Imperative (Icon of War: The Fires of Mars)'), 1]);
 cases.push(['Doctrina Imperatives: Auto-divinatory Targeting and Protector: BS 2+ (the FAQ)', () => { const d = DOC(cp(IS)), adt = dm.calc(cp(IS)).rules.find(r => r.m.from === 'Auto-divinatory Targeting').k;
   return dm.calc(Object.assign(cp(IS), { on:{ [d.k]:true, [adt]:true }, val:{ [d.pillKey]:'Protector Imperative' } })).R.groups[0].bs; }, 2, 0]);
 cases.push(['Murderous Imperative: two boxes, as its two lines, each saying its Imperative', () => { const ms = dm.calc(cp(SR)).rules.filter(r => r.m.from === 'Murderous Imperative');

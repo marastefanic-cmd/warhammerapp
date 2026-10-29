@@ -112,10 +112,10 @@ const COND = {
   targetNotBelowHalf:{ label:() => 'The target not Below Half-strength', pats:[/\btargets? an enemy unit that is not below half-strength\b/] },
   targetBelowHalf:{ label:() => 'The target Below Half-strength', pats:[/\btargets? (?:a |an enemy )?unit (?:that is )?below half-strength\b/, /\bthat (?:enemy )?unit is below half-strength\b/, /\btarget of that attack is below half-strength\b/, /\bif that unit is below half-strength\b/] },
   targetBelowStarting:{ label:() => 'The target below its Starting Strength', pats:[/\btargets? (?:a |an enemy )?unit that is below (?:its )?starting strength\b/] },
-  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\btargets? (?:that|its) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
+  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
-  used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/] },
+  used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },
   targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.join('/') : p.all ? p.all.join(' ') : p.any.join(' or ')), pats:[] },
   maxT:{ label:p => 'The target has no model with T ' + (p + 1) + '+', pats:[/\bno models with a t of (\d)\+/] },
   // a keyword of the unit the rule names ("If this model has the KHORNE keyword"): the unit's own keywords say it (the database)
@@ -130,12 +130,13 @@ const FACT_OF = Object.fromEntries(Object.entries(COND).filter(([, c]) => c.fact
 // the Custom modifiers group: every catalogue effect a player can set by hand, in this order (no rule, no AI: plain toggles)
 const CUSTOM = [];
 for(const [id, x] of Object.entries(FX)) for(const p of x.custom || []) CUSTOM.push([id, p]);
-const norm = t => String(t == null ? '' : t).replace(/\*\*|~~[^~]*~~|__/g, '').replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[–—−]/g, '-').replace(/\s+/g, ' ').toLowerCase();
+const norm = t => String(t == null ? '' : t).replace(/\*\*|~~|__/g, '').replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[–—−]/g, '-').replace(/\s+/g, ' ').toLowerCase();
 function toMod(fx){
   const out = {};
   for(const [id, p] of fx || []){ const f = FX[id]; if(!f) continue; const m = f.mod(p); if(!m) continue;
     for(const [k, x] of Object.entries(m)){
       if(k === 'set') out.set = Object.assign({}, out.set || {}, x);
+      else if((k === 'critHit' || k === 'critWound') && typeof out[k] === 'number') out[k] = Math.min(out[k], x);   // (the lowest: critical on 5+ beats 6+)
       else if(typeof x === 'number' && typeof out[k] === 'number' && !['critHit', 'critWound'].includes(k)) out[k] += x;
       else out[k] = x; } }
   return out;
