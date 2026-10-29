@@ -2493,6 +2493,10 @@ function dmCalc(st, A, au, tg, kind){
   for(const r of rules) if(r.m.limit && r.on) (lims[r.m.limit] = lims[r.m.limit] || []).push(r);
   for(const [g, list] of Object.entries(lims)){ const lim = dmLimitOf(A, au, list[0].m.limitOf);
     list.sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)); list.slice(lim.n).forEach(r => { r.extra = lim.why; }); }
+  // one of a unit's abilities to pick from (BOXES excl, GW: "select one Triarch ability"): with more than one ticked (a state saved
+  // before, a plan), the ones ticked after the first are counted by you
+  { const xs = {}; for(const r of rules) if(r.on && r.m.box && r.m.box.excl){ const g = r.m.box.excl + '|' + (r.m.src ? r.m.src.id : ''); (xs[g] = xs[g] || []).push(r); }
+    for(const list of Object.values(xs)){ list.sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)); list.slice(1).forEach(r => { if(!r.extra) r.extra = 'only one ' + r.m.box.excl + ' ability at a time (GW: “select one”): counted by you'; }); } }
   // one stratagem on the unit in this phase (15.01): the ones ticked after the first, in the order ticked, are counted by you (a
   // stratagem carried from the shooting was used in that phase)
   rules.filter(r => r.on && r.m.strat && !r.carried).sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)).slice(1).forEach(r => { if(!r.extra) r.extra = DM_ONE_STRAT; });

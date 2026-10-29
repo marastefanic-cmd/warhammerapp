@@ -818,6 +818,10 @@ cases.push(['pick one: ticking Phaeron of the Blades unticks Phaeron of the Star
   const st0 = box(S0, 'Phaeron of the Stars'), bl = box(S0, 'Phaeron of the Blades'); const p0 = dm.plan(Object.assign({ ch:{ 'me:fight':{ on:{ [st0.k]:true } } }, turn:{ me:MT('fight') } }, S0));
   const st = dm.app.dmState(), lv = dm.app.dmLevers(st, p0).find(l => l.id === 'r:' + bl.k); lv.apply(st); const c = st.ch && st.ch['me:fight'];
   return +(!!c && c.on[bl.k] === true && c.on[st0.k] === false); }, 1]);
+// both ticked in a saved state (before excl, or a plan): the one ticked after the first is counted by you, not as the rules give it
+cases.push(['pick one: both ticked, the later one counted by you', () => { const S0 = { army:'u-w0t-m8', ph:'fight', atk:'imotekh-the-stormlord', typed:{} };
+  const a = box(S0, 'Phaeron of the Stars'), b = box(S0, 'Phaeron of the Blades'), c = dm.calc(Object.assign({ on:{ [a.k]:true, [b.k]:true } }, S0));
+  const A = c.rules.find(r => r.k === a.k), B = c.rules.find(r => r.k === b.k); return +(A.on && B.on && !A.extra && /only one Triarch Abilities ability at a time/.test(B.extra || '')); }, 1]);
 // your unit changed: a tick whose rule still applies is kept (Kustom Dakka, Tankbustas → Flash Gitz: the same turn as picked so); one
 // with no rule for the new unit is dropped and said (Try Dat Button!, the Big Mek Dakkarig's), in a step out of the turn too
 const KD = strat({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka').k;
