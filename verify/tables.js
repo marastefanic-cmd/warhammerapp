@@ -494,8 +494,10 @@ function build(R){
     for(const f of DS_UNIT.slice(1).concat(CAT_COLS)) if(c[f] !== undefined && !(f in s.ds) && !s.uconf.has(f)){ s.ds[f] = c[f]; if(s.catalog === 'shared') s.catFilled.add(f); }
     if(s.catalog === 'only') s.ds.aiStatus = 'not-read';
     for(const kind of ROWS) for(const r of c[kind] || []){
-      const rk = rowKey(kind, r.name);
-      const R = s.rows[kind].get(rk);
+      // (a weapon profile of another group under the same name, the Bloodthirster's "strike" of its Axe of Khorne next to a list's Great axe
+      // of Khorne one: a row of its own; the lists' rows find theirs first, by name, as before)
+      let rk = rowKey(kind, r.name), R = s.rows[kind].get(rk);
+      if(R && (kind === 'ranged' || kind === 'melee') && (R.ds.group || null) !== (r.group || null)){ rk = rk + '\0' + (r.group || ''); R = s.rows[kind].get(rk); }
       if(!R){ s.rows[kind].set(rk, { key:rk, obs:[], ds:Object.assign({}, r), conflict:new Set(), catalog:true }); continue; }
       for(const f of Object.keys(r)) if(!(f in R.ds) && !R.conflict.has(f)) R.ds[f] = r[f];
     }

@@ -847,7 +847,9 @@ for (const u of units) {
   for (const p of u._parts) {
     const W = wahaDs(nm(p.name)); if (!W || !W.ds) continue;
     for (const [k, det] of Object.entries(W.ds.detachmentKeywords || {})) {
-      if (printed.some(x => gwKw(x) === gwKw(k)) || detNames.some(n => lc(n) === lc(det))) continue;
+      // (in --emit, a faction catalogue's reading of the datasheet alone: a detachment's keyword is never the datasheet's, though the
+      // catalogue's export takes every detachment)
+      if (printed.some(x => gwKw(x) === gwKw(k)) || (detNames.some(n => lc(n) === lc(det)) && !argv.includes('--emit'))) continue;
       const have = u.kw.find(x => gwKw(x) === gwKw(k)); if (!have) continue;
       u.kw.splice(u.kw.indexOf(have), 1);
       gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: null, bsdata: have, file: W.file, det });

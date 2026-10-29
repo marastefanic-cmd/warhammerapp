@@ -259,7 +259,7 @@ function rowDiffs(S, R, opts) {
     put(miss.length ? 'other' : stable(S.rules) === stable(R.rules) ? 'same' : 'rules', 'rules', S.rules, R.rules);
   } else if (!opts.listUnit && R.rules) put('fill', 'rules', null, R.rules);
   for (const kind of KINDS) {
-    const key = r => kind === 'stats' ? String(r.name).replace(/ ×\d+$/, '') : r.name;
+    const key = r => kind === 'stats' ? String(r.name).replace(/ ×\d+$/, '') : r.name + (r.group ? ' (' + r.group + ')' : '');
     const b = new Map((R[kind] || []).map(r => [key(r), r]));
     for (const r of S[kind] || []) {
       const c = b.get(key(r));

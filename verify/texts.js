@@ -1352,8 +1352,8 @@ for (const fk of FACTIONS) for (const e of UPD[fk]) {
   checkUpdate('packUpdate', 'core', 'rule:' + key, 'text', D.rules[key], e, t && norm(t[1]) === m[1] ? t[2] : undefined);
 }
 // Datasheets the Faction Pack prints in full (pages whose first line is the datasheet name): each ability text of
-// that unit must be in those pages word for word ("Name: text", or the DAMAGED / INVULNERABLE SAVE boxes)
-for (const a of D.armies) {
+// that unit must be in those pages word for word ("Name: text", or the DAMAGED / INVULNERABLE SAVE boxes); a catalogue row too
+for (const a of D.armies.concat(CATALOG)) {
   const d = DOCS['pack:' + a.faction]; if (!d) continue;
   const toc = packContents(d).filter(e => e.group === 'Datasheets' || e.group === 'Imperial Armour Datasheets');
   for (const u of a.units) {

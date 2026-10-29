@@ -638,7 +638,7 @@ Neurogaunts
 ×2 units
 Neurocytes
 
-While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
+While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
 
 Norn Assimilator
 Synaptoprescience
@@ -2481,7 +2481,7 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 ABILITIES
 Neurocytes
 
-While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
+While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
 
 Rules
 Synapse

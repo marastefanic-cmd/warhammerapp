@@ -1,0 +1,8 @@
+{
+ "_about": "The faction catalogue import (verify/from-bsdata.js chaos-daemons) reads BSData's whole Chaos Daemons catalogue (and the Daemons Library it imports root entries from) through verify/from-json.js as the export catalog-chaos-daemons; this is its hand file. weaponNames: a weapon BSData names otherwise than GW's datasheet (Wahapedia), so that GW's profile is found and its values checked; the app keeps BSData's name (New Recruit's, which the lists' signed-off rows and the in-app import use).",
+ "weaponNames": {
+  "Fires of Tzeentch - blue fire": "Fire of Tzeentch - blue fire",
+  "Fires of Tzeentch - pink fire": "Fire of Tzeentch - pink fire",
+  "Lashing tongues": "Lashing tongue"
+ }
+}
