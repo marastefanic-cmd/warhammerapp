@@ -49,7 +49,7 @@ row (`catalogRows()`):
 | crusade | a Crusade name or category (`CRUSADE`: Crusade…, Order of Battle, Codex Crusade Relics, Battle Scars/Honours/Traits, Weapon Modifications, Crusade Relic Upgrades, Agendas, Requisitions, …), or only Crusade costs; inside a datasheet a group or entry so named is no option | Order of Battle; on every unit the Crusade group, Weapon Modifications, Crusade Relic Upgrades |
 | crucible | the name ends in `[Crucible]`, or a category `Crucible` (characters made with GW's Crucible rules, hidden in BSData until "Show Crucible Characters"; no Wahapedia datasheet to check against) | Guardian of the Throne, Null Maiden, Kataphraktoi Exemplar |
 | config | not a unit or model entry, or its primary category is Configuration | Detachment, Show/Hide Options, Martial Ka'tah Reference |
-| ally | a datasheet with none of the faction's Faction keywords (`verify/sources/factions.json` `catalogFactions`), in the catalogue or in a library it imports root entries from | the Imperial Knights library's Armigers and the Imperial Agents (55 entries) |
+| ally | a datasheet with none of the faction's Faction keywords (`verify/sources/factions.json` `catalogFactions`), in the catalogue or in a library it imports root entries from | 55 entries: every Imperial Knight of the Imperial Knights library (22: the Armigers, Questoris, Cerastus, Acastus, Canis Rex, …), the Agents of the Imperium (29) and four Titans of Library - Titans (Reaver, Warbringer Nemesis, Warhound, Warlord) |
 
 Inside a datasheet an option BSData hides statically (`hidden: true`) and the Enhancements group (a list's choice by detachment)
 are no options. The same filter sorts the detachments. Every left-out entry is listed with its rule in the catalogue file
@@ -63,10 +63,12 @@ are no options. The same filter sorts the detachments. Every left-out entry is l
 | `abilities` (`name`, `tag`, `text`) | GW (Wahapedia) | GW's name, tag and words with their markup, found by BSData's words or name; BSData's where GW has none is listed to do |
 | `base` | GW's base size guide | else Wahapedia's datasheet, declared in `verify/deviations-bases.json` |
 | Leader / Support ability | GW (Wahapedia LEADER / SUPPORT) | "This model can be attached to the following units: …" |
-| `points`, `composition`, `options` | BSData | `verify/bs-catalog.js` |
+| `points` | GW (Wahapedia: YOUR … COSTS per copy, the unit sizes priced, WARGEAR OPTIONS), BSData's in the same shape where GW has none | `verify/catalog.js` gwCosts / bsCosts; every difference from BSData declared (the Prosecutors', Vigilators' and Witchseekers' 6-8 model units BSData prices) |
+| `composition`, `options` | BSData | `verify/bs-catalog.js` |
+| model names | BSData / New Recruit; a BSData misprint of GW's name gets GW's (declared) | hand file `modelNames`: Palas → Pallas Grav-attack (typo, GW's); Gyrfalcon Jetbike kept (GW: Gyrfalcon Jetbiker) |
 | detachments: `name`, `dp`, `rule`, `enhancements` (pts), `stratagems` (cp, WHEN/TARGET/EFFECT/RESTRICTIONS) | GW (Wahapedia faction page; GW's Printed Product Updates / Faction Pack checked by verify/texts.js) | from-json's detachment reader |
 | detachments: `dispositions`, `nr` | BSData | |
-| detachments: `phases`, `turn`, `turns`, `needs`, rule `at`/`ph`/`turn`/`needs` | derived | `verify/derive.js`'s fixed rules on the words |
+| detachments: `phases`, `turn`, `turns`, `needs`, rule `at`/`ph`/`turn`/`needs` | derived | `verify/derive.js`'s fixed rules on the words, as it gives them (no hand label, no exception of the writer's: derive.js is their only source; a wrong one is a derive.js rule to add, verify/review/labels-handoff.json) |
 | `aiStatus` | derived | `'not-read'`: the AI layers are not written yet |
 | `gist`, `def`, `mods` / `aura` / `guard`, `calcMods` and the other reading columns | **AI** (fingerprinted, reviewer-signed) | none on a catalogue row or new detachment yet (below) |
 | `weaponNames` (hand file `verify/sources/hand/catalog-<faction>.json`) | hand | a weapon BSData names otherwise than GW (Tarsis buckler / Tarsus Buckler), so GW's profile is found and checked |

@@ -1584,7 +1584,7 @@ const FACTIONS = {
       // Shadowkeepers: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js adeptus-custodes); no gists, readings or When targeted lines yet (aiStatus)
       'shadowkeepers': {
         name:'Shadowkeepers', nr:'Shadow Keepers', dispositions:['Purge the Foe'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Wardens of the Dark Cells', needs:{ all:['Faction: Adeptus Custodes'], none:['Vehicle'] }, text:'While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, melee attacks that target that unit with a S greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: KAPTARIS**\n**Additional Effect:** You can select one enemy unit **engaged** with your unit. That enemy unit must make a **battle-shock roll**, with -1 to that **battle-shock roll**. You cannot select the same enemy unit for this effect more than once per phase.' },
+        rule:{ name:'Wardens of the Dark Cells', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, needs:{ all:['Faction: Adeptus Custodes'], none:['Vehicle'] }, text:'While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, melee attacks that target that unit with a S greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: KAPTARIS**\n**Additional Effect:** You can select one enemy unit **engaged** with your unit. That enemy unit must make a **battle-shock roll**, with -1 to that **battle-shock roll**. You cannot select the same enemy unit for this effect more than once per phase.' },
         enhancements:[
           { name:'Unstoppable Destroyer', pts:25, text:'**ADEPTUS CUSTODES INFANTRY** model only. When this unit is selected to make a **pile-in**/**consolidation move**:\n- This unit can move up to 4".\n- You can select any **consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving **restrictions**.' },
           { name:'Genalchemic Warding', pts:30, text:'**ADEPTUS CUSTODES** model only. This model has **Feel No Pain 5+**.' }
@@ -7646,7 +7646,7 @@ const DATASHEETS = {
   ],
   rules:['Aquila Commander','Aegis of the Emperor','Martial Ka’tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Cleave','Assault','Rapid Fire'],
   kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris'],
-  points:{ tiers:[{ models:1, pts:265 }] },
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:265 }] }] },
   composition:[
     { model:'Trajann Valoris', min:1, max:1 }
   ],
@@ -7678,7 +7678,7 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Martial Ka\'tah','Aegis of the Emperor','Feel No Pain 5+*','Blast','Assault','Rapid Fire'],
   kw:['Allarus Custodians','Faction: Adeptus Custodes','Imperium','Infantry','Terminator'],
-  points:{ tiers:[{ models:2, pts:180 },{ models:3, pts:270 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:2, pts:180 },{ models:3, pts:270 }] },{ from:3, to:null, models:[{ models:2, pts:210 },{ models:3, pts:300 }] }] },
   composition:[
     { model:'Allarus Custodian', min:2, max:3 }
   ],
@@ -7705,7 +7705,7 @@ const DATASHEETS = {
   ],
   rules:['Feel No Pain 3+*','Daughters of the Abyss','Assault','Anti','Rapid Fire'],
   kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Prosecutor Squad'],
-  points:{ tiers:[{ models:4, pts:45 },{ models:5, pts:50 },{ models:6, pts:80 },{ models:10, pts:90 }] },
+  points:{ costs:[{ from:1, to:null, models:[{ models:4, pts:45 },{ models:5, pts:50 },{ models:9, pts:80 },{ models:10, pts:90 }] }] },
   composition:[
     { model:'Prosecutor', min:4, max:10, group:'4-10 Prosecutors' }
   ],
@@ -7731,7 +7731,7 @@ const DATASHEETS = {
   ],
   rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
   kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad'],
-  points:{ tiers:[{ models:4, pts:55 },{ models:5, pts:60 },{ models:6, pts:100 },{ models:10, pts:110 }] },
+  points:{ costs:[{ from:1, to:null, models:[{ models:4, pts:55 },{ models:5, pts:60 },{ models:9, pts:100 },{ models:10, pts:110 }] }] },
   composition:[
     { model:'Witchseeker', min:4, max:10, group:'4-10 Witchseekers' }
   ],
@@ -7763,7 +7763,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Lethal Hits','Sustained Hits'],
   kw:['Caladius','Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle'],
-  points:{ tiers:[{ models:1, pts:250 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:250 }] },{ from:3, to:null, models:[{ models:1, pts:280 }] }] },
   composition:[
     { model:'Caladius Annihilator Grav-tank', min:1, max:1 }
   ],
@@ -7794,7 +7794,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Lance','Rapid Fire'],
   kw:['Contemptor-Achillus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker'],
-  points:{ tiers:[{ models:1, pts:230 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:230 }] },{ from:3, to:null, models:[{ models:1, pts:260 }] }] },
   composition:[
     { model:'Contemptor-Achillus Dreadnought', min:1, max:1 }
   ],
@@ -7822,7 +7822,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Blast','Torrent','Twin-linked'],
   kw:['Contemptor-Galatus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker'],
-  points:{ tiers:[{ models:1, pts:220 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:220 }] },{ from:3, to:null, models:[{ models:1, pts:250 }] }] },
   composition:[
     { model:'Contemptor-Galatus Dreadnought', min:1, max:1 }
   ],
@@ -7854,7 +7854,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*'],
   kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker'],
-  points:{ tiers:[{ models:1, pts:280 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:1, pts:280 }] },{ from:2, to:null, models:[{ models:1, pts:310 }] }] },
   composition:[
     { model:'Telemon Heavy Dreadnought', min:1, max:1 }
   ],
@@ -7892,12 +7892,12 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Leader','Martial Ka’tah','Aegis of the Emperor','Aquila Commander','Feel No Pain 5+*','Precision','Melta','Cleave','Assault','Rapid Fire'],
   kw:['Character','Faction: Adeptus Custodes','Imperium','Infantry','Shield-Captain'],
-  points:{ tiers:[{ models:1, pts:180 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:1, pts:180 }] },{ from:2, to:null, models:[{ models:1, pts:200 }] }], wargear:[{ name:'Praesidium Shield', pts:25 }] },
   composition:[
     { model:'Shield-Captain', min:1, max:1 }
   ],
   options:[
-    { on:'Shield-Captain', choices:[{ name:'Paragon Blade & Praesidium Shield' },{ name:'Pyrithite Spear & Praesidium shield' },{ name:'Guardian Spear' },{ name:'Castellan Axe' }], group:'Wargear', min:1, max:1 }
+    { on:'Shield-Captain', choices:[{ name:'Paragon Blade & Praesidium Shield', pts:25 },{ name:'Pyrithite Spear & Praesidium shield', pts:25 },{ name:'Guardian Spear' },{ name:'Castellan Axe' }], group:'Wargear', min:1, max:1 }
   ]
 },
 'adeptus-custodes/sentinel-guard-sodality':{
@@ -7921,7 +7921,7 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Martial Ka’tah','Aegis of the Emperor','Feel No Pain 5+*','Assault','Close-quarters'],
   kw:['Battleline','Faction: Adeptus Custodes','Imperium','Infantry','Sentinel Guard Sodality','Trusted Sentinel'],
-  points:{ tiers:[{ models:3, pts:240 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:3, models:[{ models:3, pts:240 }] },{ from:4, to:null, models:[{ models:3, pts:270 }] }] },
   composition:[
     { model:'Sentinel Guard', min:3, max:3 }
   ],
@@ -7950,7 +7950,7 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Martial Ka\'tah','Aegis of the Emperor','Feel No Pain 5+*','Assault','Rapid Fire'],
   kw:['Battleline','Custodian Guard Sodality','Faction: Adeptus Custodes','Imperium','Infantry','Trusted Sentinel'],
-  points:{ tiers:[{ models:3, pts:240 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:3, models:[{ models:3, pts:240 }] },{ from:4, to:null, models:[{ models:3, pts:270 }] }] },
   composition:[
     { model:'Custodian Guard', min:3, max:3 }
   ],
@@ -7978,7 +7978,7 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Martial Ka\'tah','Feel No Pain 5+*','Aegis of the Emperor'],
   kw:['Custodian Wardens','Faction: Adeptus Custodes','Imperium','Infantry','Trusted Sentinel'],
-  points:{ tiers:[{ models:2, pts:200 },{ models:3, pts:295 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:2, pts:200 },{ models:3, pts:295 }] },{ from:2, to:null, models:[{ models:2, pts:230 },{ models:3, pts:325 }] }] },
   composition:[
     { model:'Custodian Warden', min:2, max:3 }
   ],
@@ -8008,7 +8008,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka\'tah','Aegis of the Emperor','Feel No Pain 5+*','Deep Strike','Lance'],
   kw:['Faction: Adeptus Custodes','Fly','Imperium','Mounted','Vertus Praetors'],
-  points:{ tiers:[{ models:1, pts:220 },{ models:3, pts:330 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:2, pts:220 },{ models:3, pts:330 }] },{ from:2, to:null, models:[{ models:2, pts:240 },{ models:3, pts:350 }] }] },
   composition:[
     { model:'Vertus Praetor', min:0, max:3, group:'2-3 Vertus Praetors', groupMin:2, groupMax:3 }
   ],
@@ -8034,7 +8034,7 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Leader','Martial Ka’tah','Aegis of the Emperor','Feel No Pain 5+*','Precision','Sustained Hits','Devastating Wounds','Cleave'],
   kw:['Blade Champion','Character','Faction: Adeptus Custodes','Imperium','Infantry'],
-  points:{ tiers:[{ models:1, pts:175 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:175 }] },{ from:3, to:null, models:[{ models:1, pts:195 }] }] },
   composition:[
     { model:'Blade Champion', min:1, max:1 }
   ],
@@ -8063,7 +8063,7 @@ const DATASHEETS = {
   ],
   rules:['Support','Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Devastating Wounds','Cleave','Blast','Assault','Rapid Fire'],
   kw:['Anathema Psykana','Character','Faction: Anathema Psykana','Imperium','Infantry','Knight-Centura'],
-  points:{ tiers:[{ models:1, pts:55 }] },
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:55 }] }] },
   composition:[
     { model:'Knight-Centura', min:1, max:1 }
   ],
@@ -8093,7 +8093,7 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Leader','Martial Ka’tah','Aegis of the Emperor','Aquila Commander','Feel No Pain 5+*','Blast','Assault','Rapid Fire','Cleave'],
   kw:['Character','Faction: Adeptus Custodes','Imperium','Infantry','Shield-Captain','Terminator'],
-  points:{ tiers:[{ models:1, pts:185 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:1, pts:185 }] },{ from:2, to:null, models:[{ models:1, pts:205 }] }] },
   composition:[
     { model:'Shield-Captain in Allarus Terminator Armour', min:1, max:1 }
   ],
@@ -8122,7 +8122,7 @@ const DATASHEETS = {
   ],
   rules:['Leader','Martial Ka’tah','Aquila Commander','Aegis of the Emperor','Deep Strike','Feel No Pain 5+*','Lance','Rapid Fire','Twin-linked'],
   kw:['Character','Faction: Adeptus Custodes','Fly','Imperium','Mounted','Shield-Captain'],
-  points:{ tiers:[{ models:1, pts:205 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:1, pts:205 }] },{ from:2, to:null, models:[{ models:1, pts:225 }] }] },
   composition:[
     { model:'Shield-Captain on Dawneagle Jetbike', min:1, max:1 }
   ],
@@ -8150,7 +8150,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D3','Firing Deck 2','Feel No Pain 3+*','Daughters of the Abyss','Rapid Fire','One Shot'],
   kw:['Anathema Psykana','Anathema Psykana Rhino','Dedicated Transport','Faction: Anathema Psykana','Frame','Imperium','Smoke','Transport','Vehicle'],
-  points:{ tiers:[{ models:1, pts:70 }], other:[{ type:'increment', value:10, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:3, models:[{ models:1, pts:70 }] },{ from:4, to:null, models:[{ models:1, pts:80 }] }] },
   composition:[
     { model:'Anathema Psykana Rhino', min:1, max:1 }
   ],
@@ -8170,9 +8170,9 @@ const DATASHEETS = {
   abilities:[
     { name:'Deft Parry', text:'Melee attacks that target this unit have -1 to **hit rolls**.' }
   ],
-  rules:['Feel No Pain 3+*','Daughters of the Abyss','Anti'],
+  rules:['Feel No Pain 3+*','Daughters of the Abyss','Devastating Wounds','Anti'],
   kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Vigilator Squad'],
-  points:{ tiers:[{ models:4, pts:50 },{ models:5, pts:55 },{ models:6, pts:90 },{ models:10, pts:100 }] },
+  points:{ costs:[{ from:1, to:null, models:[{ models:4, pts:50 },{ models:5, pts:55 },{ models:9, pts:90 },{ models:10, pts:100 }] }] },
   composition:[
     { model:'Vigilator', min:4, max:10, group:'4-10 Vigilators' }
   ],
@@ -8199,7 +8199,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka’tah','Deep Strike','Aegis of the Emperor','Feel No Pain 5+*','Close-quarters','Sustained Hits','Assault'],
   kw:['Explosives','Faction: Adeptus Custodes','Fly','Imperium','Infantry','Jump Pack','Venatari with Kinetic Destroyers'],
-  points:{ tiers:[{ models:3, pts:255 }], other:[{ type:'increment', value:25, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:3, pts:255 }] },{ from:3, to:null, models:[{ models:3, pts:280 }] }] },
   composition:[
     { model:'Venatari', min:3, max:3 }
   ],
@@ -8224,7 +8224,7 @@ const DATASHEETS = {
   ],
   rules:['Aegis of the Emperor','Feel No Pain 5+*','Deep Strike','Martial Ka’tah'],
   kw:['Aquilon Terminators with Solarite Power Gauntlets','Faction: Adeptus Custodes','Imperium','Infantry','Terminator'],
-  points:{ tiers:[{ models:3, pts:285 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:3, pts:285 }] },{ from:3, to:null, models:[{ models:3, pts:315 }] }] },
   composition:[
     { model:'Aquilon Terminator', min:3, max:3 }
   ],
@@ -8250,7 +8250,7 @@ const DATASHEETS = {
   ],
   rules:['Aegis of the Emperor','Feel No Pain 5+*','Deep Strike','Martial Ka’tah','Sustained Hits','Blast','Torrent','Rapid Fire'],
   kw:['Aquilon Terminators with Solarite Power Talons','Faction: Adeptus Custodes','Imperium','Infantry','Terminator'],
-  points:{ tiers:[{ models:3, pts:275 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:3, pts:275 }] },{ from:3, to:null, models:[{ models:3, pts:305 }] }] },
   composition:[
     { model:'Aquilon Terminator', min:3, max:3 }
   ],
@@ -8278,7 +8278,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka’tah','Deep Strike','Aegis of the Emperor','Feel No Pain 5+*','Assault','Lance','Precision'],
   kw:['Explosives','Faction: Adeptus Custodes','Fly','Imperium','Infantry','Jump Pack','Venatari with Kinetic Destroyers'],
-  points:{ tiers:[{ models:3, pts:270 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:3, pts:270 }] },{ from:3, to:null, models:[{ models:3, pts:300 }] }] },
   composition:[
     { model:'Venatari', min:3, max:3 }
   ],
@@ -8306,7 +8306,7 @@ const DATASHEETS = {
   ],
   rules:['Martial Ka’tah','Aegis of the Emperor','Feel No Pain 5+*','Deep Strike','Lance','Sustained Hits','Twin-linked','Devastating Wounds'],
   kw:['Faction: Adeptus Custodes','Fly','Gyrfalcon Jetbike Sodality','Imperium','Mounted'],
-  points:{ tiers:[{ models:2, pts:260 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:2, pts:260 }] },{ from:2, to:null, models:[{ models:2, pts:280 }] }] },
   composition:[
     { model:'Gyrfalcon Jetbike', min:2, max:2 }
   ],
@@ -8319,7 +8319,7 @@ const DATASHEETS = {
 'adeptus-custodes/pallas-grav-attack':{
   name:'Pallas Grav-attack', faction:'adeptus-custodes', bsId:'06df-2fb2-8dfa-2fce', role:'Vehicle',
   stats:[
-    { name:'Palas Grav-attack', M:'12"', T:'9', Sv:'2+', W:'10', Ld:'5+', OC:'2', InSv:'5+', base:'105×70mm Oval' }
+    { name:'Pallas Grav-attack', M:'12"', T:'9', Sv:'2+', W:'10', Ld:'5+', OC:'2', InSv:'5+', base:'105×70mm Oval' }
   ],
   ranged:[
     { name:'Twin Iliastus Accelerator Fusil', range:'48"', A:'2', BS:'2+', S:'10', AP:'-1', D:'3', kw:['RAPID FIRE 2','TWIN-LINKED'] },
@@ -8333,7 +8333,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise 1','Feel No Pain 5+*','Aegis of the Emperor','Deep Strike','Rapid Fire','Twin-linked'],
   kw:['Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Pallas Grav-attack','Vehicle'],
-  points:{ tiers:[{ models:1, pts:135 }] },
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:135 }] }] },
   composition:[
     { model:'Pallas Grav-attack', min:1, max:1 }
   ],
@@ -8361,7 +8361,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Twin-linked','Rapid Fire','Sustained Hits','Torrent','Blast'],
   kw:['Caladius','Caladius Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle'],
-  points:{ tiers:[{ models:1, pts:230 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:230 }] },{ from:3, to:null, models:[{ models:1, pts:260 }] }] },
   composition:[
     { model:'Caladius Grav-tank', min:1, max:1 }
   ],
@@ -8391,7 +8391,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D6','Damaged 6','Aegis of the Emperor','Feel No Pain 5+*','Deep Strike','Twin-linked','Sustained Hits','Torrent','Blast'],
   kw:['Coronus Grav-carrier','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Transport','Vehicle'],
-  points:{ tiers:[{ models:1, pts:225 }], other:[{ type:'increment', value:20, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:225 }] },{ from:3, to:null, models:[{ models:1, pts:245 }] }] },
   composition:[
     { model:'Coronus Grav-carrier', min:1, max:1 }
   ],
@@ -8418,7 +8418,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D6','Damaged 7','Aegis of the Emperor','Feel No Pain 5+*'],
   kw:['Aircraft','Ares Gunship','Faction: Adeptus Custodes','Fly','Imperium','Vehicle'],
-  points:{ tiers:[{ models:1, pts:580 }], other:[{ type:'increment', value:30, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:1, pts:580 }] },{ from:2, to:null, models:[{ models:1, pts:610 }] }] },
   composition:[
     { model:'Ares Gunship', min:1, max:1 }
   ],
@@ -8446,7 +8446,7 @@ const DATASHEETS = {
   ],
   rules:['Deadly Demise D6','Hover','Damaged 7','Aegis of the Emperor','Feel No Pain 5+*','Blast','Sustained Hits'],
   kw:['Faction: Adeptus Custodes','Fly','Imperium','Orion Assault Dropship','Transport','Vehicle'],
-  points:{ tiers:[{ models:1, pts:690 }], other:[{ type:'increment', value:50, when:'each earlier copy of this datasheet in the army' }] },
+  points:{ costs:[{ from:1, to:1, models:[{ models:1, pts:690 }] },{ from:2, to:null, models:[{ models:1, pts:740 }] }] },
   composition:[
     { model:'Orion Assault Dropship', min:1, max:1 }
   ],

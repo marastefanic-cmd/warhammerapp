@@ -1065,6 +1065,9 @@ for (const u of units) {
   }
   for (const r of u._dsRules.slice()) {
     if (gw.some(x => lc(x) === lc(r)) || /\*$/.test(r)) continue;
+    // a weapon ability of a weapon of the unit ("Devastating Wounds" for the Vigilators' [DEVASTATING WOUNDS: PSYKER]): GW prints it on
+    // the weapon, not under CORE ABILITIES; the Rules line names the weapons' abilities, so it stays
+    { const k = lc(r); if (u.ranged.concat(u.melee).some(w => (w.kw || []).some(x => lc(x) === k || lc(x).startsWith(k + ' ') || lc(x).startsWith(k + ':')))) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: 'a weapon ability of its weapons' }); continue; } }
     // an army rule of the faction that GW's datasheet names as the tag of one of its abilities ("Defender’s Duty (Bondsman)"): the
     // datasheet names it, so it stays on the Rules line, as on every approved Imperial Knights list
     if (F && (F.armyRules || []).some(x => lc(x.name) === lc(r)) && u.abilities.some(a => (a.tag || '').split(' · ').some(t => lc(t) === lc(r)))) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: 'the army rule its ability’s tag names (' + u.abilities.filter(a => (a.tag || '').split(' · ').some(t => lc(t) === lc(r))).map(a => a.name + ' (' + r + ')').join(', ') + ', ' + G.files.join(', ') + ')' }); continue; }

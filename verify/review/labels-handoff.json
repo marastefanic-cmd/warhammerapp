@@ -1,0 +1,34 @@
+{
+ "_about": "Labels verify/derive.js gives today that are wrong, for the labels builder (branch wt-labels: derive.js the only source of labels, no hand overrides). Found by the review of the Adeptus Custodes catalogue (verify/review/result-catalog-custodes.json). data.js keeps derive.js's values until derive.js gets the general rule; the catalogue writer has no exception of its own (verify/catalog-write.js).",
+ "items": [
+  {
+   "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+   "kind": "rule-needs",
+   "derived": { "all": ["Faction: Anathema Psykana", "Character"] },
+   "correct": { "all": ["Faction: Anathema Psykana"] },
+   "why": "first-unit takes the mustering bullet (\"When mustering your army, you can select a friendly ANATHEMA PSYKANA CHARACTER model to be your WARLORD\"). The rule's in-game part, Creeping Dread (Aura), is given to \"Friendly ANATHEMA PSYKANA units\" (derive.js's own grant reading: to {all:[Faction: Anathema Psykana]}); PROSECUTOR SQUAD (BATTLELINE) is Anathema Psykana too. With Character the rule reaches only the Knight-Centura.",
+   "rule": "first-unit (and kw-all) skip a sentence that starts \"When mustering your army\": it says who can be chosen before the battle, not which units the rule reaches",
+   "source": "data.js FACTIONS adeptus-custodes · null-maiden-vigil · rule (Wahapedia adeptus-custodes, Null Maiden Vigil 1DP)",
+   "key": "c8c98764a01463ba"
+  },
+  {
+   "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+   "kind": "rule-timing",
+   "derived": { "ph": ["movement", "shooting", "fight"], "turn": "either" },
+   "correct": { "ph": ["movement", "shooting"] },
+   "why": "GW: \"ranged attacks that target that unit … have -1 to wound rolls\", and Favoured ka'tah SALVUS \"Your unit's ranged attacks have +6\" R\". Nothing of it is in the Fight phase: the generic targeted rule matched \"attacks that target that unit\" although the attacks are ranged (derive.js's own Additional Effect reading gives movement and shooting).",
+   "rule": "\"ranged attacks that target\" is read as targeted-ranged (the opponent's Shooting phase, and Fire Overwatch in its Movement phase), not targeted",
+   "source": "data.js FACTIONS adeptus-custodes · aquilan-shield · rule",
+   "key": "5f80042b0761fcee"
+  },
+  {
+   "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+   "kind": "rule-timing",
+   "derived": { "ph": ["movement", "shooting", "fight"], "turn": "either", "turns": { "movement": "your", "shooting": "opp" } },
+   "correct": { "ph": ["fight"], "turn": "either" },
+   "why": "The mirror case of Gilded Guardians: \"melee attacks that target that unit … have -1 to wound rolls\", and Favoured ka'tah KAPTARIS's Additional Effect (an enemy unit engaged with your unit makes a battle-shock roll): only melee, the Fight phase.",
+   "rule": "\"melee attacks that target\" is read as targeted-melee (the Fight phase), not targeted",
+   "source": "data.js FACTIONS adeptus-custodes · shadowkeepers · rule"
+  }
+ ]
+}

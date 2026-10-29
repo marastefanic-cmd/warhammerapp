@@ -3066,6 +3066,16 @@
  {
   "army": "catalog",
   "unit": "adeptus-custodes/prosecutor-squad",
+  "field": "points",
+  "app": "any copy: 4 45 · 5 50 · 9 80 · 10 90",
+  "source": "any copy: 4 45 · 5 50 · 6 80 · 7 80 · 8 80 · 9 80 · 10 90",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 4 45 · 5 50 · 9 80 · 10 90; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25): any copy: 4 45 · 5 50 · 6 80 · 7 80 · 8 80 · 9 80 · 10 90 (copy 1-, 6 models: BSData 80, GW prices no unit of 6; copy 1-, 7 models: BSData 80, GW prices no unit of 7; copy 1-, 8 models: BSData 80, GW prices no unit of 8). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: any copy: 4 45 · 5 50 · 9 80 · 10 90.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/prosecutor-squad",
   "field": "melee[Gun Stock].A",
   "app": "2",
   "source": "3",
@@ -3096,6 +3106,16 @@
  {
   "army": "catalog",
   "unit": "adeptus-custodes/vigilator-squad",
+  "field": "points",
+  "app": "any copy: 4 50 · 5 55 · 9 90 · 10 100",
+  "source": "any copy: 4 50 · 5 55 · 6 90 · 7 90 · 8 90 · 9 90 · 10 100",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 4 50 · 5 55 · 9 90 · 10 100; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25): any copy: 4 50 · 5 55 · 6 90 · 7 90 · 8 90 · 9 90 · 10 100 (copy 1-, 6 models: BSData 90, GW prices no unit of 6; copy 1-, 7 models: BSData 90, GW prices no unit of 7; copy 1-, 8 models: BSData 90, GW prices no unit of 8). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html: any copy: 4 50 · 5 55 · 9 90 · 10 100.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/vigilator-squad",
   "field": "ability[Creeping Dread]",
   "app": null,
   "source": "Creeping Dread",
@@ -3115,12 +3135,12 @@
  },
  {
   "army": "catalog",
-  "unit": "adeptus-custodes/vigilator-squad",
-  "field": "rules",
-  "app": null,
-  "source": "Devastating Wounds",
-  "reason": "GW’s datasheet does not print Fights First. GW wins.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "points",
+  "app": "any copy: 4 55 · 5 60 · 9 100 · 10 110",
+  "source": "any copy: 4 55 · 5 60 · 6 100 · 7 100 · 8 100 · 9 100 · 10 110",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 4 55 · 5 60 · 9 100 · 10 110; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25): any copy: 4 55 · 5 60 · 6 100 · 7 100 · 8 100 · 9 100 · 10 110 (copy 1-, 6 models: BSData 100, GW prices no unit of 6; copy 1-, 7 models: BSData 100, GW prices no unit of 7; copy 1-, 8 models: BSData 100, GW prices no unit of 8). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: any copy: 4 55 · 5 60 · 9 100 · 10 110.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -3291,6 +3311,26 @@
   "source": "Damaged",
   "reason": "GW’s datasheet prints Damaged 4 (BSData: Damaged). GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/pallas-grav-attack",
+  "field": "stats[Pallas Grav-attack]",
+  "app": "Pallas Grav-attack",
+  "source": null,
+  "reason": "BSData's model profile is \"Palas Grav-attack\"; its datasheet, category and GW's datasheet are \"Pallas Grav-attack\" (UNIT COMPOSITION: \"1 Pallas Grav-attack model\"): a misprint, GW's spelling. GW wins (as for every misprint; verify/sources/hand/catalog-adeptus-custodes.json modelNames).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html: UNIT COMPOSITION \"1 Pallas Grav-attack model\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/pallas-grav-attack",
+  "field": "stats[Palas Grav-attack]",
+  "app": null,
+  "source": "Palas Grav-attack",
+  "reason": "BSData's model profile is \"Palas Grav-attack\"; its datasheet, category and GW's datasheet are \"Pallas Grav-attack\" (UNIT COMPOSITION: \"1 Pallas Grav-attack model\"): a misprint, GW's spelling. GW wins (as for every misprint; verify/sources/hand/catalog-adeptus-custodes.json modelNames).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html: UNIT COMPOSITION \"1 Pallas Grav-attack model\".",
   "by": "verify/from-bsdata.js"
  },
  {

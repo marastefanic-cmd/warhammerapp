@@ -59,10 +59,66 @@ function filterTest() {
     [fake('Null Maiden [Crucible]'), 'crucible'], [fake('Exemplar', ['Crucible']), 'crucible'],
     [fake('Custodian Guard Sodality', ['Infantry', 'Battleline']), 'datasheet'], [fake('Legendary Hero'), 'datasheet'], [fake('Crucible of Fire Squad'), 'datasheet']];
   for (const [e, want, l] of cases) { const got = cls(e, l || null); if (got !== want) fails.push('filter: ' + e.name + (l ? ' (link ' + l.name + ')' : '') + ' is ' + got + ', want ' + want); }
+  // an option's hidden, with its modifiers (bs-catalog.js staticHidden)
+  const H = BC.staticHidden, hm = (v, conds) => ({ field: 'hidden', type: 'set', value: v, conditions: conds || [] });
+  const hcases = [[{ hidden: false }, false], [{ hidden: true }, true], [{ hidden: false, modifiers: [hm(true)] }, true], [{ hidden: true, modifiers: [hm(false)] }, false],
+    [{ hidden: true, modifiers: [hm(false, [{ scope: 'self', childId: 'x', type: 'atLeast', value: 1 }])] }, false],
+    [{ hidden: true, modifiers: [hm(false, [{ scope: 'force', childId: 'detachment', type: 'atLeast', value: 1 }])] }, true],
+    [{ hidden: false, modifiers: [hm(true, [{ scope: 'force', childId: 'detachment', type: 'atLeast', value: 1 }])] }, false],
+    [{ hidden: true, modifierGroups: [{ comment: 'Crusade modifiers', modifiers: [hm(false)] }] }, true]];
+  hcases.forEach(([x, want], i) => { if (H(x) !== want) fails.push('filter: hidden case ' + (i + 1) + ' (' + JSON.stringify(x) + ') is ' + H(x) + ', want ' + want); });
   // inside a datasheet: BSData's Crusade group, Weapon Modifications, Crusade Relic Upgrades are no options
   for (const n of ['Crusade', 'Weapon Modifications', 'Crusade Relic Upgrades', 'Battle Scars', 'Codex Crusade Relics']) if (!BC.CRUSADE.test(n)) fails.push('filter: the group ' + n + ' is not read as Crusade');
-  return { cases: cases.length, fails };
+  return { cases: cases.length + hcases.length, fails };
 }
+
+// ---------------------------------------------------------------- points: GW's costs, and BSData's in the same shape
+// { costs:[{ from, to, models:[{ models, pts }] }], wargear:[{ name, pts }] }: per copy of the datasheet in the army (from the from-th
+// to the to-th, to null: and every one after), the price of each unit size GW lists ("4 models 45 · 5 models 50 · 9 models 80"), and
+// what GW's WARGEAR OPTIONS costs ("per Praesidium Shield 25")
+// GW's, from its datasheet (Wahapedia: "YOUR UNIT COSTS", "YOUR 1ST TO 2ND UNITS COST", "YOUR 3RD+ UNIT COSTS", then "N models" / pts)
+function gwCosts(lines) {
+  const L = lines.map(l => String(l).replace(/\*\*/g, '').replace(/^- /, '').trim()).filter(Boolean);
+  const out = { costs: [] }; let cur = null, wg = null;
+  for (let i = 0; i < L.length; i++) {
+    const h = /^YOUR (?:(\d+)(?:ST|ND|RD|TH)(?: TO (\d+)(?:ST|ND|RD|TH))?(\+)? )?UNITS? COSTS?$/.exec(L[i]);
+    if (h) { const from = h[1] ? +h[1] : 1; cur = { from, to: h[2] ? +h[2] : h[3] ? null : h[1] ? from : null, models: [] }; out.costs.push(cur); wg = null; continue; }
+    if (!out.costs.length) continue;
+    if (L[i] === 'WARGEAR OPTIONS') { wg = out.wargear = []; cur = null; continue; }
+    const m = /^(\d+) models?$/.exec(L[i]);
+    if (cur && m && /^\d+$/.test(L[i + 1] || '')) { cur.models.push({ models: +m[1], pts: +L[i + 1] }); i++; continue; }
+    const w = /^per (.+)$/.exec(L[i]);
+    if (wg && w && /^\d+$/.test(L[i + 1] || '')) { wg.push({ name: w[1].trim(), pts: +L[i + 1] }); i++; continue; }
+    if (/^[A-Z][A-Z’' ]+[A-Z]$/.test(L[i]) || /^KEYWORDS/.test(L[i])) break;
+  }
+  return out.costs.length ? out : null;
+}
+// BSData's (verify/bs-catalog.js points: the price per model count, a later copy's increment; its options' costs), every unit size it
+// allows priced
+function bsCosts(pts, options) {
+  const [lo, hi] = pts.sizes || [1, 1], price = k => { let p = (pts.tiers[0] || {}).pts || 0; for (const t of pts.tiers) if (k >= t.models) p = t.pts; return p; };
+  const sizes = []; for (let k = lo; k <= hi; k++) sizes.push({ models: k, pts: price(k) });
+  const inc = (pts.other || []).find(o => o.type === 'increment' && /^each (earlier copy|copy after the first \d+)/.test(o.when)), rest = (pts.other || []).filter(o => o !== inc);
+  const n = inc ? (+(/after the first (\d+)/.exec(inc.when) || [, 1])[1]) : null;
+  const out = { costs: inc ? [{ from: 1, to: n, models: sizes }, { from: n + 1, to: null, models: sizes.map(x => ({ models: x.models, pts: x.pts + inc.value })) }] : [{ from: 1, to: null, models: sizes }] };
+  const wg = (options || []).flatMap(o => o.choices.filter(c => c.pts).map(c => ({ name: c.name, pts: c.pts })));
+  if (wg.length) out.wargear = wg;
+  if (rest.length) out.other = rest;
+  return out;
+}
+// the differences: each copy group, each unit size GW prices (and each one BSData allows that GW does not price), each wargear cost
+function costsDiff(gw, bs) {
+  const out = [], key = c => c.from + '-' + (c.to == null ? '' : c.to);
+  if (stable(gw.costs.map(key)) !== stable(bs.costs.map(key))) out.push('copies: GW ' + gw.costs.map(key).join(', ') + ', BSData ' + bs.costs.map(key).join(', '));
+  else gw.costs.forEach((g, i) => { const b = bs.costs[i], bm = new Map(b.models.map(x => [x.models, x.pts])), gm = new Map(g.models.map(x => [x.models, x.pts]));
+    for (const [k, v] of gm) if (bm.get(k) !== v) out.push('copy ' + key(g) + ', ' + k + ' models: GW ' + v + ', BSData ' + (bm.has(k) ? bm.get(k) : 'not a size'));
+    for (const [k, v] of bm) if (!gm.has(k)) out.push('copy ' + key(g) + ', ' + k + ' models: BSData ' + v + ', GW prices no unit of ' + k); });
+  for (const w of gw.wargear || []) { const b = (bs.wargear || []).filter(x => lc(x.name).includes(lc(w.name))); if (!b.length || b.some(x => x.pts !== w.pts)) out.push('wargear ' + w.name + ': GW ' + w.pts + ', BSData ' + (b.map(x => x.name + ' ' + x.pts).join(', ') || 'none')); }
+  for (const b of bs.wargear || []) if (!(gw.wargear || []).some(w => lc(b.name).includes(lc(w.name)))) out.push('wargear ' + b.name + ': BSData ' + b.pts + ', GW prints no cost for it');
+  if ((bs.other || []).length) out.push('BSData also: ' + bs.other.map(o => o.type + ' ' + o.value + ' when ' + o.when).join('; '));
+  return out;
+}
+const costsText = c => c.costs.map(g => (g.from === 1 && g.to == null ? 'any copy' : g.to == null ? g.from + '+' : g.from === g.to ? 'copy ' + g.from : g.from + '-' + g.to) + ': ' + g.models.map(x => x.models + ' ' + x.pts).join(' · ')).join('; ') + ((c.wargear || []).length ? '; wargear: ' + c.wargear.map(w => w.name + ' ' + w.pts).join(', ') : '');
 
 // ---------------------------------------------------------------- BSData's own reading of a datasheet (the entry, before any modifier)
 function bsReading(sel, C) {
@@ -98,8 +154,10 @@ function bsReading(sel, C) {
   return out;
 }
 // every difference of a catalogue row from BSData's reading: { field, app, source }, as verify/bsdata.js names a list's
-function bsDiffs(row, bs) {
+function bsDiffs(row, bs, bsPts) {
   const out = [], put = (field, app, source) => out.push({ field, app: app === undefined ? null : app, source: source === undefined ? null : source });
+  // (the points: GW's costs over BSData's, the difference as one value each)
+  if (bsPts && row.points && row.points.costs && costsDiff(row.points, bsPts).length) put('points', costsText(row.points), costsText(bsPts));
   for (const r of row.stats || []) {
     const b = bs.stats[r.name];
     if (!b) { put('stats[' + r.name + ']', r.name, null); continue; }
@@ -143,12 +201,18 @@ function declarations(root, faction, r) {
   const pinS = 'BSData at the pin (' + C.cat.name + ' catalogue revision ' + C.cat.revision + ')';
   const roots = new Map(C.roots().filter(x => x.kind === 'datasheet').map(x => [x.entry.id, x]));
   for (const [id, row] of Object.entries(r.cat.datasheets)) {
-    const sel = C.selection(roots.get(row.bsId)), bs = bsReading(sel, C), uid = id.split('/')[1];
-    const G = (E.gwRules || {})[uid] || { files: [] };
-    for (const d of bsDiffs(row, bs)) {
+    const rt = roots.get(row.bsId), sel = C.selection(rt), bs = bsReading(sel, C), uid = id.split('/')[1];
+    const G = (E.gwRules || {})[uid] || { files: [] }, bsPts = bsCosts(C.points(rt), C.options(rt));
+    for (const d of bsDiffs(row, bs, bsPts)) {
       let reason = null, evidence = null, m;
       const gd = E.gwDevs.filter(x => x.unit === uid), jd = E.devs.filter(x => x.unit === uid);
-      if ((m = /^(stats|ranged|melee)\[(.*?)(?: \((.*)\))?\]\.(\w+)$/.exec(d.field))) {
+      const MN = ((f => fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {})(path.join(root, 'verify/sources/hand', 'catalog-' + faction + '.json')).modelNames) || {};
+      const sm = /^stats\[(.*)\]$/.exec(d.field), typoOf = sm && (d.source ? MN[d.source] : Object.entries(MN).map(([k, v]) => Object.assign({ bs: k }, v)).find(v => v.gw === d.app));
+      if (sm && typoOf && (typoOf.kind === 'typo')) { reason = typoOf.why + '. GW wins (as for every misprint; verify/sources/hand/catalog-' + faction + '.json modelNames).'; evidence = typoOf.evidence + '.'; }
+      else if (d.field === 'points') {
+        reason = 'GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): ' + d.app + '; ' + pinS + ': ' + d.source + ' (' + costsDiff(row.points, bsPts).join('; ') + '). GW wins.';
+        evidence = (G.files || [])[0] + ': ' + costsText(row.points) + '.';
+      } else if ((m = /^(stats|ranged|melee)\[(.*?)(?: \((.*)\))?\]\.(\w+)$/.exec(d.field))) {
         const kind = m[1] === 'stats' ? (m[4] === 'base' ? 'base' : 'stats') : m[1];
         const g = gd.find(x => x.kind === kind && (x.row === m[2] || x.row === m[3] || x.row === (m[3] ? m[3] + ' - ' + m[2] : m[2])) && x.field === m[4]);
         if (g) { reason = pinS + ' has ' + (d.source || 'none') + '; ' + (kind === 'base' ? 'GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none,' : 'GW’s datasheet (the codex, as Wahapedia transcribes it)') + ' has ' + g.app + '. GW wins.'; evidence = g.file; }
@@ -156,7 +220,7 @@ function declarations(root, faction, r) {
         const g = gd.find(x => x.kind === 'kw' && ((d.app && x.app === d.app) || (!d.app && x.bsdata === d.source)));
         if (g) { reason = d.app ? 'GW’s datasheet has the keyword ' + d.app.toUpperCase() + '; ' + pinS + ' does not. GW wins.' : pinS + ' gives the category ' + d.source + (g.det ? ', the ' + g.det + ' detachment’s keyword' : '') + '; GW’s datasheet does not print it. GW wins.'; evidence = 'verify/.cache/waha/ds/' + String(g.file).replace(/^verify\/\.cache\/waha\/ds\//, '') + ': KEYWORDS.'; }
       } else if (d.field === 'rules') {
-        const j = jd.find(x => x.field === 'rules' && (x.name === d.app || x.bsdata === d.source || x.app === d.app));
+        const j = jd.find(x => x.field === 'rules' && (d.app ? (x.app === d.app || x.name === d.app) : x.bsdata === d.source));
         if (j) { reason = j.why + '. GW wins.'; evidence = j.file + ': CORE ABILITIES / ARMY RULES.'; }
       } else if ((m = /^ability\[(.*)\](?:\.(\w+))?$/.exec(d.field))) {
         const an = m[1], f = m[2];
@@ -251,7 +315,7 @@ function main() {
       const byId = new Map(want.map(r => [r.entry.id, r]));
       for (const [id, row] of Object.entries(cat.datasheets)) {
         const root = byId.get(row.bsId); if (!root) continue;
-        for (const d of bsDiffs(row, bsReading(C.selection(root), C))) {
+        for (const d of bsDiffs(row, bsReading(C.selection(root), C), bsCosts(C.points(root), C.options(root)))) {
           checked.bsdata++;
           const dev = DEVB.find(x => x.unit === id && x.field === d.field && stable(x.app) === stable(d.app) && stable(x.source) === stable(d.source));
           if (dev) { usedB.add(dev); if (!dev.reason || !dev.evidence) fail('bsdata', id + ' ' + d.field + ': its declaration has no reason or evidence'); }
@@ -323,6 +387,9 @@ function main() {
       const pg = WW.wahaPage(R.name, faction);
       if (!pg) { fail('texts', id + ': no cached Wahapedia datasheet (verify/sources/waha-datasheets.txt)'); continue; }
       const hay = words(pg.P.s) + ' ' + words(packTxt);
+      // (the points: GW's costs as the datasheet prints them)
+      { const g = gwCosts(WW.markup(pg.tokens, pg.P, 0, pg.P.s.length - 1).split('\n')); checked.texts++;
+        if (g && stable(g) !== stable(R.points)) fail('texts', id + ' · points: the catalogue ' + (R.points && R.points.costs ? costsText(R.points) : JSON.stringify(R.points)) + ', GW’s datasheet ' + costsText(g) + ' (' + pg.file + ')'); }
       for (const a of R.abilities || []) {
         checked.texts++;
         const w = a.name === 'Leader' ? words(a.text).replace(/^this model can be attached to the following units /, '') : words(a.text);
@@ -338,5 +405,5 @@ function main() {
   if (fails.length) { console.log('FAIL catalog: ' + fails.length + ' failure(s) (' + sum + ')\n' + fails.slice(0, 60).map(x => ' - ' + x).join('\n')); process.exit(1); }
   console.log('catalog: ' + (sum || 'no catalogues') + '; checked ' + JSON.stringify(checked) + '; ' + usedB.size + ' BSData deviations used' + (notes.length ? '; ' + notes.join('; ') : ''));
 }
+module.exports = { bsReading, bsDiffs, declarations, rowDiffs, filterTest, gwCosts, bsCosts, costsDiff, costsText };
 if (require.main === module) main();
-module.exports = { bsReading, bsDiffs, declarations, rowDiffs, filterTest };

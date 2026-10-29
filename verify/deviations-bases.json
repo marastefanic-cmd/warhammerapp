@@ -162,10 +162,11 @@
  {
   "datasheet": "adeptus-custodes/gyrfalcon-jetbike-sodality",
   "row": "Gyrfalcon Jetbike",
-  "guide": null,
-  "app": "75×42mm Oval",
-  "waha": "verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html",
-  "reason": "GW's base size guide has no Gyrfalcon row (ADEPTUS CUSTODES section, lines 2601-2634); the app has Wahapedia's datasheet base, written as the guide writes an oval base, as for every unit the guide lacks. (The guide's \"Agamatus Custodians  75x42mm Oval Base\", line 2622, is another datasheet's name; the base is the same, but the app does not take one for the other.)",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt: no ADEPTUS CUSTODES line with \"Gyrfalcon\"; verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html: \"(⌀75 x 42mm)\"; BSData at the pin: Base 75×42mm Oval."
+  "guide": {
+   "section": "ADEPTUS CUSTODES",
+   "entry": "Agamatus Custodians"
+  },
+  "reason": "GW's base size guide names the Gyrfalcon Jetbike Sodality \"Agamatus Custodians\" (its previous name, as the guide names the Aquilon Terminators \"Aquilon Custodians\": the previous Faction Pack 1.2 says \"Agamatus Custodians take Gyrfalcon-pattern jetbikes\", and BSData's previous-codex Leader list of the Dawneagle Shield-Captain, \"AGAMATUS CUSTODIANS, VERTUS PRAETORS\", is GW's \"GYRFALCON JETBIKE SODALITY, VERTUS PRAETORS\" now); the names share no rule verify/base-guide.js can match by, so the row is named here and its base compared. A catalogue datasheet no list has yet (verify/from-bsdata.js).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2622 (ADEPTUS CUSTODES, Imperial Armour rows): \"Agamatus Custodians  75x42mm Oval Base\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt line 671; verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html: \"(⌀75 x 42mm)\"."
  }
 ]

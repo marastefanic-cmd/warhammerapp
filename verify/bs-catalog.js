@@ -43,6 +43,22 @@ function crusadeCostOnly(e){
   return cs.length > 0 && cs.every(c => /crusade|battle honours|experience|weapon modifications/i.test(c.name || ''));
 }
 const PTS = '51b2-306e-1021-d207';
+// hidden as a datasheet option: an entry's (or link's) hidden, then its "hidden" modifiers: one with no condition sets it; one that
+// shows it (hidden = false) under conditions of the unit itself (scope self / parent / the entry, its models' counts) shows it, as the
+// datasheet's own option; one whose conditions are of the force or roster (a detachment, an enhancement, a battle size) is a list's
+// choice, and the option stays as the entry says
+const condList = m => [].concat(m.conditions || [], ...((m.conditionGroups || []).map(function g(x){ return [].concat(x.conditions || [], ...((x.conditionGroups || []).map(g)), ...((x.localConditionGroups || []).flatMap(y => y.conditions || []))); })));
+function staticHidden(x){
+  if(!x) return false;
+  let h = !!x.hidden;
+  const mods = [].concat(x.modifiers || [], ...((x.modifierGroups || []).filter(g => !/crusade/i.test(g.comment || '')).map(g => [].concat(g.modifiers || []).map(m => Object.assign({}, m, { conditions:[].concat(g.conditions || [], m.conditions || []), conditionGroups:[].concat(g.conditionGroups || [], m.conditionGroups || []) }))))).filter(m => m.field === 'hidden' && m.type === 'set');
+  for(const m of mods){
+    const v = m.value === true || m.value === 'true', cs = condList(m);
+    if(!cs.length) h = v;
+    else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope))) h = false;
+  }
+  return h;
+}
 
 function load(ROOT, catalogueName, opts){
   opts = opts || {}; const dir = opts.dir;
@@ -103,7 +119,7 @@ function load(ROOT, catalogueName, opts){
   // ---- the children of an entry, as options: entries, links and groups (a group's children carry its name)
   const resolve = l => l.targetId ? get(l.targetId) : l;
   // statically hidden: hidden itself, and no modifier that shows it (a "hidden = false" modifier under a condition: shown only then)
-  const hiddenStatic = x => !!(x && x.hidden);
+  const hiddenStatic = staticHidden;
   const skipped = (x, l) => { const e = resolve(x); return !e || hiddenStatic(x) || hiddenStatic(e) || CRUSADE.test(nameOf(x)) || CRUSADE.test(nameOf(e)) || FILTER.some(F => F.kind !== 'crusade' && F.test(e, x.targetId ? x : null, catsOf(x, e))); };
   function children(node){
     const out = [];
@@ -199,7 +215,8 @@ function load(ROOT, catalogueName, opts){
         const key = c.group || '';
         if(!groups.has(key)) groups.set(key, { on, group:c.group || null, node:c.groupNode, choices:[] });
         const mm = minMax(c.link || c.entry, c.entry);
-        groups.get(key).choices.push(Object.assign({ name:nameOf(c.entry) }, mm.min ? { min:mm.min } : {}, mm.max != null ? { max:mm.max } : {}));
+        const pts = Number(((c.entry.costs || []).find(x => x.typeId === PTS) || {}).value) || 0;
+        groups.get(key).choices.push(Object.assign({ name:nameOf(c.entry) }, mm.min ? { min:mm.min } : {}, mm.max != null ? { max:mm.max } : {}, pts ? { pts } : {}));
       }
       for(const g of groups.values()){ const o = { on:g.on, choices:g.choices }; if(g.group){ o.group = g.group; const mm = minMax(g.node.link, g.node.node); if(mm.min) o.min = mm.min; if(mm.max != null) o.max = mm.max; } out.push(o); }
     };
@@ -215,16 +232,23 @@ function load(ROOT, catalogueName, opts){
       const cs = condsOf(m);
       const models = cs.length && cs.every(c => c.childId === 'model' && c.field === 'selections' && (c.scope === e.id || c.scope === 'self' || c.scope === 'parent'));
       if(models && m.type === 'set') byModels.push({ cond:cs.map(c => c.type + ' ' + c.value), pts:Number(m.value) });
-      else other.push({ type:m.type, value:Number(m.value), when:cs.some(c => c.type === 'instanceOf') && cs.some(c => c.type === 'before') ? 'each earlier copy of this datasheet in the army' : cs.map(c => (c.childName || c.childId) + ' ' + c.type + ' ' + c.value + ' (' + c.scope + ')').join(' and ') });
+      else {
+        // (a later copy's increment: its local condition group counts the earlier copies, "atLeast 2": GW's "your 1st to 2nd units cost …,
+        // your 3rd+ …")
+        const g = (m.conditionGroups || []).flatMap(x => x.localConditionGroups || []).find(x => (x.conditions || []).some(c => c.type === 'instanceOf'));
+        const copies = cs.some(c => c.type === 'instanceOf') && cs.some(c => c.type === 'before');
+        other.push({ type:m.type, value:Number(m.value), when:copies ? (g && g.type === 'atLeast' && Number(g.value) > 1 ? 'each copy after the first ' + Number(g.value) + ' of this datasheet in the army' : 'each earlier copy of this datasheet in the army') : cs.map(c => (c.childName || c.childId) + ' ' + c.type + ' ' + c.value + ' (' + c.scope + ')').join(' and ') });
+      }
     }
-    const comp = composition(root), lo = comp.reduce((t, c) => t + (c.min || 0), 0) || 1, hi = comp.every(c => c.max != null) ? comp.reduce((t, c) => t + c.max, 0) : lo;
+    // (the fewest models: each model entry's min, but a group's min for the entries of a group: Vertus Praetors' "2-3 Vertus Praetors")
+    const comp = composition(root), grp = new Map(comp.filter(c => c.group && c.groupMin != null).map(c => [c.group, c.groupMin])), lo = (comp.filter(c => !grp.has(c.group)).reduce((t, c) => t + (c.min || 0), 0) + [...grp.values()].reduce((t, v) => t + v, 0)) || 1, hi = comp.every(c => c.max != null) ? comp.reduce((t, c) => t + c.max, 0) : lo;
     const ok = (cond, n) => cond.every(c => { const [t, v] = c.split(' '); return t === 'atLeast' ? n >= +v : t === 'greaterThan' ? n > +v : t === 'atMost' ? n <= +v : t === 'lessThan' ? n < +v : t === 'equalTo' ? n === +v : false; });
     const tiers = [];
     for(let k = lo; k <= Math.max(lo, hi); k++){ let p = base; for(const b of byModels) if(ok(b.cond, k)) p = b.pts; if(!tiers.length || tiers[tiers.length - 1].pts !== p) tiers.push({ models:k, pts:p }); }
-    const out = { tiers };
+    const out = { tiers, sizes:[lo, Math.max(lo, hi)] };
     if(other.length) out.other = other;
     return out;
   }
   return { cat, get, index, roots, detachments, selection, points, composition, options, classify, catsOf, files };
 }
-module.exports = { load, FILTER, CRUSADE, crusadeCostOnly };
+module.exports = { load, FILTER, CRUSADE, crusadeCostOnly, staticHidden };

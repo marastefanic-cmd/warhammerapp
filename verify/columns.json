@@ -1622,8 +1622,8 @@
      "note": "the readings of its abilities as guard lines (DATASHEETS.guard)"
     },
     "points": {
-     "source": "bsdata",
-     "note": "the datasheet's points per model count ({ tiers:[{ models, pts }], other: the modifiers that also change them, e.g. a later copy's increment }), from the BSData entry's costs and its \"pts\" modifiers that count the unit's models (verify/bs-catalog.js points); not copied onto a list's units (their pts are the list's)"
+     "source": "gw",
+     "note": "the datasheet's costs as GW prints them (Wahapedia: YOUR UNIT COSTS / YOUR 1ST TO 2ND UNITS COST / … per copy of the datasheet, each unit size priced, WARGEAR OPTIONS): { costs:[{ from, to, models:[{ models, pts }] }], wargear }; BSData's in the same shape where GW prints none (verify/catalog.js gwCosts / bsCosts); every difference from BSData declared in verify/deviations-bsdata.json (army catalog, points); not copied onto a list's units (their pts are the list's)"
     },
     "composition": {
      "source": "bsdata",

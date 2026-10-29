@@ -67,8 +67,8 @@ module.exports = function write(ROOT, faction, r, SRC) {
       const withLabels = rr => {
         const its = at(x.name, rr.name), tm = its.find(i => i.kind === 'rule-timing'), nd = its.find(i => i.kind === 'rule-needs');
         const o = { name: rr.name };
-        // (an always-on rule that protects units and names no phase: no timing label, as verify/from-json.js writes it)
-        if (tm && tm.derived && !((tm.reasons || []).length && tm.reasons.every(q => q.part === 'used' && ['targeted', 'targeted-ranged', 'targeted-melee', 'lone-operative', 'overwatch'].includes(q.rule)))) Object.assign(o, lab(tm.derived));
+        // (the labels as verify/derive.js gives them, with no exception of the writer's own: derive.js is their only source)
+        if (tm && tm.derived) Object.assign(o, lab(tm.derived));
         if (nd && nd.derived) o.needs = nd.derived;
         for (const [k, v] of Object.entries(rr)) if (!(k in o)) o[k] = v;
         return o;

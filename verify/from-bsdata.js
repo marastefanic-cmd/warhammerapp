@@ -72,10 +72,13 @@ function emit(roster) {
 
 // ---------------------------------------------------------------- 4: the rows
 const STAT = ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base'], WPN = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D', 'kw'];
+const HAND = () => { const f = path.join(ROOT, 'verify/sources/hand', 'catalog-' + faction + '.json'); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {}; };
 function rowOf(u, root, C, E) {
   const row = { name: u.name, faction, bsId: u.parts[0].entryId };
   if (u.role) row.role = u.role;
-  row.stats = u.stats.map(s => { const o = { name: s.base0 || s.name.replace(/ ×\d+$/, '') }; for (const k of STAT) if (s[k] !== undefined && s[k] !== '') o[k] = s[k]; return o; });
+  // (a model BSData misprints, the hand file's modelNames kind typo: GW's name, declared; kind kept: BSData's, listed)
+  const MN = HAND().modelNames || {}, mname = n => MN[n] && MN[n].kind === 'typo' ? MN[n].gw : n;
+  row.stats = u.stats.map(s => { const o = { name: mname(s.base0 || s.name.replace(/ ×\d+$/, '')) }; for (const k of STAT) if (s[k] !== undefined && s[k] !== '') o[k] = s[k]; return o; });
   const weapon = w => { const o = {}; for (const k of ['name', 'group', 'fireAll', 'hunter']) if (w[k] !== undefined) o[k] = w[k]; for (const k of WPN) if (w[k] !== undefined) o[k] = w[k]; return o; };
   // (one row per profile: the same weapon on two models of the datasheet is one row)
   const uniqRows = rs => { const seen = new Set(); return rs.filter(r => { const k = JSON.stringify(r); if (seen.has(k)) return false; seen.add(k); return true; }); };
@@ -99,7 +102,10 @@ function rowOf(u, root, C, E) {
   row.rules = u.rules; row.kw = u.kw;
   if (u.kwOnly) row.kwOnly = u.kwOnly;
   // what only BSData gives: points per model count (and what else changes them), the models, the wargear choices
-  row.points = C.points(root); row.composition = C.composition(root); row.options = C.options(root);
+  // points: GW's costs as its datasheet prints them (Wahapedia), else BSData's in the same shape; a difference is declared (catalog.js)
+  const CAT = require('./catalog'), WW = require('./waha-words')(ROOT, faction), pg = WW.wahaPage(u.name, faction);
+  const gw = pg ? CAT.gwCosts(WW.markup(pg.tokens, pg.P, 0, pg.P.s.length - 1).split('\n')) : null;
+  row.points = gw || CAT.bsCosts(C.points(root), C.options(root)); row.composition = C.composition(root).map(c => Object.assign({}, c, { model: mname(c.model) })); row.options = C.options(root).map(o => Object.assign({}, o, { on: mname(o.on) }));
   return row;
 }
 
@@ -131,7 +137,7 @@ function build() {
   const cat = { _about: 'The ' + C.cat.name + ' catalogue as verify/from-bsdata.js reads it from BSData (wh40k-11e at the pin) with GW’s datasheets over it (verify/from-json.js): every current datasheet (no Legends, no Crusade, no Crucible: verify/bs-catalog.js FILTER), one DATASHEETS row each. Written by `node verify/from-bsdata.js ' + faction + ' --write`; verify/tables.js --write puts every row into DATASHEETS (a row a list has keeps the list’s signed-off facts, and gets the catalogue’s rows it lacks); the gate step catalog (verify/catalog.js) checks it is what the sources give. Do not edit.',
     faction, bsdata: { catalogue: C.cat.name, revision: C.cat.revision, pin },
     counts: { datasheets: Object.keys(rows).length, detachments: detachments.length, excluded: excluded.length },
-    datasheets: rows, detachments: detachments.map(d => ({ name: typo(d.name), bsId: d.entry.id, rules: d.rules.map(typo) })), detachmentRows, excluded, weaponNames: E.gwNames };
+    datasheets: rows, detachments: detachments.map(d => ({ name: typo(d.name), bsId: d.entry.id, rules: d.rules.map(typo) })), detachmentRows, excluded, weaponNames: E.gwNames, modelNames: Object.entries(HAND().modelNames || {}).map(([bs, x]) => ({ bsdata: bs, gw: x.gw, kind: x.kind })) };
   return { C, E, cat, devs, datasheets, detachments, excluded };
 }
 
@@ -171,6 +177,7 @@ function report(r, cmp) {
     '## Left out (verify/bs-catalog.js FILTER)', '', ...excluded.map(x => '- ' + x.kind + ': ' + x.name + ' (' + x.why + ')'), '',
     '## GW over BSData (' + devs.length + ')', '', ...devs.map(d => '- ' + d.unit + ' ' + (d.row ? d.row + ' ' : d.name ? d.name + ' ' : '') + d.field + ': GW ' + JSON.stringify(d.gw) + ', BSData ' + JSON.stringify(d.bsdata) + ' (' + d.file + ')'), '',
     '## Weapons BSData names otherwise than GW (the app keeps BSData’s, New Recruit’s name)', '', ...(cat.weaponNames || []).map(w => '- ' + w.unit + ': ' + w.app + ' (GW: ' + w.gw + ', ' + w.file + ')'), '',
+    '## Models BSData names otherwise than GW (hand file modelNames: typo, GW’s name; kept, BSData’s)', '', ...(cat.modelNames || []).map(m => '- ' + m.bsdata + ' (GW: ' + m.gw + '): ' + m.kind), '',
     '## Not filled mechanically (' + E.todo.length + ')', '', ...E.todo.map(t => '- ' + t.where + ': ' + t.what + ' (' + t.why + ')'), ''];
   if (cmp) L.push('## Against the rows data.js has (' + cmp.filter(x => !x.fill).length + ' differences, ' + cmp.filter(x => x.fill).length + ' additions)', '',
     ...cmp.map(x => '- ' + x.id + ' · ' + x.what + (x.data !== undefined ? '\n    data.js   ' + JSON.stringify(x.data) : '') + (x.cat !== undefined ? '\n    catalogue ' + JSON.stringify(x.cat) : '')), '');
