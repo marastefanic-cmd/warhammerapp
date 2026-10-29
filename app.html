@@ -356,6 +356,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .strat.none .sh span.sg{color:var(--muted)}
 .strat > summary{align-items:start}
 .strat > summary .cp{margin-top:2px}
+.cpw{position:relative; display:block}
+.cpw .ai{position:absolute; top:100%; left:0; right:0; margin-top:4px; text-align:center; font-size:10.5px; line-height:1}   /* (under the badge, out of the flow: nothing on the row moves) */
+.strat[open] .cpw .ai{display:none}
 .sh span.sw em{font-style:normal; font-weight:600; color:var(--fg2); margin-right:3px}
 .sh .ticks{margin-top:4px}
 .sh span.sg{font-size:13.5px; line-height:1.32; color:var(--fg2); margin:1px 0}
@@ -1864,7 +1867,7 @@ const HW_SRC = { gw:'GW', bsdata:'BSData', newrecruit:'New Recruit', wahapedia:'
 const HW_LAYERS = [
   ['mech', 'Mechanical', 'copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.'],
   ['sum', 'AI summary', 'a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
-  ['read', 'AI reading', 'the numbers and conditions the Damage tab uses, and the “When targeted” lines, read from GW’s words by AI (a few by a fixed program rule): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
+  ['read', 'AI reading', 'the numbers and conditions behind the footnotes, the “When targeted” lines and the Damage tab, read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
   ['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']];
 // a column's layer: its source in verify/columns.json (verify/tables.js fails unless ai-summary and ai-reading are exactly what it fingerprints)
 const hwLayer = (t, col, src) => ({ 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' })[src] || 'mech';
@@ -2012,22 +2015,27 @@ function hwMap(){
     hwTo('CONCEPTS') + ' holds the core terms, ' + hwTo('VERSION') + ' the data’s version.</p>';
 }
 function screenHow(){
+  // the layers the tables have (verify/columns.json, as the gate that checked this build wrote it): the legend and the texts name only those
+  const all = VER && VER.tables ? Object.keys(VER.tables).flatMap(t => hwCols(t).map(([c, s]) => hwLayer(t, c, s))) : [];
+  const has = l => all.includes(l), layers = HW_LAYERS.filter(([l]) => has(l));
+  const words = list => list.length > 1 ? list.slice(0, -1).join(', ') + ' or ' + list[list.length - 1] : list.join('');
+  const aiKinds = [has('sum') ? 'summaries' : '', has('read') ? 'readings' : ''].filter(Boolean);
   const steps = [
     ['Where the data comes from', 'Your New Recruit lists; BSData, the data New Recruit is built from; Games Workshop’s Core Rules, Faction Packs and FAQs, and Wahapedia where GW has no document yet. Where they disagree, GW wins; where GW misprints (a typo, a base size), the correction is written down with its reason.'],
     ['How a list is built', 'A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.'],
-    ['The tables', 'Everything the app shows is in ' + HW_TABLES.length + ' tables in one file, data.js, drawn below with their real row counts' + (VER && VER.tables ? ' and columns. Each column is tagged: mechanical, AI-written or decided by hand.' : '. This copy carries no record of its check, so its columns are not shown.')],
+    ['The tables', 'Everything the app shows is in ' + HW_TABLES.length + ' tables in one file, data.js, drawn below with their real row counts' + (VER && VER.tables ? ' and columns. Each column is tagged: ' + words(layers.map(([l, name]) => l === 'mech' ? 'mechanical' : l === 'hand' ? 'decided by hand' : name)) + '.' : '. This copy carries no record of its check, so its columns are not shown.')],
     ['What checks every release', 'A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. <button class="link" data-htab="trust">What it checks</button>'],
     ['How the app draws pages', 'One page template reads the tables and draws every screen from them. Each release renders every screen of every list and compares its text with the last one accepted, so no screen changes unseen.']];
-  const all = VER && VER.tables ? Object.keys(VER.tables).flatMap(t => hwCols(t).map(([c, s]) => hwLayer(t, c, s))) : [];
-  const share = all.length ? '<p class="note">Of the ' + all.length + ' columns of the tables: ' + HW_LAYERS.map(([l, name]) => name + ' ' + all.filter(x => x === l).length).join(' · ') + '.</p>' : '';
+  const share = all.length ? '<p class="note">Of the ' + all.length + ' columns of the tables: ' + layers.map(([l, name]) => name + ' ' + all.filter(x => x === l).length).join(' · ') + '.</p>' : '';
   return '<p class="hwi">Where every line of this app comes from, the tables it is kept in, and what is checked before any change reaches your phone.</p>' +
     '<ol class="hwflow">' + steps.map(([h, t], i) => '<li><b>' + (i + 1) + ' · ' + h + '</b><span>' + t + '</span></li>').join('') + '</ol>' +
     '<div class="sec-h"><h2>The tables</h2><span class="c">' + HW_TABLES.length + '</span></div>' + hwMap() +
-    (VER && VER.tables ? '<div class="hwleg">' + HW_LAYERS.map(([l, name, t]) => '<p class="vchk"><span class="ly ' + l + '">' + name + '</span> ' + esc(t) + '</p>').join('') + '</div>' : '') + share +
+    (VER && VER.tables ? '<div class="hwleg">' + layers.map(([l, name, t]) => '<p class="vchk"><span class="ly ' + l + '">' + name + '</span> ' + esc(t) + '</p>').join('') + '</div>' : '') + share +
     HW_TABLES.map(([t, k]) => hwCard(t, k)).join('') +
     '<div class="sec-h" id="sec-hw-trust"><h2>Why you can trust the data</h2></div>' +
     '<p class="hwp">Games Workshop is the source of truth. Where New Recruit, BSData or Wahapedia say something else, the difference is written down with its reason, and every release checks it again.</p>' +
-    '<p class="hwp">What AI wrote is marked on the tables above: summaries and readings. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.</p>' +
+    (aiKinds.length ? '<p class="hwp">What AI wrote is marked on the tables above: ' + aiKinds.join(' and ') + '. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.</p>' : '') +
+    (has('sum') ? '<p class="hwp">In the app, every summary written by AI carries a small AI label, and a tap on it opens the rule as written.</p>' : '') +
     '<p class="hwp">Nothing ships unless every check passes: the build refuses to run otherwise.</p>' +
     (VER ? '<p class="qh">Checked ' + esc(VER.date) + '</p>' + VER.checks.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') +
       '<details class="xp"><summary><span class="xh"><b>Sources</b><span>what it was compared with</span></span>' + chev + '</summary><div class="body">' + VER.sources.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') + '</div></details>'
@@ -3656,11 +3664,11 @@ function dmListPart(C, score){
   const sl = C.levers.filter(x => x.sec === 'strat' && !x.out);
   h += '<section class="dmsec"><h3 class="dmh3">Stratagems <small>with their CP</small></h3>' + (sl.length ? ranked(sl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None that change these numbers.</p>') + '</section>';
   h += dmOuts(C, C.levers.filter(x => x.out && !x.underFact && (x.sec === 'rule' || x.sec === 'strat')), M.strats.filter(s => s.state === 'out'));
-  const nc = M.nc.concat(M.strats.filter(s => s.state === 'nc').map(s => ({ side:s.side, name:s.s.cp + 'CP ' + s.s.name, text:s.text, strat:true })));
+  const nc = M.nc.concat(M.strats.filter(s => s.state === 'nc').map(s => ({ side:s.side, name:s.s.cp + 'CP ' + s.s.name, text:s.text, strat:true, id:s.s.id })));
   if(nc.length) h += '<details class="dmfold dmncf"' + (plan.k === 0 || !plan.both ? ' id="dmNc"' : '') + ' data-dmfold="nc"' + (st.fold.nc ? ' open' : '') + '><summary><span>Not counted by the calculator (' + nc.length + ')</span>' + chev + '</summary>' +
     '<p class="note">They can matter at the table, but the calculator does not play them: what each one says.</p>' +
     nc.map(x => { const bh = dmByHand(x.text);
-      return '<div class="dmncr"><b>' + esc(x.name) + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small>' +
+      return '<div class="dmncr"><b' + (x.id ? ' role="button" tabindex="0" data-strat="' + esc(x.id) + '"' : '') + '>' + esc(x.name) + (x.id && x.text ? ' ' + aiLabel : '') + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small>' +
         (bh ? '<button class="textbtn dmbh" data-dmbyhand="' + esc(bh.k + '|' + bh.v) + '">Count it by hand: ' + esc(bh.label) + '</button>' : '') + '</div>'; }).join('') + '</details>';
   h += dmManual(dmCh(st, b.id), st);
   return h;
@@ -5002,8 +5010,10 @@ function usersLine(s){
 // "End of their Movement", "Your Shooting", "Fight", "Any phase": from WHEN, as on a datasheet row
 const stratWhenShort = s => { const m = /^(start|end) of /i.exec(s.when || ''), w = shortWhen(s); return m && !/^any/i.test(w) ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() + ' of ' + w.replace(/^(Your|Their)/, x => x.toLowerCase()) : w; };
 // the row says what it does (gist, from its EFFECT), when, and which of your units can use it
+// (the gist is AI-written: the AI label under the CP badge says so; the open row shows the rules as written instead)
+const aiLabel = '<span class="tg m ai" title="Summary written by AI: tap for the rules as written">AI</span>';
 const stratHead = s => { const pb = perBattle(s);
-  return '<span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="sh"><b>' + esc(s.name) + '</b>' +
+  return '<span class="cpw"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span>' + (s.gist ? aiLabel : '') + '</span><span class="sh"><b>' + esc(s.name) + '</b>' +
   (s.gist ? '<span class="sg">' + esc(s.gist) + '</span>' : '') + '<span class="sw"><em>' + esc([stratWhenShort(s), s.limit, s.cpNote].filter(Boolean).join(' · ')) + '</em> ' + esc(usersLine(s)) + '</span>' +
   (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span>'; };
 // a rule whose wording allows two readings: settle it with the opponent before the game

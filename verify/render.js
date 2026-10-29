@@ -257,6 +257,15 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await take('damage ' + ph, `() => {}`);
     }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
+    // - ai-summary: every stratagem row with a gist (AI-written) carries the AI label, and the row opens its rules as written (WHEN,
+    //   TARGET, EFFECT as data.js has them); no row without a gist has the label
+    { const bad = await page.evaluate(() => { const out = [], al = s => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        for(const el of document.querySelectorAll('#view details.strat')){ const s = allStratagems().find(x => x.id === el.dataset.stratId); if(!s) continue;
+          const lab = !!el.querySelector('summary .cpw .ai');
+          if(!!s.gist !== lab) out.push(s.name + (s.gist ? ': its summary has no AI label' : ': an AI label without a summary'));
+          if(!al(el.querySelector('.sb').textContent).includes(al(s.effect).slice(0, 150))) out.push(s.name + ': the open row lacks the rules as written'); }
+        return out; });
+      for(const x of bad) fail('ai-summary', a.id, 'strats', x); }
     await screen('strats', { open:true });     // every stratagem, unfolded
     for(const u of a.units){
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);
