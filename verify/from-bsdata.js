@@ -50,7 +50,7 @@ const pin = (fs.readFileSync(path.join(ROOT, 'verify/fetch.sh'), 'utf8').match(/
 
 // ---------------------------------------------------------------- 1, 2: the catalogue, and the export of all of it
 function readCatalogue() {
-  const C = BC.load(ROOT, FJ[faction].bsdata);
+  const C = BC.load(ROOT, FJ[faction].bsdata, { factions: FJ[faction].catalogFactions });
   const roots = C.roots(), dets = C.detachments();
   const datasheets = roots.filter(r => r.kind === 'datasheet'), detachments = dets.filter(d => d.kind === 'detachment');
   const excluded = roots.filter(r => r.kind !== 'datasheet').map(r => ({ name: r.name, kind: r.kind, why: r.why, id: r.entry ? r.entry.id : null }))

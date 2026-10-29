@@ -2,9 +2,11 @@
    modifier of a list (a detachment, an enhancement, a battle size) changes it. What verify/from-bsdata.js (the faction catalogue
    import) and verify/catalog.js (its gate step) share:
 
-     const C = require('./bs-catalog').load(ROOT, '<catalogue name>')   the catalogue, its libraries and the game system, by id
-     C.roots()          every root entry of the catalogue, each { link, entry, name, kind, why }: kind 'datasheet' (a current
-                        datasheet), 'legends', 'crusade', 'crucible' or 'config' (no datasheet: Detachment, Show/Hide Options, …),
+     const C = require('./bs-catalog').load(ROOT, '<catalogue name>', { factions })   the catalogue, its libraries and the game
+                        system, by id; factions: the Faction keywords that make a datasheet the faction's (factions.json catalogFactions)
+     C.roots()          every root entry of the catalogue (and of the libraries it imports root entries from), each { link, entry,
+                        name, kind, why, from }: kind 'datasheet' (a current datasheet), 'legends', 'crusade', 'crucible', 'ally'
+                        (a library's datasheet of another faction) or 'config' (no datasheet: Detachment, Show/Hide Options, …),
                         why the rule that put it there (the explicit filter below)
      C.detachments()    every detachment of the catalogue's Detachment entry, each { entry, name, group, kind, why }, by the
                         same filter
@@ -23,7 +25,9 @@
                 (BSData's "Crusade" group on every unit, "Weapon Modifications", "Crusade Relic Upgrades", Battle Honours/Scars)
      crucible   the name ends in "[Crucible]" or a category is "Crucible" (GW's Crucible characters, hidden in BSData until
                 "Show Crucible Characters" is picked: built by Crucible rules, not a datasheet GW prints; no Wahapedia page)
-     config     not a unit or model entry, or its primary category is Configuration */
+     config     not a unit or model entry, or its primary category is Configuration
+     ally       a datasheet with none of the faction's Faction keywords (factions.json catalogFactions): another faction's, which the
+                catalogue (or a library it imports root entries from) offers as an ally */
 'use strict';
 const fs = require('fs'), path = require('path');
 
@@ -40,7 +44,8 @@ function crusadeCostOnly(e){
 }
 const PTS = '51b2-306e-1021-d207';
 
-function load(ROOT, catalogueName, dir){
+function load(ROOT, catalogueName, opts){
+  opts = opts || {}; const dir = opts.dir;
   const BSDIR = dir || path.join(ROOT, 'verify/.cache/bsdata');
   const files = new Map();   // id -> { f, raw, top }
   for(const f of fs.readdirSync(BSDIR).filter(f => f.endsWith('.json'))){
@@ -55,7 +60,8 @@ function load(ROOT, catalogueName, dir){
     walk(x.top);
     return x.top;
   };
-  const catId = [...files.entries()].find(([, x]) => new RegExp('"name"\\s*:\\s*"' + catalogueName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '"').test(x.raw.slice(0, 600)));
+  // (the file's own name: its first "name" field)
+  const catId = [...files.entries()].find(([, x]) => ((/"name"\s*:\s*"([^"]*)"/.exec(x.raw.slice(0, 4000)) || [])[1] || '') === catalogueName);
   if(!catId) throw new Error('no BSData catalogue "' + catalogueName + '" in ' + BSDIR);
   const cat = index(catId[0]);
   for(const l of cat.catalogueLinks || []) index(l.targetId);
@@ -71,10 +77,29 @@ function load(ROOT, catalogueName, dir){
     if(prim && /^Configuration$/i.test(catName(prim.targetId) || nameOf(prim))) return { kind:'config', why:'its primary category is Configuration' };
     return { kind:'datasheet', why:'a unit or model entry, not Legends, Crusade or Crucible' };
   };
-  const roots = () => [].concat(cat.entryLinks || [], cat.selectionEntries || []).map(l => {
-    const entry = l.targetId ? get(l.targetId) : l;
-    return Object.assign({ link:l.targetId ? l : null, entry, name:nameOf(entry || l) }, classify(entry, l.targetId ? l : null));
-  });
+  // the root entries: the catalogue's own, then those of each library it imports them from (importRootEntries: the Chaos Daemons'
+  // units are in "Chaos - Daemons Library"). A library's datasheet is the faction's only with one of the Faction keywords of the
+  // catalogue's own datasheets (or, with none of its own, the catalogue's name): else it is another faction's, an ally (the Imperial
+  // Knights' Armigers and the Imperial Agents the Adeptus Custodes catalogue imports)
+  let roots_ = null;
+  const roots = () => {
+    if(roots_) return roots_;
+    const of = (c, lib) => [].concat(c.entryLinks || [], c.selectionEntries || []).map(l => {
+      const entry = l.targetId ? get(l.targetId) : l;
+      return Object.assign({ link:l.targetId ? l : null, entry, name:nameOf(entry || l), from:lib ? nameOf(c) : null }, classify(entry, l.targetId ? l : null));
+    });
+    const own = of(cat, false);
+    // (the faction's Faction keywords: verify/sources/factions.json catalogFactions, else those of the catalogue's own datasheets)
+    const facKw = new Set(opts.factions ? opts.factions.map(k => 'Faction: ' + k) : own.filter(r => r.kind === 'datasheet').flatMap(r => catsOf(r.link, r.entry)).filter(c => /^Faction: /.test(c)));
+    if(!facKw.size) facKw.add('Faction: ' + nameOf(cat).replace(/^.* - /, ''));
+    const ally = r => r.kind === 'datasheet' && !catsOf(r.link, r.entry).some(c => facKw.has(c)) ? Object.assign(r, { kind:'ally', why:'a root entry ' + (r.from ? 'of the imported ' + r.from + ' ' : '') + 'with none of the faction’s Faction keywords (' + [...facKw].join(', ') + '): another faction’s datasheet' }) : r;
+    own.forEach(ally);
+    const libs = (cat.catalogueLinks || []).filter(l => l.importRootEntries).map(l => index(l.targetId)).filter(Boolean);
+    const lib = libs.flatMap(c => of(c, true)).map(ally);
+    // (each entry once: a library root the catalogue links itself is the catalogue's)
+    const seen = new Set(own.map(r => r.entry && r.entry.id));
+    return roots_ = own.concat(lib.filter(r => !(r.entry && seen.has(r.entry.id)) && (seen.add(r.entry && r.entry.id), true)));
+  };
   // ---- the children of an entry, as options: entries, links and groups (a group's children carry its name)
   const resolve = l => l.targetId ? get(l.targetId) : l;
   // statically hidden: hidden itself, and no modifier that shows it (a "hidden = false" modifier under a condition: shown only then)

@@ -9,7 +9,7 @@
  "counts": {
   "datasheets": 29,
   "detachments": 13,
-  "excluded": 14
+  "excluded": 93
  },
  "datasheets": {
   "adeptus-custodes/trajann-valoris": {
@@ -4553,6 +4553,480 @@
    "kind": "config",
    "why": "not a unit or model entry",
    "id": "7a3e-cedf-9f08-fcac"
+  },
+  {
+   "name": "Knight Destrier",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "10d8-d702-f556-5d3c"
+  },
+  {
+   "name": "Canis Rex",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "55fb-9c91-1a4f-3037"
+  },
+  {
+   "name": "Armiger Warglaive",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "5bbd-c5d3-58d7-e391"
+  },
+  {
+   "name": "Armiger Helverin",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "7314-3c4a-36ab-a594"
+  },
+  {
+   "name": "Knight Paladin",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "8441-8356-5e7c-69ee"
+  },
+  {
+   "name": "Knight Errant",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "9efd-ec72-353f-4b23"
+  },
+  {
+   "name": "Knight Gallant",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "eb4-4a67-11e9-3cb8"
+  },
+  {
+   "name": "Knight Warden",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "c609-c87e-f9dd-5006"
+  },
+  {
+   "name": "Knight Crusader",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "1e27-a6de-3840-a050"
+  },
+  {
+   "name": "Knight Preceptor",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "ebd9-7175-3f0c-72a9"
+  },
+  {
+   "name": "Knight Castellan",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "6e36-f85-1c3b-8bf3"
+  },
+  {
+   "name": "Knight Valiant",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "8fb9-50b2-adc6-161a"
+  },
+  {
+   "name": "Acastus Knight Asterius",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "f8d0-fdf2-2e5e-3b74"
+  },
+  {
+   "name": "Acastus Knight Porphyrion",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "61c9-8baf-22b4-5d84"
+  },
+  {
+   "name": "Cerastus Knight Lancer",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "9ee-e289-bc6c-d943"
+  },
+  {
+   "name": "Cerastus Knight Castigator",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "1654-5c17-474e-2d84"
+  },
+  {
+   "name": "Cerastus Knight Acheron",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "11d3-167b-6dff-a4c2"
+  },
+  {
+   "name": "Cerastus Knight Atrapos",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "37a7-d156-1e4c-8fe1"
+  },
+  {
+   "name": "Questoris Knight Magaera",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "adfa-19fc-7337-7350"
+  },
+  {
+   "name": "Questoris Knight Styrix",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "f8f3-a438-1212-93e8"
+  },
+  {
+   "name": "Armiger Moirax",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "e3dd-7e90-140a-b3ab"
+  },
+  {
+   "name": "Code Chivalric",
+   "kind": "config",
+   "why": "not a unit or model entry",
+   "id": "9508-a2b1-713f-cf7b"
+  },
+  {
+   "name": "Knight Defender",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Imperial Knights - Library with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "f12b-ca2a-9c87-79bb"
+  },
+  {
+   "name": "Unseated Pilot",
+   "kind": "config",
+   "why": "not a unit or model entry",
+   "id": "d00a-8b19-9550-8388"
+  },
+  {
+   "name": "Vindicare Assassin",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "efa3-2cf5-dcfb-b976"
+  },
+  {
+   "name": "Culexus Assassin",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "5e5e-d6b2-6a1c-aa69"
+  },
+  {
+   "name": "Eversor Assassin",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "f201-1f4a-b907-d9d1"
+  },
+  {
+   "name": "Callidus Assassin",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "1cfe-be05-5603-133"
+  },
+  {
+   "name": "Rogue Trader Entourage",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "9360-d8b2-cd92-9e7f"
+  },
+  {
+   "name": "Voidsmen-at-Arms",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "3953-4e12-fe7b-97e9"
+  },
+  {
+   "name": "Imperial Navy Breachers",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "24d5-9987-4d2-b42b"
+  },
+  {
+   "name": "Subductor Squad",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "6db9-cede-3810-f1f0"
+  },
+  {
+   "name": "Exaction Squad",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "ec63-524d-55a-3065"
+  },
+  {
+   "name": "Vigilant Squad",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "d44c-5cde-cb79-3ec3"
+  },
+  {
+   "name": "Inquisitor Draxus",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "f3a6-de9-584e-c394"
+  },
+  {
+   "name": "Inquisitor Coteaz",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "264a-fc24-3a98-31dc"
+  },
+  {
+   "name": "Inquisitor Greyfax",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "6e0e-b9a2-f53d-ad0e"
+  },
+  {
+   "name": "Inquisitor Karamazov [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "4349-390e-e183-f0b"
+  },
+  {
+   "name": "UR-025 [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "4f74-c65c-3a56-41d6"
+  },
+  {
+   "name": "Inquisitor Eisenhorn [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "d4d2-5f39-6a24-60ab"
+  },
+  {
+   "name": "Inquisitor",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "3e57-b15c-5580-1de1"
+  },
+  {
+   "name": "Neyam Shai Murad [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "c50a-8-694-6fa6"
+  },
+  {
+   "name": "Janus Draik [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "a8a5-f886-c09e-a6f2"
+  },
+  {
+   "name": "Damned Legionnaires [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "bbbf-a0fb-d032-3a61"
+  },
+  {
+   "name": "Inquisitor in Terminator Armour [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "c29e-e398-9588-7f30"
+  },
+  {
+   "name": "Detachment",
+   "kind": "config",
+   "why": "not a unit or model entry",
+   "id": "1162-9cd5-d6b0-1663"
+  },
+  {
+   "name": "Navigator",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "55cf-8d86-affd-bc9b"
+  },
+  {
+   "name": "Ministorum Priest",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "7554-37de-cd68-68a7"
+  },
+  {
+   "name": "Inquisitorial Agents",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "4469-7239-717e-9abd"
+  },
+  {
+   "name": "Grey Knights Terminator Squad",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "15c0-9294-7eb8-f3a7"
+  },
+  {
+   "name": "Inquisitorial Chimera",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "ede2-ae50-5f5b-cced"
+  },
+  {
+   "name": "Imperial Rhino",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "cbbd-8e0a-fd90-fa0d"
+  },
+  {
+   "name": "Sisters of Battle Squad",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "73fc-a193-7da1-d9c4"
+  },
+  {
+   "name": "Sisters of Battle Immolator",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "a5c9-2cb7-d874-8169"
+  },
+  {
+   "name": "Deathwatch Kill Team",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "0744-61ce-619d-ffe1"
+  },
+  {
+   "name": "Corvus Blackstar",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "8b98-0ac7-a0ba-dedf"
+  },
+  {
+   "name": "Watch Master",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "cfa5-df26-a886-9975"
+  },
+  {
+   "name": "Watch Captain Artemis",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "f158-1e0b-585b-bf40"
+  },
+  {
+   "name": "Deathwatch Terminator Squad [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "0b74-440c-ee1d-ca50"
+  },
+  {
+   "name": "Fortis Kill Team [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "edce-f61c-8029-897f"
+  },
+  {
+   "name": "Indomitor Kill Team [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "c538-aaf0-5788-5c07"
+  },
+  {
+   "name": "Spectrus Kill Team [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "f527-0a42-15b4-1924"
+  },
+  {
+   "name": "Proteus Kill Team [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "4681-2af4-acf9-2bce"
+  },
+  {
+   "name": "Veteran Bike Squad [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "50a9-30aa-e03a-847d"
+  },
+  {
+   "name": "Daemonhost [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "fac5-a242-951a-e1b2"
+  },
+  {
+   "name": "Jokaero Weaponsmith [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "bd54-3e9f-3f7d-ad5a"
+  },
+  {
+   "name": "Kill Team Cassius [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "88af-6e47-7162-b1be"
+  },
+  {
+   "name": "Sanctifiers",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "4e74-3710-7a66-9d6c"
+  },
+  {
+   "name": "Inquisitor Ostromandeus [Legends]",
+   "kind": "legends",
+   "why": "the name ends in [Legends], or a category Legends",
+   "id": "6315-d3e6-aa1c-69e4"
+  },
+  {
+   "name": "Aquila Kill Team",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "b040-ce24-7e1a-c903"
+  },
+  {
+   "name": "Martial Agent [Crucible]",
+   "kind": "crucible",
+   "why": "the name ends in [Crucible], or a category Crucible",
+   "id": "90e0-c5a9-17c5-fba4"
+  },
+  {
+   "name": "Deathwatch Agent [Crucible]",
+   "kind": "crucible",
+   "why": "the name ends in [Crucible], or a category Crucible",
+   "id": "9a75-f3a2-bff5-9f08"
+  },
+  {
+   "name": "Enthroned Agent [Crucible]",
+   "kind": "crucible",
+   "why": "the name ends in [Crucible], or a category Crucible",
+   "id": "2b47-b5e8-b297-7bd8"
+  },
+  {
+   "name": "Inquisitor Kroyle",
+   "kind": "ally",
+   "why": "a root entry of the imported Imperium - Agents of the Imperium with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "2a3f-b53b-6ea4-6da9"
+  },
+  {
+   "name": "NOTICE - This catalogue is no longer fully supported in Battlescribe. Please use https://newrecruit.eu for full compatibility.",
+   "kind": "config",
+   "why": "not a unit or model entry",
+   "id": "f6bb-3928-c6a3-b6d3"
+  },
+  {
+   "name": "Reaver Titan",
+   "kind": "ally",
+   "why": "a root entry of the imported Library - Titans with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "b7e8-f3ae-be53-9ba5"
+  },
+  {
+   "name": "Warbringer Nemesis Titan",
+   "kind": "ally",
+   "why": "a root entry of the imported Library - Titans with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "8e6f-4e09-12d5-fafd"
+  },
+  {
+   "name": "Warhound Titan",
+   "kind": "ally",
+   "why": "a root entry of the imported Library - Titans with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "8eb5-a990-6eb0-9b41"
+  },
+  {
+   "name": "Warlord Titan",
+   "kind": "ally",
+   "why": "a root entry of the imported Library - Titans with none of the faction’s Faction keywords (Faction: Adeptus Custodes, Faction: Anathema Psykana): another faction’s datasheet",
+   "id": "eafa-cd47-1c2f-61ee"
   }
  ],
  "weaponNames": [

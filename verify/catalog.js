@@ -233,7 +233,7 @@ function main() {
     if (!haveCache) { notes.push(faction + ': no BSData clone (verify/.cache/bsdata): complete, fresh and bsdata not checked'); }
     let C = null;
     if (haveCache) {
-      C = BC.load(ROOT, cat.bsdata.catalogue);
+      C = BC.load(ROOT, cat.bsdata.catalogue, { factions: (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'))[faction] || {}).catalogFactions });
       if (C.cat.revision !== cat.bsdata.revision) fail('fresh', faction + ': the catalogue file is of revision ' + cat.bsdata.revision + ', BSData at the pin has ' + C.cat.revision + ': node verify/from-bsdata.js ' + faction + ' --write');
       // complete: datasheets
       const roots = C.roots(), want = roots.filter(r => r.kind === 'datasheet');

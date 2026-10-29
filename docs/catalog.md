@@ -49,6 +49,7 @@ row (`catalogRows()`):
 | crusade | a Crusade name or category (`CRUSADE`: Crusade…, Order of Battle, Codex Crusade Relics, Battle Scars/Honours/Traits, Weapon Modifications, Crusade Relic Upgrades, Agendas, Requisitions, …), or only Crusade costs; inside a datasheet a group or entry so named is no option | Order of Battle; on every unit the Crusade group, Weapon Modifications, Crusade Relic Upgrades |
 | crucible | the name ends in `[Crucible]`, or a category `Crucible` (characters made with GW's Crucible rules, hidden in BSData until "Show Crucible Characters"; no Wahapedia datasheet to check against) | Guardian of the Throne, Null Maiden, Kataphraktoi Exemplar |
 | config | not a unit or model entry, or its primary category is Configuration | Detachment, Show/Hide Options, Martial Ka'tah Reference |
+| ally | a datasheet with none of the faction's Faction keywords (`verify/sources/factions.json` `catalogFactions`), in the catalogue or in a library it imports root entries from | the Imperial Knights library's Armigers and the Imperial Agents (55 entries) |
 
 Inside a datasheet an option BSData hides statically (`hidden: true`) and the Enhancements group (a list's choice by detachment)
 are no options. The same filter sorts the detachments. Every left-out entry is listed with its rule in the catalogue file
@@ -108,5 +109,6 @@ detachment (a stratagem's words, its dispositions) fails the gate.
 ## The next factions
 
 `verify/sources/factions.json` names the catalogue; the Wahapedia datasheet pages of every catalogue datasheet go into
-`verify/sources/waha-datasheets.txt` (the `--emit` run lists the ones it lacks: "no cached Wahapedia datasheet"). A library file
-(Tyranids: "Library - Tyranids", Chaos Daemons: "Chaos Daemons Library") is read through the catalogue's links.
+`verify/sources/waha-datasheets.txt` (the `--emit` run lists the ones it lacks: "no cached Wahapedia datasheet"). A library file is read through the catalogue's links, and a library it imports root entries from (Chaos Daemons: "Chaos -
+Daemons Library", where its units are) gives datasheets too; `catalogFactions` says which are the faction's (Chaos Daemons:
+Legiones Daemonica; the Shadow Legion's Heretic Astartes and the Chaos Knights library are allies).
