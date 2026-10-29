@@ -165,12 +165,12 @@ const CORE_STRATAGEMS = [
     effect:'You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).',
     // the Damage tab's reading (read by it alone): one Hit, Wound or Damage roll of the unit's attacks re-rolled, once in the phase (15.01:
     // the same stratagem not more than once in the same phase)
-    calcMods:[{ kind:'all', when:'Just after a hit, wound or damage roll of these attacks; once in the phase (15.01)', note:'re-roll one hit roll, one wound roll or one damage roll', calc:{ oneAny:1, phase:true } }] },
+    calcMods:[{ kind:'all', when:'Just after a hit, wound or damage roll of these attacks; once in the phase (15.01)', note:'re-roll one hit roll, one wound roll or one damage roll', calc:{ oneAny:1, phase:true } }], readOf:'377ce33f' },
   { id:'epic-challenge', gist:'One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.', gistOf:'59bef664', name:'Epic Challenge', cp:1, phases:['fight'], turn:'either', needs:{ all:['Character'] },
     when:'Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.',
     target:'That **CHARACTER** unit.',
     effect:'Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability.' },
-  { id:'insane-bravery', gist:'The battle-shock roll you are about to make for your unit is automatically successful.', gistOf:'02ffa2fd', note:'Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle',
+  { id:'insane-bravery', gist:'The battle-shock roll you are about to make for your unit is automatically successful.', gistOf:'02ffa2fd', note:'Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle', readOf:'02ffa2fd',
     when:'Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.',
     target:'That unit.',
     effect:'That **battle-shock roll** is automatically successful.',
@@ -995,7 +995,7 @@ const FACTIONS = {
         // statNote: the +1 OC under the unit's stats, as New Recruit's OC does not include it (one line for every profile:
         // no {OC+1} value, a unit can have two OC values)
         rule:{ name:'Cyber-psalm Programming', needs:{ all:['Legio Cybernetica'] },
-          statNote:{ text:'OC +1 for each model unless Battle-shocked, not in the OC above' },
+          statNote:{ text:'OC +1 for each model unless Battle-shocked, not in the OC above' }, readOf:'2ec3bc70',
           text:'Add 2" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit.' },
         // pts from Wahapedia, matching BSData
         enhancements:[

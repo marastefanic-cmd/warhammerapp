@@ -15,6 +15,10 @@ const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   
 // (the fingerprints of AI-written columns and readings, and readBy: not part of a judgement; a reading's key is the same on whichever
 // row of data.js it is kept, as the app gets it: verify/tables.js hides them)
 const FP_KEYS = require('./tables').FP_KEYS;
+// a stratagem's judgements: every column of CORE_STRATAGEMS and FACTIONS.detachments.stratagems written for the app (verify/columns.json:
+// hand, ai-summary, ai-reading), its id aside; the same list for the core and the detachments' stratagems
+const STRAT_KEYS = (T => [...new Set(['CORE_STRATAGEMS', 'FACTIONS.detachments.stratagems'].flatMap(t => Object.entries(T[t].columns)
+  .filter(([c, x]) => c !== 'id' && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
 
 // the readings data.js keeps on a list's entry for a reason of the list (listWhy), by "<army>/<unit>"
 let OWN_ = null;
@@ -111,11 +115,11 @@ function items(D, appSource){
     for(const id of a.detachments){
       const d = f.detachments[id];
       for(const r of detRules_(d)) rulesMeta(d.name + ' rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
-      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask', 'shield', 'help', 'react', 'weaponKw'])
+      for(const s of d.stratagems || []) for(const k of STRAT_KEYS)
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }
-  for(const s of D.coreStratagems) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'calcMods', 'lasts', 'gist', 'note'])
+  for(const s of D.coreStratagems) for(const k of STRAT_KEYS)
     if(s[k] !== undefined) add('core', 'strat-' + k, 'Core · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
   // app notes inside core rules text, and which rule each keyword spelling opens
   for(const [name, text] of Object.entries(D.rules)) for(const line of text.split('\n')) if(/^\*App note/.test(line))

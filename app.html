@@ -560,11 +560,14 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .ly.sum{color:var(--accent-ink); background:var(--accent); box-shadow:none}
 .ly.read{color:var(--accent); box-shadow:inset 0 0 0 1.5px var(--accent)}
 .ly.hand{color:var(--fg); background:var(--surface2); box-shadow:none}
-.hwc{margin-top:12px; padding:8px 10px 0; border:1px solid var(--line); border-radius:6px; background:var(--surface); scroll-margin-top:calc(var(--top) + 8px); min-width:0}
+.xp.hwc{margin-top:6px; padding:0 10px; border:1px solid var(--line); border-radius:6px; background:var(--surface); scroll-margin-top:calc(var(--top) + 8px); min-width:0}
+.xp.hwc > summary{padding:5px 0; min-height:0}
+.xp.hwc > summary b{letter-spacing:.04em; overflow-wrap:anywhere}
+.xp.hwc > summary .xh > span{font-size:13px; line-height:1.35}
+.hwcnt{font:600 13.5px var(--f-head); color:var(--fg2); font-variant-numeric:tabular-nums}
+.xp.hwc > .body{padding:0 0 4px}
+.hwidx{margin-top:8px}
 #sec-hw-trust{scroll-margin-top:calc(var(--top) + 8px)}
-.hwh{display:flex; justify-content:space-between; align-items:baseline; gap:4px 10px; flex-wrap:wrap}
-.hwh b{font:700 18px/1.15 var(--f-head); letter-spacing:.04em; overflow-wrap:anywhere}
-.hwh .c{font:600 13.5px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
 .hww{font-size:13.5px; line-height:1.4; color:var(--fg2); margin-top:2px}
 .hwk{font-size:13.5px; line-height:1.5; margin-top:4px; overflow-wrap:anywhere}
 .hwk .link{padding-bottom:0}
@@ -577,6 +580,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .hwx .pgv > .ly{flex:none}
 .hws{color:var(--muted)}
 .hwc .xp{margin:8px -10px 0; padding:0 10px; border-bottom:0; border-top:1px solid var(--line)}
+.hwc .xp > .body{padding-bottom:8px}
 .hwl{font-size:13px; line-height:1.6; margin:5px 0 0; color:var(--fg2); overflow-wrap:anywhere}
 .hwct > b{font:700 15px var(--f-head); letter-spacing:.03em; overflow-wrap:anywhere}
 .hwct .hwn{font:600 13px var(--f-head); color:var(--muted)}
@@ -1860,12 +1864,10 @@ const HW_SRC = { gw:'GW', bsdata:'BSData', newrecruit:'New Recruit', wahapedia:'
 const HW_LAYERS = [
   ['mech', 'Mechanical', 'copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.'],
   ['sum', 'AI summary', 'a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
-  ['read', 'AI reading', 'the numbers and conditions the Damage tab and the Phase checklist use, read from GW’s words by AI: fingerprinted, and each signed off by an independent reviewer.'],
-  ['hand', 'Hand', 'a decision written by hand: which source wins where they disagree (GW), ids, aliases, notes; signed off by a reviewer.']];
-// a column's layer, from its source in verify/columns.json
-const hwLayer = (t, col, src) => src === 'ai' ? (col === 'def' ? 'read' : 'sum')
-  : src !== 'hand' ? 'mech'
-  : /\.(mods|aura|guard|readings)$/.test(t) || /^(mods|aura|guard|mod|def)$|^calc|^def[A-Z]|Calc$/.test(col) ? 'read' : 'hand';
+  ['read', 'AI reading', 'the numbers and conditions the Damage tab uses, and the “When targeted” lines, read from GW’s words by AI (a few by a fixed program rule): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
+  ['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']];
+// a column's layer: its source in verify/columns.json (verify/tables.js fails unless ai-summary and ai-reading are exactly what it fingerprints)
+const hwLayer = (t, col, src) => ({ 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' })[src] || 'mech';
 const hwCols = t => { const x = VER && VER.tables && VER.tables[t]; return x ? x.cols.split(' ').filter(Boolean).map(c => { const i = c.indexOf(':'); return [c.slice(0, i), c.slice(i + 1)]; }) : null; };
 const hwTag = (t, col, src) => { if(!src) return ''; const l = hwLayer(t, col, src);
   return '<span class="ly ' + l + '">' + esc(l === 'mech' ? HW_SRC[src] || src : HW_LAYERS.find(x => x[0] === l)[1]) + '</span>'; };
@@ -1903,10 +1905,10 @@ function hwColumns(t){
   const subs = VER && VER.tables ? Object.keys(VER.tables).filter(k => k.startsWith(t + '.')) : [];
   const block = k => { const cols = hwCols(k); if(!cols) return '';
     const n = k === t ? hwRows(HW_TABLES.find(x => x[0] === t)[1]) : hwSubRows(k);
-    return '<div class="hwct" data-t="' + esc(k) + '" data-cols="' + esc(cols.map(c => c[0]).join(',')) + '"><b>' + esc(k) + '</b>' + (n == null ? '' : ' <span class="hwn">' + hwN(n, 'row', 'rows') + '</span>') +
+    return '<div class="hwct" data-t="' + esc(k) + '" data-cols="' + esc(cols.map(c => c[0] + ':' + c[1]).join(',')) + '"' + (n == null ? '' : ' data-n="' + n + '"') + '><b>' + esc(k) + '</b>' + (n == null ? '' : ' <span class="hwn">' + hwN(n, 'row', 'rows') + '</span>') +
       (k === t ? '' : '<p class="hww">' + esc(VER.tables[k].what) + '</p>') +
       HW_LAYERS.map(([l, name]) => { const these = cols.filter(([c, s]) => hwLayer(k, c, s) === l); if(!these.length) return '';
-        return '<p class="hwl"><span class="ly ' + l + '">' + name + '</span> ' + these.map(([c, s]) => esc(c) + (l === 'mech' ? ' <span class="hws">(' + esc(HW_SRC[s] || s) + ')</span>' : '')).join(', ') + '</p>'; }).join('') + '</div>'; };
+        return '<p class="hwl" data-l="' + l + '" data-c="' + esc(these.map(c => c[0]).join(',')) + '"><span class="ly ' + l + '">' + name + '</span> ' + these.map(([c, s]) => esc(c) + (l === 'mech' ? ' <span class="hws">(' + esc(HW_SRC[s] || s) + ')</span>' : '')).join(', ') + '</p>'; }).join('') + '</div>'; };
   const all = [t].concat(subs), n = all.reduce((x, k) => x + (hwCols(k) || []).length, 0);
   if(!n) return '';
   return '<details class="xp"><summary><span class="xh"><b>Every column and where it comes from</b><span>' + hwN(n, 'column', 'columns') + (subs.length ? ', with ' + hwN(subs.length, 'inner table', 'inner tables') : '') + '</span></span>' + chev + '</summary>' +
@@ -1972,12 +1974,12 @@ function hwCard(t, k){
     body = hwKey('used by', 'the list import, to find each unit and choice of a New Recruit export') +
       ex('Its lookups', hwRow(t, Object.keys(D.bsIds).map(c => [c, (v => Array.isArray(v) ? hwN(v.length, 'id', 'ids') : isObj(v) ? hwN(Object.keys(v).length, 'id', 'ids') : v)(D.bsIds[c])]))); }
   else if(t === 'VERSION'){ count = 'one value'; body = ex('Its value', '<p class="hwk">' + esc(D.version) + '</p>'); }
-  return '<div class="hwc" id="sec-hw-' + t + '" data-table="' + t + '" data-rows="' + rows + '"><div class="hwh"><b>' + t + '</b><span class="c">' + count + '</span></div>' +
-    (what ? '<p class="hww">' + esc(what) + '</p>' : '') + body + hwColumns(t) + '</div>';
+  return '<details class="xp hwc" id="sec-hw-' + t + '" data-table="' + t + '" data-rows="' + rows + '"><summary><span class="xh"><b>' + t + '</b><span><span class="hwcnt">' + count + '</span>' +
+    (what ? ' · ' + esc(what) : '') + '</span></span>' + chev + '</summary><div class="body">' + body + hwColumns(t) + '</div></details>';
 }
 // the map: the tables as boxes, their links as arrows (one row count each, from the tables)
 function hwMap(){
-  const n = t => hwRows(HW_TABLES.find(x => x[0] === t)[1]), dets = Object.values(D.factions).flatMap(f => Object.values(f.detachments));
+  const n = t => hwRows((HW_TABLES.find(x => x[0] === t) || [, ''])[1]), dets = Object.values(D.factions).flatMap(f => Object.values(f.detachments));
   const sum = (xs, k) => xs.reduce((x, d) => x + (d[k] || []).length, 0);
   const box = (t, x, y, w, h, sub) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="4"/><text class="t" x="' + (x + 8) + '" y="' + (y + 17) + '">' + t + '</text>' +
     (sub ? '<text class="s" x="' + (x + 8) + '" y="' + (y + 32) + '">' + esc(sub) + '</text>' : '');
@@ -1985,7 +1987,10 @@ function hwMap(){
   const ar = d => '<path class="ar" d="' + d + '" marker-end="url(#hwa)"/>';
   const lab = (x, y, s, mid) => '<text class="k" x="' + x + '" y="' + y + '"' + (mid ? ' text-anchor="middle"' : '') + '>' + esc(s) + '</text>';
   const entries = D.armies.reduce((x, a) => x + unitsAll(a).length, 0);
-  return '<figure class="hwmap"><svg viewBox="0 0 320 366" role="img" aria-label="How the tables link: an army’s unit entries name their DATASHEETS row (ds) and the army names its FACTIONS row; datasheets name their core rules in RULES; RULE_ALIASES and RULE_SRC point at RULES; GRANTS, RULE_OPTIONS and CHECKLIST point at a rule in FACTIONS or an ability of a datasheet; CORE_STRATAGEMS serve every list; BS_IDS serve the list import.">' +
+  const counts = { lists:D.armies.length, entries, factions:n('FACTIONS'), armyRules:sum(Object.values(D.factions), 'armyRules'), detachments:dets.length, stratagems:sum(dets, 'stratagems'),
+    enhancements:sum(dets, 'enhancements'), datasheets:n('DATASHEETS'), rules:n('RULES'), aliases:n('RULE_ALIASES'), ruleSrc:n('RULE_SRC'), concepts:n('CONCEPTS'), grants:n('GRANTS'),
+    ruleOptions:n('RULE_OPTIONS'), checklist:n('CHECKLIST'), core:n('CORE_STRATAGEMS'), bsIds:n('BS_IDS') };
+  return '<figure class="hwmap" data-counts="' + esc(JSON.stringify(counts)) + '"><svg viewBox="0 0 320 366" aria-hidden="true">' +
     '<defs><marker id="hwa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8z"/></marker></defs>' +
     box('ARMIES', 8, 8, 128, 44, hwN(D.armies.length, 'list', 'lists') + ' · ' + entries + ' entries') +
     box('FACTIONS', 184, 8, 128, 110, hwN(n('FACTIONS'), 'row', 'rows')) +
@@ -1999,13 +2004,18 @@ function hwMap(){
     one('GRANTS', 8, 264, 96) + one('RULE_OPTIONS', 112, 264, 96) + one('CHECKLIST', 216, 264, 96) +
     '<path class="ar" d="M56 264V250H264V264M160 250V264"/>' + ar('M56 250H3V108H6') + ar('M264 250H317V40H314') + lab(160, 244, 'rule / key → a rule or an ability', true) +
     box('CORE_STRATAGEMS', 8, 314, 128, 44, n('CORE_STRATAGEMS') + ' · used by every list') + box('BS_IDS', 184, 314, 128, 44, n('BS_IDS') + ' lookups · import') +
-    '</svg></figure>';
+    '</svg></figure>' +
+    // the map as text (and each table a link to its card)
+    '<p class="hwk hwidx">How they link: an army’s unit entries name their ' + hwTo('DATASHEETS') + ' row (ds) and the army names its ' + hwTo('FACTIONS') + ' row; datasheets name their rules in ' +
+    hwTo('RULES') + ', which ' + hwTo('RULE_ALIASES') + ' and ' + hwTo('RULE_SRC') + ' point at; ' + hwTo('GRANTS') + ', ' + hwTo('RULE_OPTIONS') + ' and ' + hwTo('CHECKLIST') +
+    ' point at a rule in FACTIONS or an ability of a datasheet; ' + hwTo('CORE_STRATAGEMS') + ' serve every list, ' + hwTo('BS_IDS') + ' the list import; ' +
+    hwTo('CONCEPTS') + ' holds the core terms, ' + hwTo('VERSION') + ' the data’s version.</p>';
 }
 function screenHow(){
   const steps = [
-    ['Where the data comes from', 'Your New Recruit lists; BSData, the data New Recruit is built from; Games Workshop’s Core Rules, Faction Packs and FAQs, and Wahapedia where GW has no document yet. Where they disagree, GW wins.'],
-    ['How a list is built', 'A program reads the list and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources.'],
-    ['The tables', 'Everything the app shows is in ' + HW_TABLES.length + ' tables in one file, data.js, drawn below with their real columns and row counts. Each column is tagged: mechanical, AI-written or decided by hand.'],
+    ['Where the data comes from', 'Your New Recruit lists; BSData, the data New Recruit is built from; Games Workshop’s Core Rules, Faction Packs and FAQs, and Wahapedia where GW has no document yet. Where they disagree, GW wins; where GW misprints (a typo, a base size), the correction is written down with its reason.'],
+    ['How a list is built', 'A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.'],
+    ['The tables', 'Everything the app shows is in ' + HW_TABLES.length + ' tables in one file, data.js, drawn below with their real row counts' + (VER && VER.tables ? ' and columns. Each column is tagged: mechanical, AI-written or decided by hand.' : '. This copy carries no record of its check, so its columns are not shown.')],
     ['What checks every release', 'A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. <button class="link" data-htab="trust">What it checks</button>'],
     ['How the app draws pages', 'One page template reads the tables and draws every screen from them. Each release renders every screen of every list and compares its text with the last one accepted, so no screen changes unseen.']];
   const all = VER && VER.tables ? Object.keys(VER.tables).flatMap(t => hwCols(t).map(([c, s]) => hwLayer(t, c, s))) : [];
@@ -2013,11 +2023,11 @@ function screenHow(){
   return '<p class="hwi">Where every line of this app comes from, the tables it is kept in, and what is checked before any change reaches your phone.</p>' +
     '<ol class="hwflow">' + steps.map(([h, t], i) => '<li><b>' + (i + 1) + ' · ' + h + '</b><span>' + t + '</span></li>').join('') + '</ol>' +
     '<div class="sec-h"><h2>The tables</h2><span class="c">' + HW_TABLES.length + '</span></div>' + hwMap() +
-    '<div class="hwleg">' + HW_LAYERS.map(([l, name, t]) => '<p class="vchk"><span class="ly ' + l + '">' + name + '</span> ' + esc(t) + '</p>').join('') + '</div>' + share +
+    (VER && VER.tables ? '<div class="hwleg">' + HW_LAYERS.map(([l, name, t]) => '<p class="vchk"><span class="ly ' + l + '">' + name + '</span> ' + esc(t) + '</p>').join('') + '</div>' : '') + share +
     HW_TABLES.map(([t, k]) => hwCard(t, k)).join('') +
     '<div class="sec-h" id="sec-hw-trust"><h2>Why you can trust the data</h2></div>' +
     '<p class="hwp">Games Workshop is the source of truth. Where New Recruit, BSData or Wahapedia say something else, the difference is written down with its reason, and every release checks it again.</p>' +
-    '<p class="hwp">What AI wrote is marked on the tables above: summaries and readings. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words flags it, and every judgement the app adds is signed off by an independent reviewer; a changed rule voids its sign-off.</p>' +
+    '<p class="hwp">What AI wrote is marked on the tables above: summaries and readings. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.</p>' +
     '<p class="hwp">Nothing ships unless every check passes: the build refuses to run otherwise.</p>' +
     (VER ? '<p class="qh">Checked ' + esc(VER.date) + '</p>' + VER.checks.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') +
       '<details class="xp"><summary><span class="xh"><b>Sources</b><span>what it was compared with</span></span>' + chev + '</summary><div class="body">' + VER.sources.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') + '</div></details>'

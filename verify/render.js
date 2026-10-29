@@ -21,7 +21,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   const browser = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium' });
   const W = +(process.env.VERIFY_WIDTH || 390);   // run.js checks 390 (snapshots) and 320 (layout)
   const main = W === 390;
-  const page = await (await browser.newContext({ viewport:{ width:W, height:844 } })).newPage();
+  const page = await (await browser.newContext({ viewport:{ width:W, height:844 }, serviceWorkers:'block' })).newPage();   // (a service worker's fetches would pass by the stand-in verified.js below)
   const pageErrors = [];
   page.on('pageerror', e => pageErrors.push(e.message));
   // only the app's own files and its web fonts (the layout checks need the real fonts' widths)
@@ -134,14 +134,31 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     if(label){ await page.click('#view [data-how]'); await page.waitForTimeout(300); }
     const o = await page.evaluate(() => ({ s:cur.s, t:$('#top').innerText, back:($('#top [data-back]') || {}).textContent || '' }));
     if(o.s !== 'how' || !/How the app works/.test(o.t) || o.back !== 'Armies') fail('how-row', '', 'the row opens it', JSON.stringify(o));
-    const got = await page.evaluate(() => ({ cards:[...document.querySelectorAll('#view .hwc')].map(c => ({ t:c.dataset.table, rows:+c.dataset.rows, head:c.querySelector('.hwh .c').textContent })),
-      cols:Object.fromEntries([...document.querySelectorAll('#view .hwct')].map(x => [x.dataset.t, x.dataset.cols])) }));
+    const got = await page.evaluate(() => ({ cards:[...document.querySelectorAll('#view .hwc')].map(c => ({ t:c.dataset.table, rows:+c.dataset.rows, head:c.querySelector('summary .hwcnt').textContent })),
+      cols:Object.fromEntries([...document.querySelectorAll('#view .hwct')].map(x => [x.dataset.t, x.dataset.cols])),
+      n:Object.fromEntries([...document.querySelectorAll('#view .hwct[data-n]')].map(x => [x.dataset.t, +x.dataset.n])),
+      lines:[...document.querySelectorAll('#view .hwct .hwl[data-l]')].map(x => ({ t:x.closest('.hwct').dataset.t, l:x.dataset.l, c:x.dataset.c.split(',') })),
+      map:JSON.parse((document.querySelector('#view .hwmap') || { dataset:{ counts:'{}' } }).dataset.counts) }));
     for(const n of names){ const c = got.cards.find(x => x.t === n), want = rows(RAW[n]);
       if(!c) fail('how-tables', '', n, 'no card'); else if(c.rows !== want || !(n === 'VERSION' ? c.head === 'one value' : c.head.startsWith(want + ' '))) fail('how-tables', '', n, 'shows ' + c.rows + ' (' + c.head + '), data.js has ' + want); }
     for(const c of got.cards) if(!names.includes(c.t)) fail('how-tables', '', c.t, 'a card for a table data.js does not have');
     const entries = RAW.ARMIES.reduce((x, a) => x + a.units.length, 0), ac = got.cards.find(x => x.t === 'ARMIES');
     if(ac && !ac.head.includes(entries + ' unit entries')) fail('how-tables', '', 'ARMIES', 'unit entries: ' + ac.head + ', data.js has ' + entries);
-    for(const t of Object.keys(COLS)){ const want = Object.keys(COLS[t].columns || {}).join(','); if(got.cols[t] !== want) fail('how-tables', '', t, 'columns ' + got.cols[t] + ', columns.json ' + want); }
+    for(const t of Object.keys(COLS)){ const want = Object.entries(COLS[t].columns || {}).map(([n, x]) => n + ':' + x.source).join(','); if(got.cols[t] !== want) fail('how-tables', '', t, 'columns ' + got.cols[t] + ', columns.json ' + want); }
+    // each column under the layer its columns.json source gives
+    const LAYER = { 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' };
+    for(const x of got.lines) for(const c of x.c){ const s = ((COLS[x.t] || { columns:{} }).columns[c] || {}).source; if((LAYER[s] || 'mech') !== x.l) fail('how-tables', '', x.t + '.' + c, 'shown as ' + x.l + ', columns.json source ' + s); }
+    // the inner tables' rows and the map's numbers, counted here from data.js as stored
+    const walk = (root, parts) => parts.reduce((xs, k) => xs.flatMap(x => { const v = x[k]; return v == null ? [] : Array.isArray(v) ? v : k === 'detachments' ? Object.values(v) : [v]; }), root);
+    const ROOTS = { ARMIES:RAW.ARMIES, DATASHEETS:Object.values(RAW.DATASHEETS), FACTIONS:Object.values(RAW.FACTIONS) };
+    for(const [t, n] of Object.entries(got.n)){ const p = t.split('.'); if(p.length < 2) continue; const want = ROOTS[p[0]] ? walk(ROOTS[p[0]], p.slice(1)).length : null;
+      if(want !== n) fail('how-tables', '', t, 'shows ' + n + ' rows, data.js has ' + want); }
+    for(const t of ['DATASHEETS.stats', 'DATASHEETS.abilities', 'FACTIONS.detachments', 'FACTIONS.detachments.stratagems', 'ARMIES.units']) if(!(t in got.n)) fail('how-tables', '', t, 'no row count shown');
+    const dets = walk(ROOTS.FACTIONS, ['detachments']);
+    const wantMap = { lists:RAW.ARMIES.length, entries, factions:rows(RAW.FACTIONS), armyRules:walk(ROOTS.FACTIONS, ['armyRules']).length, detachments:dets.length,
+      stratagems:walk(dets, ['stratagems']).length, enhancements:walk(dets, ['enhancements']).length, datasheets:rows(RAW.DATASHEETS), rules:rows(RAW.RULES), aliases:rows(RAW.RULE_ALIASES),
+      ruleSrc:rows(RAW.RULE_SRC), concepts:rows(RAW.CONCEPTS), grants:rows(RAW.GRANTS), ruleOptions:rows(RAW.RULE_OPTIONS), checklist:rows(RAW.CHECKLIST), core:rows(RAW.CORE_STRATAGEMS), bsIds:rows(RAW.BS_IDS) };
+    if(JSON.stringify(got.map) !== JSON.stringify(wantMap)) fail('how-tables', '', 'the map', 'shows ' + JSON.stringify(got.map) + ', data.js has ' + JSON.stringify(wantMap));
     for(const t of Object.keys(got.cols)) if(!COLS[t]) fail('how-tables', '', t, 'columns of a table columns.json does not have');
     const ex = await page.evaluate(() => { const el = document.querySelector('#view [data-hwentry]'); return el && { at:el.dataset.hwentry, rows:[...el.querySelectorAll('.pgr')].map(r => [r.querySelector('.pgk').textContent, r.querySelector('.pgv > span').textContent]) }; });
     if(!ex) fail('how-example', '', 'ARMIES', 'no unit entry shown');
@@ -219,10 +236,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await take('popup order', `() => { hideSheet(); go({ s:'home' }); go({ s:'lists' }); showSort(); }`);
       await take('home favorites (two)', `() => { const ids = ['shooty', 'healybois'].filter(armyById); store.set('wh-favs', ids.length === 2 ? ids : WH_DATA.armies.slice(0, 2).map(x => x.id)); store.set('wh-home-sort', 'az'); hideSheet(); go({ s:'home' }); go({ s:'favs' }); }`);
       await take('home (two favorites)', `() => { hideSheet(); go({ s:'home' }); }`);
-      // (before the reloads of the checks: a reloaded page gets the verified.js on disk, not the stand-in, and shows no checks)
       await take('home how the app works', `() => { hideSheet(); go({ s:'home' }); go({ s:'how' }); }`);
-      await howChecks();
       await homeChecks();
+      await howChecks();
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }

@@ -1,5 +1,5 @@
 {
- "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai (AI-written; carries a fingerprint of the text it was written from).",
+ "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist.",
  "tables": {
   "RULES": {
    "what": "core rules and weapon abilities: name → text (glossary)",
@@ -57,7 +57,7 @@
      "note": "stable id (the app links by it)"
     },
     "gist": {
-     "source": "ai",
+     "source": "ai-summary",
      "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
     },
     "gistOf": {
@@ -73,16 +73,16 @@
      "note": "checked by verify/texts.js"
     },
     "phases": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "when": {
      "source": "gw",
@@ -101,31 +101,31 @@
      "note": "RESTRICTIONS, word for word (verify/texts.js)"
     },
     "needs": {
-     "source": "derived",
-     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+     "source": "hand",
+     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "note": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "limit": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defCalc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcMods": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the stratagem (its numbers and conditions: Command Re-roll's one die, once in the phase), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the stratagem (its numbers and conditions: Command Re-roll's one die, once in the phase), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cpNote": {
      "source": "hand",
      "note": "the extra CP part, from the words; signed off"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -133,36 +133,36 @@
      "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
     },
     "mod": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "shield": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "help": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defPick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "react": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weaponKw": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -215,24 +215,24 @@
      "note": "GW's tag as New Recruit prints it after the name; derive.js derives the \"Once per…\" parts"
     },
     "ph": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "at": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "needs": {
-     "source": "derived",
-     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+     "source": "hand",
+     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "coreTwin": {
      "source": "hand",
@@ -243,31 +243,31 @@
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "calcNc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcMods": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcDefs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "limit": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "both": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "mod": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -275,12 +275,12 @@
      "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
     },
     "parts": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
     },
     "statNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "tableAt": {
      "source": "hand",
@@ -295,15 +295,15 @@
      "note": "the phases its \"When targeted\" line (def) is for, from its words; signed off with the def (approvals.json, ability-def / rule-def)"
     },
     "mods": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as footnotes (FACTIONS.readings), each with readOf; moved here from the lists by verify/tables.js --write"
     },
     "aura": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as what the units it reaches give other units (FACTIONS.readings)"
     },
     "guard": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as help to other units when they are attacked (FACTIONS.readings)"
     },
     "readOf": {
@@ -365,24 +365,24 @@
      "note": "GW's tag as New Recruit prints it after the name; derive.js derives the \"Once per…\" parts"
     },
     "ph": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "at": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "needs": {
-     "source": "derived",
-     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+     "source": "hand",
+     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "coreTwin": {
      "source": "hand",
@@ -393,31 +393,31 @@
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "calcNc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcMods": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcDefs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "limit": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "both": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "mod": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -425,12 +425,12 @@
      "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
     },
     "parts": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
     },
     "statNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "tableAt": {
      "source": "hand",
@@ -445,15 +445,15 @@
      "note": "the phases its \"When targeted\" line (def) is for, from its words; signed off with the def (approvals.json, ability-def / rule-def)"
     },
     "mods": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as footnotes (FACTIONS.readings), each with readOf; moved here from the lists by verify/tables.js --write"
     },
     "aura": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as what the units it reaches give other units (FACTIONS.readings)"
     },
     "guard": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as help to other units when they are attacked (FACTIONS.readings)"
     },
     "readOf": {
@@ -482,24 +482,24 @@
      "note": "GW's tag as New Recruit prints it after the name; derive.js derives the \"Once per…\" parts"
     },
     "ph": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "at": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "needs": {
-     "source": "derived",
-     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+     "source": "hand",
+     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "coreTwin": {
      "source": "hand",
@@ -510,31 +510,31 @@
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "calcNc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcMods": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcDefs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "limit": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "both": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "mod": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -542,12 +542,12 @@
      "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
     },
     "parts": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
     },
     "statNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "tableAt": {
      "source": "hand",
@@ -562,15 +562,15 @@
      "note": "the phases its \"When targeted\" line (def) is for, from its words; signed off with the def (approvals.json, ability-def / rule-def)"
     },
     "mods": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as footnotes (FACTIONS.readings), each with readOf; moved here from the lists by verify/tables.js --write"
     },
     "aura": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as what the units it reaches give other units (FACTIONS.readings)"
     },
     "guard": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as help to other units when they are attacked (FACTIONS.readings)"
     },
     "readOf": {
@@ -583,11 +583,11 @@
    "what": "a detachment's stratagems",
    "columns": {
     "id": {
-     "source": "hand",
-     "note": "stable id (the app links by it)"
+     "source": "derived",
+     "note": "a stable id made from the stratagem's name by verify/from-json.js (the app links by it)"
     },
     "gist": {
-     "source": "ai",
+     "source": "ai-summary",
      "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
     },
     "gistOf": {
@@ -603,16 +603,16 @@
      "note": "checked by verify/texts.js"
     },
     "phases": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "when": {
      "source": "gw",
@@ -631,27 +631,27 @@
      "note": "RESTRICTIONS, word for word (verify/texts.js)"
     },
     "needs": {
-     "source": "derived",
-     "note": "which units it is for, derived from TARGET / the rule text by verify/derive.js and kept agreeing; checked by verify/invariants.js"
+     "source": "hand",
+     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "note": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "limit": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defCalc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cpNote": {
      "source": "hand",
      "note": "the extra CP part, from the words; signed off"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -659,36 +659,36 @@
      "note": "fingerprint of the text the AI-written column was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches"
     },
     "mod": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "shield": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "help": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defPick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "react": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weaponKw": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -724,15 +724,15 @@
      "note": "\"(one per army)\" as Wahapedia prints it after the name"
     },
     "mods": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as footnotes (FACTIONS.readings), each with readOf; moved here from the lists by verify/tables.js --write"
     },
     "aura": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as what the units it reaches give other units (FACTIONS.readings)"
     },
     "guard": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "its readings as help to other units when they are attacked (FACTIONS.readings)"
     }
    }
@@ -781,8 +781,8 @@
      "note": "the other selections printed under the army name, as printed"
     },
     "units": {
-     "source": "hand",
-     "note": "the unit entries, see ARMIES.units"
+     "source": "newrecruit",
+     "note": "the list's unit entries, from the New Recruit export (verify/from-json.js) or its PDF (verify/import-nr.js), checked by verify/nr.js"
     }
    }
   },
@@ -790,8 +790,8 @@
    "what": "a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS",
    "columns": {
     "id": {
-     "source": "hand",
-     "note": "stable id (per-list state, links)"
+     "source": "derived",
+     "note": "a stable id made from the unit's name by verify/from-json.js (per-list state, links)"
     },
     "ds": {
      "source": "derived",
@@ -910,15 +910,15 @@
      "note": "its ability rows (see ARMIES.units.abilities)"
     },
     "mods": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the list's own readings (ARMIES.units.mods), and, where the list shows the rows' readings in another order, their names in its order; null: none"
     },
     "aura": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the list's own readings (ARMIES.units.aura), and, where the list shows the rows' readings in another order, their names in its order; null: none"
     },
     "guard": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the list's own readings (ARMIES.units.guard), and, where the list shows the rows' readings in another order, their names in its order; null: none"
     },
     "over": {
@@ -1166,23 +1166,23 @@
      "note": "\"Enhancement\" / \"Upgrade\" and GW's tags as New Recruit prints them"
     },
     "ph": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "at": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -1198,44 +1198,44 @@
      "note": "why it does nothing in this list; signed off"
     },
     "damaged": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the wounds range of a Damaged ability, from its words (verify/invariants.js)"
     },
     "riled": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "embarked": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defCalc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcDef": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "fightOnDeath": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "comeback": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defPh": {
      "source": "derived",
@@ -1255,84 +1255,84 @@
    "what": "footnotes under a unit's weapon tables: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -1352,84 +1352,84 @@
    "what": "what a unit gives other units of its list: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -1449,84 +1449,84 @@
    "what": "help a unit gives other units of its list when they are attacked: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -1602,15 +1602,15 @@
      "note": "abilities and their texts"
     },
     "mods": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the readings of its abilities (DATASHEETS.mods), moved here from the lists by verify/tables.js --write; derived ones (readBy) by verify/derive.js"
     },
     "aura": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the readings of its abilities as auras (DATASHEETS.aura)"
     },
     "guard": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the readings of its abilities as guard lines (DATASHEETS.guard)"
     }
    }
@@ -1794,23 +1794,23 @@
      "note": "GW's tags as New Recruit prints them; derive.js derives the \"Once per…\" parts"
     },
     "ph": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turn": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "turns": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "at": {
-     "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables); each stored label it derives must keep agreeing (verify/derive-agreed.json), the others are hand-written and signed off (verify/approvals.json)"
+     "source": "hand",
+     "note": "the phases and turn it is used in, hand-written from the words; checked against verify/derive.js, which derives it from the words by its rule tables: each label it derives must keep agreeing (verify/derive-agreed.json), the others are signed off (verify/approvals.json)"
     },
     "def": {
-     "source": "ai",
+     "source": "ai-reading",
      "note": "AI-written \"When targeted\" line, written from the text of the item it is on; signed off (approvals.json); defOf is the fingerprint of that text"
     },
     "defOf": {
@@ -1826,44 +1826,44 @@
      "note": "why it does nothing in this list; signed off"
     },
     "damaged": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the wounds range of a Damaged ability, from its words (verify/invariants.js)"
     },
     "riled": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "embarked": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defCalc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcDef": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "fightOnDeath": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "comeback": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calcNote": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "defPh": {
      "source": "derived",
@@ -2006,84 +2006,84 @@
    "what": "the readings of the datasheet's abilities (and of a core rule on its Rules line, or a weapon ability it defines) as footnotes under its weapon tables: every list with the datasheet has them",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -2103,84 +2103,84 @@
    "what": "the readings of the datasheet's abilities as what it gives other units of its list",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -2200,84 +2200,84 @@
    "what": "the readings of the datasheet's abilities as help it gives other units of its list when they are attacked",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
@@ -2297,84 +2297,84 @@
    "what": "the readings (mods, aura, guard) of an army rule, detachment rule or enhancement, on its row: every unit the rule reaches (an army rule on its Rules line, a detachment rule whose needs it meets) or the enhancement's bearer has them",
    "columns": {
     "kind": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "weapon": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "who": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "set": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "when": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "cond": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "note": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the footnote, copied from the words of the rule it cites (from); signed off (approvals.json key = footnote + cited text)"
     },
     "from": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "the ability, rule or stratagem it cites"
     },
     "always": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "calc": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "pick": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "lasts": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "vs": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "needs": {
-     "source": "hand",
+     "source": "ai-reading",
      "note": "which units of the list it is for (keywords); signed off"
     },
     "selfWhen": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "selfAlways": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "oneModel": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "notSelf": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "one": {
-     "source": "hand",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), hand-written from the words and signed off (approvals.json)"
+     "source": "ai-reading",
+     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "readOf": {
      "source": "derived",
