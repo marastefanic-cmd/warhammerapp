@@ -1414,9 +1414,9 @@ They can matter at the table, but the calculator does not play them: what each o
 
 Phaeron of the Blades
 Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1733,9 +1733,9 @@ They can matter at the table, but the calculator does not play them: what each o
 
 Phaeron of the Blades
 Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1769,31 +1769,37 @@ OBEISANCE PHALANX
 6
 1
 CP
+AI
 Territorial Obsession
 Your Command phase, your LYCHGUARD or TRIARCH unit: until the start of your next Command phase, +1 OC for its models (+3 instead if it is a VEHICLE unit).
 Your Command The Silent King
 1
 CP
+AI
 Enslaved Artifice
 Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+.
 Your Shoot · Fight All but Tesseract Vault ×2
 1
 CP
+AI
 Nanoassembly Protocols
 Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit.
 Their Shoot · Fight The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
 1
 CP
+AI
 Suffer No Rival
 Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION].
 Fight The Silent King
 1
 CP
+AI
 Your Time Is Nigh
 Any phase, just after your opponent’s WARLORD is destroyed, your NECRONS WARLORD: until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, -1 to the result.
 Any phase The Silent King
 1
 CP
+AI
 Sentinels of Eternity
 Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed.
 Fight No unit in this list can use it (needs LYCHGUARD OR TRIARCH PRAETORIANS)
@@ -1801,16 +1807,19 @@ THE PHAERON’S ARMOURY
 3
 1
 CP
+AI
 Subsurface Quantumweave
 Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
 Their Shoot · Fight Tesseract Vault ×2
 1
 CP
+AI
 Particle Pulse
 Start of your Shooting phase, your NECRONS TITANIC FLY unit: one visible enemy unit within 12" of it has +3" detection range.
 Start of your Shooting Tesseract Vault ×2
 1
 CP
+AI
 Cosmic Storm
 Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP.
 Your Shooting Tesseract Vault ×2
@@ -1818,51 +1827,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Canoptek Reanimator, Canoptek Spyders
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

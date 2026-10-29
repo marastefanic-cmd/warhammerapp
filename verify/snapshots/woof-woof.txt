@@ -217,7 +217,7 @@ It can also move through sections of terrain features that are more than 4" in h
 CORE RULESuper-Heavy Walker
 
 Marked Prey
-Houndpack Lance · Your Command
+Houndpack Lance · Your Command/Shoot · Fight
 
 At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.
 
@@ -721,7 +721,7 @@ CORE RULESuper-Heavy Walker
 DETACHMENTS
 HOUNDPACK LANCE
 Marked Prey
-Detachment rule · Your Command
+Detachment rule · Your Command/Shoot · Fight
 
 At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.
 
@@ -1099,9 +1099,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-2CP Vox-howl
+2CP Vox-howl AI
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Leash of the Masters
+1CP Leash of the Masters AI
 Your unit has shot: those attacks do not prevent it from being eligible to start an action.
 MODIFIERS · NONE
 Hit roll
@@ -1316,15 +1316,15 @@ NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-2CP Vox-howl
+2CP Vox-howl AI
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Animalistic Rage
+1CP Animalistic Rage AI
 Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
-1CP Encircling Pack
+1CP Encircling Pack AI
 Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1626,9 +1626,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-2CP Vox-howl
+2CP Vox-howl AI
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Leash of the Masters
+1CP Leash of the Masters AI
 Your unit has shot: those attacks do not prevent it from being eligible to start an action.
 MODIFIERS · NONE
 Hit roll
@@ -1723,15 +1723,15 @@ NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-2CP Vox-howl
+2CP Vox-howl AI
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Animalistic Rage
+1CP Animalistic Rage AI
 Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
-1CP Encircling Pack
+1CP Encircling Pack AI
 Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1765,31 +1765,37 @@ HOUNDPACK LANCE
 6
 1
 CP
+AI
 Cunning Hunter
 Until the end of the turn, your unit can shoot and declare a charge in a turn in which it Fell Back.
 Your Movement Any unit
 1
 CP
+AI
 Harrying Hounds
 An enemy unit just ended a Normal, Advance or Fall Back move within 8" of your unit: your unit can make a Normal move of up to 6".
 Their Movement Any unit
 2
 CP
+AI
 Vox-howl
 Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
 Start of Shoot/Fight War Dog Brigand ×2, War Dog Karnivore
 1
 CP
+AI
 Animalistic Rage
 Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
 Their Shoot · Fight Any unit
 1
 CP
+AI
 Hungry for Combat
 Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.
 Start of Fight Any unit
 1
 CP
+AI
 Encircling Pack
 Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
 End of their Fight Any unit
@@ -1797,16 +1803,19 @@ HUNTING WARPACK
 3
 1
 CP
+AI
 Leash of the Masters
 Your unit has shot: those attacks do not prevent it from being eligible to start an action.
 Your Shooting Any unit
 1
 CP
+AI
 Stalking Focus
 An enemy unit targets your unit within range of an objective: ranged attacks that target your unit have -1 AP until that enemy unit has attacked.
 Their Shooting Any unit
 1
 CP
+AI
 Insensate Bloodthirst
 An enemy unit targets your unit in the Fight phase: your unit has Feel No Pain 5+.
 Fight Any unit
@@ -1814,51 +1823,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Any unit
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight War Dog Brigand ×2, War Dog Karnivore
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

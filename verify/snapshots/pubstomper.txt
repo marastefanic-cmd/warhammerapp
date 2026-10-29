@@ -890,9 +890,9 @@ In your opponent's Movement phase, if an enemy unit ends a move within 8” of t
 
 Defiler
 Scuttling Walker
-Your Move/Shoot
+Your Movement
 
-Movement / Shooting · Your turn
+Movement · Your turn
 
 Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
 
@@ -1358,7 +1358,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Arcane Focus
+1CP Arcane Focus AI
 Just after your model’s Psychic test with Channelling the Warp, before resolving that Ritual: re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
 MODIFIERS · NONE
 Hit roll
@@ -1604,9 +1604,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1884,7 +1884,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Arcane Focus
+1CP Arcane Focus AI
 Just after your model’s Psychic test with Channelling the Warp, before resolving that Ritual: re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
 MODIFIERS · NONE
 Hit roll
@@ -2003,9 +2003,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2039,31 +2039,37 @@ GRAND COVEN
 6
 1
 CP
+AI
 Egotistical Power
 Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.
 Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 1
 CP
+AI
 Desecration of Worlds
 An objective marker you control that your unit is within range of stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 1
 CP
+AI
 Arcane Focus
 Just after your model’s Psychic test with Channelling the Warp, before resolving that Ritual: re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
 Your Shooting Any unit
 2
 CP
+AI
 Devastating Sorcery
 Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.
 Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 1
 CP
+AI
 Psychic Dominion
 Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
 Any phase Any unit
 1
 CP
+AI
 Destined by Fate
 Just after a saving throw is failed for your PSYKER model: change the Damage of that attack to 0.
 Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
@@ -2071,51 +2077,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but Tzaangors
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Exalted Sorcerer + Rubric Marines
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler, Sekhetar Robots
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)
@@ -3385,9 +3401,9 @@ D6+1
 1
 ABILITIES
 Scuttling Walker
-Your Move/Shoot
+Your Movement
 
-Movement / Shooting · Your turn
+Movement · Your turn
 
 Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
 

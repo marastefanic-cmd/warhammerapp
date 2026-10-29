@@ -1547,11 +1547,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP A Worthy Skull
+1CP A Worthy Skull AI
 Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1885,17 +1885,17 @@ NOT COUNTED BY THE CALCULATOR (6)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Daemonic Fury
+1CP Daemonic Fury AI
 Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).
-1CP A Worthy Skull
+1CP A Worthy Skull AI
 Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
-1CP Blessing of Burning Blood
+1CP Blessing of Burning Blood AI
 A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
-1CP Murder-call
+1CP Murder-call AI
 Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1929,31 +1929,37 @@ KHORNE DAEMONKIN
 6
 1
 CP
+AI
 Daemontide
 Select one friendly BLOOD LEGIONS unit within 6" of your unit: one destroyed MOUNTED model, up to D3 destroyed BEAST models or up to D6 destroyed INFANTRY models return to it with full wounds (not CHARACTER models to Attached units).
 Your Command Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
 1
 CP
+AI
 Blessing of Burning Blood
 A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
 Their Shoot · Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
 1
 CP
+AI
 Daemonic Fury
 Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).
 Start of your Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
 1
 CP
+AI
 A Worthy Skull
 Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
 Fight Any unit
 1
 CP
+AI
 Murder-call
 Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
 End of their Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
 1
 CP
+AI
 Summoned by Slaughter
 The last model of a unit is destroyed: set your BLOODLETTERS unit in Reserves up wholly within 9" of that model and more than 6" horizontally away from all enemy units (once per battle round).
 Any phase No unit in this list can use it (needs BLOODLETTERS)
@@ -1961,16 +1967,19 @@ VESSELS OF WRATH
 3
 1
 CP
+AI
 Punish the Craven
 An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
 Their Movement Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 1
 CP
+AI
 Aspire to Infamy
 Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.
 Fight Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 1
 CP
+AI
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
 Any phase Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
@@ -1978,51 +1987,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but Angron
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

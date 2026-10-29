@@ -1343,9 +1343,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Impossible Eclipse
+1CP Impossible Eclipse AI
 Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Ficklefire
+1CP Ficklefire AI
 Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
 MODIFIERS · NONE
 Hit roll
@@ -1553,13 +1553,13 @@ NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Impossible Eclipse
+1CP Impossible Eclipse AI
 Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Delirium Unmade
+1CP Delirium Unmade AI
 End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1837,9 +1837,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Impossible Eclipse
+1CP Impossible Eclipse AI
 Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Ficklefire
+1CP Ficklefire AI
 Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
 MODIFIERS · NONE
 Hit roll
@@ -1925,13 +1925,13 @@ NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Impossible Eclipse
+1CP Impossible Eclipse AI
 Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Delirium Unmade
+1CP Delirium Unmade AI
 End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1965,16 +1965,19 @@ CAVALCADE OF CHAOS
 3
 2
 CP
+AI
 From Beyond the Veil
 End of the Movement phase, from the start of the battle, your LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves: it can make an Ingress move.
 End of Movement The Blue Scribes, Fluxmaster + Pink Horrors
 1
 CP
+AI
 Warp-Riders
 Your Movement phase, when your LEGIONES DAEMONICA MOUNTED unit is selected to move: it has MOBILE.
 Your Movement The Blue Scribes, Fluxmaster + Pink Horrors
 1
 CP
+AI
 Inescapable Manifestations
 Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls).
 Their Movement The Blue Scribes, Fluxmaster + Pink Horrors
@@ -1982,31 +1985,37 @@ SCINTILLATING LEGION
 6
 1
 CP
+AI
 Fateborne Nightmares
 Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA TZEENTCH unit can move through terrain features.
 Your Move/Charge Any unit
 1
 CP
+AI
 Pyrogenesis
 Your Shooting phase or the Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not yet selected to shoot or fight: until the end of the phase, +2 S to its weapons, or spend one Flux token for +3 S and +1 AP instead.
 Your Shoot · Fight Any unit
 1
 CP
+AI
 Ficklefire
 Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
 Your Shooting Any unit
 1
 CP
+AI
 Flickering Reality
 Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit.
 Fight Any unit
 1
 CP
+AI
 Delirium Unmade
 End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
 End of their Fight Any unit
 1
 CP
+AI
 Impossible Eclipse
 Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
 Any phase Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2
@@ -2014,51 +2023,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but The Blue Scribes
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2, Tzeentch Soul Grinder
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight All but Flamers ×3, Tzeentch Soul Grinder
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

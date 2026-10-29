@@ -1482,11 +1482,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Lightning Wrath
+1CP Lightning Wrath AI
 Your unit is selected to make a pile-in move: it can move up to D3+3".
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1834,11 +1834,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Lightning Wrath
+1CP Lightning Wrath AI
 Your unit is selected to make a pile-in move: it can move up to D3+3".
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1872,16 +1872,19 @@ DREAD HOST
 3
 2
 CP
+AI
 Golden Light of the Moiraides
 Your unit is selected to make an ingress move: until the start of your next turn, attacks that target it have -1 to hit rolls and enemy units cannot target it with snap shooting attacks.
 Your Movement All but Prosecutor Squad ×2, Witchseeker Squad
 1
 CP
+AI
 Preternatural Rapidity
 Your unit ends an advance move: that move does not prevent it from declaring a charge.
 Your Movement All but Prosecutor Squad ×2, Witchseeker Squad
 1
 CP
+AI
 Lightning Wrath
 Your unit is selected to make a pile-in move: it can move up to D3+3".
 Fight All but Prosecutor Squad ×2, Witchseeker Squad
@@ -1889,16 +1892,19 @@ HONOURED COMPANIONS
 3
 1
 CP
+AI
 Swift as the Eagle
 An enemy unit ends a move within 8" of your unengaged unit: your unit can make a normal move of up to D3+3".
 Their Movement Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens
 1
 CP
+AI
 Emperor’s Domain
 Your unit is selected to make a consolidation move: you can select the objective consolidation mode, regardless of that move’s Before Moving restrictions.
 Fight Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens
 1
 CP
+AI
 Avenge the Fallen
 Your unit below starting strength is selected to fight: its melee attacks (not those of CHARACTER models) have +2 A.
 Fight Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens
@@ -1906,16 +1912,19 @@ LIONS OF THE EMPEROR
 3
 1
 CP
+AI
 Unleash the Lions
 Your unit of 2+ models is split into separate units of one model each, each with a starting strength of 1.
 Your Command Trajann Valoris + Allarus Custodians, Allarus Custodians
 2
 CP
+AI
 Vigil Unending
 An enemy unit targets your unit: attacks that target your unit have -1 D until that enemy unit has attacked.
 Their Shoot · Fight Trajann Valoris + Allarus Custodians, Allarus Custodians
 1
 CP
+AI
 Fury of the Emperor
 Your unit that made an ingress move this turn declares a charge: it has +2 to charge rolls.
 Your Charge Trajann Valoris + Allarus Custodians, Allarus Custodians
@@ -1923,51 +1932,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Caladius Annihilator Grav-tank
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Caladius Annihilator Grav-tank
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Trajann Valoris + Allarus Custodians, Shield-Captain + Sentinel Guard Sodality
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

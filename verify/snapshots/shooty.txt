@@ -51,6 +51,7 @@ All lists
 25
 Import a list from New Recruit
 Its JSON export
+How the app works and why you should be able to trust the data
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
@@ -593,9 +594,769 @@ All lists
 25
 Import a list from New Recruit
 Its JSON export
+How the app works and why you should be able to trust the data
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
+
+######## home how the app works · ARMIES How the app works
+Where every line of this app comes from, the tables it is kept in, and what is checked before any change reaches your phone.
+
+1 · Where the data comes from
+Your New Recruit lists; BSData, the data New Recruit is built from; Games Workshop’s Core Rules, Faction Packs and FAQs, and Wahapedia where GW has no document yet. Where they disagree, GW wins; where GW misprints (a typo, a base size), the correction is written down with its reason.
+2 · How a list is built
+A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.
+3 · The tables
+Everything the app shows is in 13 tables in one file, data.js, drawn below with their real row counts and columns. Each column is tagged: mechanical, AI summary, AI reading or decided by hand.
+4 · What checks every release
+A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. What it checks
+5 · How the app draws pages
+One page template reads the tables and draws every screen from them. Each release renders every screen of every list and compares its text with the last one accepted, so no screen changes unseen.
+THE TABLES
+13
+ARMIES
+25 lists · 213 entries
+FACTIONS
+13 rows
+army rules 29
+detachments 40
+↳ stratagems 166
+↳ enhancements 115
+faction
+DATASHEETS
+169 rows
+ds
+RULES
+66 rows
+rules
+RULE_ALIASES 70
+RULE_SRC 6
+CONCEPTS 20
+GRANTS 64
+RULE_OPTIONS 74
+CHECKLIST 470
+rule / key → a rule or an ability
+CORE_STRATAGEMS
+10 · used by every list
+BS_IDS
+13 lookups · import
+
+How they link: an army’s unit entries name their DATASHEETS row (ds) and the army names its FACTIONS row; datasheets name their rules in RULES, which RULE_ALIASES and RULE_SRC point at; GRANTS, RULE_OPTIONS and CHECKLIST point at a rule in FACTIONS or an ability of a datasheet; CORE_STRATAGEMS serve every list, BS_IDS the list import; CONCEPTS holds the core terms, VERSION the data’s version.
+
+MECHANICAL copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.
+
+AI SUMMARY a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.
+
+AI READING the numbers and conditions behind the footnotes, the “When targeted” lines and the Damage tab, read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.
+
+HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
+
+Of the 556 columns of the tables: Mechanical 269 · AI summary 2 · AI reading 230 · Hand 55.
+
+ARMIES
+25 rows · 213 unit entries · one row per list
+
+UNITS[ ].DS→ the unit’s DATASHEETS row
+
+FACTION, DETACHMENTS→ FACTIONS and its detachments
+
+ONE ROW: ME SHOOTY YER’ BOOTY
+
+id
+shooty
+HAND
+name
+Me shooty yer’ booty
+NEW RECRUIT
+faction
+orks
+NEW RECRUIT
+points
+2000
+NEW RECRUIT
+pointsUsed
+2000
+NEW RECRUIT
+battleSize
+Strike Force
+NEW RECRUIT
+disposition
+Purge the Foe
+NEW RECRUIT
+detachments
+dread-mob · shoota-boyz · wreckas
+NEW RECRUIT
+source
+New Recruit, exported 17 Oct 2026
+NEW RECRUIT
+units
+10 entries
+NEW RECRUIT
+
+ONE OF ITS UNIT ENTRIES
+
+id
+wazdakka
+COMPUTED
+ds
+orks/wazdakka-gutsmek
+COMPUTED
+pts
+200
+NEW RECRUIT
+models
+1× Wazdakka Gutsmek
+NEW RECRUIT
+gear
+[Fixit’s Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust]
+NEW RECRUIT
+
+An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
+
+Every column and where it comes from
+190 columns, with 8 inner tables
+ARMIES 25 rows
+
+MECHANICAL name (New Recruit), faction (New Recruit), points (New Recruit), pointsUsed (New Recruit), battleSize (New Recruit), disposition (New Recruit), detachments (New Recruit), source (New Recruit), config (New Recruit), units (New Recruit)
+
+HAND id
+
+ARMIES.units 213 rows
+
+a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
+
+MECHANICAL id (computed), ds (computed), pts (New Recruit), ptsNote (New Recruit), copies (New Recruit), models (New Recruit), gear (New Recruit), unplaced (New Recruit), enhancement (New Recruit), warlord (New Recruit), enhOn (New Recruit), warlordOn (New Recruit), upgrade (New Recruit), leads (New Recruit), support (New Recruit), also (New Recruit), role (New Recruit), name (New Recruit), rules (New Recruit), kw (New Recruit), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (New Recruit), why (computed)
+
+AI READING mods, aura, guard
+
+HAND ref, short, kwNote, kwOnly, partialRules, srcNote, over, note
+
+ARMIES.units.stats
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+MECHANICAL name (New Recruit), from (BSData), printed (New Recruit), own (GW), M (BSData), T (BSData), Sv (BSData), W (BSData), Ld (BSData), OC (BSData), InSv (BSData), base (BSData), of (computed), why (computed)
+
+HAND over
+
+ARMIES.units.ranged
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed)
+
+HAND over
+
+ARMIES.units.melee
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed)
+
+HAND over
+
+ARMIES.units.abilities
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), why (computed), readOf (computed)
+
+AI READING def, damaged, riled, embarked, defAlways, defCalc, calcDef, lasts, fightOnDeath, comeback, calcNote
+
+HAND over, note, na
+
+ARMIES.units.mods
+
+footnotes under a unit's weapon tables: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+ARMIES.units.aura
+
+what a unit gives other units of its list: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+ARMIES.units.guard
+
+help a unit gives other units of its list when they are attacked: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+DATASHEETS
+169 rows · one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
+
+KEY“faction/name”, the id an entry’s ds names
+
+RULES→ by name: a core rule in RULES (through RULE_ALIASES) or an army rule in FACTIONS
+
+ONE ROW: ORKS/WAZDAKKA-GUTSMEK
+
+name
+Wazdakka Gutsmek
+NEW RECRUIT
+faction
+orks
+COMPUTED
+bsId
+2ab7-ab71-0af4-5d39
+BSDATA
+role
+Epic Hero
+NEW RECRUIT
+rules
+Deadly Demise D3 · Deep Strike · Lone Operative · Waaagh!
+NEW RECRUIT
+kw
+Character · Epic Hero · Faction: Orks · Mounted · Smoke · Speed Freeks · Vehicle · Wazdakka Gutsmek
+NEW RECRUIT
+stats
+1 row: Wazdakka Gutsmek
+NEW RECRUIT
+ranged
+2 rows: Grabba Dragga, Psyko-gatler
+NEW RECRUIT
+melee
+3 rows: Fixit’s Wrench, Grabba Dragga, Speeding Bulk and Flaming Exhaust
+NEW RECRUIT
+abilities
+4 rows: Full Throttle, Turbo Engine, Pulse Jet, Shokk Attack Engine
+WAHAPEDIA
+Every column and where it comes from
+146 columns, with 7 inner tables
+DATASHEETS 169 rows
+
+MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia)
+
+AI READING mods, aura, guard
+
+HAND kwOnly, partialRules, srcNote
+
+DATASHEETS.stats 190 rows
+
+a datasheet's model profiles
+
+MECHANICAL name (New Recruit), M (New Recruit), T (New Recruit), Sv (New Recruit), W (New Recruit), Ld (New Recruit), OC (New Recruit), InSv (New Recruit), base (New Recruit), baseWith (GW)
+
+DATASHEETS.ranged 294 rows
+
+a datasheet's ranged weapon profiles
+
+MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
+
+DATASHEETS.melee 256 rows
+
+a datasheet's melee weapon profiles
+
+MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
+
+DATASHEETS.abilities 405 rows
+
+a datasheet's abilities
+
+MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+
+AI READING def, damaged, riled, embarked, defAlways, defCalc, calcDef, lasts, fightOnDeath, comeback, calcNote
+
+HAND note, na
+
+DATASHEETS.mods 130 rows
+
+the readings of the datasheet's abilities (and of a core rule on its Rules line, or a weapon ability it defines) as footnotes under its weapon tables: every list with the datasheet has them
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+DATASHEETS.aura 31 rows
+
+the readings of the datasheet's abilities as what it gives other units of its list
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+DATASHEETS.guard 12 rows
+
+the readings of the datasheet's abilities as help it gives other units of its list when they are attacked
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+FACTIONS
+13 rows · one row per faction: its army rules, detachments and aliases
+
+KEYthe faction’s id, the faction an army names
+
+DETACHMENTS→ each with its rule, stratagems and enhancements, inside the row
+
+ONE ROW: ORKS
+
+name
+Orks
+GW
+aliases
+[/^riled up/i, Waaagh!]
+HAND
+armyRules
+3 rows: Waaagh!, War Cry, Da Boss
+GW
+detachments
+6 detachments: Brute Bosses, Bully Boyz, Dread Mob, Runt Swarm, Shoota Boyz, Wreckas
+GW
+
+ONE OF ITS DETACHMENTS
+
+name
+Dread Mob
+GW
+dispositions
+Purge the Foe
+BSDATA
+dp
+1
+GW
+rule
+Try Dat Button! (+ 9 columns)
+GW
+enhancements
+2 rows: Cybork Boosta, Dreadherder
+GW
+stratagems
+3 rows: Crazed Rampage, Dread Power, Stomping Juggernaut
+GW
+
+ONE OF ITS STRATAGEMS
+
+id
+crazed-rampage
+COMPUTED
+gist
+An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight …
+AI SUMMARY
+gistOf
+263b4efe
+COMPUTED
+name
+Crazed Rampage
+GW
+cp
+1
+GW
+phases
+fight
+COMPUTED
+turn
+either
+COMPUTED
+when
+Fight phase, when an enemy unit targets a friendly ORKS WALKER unit (excluding TITANIC units).
+GW
+target
+That ORKS WALKER unit.
+GW
+effect
+When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one …
+GW
+needs
+all: Walker; none: Titanic
+HAND
+note
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on …
+HAND
+def
+Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on …
+AI READING
+defOf
+263b4efe
+COMPUTED
+Every column and where it comes from
+156 columns, with 7 inner tables
+FACTIONS 13 rows
+
+MECHANICAL name (GW), armyRules (GW), detachments (GW)
+
+HAND aliases, allies
+
+FACTIONS.armyRules 29 rows
+
+a faction's army rules
+
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+
+AI READING calcNc, calcMods, calcDefs, limit, both, mod, def, parts, statNote, mods, aura, guard
+
+HAND needs, coreTwin, note, tableAt, missing
+
+FACTIONS.detachments 40 rows
+
+a faction's detachments
+
+MECHANICAL name (GW), dispositions (BSData), dp (GW), rule (GW), moreRules (GW), enhancements (GW), stratagems (GW)
+
+FACTIONS.detachments.rule 40 rows
+
+a detachment's rule
+
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+
+AI READING calcNc, calcMods, calcDefs, limit, both, mod, def, parts, statNote, mods, aura, guard
+
+HAND needs, coreTwin, note, tableAt, missing
+
+FACTIONS.detachments.moreRules 1 row
+
+a detachment's further rule (moreRules), with the columns of its first
+
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+
+AI READING calcNc, calcMods, calcDefs, limit, both, mod, def, parts, statNote, mods, aura, guard
+
+HAND needs, coreTwin, note, tableAt, missing
+
+FACTIONS.detachments.stratagems 166 rows
+
+a detachment's stratagems
+
+MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), defOf (computed), readOf (computed)
+
+AI SUMMARY gist
+
+AI READING limit, defCalc, def, mod, shield, help, defPick, react, weaponKw, lasts, calcNote
+
+HAND needs, note, cpNote
+
+FACTIONS.detachments.enhancements 115 rows
+
+a detachment's enhancements
+
+MECHANICAL name (GW), pts (New Recruit), text (GW), upgrade (BSData), nr (New Recruit), limit (Wahapedia)
+
+AI READING mods, aura, guard
+
+FACTIONS.readings
+
+the readings (mods, aura, guard) of an army rule, detachment rule or enhancement, on its row: every unit the rule reaches (an army rule on its Rules line, a detachment rule whose needs it meets) or the enhancement's bearer has them
+
+MECHANICAL readOf (computed), readBy (computed)
+
+AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
+
+HAND listWhy
+
+CORE_STRATAGEMS
+10 rows · the core stratagems
+
+USED BYevery list
+
+ONE ROW
+
+id
+command-re-roll
+HAND
+gist
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of …
+AI SUMMARY
+gistOf
+377ce33f
+COMPUTED
+name
+Command Re-roll
+GW
+cp
+1
+GW
+phases
+command · movement · shooting · charge · fight
+COMPUTED
+turn
+either
+COMPUTED
+when
+Any phase, just after you make one of the following rolls for a friendly unit or model: - Advance roll - …
+GW
+target
+That unit or model.
+GW
+effect
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll …
+GW
+calcMods
+1 row
+AI READING
+readOf
+377ce33f
+COMPUTED
+Every column and where it comes from
+29 columns
+CORE_STRATAGEMS 10 rows
+
+MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), defOf (computed), readOf (computed)
+
+AI SUMMARY gist
+
+AI READING limit, defCalc, calcMods, def, mod, shield, help, defPick, react, weaponKw, lasts, calcNote
+
+HAND id, needs, note, cpNote
+
+RULES
+66 rows · core rules and weapon abilities: name → text (glossary)
+
+KEYthe rule’s name
+
+ONE ROW
+
+name
+Deep Strike
+GW
+text
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be …
+GW
+Every column and where it comes from
+2 columns
+RULES 66 rows
+
+MECHANICAL name (GW), text (GW)
+
+RULE_ALIASES
+70 rows · which RULES entry a keyword or rule chip opens: [pattern, rule]
+
+RULE→ RULES
+
+ONE ROW
+
+pattern
+/^supa-hazardous/i
+HAND
+rule
+Supa-hazardous
+HAND
+Every column and where it comes from
+2 columns
+RULE_ALIASES 70 rows
+
+HAND pattern, rule
+
+RULE_SRC
+6 rows · where a RULES entry comes from when it is not a core rule
+
+NAME→ RULES
+
+ONE ROW
+
+name
+Pulse Jet Move
+HAND
+source
+Orks army rule (special move type)
+HAND
+Every column and where it comes from
+2 columns
+RULE_SRC 6 rows
+
+HAND name, source
+
+CONCEPTS
+20 rows · core terms kept out of a unit's rule list
+
+ITS ROWS
+
+Hazard Roll · Mortal Wounds · Battle-shock · Engagement · Selected to Attack · Destroyed · Normal Move · Advance Move · Fall-back Move · Charge · Charge Move · Pile-in Move · Consolidation Move · Benefit of Cover · Strategic Reserves · Ingress Move · Surge Move · Scout Move · Starting Strength · Select Weapons
+
+Every column and where it comes from
+1 column
+CONCEPTS 20 rows
+
+MECHANICAL term (GW)
+
+GRANTS
+64 rows · a rule or option giving units an ability or keyword
+
+RULE→ an army rule (4) or detachment rule (14) in FACTIONS, or a unit’s ability (46) in a list (ARMIES → DATASHEETS)
+
+ONE ROW
+
+rule
+Orks · Runt Swarm rule · Sneaky Little Gitz
+COMPUTED
+grants
+BATTLELINE
+COMPUTED
+type
+keyword or weapon ability
+COMPUTED
+to
+all: Gretchin
+COMPUTED
+while
+–
+COMPUTED
+text
+- Friendly GRETCHIN units have BATTLELINE.
+COMPUTED
+Every column and where it comes from
+7 columns
+GRANTS 64 rows
+
+MECHANICAL rule (computed), option (computed), grants (computed), type (computed), to (computed), while (computed), text (computed)
+
+RULE_OPTIONS
+74 rows · the options inside a rule or ability, each with the phases its words give
+
+RULE→ an army rule (37) or detachment rule (23) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
+
+ONE ROW
+
+rule
+Orks · Dread Mob rule · Try Dat Button!
+COMPUTED
+option
+1–2
+COMPUTED
+text
++1 A
+COMPUTED
+found
+table row, trigger: the rule's
+COMPUTED
+explicit
+false
+COMPUTED
+trigger
+ph: shooting, fight; turn: either; turns: shooting: your
+COMPUTED
+used
+–
+COMPUTED
+phases
+ph: shooting, fight; turn: either; turns: shooting: your
+COMPUTED
+Every column and where it comes from
+8 columns
+RULE_OPTIONS 74 rows
+
+MECHANICAL rule (computed), option (computed), text (computed), found (computed), explicit (computed), trigger (computed), used (computed), phases (computed)
+
+CHECKLIST
+470 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+
+R|FACTION|NAME→ an army or detachment rule in FACTIONS (70)
+
+A|FINGERPRINT→ an ability, by a fingerprint of its name and words (400), in DATASHEETS
+
+ONE ROW: FULL THROTTLE (WAZDAKKA GUTSMEK)
+
+key
+a|17acewe
+COMPUTED
+t
+command:your (the phases it is triggered in)
+COMPUTED
+s
+1 (listed at a fixed moment of the turn)
+COMPUTED
+pk
+u: command:either,movement:either,shooting:either,charge:either,fight:either (a pick of options)
+COMPUTED
+
+t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
+
+BS_IDS
+13 lookups · the BSData ids the list import resolves an export by (verify/import-ids.js --write)
+
+USED BYthe list import, to find each unit and choice of a New Recruit export
+
+ITS LOOKUPS
+
+factions
+13 ids
+BSDATA
+roots
+16 ids
+BSDATA
+battleSizes
+1 id
+BSDATA
+limits
+1 id
+BSDATA
+dispositions
+5 ids
+BSDATA
+detachments
+40 ids
+BSDATA
+config
+1 id
+BSDATA
+configKids
+2 ids
+BSDATA
+info
+4 ids
+BSDATA
+infoKids
+18 ids
+BSDATA
+units
+212 ids
+BSDATA
+names
+811 ids
+BSDATA
+maxPerList
+81 ids
+BSDATA
+Every column and where it comes from
+13 columns
+BS_IDS 13 rows
+
+MECHANICAL factions (BSData), roots (BSData), battleSizes (BSData), limits (BSData), dispositions (BSData), detachments (BSData), config (BSData), configKids (BSData), info (BSData), infoKids (BSData), units (BSData), names (BSData), maxPerList (BSData)
+
+VERSION
+one value · the data’s version: one value, raised with every release
+
+ITS VALUE
+
+2026-10-29.1
+
+WHY YOU CAN TRUST THE DATA
+
+Games Workshop is the source of truth. Where New Recruit, BSData or Wahapedia say something else, the difference is written down with its reason, and every release checks it again.
+
+What AI wrote is marked on the tables above: summaries and readings. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.
+
+In the app, every summary written by AI carries a small AI label, and a tap on it opens the rule as written.
+
+Nothing ships unless every check passes: the build refuses to run otherwise.
+
+CHECKED (DATE OF THE CHECK)
+
+(checks) (as listed by verify/run.js)
+
+Sources
+what it was compared with
+
+(sources) (as listed by verify/run.js)
 
 ######## popup import · KK Kunnin’ Kodex
 NEW RECRUIT
@@ -796,7 +1557,7 @@ If you rolled two D6, when this unit has attacked, this unit makes one hazard ro
 APPLIES TOBig Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
 Dakka! Dakka! Dakka!
-Shoota Boyz · Their Move · Shoot
+Shoota Boyz · Move · Your Shoot
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -1728,7 +2489,7 @@ STRATAGEMSDread Power, Stomping Juggernaut, Crazed Rampage
 
 SHOOTA BOYZ
 Dakka! Dakka! Dakka!
-Detachment rule · Their Move · Shoot
+Detachment rule · Move · Your Shoot
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -2301,9 +3062,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2644,9 +3405,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2680,16 +3441,19 @@ DREAD MOB
 3
 1
 CP
+AI
 Dread Power
 Your unit is riled up until the start of your next turn.
 Your Movement Big Mek Dakkarig ×2, Killa Kans
 1
 CP
+AI
 Stomping Juggernaut
 When your unit is selected to move or declares a charge: it has MOBILE.
 Your Move/Charge Big Mek Dakkarig ×2, Killa Kans
 1
 CP
+AI
 Crazed Rampage
 An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
 Fight Big Mek Dakkarig ×2, Killa Kans
@@ -2697,16 +3461,19 @@ SHOOTA BOYZ
 3
 1
 CP
+AI
 Kustom Dakka
 Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Gretchin ×3
 1
 CP
+AI
 Glowin’ Dakka
 Your unit’s ranged attacks against a unit within 9" have +1 AP.
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Gretchin ×3
 1
 CP
+AI
 Never Enough Dakka
 Your unit’s ranged attacks have [SUSTAINED HITS 1].
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Gretchin ×3
@@ -2714,16 +3481,19 @@ WRECKAS
 3
 1
 CP
+AI
 Grab It
 After shooting, if unengaged: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.
 Your Shooting Mek + Tankbustas ×2, Mek + Flash Gitz
 1
 CP
+AI
 Gun-crazy Show-offs
 After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
 Their Shooting Mek + Tankbustas ×2, Mek + Flash Gitz
 1
 CP
+AI
 Drive-by Bustin’
 Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.
 Your Shooting No unit in this list can use it (needs TRANSPORT)
@@ -2731,51 +3501,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Deffkoptas
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting Wazdakka Gutsmek
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Wazdakka Gutsmek, Big Mek Dakkarig ×2, Killa Kans
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Wazdakka Gutsmek, Big Mek Dakkarig ×2, Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
