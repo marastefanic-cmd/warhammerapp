@@ -17,6 +17,10 @@ const detRules_ = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];   
 const FP_KEYS = require('./tables').FP_KEYS;
 // a stratagem's judgements: every column of CORE_STRATAGEMS and FACTIONS.detachments.stratagems written for the app (verify/columns.json:
 // hand, ai-summary, ai-reading), its id aside; the same list for the core and the detachments' stratagems
+// an army or detachment rule's judgements, the same way: its columns written for the app (coreTwin aside, it has an item of its own;
+// mods, aura and guard aside, signed as the unit footnote, aura and guard items of the units they reach)
+const RULE_KEYS = (T => [...new Set(['FACTIONS.armyRules', 'FACTIONS.detachments.rule', 'FACTIONS.detachments.moreRules'].flatMap(t => Object.entries(T[t].columns)
+  .filter(([c, x]) => !['coreTwin', 'mods', 'aura', 'guard'].includes(c) && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
 const STRAT_KEYS = (T => [...new Set(['CORE_STRATAGEMS', 'FACTIONS.detachments.stratagems'].flatMap(t => Object.entries(T[t].columns)
   .filter(([c, x]) => c !== 'id' && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
 
@@ -65,7 +69,7 @@ function items(D, appSource){
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
-        if(ab.ph || ab.turn) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
+        if(ab.ph || ab.turn || ab.at) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns, at:ab.at }, src);
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
         if(ab.who) add(a.id, 'ability-who', w + ' · ' + ab.name, { who:ab.who, models:u.models }, src);
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
@@ -97,6 +101,8 @@ function items(D, appSource){
       if(u.kwOnly) add(a.id, 'unit-kwOnly', w, { kwOnly:u.kwOnly }, { models:u.models, kw:u.kw, kwNote:u.kwNote || null });
       // where the sources disagree about the unit (Wahapedia's Tyrannofex FRAME, Sir Hekhtur's own datasheet), marked on its datasheet
       if(u.srcNote) add(a.id, 'unit-srcNote', w, { srcNote:u.srcNote }, { models:u.models, kw:u.kw });
+      // a reference sheet (not in the army until a rule or stratagem adds it): the rule it cites and its quote
+      if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, u, { from:u.ref.rule || u.ref.strat }));
       // weapons: which model has which, how many, and the multi-profile groups
       // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)
       add(a.id, 'unit-weapons', w, { gear:u.gear, unplaced:u.unplaced, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
@@ -107,7 +113,7 @@ function items(D, appSource){
       const src = { rule:r.name, text:srcText };
       // (calcMods, calcDefs, calcNc, both, limit: the Damage tab's own reading of an army rule; parts: the parts of a detachment rule
       // for some of its units only, each with its needs and its footnote, "When targeted" line or the army rule it gives)
-      for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing', 'ask', 'calcMods', 'calcDefs', 'calcNc', 'both', 'limit', 'parts']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
+      for(const k of RULE_KEYS) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
       // an army rule shown with the core ability of the same name (Super-heavy Walker): the pairing, against both texts
       if(r.coreTwin !== undefined) add(a.id, 'rule-coreTwin', where + ' · ' + r.name, { coreTwin:r.coreTwin }, { rule:r.name, text:srcText, core:D.rules[r.coreTwin] || null });
     };
@@ -126,6 +132,8 @@ function items(D, appSource){
     add('core', 'rule-appnote', name, { note:line }, { rule:name, text:text.split('\n').filter(l => l !== line).join('\n') });
   for(const [re, k] of D.ruleAliases) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
   for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
+  // the allies a faction may take (FACTIONS.allies: the role New Recruit prints → the rule that brings them in), against those rules
+  for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || '')) });
   // a sentence verify/readings.js reads as a bonus with no reading, declared no numeric bonus after all (readings-gaps.json
   // status:'not-applicable', with its why): that declaration, against the ability's words
   for(const [k, g] of Object.entries(readJSON(path.join(ROOT, 'verify/readings-gaps.json'), {}))) if(g && g.status === 'not-applicable')

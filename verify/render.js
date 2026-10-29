@@ -255,6 +255,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         go({ s:'damage', army:id }); }, [a.id, ph]);
       await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 });
       await take('damage ' + ph, `() => {}`);
+      // (ai-summary: a "Not counted" stratagem line is its gist: labelled, its name opening the stratagem)
+      { const bad = await page.evaluate(() => [...document.querySelectorAll('#view .dmncr [data-strat]')].map(el => { const s = allStratagems().find(x => x.id === el.dataset.strat), lab = !!el.querySelector('.ai');
+          return !s ? el.dataset.strat + ': no such stratagem' : !!s.gist !== lab ? s.name + (s.gist ? ': its summary has no AI label' : ': an AI label without a summary') : ''; }).filter(Boolean));
+        for(const x of bad) fail('ai-summary', a.id, 'damage ' + ph, x); }
     }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
     // - ai-summary: every stratagem row with a gist (AI-written) carries the AI label, and the row opens its rules as written (WHEN,

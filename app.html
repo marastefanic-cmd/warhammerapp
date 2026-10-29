@@ -824,6 +824,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmfold > .note{margin:0 0 6px}
 .dmncr{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 6px; padding:6px 2px; border-top:1px solid var(--line)}
 .dmncr b{font:700 14.5px/1.2 var(--f-head); letter-spacing:.02em}
+.dmncr b.rl{padding:0}   /* (the link style without its tap padding: the line keeps its height) */
 .dmncr small{flex-basis:100%; font-size:12.5px; line-height:1.35; color:var(--muted)}
 .dmncr .dmbh{min-height:34px; font-size:11.5px}
 .dmman{display:grid; gap:6px; padding:6px 0 10px}
@@ -3668,7 +3669,7 @@ function dmListPart(C, score){
   if(nc.length) h += '<details class="dmfold dmncf"' + (plan.k === 0 || !plan.both ? ' id="dmNc"' : '') + ' data-dmfold="nc"' + (st.fold.nc ? ' open' : '') + '><summary><span>Not counted by the calculator (' + nc.length + ')</span>' + chev + '</summary>' +
     '<p class="note">They can matter at the table, but the calculator does not play them: what each one says.</p>' +
     nc.map(x => { const bh = dmByHand(x.text);
-      return '<div class="dmncr"><b' + (x.id ? ' role="button" tabindex="0" data-strat="' + esc(x.id) + '"' : '') + '>' + esc(x.name) + (x.id && x.text ? ' ' + aiLabel : '') + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small>' +
+      return '<div class="dmncr"><b' + (x.id ? ' class="rl" role="button" tabindex="0" data-strat="' + esc(x.id) + '"' : '') + '>' + esc(x.name) + (x.id && x.text ? ' ' + aiLabel : '') + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small>' +
         (bh ? '<button class="textbtn dmbh" data-dmbyhand="' + esc(bh.k + '|' + bh.v) + '">Count it by hand: ' + esc(bh.label) + '</button>' : '') + '</div>'; }).join('') + '</details>';
   h += dmManual(dmCh(st, b.id), st);
   return h;
