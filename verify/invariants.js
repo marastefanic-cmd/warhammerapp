@@ -53,9 +53,10 @@ function run(D){
     // (and the keywords its needs name, which no unit of the list may have: TRIARCH PRAETORIANS, so its TRIARCH is not read alone)
     const kws = new Set(a.units.flatMap(u => u.kw).concat(needKws(n)).filter(k => !/^Faction:/.test(k)).map(k => k.toUpperCase()));
     const boldOf = t => [...t.matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].toUpperCase().replace(/~~/g, '')).join(' | ');
+    // (struck words, ~~…~~, are GW's errata deleting them: not the target's; Vox-howl's ~~WAR DOG CHARACTER~~)
     // (a TARGET's "that **ORKS INFANTRY** unit" is the unit its WHEN names, not the target: Grot Shields' "One friendly **GRETCHIN** unit
     // within 3" of that **ORKS INFANTRY** unit", the unit being shot; its keywords are not the target's)
-    const whenB = boldOf(s.when).split(' | '), tgt = String(s.target).replace(/\bthat \*\*([^*]+)\*\*/g, (m, k) => whenB.some(w => w.includes(k.toUpperCase())) ? 'that #' : m);
+    const whenB = boldOf(s.when).split(' | '), tgt = String(s.target).replace(/~~[^~]*~~\s*\/?\s*/g, '').replace(/\bthat \*\*([^*]+)\*\*/g, (m, k) => whenB.some(w => w.includes(k.toUpperCase())) ? 'that #' : m);
     const bold = boldOf(s.target + ' ' + s.when), boldTarget = boldOf(tgt);   // WHEN may name the enemy's keywords
     for(const k of needKws(n)){
       const word = k.replace(/^Faction: /, '').toUpperCase();

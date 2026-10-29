@@ -180,6 +180,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         sess.dmg[id] = { atk:u.id, turn:{ me:dmModeTurn(ph === 'shooting' ? 'shoot' : ph, ph === 'fight' ? { fc:true } : {}) } };
         go({ s:'damage', army:id }); }, [a.id, ph]);
       await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 });
+      const custFolded = await page.evaluate(() => { const c = [...document.querySelectorAll('#dmList details.dmcust')]; return c.length > 0 && c.every(d => !d.open); });   // (as drawn: the take opens every fold)
       await take('damage ' + ph, `() => {}`);
       // the five groups, in order (Army rules, Unit rules, From other units in your list, Stratagems, Custom modifiers), in each part of
       // the list; every rule box in exactly one of them; the Custom modifiers folded, each of effects.js's once
@@ -188,9 +189,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         const want = DM_GROUPS.slice(0, 4).map(g => g[1]); for(let i = 0; i < parts; i++) if(heads.slice(i * 4, i * 4 + 4).join('|') !== want.join('|')) bad.push('groups: ' + heads.join(', '));
         const cust = [...document.querySelectorAll('#dmList details.dmcust')];
         if(cust.length !== parts) bad.push(cust.length + ' Custom modifiers groups for ' + parts + ' parts');
-        for(const c of cust){ if(c.open) bad.push('Custom modifiers not folded'); const n = c.querySelectorAll('[data-dmlv*="r:u:"]').length; if(n !== WH_EFFECTS.CUSTOM.length) bad.push('Custom modifiers: ' + n + ' of ' + WH_EFFECTS.CUSTOM.length); }
+        for(const c of cust){ const n = c.querySelectorAll('[data-dmlv*="r:u:"]').length; if(n !== WH_EFFECTS.CUSTOM.length) bad.push('Custom modifiers: ' + n + ' of ' + WH_EFFECTS.CUSTOM.length); }
         for(const e of document.querySelectorAll('#dmList .dmlv[data-dmlv*="r:"]')){ const n = [e.closest('[data-dmgrp]'), e.closest('details.dmcust')].filter(Boolean).length; if(n !== 1) bad.push(e.dataset.dmlv + ' in ' + n + ' groups'); }
         return bad; });
+      if(!custFolded) grp.unshift('Custom modifiers not folded');
       if(grp.length) fail('damage-groups', a.id, ph, grp.slice(0, 5).join('; '));
     }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
@@ -789,14 +791,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       if(before !== 'b:0,b:12' || after !== 'b:0,b:13.5,b:12') fail('damage-band-ticked', at[0], at[1], 'bands ' + before + ' unticked, ' + after + ' with Dakka! Dakka! Dakka! ticked');
       await tapBands(at, ' (Dakka! Dakka! Dakka! ticked)');
     }
-    // a fact's box with the rules it switches on: none ticked, empty; some, partly; all, ticked (one rule: Riled up → Dakka!
+    // a fact's box with the rules it switches on (ticked in their groups): none ticked, empty; some, partly; all, ticked (one rule: Riled up → Dakka!
     // Dakka! Dakka!; two: the objective → Finderz Keeperz, Wreckin’ and Lootin’)
     {
       const at = ['shooty', 'mek-flashgitz'];
       const mark = f => page.evaluate(f => { const e = document.querySelector('#dmList [data-dmlv="' + f + '"]'); return e.classList.contains('part') ? 'part' : e.getAttribute('aria-pressed') === 'true' ? 'on' : 'off'; }, f);
-      const kidTap = async (f, i) => { const sel = '#dmList .dmrw:has([data-dmlv="' + f + '"]) .dmkid';
-        await page.evaluate(([s, i]) => document.querySelectorAll(s)[i].scrollIntoView({ block:'center' }), [sel, i]); await page.waitForTimeout(400);
-        await page.locator(sel).nth(i).click(); await settled(); };
+      // (the boxes a fact ticks are in their groups, each in one: tapped there)
+      const KIDS = { 'f:mine:riled':['Dakka! Dakka! Dakka!'], 'f:pair:objective':['Wreckin’ and Lootin’', 'Finderz Keeperz'] };
+      const kidTap = async (f, i) => { const sel = '#dmList [data-dmgrp] .dmrh > [data-dmlv^="r:m:' + KIDS[f][i] + '|"]';
+        await page.evaluate(s => document.querySelector(s).scrollIntoView({ block:'center' }), sel); await page.waitForTimeout(400);
+        await page.locator(sel).first().click(); await settled(); };
       for(const [f, n] of [['f:mine:riled', 1], ['f:pair:objective', 2]]){
         await open('shoot', at);
         const seen = [await mark(f)], want = n === 1 ? ['off', 'on', 'off'] : ['off', 'part', 'on', 'part', 'off'];
