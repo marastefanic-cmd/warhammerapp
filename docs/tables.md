@@ -111,6 +111,11 @@ give, and that every list's units are shown exactly the stratagems their keyword
 not the Damage tab's: their `calc`, `always`, `oneModel`, `dice`, `follow`, `onDeath`, and an army rule's `calcMods`, `calcNc`, `both`,
 `limit`, are retired.
 
+**Timing labels.** A row's phase tags (`ph`, `turn`, `turns`, `at`; a stratagem's `phases`) come from `verify/derive.js` only:
+the gate step `derive` fails on a stored label its rule tables do not give. Where their reading is not the label the lists were
+signed off with, the row has no label and `verify/derive-unread.json` records it (`node verify/derive.js --unread`; listed with
+GW's words in `verify/out/derive.md`, "Not read by the program").
+
 ## Columns and their sources
 
 Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k-11e), **wahapedia**, **gw**

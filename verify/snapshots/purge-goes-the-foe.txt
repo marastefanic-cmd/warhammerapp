@@ -771,9 +771,9 @@ Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on 
 
 Thulia Ghuld
 Icon of War
-Your Command · Their Move · Shoot · Your Charge · Fight
+Your Command · Move · Your Shoot/Charge · Fight
 
-Your Command / Their Movement / Shooting (either turn) / Your Charge / Fight (either turn)
+Your Command / Movement (either turn) / Your Shooting / Your Charge / Fight (either turn)
 
 Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
 
@@ -1579,9 +1579,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1954,9 +1954,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1990,31 +1990,37 @@ COHORT CYBERNETICA
 6
 1
 CP
+AI
 Motive Imperative
 Until the start of your next Command phase, your unit has +3" Move and +1 to Advance and Charge rolls.
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Auto-divinatory Targeting
 Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker.
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Machine Spirit Resurgent
 Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Machine Superiority
 Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Transcendent Cogitation
 Until the start of your next Command phase, the Conqueror and Protector Imperatives are both active for your unit.
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Benevolence of the Omnissiah
 Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
@@ -2022,31 +2028,37 @@ ERADICATION COHORT
 6
 1
 CP
+AI
 Unrelenting Aggression
 Until the end of the turn, your unit is eligible to shoot after Falling Back (a SKITARII unit: to shoot and declare a charge).
 Your Movement Any unit
 1
 CP
+AI
 Unshackled Wrath
 Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].
 Your Shooting Cybernetica Datasmith + Kastelan Robots, Skitarii Rangers ×2, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Threat-cogitation Targeters
 Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll.
 Your Shooting Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
+AI
 Analytic Reprisals
 An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
 Their Shooting Skitarii Rangers ×2
 1
 CP
+AI
 Servo-driven Charge
 Until the end of the phase, your unit’s melee weapons have [LANCE].
 Fight Any unit
 1
 CP
+AI
 Precision Onslaught
 When your unit ends a Charge move: one D6 for each of its models within Engagement Range of one enemy unit; 1 mortal wound to that unit for each 4+.
 Your Charge No unit in this list can use it (needs SICARIAN)
@@ -2054,51 +2066,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting Ironstrider Ballistarii ×2, Skorpius Disintegrator ×2
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge All but Tech-Priest Enginseer, Skitarii Rangers ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Skorpius Disintegrator ×2
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Belisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer, Cybernetica Datasmith + Kastelan Robots
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
@@ -2712,9 +2734,9 @@ STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Icon of War
-Your Command · Their Move · Shoot · Your Charge · Fight
+Your Command · Move · Your Shoot/Charge · Fight
 
-Your Command / Their Movement / Shooting (either turn) / Your Charge / Fight (either turn)
+Your Command / Movement (either turn) / Your Shooting / Your Charge / Fight (either turn)
 
 Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
 
@@ -3742,7 +3764,7 @@ Ask about this ability
 ######## popup ability:purge-goes-the-foe|Icon of War|**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
 **Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
 **The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit. · PURGE GOES THE FOE Purge goes the Foe
-ABILITY · YOUR COMMAND / THEIR MOVEMENT / SHOOTING (EITHER TURN) / YOUR CHARGE / FIGHT (EITHER TURN)
+ABILITY · YOUR COMMAND / MOVEMENT (EITHER TURN) / YOUR SHOOTING / YOUR CHARGE / FIGHT (EITHER TURN)
 
 Icon of War
 

@@ -1177,9 +1177,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Profane Symbiosis
+1CP Profane Symbiosis AI
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Unleash Balefire
+1CP Unleash Balefire AI
 After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
 MODIFIERS · NONE
 Hit roll
@@ -1444,11 +1444,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Profane Symbiosis
+1CP Profane Symbiosis AI
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1792,9 +1792,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Profane Symbiosis
+1CP Profane Symbiosis AI
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Unleash Balefire
+1CP Unleash Balefire AI
 After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
 MODIFIERS · NONE
 Hit roll
@@ -1940,11 +1940,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Profane Symbiosis
+1CP Profane Symbiosis AI
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1978,31 +1978,37 @@ INFERNAL LANCE
 6
 1
 CP
+AI
 Corrupting Taint
 Just after your unit makes a Malefic Surge: select one objective marker you control that your unit is within range of; it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 Your Command All but Nurglings
 1
 CP
+AI
 Unleash Balefire
 After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
 Your Shooting All but Nurglings
 1
 CP
+AI
 Warp Vision
 Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER].
 Your Shooting All but Nurglings
 1
 CP
+AI
 Diabolic Bulwark
 Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.
 Their Shooting All but Nurglings
 1
 CP
+AI
 Hellforged Construction
 Just after an enemy unit selects your unit as a target: until that unit has finished making its attacks, worsen the AP of each attack that targets your unit by 1.
 Fight All but Nurglings
 1
 CP
+AI
 Profane Symbiosis
 End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
 Any phase All but Nurglings
@@ -2010,51 +2016,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement No unit in this list can use it
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge All but Nurglings
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight All but Nurglings
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

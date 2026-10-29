@@ -48,9 +48,10 @@ const FINGERPRINT = { gist:'gistOf', def:'defOf' };
 const READ = ['mods', 'aura', 'guard'];
 const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWhy: a reading the list's own, and why: it stays on the entry)
 const READ_COLS = {
-  rule:['mod', 'calcMods', 'calcDefs', 'calcNc', 'parts', 'both', 'limit'],
-  strat:['mod', 'help', 'shield', 'defCalc', 'defPick'],
-  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'embarked', 'fightOnDeath', 'comeback'],
+  // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
+  rule:['mod', 'calcDefs', 'parts', 'statNote'],
+  strat:['mod', 'help', 'shield', 'defCalc', 'defPick', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
+  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'embarked', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
@@ -1082,9 +1083,25 @@ function unregistered(src){
     for(const c of cols) if(!reg[t].columns[c]) out.push(t + '.' + c);
   }
   for(const [t, x] of Object.entries(reg)) for(const [c, v] of Object.entries(x.columns || {})) if(!SOURCES.includes(v.source)) out.push(t + '.' + c + ': source "' + v.source + '" is none of ' + SOURCES.join(', '));
+  // the AI layers are what the gate fingerprints, no more, no less: ai-reading exactly the readings (a reading table's columns but its
+  // fingerprint, readBy and listWhy; mods / aura / guard; a row's READ_COLS; def), ai-summary exactly gist (the app's How screen shows these)
+  for(const [t, x] of Object.entries(reg)) for(const [c, v] of Object.entries(x.columns || {})){
+    const want = layerOf(t, c);
+    if(want && v.source !== want) out.push(t + '.' + c + ': source "' + v.source + '", but the gate fingerprints it as ' + want);
+    if(!want && (v.source === 'ai-reading' || v.source === 'ai-summary')) out.push(t + '.' + c + ': source "' + v.source + '", but nothing fingerprints it');
+  }
   return out;
 }
-const SOURCES = ['bsdata', 'wahapedia', 'gw', 'newrecruit', 'derived', 'hand', 'ai'];
+// a column's AI layer, by what the gate fingerprints (null: neither)
+const READ_KIND = { 'CORE_STRATAGEMS':'strat', 'FACTIONS.detachments.stratagems':'strat', 'FACTIONS.armyRules':'rule', 'FACTIONS.detachments.rule':'rule',
+  'FACTIONS.detachments.moreRules':'rule', 'DATASHEETS.abilities':'ability', 'ARMIES.units.abilities':'ability' };
+function layerOf(t, c){
+  if(/\.(mods|aura|guard|readings)$/.test(t)) return [READ_FP, READ_BY, READ_WHY].includes(c) ? null : 'ai-reading';
+  if(c === 'gist') return 'ai-summary';
+  if(c === 'def' || READ.includes(c) || (READ_KIND[t] && READ_COLS[READ_KIND[t]].includes(c))) return 'ai-reading';
+  return null;
+}
+const SOURCES = ['bsdata', 'wahapedia', 'gw', 'newrecruit', 'derived', 'hand', 'ai-summary', 'ai-reading'];
 
 // ------------------------------------------------------------------------------------------------------------------
 // the report: the datasheets and every fact two lists have differently

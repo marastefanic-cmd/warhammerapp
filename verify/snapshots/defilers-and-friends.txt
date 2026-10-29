@@ -145,7 +145,7 @@ POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES
 Thrill Seekers
-Your Shoot/Charge
+Your Move/Shoot/Charge
 
 If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:
 
@@ -935,7 +935,7 @@ While this model has 1-4 wounds remaining, each time this model makes an attack,
 Emperor’s Children · Purge the Foe
 ARMY RULES
 Thrill Seekers
-Your Shoot/Charge
+Your Move/Shoot/Charge
 
 If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:
 
@@ -1295,9 +1295,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Unbound Arrogance
+1CP Unbound Arrogance AI
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Explosives
+1CP Explosives AI
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
 Hit roll
@@ -1567,13 +1567,13 @@ NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Embrace the Pain
+1CP Embrace the Pain AI
 Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
-1CP Unbound Arrogance
+1CP Unbound Arrogance AI
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1813,9 +1813,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Unbound Arrogance
+1CP Unbound Arrogance AI
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Explosives
+1CP Explosives AI
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
 Hit roll
@@ -1953,13 +1953,13 @@ NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Embrace the Pain
+1CP Embrace the Pain AI
 Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
-1CP Unbound Arrogance
+1CP Unbound Arrogance AI
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1993,31 +1993,37 @@ COTERIE OF THE CONCEITED
 6
 1
 CP
+AI
 Unshakeable Opponents
 Until the end of the turn, your unit’s attacks can ignore any or all modifiers to BS or WS, the hit roll and the wound roll.
 Command Any unit
 1
 CP
+AI
 Unbound Arrogance
 Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
 Your Shoot · Fight Any unit
 1
 CP
+AI
 Armour of Abhorrence
 Just after an enemy unit selects your unit as a target: until that unit has finished making its attacks, worsen the AP of each attack that targets your unit by 1.
 Their Shoot · Fight Any unit
 1
 CP
+AI
 Embrace the Pain
 Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
 Start of Fight Lucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 1
 CP
+AI
 Martial Perfection
 Your unit has not been selected to fight this phase: until the end of the phase, it can re-roll the hit roll.
 Fight Any unit
 1
 CP
+AI
 Protection of the Dark Prince
 Just after a mortal wound or attack is allocated to a model in your unit: until the end of the phase, your unit has Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds.
 Any phase Any unit
@@ -2025,51 +2031,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Lucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting Chaos Rhino
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Daemon Prince of Slaanesh with Wings, Chaos Rhino, Defiler ×2, Maulerfiend ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Chaos Rhino
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Lucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings, Sorcerer, Lord Exultant + Infractors ×2
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit

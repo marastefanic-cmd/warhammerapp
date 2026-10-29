@@ -102,7 +102,7 @@ writeVerified(ok);
 
 // verified.js: what the app shows under "Checked <date>" (the sources and what was compared)
 function writeVerified(ok){
-  const { readJSON, loadData } = require('./lib');
+  const { readJSON, loadData, columnSources } = require('./lib');
   const D = loadData(), out = n => readJSON(path.join(ROOT, 'verify/out', n + '.json'), {});
   const total = c => typeof c === 'number' ? c : Object.values(c || {}).reduce((t, v) => t + total(v), 0);
   const help = readJSON(path.join(ROOT, 'verify/out/helpers.json.summary'), {});
@@ -128,7 +128,7 @@ function writeVerified(ok){
     { label:'Wahapedia:', detail:'faction pages for ' + Object.values(D.factions).map(f => f.name).join(', ') + ' and the errata and FAQs they list' +
       (noPack.length ? ' (the only source for ' + noPack.join(', ') + ': no GW Faction Pack yet)' : '') + '.' }
   ];
-  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources };
+  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources, tables:columnSources() };
   fs.writeFileSync(path.join(ROOT, 'verified.js'), '// written by verify/run.js: the last verification of this app.html + data.js\nwindow.WH_VERIFIED = ' + JSON.stringify(v, null, 1) + ';\n');
 }
 console.log(ok ? '\nVERIFIED: every check passes for this app.html + data.js' : '\nNOT VERIFIED: build.js will refuse to build');

@@ -1,0 +1,44 @@
+[
+ {
+  "key": "7f45c7e9522cc0a5",
+  "where": "verify/derive.js (review fixes on 9a1ad64)",
+  "verdict": "ok",
+  "why": "Identical to the review patch (full-fix.patch): every derive.js line of 9a1ad64..3dd9653 is in it and nothing else; label-select-ability by section now also takes Pulse Jet and Shokk Attack Engine (same 'Throttlerokkit Shokka Engine' section), Full Throttle's label unchanged."
+ },
+ {
+  "key": "a0c8b92c83ad1126",
+  "where": "Orks · Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "verdict": "ok",
+  "why": "Correction: Move · Your Shoot ([ASSAULT] after an Advance in your Movement phase + Fire Overwatch in theirs; no shooting in the opponent's Shooting phase), as Onslaught is signed off. Snapshot shooty: only this label."
+ },
+ {
+  "key": "7c2398765a7cc1f8",
+  "where": "Emperor’s Children army rule · Thrill Seekers",
+  "verdict": "ok",
+  "why": "Correction: Your Move/Shoot/Charge, as Adaptive Strategy (same words) and Bounding Leaps are signed off. Snapshot defilers-and-friends: only this label."
+ },
+ {
+  "key": "2253e46f72e603cb",
+  "where": "Chaos Knights · Houndpack Lance rule · Marked Prey",
+  "verdict": "ok",
+  "why": "Correction: Your Command/Shoot · Fight, the signed-off Worthy Foes label for the same structure (selected in your Command phase; the bonus is on its attacks). Snapshot woof-woof: only this label."
+ },
+ {
+  "key": "84d1fe489f9d1c33",
+  "where": "pubstomper · Defiler · Scuttling Walker",
+  "verdict": "ok",
+  "why": "Correction: Your Move, the signed-off label of the identical words on defilers-and-friends' Defilers; Normal/Advance/Fall Back moves only. Snapshot pubstomper: only this label."
+ },
+ {
+  "key": "ea09cecac7abe50f",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "verdict": "ok",
+  "why": "Correction (label-section): Rod of the War Forge's Your Command + Fanatical Devotion/Adaptive Tactics (Your Move/Shoot/Charge) + The Fires of Mars (Imperatives: Your Shoot, Fight, Fire Overwatch in their Move) = Your Command · Move · Your Shoot/Charge · Fight. Snapshot purge-goes-the-foe: only this label."
+ },
+ {
+  "key": "d7be28dbe9814674",
+  "where": "labels",
+  "verdict": "ok",
+  "why": "Confirmed: 0 removed, 5 corrected, 86 not read (none had a label before); snapshot diffs (snap2-*.diff) contain only the five corrections."
+ }
+]

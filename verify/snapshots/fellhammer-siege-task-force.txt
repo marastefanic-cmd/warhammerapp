@@ -1561,7 +1561,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Touch of the Arkifane
+1CP Touch of the Arkifane AI
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
 MODIFIERS · NONE
 Hit roll
@@ -1813,11 +1813,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Touch of the Arkifane
+1CP Touch of the Arkifane AI
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2074,7 +2074,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Touch of the Arkifane
+1CP Touch of the Arkifane AI
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
 MODIFIERS · NONE
 Hit roll
@@ -2202,11 +2202,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Touch of the Arkifane
+1CP Touch of the Arkifane AI
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2240,31 +2240,37 @@ CULT OF THE ARKIFANE
 6
 1
 CP
+AI
 Biomechanoid Regeneration
 Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword.
 Your Command All but Cultist Mob
 1
 CP
+AI
 Forge-Fire Surge
 Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge.
 Your Movement Any unit
 1
 CP
+AI
 Balefire Boon
 Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.
 Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 2
 CP
+AI
 Soul-Tally Offering
 Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.
 Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 1
 CP
+AI
 Unholy Fortitude
 Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.
 Their Shooting Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 1
 CP
+AI
 Touch of the Arkifane
 Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
 Any phase All but Cultist Mob
@@ -2272,16 +2278,19 @@ DEVOTEES OF DESTRUCTION
 3
 1
 CP
+AI
 Snare of Fire
 Your opponent’s Movement phase, an enemy unit ends a move within 8" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3".
 Their Movement Havocs ×2
 1
 CP
+AI
 Ruination’s Bounty
 Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].
 Your Shooting Havocs ×2, Obliterators
 1
 CP
+AI
 Undying Hatred
 Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.
 Their Shooting Havocs ×2, Obliterators
@@ -2289,51 +2298,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but Maulerfiend
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Vashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob, Havocs ×2, Obliterators, Forgefiend, Maulerfiend
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit

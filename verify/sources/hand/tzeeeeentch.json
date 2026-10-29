@@ -1,5 +1,5 @@
 {
- "_about": "What verify/from-json.js cannot fill mechanically for tzeeeeentch, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). units: per unit entry, GW's words where Wahapedia's transcription of an ability differs from GW's Faction Pack (texts), its abilities' When targeted lines (def, AI-written, with defOf), timing labels where derive.js's reading is not the rule's (labels; {} for none), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
+ "_about": "What verify/from-json.js cannot fill mechanically for tzeeeeentch, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). units: per unit entry, GW's words where Wahapedia's transcription of an ability differs from GW's Faction Pack (texts), its abilities' When targeted lines (def, AI-written, with defOf), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
  "gists": {
   "cavalcade-of-chaos/from-beyond-the-veil": {
    "by": "AI (Claude)",
@@ -65,22 +65,6 @@
    "gistOf": "70b46e6a"
   }
  },
- "rules": {
-  "scintillating-legion": {
-   "by": "hand (Claude)",
-   "label": {
-    "ph": [
-     "command",
-     "movement",
-     "shooting",
-     "charge",
-     "fight"
-    ],
-    "turn": "either"
-   },
-   "why": "Fates in Flux: a Flux token is spent just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test (and by the opponent after their rolls), in any phase of either turn; derive.js reads only the Command phase gain and the saving throws (their Shooting phase, the Fight phase)."
-  }
- },
  "units": {
   "kairos-fateweaver": {
    "texts": {
@@ -114,28 +98,7 @@
    }
   },
   "daemon-prince-of-chaos-with-wings": {
-   "labels": {
-    "Harbinger of Death": {
-     "ph": [
-      "fight"
-     ],
-     "turn": "either"
-    },
-    "Daemonic Allegiance": {}
-   },
-   "why": "Daemonic Allegiance: this list chose TZEENTCH (New Recruit: “Daemon Prince of Chaos with wings (Tzeentch)”); the TZEENTCH keyword and the infernal cannon’s A 6 (“add 3 to the Attacks characteristic of this model’s infernal cannon”) are the list’s values, the datasheet keeps GW’s A 3. Neverblade’s +2 S, +1 A and +1 AP are in the hellforged weapons’ profiles (New Recruit’s), its +1 to hit is a footnote. Timing: Harbinger of Death is used each time the model is selected to fight (derive.js reads its weapon abilities as shooting too); Daemonic Allegiance is a choice made when mustering, no phase (as the-exiled-legion’s Daemon Prince of Chaos)."
-  },
-  "flamers": {
-   "labels": {
-    "Bounding Leaps": {
-     "ph": [
-      "movement",
-      "shooting"
-     ],
-     "turn": "your"
-    }
-   },
-   "why": "Bounding Leaps: a Fall Back move (your Movement phase) does not stop the unit shooting (your Shooting phase); derive.js reads the Movement phase as either turn."
+   "why": "Daemonic Allegiance: this list chose TZEENTCH (New Recruit: “Daemon Prince of Chaos with wings (Tzeentch)”); the TZEENTCH keyword and the infernal cannon’s A 6 (“add 3 to the Attacks characteristic of this model’s infernal cannon”) are the list’s values, the datasheet keeps GW’s A 3. Neverblade’s +2 S, +1 A and +1 AP are in the hellforged weapons’ profiles (New Recruit’s), its +1 to hit is a footnote."
   },
   "the-changeling": {
    "defs": {

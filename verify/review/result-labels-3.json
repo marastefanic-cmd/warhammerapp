@@ -1,0 +1,8 @@
+[
+ {
+  "key": "e6bee8778db287df",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "verdict": "ok",
+  "why": "Same judgement as the approved correction (result-labels-2 ea09cecac7abe50f): {ph:[command,movement,shooting,charge,fight], turn:your, turns:{movement:either, fight:either}}, at none, over the same text; only wt-howto's helpers.js line (at added to ability-timing) re-keys it. The program reads it (derive.js label-section: Rod of the War Forge's Your Command + Fanatical Devotion/Adaptive Tactics Your Move/Shoot/Charge + The Fires of Mars' Imperatives: Your Shoot, Fight, Fire Overwatch in their Move). Note: an earlier sign-off argued Shoot (either turn) through Analytic Reprisals; derive.js adds the opponent's turn for ranged bonuses only through Fire Overwatch, for every list alike (Doctrina Imperatives, Omnispex), so Your Shoot is consistent."
+ }
+]

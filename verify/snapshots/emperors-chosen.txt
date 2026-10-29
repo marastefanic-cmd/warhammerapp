@@ -1275,7 +1275,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Superhuman Focus
+1CP Superhuman Focus AI
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
 MODIFIERS · NONE
 Hit roll
@@ -1514,11 +1514,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Superhuman Focus
+1CP Superhuman Focus AI
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1785,7 +1785,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Superhuman Focus
+1CP Superhuman Focus AI
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
 MODIFIERS · NONE
 Hit roll
@@ -1882,11 +1882,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Superhuman Focus
+1CP Superhuman Focus AI
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1920,16 +1920,19 @@ EMPEROR’S CHOSEN
 3
 1
 CP
+AI
 Impenetrable Bastion
 Select one objective your unit is controlling: that objective is secured.
 End of your Movement Trajann Valoris + Allarus Custodians, Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens, Vertus Praetors
 1
 CP
+AI
 In Auramite Clad
 An enemy unit targets your unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
 Their Shoot · Fight Trajann Valoris + Allarus Custodians, Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Vertus Praetors, Caladius Annihilator Grav-tank
 1
 CP
+AI
 Superhuman Focus
 End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
 Any phase All but Prosecutor Squad, Witchseeker Squad
@@ -1937,16 +1940,19 @@ HONOURED COMPANIONS
 3
 1
 CP
+AI
 Swift as the Eagle
 An enemy unit ends a move within 8" of your unengaged unit: your unit can make a normal move of up to D3+3".
 Their Movement Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens
 1
 CP
+AI
 Emperor’s Domain
 Your unit is selected to make a consolidation move: you can select the objective consolidation mode, regardless of that move’s Before Moving restrictions.
 Fight Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens
 1
 CP
+AI
 Avenge the Fallen
 Your unit below starting strength is selected to fight: its melee attacks (not those of CHARACTER models) have +2 A.
 Fight Shield-Captain + Sentinel Guard Sodality, Custodian Guard Sodality, Custodian Wardens
@@ -1954,16 +1960,19 @@ LIONS OF THE EMPEROR
 3
 1
 CP
+AI
 Unleash the Lions
 Your unit of 2+ models is split into separate units of one model each, each with a starting strength of 1.
 Your Command Trajann Valoris + Allarus Custodians
 2
 CP
+AI
 Vigil Unending
 An enemy unit targets your unit: attacks that target your unit have -1 D until that enemy unit has attacked.
 Their Shoot · Fight Trajann Valoris + Allarus Custodians
 1
 CP
+AI
 Fury of the Emperor
 Your unit that made an ingress move this turn declares a charge: it has +2 to charge rolls.
 Your Charge Trajann Valoris + Allarus Custodians
@@ -1971,51 +1980,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Caladius Annihilator Grav-tank
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Caladius Annihilator Grav-tank
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Trajann Valoris + Allarus Custodians, Shield-Captain + Sentinel Guard Sodality
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)
