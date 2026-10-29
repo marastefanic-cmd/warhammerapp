@@ -278,6 +278,10 @@ function extract(src, ctx){
     // abilities New Recruit lists under it): the one selected, its moment in GW's words; one of them at a time (excl)
     if(src.pickOf){ const at = /^(At the start of [^,]+|In your [^,]+ phase)/i.exec(plainCase(src.pickOf.text));
       if(!on.some(x => x[0] === 'opt')) on.unshift(['opt', src.pickOf.name + ': the one selected' + (at ? ' (' + at[1].replace(/^./, c => c.toLowerCase()) + ')' : '')]); }
+    // a stratagem's TARGET that says where its units must be, which no condition above reads ("Two or more WAR DOG units from your army
+    // within Engagement Range of the same enemy unit"): its words
+    if(src.type === 'strat'){ const tg = plainCase(src.target || '').replace(/\.\s*$/, ''), tn = norm(tg);
+      if(/\bwithin (?:engagement range|\d+") of\b/.test(tn) && !Object.entries(COND).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(r => r.test(tn))) && !on.some(x => x[0] === 'q' && x[1] === tg)) on.push(['q', tg]); }
     // "If it does, …" / a line "… If it does:": what it does is the player's (used), in GW's words ("that unit can make a Warpmeld
     // Sacrifice", "when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride")
     if(/^if (?:it|you) do(?:es)?\b/.test(n) || /\bif (?:it|you) do(?:es)?:\s*$/.test(norm(u.lead || ''))){

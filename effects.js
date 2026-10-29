@@ -94,7 +94,7 @@ const NC = {
 // ticks the box); the others are said on the box. targetKw / maxT: about the target (its keywords are the player's to say)
 const COND = {
   leading:{ label:() => 'While leading a unit', pats:[/\bwhile this (?:model|unit) is leading a unit\b/, /\bif this model is leading\b/] },
-  aura:{ label:p => 'Within ' + p + '" of it', pats:[/\bfriendly [^.]*?\b(?:is|are|units?|models?|unit \([^)]*\)|units \([^)]*\)) within (\d+)" of (?:this|the bearer|the selected)/, /\bfriendly [^.]*?within (\d+)" of this unit's [a-z]+ model\b/] },
+  aura:{ label:p => 'Within ' + p + '" of it', pats:[/(?<!\bno (?:other )?)\bfriendly [^.]*?\b(?:is|are|units?|models?|unit \([^)]*\)|units \([^)]*\)) within (\d+)" of (?:this|the bearer|the selected|your unit\b)/, /\bfriendly [^.]*?within (\d+)" of this unit's [a-z]+ model\b/] },
   selected:{ label:() => 'Selected by it', pats:[/\bselect one (?:other )?friendly\b/] },
   battleline6:{ fact:'battleline6', label:() => 'BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit', pats:[/\bif this unit has the battleline keyword and\/or it is within 6" of one or more friendly adeptus mechanicus battleline units\b/] },
   charged:{ fact:'charged', label:() => 'Charged this turn', pats:[/\b(?:made|makes|ends) a charge move\b/] },
