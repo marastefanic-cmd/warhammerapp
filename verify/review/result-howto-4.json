@@ -1,0 +1,32 @@
+[
+ {
+  "key": "484c49a360a79ac2",
+  "verdict": "ok",
+  "where": "helpers.js: ability-timing with at; RULE_KEYS from columns.json; unit-ref; faction-allies",
+  "why": "The a9a05e2 diff of verify/helpers.js is exactly the result-howto-3 fix. RULE_KEYS has .concat(\"tag\"); unit-ref cites a.units.find(x => x.id === u.ref.by) || u; faction-allies falls back to the faction’s army and detachment rules. I recomputed items() from the committed code on data.js: all 3005 non-code items are signed, and the 5 rule-tag items match their old approvals again."
+ },
+ {
+  "key": "641de8aa546cc7ac",
+  "verdict": "ok",
+  "where": "unit-ref · tzeeeeentch · Blue Horrors",
+  "why": "The source is now the ability of fluxmaster-pink-horrors (“Horrors are Pink…”), whose text holds the quote word for word."
+ },
+ {
+  "key": "97d8b0af3d5060d0",
+  "verdict": "ok",
+  "where": "unit-ref · tzeeeeentch · Brimstone Horrors",
+  "why": "The source is now fluxmaster-pink-horrors’ Split; its text holds the quote word for word."
+ },
+ {
+  "key": "54b1d1ced7d0e446",
+  "verdict": "ok",
+  "where": "unit-ref · healybois · Spore Mines (Biovore)",
+  "why": "The source is now the Biovores’ Seed Spore Mines; its text holds the quote word for word."
+ },
+ {
+  "key": "03dc3fb93cc8a4a5",
+  "verdict": "ok",
+  "where": "faction-allies · Ultramarines",
+  "why": "The source is now the full Mission Tactics text (the Deathwatch Support detachment rule), including its DEATHWATCH ALLIES part."
+ }
+]
