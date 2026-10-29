@@ -2292,6 +2292,10 @@
     "both": {
      "source": "derived",
      "note": "another rule's two options at once for the units it reaches (\"the Conqueror Imperative and Protector Imperative are both active for that unit\", Icon of War): names, quote, reach, mark, opt, lasts, read by verify/effects-extract.js"
+    },
+    "embarked": {
+     "source": "derived",
+     "note": "a model of the unit not on the battlefield yet, read by one fixed pattern of GW's words (\"If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport\"): until (the model it waits for)"
     }
    }
   },
@@ -2361,6 +2365,10 @@
     "pool": {
      "source": "derived",
      "note": "a re-roll of one die: how often, read from GW's words by closed patterns (selected: each time the unit is selected to shoot or fight, one for the unit; phase, turn, round)"
+    },
+    "excl": {
+     "source": "derived",
+     "note": "one of a unit's abilities to pick from (New Recruit's \"X: pick one\", X the ability whose words say \"select one X ability\"): X; ticking one unticks the others"
     }
    }
   }
