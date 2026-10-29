@@ -41,15 +41,31 @@ row (`catalogRows()`):
 
 ## What is left out: the explicit filter
 
-`verify/bs-catalog.js` `FILTER` (the owner's rule: no Legends, no Crusade, ever), tested on fixed cases by the gate:
+**The standing rule (the owner's, for every faction, not a per-faction choice):** "I only care about units that are playable in
+official 2000 point competitive Warhammer 40k." A catalogue holds only what is legal in official matched play at Strike Force
+(2000 pts): no Legends, no Crusade-only content, no Crucible characters ("Leave the crucible units out, ever"), nothing only
+another game mode has (Boarding Actions). None of them is ever offered, as a datasheet, an option inside one or a detachment.
 
-| kind | detected by | Adeptus Custodes |
+`verify/bs-catalog.js` `FILTER` applies it, the same code for roots, detachments and options inside a datasheet, tested on fixed
+cases by the gate (verify/catalog.js `filter`: the cases below, and a scan of every catalogue row and detachment for a Legends,
+Crusade or Crucible name, which fails the gate):
+
+| kind | detected by | examples (Adeptus Custodes unless named) |
 |---|---|---|
 | legends | the name ends in `[Legends]`, or a category `Legends` (entry or link) | Aleya, Valerian, Venerable Contemptor Dreadnought, Venerable Land Raider, Custodian Guard Sodality with Adrasite / Pyrithite Spears, Sagittarum Custodians Sodality |
 | crusade | a Crusade name or category (`CRUSADE`: Crusade…, Order of Battle, Codex Crusade Relics, Battle Scars/Honours/Traits, Weapon Modifications, Crusade Relic Upgrades, Agendas, Requisitions, …), or only Crusade costs; inside a datasheet a group or entry so named is no option | Order of Battle; on every unit the Crusade group, Weapon Modifications, Crusade Relic Upgrades |
 | crucible | the name ends in `[Crucible]`, or a category `Crucible` (characters made with GW's Crucible rules, hidden in BSData until "Show Crucible Characters"; no Wahapedia datasheet to check against) | Guardian of the Throne, Null Maiden, Kataphraktoi Exemplar |
+| other-mode | BSData shows it only in a force other than matched play's "Army Roster" (the game system's "Boarding Actions" and "Crusade Force"): a `hidden` modifier whose every condition is that the force is not that one (`notInstanceOf`) or that the roster has none of it (`forces` < 1); a modifier that also allows a detachment (an "or") is no such mark | Tyranids: Tyranid Attack, Boarding Swarm, Biotide, Infestation Swarm (Boarding Actions detachments); elsewhere in BSData at the pin: other factions' Boarding Actions detachments, Crusade-only entries (Dark Angels' Master of the Deathwing, Wolf Guard Headtakers) |
+| boarding-actions | a detachment whose rules muster a Boarding Patrol (Mustering A Boarding Patrol, Forming Boarding Squads): a second mark for the same Boarding Actions detachments | (the same four) |
+| reference | primary category Reference: New Recruit's reference copy of a datasheet that is a root entry of its own | Tyranids: Spore Mines (Biovore), Spore Mines (Harpy), Ripper Swarms (Parasite of Mortrex), Mucolid Spores (Sporocyst) |
 | config | not a unit or model entry, or its primary category is Configuration | Detachment, Show/Hide Options, Martial Ka'tah Reference |
 | ally | a datasheet with none of the faction's Faction keywords (`verify/sources/factions.json` `catalogFactions`), in the catalogue or in a library it imports root entries from | 55 entries: every Imperial Knight of the Imperial Knights library (22: the Armigers, Questoris, Cerastus, Acastus, Canis Rex, …), the Agents of the Imperium (29) and four Titans of Library - Titans (Reaver, Warbringer Nemesis, Warhound, Warlord) |
+
+Other game modes BSData has, checked at the pin (wh40k-11e b4dc3f4): its game system has three forces, Army Roster (matched play),
+Boarding Actions and Crusade Force; there is no Combat Patrol, Kill Team or Apocalypse force or entry (the "Kill Team" categories are
+the Deathwatch and Agents of the Imperium Kill Team datasheets of Warhammer 40,000 itself). Titan-scale units (Library - Titans,
+Adeptus Titanicus, Titanicus Traitoris) are allies of no catalogue imported so far (ally); a faction of their own is checked
+against Wahapedia's current range when it is imported.
 
 Inside a datasheet an option BSData hides statically (`hidden: true`) and the Enhancements group (a list's choice by detachment)
 are no options. The same filter sorts the detachments. Every left-out entry is listed with its rule in the catalogue file

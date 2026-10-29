@@ -7729,15 +7729,9 @@
    ],
    "dp": 3,
    "rule": {
-    "name": "If your Army Faction is LEGIONES DAEMONICA, you can use this Daemonic Incursion Detachment rule.",
-    "text": ""
+    "name": "Warp Rifts",
+    "text": "Each time a **LEGIONES DAEMONICA** unit from your army is set up on the battlefield using the **Deep Strike** ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units with which it shares the **KHORNE**, **TZEENTCH**, **NURGLE** or **SLAANESH** keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
    },
-   "moreRules": [
-    {
-     "name": "Warp Rifts",
-     "text": "Each time a **LEGIONES DAEMONICA** unit from your army is set up on the battlefield using the **Deep Strike** ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units with which it shares the **KHORNE**, **TZEENTCH**, **NURGLE** or **SLAANESH** keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
-    }
-   ],
    "enhancements": [
     {
      "name": "A’rgath, the King of Blades",
@@ -7991,7 +7985,7 @@
    "dp": 2,
    "rule": {
     "name": "Thralls of the First Prince",
-    "text": "When mustering your army, you cannot include any **DAEMON PRINCE**, **DAEMON PRINCE WITH WINGS** or **EPIC HERO** units (excluding **BE’LAKOR**), but you can include the following **HERETIC ASTARTES** units:\n- **CHAOS LORD**\n- **CHAOS LORD IN TERMINATOR ARMOUR**\n- **CHAOS LORD WITH JUMP PACK**\n- **CHAOS TERMINATOR SQUAD**\n- **CHOSEN**\n- **DAMNED** units\n- **DARK APOSTLE**\n- **HAVOCS**\n- **LEGIONARIES**\n- **MASTER OF POSSESSION**\n- **POSSESSED**\n- **RAPTORS**\n- **SORCERER**\n- **SORCERER IN TERMINATOR ARMOUR**\n- **WARP TALONS**\nThe combined points value of such units depends on your battle size, as shown below.\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nKEYWORDS\n**BE’LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.\n**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword.\nIf your Army Faction is **LEGIONES DAEMONICA**, you can use this Shadow Legion Detachment rule."
+    "text": "When mustering your army, you cannot include any **DAEMON PRINCE**, **DAEMON PRINCE WITH WINGS** or **EPIC HERO** units (excluding **BE’LAKOR**), but you can include the following **HERETIC ASTARTES** units:\n- **CHAOS LORD**\n- **CHAOS LORD IN TERMINATOR ARMOUR**\n- **CHAOS LORD WITH JUMP PACK**\n- **CHAOS TERMINATOR SQUAD**\n- **CHOSEN**\n- **DAMNED** units\n- **DARK APOSTLE**\n- **HAVOCS**\n- **LEGIONARIES**\n- **MASTER OF POSSESSION**\n- **POSSESSED**\n- **RAPTORS**\n- **SORCERER**\n- **SORCERER IN TERMINATOR ARMOUR**\n- **WARP TALONS**\nThe combined points value of such units depends on your battle size, as shown below.\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nKEYWORDS\n**BE’LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.\n**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword."
    },
    "moreRules": [
     {

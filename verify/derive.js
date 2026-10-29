@@ -73,8 +73,8 @@ const MOMENT_RULES = [
     why:'"the start of the battle round" later in the text: listed with the Command phase, no moment tag (the text does not open with it)' },
   { id:'start-your-command', rulesOnly:true, re:/^at the start of your command phase\b/i, at:'Start of your Command phase', ph:{ command:'your' },
     why:'an army or detachment rule whose text opens with "At the start of your Command phase": the moment its choice is made, before anything else in that phase (Martial Ka’tah, Combat Doctrines); not read on abilities or rule options' },
-  { id:'end-opp-turn', re:/^at the end of your opponent's turn\b/i, at:'End of your opponent’s turn', ph:{ fight:'opp' },
-    why:'"At the end of your opponent\'s turn": after their Fight phase, the last phase of the turn' },
+  { id:'end-opp-turn', re:/^(?:at the )?end of your opponent's turn\b/i, at:'End of your opponent’s turn', ph:{ fight:'opp' },
+    why:'"At the end of your opponent\'s turn" (a stratagem\'s WHEN: "End of your opponent\'s turn."): after their Fight phase, the last phase of the turn' },
 ];
 // Where its EFFECT IS USED: read from what the effect does, clause by clause (every rule that matches adds its phases).
 // The phases the app shows are the trigger's (above) and these together.

@@ -214,6 +214,9 @@ function wahaDetachment(name) {
     // the detachment's next rule (its heading in the page's contents): it ends the spoiler before it
     if (seg === 'rule' && res.rule.name && [...DETRULEHEADS].some(x => lc(x) === lc(b)) && !res.rules.some(r => lc(r.name) === lc(b))) { res.rule = { name: b, lines: [] }; res.rules.push(res.rule); note = false; continue; }
     if (NOTEHEAD.test(b)) { note = true; continue; }
+    // (the codex's preamble, "If your Army Faction is LEGIONES DAEMONICA, you can use this Daemonic Incursion Detachment rule.",
+    // before the first rule or, on Wahapedia's Shadow Legion, after the mustering rule: no rule's name or words)
+    if (seg === 'rule' && /^If your Army Faction is .+, you can use this .+ Detachment rules?\.$/.test(b.replace(/\*\*/g, ''))) continue;
     if (seg === 'rule') { if (note) continue; if (!res.rule.name) res.rule.name = b; else res.rule.lines.push(t); }
     else if (seg === 'enh') {
       const m = /^- (.+?)\s*(UPGRADE)?\s*(\d+) pts$/.exec(b);

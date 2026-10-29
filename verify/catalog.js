@@ -59,6 +59,14 @@ function filterTest() {
     [fake('Hero', [], { costs: [{ name: 'Crusade Points', value: 1 }] }), 'crusade'], [fake('Weapon Modifications'), 'crusade'], [fake('Battle Honours'), 'crusade'],
     [fake('Null Maiden [Crucible]'), 'crucible'], [fake('Exemplar', ['Crucible']), 'crucible'],
     [fake('Custodian Guard Sodality', ['Infantry', 'Battleline']), 'datasheet'], [fake('Legendary Hero'), 'datasheet'], [fake('Crucible of Fire Squad'), 'datasheet']];
+  // (another game mode than matched play: BSData shows the entry only in a Boarding Actions or Crusade force; a modifier hiding it
+  // only in such a force, or one with an "or" of conditions, leaves it in)
+  const MF = BC.MODE_FORCES, had = MF.has('test-ba'); MF.set('test-ba', 'Boarding Actions');
+  const fm = (name, mods) => Object.assign(fake(name), { modifiers: mods });
+  cases.push([fm('Boarding Swarm', [{ field: 'hidden', type: 'set', value: true, conditions: [{ childId: 'test-ba', field: 'forces', scope: 'force', type: 'notInstanceOf', value: 1 }] }]), 'other-mode'],
+    [fm('Master of the Deathwing', [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'and', conditions: [{ childId: 'test-ba', field: 'forces', scope: 'roster', type: 'lessThan', value: 1 }] }] }]), 'other-mode'],
+    [fm('Tervigon', [{ field: 'hidden', type: 'set', value: true, conditions: [{ childId: 'test-ba', field: 'forces', scope: 'force', type: 'instanceOf', value: 1 }] }]), 'datasheet'],
+    [fm('A’rgath', [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'or', conditions: [{ childId: 'test-ba', field: 'forces', scope: 'roster', type: 'lessThan', value: 1 }, { childId: 'det', field: 'selections', scope: 'force', type: 'lessThan', value: 1 }] }] }]), 'datasheet']);
   for (const [e, want, l] of cases) { const got = cls(e, l || null); if (got !== want) fails.push('filter: ' + e.name + (l ? ' (link ' + l.name + ')' : '') + ' is ' + got + ', want ' + want); }
   // an option's hidden, with its modifiers (bs-catalog.js staticHidden)
   const H = BC.staticHidden, hm = (v, conds) => ({ field: 'hidden', type: 'set', value: v, conditions: conds || [] });
@@ -75,6 +83,7 @@ function filterTest() {
   hcases.forEach(([x, want, lc0], i) => { if (H(x, lc0) !== want) fails.push('filter: hidden case ' + (i + 1) + ' (' + JSON.stringify(x) + ') is ' + H(x, lc0) + ', want ' + want); });
   // inside a datasheet: BSData's Crusade group, Weapon Modifications, Crusade Relic Upgrades are no options
   for (const n of ['Crusade', 'Weapon Modifications', 'Crusade Relic Upgrades', 'Battle Scars', 'Codex Crusade Relics']) if (!BC.CRUSADE.test(n)) fails.push('filter: the group ' + n + ' is not read as Crusade');
+  if (!had) MF.delete('test-ba');
   return { cases: cases.length + hcases.length, fails };
 }
 
@@ -311,6 +320,14 @@ function main() {
   const haveCache = fs.existsSync(path.join(ROOT, 'verify/.cache/bsdata'));
   for (const f of files) {
     const cat = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')), faction = cat.faction, rep = report.factions[faction] = { datasheets: Object.keys(cat.datasheets).length, detachments: (cat.detachments || []).length, excluded: (cat.excluded || []).length, differences: [] };
+    // the owner's standing rule (Legends, Crusade, Crucible: left out, ever): nothing of them anywhere in what the catalogue gives the
+    // app, a datasheet, an option, a weapon, an ability or a detachment (only its excluded list names them)
+    { const bad = []; const walk = (o, at) => { if (typeof o === 'string') { if (/\[(?:Legends|Crucible)\]|\bCrucible\b|\bCrusade\b|\bOrder of Battle\b/i.test(o)) bad.push(at + ': ' + o.slice(0, 80)); return; }
+        if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) walk(v, at + (Array.isArray(o) ? '[' + k + ']' : '.' + k)); };
+      for (const [id, row] of Object.entries(cat.datasheets)) walk(row, id);
+      walk(cat.detachments || [], 'detachments'); walk(cat.detachmentRows || {}, 'detachmentRows');
+      checked.filter += Object.keys(cat.datasheets).length;
+      for (const b of bad) fail('filter', faction + ': Legends, Crusade or Crucible in the catalogue’s rows (left out, ever): ' + b); }
     if (!haveCache) { notes.push(faction + ': no BSData clone (verify/.cache/bsdata): complete, fresh and bsdata not checked'); }
     let C = null;
     if (haveCache) {

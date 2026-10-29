@@ -631,6 +631,8 @@ function wahaDetachment(faction, name) {
     if (seg === 'rule' && res.rule.name && heads.has(norm(t)) && !res.rules.some(r => norm(r.name) === norm(t))) {   // (a table headed with the rule's own name is not another rule: Try Dat Button!)
     res.rule = { name: t, body: [], at: L[i] }; res.rules.push(res.rule); inNote = false; continue; }
     if (NOTEHEAD.test(t)) { inNote = true; continue; }
+    // (the codex's preamble, "If your Army Faction is …, you can use this … Detachment rule.": no rule's name or words)
+    if (seg === 'rule' && /^If your Army Faction is .+, you can use this .+ Detachment rules?\.$/.test(t.replace(/\*\*/g, ''))) continue;
     if (seg === 'rule') { if (inNote) continue; if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; } else res.rule.body.push(L[i]); }
     else if (seg === 'enh') {
       const m = /^- (.+?)\s*(UPGRADE)?\s*(\d+) pts$/.exec(t);

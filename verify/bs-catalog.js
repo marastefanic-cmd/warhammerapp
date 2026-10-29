@@ -17,12 +17,15 @@
                         increment), its models (min/max per model entry) and wargear choices (groups with min/max), as BSData
                         gives them
 
-   The filter (the owner's rule: no Legends, no Crusade, ever) is explicit, by these marks, in this order (FILTER, tested by
-   verify/catalog.js):
+   The filter is the owner's standing rule for every faction: only what is legal in official matched play at Strike Force (2000
+   pts) — no Legends, no Crusade, no Crucible, nothing only another game mode has, ever, as a datasheet, an option or a detachment
+   (docs/catalog.md). It is explicit, by these marks, in this order (FILTER, tested by verify/catalog.js):
      legends    the name ends in "[Legends]", or the entry (or its link) has a category named "Legends"
      crusade    the name or a category names Crusade ("Crusade", "Order of Battle", "Codex Crusade Relics", …: CRUSADE), or
                 every cost of the entry is a Crusade cost type; inside a datasheet, a group or entry so named is not an option
                 (BSData's "Crusade" group on every unit, "Weapon Modifications", "Crusade Relic Upgrades", Battle Honours/Scars)
+     other-mode BSData shows it only in a force other than matched play's Army Roster (the game system's Boarding Actions, Crusade
+                Force): a "hidden" modifier whose every condition is that the force is not that one, or that the roster has none
      crucible   the name ends in "[Crucible]" or a category is "Crucible" (GW's Crucible characters, hidden in BSData until
                 "Show Crucible Characters" is picked: built by Crucible rules, not a datasheet GW prints; no Wahapedia page)
      config     not a unit or model entry, or its primary category is Configuration
@@ -40,8 +43,29 @@ const nameOf = x => String((x && x.name) || '').trim();
 const FILTER = [
   { kind:'legends', test:(e, l, cats) => /\[Legends\]\s*$/i.test(nameOf(e)) || /\[Legends\]\s*$/i.test(nameOf(l)) || cats.some(c => /^Legends$/i.test(c)), why:'the name ends in [Legends], or a category Legends' },
   { kind:'crusade', test:(e, l, cats) => CRUSADE.test(nameOf(e)) || CRUSADE.test(nameOf(l)) || /\bCrusade\b/i.test(nameOf(e)) || cats.some(c => /\bCrusade\b/i.test(c)) || crusadeCostOnly(e), why:'a Crusade name or category, or only Crusade costs' },
+  { kind:'other-mode', test:(e, l) => !!(modeOnly(e) || modeOnly(l)), why:'shown only in a Boarding Actions or Crusade force (BSData hides it in matched play\'s Army Roster): not legal in matched play' },
   { kind:'crucible', test:(e, l, cats) => /\[Crucible\]\s*$/i.test(nameOf(e)) || /\[Crucible\]\s*$/i.test(nameOf(l)) || cats.some(c => /^Crucible$/i.test(c)), why:'the name ends in [Crucible], or a category Crucible' },
 ];
+// the game system's forces other than matched play's (BSData: "Army Roster"; the others "Boarding Actions", "Crusade Force"), by id
+const MODE_FORCES = new Map();
+function modeForces(gs){
+  if(gs && !MODE_FORCES.size) for(const f of gs.forceEntries || []) if(nameOf(f) !== 'Army Roster') MODE_FORCES.set(f.id, nameOf(f));
+  return MODE_FORCES;
+}
+// an entry (or link) BSData shows only in such a force: a "hidden" modifier whose every condition is that the force is not one of
+// them ("notInstanceOf" the force) or that the roster has none ("forces" lessThan 1 / equalTo 0); conditions in an "and" group
+// count, a nested or "or" group does not (A'rgath: hidden unless Crusade or its detachment). The force's name, or null
+function modeOnly(x){
+  for(const m of (x && x.modifiers) || []){
+    if(m.field !== 'hidden' || !(m.value === true || m.value === 'true')) continue;
+    const gs = m.conditionGroups || [];
+    if(gs.some(g => g.type !== 'and' || (g.conditionGroups || []).length)) continue;
+    const cs = [].concat(m.conditions || [], ...gs.map(g => g.conditions || []));
+    const hit = cs.filter(c => MODE_FORCES.has(c.childId) && ((c.type === 'notInstanceOf' && c.scope === 'force') || (c.field === 'forces' && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0)))));
+    if(hit.length && hit.length === cs.length) return MODE_FORCES.get(hit[0].childId);
+  }
+  return null;
+}
 function crusadeCostOnly(e){
   const cs = ((e && e.costs) || []).filter(c => Number(c.value));
   return cs.length > 0 && cs.every(c => /crusade|battle honours|experience|weapon modifications/i.test(c.name || ''));
@@ -88,7 +112,7 @@ function load(ROOT, catalogueName, opts){
   if(!catId) throw new Error('no BSData catalogue "' + catalogueName + '" in ' + BSDIR);
   const cat = index(catId[0]);
   for(const l of cat.catalogueLinks || []) index(l.targetId);
-  index(cat.gameSystemId);
+  index(cat.gameSystemId); modeForces(BS.get(cat.gameSystemId));
   const get = id => BS.get(id);
   const catName = id => { const c = get(id); return c ? nameOf(c) : null; };
   const catsOf = (...xs) => xs.flatMap(x => ((x && x.categoryLinks) || []).map(c => catName(c.targetId) || nameOf(c)));
@@ -269,4 +293,4 @@ function load(ROOT, catalogueName, opts){
   }
   return { cat, get, index, roots, detachments, selection, points, composition, options, classify, catsOf, files };
 }
-module.exports = { load, FILTER, CRUSADE, crusadeCostOnly, staticHidden };
+module.exports = { load, FILTER, CRUSADE, crusadeCostOnly, staticHidden, modeForces, modeOnly, MODE_FORCES };
