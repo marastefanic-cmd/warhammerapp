@@ -1387,11 +1387,11 @@ They can matter at the table, but the calculator does not play them: what each o
 
 Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
-1CP Corrosive Viscera
+1CP Corrosive Viscera AI
 Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1723,11 +1723,11 @@ They can matter at the table, but the calculator does not play them: what each o
 
 Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
-1CP Corrosive Viscera
+1CP Corrosive Viscera AI
 Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1761,31 +1761,37 @@ CRUSHER STAMPEDE
 6
 1
 CP
+AI
 Untrammelled Ferocity
 Until the end of the phase, your unit’s Normal, Advance and Fall Back moves can pass through models (excluding TITANIC) and terrain up to 4" tall, and through Engagement Range without ending there; taller terrain too, but then, after your unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
 Your Movement All but Neurogaunts ×2
 1
 CP
+AI
 Corrosive Viscera
 Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 Their Shoot · Fight All but Neurogaunts ×2
 1
 CP
+AI
 Swarm-guided Salvoes
 Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.
 Your Shooting All but Neurogaunts ×2
 1
 CP
+AI
 Massive Impact
 Your model has ended a Charge move: select one enemy unit within Engagement Range of it and roll six D6: 1 mortal wound for each 4+.
 Your Charge All but Neurogaunts ×2
 1
 CP
+AI
 Rampaging Monstrosities
 Until the end of the phase, your unit’s attacks can re-roll the hit roll.
 Fight All but Neurogaunts ×2
 1
 CP
+AI
 Savage Roar
 An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
 Fight All but Neurogaunts ×2
@@ -1793,16 +1799,19 @@ TALONS OF THE NORN QUEEN
 3
 1
 CP
+AI
 Tanglestrike Rounds
 After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
 Your Shooting Norn Assimilator ×2
 1
 CP
+AI
 Lesser Prey
 Your unit’s melee attacks have +2 S.
 Fight Norn Assimilator ×2, Norn Emissary ×2
 1
 CP
+AI
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
 Any phase Norn Assimilator ×2
@@ -1810,51 +1819,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but Hive Tyrant, Neurogaunts ×2
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge All but Neurogaunts ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight The Swarmlord, Hive Tyrant
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

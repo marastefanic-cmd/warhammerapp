@@ -1412,11 +1412,11 @@ Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Secure Biomass
 Fight phase, not yet selected to fight, until the end of the phase: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+)
-1CP Rapacious Hunger
+1CP Rapacious Hunger AI
 Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1735,11 +1735,11 @@ Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Secure Biomass
 Fight phase, not yet selected to fight, until the end of the phase: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+)
-1CP Rapacious Hunger
+1CP Rapacious Hunger AI
 Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1773,31 +1773,37 @@ ASSIMILATION SWARM
 6
 1
 CP
+AI
 Tyrannoformed
 Command phase, your HARVESTER unit within range of an objective marker you control: that objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 Command Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
 2
 CP
+AI
 Ablative Carapace
 Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your HARVESTER unit as a target: until the end of the phase, its models have Feel No Pain 5+ (4+ if it is within range of an objective marker you control).
 Their Shoot · Fight Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
 1
 CP
+AI
 Secure Biomass
 Fight phase, your TYRANIDS unit not yet selected to fight: until the end of the phase, its melee weapons have [LETHAL HITS]; if it is a HARVESTER unit, its melee attacks also score a Critical Hit on an unmodified Hit roll of 5+.
 Fight Any unit
 1
 CP
+AI
 Rapacious Hunger
 Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead.
 Your Fight Any unit
 1
 CP
+AI
 Broodguard Impulse
 Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.
 Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
 1
 CP
+AI
 Reclaim Biomass
 Any phase, a TYRANIDS unit from your army is destroyed (before its last model is removed), your HARVESTER unit within 6" of it: Regenerate one friendly TYRANIDS unit within 6" of your HARVESTER unit (see Feed the Swarm).
 Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
@@ -1805,16 +1811,19 @@ TALONS OF THE NORN QUEEN
 3
 1
 CP
+AI
 Tanglestrike Rounds
 After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
 Your Shooting Norn Assimilator ×2
 1
 CP
+AI
 Lesser Prey
 Your unit’s melee attacks have +2 S.
 Fight Norn Assimilator ×2, Norn Emissary
 1
 CP
+AI
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
 Any phase Norn Assimilator ×2
@@ -1822,51 +1831,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but Hive Tyrant + Tyrant Guard, Ripper Swarms
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Norn Assimilator ×2, Norn Emissary, Tyrannofex
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

@@ -7,7 +7,7 @@
 // Usage: node verify/render.js   (needs a built index.html; NODE_PATH=$(npm root -g) for playwright)
 // VERIFY_WIDTH=320 checks a small phone (snapshots and helpers come from the run at 390).
 const path = require('path'), fs = require('fs');
-const { ROOT, normText, serve, writeJSON, sha, loadData } = require('./lib');
+const { ROOT, normText, serve, writeJSON, sha, loadData, columnSources } = require('./lib');
 const { chromium } = require('playwright');
 // a promise rejected with nothing to catch it (the browser gone, a page closed mid-call): its cause first, so the gate's summary line shows it
 process.on('unhandledRejection', e => { console.log('render crashed: ' + ((e && e.stack) || e)); process.exit(1); });
@@ -21,7 +21,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   const browser = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium' });
   const W = +(process.env.VERIFY_WIDTH || 390);   // run.js checks 390 (snapshots) and 320 (layout)
   const main = W === 390;
-  const page = await (await browser.newContext({ viewport:{ width:W, height:844 } })).newPage();
+  const page = await (await browser.newContext({ viewport:{ width:W, height:844 }, serviceWorkers:'block' })).newPage();   // (a service worker's fetches would pass by the stand-in verified.js below)
   const pageErrors = [];
   page.on('pageerror', e => pageErrors.push(e.message));
   // only the app's own files and its web fonts (the layout checks need the real fonts' widths)
@@ -29,7 +29,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
   // this build passed, so the screens and their snapshots do not depend on how the previous run went
   const build = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
-  const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }] };
+  const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }], tables:columnSources() };
   await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
   await page.evaluate(() => document.fonts.ready);
@@ -112,6 +112,78 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.evaluate(() => { localStorage.removeItem('wh-favs'); localStorage.removeItem('wh-home-sort'); hideSheet(); go({ s:'home' }); });
   };
 
+  // ---- How the app works (from the home screen) ----
+  // - how-row: home has the row "How the app works and why you should be able to trust the data"; it opens the screen, which comes back
+  //   on a reload with its Back, and Back returns home
+  // - how-tables: every table of data.js (TABLE_ORDER aside: the key order verify/tables.js writes, which the app never gets) has its card,
+  //   with its real row count (and ARMIES its unit entries); every table of verify/columns.json has its columns, as columns.json lists them
+  // - how-example: the unit entry shown is the one data.js stores (its ds and every field shown, as data.js has them)
+  // - how-links: every GRANTS and RULE_OPTIONS row's rule is where the card says (an army rule, a detachment rule, a list's unit's ability);
+  //   every CHECKLIST column is explained
+  const howChecks = async () => {
+    const src = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'), names = [...src.matchAll(/^const ([A-Z_]+) = /gm)].map(m => m[1]).filter(n => n !== 'TABLE_ORDER');
+    const RAW = (() => { const t = src.replace(/\nreturn \{ version:VERSION/, '\nreturn { __raw:{ ' + names.join(', ') + ' }, version:VERSION'); if(t === src) return null;
+      const w = {}; new Function('window', t)(w); return w.WH_DATA.__raw; })();
+    if(!RAW){ fail('how-tables', '', 'data.js', 'its return line was not found: the raw tables could not be read'); return; }
+    const rows = v => Array.isArray(v) ? v.length : v && typeof v === 'object' ? Object.keys(v).length : 1;
+    const COLS = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/columns.json'), 'utf8')).tables;
+    await page.evaluate(() => { hideSheet(); go({ s:'home' }); });
+    await page.waitForTimeout(400);
+    const label = await page.evaluate(() => { const b = document.querySelector('#view [data-how]'); return b ? b.innerText.trim() : null; });
+    if(label !== 'How the app works and why you should be able to trust the data') fail('how-row', '', 'home', JSON.stringify(label));
+    if(label){ await page.click('#view [data-how]'); await page.waitForTimeout(300); }
+    const o = await page.evaluate(() => ({ s:cur.s, t:$('#top').innerText, back:($('#top [data-back]') || {}).textContent || '' }));
+    if(o.s !== 'how' || !/How the app works/.test(o.t) || o.back !== 'Armies') fail('how-row', '', 'the row opens it', JSON.stringify(o));
+    const got = await page.evaluate(() => ({ cards:[...document.querySelectorAll('#view .hwc')].map(c => ({ t:c.dataset.table, rows:+c.dataset.rows, head:c.querySelector('summary .hwcnt').textContent })),
+      cols:Object.fromEntries([...document.querySelectorAll('#view .hwct')].map(x => [x.dataset.t, x.dataset.cols])),
+      n:Object.fromEntries([...document.querySelectorAll('#view .hwct[data-n]')].map(x => [x.dataset.t, +x.dataset.n])),
+      lines:[...document.querySelectorAll('#view .hwct .hwl[data-l]')].map(x => ({ t:x.closest('.hwct').dataset.t, l:x.dataset.l, c:x.dataset.c.split(',') })),
+      map:JSON.parse((document.querySelector('#view .hwmap') || { dataset:{ counts:'{}' } }).dataset.counts) }));
+    for(const n of names){ const c = got.cards.find(x => x.t === n), want = rows(RAW[n]);
+      if(!c) fail('how-tables', '', n, 'no card'); else if(c.rows !== want || !(n === 'VERSION' ? c.head === 'one value' : c.head.startsWith(want + ' '))) fail('how-tables', '', n, 'shows ' + c.rows + ' (' + c.head + '), data.js has ' + want); }
+    for(const c of got.cards) if(!names.includes(c.t)) fail('how-tables', '', c.t, 'a card for a table data.js does not have');
+    const entries = RAW.ARMIES.reduce((x, a) => x + a.units.length, 0), ac = got.cards.find(x => x.t === 'ARMIES');
+    if(ac && !ac.head.includes(entries + ' unit entries')) fail('how-tables', '', 'ARMIES', 'unit entries: ' + ac.head + ', data.js has ' + entries);
+    for(const t of Object.keys(COLS)){ const want = Object.entries(COLS[t].columns || {}).map(([n, x]) => n + ':' + x.source).join(','); if(got.cols[t] !== want) fail('how-tables', '', t, 'columns ' + got.cols[t] + ', columns.json ' + want); }
+    // each column under the layer its columns.json source gives
+    const LAYER = { 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' };
+    for(const x of got.lines) for(const c of x.c){ const s = ((COLS[x.t] || { columns:{} }).columns[c] || {}).source; if((LAYER[s] || 'mech') !== x.l) fail('how-tables', '', x.t + '.' + c, 'shown as ' + x.l + ', columns.json source ' + s); }
+    // the inner tables' rows and the map's numbers, counted here from data.js as stored
+    const walk = (root, parts) => parts.reduce((xs, k) => xs.flatMap(x => { const v = x[k]; return v == null ? [] : Array.isArray(v) ? v : k === 'detachments' ? Object.values(v) : [v]; }), root);
+    const ROOTS = { ARMIES:RAW.ARMIES, DATASHEETS:Object.values(RAW.DATASHEETS), FACTIONS:Object.values(RAW.FACTIONS) };
+    for(const [t, n] of Object.entries(got.n)){ const p = t.split('.'); if(p.length < 2) continue; const want = ROOTS[p[0]] ? walk(ROOTS[p[0]], p.slice(1)).length : null;
+      if(want !== n) fail('how-tables', '', t, 'shows ' + n + ' rows, data.js has ' + want); }
+    for(const t of ['DATASHEETS.stats', 'DATASHEETS.abilities', 'FACTIONS.detachments', 'FACTIONS.detachments.stratagems', 'ARMIES.units']) if(!(t in got.n)) fail('how-tables', '', t, 'no row count shown');
+    const dets = walk(ROOTS.FACTIONS, ['detachments']);
+    const wantMap = { lists:RAW.ARMIES.length, entries, factions:rows(RAW.FACTIONS), armyRules:walk(ROOTS.FACTIONS, ['armyRules']).length, detachments:dets.length,
+      stratagems:walk(dets, ['stratagems']).length, enhancements:walk(dets, ['enhancements']).length, datasheets:rows(RAW.DATASHEETS), rules:rows(RAW.RULES), aliases:rows(RAW.RULE_ALIASES),
+      ruleSrc:rows(RAW.RULE_SRC), concepts:rows(RAW.CONCEPTS), grants:rows(RAW.GRANTS), ruleOptions:rows(RAW.RULE_OPTIONS), checklist:rows(RAW.CHECKLIST), core:rows(RAW.CORE_STRATAGEMS), bsIds:rows(RAW.BS_IDS) };
+    if(JSON.stringify(got.map) !== JSON.stringify(wantMap)) fail('how-tables', '', 'the map', 'shows ' + JSON.stringify(got.map) + ', data.js has ' + JSON.stringify(wantMap));
+    for(const t of Object.keys(got.cols)) if(!COLS[t]) fail('how-tables', '', t, 'columns of a table columns.json does not have');
+    const ex = await page.evaluate(() => { const el = document.querySelector('#view [data-hwentry]'); return el && { at:el.dataset.hwentry, rows:[...el.querySelectorAll('.pgr')].map(r => [r.querySelector('.pgk').textContent, r.querySelector('.pgv > span').textContent]) }; });
+    if(!ex) fail('how-example', '', 'ARMIES', 'no unit entry shown');
+    else { const [aid, uid] = ex.at.split('|'), e = ((RAW.ARMIES.find(x => x.id === aid) || { units:[] }).units.find(x => x.id === uid));
+      if(!e) fail('how-example', '', ex.at, 'not an entry of data.js');
+      else { const want = await page.evaluate(e => Object.fromEntries(Object.keys(e).map(k => [k, hwCut(hwPlain(hwVal(e[k])))])), e);
+        for(const [k, v] of ex.rows) if(want[k] !== v) fail('how-example', '', ex.at + ' ' + k, 'shows ' + JSON.stringify(v) + ', data.js has ' + JSON.stringify(want[k])); } }
+    const ln = await page.evaluate(() => {
+      const fac = n => Object.values(D.factions).find(f => f.name === n);
+      const at = r => { const p = r.split(' · '), k = hwRuleAt(r);
+        if(k === 'army'){ const f = fac(p[0].replace(/ army rule$/, '')); return !!f && f.armyRules.some(x => x.name === p[1]); }
+        if(k === 'det'){ const f = fac(p[0]); return !!f && Object.values(f.detachments).some(d => d.name + ' rule' === p[1]); }
+        const a = armyById(p[0]); return !!a && unitsAll(a).some(u => u.name === p[1] && u.abilities.some(x => x.name === p[2])); };
+      return { bad:D.grants.concat(D.ruleOptions).filter(x => !at(x.rule)).map(x => x.rule),
+        ck:[...new Set(Object.values(D.checklist).flatMap(Object.keys))].filter(c => !hasOwn(HW_CK, c)) }; });
+    if(ln.bad.length) fail('how-links', '', 'GRANTS / RULE_OPTIONS', 'a rule not where the card says: ' + ln.bad.slice(0, 5).join('; '));
+    if(ln.ck.length) fail('how-links', '', 'CHECKLIST', 'columns the card does not explain: ' + ln.ck.join(', '));
+    await page.reload(); await page.evaluate(() => document.fonts.ready); await page.waitForTimeout(300);
+    const re = await page.evaluate(() => ({ s:cur.s, back:($('#top [data-back]') || {}).textContent || '' }));
+    if(re.s !== 'how' || re.back !== 'Armies') fail('how-row', '', 'reload on How the app works', JSON.stringify(re));
+    if(re.back){ await page.click('#top [data-back]'); await page.waitForTimeout(300); }
+    const hb = await page.evaluate(() => cur.s);
+    if(hb !== 'home') fail('how-row', '', 'Back', hb);
+  };
+
   // VERIFY_LISTS=a,b: only those lists' screens (a check run by hand, e.g. that the same build renders the same text again; run.js
   // renders every list)
   const only = (process.env.VERIFY_LISTS || '').split(',').filter(Boolean);
@@ -132,7 +204,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           .map(x => x.dataset.grant ? 'grant:' + JSON.stringify([x.dataset.grant, x.dataset.gu, x.dataset.what, x.dataset.rule || null])
             : Object.entries(x.dataset).filter(([k]) => ['rule','strat','ability','enh','kw'].includes(k)).map(([k, v]) => k + ':' + v)[0]);
         return { title:$('#top').innerText.replace(/\s+/g, ' ').trim(), text:host.innerText, hs, links, overflow:document.documentElement.scrollWidth - innerWidth,
-          bigIcons:[...document.querySelectorAll('#top svg, #view svg, #sheetIn svg, #subbar svg, #bbar svg')].filter(x => x.getBoundingClientRect().width > 40 || x.getBoundingClientRect().height > 40).map(x => (x.getAttribute('class') || '') + ' ' + ((x.querySelector('use') || {}).getAttribute ? x.querySelector('use').getAttribute('href') : '') + ' in .' + x.parentElement.className).slice(0, 3), tabs:document.querySelectorAll('#bbar .tabs button').length === 5,
+          bigIcons:[...document.querySelectorAll('#top svg, #view svg, #sheetIn svg, #subbar svg, #bbar svg')].filter(x => !x.closest('.hwmap')).filter(x => x.getBoundingClientRect().width > 40 || x.getBoundingClientRect().height > 40).map(x => (x.getAttribute('class') || '') + ' ' + ((x.querySelector('use') || {}).getAttribute ? x.querySelector('use').getAttribute('href') : '') + ' in .' + x.parentElement.className).slice(0, 3), tabs:document.querySelectorAll('#bbar .tabs button').length === 5,
           unnamed:[...document.querySelectorAll('#bbar .tabs button')].filter(x => !(x.getAttribute('aria-label') || '').trim()).map(x => x.dataset.tab) };
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
@@ -164,7 +236,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await take('popup order', `() => { hideSheet(); go({ s:'home' }); go({ s:'lists' }); showSort(); }`);
       await take('home favorites (two)', `() => { const ids = ['shooty', 'healybois'].filter(armyById); store.set('wh-favs', ids.length === 2 ? ids : WH_DATA.armies.slice(0, 2).map(x => x.id)); store.set('wh-home-sort', 'az'); hideSheet(); go({ s:'home' }); go({ s:'favs' }); }`);
       await take('home (two favorites)', `() => { hideSheet(); go({ s:'home' }); }`);
+      await take('home how the app works', `() => { hideSheet(); go({ s:'home' }); go({ s:'how' }); }`);
       await homeChecks();
+      await howChecks();
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
@@ -181,8 +255,21 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         go({ s:'damage', army:id }); }, [a.id, ph]);
       await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 });
       await take('damage ' + ph, `() => {}`);
+      // (ai-summary: a "Not counted" stratagem line is its gist: labelled, its name opening the stratagem)
+      { const bad = await page.evaluate(() => [...document.querySelectorAll('#view .dmncr [data-strat]')].map(el => { const s = allStratagems().find(x => x.id === el.dataset.strat), lab = !!el.querySelector('.ai');
+          return !s ? el.dataset.strat + ': no such stratagem' : !!s.gist !== lab ? s.name + (s.gist ? ': its summary has no AI label' : ': an AI label without a summary') : ''; }).filter(Boolean));
+        for(const x of bad) fail('ai-summary', a.id, 'damage ' + ph, x); }
     }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
+    // - ai-summary: every stratagem row with a gist (AI-written) carries the AI label, and the row opens its rules as written (WHEN,
+    //   TARGET, EFFECT as data.js has them); no row without a gist has the label
+    { const bad = await page.evaluate(() => { const out = [], al = s => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        for(const el of document.querySelectorAll('#view details.strat')){ const s = allStratagems().find(x => x.id === el.dataset.stratId); if(!s) continue;
+          const lab = !!el.querySelector('summary .cpw .ai');
+          if(!!s.gist !== lab) out.push(s.name + (s.gist ? ': its summary has no AI label' : ': an AI label without a summary'));
+          if(!al(el.querySelector('.sb').textContent).includes(al(s.effect).slice(0, 150))) out.push(s.name + ': the open row lacks the rules as written'); }
+        return out; });
+      for(const x of bad) fail('ai-summary', a.id, 'strats', x); }
     await screen('strats', { open:true });     // every stratagem, unfolded
     for(const u of a.units){
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);

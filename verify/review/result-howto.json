@@ -1,0 +1,99 @@
+[
+ {
+  "key": "c5e9b8249ef978fe",
+  "where": "How the app works: screen, cards, map, layers (app.html)",
+  "verdict": "fix",
+  "why": "Counts are live (hwRows/hwSubRows over D; a +1 on RULES, a dropped gist column and a +5 on the example pts each failed render.js how-tables/how-example). Layout 390/320 has no sideways scroll, gunmetal and paper read well, the SVG is role=\"img\" with an aria-label. What is wrong is the layer tags: hwLayer (app.html:1866-1868) guesses from column names and disagrees with what the gate actually fingerprints (verify/tables.js:50-54 READ_COLS). Tagged Hand although they are fingerprinted readings: rule parts, both, limit; stratagem help, shield; ability riled, damaged, embarked, fightOnDeath, comeback. Tagged AI reading although nothing fingerprints them: stratagem calcMods and calcNote, ability calcNote. Tagged Hand although their notes say \"the Damage tab's reading\": stratagem limit, lasts, react, weaponKw; rule statNote; ability lasts. Tagged Mechanical/computed although about half their values are written by hand and only checked against derive.js (derive.md: abilities 318 identical, 261 different, 86 not derivable): ph, turn, turns, at, needs, phases. ARMIES.units is tagged HAND but the entries come from the New Recruit export (from-json.js); ARMIES.units.id and the detachment stratagem id are slugs from-json.js computes (from-json.js:658, :342). The legend says the Phase checklist uses the AI readings, but CHECKLIST is derive.js's, all mechanical. 19 of the 244 readings are readBy:\"derive\" (a program's, not AI's). Without VER.tables the screen keeps \"Each column is tagged\" while showing no tags. hwMap (app.html:1980) throws when a table leaves HW_TABLES, which crashes the whole screen. The screen is about 9,400 px long at 390. Builder q3: Keep it in verified.js. VER is accepted only when its build matches this app.html+data.js (app.html:1830), so the tags shown are always those the gate checked for this exact build. Every release runs run.js, which writes tables before build.js can run, so the committed verified.js missing tables lasts only until the next gate. Generating it into data.js would change the data hash and ship columns.json twice. A build.js constant in index.html would miss the artifact, which publishes app.html as-is. Only the fallback text needs fixing (see the screen item, app.html:2008/2016). Also needed on the catalog branch: helpers.js and tables.js reach datasheet abilities only through D.armies (helpers.js:59-99, tables.js:1001). A datasheet in no list would have its def or readings neither signed nor fingerprinted, so the import must carry none, or both loops must also walk Object.values(D.datasheets).",
+  "fix": "(1) Tags from columns.json, not from names (see the gate item and q1): app.html:1866-1868 `const hwLayer = (t, col, src) => ({ 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' })[src] || 'mech';` and app.html:1859 HW_SRC unchanged (derived:'computed'). (2) Legend text, app.html:1863 `['read', 'AI reading', 'the numbers and conditions the Damage tab uses, and the “When targeted” lines, read from GW’s words by AI (a few by a fixed program rule): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.']`. app.html:1864 `['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']`. (3) Honest fallback, app.html:2008 `['The tables', 'Everything the app shows is in ' + HW_TABLES.length + ' tables in one file, data.js, drawn below with their real row counts' + (VER && VER.tables ? ' and columns. Each column is tagged: mechanical, AI-written or decided by hand.' : '. This copy carries no record of its check, so its columns are not shown.')]`, and app.html:2016 render the legend only when `VER && VER.tables`. (4) app.html:1980 `const n = t => hwRows((HW_TABLES.find(x => x[0] === t) || [, ''])[1]);` so a missing table fails how-tables instead of crashing. (5) Folding (q6): app.html:1975 make each card `<details class=\"xp hwc\" id=\"sec-hw-' + t + '\" data-table=\"' + t + '\" data-rows=\"' + rows + '\"><summary><span class=\"xh\"><b>' + t + '</b><span><span class=\"hwcnt\">' + count + '</span>' + (what ? ' · ' + esc(what) : '') + '</span></span>' + chev + '</summary><div class=\"body\">' + body + hwColumns(t) + '</div></details>`, closed by default. jumpTo already opens a DETAILS target (app.html:5520), so every data-htab link and map entry opens its card. Under the figure (app.html:1988), add a text index `<p class=\"hwk hwidx\">` + HW_TABLES.map(([t,k]) => hwTo(t) + ' ' + hwRows(k)).join(' · ') + `</p>`: the map's content as text and tappable. Keep the example rows and the nested \"Every column\" fold inside the card body. That makes about 3,100 px at 390 (flow 760, map and index 500, legend 330, 13 summaries of about 64 px, trust 700). Snapshots open every fold, so they change only by the summary line."
+ },
+ {
+  "key": "b942082a4b417142",
+  "where": "home row and router (app.html)",
+  "verdict": "ok",
+  "why": "The row is a real <button> with text (icon aria-hidden), placed after the import row. calm, parentOf, titleOf and valid all know \"how\"; Back reads \"Armies\" and returns home; an update reload keeps the spot (reloadNow saves cur and spot). data-htab=\"trust\" lands on #sec-hw-trust. Checked by how-row at 390 and 320."
+ },
+ {
+  "key": "aff2f469a437c49e",
+  "where": "gate checks (verify/render.js howChecks, lib.js columnSources, run.js verified.js tables)",
+  "verdict": "fix",
+  "why": "Gate on 84f5acd in a separate worktree: every step passes except snapshots (shooty.txt, identical to howto-work/snapshot.diff). howChecks does fail on a wrong count, a missing column and a wrong example value (each broken on purpose). Gaps: (a) q4 is a real bug. The app registers sw.js on 127.0.0.1 (app.html:5879); once the service worker controls the page, its fetches bypass page.route. Reproduced: without blocking, the second reload shows WH_VERIFIED.date \"29 Oct 2026\" from the disk instead of the stand-in \"STUB\"; with serviceWorkers:\"block\" every load gets the stand-in. With the block, the full render passes (3171 screens, 0 failures) and all 25 snapshots equal the builder's. (b) Only column names are compared, not their sources or layers, so a wrong tag passes. (c) Inner-table row counts (hwSubRows) and the map's numbers (army rules, detachments, stratagems, enhancements, entries) are not checked. (d) The how-tables comparison reads `.hwh .c`, which must follow the folding change. (e) Builder q1: yes, record the layer in columns.json. Yes. The name rule is wrong in both directions (see the screen item), and columns.json contradicts the screen: it says source \"hand\", \"hand-written from the words\", for what the screen calls AI readings. The layer should be a recorded, gate-checked fact, not a guess in app.html.",
+  "fix": "verify/render.js:24 `const page = await (await browser.newContext({ viewport:{ width:W, height:844 }, serviceWorkers:'block' })).newPage();` and drop the comment at render.js:222 (a reload now keeps the stand-in). app.html:1906 `data-cols=\"' + esc(cols.map(c => c[0] + ':' + c[1]).join(',')) + '\"` with render.js:144 `const want = Object.entries(COLS[t].columns || {}).map(([n, x]) => n + ':' + x.source).join(',');`, plus per .hwl line: every column listed under a layer has hwLayer(t, c, columns.json source) === that layer. Put data-n=\"<count>\" on each .hwct and on the map figure (`data-counts='{\"armyRules\":29,...}'`), and compare in howChecks with counts computed in node from RAW. After the folding change, render.js:137 reads `c.querySelector('summary .hwcnt').textContent`. Builder q1, columns.json and tables.js: verify/columns.json: replace source \"ai\" with \"ai-summary\" for gist (CORE_STRATAGEMS, FACTIONS.detachments.stratagems), and with \"ai-reading\" for def (all 9). Set \"ai-reading\" for mods/aura/guard on DATASHEETS, ARMIES.units, FACTIONS.armyRules, FACTIONS.detachments.rule/moreRules/enhancements, for READ_COLS.rule (mod, calcMods, calcDefs, calcNc, parts, both, limit, statNote), READ_COLS.strat (mod, help, shield, defCalc, defPick, calcMods, calcNote, limit, lasts, react, weaponKw) and READ_COLS.ability (riled, damaged, defAlways, defCalc, calcDef, embarked, fightOnDeath, comeback, calcNote, lasts), and for every column of DATASHEETS.mods/aura/guard, ARMIES.units.mods/aura/guard and FACTIONS.readings except readOf/readBy (derived) and listWhy (hand). Also set ARMIES.units \"newrecruit\", ARMIES.units.id and FACTIONS.detachments.stratagems.id \"derived\" (from-json.js:658, :342), and set ph/turn/turns/at/needs/phases to \"hand\" with notes \"checked against verify/derive.js (derive-agreed.json)\". Update \"about\". verify/tables.js:50-54 READ_COLS = { rule:['mod','calcMods','calcDefs','calcNc','parts','both','limit','statNote'], strat:['mod','help','shield','defCalc','defPick','calcMods','calcNote','limit','lasts','react','weaponKw'], ability:['riled','damaged','defAlways','defCalc','calcDef','embarked','fightOnDeath','comeback','calcNote','lasts'] }, then `node verify/tables.js --stamp` (3 rows gain readOf: Command Re-roll, Insane Bravery, Cohort Cybernetica Cyber-psalm Programming). verify/tables.js:1085 `const SOURCES = ['bsdata', 'wahapedia', 'gw', 'newrecruit', 'derived', 'hand', 'ai-summary', 'ai-reading'];` and after :1082 a gate rule: a column of a row table is \"ai-reading\" iff it is in READ / READ_COLS for that row kind or FINGERPRINT.def, and \"ai-summary\" iff it is FINGERPRINT.gist; a column of a reading table is ai-reading unless it is readOf/readBy/listWhy. Fail otherwise. app.html:1866 hwLayer as in the screen item."
+ },
+ {
+  "key": "5945c01443e55d3e",
+  "where": "How the app works · flow step 1",
+  "verdict": "fix",
+  "why": "Not without exception: the app corrects GW's own misprints and says so. verify/deviations-texts.json: \"Toughenss\" in GW's Faction Pack, \"TYRANIDSunit\". verify/deviations-bases.json gwError: Wazdakka 120mm round taken to be GW's error, owner 2026-10-25. Houndpack Lance's enhancement uses New Recruit's spelling where GW prints none.",
+  "fix": "app.html:2006 `… and Wahapedia where GW has no document yet. Where they disagree, GW wins; where GW misprints (a typo, a base size), the correction is written down with its reason.`"
+ },
+ {
+  "key": "b66afc4800424040",
+  "where": "How the app works · flow step 2",
+  "verdict": "fix",
+  "why": "from-json.js does build 23 lists from their exports (import-test: 23 of 23 identical). Two of the 25 lists, dread-host and emperors-chosen, have no export (verify/sources/nr-json): they were typed in from the PDF and are checked by verify/nr.js against it. \"A program reads the list\" is not how those two were made.",
+  "fix": "app.html:2007 `A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.`"
+ },
+ {
+  "key": "cfeff73d5d2b645c",
+  "where": "How the app works · flow step 4",
+  "verdict": "ok",
+  "why": "run.js runs data, tables, fingerprints, texts, bsdata, nr, screens and the others. build.js refuses unless report.json is ok and its hash matches app.html+data.js+calc.js+ask.js+import.js (build.js:28-34). derive.js lists differences without failing, but that is a listing, not a check that fails."
+ },
+ {
+  "key": "3b5a63d82bdd3620",
+  "where": "How the app works · flow step 5",
+  "verdict": "ok",
+  "why": "render.js writes verify/out/snapshots/<list>.txt for every list with every fold open (render.js:576), and run.js fails on any difference until --accept. The How screen itself is in shooty.txt, rendered from the stand-in verified.js that carries columnSources(), so a columns.json change shows in the snapshot."
+ },
+ {
+  "key": "ed14866283e62a15",
+  "where": "How the app works · legend: AI summary",
+  "verdict": "ok",
+  "why": "gist has gistOf (tables.js FINGERPRINT), and the gate step fingerprints fails when the text changes (274 of 274 match). The gists are also signed (strat-gist items)."
+ },
+ {
+  "key": "43183463ba389a99",
+  "where": "How the app works · legend: AI reading",
+  "verdict": "fix",
+  "why": "(1) The Phase checklist does not use the readings: it uses CHECKLIST, which derive.js computes. (2) Not every column tagged AI reading is fingerprinted: stratagem calcMods and calcNote and ability calcNote are not in READ_COLS. Several fingerprinted readings are tagged Hand (rule parts, both, limit; stratagem help, shield; ability riled, damaged, embarked, fightOnDeath, comeback). (3) 19 of the 244 readings are readBy:\"derive\", a program's. (4) \"each signed off\" holds for what helpers.js lists (unit-footnote/aura/guard, rule-*, strat-*, ability-calc/turn), but see trust 2 for core stratagem limit and cpNote. columns.json still calls all of these \"hand-written from the words\".",
+  "fix": "app.html:1863 `['read', 'AI reading', 'the numbers and conditions the Damage tab uses, and the “When targeted” lines, read from GW’s words by AI (a few by a fixed program rule): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.']`, together with the columns.json \"ai-reading\" source and READ_COLS extension in the q1 item so the tag set is exactly the fingerprinted set."
+ },
+ {
+  "key": "a261726950a2f00e",
+  "where": "How the app works · legend: Hand",
+  "verdict": "fix",
+  "why": "\"signed off by a reviewer\" is false for some Hand columns. Hand columns that no helpers.js item covers: CORE_STRATAGEMS.limit (Insane Bravery \"Once per battle\") and CORE_STRATAGEMS.cpNote (Heroic Intervention \"Into the Fray +1CP\"); helpers.js:118 omits limit, cpNote, shield, help, react, weaponKw, ask; helpers.js:114 omits limit and calcMods for detachment stratagems. Also unsigned: RULE_SRC.name/source (6 rows), FACTIONS.allies (3), ARMIES.units.short (6), ARMIES.units.ref (4; check.js finds its quote, nobody signs it), ARMIES.id, CORE_STRATAGEMS.id, and ARMIES.units.over / *.over and FACTIONS.*.tableAt (empty today). Checked against verify/out/helpers-all.json: no item for either core value. \"which source wins where they disagree\" is not a column of the tables: those decisions live in verify/deviations-*.json. ARMIES.units, ARMIES.units.id and the stratagem id are not hand-written at all (see the screen item).",
+  "fix": "verify/helpers.js:114 and :118 share one list: `const STRAT_KEYS = ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'calcMods', 'lasts', 'gist', 'note', 'cpNote', 'ask', 'shield', 'help', 'react', 'weaponKw', 'limit'];` used by both loops. This adds 2 todo items (Insane Bravery limit, Heroic Intervention cpNote) to sign. Better, build that list from verify/columns.json: every column of CORE_STRATAGEMS / FACTIONS.detachments.stratagems whose source is hand, ai-summary or ai-reading, except id. Then app.html:1864 as in the screen item: `a decision about the rules written for this app, not copied from a source: when a rule is used and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.`"
+ },
+ {
+  "key": "03b53a365a32eb12",
+  "where": "How the app works · trust 1",
+  "verdict": "ok",
+  "why": "verify/deviations-{texts,bsdata,nr,bases}.json each give a reason, and the gate uses them on every run (19 text, 282 BSData, 200 New Recruit, 12 base deviations used). The bases gwError fails if GW's row ever changes."
+ },
+ {
+  "key": "90a769cae18511ad",
+  "where": "How the app works · trust 2",
+  "verdict": "fix",
+  "why": "\"every judgement the app adds is signed off\" is false today for CORE_STRATAGEMS.limit (Insane Bravery) and cpNote (Heroic Intervention): helpers.js:118 makes no item for them. \"Each carries a fingerprint\" is false for stratagem calcMods/calcNote and ability calcNote while they are tagged AI reading. The sign-off itself does void on a changed rule: helpers key = kind + judgement + source text.",
+  "fix": "With the helpers.js:114/118 STRAT_KEYS fix and the q1 READ_COLS extension it becomes true. Wording, app.html:2020: `What AI wrote is marked on the tables above: summaries and readings. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.`"
+ },
+ {
+  "key": "9395c69612640a39",
+  "where": "How the app works · trust 3",
+  "verdict": "ok",
+  "why": "build.js:28-34 throws unless verify/report.json is ok and made from this exact app.html+data.js+calc.js+ask.js+import.js. The artifact copy is republished by hand (README step 6) after that build, and the app shows a check only when verified.js's build matches (app.html:1830). Optional precision: \"Nothing is built for your phone unless every check passes.\""
+ },
+ {
+  "key": "31334ce6e3e63331",
+  "where": "How the app works · CHECKLIST column meanings",
+  "verdict": "ok",
+  "why": "They match derive.js: :757 (at: the moment it opens with; none: no phase; x: not derivable, also set when the same words give two entries, :867), :775 ae, :914/:953 f, s, a, pk, oc, :1150 x. render.js how-links fails on a column HW_CK does not name."
+ },
+ {
+  "key": "1b6157305be8ed4f",
+  "where": "How the app works · links",
+  "verdict": "ok",
+  "why": "Checked on data: every RULE_SRC and RULE_ALIASES target is a RULES key; every r| key names an existing faction; GRANTS/RULE_OPTIONS rules sit where hwRuleAt says (how-links). Every DATASHEETS rule resolves through RULES/aliases/army rules except one curly-apostrophe spelling (Martial Ka'tah), which the app normalises."
+ }
+]

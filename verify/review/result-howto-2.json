@@ -1,0 +1,124 @@
+[
+ {
+  "key": "f65165c291ee9e1e",
+  "verdict": "ok",
+  "where": "How the app works: screen (app.html), after review 1",
+  "why": "hwLayer is now a lookup of the columns.json source. The fallback with no VER.tables says the columns are not shown, and the legend and share line appear only with VER.tables. hwMap no longer crashes on a missing table. Cards are details.xp with the count in the summary, and jumpTo opens them. The SVG is aria-hidden, with a tappable text alternative (.hwidx). Folded height is 3,775 px at 390: acceptable, about 60% shorter than before."
+ },
+ {
+  "key": "56ca77f3f2a9581c",
+  "verdict": "ok",
+  "where": "columns.json AI layers enforced (verify/tables.js layerOf, READ_COLS, SOURCES)",
+  "why": "layerOf gives the reading tables minus readOf/readBy/listWhy; gist → ai-summary; def, READ and READ_COLS by row kind → ai-reading. The check runs in both directions (unregistered). The tables step passes on a941f16."
+ },
+ {
+  "key": "13a5d5b40b18cedf",
+  "verdict": "ok",
+  "where": "helpers.js STRAT_KEYS",
+  "why": "Built from columns.json (hand, ai-summary, ai-reading, minus id), the same list for core and detachment stratagems. The gate shows exactly 2 new items (Insane Bravery limit, Heroic Intervention cpNote). Every other key is unchanged: 2214 still approved."
+ },
+ {
+  "key": "0041132a3b1cc683",
+  "verdict": "ok",
+  "where": "render.js: service workers blocked, how checks extended",
+  "why": "serviceWorkers:\"block\" is at render.js:24. The new checks compare data-cols as name:source, each .hwl layer against its columns.json source, inner-table counts walked from RAW, and the map counts. howChecks now runs after homeChecks, which is fine with the stand-in kept across reloads. screens and small phone pass with 0 failures."
+ },
+ {
+  "key": "bafeea2903bf42e6",
+  "verdict": "ok",
+  "where": "verify/columns.json sources",
+  "why": "Spot-checked: ARMIES.units is newrecruit; ARMIES.units.id and the detachment stratagem id are derived; CORE_STRATAGEMS.id is hand; phases/ph/turn/needs are hand, with notes saying derive.js checks them; gist is ai-summary; def, limit, calcNote and statNote are ai-reading; listWhy is hand; readBy is derived. \"about\" explains both AI sources. Note that `at` is now hand with no sign-off (see the Hand legend)."
+ },
+ {
+  "key": "cd818daa22ad9d46",
+  "verdict": "ok",
+  "where": "three readings newly fingerprinted by --stamp (READ_COLS extension)",
+  "why": "Each checked against its text. Command Re-roll calcMods \"re-roll one hit roll, one wound roll or one damage roll, once in the phase\": GW lists Hit/Wound/Damage rolls and \"select one of those dice to re-roll\"; once per phase is 15.01. Insane Bravery limit \"Once per battle\": RESTRICTIONS \"You cannot use this stratagem more than once per battle.\" Cyber-psalm Programming statNote \"OC +1 for each model unless Battle-shocked\": \"unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit\". Insane Bravery's readOf 02ffa2fd equals its gistOf, as it should: both fingerprint the same WHEN/TARGET/EFFECT/RESTRICTIONS text."
+ },
+ {
+  "key": "30fdc1043786c6c1",
+  "verdict": "ok",
+  "where": "Core · Insane Bravery · strat-limit",
+  "why": "{\"limit\":\"Once per battle\"}: GW RESTRICTIONS \"You cannot use this stratagem more than once per battle.\""
+ },
+ {
+  "key": "c39e95bb8b814e04",
+  "verdict": "ok",
+  "where": "Core · Heroic Intervention · strat-cpNote",
+  "why": "{\"cpNote\":\"Into the Fray +1CP\"}: GW EFFECT \"Into the Fray (+1CP): …\", the extra CP for that mode only."
+ },
+ {
+  "key": "8893f48e1d341ed1",
+  "verdict": "ok",
+  "where": "How the app works · flow step 1",
+  "why": "Matches deviations-texts.json (GW's \"Toughenss\" and \"TYRANIDSunit\" corrected) and deviations-bases.json gwError (Wazdakka), each with its reason."
+ },
+ {
+  "key": "d2dbc34592c080e8",
+  "verdict": "ok",
+  "where": "How the app works · flow step 2",
+  "why": "23 lists come from exports (import-test: 23 of 23 identical). dread-host and emperors-chosen have only a PDF and are checked by nr.js."
+ },
+ {
+  "key": "b755148766f1d410",
+  "verdict": "ok",
+  "where": "How the app works · flow step 3 (no check record)",
+  "why": "Shown only when !(VER && VER.tables), which is exactly when hwCols returns null and no columns are drawn."
+ },
+ {
+  "key": "a086f3ee27f978e2",
+  "verdict": "ok",
+  "where": "How the app works · legend: AI reading",
+  "why": "Superseded: the app now prints 8ea7db5347293ca6. This wording was also true."
+ },
+ {
+  "key": "7f84e6936536593c",
+  "verdict": "fix",
+  "where": "How the app works · legend: Hand",
+  "why": "\"each signed off by an independent reviewer\" is still false for some Hand columns that are neither ids, short names nor source labels. Rule and ability `at` (24 values, e.g. Da Boss, Blessings of Khorne, Martial Ka’tah, Icon of Khorne \"Start of the battle round\"): no helpers item includes at (helpers-all.json: 0), and the rule list at helpers.js:110 and ability-timing at :68 omit it. It became Hand when columns.json moved timing from derived to hand. Also FACTIONS.allies (3, e.g. {\"Imperial Agents\":\"Assigned Agents\"}) and ARMIES.units.ref (4: check.js checks the quote, nobody signs it). FACTIONS.*.tableAt and the *.over columns are empty today.",
+  "fix": "verify/helpers.js:68 `if(ab.ph || ab.turn || ab.at) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns, at:ab.at }, src);`. at is undefined on every other ability, so no other key changes. verify/helpers.js:110: build the rule list from verify/columns.json the way STRAT_KEYS is built: every column of FACTIONS.armyRules, FACTIONS.detachments.rule and FACTIONS.detachments.moreRules whose source is hand, ai-summary or ai-reading, minus coreTwin, which has its own item. That adds at and tableAt. After the alias loop at :128, add `for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || '')) });` and in the unit loop `if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, u, { from:u.ref.rule || u.ref.strat }));`. That gives about 24 at, 3 allies and 4 ref items to sign. If you would rather not sign allies and ref, add \"the allies a faction may take, reference sheets\" to the not-signed sentence of the Hand legend (app.html:1871) instead."
+ },
+ {
+  "key": "5bc5a5102d3b587c",
+  "verdict": "fix",
+  "where": "How the app works · trust 2",
+  "why": "\"Every judgement the app adds, by AI or by hand, is signed off\": the same gap, the 24 `at` values (plus allies and ref). The fingerprint and voiding parts are true. The tables step enforces ai-* as exactly the fingerprinted columns, and a helpers key includes the source text.",
+  "fix": "verify/helpers.js:68 `if(ab.ph || ab.turn || ab.at) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns, at:ab.at }, src);`. at is undefined on every other ability, so no other key changes. verify/helpers.js:110: build the rule list from verify/columns.json the way STRAT_KEYS is built: every column of FACTIONS.armyRules, FACTIONS.detachments.rule and FACTIONS.detachments.moreRules whose source is hand, ai-summary or ai-reading, minus coreTwin, which has its own item. That adds at and tableAt. After the alias loop at :128, add `for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || '')) });` and in the unit loop `if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, u, { from:u.ref.rule || u.ref.strat }));`. That gives about 24 at, 3 allies and 4 ref items to sign. If you would rather not sign allies and ref, add \"the allies a faction may take, reference sheets\" to the not-signed sentence of the Hand legend (app.html:1871) instead. The text can then stay as it is."
+ },
+ {
+  "key": "fab5efaab037f9a9",
+  "verdict": "ok",
+  "where": "How the app works · map text alternative",
+  "why": "Same links as the SVG, which is now aria-hidden. CONCEPTS holds 20 core terms (\"core terms (not abilities)\", data.js:9047). VERSION is one value. Each table name is a link to its card."
+ },
+ {
+  "key": "ef4dc21d1ea7eff3",
+  "verdict": "ok",
+  "where": "AI label on every summary (app.html)",
+  "why": "A gist appears in only two places, stratHead (app.html:5016) and the Damage tab's \"Not counted\" stratagem line (app.html:3671), and both now carry aiLabel. The label sits under the CP badge, out of the flow, and is hidden when the row is open. Unit screens are pixel-identical to main 76d6e7e: I rendered 16 units of shooty, nidzillas, tzeeeeentch and woof-woof at 390 and 320, and all 32 images are the same. The builder's r2 images agree. On the Stratagems screen the pixels change only at x 57-79 (the label). Snapshot diffs of all 24 other lists hold only \"+AI\" lines and \"NCP Name\" → \"NCP Name AI\" pairs; nothing else changed. The Damage screenshots differ only in sampled numbers (7.1 vs 7.3 wounds lost), not in layout. Optional: the \"Not counted\" name is tappable (role=\"button\") but has no link style; `class=\"rl\"` would show it."
+ },
+ {
+  "key": "8f28d05f6922fa4b",
+  "verdict": "ok",
+  "where": "How screen: legend and texts from the layers present (app.html)",
+  "why": "layers/aiKinds come from VER.tables, so the legend, step 3, the share line and trust 2 name only the layers columns.json has. When the readings become script-made (source derived), \"AI reading\" disappears by itself; tables.js layerOf (READ, READ_COLS, def → ai-reading) must change in the same commit, or the gate fails."
+ },
+ {
+  "key": "79af59cd949519a7",
+  "verdict": "ok",
+  "where": "render.js ai-summary",
+  "why": "Break-tested on shooty. I dropped the label from Epic Challenge and emptied Fire Overwatch's open body. It failed \"Epic Challenge: its summary has no AI label\" and \"Fire Overwatch: the open row lacks the rules as written\". The \"label without a summary\" branch cannot be tested on today's data, since every stratagem has a gist. Not covered: the Damage tab's \"Not counted\" label. Optionally add `.dmncr [data-strat]` to the check."
+ },
+ {
+  "key": "8ea7db5347293ca6",
+  "verdict": "ok",
+  "where": "How the app works · legend: AI reading (today)",
+  "why": "True on this branch. The 244 readings are fingerprinted (19 by derive.js, readBy) and signed (unit-footnote/aura/guard, rule-*, strat-*, ability-calc/turn)."
+ },
+ {
+  "key": "d98994f279f81501",
+  "verdict": "ok",
+  "where": "How the app works · trust (added)",
+  "why": "Every gist shown carries the label (strat rows, Damage \"Not counted\"). A tap opens the row's WHEN/TARGET/EFFECT (checked by ai-summary) or showStrat."
+ }
+]

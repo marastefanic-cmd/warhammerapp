@@ -1,5 +1,5 @@
 {
- "_about": "What verify/from-json.js cannot fill mechanically for the-exiled-legion, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), notes on its abilities, its auras (only what GW tags (Aura), Core Rules 22.01) and guard (an (Aura) that protects other units). No stratagem of Blood Legion or Warptide changes a weapon's numbers or keywords (no mod); no detachment rule changes an attack's numbers (no calcMods: Shudderblink's [ASSAULT] changes none, Murdercall is a surge move). labels: an ability's timing label where derive.js's reading is not the one the signed-off lists store ({}: none), from the reviews (verify/review/result-exiled-*.json). armyRules: a FAQ GW's Faction Pack prints on an army rule, quoted. Each is a judgement verify/helpers.js lists for sign-off.",
+ "_about": "What verify/from-json.js cannot fill mechanically for the-exiled-legion, written by hand and read by it on every run (from-json.js --write from the committed data.js gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), notes on its abilities, its auras (only what GW tags (Aura), Core Rules 22.01) and guard (an (Aura) that protects other units). No stratagem of Blood Legion or Warptide changes a weapon's numbers or keywords (no mod); no detachment rule changes an attack's numbers (no calcMods: Shudderblink's [ASSAULT] changes none, Murdercall is a surge move). armyRules: a FAQ GW's Faction Pack prints on an army rule, quoted. Each is a judgement verify/helpers.js lists for sign-off.",
  "gists": {
   "blood-legion/wrath-undeniable": {
    "by": "AI (Claude)",
@@ -55,10 +55,7 @@
  },
  "units": {
   "skarbrand": {
-   "why": "Rage Embodied (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", his own unit included (22.01). Greater Daemon of Khorne (Aura) puts units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard.",
-   "labels": {
-    "Murderlust": {}
-   }
+   "why": "Rage Embodied (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", his own unit included (22.01). Greater Daemon of Khorne (Aura) puts units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard."
   },
   "bloodthirster": {
    "why": "Daemon Lord of Khorne (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", its own unit included (22.01)."
@@ -77,31 +74,8 @@
     }
    }
   },
-  "skulltaker-bloodletters": {
-   "labels": {
-    "Skulls for Khorne": {},
-    "Bane-Forged Weapons": {}
-   }
-  },
-  "bloodmaster-bloodletters": {
-   "labels": {
-    "Bane-Forged Weapons": {},
-    "Bloodmaster": {}
-   }
-  },
   "rendmaster-on-blood-throne": {
    "why": "Blood Throne gives every friendly KHORNE LEGIONES DAEMONICA unit the bonus against the selected unit, but GW does not tag it (Aura): shown on the Rendmaster’s own weapons only."
-  },
-  "skullmaster-bloodcrushers": {
-   "labels": {
-    "Skullmaster’s Fury": {
-     "ph": [
-      "charge",
-      "fight"
-     ],
-     "turn": "either"
-    }
-   }
   },
   "daemon-prince-of-chaos": {
    "defs": {
@@ -116,10 +90,7 @@
      "defOf": "e269580e"
     }
    },
-   "why": "Slaughterthirst (Aura): KHORNE LEGIONES DAEMONICA units within 6\" excluding MONSTERS, so not the Daemon Prince itself (22.01). Prince of Darkness (Aura): Stealth for LEGIONES DAEMONICA units within 6\". Daemonic Allegiance: this list chose KHORNE (New Recruit: “Daemon Prince of Chaos (Khorne)”); the KHORNE keyword and the hellforged weapons’ S 10 / 8 are the list’s values (verify/tables.js why), the datasheet keeps GW’s S 8 / 6.",
-   "labels": {
-    "Daemonic Allegiance": {}
-   }
+   "why": "Slaughterthirst (Aura): KHORNE LEGIONES DAEMONICA units within 6\" excluding MONSTERS, so not the Daemon Prince itself (22.01). Prince of Darkness (Aura): Stealth for LEGIONES DAEMONICA units within 6\". Daemonic Allegiance: this list chose KHORNE (New Recruit: “Daemon Prince of Chaos (Khorne)”); the KHORNE keyword and the hellforged weapons’ S 10 / 8 are the list’s values (verify/tables.js why), the datasheet keeps GW’s S 8 / 6."
   }
  },
  "armyRules": {

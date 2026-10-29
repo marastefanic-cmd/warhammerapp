@@ -1771,9 +1771,9 @@ They can matter at the table, but the calculator does not play them: what each o
 1CP Gene-Wrought Might
 Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
 COUNT IT BY HAND: AP +1
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2089,9 +2089,9 @@ They can matter at the table, but the calculator does not play them: what each o
 1CP Gene-Wrought Might
 Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
 COUNT IT BY HAND: AP +1
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2125,16 +2125,19 @@ ASSAULT BRETHREN
 3
 1
 CP
+AI
 Armour of Contempt
 Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
 Their Shoot · Fight Any unit
 1
 CP
+AI
 Gene-Wrought Might
 Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.
 Fight Any unit
 1
 CP
+AI
 Duty in Death
 Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase.
 Fight Any unit
@@ -2142,21 +2145,25 @@ DEATHWATCH SUPPORT
 4
 1
 CP
+AI
 Kraken Rounds
 Your KILL TEAM unit is selected to shoot: its ranged attacks have +6" range and +1 S.
 Your Shooting Deathwatch Terminator Squad ×2
 1
 CP
+AI
 Dragonfire Rounds
 Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].
 Your Shooting Deathwatch Terminator Squad ×2
 1
 CP
+AI
 Hellfire Rounds
 Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].
 Your Shooting Deathwatch Terminator Squad ×2
 1
 CP
+AI
 Blackstar Extraction
 End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.
 End of their Fight Deathwatch Terminator Squad ×2
@@ -2164,16 +2171,19 @@ TERMINATOR STORM FORCE
 3
 2
 CP
+AI
 Tactical Dreadnought Fortitude
 Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked.
 Their Shoot · Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
 1
 CP
+AI
 Merciless Veterans
 Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].
 Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
 1
 CP
+AI
 Gunship Extraction
 End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.
 End of their Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
@@ -2181,51 +2191,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles ×2, Reiver Squad ×2
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting Reiver Squad ×2
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Roboute Guilliman, Impulsor ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Impulsor ×2
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Roboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit

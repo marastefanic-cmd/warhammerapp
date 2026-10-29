@@ -269,6 +269,12 @@
   "at": "2026-10-23",
   "why": "“in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight”: Shooting your turn, Fight either."
  },
+ "0382ffcc1b021b58": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment (\"at the start of the first, third and fifth battle rounds\"; the Phase checklist quotes the rounds, app.html:5317, and at is a section key, app.html:5391)."
+ },
  "039302018ddab078": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -286,6 +292,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Thievin’ Scavengers - Gretchin\"."
+ },
+ "03dc3fb93cc8a4a5": {
+  "verdict": "ok",
+  "by": "review:howto-3 (its fix)",
+  "at": "2026-10-29",
+  "why": "The judgement is right. Mission Tactics (the Deathwatch Support detachment rule) has a \"DEATHWATCH ALLIES\" part: \"You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword… cannot exceed 500 points\", and the list's Deathwatch Terminator Squad has role \"Allies: Deathwatch\". But the item's source is \"Mission Tactics: \" (empty), because the lookup only searches D.rules. Apply the faction-allies fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key with the rule text."
  },
  "040b27634dda3565": {
   "verdict": "ok",
@@ -965,6 +977,12 @@
   "at": "2026-10-16",
   "why": "Their turn."
  },
+ "0c9767fb0fda9176": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
  "0cbaae2772ed3657": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -1415,6 +1433,12 @@
   "at": "2026-10-16",
   "why": "\"Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll\": Fight-phase attacks are melee."
  },
+ "13a4bf408564fdc5": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment (it also ends at the end of the battle round: at is the moment it opens with)."
+ },
  "13c13ff0ed8da907": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1756,6 +1780,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability.\""
+ },
+ "19f0dfad74c14799": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"allies\":{\"Imperial Agents\":\"Assigned Agents\"}}: Assigned Agents: \"every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units\"."
  },
  "19f94423981500cc": {
   "verdict": "ok",
@@ -2134,6 +2164,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
+ },
+ "1f1c1ad63d0bfbe5": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"movement\",\"fight\"],\"turn\":\"your\",\"turns\":{\"fight\":\"opp\"},\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "1f3900a4b053e14e": {
   "verdict": "ok",
@@ -3167,6 +3203,12 @@
   "at": "2026-10-21",
   "why": "NR \"Twisted Sorceries (Psychic) - Sorcerer\"; \"this model\" is the Sorcerer. Model lines match NR (1 Sorcerer, 1 Aspiring Sorcerer, 1 w/ soulreaper cannon, 3 w/ warpflamer)."
  },
+ "2e957ee986c0d7ca": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of your Command phase\"}: the rule's words open with that moment."
+ },
  "2ef92d21db9028cd": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -3268,6 +3310,12 @@
   "by": "review:r11-misc",
   "at": "2026-10-21",
   "why": "WHEN \"Fight phase\". EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The line is the signed-off Crazed Rampage line plus \"D6, +1 if riled up\", which is in the text (Wahapedia gives the same words). It adds nothing."
+ },
+ "30fdc1043786c6c1": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"limit\":\"Once per battle\"}: the same key and judgement as result-howto-2. RESTRICTIONS \"You cannot use this stratagem more than once per battle.\""
  },
  "3119d9f672bc8ad0": {
   "verdict": "ok",
@@ -3634,6 +3682,12 @@
   "by": "review:healybois",
   "at": "2026-10-28",
   "why": "GW's words shortened, nothing added. (For the owner, not a fix: GW still says \"regain up to D3 lost wounds\" here while FP 1.3's Feed the Swarm now gives \"up to D3+1\"; the gist rightly quotes GW and does not reconcile them.)"
+ },
+ "363fe8d12bb09f4f": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "The quote is Gift of Change's EFFECT word for word; the strat is gift-of-change and there is no by. The source (the stratagem) is right."
  },
  "3644cdda4e1f2d45": {
   "verdict": "ok",
@@ -4019,6 +4073,12 @@
   "at": "2026-10-23",
   "why": "\"At the end of the Fight phase\": either player's Fight phase."
  },
+ "3bc9f6592c6c216a": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\"],\"turn\":\"either\",\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
  "3bca809001bd76a5": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -4169,6 +4229,12 @@
   "at": "2026-10-16",
   "why": "\"desperate escape\" etc. are fall-back modes; 09.07.01 Desperate Escape test is in that text."
  },
+ "3d85a0176bc24603": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of your Command phase\"}: the rule's words open with that moment."
+ },
  "3d883272fd3164b7": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -4318,6 +4384,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "BSData’s categories, per model: the unit “Epic Hero, Character, Imperium, Faction: Imperial Knights”; the Canis Rex model “Vehicle, Walker, Titanic, Towering, Canis Rex, Questoris, Character, Epic Hero”; the Sir Hekhtur model “Infantry, Sir Hekhtur, Character, Epic Hero”. So VEHICLE, WALKER, TITANIC, TOWERING, QUESTORIS and CANIS REX are Canis Rex’s, INFANTRY and SIR HEKHTUR are Sir Hekhtur’s, and the rest both models’: exactly the judgement. Wahapedia’s Canis Rex (“KEYWORDS: VEHICLE; WALKER; TITANIC; TOWERING; QUESTORIS; CHARACTER; EPIC HERO; IMPERIUM; CANIS REX”, no INFANTRY) agrees for the Knight. New Recruit prints all twelve on the unit."
+ },
+ "3fa1ef844069b152": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "3fa3553464dccc08": {
   "verdict": "ok",
@@ -4570,6 +4642,12 @@
   "by": "review:healybois",
   "at": "2026-10-28",
   "why": "Malign Presence is on the Swarmlord's datasheet (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html); FP 1.3 Rules Updates \"The Swarmlord, Malign Presence Ability – Change to: 'Once per turn, when your opponent targets a unit from their army within 12\\\" of this model …'\" (l.659-662). Who = The Swarmlord."
+ },
+ "4323351af991d577": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\",\"movement\"],\"turn\":\"either\",\"turns\":{\"movement\":\"your\"},\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "4331ad19f8eb4deb": {
   "verdict": "ok",
@@ -5633,6 +5711,12 @@
   "at": "2026-10-22",
   "why": "An Infernal Lance enhancement (Wahapedia “Fleshmetal Fusion 35 pts”). NR gives it to the 360-pt Ruinator: “Options: Fleshmetal Fusion, Darkflame lance, …”, with T 12."
  },
+ "54b1d1ced7d0e446": {
+  "verdict": "ok",
+  "by": "review:howto-3 (its fix)",
+  "at": "2026-10-29",
+  "why": "The judgement is right: the quote is in biovores's \"Seed Spore Mines\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Seed Spore Mines\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix."
+ },
  "54cc6dd22280694e": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -5872,6 +5956,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"Your unit’s attacks can: Re-roll hit rolls of 1. If your unit is riled up, re-roll hit rolls.\" The rule says \"attacks\", so kind is all. The when copies the WHEN phases, and the note is the effect. No hit re-roll is printed by NR, so nothing is doubled."
+ },
+ "584d8362bb5a7530": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
  },
  "584e74acd6871090": {
   "verdict": "ok",
@@ -6184,6 +6274,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Move characteristic (your Movement) and Advance/Charge rolls: same as approved Brayhorn."
+ },
+ "5d154f49e3837172": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\"],\"turn\":\"either\",\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "5d16956003a085ed": {
   "verdict": "ok",
@@ -6593,11 +6689,23 @@
   "at": "2026-10-24",
   "why": "It is on the Bloodletters datasheet."
  },
+ "63b5ffba86ca1665": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "tableAt 1 = one text line before the table. Wahapedia orks.txt:393-399: \"…have the relevant rule(s):\", then the D6 table, then \"If you rolled two D6…\"."
+ },
  "63f34627918d7e4b": {
   "verdict": "ok",
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "641de8aa546cc7ac": {
+  "verdict": "ok",
+  "by": "review:howto-3 (its fix)",
+  "at": "2026-10-29",
+  "why": "The judgement is right: the quote is in fluxmaster-pink-horrors's \"Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix."
  },
  "64385370643e5b6e": {
   "verdict": "ok",
@@ -7415,6 +7523,12 @@
   "at": "2026-10-28",
   "why": "Either (Fight)."
  },
+ "72458854b806672c": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
  "724e8deca9f26c9b": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -7648,6 +7762,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” Same duration, condition and re-rolls."
+ },
+ "75a26ce82427b35a": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
  },
  "75ca10d32d1676b6": {
   "verdict": "ok",
@@ -8327,6 +8447,12 @@
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
  },
+ "80a243dc4bdf690b": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\",\"shooting\",\"fight\"],\"turn\":\"either\",\"turns\":{\"shooting\":\"your\"},\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
  "80a51828fa2da38a": {
   "verdict": "ok",
   "by": "review:tzeentch-data-b",
@@ -8362,6 +8488,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "WHEN: \"Any phase.\""
+ },
+ "8126f962efbc81ee": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\",\"movement\",\"shooting\",\"fight\"],\"turn\":\"either\",\"turns\":{\"movement\":\"opp\",\"shooting\":\"your\"},\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "8131e990fd5798e5": {
   "verdict": "ok",
@@ -9449,6 +9581,12 @@
   "at": "2026-10-23",
   "why": "Wahapedia datasheet (new codex): “Captain-General (Aura): Friendly ADEPTUS CUSTODES units … within 6\" of this model can …”; New Recruit prints “Captain-General (Aura)”. GW tags it Aura (22.01), so tag Aura is right."
  },
+ "90ea8eec4723ebc6": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\"],\"turn\":\"either\",\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
  "9108deafb0cbff00": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -9869,6 +10007,12 @@
   "at": "2026-10-26",
   "why": "Wahapedia: Lucius “1 model 130”, Flawless Blades “3 models 95”; the export: Lucius the Eternal 130, Flawless Blades 95 (3 models). 225 total."
  },
+ "97d8b0af3d5060d0": {
+  "verdict": "ok",
+  "by": "review:howto-3 (its fix)",
+  "at": "2026-10-29",
+  "why": "The judgement is right: the quote is in fluxmaster-pink-horrors's \"Split\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Split\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix."
+ },
  "980ff948d3a100d1": {
   "verdict": "ok",
   "by": "review:gists",
@@ -10186,6 +10330,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "New Recruit: “Tzaangor Enlightened*, *from combined unit”; Wahapedia Shaman keywords include MOUNTED, FLY, MUTANT."
+ },
+ "9beeb638dd6ac8f9": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
  },
  "9c62ea766ff9276a": {
   "verdict": "ok",
@@ -11435,6 +11585,12 @@
   "at": "2026-10-28",
   "why": "GW's EFFECT shortened (\"over it\" for \"over that objective marker\"), WHEN/TARGET kept, nothing added."
  },
+ "ae3d67e5a7464e45": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"movement\",\"fight\"],\"turn\":\"your\",\"turns\":{\"fight\":\"opp\"},\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
  "ae4ba2712c859010": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -11956,6 +12112,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Matches the NR options and profiles: Thump Gun; Big Chompa's Jaws; Gutrippa Hunter and Standard. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "b69ffa21dd77e64b": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\",\"fight\"],\"turn\":\"either\",\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "b6acbc1b3f60e8b2": {
   "verdict": "ok",
@@ -12718,6 +12880,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when … selected to shoot, if any of the following apply, that unit’s attacks can re-roll hit rolls of 1: That unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same alternative conditions, the same effect. Attacks made when selected to shoot are its ranged attacks."
+ },
+ "c39e95bb8b814e04": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"cpNote\":\"Into the Fray +1CP\"}: the same key and judgement as result-howto-2. EFFECT \"Into the Fray (+1CP)\"."
  },
  "c3acfee6233606e5": {
   "verdict": "ok",
@@ -14867,6 +15035,12 @@
   "at": "2026-10-24",
   "why": "Trajann 265 (Wahapedia 1 model 265); 3 Allarus 270 (1st-2nd unit bracket; Dread Host has 2 Allarus units, 270 and 180). Total 535 matches NR."
  },
+ "e49dd1300893e760": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
  "e4c004b9b108f7b0": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -15268,6 +15442,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "15.05 \"WHEN: Your Shooting phase.\""
+ },
+ "ea5ea8048664a89c": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"allies\":{\"Legiones Daemonica\":\"Daemonic Pact\"}}: Daemonic Pact: \"If every model from your army has the CHAOS KNIGHTS or HERETIC ASTARTES keyword, you can include LEGIONES DAEMONICA units\"."
  },
  "ea627b1a03ffb244": {
   "verdict": "ok",
@@ -15827,6 +16007,12 @@
   "at": "2026-10-17",
   "why": "Verbatim from the FAQ printed under Shadow in the Warp on Wahapedia’s Tyranids page: “Q:Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem? A: No. Insane Bravery can only be used in your Command phase.” It is attributed to Wahapedia and adds no conclusion of the app’s own."
  },
+ "f4bccf0906ed56c1": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"command\",\"shooting\",\"fight\"],\"turn\":\"either\",\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
  "f50ab0f7c2d0bd07": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -15838,6 +16024,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Single wording only when the unit has 1 model (starting strength 1: \"Below starting strength: model's remaining wounds are less than its W\"); attached units count all models so never take it. Used for Enraged Behemoths on the Tyranid monsters."
+ },
+ "f574fb4896c8105a": {
+  "verdict": "ok",
+  "by": "review:howto-3",
+  "at": "2026-10-29",
+  "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
  "f5803142822f4aa5": {
   "verdict": "ok",

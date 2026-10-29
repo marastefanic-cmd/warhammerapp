@@ -17,7 +17,7 @@
                      enhancements and stratagems from the Wahapedia faction page (verify/.cache/waha/<faction>.txt, the
                      codex as Wahapedia transcribes it); Force Dispositions from BSData (verify/dispositions.js)
      labels          phases, turn, needs, tags: verify/derive.js's fixed rules, on the words just written (never by hand);
-                     where derive.js cannot derive one, the label is left out and listed
+                     where derive.js cannot derive one, or its reading is not the signed-off one (verify/derive-unread.json), the label is left out and listed
      "+" marks       verify/bsdata.js + verify/write-grants.js (BSData's modifiers), as for every list
    and lists everything it could not fill mechanically (verify/out/from-json-<army>.md), each marked as what a person (or
    an AI, marked as such) still writes. A stratagem's gist is such a column: it is written AI-assisted and marked
@@ -1595,16 +1595,8 @@ const abAt = it => {
 for (const it of labels) {
   // (an ability of a datasheet row another list has: its labels are the row's, kept as they are)
   if ((it.kind === 'ability-timing' || it.kind === 'ability-tag') && reusedAbs.has(it.where.split(' · ').slice(1).join(' · ').replace(/ #\d+$/, ''))) continue;
-  // a timing label written by hand (verify/sources/hand/<army>.json units.<id>.labels: {} for none), where derive.js's reading is not the
-  // one the signed-off lists store (a reviewer's fix)
-  if (it.kind === 'ability-timing') {
-    const at = abAt(it), ov = at && (((HAND.units || {})[at.u.id] || {}).labels || {})[at.abName];
-    if (ov) {
-      if (Object.keys(ov).length) { const ti0 = d.indexOf(" text:'", at.ai), cand = [" note:'", " def:'"].map(x => d.indexOf(x, at.ai)).filter(x => x >= 0 && x < ti0), ti = cand.length ? Math.min(...cand) : ti0; d = d.slice(0, ti) + ' ' + litKV(ov) + ',' + d.slice(ti); }
-      handDone.push({ what: 'timing label of ' + at.u.name + ' · ' + at.abName + ': ' + JSON.stringify(ov), by: 'hand (Claude), a reviewer’s fix', text: 'derive.js: ' + JSON.stringify(it.derived || null) });
-      continue;
-    }
-  }
+  // a timing label comes from verify/derive.js only: where its reading is not the signed-off one (verify/derive-unread.json), no label
+  if (it.status === 'unread') { filled.push({ what: 'no timing label ' + it.where, from: 'not read by the program (verify/derive-unread.json): it reads ' + JSON.stringify(it.derived) }); continue; }
   // a stratagem's needs written by hand (verify/sources/hand/<army>.json gists.<id>.needs) where derive.js reads none from its TARGET
   // ("Your NECRONS WARLORD"; "TRIARCH PRAETORIANS", a keyword no unit of the lists has)
   if (it.kind === 'strat-needs' && (it.status === 'not-derivable' || it.derived == null)) {
@@ -1617,20 +1609,8 @@ for (const it of labels) {
     want(it.where, it.kind.replace('-', ' '), 'derive.js has no rule that gives it from the words: left out (no label)'); continue;
   }
   if (it.kind === 'ability-timing') {
-    // a Damaged band (New Recruit's "Damaged: 1-6 Wounds Remaining" too): no timing label, as every approved list stores it (its damaged chip
-    // and footnote show it)
-    if (/ · Damaged: [^·]* wounds remaining$/i.test(it.where.replace(/ #\d+$/, ''))) { filled.push({ what: 'no timing label ' + it.where, from: 'a Damaged band (stored without timing, as in the approved lists)' }); continue; }
-    // an always-on ability that protects the unit and names no phase (Feel No Pain, an InSv, +1 to save rolls, Lone Operative while …,
-    // "when an enemy unit targets this unit"): no timing label, as the signed-off lists store none (Kustom Force Field, Augury Uplink,
-    // Da Grand Warlord’s Ladz, the Repulsor Grid); its When targeted line (def) or stat column shows it
-    const DEFENSIVE = ['targeted', 'targeted-ranged', 'targeted-melee', 'lone-operative', 'overwatch'];
-    if ((it.reasons || []).length && it.reasons.every(r => r.part === 'used' && DEFENSIVE.includes(r.rule))) { filled.push({ what: 'no timing label ' + it.where, from: 'an always-on defensive ability naming no phase (verify/derive.js: ' + it.reasons.map(r => r.rule).join(', ') + ')' }); continue; }
-    // an ability that opens "Each time an enemy unit … targets this model" protects the unit (Reorder Reality), as does one opening "Each
-    // time a model makes an attack that targets this model" (Fulgrim's Beguiling Form): no timing label, its When targeted line shows it
-    // (the enemy's weapons it names are not this unit's attacks)
-    { const [, uN, ...r0] = it.where.split(' · '), an = r0[r0.length - 1].replace(/ #\d+$/, '');
-      const ab = ((D.armies.find(a => a.id === armyId).units.find(x => x.name === uN.replace(/ \[.*\]$/, '')) || {}).abilities || []).find(a => a.name === an);
-      if (ab && /^Each time (?:an enemy unit\b[^.]*|a model makes an attack that )\btargets this (?:model|unit)\b/i.test(bare(ab.text || ''))) { filled.push({ what: 'no timing label ' + it.where, from: 'its words open "Each time an enemy unit … targets this model": it protects the unit' }); continue; } }
+    // (a Damaged band, an always-on protection, a text opening "Each time an enemy unit … targets this model": verify/derive.js reads
+    // no label for them, label-damaged and label-no-defence)
     const o = lab(it.derived); if (!Object.keys(o).length) continue;
     const [, uName, ...rest] = it.where.split(' · '); const abName = rest[rest.length - 1].replace(/ #\d+$/, '');
     const u = D.armies.find(a => a.id === armyId).units.find(x => x.name === uName.replace(/ \[.*\]$/, '') && (!/\[/.test(uName) || x.id === /\[(.*)\]/.exec(uName)[1]));
@@ -1671,19 +1651,11 @@ for (const it of labels) {
     if (it.kind === 'strat-timing') { const o = it.derived; const ins = ' phases:' + lit(o.ph) + ', turn:' + lit(o.turn) + (o.turns ? ', turns:' + lit(o.turns) : '') + ','; const ci = d.indexOf(',', d.indexOf('cp:', si)); d = d.slice(0, ci + 1) + ins + d.slice(ci + 1); }
     else { const ci = d.indexOf(" when:'", si); d = d.slice(0, ci) + ' needs:' + lit(it.derived) + ',' + d.slice(ci); }
     filled.push({ what: 'label ' + it.where + ' ' + it.kind + ': ' + JSON.stringify(it.derived), from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') });
-  } else if (it.kind === 'rule-timing' && (it.reasons || []).length && it.reasons.every(r => r.part === 'used' && ['targeted', 'targeted-ranged', 'targeted-melee', 'lone-operative', 'overwatch'].includes(r.rule))) {
-    // an always-on rule that protects units and names no phase (Soul Forge Boons: keywords and a 5+ invulnerable save): no timing
-    // label, as for such abilities (the signed-off lists store none: Aegis of the Emperor)
-    filled.push({ what: 'no timing label ' + it.where, from: 'an always-on defensive rule naming no phase (verify/derive.js: ' + it.reasons.map(r => r.rule).join(', ') + ')' });
   } else if (it.kind === 'rule-timing' || it.kind === 'rule-needs') {
     const rName = it.where.split(' · ').pop().replace(/^.* rule · /, '');
     const ri = d.indexOf("{ name:" + lit(rName) + ",", d.indexOf("const FACTIONS = {"));
     if (ri < 0) continue;
-    // (a detachment rule's timing label written by hand, verify/sources/hand/<army>.json rules.<detachment id>.label, where derive.js's
-    // reading is not the rule's: Fates in Flux's Flux tokens are spent after rolls in any phase)
-    const hl = it.kind === 'rule-timing' && Object.entries(HAND.rules || {}).find(([k, v]) => v.label && facSrc.detachments[k.split('/')[0]] && lc((k.includes('/') ? k.split('/').slice(1).join('/') : (facSrc.detachments[k].rule || {}).name)) === lc(rName));
-    if (hl) handDone.push({ what: 'timing label of ' + rName + ': ' + JSON.stringify(hl[1].label), by: hl[1].by || 'hand (Claude)', text: (hl[1].why || '') + ' (derive.js: ' + JSON.stringify(it.derived || null) + ')' });
-    const ins = it.kind === 'rule-timing' ? litKV(lab(hl ? hl[1].label : it.derived)) : 'needs:' + lit(it.derived);
+    const ins = it.kind === 'rule-timing' ? litKV(lab(it.derived)) : 'needs:' + lit(it.derived);
     if (!ins) continue;
     const after = ri + 7 + lit(rName).length;   // just after "{ name:'…'"
     d = d.slice(0, after) + ', ' + ins + d.slice(after);

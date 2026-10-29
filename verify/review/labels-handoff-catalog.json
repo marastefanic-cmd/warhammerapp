@@ -1,0 +1,15 @@
+{
+ "for": "the catalog builder (wt-catalog: Adeptus Custodes rows), from wt-labels",
+ "what": "Timing labels (ph, turn, turns, at) come from verify/derive.js only: the gate step derive fails on a stored label it does not give (HAND LABEL) and on a reading a row lacks that verify/derive-unread.json does not list (MISSING). Write no label by hand; write what derive() gives (verify/from-json.js does), or nothing where it gives none.",
+ "context": [
+  "derive() reads every army and detachment rule with { core, rule:true, table:r.table, label:true, option } and every ability with { core, label:true, self, option, abilities, armyAbility, weapons, named }. option(n) finds a RULE_OPTIONS row of the same faction by option name (case-insensitive), so label-favoured and label-named-option work for any faction whose rules are in data.js.",
+  "Anything that calls timing() itself (not through derive()) must pass the same context, or label-favoured / label-named-option / label-section are not read.",
+  "label-favoured needs the Favoured ka’tah lines as data.js writes them for Dread Host: \"**Favoured ka’tah: SALVUS**\\n**Additional Effect:** …\" (bold closed on the ka’tah line; the Additional Effect on the next line, any \"- \" lines under it), and Martial Ka’tah's RULE_OPTIONS rows (node verify/tables.js --write after adding rows)."
+ ],
+ "expected": {
+  "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians": { "ph":["shooting"], "turn":"your", "why":"label-no-defence (the protection is its When targeted line) + label-favoured (Salvus: your Shooting phase, when selected to shoot; no Fire Overwatch)" },
+  "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells": { "ph":["fight"], "turn":"either", "why":"label-no-defence + label-favoured (Kaptaris: start of the Fight phase)" },
+  "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood": { "ph":null, "needs":{ "all":["Faction: Anathema Psykana"] }, "why":"no timing label (its only phase is in the ability it grants, Creeping Dread); needs: the mustering and BATTLELINE-only lines are army building (needs rule mustering)" }
+ },
+ "check": "node verify/derive.js after the import: 0 HAND LABEL, 0 MISSING, 0 STALE; a reading that is not the reviewed label is recorded with node verify/derive.js --unread (no label shown) and listed for review"
+}

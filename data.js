@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-28.2';
+const VERSION = '2026-10-29.1';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -165,12 +165,12 @@ const CORE_STRATAGEMS = [
     effect:'You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).',
     // the Damage tab's reading (read by it alone): one Hit, Wound or Damage roll of the unit's attacks re-rolled, once in the phase (15.01:
     // the same stratagem not more than once in the same phase)
-    calcMods:[{ kind:'all', when:'Just after a hit, wound or damage roll of these attacks; once in the phase (15.01)', note:'re-roll one hit roll, one wound roll or one damage roll', calc:{ oneAny:1, phase:true } }] },
+    calcMods:[{ kind:'all', when:'Just after a hit, wound or damage roll of these attacks; once in the phase (15.01)', note:'re-roll one hit roll, one wound roll or one damage roll', calc:{ oneAny:1, phase:true } }], readOf:'377ce33f' },
   { id:'epic-challenge', gist:'One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.', gistOf:'59bef664', name:'Epic Challenge', cp:1, phases:['fight'], turn:'either', needs:{ all:['Character'] },
     when:'Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.',
     target:'That **CHARACTER** unit.',
     effect:'Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability.' },
-  { id:'insane-bravery', gist:'The battle-shock roll you are about to make for your unit is automatically successful.', gistOf:'02ffa2fd', note:'Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle',
+  { id:'insane-bravery', gist:'The battle-shock roll you are about to make for your unit is automatically successful.', gistOf:'02ffa2fd', note:'Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle', readOf:'02ffa2fd',
     when:'Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.',
     target:'That unit.',
     effect:'That **battle-shock roll** is automatically successful.',
@@ -337,7 +337,7 @@ const FACTIONS = {
       // Shoota Boyz and Wreckas: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack)
       'shoota-boyz': {
         name:'Shoota Boyz', dispositions:['Purge the Foe'], dp:1,
-        rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp' }, needs:{ all:['Faction: Orks','Infantry'] },
+        rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Orks','Infantry'] },
           mod:{ kind:'ranged', when:'Riled up', cond:'riled', note:'+3" range' }, readOf:'48632a72',
           text:'Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3" **R**.' },
         enhancements:[
@@ -971,7 +971,7 @@ const FACTIONS = {
       // Synaptic Nexus: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js tyranids); no gists, readings or When targeted lines yet (aiStatus)
       'synaptic-nexus': {
         name:'Synaptic Nexus', dispositions:['Disruption'], dp:2, aiStatus:'not-read',
-        rule:{ name:'Synaptic Imperatives', at:'Start of the battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, needs:{ all:['Faction: Tyranids'] }, text:'At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a **TYRANIDS** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n- **Synaptic Augmentation:** While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n- **Surging Vitality:** While this unit is within Synapse Range of your army, add 1 to **Advance** and **Charge rolls** made for this unit.\n- **Goaded to Slaughter:** While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the **Hit roll**.' },
+        rule:{ name:'Synaptic Imperatives', at:'Start of the battle round', ph:['command'], turn:'either', needs:{ all:['Faction: Tyranids'] }, text:'At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a **TYRANIDS** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n- **Synaptic Augmentation:** While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n- **Surging Vitality:** While this unit is within Synapse Range of your army, add 1 to **Advance** and **Charge rolls** made for this unit.\n- **Goaded to Slaughter:** While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the **Hit roll**.' },
         enhancements:[
           { name:'Power of the Hive Mind', pts:10, text:'**TYRANIDS PSYKER** model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1.' },
           { name:'Psychostatic Disruption', pts:30, text:'**TYRANIDS SYNAPSE** model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from **Strategic Reserves**, the bearer can use this Enhancement. If it does, roll one D6: on a 4+, that enemy unit cannot arrive on the battlefield this turn.' },
@@ -1031,7 +1031,7 @@ const FACTIONS = {
       // Warrior Bioform Onslaught: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js tyranids); no gists, readings or When targeted lines yet (aiStatus)
       'warrior-bioform-onslaught': {
         name:'Warrior Bioform Onslaught', dispositions:['Take and Hold'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Leader-beasts', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, needs:{ any:['Tyranid Warriors With Ranged Bio-Weapons','Tyranid Warriors With Melee Bio-Weapons','Tyranid Warriors','Tyranid Prime With Lash Whip','Winged Tyranid Prime'] }, text:'- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n- **TYRANID WARRIORS**.\n- **BATTLELINE**.\n- **TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**.' },
+        rule:{ name:'Leader-beasts', needs:{ any:['Tyranid Warriors With Ranged Bio-Weapons','Tyranid Warriors With Melee Bio-Weapons','Tyranid Warriors','Tyranid Prime With Lash Whip','Winged Tyranid Prime'] }, text:'- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n- **TYRANID WARRIORS**.\n- **BATTLELINE**.\n- **TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**.' },
         enhancements:[
           { name:'Elevated Might', pts:30, text:'**WINGED TYRANID PRIME**/**TYRANID PRIME WITH LASH WHIP** model only. This model’s melee attacks:\n- Can re-roll **wound rolls**.\n- Have +1 **AP**.' },
           { name:'Ocular Adaptation', pts:20, text:'**WINGED TYRANID PRIME**/**TYRANID PRIME WITH LASH WHIP** model only. This unit’s melee attacks have +1 to **hit rolls**.' }
@@ -1121,7 +1121,7 @@ const FACTIONS = {
         // statNote: the +1 OC under the unit's stats, as New Recruit's OC does not include it (one line for every profile:
         // no {OC+1} value, a unit can have two OC values)
         rule:{ name:'Cyber-psalm Programming', needs:{ all:['Legio Cybernetica'] },
-          statNote:{ text:'OC +1 for each model unless Battle-shocked, not in the OC above' },
+          statNote:{ text:'OC +1 for each model unless Battle-shocked, not in the OC above' }, readOf:'2ec3bc70',
           text:'Add 2" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit.' },
         // pts from Wahapedia, matching BSData
         enhancements:[
@@ -1220,7 +1220,7 @@ const FACTIONS = {
     // army rules: Wahapedia, Emperor’s Children, Army Rules (the Faction Pack 1.3 prints no army rule and its Rules Updates change none)
     armyRules: [
       // Wahapedia prints “another units charge” (no apostrophe); New Recruit prints “another unit's charge”
-      { name:'Thrill Seekers', ph:['shooting','charge'], turn:'your',
+      { name:'Thrill Seekers', ph:['movement','shooting','charge'], turn:'your',
         text:'If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within **Engagement Range** of at the start of the turn.\n- It cannot target a unit that was the target of another units charge or attack this phase.' },
       { name:'Pact of Excess',
         text:'When mustering your army, unless specifically stated otherwise, you cannot select **LEGIONS OF EXCESS** as your Army Faction.' }
@@ -1366,8 +1366,8 @@ const FACTIONS = {
       // (Animalistic Rage's When, Harrying Hounds' Target), which Wahapedia's text already has
       'houndpack-lance': {
         name:'Houndpack Lance', dispositions:['Reconnaissance'], dp:2,
-        // ph/turn: the unit is selected at the start of your Command phase; the attack bonus is the footnote of every WAR DOG unit
-        rule:{ name:'Marked Prey', ph:['command'], turn:'your', needs:{ all:['War Dog'] },
+        // the attack bonus is also the footnote of every WAR DOG unit
+        rule:{ name:'Marked Prey', ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' }, needs:{ all:['War Dog'] },
           mod:{ kind:'all', lasts:'round', when:'Target is the unit selected at the start of your Command phase, visible to the attacking model', note:'[SUSTAINED HITS 1]' }, readOf:'14b1ad41',
           text:'At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**.' },
         enhancements:[
@@ -1635,7 +1635,7 @@ const FACTIONS = {
       // Null Maiden Vigil: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js adeptus-custodes); no gists, readings or When targeted lines yet (aiStatus)
       'null-maiden-vigil': {
         name:'Null Maiden Vigil', dispositions:['Disruption'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Silent Sisterhood', ph:['command'], turn:'opp', needs:{ all:['Faction: Anathema Psykana','Character'] }, text:'- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**.' },
+        rule:{ name:'Silent Sisterhood', needs:{ all:['Faction: Anathema Psykana'] }, text:'- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**.' },
         enhancements:[
           { name:'Oblivion Knight', pts:15, text:'**ANATHEMA PSYKANA** model only. This unit’s attacks have:\n- +1 to **hit rolls**.\n- Or: If this unit targets a **PSYKER**/**battle-shocked** unit, +1 to **hit rolls** and **wound rolls**.' },
           { name:'Huntress’ Eye', pts:10, text:'**ANATHEMA PSYKANA** model only. In your Movement phase, you can select one **visible** enemy unit within 12" of this unit. That unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**.' }
@@ -1682,7 +1682,7 @@ const FACTIONS = {
       // Aquilan Shield: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js adeptus-custodes); no gists, readings or When targeted lines yet (aiStatus)
       'aquilan-shield': {
         name:'Aquilan Shield', dispositions:['Take and Hold'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Gilded Guardians', ph:['movement','shooting','fight'], turn:'either', needs:{ all:['Faction: Adeptus Custodes'], none:['Vehicle'] }, text:'While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, ranged attacks that target that unit with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: SALVUS**\n**Additional Effect:** Your unit’s ranged attacks have +6" **R**.' },
+        rule:{ name:'Gilded Guardians', ph:['shooting'], turn:'your', needs:{ all:['Faction: Adeptus Custodes'], none:['Vehicle'] }, text:'While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, ranged attacks that target that unit with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: SALVUS**\n**Additional Effect:** Your unit’s ranged attacks have +6" **R**.' },
         enhancements:[
           { name:'Not a Shell Wasted', pts:10, text:'**ADEPTUS CUSTODES INFANTRY** model only. This unit’s ranged attacks have +1 **A**.' },
           { name:'Pareldor’s Caducatrix', pts:30, text:'**ADEPTUS CUSTODES** model only. (Once per battle, per army) At the start of any phase, this model **heals** D3+3 wounds.' }
@@ -1696,7 +1696,7 @@ const FACTIONS = {
       // Emissaries Imperatus: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js adeptus-custodes); no gists, readings or When targeted lines yet (aiStatus)
       'emissaries-imperatus': {
         name:'Emissaries Imperatus', dispositions:['Priority Assets'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Heralds of the Throne', ph:['movement','fight'], turn:'either', turns:{ movement:'your' }, needs:{ all:['Faction: Adeptus Custodes'] }, text:'Friendly **ADEPTUS CUSTODES** units have **Fights First**.\n**Favoured Ka’tah: CONSERVAI**\n**Additional Effect:** Until the end of the turn, being selected to make an **advance**/**fall-back move** does not prevent your unit from being **eligible to start an action**.' },
+        rule:{ name:'Heralds of the Throne', ph:['command','fight'], turn:'either', turns:{ command:'your' }, needs:{ all:['Faction: Adeptus Custodes'] }, text:'Friendly **ADEPTUS CUSTODES** units have **Fights First**.\n**Favoured Ka’tah: CONSERVAI**\n**Additional Effect:** Until the end of the turn, being selected to make an **advance**/**fall-back move** does not prevent your unit from being **eligible to start an action**.' },
         enhancements:[
           { name:'Edge of the Blade', pts:15, text:'Adeptus Custodes model only. If this unit made a **charge move** this turn, this model’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
           { name:'Auriferous Orb', pts:20, text:'**ADEPTUS CUSTODES** model only. This model has the following weapon:\nAuriferous Orb: 12" A3 BS2+ S1 AP0 D1 [ANTI-non-MONSTER/VEHICLE 2+, BLINDING LIGHT, DEVASTATING WOUNDS]\n**[BLINDING LIGHT]**: In your Shooting phase, when this unit has shot, select one enemy unit hit by this unit’s Auriferous Orb weapon. That enemy unit’s attacks have -1 to hit rolls until the start of your next turn.' }
@@ -1710,7 +1710,7 @@ const FACTIONS = {
       // Shadowkeepers: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js adeptus-custodes); no gists, readings or When targeted lines yet (aiStatus)
       'shadowkeepers': {
         name:'Shadowkeepers', nr:'Shadow Keepers', dispositions:['Purge the Foe'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Wardens of the Dark Cells', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, needs:{ all:['Faction: Adeptus Custodes'], none:['Vehicle'] }, text:'While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, melee attacks that target that unit with a S greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: KAPTARIS**\n**Additional Effect:** You can select one enemy unit **engaged** with your unit. That enemy unit must make a **battle-shock roll**, with -1 to that **battle-shock roll**. You cannot select the same enemy unit for this effect more than once per phase.' },
+        rule:{ name:'Wardens of the Dark Cells', ph:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Custodes'], none:['Vehicle'] }, text:'While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, melee attacks that target that unit with a S greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: KAPTARIS**\n**Additional Effect:** You can select one enemy unit **engaged** with your unit. That enemy unit must make a **battle-shock roll**, with -1 to that **battle-shock roll**. You cannot select the same enemy unit for this effect more than once per phase.' },
         enhancements:[
           { name:'Unstoppable Destroyer', pts:25, text:'**ADEPTUS CUSTODES INFANTRY** model only. When this unit is selected to make a **pile-in**/**consolidation move**:\n- This unit can move up to 4".\n- You can select any **consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving **restrictions**.' },
           { name:'Genalchemic Warding', pts:30, text:'**ADEPTUS CUSTODES** model only. This model has **Feel No Pain 5+**.' }
@@ -1897,7 +1897,7 @@ const FACTIONS = {
         name:'Legion of Excess', dispositions:['Priority Assets'], dp:2, aiStatus:'not-read',
         rule:{ name:'Beguiling Aura', ph:['movement','charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army are eligible to declare a charge in a turn in which they Fell Back.' },
         moreRules:[
-          { name:'Seductive Gambit', ph:['shooting','charge','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:\n**Seductive Gambit:** Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.' }
+          { name:'Seductive Gambit', needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:\n**Seductive Gambit:** Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.' }
         ],
         enhancements:[
           { name:'False Majesty (Aura)', pts:30, text:'**LEGIONES DAEMONICA SLAANESH** model only. While a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTERS**) is within 6" of the bearer, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.' },
@@ -1938,7 +1938,7 @@ const FACTIONS = {
         name:'Shadow Legion', dispositions:['Purge the Foe'], dp:2, aiStatus:'not-read',
         rule:{ name:'Thralls of the First Prince', needs:{ any:['Be\'lakor','Faction: Heretic Astartes','Faction: Legiones Daemonica'] }, text:'When mustering your army, you cannot include any **DAEMON PRINCE**, **DAEMON PRINCE WITH WINGS** or **EPIC HERO** units (excluding **BE’LAKOR**), but you can include the following **HERETIC ASTARTES** units:\n- **CHAOS LORD**\n- **CHAOS LORD IN TERMINATOR ARMOUR**\n- **CHAOS LORD WITH JUMP PACK**\n- **CHAOS TERMINATOR SQUAD**\n- **CHOSEN**\n- **DAMNED** units\n- **DARK APOSTLE**\n- **HAVOCS**\n- **LEGIONARIES**\n- **MASTER OF POSSESSION**\n- **POSSESSED**\n- **RAPTORS**\n- **SORCERER**\n- **SORCERER IN TERMINATOR ARMOUR**\n- **WARP TALONS**\nThe combined points value of such units depends on your battle size, as shown below.\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nKEYWORDS\n**BE’LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.\n**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword.\nIf your Army Faction is **LEGIONES DAEMONICA**, you can use this Shadow Legion Detachment rule.' },
         moreRules:[
-          { name:'First Prince of Chaos', ph:['movement','shooting','charge','fight'], turn:'either', turns:{ movement:'your', charge:'your' }, text:'Units from your army have the relevant abilities presented below.\nMURDERER’S COWL\n**SHADOW LEGION KHORNE** units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.\nPENUMBRAL PUPPETRY\n**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the **Hit roll**.\nGLOAM ROT\n**SHADOW LEGION NURGLE** units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the **Wound roll**.\nSHADOW’S CARESS\n**SHADOW LEGION SLAANESH** units only. Enemy units cannot target this unit with **snap shooting** attacks.\nDISCIPLES OF BE’LAKOR\n**SHADOW LEGION UNDIVIDED** units only.\n- This unit has the **Dark Pacts** army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not **HERETIC ASTARTES**. If this unit is **BE’LAKOR**, it automatically passes the **Leadership test** required for Dark Pacts.\n- **SHADOW LEGION HERETIC ASTARTES** models in this unit have the **Deep Strike** ability.' }
+          { name:'First Prince of Chaos', ph:['movement','shooting','charge'], turn:'your', text:'Units from your army have the relevant abilities presented below.\nMURDERER’S COWL\n**SHADOW LEGION KHORNE** units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.\nPENUMBRAL PUPPETRY\n**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the **Hit roll**.\nGLOAM ROT\n**SHADOW LEGION NURGLE** units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the **Wound roll**.\nSHADOW’S CARESS\n**SHADOW LEGION SLAANESH** units only. Enemy units cannot target this unit with **snap shooting** attacks.\nDISCIPLES OF BE’LAKOR\n**SHADOW LEGION UNDIVIDED** units only.\n- This unit has the **Dark Pacts** army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not **HERETIC ASTARTES**. If this unit is **BE’LAKOR**, it automatically passes the **Leadership test** required for Dark Pacts.\n- **SHADOW LEGION HERETIC ASTARTES** models in this unit have the **Deep Strike** ability.' }
         ],
         enhancements:[
           { name:'Leaping Shadows', pts:25, text:'**SHADOW LEGION** model only. Models in the bearer’s unit have the **Scouts 9"** ability.' },
@@ -6582,7 +6582,7 @@ const DATASHEETS = {
     { name:'sweep', group:'Shearing claws', range:'Melee', A:'10', WS:'3+', S:'6', AP:'-2', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
+    { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
     // every source ends the text with a stray closing quote mark (’); the app leaves it out
     { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp', text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
     { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' }
@@ -8456,9 +8456,8 @@ const DATASHEETS = {
     { name:'sweep', group:'Rod of the War Forge', range:'Melee', A:'12', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
   ],
   abilities:[
-    // the three abilities Rod of the War Forge selects from: shooting and declaring a charge after an Advance or a
-    // Fall Back (your Shooting and Charge phases), and both Imperatives (attacks in either player's Fight phase too)
-    { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'either', turns:{ command:'your', movement:'opp', charge:'your' }, note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”', text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
+    // the three abilities Rod of the War Forge selects from (its phase tags: Rod of the War Forge's and the three options', label-section)
+    { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'your', note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”', turns:{ movement:'either', fight:'either' }, text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
     { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.', defOf:'a15f3d7e' },
     { name:'Secutor of Olympus', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.' },
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your Warlord.' },
@@ -13663,7 +13662,7 @@ const CHECKLIST = {
   "a|1ihdtx":{"x":1},
   "a|1ik9pa":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Protocol","u":"shooting:your"},{"n":"Conqueror Protocol","u":"fight:either"},{"n":"Aegis Protocol"}]},
   "a|1ilhdau":{"u":"shooting:your,fight:either","a":1},
-  "a|1j6lbpi":{"u":"shooting:opp,fight:either"},
+  "a|1j6lbpi":{"u":"shooting:opp"},
   "a|1j8sgg6":{"t":"command:either"},
   "a|1j9160m":{"t":"command:your","s":1},
   "a|1jln2xs":{"u":"shooting:your"},
@@ -13960,7 +13959,7 @@ const CHECKLIST = {
   "r|adeptus-custodes|Companion’s Watch":{"u":"shooting:your,fight:either"},
   "r|adeptus-custodes|Daughters of the Abyss":{"u":"shooting:opp,fight:either","o":[{"n":"Psychic Null (Aura)","u":"shooting:opp,fight:either"}],"g":[{"name":"Feel No Pain 5+ against psychic attacks","to":{"all":["Faction: Adeptus Custodes"]},"opt":"Psychic Null (Aura)","while":"Psychic Null (Aura) active"},{"name":"Psychic Null (Aura)","to":{"all":["Faction: Anathema Psykana"]}}]},
   "r|adeptus-custodes|Flare Shields":{"u":"shooting:opp"},
-  "r|adeptus-custodes|Gilded Guardians":{"u":"shooting:opp,fight:either","o":[{"n":"Additional Effect","u":"shooting:your"}]},
+  "r|adeptus-custodes|Gilded Guardians":{"u":"shooting:opp","o":[{"n":"Additional Effect","u":"shooting:your"}]},
   "r|adeptus-custodes|Heralds of the Throne":{"u":"fight:either","o":[{"n":"Additional Effect","u":"movement:your"}],"g":[{"name":"Fights First","to":{"all":["Faction: Adeptus Custodes"]}}]},
   "r|adeptus-custodes|Instruments of the Emperor’s Wrath":{"u":"charge:either","o":[{"n":"Additional Effect","u":"fight:either","a":1}]},
   "r|adeptus-custodes|Magna Imperator":{"u":"shooting:your,fight:either","o":[{"n":"Additional Effect","x":1}]},
@@ -13970,7 +13969,7 @@ const CHECKLIST = {
   "r|adeptus-custodes|On Gilded Wings":{"t":"fight:opp","s":1},
   "r|adeptus-custodes|Silent Sisterhood":{"x":1,"o":[{"n":"Creeping Dread (Aura)","t":"command:opp","s":1}],"g":[{"name":"Creeping Dread (Aura)","to":{"all":["Faction: Anathema Psykana"]}}]},
   "r|adeptus-custodes|Talon Sortie":{"u":"movement:your","o":[{"n":"Additional Effect","u":"movement:your"}]},
-  "r|adeptus-custodes|Wardens of the Dark Cells":{"u":"shooting:opp,fight:either","o":[{"n":"Additional Effect","x":1}]},
+  "r|adeptus-custodes|Wardens of the Dark Cells":{"u":"fight:either","o":[{"n":"Additional Effect","x":1}]},
   "r|adeptus-mechanicus|Cyber-psalm Programming":{"u":"movement:your"},
   "r|adeptus-mechanicus|Doctrina Imperatives":{"at":"Start of the battle round","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Imperative","row":"Protector Imperative","u":"shooting:your,fight:either"},{"n":"Conqueror Imperative","row":"Conqueror Imperative","u":"shooting:your,fight:either"}]},
   "r|adeptus-mechanicus|Murderous Imperative":{"u":"shooting:your,fight:either"},
@@ -14230,7 +14229,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','damaged','embarked','na','ph','turn','turns','note','def','text','riled','defOf','readOf']
+  abilities:['name','who','tag','at','damaged','embarked','na','ph','turn','note','def','turns','text','riled','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

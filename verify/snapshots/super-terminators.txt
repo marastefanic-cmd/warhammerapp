@@ -1064,7 +1064,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Blood Offering
+1CP Blood Offering AI
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 MODIFIERS · NONE
 Hit roll
@@ -1331,13 +1331,13 @@ NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Blood Offering
+1CP Blood Offering AI
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Skulls for the Skull Throne!
+1CP Skulls for the Skull Throne! AI
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1602,7 +1602,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Blood Offering
+1CP Blood Offering AI
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 MODIFIERS · NONE
 Hit roll
@@ -1730,11 +1730,11 @@ NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Blood Offering
+1CP Blood Offering AI
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Skulls for the Skull Throne!
+1CP Skulls for the Skull Throne! AI
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1768,31 +1768,37 @@ BERZERKER WARBAND
 6
 1
 CP
+AI
 Hack and Slash
 Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 Fight Any unit
 2
 CP
+AI
 Frenzied Resilience
 Until the end of the phase, -1 Damage to each attack allocated to a model in your unit.
 Fight Any unit
 1
 CP
+AI
 Skulls for the Skull Throne!
 Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 Fight Any unit
 1
 CP
+AI
 Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 Any phase Any unit
 1
 CP
+AI
 Apoplectic Frenzy
 Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.
 Your Movement No unit in this list can use it (needs BERZERKERS)
 1
 CP
+AI
 Berzerker’s Wrath
 Your unit’s surge move is up to 8" instead of a D6 roll.
 Their Shooting No unit in this list can use it (needs BERZERKERS)
@@ -1800,16 +1806,19 @@ BUTCHERS OF KHORNE
 3
 2
 CP
+AI
 Wrath Beyond Reason
 Ranged attacks that target your unit have -1 D until that enemy unit has attacked.
 Their Shooting Chaos Terminators ×3
 1
 CP
+AI
 Focused Ferocity
 Your unit’s melee attacks have +1 A.
 Fight Chaos Terminators ×3
 1
 CP
+AI
 A Trophy for the Throne
 Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls.
 Fight Chaos Terminators ×3
@@ -1817,51 +1826,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement All but Angron, Eightbound
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Goremongers, Jakhals
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Angron, Forgefiend ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Angron
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

@@ -1435,7 +1435,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Explosives
+1CP Explosives AI
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
 Hit roll
@@ -1648,9 +1648,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -1894,7 +1894,7 @@ NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Explosives
+1CP Explosives AI
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 MODIFIERS · NONE
 Hit roll
@@ -1983,9 +1983,9 @@ NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-1CP Epic Challenge
+1CP Epic Challenge AI
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
+2CP Counteroffensive AI
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 MODIFIERS · NONE
 Hit roll
@@ -2019,16 +2019,19 @@ BULLY BOYZ
 3
 1
 CP
+AI
 Armed to da Teef
 Your unit’s attacks can re-roll hit rolls of 1, or re-roll hit rolls if your unit is riled up.
 Your Shoot · Fight Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz
 1
 CP
+AI
 Hulking Brutes
 Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do.
 Their Shooting · Or: +1CP Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz
 1
 CP
+AI
 Too Arrogant to Die
 An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
 Fight Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz
@@ -2036,16 +2039,19 @@ RUNT SWARM
 3
 1
 CP
+AI
 Scarper!
 An enemy unit ends a move within 8" of your unengaged unit: your unit can make a normal move of up to D6", or up to 6" if it is an attached unit.
 Their Movement Zodgrod Wortsnagga + Runtherd + Gretchin, Gretchin ×2
 1
 CP
+AI
 Grot Shields
 An enemy unit targets an ORKS INFANTRY unit (excluding GRETCHIN units) within 3" of your GRETCHIN unit: if a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.
 Their Shooting Zodgrod Wortsnagga + Runtherd + Gretchin, Gretchin ×2
 2
 CP
+AI
 Infested War Zone
 After an enemy unit has attacked: add a new GRETCHIN unit identical to your just-destroyed unit to your army, in strategic reserves, at its starting strength.
 Any phase Zodgrod Wortsnagga + Runtherd + Gretchin, Gretchin ×2
@@ -2053,51 +2059,61 @@ CORE STRATAGEMS
 10
 1
 CP
+AI
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
 Your Command · Once per battle Any unit
 1
 CP
+AI
 Rapid Ingress
 Your unit in strategic reserves makes an ingress move (not in the first battle round).
 End of their Movement Any unit
 1
 CP
+AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
+AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Ghazghkull Thraka, Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz, Deffkoptas
 1
 CP
+AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 Your Charge Mozrog Skragbad, Beastboss on Squigosaur, Big Mek Dakkarig ×2
 1
 CP
+AI
 Heroic Intervention
 Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
+AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 Fight Ghazghkull Thraka, Mozrog Skragbad, Nazdreg + Meganobz, Zodgrod Wortsnagga + Runtherd + Gretchin, Beastboss on Squigosaur, Big Mek Dakkarig ×2, Warboss in Mega Armour + Meganobz
 2
 CP
+AI
 Counteroffensive
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 Their Fight Any unit
 1
 CP
+AI
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
+AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
 Start of their Shooting No unit in this list can use it (needs SMOKE)

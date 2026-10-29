@@ -1,0 +1,577 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "label rules (LABEL_RULES, LABEL_SENTENCE, namedWeapons, OWN_TARGET)",
+  "judgement": {
+   "code": "// what a label leaves out (a label is the phase tags on an ability or rule row; the checklist and RULE_OPTIONS read table 1 without these)\nconst LABEL_RULES = [\n  { id:'label-damaged', why:'a Damaged band (\"While this model has 1-N wounds remaining, …\"): shown by its damaged chip and footnote; its label is only a phase its words name (\"… only one of the C\\'tan Powers weapons in your Shooting phase\"), else none' },\n  { id:'label-own-target', why:'\"makes a ranged attack that targets X\" / \"ranged attacks that target X\" (the closest eligible target, a unit on an objective): a bonus for the targets the unit picks in its own Shooting phase; not added for Fire Overwatch, whose target is the enemy unit that just moved' },\n  { id:'label-named-weapons', why:'a weapon ability given to weapons the unit\\'s datasheet names (\"its hellforged weapons have the [DEVASTATING WOUNDS] ability\", \"its Dark Blessing has the [SUSTAINED HITS D3] ability\"): the phase of those weapons, your Shooting phase for ranged ones, the Fight phase for melee ones (not \"weapons have\": both)' },\n  { id:'label-those-attacks', why:'\"Each time this model is selected to shoot or fight, you can re-roll one Hit roll … when resolving those attacks\": the attacks of that activation, your Shooting phase and the Fight phase; not added for Fire Overwatch' },\n  { id:'label-options', why:'the options of a rule or ability: written in its own lines (\"**Name:** effect\", a bullet \"**Name**\" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not \"**Additional Effect:**\", which is no choice); set out as a table or under headings of their own, each row\\'s phases are added (from its own WHEN, else the item\\'s trigger: Martial Ka\\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\\'s ranged attacks when it lasts \"until the start of your next Command phase\" (Kindred Sorcery); not a table of abilities the units \"gain\" (Doctrina Imperatives, Harbingers of Dread: each unit\\'s sheet has them). A detachment\\'s KEYWORDS section is left out (army building)' },\n  { id:'label-assault', why:'[ASSAULT] given to ranged attacks or weapons: they shoot after an Advance move, your Movement phase too' },\n  { id:'label-at-choice', why:'\"At the start of your Command phase\" is shown as the moment only for a rule with options chosen then (Martial Ka\\'tah, Combat Doctrines)' },\n  { id:'label-select-ability', why:'\"select one Throttlerokkit Shokka Engine ability\": the phases of the unit\\'s abilities of that kind (whose name ends as it does: \"… Engine\")' },\n  { id:'label-no-defence', why:'a protection (a save, Feel No Pain, -1 to wound against it, Lone Operative; a text opening \"Each time / When an enemy unit … targets this model\"): shown by its When targeted line, not by phase tags; an item that only protects has no label. Not a protection that is an option to select (\"- Select one objective marker …\": Singular Purpose) or that an enemy unit selected to shoot or fight triggers (Warpmeld Sacrifice)' },\n];\n// the unit's weapons a clause gives a weapon ability to (\"… have the [X] ability\", \"… has [X]\"), by profile name or group (W: { ranged, melee }\n// as lists of names, lower case); null when it names none\nfunction namedWeapons(s, W){\n  if(!/\\b(?:has|have)\\s+(?:the\\s+)?\\*{0,2}\\[|\\b(?:has|have) that ability\\b/i.test(s)) return null;\n  const lc = plain(s).toLowerCase(), out = {};\n  const hit = n => { const b = plain(n).toLowerCase().replace(/\\s+weapons?$/, '').trim(); if(b.length < 4) return false;\n    return new RegExp('(?:^|[^a-z])' + b.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '(?:s|es)?(?: weapons?)?(?![a-z])').test(lc); };\n  for(const k of ['ranged', 'melee']) for(const n of W[k] || []) if(hit(n)){ out[k] = true; out.match = (out.match ? out.match + ', ' : '') + k + ' ' + n; }\n  return out.match ? out : null;\n}\nconst OWN_TARGET = /\\bmakes? a ranged attack that targets\\b(?! (?:this|that) (?:unit|model)\\b| it\\b| the bearer\\b)|\\branged attacks that target\\b(?! (?:this|that) (?:unit|model)\\b| it\\b| the bearer\\b)/i;\nconst EVERY = Object.fromEntries(PH.map(p => [p, 'either']));\nfunction EVERY_MOVE(){ return { movement:'either', charge:'either', fight:'either' }; }\nconst ROLL_KINDS = /\\b(advance roll|hit roll|wound roll|damage roll|saving throw|hazardous test|charge roll|battle-shock test)s?\\b/gi;\nconst LABEL_SENTENCE = [\n  { id:'label-other-unit', re:/^while a unit is\\b/i, ph:{}, skip:true,\n    why:'\"While a unit is wracked with agonies, subtract 2\" from its Move characteristic …\": what the item does to another unit it selected, not when the item is used' },\n  { id:'label-move-each', re:/\\bthis unit or an enemy unit ends a move\\b/i, ph:EVERY_MOVE(), skip:true,\n    why:'\"each time this unit or an enemy unit ends a move\": any move of either player (Normal, Advance, Fall Back, charge, pile-in, consolidation): the Movement, Charge and Fight phases of both turns' },\n  { id:'label-enemy-cannot-move', re:/^enemy units? cannot [^.]*?\\bmove\\b/i, ph:{ movement:'opp' }, skip:true,\n    why:'\"Enemy units cannot start or end an Advance move …\": the enemy\\'s moves, your opponent\\'s Movement phase' },\n  { id:'label-model-destroyed', first:true, re:/^when a friendly [^.]*?\\bmodel is destroyed\\b/i, ph:EVERY, skip:true,\n    why:'the text opens \"When a friendly X model is destroyed\": a model can be destroyed in any phase of either turn' },\n  { id:'label-any-roll', re:{ exec:x => new Set([...x.matchAll(ROLL_KINDS)].map(m => m[1].toLowerCase())).size >= 4 ? [x.slice(0, 80)] : null }, ph:EVERY, skip:true,\n    why:'a re-roll of four or more kinds of roll (\"an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test\"): rolls made in every phase of both turns' },\n  { id:'label-objective-control', re:/\\b(?:add|subtract) \\d+ (?:to|from) the objective control characteristic\\b/i, ph:EVERY,\n    why:'a change to the Objective Control characteristic: objectives are controlled at the end of every phase and turn, in both turns' },\n  { id:'label-destroys', re:/\\beach time (?:this|the bearer's|that) (?:unit|model)(?:'s unit)? destroys an enemy unit\\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,\n    why:'\"each time the bearer\\'s unit destroys an enemy unit\": with its attacks, your Shooting phase and the Fight phase' },\n  { id:'label-named-roll', re:/\\bmake an? ([A-Z][\\w'’]*(?: (?:of )?[A-Z][\\w'’]*)*) roll\\b/, named:'trigger',\n    why:'\"each time you make a Blessings of Khorne roll\": when that rule\\'s roll is made (its trigger and moment)' },\n  { id:'label-named-move', re:/\\bmakes? an? ([A-Z][\\w'’]*(?: [A-Z][\\w'’]*)*) move\\b/, named:'all',\n    why:'\"each time that unit makes a Blood Surge move\": the phases of the ability of that name' },\n];\nconst TABLE_LIKE = /^(?:table row|heading)/;   // options set out as a table or under headings of their own (not written in a sentence's line)\nconst LABEL_NONE = ['label-no-defence', 'label-damaged'];\nconst DAMAGED_BAND = /^while this (?:model|unit's [^,.]*? model) has 1-\\d+ wounds remaining\\b/i;\nconst ENEMY_ACT = /\\beach time an enemy unit is selected to (?:shoot|fight|shoot or fight)\\b/i;"
+  },
+  "source": {
+   "implements": "timing labels (ph, turn, turns, at) from verify/derive.js only; verify/derive-unread.json lists where its reading is not the signed-off label (no label shown)"
+  },
+  "key": "076f74fba1dcddc9"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "timing(): the label layer (options, KEYWORDS section, Damaged band, at-choice, select-ability)",
+  "judgement": {
+   "code": "function timing(text, ctx){\n  // a label: a text that opens with an enemy unit targeting this one (\"Each time an enemy unit within 18\" of this model targets this model,\n  // subtract 1 from the Hit roll\", \"When an enemy unit targets this unit with ranged attacks, …\") protects it: no label (label-no-defence)\n  if(ctx && ctx.label){ const m = /^(?:each time|when) an enemy unit\\b[^.,]*?\\btargets this (?:model|unit)\\b/i.exec(plain(rulesText(text)));\n    if(m) return { how:'activity', ph:{}, reasons:[{ part:'used', rule:'label-no-defence', match:m[0] }], trigger:null, used:null }; }\n  // a label: the item's own words, without the options written in them (each option is used as the item's choice says: label-options)\n  // a label: a detachment's KEYWORDS section (what units it musters with which keywords) is army building, not when the rule is used\n  if(ctx && ctx.label && /\\nKEYWORDS\\n/.test(norm(text))) text = norm(text).replace(/\\nKEYWORDS\\n[\\s\\S]*$/, '');\n  const full = text, opts = ctx && ctx.label ? optionsOf(rulesText(text), ctx.table).filter(o => !/^additional effects?$/i.test(o.name)) : [];\n  if(ctx && ctx.label && opts.some(o => !TABLE_LIKE.test(o.how))) text = withoutOptions(text, ctx.table);\n  const trig = explicitTiming(text, ctx && (ctx.rule || ctx.label) ? { rule:!!ctx.rule, label:!!ctx.label } : undefined);\n  const used = usedIn(text, ctx, trig);\n  // a label: \"select one Throttlerokkit Shokka Engine ability\": the phases of the unit's abilities of that kind (named \"… Engine\") (label-select-ability)\n  { const m = ctx && ctx.label && ctx.abilities && /\\bselect one ([A-Z][\\w'’-]*(?: [A-Z][\\w'’-]*)*) ability\\b/.exec(plain(rulesText(text)));\n    const head = m && m[1].split(' ').pop().toLowerCase(), kin = m ? ctx.abilities.filter(a => plain(a.text) !== plain(full) && plain(a.name).split(' ').pop().toLowerCase() === head) : [];\n    for(const a of kin){ const w = timing(a.text, Object.assign({}, ctx, { named:null, table:null, abilities:null })); for(const [p, v] of Object.entries(w.ph || {})) addPh(used.ph, p, v); }\n    if(kin.length) used.reasons.push({ rule:'label-select-ability', match:m[0] + ' → ' + kin.map(a => a.name).join(', ') }); }\n  if(ctx && ctx.label && opts.some(o => !TABLE_LIKE.test(o.how))) used.reasons.push({ rule:'label-options', match:'without its options: ' + opts.filter(o => !TABLE_LIKE.test(o.how)).map(o => o.name).join(', ') });\n  // a label: a table of options (Rituals, ka'tah abilities, Blessings of Khorne): each row's phases, from its own WHEN or the item's trigger\n  // (not a table of abilities units gain, \"all units … gain the relevant abilities shown below\" (Doctrina Imperatives), \"each unit … gains\n  // Dread abilities\": each unit's sheet has them)\n  const gained = /\\bgains? (?:the relevant abilities|[A-Z][\\w'’]* abilities)\\b/.exec(plain(rulesText(full)));\n  if(ctx && ctx.label && gained && opts.some(o => o.how === 'table row')) used.reasons.push({ rule:'label-options', match:'not its table: ' + gained[0] });\n  if(ctx && ctx.label) for(const o of opts.filter(o => TABLE_LIKE.test(o.how) && !(gained && o.how === 'table row'))){\n    const own = explicitTiming(o.text), tr = own || trig, u = usedIn(o.text, ctx, tr), ph = Object.assign({}, tr ? tr.ph : {});\n    for(const [p, v] of Object.entries(u.ph)) addPh(ph, p, v);\n    // (triggered at the start of the battle round: in force in both players' turns; triggered in your Command phase \"until the start of\n    // your next Command phase\": its ranged attacks are also made with Fire Overwatch in the opponent's turn)\n    if(!own && trig && /battle round/i.test(trig.at || '')) for(const p of Object.keys(ph)) ph[p] = 'either';\n    else if(!own && o.how === 'table row' && u.shoots && /\\buntil the start of your next command phase\\b/i.test(plain(text))) for(const cs of (ctx.core || []).filter(c => /\\byour unit shoots\\b/i.test(plain(c.effect)))){\n      const w = explicitTiming(cs.when.split(/[.:]/)[0]); if(w) for(const [p, v] of Object.entries(w.ph)) addPh(ph, p, v); }\n    for(const [p, v] of Object.entries(ph)) if(!(trig && trig.ph[p])) addPh(used.ph, p, v); else if(trig.ph[p] !== v) addPh(used.ph, p, v);\n    used.reasons.push({ rule:'label-options', match:o.name + ' → ' + JSON.stringify(ph).replace(/\"/g, '') });\n  }\n  // a label: a Damaged band is shown by its damaged chip and footnote; only a phase its words name is a label (label-damaged)\n  if(ctx && ctx.label){ const dm = DAMAGED_BAND.exec(plain(rulesText(text)));\n    if(dm){ used.reasons = used.reasons.map(r => ({ rule:'label-damaged', match:r.rule + ': ' + r.match })); used.reasons.unshift({ rule:'label-damaged', match:dm[0] }); used.ph = {}; } }\n  let at = trig && trig.at || used.labelAt;\n  // a label: \"At the start of your Command phase\" is shown as the moment only for a rule with options to choose then (Martial Ka'tah,\n  // Combat Doctrines), not one that selects a unit (\"select one unit from your opponent's army\": Marked Prey): label-at-choice\n  if(ctx && ctx.label && trig && /^start of your command phase$/i.test(trig.at || '') && !opts.length){ at = undefined; used.reasons.push({ rule:'label-at-choice', match:trig.at }); }\n  const ph = Object.assign({}, trig ? trig.ph : {});\n  for(const [p, o] of Object.entries(used.ph)) addPh(ph, p, o);\n  const reasons = (trig ? trig.reasons.map(r => Object.assign({ part:'trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r)));\n  const trigLabel = trig ? asLabel(trig.ph, trig.at) : null, usedLabel = Object.keys(used.ph).length ? asLabel(used.ph) : null;\n  if(Object.keys(ph).length || at) return { how:trig ? 'explicit' : 'activity', ph, at, reasons, trigger:trigLabel, used:usedLabel, trigPh:trig && trig.ph, usedPh:used.ph, atOnly:trig ? trig.atOnly : [] };\n  if(used.blocked) return { how:'none', blocked:true, reasons:[used.blocked] };\n  if(used.none) return { how:'activity', ph:{}, reasons:[used.none], trigger:null, used:null };   // positively: no phase\n  if(used.reasons.some(r => LABEL_NONE.includes(r.rule))) return { how:'activity', ph:{}, reasons, trigger:null, used:null };   // a label: positively none\n  return { how:'none', reasons:[] };\n}"
+  },
+  "source": {
+   "implements": "timing labels (ph, turn, turns, at) from verify/derive.js only; verify/derive-unread.json lists where its reading is not the signed-off label (no label shown)"
+  },
+  "key": "a541ef195f15e0ff"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "usedIn(): label sentence rules, named weapons, no-defence, those-attacks, own-target, assault",
+  "judgement": {
+   "code": "function usedIn(text, ctx, trig){\n  let t = plain(rulesText(text));\n  const reasons = [], out = {};\n  let none = null, blocked = null, shoots = false, guarded = false;\n  const afterCharge = AFTER_CHARGE.re.exec(t);\n  if(afterCharge) t = t.replace(AFTER_CHARGE.re, ' ');                  // a condition: no charge-move rule on it\n  const add = (ph, r) => { for(const [p, o] of Object.entries(ph)){ if(afterCharge && p === 'shooting' && r.shoots && r.id !== 'ranged' && r.id !== 'ranged-only-keyword') continue; addPh(out, p, o); } };\n  let labelAt = null; const labelOut = {};\n  for(const sent of sentences(t)){\n    // a label: what a sentence says that table 1 does not read (LABEL_SENTENCE)\n    if(ctx && ctx.label){\n      let skip = false;\n      for(const r of LABEL_SENTENCE){\n        const m = r.re.exec(sent); if(!m) continue;\n        if(r.first && sent !== sentences(t)[0]) continue;\n        let ph = r.ph;\n        if(r.named){ const other = ctx.named && (ctx.named(m[1]) || (r.named === 'all' && ctx.armyAbility && ctx.armyAbility(m[1]))); if(!other) continue;\n          const w = r.named === 'trigger' ? explicitTiming(other, { rule:true, label:true }) : timing(other, Object.assign({}, ctx, { named:null, table:null }));\n          if(!w || !w.ph || !Object.keys(w.ph).length) continue; ph = w.ph; if(w.at && r.named === 'trigger') labelAt = w.at; }\n        for(const [p, o] of Object.entries(ph)) addPh(labelOut, p, o); if(r.shoots) shoots = true;\n        reasons.push({ rule:r.id, match:m[0] + (r.named ? ' → ' + JSON.stringify(ph).replace(/\"/g, '') : '') });\n        if(r.skip) skip = true;\n      }\n      if(skip) continue;\n    }\n    // a sentence about the unit being attacked is read by the \"targeted\" rules only\n    const defs = ACTIVITY_RULES.filter(r => r.def).map(r => [r, r.re.exec(sent)]).filter(x => x[1]);\n    if(defs.length){\n      const d = defs.find(x => x[0].id !== 'targeted') || defs[0];      // \"against ranged attacks\" is more precise than \"invulnerable save\"\n      // (a label: a protection is shown by its When targeted line, not by phase tags: label-no-defence)\n      // (not a protection that is one of its options, \"- Select one objective marker. … it has the Feel No Pain 5+ ability\" (Singular\n      // Purpose), or that an enemy's attack triggers, \"Each time an enemy unit is selected to shoot or fight … each time an attack targets\n      // that unit, subtract 1\" (Warpmeld Sacrifice): those are what it is used for)\n      if(ctx && ctx.label && !t.split('\\n').some(l => /^\\s*-\\s*select\\b/i.test(l) && l.includes(sent)) && !ENEMY_ACT.test(sentences(t)[0] || '')){ reasons.push({ rule:'label-no-defence', match:d[1][0] }); continue; }\n      add(d[0].ph, d[0]); reasons.push({ rule:d[0].id, match:d[1][0] });\n      if(d[0].ph.shooting) guarded = true;\n      continue;\n    }\n    // clause by clause (\"weapons … have [LETHAL HITS], and melee weapons … have [LANCE]\")\n    for(const s of sent.split(/,\\s+and\\s+|;\\s+/)){\n      // (a label: a weapon ability given to weapons the unit's datasheet names, \"its hellforged weapons have the [DEVASTATING WOUNDS]\n      // ability\", \"its Dark Blessing has …\": the phase of those weapons, ranged or melee (label-named-weapons))\n      const nw = ctx && ctx.label && ctx.weapons && namedWeapons(s, ctx.weapons);\n      if(nw){\n        if(nw.ranged){ add({ shooting:'your' }, { id:'label-named-weapons', shoots:true }); shoots = true; }\n        if(nw.melee) add({ fight:'either' }, { id:'label-named-weapons' });\n        reasons.push({ rule:'label-named-weapons', match:nw.match });\n      }\n      const kwOnly = ACTIVITY_RULES.filter(r => /-only-keyword$/.test(r.id)).some(r => r.re.test(s));\n      for(const r of ACTIVITY_RULES){\n        if(r.def) continue;\n        if(nw && /^(?:weapons-have|ranged|melee|any-attack|melee-only-keyword|ranged-only-keyword)$/.test(r.id)) continue;\n        if(r.id === 'weapons-have' && kwOnly) continue;   // \"Snazzgun weapons have [RAPID FIRE 1]\": the keyword says which weapons\n        if(r.named){\n          const m = /\\b(?:uses its|as a result of the) ([A-Z][^,.]*?)(?: ability| detachment rule)\\b/.exec(s);\n          const other = m && ctx && ctx.named && ctx.named(m[1]);\n          if(other){\n            const w = timing(other, { core:ctx.core, noStrat:ctx.noStrat });\n            if(w.ph && Object.keys(w.ph).length){ add(w.ph, r); reasons.push({ rule:r.id, match:m[0] + ' → ' + w.reasons.map(x => x.match).join(', ') }); }\n          }\n          continue;\n        }\n        if(r.core){\n          for(const cs of (ctx && ctx.core) || []){\n            const m = new RegExp('\\\\b' + cs.name.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\b[^.]*\\\\bstratagem\\\\b', 'i').exec(s);\n            if(!m) continue;\n            const w = explicitTiming(cs.when.split(/[.:]/)[0]);\n            if(w){ add(w.ph, r); reasons.push({ rule:r.id, match:cs.name + ' → ' + w.reasons.map(x => x.match).join(', ') }); }\n          }\n          continue;\n        }\n        const m = r.re.exec(s);\n        if(!m) continue;\n        if(r.blocker){ if(ctx && ctx.noStrat) continue; if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }\n        if(r.none){ none = none || { rule:r.id, match:m[0] }; continue; }\n        if(r.id === 'any-stratagem' && reasons.some(x => x.rule === 'named-core-stratagem')) continue;\n        if(r.id === 'any-stratagem' && ctx && ctx.noStrat) continue;   // (the checklist: no phase reached through a stratagem)\n        if(r.id === 'move-own' && /\\benemy unit\\b/i.test(s) && ACTIVITY_RULES.find(x => x.id === 'move-enemy').re.test(s)) continue;\n        // (a clause whose only weapon ability is [HEAVY]: phase-locked, no Overwatch from it)\n        const locked = PHASE_LOCKED.re.test(s) && !/\\[(?!HEAVY\\])/i.test(s) && !/\\bBS\\b|\\bballistic skill\\b|\\bhit roll/i.test(s);\n        if(locked && !reasons.some(x => x.rule === 'phase-locked')) reasons.push({ rule:'phase-locked', match:'[HEAVY]' });\n        if(r.shoots && !locked && !(afterCharge && r.id === 'any-attack')) shoots = true;\n        add(r.ph, r);\n        reasons.push({ rule:r.id, match:m[0] });\n      }\n    }\n  }\n  if(afterCharge && reasons.some(r => r.rule === 'any-attack' || r.rule === 'weapons-have')) reasons.push({ rule:'after-charge', match:afterCharge[0] });\n  // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger; one that lasts \"until the end of the turn\" is\n  // triggered in that turn, even when derive.js reads no trigger in its words: Shudderblink's [ASSAULT] after an advance move)\n  // (not one that holds only \"in a turn in which it Fell Back/Advanced\": both are moves of your own Movement phase, Core Rules 09.02,\n  // 09.07, so never in the opponent's turn, when Fire Overwatch is used)\n  // (a label: a re-roll \"when resolving those attacks\" of the activation that triggers it (\"Each time this model is selected to shoot or\n  // fight, you can re-roll one Hit roll …\"): those attacks, in its own Shooting phase or a Fight phase, not with Fire Overwatch: label-those-attacks)\n  const those = ctx && ctx.label && shoots && /\\beach time this (?:model|unit) is selected to shoot\\b[^.]*\\bwhen resolving those attacks\\b/i.exec(t);\n  if(those){ shoots = false; reasons.push({ rule:'label-those-attacks', match:those[0].slice(0, 80) }); }\n  // (a label: not a ranged attack chosen by its target, \"makes a ranged attack that targets the closest eligible target\": label-own-target)\n  const ownTarget = ctx && ctx.label && shoots && OWN_TARGET.exec(t);\n  if(ownTarget){ shoots = false; reasons.push({ rule:'label-own-target', match:ownTarget[0] }); }\n  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !/\\bin a turn in which it (?:Fell Back|Advanced)\\b/i.test(plain(t))){\n    for(const cs of (ctx && ctx.core) || []){\n      if(!/\\byour unit shoots\\b/i.test(plain(cs.effect))) continue;\n      const w = explicitTiming(cs.when.split(/[.:]/)[0]);\n      if(!w) continue;\n      for(const [p, o] of Object.entries(w.ph)){ if(shoots) addPh(out, p, o); if(guarded) addPh(out, p, OTHER[o]); }\n      reasons.push({ rule:'overwatch', match:cs.name + ': ' + w.reasons.map(x => x.match).join(', ') + (guarded && !shoots ? ' (the enemy\\'s)' : '') });\n    }\n  }\n  // an effect used in the phase it is triggered in is used in that turn (\"In your opponent's Movement phase, … make a Normal move\")\n  if(trig) for(const p of Object.keys(out)) if(trig.ph[p]) out[p] = trig.ph[p];\n  // the text opens with its phase and has no duration (\"In the Fight phase, …, you can select one of the following\"): that phase only\n  const opening = USED_MODIFIERS.find(r => r.id === 'opening-phase').re.exec(t);\n  if(trig && opening && !/\\buntil\\b|\\bthis turn\\b/i.test(t) && Object.keys(out).some(p => !trig.ph[p])){\n    for(const p of Object.keys(out)) if(!trig.ph[p]) delete out[p];\n    reasons.push({ rule:'opening-phase', match:opening[0] });\n  }\n  // triggered in a phase, \"until the end of the phase\": that phase only\n  const samePh = USED_MODIFIERS.find(r => r.id === 'same-phase').re.exec(t);\n  if(trig && samePh && Object.keys(out).length && Object.keys(out).some(p => !trig.ph[p])){\n    for(const p of Object.keys(out)) if(!trig.ph[p]) delete out[p];\n    reasons.push({ rule:'same-phase', match:samePh[0] });\n  }\n  // triggered in one turn, \"until the end of the turn\": that turn only, from the trigger's phase on\n  const same = USED_MODIFIERS.find(r => r.id === 'same-turn').re.exec(t);\n  if(trig && same && Object.keys(out).length){\n    const owners = [...new Set(Object.values(trig.ph))], first = PH.findIndex(p => trig.ph[p]);\n    if(owners.length === 1 && owners[0] !== 'either'){\n      for(const p of Object.keys(out)){ if(PH.indexOf(p) < first) delete out[p]; else out[p] = owners[0]; }\n      reasons.push({ rule:'same-turn', match:same[0] });\n    }\n  }\n  // (a label: [ASSAULT] is used to shoot after an Advance move in your Movement phase: label-assault)\n  if(ctx && ctx.label && /\\[ASSAULT\\]/i.test(t) && reasons.some(r => /^(?:ranged|ranged-only-keyword|weapons-have)$/.test(r.rule))){ addPh(out, 'movement', 'your'); reasons.push({ rule:'label-assault', match:'[ASSAULT]' }); }\n  for(const [p, o] of Object.entries(labelOut)) addPh(out, p, o);   // (LABEL_SENTENCE: as the sentence says, not the trigger's turn)\n  return { ph:out, reasons, none, blocked, shoots, labelAt };\n}"
+  },
+  "source": {
+   "implements": "timing labels (ph, turn, turns, at) from verify/derive.js only; verify/derive-unread.json lists where its reading is not the signed-off label (no label shown)"
+  },
+  "key": "fa366ae15e3b8027"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ruleNeeds(): mustering lines left out",
+  "judgement": {
+   "code": "// a rule's words without its army-building lines: \"When mustering your army, you can select a friendly ANATHEMA PSYKANA CHARACTER model to be\n// your WARLORD\" (Silent Sisterhood) says who may be the Warlord, not which units the rule is for (needs rule `mustering`)\nconst MUSTERING = /^(?:- )?[^\\n.]*\\bwhen mustering your army\\b[^\\n]*$/gim;\nfunction ruleNeeds(V, r){\n  const reasons = [];\n  let words = rulesText(r.text).replace(MUSTERING, m => { reasons.push({ rule:'mustering', match:clip(plain(m), 80) }); return ''; }).replace(/^\\n+/, '');\n  // (and a line that only gives units the BATTLELINE keyword, when another line names who the rule is for: army building too)\n  { const bl = /^(?:- )?friendly [^\\n.]*?\\bunits have (?:the )?\\*\\*BATTLELINE\\*\\*(?: keyword)?\\.\\s*$/gim, rest = words.replace(bl, '');\n    if(rest !== words && friendlyUnit(V, rest, { keyword:true })){ for(const m of words.match(bl)) reasons.push({ rule:'mustering', match:clip(plain(m), 80) }); words = rest.replace(/^\\n+/, ''); } }\n  const unit = friendlyUnit(V, words, { keyword:true });\n  if(unit){\n    reasons.push({ rule:'first-unit', match:clip(plain(unit.matched), 80) });\n    let n = needsOf(V, unit, reasons);\n    if(n.bad) return { how:'none', reasons:[{ rule:'unparsed', match:n.bad }] };\n    // every other sentence whose subject is a friendly unit phrase (\"**SOUL FORGE** units from your army have a 5+ invulnerable\n    // save.\"): the rule reaches those units too, so its needs are the \"or\" of them all (Soul Forge Boons: three sentences)\n    const more = ruleSubjects(V, words, unit);\n    if(more.length){\n      const alts = [n].concat(more.map(x => x.n));\n      // (one alternative per keyword of an \"any\": HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE)\n      const sets = []; for(const a of alts) for(const k of (a.any.length ? a.any : [null])){ const x = a.all.concat(k ? [k] : []); if(!sets.some(y => y.join('|') === x.join('|'))) sets.push(x); }\n      const c = sets.length > 1 ? combineAlts(sets) : { all:sets[0], any:[], rules:[] };\n      if(!c.bad && alts.every(a => !a.none.length && !a.rule)){\n        n = { all:c.all, any:c.any, none:[] };\n        reasons.push(...more.map(x => ({ rule:'more-subjects', match:clip(plain(x.unit.matched), 80) })), { rule:c.rules.join('+') || 'kw-all', match:sets.map(x => x.join(' ')).join(' | ') });\n      }\n    }\n    if(/\\battached\\b/i.test(plain(r.text))) { n.attached = true; reasons.push({ rule:'attached', match:'attached' }); }\n    return { how:'explicit', needs:n, reasons };\n  }\n  const m = /\\b(?:a model|models|units?) (?:from your army )?with this ability\\b/i.exec(plain(r.text));\n  if(m) return { how:'explicit', needs:{ rule:[r.name] }, reasons:[{ rule:'with-this-ability', match:m[0] }] };\n  return { how:'none', reasons:[] };\n}"
+  },
+  "source": {
+   "implements": "timing labels (ph, turn, turns, at) from verify/derive.js only; verify/derive-unread.json lists where its reading is not the signed-off label (no label shown)"
+  },
+  "key": "ac6ebd119c5da339"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gate: labels from the program only (derive.js main)",
+  "judgement": {
+   "code": "  // the timing labels (phases, turn, moment of stratagems, rules and abilities) come from the program only: each stored label is\n  // what this file derives from the words, and where its reading is not the signed-off one (verify/derive-unread.json) or it reads\n  // none, the row has no label. A label written by hand fails, as does a reading the row lacks that is not recorded as not read.\n  const TIMING = labelled.filter(it => /-timing$/.test(it.kind));\n  const empty = x => !x || (!(x.ph && x.ph.length) && !x.at);\n  const hand = TIMING.filter(it => !empty(it.stored) && it.status !== 'identical');\n  const missing = TIMING.filter(it => empty(it.stored) && it.status === 'different');\n  const UNREAD = readJSON(UNREAD_FILE, {}).items || {};\n  const byKey = new Map(TIMING.map(it => [keyOf(it), it]));\n  const staleUnread = Object.entries(UNREAD).filter(([k, v]) => { const it = byKey.get(k); return !it || it.status !== 'unread'; }).map(([k]) => k);\n  if(process.argv.includes('--unread')){\n    const items = {};\n    for(const it of TIMING.filter(x => empty(x.stored) && (x.status === 'different' || x.status === 'unread'))){\n      const k = keyOf(it), was = UNREAD[k] || {};\n      items[k] = { of:sha(it.text).slice(0, 8), reading:it.derived, signedOff:was.signedOff !== undefined ? was.signedOff : null, why:was.why || 'the signed-off lists show no label here; the program reads one (rules: ' + [...new Set(it.reasons.map(r => r.rule))].join(', ') + ')' };\n    }\n    writeJSON(UNREAD_FILE, { note:'timing labels the program (verify/derive.js) does not read as signed off: each row has no label. of: the fingerprint of the words read; reading: what the program reads; signedOff: the label the row had before (null: none). node verify/derive.js --unread rewrites it', items });\n    console.log('derive: recorded ' + Object.keys(items).length + ' places not read by the program in verify/derive-unread.json');\n    process.exit(0);\n  }\n  // the gate: an item that agreed must still agree\n  if(!fs.existsSync(AGREED)){ console.log('derive: verify/derive-agreed.json is missing (node verify/derive.js --agree records the labels that agree today)'); process.exit(1); }\n  const agreed = (readJSON(AGREED, {}).items) || {};\n  const now = new Map(labelled.map(it => [keyOf(it), it]));\n  const drift = [], stale = [];\n  for(const [k, label] of Object.entries(agreed)){\n    const it = now.get(k);\n    if(!it){ stale.push(k); continue; }\n    if(it.status !== 'identical') drift.push(k + ': stored ' + J(it.stored) + ', derived ' + J(it.derived) + ' (agreed ' + J(label) + ')');\n  }\n  const L = k => c[k].identical + '/' + c[k].different + '/' + c[k]['not-derivable'] + (c[k].unread ? '/' + c[k].unread + ' not read' : '');\n  const total = s => labelled.filter(it => it.status === s).length;\n  const shown = TIMING.filter(it => it.status === 'identical' && !empty(it.stored)).length, none = TIMING.filter(it => empty(it.stored)).length;\n  console.log('derive: ' + Object.keys(agreed).length + ' agreed labels hold' + (drift.length ? ' except ' + drift.length : '') + '; ' + total('different') + ' differ, ' + total('not-derivable') + ' not derivable (verify/out/derive.md)' + (stale.length ? '; ' + stale.length + ' agreed items no longer exist' : ''));\n  console.log('  timing labels: ' + shown + ' shown, each what the program reads; ' + none + ' places with no label (' + TIMING.filter(it => it.status === 'unread').length + ' not read by the program: verify/derive-unread.json; ' + TIMING.filter(it => it.status === 'identical' && empty(it.stored)).length + ' read as none; ' + TIMING.filter(it => it.status === 'not-derivable').length + ' not derivable); ' + hand.length + ' written by hand');\n  console.log('  identical/different/not derivable: ' + KINDS.map(k => k + ' ' + L(k)).join(' · '));\n  for(const d of drift) console.log('  DRIFT ' + d);\n  for(const it of hand) console.log('  HAND LABEL ' + keyOf(it) + ': stored ' + J(it.stored) + ', the program reads ' + J(it.derived) + ' (a label comes from the program only: remove it, or improve the rule tables)');\n  for(const it of missing) console.log('  MISSING ' + keyOf(it) + ': the program reads ' + J(it.derived) + ', the row has no label (write it, or record it as not read: node verify/derive.js --unread)');\n  for(const k of staleUnread) console.log('  STALE verify/derive-unread.json ' + k + ': ' + (byKey.get(k) ? 'now ' + byKey.get(k).status + (byKey.get(k).unread && byKey.get(k).unread.of !== sha(byKey.get(k).text).slice(0, 8) ? ' (its words changed)' : '') : 'no such item') + ' (node verify/derive.js --unread)');\n  if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');\n  process.exit(drift.length || hand.length || missing.length || staleUnread.length || items.tablesStale || ckStale ? 1 : 0);\n}"
+  },
+  "source": {
+   "implements": "timing labels (ph, turn, turns, at) from verify/derive.js only; verify/derive-unread.json lists where its reading is not the signed-off label (no label shown)"
+  },
+  "key": "db17f1c954192b2a"
+ },
+ {
+  "army": "Orks",
+  "kind": "label-removed",
+  "where": "Orks · Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "before": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp"
+    }
+   },
+   "after": null,
+   "programReads": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "either",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "rules": [
+    "ranged",
+    "ranged-only-keyword",
+    "overwatch",
+    "label-assault"
+   ]
+  },
+  "source": {
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**.",
+   "why": "no rule in verify/derive.js gives the signed-off label from these words without changing another signed-off label; the row shows no label (the owner: no hand label)"
+  },
+  "key": "9df0a95534612b62"
+ },
+ {
+  "army": "Emperor’s Children army rule",
+  "kind": "label-removed",
+  "where": "Emperor’s Children army rule · Thrill Seekers",
+  "judgement": {
+   "before": {
+    "ph": [
+     "shooting",
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "after": null,
+   "programReads": {
+    "ph": [
+     "movement",
+     "shooting",
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "ranged",
+    "declare-charge",
+    "move-own"
+   ]
+  },
+  "source": {
+   "text": "If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within **Engagement Range** of at the start of the turn.\n- It cannot target a unit that was the target of another units charge or attack this phase.",
+   "why": "no rule in verify/derive.js gives the signed-off label from these words without changing another signed-off label; the row shows no label (the owner: no hand label)"
+  },
+  "key": "66f8b513606e9382"
+ },
+ {
+  "army": "Chaos Knights",
+  "kind": "label-removed",
+  "where": "Chaos Knights · Houndpack Lance rule · Marked Prey",
+  "judgement": {
+   "before": {
+    "ph": [
+     "command"
+    ],
+    "turn": "your"
+   },
+   "after": null,
+   "programReads": {
+    "ph": [
+     "command",
+     "shooting",
+     "fight"
+    ],
+    "turn": "your",
+    "turns": {
+     "fight": "either"
+    }
+   },
+   "rules": [
+    "start-your-command",
+    "skip-until",
+    "phase-your",
+    "any-attack",
+    "label-at-choice"
+   ]
+  },
+  "source": {
+   "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**.",
+   "why": "no rule in verify/derive.js gives the signed-off label from these words without changing another signed-off label; the row shows no label (the owner: no hand label)"
+  },
+  "key": "944b3ceb9deb81c8"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "label-removed",
+  "where": "pubstomper · Defiler · Scuttling Walker",
+  "judgement": {
+   "before": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "after": null,
+   "programReads": {
+    "ph": [
+     "movement"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "move-own"
+   ]
+  },
+  "source": {
+   "text": "Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+   "why": "no rule in verify/derive.js gives the signed-off label from these words without changing another signed-off label; the row shows no label (the owner: no hand label)"
+  },
+  "key": "e83434f214754920"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "label-removed",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "judgement": {
+   "before": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "command": "your",
+     "movement": "opp",
+     "charge": "your"
+    }
+   },
+   "after": null,
+   "programReads": null,
+   "rules": []
+  },
+  "source": {
+   "text": "**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.",
+   "why": "no rule in verify/derive.js gives the signed-off label from these words without changing another signed-off label; the row shows no label (the owner: no hand label)"
+  },
+  "key": "39ebc74cd3dc35fc"
+ },
+ {
+  "army": "Orks",
+  "kind": "label-now-derived",
+  "where": "Orks · Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "label": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "rules": [
+    "label-model-destroyed"
+   ]
+  },
+  "source": {
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "b227c1a1b1946d2d"
+ },
+ {
+  "army": "Chaos Daemons",
+  "kind": "label-now-derived",
+  "where": "Chaos Daemons · Scintillating Legion rule · Fates in Flux",
+  "judgement": {
+   "label": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "rules": [
+    "phase-your",
+    "label-any-roll",
+    "label-no-defence"
+   ]
+  },
+  "source": {
+   "text": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an **Advance roll**, **Hit roll**, **Wound roll**, Damage roll, saving throw or Hazardous test is made for a **LEGIONES DAEMONICA TZEENTCH** model or **LEGIONES DAEMONICA TZEENTCH** unit from your army to re-roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re-roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n**Designer’s Note:** When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re-roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "59466aaf9fdd4890"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "label-now-derived",
+  "where": "defilers-and-friends · Sorcerer · Wracking Agonies",
+  "judgement": {
+   "label": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "skip-until",
+    "phase-your",
+    "ranged",
+    "label-other-unit"
+   ]
+  },
+  "source": {
+   "text": "In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "87b55e1c466213cb"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "label-now-derived",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "judgement": {
+   "label": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "skip-until",
+    "phase-your",
+    "ranged",
+    "label-other-unit"
+   ]
+  },
+  "source": {
+   "text": "In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "f608a8f66ef9049f"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "label-now-derived",
+  "where": "the-exiled-legion · Skullmaster · Skullmaster · Skullmaster’s Fury",
+  "judgement": {
+   "label": {
+    "ph": [
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "rules": [
+    "label-named-weapons",
+    "charge-move"
+   ]
+  },
+  "source": {
+   "text": "While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "ee03153c7cd70b2a"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "label-now-derived",
+  "where": "tzeeeeentch · Daemon Prince of Chaos with wings · Harbinger of Death",
+  "judgement": {
+   "label": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "rules": [
+    "melee",
+    "label-named-weapons"
+   ]
+  },
+  "source": {
+   "text": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "87aae85a4c0c8859"
+ },
+ {
+  "army": "tzeeeeentch",
+  "kind": "label-now-derived",
+  "where": "tzeeeeentch · Flamers · Bounding Leaps",
+  "judgement": {
+   "label": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "ranged",
+    "move-own"
+   ]
+  },
+  "source": {
+   "text": "This unit is eligible to shoot in a turn in which it Fell Back.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "e0a0aaee1910ef76"
+ },
+ {
+  "army": "healybois",
+  "kind": "label-now-derived",
+  "where": "healybois · Spore Mines (Biovore) · Floating Death",
+  "judgement": {
+   "label": {
+    "ph": [
+     "movement",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "rules": [
+    "label-move-each"
+   ]
+  },
+  "source": {
+   "text": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 **mortal wound**; on a 6, that enemy unit suffers D3 mortal wounds.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "893c9fd82ec35514"
+ },
+ {
+  "army": "healybois",
+  "kind": "label-now-derived",
+  "where": "healybois · Spore Mines (Biovore) · Bio-minefield",
+  "judgement": {
+   "label": {
+    "ph": [
+     "movement"
+    ],
+    "turn": "opp"
+   },
+   "rules": [
+    "label-enemy-cannot-move"
+   ]
+  },
+  "source": {
+   "text": "Enemy units cannot start or end an **Advance move** within 6\" of this unit.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "bfe13df7f8c1d917"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "label-now-derived",
+  "where": "u-w0t-m8 · Tesseract Vault [tesseract-vault] · Damaged: 1-8 wounds remaining",
+  "judgement": {
+   "label": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "phase-your",
+    "label-damaged"
+   ]
+  },
+  "source": {
+   "text": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "f4ae733c84117086"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "label-now-derived",
+  "where": "u-w0t-m8 · Tesseract Vault [tesseract-vault-2] · Damaged: 1-8 wounds remaining",
+  "judgement": {
+   "label": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "rules": [
+    "phase-your",
+    "label-damaged"
+   ]
+  },
+  "source": {
+   "text": "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.",
+   "why": "was a hand label (or a reviewer's fix the program misread); the program now reads the signed-off label, unchanged on screen"
+  },
+  "key": "c932174c86531001"
+ },
+ {
+  "army": "code",
+  "kind": "summary",
+  "where": "labels",
+  "judgement": {
+   "changedNotRemoved": 0,
+   "removed": 5,
+   "notRead": 90,
+   "notReadNote": "each a place that showed no label before and shows none now (the program reads one that was not signed off): verify/derive-unread.json, verify/out/derive.md \"Not read by the program\"",
+   "checklistChanged": [
+    "a|1j6lbpi Warped Interference (defilers-and-friends Sorcerer): u shooting:opp,fight:either → shooting:opp (\"each time a ranged attack targets that unit\": targeted-ranged now reads \"that unit\" / \"the bearer\")"
+   ],
+   "ruleOptionsChanged": 0,
+   "grantsChanged": 0
+  },
+  "source": {
+   "implements": "counts"
+  },
+  "key": "5356aa109d1f62ad"
+ },
+ {
+  "army": "adeptus-custodes (wt-catalog)",
+  "kind": "catalog-check-needs",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Anathema Psykana"
+    ]
+   },
+   "rules": [
+    "mustering",
+    "first-unit",
+    "kw-all"
+   ]
+  },
+  "source": {
+   "why": "the \"When mustering your army, you can select a friendly ANATHEMA PSYKANA CHARACTER model to be your WARLORD\" line and the \"Friendly PROSECUTOR SQUAD units have BATTLELINE\" line are army building (needs rule mustering); the first unit after them is \"Friendly ANATHEMA PSYKANA units have the following ability\" (Creeping Dread). Its timing: no label (its only phase is in the ability it gives, Creeping Dread, written as its \"**Name:**\" option: label-options)"
+  },
+  "key": "9228e46c8cfe1ce9"
+ },
+ {
+  "army": "adeptus-custodes (wt-catalog)",
+  "kind": "catalog-check-timing",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "judgement": {
+   "label": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "table1": {
+    "shooting": "either",
+    "movement": "either"
+   },
+   "rules": [
+    "targeted-ranged (now also \"ranged attacks that target that unit\")",
+    "label-no-defence",
+    "ranged",
+    "overwatch"
+   ]
+  },
+  "source": {
+   "why": "table 1 now reads \"ranged attacks that target that unit\" as targeted-ranged (the checklist: their Shooting phase and your Fire Overwatch moment). The label leaves the protection out (label-no-defence: a protection is its When targeted line, as the signed-off Flare Shields and Aegis of the Emperor show no label) and reads the Additional Effect, \"Your unit's ranged attacks have +6\\\" R\": your Shooting phase and Fire Overwatch in their Movement phase. Phases movement + shooting, as the review asks; turns: Their Move · Your Shoot (the review reasoned Your Move · Their Shoot from the protection)"
+  },
+  "key": "1428a2c1ae1f5c6d"
+ },
+ {
+  "army": "adeptus-custodes (wt-catalog)",
+  "kind": "catalog-check-timing",
+  "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+  "judgement": {
+   "label": null,
+   "table1": {
+    "fight": "either"
+   },
+   "rules": [
+    "targeted-melee (now also \"melee attacks that target that unit\")",
+    "label-no-defence"
+   ]
+  },
+  "source": {
+   "why": "GW's words: an always-on protection (\"melee attacks that target that unit … have -1 to wound rolls\": the Fight phase, its When targeted line) and an Additional Effect naming no phase (it comes with the Kaptaris ka'tah, whose WHEN is in Martial Ka'tah's table, not in these words). The program shows no label, as for the signed-off always-on protections (Flare Shields, Aegis of the Emperor, Soul Forge Boons); the checklist (table 1) lists it in the Fight phase"
+  },
+  "key": "ac842dcf8acfc53a"
+ }
+]

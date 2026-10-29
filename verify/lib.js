@@ -33,4 +33,9 @@ function serve(root){
 const readJSON = (f, dflt) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch(e){ return dflt; } };
 const writeJSON = (f, v) => { fs.mkdirSync(path.dirname(f), { recursive:true }); fs.writeFileSync(f, JSON.stringify(v, null, 1) + '\n'); };
 
-module.exports = { ROOT, sha, key, loadData, normText, serve, readJSON, writeJSON };
+// verify/columns.json in short, { table: { what, cols:'column:source …' } }: verified.js carries it for the app's "How the app works"
+// screen (each table's columns and where each comes from), so the screen shows what the gate that wrote it checked
+const columnSources = () => Object.fromEntries(Object.entries(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables || {})
+  .map(([t, v]) => [t, { what:v.what || '', cols:Object.entries(v.columns || {}).map(([n, x]) => n + ':' + x.source).join(' ') }]));
+
+module.exports = { ROOT, sha, key, loadData, normText, serve, readJSON, writeJSON, columnSources };

@@ -1,0 +1,1254 @@
+{
+ "note": "timing labels the program (verify/derive.js) does not read as signed off: each row has no label. of: the fingerprint of the words read; reading: what the program reads; signedOff: the label the row had before (null: none). node verify/derive.js --unread rewrites it",
+ "items": {
+  "rule-timing | Orks army rule · Waaagh!": {
+   "of": "1996923b",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "charge"
+    ],
+    "turn": "your",
+    "turns": {
+     "movement": "either"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: move-own, label-other-unit, label-no-defence, ranged-only-keyword, ranged, declare-charge, overwatch, label-assault)"
+  },
+  "rule-timing | Orks · Runt Swarm rule · Sneaky Little Gitz": {
+   "of": "4e46705b",
+   "reading": {
+    "ph": [
+     "movement"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: move-own)"
+  },
+  "rule-timing | Imperial Knights army rule · Code Chivalric": {
+   "of": "d6596020",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: label-options)"
+  },
+  "rule-timing | Tyranids army rule · Synapse": {
+   "of": "2910ec76",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "rule-timing | Adeptus Mechanicus · Cohort Cybernetica rule · Cyber-psalm Programming": {
+   "of": "2ec3bc70",
+   "reading": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: move-own, label-objective-control)"
+  },
+  "rule-timing | Adeptus Mechanicus · Eradication Cohort rule · Murderous Imperative": {
+   "of": "665d4f12",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "rule-timing | Adeptus Custodes · Might of the Moritoi rule · Moritoi Ancients": {
+   "of": "fb6c3146",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-boosta] · Cybork Boosta": {
+   "of": "693951ac",
+   "reading": {
+    "ph": [
+     "movement"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: move-own)"
+  },
+  "ability-timing | shooty · Big Mek in Mega Armour · More Dakka": {
+   "of": "37fca761",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, ranged-only-keyword, overwatch)"
+  },
+  "ability-timing | shooty · Big Mek in Mega Armour · Supa-glowy Fing": {
+   "of": "a45b27c9",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
+  },
+  "ability-timing | shooty · Mek [mek-tankbustas] · Mek · Kustom Dakka": {
+   "of": "7de02f42",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | shooty · Mek [mek-flashgitz] · Mek · Kustom Dakka": {
+   "of": "7de02f42",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | shooty · Mek [mek-flashgitz] · Flash Gitz · Supa-snazz Dakka": {
+   "of": "b37d622b",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: label-named-weapons, overwatch)"
+  },
+  "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Berzerker Glaive": {
+   "of": "559e5240",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "of": "0a9a30e0",
+   "reading": {
+    "at": "Start of the battle round",
+    "ph": [
+     "command"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: label-named-roll)"
+  },
+  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Berzerker Glaive": {
+   "of": "559e5240",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | pubstomper · Exalted Sorcerer · Rubric Marines · Icon of Flame": {
+   "of": "5a4139ae",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Empyric Guidance": {
+   "of": "9132e2bb",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: weapons-have, overwatch)"
+  },
+  "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Destabilising Predation": {
+   "of": "0429754d",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
+  },
+  "ability-timing | 6-bigs · Knight Destrier · Thundercharge": {
+   "of": "3191643c",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | 6-bigs · Knight Errant · Errant’s Duty": {
+   "of": "54db6f62",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "either",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, move-own, overwatch, label-assault)"
+  },
+  "ability-timing | 6-bigs · Knight Paladin · Paladin’s Duty": {
+   "of": "0529a76a",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: weapons-have, melee-only-keyword, melee, overwatch)"
+  },
+  "ability-timing | 6-bigs · Knight Warden · Warden’s Duty": {
+   "of": "f4e10bae",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: weapons-have, ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "of": "3c11830a",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Bringer of Justice": {
+   "of": "d1f22b85",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": {
+   "of": "7522a4f2",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Lancer’s Duty": {
+   "of": "aa5791f4",
+   "reading": {
+    "ph": [
+     "movement",
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: declare-charge, move-own)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye": {
+   "of": "a3879d55",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Crusader’s Duty": {
+   "of": "cb466686",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Thundercharge": {
+   "of": "3191643c",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "of": "0a9a30e0",
+   "reading": {
+    "at": "Start of the battle round",
+    "ph": [
+     "command"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: label-named-roll)"
+  },
+  "ability-timing | super-terminators · Chaos Terminators [chaos-terminators] · Gore-stained Veterans": {
+   "of": "d6f3aa97",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
+  },
+  "ability-timing | super-terminators · Chaos Terminators [chaos-terminators-2] · Gore-stained Veterans": {
+   "of": "d6f3aa97",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
+  },
+  "ability-timing | purge-goes-the-foe · Skitarii Rangers · Omnispex": {
+   "of": "a58b31c8",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
+  },
+  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether": {
+   "of": "d892470d",
+   "reading": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-stratagem)"
+  },
+  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether": {
+   "of": "d892470d",
+   "reading": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-stratagem)"
+  },
+  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Broad spectrum data-tether": {
+   "of": "d5f17297",
+   "reading": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-stratagem)"
+  },
+  "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether": {
+   "of": "6bebcdc7",
+   "reading": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-stratagem)"
+  },
+  "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Blistering Salvoes": {
+   "of": "8ddcceb7",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill": {
+   "of": "ed251c7c",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "of": "42b18b8c",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger": {
+   "of": "998d3b00",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Knight Diabolus": {
+   "of": "a4412751",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour": {
+   "of": "aa9a9d49",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "either",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch, label-assault)"
+  },
+  "ability-timing | infernal-lance · Knight Despoiler · Bestial Aspect": {
+   "of": "34093f1f",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "either",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, move-own, overwatch, label-assault)"
+  },
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": {
+   "of": "bfc39fb4",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": {
+   "of": "bfc39fb4",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand": {
+   "of": "5dc3c2dc",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Final Howl (Aura)": {
+   "of": "0324c6a8",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand": {
+   "of": "5dc3c2dc",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand": {
+   "of": "5dc3c2dc",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Executioner · Executioner": {
+   "of": "4c3a2bf1",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Executioner · Snarling Rivalry": {
+   "of": "0793b5f6",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · Karnivore": {
+   "of": "626400d8",
+   "reading": {
+    "ph": [
+     "movement",
+     "charge"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: charge-move, move-own)"
+  },
+  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore] · Karnivore": {
+   "of": "626400d8",
+   "reading": {
+    "ph": [
+     "movement",
+     "charge"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: charge-move, move-own)"
+  },
+  "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "of": "0a9a30e0",
+   "reading": {
+    "at": "Start of the battle round",
+    "ph": [
+     "command"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: label-named-roll)"
+  },
+  "ability-timing | big-demons-baby · Skarbrand · Murderlust": {
+   "of": "3b962e18",
+   "reading": {
+    "ph": [
+     "movement",
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: declare-charge, move-own)"
+  },
+  "ability-timing | big-demons-baby · Daemon Prince of Khorne · Blade of Endless Bloodshed": {
+   "of": "9179da98",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee, label-destroys, overwatch)"
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-curse-of-life] · Tzaangor Shaman · Bestial Prophet": {
+   "of": "2e051e31",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Shaman · Bestial Prophet": {
+   "of": "2e051e31",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Shaman · Bestial Prophet": {
+   "of": "2e051e31",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | lite-knights · Trajann Valoris · Allarus Custodians · Slayer of Tyrants": {
+   "of": "c849a61b",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower": {
+   "of": "6069966f",
+   "reading": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
+  },
+  "ability-timing | lite-knights · Contemptor-Galatus Dreadnought · Memento Moritoi": {
+   "of": "d518896a",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | the-exiled-legion · Skarbrand · Murderlust": {
+   "of": "3b962e18",
+   "reading": {
+    "ph": [
+     "movement",
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: declare-charge, move-own)"
+  },
+  "ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne": {
+   "of": "3bb6879b",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | the-exiled-legion · Skulltaker · Bloodletters · Bane-Forged Weapons": {
+   "of": "70353116",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | the-exiled-legion · Bloodmaster · Bloodmaster · Bloodmaster": {
+   "of": "fdeba804",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | the-exiled-legion · Bloodmaster · Bloodletters · Bane-Forged Weapons": {
+   "of": "70353116",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | emperors-chosen · Trajann Valoris · Allarus Custodians · Slayer of Tyrants": {
+   "of": "c849a61b",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | emperors-chosen · Shield-Captain · Sentinel Guard Sodality · Stand Vigil": {
+   "of": "320e23dd",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | emperors-chosen · Custodian Guard Sodality · Impenetrable Defence": {
+   "of": "b729d41c",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower": {
+   "of": "6069966f",
+   "reading": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
+  },
+  "ability-timing | dread-host · Trajann Valoris · Allarus Custodians · Slayer of Tyrants": {
+   "of": "c849a61b",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | dread-host · Shield-Captain · Sentinel Guard Sodality · Stand Vigil": {
+   "of": "320e23dd",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | dread-host · Custodian Guard Sodality · Impenetrable Defence": {
+   "of": "b729d41c",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | dread-host · Allarus Custodians · Slayer of Tyrants": {
+   "of": "c849a61b",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower": {
+   "of": "6069966f",
+   "reading": {
+    "ph": [
+     "shooting"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
+  },
+  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "of": "3c11830a",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty": {
+   "of": "7522a4f2",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
+  "ability-timing | navigator-sounds-op-ngl · Knight Crusader · Crusader’s Duty": {
+   "of": "cb466686",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
+  },
+  "ability-timing | navigator-sounds-op-ngl · Knight Destrier · Thundercharge": {
+   "of": "3191643c",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
+  },
+  "ability-timing | navigator-sounds-op-ngl · Knight Errant · Errant’s Duty": {
+   "of": "54db6f62",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "either",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, move-own, overwatch, label-assault)"
+  },
+  "ability-timing | u-w0t-m8 · Canoptek Scarab Swarms · Chittering swarm": {
+   "of": "8a4b5cf2",
+   "reading": {
+    "ph": [
+     "command",
+     "movement",
+     "shooting",
+     "charge",
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: label-objective-control)"
+  },
+  "ability-timing | simple-but-effective · Nazdreg · Nazdreg · Nazdreg’s Know-wotz": {
+   "of": "15e00f13",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
+  "ability-timing | simple-but-effective · Zodgrod Wortsnagga · Zodgrod Wortsnagga · Super Runts": {
+   "of": "b65d65b6",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword)"
+  }
+ }
+}
