@@ -781,6 +781,8 @@ if (process.argv.includes('--debug-dets')) {
 const armiesOf = fk => D.armies.filter(a => a.faction === fk);
 const armyIdsOf = fk => fk;   // faction rules are reported under the faction, so adding a list of it changes no report line
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
+// (the detachments whose words are checked: the lists', and every one a faction catalogue added, verify/from-bsdata.js)
+const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read')))];
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
 const usedUpdates = new Set();
 // Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
@@ -838,7 +840,8 @@ function wahaWeapon(body) {
   while (i < rest.length && /^(RANGE|A|BS|WS|S|AP|D)$/.test(rest[i])) heads.push(rest[i++]);
   const names = []; while (i < rest.length && !/^(\d|-|Melee|N\/A)/.test(rest[i])) names.push(rest[i++]);
   const vals = rest.slice(i, i + heads.length);
-  return { prose: body.slice(0, k), heads, nameKw: names[0] || '', vals, line: body[k] };
+  // (and the words after the weapon: a weapon ability the enhancement defines, Auriferous Orb's "[BLINDING LIGHT]: …")
+  return { prose: body.slice(0, k), after: body.slice(k + 1 + i + heads.length), heads, nameKw: names[0] || '', vals, line: body[k] };
 }
 const WEAPON_LINE = /^(.+?): (\S+) A(\S+) (BS|WS)(\S+) S(\S+) AP(\S+) D(\S+) \[(.*)\]$/;
 
@@ -846,7 +849,7 @@ const WEAPON_LINE = /^(.+?): (\S+) A(\S+) (BS|WS)(\S+) S(\S+) AP(\S+) D(\S+) \[(
 for (const fk of FACTIONS) {
   const F = D.factions[fk];
   const army = armyIdsOf(fk);
-  for (const detId of usedDetachments(fk)) {
+  for (const detId of checkedDetachments(fk)) {
     const det = F.detachments[detId];
     const U = 'detachment:' + detId;
     if (!det) { fail('detachment', army, U, 'missing', '', 'an army uses detachment ' + detId + ' but D.factions.' + fk + ' has no such detachment', ''); continue; }
@@ -965,7 +968,7 @@ for (const fk of FACTIONS) {
           const lines = String(e.text).split('\n');
           const wl = lines.findIndex(l => WEAPON_LINE.test(stripMarkup(l).trim()));
           const prose = lines.filter((l, i) => i !== wl).join('\n');
-          const a = normField(prose), b = joinNorm(wt.prose.map(l => l.text));
+          const a = normField(prose), b = joinNorm(wt.prose.concat(wt.after).map(l => l.text));
           if (a !== b) fail('detachment', army, I, 'text', prose, b + ' | ' + diffAt(a, b), W.where);
           count('detachment');
           const m = wl >= 0 ? WEAPON_LINE.exec(stripMarkup(lines[wl]).trim()) : null;

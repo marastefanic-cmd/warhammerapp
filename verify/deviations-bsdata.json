@@ -2812,5 +2812,845 @@
   "reason": "BSData at the pin (Xenos - Orks catalogue revision 8) has Deffkoptas: 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval; New Recruit’s export (catalogue revision 8) has 75×42mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: 75×42mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/trajann-valoris",
+  "field": "ability[Supreme Commander]",
+  "app": "Supreme Commander",
+  "source": null,
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData’s entry does not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/blade-champion",
+  "field": "melee[Hurricanis (Vaultswords)].AP",
+  "app": "-2",
+  "source": "-1",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has -1; GW’s datasheet (the codex, as Wahapedia transcribes it) has -2. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Blade-Champion.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/blade-champion",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN WARDENS, SENTINEL GUARD SODALITY",
+  "source": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to CUSTODIAN GUARD SODALITY, CUSTODIAN WARDENS, SENTINEL GUARD SODALITY; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Blade-Champion.html: LEADER \"This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN WARDENS, SENTINEL GUARD SODALITY\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "stats[Knight-Centura].base",
+  "app": "32mm",
+  "source": "undefined",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has undefined; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 32mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2609: \"Knight-Centura  32mm\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "melee[Gun Stock].WS",
+  "app": "2+",
+  "source": "3+",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 3+; GW’s datasheet (the codex, as Wahapedia transcribes it) has 2+. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "ability[Support].text",
+  "app": "This model can be attached to the following units: PROSECUTOR SQUAD, VIGILATOR SQUAD, WITCHSEEKER SQUAD",
+  "source": "This model can be attached to the following units:\n- Prosecutors\n- Vigilators\n- Witchseekers",
+  "reason": "GW’s datasheet (its SUPPORT section) lets this model be attached to PROSECUTOR SQUAD, VIGILATOR SQUAD, WITCHSEEKER SQUAD; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25)’s Support ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: SUPPORT \"This model can be attached to the following units: PROSECUTOR SQUAD, VIGILATOR SQUAD, WITCHSEEKER SQUAD\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "ability[Corner the Quarry].text",
+  "app": "When an enemy unit (excluding **MONSTER/VEHICLE** units) **engaged** with this unit makes a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**.",
+  "source": "When an enemy unit (excluding MONSTERS/VEHICLES) engaged with this unit makes a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: \"When an enemy unit (excluding MONSTER/VEHICLE units) engaged with this unit makes a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "ability[Creeping Dread]",
+  "app": null,
+  "source": "Creeping Dread",
+  "reason": "GW’s datasheet does not print the ability Creeping Dread. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "rules",
+  "app": "Scouts 7\"",
+  "source": null,
+  "reason": "GW’s datasheet prints Scouts 7\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "rules",
+  "app": null,
+  "source": "Scouts",
+  "reason": "GW’s datasheet prints Scouts 7\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+  "source": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html: LEADER \"This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain",
+  "field": "ability[Master of Ka’tahs].name",
+  "app": "Master of Ka’tahs",
+  "source": "Master of the Ka’tahs",
+  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Master of the Ka’tahs. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain-in-allarus-terminator-armour",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS",
+  "source": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON CUSTODIANS",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-in-Allarus-Terminator-Armour.html: LEADER \"This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain-in-allarus-terminator-armour",
+  "field": "ability[Archeotech Teleport-shunter].tag",
+  "app": "Once per battle, per unit",
+  "source": "Once per battle, per army",
+  "reason": "GW’s datasheet (Wahapedia, the codex) tags the ability (Once per battle, per unit); BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has (Once per battle, per army). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-in-Allarus-Terminator-Armour.html: ABILITIES \"Archeotech Teleport-shunter (Once per battle, per unit)\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain-in-allarus-terminator-armour",
+  "field": "ability[Master of Ka’tahs].name",
+  "app": "Master of Ka’tahs",
+  "source": "Master of the Ka’tahs",
+  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Master of the Ka’tahs. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-in-Allarus-Terminator-Armour.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain-on-dawneagle-jetbike",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: GYRFALCON JETBIKE SODALITY, VERTUS PRAETORS",
+  "source": "This model can be attached to the following units: AGAMATUS CUSTODIANS, VERTUS PRAETORS",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to GYRFALCON JETBIKE SODALITY, VERTUS PRAETORS; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-on-Dawneagle-Jetbike.html: LEADER \"This model can be attached to the following units: GYRFALCON JETBIKE SODALITY, VERTUS PRAETORS\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/shield-captain-on-dawneagle-jetbike",
+  "field": "ability[Master of Ka’tahs].name",
+  "app": "Master of Ka’tahs",
+  "source": "Master of the Ka’tahs",
+  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Master of the Ka’tahs. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-on-Dawneagle-Jetbike.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "stats[Anathema Psykana Rhino].base",
+  "app": "Hull",
+  "source": "undefined",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has undefined; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has Hull. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2605: \"Anathema Psykana Rhino  Hull\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "ability[Creeping Dread]",
+  "app": null,
+  "source": "Creeping Dread",
+  "reason": "GW’s datasheet does not print the ability Creeping Dread. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Anathema-Psykana-Rhino.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Anathema-Psykana-Rhino.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "rules",
+  "app": "Firing Deck 2",
+  "source": null,
+  "reason": "GW’s datasheet prints Firing Deck 2 (BSData: Firing Deck). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Anathema-Psykana-Rhino.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Anathema-Psykana-Rhino.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "rules",
+  "app": null,
+  "source": "Firing Deck",
+  "reason": "GW’s datasheet prints Firing Deck 2 (BSData: Firing Deck). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Anathema-Psykana-Rhino.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/allarus-custodians",
+  "field": "ability[Slayer of Tyrants].name",
+  "app": "Slayer of Tyrants",
+  "source": "Slayers of Tyrants",
+  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Slayers of Tyrants. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/custodian-wardens",
+  "field": "ability[Living Fortress].text",
+  "app": "Attacks that target this unit have -1 **AP**.",
+  "source": "Attacks that target this unit have -1AP.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Custodian-Wardens.html: \"Attacks that target this unit have -1 AP.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/prosecutor-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 3; GW’s datasheet (the codex, as Wahapedia transcribes it) has 2. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/prosecutor-squad",
+  "field": "ability[Creeping Dread]",
+  "app": null,
+  "source": "Creeping Dread",
+  "reason": "GW’s datasheet does not print the ability Creeping Dread. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/prosecutor-squad",
+  "field": "rules",
+  "app": null,
+  "source": "Fights First",
+  "reason": "GW’s datasheet does not print Fights First. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/vigilator-squad",
+  "field": "ability[Creeping Dread]",
+  "app": null,
+  "source": "Creeping Dread",
+  "reason": "GW’s datasheet does not print the ability Creeping Dread. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/vigilator-squad",
+  "field": "rules",
+  "app": null,
+  "source": "Fights First",
+  "reason": "GW’s datasheet does not print Fights First. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/vigilator-squad",
+  "field": "rules",
+  "app": null,
+  "source": "Devastating Wounds",
+  "reason": "GW’s datasheet does not print Fights First. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 3; GW’s datasheet (the codex, as Wahapedia transcribes it) has 2. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "ability[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll with -1 to that battle-shock roll if that enemy unit is a Psyker unit..",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "ability[Creeping Dread]",
+  "app": null,
+  "source": "Creeping Dread",
+  "reason": "GW’s datasheet does not print the ability Creeping Dread. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "rules",
+  "app": "Scouts 7\"",
+  "source": null,
+  "reason": "GW’s datasheet prints Scouts 7\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "rules",
+  "app": null,
+  "source": "Scouts",
+  "reason": "GW’s datasheet prints Scouts 7\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "rules",
+  "app": null,
+  "source": "Fights First",
+  "reason": "GW’s datasheet does not print Fights First. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/venatari-with-kinetic-destroyers",
+  "field": "stats[Venatari].Ld",
+  "app": "5+",
+  "source": "6+",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 6+; GW’s datasheet (the codex, as Wahapedia transcribes it) has 5+. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Kinetic-Destroyers.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/venatari-with-verutum-lances",
+  "field": "stats[Venatari].Ld",
+  "app": "5+",
+  "source": "6+",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 6+; GW’s datasheet (the codex, as Wahapedia transcribes it) has 5+. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/venatari-with-verutum-lances",
+  "field": "ability[Swift Ruin].text",
+  "app": "You can target this unit with the **Rapid Ingress stratagem**, regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase.",
+  "source": "You can target this unit with the Rapid Ingress stratagem regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1CP.\n- That use does not prevent any uses of that stratagem on other units this phase.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: \"You can target this unit with the Rapid Ingress stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": "Damaged 4",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 4 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 4 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": "Damaged 4",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 4 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 4 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/pallas-grav-attack",
+  "field": "melee[Armoured hull].A",
+  "app": "3",
+  "source": "4",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 4; GW’s datasheet (the codex, as Wahapedia transcribes it) has 3. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/pallas-grav-attack",
+  "field": "rules",
+  "app": "Deadly Demise 1",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/pallas-grav-attack",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "stats[Caladius Grav-tank].base",
+  "app": "170×109mm Oval",
+  "source": "150×95mm Oval",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 150×95mm Oval; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 170×109mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2625: \"Caladius Grav-tank  170x109mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "ability[Destructor Optics].text",
+  "app": "This unit’s ranged attacks that target a unit (excluding **MONSTER/VEHICLE** units) have +1 **AP**.",
+  "source": "This unit's ranged attacks that target a unit (excluding MONSTER/VEHICLE) have +1 AP.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html: \"This unit's ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 AP.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "kw",
+  "app": "Caladius",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword CALADIUS; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "rules",
+  "app": "Damaged 5",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-grav-tank",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/telemon-heavy-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/telemon-heavy-dreadnought",
+  "field": "rules",
+  "app": "Damaged 5",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/telemon-heavy-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/telemon-heavy-dreadnought",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "stats[Coronus Grav-carrier].base",
+  "app": "170×109mm Oval",
+  "source": "150×95mm Oval",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 150×95mm Oval; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 170×109mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2628: \"Coronus Grav-carrier  170x109mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "melee[Armoured hull].A",
+  "app": "6",
+  "source": "4",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 4; GW’s datasheet (the codex, as Wahapedia transcribes it) has 6. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "melee[Armoured hull].S",
+  "app": "8",
+  "source": "6",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 6; GW’s datasheet (the codex, as Wahapedia transcribes it) has 8. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "rules",
+  "app": "Damaged 6",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 6 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/coronus-grav-carrier",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 6 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/ares-gunship",
+  "field": "ranged[Arachnus magna-blaze cannon].AP",
+  "app": "-3",
+  "source": "-4",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has -4; GW’s datasheet (the codex, as Wahapedia transcribes it) has -3. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/ares-gunship",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/ares-gunship",
+  "field": "rules",
+  "app": "Damaged 7",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 7 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/ares-gunship",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/ares-gunship",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 7 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/orion-assault-dropship",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Orion-Assault-Dropship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/orion-assault-dropship",
+  "field": "rules",
+  "app": "Damaged 7",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 7 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Orion-Assault-Dropship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/orion-assault-dropship",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Orion-Assault-Dropship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/orion-assault-dropship",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 7 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Orion-Assault-Dropship.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-annihilator-grav-tank",
+  "field": "stats[Caladius Annihilator Grav-tank].base",
+  "app": "170×109mm Oval",
+  "source": "150×95mm Oval",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) has 150×95mm Oval; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 170×109mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2625: \"Caladius Grav-tank  170x109mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-annihilator-grav-tank",
+  "field": "kw",
+  "app": "Caladius",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword CALADIUS; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-annihilator-grav-tank",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-annihilator-grav-tank",
+  "field": "rules",
+  "app": "Damaged 5",
+  "source": null,
+  "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-annihilator-grav-tank",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/caladius-annihilator-grav-tank",
+  "field": "rules",
+  "app": null,
+  "source": "Damaged",
+  "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
  }
 ]

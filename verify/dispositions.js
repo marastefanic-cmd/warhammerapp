@@ -46,7 +46,8 @@ const DEVS = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-bsdat
 const devUsed = new Set();
 for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.entries(f.detachments || {})){
   n++;
-  const want = B[key(d.name)];
+  // (by GW's name, else BSData's spelling of it, nr: Shadow Keepers for GW's Shadowkeepers)
+  const want = B[key(d.name)] || (d.nr ? B[key(d.nr)] : undefined);
   const dev = DEVS.find(x => x.faction === fid && key(x.detachment) === key(d.name));
   if(dev && JSON.stringify(dev.app) === JSON.stringify(d.dispositions || []) && JSON.stringify(dev.source || null) === JSON.stringify(want || null)){ devUsed.add(dev); continue; }
   if(!want){ fails.push(fid + ' · ' + d.name + ': not found in BSData'); continue; }
@@ -61,7 +62,7 @@ for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.e
   src = src.slice(0, end) + lit + src.slice(end + (next ? next[0].length : 0));
 }
 for(const a of D.armies){
-  const can = new Set((a.detachments || []).flatMap(id => (D.factions[a.faction].detachments[id] || {}).dispositions || B[key((D.factions[a.faction].detachments[id] || {}).name)] || []));
+  const can = new Set((a.detachments || []).flatMap(id => (D.factions[a.faction].detachments[id] || {}).dispositions || B[key((D.factions[a.faction].detachments[id] || {}).name)] || B[key((D.factions[a.faction].detachments[id] || {}).nr || '')] || []));
   if(a.disposition && !can.has(a.disposition)) fails.push(a.id + ': its disposition ' + a.disposition + ' is not one its detachments allow (' + [...can].join(', ') + ')');
 }
 for(const x of DEVS) if(!devUsed.has(x)) fails.push('verify/deviations-bsdata.json: nothing matches the dispositions deviation of ' + x.faction + ' · ' + x.detachment);

@@ -1,0 +1,8 @@
+{
+ "_about": "The faction catalogue import (verify/from-bsdata.js adeptus-custodes) reads BSData's whole Adeptus Custodes catalogue through verify/from-json.js as the export catalog-adeptus-custodes; this is its hand file. weaponNames: a weapon BSData names otherwise than GW's datasheet (Wahapedia) by more than the spelling rules of verify/from-json.js can tell, so that GW's profile is found and its values checked; the app keeps BSData's name (New Recruit's, which the in-app import matches), and verify/out/catalog/adeptus-custodes.md lists it as named otherwise.",
+ "weaponNames": {
+  "Twin Iliastus Accelerator Cannon": "Iliastus Accelerator Cannon",
+  "Tarsis buckler": "Tarsus Buckler",
+  "Solarite Power Talons": "Solarite Power Talon"
+ }
+}
