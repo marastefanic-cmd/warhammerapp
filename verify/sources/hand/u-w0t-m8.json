@@ -111,26 +111,10 @@
    "why": "Plasmacyte: GW’s wargear option (\"For every 3 models in this unit, this unit can have 1 Plasmacyte\") this list did not take (the export has no Plasmacyte), so the Plasmacyte ability and its Designer’s Note are left out. Tunnelling Horrors in GW’s Faction Pack 1.3 words (as Wahapedia and BSData)."
   },
   "tesseract-vault": {
-   "why": "Powers of the C’tan: in your Shooting phase, when selected to shoot, it selects up to two different C’tan Powers weapons (one while Damaged); GW prints them as RANGED WEAPONS with [C’TAN POWER] (BSData’s profiles of the type \"C'tan Powers\", read as weapons): shown as three ranged weapons, the choice is the ability’s, not a pick-one or all-fire group. Tesla sphere: GW’s composition gives 4 tesla spheres (the profile named “Tesla spheres”), New Recruit 4× Tesla sphere: four weapons of A 6. M 14\": Empowered Engines (The Phaeron’s Armoury: friendly NECRONS TITANIC FLY units have +6\" M), the datasheet’s 8\" kept as its own value. Damaged: 1-8 wounds remaining is labelled your Shooting phase (its words: only one C’tan Powers weapon “in your Shooting phase”); a Damaged band otherwise gets no label.",
-   "labels": {
-    "Damaged: 1-8 wounds remaining": {
-     "ph": [
-      "shooting"
-     ],
-     "turn": "your"
-    }
-   }
+   "why": "Powers of the C’tan: in your Shooting phase, when selected to shoot, it selects up to two different C’tan Powers weapons (one while Damaged); GW prints them as RANGED WEAPONS with [C’TAN POWER] (BSData’s profiles of the type \"C'tan Powers\", read as weapons): shown as three ranged weapons, the choice is the ability’s, not a pick-one or all-fire group. Tesla sphere: GW’s composition gives 4 tesla spheres (the profile named “Tesla spheres”), New Recruit 4× Tesla sphere: four weapons of A 6. M 14\": Empowered Engines (The Phaeron’s Armoury: friendly NECRONS TITANIC FLY units have +6\" M), the datasheet’s 8\" kept as its own value."
   },
   "tesseract-vault-2": {
-   "why": "As the other Tesseract Vault (the same datasheet); 505 pts, GW’s price of a 2nd+ unit.",
-   "labels": {
-    "Damaged: 1-8 wounds remaining": {
-     "ph": [
-      "shooting"
-     ],
-     "turn": "your"
-    }
-   }
+   "why": "As the other Tesseract Vault (the same datasheet); 505 pts, GW’s price of a 2nd+ unit."
   },
   "imotekh-the-stormlord": {
    "why": "Imotekh leads no unit in this list (Leader: IMMORTALS, LYCHGUARD, NECRON WARRIORS): the export attaches him to none, the Immortals included (the Technomancer supports them). NOBLE: Worthy Foes applies."
