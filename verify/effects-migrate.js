@@ -43,7 +43,10 @@ function sources(D){
     // (an ability whose tag names an army rule of its faction, Bondsman: that rule's words say whom it reaches)
     const F = D.factions[a.faction] || {};
     for(const ab of u.abilities || []){ const tr = (F.armyRules || []).find(r => String(ab.tag || '').split(/ · |, /).includes(r.name));
-      put(KEY.ability(ab), Object.assign({ type:'ability', name:ab.name, text:ab.text, tag:ab.tag || '', weapons:ws }, tr ? { tagText:tr.text } : {})); }
+      // (one of the abilities to pick from: New Recruit lists it under "X: pick one", X the unit's ability whose words say "select one
+      // X ability")
+      const po = /^(.+): pick one$/.exec(ab.who || ''), par = po && (u.abilities || []).find(x => x.name === po[1] && /\bselect one\b/i.test(x.text || '') && new RegExp('\\bselect one ' + po[1].split(/\s+/)[0], 'i').test(x.text || ''));
+      put(KEY.ability(ab), Object.assign({ type:'ability', name:ab.name, text:ab.text, tag:ab.tag || '', weapons:ws }, tr ? { tagText:tr.text } : {}, par ? { pickOf:{ name:par.name, text:par.text } } : {})); }
     // the core weapon abilities of its weapons that calc.js does not play (Conversion), each for the weapons with it
     for(const w of [].concat(u.ranged || [], u.melee || [])) for(const k of w.kw || []){
       if(CALC_KW.test(k)) continue;
@@ -76,6 +79,7 @@ function build(D){
     if(r.nc.length) o.nc = r.nc;
     if(r.reach && /\baura\b/i.test(s.tag || '')) o.reach = r.reach;
     if(r.both && r.both.length) o.both = r.both;
+    if(r.embarked) o.embarked = r.embarked;
     if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
   }
   return T;

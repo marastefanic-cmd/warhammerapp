@@ -2257,13 +2257,12 @@ function dmReach(u, it, m, sc){
   return n;
 }
 // the models of a unit that are not on the battlefield yet (an ability's embarked mark: Sir Hekhtur while Canis Rex lives) and why, quoted
-// read from GW's words by one fixed pattern: "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a
-// destroyed Transport" (Using Sir Hekhtur): "this model" is the unit's other model, not on the battlefield while that one lives
-const DM_EMBARKED = /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\b/;
-const dmEmbarked = u => { for(const ab of u.abilities || []){ const m = DM_EMBARKED.exec(String(ab.text || '').replace(/\*\*/g, '')); if(!m) continue;
-    const names = (u.models || []).map(l => String(l).replace(/^\d+×\s*/, '')).filter(n => n !== m[1]);
-    if(names.length !== 1 || !(u.models || []).some(l => String(l).replace(/^\d+×\s*/, '') === m[1])) continue;
-    return { names:new Set(names), until:m[1], ab, quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' }; }
+// the model of a unit not on the battlefield yet (Sir Hekhtur while Canis Rex lives): BOXES embarked, read at build time from GW's words by
+// one fixed pattern (verify/effects-extract.js); "this model" is the unit's other model
+const dmEmbarked = u => { for(const ab of u.abilities || []){ const o = dmBoxesOf(DM_KEY.a(ab)); if(!o || !o.embarked) continue; const until = o.embarked.until;
+    const names = (u.models || []).map(l => String(l).replace(/^\d+×\s*/, '')).filter(n => n !== until);
+    if(names.length !== 1 || !(u.models || []).some(l => String(l).replace(/^\d+×\s*/, '') === until)) continue;
+    return { names:new Set(names), until, ab, quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' }; }
   return null; };
 // (a reference sheet's unit after the army's: selectable, never the one picked first)
 const dmUnits = (a, kind) => a.units.concat(a.refs || []).filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
@@ -2974,7 +2973,7 @@ function dmLeversOf(st, plan, bi, pf, facts, prior){
     const turnCharge = k === 'charged';
     const F = dmFx(st, b.atk, id0 === 'fight' && dmCharged(st, plan.turn)), onNow = turnCharge ? dmCharged(st, plan.turn) : !!F.fx[k];
     const here = ruled(b, unitWho, store), reach = here.filter(r => !r.m.strat).map(r => r.m.from).concat(k === 'stationary' && M.sit.some(x => x.k === 'c:heavy') ? ['[HEAVY] +1 to hit'] : [],
-      parts(b, unitWho, store).map(r => r.m.from + ' (' + r.m.part.note + (r.partIn ? '' : ', with ' + andList(r.m.part.picks).replace(/ and /, ' or ')) + ')')), cond = here.filter(r => r.m.strat).map(r => r.m.cp + 'CP ' + r.m.from);
+      parts(b, unitWho, store).map(r => r.m.from + ' (' + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ')')), cond = here.filter(r => r.m.strat).map(r => r.m.cp + 'CP ' + r.m.from);
     const elsewhere = plan.beats.filter(bb => bb !== b && !(turnCharge && bb.id !== 'fight')).map(bb => [bb, ruled(bb, unitWho, store).filter(r => !r.m.strat)]).filter(([, l]) => l.length);
     const also = elsewhere.map(([bb, l]) => 'in the ' + bb.label.toLowerCase() + ': ' + andList([...new Set(l.map(r => r.m.from))])).join(' · ');
     const label = k === 'charged' ? DM_FACTS.charged : DM_FACTS[k] || k;
@@ -2994,7 +2993,9 @@ function dmLeversOf(st, plan, bi, pf, facts, prior){
   for(const x of M.sit) if(!x.fixed) add('s:' + x.k, { sec:'rule', on:x.on, x, apply:flip(x.k, x.on) });
   for(const r of M.rules){
     if(r.state === 'nc') continue;
-    const lv = add('r:' + r.k, { sec:r.m.strat ? 'strat' : 'rule', grp:dmGroupOf(r), on:r.on, r, out:r.state === 'out', range:!!(r.e && r.e.range), apply:flip(r.k, r.on) });
+    // (one of a unit's abilities to pick from, BOXES excl: ticking it unticks the others of its pick, "select one Wrathful Presence ability")
+    const ex = r.m.box && r.m.box.excl, others = ex ? M.rules.filter(y => y !== r && y.m.box && y.m.box.excl === ex && (y.m.src || null) === (r.m.src || null)).map(y => y.k) : [];
+    const lv = add('r:' + r.k, { sec:r.m.strat ? 'strat' : 'rule', grp:dmGroupOf(r), on:r.on, r, out:r.state === 'out', range:!!(r.e && r.e.range), apply:s => { flip(r.k, r.on)(s); if(!r.on) for(const k of others) chOf(s).on[k] = false; } });
     if(r.pills) r.pills.forEach(([name, sel]) => add('k:' + r.k + '|' + name, { sec:'pill', radio:true, on:r.on && sel, parent:lv.id, name, apply:s => { const x = chOf(s); x.val[r.pillKey] = name; x.on[r.k] = true;
       if(r.dice && (r.m.dice.two || []).includes(name)) x.val[r.diceKey] = r.m.dice.opts[1]; } }));   // a pick of two results: two D6 by itself
     // the dice rolled, its own choice (one D6 with a pick of two results: the first of them)
@@ -3653,10 +3654,10 @@ function dmLeverRow(C, x){
     const sc0 = (r.sc && r.sc.scope) || {}, bu0 = C.plan.beats[C.plan.k].atk.u;
     const one = sc0.models === 'one' && modelCount(bu0) > 1 ? ' · one model only: counted for the weapons of one model' : '';
     // (the models its words name: CHARACTER models, or the others; a re-roll of one die: how often, in GW's words, BOXES pool)
-    const who = sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '';
+    const who = (sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '') + (sc0.wkw ? ' · ' + dmCap(sc0.wkw.toLowerCase()) + ' weapons only' : '') + (sc0.weapon && !part ? ' · its ' + sc0.weapon.replace(/ weapons?$/, '') + ' weapons' : '');
     const PL = { selected:'one for the unit each time it is selected to shoot or fight, its weapons most valuable first', phase:'once in the phase', turn:'once per turn', round:'once per battle round' };
     const pool = r.m.box && r.m.box.pool && r.m.box.pool !== 'phase' ? ' · ' + PL[r.m.box.pool] : '';
-    const bu = bu0, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while “' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + '” holds (above)' : '') : '';
+    const bu = bu0, pt = r.m.part ? (words ? ' · ' : '') + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ' (' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + ')' + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while it holds (above)' : '') : '';
     const counted = '', lead = '';
     // a re-roll of one die, ticked: which weapons it goes to (the working's exact averages; the unit's re-rolls of one die together)
     const went = r.on && r.e && ['oneHit', 'oneWound', 'oneDmg', 'oneEither', 'oneAny'].some(k => r.e[k]) ? dmOneWent(C.M, r.m.from) : '';
@@ -3696,8 +3697,10 @@ function dmPills(C, x){
   if(!kids.length) return '';
   const pk = x.r && x.r.m.box && x.r.m.box.pick ? x.r.m.box.pick : [];
   // each pick: its name (GW's: a table's row, an option), and its effects when the name is not them (effects.js labels)
-  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), fl = p ? WH_EFFECTS.fxLabel(p.fx) : '';
-    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (fl && fl !== y.name ? '<small>' + esc(fl) + (p.part ? '; ' + esc(WH_EFFECTS.fxLabel(p.part.fx)) + ' ' + esc(WH_EFFECTS.condLabel(p.part.on)) : '') + '</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
+  // (and its own condition, GW's words: "If the assault doctrine is active for your unit", "spend one Flux token")
+  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), fl0 = p ? WH_EFFECTS.fxLabel(p.fx) : '', cl = p && (p.on || []).length ? WH_EFFECTS.condLabel(p.on.filter(o => o[0] !== 'opt')) : '';
+    const fl = (cl ? cl + (fl0 && fl0 !== y.name ? ': ' : '') : '') + (fl0 && fl0 !== y.name ? fl0 : '');
+    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (fl ? '<small>' + esc(fl) + (p.part ? '; ' + esc(WH_EFFECTS.fxLabel(p.part.fx)) + ' ' + esc(WH_EFFECTS.condLabel(p.part.on)) : '') + '</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
 }
 // the step a control is for: the part of the list it is in (Both: the shooting or the fight), else the step shown
 const dmStepId = el => { const x = el && el.closest && el.closest('[data-dmstep]'); return x ? x.dataset.dmstep : DM_CTX ? DM_CTX.plan.beats[DM_CTX.plan.k].id : 'shoot'; };

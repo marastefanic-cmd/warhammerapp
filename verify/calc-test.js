@@ -813,6 +813,11 @@ cases.push(['Doctrina: the both pill, from Icon of War', () => +((DOCB().pills |
 cases.push(['Doctrina: the both pill counts both rows', () => (r => { const p = r.pills.find(x => /^Conqueror Imperative and Protector Imperative/.test(x[0]))[0]; const c = dm.calc({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{}, on:{ [r.k]:true }, val:{ [r.pillKey]:p } }).rules.find(x => x.k === r.k);
   return +(!!c.e.heavy && c.e.skill === 1 && c.e.ap === 1); })(DOCB()), 1]);   // ([ASSAULT]: no effect in these numbers; +1 AP: the Conqueror's part, a BATTLELINE unit)
 cases.push(['Doctrina: no both pill for a unit the Icon of War cannot select (Belisarius Cawl: no SKITARII or THULIA GHULD)', () => +!dm.calc({ army:'purge-goes-the-foe', ph:'shooting', atk:'belisarius-cawl', typed:{} }).rules.some(r => r.m.from === 'Doctrina Imperatives' && (r.pills || []).some(p => / and /.test(p[0]))), 1]);
+// one of a unit's abilities to pick from (BOXES excl, "select one Triarch ability"): ticking one unticks the other
+cases.push(['pick one: ticking Phaeron of the Blades unticks Phaeron of the Stars', () => { const S0 = { army:'u-w0t-m8', ph:'fight', atk:'imotekh-the-stormlord', typed:{} };
+  const st0 = box(S0, 'Phaeron of the Stars'), bl = box(S0, 'Phaeron of the Blades'); const p0 = dm.plan(Object.assign({ ch:{ 'me:fight':{ on:{ [st0.k]:true } } }, turn:{ me:MT('fight') } }, S0));
+  const st = dm.app.dmState(), lv = dm.app.dmLevers(st, p0).find(l => l.id === 'r:' + bl.k); lv.apply(st); const c = st.ch && st.ch['me:fight'];
+  return +(!!c && c.on[bl.k] === true && c.on[st0.k] === false); }, 1]);
 // your unit changed: a tick whose rule still applies is kept (Kustom Dakka, Tankbustas → Flash Gitz: the same turn as picked so); one
 // with no rule for the new unit is dropped and said (Try Dat Button!, the Big Mek Dakkarig's), in a step out of the turn too
 const KD = strat({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka').k;

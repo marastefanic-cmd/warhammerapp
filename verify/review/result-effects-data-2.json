@@ -1,0 +1,479 @@
+[
+ {
+  "key": "2eb769b6aba90392",
+  "where": "ability · Soul Sight",
+  "verdict": "ok",
+  "why": "GW: “Ranged attacks that target that enemy unit have [IGNORES COVER].” → [IGNORES COVER] when The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6” (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "9a03e54ebf6b04e0",
+  "where": "ability · Icon of War",
+  "verdict": "ok",
+  "why": "BOXES both: The Fires of Mars, “the Conqueror Imperative and Protector Imperative are both active for that unit”, reach any SKITARII/THULIA GHULD, mark selected, lasts round. Rendered (my own build): the “Conqueror Imperative and Protector Imperative (Icon of War: The Fires of Mars)” pill on every Skitarii unit, Thulia Ghuld and the Kastelans+Datasmith (the Martial Signatum Amplificator enhancement gives that unit SKITARII), not on Belisarius Cawl or the Enginseer; shooting only (melee: = Conqueror). GW-backed. "
+ },
+ {
+  "key": "638b3a3de5c95e2e",
+  "where": "ability · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "“Once per battle” comes from the database tag, which is GW’s: CSM Faction Pack l.1633 “Warp Rift Firepower (Once per battle, per unit): …” (Wahapedia Obliterators the same). GW: “If you do, this unit's ranged attacks have [INDIRECT FIRE].” → [INDIRECT FIRE] when Once per battle · If it uses this ability (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "51dacae9d6a5d25f",
+  "where": "ability · Slayer of Tyrants",
+  "verdict": "ok",
+  "why": "GW: “This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.” → +1 to Wound rolls when “that target a unit with a T greater than this unit's T” (melee). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "073f859b59e8c520",
+  "where": "ability · Bladeguard",
+  "verdict": "ok",
+  "why": "GW: “This unit’s melee attacks have +1 to hit rolls.” → +1 to Hit rolls when “In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following” (melee). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "ae59b71c27734cd8",
+  "where": "ability · Brigand",
+  "verdict": "ok",
+  "why": "GW: “Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.” → [IGNORES COVER] when The target within range of an objective marker (ranged, scope {\"models\":\"model\"}). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "83efb74d8ebf69e2",
+  "where": "ability · Moment Shackle",
+  "verdict": "ok",
+  "why": "GW: “This model’s Watcher’s Axe weapon has +3 A.” → +3 A when Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase” (all, scope {\"weapon\":\"watcher's axe\",\"models\":\"model\"}). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "89f545d6130fa81b",
+  "where": "ability · Boss’ Ammo Runt",
+  "verdict": "ok",
+  "why": "“Once per battle” from the database tag “Once per battle, per unit” (and GW’s token “removing it when this ability is used”). GW: “If you do, this model’s ranged attacks have +1 to hit rolls.” → +1 to Hit rolls when Once per battle · If it uses this ability (ranged, scope {\"models\":\"model\"}). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "6472800bca1558ee",
+  "where": "ability · Canticles of the Omnissiah",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll.” → Re-roll Hit rolls when Invocation of Machine Vengeance · The target is the enemy unit selected (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "212a6b015a63fc3d",
+  "where": "ability · Paladin’s Duty",
+  "verdict": "ok",
+  "why": "GW: “While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.” → [LETHAL HITS] when “While a model is affected by this ability” · Selected by it (all); “While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.” → [LANCE] when “While a model is affected by this ability” · Selected by it (melee). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "5283b5f419a6290a",
+  "where": "ability · Aetherstride",
+  "verdict": "ok",
+  "why": "Builder used the full clause “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride” + used: right, GW’s own words, and it names the aetherstride the effect depends on. GW: “Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” → [SUSTAINED HITS D3] when If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride” (all, scope {\"weapon\":\"dark blessing\"}). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "4a2153585aee2241",
+  "where": "ability · Warden’s Duty",
+  "verdict": "ok",
+  "why": "GW: “While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ab” → [SUSTAINED HITS 1] when “While a model is affected by this ability” · Selected by it (all); “While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ab” → [IGNORES COVER] when “While a model is affected by this ability” · Selected by it (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "9790a2a5ccd7fb16",
+  "where": "ability · Close-range Killers",
+  "verdict": "ok",
+  "why": "GW: “While a friendly War Dog model is within 9\" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characte” → +1 AP when Within 9\" of it · “that targets the closest enemy unit” (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "66fe39f0bbc0476a",
+  "where": "ability · Warp-sighted Butcher",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll.” → Re-roll Hit rolls when While leading a unit · The target below its Starting Strength (melee); “If that unit is Below Half-strength, you can re-roll the Wound roll as well.” → Re-roll Wound rolls when While leading a unit · The target below its Starting Strength · The target Below Half-strength (melee). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "a74f0e4a5a852bd0",
+  "where": "ability · Icon of Flame",
+  "verdict": "ok",
+  "why": "GW: “Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.” → [IGNORES COVER] (ranged, scope {\"models\":\"nonchar\"}). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "e24f2cfa8e3fd858",
+  "where": "ability · Seething Hatred",
+  "verdict": "ok",
+  "why": "GW: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.” → Re-roll one Hit or Wound roll (all, pool selected). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "f525785a5df86485",
+  "where": "ability · Singular Purpose",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.” → Re-roll Hit rolls, Re-roll Wound rolls when The target is the enemy unit selected · “At the start of the first battle round, select one of the following” (all, scope {\"models\":\"model\"}). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "0ba8877fe0f4615b",
+  "where": "core · Damaged 4",
+  "verdict": "ok",
+  "why": "The core rule “Damaged X” (“This ability always takes the form Damaged X”) is resolved to its value from the rule’s name (helpers.js/dmCoreText): the shown text keeps “always takes the form Damaged X” before “… equal to or less than 4”, so the substitution is visible; label “While a model’s remaining wounds are equal to or less than 4”: −1 to Hit rolls, as main’s “Damaged (4 or fewer wounds remaining)”. The key change follows the text change: accepted. GW: “While a model’s remaining wounds are equal to or less than 4, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*” → −1 to Hit rolls when “While a model's remaining wounds are equal to or less than 4” (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "50b933d3c9982a97",
+  "where": "core · Damaged 5",
+  "verdict": "ok",
+  "why": "As Damaged 4, with 5 (main: “Damaged (5 or fewer wounds remaining)”). Accepted. GW: “While a model’s remaining wounds are equal to or less than 5, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*” → −1 to Hit rolls when “While a model's remaining wounds are equal to or less than 5” (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "702e40c9e955634d",
+  "where": "rule · Magna Imperator",
+  "verdict": "ok",
+  "why": "GW: “Re-roll one hit roll. Re-roll one wound roll.” → Re-roll one Hit roll, Re-roll one Wound roll (all, pool selected). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "555590d2aa806d8e",
+  "where": "rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "Builder used GW’s exact words “that unit can make a Warpmeld Sacrifice” + “If it uses this ability” instead of my parenthesis: right — the D3 mortal wounds are a cost, not a condition of the box, and the label now states the Sacrifice (rendered: “If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls”). GW: “If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll.” → +1 to Wound rolls when If it uses this ability · “that unit can make a Warpmeld Sacrifice” (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "05f25c34940fe42f",
+  "where": "rule · Mission Tactics",
+  "verdict": "ok",
+  "why": "GW: “If the devastator doctrine is active for your unit, your unit’s attacks have [SUSTAINED HITS 1].” → [SUSTAINED HITS 1] when Furor Tactics · “If the devastator doctrine is active for your unit” (all); “If the tactical doctrine is active for your unit, your unit’s attacks have [LETHAL HITS].” → [LETHAL HITS] when Malleus Tactics · “If the tactical doctrine is active for your unit” (all); “If the assault doctrine is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have [PRECISION].” → [PRECISION] when Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9\" of this unit” (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "1cee04af9acdb917",
+  "where": "rule · Martial Ka’tah",
+  "verdict": "ok",
+  "why": "GW: “Your unit can ignore modifiers to your unit’s: - BS. - Hit rolls and wound rolls.” → pick Salvus = Ignore modifiers to BS/WS and the Hit roll (ranged); “Your unit’s melee attacks that target an enemy unit (excluding MONSTER/VEHICLE units) can re-roll hit rolls of 1.” → pick Dacatarai = Re-roll Hit rolls of 1 / Rendax = [LETHAL HITS] (melee). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "9861fa09b24337ca",
+  "where": "rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "GW: “[LETHAL HITS]” → pick [LETHAL HITS] = [LETHAL HITS] / [SUSTAINED HITS 1] = [SUSTAINED HITS 1] when If it uses this ability · “If your Army Faction is HERETIC ASTARTES” (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "206c194084b10b62",
+  "where": "rule · Code Chivalric",
+  "verdict": "ok",
+  "why": "GW: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” → Re-roll one Hit roll, Re-roll one Wound roll when Quality 1–2 · …with our martial valour risen over all (all, pool selected). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "b264635bc062a21e",
+  "where": "rule · Synapse",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” → +1 S when “If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army” (melee). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "ecf44d2a7d882f19",
+  "where": "rule · Pledges to the Dark Prince",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit makes an attack, re-roll a Hit roll of 1.” → Re-roll Hit rolls of 1 when 1+ Pact points (cumulative) (all); “Each time a model in this unit makes an attack, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 when 3+ Pact points (cumulative) (all); “Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.” → [LETHAL HITS], [SUSTAINED HITS 1] when 5+ Pact points (cumulative) (melee); “Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.” → Critical Hit on 5+ when 7+ Pact points (cumulative) (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "36f6154afd910402",
+  "where": "strat · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "GW: “Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can” → BS 3+, [IGNORES COVER] when “they can only target units within range of the selected objective marker” (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "33f8a9df4bd46b7a",
+  "where": "strat · Pyrogenesis",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of tho” → pick +2 S = +2 S / +3 S, +1 AP = +3 S, +1 AP (all). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "0b486981340f4b5c",
+  "where": "strat · Inevitable Annihilation",
+  "verdict": "ok",
+  "why": "GW: “Your unit can ignore modifiers to your unit’s: - BS. - Hit rolls.” → Ignore modifiers to BS/WS and the Hit roll (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "d454c4a5ecd285f1",
+  "where": "strat · Ruination’s Bounty",
+  "verdict": "ok",
+  "why": "GW: “[LETHAL HITS]. [SUSTAINED HITS 1].” → [LETHAL HITS], [SUSTAINED HITS 1] when “When your unit uses the Dark Pacts ability” (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "f588d811297218f3",
+  "where": "strat · Glowin’ Dakka",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” → +1 AP when “that target a unit within 9\"” (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "609b3583b67414ef",
+  "where": "strat · Command Re-roll",
+  "verdict": "ok",
+  "why": "GW: “You re-roll that roll.” → Re-roll one Hit, Wound or Damage roll (once in the phase) (all, pool phase). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "6b7e503a14108c46",
+  "where": "strat · Drive-by Bustin’",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks with weapons selected for the Firing Deck ability have +1 to hit rolls.” → +1 to Hit rolls when “with weapons selected for the Firing Deck ability” (ranged). Effect, conditions (label), scope, reach and pool equal GW’s words; checked rendered against main (label kept or corrected)."
+ },
+ {
+  "key": "gone-c|189uwq8",
+  "where": "gone · Damaged 4",
+  "verdict": "ok",
+  "why": "Gone only because the source text now resolves Damaged X to its value (new key); the new entry reads the same sentence with the number (see Damaged 4): right."
+ },
+ {
+  "key": "gone-c|1t54jx4",
+  "where": "gone · Damaged 5",
+  "verdict": "ok",
+  "why": "Gone only because the source text now resolves Damaged X to its value (new key); the new entry reads the same sentence with the number (see Damaged 5): right."
+ },
+ {
+  "key": "effects-parity-2",
+  "where": "Damage tab rendered before/after (labels, folds, numbers)",
+  "verdict": "fix",
+  "why": "Re-checked independently (my own label diff over all 396 list×unit×phase views with damage-node, main vs 0362348; my own build+render of 5 views; rd-old/rd-new; snapshot-diffs-2). Right: Vox-howl only on the 3 WAR DOG CHARACTER units (Damage tab, stratagem list, unit screens: snapshot-diffs-2/woof-woof only drops the AI badge); out-of-step rows in a closed “Not for this step, by the rules (n) · yours to count anyway” fold per group; all 20 label fixes in; Doctrina Both reach; Code Chivalric/Magna Imperator/Seething Hatred pool notes (“one for the unit each time it is selected to shoot or fight, its weapons most valuable first”) as GW’s words; Stand Vigil/Impenetrable Defence as own Unit-rules rows (fact row “ticks …”); Honoured Interred split (strat on the Dreadnoughts, From other units on Trajann). 224 corrections: 52 distinct rows checked against GW (all as GW reads). But not all INTENDED “WORDS” rows are intended: 3 rule labels lost a condition main stated (entries extra-pick-one-*), and 3 minor ones (entries extra-doctrina-dot, extra-hungry, extra-malefic). These are regressions hidden in the INTENDED class.",
+  "fix": {
+   "reclassify": [
+    "Driven by Ultimate Rage",
+    "Phaeron of the Stars",
+    "Phaeron of the Blades",
+    "Doctrina Imperatives (“· +1 AP”)",
+    "Hungry for Combat",
+    "Malefic Surge"
+   ],
+   "to": "REGRESSION until fixed (entries below)"
+  }
+ },
+ {
+  "key": "extra-pick-one-driven-by-ultimate-rage",
+  "where": "standard, super-terminators, big-demons-baby · Driven by Ultimate Rage",
+  "verdict": "fix",
+  "why": "GW: Angron’s Wrathful Presence: “At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” Driven by Ultimate Rage is one of three (data.js who:\"Wrathful Presence: pick one\"). Main: “Within 6\" of Angron, if he has Driven by Ultimate Rage this round”; here only “Aura · Within 6\" of it: …” — the pick condition is dropped (standard, super-terminators, big-demons-baby; classed INTENDED WORDS). State it.",
+  "fix": {
+   "box": "a|1c2pjdd",
+   "b": [
+    {
+     "quote": "Re-roll hit rolls of 1.\nRe-roll wound rolls of 1.",
+     "fx": [
+      [
+       "rrHit1",
+       true
+      ],
+      [
+       "rrWound1",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Wrathful Presence: the one selected at the start of the battle round"
+      ],
+      [
+       "aura",
+       6
+      ]
+     ],
+     "kind": "melee",
+     "lead": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:",
+     "reach": {
+      "all": [
+       "Faction: World Eaters"
+      ]
+     },
+     "mark": "aura"
+    }
+   ],
+   "nc": [],
+   "reach": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   }
+  }
+ },
+ {
+  "key": "extra-pick-one-phaeron-of-the-stars",
+  "where": "u-w0t-m8 · Phaeron of the Stars",
+  "verdict": "fix",
+  "why": "GW: The Silent King’s Triarch Abilities: “At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.” (data.js who:\"Triarch Abilities: pick one\"). Main: “Within 6\" of Szarekh, if The Silent King has Phaeron of the Stars this battle round”; here “Aura · Within 6\" of it: …”: dropped (u-w0t-m8). It and Phaeron of the Blades can both be ticked although GW allows one.",
+  "fix": {
+   "box": "a|13o0mkf",
+   "b": [
+    {
+     "quote": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.",
+     "fx": [
+      [
+       "rrHit1",
+       true
+      ],
+      [
+       "rrWound1",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Triarch Abilities: the one selected at the start of the battle round"
+      ],
+      [
+       "aura",
+       6
+      ]
+     ],
+     "kind": "all",
+     "reach": {
+      "all": [
+       "Faction: Necrons"
+      ],
+      "none": [
+       "Monster"
+      ]
+     },
+     "mark": "aura"
+    }
+   ],
+   "nc": [],
+   "reach": {
+    "all": [
+     "Faction: Necrons"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  }
+ },
+ {
+  "key": "extra-pick-one-phaeron-of-the-blades",
+  "where": "u-w0t-m8 · Phaeron of the Blades",
+  "verdict": "fix",
+  "why": "As Phaeron of the Stars: one of the Triarch abilities selected each battle round; the label says only “Within 6\" of it: +1 S” (main: “Own aura, if it has Phaeron of the Blades this battle round”). State it.",
+  "fix": {
+   "box": "a|1nwz1gg",
+   "b": [
+    {
+     "quote": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+     "fx": [
+      [
+       "s",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Triarch Abilities: the one selected at the start of the battle round"
+      ],
+      [
+       "aura",
+       6
+      ]
+     ],
+     "kind": "melee",
+     "reach": {
+      "all": [
+       "Faction: Necrons"
+      ],
+      "none": [
+       "Monster"
+      ]
+     },
+     "mark": "aura"
+    }
+   ],
+   "nc": [],
+   "reach": {
+    "all": [
+     "Faction: Necrons"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  }
+ },
+ {
+  "key": "extra-hungry",
+  "where": "woof-woof · 1CP Hungry for Combat",
+  "verdict": "fix",
+  "why": "GW: “Until the end of the phase, models in those WAR DOG units can only target that enemy unit, but each time … an unmodified Hit roll of 5+ scores a Critical Hit.” Main stated the restriction (“they can only target it”); here only “The target is the enemy unit selected: Critical Hit on 5+”. State GW’s restriction, as Auto-divinatory Targeting’s.",
+  "fix": {
+   "box": "s|firve9",
+   "b": [
+    {
+     "quote": "Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
+     "fx": [
+      [
+       "critHit",
+       5
+      ]
+     ],
+     "on": [
+      [
+       "targetSelected",
+       true
+      ],
+      [
+       "q",
+       "models in those WAR DOG units can only target that enemy unit"
+      ]
+     ],
+     "kind": "melee",
+     "lead": "Select one enemy unit within Engagement Range of those **WAR DOG** units."
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "extra-malefic",
+  "where": "infernal-lance · Malefic Surge",
+  "verdict": "fix",
+  "why": "GW: “… that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.” Main: “Empowered, using Diabolic Power”; here only “Diabolic Power”. Minor; state Empowered.",
+  "fix": {
+   "box": "r|1xk95t6",
+   "b": [
+    {
+     "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability.",
+     "fx": [],
+     "on": [
+      [
+       "q",
+       "While a unit is Empowered it can use one of the Malefic Surge abilities below"
+      ],
+      [
+       "opt",
+       "Diabolic Power"
+      ]
+     ],
+     "kind": "all",
+     "opt": "Diabolic Power",
+     "pick": [
+      {
+       "name": "[LETHAL HITS]",
+       "fx": [
+        [
+         "lethal",
+         true
+        ]
+       ],
+       "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability."
+      },
+      {
+       "name": "[SUSTAINED HITS 1]",
+       "fx": [
+        [
+         "sus",
+         "1"
+        ]
+       ],
+       "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability."
+      }
+     ]
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "extra-doctrina-dot",
+  "where": "purge-goes-the-foe · Doctrina Imperatives row (app.html l.3659)",
+  "verdict": "fix",
+  "why": "Rendered (skitarii-rangers, every AdMech unit): the row’s words are “· +1 AP” — the label is empty (pills) so the part note starts with a dangling separator and does not say what the +1 AP is (main: “+1 AP with Conqueror if this unit is BATTLELINE or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit”). Cosmetic, but unreadable.",
+  "fix": {
+   "app.html:3659": "const pt = r.m.part ? (words ? ' · ' : '') + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ' (' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + ')' + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while it holds (above)' : '') : '';"
+  }
+ }
+]

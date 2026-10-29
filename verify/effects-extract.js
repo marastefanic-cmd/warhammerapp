@@ -116,9 +116,10 @@ function condsOf(V, sOrig, leadOrig, opts){
   // greater than this unit's T", "that targets the closest enemy unit"), what it can target ("they can only target units within range
   // of the selected objective marker"), the weapons ("with weapons selected for the Firing Deck ability")
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
-    /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g];
+    /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g];
   for(const re of QP) for(const m of pc.matchAll(re)){ const cl = m[0].trim(), cn = norm(cl);
-    if(Object.entries(COND).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(r => r.test(cn)))) continue;
+    // (a restriction on what it can target is its own words, even where a condition reads the target: "can only target that enemy unit")
+    if(!/\bcan only target\b/.test(cn) && Object.entries(COND).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(r => r.test(cn)))) continue;
     if(!on.some(x => x[0] === 'q' && x[1] === cl)) on.push(['q', cl]); }
   // (the target, not this unit: "targets a unit that is below its Starting Strength … If that unit is Below Half-strength")
   if(on.some(x => x[0] === 'targetBelowHalf')) { const i = on.findIndex(x => x[0] === 'belowHalf'); if(i >= 0 && /\bthat unit is (?:also )?below half-strength\b/.test(both) && !/\b(?:this|your) unit is (?:also )?below half-strength\b/.test(both)) on.splice(i, 1); }
@@ -268,6 +269,15 @@ function extract(src, ctx){
     // (a part of a split sentence takes who and what it is about from the first part, not its condition)
     const WHO = ['aura', 'leading', 'targetKw', 'selected', 'targetSelected', 'oncePerBattle', 'oncePerTurn', 'used'];
     if(base){ const own = new Set(on.map(x => x[0])); on = base.on.filter(x => !own.has(x[0]) && !(x[0] === 'targetKw' && own.has('targetKw')) && x[0] !== 'q' && (!u.split || WHO.includes(x[0]))).concat(on); }
+    // an option of a rule whose words say when one of its options can be used ("While a unit is Empowered it can use one of the Malefic
+    // Surge abilities below"), or how often each ("You can only select each of these abilities once per battle")
+    if(u.sec && src.type !== 'strat'){ const rt = plainCase(String(src.text || '').split('\n')[0]);
+      const w = /\b(While [^,.]+? it can use one of the [^.]+? below)/.exec(rt); if(w && !on.some(x => x[0] === 'q' && x[1] === w[1])) on.push(['q', w[1]]);
+      if(/\bonly select each of these abilities once per battle\b/i.test(rt) && !on.some(x => x[0] === 'oncePerBattle')) on.push(['oncePerBattle', true]); }
+    // one of a unit's abilities to pick from ("At the start of the battle round, select one Wrathful Presence ability", its options the
+    // abilities New Recruit lists under it): the one selected, its moment in GW's words; one of them at a time (excl)
+    if(src.pickOf){ const at = /^(At the start of [^,]+|In your [^,]+ phase)/i.exec(plainCase(src.pickOf.text));
+      if(!on.some(x => x[0] === 'opt')) on.unshift(['opt', src.pickOf.name + ': the one selected' + (at ? ' (' + at[1].replace(/^./, c => c.toLowerCase()) + ')' : '')]); }
     // "If it does, …" / a line "… If it does:": what it does is the player's (used), in GW's words ("that unit can make a Warpmeld
     // Sacrifice", "when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride")
     if(/^if (?:it|you) do(?:es)?\b/.test(n) || /\bif (?:it|you) do(?:es)?:\s*$/.test(norm(u.lead || ''))){
@@ -315,12 +325,17 @@ function extract(src, ctx){
     // a re-roll of one die: how often, in GW's words (closed patterns): each time the unit is selected to shoot or fight ("Each time this
     // model is selected to shoot or fight", "When a friendly ADEPTUS CUSTODES unit is selected to attack"): one for the unit's attacks,
     // shared by its weapons; once per turn, once per battle round, once in the phase (Command Re-roll, 15.01)
+    if(src.pickOf) box.excl = src.pickOf.name;
     if(fx.some(([id]) => /^one/.test(id))){ const t = norm([u.s, u.lead || '', u.prevS || '', u.ctx || ''].join(' '));
       const pool = fx.some(([id]) => id === 'oneAnyPhase') ? 'phase' : /\bonce per turn\b/.test(t) ? 'turn' : /\bonce per battle round\b/.test(t) ? 'round'
         : /\beach time (?:this|that) (?:model|unit) is selected to (?:shoot|fight|shoot or fight)\b|\bis selected to (?:attack|shoot|fight|shoot or fight)\b|\bwhen resolving those attacks\b/.test(t) ? 'selected' : '';
       if(pool) box.pool = pool; }
     // (its tag, the database's: "Once per battle")
     if(/\bonce per battle\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerBattle')) on.unshift(['oncePerBattle', true]);
+    if(/\bonce per turn\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerTurn')) on.unshift(['oncePerTurn', true]);
+    // (the enemy unit it selects, by its keyword: "select one visible enemy VEHICLE unit … attacks that target that unit")
+    if(on.some(x => x[0] === 'targetSelected') && !on.some(x => x[0] === 'targetKw')){ const t = /\bselect one (?:\*\*visible\*\* |visible )?enemy \*\*([A-Z][A-Z ]+?)\*\* unit\b/.exec([u.prevS || '', u.lead || '', u.s].join(' '));
+      if(t){ const ks = Dv.tokens(V, t[1]); if(ks.length) on.push(['targetKw', ks.length === 1 ? { any:ks } : { all:ks }]); } }
     box.grp = u.grp; box.bullet = u.bullet;
     // (one sentence for two kinds of attack: "weapons equipped by that model have [LETHAL HITS], and melee weapons equipped by that model
     // have [LANCE]": a box for each)
@@ -337,7 +352,10 @@ function extract(src, ctx){
   for(const u of us){ const m = BOTH_RE.exec(plainCase(u.s)); if(!m || !m[2]) continue;
     const r = reachOf(V, u.s); if(!r) continue;
     both.push(Object.assign({ names:[m[1], m[2]], quote:u.s, reach:r, mark:/\bselect one\b/.test(norm(u.s)) ? 'selected' : 'friendly' }, u.sec ? { opt:u.sec } : {}, lastsOf(norm(u.s)) ? { lasts:lastsOf(norm(u.s)) } : {})); }
-  return { boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both };
+  // a model of the unit not on the battlefield yet, by one fixed pattern of GW's words ("If your Canis Rex model is destroyed, this model is
+  // treated as a model disembarking from a destroyed Transport", Using Sir Hekhtur): until that model is destroyed
+  const em = src.type === 'ability' ? /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\b/.exec(plainCase(src.text || '')) : null;
+  return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {});
 }
 
 // the boxes of one rule: bullets of one list with no conditions of their own are one box; a list that picks one ("Or:", "select
