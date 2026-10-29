@@ -1,5 +1,1288 @@
 [
  {
+  "army": "catalog",
+  "kind": "rule-ph",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Silent Sisterhood",
+   "text": "- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12\" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
+  },
+  "key": "4eb388d2438f8bbe"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turn",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "rule": "Silent Sisterhood",
+   "text": "- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12\" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
+  },
+  "key": "70b91e7cfe92cdcf"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Anathema Psykana",
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Silent Sisterhood",
+   "text": "- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12\" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
+  },
+  "key": "c8c98764a01463ba"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Anathema Blademastery",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Anathema Blademastery",
+   "text": "WHEN: Fight phase, when a friendly **VIGILATOR SQUAD** unit is **selected to fight**.\nTARGET: That **VIGILATOR SQUAD** unit.\nEFFECT: Your unit’s attacks have:\n- **[Sustained Hits 1]**\n- Or: **[Lethal Hits]**."
+  },
+  "key": "cd283fb449ac7411"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Anathema Blademastery",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Anathema Blademastery",
+   "text": "WHEN: Fight phase, when a friendly **VIGILATOR SQUAD** unit is **selected to fight**.\nTARGET: That **VIGILATOR SQUAD** unit.\nEFFECT: Your unit’s attacks have:\n- **[Sustained Hits 1]**\n- Or: **[Lethal Hits]**."
+  },
+  "key": "8d7d18e897205611"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Anathema Blademastery",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Vigilator Squad"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Anathema Blademastery",
+   "text": "WHEN: Fight phase, when a friendly **VIGILATOR SQUAD** unit is **selected to fight**.\nTARGET: That **VIGILATOR SQUAD** unit.\nEFFECT: Your unit’s attacks have:\n- **[Sustained Hits 1]**\n- Or: **[Lethal Hits]**."
+  },
+  "key": "c762a2df5e80bb59"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Psy-Chaff Volley",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Psy-Chaff Volley",
+   "text": "WHEN: Your Shooting phase, when a friendly **PROSECUTOR SQUAD** unit has shot.\nTARGET: That **PROSECUTOR SQUAD** unit.\nEFFECT: Select one enemy unit hit by those attacks. That unit is **prosecuted** until the end of the turn:\n- Attacks that target a **prosecuted** unit have +1 **AP**."
+  },
+  "key": "01d6c69cd7032a50"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Psy-Chaff Volley",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Psy-Chaff Volley",
+   "text": "WHEN: Your Shooting phase, when a friendly **PROSECUTOR SQUAD** unit has shot.\nTARGET: That **PROSECUTOR SQUAD** unit.\nEFFECT: Select one enemy unit hit by those attacks. That unit is **prosecuted** until the end of the turn:\n- Attacks that target a **prosecuted** unit have +1 **AP**."
+  },
+  "key": "2c1b9e134174fdfb"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Psy-Chaff Volley",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Prosecutor Squad"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Psy-Chaff Volley",
+   "text": "WHEN: Your Shooting phase, when a friendly **PROSECUTOR SQUAD** unit has shot.\nTARGET: That **PROSECUTOR SQUAD** unit.\nEFFECT: Select one enemy unit hit by those attacks. That unit is **prosecuted** until the end of the turn:\n- Attacks that target a **prosecuted** unit have +1 **AP**."
+  },
+  "key": "1d80ec9fd5eaa70d"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Purgation Sweep",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Purgation Sweep",
+   "text": "WHEN: Your Shooting phase, when a friendly **WITCHSEEKER SQUAD** unit is **selected to shoot**.\nTARGET: That **WITCHSEEKER SQUAD** unit.\nEFFECT: Your unit’s **[Torrent]** attacks have:\n- +1 **A**.\n- Or: If those attacks target a **PSYKER**/**battle-shocked** unit, +2 **A**."
+  },
+  "key": "62ac27f817ae78b4"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Purgation Sweep",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Purgation Sweep",
+   "text": "WHEN: Your Shooting phase, when a friendly **WITCHSEEKER SQUAD** unit is **selected to shoot**.\nTARGET: That **WITCHSEEKER SQUAD** unit.\nEFFECT: Your unit’s **[Torrent]** attacks have:\n- +1 **A**.\n- Or: If those attacks target a **PSYKER**/**battle-shocked** unit, +2 **A**."
+  },
+  "key": "03450e6e9bf04852"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Purgation Sweep",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Witchseeker Squad"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Purgation Sweep",
+   "text": "WHEN: Your Shooting phase, when a friendly **WITCHSEEKER SQUAD** unit is **selected to shoot**.\nTARGET: That **WITCHSEEKER SQUAD** unit.\nEFFECT: Your unit’s **[Torrent]** attacks have:\n- +1 **A**.\n- Or: If those attacks target a **PSYKER**/**battle-shocked** unit, +2 **A**."
+  },
+  "key": "ab252514dfa444b7"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-ph",
+  "where": "Adeptus Custodes · Auric Champions rule · Assemblage of Might",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Assemblage of Might",
+   "text": "In your Command phase, you can select one enemy unit to be a **dreadful foe** unit until the start of your next Command phase. Friendly **ADEPTUS CUSTODES CHARACTER** models’ attacks that target a **dreadful foe** unit have +1 to **wound rolls**."
+  },
+  "key": "31708f41086199da"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turn",
+  "where": "Adeptus Custodes · Auric Champions rule · Assemblage of Might",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Assemblage of Might",
+   "text": "In your Command phase, you can select one enemy unit to be a **dreadful foe** unit until the start of your next Command phase. Friendly **ADEPTUS CUSTODES CHARACTER** models’ attacks that target a **dreadful foe** unit have +1 to **wound rolls**."
+  },
+  "key": "7784492ce2233948"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Auric Champions rule · Assemblage of Might",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Assemblage of Might",
+   "text": "In your Command phase, you can select one enemy unit to be a **dreadful foe** unit until the start of your next Command phase. Friendly **ADEPTUS CUSTODES CHARACTER** models’ attacks that target a **dreadful foe** unit have +1 to **wound rolls**."
+  },
+  "key": "8b3c42936f3dbb88"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Auric Champions · Gilded Champion",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Gilded Champion",
+   "text": "WHEN: Any phase, when a friendly **ADEPTUS CUSTODES CHARACTER** model has used a (Once per battle, per unit) datasheet ability.\nTARGET: That **ADEPTUS CUSTODES CHARACTER** model.\nEFFECT: Your model can use that (Once per battle, per unit) datasheet ability one additional time, but not in the same phase.\nRESTRICTIONS: You cannot use this **stratagem** on the same **ADEPTUS CUSTODES CHARACTER** model more than once per battle."
+  },
+  "key": "8d25603b2e4034e3"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Auric Champions · Gilded Champion",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Gilded Champion",
+   "text": "WHEN: Any phase, when a friendly **ADEPTUS CUSTODES CHARACTER** model has used a (Once per battle, per unit) datasheet ability.\nTARGET: That **ADEPTUS CUSTODES CHARACTER** model.\nEFFECT: Your model can use that (Once per battle, per unit) datasheet ability one additional time, but not in the same phase.\nRESTRICTIONS: You cannot use this **stratagem** on the same **ADEPTUS CUSTODES CHARACTER** model more than once per battle."
+  },
+  "key": "0d323c58e9f4991d"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Auric Champions · Gilded Champion",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Gilded Champion",
+   "text": "WHEN: Any phase, when a friendly **ADEPTUS CUSTODES CHARACTER** model has used a (Once per battle, per unit) datasheet ability.\nTARGET: That **ADEPTUS CUSTODES CHARACTER** model.\nEFFECT: Your model can use that (Once per battle, per unit) datasheet ability one additional time, but not in the same phase.\nRESTRICTIONS: You cannot use this **stratagem** on the same **ADEPTUS CUSTODES CHARACTER** model more than once per battle."
+  },
+  "key": "4116f0f78c8473c2"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Auric Champions · Duty Unto Death",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Duty Unto Death",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if that model is a **CHARACTER** model:\n- On a 3+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "90178f7bdceba35e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Auric Champions · Duty Unto Death",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Duty Unto Death",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if that model is a **CHARACTER** model:\n- On a 3+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "2d336ff433f21e0a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Auric Champions · Duty Unto Death",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Duty Unto Death",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if that model is a **CHARACTER** model:\n- On a 3+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "9128507d242a7aad"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-ph",
+  "where": "Adeptus Custodes · Guardians of the Throne rule · Martial Mastery",
+  "judgement": {
+   "ph": [
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Martial Mastery",
+   "text": "In the Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**, that unit’s melee attacks have:\n- **[Sustained Hits 1]**.\n- Or: **[Lethal Hits]**."
+  },
+  "key": "f222c548afd8d3a3"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turn",
+  "where": "Adeptus Custodes · Guardians of the Throne rule · Martial Mastery",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Martial Mastery",
+   "text": "In the Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**, that unit’s melee attacks have:\n- **[Sustained Hits 1]**.\n- Or: **[Lethal Hits]**."
+  },
+  "key": "79b60bf77becc5b4"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Guardians of the Throne rule · Martial Mastery",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Martial Mastery",
+   "text": "In the Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**, that unit’s melee attacks have:\n- **[Sustained Hits 1]**.\n- Or: **[Lethal Hits]**."
+  },
+  "key": "d1f82e411447a4eb"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Shield of Honour",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES INFANTRY**/**MOUNTED** unit.\nEFFECT: When an enemy model **engaged** with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have:\n- -1 to **hit rolls**.\n- -1 to **wound rolls**."
+  },
+  "key": "3a39c4fc004d71d9"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Shield of Honour",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES INFANTRY**/**MOUNTED** unit.\nEFFECT: When an enemy model **engaged** with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have:\n- -1 to **hit rolls**.\n- -1 to **wound rolls**."
+  },
+  "key": "3e965a536e3219f6"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "any": [
+     "Infantry",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Shield of Honour",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **ADEPTUS CUSTODES INFANTRY**/**MOUNTED** unit.\nEFFECT: When an enemy model **engaged** with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have:\n- -1 to **hit rolls**.\n- -1 to **wound rolls**."
+  },
+  "key": "ceb6d55889eeafae"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Guardians of the Throne · Superhuman Focus",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+  },
+  "key": "8595836d1a888038"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Guardians of the Throne · Superhuman Focus",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+  },
+  "key": "d6cf828a8963899f"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Guardians of the Throne · Superhuman Focus",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Superhuman Focus",
+   "text": "WHEN: End of any phase.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is not **readied**.\nEFFECT: Your unit is **readied**.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+  },
+  "key": "33a05c97634c9d90"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Guardians of the Throne · Prime Target",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Prime Target",
+   "text": "WHEN: Your Shooting phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to shoot**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s ranged attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+  },
+  "key": "7d1210f969b51afc"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Guardians of the Throne · Prime Target",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Prime Target",
+   "text": "WHEN: Your Shooting phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to shoot**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s ranged attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+  },
+  "key": "7aa258acf57c583a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Guardians of the Throne · Prime Target",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Prime Target",
+   "text": "WHEN: Your Shooting phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to shoot**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s ranged attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+  },
+  "key": "9e7d7193641e3745"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Guardians of the Throne · Unlimited Endurance",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Unlimited Endurance",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Until the end of the turn:\n- Your unit’s ranged attacks have **[Assault]**.\n- That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "c7fc01e0c820472f"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Guardians of the Throne · Unlimited Endurance",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Unlimited Endurance",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Until the end of the turn:\n- Your unit’s ranged attacks have **[Assault]**.\n- That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "e7035834fe607b7c"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Guardians of the Throne · Unlimited Endurance",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unlimited Endurance",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Until the end of the turn:\n- Your unit’s ranged attacks have **[Assault]**.\n- That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+  },
+  "key": "54cc6dd22280694e"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-ph",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Gilded Guardians",
+   "text": "While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, ranged attacks that target that unit with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: SALVUS**\n**Additional Effect:** Your unit’s ranged attacks have +6\" **R**."
+  },
+  "key": "5f80042b0761fcee"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turn",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Gilded Guardians",
+   "text": "While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, ranged attacks that target that unit with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: SALVUS**\n**Additional Effect:** Your unit’s ranged attacks have +6\" **R**."
+  },
+  "key": "c7587da39b74b8a5"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Gilded Guardians",
+   "text": "While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, ranged attacks that target that unit with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: SALVUS**\n**Additional Effect:** Your unit’s ranged attacks have +6\" **R**."
+  },
+  "key": "0762f027bcdb70cb"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Aquilan Shield · Manoeuvre and Fire",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Manoeuvre and Fire",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **fall-back move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That move does not prevent your unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "34caeedc8042b3cf"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Aquilan Shield · Manoeuvre and Fire",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Manoeuvre and Fire",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **fall-back move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That move does not prevent your unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "78db5d4bf7883444"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Aquilan Shield · Manoeuvre and Fire",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Manoeuvre and Fire",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **fall-back move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That move does not prevent your unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "56db6e3083916215"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Aquilan Shield · Tip of the Talon",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Tip of the Talon",
+   "text": "WHEN: Your Shooting phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to shoot**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s ranged attacks that target an enemy unit within 9\" of your unit have +1 **S**."
+  },
+  "key": "90d5e462a18e3604"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Aquilan Shield · Tip of the Talon",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Tip of the Talon",
+   "text": "WHEN: Your Shooting phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to shoot**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s ranged attacks that target an enemy unit within 9\" of your unit have +1 **S**."
+  },
+  "key": "002fa06586195a02"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Aquilan Shield · Tip of the Talon",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Tip of the Talon",
+   "text": "WHEN: Your Shooting phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to shoot**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s ranged attacks that target an enemy unit within 9\" of your unit have +1 **S**."
+  },
+  "key": "5449a3733c5b80c1"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Aquilan Shield · Rapid Reactions",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Rapid Reactions",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **ADEPTUS CUSTODES INFANTRY** unit that was **engaged** with that enemy unit at the start of the phase.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "0d562d88c511240c"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Aquilan Shield · Rapid Reactions",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Rapid Reactions",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **ADEPTUS CUSTODES INFANTRY** unit that was **engaged** with that enemy unit at the start of the phase.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "aad20ff5bc413e8a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Aquilan Shield · Rapid Reactions",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rapid Reactions",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **ADEPTUS CUSTODES INFANTRY** unit that was **engaged** with that enemy unit at the start of the phase.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "4b76817153181281"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-ph",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "judgement": {
+   "ph": [
+    "movement",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Heralds of the Throne",
+   "text": "Friendly **ADEPTUS CUSTODES** units have **Fights First**.\n**Favoured Ka’tah: CONSERVAI**\n**Additional Effect:** Until the end of the turn, being selected to make an **advance**/**fall-back move** does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "180049664af80920"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turn",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Heralds of the Throne",
+   "text": "Friendly **ADEPTUS CUSTODES** units have **Fights First**.\n**Favoured Ka’tah: CONSERVAI**\n**Additional Effect:** Until the end of the turn, being selected to make an **advance**/**fall-back move** does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "929092d16109b0cd"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turns",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "judgement": {
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "source": {
+   "rule": "Heralds of the Throne",
+   "text": "Friendly **ADEPTUS CUSTODES** units have **Fights First**.\n**Favoured Ka’tah: CONSERVAI**\n**Additional Effect:** Until the end of the turn, being selected to make an **advance**/**fall-back move** does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "a221ddcd38375d15"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Heralds of the Throne",
+   "text": "Friendly **ADEPTUS CUSTODES** units have **Fights First**.\n**Favoured Ka’tah: CONSERVAI**\n**Additional Effect:** Until the end of the turn, being selected to make an **advance**/**fall-back move** does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "2ef92d21db9028cd"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Bearers of His Light",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Bearers of His Light",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks can ignore modifiers to **hit rolls** and **wound rolls**."
+  },
+  "key": "f7a3347937d183ba"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Bearers of His Light",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Bearers of His Light",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks can ignore modifiers to **hit rolls** and **wound rolls**."
+  },
+  "key": "32920d6527fd499e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Bearers of His Light",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Bearers of His Light",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks can ignore modifiers to **hit rolls** and **wound rolls**."
+  },
+  "key": "7ebd2a9007ef7a5a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Slayers of Nightmares",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Slayers of Nightmares",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "01e170e09914c43b"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Slayers of Nightmares",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Slayers of Nightmares",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "1c9796c61ca577ff"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Slayers of Nightmares",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Slayers of Nightmares",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
+  },
+  "key": "8b6346b43cd434c6"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Selfless Service",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Selfless Service",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES** unit within 6\" of an enemy unit. You can only select a **VEHICLE** unit if it is a **CHARACTER**/**WALKER** unit.\nEFFECT: **Declare a charge** with your unit:\n- When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6.\n- When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "fa04c7595e8b407f"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Selfless Service",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Selfless Service",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES** unit within 6\" of an enemy unit. You can only select a **VEHICLE** unit if it is a **CHARACTER**/**WALKER** unit.\nEFFECT: **Declare a charge** with your unit:\n- When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6.\n- When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "f916f3263cf3d2b4"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Selfless Service",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "unless": {
+     "all": [
+      "Vehicle"
+     ],
+     "none": [
+      "Character",
+      "Walker"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Selfless Service",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES** unit within 6\" of an enemy unit. You can only select a **VEHICLE** unit if it is a **CHARACTER**/**WALKER** unit.\nEFFECT: **Declare a charge** with your unit:\n- When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6.\n- When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "f8b6f876ed32a8e5"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Wardens of the Dark Cells",
+   "text": "While a friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units) is within range of an **objective**, melee attacks that target that unit with a S greater than that unit’s **T** have -1 to **wound rolls**.\n**Favoured ka’tah: KAPTARIS**\n**Additional Effect:** You can select one enemy unit **engaged** with your unit. That enemy unit must make a **battle-shock roll**, with -1 to that **battle-shock roll**. You cannot select the same enemy unit for this effect more than once per phase."
+  },
+  "key": "fa9ba317d6e75b96"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Shadowkeepers · Grim Responsibility",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Grim Responsibility",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES INFANTRY** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks have **[Lethal Hits: Character/Monster]**."
+  },
+  "key": "8a35309aff984d07"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Shadowkeepers · Grim Responsibility",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Grim Responsibility",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES INFANTRY** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks have **[Lethal Hits: Character/Monster]**."
+  },
+  "key": "81d666581bbf748f"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Shadowkeepers · Grim Responsibility",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Grim Responsibility",
+   "text": "WHEN: Fight phase, when a friendly **ADEPTUS CUSTODES INFANTRY** unit is **selected to fight**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Your unit’s melee attacks have **[Lethal Hits: Character/Monster]**."
+  },
+  "key": "dce14f090f2a504e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Shadowkeepers · No Escape",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "No Escape",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES INFANTRY** unit that is within 6\" of that enemy unit.\nEFFECT: **Declare a charge** with your unit. When selecting **charge targets**, you can only select enemy units that made a **fall-back move** this phase and are within the **maximum distance**."
+  },
+  "key": "20fc9dad8ce9ed6f"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Shadowkeepers · No Escape",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "No Escape",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES INFANTRY** unit that is within 6\" of that enemy unit.\nEFFECT: **Declare a charge** with your unit. When selecting **charge targets**, you can only select enemy units that made a **fall-back move** this phase and are within the **maximum distance**."
+  },
+  "key": "540a45a3dd26389d"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Shadowkeepers · No Escape",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "No Escape",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES INFANTRY** unit that is within 6\" of that enemy unit.\nEFFECT: **Declare a charge** with your unit. When selecting **charge targets**, you can only select enemy units that made a **fall-back move** this phase and are within the **maximum distance**."
+  },
+  "key": "d1bb1f8c83f69cd6"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Shadowkeepers · Indomitable Guardians",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Indomitable Guardians",
+   "text": "WHEN: Your opponent’s Fight phase, when an enemy unit has fought.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is within range of an **objective** and is **eligible to fight**.\nEFFECT: Your unit has **Fights First** and must be the next unit you **select to fight**."
+  },
+  "key": "444078273c1adc64"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Shadowkeepers · Indomitable Guardians",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Indomitable Guardians",
+   "text": "WHEN: Your opponent’s Fight phase, when an enemy unit has fought.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is within range of an **objective** and is **eligible to fight**.\nEFFECT: Your unit has **Fights First** and must be the next unit you **select to fight**."
+  },
+  "key": "8c19b12bb89bfe93"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Shadowkeepers · Indomitable Guardians",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Indomitable Guardians",
+   "text": "WHEN: Your opponent’s Fight phase, when an enemy unit has fought.\nTARGET: One friendly **ADEPTUS CUSTODES** unit that is within range of an **objective** and is **eligible to fight**.\nEFFECT: Your unit has **Fights First** and must be the next unit you **select to fight**."
+  },
+  "key": "b62e2e5b13e6d244"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-ph",
+  "where": "Adeptus Custodes · Solar Watch rule · Talon Sortie",
+  "judgement": {
+   "ph": [
+    "movement"
+   ]
+  },
+  "source": {
+   "rule": "Talon Sortie",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit makes a **fall-back move**, that **fall-back move** does not prevent that unit from being eligible to charge.\n**Favoured ka’tah: CALISTUS**\n**Additional Effect:** Your unit has +2\" **M**."
+  },
+  "key": "1a83a98325cf9d1f"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-turn",
+  "where": "Adeptus Custodes · Solar Watch rule · Talon Sortie",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Talon Sortie",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit makes a **fall-back move**, that **fall-back move** does not prevent that unit from being eligible to charge.\n**Favoured ka’tah: CALISTUS**\n**Additional Effect:** Your unit has +2\" **M**."
+  },
+  "key": "852048f410e5a817"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Solar Watch rule · Talon Sortie",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Talon Sortie",
+   "text": "When a friendly **ADEPTUS CUSTODES** unit makes a **fall-back move**, that **fall-back move** does not prevent that unit from being eligible to charge.\n**Favoured ka’tah: CALISTUS**\n**Additional Effect:** Your unit has +2\" **M**."
+  },
+  "key": "a69296c19cf3f632"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Solar Watch · Inexorable",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Inexorable",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Until the end of the turn, your unit can ignore modifiers to your unit’s:\n- **M**.\n- **Advance rolls** and **charge rolls**."
+  },
+  "key": "ccf41cb41b973358"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Solar Watch · Inexorable",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Inexorable",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Until the end of the turn, your unit can ignore modifiers to your unit’s:\n- **M**.\n- **Advance rolls** and **charge rolls**."
+  },
+  "key": "060aa85314bc34e3"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Solar Watch · Inexorable",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Inexorable",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: Until the end of the turn, your unit can ignore modifiers to your unit’s:\n- **M**.\n- **Advance rolls** and **charge rolls**."
+  },
+  "key": "e35823424a736940"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Solar Watch · At Spear’s Length",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "At Spear’s Length",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **fall-back move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **fall-back move** does not prevent your unit from being **eligible to shoot**."
+  },
+  "key": "ad97d131bd45fd67"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Solar Watch · At Spear’s Length",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "At Spear’s Length",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **fall-back move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **fall-back move** does not prevent your unit from being **eligible to shoot**."
+  },
+  "key": "e88a255cb9583b96"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Solar Watch · At Spear’s Length",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "At Spear’s Length",
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make a **fall-back move**.\nTARGET: That **ADEPTUS CUSTODES** unit.\nEFFECT: That **fall-back move** does not prevent your unit from being **eligible to shoot**."
+  },
+  "key": "40ca2c4f5e8ed9cc"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-phases",
+  "where": "Adeptus Custodes · Solar Watch · Gravimetric Grenade",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Gravimetric Grenade",
+   "text": "WHEN: Start of your opponent’s Charge phase.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. When that enemy unit **declares a charge**, that enemy unit has -1 to **charge rolls**."
+  },
+  "key": "57d00fd05e0a423d"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-turn",
+  "where": "Adeptus Custodes · Solar Watch · Gravimetric Grenade",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Gravimetric Grenade",
+   "text": "WHEN: Start of your opponent’s Charge phase.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. When that enemy unit **declares a charge**, that enemy unit has -1 to **charge rolls**."
+  },
+  "key": "2cd86d1c93754fe4"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Adeptus Custodes · Solar Watch · Gravimetric Grenade",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Gravimetric Grenade",
+   "text": "WHEN: Start of your opponent’s Charge phase.\nTARGET: One friendly **unengaged ADEPTUS CUSTODES** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. When that enemy unit **declares a charge**, that enemy unit has -1 to **charge rolls**."
+  },
+  "key": "b1c71477fcab8929"
+ },
+ {
   "army": "code",
   "kind": "code",
   "where": "resolveArmies",
@@ -154,6 +1437,42 @@
    "implements": "bases of catalogue rows no list has; words of catalogue detachments; BSData spelling of a detachment; catalogue deviations checked by verify/catalog.js"
   },
   "key": "d0c26025a7dab4f0"
+ },
+ {
+  "army": "catalog-adeptus-custodes",
+  "kind": "code",
+  "where": "verify/helpers.js: judgements on DATASHEETS rows no list has and on catalogue detachments",
+  "judgement": {
+   "code": "// the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md) and the detachments a catalogue added (aiStatus 'not-read'):\n  // every judgement on them too, though no unit shows it yet. (A catalogue row's tag is GW's, as its datasheet prints it with the\n  // ability's name, checked by verify/catalog.js against BSData with GW's evidence: no judgement.)\n  { const T = require('./tables'), RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));\n    const listed = new Set(RAW.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));\n    for(const [sid, S] of Object.entries(RAW.S ? RAW.S.value : {})){\n      if(listed.has(sid)) continue;\n      const w = 'catalog · ' + sid;\n      for(const ab of S.abilities || []){\n        const src = { ability:ab.name, text:ab.text };\n        if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);\n        if(ab.def) add('catalog', 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);\n        for(const k of ['note', 'na', 'damaged']) if(ab[k]) add('catalog', 'ability-' + k, w + ' · ' + ab.name, { [k]:ab[k] }, src);\n        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef || ab.embarked || ab.fightOnDeath || ab.comeback || ab.calcNote) add('catalog', 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, embarked:ab.embarked, fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote }, src);\n      }\n      const citedRow = m => { const ab = (S.abilities || []).find(x => x.name === m.from); return ab ? { ability:ab.name, text:ab.text } : { missing:'nothing of the datasheet is named ' + m.from }; };\n      for(const [k, kind] of [['mods', 'unit-footnote'], ['aura', 'unit-aura'], ['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));\n      for(const k of ['kwOnly', 'srcNote', 'partialRules']) if(S[k]) add('catalog', 'unit-' + k, w, { [k]:S[k] }, { kw:S.kw, rules:S.rules });\n    }\n    for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})){\n      if(d.aiStatus !== 'not-read') continue;\n      for(const r of detRules_(d)) for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'calcMods']) if(r[k] !== undefined) add('catalog', 'rule-' + k, f.name + ' · ' + d.name + ' rule · ' + r.name, { [k]:r[k] }, { rule:r.name, text:r.text + (r.table ? '\\n' + r.table.map(t => t.join(': ')).join('\\n') : '') });\n      for(const st of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'gist', 'note'])\n        if(st[k] !== undefined) add('catalog', 'strat-' + k, f.name + ' · ' + d.name + ' · ' + st.name, { [k]:st[k] }, { stratagem:st.name, text:stratText(st) });\n    }\n  }"
+  },
+  "source": {
+   "implements": "every judgement signed off wherever it is kept, not only on a list unit (the coordinator’s review note)"
+  },
+  "key": "f4450f0eab6058b2"
+ },
+ {
+  "army": "catalog-adeptus-custodes",
+  "kind": "code",
+  "where": "verify/tables.js sites: fingerprints of DATASHEETS rows no list has",
+  "judgement": {
+   "code": "// the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md): every AI-written column and reading on them too, though no\n  // unit shows it yet (an ability's def and reading columns; a row's mods / aura / guard read from the ability, or core rule, they name)\n  for(const [sid, S] of Object.entries(unlisted || {})){\n    for(const ab of S.abilities || []){\n      each('DATASHEETS', null, sid + ' · ' + ab.name, ab, ab.text);\n      rowSite('DATASHEETS', null, sid + ' · ' + ab.name, ab, ab.text, READ_COLS.ability);\n    }\n    for(const kind of READ) for(const m of S[kind] || []){\n      const ab = (S.abilities || []).find(x => x.name === m.from), text = ab ? ab.text : coreText(D, m.from);\n      out.push({ table:'DATASHEETS', path:null, where:sid + ' · ' + kind + ' · ' + m.from, col:kind, fpKey:READ_FP, has:m[READ_FP], source:text, sources:text == null ? null : [{ name:m.from, text }], want:text == null ? undefined : fp(text), reading:true, derived:m[READ_BY] === 'derive' });\n    }\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "every def and reading fingerprinted wherever it is kept"
+  },
+  "key": "0ed3295866058bc6"
+ },
+ {
+  "army": "catalog-adeptus-custodes",
+  "kind": "code",
+  "where": "verify/readings.js notReadYet",
+  "judgement": {
+   "code": "function notReadYet(){\n  const out = [];\n  for(const [id, S] of Object.entries(D.datasheets || {})) if(S.aiStatus === 'not-read')\n    for(const ab of S.abilities || []) for(const g of abilityGaps(S, ab)) out.push(Object.assign(g, { where:id, ability:ab.name }));\n  for(const [fk, F] of Object.entries(D.factions || {})) for(const [dk, d] of Object.entries(F.detachments || {})) if(d.aiStatus === 'not-read'){\n    for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) for(const { s } of sentenceCtx(r.text)){ const b = bonusOf(s); if(b.att.length || b.def.length) out.push({ check:'rule', where:fk + '/' + dk, ability:r.name, sentence:s, bonus:b.att.concat(b.def) }); }\n    for(const e of d.enhancements || []) for(const { s } of sentenceCtx(e.text)){ const b = bonusOf(s); if(b.att.length || b.def.length) out.push({ check:'enhancement', where:fk + '/' + dk, ability:e.name, sentence:s, bonus:b.att.concat(b.def) }); }\n    for(const st of d.stratagems || []) for(const { s } of sentenceCtx(st.effect)){ const b = bonusOf(s); if(b.att.length || b.def.length) out.push({ check:'stratagem', where:fk + '/' + dk, ability:st.name, sentence:s, bonus:b.att.concat(b.def) }); }\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "the explicit \"not read yet\" status of catalogue rows and detachments, listed for the owner, not failing"
+  },
+  "key": "a8ef9010f7b82a00"
  },
  {
   "army": "catalog-adeptus-custodes",
@@ -397,502 +1716,5 @@
    "reason": "each is GW’s value where BSData at the pin differs; check a sample against the cached pages"
   },
   "key": "0f2ea96f0be74084"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Null Maiden Vigil",
-  "judgement": {
-   "rule": "Silent Sisterhood",
-   "stratagems": [
-    {
-     "id": "anathema-blademastery",
-     "phases": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Vigilator Squad"
-      ]
-     }
-    },
-    {
-     "id": "psy-chaff-volley",
-     "phases": [
-      "shooting"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Prosecutor Squad"
-      ]
-     }
-    },
-    {
-     "id": "purgation-sweep",
-     "phases": [
-      "shooting"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Witchseeker Squad"
-      ]
-     }
-    },
-    {
-     "rule": "Silent Sisterhood",
-     "ph": [
-      "command"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Faction: Anathema Psykana",
-       "Character"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "eefd89235cc4c1bb"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Auric Champions",
-  "judgement": {
-   "rule": "Assemblage of Might",
-   "stratagems": [
-    {
-     "id": "gilded-champion",
-     "phases": [
-      "command",
-      "movement",
-      "shooting",
-      "charge",
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes",
-       "Character"
-      ]
-     }
-    },
-    {
-     "id": "duty-unto-death",
-     "phases": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "rule": "Assemblage of Might",
-     "ph": [
-      "command"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes",
-       "Character"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "00b009213614db62"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Guardians of the Throne",
-  "judgement": {
-   "rule": "Martial Mastery",
-   "stratagems": [
-    {
-     "id": "shield-of-honour",
-     "phases": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ],
-      "any": [
-       "Infantry",
-       "Mounted"
-      ]
-     }
-    },
-    {
-     "id": "superhuman-focus-guardians-of-the-throne",
-     "phases": [
-      "command",
-      "movement",
-      "shooting",
-      "charge",
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "in-auramite-clad-guardians-of-the-throne",
-     "phases": [
-      "shooting",
-      "fight"
-     ],
-     "turn": "either",
-     "turns": {
-      "shooting": "opp"
-     },
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ],
-      "none": [
-       "Custodian Wardens"
-      ]
-     }
-    },
-    {
-     "id": "prime-target",
-     "phases": [
-      "shooting"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "unlimited-endurance",
-     "phases": [
-      "movement"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "swift-as-the-eagle-guardians-of-the-throne",
-     "phases": [
-      "movement"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Trusted Sentinel"
-      ]
-     }
-    },
-    {
-     "rule": "Martial Mastery",
-     "ph": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "1c881a1109d872ac"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Aquilan Shield",
-  "judgement": {
-   "rule": "Gilded Guardians",
-   "stratagems": [
-    {
-     "id": "manoeuvre-and-fire",
-     "phases": [
-      "movement"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "tip-of-the-talon",
-     "phases": [
-      "shooting"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "rapid-reactions",
-     "phases": [
-      "movement"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes",
-       "Infantry"
-      ]
-     }
-    },
-    {
-     "rule": "Gilded Guardians",
-     "ph": [
-      "movement",
-      "shooting",
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ],
-      "none": [
-       "Vehicle"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "274c7e1197d2b2c9"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Emissaries Imperatus",
-  "judgement": {
-   "rule": "Heralds of the Throne",
-   "stratagems": [
-    {
-     "id": "bearers-of-his-light",
-     "phases": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "slayers-of-nightmares",
-     "phases": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "selfless-service",
-     "phases": [
-      "charge"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ],
-      "unless": {
-       "all": [
-        "Vehicle"
-       ],
-       "none": [
-        "Character",
-        "Walker"
-       ]
-      }
-     }
-    },
-    {
-     "rule": "Heralds of the Throne",
-     "ph": [
-      "movement",
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "ecae2f91439e5150"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Shadowkeepers",
-  "judgement": {
-   "rule": "Wardens of the Dark Cells",
-   "stratagems": [
-    {
-     "id": "grim-responsibility",
-     "phases": [
-      "fight"
-     ],
-     "turn": "either",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes",
-       "Infantry"
-      ]
-     }
-    },
-    {
-     "id": "no-escape",
-     "phases": [
-      "movement"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes",
-       "Infantry"
-      ]
-     }
-    },
-    {
-     "id": "indomitable-guardians",
-     "phases": [
-      "fight"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "rule": "Wardens of the Dark Cells",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ],
-      "none": [
-       "Vehicle"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "2ea8ad57b7e85341"
- },
- {
-  "army": "catalog-adeptus-custodes",
-  "kind": "detachment-labels",
-  "where": "adeptus-custodes · Solar Watch",
-  "judgement": {
-   "rule": "Talon Sortie",
-   "stratagems": [
-    {
-     "id": "inexorable",
-     "phases": [
-      "movement"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "at-spears-length",
-     "phases": [
-      "movement"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "id": "gravimetric-grenade",
-     "phases": [
-      "charge"
-     ],
-     "turn": "opp",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    },
-    {
-     "rule": "Talon Sortie",
-     "ph": [
-      "movement"
-     ],
-     "turn": "your",
-     "needs": {
-      "all": [
-       "Faction: Adeptus Custodes"
-      ]
-     }
-    }
-   ]
-  },
-  "source": {
-   "reason": "labels verify/derive.js derives from the words (mechanical, as for a list’s new detachment): which phases each stratagem is offered in, and which units its TARGET selects"
-  },
-  "key": "938138b9f121c2b1"
  }
 ]

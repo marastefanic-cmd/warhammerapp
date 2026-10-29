@@ -89,6 +89,22 @@ now), tables (every row in DATASHEETS; a list's row differs only by fill / marku
 (every value BSData's or a declared GW value), texts (every ability's words on its Wahapedia datasheet or GW's update document);
 bases by `verify/bases.js`, detachment words by `verify/texts.js`, dispositions by `verify/dispositions.js`, as for every list.
 
+Every check that used to reach datasheets only through a list's units also walks the DATASHEETS rows no list has, and the
+catalogue's detachments, directly:
+
+| check | catalogue-only datasheet rows | catalogue detachments |
+|---|---|---|
+| fingerprints (`verify/tables.js --fingerprints`) | every `def` and reading column on the row, and its `mods` / `aura` / `guard` | every gist, def and reading (all of FACTIONS, as before) |
+| helpers (`verify/helpers.js`) | every judgement column (timing, def, note, na, damaged, the Damage tab's columns, readings, kwOnly, srcNote) | rule and stratagem labels (phases, turn, needs, …), gist, def, mod |
+| readings (`verify/readings.js`) | their bonus sentences, listed "not read yet" (not failing) | the same, for rules, enhancements and stratagems |
+| bsdata, texts, nr (`verify/catalog.js`) | every value against BSData (or a declared GW value), every ability's words on GW's datasheet; every list unit against its catalogue row | words by `verify/texts.js`, and in data.js as the catalogue has them |
+| bases (`verify/bases.js`) | every model row | – |
+| dispositions (`verify/dispositions.js`) | – | every detachment |
+| screens / snapshots | not shown by the app until a list has the datasheet (the in-app import will build one) | the same |
+
+A value broken in a catalogue-only row (a def or reading without its sign-off, a stat, a base, an ability's words) or in a catalogue
+detachment (a stratagem's words, its dispositions) fails the gate.
+
 ## The next factions
 
 `verify/sources/factions.json` names the catalogue; the Wahapedia datasheet pages of every catalogue datasheet go into

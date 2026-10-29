@@ -1003,7 +1003,7 @@ function evaluate(text){
 const stratText = s => ['WHEN: ' + s.when, 'TARGET: ' + s.target, 'EFFECT: ' + s.effect, s.restrictions ? 'RESTRICTIONS: ' + s.restrictions : ''].filter(Boolean).join('\n');
 const ruleText = r => r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : '');
 // every AI-written value: { table, path (in that constant), where, col, has (its fingerprint), source (the text it summarises) }
-function sites(D, armies){
+function sites(D, armies, unlisted){
   const out = [];
   const each = (table, path, where, o, source) => { for(const [col, f] of Object.entries(FINGERPRINT)) if(typeof o[col] === 'string') out.push({ table, path, where, col, fpKey:f, has:o[f], source }); };
   D.coreStratagems.forEach((x, i) => each('CORE_STRATAGEMS', [i], 'Core · ' + x.name, x, stratText(x)));
@@ -1043,6 +1043,18 @@ function sites(D, armies){
       out.push({ table:'ARMIES', path:null, where:a.id + ' · ' + u.name + ' · ' + kind + ' · ' + m.from + (m.when ? ' (' + m.when + ')' : ''), col:kind, fpKey:READ_FP, has:m[READ_FP], source:srcs && srcs[0].text, sources:srcs, want:srcs && readFp(srcs), reading:true, derived:m[READ_BY] === 'derive' });
     }
   }));
+  // the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md): every AI-written column and reading on them too, though no
+  // unit shows it yet (an ability's def and reading columns; a row's mods / aura / guard read from the ability, or core rule, they name)
+  for(const [sid, S] of Object.entries(unlisted || {})){
+    for(const ab of S.abilities || []){
+      each('DATASHEETS', null, sid + ' · ' + ab.name, ab, ab.text);
+      rowSite('DATASHEETS', null, sid + ' · ' + ab.name, ab, ab.text, READ_COLS.ability);
+    }
+    for(const kind of READ) for(const m of S[kind] || []){
+      const ab = (S.abilities || []).find(x => x.name === m.from), text = ab ? ab.text : coreText(D, m.from);
+      out.push({ table:'DATASHEETS', path:null, where:sid + ' · ' + kind + ' · ' + m.from, col:kind, fpKey:READ_FP, has:m[READ_FP], source:text, sources:text == null ? null : [{ name:m.from, text }], want:text == null ? undefined : fp(text), reading:true, derived:m[READ_BY] === 'derive' });
+    }
+  }
   return out;
 }
 // write the missing fingerprints (and with restamp the stale ones) into CORE_STRATAGEMS and FACTIONS (the units' through stampRows)
@@ -1178,7 +1190,9 @@ if(require.main === module){
   const arg = process.argv.slice(2), has = a => arg.includes(a);
   if(has('--expand')){ fs.writeFileSync(DATA, oldForm(src)); console.log('tables: data.js written in the old form (every unit in full); node verify/tables.js --write puts it back'); process.exit(0); }
   if(has('--fingerprints')){
-    const D = evaluate(src), R = read(src), bad = [], all = sites(D, R.armies);
+    const D = evaluate(src), R = read(src), bad = [];
+    const listed = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+    const all = sites(D, R.armies, Object.fromEntries(Object.entries(R.S ? R.S.value : {}).filter(([k]) => !listed.has(k))));
     for(const x of all){
       const what = x.reading ? 'reading' : 'summary';
       if(x.reading && x.source == null && !x.want) bad.push('NO TEXT ' + x.where + ': nothing of its unit or list is the text it reads (' + x.col + '); name the rule it reads (from / rule)');
