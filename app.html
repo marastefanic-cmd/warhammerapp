@@ -1858,7 +1858,7 @@ const HOW_TITLE = 'How the app works and why you should be able to trust the dat
 // the tables of data.js, in the order the screen draws them: name, key in D, what one row is (verify/columns.json says it for most)
 const HW_TABLES = [['ARMIES', 'armies'], ['DATASHEETS', 'datasheets'], ['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'],
   ['RULE_ALIASES', 'ruleAliases'], ['RULE_SRC', 'ruleSrc'], ['CONCEPTS', 'concepts'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'],
-  ['CHECKLIST', 'checklist'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
+  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
 const HW_WHAT = { CHECKLIST:'per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js',
   VERSION:'the data’s version: one value, raised with every release' };
 // CHECKLIST's columns (verify/derive.js writes them; verify/render.js fails on one this does not name)
@@ -1869,7 +1869,7 @@ const HW_SRC = { gw:'GW', bsdata:'BSData', newrecruit:'New Recruit', wahapedia:'
 const HW_LAYERS = [
   ['mech', 'Mechanical', 'copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.'],
   ['sum', 'AI summary', 'a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
-  ['read', 'AI reading', 'the numbers and conditions behind the footnotes, the “When targeted” lines and the Damage tab, read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
+  ['read', 'AI reading', 'the numbers and conditions behind the datasheets’ footnotes and the “When targeted” lines (not the Damage tab’s: its boxes are made by a program from GW’s words), read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
   ['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']];
 // a column's layer: its source in verify/columns.json (verify/tables.js fails unless ai-summary and ai-reading are exactly what it fingerprints)
 const hwLayer = (t, col, src) => ({ 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' })[src] || 'mech';
