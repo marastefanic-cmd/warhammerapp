@@ -1,0 +1,234 @@
+[
+ {
+  "key": "484c49a360a79ac2",
+  "verdict": "fix",
+  "where": "helpers.js: ability-timing with at; RULE_KEYS from columns.json; unit-ref; faction-allies",
+  "why": "Mostly right. ability-timing with at only changes the 13 keys whose ability has at. RULE_KEYS from columns.json gives the old list minus tag and ask plus at and tableAt; no rule has ask (columns.json has no such column). Leaving mods, aura and guard out is right: all 14 faction-level readings match an approved unit-footnote, aura or guard item exactly. 459 stale = 441 + 13 ability-timing re-keyed by at + 5 rule-tag dropped. I checked this by running a941f16's helpers.js on the same data: the 18 approved keys gone are exactly those, and the 30 new keys are rule-at 9, rule-tableAt 1, ability-timing 13, unit-ref 4, faction-allies 3. Three problems remain: dropping tag, the unit-ref source and the faction-allies source.",
+  "fix": "verify/helpers.js has three fixes. (1) RULE_KEYS: keep tag, i.e. `.map(([c]) => c)))].concat('tag'))`. Relentless Rage's tag \"Already in A\" is the app's own judgement (data.js:514, with its note); New Recruit does not print it, so it must stay signed. The four \"Once per…\" tags are harmless to keep signed. Their 5 old approvals come back with the same keys, and stale drops to 441. (2) unit-ref: cite the unit that has the rule, not the reference sheet, `if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, a.units.find(x => x.id === u.ref.by) || u, { from:u.ref.rule || u.ref.strat }));`. Today 3 of the 4 items have source {\"missing\":\"nothing in the data is named …\"}, so a change to Split, Seed Spore Mines or the Pink Horrors ability would not void their sign-off. (3) faction-allies: look the rule up among the faction's army and detachment rules too. Mission Tactics is the Deathwatch Support detachment rule, so today its source is \"Mission Tactics: \" (empty). Use `{ rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || f.armyRules.concat(Object.values(f.detachments).flatMap(detRules_)).filter(r => r.name === n).map(r => r.text).join('\\n'))) }`."
+ },
+ {
+  "key": "7b9c777d6a11747a",
+  "verdict": "ok",
+  "where": "Damage tab \"Not counted\" stratagem name: class rl (padding 0), render.js ai-summary on .dmncr [data-strat]",
+  "why": "class rl with padding 0 keeps the line height. The .dmncr check fails a summary with no AI label, or a label with no summary. Snapshots are identical to a941f16's: class changes no text."
+ },
+ {
+  "key": "0c9767fb0fda9176",
+  "verdict": "ok",
+  "where": "rule-at · orks army rule · Da Boss",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "63b5ffba86ca1665",
+  "verdict": "ok",
+  "where": "rule-tableAt · Dread Mob rule · Try Dat Button!",
+  "why": "tableAt 1 = one text line before the table. Wahapedia orks.txt:393-399: \"…have the relevant rule(s):\", then the D6 table, then \"If you rolled two D6…\"."
+ },
+ {
+  "key": "8126f962efbc81ee",
+  "verdict": "ok",
+  "where": "ability-timing · big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+  "why": "{\"ph\":[\"command\",\"movement\",\"shooting\",\"fight\"],\"turn\":\"either\",\"turns\":{\"movement\":\"opp\",\"shooting\":\"your\"},\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "9beeb638dd6ac8f9",
+  "verdict": "ok",
+  "where": "rule-at · world-eaters army rule · Blessings of Khorne",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "4323351af991d577",
+  "verdict": "ok",
+  "where": "ability-timing · big-demons-baby · Angron · Reborn in Blood",
+  "why": "{\"ph\":[\"command\",\"movement\"],\"turn\":\"either\",\"turns\":{\"movement\":\"your\"},\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "5d154f49e3837172",
+  "verdict": "ok",
+  "where": "ability-timing · big-demons-baby · Angron · Wrathful Presence",
+  "why": "{\"ph\":[\"command\"],\"turn\":\"either\",\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "3bc9f6592c6c216a",
+  "verdict": "ok",
+  "where": "ability-timing · mucho-mutantes · Magnus the Red · Unearthly Power",
+  "why": "{\"ph\":[\"command\"],\"turn\":\"either\",\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "3fa1ef844069b152",
+  "verdict": "ok",
+  "where": "ability-timing · mucho-mutantes · Tzaangors · Ambushing Hunters",
+  "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "f4bccf0906ed56c1",
+  "verdict": "ok",
+  "where": "ability-timing · healybois · Norn Emissary · Singular Purpose",
+  "why": "{\"ph\":[\"command\",\"shooting\",\"fight\"],\"turn\":\"either\",\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "584d8362bb5a7530",
+  "verdict": "ok",
+  "where": "rule-at · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "13a4bf408564fdc5",
+  "verdict": "ok",
+  "where": "rule-at · Coterie of the Conceited rule · Pledges to the Dark Prince",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment (it also ends at the end of the battle round: at is the moment it opens with)."
+ },
+ {
+  "key": "80a243dc4bdf690b",
+  "verdict": "ok",
+  "where": "ability-timing · infernal-lance · Knight Ruinator · Methodical Destruction",
+  "why": "{\"ph\":[\"command\",\"shooting\",\"fight\"],\"turn\":\"either\",\"turns\":{\"shooting\":\"your\"},\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "0382ffcc1b021b58",
+  "verdict": "ok",
+  "where": "rule-at · chaos-knights army rule · Harbingers of Dread",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment (\"at the start of the first, third and fifth battle rounds\"; the Phase checklist quotes the rounds, app.html:5317, and at is a section key, app.html:5391)."
+ },
+ {
+  "key": "f574fb4896c8105a",
+  "verdict": "ok",
+  "where": "ability-timing · big-demons-baby · Flesh Hounds · Hunters from the Warp",
+  "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "363fe8d12bb09f4f",
+  "verdict": "ok",
+  "where": "unit-ref · mucho-mutantes · Chaos Spawn",
+  "why": "The quote is Gift of Change's EFFECT word for word; the strat is gift-of-change and there is no by. The source (the stratagem) is right."
+ },
+ {
+  "key": "3d85a0176bc24603",
+  "verdict": "ok",
+  "where": "rule-at · adeptus-custodes army rule · Martial Ka’tah",
+  "why": "{\"at\":\"Start of your Command phase\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "72458854b806672c",
+  "verdict": "ok",
+  "where": "rule-at · adeptus-custodes army rule · Aquila Commander",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "2e957ee986c0d7ca",
+  "verdict": "ok",
+  "where": "rule-at · ultramarines army rule · Combat Doctrines",
+  "why": "{\"at\":\"Start of your Command phase\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "75a26ce82427b35a",
+  "verdict": "ok",
+  "where": "rule-at · ultramarines army rule · Transhuman Strategist",
+  "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ {
+  "key": "b69ffa21dd77e64b",
+  "verdict": "ok",
+  "where": "ability-timing · the-exiled-legion · Karanak · Prey of the Blood God",
+  "why": "{\"ph\":[\"command\",\"fight\"],\"turn\":\"either\",\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "e49dd1300893e760",
+  "verdict": "ok",
+  "where": "ability-timing · the-exiled-legion · Karanak · Hunters from the Warp",
+  "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "1f1c1ad63d0bfbe5",
+  "verdict": "ok",
+  "where": "ability-timing · navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "why": "{\"ph\":[\"movement\",\"fight\"],\"turn\":\"your\",\"turns\":{\"fight\":\"opp\"},\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "6a4e6483fbde2880",
+  "verdict": "fix",
+  "where": "unit-ref · tzeeeeentch · Blue Horrors",
+  "why": "The judgement is right: the quote is in fluxmaster-pink-horrors's \"Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix.",
+  "fix": {
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+    "quote": "If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit."
+   }
+  }
+ },
+ {
+  "key": "79f6be2480eab711",
+  "verdict": "fix",
+  "where": "unit-ref · tzeeeeentch · Brimstone Horrors",
+  "why": "The judgement is right: the quote is in fluxmaster-pink-horrors's \"Split\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Split\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix.",
+  "fix": {
+   "ref": {
+    "by": "fluxmaster-pink-horrors",
+    "rule": "Split",
+    "quote": "On a 4+, if it was a PINK HORROR, add two BLUE HORROR models to this unit, and if it was a BLUE HORROR, add one BRIMSTONE HORROR model to this unit.",
+    "of": "Blue Horrors"
+   }
+  }
+ },
+ {
+  "key": "89d05f0b352bfa7f",
+  "verdict": "fix",
+  "where": "unit-ref · healybois · Spore Mines (Biovore)",
+  "why": "The judgement is right: the quote is in biovores's \"Seed Spore Mines\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Seed Spore Mines\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix.",
+  "fix": {
+   "ref": {
+    "by": "biovores",
+    "rule": "Seed Spore Mines",
+    "quote": "If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units."
+   }
+  }
+ },
+ {
+  "key": "90ea8eec4723ebc6",
+  "verdict": "ok",
+  "where": "ability-timing · u-w0t-m8 · The Silent King · Triarch Abilities",
+  "why": "{\"ph\":[\"command\"],\"turn\":\"either\",\"at\":\"Start of the battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "ae3d67e5a7464e45",
+  "verdict": "ok",
+  "where": "ability-timing · u-w0t-m8 · Ophydian Destroyers · Tunnelling Horrors",
+  "why": "{\"ph\":[\"movement\",\"fight\"],\"turn\":\"your\",\"turns\":{\"fight\":\"opp\"},\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
+ },
+ {
+  "key": "30fdc1043786c6c1",
+  "verdict": "ok",
+  "where": "strat-limit · Core · Insane Bravery",
+  "why": "{\"limit\":\"Once per battle\"}: the same key and judgement as result-howto-2. RESTRICTIONS \"You cannot use this stratagem more than once per battle.\""
+ },
+ {
+  "key": "c39e95bb8b814e04",
+  "verdict": "ok",
+  "where": "strat-cpNote · Core · Heroic Intervention",
+  "why": "{\"cpNote\":\"Into the Fray +1CP\"}: the same key and judgement as result-howto-2. EFFECT \"Into the Fray (+1CP)\"."
+ },
+ {
+  "key": "19f0dfad74c14799",
+  "verdict": "ok",
+  "where": "faction-allies · Imperial Knights",
+  "why": "{\"allies\":{\"Imperial Agents\":\"Assigned Agents\"}}: Assigned Agents: \"every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units\"."
+ },
+ {
+  "key": "ea5ea8048664a89c",
+  "verdict": "ok",
+  "where": "faction-allies · Chaos Knights",
+  "why": "{\"allies\":{\"Legiones Daemonica\":\"Daemonic Pact\"}}: Daemonic Pact: \"If every model from your army has the CHAOS KNIGHTS or HERETIC ASTARTES keyword, you can include LEGIONES DAEMONICA units\"."
+ },
+ {
+  "key": "fe3d8491323f16d6",
+  "verdict": "fix",
+  "where": "faction-allies · Ultramarines",
+  "why": "The judgement is right. Mission Tactics (the Deathwatch Support detachment rule) has a \"DEATHWATCH ALLIES\" part: \"You can include DEATHWATCH units in your army, even though they do not have the same Chapter faction keyword… cannot exceed 500 points\", and the list's Deathwatch Terminator Squad has role \"Allies: Deathwatch\". But the item's source is \"Mission Tactics: \" (empty), because the lookup only searches D.rules. Apply the faction-allies fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key with the rule text.",
+  "fix": {
+   "allies": {
+    "Deathwatch": "Mission Tactics"
+   }
+  }
+ }
+]

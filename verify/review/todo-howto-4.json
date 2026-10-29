@@ -1,0 +1,60 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "helpers.js: ability-timing with at; RULE_KEYS from columns.json; unit-ref; faction-allies",
+  "judgement": {
+   "code": "// an army or detachment rule's judgements, the same way: its columns written for the app (coreTwin aside, it has an item of its own;\n// mods, aura and guard aside, signed as the unit footnote, aura and guard items of the units they reach)\nconst RULE_KEYS = (T => [...new Set(['FACTIONS.armyRules', 'FACTIONS.detachments.rule', 'FACTIONS.detachments.moreRules'].flatMap(t => Object.entries(T[t].columns)\n  .filter(([c, x]) => !['coreTwin', 'mods', 'aura', 'guard'].includes(c) && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);\n\n        if(ab.ph || ab.turn || ab.at) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns, at:ab.at }, src);\n\n      // a reference sheet (not in the army until a rule or stratagem adds it): the rule it cites and its quote\n      if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, u, { from:u.ref.rule || u.ref.strat }));\n\n  // the allies a faction may take (FACTIONS.allies: the role New Recruit prints → the rule that brings them in), against those rules\n  for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || '')) });"
+  },
+  "source": {
+   "implements": "result-howto-2 fixes (Hand legend, trust 2); mods/aura/guard left out of RULE_KEYS (signed as the units' footnote/aura/guard items); rule tag (newrecruit) no longer a judgement",
+   "new_todo": [
+    "rule-at · orks army rule · Da Boss",
+    "rule-tableAt · Dread Mob rule · Try Dat Button!",
+    "ability-timing · big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+    "rule-at · world-eaters army rule · Blessings of Khorne",
+    "ability-timing · big-demons-baby · Angron · Reborn in Blood",
+    "ability-timing · big-demons-baby · Angron · Wrathful Presence",
+    "ability-timing · mucho-mutantes · Magnus the Red · Unearthly Power",
+    "ability-timing · mucho-mutantes · Tzaangors · Ambushing Hunters",
+    "ability-timing · healybois · Norn Emissary · Singular Purpose",
+    "rule-at · adeptus-mechanicus army rule · Doctrina Imperatives",
+    "rule-at · Coterie of the Conceited rule · Pledges to the Dark Prince",
+    "ability-timing · infernal-lance · Knight Ruinator · Methodical Destruction",
+    "rule-at · chaos-knights army rule · Harbingers of Dread",
+    "ability-timing · big-demons-baby · Flesh Hounds · Hunters from the Warp",
+    "unit-ref · mucho-mutantes · Chaos Spawn",
+    "rule-at · adeptus-custodes army rule · Martial Ka’tah",
+    "rule-at · adeptus-custodes army rule · Aquila Commander",
+    "rule-at · ultramarines army rule · Combat Doctrines",
+    "rule-at · ultramarines army rule · Transhuman Strategist",
+    "ability-timing · the-exiled-legion · Karanak · Prey of the Blood God",
+    "ability-timing · the-exiled-legion · Karanak · Hunters from the Warp",
+    "ability-timing · navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+    "unit-ref · tzeeeeentch · Blue Horrors",
+    "unit-ref · tzeeeeentch · Brimstone Horrors",
+    "unit-ref · healybois · Spore Mines (Biovore)",
+    "ability-timing · u-w0t-m8 · The Silent King · Triarch Abilities",
+    "ability-timing · u-w0t-m8 · Ophydian Destroyers · Tunnelling Horrors",
+    "strat-limit · Core · Insane Bravery",
+    "strat-cpNote · Core · Heroic Intervention",
+    "faction-allies · Imperial Knights",
+    "faction-allies · Chaos Knights",
+    "faction-allies · Ultramarines"
+   ]
+  },
+  "key": "484c49a360a79ac2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "Damage tab \"Not counted\" stratagem name: class rl (padding 0), render.js ai-summary on .dmncr [data-strat]",
+  "judgement": {
+   "code": "      return '<div class=\"dmncr\"><b' + (x.id ? ' class=\"rl\" role=\"button\" tabindex=\"0\" data-strat=\"' + esc(x.id) + '\"' : '') + '>' + esc(x.name) + (x.id && x.text ? ' ' + aiLabel : '') + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small>' +\n.dmncr b.rl{padding:0}   /* (the link style without its tap padding: the line keeps its height) */\n      // (ai-summary: a \"Not counted\" stratagem line is its gist: labelled, its name opening the stratagem)\n      { const bad = await page.evaluate(() => [...document.querySelectorAll('#view .dmncr [data-strat]')].map(el => { const s = allStratagems().find(x => x.id === el.dataset.strat), lab = !!el.querySelector('.ai');\n          return !s ? el.dataset.strat + ': no such stratagem' : !!s.gist !== lab ? s.name + (s.gist ? ': its summary has no AI label' : ': an AI label without a summary') : ''; }).filter(Boolean));\n        for(const x of bad) fail('ai-summary', a.id, 'damage ' + ph, x); }"
+  },
+  "source": {
+   "implements": "optional items of result-howto-2"
+  },
+  "key": "7b9c777d6a11747a"
+ }
+]
