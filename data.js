@@ -1802,7 +1802,7 @@ const ARMIES = [
       ranged:[
         { name:'Kustom Shoota', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','ASSAULT'], from:{ ASSAULT:'Dakka! Dakka! Dakka!' } }
       ],
-      kw:['Infantry','Character','Warboss','Grenades','Faction: Orks','Warlord'],
+      kw:['Infantry','Character','Explosives','Warboss','Faction: Orks','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
@@ -5297,7 +5297,7 @@ const DATASHEETS = {
     { kind:'ranged', when:'Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Boss’ Ammo Runt', readOf:'682a29b8' }
   ],
   rules:['Leader','Da Boss','Waaagh!'],
-  kw:['Infantry','Character','Warboss','Grenades','Faction: Orks']
+  kw:['Infantry','Character','Explosives','Warboss','Faction: Orks']
 },
 'orks/mek':{
   name:'Mek', faction:'orks', bsId:'3b2-8c11-616a-1005',
@@ -7510,7 +7510,7 @@ const DATASHEETS = {
     { name:'Purity of Execution', ph:['shooting'], turn:'your', text:'In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**:\n- While a unit is **detected**, that unit has +3" **detection range**.' }
   ],
   rules:['Daughters of the Abyss','Feel No Pain 3+*','Assault','Anti','Rapid Fire'],
-  kw:['Infantry','Imperium','Anathema Psykana','Prosecutor Squad','Faction: Anathema Psykana']
+  kw:['Infantry','Imperium','Prosecutor Squad','Faction: Anathema Psykana']
 },
 'adeptus-custodes/witchseeker-squad':{
   name:'Witchseeker Squad', faction:'adeptus-custodes', bsId:'503b-f7be-eeeb-9e31', role:'Infantry',
@@ -7529,7 +7529,7 @@ const DATASHEETS = {
     { name:'Sanctified Flames', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.' }
   ],
   rules:['Scouts 7"','Daughters of the Abyss','Feel No Pain 3+*','Anti','Torrent','Assault','Blast'],
-  kw:['Infantry','Imperium','Anathema Psykana','Witchseeker Squad','Faction: Anathema Psykana']
+  kw:['Infantry','Imperium','Witchseeker Squad','Faction: Anathema Psykana']
 },
 'adeptus-custodes/caladius-annihilator-grav-tank':{
   name:'Caladius Annihilator Grav-tank', faction:'adeptus-custodes', bsId:'dbf0-5211-463c-40ec', role:'Vehicle',

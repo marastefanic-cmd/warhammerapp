@@ -2164,5 +2164,176 @@
   "reason": "New Recruit’s export (catalogue revision 8) gives the base as 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: Base 75x42mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "kw",
+  "app": [
+   "Character",
+   "Explosives",
+   "Faction: Orks",
+   "Infantry",
+   "Warboss",
+   "Warlord"
+  ],
+  "source": [
+   "Character",
+   "Faction: Orks",
+   "Grenades",
+   "Infantry",
+   "Warboss",
+   "Warlord"
+  ],
+  "where": "verify/sources/nr/shooty.txt p9",
+  "reason": "GW’s datasheet prints EXPLOSIVES (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; WARBOSS\"); New Recruit (BSData) prints Grenades. The Core Rules make them one keyword (the Explosives stratagem’s TARGET \"EXPLOSIVES/GRENADES\"; \"The Grenade Stratagem is the same as the Explosives stratagem\"). The app has GW’s: EXPLOSIVES (verify/from-json.js, keyword pairs).",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html, KEYWORDS; rules/core-rules.md (Explosives; Grenades Stratagem)."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p3",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p4",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p5",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "where": "verify/sources/nr/emperors-chosen.txt p6",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/emperors-chosen.txt p7",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "dread-host",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "where": "verify/sources/nr/dread-host.txt p7",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "dread-host",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/dread-host.txt p8",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
  }
 ]

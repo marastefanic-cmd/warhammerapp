@@ -2812,5 +2812,95 @@
   "reason": "BSData at the pin (Xenos - Orks catalogue revision 8) has Deffkoptas: 75x42mm; GW’s base size guide (Event Companion) has 75×42mm Oval; New Recruit’s export (catalogue revision 8) has 75×42mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3498: \"Deffkoptas  75x42mm Oval Base\"; verify/sources/nr-json/simple-but-effective.json: 75×42mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "kw",
+  "app": "Explosives",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword EXPLOSIVES (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; WARBOSS\"); BSData at the pin has the category Grenades instead. The Core Rules make them one keyword (the Explosives stratagem’s TARGET \"EXPLOSIVES/GRENADES unit\"; \"The Grenade Stratagem is the same as the Explosives stratagem\"). GW wins: EXPLOSIVES.",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS; rules/core-rules.md (Explosives, Grenades Stratagem).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "kw",
+  "app": "",
+  "source": "Grenades",
+  "reason": "BSData at the pin gives the Warboss the category Grenades; GW’s datasheet prints EXPLOSIVES, which the Core Rules make the same keyword (\"EXPLOSIVES/GRENADES\"). GW wins: EXPLOSIVES only.",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS; rules/core-rules.md (Grenades Stratagem).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "dread-host",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "dread-host",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
  }
 ]
