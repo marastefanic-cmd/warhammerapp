@@ -3549,7 +3549,7 @@ const ARMIES = [
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
       rules:['Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Leader','Aegis of the Emperor','Aquila Commander','Martial Ka\'tah','Assault','Rapid Fire','Cleave','Blast'],
-      kw:['Infantry','Character','Epic Hero','Imperium','Terminator','Trajann Valoris','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
+      kw:['Infantry','Character','Epic Hero','Imperium','Trajann Valoris','Terminator','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
@@ -3727,7 +3727,7 @@ const ARMIES = [
         { name:'Furious Assault', who:'Bladeguard Veteran Squad', tag:'Upgrade', ph:['fight'], turn:'either', text:'**ADEPTUS ASTARTES INFANTRY** unit only. This unit’s melee attacks have **[Sustained Hits 1: non-Monster/Vehicle]**.' }
       ],
       rules:['Deep Strike','Leader','Support','Combat Doctrines','Transhuman Strategist','Close-quarters','Twin-linked','Extra Attacks','Assault','Heavy','Rapid Fire','Blast','Psychic','Devastating Wounds'],
-      kw:['Infantry','Chapter Master','Character','Epic Hero','Imperium','Terminator','Explosives','Tacticus','Psyker','Marneus Calgar','Wardens of Ultramar','Bladeguard Veteran Squad','Faction: Adeptus Astartes','Faction: Ultramarines'],
+      kw:['Infantry','Chapter Master','Character','Epic Hero','Imperium','Terminator','Marneus Calgar','Explosives','Tacticus','Psyker','Wardens of Ultramar','Bladeguard Veteran Squad','Faction: Adeptus Astartes','Faction: Ultramarines'],
       kwNote:'Explosives, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit.',
       partialRules:{ 'Deep Strike':'Marneus Calgar' },
       kwOnly:{ Psyker:'Dainal Kornelius' },
@@ -4218,7 +4218,7 @@ const ARMIES = [
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
       rules:['Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Leader','Aegis of the Emperor','Aquila Commander','Martial Ka\'tah','Assault','Rapid Fire','Cleave','Blast'],
-      kw:['Infantry','Character','Epic Hero','Imperium','Terminator','Trajann Valoris','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
+      kw:['Infantry','Character','Epic Hero','Imperium','Trajann Valoris','Terminator','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
@@ -4372,7 +4372,7 @@ const ARMIES = [
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
       rules:['Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Leader','Aegis of the Emperor','Aquila Commander','Martial Ka\'tah','Assault','Rapid Fire','Cleave','Blast'],
-      kw:['Infantry','Character','Epic Hero','Imperium','Terminator','Trajann Valoris','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
+      kw:['Infantry','Character','Epic Hero','Imperium','Trajann Valoris','Terminator','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
       // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
@@ -5051,7 +5051,7 @@ const ARMIES = [
         { name:'Krumpin’ Time', who:'Meganobz' }
       ],
       rules:['Deep Strike','Leader','Da Boss','Waaagh!'],
-      kw:['Infantry','Character','Epic Hero','Mega Armour','Warboss','Explosives','Nazdreg','Meganobz','Faction: Orks'],
+      kw:['Infantry','Character','Epic Hero','Mega Armour','Warboss','Nazdreg','Explosives','Meganobz','Faction: Orks'],
       kwNote:'Explosives, Meganobz come from the led Meganobz.',
       why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Nazdreg + Meganobz)' }
     },
@@ -5086,7 +5086,7 @@ const ARMIES = [
         { name:'Extra Sneaky', who:'Gretchin', tag:'Upgrade', def:'-3" detection range', text:'**GRETCHIN** unit only. This unit has -3" **detection range**.', defOf:'10b55c47' }
       ],
       rules:['Leader','Support','Waaagh!'],
-      kw:['Infantry','Character','Epic Hero','Runtherd','Grots','Zodgrod Wortsnagga','Gretchin','Faction: Orks','Battleline'],
+      kw:['Infantry','Character','Epic Hero','Runtherd','Zodgrod Wortsnagga','Grots','Gretchin','Faction: Orks','Battleline'],
       kwNote:'Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm).',
       why:{ kw:{ Battleline:'Sneaky Little Gitz' }, kwNote:'leads Gretchin (with Runtherd)', ptsNote:'the points of its parts as the list has them (Zodgrod Wortsnagga + Runtherd + Gretchin)' }
     },
@@ -5137,7 +5137,7 @@ const ARMIES = [
         { name:'Krumpin’ Time', who:'Meganobz' }
       ],
       rules:['Leader','Da Boss','Waaagh!'],
-      kw:['Infantry','Character','Mega Armour','Warboss','Explosives','Warboss in Mega Armour','Meganobz','Faction: Orks'],
+      kw:['Infantry','Character','Mega Armour','Warboss','Warboss in Mega Armour','Explosives','Meganobz','Faction: Orks'],
       kwNote:'Explosives, Meganobz come from the led Meganobz.',
       why:{ kwNote:'leads Meganobz', ptsNote:'the points of its parts as the list has them (Warboss in Mega Armour + Meganobz)' }
     },
@@ -6776,7 +6776,7 @@ const DATASHEETS = {
     { name:'Third Eye', tag:'Psychic', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy unit within 12" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**.' }
   ],
   rules:['Leader','Psychic','Pistol'],
-  kw:['Infantry','Character','Psyker','Imperium','Voidfarers','Navigator','Allies: Imperial Agents','Faction: Agents of the Imperium']
+  kw:['Infantry','Character','Psyker','Imperium','Voidfarers','Navigator','Faction: Agents of the Imperium','Allies: Imperial Agents']
 },
 'adeptus-mechanicus/belisarius-cawl':{
   name:'Belisarius Cawl', faction:'adeptus-mechanicus', bsId:'1f1e-2989-4762-cf88', role:'Epic Hero',
@@ -7359,7 +7359,7 @@ const DATASHEETS = {
     { from:'Mischief Makers', kind:'melee', when:'Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings', note:'-1 to hit rolls (until the end of the phase)', selfAlways:true, readOf:'b35db159' }
   ],
   rules:['Deep Strike','Infiltrators','Lethal Hits'],
-  kw:['Swarm','Battleline','Chaos','Daemon','Nurgle','Nurglings','Allies: Legiones Daemonica','Faction: Legiones Daemonica']
+  kw:['Swarm','Battleline','Chaos','Daemon','Nurgle','Nurglings','Faction: Legiones Daemonica','Allies: Legiones Daemonica']
 },
 'chaos-knights/war-dog-brigand':{
   name:'War Dog Brigand', faction:'chaos-knights', bsId:'753d-4e02-eda3-4809',
@@ -7949,7 +7949,7 @@ const DATASHEETS = {
     { name:'Storm Shield', text:'This model has +1 **W**.' }
   ],
   rules:['Deep Strike','Combat Doctrines','Devastating Wounds','Hazardous','Blast'],
-  kw:['Infantry','Kill Team','Terminator','Imperium','Allies: Deathwatch','Deathwatch Terminator Squad','Faction: Adeptus Astartes','Faction: Deathwatch']
+  kw:['Infantry','Kill Team','Terminator','Imperium','Deathwatch Terminator Squad','Faction: Adeptus Astartes','Faction: Deathwatch','Allies: Deathwatch']
 },
 'chaos-daemons/skarbrand':{
   name:'Skarbrand', faction:'chaos-daemons', bsId:'7998-d0a-baa4-e8b3', role:'Epic Hero',

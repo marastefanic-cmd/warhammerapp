@@ -199,8 +199,9 @@ module.exports = function make(ROOT) {
   function orderKw(u, parts, own) {
     if (!Array.isArray(u.kw) || parts.every(p => !p.page)) return;
     const K = [], F = [];
-    for (const p of parts) if (p.page) { for (const k of p.page.keywords) if (!K.includes(n(k))) K.push(n(k)); for (const k of p.page.factionKeywords) if (!F.includes(n(k))) F.push(n(k)); }
-    const ownSet = new Set((own || []).map(n));
+    // (each part's KEYWORDS, then its datasheet's name keyword where the page leaves it out; an Allies marker is the list's own)
+    for (const p of parts) if (p.page) { for (const k of p.page.keywords) if (!K.includes(n(k))) K.push(n(k)); if (!K.includes(n(p.name))) K.push(n(p.name)); for (const k of p.page.factionKeywords) if (!F.includes(n(k))) F.push(n(k)); }
+    const ownSet = new Set((own || []).concat(u.kw.filter(k => /^Allies: /.test(k))).map(n));
     u.kw = sortBy(u.kw, (k, i) => {
       // (a keyword GW's page prints is in GW's place, though a rule of the list also gives it: the Bloodmaster's BATTLELINE)
       const f = /^Faction: (.*)$/.exec(k);
