@@ -115,7 +115,7 @@ const ACTIVITY_RULES = [
     why:'"makes an attack" (ranged or melee): your Shooting phase and the Fight phase' },
   { id:'charge-move', re:/\bcharge (?:rolls?|moves?)\b|\bends a charge\b|\bmakes a charge\b/i, ph:{ charge:'either' },
     why:'charge rolls / charge moves: the Charge phase (either turn: a Heroic Intervention is a charge move too)' },
-  { id:'declare-charge', re:/\bdeclares? a charge\b|\beligible to declare a charge\b/i, ph:{ charge:'your' },
+  { id:'declare-charge', re:/\bdeclares? a charge\b|\beligible to (?:declare a )?charge\b/i, ph:{ charge:'your' },
     why:'"declare a charge": your Charge phase' },
   { id:'move-enemy', re:/\benemy unit\b[^.]*\b(?:ends a (?:normal |advance |fall back )?move|(?:selected|chosen) to fall back|falls back|makes? a (?:normal|advance|fall back) move)\b/i, ph:{ movement:'opp' },
     why:'an enemy unit moving / Falling Back ("each time an enemy unit … Falls Back"): your opponent\'s Movement phase' },
@@ -138,6 +138,13 @@ const USED_MODIFIERS = [
     why:'triggered in one player\'s turn with an effect "until the end of the turn": used in that turn only, from the trigger\'s phase on' },
 ];
 const AFTER_CHARGE = USED_MODIFIERS[0];
+// (a move the unit made this turn as a condition, "eligible to declare a charge in a turn in which they Fell Back": the rule is used when
+// it shoots or charges, not when it moved)
+const MOVED_TURN = { id:'fell-back-charge', re:/\beligible to (?:declare a )?charge in a turn in which (?:it|they|this unit|that unit) fell back\b/gi,
+  why:'"eligible to (declare a) charge in a turn in which they Fell Back" (Beguiling Aura, Questing Tendrils): used when the charge is declared, the Charge phase; the Fall Back is its condition. (A unit eligible to shoot or charge after it Advanced keeps the Movement phase, as the signed-off Thrill Seekers, Adaptive Strategy and Bounding Leaps labels have it: the Advance is chosen there)' };
+// (an effect "until the end of the turn" triggered when the unit ends a Charge move: the Fight phase is left in that turn, no Shooting phase)
+const CHARGE_THEN = { id:'charge-then-turn', re:/\bends a charge move\b[^]*?\buntil the end of the turn\b/i,
+  why:'triggered when the unit ends a Charge move, "until the end of the turn": its attacks are the Fight phase\'s that follows (Seductive Gambit), not the Shooting phase\'s' };
 // what a label leaves out (a label is the phase tags on an ability or rule row; the checklist and RULE_OPTIONS read table 1 without these)
 const LABEL_RULES = [
   { id:'label-damaged', why:'a Damaged band ("While this model has 1-N wounds remaining, …"): shown by its damaged chip and footnote; its label is only a phase its words name ("… only one of the C\'tan Powers weapons in your Shooting phase"), else none' },
@@ -233,8 +240,11 @@ function usedIn(text, ctx, trig){
   let t = plain(rulesText(text));
   const reasons = [], out = {};
   let none = null, blocked = null, shoots = false, guarded = false;
-  const afterCharge = AFTER_CHARGE.re.exec(t);
+  const afterCharge = AFTER_CHARGE.re.exec(t) || CHARGE_THEN.re.exec(t);
   if(afterCharge) t = t.replace(AFTER_CHARGE.re, ' ');                  // a condition: no charge-move rule on it
+  let movedTurn = false;
+  if(MOVED_TURN.re.test(t)){ MOVED_TURN.re.lastIndex = 0; movedTurn = true; t = t.replace(MOVED_TURN.re, m => { reasons.push({ part:'used', rule:'fell-back-charge', match:m }); return 'eligible to declare a charge'; }); }
+  MOVED_TURN.re.lastIndex = 0;
   const add = (ph, r) => { for(const [p, o] of Object.entries(ph)){ if(afterCharge && p === 'shooting' && r.shoots && r.id !== 'ranged' && r.id !== 'ranged-only-keyword') continue; addPh(out, p, o); } };
   let labelAt = null; const labelOut = {};
   for(const sent of sentences(t)){
@@ -332,7 +342,7 @@ function usedIn(text, ctx, trig){
   // (a label: not a ranged attack chosen by its target, "makes a ranged attack that targets the closest eligible target": label-own-target)
   const ownTarget = ctx && ctx.label && shoots && OWN_TARGET.exec(t);
   if(ownTarget){ shoots = false; reasons.push({ rule:'label-own-target', match:ownTarget[0] }); }
-  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
+  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !movedTurn && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
       const w = explicitTiming(cs.when.split(/[.:]/)[0]);
@@ -384,6 +394,10 @@ function timing(text, ctx){
   if(ctx && ctx.label && ctx.option){ const m = /^\*\*Favoured ka['’]tah: ([^*\n]+)\*\*[ \t]*\n\*\*Additional Effect:\*\*[^\n]*(?:\n- [^\n]*)*/im.exec(norm(text)), o = m && ctx.option(m[1].trim());
     if(o && o.trigger && o.trigger.ph){ favoured = { o, m:m[0] }; text = norm(text).replace(m[0], ''); } }
   const full = text, opts = ctx && ctx.label ? optionsOf(rulesText(text), ctx.table).filter(o => !/^additional effects?$/i.test(o.name)) : [];
+  // (a label: a rule that gives units one ability in its words, "… have the following ability: **Seductive Gambit:** Each time this unit
+  // ends a Charge move, …", is used as that ability: its words are no option to choose (label-granted-ability))
+  const granted = ctx && ctx.label && opts.length === 1 && !(CARD_ABILITIES && CARD_ABILITIES.has(norm(opts[0].name).toLowerCase())) && !TABLE_LIKE.test(opts[0].how) && (pre => /\bha(?:ve|s) the following ability:$/i.test(pre) && !/[.\n]/.test(pre.replace(/:$/, '')))(plain(rulesText(text)).split(plain(opts[0].name))[0].trim());
+  if(granted) opts.length = 0;
   if(ctx && ctx.label && opts.some(o => !TABLE_LIKE.test(o.how))) text = withoutOptions(text, ctx.table);
   const trig = explicitTiming(text, ctx && (ctx.rule || ctx.label) ? { rule:!!ctx.rule, label:!!ctx.label } : undefined);
   const used = usedIn(text, ctx, trig);
@@ -1058,8 +1072,12 @@ function ckBlock(T){
     'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
 }
 
+// the abilities on the datasheets (a list's unit or a DATASHEETS row): a rule that gives units an ability their cards show has no label of
+// its own (Higher Imperatives' Protean Purpose, Silent Sisterhood's Creeping Dread: label-granted-ability)
+let CARD_ABILITIES = null;
 function derive(D){
   const V = vocab(D);
+  CARD_ABILITIES = new Set([].concat(...Object.values(D.datasheets || {}).map(u => u.abilities || []), ...(D.armies || []).flatMap(a => a.units || []).map(u => u.abilities || [])).map(a => norm(a.name || '').toLowerCase()));
   const UNREAD = (readJSON(UNREAD_FILE, {}).items) || {};
   // the comments next to an item: data.js in the old form (each unit in full, as the lists were written), where each comment
   // is on every unit it is about (verify/tables.js)
@@ -1404,9 +1422,13 @@ function ruleTables(D){
       // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
       const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;
       const grantName = name.replace(/ ability$/i, '') + (against ? ' ' + against[1].replace(/\*\*/g, '') : '');
-      const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
-      const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:grantName, type, to, while:wh, text:sent });
-      grants.push(g); grantSink(g);   // (the checklist: an ability it gives to units by keyword, Might of Khorne's Blessings of Khorne)
+      // (and the keywords "and" names after it, "gain the SHADOW LEGION and UNDIVIDED keywords": each)
+      const andKw = /^\s*and \*\*([^*]+)\*\*\s+keywords\b/i.exec(norm(sent).slice(m.index + m[0].length));
+      for(const gn of [grantName].concat(andKw ? [andKw[1].trim()] : [])){
+        const type = isUpperWord(gn.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
+        const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:gn, type, to, while:wh, text:sent });
+        grants.push(g); grantSink(g);   // (the checklist: an ability it gives to units by keyword, Might of Khorne's Blessings of Khorne)
+      }
     }
   }
   return { options, grants, reasons, sinks };

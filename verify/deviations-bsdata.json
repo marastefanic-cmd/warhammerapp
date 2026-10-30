@@ -3686,21 +3686,21 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/belakor",
-  "field": "ability[Damaged: 1-7 wounds remaining]",
-  "app": "Damaged: 1-7 wounds remaining",
-  "source": null,
-  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Damaged: 1-6 wounds remaining. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Be-lakor.html.",
+  "field": "ability[Shadow Form].text",
+  "app": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability.",
+  "source": "At the start of the battle round, select one Shadow Form ability. Until the end of the battle round, this model has that ability.",
+  "reason": "GW's Faction Pack prints on Be'lakor's datasheet \"Shadow Form: At the start of the battle round, select one Shadow Form ability (see reverse). Until the end of the battle round, this model has that ability.\" (lines 3032-3036); Wahapedia names it \"Shadow Form Abilities:\", so the import did not find it. GW's words, \"(see below)\" for the card's reverse, as Wahapedia writes it: the three Shadow Form abilities follow it; BSData's leaves \"(see reverse)\" out (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt). GW wins (verify/sources/hand/catalog-chaos-daemons.json texts).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt).",
   "by": "verify/from-bsdata.js"
  },
  {
   "army": "catalog",
   "unit": "chaos-daemons/belakor",
-  "field": "ability[Disciples of Be’lakor].text",
-  "app": "Be’lakor’s immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy’s midst.\n**SHADOW LEGION UNDIVIDED** units only.\n- This unit has the **Dark Pacts** army rule, and can use it as described in *Codex: Chaos Space Marines*, even though your Army Faction is not **HERETIC ASTARTES**. If this unit is **BE’LAKOR**, it automatically passes the **Leadership test** required for Dark Pacts.\n- **SHADOW LEGION HERETIC ASTARTES** models in this unit have the **Deep Strike** ability.\n© Vyacheslav Maltsev 2013-2026",
-  "source": "- This unit has the Dark Pacts army rule, and can use it as described in _Codex: Chaos Space Marines_, even though your Army Faction is not Heretic Astartes. If this unit is Be’lakor, it automatically passes the Leadership test required for Dark Pacts. \n- Shadow Legion Heretic Astartes models in this unit have the Deep Strike ability.",
-  "reason": "GW’s datasheet (Wahapedia) prints the box Disciples of Be’lakor otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Be-lakor.html: \"Be'lakor's immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night str\".",
+  "field": "ability[Damaged: 1-7 wounds remaining]",
+  "app": "Damaged: 1-7 wounds remaining",
+  "source": null,
+  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Damaged: 1-6 wounds remaining. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Be-lakor.html.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -3716,31 +3716,11 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/belakor",
-  "field": "ability[Shadow Form]",
-  "app": null,
-  "source": "Shadow Form",
-  "reason": "GW’s datasheet does not print the ability Shadow Form. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Be-lakor.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/belakor",
   "field": "ability[Damaged: 1-6 wounds remaining]",
   "app": null,
   "source": "Damaged: 1-6 wounds remaining",
   "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Damaged: 1-6 wounds remaining. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Be-lakor.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/belakor",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Be-lakor.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -3807,10 +3787,10 @@
   "army": "catalog",
   "unit": "chaos-daemons/horticulous-slimux",
   "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS",
+  "app": "This model can be attached to the following units: BEASTS OF NURGLE",
   "source": "This model can be attached to the following unit:\n■ BEASTS OF NURGLE",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Horticulous-Slimux.html: LEADER \"This model can be attached to the following units: BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS\".",
+  "reason": "GW's Faction Pack Chaos Daemons prints Horticulous Slimux's LEADER section \"This model can be attached to the following unit: ■ Beasts of Nurgle\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2129-2130); Wahapedia also lists the Legends Plague Toads and Pox Riders. BSData agrees with GW. GW wins (verify/sources/hand/catalog-chaos-daemons.json texts).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4116,16 +4096,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/bloodmaster",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Bloodmaster.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/bloodmaster",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -4141,16 +4111,6 @@
   "source": "120×92mm",
   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2926: \"Bloodthirster  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/bloodthirster",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Bloodthirster.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4196,16 +4156,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/changecaster",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Changecaster.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/changecaster",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -4226,31 +4176,11 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/contorted-epitome",
-  "field": "ability[Horrible Fascination(Psychic)].name",
-  "app": "Horrible Fascination(Psychic)",
-  "source": "Horrible Fascination",
-  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Horrible Fascination. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Contorted-Epitome.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/contorted-epitome",
   "field": "ability[Leader].text",
   "app": "This model can be attached to the following units: DAEMONETTES",
   "source": "This model can be attached to the following unit:\n■ DAEMONETTES",
   "reason": "GW’s datasheet (its LEADER section) lets this model be attached to DAEMONETTES; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Contorted-Epitome.html: LEADER \"This model can be attached to the following units: DAEMONETTES\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/contorted-epitome",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Contorted-Epitome.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4366,16 +4296,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/exalted-flamer",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Exalted-Flamer.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/exalted-flamer",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -4401,16 +4321,6 @@
   "source": "This model can be attached to the following unit:\n■ SCREAMERS",
   "reason": "GW’s datasheet (its LEADER section) lets this model be attached to SCREAMERS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Fateskimmer.html: LEADER \"This model can be attached to the following units: SCREAMERS\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/fateskimmer",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fateskimmer.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4456,16 +4366,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/fluxmaster",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/fluxmaster",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -4481,16 +4381,6 @@
   "source": "Stealth",
   "reason": "GW’s datasheet does not print Stealth. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/great-unclean-one",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Great-Unclean-One.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4566,31 +4456,11 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/infernal-enrapturess",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Infernal-Enrapturess.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/infernal-enrapturess",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Infernal-Enrapturess.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/keeper-of-secrets",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Keeper-Of-Secrets.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4621,16 +4491,6 @@
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Keeper-Of-Secrets.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/lord-of-change",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Lord-of-Change.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4676,16 +4536,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/poxbringer",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Poxbringer.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/poxbringer",
   "field": "rules",
   "app": "Feel No Pain 5+",
   "source": null,
@@ -4726,16 +4576,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/rendmaster-on-blood-throne",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Rendmaster-On-Blood-Throne.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/rendmaster-on-blood-throne",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -4751,16 +4591,6 @@
   "source": "90×52.5mm",
   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has 90×52.5mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 90×52.5mm Oval. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2968: \"Skullmaster  90x52.5mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/skullmaster",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Skullmaster.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4786,16 +4616,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/sloppity-bilepiper",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Sloppity-Bilepiper.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/sloppity-bilepiper",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -4811,16 +4631,6 @@
   "source": "This model can be attached to the following unit:\n■ PLAGUE BEARERS",
   "reason": "GW’s datasheet (its LEADER section) lets this model be attached to PLAGUEBEARERS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Spoilpox-Scrivener.html: LEADER \"This model can be attached to the following units: PLAGUEBEARERS\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/spoilpox-scrivener",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Spoilpox-Scrivener.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4856,16 +4666,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/tormentbringer",
-  "field": "ability[Hysterical Frenzy].tag",
-  "app": "Psychic",
-  "source": null,
-  "reason": "GW’s datasheet (Wahapedia, the codex) tags the ability (Psychic); BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has none. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Tormentbringer.html: ABILITIES \"Hysterical Frenzy (Psychic)\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/tormentbringer",
   "field": "ability[Leader].text",
   "app": "This model can be attached to the following units: HELLFLAYERS",
   "source": "This model can be attached to the following unit: \n- Hellflayers",
@@ -4876,40 +4676,10 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/tormentbringer",
-  "field": "kw",
-  "app": "Tormentbringer On Exalted Seeker Chariot",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword TORMENTBRINGER ON EXALTED SEEKER CHARIOT; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Tormentbringer.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/tormentbringer",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Tormentbringer.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/tormentbringer",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Tormentbringer.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/tormentbringer",
-  "field": "rules",
-  "app": null,
-  "source": "Leader",
-  "reason": "GW’s datasheet does not print Leader. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Tormentbringer.html: CORE ABILITIES / ARMY RULES.",
   "by": "verify/from-bsdata.js"
  },
@@ -4926,31 +4696,11 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/tranceweaver",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Tranceweaver.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/tranceweaver",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Tranceweaver.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/bloodletters",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Bloodletters.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5066,16 +4816,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/daemonettes",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemonettes.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/daemonettes",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5101,16 +4841,6 @@
   "source": "Aura",
   "reason": "GW’s datasheet does not tag Mischief Makers (Aura); BSData names it \"Mischief Makers (Aura)\". GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Nurglings.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/nurglings",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Nurglings.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5236,26 +4966,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/plaguebearers",
-  "field": "ability[Infected Outbreak].text",
-  "app": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-  "source": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Plaguebearers.html: \"At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at t\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/plaguebearers",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Plaguebearers.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/plaguebearers",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5271,16 +4981,6 @@
   "source": "any copy: 3 65 · 4 130 · 5 130 · 6 130",
   "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 65 · 6 130; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2): any copy: 3 65 · 4 130 · 5 130 · 6 130 (copy 1-, 4 models: BSData 130, GW prices no unit of 4; copy 1-, 5 models: BSData 130, GW prices no unit of 5). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Flamers.html: any copy: 3 65 · 6 130.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/flamers",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Flamers.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5316,16 +5016,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/bloodcrushers",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Bloodcrushers.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/bloodcrushers",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5341,16 +5031,6 @@
   "source": "120×92mm",
   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2928: \"Burning Chariot  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/burning-chariot",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Burning-Chariot.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5406,16 +5086,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/hellflayers",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Hellflayers.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/hellflayers",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5441,16 +5111,6 @@
   "source": "60mm Flying",
   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has 60mm Flying; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has Large Flying. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2952: \"Plague Drones  Large Flying Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/plague-drones",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Plague-Drones.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5496,16 +5156,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/seekers",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Seekers.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/seekers",
   "field": "rules",
   "app": "Scouts 9\"",
   "source": null,
@@ -5546,16 +5196,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/skull-cannon",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Skull-Cannon.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/skull-cannon",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5571,16 +5211,6 @@
   "source": "any copy: 1 80 · 2 80",
   "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 1 80 · 2 150; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2): any copy: 1 80 · 2 80 (copy 1-, 2 models: GW 150, BSData 80; BSData also: set 150 when model atLeast 2 (unit-self)). GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Beasts-Of-Nurgle.html: any copy: 1 80 · 2 150.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/beasts-of-nurgle",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Beasts-Of-Nurgle.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5656,16 +5286,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/fiends",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fiends.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/fiends",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5691,16 +5311,6 @@
   "source": "60×35.5mm",
   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has 60×35.5mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 60×35.5mm Oval. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2940: \"Flesh Hounds  60x35.5mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/flesh-hounds",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Flesh-Hounds.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5746,16 +5356,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/screamers",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Screamers.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/screamers",
   "field": "rules",
   "app": null,
   "source": "Warp Rifts",
@@ -5786,16 +5386,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/khorne-soul-grinder",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/khorne-soul-grinder",
   "field": "rules",
   "app": "Deadly Demise D3",
   "source": null,
@@ -5841,16 +5431,6 @@
   "source": null,
   "reason": "GW’s datasheet prints the ability Daemonic Allegiance (a box of its own); BSData’s entry does not have it. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/nurgle-soul-grinder",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -5906,16 +5486,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/slaanesh-soul-grinder",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/slaanesh-soul-grinder",
   "field": "rules",
   "app": "Deadly Demise D3",
   "source": null,
@@ -5966,16 +5536,6 @@
  {
   "army": "catalog",
   "unit": "chaos-daemons/tzeentch-soul-grinder",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/tzeentch-soul-grinder",
   "field": "rules",
   "app": "Deadly Demise D3",
   "source": null,
@@ -6001,16 +5561,6 @@
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Soul-Grinder.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/feculent-gnarlmaw",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Feculent-Gnarlmaw.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -6021,16 +5571,6 @@
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Feculent-Gnarlmaw.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/skull-altar",
-  "field": "kw",
-  "app": null,
-  "source": "Shadow Legion",
-  "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) gives the category Shadow Legion, the Shadow Legion detachment’s keyword; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Skull-Altar.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -6131,6 +5671,16 @@
   "source": null,
   "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/the-red-terror",
+  "field": "kw",
+  "app": null,
+  "source": "Burrowers",
+  "reason": "GW's Faction Pack Tyranids prints The Red Terror's datasheet with \"KEYWORDS: Character, Mobile, Epic Hero, Great Devourer, Monster, Burrower, Vanguard Invader, The Red Terror\" (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 305-306): BURROWER, not BSData's category \"Burrowers\" as well. GW wins (verify/sources/hand/catalog-tyranids.json texts).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt.",
   "by": "verify/from-bsdata.js"
  },
  {

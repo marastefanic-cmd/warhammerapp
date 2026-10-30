@@ -80,7 +80,12 @@ function filterTest() {
   // (shown only when the list took a detachment: a detachment's ability on the unit, BSData's Shadow Legion / Legion of Excess profiles)
   hcases.push([{ hidden: false, modifiers: [hm(true, [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }])] }, true]);
   hcases.push([{ hidden: false, modifiers: [hm(true, [{ scope: 'force', childId: 'det-1', type: 'equalTo', value: 0 }])] }, true]);
-  hcases.forEach(([x, want, lc0], i) => { if (H(x, lc0) !== want) fails.push('filter: hidden case ' + (i + 1) + ' (' + JSON.stringify(x) + ') is ' + H(x, lc0) + ', want ' + want); });
+  // (one "and" group: the detachment absent and the force no Crusade Force, Disciples of Be'lakor; an "or" group stays shown)
+  { const MF = BC.MODE_FORCES, had = MF.has('test-cf'); MF.set('test-cf', 'Crusade Force');
+    hcases.push([{ hidden: false, modifiers: [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'and', conditions: [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }, { scope: 'force', childId: 'test-cf', type: 'notInstanceOf', value: 1 }] }] }] }, true]);
+    hcases.push([{ hidden: false, modifiers: [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'or', conditions: [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }, { scope: 'self', childId: 'x', type: 'atLeast', value: 1 }] }] }] }, false]);
+    hcases.forEach(([x, want, lc0], i) => { if (H(x, lc0) !== want) fails.push('filter: hidden case ' + (i + 1) + ' (' + JSON.stringify(x) + ') is ' + H(x, lc0) + ', want ' + want); });
+    if (!had) MF.delete('test-cf'); }
   // inside a datasheet: BSData's Crusade group, Weapon Modifications, Crusade Relic Upgrades are no options
   for (const n of ['Crusade', 'Weapon Modifications', 'Crusade Relic Upgrades', 'Battle Scars', 'Codex Crusade Relics']) if (!BC.CRUSADE.test(n)) fails.push('filter: the group ' + n + ' is not read as Crusade');
   if (!had) MF.delete('test-ba');
@@ -227,7 +232,7 @@ function declarations(root, faction, r) {
       const sm = /^stats\[(.*)\]$/.exec(d.field), typoOf = sm && (d.source ? MN[d.source] : Object.entries(MN).map(([k, v]) => Object.assign({ bs: k }, v)).find(v => v.gw === d.app));
       // (a value the Faction Pack's Rules Updates gave the row, verify/from-bsdata.js applyPack)
       const pk = (r.cat.packApplied || []).find(x => x.id === id && (x.field === d.field || (x.field === 'kw' && d.field === 'kw' && x.app === d.app)));
-      const hk = !pk && (r.cat.handApplied || []).find(x => x.id === id && x.field === d.field);
+      const hk = !pk && (r.cat.handApplied || []).find(x => x.id === id && x.field === d.field && (!['kw', 'rules'].includes(d.field) || (d.app != null ? x.app === d.app : x.was === d.source)));
       if (hk) { reason = hk.why + '. GW wins (verify/sources/hand/catalog-' + faction + '.json texts).'; evidence = (hk.why.match(/verify\/\.cache\/\S+/) || ['the Faction Pack named in the reason'])[0] + '.'; }
       else if (pk) { reason = 'GW’s Faction Pack, Rules Updates: "' + pk.title + '" — ' + pk.instr + (pk.field.endsWith('.text') ? '' : ' ' + pk.app) + '; ' + pinS + ' has ' + (d.source == null ? 'none' : JSON.stringify(d.source)) + '. GW wins.'; evidence = pk.where + '.'; }
       else if (sm && typoOf && (typoOf.kind === 'typo')) { reason = typoOf.why + '. GW wins (as for every misprint; verify/sources/hand/catalog-' + faction + '.json modelNames).'; evidence = typoOf.evidence + '.'; }
@@ -322,7 +327,18 @@ function main() {
     const cat = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')), faction = cat.faction, rep = report.factions[faction] = { datasheets: Object.keys(cat.datasheets).length, detachments: (cat.detachments || []).length, excluded: (cat.excluded || []).length, differences: [] };
     // the owner's standing rule (Legends, Crusade, Crucible: left out, ever): nothing of them anywhere in what the catalogue gives the
     // app, a datasheet, an option, a weapon, an ability or a detachment (only its excluded list names them)
-    { const bad = []; const walk = (o, at) => { if (typeof o === 'string') { if (/\[(?:Legends|Crucible)\]|\bCrucible\b|\bCrusade\b|\bOrder of Battle\b/i.test(o)) bad.push(at + ': ' + o.slice(0, 80)); return; }
+    // (and the names of the entries it left out as Legends, Crucible or Crusade, without their bracket tag: Horticulous Slimux's Leader
+    // naming Plague Toads, Tormentbringer's keyword "Tormentbringer On Exalted Seeker Chariot")
+    { const esc = x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const gone = [...new Set((cat.excluded || []).filter(x => ['legends', 'crucible', 'crusade'].includes(x.kind)).map(x => String(x.name).replace(/\s*\[[^\]]*\]\s*$/, '').trim()).filter(n => n.length > 3))];
+      const goneRe = gone.length ? new RegExp('(?<![A-Za-z’\'])(?:' + gone.map(esc).join('|') + ')(?![A-Za-z’\'])', 'gi') : null;
+      // (not a part of a longer name, a title-case word after it: "Null Maiden Vigil", the detachment)
+      const goneIn = o => { if (!goneRe) return null; goneRe.lastIndex = 0; for (let m; (m = goneRe.exec(o));) if (!/^\s+[A-Z][a-z]/.test(o.slice(m.index + m[0].length))) return m; return null; };
+      // (a LEADER list in GW's words may name a Legends datasheet, "the following units: …, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS":
+      // GW's text is shown, checked by verify/texts.js; the unit is no catalogue row, so it is never offered)
+      const leaderText = at => /\.abilities\[\d+\]\.text$/.test(at) && /^This (?:model|unit) can be attached to the following units?:/.test(curText);
+      let curText = '';
+      const bad = []; const walk = (o, at) => { if (typeof o === 'string') { curText = o; const g = leaderText(at) ? null : goneIn(o); if (/\[(?:Legends|Crucible)\]|\bCrucible\b|\bCrusade\b|\bOrder of Battle\b/i.test(o) || g) bad.push(at + ': ' + (g ? '"' + g[0] + '" (left out) in ' : '') + o.slice(0, 80)); return; }
         if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) walk(v, at + (Array.isArray(o) ? '[' + k + ']' : '.' + k)); };
       for (const [id, row] of Object.entries(cat.datasheets)) walk(row, id);
       walk(cat.detachments || [], 'detachments'); walk(cat.detachmentRows || {}, 'detachmentRows');

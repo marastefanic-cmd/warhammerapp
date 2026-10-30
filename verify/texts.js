@@ -656,6 +656,9 @@ function packContents(d) {
     const m = /^(.+?) ?(\d+)$/.exec(t);
     if (!m) continue;
     if (/^(Detachments|Datasheets|Imperial Armour Datasheets|Rules Updates|Legends Datasheets)$/.test(m[1])) { group = m[1]; toc.push({ name: m[1], page: +m[2], group: 'top' }); continue; }
+    // ("Index: Chaos Daemons 2": the pack prints every datasheet of the faction from there, its contents naming none: the Datasheets
+    // group, each datasheet found by the page its name opens)
+    if (/^Index: \S/.test(m[1])) { group = 'Datasheets'; toc.push({ name: m[1], page: +m[2], group: 'top', index: true }); continue; }
     toc.push({ name: m[1], page: +m[2], group });
   }
   return toc;
@@ -1358,17 +1361,58 @@ for (const fk of FACTIONS) for (const e of UPD[fk]) {
 // that unit must be in those pages word for word ("Name: text", or the DAMAGED / INVULNERABLE SAVE boxes); a catalogue row too
 for (const a of D.armies.concat(CATALOG)) {
   const d = DOCS['pack:' + a.faction]; if (!d) continue;
-  const toc = packContents(d).filter(e => e.group === 'Datasheets' || e.group === 'Imperial Armour Datasheets');
+  const all = packContents(d), toc = all.filter(e => e.group === 'Datasheets' || e.group === 'Imperial Armour Datasheets'), index = all.find(e => e.index);
   for (const u of a.units) {
-    const e = toc.find(x => norm(x.name) === norm(u.name)); if (!e) continue;
+    const e = toc.find(x => norm(x.name) === norm(u.name)) || index; if (!e) continue;
     const p0 = d.pages.findIndex((p, pi) => pi > 0 && squash(p.lines.find(l => l.trim()) || '') === squash(u.name));
     if (p0 < 0) continue;
     const [s0, s1] = pageRange(d, p0, p0 + 1);
     const wh = d.label + ' PDF p' + (p0 + 1) + '-' + (p0 + 2) + ' (' + u.name + ' datasheet)';
+    // (the datasheet's KEYWORDS line, its CORE line and the Aura / Psychic tags GW prints in an ability's name: the row has them; a
+    // datasheet whose keywords GW prints per model, "KEYWORDS – ALL MODELS: …", is checked by its abilities only)
+    { const L = [].concat(...d.pages.slice(p0, p0 + 2).map(pg => pg.lines)), seg = x => x.trim().split(/\s{4,}/)[0].trim();
+      // (a catalogue row: a list's unit carries its list's choices, a Warlord, an allegiance, its attached unit's keywords)
+      const ki = a.id === 'catalog' ? L.findIndex(l => /^\s*KEYWORDS:/.test(l)) : -1;
+      if (ki >= 0) {
+        let kt = seg(L[ki].replace(/^\s*KEYWORDS:\s*/, '').replace(/FACTION KEYWORDS:.*$/, ''));
+        for (let j = ki + 1; /,$/.test(kt) && j < L.length; j++) kt += ' ' + seg(L[j]);
+        const gwKw = kt.replace(/,$/, '').split(/\s*,\s*/).map(x => norm(x)).filter(Boolean).sort(), appKw = (u.kw || []).filter(k => !/^Faction: /.test(k)).map(x => norm(x)).sort();
+        count('packDatasheet');
+        if (gwKw.join('|') !== appKw.join('|')) fail('packDatasheet', a.id, u.id, 'kw', (u.kw || []).join(', '), 'KEYWORDS: ' + kt, wh);
+      }
+      const ci = a.id === 'catalog' ? L.findIndex(l => /\bCORE: /.test(l)) : -1;
+      if (ci >= 0) {
+        const gwCore = L[ci].replace(/^.*\bCORE: /, '').trim().split(/\s*,\s*/).map(x => norm(x)).filter(Boolean), appR = new Set((u.rules || []).map(x => norm(x)));
+        count('packDatasheet');
+        const miss = gwCore.filter(x => !appR.has(x));
+        if (miss.length) fail('packDatasheet', a.id, u.id, 'rules', (u.rules || []).join(', '), 'CORE: ' + L[ci].replace(/^.*\bCORE: /, '').trim() + ' (the row lacks ' + miss.join(', ') + ')', wh);
+      }
+      const page = norm(L.join(' ').replace(/\s+/g, ' '));
+      for (const ab of a.id === 'catalog' ? u.abilities || [] : []) {
+        if (ab.who && norm(ab.who) !== norm(u.name)) continue;
+        const esc = norm(ab.name).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), m = new RegExp('(?:^|[^a-z’\'])' + esc + '\\s*(\\(([^)]*)\\))?:').exec(page);
+        if (!m) continue;
+        for (const tg of ['aura', 'psychic']) { const gw = new RegExp('\\b' + tg + '\\b').test(m[2] || ''), app = new RegExp('\\b' + tg + '\\b').test(norm(ab.tag || ''));
+          count('packDatasheet');
+          if (gw !== app) fail('packDatasheet', a.id, u.id, 'ability:' + ab.name + ' (tag)', ab.tag || '', 'GW prints "' + (m[0].replace(/^[^a-z]/, '')) + '"', wh); } } }
     for (const ab of u.abilities || []) {
       if (ab.who && norm(ab.who) !== norm(u.name)) continue;
       if (enhNames(a).has(norm(ab.name))) continue;
       if (/^invulnerable save/.test(norm(ab.name))) continue;   // a box ("INVULNERABLE SAVE* 5+ * Against ranged attacks only"), not text
+      // (LEADER: GW prints "This model can be attached to the following unit(s):" and a "■ Name" line per unit; the app writes them in one
+      // line, "…: BLOODLETTERS, FLAMERS": the same units, compared as a list)
+      const lm = norm(ab.name) === 'leader' && /attached to the following units?:\s*([\s\S]+)$/i.exec(String(ab.text).replace(/\*\*/g, ''));
+      if (lm) {
+        count('packDatasheet');
+        const want = lm[1].split(/\s*,\s*|\n/).map(x => norm(x.replace(/^[-■]\s*/, ''))).filter(Boolean).sort();
+        const got = []; for (const pg of d.pages.slice(p0, p0 + 2)) { const L = pg.lines; for (let i = 0; i < L.length; i++) if (/can be attached to the following units?:/i.test(L[i])) {
+          if (/■/.test(L[i + 1] || '')) for (let j = i + 1; j < L.length && /■/.test(L[j]); j++) got.push(norm(L[j].split('■').pop().trim()));
+          // (or a sentence of names, "Hormagaunts, Termagants, Tyranid Warriors / with Melee Bio-weapons, …." over its lines)
+          else { const ls = []; for (let j = i + 1; j < L.length && L[j].trim(); j++) ls.push(L[j].trim()); got.push(...ls.join(' ').replace(/\.$/, '').split(/\s*,\s*/).map(x => norm(x))); } } }
+        prov.push({ item: a.id + ' / ' + u.id + ' / ability:' + ab.name, field: 'text', doc: d.label, file: d.file, sha256: d.sha256, where: wh });
+        if (got.sort().join('|') !== want.join('|')) fail('packDatasheet', a.id, u.id, 'ability:' + ab.name, ab.text, 'LEADER: ' + (got.join(', ') || '(no unit list found)'), wh);
+        continue;
+      }
       count('packDatasheet');
       const n = normField(ab.text);
       const hits = findAll(d, n, s0, s1);

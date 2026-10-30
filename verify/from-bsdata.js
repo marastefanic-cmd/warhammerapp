@@ -180,6 +180,22 @@ function build() {
     if (!ab || String(ab.text).split(fx.from).length !== 2) throw new Error('verify/sources/hand/catalog-' + faction + '.json texts ' + id + ' · ' + an + ': its words "' + fx.from + '" are not there exactly once');
     const was = ab.text; ab.text = ab.text.replace(fx.from, fx.to); handApplied.push({ id, field: 'ability[' + an + '].text', app: ab.text, was, why: fx.why });
   }
+  // GW's datasheet as its Faction Pack prints it, where Wahapedia's page (which the import reads as GW's) differs from it (the hand
+  // file's rows: { "<datasheet id>": { kwRemove:[…], rulesAdd:[{ name, after }], abilities:{ "<name>": { name?, tag? } },
+  // abilityAdd:[{ name, text, after }], why }); each recorded (handApplied) and declared where it differs from BSData
+  for (const [id, h] of Object.entries(HAND().rows || {})) {
+    const row = rows[id], bad = w => { throw new Error('verify/sources/hand/catalog-' + faction + '.json rows ' + id + ': ' + w); };
+    if (!row) bad('no such row');
+    for (const k of h.kwRemove || []) { if (!(row.kw || []).includes(k)) bad('no keyword ' + k); row.kw = row.kw.filter(x => x !== k); handApplied.push({ id, field: 'kw', app: null, was: k, why: h.why }); }
+    for (const r of h.rulesAdd || []) { if ((row.rules || []).includes(r.name)) bad('already has ' + r.name); const i = r.after ? row.rules.indexOf(r.after) : -1; if (r.after && i < 0) bad('no rule ' + r.after); row.rules.splice(i + 1, 0, r.name); handApplied.push({ id, field: 'rules', app: r.name, was: null, why: h.why }); }
+    for (const [an, fx] of Object.entries(h.abilities || {})) {
+      const ab = (row.abilities || []).find(a => a.name === an); if (!ab) bad('no ability ' + an);
+      if ('tag' in fx) { const was = ab.tag; if (fx.tag == null) delete ab.tag; else ab.tag = fx.tag; handApplied.push({ id, field: 'ability[' + an + '].tag', app: fx.tag, was, why: h.why }); }
+      if ('name' in fx) { ab.name = fx.name; handApplied.push({ id, field: 'ability[' + fx.name + '].name', app: fx.name, was: an, why: h.why }); }
+    }
+    for (const a of h.abilityAdd || []) { if ((row.abilities || []).some(x => x.name === a.name)) bad('already has ' + a.name); const i = a.after ? row.abilities.findIndex(x => x.name === a.after) : -1; if (a.after && i < 0) bad('no ability ' + a.after);
+      const o = Object.assign({ name: a.name }, a.tag ? { tag: a.tag } : {}, { text: a.text }); row.abilities.splice(i + 1, 0, o); handApplied.push({ id, field: 'ability[' + a.name + '].text', app: a.text, was: null, why: h.why }); }
+  }
   // the GW-over-BSData differences, with their evidence: the deviations to declare (as verify/from-json.js declares a list's)
   const devs = [];
   for (const d of E.gwDevs) devs.push({ unit: d.unit, kind: d.kind, row: d.row || null, field: d.field, gw: d.app, bsdata: d.bsdata === 'undefined' ? null : d.bsdata, file: d.file, det: d.det || null });

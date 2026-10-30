@@ -63,6 +63,65 @@
     "to": "stated for that keyword below.",
     "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
    }
+  },
+  "chaos-daemons/plaguebearers": {
+   "Infected Outbreak": {
+    "from": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "to": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "why": "GW's Faction Pack Chaos Daemons (legal from 30 Sep 2026) prints the Plaguebearers' datasheet: \"If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2149-2153); Wahapedia's Level of Control wording is in no cached GW document. BSData agrees with GW"
+   }
+  },
+  "chaos-daemons/horticulous-slimux": {
+   "Leader": {
+    "from": "BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS",
+    "to": "BEASTS OF NURGLE",
+    "why": "GW's Faction Pack Chaos Daemons prints Horticulous Slimux's LEADER section \"This model can be attached to the following unit: ■ Beasts of Nurgle\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2129-2130); Wahapedia also lists the Legends Plague Toads and Pox Riders. BSData agrees with GW"
+   }
+  }
+ },
+ "rows": {
+  "chaos-daemons/tormentbringer": {
+   "kwRemove": [
+    "Tormentbringer On Exalted Seeker Chariot"
+   ],
+   "rulesAdd": [
+    {
+     "name": "Leader",
+     "after": "Deep Strike"
+    }
+   ],
+   "abilities": {
+    "Hysterical Frenzy": {
+     "tag": null
+    }
+   },
+   "why": "GW's Faction Pack Chaos Daemons prints the Tormentbringer datasheet with \"CORE: Deep Strike, Leader\" (line 2717), \"Hysterical Frenzy: Each time a model …\" untagged (line 2724) and \"KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer\" (lines 2736-2737); Wahapedia's page, which the import reads, differs (its keyword names the Legends Exalted Seeker Chariot). BSData agrees with GW (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "chaos-daemons/contorted-epitome": {
+   "abilities": {
+    "Horrible Fascination(Psychic)": {
+     "name": "Horrible Fascination"
+    }
+   },
+   "why": "GW's Faction Pack prints \"Horrible Fascination(Psychic):\" (line 2670): the name Horrible Fascination with its (Psychic) tag, a space missing; the tag stays in tag. BSData agrees (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "chaos-daemons/keeper-of-secrets": {
+   "abilities": {
+    "Shining aegis": {
+     "name": "Shining Aegis"
+    }
+   },
+   "why": "GW's Faction Pack prints \"Shining Aegis: The bearer has a Save characteristic of 3+.\" (line 2469); BSData names it \"Shining aegis\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "chaos-daemons/belakor": {
+   "abilityAdd": [
+    {
+     "name": "Shadow Form",
+     "after": "The Dark Master",
+     "text": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability."
+    }
+   ],
+   "why": "GW's Faction Pack prints on Be'lakor's datasheet \"Shadow Form: At the start of the battle round, select one Shadow Form ability (see reverse). Until the end of the battle round, this model has that ability.\" (lines 3032-3036); Wahapedia names it \"Shadow Form Abilities:\", so the import did not find it. GW's words, \"(see below)\" for the card's reverse, as Wahapedia writes it: the three Shadow Form abilities follow it; BSData's leaves \"(see reverse)\" out (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
   }
  }
 }

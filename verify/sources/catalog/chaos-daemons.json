@@ -98,12 +98,12 @@
      "text": "The area of the battlefield within 6\" of this model is within your army’s Shadow of Chaos."
     },
     {
-     "name": "Damaged: 1-7 wounds remaining",
-     "text": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+     "name": "Shadow Form",
+     "text": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability."
     },
     {
-     "name": "Disciples of Be’lakor",
-     "text": "Be’lakor’s immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy’s midst.\n**SHADOW LEGION UNDIVIDED** units only.\n- This unit has the **Dark Pacts** army rule, and can use it as described in *Codex: Chaos Space Marines*, even though your Army Faction is not **HERETIC ASTARTES**. If this unit is **BE’LAKOR**, it automatically passes the **Leadership test** required for Dark Pacts.\n- **SHADOW LEGION HERETIC ASTARTES** models in this unit have the **Deep Strike** ability.\n© Vyacheslav Maltsev 2013-2026"
+     "name": "Damaged: 1-7 wounds remaining",
+     "text": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
     },
     {
      "name": "Wreathed in Shadows",
@@ -148,8 +148,7 @@
     "Faction: Legiones Daemonica",
     "Fly",
     "Monster",
-    "Psyker",
-    "Undivided"
+    "Psyker"
    ],
    "points": {
     "costs": [
@@ -334,7 +333,7 @@
    "abilities": [
     {
      "name": "Leader",
-     "text": "This model can be attached to the following units: BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS"
+     "text": "This model can be attached to the following units: BEASTS OF NURGLE"
     },
     {
      "name": "Beast Handler",
@@ -2205,7 +2204,7 @@
      "text": "While this model is leading a unit, models in that unit have the **Feel No Pain 4+** ability against **mortal wounds** and **Psychic Attacks**."
     },
     {
-     "name": "Horrible Fascination(Psychic)",
+     "name": "Horrible Fascination",
      "tag": "Psychic",
      "text": "At the start of your opponent’s Shooting phase, one **PSYKER** model from your army with this ability can use it. If it does, select one enemy unit within 12\" of and visible to that **PSYKER** model and roll one D6: on a 1, that **PSYKER** model suffers D3 **mortal wounds**; on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase."
     },
@@ -3462,7 +3461,7 @@
      "text": "While a friendly **SLAANESH LEGIONES DAEMONICA** unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos."
     },
     {
-     "name": "Shining aegis",
+     "name": "Shining Aegis",
      "text": "The bearer has a Save characteristic of 3+."
     }
    ],
@@ -4366,7 +4365,6 @@
     },
     {
      "name": "Hysterical Frenzy",
-     "tag": "Psychic",
      "text": "Each time a model in this model’s unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
     },
     {
@@ -4376,6 +4374,7 @@
    ],
    "rules": [
     "Deep Strike",
+    "Leader",
     "The Shadow of Chaos",
     "Anti",
     "Assault",
@@ -4392,8 +4391,7 @@
     "Mounted",
     "Psyker",
     "Slaanesh",
-    "Tormentbringer",
-    "Tormentbringer On Exalted Seeker Chariot"
+    "Tormentbringer"
    ],
    "points": {
     "costs": [
@@ -5246,7 +5244,7 @@
    "abilities": [
     {
      "name": "Infected Outbreak",
-     "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+     "text": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
     },
     {
      "name": "Daemonic Icon",
@@ -8696,6 +8694,62 @@
    "app": "When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below.\n**KHORNE** – **This model is additionally equipped with:** torrent of burning blood\n**TZEENTCH** – **This model is additionally equipped with:** warp gaze\n**NURGLE** – **This model is additionally equipped with:** phlegm bombardment\n**SLAANESH** – **This model is additionally equipped with:** scream of despair",
    "was": "When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below:\n**KHORNE** – **This model is additionally equipped with:** torrent of burning blood\n**TZEENTCH** – **This model is additionally equipped with:** warp gaze\n**NURGLE** – **This model is additionally equipped with:** phlegm bombardment\n**SLAANESH** – **This model is additionally equipped with:** scream of despair",
    "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+  },
+  {
+   "id": "chaos-daemons/plaguebearers",
+   "field": "ability[Infected Outbreak].text",
+   "app": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+   "was": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+   "why": "GW's Faction Pack Chaos Daemons (legal from 30 Sep 2026) prints the Plaguebearers' datasheet: \"If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2149-2153); Wahapedia's Level of Control wording is in no cached GW document. BSData agrees with GW"
+  },
+  {
+   "id": "chaos-daemons/horticulous-slimux",
+   "field": "ability[Leader].text",
+   "app": "This model can be attached to the following units: BEASTS OF NURGLE",
+   "was": "This model can be attached to the following units: BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS",
+   "why": "GW's Faction Pack Chaos Daemons prints Horticulous Slimux's LEADER section \"This model can be attached to the following unit: ■ Beasts of Nurgle\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2129-2130); Wahapedia also lists the Legends Plague Toads and Pox Riders. BSData agrees with GW"
+  },
+  {
+   "id": "chaos-daemons/tormentbringer",
+   "field": "kw",
+   "app": null,
+   "was": "Tormentbringer On Exalted Seeker Chariot",
+   "why": "GW's Faction Pack Chaos Daemons prints the Tormentbringer datasheet with \"CORE: Deep Strike, Leader\" (line 2717), \"Hysterical Frenzy: Each time a model …\" untagged (line 2724) and \"KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer\" (lines 2736-2737); Wahapedia's page, which the import reads, differs (its keyword names the Legends Exalted Seeker Chariot). BSData agrees with GW (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  {
+   "id": "chaos-daemons/tormentbringer",
+   "field": "rules",
+   "app": "Leader",
+   "was": null,
+   "why": "GW's Faction Pack Chaos Daemons prints the Tormentbringer datasheet with \"CORE: Deep Strike, Leader\" (line 2717), \"Hysterical Frenzy: Each time a model …\" untagged (line 2724) and \"KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer\" (lines 2736-2737); Wahapedia's page, which the import reads, differs (its keyword names the Legends Exalted Seeker Chariot). BSData agrees with GW (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  {
+   "id": "chaos-daemons/tormentbringer",
+   "field": "ability[Hysterical Frenzy].tag",
+   "app": null,
+   "was": "Psychic",
+   "why": "GW's Faction Pack Chaos Daemons prints the Tormentbringer datasheet with \"CORE: Deep Strike, Leader\" (line 2717), \"Hysterical Frenzy: Each time a model …\" untagged (line 2724) and \"KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer\" (lines 2736-2737); Wahapedia's page, which the import reads, differs (its keyword names the Legends Exalted Seeker Chariot). BSData agrees with GW (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  {
+   "id": "chaos-daemons/contorted-epitome",
+   "field": "ability[Horrible Fascination].name",
+   "app": "Horrible Fascination",
+   "was": "Horrible Fascination(Psychic)",
+   "why": "GW's Faction Pack prints \"Horrible Fascination(Psychic):\" (line 2670): the name Horrible Fascination with its (Psychic) tag, a space missing; the tag stays in tag. BSData agrees (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  {
+   "id": "chaos-daemons/keeper-of-secrets",
+   "field": "ability[Shining Aegis].name",
+   "app": "Shining Aegis",
+   "was": "Shining aegis",
+   "why": "GW's Faction Pack prints \"Shining Aegis: The bearer has a Save characteristic of 3+.\" (line 2469); BSData names it \"Shining aegis\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  {
+   "id": "chaos-daemons/belakor",
+   "field": "ability[Shadow Form].text",
+   "app": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability.",
+   "was": null,
+   "why": "GW's Faction Pack prints on Be'lakor's datasheet \"Shadow Form: At the start of the battle round, select one Shadow Form ability (see reverse). Until the end of the battle round, this model has that ability.\" (lines 3032-3036); Wahapedia names it \"Shadow Form Abilities:\", so the import did not find it. GW's words, \"(see below)\" for the card's reverse, as Wahapedia writes it: the three Shadow Form abilities follow it; BSData's leaves \"(see reverse)\" out (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
   }
  ],
  "modelNames": []

@@ -76,6 +76,8 @@ const PTS = '51b2-306e-1021-d207';
 // datasheet's own option; one whose conditions are of the force or roster (a detachment, an enhancement, a battle size) is a list's
 // choice, and the option stays as the entry says
 const condList = m => [].concat(m.conditions || [], ...((m.conditionGroups || []).map(function g(x){ return [].concat(x.conditions || [], ...((x.conditionGroups || []).map(g)), ...((x.localConditionGroups || []).flatMap(y => y.conditions || []))); })));
+// a modifier's conditions all of one "and": none in groups, or one "and" group with no group inside
+const oneAndGroup = m => { const g = m.conditionGroups || []; return !g.length || (g.length === 1 && g[0].type === 'and' && !(g[0].conditionGroups || []).length && !(g[0].localConditionGroups || []).length && !(m.conditions || []).length); };
 function staticHidden(x, listChoice){
   if(!x) return false;
   let h = !!x.hidden;
@@ -86,7 +88,13 @@ function staticHidden(x, listChoice){
     // (a condition on a list's choice, an enhancement or the Warlord taken on the unit, a detachment, is the list's, whatever its scope)
     else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope) && !(listChoice && listChoice(c.childId)))) h = false;
     // hidden unless the list took something (a detachment's ability on the unit, Shadow Legion's, Legion of Excess's): no datasheet's own
-    else if(v && !h && !(m.conditionGroups || []).length && cs.every(c => (['force', 'roster'].includes(c.scope) || (listChoice && listChoice(c.childId))) && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0)))) h = true;
+    // (its conditions in one "and" group too, and with it one that the force is not Crusade or Boarding Actions: Disciples of
+    // Be'lakor, hidden unless the roster has Shadow Legion and the force is no Crusade Force)
+    else if(v && !h && oneAndGroup(m)){
+      const absent = c => (['force', 'roster'].includes(c.scope) || (listChoice && listChoice(c.childId))) && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0));
+      const mode = c => c.scope === 'force' && c.type === 'notInstanceOf' && MODE_FORCES.has(c.childId);
+      if(cs.some(absent) && cs.every(c => absent(c) || mode(c))) h = true;
+    }
   }
   return h;
 }
@@ -203,7 +211,8 @@ function load(ROOT, catalogueName, opts){
     let n = 0;
     const sel = (e, l, ids, group) => {
       const { profiles, rules } = info(e);
-      const lcats = ((l && l.categoryLinks) || []).concat(e.categoryLinks || []);
+      // (a category BSData shows only when the list took something, Shadow Legion's UNDIVIDED on Be'lakor: no datasheet keyword)
+      const lcats = ((l && l.categoryLinks) || []).concat(e.categoryLinks || []).filter(c => !hiddenStatic(c) && !hiddenStatic(get(c.targetId)));
       const o = { id:'cat-' + (++n) + '-' + e.id, name:nameOf(e), entryId:ids.concat(e.id).join('::'), type:e.type, number:1 };
       if(group) o.group = group;
       if(lcats.length) o.categories = lcats.map(c => ({ name:catName(c.targetId) || nameOf(c), primary:!!c.primary, entryId:c.targetId }));

@@ -39,6 +39,8 @@ const RULES = {
   'Devastating Wounds': 'Each time an attack made with a **[DEVASTATING WOUNDS]** weapon results in a **critical wound**, the attack sequence for that attack ends and the target unit suffers a number of **mortal wounds** equal to the **D** characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n**Mortal wounds** inflicted by **[DEVASTATING WOUNDS]** weapons can damage a maximum of one model for each **critical wound**; any remaining **mortal wounds** inflicted by that attack are lost.',
   'Extra Attacks': 'Each time a unit containing one or more models with an **[EXTRA ATTACKS]** weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n- All of that model’s **[EXTRA ATTACKS]** weapons.\n- One of that model’s other melee weapons, if possible.',
   'Harpooned': 'When this unit **declares a charge**, if an enemy **MONSTER/VEHICLE** unit is within 12" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to **charge rolls** until the end of the phase.\n- This unit must end that **charge move engaged** with that **MONSTER/VEHICLE** unit.',
+  // Reverberating Summons: GW's Faction Pack Chaos Daemons (the Great Unclean One's doomsday bell [LETHAL HITS, REVERBERATING SUMMONS])
+  'Reverberating Summons': 'Each time a model is destroyed by this weapon, you can select one friendly **PLAGUEBEARERS** unit within 12" of the bearer and return 1 destroyed Plaguebearer model to that unit.',
   // the rules that bring an allied unit into a list (FACTIONS[…].allies names the one for each ally; RULE_SRC says where): Daemonic Pact
   // (GW's Faction Pack: Chaos Daemons, Army Rules), Assigned Agents (Wahapedia, Imperial Agents, Army Rules; its table as lines)
   'Daemonic Pact': 'If every model from your army has the **CHAOS KNIGHTS** or **HERETIC ASTARTES** keyword, you can include **LEGIONES DAEMONICA** units in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points cost of such units you can include depends on your battle size, as shown below.\n- Incursion: Up to 250 pts\n- Strike Force: Up to 500 pts\n- Onslaught: Up to 750 pts\nNone of these models can be your **WARLORD**, and they cannot be given Enhancements.\nIn addition, for each of the following keywords, the number of non-**BATTLELINE** units with that keyword you include in this way cannot be greater than the number of **BATTLELINE** units with that keyword you include in this way:\n- **KHORNE**\n- **TZEENTCH**\n- **NURGLE**\n- **SLAANESH**',
@@ -113,7 +115,7 @@ const RULES = {
 
 // Which RULES entry a keyword or rule chip opens ("RAPID FIRE 4" -> "Rapid Fire").
 // where a RULES entry comes from when it is not a core rule
-const RULE_SRC = { 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing', 'Conversion':'weapon ability each datasheet defines for its own weapon (Knight Defender datasheet: conversion beam obliterator)', 'C’tan Power':'weapon keyword of the C’tan Powers weapons (Tesseract Vault datasheet: Powers of the C’tan)', 'Daemonic Pact':'Chaos Daemons army rule (Legiones Daemonica allies)', 'Assigned Agents':'Imperial Agents army rule (Agents of the Imperium units in another army)' };
+const RULE_SRC = { 'Reverberating Summons':'weapon ability of the Great Unclean One’s doomsday bell (Faction Pack Chaos Daemons: its datasheet)', 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing', 'Conversion':'weapon ability each datasheet defines for its own weapon (Knight Defender datasheet: conversion beam obliterator)', 'C’tan Power':'weapon keyword of the C’tan Powers weapons (Tesseract Vault datasheet: Powers of the C’tan)', 'Daemonic Pact':'Chaos Daemons army rule (Legiones Daemonica allies)', 'Assigned Agents':'Imperial Agents army rule (Agents of the Imperium units in another army)' };
 const RULE_ALIASES = [
   [/^supa-hazardous/i, 'Supa-hazardous'], [/^pulse jet move$/i, 'Pulse Jet Move'], [/^support$/i, 'Support'],
   [/^(below |at |at or below )?(starting|half)[- ]strength$/i, 'Starting Strength'], [/^towering$/i, 'Plunging Fire'], [/^(select|choosing) weapons?$/i, 'Select Weapons'],
@@ -128,7 +130,7 @@ const RULE_ALIASES = [
   [/^melta/i, 'Melta'], [/^lance/i, 'Lance'], [/^super-heavy walker/i, 'Super-Heavy Walker'],
   [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'], [/^damaged \d+$/i, 'Damaged'],
   [/^psychic$/i, 'Psychic'],
-  [/^harpooned$/i, 'Harpooned'], [/^conversion$/i, 'Conversion'], [/^c['’]tan power$/i, 'C’tan Power'], [/^daemonic pact$/i, 'Daemonic Pact'], [/^assigned agents$/i, 'Assigned Agents'],
+  [/^harpooned$/i, 'Harpooned'], [/^reverberating summons$/i, 'Reverberating Summons'], [/^conversion$/i, 'Conversion'], [/^c['’]tan power$/i, 'C’tan Power'], [/^daemonic pact$/i, 'Daemonic Pact'], [/^assigned agents$/i, 'Assigned Agents'],
   [/^hazard(ous)? (roll|test)s?$/i, 'Hazard Roll'],
   [/^mortal wounds?$/i, 'Mortal Wounds'],
   [/^battle-shock/i, 'Battle-shock'],
@@ -1009,7 +1011,7 @@ const FACTIONS = {
       // Vanguard Onslaught: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js tyranids); no gists, readings or When targeted lines yet (aiStatus)
       'vanguard-onslaught': {
         name:'Vanguard Onslaught', dispositions:['Reconnaissance'], dp:2, aiStatus:'not-read',
-        rule:{ name:'Questing Tendrils', ph:['movement'], turn:'your', needs:{ all:['Faction: Tyranids'] }, text:'**TYRANIDS** units with this ability are eligible to charge in a turn in which they Fell Back. **VANGUARD INVADER** units with this ability are eligible to charge in a turn in which they Advanced.' },
+        rule:{ name:'Questing Tendrils', ph:['movement','charge'], turn:'your', needs:{ all:['Faction: Tyranids'] }, text:'**TYRANIDS** units with this ability are eligible to charge in a turn in which they Fell Back. **VANGUARD INVADER** units with this ability are eligible to charge in a turn in which they Advanced.' },
         moreRules:[
           { name:'Vanguard Prime', text:'**DEATHLEAPER** loses the Hunter Organism rule and can be your **WARLORD**.' }
         ],
@@ -1724,7 +1726,7 @@ const FACTIONS = {
       // Solar Watch: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js adeptus-custodes); no gists, readings or When targeted lines yet (aiStatus)
       'solar-watch': {
         name:'Solar Watch', dispositions:['Reconnaissance'], dp:1, aiStatus:'not-read',
-        rule:{ name:'Talon Sortie', ph:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes'] }, text:'When a friendly **ADEPTUS CUSTODES** unit makes a **fall-back move**, that **fall-back move** does not prevent that unit from being eligible to charge.\n**Favoured ka’tah: CALISTUS**\n**Additional Effect:** Your unit has +2" **M**.' },
+        rule:{ name:'Talon Sortie', ph:['movement','charge'], turn:'your', needs:{ all:['Faction: Adeptus Custodes'] }, text:'When a friendly **ADEPTUS CUSTODES** unit makes a **fall-back move**, that **fall-back move** does not prevent that unit from being eligible to charge.\n**Favoured ka’tah: CALISTUS**\n**Additional Effect:** Your unit has +2" **M**.' },
         enhancements:[
           { name:'Sally Forth', pts:30, text:'**ADEPTUS CUSTODES SHIELD-CAPTAIN** model only. At the start of your Charge phase, select one friendly **ADEPTUS CUSTODES INFANTRY** unit within 6" of this model. If that unit made an **advance move** this turn, that **advance move** does not prevent that unit from being **eligible to declare a charge**.' },
           { name:'Auric Eagle', pts:15, upgrade:true, text:'**ADEPTUS CUSTODES INFANTRY**/**MOUNTED** unit only (excluding **TERMINATOR** units). This unit has +1 to **advance rolls** and **charge rolls**.' }
@@ -1892,9 +1894,9 @@ const FACTIONS = {
       // Legion of Excess: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js chaos-daemons); no gists, readings or When targeted lines yet (aiStatus)
       'legion-of-excess': {
         name:'Legion of Excess', dispositions:['Priority Assets'], dp:2, aiStatus:'not-read',
-        rule:{ name:'Beguiling Aura', ph:['movement','charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army are eligible to declare a charge in a turn in which they Fell Back.' },
+        rule:{ name:'Beguiling Aura', ph:['charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army are eligible to declare a charge in a turn in which they Fell Back.' },
         moreRules:[
-          { name:'Seductive Gambit', needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:\n**Seductive Gambit:** Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.' }
+          { name:'Seductive Gambit', ph:['charge','fight'], turn:'either', needs:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, text:'**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:\n**Seductive Gambit:** Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.' }
         ],
         enhancements:[
           { name:'False Majesty (Aura)', pts:30, text:'**LEGIONES DAEMONICA SLAANESH** model only. While a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTERS**) is within 6" of the bearer, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.' },
@@ -7055,7 +7057,7 @@ const DATASHEETS = {
     { name:'Subterranean Hunter', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
   ],
   rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
-  kw:['Burrower','Burrowers','Character','Epic Hero','Faction: Tyranids','Great Devourer','Mobile','Monster','The Red Terror','Vanguard Invader'],
+  kw:['Burrower','Character','Epic Hero','Faction: Tyranids','Great Devourer','Mobile','Monster','The Red Terror','Vanguard Invader'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
   composition:[
     { model:'The Red Terror', min:1, max:1 }
@@ -7834,7 +7836,6 @@ const DATASHEETS = {
     { model:'Trygon', min:1, max:1 }
   ],
   options:[
-    { on:'Trygon', choices:[{ name:'Trygon Character upgrade', max:1 }] },
     { on:'Trygon', choices:[{ name:'Trygon scything talons', min:1, max:1 },{ name:'Bio-electric pulse', min:1, max:1 }], group:'Wargear' }
   ],
   aiStatus:'not-read'
@@ -10820,15 +10821,15 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'The Dark Master', tag:'Aura', text:'The area of the battlefield within 6" of this model is within your army’s Shadow of Chaos.' },
+    { name:'Shadow Form', text:'At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability.' },
     { name:'Damaged: 1-7 wounds remaining', text:'While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-    { name:'Disciples of Be’lakor', text:'Be’lakor’s immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy’s midst.\n**SHADOW LEGION UNDIVIDED** units only.\n- This unit has the **Dark Pacts** army rule, and can use it as described in *Codex: Chaos Space Marines*, even though your Army Faction is not **HERETIC ASTARTES**. If this unit is **BE’LAKOR**, it automatically passes the **Leadership test** required for Dark Pacts.\n- **SHADOW LEGION HERETIC ASTARTES** models in this unit have the **Deep Strike** ability.\n© Vyacheslav Maltsev 2013-2026' },
     { name:'Wreathed in Shadows', who:'Shadow Form Abilities: pick one', tag:'Aura, Psychic', text:'While a friendly **LEGIONES DAEMONICA** unit or **SHADOW LEGION** unit is within 6" of this model, that unit can only be targeted by a ranged attack if the attacking model is within 18".' },
     { name:'Pall of Despair', who:'Shadow Form Abilities: pick one', tag:'Aura, Psychic', text:'In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9" of this model, that unit must take a Battle-shock test. For the purposes of this ability, if a unit has a Starting Strength of 1, it is considered to be below its Starting Strength while it has lost one or more wounds. In addition, for each enemy unit that fails a **Battle-shock test** within 9" of this model, this model regains up to D3 lost wounds.' },
     { name:'Shadow Lord', who:'Shadow Form Abilities: pick one', tag:'Aura, Psychic', text:'While a friendly **LEGIONES DAEMONICA** or **SHADOW LEGION** unit is within 6" of this model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1.' },
     { name:'Supreme Commander', text:'If this model is in your army, it must be your Warlord.' }
   ],
   rules:['Deep Strike','The Shadow of Chaos','Stealth','Deadly Demise D6','Devastating Wounds','Psychic','Hazardous','Ignores Cover','Sustained Hits'],
-  kw:['Be\'lakor','Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Fly','Monster','Psyker','Undivided'],
+  kw:['Be\'lakor','Chaos','Character','Daemon','Epic Hero','Faction: Legiones Daemonica','Fly','Monster','Psyker'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:390 }] }] },
   composition:[
     { model:'Be\'lakor', min:1, max:1 }
@@ -10872,7 +10873,7 @@ const DATASHEETS = {
     { name:'Lopping shears', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-2', D:'3', kw:['LETHAL HITS'] }
   ],
   abilities:[
-    { name:'Leader', text:'This model can be attached to the following units: BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS' },
+    { name:'Leader', text:'This model can be attached to the following units: BEASTS OF NURGLE' },
     { name:'Beast Handler', text:'While this model is leading a unit, you can re-roll **charge rolls** made for that unit. In addition, once per battle, you can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase.' },
     { name:'Seed the Garden of Nurgle', text:'At the end of your Movement phase, if this model is within one **Area Terrain** feature, until the end of the battle, that **AREA TERRAIN** feature is considered to be within your army’s Shadow of Chaos.' }
   ],
@@ -11039,7 +11040,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Swallow Energy', tag:'Psychic', text:'While this model is leading a unit, models in that unit have the **Feel No Pain 4+** ability against **mortal wounds** and **Psychic Attacks**.' },
-    { name:'Horrible Fascination(Psychic)', tag:'Psychic', text:'At the start of your opponent’s Shooting phase, one **PSYKER** model from your army with this ability can use it. If it does, select one enemy unit within 12" of and visible to that **PSYKER** model and roll one D6: on a 1, that **PSYKER** model suffers D3 **mortal wounds**; on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.' },
+    { name:'Horrible Fascination', tag:'Psychic', text:'At the start of your opponent’s Shooting phase, one **PSYKER** model from your army with this ability can use it. If it does, select one enemy unit within 12" of and visible to that **PSYKER** model and roll one D6: on a 1, that **PSYKER** model suffers D3 **mortal wounds**; on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.' },
     { name:'Leader', text:'This model can be attached to the following units: DAEMONETTES' }
   ],
   rules:['Deep Strike','The Shadow of Chaos','Leader','Fights First','Extra Attacks','Devastating Wounds'],
@@ -11193,7 +11194,7 @@ const DATASHEETS = {
     { name:'Mesmerising Form', text:'Each time an attack targets this model, subtract 1 from the **Hit roll**.' },
     { name:'Damaged: 1-6 wounds remaining', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
     { name:'Greater Daemon of Slaanesh', tag:'Aura', text:'While a friendly **SLAANESH LEGIONES DAEMONICA** unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.' },
-    { name:'Shining aegis', text:'The bearer has a Save characteristic of 3+.' }
+    { name:'Shining Aegis', text:'The bearer has a Save characteristic of 3+.' }
   ],
   rules:['Deadly Demise D6','Deep Strike','The Shadow of Chaos','Devastating Wounds','Hazardous','Psychic','Extra Attacks','Assault'],
   kw:['Chaos','Character','Daemon','Faction: Legiones Daemonica','Keeper of Secrets','Monster','Psyker','Slaanesh'],
@@ -11296,11 +11297,11 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Tormentbringer', tag:'Aura', text:'While a friendly **SLAANESH LEGIONES DAEMONICA** unit is within 6" of this model, melee weapons in that unit have the **[SUSTAINED HITS 1]** ability.' },
-    { name:'Hysterical Frenzy', tag:'Psychic', text:'Each time a model in this model’s unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.' },
+    { name:'Hysterical Frenzy', text:'Each time a model in this model’s unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.' },
     { name:'Leader', text:'This model can be attached to the following units: HELLFLAYERS' }
   ],
-  rules:['Deep Strike','The Shadow of Chaos','Anti','Assault','Pistol','Extra Attacks','Lethal Hits','Devastating Wounds'],
-  kw:['Chaos','Character','Daemon','Faction: Legiones Daemonica','Mounted','Psyker','Slaanesh','Tormentbringer','Tormentbringer On Exalted Seeker Chariot'],
+  rules:['Deep Strike','Leader','The Shadow of Chaos','Anti','Assault','Pistol','Extra Attacks','Lethal Hits','Devastating Wounds'],
+  kw:['Chaos','Character','Daemon','Faction: Legiones Daemonica','Mounted','Psyker','Slaanesh','Tormentbringer'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:135 }] }] },
   composition:[
     { model:'Tormentbringer', min:1, max:1 }
@@ -11392,7 +11393,7 @@ const DATASHEETS = {
     { name:'Plaguesword', range:'Melee', A:'2', WS:'3+', S:'4', AP:'-1', D:'1', kw:['LETHAL HITS'] }
   ],
   abilities:[
-    { name:'Infected Outbreak', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+    { name:'Infected Outbreak', text:'If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.' },
     { name:'Daemonic Icon', text:'Models in the bearer’s unit have a Leadership characteristic of 6+.' },
     { name:'Instrument of Chaos', text:'Add 1 to **Charge rolls** made for the bearer’s unit.' }
   ],
@@ -13964,19 +13965,19 @@ const CHECKLIST = {
   "r|adeptus-custodes|Moritoi Ancients":{"u":"shooting:your,fight:either"},
   "r|adeptus-custodes|On Gilded Wings":{"t":"fight:opp","s":1},
   "r|adeptus-custodes|Silent Sisterhood":{"x":1,"o":[{"n":"Creeping Dread (Aura)","t":"command:opp","s":1}],"g":[{"name":"Creeping Dread (Aura)","to":{"all":["Faction: Anathema Psykana"]}}]},
-  "r|adeptus-custodes|Talon Sortie":{"u":"movement:your","o":[{"n":"Additional Effect","u":"movement:your"}]},
+  "r|adeptus-custodes|Talon Sortie":{"u":"movement:your,charge:your","o":[{"n":"Additional Effect","u":"movement:your"}]},
   "r|adeptus-custodes|Wardens of the Dark Cells":{"u":"fight:either","o":[{"n":"Additional Effect","x":1}]},
   "r|adeptus-mechanicus|Cyber-psalm Programming":{"u":"movement:your"},
   "r|adeptus-mechanicus|Doctrina Imperatives":{"at":"Start of the battle round","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Protector Imperative","row":"Protector Imperative","u":"shooting:your,fight:either"},{"n":"Conqueror Imperative","row":"Conqueror Imperative","u":"shooting:your,fight:either"}]},
   "r|adeptus-mechanicus|Murderous Imperative":{"u":"shooting:your,fight:either"},
-  "r|chaos-daemons|Beguiling Aura":{"u":"movement:your,charge:your"},
+  "r|chaos-daemons|Beguiling Aura":{"u":"charge:your"},
   "r|chaos-daemons|Blood Tainted":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "r|chaos-daemons|Fates in Flux":{"t":"command:your","s":1},
   "r|chaos-daemons|First Prince of Chaos":{"x":1,"o":[{"n":"MURDERER'S COWL","u":"movement:your,shooting:your,charge:your"},{"n":"PENUMBRAL PUPPETRY","u":"fight:either"},{"n":"GLOAM ROT","u":"shooting:opp,fight:either"},{"n":"SHADOW'S CARESS","x":1},{"n":"DISCIPLES OF BE'LAKOR","x":1}],"g":[{"name":"Deep Strike","to":{"all":["Shadow Legion","Faction: Heretic Astartes"]}}]},
   "r|chaos-daemons|Loci of Power":{"x":1},
   "r|chaos-daemons|Melancholic Miasma":{"t":"command:either"},
   "r|chaos-daemons|Murdercall":{"t":"movement:opp","u":"movement:opp"},
-  "r|chaos-daemons|Seductive Gambit":{"x":1,"o":[{"n":"Seductive Gambit","u":"shooting:your,charge:either,fight:either"}]},
+  "r|chaos-daemons|Seductive Gambit":{"x":1,"o":[{"n":"Seductive Gambit","u":"charge:either,fight:either"}]},
   "r|chaos-daemons|Shudderblink":{"u":"movement:your,shooting:your,charge:your"},
   "r|chaos-daemons|The Shadow of Chaos":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1,"o":[{"n":"DAEMONIC MANIFESTATION"},{"n":"DAEMONIC TERROR"}]},
   "r|chaos-daemons|Thralls of the First Prince":{"x":1,"o":[{"n":"WARP TALONS","x":1}]},
@@ -14021,7 +14022,7 @@ const CHECKLIST = {
   "r|tyranids|Insurmountable Odds":{"t":"shooting:opp","u":"shooting:opp"},
   "r|tyranids|Leader-beasts":{"u":"shooting:opp,fight:either"},
   "r|tyranids|Mindhunger":{"x":1,"g":[{"name":"Deep Strike","to":{"any":["Deathleaper","Lictor","Neurolictor"]}}]},
-  "r|tyranids|Questing Tendrils":{"u":"movement:your"},
+  "r|tyranids|Questing Tendrils":{"u":"movement:your,charge:your"},
   "r|tyranids|Shadow in the Warp":{"t":"command:either","s":1},
   "r|tyranids|Surprise Assault":{"t":"movement:your","s":1},
   "r|tyranids|Synapse":{"u":"fight:either"},
@@ -14117,7 +14118,7 @@ const RULE_OPTIONS = [
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', option:'Purgatus Tactics', text:'If the **assault doctrine** is active for your unit, your unit\'s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.', found:'heading "**Name**" and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
   { rule:'Chaos Daemons army rule · The Shadow of Chaos', option:'DAEMONIC MANIFESTATION', text:'While a friendly **LEGIONES DAEMONICA** unit is within your army\'s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).', found:'heading in capitals and its line, trigger: the rule\'s', explicit:false, trigger:{ ph:['command','movement','shooting','charge','fight'], turn:'either' }, used:null, phases:{ ph:['command','movement','shooting','charge','fight'], turn:'either' } },
   { rule:'Chaos Daemons army rule · The Shadow of Chaos', option:'DAEMONIC TERROR', text:'While an enemy unit is within your army\'s Shadow of Chaos and/or it is within 6" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a **Battle-shock test**, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 **mortal wounds**.', found:'heading in capitals and its line, trigger: the rule\'s', explicit:false, trigger:{ ph:['command','movement','shooting','charge','fight'], turn:'either' }, used:null, phases:{ ph:['command','movement','shooting','charge','fight'], turn:'either' } },
-  { rule:'Chaos Daemons · Legion of Excess rule · Seductive Gambit', option:'Seductive Gambit', text:'Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['shooting','charge','fight'], turn:'either', turns:{ shooting:'your' } }, phases:{ ph:['shooting','charge','fight'], turn:'either', turns:{ shooting:'your' } } },
+  { rule:'Chaos Daemons · Legion of Excess rule · Seductive Gambit', option:'Seductive Gambit', text:'Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['charge','fight'], turn:'either' }, phases:{ ph:['charge','fight'], turn:'either' } },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', option:'WARP TALONS', text:'The combined points value of such units depends on your battle size, as shown below.', found:'bullet "**Name**" and its line', explicit:false, trigger:null, used:null, phases:null },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'MURDERER\'S COWL', text:'**SHADOW LEGION KHORNE** units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.', found:'heading in capitals and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['movement','shooting','charge'], turn:'your' } },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'PENUMBRAL PUPPETRY', text:'**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the **Hit roll**.', found:'heading in capitals and its line', explicit:false, trigger:null, used:{ ph:['fight'], turn:'either' }, phases:{ ph:['fight'], turn:'either' } },
@@ -14163,6 +14164,7 @@ const GRANTS = [
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Malleus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Purgatus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', grants:'SHADOW LEGION', type:'keyword or weapon ability', to:{ any:['Be\'lakor','Faction: Heretic Astartes'] }, while:null, text:'**BE\'LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', grants:'UNDIVIDED', type:'keyword or weapon ability', to:{ any:['Be\'lakor','Faction: Heretic Astartes'] }, while:null, text:'**BE\'LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.' },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', grants:'SHADOW LEGION', type:'keyword or weapon ability', to:{ all:['Faction: Legiones Daemonica'] }, while:null, text:'**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword.' },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'PENUMBRAL PUPPETRY', grants:'Stealth', type:'ability', to:'this unit / model', while:'PENUMBRAL PUPPETRY active', text:'This unit has **Stealth**.' },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'Dark Pacts', type:'ability', to:'this unit / model', while:null, text:'- This unit has the **Dark Pacts** army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not **HERETIC ASTARTES**.' },

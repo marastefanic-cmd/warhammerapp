@@ -17,5 +17,13 @@
    "to": "the closest enemy unit).",
    "why": "Wahapedia closes the bracket with \"]\"; GW's Faction Pack Tyranids (Rules Updates: Unending Swarm Detachment, Synaptic Goading Stratagem, When and Effect Sections) prints \"(instead of as close as possible to the closest enemy unit).\""
   }
- ]
+ ],
+ "rows": {
+  "tyranids/the-red-terror": {
+   "kwRemove": [
+    "Burrowers"
+   ],
+   "why": "GW's Faction Pack Tyranids prints The Red Terror's datasheet with \"KEYWORDS: Character, Mobile, Epic Hero, Great Devourer, Monster, Burrower, Vanguard Invader, The Red Terror\" (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 305-306): BURROWER, not BSData's category \"Burrowers\" as well"
+  }
+ }
 }
