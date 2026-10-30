@@ -123,8 +123,12 @@ for(const s of D.coreStratagems) if(s.calcMods) fail('G6', 'Core · ' + s.name, 
   // (but the code that only shows GW's words, a quote: dmQuoteOf, and a quote: '“' + … built for display)
   const dmNoQuote = dm.split('\n').filter(l => !/^const dmQuoteOf\b/.test(l) && !/\bquote:'“' \+/.test(l) && !/text:'“' \+ dmQuoteOf\(/.test(l)).join('\n');
   // (and a rule's words read at all: only by the key hash, DM_KEY and the texts it hashes, and by code that shows them)
-  { const keyCode = /^const (?:DM_KEY|dmStratText|dmRuleText|dmCoreText)\b/, show = /\besc\((?:x|r|s)\.text\)|\bquote:'“'|text:'“' \+ dmQuoteOf\(|\bdmQuoteOf\(|\bk = L\.id \+ '\|' \+ ab\.name \+ '\|' \+ ab\.text\b|\btext:(?:ab|s)\.text\b|\btext:dmStratText\(s\)|\btext:dmRuleText\(r\)/;
-    const bad = dm.split('\n').filter(l => /\b(?:ab|r|s|x|S\.ab|S\.s|S)\.(?:text|effect|target(?!\.)|when|restrictions)\b/.test(l) && !keyCode.test(l.trim()) && !show.test(l));
+  { const keyCode = /^const (?:DM_KEY|dmStratText|dmRuleText|dmCoreText)\b/;
+    // (the exempt pieces are taken out of the line and what is left is tested: a read beside them still fails)
+    const SHOW = [/\besc\((?:x|r|s)\.text\)/g, /\bdmQuoteOf\([^()]*(?:\([^()]*\)[^()]*)*\)/g, /\bquote:'“' \+ ab\.text\.split\('\. '\)\[0\]/g, /\bk = L\.id \+ '\|' \+ ab\.name \+ '\|' \+ ab\.text\b/g,
+      /\btext:(?:ab|s)\.text\b/g, /\btext:dmStratText\(s\)/g, /\btext:dmRuleText\(r\)/g];
+    const rest = l => SHOW.reduce((t, re) => t.replace(re, ' '), l);
+    const bad = dm.split('\n').filter(l => !keyCode.test(l.trim()) && /\b(?:ab|r|s|x|S\.ab|S\.s|S)\.(?:text|effect|target(?!\.)|when|restrictions)\b/.test(rest(l)));
     if(bad.length) fail('G6', 'app.html', 'the Damage tab reads a rule’s words outside the key hash and its display: ' + bad.map(l => l.trim().slice(0, 80)).join(' | ')); }
   if(/\bdmEffects\b|\bdmScope\b|\bdmByHand\b|WH_EFFECTS\.norm\b|\.extract\(/.test(dm)) fail('G6', 'app.html', 'the Damage tab reads a rule’s words at run time (dmEffects, dmScope, dmByHand, the extractor)');
   for(const [re, what] of [[/\bm\.note\b/, 'a reading’s note'], [/\bm\.when\b/, 'a reading’s when'], [/\bm\.calc\b/, 'a reading’s calc'], [/\.calcMods\b/, 'calcMods'], [/\b(?:au|u|x|src)\.(?:mods|aura|help|shield|readOf|calcDef|defCalc)\b/, 'a unit’s readings (mods, aura, help, shield, calcDef, defCalc)'], [/\.damaged\b|\bab\.embarked\b/, 'an ability’s damaged or embarked reading'], [/\.(?:test|exec|match|matchAll|search|replace|split|includes|indexOf|startsWith|endsWith|lastIndexOf)\(\s*(?:String\()?[\w.]*\b(?:ab|r|s|S\.ab|S\.s|x|y|m)\.(?:text|effect|target|when)\b|\b(?:ab|r|s|x|y)\.(?:text|effect|target|when)\b[^;\n]*\.(?:match|search|test|exec)\(/, 'a regex over a rule’s words at run time']]) if(re.test(dmNoQuote)) fail('G6', 'app.html', 'the Damage tab reads ' + what);
