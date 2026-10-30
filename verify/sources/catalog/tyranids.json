@@ -3219,8 +3219,17 @@
     {
      "model": "Neurogaunt Nodebeast",
      "min": 1,
-     "max": 1,
-     "group": "1-2 Neurogaunt Nodebeasts"
+     "max": 2,
+     "group": "1-2 Neurogaunt Nodebeasts",
+     "maxIf": {
+      "max": 1,
+      "atLeast": [
+       {
+        "model": "Neurogaunt",
+        "n": 20
+       }
+      ]
+     }
     },
     {
      "model": "Neurogaunt",

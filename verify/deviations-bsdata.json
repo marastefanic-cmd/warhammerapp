@@ -2824,6 +2824,26 @@
   "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\""
  },
  {
+  "army": "nidzillas",
+  "unit": "tyrannofex",
+  "field": "kw",
+  "app": "Frame",
+  "source": "",
+  "where": "not a category of Tyrannofex",
+  "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr/nidzillas.txt (Tyrannofex, Categories)."
+ },
+ {
+  "army": "healybois",
+  "unit": "tyrannofex",
+  "field": "kw",
+  "app": "Frame",
+  "source": "",
+  "where": "not a category of Tyrannofex",
+  "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr-json/healybois.json (Tyrannofex, categories)."
+ },
+ {
   "army": "catalog",
   "unit": "adeptus-custodes/trajann-valoris",
   "field": "ability[Supreme Commander]",
@@ -3651,1236 +3671,6 @@
   "source": "Damaged",
   "reason": "GW’s datasheet prints Damaged 5 (BSData: Damaged). GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/the-swarmlord",
-  "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: TYRANT GUARD",
-  "source": "This model can be attached to the following unit:\n- Tyrant Guard",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to TYRANT GUARD; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: LEADER \"This model can be attached to the following units: TYRANT GUARD\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/the-swarmlord",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/the-swarmlord",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/old-one-eye",
-  "field": "stats[Old One Eye].base",
-  "app": "105×70mm Oval",
-  "source": "105×70mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 105×70mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 105×70mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3833: \"Old One Eye  105x70mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/old-one-eye",
-  "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: CARNIFEXES",
-  "source": "This model can be attached to the following unit:\n- Carnifexes",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to CARNIFEXES; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Old-One-Eye.html: LEADER \"This model can be attached to the following units: CARNIFEXES\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/old-one-eye",
-  "field": "rules",
-  "app": "Feel No Pain 5+",
-  "source": null,
-  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Old-One-Eye.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/old-one-eye",
-  "field": "rules",
-  "app": null,
-  "source": "Feel No Pain",
-  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Old-One-Eye.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/the-red-terror",
-  "field": "kw",
-  "app": "Burrower",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/winged-hive-tyrant",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Winged-Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/winged-hive-tyrant",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Winged-Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-tyrant",
-  "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: TYRANT GUARD",
-  "source": "This model can be attached to the following unit:\n- Tyrant Guard",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to TYRANT GUARD; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: LEADER \"This model can be attached to the following units: TYRANT GUARD\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-tyrant",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-tyrant",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tervigon",
-  "field": "stats[Tervigon].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3843: \"Tervigon  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tervigon",
-  "field": "ability[Spawn Termagants].text",
-  "app": "In your Command phase, you can select one friendly **TERMAGANTS** unit within 6\" of this model and return up to D3+3 destroyed models to that unit. A **TERMAGANTS** unit cannot be selected for this ability more than once per phase.",
-  "source": "In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed TERMAGANT models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tervigon.html: \"In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tervigon",
-  "field": "rules",
-  "app": "Deadly Demise D6",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tervigon.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tervigon",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tervigon.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/broodlord",
-  "field": "stats[Broodlord].base",
-  "app": "75×42mm Oval",
-  "source": "75×42mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 75×42mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 75×42mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3810: \"Broodlord  75x42mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/broodlord",
-  "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: GENESTEALERS",
-  "source": "This model can be attached to the following unit:\n- Genestealers",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to GENESTEALERS; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Broodlord.html: LEADER \"This model can be attached to the following units: GENESTEALERS\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/broodlord",
-  "field": "rules",
-  "app": "Scouts 8\"",
-  "source": null,
-  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Broodlord.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/broodlord",
-  "field": "rules",
-  "app": null,
-  "source": "Scouts",
-  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Broodlord.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/neurotyrant",
-  "field": "ability[Psychic Terror].text",
-  "app": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the **Battle-shock test** each enemy unit on the battlefield must take as a result.",
-  "source": "If one or more Neurotyrants from your army are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurotyrant.html: \"If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/neurotyrant",
-  "field": "ability[Neuroloids].text",
-  "app": "In your Command phase, you can select up to two friendly **TYRANIDS** units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.",
-  "source": "In your Command phase, you can select up to two friendly Tyranids units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\n\nDesigner's Note: Place a Neuroloid token next to each select unit to remind you.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurotyrant.html: \"In your Command phase, you can select up to two friendly TYRANIDS units within 18\" of this model's unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hyperadapted-raveners",
-  "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: RAVENERS",
-  "source": "This unit can be attached to the following units: Raveners",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to RAVENERS; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hyperadapted-Raveners.html: LEADER \"This model can be attached to the following units: RAVENERS\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hyperadapted-raveners",
-  "field": "rules",
-  "app": null,
-  "source": "Sustained Hits",
-  "reason": "GW’s datasheet does not print Sustained Hits. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hyperadapted-Raveners.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-prime-with-lash-whip",
-  "field": "ability[Leader].text",
-  "app": "This model can be attached to the following units: HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS",
-  "source": "This model can be attached to the following unit:\n- Hormagaunts\n- Termagants\n- Tyranid Warriors with Melee Bio-weapons\n- Tyranid Warriors with Ranged Bio-weapons",
-  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Prime-with-Lash-Whip.html: LEADER \"This model can be attached to the following units: HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-prime-with-lash-whip",
-  "field": "rules",
-  "app": null,
-  "source": "Sustained Hits",
-  "reason": "GW’s datasheet does not print Sustained Hits. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Prime-with-Lash-Whip.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/termagants",
-  "field": "points",
-  "app": "any copy: 10 55 · 20 110",
-  "source": "any copy: 10 55 · 11 110 · 12 110 · 13 110 · 14 110 · 15 110 · 16 110 · 17 110 · 18 110 · 19 110 · 20 110 · 21 110 · 22 110 · 23 110 · 24 110 · 25 110 · 26 110",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 10 55 · 20 110; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 10 55 · 11 110 · 12 110 · 13 110 · 14 110 · 15 110 · 16 110 · 17 110 · 18 110 · 19 110 · 20 110 · 21 110 · 22 110 · 23 110 · 24 110 · 25 110 · 26 110 (copy 1-, 11 models: BSData 110, GW prices no unit of 11; copy 1-, 12 models: BSData 110, GW prices no unit of 12; copy 1-, 13 models: BSData 110, GW prices no unit of 13; copy 1-, 14 models: BSData 110, GW prices no unit of 14; copy 1-, 15 models: BSData 110, GW prices no unit of 15; copy 1-, 16 models: BSData 110, GW prices no unit of 16; copy 1-, 17 models: BSData 110, GW prices no unit of 17; copy 1-, 18 models: BSData 110, GW prices no unit of 18; copy 1-, 19 models: BSData 110, GW prices no unit of 19; copy 1-, 21 models: BSData 110, GW prices no unit of 21; copy 1-, 22 models: BSData 110, GW prices no unit of 22; copy 1-, 23 models: BSData 110, GW prices no unit of 23; copy 1-, 24 models: BSData 110, GW prices no unit of 24; copy 1-, 25 models: BSData 110, GW prices no unit of 25; copy 1-, 26 models: BSData 110, GW prices no unit of 26). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Termagants.html: any copy: 10 55 · 20 110.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hormagaunts",
-  "field": "points",
-  "app": "any copy: 10 70 · 20 120",
-  "source": "any copy: 10 70 · 11 120 · 12 120 · 13 120 · 14 120 · 15 120 · 16 120 · 17 120 · 18 120 · 19 120 · 20 120",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 10 70 · 20 120; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 10 70 · 11 120 · 12 120 · 13 120 · 14 120 · 15 120 · 16 120 · 17 120 · 18 120 · 19 120 · 20 120 (copy 1-, 11 models: BSData 120, GW prices no unit of 11; copy 1-, 12 models: BSData 120, GW prices no unit of 12; copy 1-, 13 models: BSData 120, GW prices no unit of 13; copy 1-, 14 models: BSData 120, GW prices no unit of 14; copy 1-, 15 models: BSData 120, GW prices no unit of 15; copy 1-, 16 models: BSData 120, GW prices no unit of 16; copy 1-, 17 models: BSData 120, GW prices no unit of 17; copy 1-, 18 models: BSData 120, GW prices no unit of 18; copy 1-, 19 models: BSData 120, GW prices no unit of 19). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hormagaunts.html: any copy: 10 70 · 20 120.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/gargoyles",
-  "field": "points",
-  "app": "any copy: 10 75 · 20 150",
-  "source": "any copy: 10 75 · 11 150 · 12 150 · 13 150 · 14 150 · 15 150 · 16 150 · 17 150 · 18 150 · 19 150 · 20 150",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 10 75 · 20 150; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 10 75 · 11 150 · 12 150 · 13 150 · 14 150 · 15 150 · 16 150 · 17 150 · 18 150 · 19 150 · 20 150 (copy 1-, 11 models: BSData 150, GW prices no unit of 11; copy 1-, 12 models: BSData 150, GW prices no unit of 12; copy 1-, 13 models: BSData 150, GW prices no unit of 13; copy 1-, 14 models: BSData 150, GW prices no unit of 14; copy 1-, 15 models: BSData 150, GW prices no unit of 15; copy 1-, 16 models: BSData 150, GW prices no unit of 16; copy 1-, 17 models: BSData 150, GW prices no unit of 17; copy 1-, 18 models: BSData 150, GW prices no unit of 18; copy 1-, 19 models: BSData 150, GW prices no unit of 19). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Gargoyles.html: any copy: 10 75 · 20 150.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/gargoyles",
-  "field": "stats[Gargoyles].base",
-  "app": "Small Flying",
-  "source": "32mm Flying",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 32mm Flying; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has Small Flying. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3814: \"Gargoyles  Small Flying Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/gargoyles",
-  "field": "rules",
-  "app": null,
-  "source": "Stealth",
-  "reason": "GW’s datasheet does not print Stealth. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Gargoyles.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannocyte",
-  "field": "kw",
-  "app": "Frame",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannocyte.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannocyte",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannocyte.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannocyte",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannocyte.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-warriors-with-ranged-bio-weapons",
-  "field": "points",
-  "app": "any copy: 3 60 · 6 120",
-  "source": "any copy: 3 60 · 4 120 · 5 120 · 6 120",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 60 · 6 120; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 60 · 4 120 · 5 120 · 6 120 (copy 1-, 4 models: BSData 120, GW prices no unit of 4; copy 1-, 5 models: BSData 120, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Ranged-Bio-weapons.html: any copy: 3 60 · 6 120.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-warriors-with-ranged-bio-weapons",
-  "field": "rules",
-  "app": null,
-  "source": "Stealth",
-  "reason": "GW’s datasheet does not print Stealth. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Ranged-Bio-weapons.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-warriors-with-melee-bio-weapons",
-  "field": "points",
-  "app": "any copy: 3 75 · 6 150",
-  "source": "any copy: 3 75 · 4 150 · 5 150 · 6 150",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 75 · 6 150; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 75 · 4 150 · 5 150 · 6 150 (copy 1-, 4 models: BSData 150, GW prices no unit of 4; copy 1-, 5 models: BSData 150, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Melee-Bio-weapons.html: any copy: 3 75 · 6 150.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-warriors-with-melee-bio-weapons",
-  "field": "ability[Adaptive Instincts].text",
-  "app": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 **S**.\n- Or: This unit has +1 **T**.",
-  "source": "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 S.\n▪ <ins>Or</ins>: This unit has +1 T.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Melee-Bio-weapons.html: \"In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following: - This unit's melee attacks have +1 S. - Or: This unit has +1 T.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyranid-warriors-with-melee-bio-weapons",
-  "field": "rules",
-  "app": null,
-  "source": "Stealth",
-  "reason": "GW’s datasheet does not print Stealth. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Melee-Bio-weapons.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrant-guard",
-  "field": "points",
-  "app": "any copy: 3 80 · 6 170",
-  "source": "any copy: 3 80 · 4 170 · 5 170 · 6 170",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 80 · 6 170; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 80 · 4 170 · 5 170 · 6 170 (copy 1-, 4 models: BSData 170, GW prices no unit of 4; copy 1-, 5 models: BSData 170, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: any copy: 3 80 · 6 170.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/pyrovores",
-  "field": "rules",
-  "app": "Deadly Demise 1",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Pyrovores.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/pyrovores",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Pyrovores.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/venomthropes",
-  "field": "points",
-  "app": "any copy: 3 55 · 6 110",
-  "source": "any copy: 3 55 · 4 110 · 5 110 · 6 110",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 55 · 6 110; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 55 · 4 110 · 5 110 · 6 110 (copy 1-, 4 models: BSData 110, GW prices no unit of 4; copy 1-, 5 models: BSData 110, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Venomthropes.html: any copy: 3 55 · 6 110.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/von-ryans-leapers",
-  "field": "points",
-  "app": "any copy: 3 55 · 6 105",
-  "source": "any copy: 3 55 · 4 105 · 5 105 · 6 105",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 55 · 6 105; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 55 · 4 105 · 5 105 · 6 105 (copy 1-, 4 models: BSData 105, GW prices no unit of 4; copy 1-, 5 models: BSData 105, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Von-Ryan-s-Leapers.html: any copy: 3 55 · 6 105.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/neurogaunts",
-  "field": "points",
-  "app": "any copy: 11 45 · 21 90 · 22 90",
-  "source": "any copy: 11 45 · 12 90 · 13 90 · 14 90 · 15 90 · 16 90 · 17 90 · 18 90 · 19 90 · 20 90 · 21 90",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 11 45 · 21 90 · 22 90; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 11 45 · 12 90 · 13 90 · 14 90 · 15 90 · 16 90 · 17 90 · 18 90 · 19 90 · 20 90 · 21 90 (copy 1-, 22 models: GW 90, BSData not a size; copy 1-, 12 models: BSData 90, GW prices no unit of 12; copy 1-, 13 models: BSData 90, GW prices no unit of 13; copy 1-, 14 models: BSData 90, GW prices no unit of 14; copy 1-, 15 models: BSData 90, GW prices no unit of 15; copy 1-, 16 models: BSData 90, GW prices no unit of 16; copy 1-, 17 models: BSData 90, GW prices no unit of 17; copy 1-, 18 models: BSData 90, GW prices no unit of 18; copy 1-, 19 models: BSData 90, GW prices no unit of 19; copy 1-, 20 models: BSData 90, GW prices no unit of 20). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html: any copy: 11 45 · 21 90 · 22 90.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/neurogaunts",
-  "field": "ability[Neurocytes].text",
-  "app": "While this unit is within Synapse Range of a friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.",
-  "source": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html: \"While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/zoanthropes",
-  "field": "points",
-  "app": "any copy: 3 90 · 6 190",
-  "source": "any copy: 3 90 · 4 190 · 5 190 · 6 190",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 90 · 6 190; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 90 · 4 190 · 5 190 · 6 190 (copy 1-, 4 models: BSData 190, GW prices no unit of 4; copy 1-, 5 models: BSData 190, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Zoanthropes.html: any copy: 3 90 · 6 190.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/zoanthropes",
-  "field": "ability[Spirit Leech].text",
-  "app": "While an enemy unit is within 6\" of this unit, if this unit contains a Neurothrope, each time that enemy unit fails a **Battle-shock test**, it suffers D3 **mortal wounds** and one model in this unit regains up to D3 lost wounds.",
-  "source": "While an enemy unit is within 6\" of this unit, if it contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Zoanthropes.html: \"While an enemy unit is within 6\" of this unit, if this unit contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/biovores",
-  "field": "kw",
-  "app": "Biovores",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/biovores",
-  "field": "kw",
-  "app": null,
-  "source": "Biovore",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the category Biovore; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/biovores",
-  "field": "rules",
-  "app": "Deadly Demise 1",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/biovores",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-guard",
-  "field": "points",
-  "app": "1-2: 3 80 · 6 160; 3+: 3 90 · 6 170",
-  "source": "1-2: 3 80 · 4 160 · 5 160 · 6 160 · 7 160 · 8 160 · 9 160 · 10 160 · 11 160 · 12 160; 3+: 3 90 · 4 170 · 5 170 · 6 170 · 7 170 · 8 170 · 9 170 · 10 170 · 11 170 · 12 170",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): 1-2: 3 80 · 6 160; 3+: 3 90 · 6 170; BSData at the pin (Xenos - Tyranids catalogue revision 3): 1-2: 3 80 · 4 160 · 5 160 · 6 160 · 7 160 · 8 160 · 9 160 · 10 160 · 11 160 · 12 160; 3+: 3 90 · 4 170 · 5 170 · 6 170 · 7 170 · 8 170 · 9 170 · 10 170 · 11 170 · 12 170 (copy 1-2, 4 models: BSData 160, GW prices no unit of 4; copy 1-2, 5 models: BSData 160, GW prices no unit of 5; copy 1-2, 7 models: BSData 160, GW prices no unit of 7; copy 1-2, 8 models: BSData 160, GW prices no unit of 8; copy 1-2, 9 models: BSData 160, GW prices no unit of 9; copy 1-2, 10 models: BSData 160, GW prices no unit of 10; copy 1-2, 11 models: BSData 160, GW prices no unit of 11; copy 1-2, 12 models: BSData 160, GW prices no unit of 12; copy 3-, 4 models: BSData 170, GW prices no unit of 4; copy 3-, 5 models: BSData 170, GW prices no unit of 5; copy 3-, 7 models: BSData 170, GW prices no unit of 7; copy 3-, 8 models: BSData 170, GW prices no unit of 8; copy 3-, 9 models: BSData 170, GW prices no unit of 9; copy 3-, 10 models: BSData 170, GW prices no unit of 10; copy 3-, 11 models: BSData 170, GW prices no unit of 11; copy 3-, 12 models: BSData 170, GW prices no unit of 12). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Guard.html: 1-2: 3 80 · 6 160; 3+: 3 90 · 6 170.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/barbgaunts",
-  "field": "points",
-  "app": "any copy: 5 50 · 10 100",
-  "source": "any copy: 5 50 · 6 100 · 7 100 · 8 100 · 9 100 · 10 100",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 5 50 · 10 100; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 5 50 · 6 100 · 7 100 · 8 100 · 9 100 · 10 100 (copy 1-, 6 models: BSData 100, GW prices no unit of 6; copy 1-, 7 models: BSData 100, GW prices no unit of 7; copy 1-, 8 models: BSData 100, GW prices no unit of 8; copy 1-, 9 models: BSData 100, GW prices no unit of 9). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Barbgaunts.html: any copy: 5 50 · 10 100.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/genestealers",
-  "field": "points",
-  "app": "1-2: 5 75 · 10 140; 3+: 5 85 · 10 150",
-  "source": "1-2: 5 75 · 6 140 · 7 140 · 8 140 · 9 140 · 10 140; 3+: 5 85 · 6 150 · 7 150 · 8 150 · 9 150 · 10 150",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): 1-2: 5 75 · 10 140; 3+: 5 85 · 10 150; BSData at the pin (Xenos - Tyranids catalogue revision 3): 1-2: 5 75 · 6 140 · 7 140 · 8 140 · 9 140 · 10 140; 3+: 5 85 · 6 150 · 7 150 · 8 150 · 9 150 · 10 150 (copy 1-2, 6 models: BSData 140, GW prices no unit of 6; copy 1-2, 7 models: BSData 140, GW prices no unit of 7; copy 1-2, 8 models: BSData 140, GW prices no unit of 8; copy 1-2, 9 models: BSData 140, GW prices no unit of 9; copy 3-, 6 models: BSData 150, GW prices no unit of 6; copy 3-, 7 models: BSData 150, GW prices no unit of 7; copy 3-, 8 models: BSData 150, GW prices no unit of 8; copy 3-, 9 models: BSData 150, GW prices no unit of 9). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: 1-2: 5 75 · 10 140; 3+: 5 85 · 10 150.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/genestealers",
-  "field": "ability[Vanguard Predator].text",
-  "app": "Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1. If the target is within range of one or more objective markers, re-roll a **Wound roll** of 1 as well.",
-  "source": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll 1 as well.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: \"Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll of 1 as well.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/genestealers",
-  "field": "rules",
-  "app": "Scouts 8\"",
-  "source": null,
-  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/genestealers",
-  "field": "rules",
-  "app": null,
-  "source": "Scouts",
-  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/genestealers",
-  "field": "rules",
-  "app": null,
-  "source": "Stealth",
-  "reason": "GW’s datasheet does not print Stealth. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/raveners",
-  "field": "rules",
-  "app": null,
-  "source": "Stealth",
-  "reason": "GW’s datasheet does not print Stealth. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Raveners.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/neurolictor",
-  "field": "ability[Psychological Saboteur].text",
-  "app": "While an enemy unit is within 12\" of this model, if that unit is **Battle-shocked**:\n- Each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.\n- Each time a friendly **TYRANIDS** model makes an attack that targets that unit, add 1 to the **Wound roll**.",
-  "source": "While an enemy unit is with 12\" of this model, if that unit is Battle-shocked:\n\n- Each time a model in that unit makes an attack, subtract 1 from the Hit roll\n- Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurolictor.html: \"While an enemy unit is within 12\" of this model, if that unit is Battle-shocked: - Each time a model in that unit makes an attack, subtract 1 from the Hit roll. - Each time a friendly TYRANIDS model makes an attack that targets that unit, a\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/spore-mines",
-  "field": "points",
-  "app": "any copy: 3 55 · 6 110",
-  "source": "any copy: 3 55 · 4 110 · 5 110 · 6 110",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 55 · 6 110; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 55 · 4 110 · 5 110 · 6 110 (copy 1-, 4 models: BSData 110, GW prices no unit of 4; copy 1-, 5 models: BSData 110, GW prices no unit of 5). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: any copy: 3 55 · 6 110.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/mucolid-spores",
-  "field": "points",
-  "app": "any copy: 1 30 · 2 60",
-  "source": "any copy: 1 0 · 2 0",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 1 30 · 2 60; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 1 0 · 2 0 (copy 1-, 1 models: GW 30, BSData 0; copy 1-, 2 models: GW 60, BSData 0). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Mucolid-Spores.html: any copy: 1 30 · 2 60.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/mucolid-spores",
-  "field": "ability[Floating Death].text",
-  "app": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 **mortal wounds**; on a 6, that enemy unit suffers D6 mortal wounds.",
-  "source": "Each time this unit or an enemy unit ends a move, for each model in this unit within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6 that enemy unit suffers D6 mortal wounds.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Mucolid-Spores.html: \"Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit s\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/ripper-swarms",
-  "field": "kw",
-  "app": "Ripper Swarms",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword RIPPER SWARMS; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/ripper-swarms",
-  "field": "kw",
-  "app": null,
-  "source": "Ripper Swarm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the category Ripper Swarm; GW’s datasheet does not print it. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/toxicrene",
-  "field": "stats[Toxicrene].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3846: \"Toxicrene  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/toxicrene",
-  "field": "ability[Damaged: 1-5 Wounds Remaining]",
-  "app": null,
-  "source": "Damaged: 1-5 Wounds Remaining",
-  "reason": "GW’s datasheet does not print the ability Damaged: 1-5 Wounds Remaining. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/toxicrene",
-  "field": "kw",
-  "app": "Frame",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/toxicrene",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/toxicrene",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/maleceptor",
-  "field": "stats[Maleceptor].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3824: \"Maleceptor  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/maleceptor",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/maleceptor",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/haruspex",
-  "field": "stats[Haruspex].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/haruspex",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Haruspex.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/haruspex",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Haruspex.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/mawloc",
-  "field": "stats[Mawloc].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3825: \"Mawloc  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/mawloc",
-  "field": "ability[Terror from the Deep].text",
-  "app": "Each time this model is set up on the battlefield using the **Deep Strike** ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 **mortal wounds**; on a 5+, that unit suffers 3 mortal wounds and must take a **Battle-shock test**.",
-  "source": "Each time this unit is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Mawloc.html: \"Each time this model is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must tak\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/mawloc",
-  "field": "kw",
-  "app": "Burrower",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Mawloc.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/trygon",
-  "field": "stats[Trygon].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3847: \"Trygon  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/trygon",
-  "field": "kw",
-  "app": "Burrower",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Trygon.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/exocrine",
-  "field": "stats[Exocrine].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3813: \"Exocrine  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/exocrine",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Exocrine.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/exocrine",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Exocrine.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/carnifexes",
-  "field": "points",
-  "app": "any copy: 1 90 · 2 180",
-  "source": "any copy: 1 0 · 2 0",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 1 90 · 2 180; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 1 0 · 2 0 (copy 1-, 1 models: GW 90, BSData 0; copy 1-, 2 models: GW 180, BSData 0). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: any copy: 1 90 · 2 180.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/carnifexes",
-  "field": "stats[Carnifex].base",
-  "app": "105×70mm Oval",
-  "source": "105×70mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 105×70mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 105×70mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3811: \"Carnifexes  105x70mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/carnifexes",
-  "field": "rules",
-  "app": "Deadly Demise 1",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/carnifexes",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/screamer-killer",
-  "field": "rules",
-  "app": "Deadly Demise 1",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Screamer-killer.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/screamer-killer",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Screamer-killer.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannofex",
-  "field": "points",
-  "app": "1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20",
-  "source": "1-2: 1 170; 3+: 1 180; wargear: Rupture cannon 20",
-  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): 1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20; BSData at the pin (Xenos - Tyranids catalogue revision 3): 1-2: 1 170; 3+: 1 180; wargear: Rupture cannon 20 (wargear Acid spray: GW 10, BSData none). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: 1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannofex",
-  "field": "stats[Tyrannofex].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannofex",
-  "field": "kw",
-  "app": "Frame",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannofex",
-  "field": "rules",
-  "app": "Deadly Demise D6",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/tyrannofex",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/harpy",
-  "field": "stats[Harpy].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3816: \"Harpy  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/harpy",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Harpy.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/harpy",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Harpy.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-crone",
-  "field": "stats[Hive Crone].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3818: \"Hive Crone  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-crone",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Crone.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hive-crone",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Crone.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/sporocyst",
-  "field": "ranged[Sporocyst bio-weapon].kw",
-  "app": "",
-  "source": "HIVE DEFENCES",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has HIVE DEFENCES; GW’s datasheet (the codex, as Wahapedia transcribes it) has . GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/sporocyst",
-  "field": "ability[Seed Mucolids].text",
-  "app": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **MUCOLID SPORES** unit containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
-  "source": "Once per turn, in your shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with it's ranged weapons. If it does, you can add one new MUCOLID SPORES containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html: \"Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new MUCOLID SPORES unit containing 1 model to your army \".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/sporocyst",
-  "field": "rules",
-  "app": "Deadly Demise D3",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/sporocyst",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/psychophage",
-  "field": "stats[Psychophage].base",
-  "app": "120×92mm Oval",
-  "source": "120×92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/psychophage",
-  "field": "rules",
-  "app": "Deadly Demise 1",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/psychophage",
-  "field": "rules",
-  "app": "Feel No Pain 5+",
-  "source": null,
-  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/psychophage",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/psychophage",
-  "field": "rules",
-  "app": null,
-  "source": "Feel No Pain",
-  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/harridan",
-  "field": "rules",
-  "app": "Deadly Demise 2D6",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 2D6; BSData’s entry does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Harridan.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/harridan",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet does not print Deadly Demise. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Harridan.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hierophant",
-  "field": "rules",
-  "app": "Deadly Demise 2D6",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise 2D6; BSData’s entry does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hierophant.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/hierophant",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet does not print Deadly Demise. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Hierophant.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-emissary",
-  "field": "ability[Unnatural Resilience].name",
-  "app": "Unnatural Resilience",
-  "source": "Unnatural Resistance",
-  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Unnatural Resistance. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-emissary",
-  "field": "rules",
-  "app": "Deadly Demise D6",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-emissary",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-emissary",
-  "field": "rules",
-  "app": null,
-  "source": "Feel No Pain",
-  "reason": "GW’s datasheet does not print Feel No Pain. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-assimilator",
-  "field": "ability[Harpoon Barbs].text",
-  "app": "Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
-  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
-  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-assimilator",
-  "field": "rules",
-  "app": "Deadly Demise D6",
-  "source": null,
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: CORE ABILITIES / ARMY RULES.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "tyranids/norn-assimilator",
-  "field": "rules",
-  "app": null,
-  "source": "Deadly Demise",
-  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: CORE ABILITIES / ARMY RULES.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -7261,6 +6051,1236 @@
   "source": "Warp Rifts",
   "reason": "GW’s datasheet does not print Warp Rifts. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Skull-Altar.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/the-swarmlord",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: TYRANT GUARD",
+  "source": "This model can be attached to the following unit:\n- Tyrant Guard",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to TYRANT GUARD; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: LEADER \"This model can be attached to the following units: TYRANT GUARD\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/the-swarmlord",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/the-swarmlord",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/old-one-eye",
+  "field": "stats[Old One Eye].base",
+  "app": "105×70mm Oval",
+  "source": "105×70mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 105×70mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 105×70mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3833: \"Old One Eye  105x70mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/old-one-eye",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: CARNIFEXES",
+  "source": "This model can be attached to the following unit:\n- Carnifexes",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to CARNIFEXES; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Old-One-Eye.html: LEADER \"This model can be attached to the following units: CARNIFEXES\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/old-one-eye",
+  "field": "rules",
+  "app": "Feel No Pain 5+",
+  "source": null,
+  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Old-One-Eye.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/old-one-eye",
+  "field": "rules",
+  "app": null,
+  "source": "Feel No Pain",
+  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Old-One-Eye.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/the-red-terror",
+  "field": "kw",
+  "app": "Burrower",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/winged-hive-tyrant",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Winged-Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/winged-hive-tyrant",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Winged-Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-tyrant",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: TYRANT GUARD",
+  "source": "This model can be attached to the following unit:\n- Tyrant Guard",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to TYRANT GUARD; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: LEADER \"This model can be attached to the following units: TYRANT GUARD\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-tyrant",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-tyrant",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tervigon",
+  "field": "stats[Tervigon].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3843: \"Tervigon  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tervigon",
+  "field": "ability[Spawn Termagants].text",
+  "app": "In your Command phase, you can select one friendly **TERMAGANTS** unit within 6\" of this model and return up to D3+3 destroyed models to that unit. A **TERMAGANTS** unit cannot be selected for this ability more than once per phase.",
+  "source": "In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed TERMAGANT models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tervigon.html: \"In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tervigon",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tervigon.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tervigon",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tervigon.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/broodlord",
+  "field": "stats[Broodlord].base",
+  "app": "75×42mm Oval",
+  "source": "75×42mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 75×42mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 75×42mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3810: \"Broodlord  75x42mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/broodlord",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: GENESTEALERS",
+  "source": "This model can be attached to the following unit:\n- Genestealers",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to GENESTEALERS; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Broodlord.html: LEADER \"This model can be attached to the following units: GENESTEALERS\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/broodlord",
+  "field": "rules",
+  "app": "Scouts 8\"",
+  "source": null,
+  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Broodlord.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/broodlord",
+  "field": "rules",
+  "app": null,
+  "source": "Scouts",
+  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Broodlord.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/neurotyrant",
+  "field": "ability[Psychic Terror].text",
+  "app": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the **Battle-shock test** each enemy unit on the battlefield must take as a result.",
+  "source": "If one or more Neurotyrants from your army are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurotyrant.html: \"If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/neurotyrant",
+  "field": "ability[Neuroloids].text",
+  "app": "In your Command phase, you can select up to two friendly **TYRANIDS** units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.",
+  "source": "In your Command phase, you can select up to two friendly Tyranids units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\n\nDesigner's Note: Place a Neuroloid token next to each select unit to remind you.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurotyrant.html: \"In your Command phase, you can select up to two friendly TYRANIDS units within 18\" of this model's unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hyperadapted-raveners",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: RAVENERS",
+  "source": "This unit can be attached to the following units: Raveners",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to RAVENERS; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hyperadapted-Raveners.html: LEADER \"This model can be attached to the following units: RAVENERS\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hyperadapted-raveners",
+  "field": "rules",
+  "app": null,
+  "source": "Sustained Hits",
+  "reason": "GW’s datasheet does not print Sustained Hits. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hyperadapted-Raveners.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-prime-with-lash-whip",
+  "field": "ability[Leader].text",
+  "app": "This model can be attached to the following units: HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS",
+  "source": "This model can be attached to the following unit:\n- Hormagaunts\n- Termagants\n- Tyranid Warriors with Melee Bio-weapons\n- Tyranid Warriors with Ranged Bio-weapons",
+  "reason": "GW’s datasheet (its LEADER section) lets this model be attached to HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS; BSData at the pin (Xenos - Tyranids catalogue revision 3)’s Leader ability names them otherwise (the previous codex’s list, or its own names). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Prime-with-Lash-Whip.html: LEADER \"This model can be attached to the following units: HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-prime-with-lash-whip",
+  "field": "rules",
+  "app": null,
+  "source": "Sustained Hits",
+  "reason": "GW’s datasheet does not print Sustained Hits. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Prime-with-Lash-Whip.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/termagants",
+  "field": "points",
+  "app": "any copy: 10 55 · 20 110",
+  "source": "any copy: 10 55 · 11 110 · 12 110 · 13 110 · 14 110 · 15 110 · 16 110 · 17 110 · 18 110 · 19 110 · 20 110 · 21 110 · 22 110 · 23 110 · 24 110 · 25 110 · 26 110",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 10 55 · 20 110; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 10 55 · 11 110 · 12 110 · 13 110 · 14 110 · 15 110 · 16 110 · 17 110 · 18 110 · 19 110 · 20 110 · 21 110 · 22 110 · 23 110 · 24 110 · 25 110 · 26 110 (copy 1-, 11 models: BSData 110, GW prices no unit of 11; copy 1-, 12 models: BSData 110, GW prices no unit of 12; copy 1-, 13 models: BSData 110, GW prices no unit of 13; copy 1-, 14 models: BSData 110, GW prices no unit of 14; copy 1-, 15 models: BSData 110, GW prices no unit of 15; copy 1-, 16 models: BSData 110, GW prices no unit of 16; copy 1-, 17 models: BSData 110, GW prices no unit of 17; copy 1-, 18 models: BSData 110, GW prices no unit of 18; copy 1-, 19 models: BSData 110, GW prices no unit of 19; copy 1-, 21 models: BSData 110, GW prices no unit of 21; copy 1-, 22 models: BSData 110, GW prices no unit of 22; copy 1-, 23 models: BSData 110, GW prices no unit of 23; copy 1-, 24 models: BSData 110, GW prices no unit of 24; copy 1-, 25 models: BSData 110, GW prices no unit of 25; copy 1-, 26 models: BSData 110, GW prices no unit of 26). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Termagants.html: any copy: 10 55 · 20 110.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hormagaunts",
+  "field": "points",
+  "app": "any copy: 10 70 · 20 120",
+  "source": "any copy: 10 70 · 11 120 · 12 120 · 13 120 · 14 120 · 15 120 · 16 120 · 17 120 · 18 120 · 19 120 · 20 120",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 10 70 · 20 120; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 10 70 · 11 120 · 12 120 · 13 120 · 14 120 · 15 120 · 16 120 · 17 120 · 18 120 · 19 120 · 20 120 (copy 1-, 11 models: BSData 120, GW prices no unit of 11; copy 1-, 12 models: BSData 120, GW prices no unit of 12; copy 1-, 13 models: BSData 120, GW prices no unit of 13; copy 1-, 14 models: BSData 120, GW prices no unit of 14; copy 1-, 15 models: BSData 120, GW prices no unit of 15; copy 1-, 16 models: BSData 120, GW prices no unit of 16; copy 1-, 17 models: BSData 120, GW prices no unit of 17; copy 1-, 18 models: BSData 120, GW prices no unit of 18; copy 1-, 19 models: BSData 120, GW prices no unit of 19). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hormagaunts.html: any copy: 10 70 · 20 120.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/gargoyles",
+  "field": "points",
+  "app": "any copy: 10 75 · 20 150",
+  "source": "any copy: 10 75 · 11 150 · 12 150 · 13 150 · 14 150 · 15 150 · 16 150 · 17 150 · 18 150 · 19 150 · 20 150",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 10 75 · 20 150; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 10 75 · 11 150 · 12 150 · 13 150 · 14 150 · 15 150 · 16 150 · 17 150 · 18 150 · 19 150 · 20 150 (copy 1-, 11 models: BSData 150, GW prices no unit of 11; copy 1-, 12 models: BSData 150, GW prices no unit of 12; copy 1-, 13 models: BSData 150, GW prices no unit of 13; copy 1-, 14 models: BSData 150, GW prices no unit of 14; copy 1-, 15 models: BSData 150, GW prices no unit of 15; copy 1-, 16 models: BSData 150, GW prices no unit of 16; copy 1-, 17 models: BSData 150, GW prices no unit of 17; copy 1-, 18 models: BSData 150, GW prices no unit of 18; copy 1-, 19 models: BSData 150, GW prices no unit of 19). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Gargoyles.html: any copy: 10 75 · 20 150.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/gargoyles",
+  "field": "stats[Gargoyles].base",
+  "app": "Small Flying",
+  "source": "32mm Flying",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 32mm Flying; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has Small Flying. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3814: \"Gargoyles  Small Flying Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/gargoyles",
+  "field": "rules",
+  "app": null,
+  "source": "Stealth",
+  "reason": "GW’s datasheet does not print Stealth. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Gargoyles.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannocyte",
+  "field": "kw",
+  "app": "Frame",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannocyte.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannocyte",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannocyte.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannocyte",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannocyte.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-warriors-with-ranged-bio-weapons",
+  "field": "points",
+  "app": "any copy: 3 60 · 6 120",
+  "source": "any copy: 3 60 · 4 120 · 5 120 · 6 120",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 60 · 6 120; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 60 · 4 120 · 5 120 · 6 120 (copy 1-, 4 models: BSData 120, GW prices no unit of 4; copy 1-, 5 models: BSData 120, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Ranged-Bio-weapons.html: any copy: 3 60 · 6 120.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-warriors-with-ranged-bio-weapons",
+  "field": "rules",
+  "app": null,
+  "source": "Stealth",
+  "reason": "GW’s datasheet does not print Stealth. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Ranged-Bio-weapons.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-warriors-with-melee-bio-weapons",
+  "field": "points",
+  "app": "any copy: 3 75 · 6 150",
+  "source": "any copy: 3 75 · 4 150 · 5 150 · 6 150",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 75 · 6 150; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 75 · 4 150 · 5 150 · 6 150 (copy 1-, 4 models: BSData 150, GW prices no unit of 4; copy 1-, 5 models: BSData 150, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Melee-Bio-weapons.html: any copy: 3 75 · 6 150.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-warriors-with-melee-bio-weapons",
+  "field": "ability[Adaptive Instincts].text",
+  "app": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 **S**.\n- Or: This unit has +1 **T**.",
+  "source": "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 S.\n▪ <ins>Or</ins>: This unit has +1 T.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Melee-Bio-weapons.html: \"In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following: - This unit's melee attacks have +1 S. - Or: This unit has +1 T.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyranid-warriors-with-melee-bio-weapons",
+  "field": "rules",
+  "app": null,
+  "source": "Stealth",
+  "reason": "GW’s datasheet does not print Stealth. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyranid-Warriors-With-Melee-Bio-weapons.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrant-guard",
+  "field": "points",
+  "app": "any copy: 3 80 · 6 170",
+  "source": "any copy: 3 80 · 4 170 · 5 170 · 6 170",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 80 · 6 170; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 80 · 4 170 · 5 170 · 6 170 (copy 1-, 4 models: BSData 170, GW prices no unit of 4; copy 1-, 5 models: BSData 170, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: any copy: 3 80 · 6 170.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/pyrovores",
+  "field": "rules",
+  "app": "Deadly Demise 1",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Pyrovores.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/pyrovores",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Pyrovores.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/venomthropes",
+  "field": "points",
+  "app": "any copy: 3 55 · 6 110",
+  "source": "any copy: 3 55 · 4 110 · 5 110 · 6 110",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 55 · 6 110; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 55 · 4 110 · 5 110 · 6 110 (copy 1-, 4 models: BSData 110, GW prices no unit of 4; copy 1-, 5 models: BSData 110, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Venomthropes.html: any copy: 3 55 · 6 110.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/von-ryans-leapers",
+  "field": "points",
+  "app": "any copy: 3 55 · 6 105",
+  "source": "any copy: 3 55 · 4 105 · 5 105 · 6 105",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 55 · 6 105; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 55 · 4 105 · 5 105 · 6 105 (copy 1-, 4 models: BSData 105, GW prices no unit of 4; copy 1-, 5 models: BSData 105, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Von-Ryan-s-Leapers.html: any copy: 3 55 · 6 105.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/neurogaunts",
+  "field": "points",
+  "app": "any copy: 11 45 · 21 90 · 22 90",
+  "source": "any copy: 11 45 · 12 90 · 13 90 · 14 90 · 15 90 · 16 90 · 17 90 · 18 90 · 19 90 · 20 90 · 21 90 · 22 90",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 11 45 · 21 90 · 22 90; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 11 45 · 12 90 · 13 90 · 14 90 · 15 90 · 16 90 · 17 90 · 18 90 · 19 90 · 20 90 · 21 90 · 22 90 (copy 1-, 12 models: BSData 90, GW prices no unit of 12; copy 1-, 13 models: BSData 90, GW prices no unit of 13; copy 1-, 14 models: BSData 90, GW prices no unit of 14; copy 1-, 15 models: BSData 90, GW prices no unit of 15; copy 1-, 16 models: BSData 90, GW prices no unit of 16; copy 1-, 17 models: BSData 90, GW prices no unit of 17; copy 1-, 18 models: BSData 90, GW prices no unit of 18; copy 1-, 19 models: BSData 90, GW prices no unit of 19; copy 1-, 20 models: BSData 90, GW prices no unit of 20). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html: any copy: 11 45 · 21 90 · 22 90.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/neurogaunts",
+  "field": "ability[Neurocytes].text",
+  "app": "While this unit is within Synapse Range of a friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.",
+  "source": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html: \"While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/zoanthropes",
+  "field": "points",
+  "app": "any copy: 3 90 · 6 190",
+  "source": "any copy: 3 90 · 4 190 · 5 190 · 6 190",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 90 · 6 190; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 90 · 4 190 · 5 190 · 6 190 (copy 1-, 4 models: BSData 190, GW prices no unit of 4; copy 1-, 5 models: BSData 190, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Zoanthropes.html: any copy: 3 90 · 6 190.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/zoanthropes",
+  "field": "ability[Spirit Leech].text",
+  "app": "While an enemy unit is within 6\" of this unit, if this unit contains a Neurothrope, each time that enemy unit fails a **Battle-shock test**, it suffers D3 **mortal wounds** and one model in this unit regains up to D3 lost wounds.",
+  "source": "While an enemy unit is within 6\" of this unit, if it contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Zoanthropes.html: \"While an enemy unit is within 6\" of this unit, if this unit contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/biovores",
+  "field": "kw",
+  "app": "Biovores",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/biovores",
+  "field": "kw",
+  "app": null,
+  "source": "Biovore",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the category Biovore; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/biovores",
+  "field": "rules",
+  "app": "Deadly Demise 1",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/biovores",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-guard",
+  "field": "points",
+  "app": "1-2: 3 80 · 6 160; 3+: 3 90 · 6 170",
+  "source": "1-2: 3 80 · 4 160 · 5 160 · 6 160 · 7 160 · 8 160 · 9 160 · 10 160 · 11 160 · 12 160; 3+: 3 90 · 4 170 · 5 170 · 6 170 · 7 170 · 8 170 · 9 170 · 10 170 · 11 170 · 12 170",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): 1-2: 3 80 · 6 160; 3+: 3 90 · 6 170; BSData at the pin (Xenos - Tyranids catalogue revision 3): 1-2: 3 80 · 4 160 · 5 160 · 6 160 · 7 160 · 8 160 · 9 160 · 10 160 · 11 160 · 12 160; 3+: 3 90 · 4 170 · 5 170 · 6 170 · 7 170 · 8 170 · 9 170 · 10 170 · 11 170 · 12 170 (copy 1-2, 4 models: BSData 160, GW prices no unit of 4; copy 1-2, 5 models: BSData 160, GW prices no unit of 5; copy 1-2, 7 models: BSData 160, GW prices no unit of 7; copy 1-2, 8 models: BSData 160, GW prices no unit of 8; copy 1-2, 9 models: BSData 160, GW prices no unit of 9; copy 1-2, 10 models: BSData 160, GW prices no unit of 10; copy 1-2, 11 models: BSData 160, GW prices no unit of 11; copy 1-2, 12 models: BSData 160, GW prices no unit of 12; copy 3-, 4 models: BSData 170, GW prices no unit of 4; copy 3-, 5 models: BSData 170, GW prices no unit of 5; copy 3-, 7 models: BSData 170, GW prices no unit of 7; copy 3-, 8 models: BSData 170, GW prices no unit of 8; copy 3-, 9 models: BSData 170, GW prices no unit of 9; copy 3-, 10 models: BSData 170, GW prices no unit of 10; copy 3-, 11 models: BSData 170, GW prices no unit of 11; copy 3-, 12 models: BSData 170, GW prices no unit of 12). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Guard.html: 1-2: 3 80 · 6 160; 3+: 3 90 · 6 170.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/barbgaunts",
+  "field": "points",
+  "app": "any copy: 5 50 · 10 100",
+  "source": "any copy: 5 50 · 6 100 · 7 100 · 8 100 · 9 100 · 10 100",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 5 50 · 10 100; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 5 50 · 6 100 · 7 100 · 8 100 · 9 100 · 10 100 (copy 1-, 6 models: BSData 100, GW prices no unit of 6; copy 1-, 7 models: BSData 100, GW prices no unit of 7; copy 1-, 8 models: BSData 100, GW prices no unit of 8; copy 1-, 9 models: BSData 100, GW prices no unit of 9). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Barbgaunts.html: any copy: 5 50 · 10 100.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/genestealers",
+  "field": "points",
+  "app": "1-2: 5 75 · 10 140; 3+: 5 85 · 10 150",
+  "source": "1-2: 5 75 · 6 140 · 7 140 · 8 140 · 9 140 · 10 140; 3+: 5 85 · 6 150 · 7 150 · 8 150 · 9 150 · 10 150",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): 1-2: 5 75 · 10 140; 3+: 5 85 · 10 150; BSData at the pin (Xenos - Tyranids catalogue revision 3): 1-2: 5 75 · 6 140 · 7 140 · 8 140 · 9 140 · 10 140; 3+: 5 85 · 6 150 · 7 150 · 8 150 · 9 150 · 10 150 (copy 1-2, 6 models: BSData 140, GW prices no unit of 6; copy 1-2, 7 models: BSData 140, GW prices no unit of 7; copy 1-2, 8 models: BSData 140, GW prices no unit of 8; copy 1-2, 9 models: BSData 140, GW prices no unit of 9; copy 3-, 6 models: BSData 150, GW prices no unit of 6; copy 3-, 7 models: BSData 150, GW prices no unit of 7; copy 3-, 8 models: BSData 150, GW prices no unit of 8; copy 3-, 9 models: BSData 150, GW prices no unit of 9). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: 1-2: 5 75 · 10 140; 3+: 5 85 · 10 150.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/genestealers",
+  "field": "ability[Vanguard Predator].text",
+  "app": "Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1. If the target is within range of one or more objective markers, re-roll a **Wound roll** of 1 as well.",
+  "source": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll 1 as well.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: \"Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll of 1 as well.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/genestealers",
+  "field": "rules",
+  "app": "Scouts 8\"",
+  "source": null,
+  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/genestealers",
+  "field": "rules",
+  "app": null,
+  "source": "Scouts",
+  "reason": "GW’s datasheet prints Scouts 8\" (BSData: Scouts). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/genestealers",
+  "field": "rules",
+  "app": null,
+  "source": "Stealth",
+  "reason": "GW’s datasheet does not print Stealth. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/raveners",
+  "field": "rules",
+  "app": null,
+  "source": "Stealth",
+  "reason": "GW’s datasheet does not print Stealth. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Raveners.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/neurolictor",
+  "field": "ability[Psychological Saboteur].text",
+  "app": "While an enemy unit is within 12\" of this model, if that unit is **Battle-shocked**:\n- Each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.\n- Each time a friendly **TYRANIDS** model makes an attack that targets that unit, add 1 to the **Wound roll**.",
+  "source": "While an enemy unit is with 12\" of this model, if that unit is Battle-shocked:\n\n- Each time a model in that unit makes an attack, subtract 1 from the Hit roll\n- Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurolictor.html: \"While an enemy unit is within 12\" of this model, if that unit is Battle-shocked: - Each time a model in that unit makes an attack, subtract 1 from the Hit roll. - Each time a friendly TYRANIDS model makes an attack that targets that unit, a\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/spore-mines",
+  "field": "points",
+  "app": "any copy: 3 55 · 6 110",
+  "source": "any copy: 3 55 · 4 110 · 5 110 · 6 110",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 3 55 · 6 110; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 3 55 · 4 110 · 5 110 · 6 110 (copy 1-, 4 models: BSData 110, GW prices no unit of 4; copy 1-, 5 models: BSData 110, GW prices no unit of 5). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: any copy: 3 55 · 6 110.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/mucolid-spores",
+  "field": "points",
+  "app": "any copy: 1 30 · 2 60",
+  "source": "any copy: 1 0 · 2 0",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 1 30 · 2 60; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 1 0 · 2 0 (copy 1-, 1 models: GW 30, BSData 0; copy 1-, 2 models: GW 60, BSData 0). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Mucolid-Spores.html: any copy: 1 30 · 2 60.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/mucolid-spores",
+  "field": "ability[Floating Death].text",
+  "app": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 **mortal wounds**; on a 6, that enemy unit suffers D6 mortal wounds.",
+  "source": "Each time this unit or an enemy unit ends a move, for each model in this unit within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6 that enemy unit suffers D6 mortal wounds.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Mucolid-Spores.html: \"Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit s\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/ripper-swarms",
+  "field": "kw",
+  "app": "Ripper Swarms",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword RIPPER SWARMS; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/ripper-swarms",
+  "field": "kw",
+  "app": null,
+  "source": "Ripper Swarm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the category Ripper Swarm; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/toxicrene",
+  "field": "stats[Toxicrene].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3846: \"Toxicrene  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/toxicrene",
+  "field": "ability[Damaged: 1-5 Wounds Remaining]",
+  "app": null,
+  "source": "Damaged: 1-5 Wounds Remaining",
+  "reason": "GW’s datasheet does not print the ability Damaged: 1-5 Wounds Remaining. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/toxicrene",
+  "field": "kw",
+  "app": "Frame",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/toxicrene",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/toxicrene",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Toxicrene.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/maleceptor",
+  "field": "stats[Maleceptor].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3824: \"Maleceptor  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/maleceptor",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/maleceptor",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/haruspex",
+  "field": "stats[Haruspex].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/haruspex",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Haruspex.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/haruspex",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Haruspex.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/mawloc",
+  "field": "stats[Mawloc].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3825: \"Mawloc  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/mawloc",
+  "field": "ability[Terror from the Deep].text",
+  "app": "Each time this model is set up on the battlefield using the **Deep Strike** ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 **mortal wounds**; on a 5+, that unit suffers 3 mortal wounds and must take a **Battle-shock test**.",
+  "source": "Each time this unit is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Mawloc.html: \"Each time this model is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must tak\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/mawloc",
+  "field": "kw",
+  "app": "Burrower",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Mawloc.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/trygon",
+  "field": "stats[Trygon].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3847: \"Trygon  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/trygon",
+  "field": "kw",
+  "app": "Burrower",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Trygon.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/exocrine",
+  "field": "stats[Exocrine].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3813: \"Exocrine  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/exocrine",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Exocrine.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/exocrine",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Exocrine.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/carnifexes",
+  "field": "points",
+  "app": "any copy: 1 90 · 2 180",
+  "source": "any copy: 1 0 · 2 0",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 1 90 · 2 180; BSData at the pin (Xenos - Tyranids catalogue revision 3): any copy: 1 0 · 2 0 (copy 1-, 1 models: GW 90, BSData 0; copy 1-, 2 models: GW 180, BSData 0). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: any copy: 1 90 · 2 180.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/carnifexes",
+  "field": "stats[Carnifex].base",
+  "app": "105×70mm Oval",
+  "source": "105×70mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 105×70mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 105×70mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3811: \"Carnifexes  105x70mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/carnifexes",
+  "field": "rules",
+  "app": "Deadly Demise 1",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/carnifexes",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/screamer-killer",
+  "field": "rules",
+  "app": "Deadly Demise 1",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Screamer-killer.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/screamer-killer",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Screamer-killer.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannofex",
+  "field": "points",
+  "app": "1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20",
+  "source": "1-2: 1 170; 3+: 1 180; wargear: Rupture cannon 20",
+  "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): 1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20; BSData at the pin (Xenos - Tyranids catalogue revision 3): 1-2: 1 170; 3+: 1 180; wargear: Rupture cannon 20 (wargear Acid spray: GW 10, BSData none). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: 1-2: 1 170; 3+: 1 180; wargear: Acid spray 10, Rupture cannon 20.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannofex",
+  "field": "stats[Tyrannofex].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannofex",
+  "field": "kw",
+  "app": "Frame",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannofex",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/tyrannofex",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/harpy",
+  "field": "stats[Harpy].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3816: \"Harpy  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/harpy",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Harpy.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/harpy",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Harpy.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-crone",
+  "field": "stats[Hive Crone].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3818: \"Hive Crone  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-crone",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Crone.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hive-crone",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Crone.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/sporocyst",
+  "field": "ranged[Sporocyst bio-weapon].kw",
+  "app": "",
+  "source": "HIVE DEFENCES",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has HIVE DEFENCES; GW’s datasheet (the codex, as Wahapedia transcribes it) has . GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/sporocyst",
+  "field": "ability[Seed Mucolids].text",
+  "app": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **MUCOLID SPORES** unit containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
+  "source": "Once per turn, in your shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with it's ranged weapons. If it does, you can add one new MUCOLID SPORES containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html: \"Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new MUCOLID SPORES unit containing 1 model to your army \".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/sporocyst",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/sporocyst",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D3 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Sporocyst.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/psychophage",
+  "field": "stats[Psychophage].base",
+  "app": "120×92mm Oval",
+  "source": "120×92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has 120×92mm; GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none, has 120×92mm Oval. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/psychophage",
+  "field": "rules",
+  "app": "Deadly Demise 1",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/psychophage",
+  "field": "rules",
+  "app": "Feel No Pain 5+",
+  "source": null,
+  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/psychophage",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise 1 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/psychophage",
+  "field": "rules",
+  "app": null,
+  "source": "Feel No Pain",
+  "reason": "GW’s datasheet prints Feel No Pain 5+ (BSData: Feel No Pain). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/harridan",
+  "field": "rules",
+  "app": "Deadly Demise 2D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 2D6; BSData’s entry does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Harridan.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/harridan",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet does not print Deadly Demise. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Harridan.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hierophant",
+  "field": "rules",
+  "app": "Deadly Demise 2D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise 2D6; BSData’s entry does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hierophant.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/hierophant",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet does not print Deadly Demise. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hierophant.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-emissary",
+  "field": "ability[Unnatural Resilience].name",
+  "app": "Unnatural Resilience",
+  "source": "Unnatural Resistance",
+  "reason": "GW’s name for the ability (Wahapedia’s datasheet); BSData names it Unnatural Resistance. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-emissary",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-emissary",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-emissary",
+  "field": "rules",
+  "app": null,
+  "source": "Feel No Pain",
+  "reason": "GW’s datasheet does not print Feel No Pain. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-assimilator",
+  "field": "ability[Harpoon Barbs].text",
+  "app": "Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+  "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-assimilator",
+  "field": "rules",
+  "app": "Deadly Demise D6",
+  "source": null,
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "tyranids/norn-assimilator",
+  "field": "rules",
+  "app": null,
+  "source": "Deadly Demise",
+  "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: CORE ABILITIES / ARMY RULES.",
   "by": "verify/from-bsdata.js"
  }
 ]

@@ -96,6 +96,11 @@ module.exports = function write(ROOT, faction, r, SRC) {
   const ours = x => x.army === 'catalog' && String(x.unit).startsWith(faction + '/');
   const devList = JSON.parse(fs.readFileSync(DEVF, 'utf8')).filter(x => !ours(x));
   devList.push(...CAT.declarations(ROOT, faction, r));
+  // (the lists' declarations first, as they are; then the catalogues', by faction, each faction's in the order its import writes
+  // them: the file is the same whatever order the factions are written in)
+  const facOf = x => x.army === 'catalog' ? String(x.unit).split('/')[0] : '';
+  const sorted = devList.map((x, i) => [x, i]).sort((a, b) => (facOf(a[0]) === facOf(b[0]) ? a[1] - b[1] : facOf(a[0]) < facOf(b[0]) ? -1 : 1)).map(([x]) => x);
+  devList.length = 0; devList.push(...sorted);
   fs.writeFileSync(DEVF, JSON.stringify(devList, null, 1) + '\n');
   // 4. the tables: every catalogue row into DATASHEETS (and once more through the old form, as verify/from-json.js does)
   const t = node(['verify/tables.js', '--write']);

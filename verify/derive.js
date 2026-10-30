@@ -468,6 +468,10 @@ const NEEDS_RULES = {
   'with-ability':  '"with the X ability" in the unit\'s clause: the unit\'s Rules line names X (needs.rule)',
   'mustering':     'a line "When mustering your army, …" (who may be the Warlord, what may be included), or one that only gives units BATTLELINE when another line names a unit, is army building: not read for who the rule is for',
   'with-this-ability':'a rule for "a model with this ability" and no keyword: the units whose Rules line names this rule (needs.rule)',
+  'kw-with-this-ability':'a rule for "X units with this ability" that names keywords ("TYRANIDS units with this ability", Questing Tendrils): the units with those keywords, as for a friendly unit (the rule is the detachment\'s, every such unit has it)',
+  'or-target':     'TARGET with alternatives ("Up to two X units …, or one (other) Y unit …"): for a unit of either kind (the alternatives as "or"); "One X MONSTER unit or up to two X units (excluding MONSTERS)" is X either way',
+  'kw-or-faction-alone':'alternatives one of which is the army\'s Faction keyword alone ("One TYRANIDS unit … or up to two BURROWER units"): every unit of the army, that keyword',
+  'kw-or-same':    'alternatives naming the same keywords ("One SYNAPSE unit … and one enemy unit within 24\" of … the SYNAPSE unit"): those keywords, once',
   'that-unit':     'TARGET "That … unit": the unit WHEN names (its keywords and exclusions) and TARGET\'s keywords',
   'first-unit':    'stratagems: the first unit TARGET names; rules: the first friendly / "from your army" unit the text names with a keyword. Later units (a unit it is near, an enemy) are not who it is for',
   'no-keyword':    'the unit named has no keyword: any unit (no needs)',
@@ -533,6 +537,8 @@ function parseRun(V, run){
 // alternatives, each a list of keywords the unit has all of → { all, any }
 function combineAlts(sets){
   const rules = new Set();
+  // (the same keywords in every alternative: those, once)
+  if(sets.every(x => x.length && [...x].sort().join('|') === [...sets[0]].sort().join('|'))) return { all:[...sets[0]], any:[], rules:['kw-or-same'] };
   if(sets.every(x => x.length === 1)) return { all:[], any:sets.map(x => x[0]), rules:['kw-or'] };
   const common = sets[0].filter(k => sets.every(x => x.includes(k)));
   let rest = sets.map(x => x.filter(k => !common.includes(k)));
@@ -631,6 +637,32 @@ function stratNeeds(V, s){
       reasons.push({ rule:c.rules.join('+'), match:alts.map(x => x.all.join(' ')).join(' | ') });
     }
   }
+  // "Up to two X units …, or one (other) Y unit …": for a unit of either kind
+  const ors = parts.length === 1 ? first.split(/,?\s+or\s+(?=(?:one|two|up to \w+)\b)/i) : [first];
+  if(ors.length > 1){
+    const alts = [n];
+    for(const part of ors.slice(1)){
+      const u2 = friendlyUnit(V, part, { any:true });
+      if(!u2) continue;
+      const r2 = [], n2 = needsOf(V, u2, r2);
+      if(n2.bad || n2.rule || n.rule) return { how:'none', reasons:[{ rule:'unparsed', match:'alternatives with a rule: ' + clip(plain(first), 90) }] };
+      alts.push(n2);
+      reasons.push({ rule:'or-target', match:plain(u2.matched) });
+    }
+    if(alts.length > 1){
+      // (a keyword one alternative has and another excludes, "One X MONSTER unit or up to two X units (excluding MONSTERS)": X either way)
+      const has = k => alts.some(a => a.all.includes(k)), excl = k => alts.some(a => a.none.includes(k));
+      const sets = alts.map(a => a.all.filter(k => !excl(k)));
+      const none = [...new Set(alts.flatMap(a => a.none).filter(k => !has(k)))];
+      if(alts.some(a => a.any.length) || none.length || sets.some(x => !x.length)) return { how:'none', reasons:[{ rule:'unparsed', match:'alternatives with "/" or exclusions: ' + clip(plain(first), 90) }] };
+      // (an alternative that is the Faction keyword alone, "One TYRANIDS unit … or up to two BURROWER units": every unit of the army)
+      const fac = sets.find(x => x.length === 1 && /^Faction: /.test(x[0]));
+      const c = fac ? { all:fac, any:[], rules:['kw-or-faction-alone'] } : combineAlts(sets);
+      if(c.bad) return { how:'none', reasons:[{ rule:'unparsed', match:c.bad }] };
+      n = { all:c.all, any:c.any, none:[] };
+      reasons.push({ rule:c.rules.join('+'), match:sets.map(x => x.join(' ')).join(' | ') });
+    }
+  }
   if(/^that\b/i.test(plain(first))){
     const w = friendlyUnit(V, when);
     if(w){
@@ -689,6 +721,11 @@ function ruleNeeds(V, r){
     if(/\battached\b/i.test(plain(r.text))) { n.attached = true; reasons.push({ rule:'attached', match:'attached' }); }
     return { how:'explicit', needs:n, reasons };
   }
+  // "TYRANIDS units with this ability …" (Questing Tendrils): the rule names keywords, so they are its units
+  { const u = friendlyUnit(V, words, { any:true, keyword:true });
+    if(u && /^\s*(?:from your army\s*)?with this ability\b/i.test(u.after)){
+      const n = needsOf(V, u, reasons);
+      if(!n.bad){ reasons.push({ rule:'kw-with-this-ability', match:clip(plain(u.matched + ' with this ability'), 80) }); return { how:'explicit', needs:n, reasons }; } } }
   const m = /\b(?:a model|models|units?) (?:from your army )?with this ability\b/i.exec(plain(r.text));
   if(m) return { how:'explicit', needs:{ rule:[r.name] }, reasons:[{ rule:'with-this-ability', match:m[0] }] };
   return { how:'none', reasons:[] };

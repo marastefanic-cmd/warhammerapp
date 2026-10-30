@@ -244,7 +244,16 @@ function load(ROOT, catalogueName, opts){
     if(e.type === 'model') return [{ model:nameOf(e), min:1, max:1 }];
     const out = [];
     const walk = (node, inGroup) => { for(const c of children(node)){ if(c.entry.type === 'model'){ const mm = minMax(c.link || c.entry, c.entry), g = c.groupNode ? minMax(c.groupNode.link, c.groupNode.node) : null;
-      const o = { model:nameOf(c.entry), min:mm.min, max:mm.max }; if(c.group) o.group = c.group; if(g && (g.min || g.max != null)) o.groupMin = g.min, o.groupMax = g.max; out.push(o); } } };
+      const o = { model:nameOf(c.entry), min:mm.min, max:mm.max }; if(c.group) o.group = c.group;
+      // (a max BSData raises when the unit has enough of another model, "*This unit can only contain 2 Neurogaunt Nodebeasts if it
+      // contains 20 Neurogaunts": an "increment" of the max constraint whose conditions count the unit's own models): the larger max,
+      // and when (maxIf)
+      { const mx = [].concat((c.link && c.link.constraints) || [], c.entry.constraints || []).find(k => k.field === 'selections' && k.scope === 'parent' && k.type === 'max');
+        for(const m of mx ? [].concat((c.link && c.link.modifiers) || [], c.entry.modifiers || []).filter(m => m.field === mx.id && m.type === 'increment' && !(m.conditionGroups || []).length) : []){
+          const cs = m.conditions || [];
+          if(!cs.length || !cs.every(k => ['unit', 'parent'].includes(k.scope) && k.field === 'selections' && k.type === 'atLeast')) continue;
+          o.maxIf = { max:mm.max, atLeast:cs.map(k => ({ model:nameOf(get(k.childId)) || k.childId, n:Number(k.value) })) }; o.max = mm.max + Number(m.value);
+        } } if(g && (g.min || g.max != null)) o.groupMin = g.min, o.groupMax = g.max; out.push(o); } } };
     walk(e);
     return out;
   }
