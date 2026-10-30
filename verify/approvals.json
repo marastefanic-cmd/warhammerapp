@@ -677,6 +677,12 @@
   "at": "2026-10-27",
   "why": "\"At the end of your Movement phase, roll one D6 for each enemy unit within 6\"\": your Movement phase, a fixed moment (checklist Movement · Your turn)."
  },
+ "087eca4164327fe3": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Invasion Fleet · Endless Swarm), read against the faction page."
+ },
  "08a220105e94f750": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1037,6 +1043,12 @@
   "at": "2026-10-16",
   "why": "Either turn."
  },
+ "0d4cee7588b38d24": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet rule · Hyper-adaptations), read against the faction page."
+ },
  "0d562d88c511240c": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -1090,6 +1102,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "True: melee A values include it (BSData base +1)."
+ },
+ "0e513baf550ef923": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Alien Physiology), read against the faction page."
  },
  "0e6335620c9117ba": {
   "verdict": "ok",
@@ -1373,6 +1391,12 @@
   "at": "2026-10-27",
   "why": "GW: \"This model is equipped with: Infernal Gateway; Staff of Tomorrow.\" WARGEAR OPTIONS None (FP 1.2 l.1120-1122); profiles match GW (witchfire 24\" D6+3 2+ S9 AP-2 DD3 [BLAST, INDIRECT FIRE, PSYCHIC]; focused D3+6 … D3 → 3 [+HAZARDOUS]; Staff A5 WS3+ S8 AP-2 D2D3 [PSYCHIC])."
  },
+ "12971af6f6956b5c": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "As I asked in round 1: Creeping Dread goes to all ANATHEMA PSYKANA units. Its timing is now on the rule option (command:opp in RULE_OPTIONS)."
+ },
  "12d5d6ed864ee274": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1463,6 +1487,12 @@
   "at": "2026-10-23",
   "why": "“When a friendly THOUSAND SONS PSYKER unit … successfully manifests a Ritual”; Rituals are attempted “at the start of your Shooting phase” (Cabal of Sorcerers, Rules Update)."
  },
+ "13fd125e65443c34": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader]} (Vanguard Onslaught · Surprise Assault), read against the faction page."
+ },
  "13fe6aa89ee63846": {
   "verdict": "ok",
   "by": "review:pubstomper",
@@ -1529,6 +1559,18 @@
   "at": "2026-10-22",
   "why": "\"Any phase, just after a mortal wound or attack is allocated\": in either player's turn."
  },
+ "14d8bcebdc947d65": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Faction: Tyranids,Mawloc,Trygon]} (Subterranean Assault rule · Surprise Assault), read against the faction page."
+ },
+ "14fd3e85e3d02a08": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Unending Waves), read against the faction page."
+ },
  "1518e797a995a17b": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -1570,6 +1612,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Your turn."
+ },
+ "162557ecdd499676": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader]} (Vanguard Onslaught · Unseen Lurkers), read against the faction page."
  },
  "168f3f8f3f5ca671": {
   "verdict": "ok",
@@ -1780,6 +1828,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability.\""
+ },
+ "19eeea6d75c93049": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Preservation Imperative), read against the faction page."
  },
  "19f0dfad74c14799": {
   "verdict": "ok",
@@ -2044,6 +2098,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“One TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves”."
+ },
+ "1d3b64dee2e40b0d": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor]} (Ambush Predators rule · Mindhunger), read against the faction page."
  },
  "1d5146bf15577827": {
   "verdict": "ok",
@@ -2458,6 +2518,12 @@
   "by": "review:fellhammer-3",
   "at": "2026-10-24",
   "why": "The default turn is “either” because the Fight phase is in both turns (selected to fight). The turns override covers Movement and Shooting. The full text, FAQ lines included, names no other turn."
+ },
+ "23132c7a093ab1ae": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Parasitic Payload), read against the faction page."
  },
  "231379af293895c5": {
   "verdict": "ok",
@@ -3209,6 +3275,12 @@
   "at": "2026-10-29",
   "why": "{\"at\":\"Start of your Command phase\"}: the rule's words open with that moment."
  },
+ "2ed313ae2ac161aa": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor,Von Ryan's Leapers]} (Ambush Predators · Hypersensory Adaptations), read against the faction page."
+ },
  "2ef92d21db9028cd": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -3652,6 +3724,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR Options \"Hellforged weapons, Infernal cannon\"; rows \"Infernal cannon\", \"➤ Hellforged weapons - strike\", \"➤ Hellforged weapons - sweep\"."
+ },
+ "35568c58e6cfd212": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Overrun), read against the faction page."
  },
  "35ae05852210a8fd": {
   "verdict": "ok",
@@ -4217,6 +4295,12 @@
   "at": "2026-10-26",
   "why": "The A 11 is right: Wahapedia's Slaughterbound has Lacerator and daemonic claw A 6. Relentless Rage (Berzerker Warband) gives +1 (A 7 in every list), Berzerker Glaive another +1 (A 8 here, marked), and Possessed Lord adds +3, so 11. [DEVASTATING WOUNDS] until the end of the phase, once per battle, at the start of the Fight phase: all correct. Making it the list's own reading is right. But listWhy says 'the datasheet’s A 7 makes 10'. The datasheet's A is 6 (DATASHEETS leaves A out because it varies by list), and 7 already includes the detachment's +1. The fix below corrects only the listWhy wording. Two related notes. (1) The datasheet reading set:{A:'10'} has Relentless Rage baked in, so a future Slaughterbound list in another detachment would get a wrong A 10. set:{A:'+3'} (as Battle Protocols writes set:{A:'+2'}) would be right for every list and would make this listWhy unnecessary. That is the owner's call, since it changes the display. (2) readOf fingerprints only Possessed Lord's text. Changing Berzerker Glaive's or Relentless Rage's text does not make A 11 or A 10 stale (tested on a scratch copy)."
  },
+ "3d46933deeb3f72a": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Adrenal Surge), read against the faction page."
+ },
  "3d58512771b1037d": {
   "verdict": "ok",
   "by": "review:round2",
@@ -4378,6 +4462,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Cult of the Arkifane enhancement (Wahapedia 20 pts; export Enhancements=1), so tag Enhancement."
+ },
+ "3f5ae99ce78af82a": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Tyranid Warriors With Ranged Bio-Weapons,Tyranid Warriors With Melee Bio-Weapons,Tyranid Warriors,Tyranid Prime With Lash Whip,Winged Tyranid Prime]} (Warrior Bioform Onslaught rule · Leader-beasts), read against the faction page."
  },
  "3fa10f6d7466f8be": {
   "verdict": "ok",
@@ -5315,6 +5405,12 @@
   "at": "2026-10-21",
   "why": "“At the start of your Command phase, this model regains up to D3 lost wounds.”"
  },
+ "4e322e886783aa57": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Override Instincts), read against the faction page."
+ },
  "4e4125dbff4c1bdb": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5681,6 +5777,12 @@
   "at": "2026-10-23",
   "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.” No who: every model of the unit, the Shaman included; always while leading."
  },
+ "5447f6d89083ec27": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Synaptic Micronodes), read against the faction page."
+ },
  "5449a3733c5b80c1": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -5777,6 +5879,12 @@
   "at": "2026-10-16",
   "why": "The rule is \"When that unit is selected to make an advance move, that advance move does not prevent…\": the unit must be riled up when it advances. A unit riled up after advancing (Makari, Dread Power or Intimidating Motivation later in the phase) still cannot charge, but the reminder would let it."
  },
+ "558b92d05088a482": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "“Up to two VANGUARD INVADER units …, or one TYRANIDS INFANTRY unit”."
+ },
  "5591b92f968de557": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -5848,6 +5956,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "The opponent’s Shooting phase and the Fight phase of either turn: either."
+ },
+ "56c9d1068a9125af": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Swarming Masses), read against the faction page."
  },
  "56cbe32ed8294e4c": {
   "verdict": "ok",
@@ -6323,6 +6437,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
  },
+ "5dde267c50b6cf60": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor]} (Ambush Predators · Scanner Gheist), read against the faction page."
+ },
  "5df7ecf601b79724": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -6460,6 +6580,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "Cerastus Knight Lancer datasheet (GW faction pack): W 28 and \"DAMAGED: 1-10 WOUNDS REMAINING ... While this model has 1-10 wounds remaining\". Matches."
+ },
+ "6008621561949fcc": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Retreat Below), read against the faction page."
  },
  "6018aeed36448653": {
   "verdict": "ok",
@@ -6634,6 +6760,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit”; New Recruit prints OC 1 (Datasmith) and 2 (Kastelan Robot), the same as Wahapedia's base OC 1 and 2, so the +1 is not in them (its M 8\" does include the +2\")."
+ },
+ "62cae39d7aa5f54e": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Rapid Regeneration), read against the faction page."
  },
  "62d3d4be59b6eea3": {
   "verdict": "ok",
@@ -7319,6 +7451,12 @@
   "at": "2026-10-16",
   "why": "\"Your Shooting phase\": shooting is your turn only."
  },
+ "6ed7bedcb8edc9d4": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · The Smothering Shadow), read against the faction page."
+ },
  "6f044aaa078d6580": {
   "verdict": "ok",
   "by": "review:lite-knights (its fix)",
@@ -7870,6 +8008,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "TARGET “wholly within 12\" of one or more battlefield edges and not within Engagement Range of one or more enemy units” and EFFECT “Remove your unit from the battlefield and place it into Strategic Reserves.” are both kept, “wholly” included."
+ },
+ "77a2c2e6438b1bf8": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "“Up to two VANGUARD INVADER units … or one other TYRANIDS INFANTRY unit”."
  },
  "77afe33b4fcd0028": {
   "verdict": "ok",
@@ -8447,6 +8591,12 @@
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
  },
+ "80a14da70962b006": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Enfilading Emergence), read against the faction page."
+ },
  "80a243dc4bdf690b": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -8602,6 +8752,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Your Movement/Charge phase”: movement and charge."
+ },
+ "83326bf32075d844": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Teeming Masses), read against the faction page."
  },
  "83424b9a3fec2d9a": {
   "verdict": "ok",
@@ -8926,6 +9082,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "The Khorne Daemonkin Enhancement (Wahapedia 20 pts; New Recruit on the Master of Executions). \"BLOOD LEGIONS or WORLD EATERS model only\": it is a WORLD EATERS model."
+ },
+ "8807ec417fe383d5": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Bounding Advance), read against the faction page."
  },
  "8811cf92804280e3": {
   "verdict": "ok",
@@ -10331,6 +10493,12 @@
   "at": "2026-10-23",
   "why": "New Recruit: “Tzaangor Enlightened*, *from combined unit”; Wahapedia Shaman keywords include MOUNTED, FLY, MUTANT."
  },
+ "9bdf32447c4045aa": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Synaptic Goading), read against the faction page."
+ },
  "9beeb638dd6ac8f9": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -11633,6 +11801,12 @@
   "at": "2026-10-28",
   "why": "\"Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\": kind all, lasts battle, nothing added. GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only)."
  },
+ "aed4eec55bd87427": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "GW: ARMY RULES “Shadow In The Warp (Ravener Prime only), Synapse”."
+ },
  "aee2ee09c2b84801": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -11674,6 +11848,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "\"NECRONS unit … (excluding TITANIC units)\": the Tesseract Vaults rightly lack it."
+ },
+ "af4677a8e1483126": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "GW: “KEYWORDS – ALL MODELS: …; RAVENER PRIME: CHARACTER; SYNAPSE”."
  },
  "af5bc0e30fb8a963": {
   "verdict": "ok",
@@ -12077,6 +12257,12 @@
   "at": "2026-10-27",
   "why": "Harbinger of Death: pick one of [LETHAL HITS], [PRECISION], [SUSTAINED HITS 1] for its hellforged weapons until the end of the phase: melee, a pick of GW's three, nothing added."
  },
+ "b5e9e7b4c0dcbf9e": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids,Monster]} (Subterranean Assault · Swarming Assault), read against the faction page."
+ },
  "b60342db49b96b36": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -12226,6 +12412,12 @@
   "by": "review:r6-text",
   "at": "2026-10-17",
   "why": "EFFECT: \"Your unit can make a normal move of up to 6\", and must end that move within range of an objective.\" / \"Your unit is not eligible to declare a charge until the end of the turn.\" The gist keeps the move optional (\"can make\"), the 6\" limit and the end-within-range-of-an-objective requirement (\"ending within range\"). The charge ban stays a separate clause, not tied to the move. Trigger \"After shooting\" = \"when ... has shot\". Nothing added or dropped."
+ },
+ "b901fdd610e26bd7": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus rule · Synaptic Imperatives), read against the faction page."
  },
  "b938a8aab373de99": {
   "verdict": "ok",
@@ -12454,6 +12646,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "“Your” Movement and Charge phases: your."
+ },
+ "bba0b6e9ab022c56": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Tunnel Network), read against the faction page."
  },
  "bbc956efd0611697": {
   "verdict": "ok",
@@ -12959,6 +13157,12 @@
   "at": "2026-10-24",
   "why": "GW's erratum and Wahapedia both say '(Once per battle, per unit)'. The tag is 'Once per battle, per unit', the same form as the approved Ammo Runts and Boss’ Ammo Runt tags. derive.js cannot derive it because the parenthesis is in the tag, not the text; the same is true of the approved items."
  },
+ "c5461d0942903459": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Predatory Imperative), read against the faction page."
+ },
  "c5472f5c64144bd1": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -13144,6 +13348,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” The Fight phase of either turn plus the opponent’s Shooting phase: 'either'."
+ },
+ "c7d9d551e8182ab2": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Imperative Dominance), read against the faction page."
  },
  "c7eddeee6b91a3e6": {
   "verdict": "ok",
@@ -13925,6 +14135,12 @@
   "at": "2026-10-28",
   "why": "Quotes GW: target Below Half-strength → a successful Hit roll scores a Critical Hit (melee)."
  },
+ "d2e721652a626c1b": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "TARGET “One SYNAPSE unit …”: {all:[Synapse]}."
+ },
  "d352feec3f52b87d": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -13966,6 +14182,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Your Shooting phase and either Fight phase: either."
+ },
+ "d3fc3158b20f74cc": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Mawloc,Trygon]} (Subterranean Assault · Adaptive Optimisation), read against the faction page."
  },
  "d429635f8f365c06": {
   "verdict": "ok",
@@ -14471,6 +14693,12 @@
   "at": "2026-10-28",
   "why": "\"TARGET: One HARVESTER unit from your army …\": Harvester."
  },
+ "dc69f79751438465": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · Synaptic Channelling), read against the faction page."
+ },
  "dc6af6247ab2f48e": {
   "verdict": "ok",
   "by": "review:core-code (its fix)",
@@ -14644,6 +14872,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"Your opponent’s Shooting phase\"."
+ },
+ "defa274ed5f89239": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader,Infantry]} (Vanguard Onslaught · Assassin Beasts), read against the faction page."
  },
  "df1edca14fb50e2e": {
   "verdict": "ok",
@@ -14993,6 +15227,12 @@
   "at": "2026-10-23",
   "why": "The Shaman's ability (“this model can use this ability … Psychic weapons equipped by this model”)."
  },
+ "e3cff3528bc2eadf": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Vanguard Onslaught · Seeded Broods), read against the faction page."
+ },
  "e3d7716aca76d96b": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -15094,6 +15334,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "NR: “Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber” and “War Dog autocannon (x2)”; Wahapedia: “diabolus heavy stubber; 2 War Dog autocannons; armoured feet”. ×2 autocannon is right."
+ },
+ "e58797ee9fe14b7c": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor,Von Ryan's Leapers]} (Ambush Predators · Counterpredation), read against the faction page."
  },
  "e5aa8dff5d47c375": {
   "verdict": "ok",
@@ -15635,6 +15881,12 @@
   "at": "2026-10-28",
   "why": "\"Your Fight phase\": your."
  },
+ "edc650e28faa5a25": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "“TYRANIDS units with this ability … VANGUARD INVADER units with this ability …”: the named keyword is the rule’s reach. VANGUARD INVADER units are Tyranids, so {all:[Faction: Tyranids]}."
+ },
  "edc9c7db81dd2899": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -15881,6 +16133,12 @@
   "at": "2026-10-16",
   "why": "15.04 \"WHEN: Battle-shock step of your Command phase\"."
  },
+ "f24e9f9137515014": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Replenishing Swarms), read against the faction page."
+ },
  "f25cea45a74e0325": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -15940,6 +16198,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "An Infernal Lance enhancement (Wahapedia “Blasphemous Engine 35 pts”). NR: “Options: Blasphemous Engine, Cerastus shock lance”."
+ },
+ "f36f39bae94d6beb": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm rule · Insurmountable Odds), read against the faction page."
  },
  "f3b278734996b305": {
   "verdict": "ok",
@@ -16103,6 +16367,12 @@
   "at": "2026-10-21",
   "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
  },
+ "f738756895aa1b62": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · Reinforced Hive Node), read against the faction page."
+ },
  "f78aa33334249bd2": {
   "verdict": "ok",
   "by": "review:r18b-game",
@@ -16138,6 +16408,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"pile-in target\" etc.; Pile-in Move 12.03."
+ },
+ "f8ab970fe12f3379": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Death Frenzy), read against the faction page."
  },
  "f8ad0f251ac9f316": {
   "verdict": "ok",
