@@ -1277,7 +1277,8 @@ function main() {
   // deviations: the only accepted differences
   const devs = fs.existsSync(P.dev) ? JSON.parse(fs.readFileSync(P.dev, 'utf8')) : [];
   // (a detachment's Force Dispositions are verify/dispositions.js's: its deviations are checked there)
-  const devList = (Array.isArray(devs) ? devs : devs.deviations || []).filter((d) => d.field !== 'dispositions' && d.field !== 'relink');
+  // (and a faction catalogue's, army "catalog": verify/catalog.js checks those against the catalogue rows)
+  const devList = (Array.isArray(devs) ? devs : devs.deviations || []).filter((d) => d.field !== 'dispositions' && d.field !== 'relink' && d.army !== 'catalog');
   for (const r of RELINKS) if (!r.ok) failures.push({ army: r.d.army, unit: r.d.unit, field: 'deviation.stale', app: r.d.to, source: r.d.from, where: `verify/deviations-bsdata.json: the relink of ${r.d.link} does not match BSData (its target is not ${r.d.from}, or ${r.d.to} is not there)` });
   const keyOf = (x) => JSON.stringify([x.army, x.unit, x.field, str(x.app), str(x.source)]);
   const devKeys = new Map(devList.map((d) => [keyOf(d), d]));

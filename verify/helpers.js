@@ -125,6 +125,33 @@ function items(D, appSource){
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }
+  // the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md) and the detachments a catalogue added (aiStatus 'not-read'):
+  // every judgement on them too, though no unit shows it yet. (A catalogue row's tag is GW's, as its datasheet prints it with the
+  // ability's name, checked by verify/catalog.js against BSData with GW's evidence: no judgement.)
+  { const T = require('./tables'), RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
+    const listed = new Set(RAW.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+    for(const [sid, S] of Object.entries(RAW.S ? RAW.S.value : {})){
+      if(listed.has(sid)) continue;
+      const w = 'catalog · ' + sid;
+      for(const ab of S.abilities || []){
+        const src = { ability:ab.name, text:ab.text };
+        if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
+        if(ab.def) add('catalog', 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
+        for(const k of ['note', 'na', 'damaged']) if(ab[k]) add('catalog', 'ability-' + k, w + ' · ' + ab.name, { [k]:ab[k] }, src);
+        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef || ab.embarked) add('catalog', 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, embarked:ab.embarked }, src);
+        if(ab.fightOnDeath || ab.comeback || ab.calcNote) add('catalog', 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:S.models }, src);
+      }
+      const citedRow = m => { const ab = (S.abilities || []).find(x => x.name === m.from); return ab ? { ability:ab.name, text:ab.text } : { missing:'nothing of the datasheet is named ' + m.from }; };
+      for(const [k, kind] of [['mods', 'unit-footnote'], ['aura', 'unit-aura'], ['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));
+      for(const k of ['kwOnly', 'srcNote', 'partialRules']) if(S[k]) add('catalog', 'unit-' + k, w, { [k]:S[k] }, { kw:S.kw, rules:S.rules });
+    }
+    for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})){
+      if(d.aiStatus !== 'not-read') continue;
+      for(const r of detRules_(d)) for(const k of RULE_KEYS) if(r[k] !== undefined) add('catalog', 'rule-' + k, f.name + ' · ' + d.name + ' rule · ' + r.name, { [k]:r[k] }, { rule:r.name, text:r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : '') });
+      for(const st of d.stratagems || []) for(const k of STRAT_KEYS)
+        if(st[k] !== undefined) add('catalog', 'strat-' + k, f.name + ' · ' + d.name + ' · ' + st.name, { [k]:st[k] }, { stratagem:st.name, text:stratText(st) });
+    }
+  }
   for(const s of D.coreStratagems) for(const k of STRAT_KEYS)
     if(s[k] !== undefined) add('core', 'strat-' + k, 'Core · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
   // app notes inside core rules text, and which rule each keyword spelling opens

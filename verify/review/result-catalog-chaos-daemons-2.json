@@ -1,0 +1,74 @@
+[
+ {
+  "key": "1ed508d3cb3b7a95",
+  "where": "verify/bs-catalog.js staticHidden: one \"and\" group with a Crusade/Boarding force condition; hidden categories",
+  "verdict": "ok",
+  "why": "Did what round 1 asked. A modifier whose conditions form one \"and\" group (no nested group) is now treated as list-given when each condition is a roster/force \"absent\" one or a force notInstanceOf a MODE_FORCES force. A category link is dropped when the link or its target is hidden that way. Diffed verify/sources/catalog/* and data.js at 5348e86 and at HEAD: the rule changes exactly 3 things. Be’lakor loses Disciples of Be’lakor and UNDIVIDED, which matches GW FP 1.2 lines 3047-3048 “KEYWORDS: Monster, Character, Fly, Epic Hero, Psyker, Chaos, Daemon, Be’lakor”. Trygon loses “Trygon Character upgrade”, which is Subterranean Assault’s (Tyranids FP line 212 “select up to 2 Trygon models”; the GRANTS row “The selected units gain the CHARACTER keyword” covers it). Custodes catalogue unchanged. An \"or\" group stays shown (new test case)."
+ },
+ {
+  "key": "430877a1920c3376",
+  "where": "verify/catalog.js scan: names of the left-out Legends / Crucible / Crusade entries",
+  "verdict": "ok",
+  "why": "The scan is general: it uses the names of every excluded Legends/Crucible/Crusade entry with the tag dropped, word-bounded, and skips a match followed by a title-case word. It now catches the round-1 cases. Note that round 1’s second part (the Leader reader skipping Wahapedia <li class=sLegendary>) was not done. Horticulous Slimux was fixed by a hand text instead (GW FP lines 2129-2130 “This model can be attached to the following unit: ■ Beasts of Nurgle”, correct). The Leader-text exemption then lets Legends names through in Leader lists. I accept this because the reader rule would be wrong: I checked every cached Wahapedia datasheet, and Blade Champion’s <li> “CUSTODIAN GUARD SODALITY” is marked sLegendary although it is a catalogue row. For any pack that prints datasheets, the new texts.js Leader-list check against GW guards this generally. Custodes Leader lists (codex, not in the pack) stay unchecked; see the caller report."
+ },
+ {
+  "key": "260d8553d60f05e4",
+  "where": "verify/from-bsdata.js hand rows (GW's Faction Pack datasheet where Wahapedia differs)",
+  "verdict": "ok",
+  "why": "A new hand-rows mechanism in from-bsdata.js for the GW-over-Wahapedia datasheet facts that round 1 listed as data changes. It is not a label, and each entry is recorded in handApplied with GW evidence and fails loudly if its target is missing. Checked each entry against FP 1.2. Tormentbringer: “CORE: Deep Strike, Leader” (l.2717), Hysterical Frenzy untagged (l.2724), “KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer” (l.2736-2737). Contorted Epitome “Horrible Fascination(Psychic):” (l.2670). Keeper of Secrets “Shining Aegis:” (l.2469). Be’lakor “Shadow Form: …(see reverse)…” (l.3032-3036). The Red Terror: Tyranids FP l.305-306 has BURROWER only. In data.js these are the only row changes."
+ },
+ {
+  "key": "69e08aee098891ba",
+  "where": "verify/derive.js label rules: fell-back-charge, charge-then-turn, label-granted-ability, \"eligible to charge\"; grants \"the X and Y keywords\"",
+  "verdict": "ok",
+  "why": "I ran derive.js --report at 5348e86 and at HEAD and diffed all of verify/out/derive.json (2047 → 2048 items). Exactly what the builder declared changed. Beguiling Aura {movement,charge} → {charge}. Seductive Gambit is now derived {charge,fight} either, and its option drops shooting. Questing Tendrils → {movement,charge}. Talon Sortie → {movement,charge}. One new grant: UNDIVIDED from Thralls of the First Prince (“gain the SHADOW LEGION and UNDIVIDED keywords”). Nothing else moved, and every list label is unchanged. All of it comes from text rules (fell-back-charge, charge-then-turn, label-granted-ability, the broadened declare-charge), with no hand labels. Beguiling Aura and Seductive Gambit now match round 1’s fix. Minor point: Talon Sortie (“a fall-back move does not prevent … eligible to charge”) has the same effect as Beguiling Aura but keeps Movement, because its words make the fall-back move the trigger. That is defensible, and adding Charge is an improvement on the old {movement}."
+ },
+ {
+  "key": "c0dc3944d005083d",
+  "where": "verify/texts.js: \"Index: <faction>\" as the Datasheets group; LEADER lists compared as lists; KEYWORDS, CORE and Aura/Psychic tags of catalogue rows against the pack",
+  "verdict": "ok",
+  "why": "As round 1 asked. “Index: Chaos Daemons” now counts as the Datasheets group, so each unit page is found by name. Leader lists are compared as sets of unit names. For catalogue rows, the KEYWORDS line, the CORE line (missing entries) and Aura/Psychic tags are compared with the pack. The fixes this surfaced (items 260d…, 45284…, 9afae…) each match GW. The misprints it surfaced are declared in deviations-texts.json (item dc82…). The gate’s texts step passes."
+ },
+ {
+  "key": "77c1ef7a5c6f6ccf",
+  "where": "RULES: Reverberating Summons",
+  "verdict": "ok",
+  "why": "Word for word GW FP 1.2 lines 1843-1844 (Great Unclean One, doomsday bell [LETHAL HITS, REVERBERATING SUMMONS]): “Each time a model is destroyed by this weapon, you can select one friendly Plaguebearers unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit.” PLAGUEBEARERS is in bold capitals, as the app writes keywords. RULE_SRC names its source."
+ },
+ {
+  "key": "45284cb5f884b7e2",
+  "where": "hand file catalog-chaos-daemons.json texts: Plaguebearers Infected Outbreak, Horticulous Slimux Leader; rows",
+  "verdict": "ok",
+  "why": "The two new texts are GW’s. Plaguebearers Infected Outbreak = FP 1.2 lines 2149-2153 word for word. Horticulous Slimux’s Leader = lines 2129-2130 (Beasts of Nurgle only; Plague Toads and Pox Riders are Legends). The rows section is the same content as item 260d…, checked there. The older entries (Kairos, Fluxmaster, Soul Grinders) are unchanged from round 1."
+ },
+ {
+  "key": "9afae176e3353730",
+  "where": "hand file catalog-tyranids.json rows: The Red Terror without \"Burrowers\"",
+  "verdict": "ok",
+  "why": "GW Tyranids FP lines 305-306 “KEYWORDS: Character, Mobile, Epic Hero, Great Devourer, Monster, Burrower, Vanguard Invader, The Red Terror”: no “Burrowers”. Removing it is right. The Tyranids catalogue changes only by that and the Trygon option (item 1ed5…)."
+ },
+ {
+  "key": "dc82083b764c22ed",
+  "where": "deviations-texts.json: 6 GW Faction Pack misprints and the \"(see below)\"",
+  "verdict": "ok",
+  "why": "Each declared misprint is in the pack. “one of more” (l.2875). “so not need” for the Feculent Gnarlmaw (l.2358) and the Skull Altar (l.1041). “Deluge of Nurgle (Aura):While” (l.1795). “Horrible Fascination(Psychic):” (l.2670). “(see reverse)” (l.3033), which the app writes as “(see below)” because the three Shadow Form abilities follow it on the same row. In each case the app keeps the correct words or GW’s name."
+ },
+ {
+  "key": "9f47721b56a3214e",
+  "where": "chaos-daemons · Legion of Excess",
+  "verdict": "ok",
+  "why": "These are the round-1 fix labels exactly (c9f7e14613f7ccf7): Beguiling Aura {charge} your; Seductive Gambit {charge,fight} either; Archagonists {all:[Faction: Legiones Daemonica, Slaanesh]}. The other five are unchanged. derive.js derives all of them and the diff shows no hand label."
+ },
+ {
+  "key": "9df12e4a5b6c5c03",
+  "where": "Chaos Daemons · Legion of Excess · Archagonists",
+  "verdict": "ok",
+  "why": "TARGET “One LEGIONES DAEMONICA SLAANESH MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS)”. Needs keeps only what both alternatives share, as round 1 asked (f94dec1b7ca504e9). It is derived by the or-target rule."
+ },
+ {
+  "key": "cf9189e0cf878a39",
+  "where": "/^reverberating summons$/i",
+  "verdict": "ok",
+  "why": "An exact, anchored, case-insensitive match on the weapon keyword “REVERBERATING SUMMONS” (doomsday bell). It opens the new RULES entry, and it is the same form as the Harpooned and Conversion aliases next to it. It matches nothing else."
+ }
+]

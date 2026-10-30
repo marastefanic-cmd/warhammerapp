@@ -44,7 +44,7 @@ function make(ROOT, factionId) {
     const re = /<(\/?)([a-zA-Z0-9]+)([^>]*)>|([^<]+)/g;
     let m;
     while ((m = re.exec(html))) {
-      if (m[4] !== undefined) { let t = dec(m[4]).replace(/\s+/g, ' '); if (kwd) t = t.toUpperCase(); if (t) out.push({ t, b: bold > 0, i: ital > 0 }); continue; }   // a keyword span: capitals, as the app writes keywords
+      if (m[4] !== undefined) { let t = dec(m[4]).replace(/\s+/g, ' '); if (kwd) t = t.toUpperCase().replace(/\bNON-(?=[A-Z]|$)/g, 'non-'); if (t) out.push({ t, b: bold > 0, i: ital > 0 }); continue; }   // a keyword span: capitals, as the app writes keywords (but GW's lower-case "non-": [SUSTAINED HITS 1: non-MONSTER/VEHICLE])
       const close = m[1] === '/', name = m[2].toLowerCase(), attrs = m[3] || '';
       const kw = name === 'span' && /class="kwb\b/.test(attrs);
       if (!close) {

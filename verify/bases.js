@@ -15,6 +15,7 @@
    Vanguard: Transuranic Arquebus") must each be met in every unit of that datasheet: by a stats row, by a models line (a model
    of that name or with that wargear, on the base Bases & proxies counts for it: the stats row's baseWith for the wargear, else
    the stats row of its name), or by an `absent` declaration; every baseWith must be such a row of GW's, with its base.
+   The same for every model row of a DATASHEETS row no list has (a faction catalogue's, verify/from-bsdata.js).
    Fails on any difference, an undeclared missing row, a GW model row nothing meets, or a declaration nothing uses.
      node verify/bases.js         check (verify/out/bases.json: every row, its guide line or declaration) */
 'use strict';
@@ -25,7 +26,7 @@ const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.j
 const DEVF = 'verify/deviations-bases.json';
 const DEVS = JSON.parse(fs.readFileSync(path.join(ROOT, DEVF), 'utf8'));
 // the forms GW's guide prints, as the app writes them
-const FORM = /^(\d+(\.\d+)?mm|\d+(\.\d+)?×\d+(\.\d+)?mm Oval|Hull|(Large|Small) Flying)$/;
+const FORM = /^(\d+(\.\d+)?mm|\d+(\.\d+)?×\d+(\.\d+)?mm Oval|Hull|(Large|Small) Flying|Unique)$/;
 const baseName = n => String(n).replace(/ ×\d+$/, '');
 
 const guide = G.guide();
@@ -40,8 +41,13 @@ T.resolveArmies(R.A.value, S, R.order, R.factions, { trace: (a, u, kind, n, sid,
 const fails = [], rows = [], used = new Set();
 const fail = (where, msg) => fails.push(where + ': ' + msg);
 const wahaBase = f => { try { const m = /\(&#8960;([^)]*)\)|\(⌀([^)]*)\)/.exec(fs.readFileSync(path.join(ROOT, f), 'utf8')); return m ? (m[1] || m[2]).replace(/\s*x\s*/gi, '×').trim() : null; } catch (e) { return null; } };
-for (const a of D.armies) for (const u of a.units) (u.stats || []).forEach((row, n) => {
-  const sid = from.get(a.id + '/' + u.id + '/' + n), ds = S[sid];
+// every stats row of every list, then of every DATASHEETS row no list has (a faction catalogue's, verify/from-bsdata.js)
+const each = [];
+for (const a of D.armies) for (const u of a.units) (u.stats || []).forEach((row, n) => each.push({ a, u, row, n }));
+const listed = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+for (const [sid, ds] of Object.entries(S)) if (!listed.has(sid)) (ds.stats || []).forEach((row, n) => each.push({ a: { id: 'catalog', faction: ds.faction }, u: { id: sid, name: ds.name }, row, n, sid }));
+for (const { a, u, row, n, sid: sid0 } of each) (() => {
+  const sid = sid0 || from.get(a.id + '/' + u.id + '/' + n), ds = S[sid];
   const model = baseName(row.name), unit = ds ? ds.name : u.name, fac = ds ? ds.faction : a.faction;
   const where = a.id + ' · ' + u.name + (model !== unit ? ' · ' + model : '');
   const sections = (FJ[fac] || {}).baseGuide || (D.factions[fac] || {}).name || fac;
@@ -76,14 +82,15 @@ for (const a of D.armies) for (const u of a.units) (u.stats || []).forEach((row,
       if (app !== dev.app) fail(where, 'app ' + app + ', declared (' + DEVF + ') ' + dev.app);
       // (no guide row to compare with: the app's base must still be written as the guide writes its bases)
       if (!FORM.test(String(app || ''))) fail(where, 'base "' + app + '" is not in a form GW’s guide prints (e.g. "40mm", "170×109mm Oval", "Hull")');
-      if (!dev.waha || w !== dev.app) fail(where, DEVF + ': Wahapedia’s datasheet (' + (dev.waha || 'none named') + ') has ' + w + ', the declaration ' + dev.app);
+      // (Wahapedia prints an oval base without the word: "⌀75 x 42mm" for GW's "75×42mm Oval")
+      if (!dev.waha || w !== String(dev.app).replace(/ Oval$/, '')) fail(where, DEVF + ': Wahapedia’s datasheet (' + (dev.waha || 'none named') + ') has ' + w + ', the declaration ' + dev.app);
     }
     return;
   }
   if (!L) { fail(where, 'GW’s base size guide has no row for it (sections ' + [].concat(sections).join(', ') + '; app ' + app + '): declare it in ' + DEVF + ' with its evidence'); return; }
   Object.assign(rec, { gw: L.base, line: L.line, entry: L.entry, how: L.how });
   if (app !== L.base) fail(where, 'app ' + app + ', GW ' + L.base + ' (' + L.file + ' line ' + L.line + ': "' + L.entry + '  ' + L.printed + '")');
-});
+})();
 // GW's rows for some models of a unit ("Tankbustas: Boss Nob", "Skitarii Rangers/Skitarii Vanguard: Transuranic Arquebus"):
 // each must be met in every unit of that datasheet by a stats row (above), by a models line (a model of that name, or carrying
 // that wargear: its base is the stats row's baseWith for the wargear, as Bases & proxies counts it), or by a declaration
@@ -135,5 +142,5 @@ for (const d of DEVS) if (!used.has(d)) fail(DEVF, 'nothing in the lists matches
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/bases.json'), JSON.stringify({ guide: guide.file, checked: rows.length, failures: fails, rows, lines }, null, 1) + '\n');
 if (fails.length) { console.log('FAIL bases: ' + fails.length + ' of ' + rows.length + ' model rows\n' + fails.map(x => ' - ' + x).join('\n')); process.exit(1); }
-const nDecl = rows.filter(r => /^declared/.test(r.how)).length;
-console.log('bases: ' + rows.length + ' model rows in ' + D.armies.length + ' lists have GW’s base as its guide prints it (' + guide.file.replace(/^.*\//, '') + '; ' + nDecl + ' by a declaration in ' + DEVF + ', ' + rows.filter(r => r.how === 'declared: not in the guide').length + ' of them Wahapedia’s where the guide has none, ' + rows.filter(r => r.how === 'declared: GW error').length + ' where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: ' + lines.length + ' models lines on their base (wargear: baseWith), ' + [...used].filter(d => d.absent).length + ' declared absent');
+const nDecl = rows.filter(r => /^declared/.test(r.how)).length, nCat = rows.filter(r => r.army === 'catalog').length;
+console.log('bases: ' + (rows.length - nCat) + ' model rows in ' + D.armies.length + ' lists and ' + nCat + ' of catalogue datasheets no list has have GW’s base as its guide prints it (' + guide.file.replace(/^.*\//, '') + '; ' + nDecl + ' by a declaration in ' + DEVF + ', ' + rows.filter(r => r.how === 'declared: not in the guide').length + ' of them Wahapedia’s where the guide has none, ' + rows.filter(r => r.how === 'declared: GW error').length + ' where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: ' + lines.length + ' models lines on their base (wargear: baseWith), ' + [...used].filter(d => d.absent).length + ' declared absent');

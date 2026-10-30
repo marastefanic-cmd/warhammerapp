@@ -1,0 +1,19 @@
+[
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Anathema Psykana"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Silent Sisterhood",
+   "text": "- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12\" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
+  },
+  "key": "12971af6f6956b5c"
+ }
+]

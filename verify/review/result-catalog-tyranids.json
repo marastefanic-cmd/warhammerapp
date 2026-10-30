@@ -1,0 +1,520 @@
+[
+ {
+  "key": "831fb493118cecde",
+  "where": "verify/bs-catalog.js FILTER kinds reference and boarding-actions; staticHidden listChoice",
+  "verdict": "ok",
+  "why": "Each kind checked on the pin:\n- other-mode: the 4 detachments it drops (Tyranid Attack, Boarding Swarm, Biotide, Infestation Swarm) are each hidden only by “notInstanceOf Boarding Actions” (force scope).\n- reference: the 4 New Recruit copies (Spore Mines (Biovore)/(Harpy), Ripper Swarms (Parasite), Mucolid Spores (Sporocyst)), each also a root datasheet.\n- staticHidden with listChoice changes exactly these rows: Lictor, Deathleaper and Neurolictor lose Deep Strike (GW prints none under CORE ABILITIES; it is Ambush Predators’ Mindhunger, faction page line 542); Norn Emissary and Assimilator lose Protean Purpose (Talons of the Norn Queen); Custodes Knight-Centura loses its Warlord option; Daemons Stealth is the other reviewer’s. All right for Tyranids and Custodes.\nNotes:\n- listChoice takes every id nested anywhere under an Enhancements group, the Detachment entry or Warlord, targetIds included. A profile shared by an enhancement and a datasheet option would count as a list’s choice; I found no such case.\n- MODE_FORCES is a module-level cache filled from the first game system loaded; fine while there is one game system."
+ },
+ {
+  "key": "f0d44829f9a23635",
+  "where": "verify/from-bsdata.js applyPack (the Faction Pack's Rules Updates on the catalogue rows)",
+  "verdict": "ok",
+  "why": "The 3 updates Wahapedia does not carry are applied, in the pack’s words: Will of the Hive Mind on Hive Tyrant and Winged Hive Tyrant (“that use”, not “that usage”), and Swarmlord’s Malign Presence (pack 1.3: “Once per turn …”; Wahapedia still has “If this model is your WARLORD …”). The pack’s other datasheet updates are already on the rows through Wahapedia; I checked about 20 of them, e.g. Harpy/Hive Crone M and OC –, Hover removed; Psychophage M12\", SMOKE, Talons A6 AP-2, Bio-stimulus; Rupture cannon 48\" 2 3+ 18 -4 D6+6; Bio-plasmic S9; Neurolictor SYNAPSE; Norn Assimilator HARVESTER; Broodlord/Parasite SYNAPSE + Shadow in the Warp; Mawloc/Trygon/Raveners VANGUARD INVADER; Carnifex, Termagants, Trygon, Venomthropes, Von Ryan’s, Onslaught texts; 9\"→8\" on Biovores, Sporocyst, Tyrannocyte."
+ },
+ {
+  "key": "2bdb299b262c8d09",
+  "where": "verify/texts.js --updates and the catalogue pseudo-armies (pack checks on catalogue rows; keywords section)",
+  "verdict": "ok",
+  "why": "Break test: Winged Hive Tyrant’s Will of the Hive Mind changed in data.js → texts.js FAIL “[packUpdate] catalog / tyranids/winged-hive-tyrant / ability:Will of the Hive Mind”, and catalog.js FAIL."
+ },
+ {
+  "key": "78b270341f1f2964",
+  "where": "verify/derive.js: hasRule in the needs matcher (no label rule changed)",
+  "verdict": "ok",
+  "why": "Only the needs matcher’s rule-name comparison (apostrophes); no label changes (derive: 1071 agreed hold)."
+ },
+ {
+  "key": "7ed2425f412eeeda",
+  "where": "verify/from-bsdata.js partialRules for \"X (Model only)\" rules; damaged column dropped from rows",
+  "verdict": "ok",
+  "why": "partialRules for “X (Model only)”: GW prints “Shadow In The Warp (Ravener Prime only)” on Hyperadapted Raveners. The damaged column is dropped from rows (Damaged abilities keep their GW name and text)."
+ },
+ {
+  "key": "cbd95e13d0b5c8db",
+  "where": "left out by the filter (42)",
+  "verdict": "ok",
+  "why": "42 left out, each right:\n- 25 Legends; Order of Battle; 3 Crucible.\n- 4 reference copies; 3 allies (Sentry Gun, Searchlight, Breaching Robot).\n- 2 config entries; 4 Boarding Actions-only detachments.\nWahapedia’s faction page links 57 datasheets: the 5 flagged sLegendary are out, the other 52 are exactly the catalogue."
+ },
+ {
+  "key": "0eb476e534e529ed",
+  "where": "counts",
+  "verdict": "ok",
+  "why": "52 datasheets = Wahapedia’s current range. 10 detachments = Wahapedia’s 10 (Invasion Fleet, Crusher Stampede, Unending Swarm, Assimilation Swarm, Vanguard Onslaught, Synaptic Nexus, Subterranean Assault, Ambush Predators, Talons of the Norn Queen, Warrior Bioform Onslaught); 7 new. Rerunning `from-bsdata.js tyranids --write` and then `tables.js --write`: data.js and the catalogue byte-identical. deviations-bsdata.json gets the same 727 entries, but its order depends on which faction was written last: after writing Tyranids it differs until Chaos Daemons is rewritten. Suggest writing it sorted by faction."
+ },
+ {
+  "key": "203a59952d6e65a9",
+  "where": "BSData Genestealers claws and talons",
+  "verdict": "ok",
+  "why": "Wahapedia Genestealers: “Genestealer claws and talons”."
+ },
+ {
+  "key": "2eb1358d98c311ae",
+  "where": "BSData Distendible jaw",
+  "verdict": "ok",
+  "why": "Wahapedia Mawloc: “Distensible jaw”."
+ },
+ {
+  "key": "adc4f19f97fc330f",
+  "where": "BSData Sporocyst bio-weapon",
+  "verdict": "ok",
+  "why": "Wahapedia Sporocyst: “Sporocyst bio-weapons”."
+ },
+ {
+  "key": "8704ed8ce31274c3",
+  "where": "BSData Toxinjecter Harpoon",
+  "verdict": "ok",
+  "why": "Wahapedia Norn Assimilator: “Toxinjector Harpoon”."
+ },
+ {
+  "key": "dc694277cde25734",
+  "where": "BSData profile Ravener",
+  "verdict": "ok",
+  "why": "Wahapedia Hyperadapted Raveners: profiles “Ravener Prime” and “Raveners”."
+ },
+ {
+  "key": "e1f2d926f8a15051",
+  "where": "unending-swarm/stratagem/Synaptic Goading · effect",
+  "verdict": "ok",
+  "why": "Faction Pack 1.3, Rules Updates, Synaptic Goading: “… (instead of as close as possible to the closest enemy unit).” Wahapedia’s “]” is a transcription slip."
+ },
+ {
+  "key": "f6d0c0c325a5fd13",
+  "where": "tyranids/winged-hive-tyrant · ability[Will of the Hive Mind].text",
+  "verdict": "ok",
+  "why": "Pack 1.3 p20: “Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.” Same words."
+ },
+ {
+  "key": "54a5e4852cd45ca7",
+  "where": "tyranids/hive-tyrant · ability[Will of the Hive Mind].text",
+  "verdict": "ok",
+  "why": "As the Winged Hive Tyrant (one pack update covers both)."
+ },
+ {
+  "key": "80b6d8f11c6377c9",
+  "where": "tyranids/the-swarmlord · ability[Malign Presence].text",
+  "verdict": "ok",
+  "why": "Pack 1.3: “Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.” The lists’ signed row already had this; the catalogue now agrees."
+ },
+ {
+  "key": "5a891ffe8975963d",
+  "where": "verify/deviations-bsdata.json army \"catalog\", tyranids (123, written mechanically with GW evidence)",
+  "verdict": "ok",
+  "why": "Spot-checked 35 of 123 against the Wahapedia pages, the Event Companion and Faction Pack 1.3; all GW’s:\n- Keywords: The Red Terror, Mawloc and Trygon BURROWER; Tyrannocyte, Toxicrene and Tyrannofex FRAME; Biovores and Ripper Swarms names.\n- Core abilities: Scouts 8\" (Broodlord, Genestealers); Stealth dropped (Gargoyles, both Warriors, Genestealers, Raveners: none under GW’s CORE ABILITIES); Feel No Pain 5+ (Old One Eye, Psychophage); Deadly Demise values (D3, D6, 1, 2D6 on Harridan and Hierophant).\n- Other: Toxicrene’s Damaged dropped (GW prints none); Sporocyst HIVE DEFENCES weapon keyword dropped; Unnatural Resilience; Leader lists; Gargoyles “Small Flying” base (guide line 3814); the 17 points declarations.\nNote: Hyperadapted Raveners’ Rules line drops Sustained Hits, which Alpha Invader grants to all its weapons, so the glossary lacks it on that row."
+ },
+ {
+  "key": "1fd9e36830f8d663",
+  "where": "tyranids/tyrannofex · kw",
+  "verdict": "ok",
+  "why": "The declaration is accurate; it stays the owner’s question. GW’s 11th-edition Core Rules (17.02) give FRAME to base-less models “as do some other large models”, without a list. Wahapedia’s 11th datasheets print FRAME on Tyrannofex, Toxicrene and Tyrannocyte, and Faction Pack 1.3’s Imperial Armour sheets on Hierophant and Hierodules; BSData and the pack’s keyword updates don’t. Recommendation: FRAME on the list row too. The catalogue already takes Wahapedia’s FRAME for Toxicrene and Tyrannocyte, so leaving only the Tyrannofex without it is the inconsistent choice."
+ },
+ {
+  "key": "a3a9dc47bb13d722",
+  "where": "tyranids/norn-emissary · rules",
+  "verdict": "ok",
+  "why": "GW: CORE ABILITIES “Deadly Demise D6” only; Unnatural Resilience “Feel No Pain 4+ against mortal wounds”. The catalogue is right; the lists’ signed row keeps New Recruit’s, declared."
+ },
+ {
+  "key": "a52897b68b14733c",
+  "where": "tyranids/norn-emissary · abilities Protean Purpose: not in the catalogue",
+  "verdict": "ok",
+  "why": "Protean Purpose is given by Talons of the Norn Queen (“Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability”). BSData shows it only under that detachment (staticHidden now hides it). Both lists take the detachment."
+ },
+ {
+  "key": "a19cdd2159d98514",
+  "where": "tyranids/norn-assimilator · abilities Protean Purpose: not in the catalogue",
+  "verdict": "ok",
+  "why": "As Norn Emissary."
+ },
+ {
+  "key": "e484aa567e801d82",
+  "where": "tyranids · Invasion Fleet",
+  "verdict": "ok",
+  "why": "Invasion Fleet labels match the words: Hyper-adaptations (start of the first battle round; attack effects); Rapid Regeneration (shooting opp / fight); Adrenal Surge, Death Frenzy, Overrun (fight); Predatory Imperative, Endless Swarm (your Command)."
+ },
+ {
+  "key": "19546243d327a48c",
+  "where": "tyranids · Synaptic Nexus",
+  "verdict": "ok",
+  "why": "Phases and turns right. One cosmetic misread, item Irresistible Will: needs {any:[Synapse, Synapse]}."
+ },
+ {
+  "key": "52967749aabc6ab0",
+  "where": "tyranids · Unending Swarm",
+  "verdict": "ok",
+  "why": "Insurmountable Odds (pack wording) your opponent’s Shooting; Synaptic Goading and Unending Waves any phase; Teeming Masses, Preservation Imperative opp; Swarming Masses, Bounding Advance your."
+ },
+ {
+  "key": "eaaa7262d1823b46",
+  "where": "tyranids · Vanguard Onslaught",
+  "verdict": "fix",
+  "why": "Three needs misreads.\n- Questing Tendrils gets {rule:[Questing Tendrils]} (“units with this ability”), but no unit’s Rules line names it, so the rule reaches nobody. GW: “TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units … Advanced.” It is the detachment rule for TYRANIDS units, a keyword is named, and derive.js’s own with-this-ability rule is for no keyword.\n- Hypersensory Scillia: TARGET “Up to two VANGUARD INVADER units … or one other TYRANIDS INFANTRY unit”.\n- Invisible Hunter: “Up to two VANGUARD INVADER units …, or one TYRANIDS INFANTRY unit”.\nBoth give {all:[Vanguard Invader]}, dropping the “or one other TYRANIDS INFANTRY” alternative; Invasion Fleet’s “or one other TYRANIDS unit” is read right. Program-made label: the correction belongs in derive.js (for the labels list), not a hand label.",
+  "fix": {
+   "rules": [
+    {
+     "rule": "Questing Tendrils",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "hypersensory-scillia",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ],
+      "any": [
+       "Vanguard Invader",
+       "Infantry"
+      ]
+     }
+    },
+    {
+     "id": "invisible-hunter",
+     "needs": {
+      "all": [
+       "Faction: Tyranids"
+      ],
+      "any": [
+       "Vanguard Invader",
+       "Infantry"
+      ]
+     }
+    }
+   ]
+  }
+ },
+ {
+  "key": "db5a8d24a0398eae",
+  "where": "tyranids · Warrior Bioform Onslaught",
+  "verdict": "ok",
+  "why": "Leader-beasts: keyword/BATTLELINE/InSv grants with no phase, needs the Warrior/Prime datasheets; the three stratagems match their WHEN/TARGET (the TYRANID WARRIORS keyword comes from Leader-beasts)."
+ },
+ {
+  "key": "904f0d4eedee6447",
+  "where": "tyranids · Subterranean Assault",
+  "verdict": "ok",
+  "why": "Surprise Assault: phases right (re-rolls of hit rolls of 1, tunnel markers). needs any[Faction: Tyranids, Mawloc, Trygon] equals all Tyranids (the extra names are redundant, harmless). Stratagems right."
+ },
+ {
+  "key": "afbf31aef51c09d9",
+  "where": "tyranids · Ambush Predators",
+  "verdict": "ok",
+  "why": "Mindhunger (Deep Strike grant, re-rolls vs CHARACTER) needs any[Deathleaper, Lictor, Neurolictor]; Counterpredation fight, Hypersensory Adaptations your Shooting, Scanner Gheist end of opponent’s Fight, with Von Ryan’s Leapers where GW names them."
+ },
+ {
+  "key": "af4677a8e1483126",
+  "where": "catalog · tyranids/hyperadapted-raveners",
+  "verdict": "ok",
+  "why": "GW: “KEYWORDS – ALL MODELS: …; RAVENER PRIME: CHARACTER; SYNAPSE”."
+ },
+ {
+  "key": "aed4eec55bd87427",
+  "where": "catalog · tyranids/hyperadapted-raveners",
+  "verdict": "ok",
+  "why": "GW: ARMY RULES “Shadow In The Warp (Ravener Prime only), Synapse”."
+ },
+ {
+  "key": "0d4cee7588b38d24",
+  "where": "Tyranids · Invasion Fleet rule · Hyper-adaptations",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet rule · Hyper-adaptations), read against the faction page."
+ },
+ {
+  "key": "62cae39d7aa5f54e",
+  "where": "Tyranids · Invasion Fleet · Rapid Regeneration",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Rapid Regeneration), read against the faction page."
+ },
+ {
+  "key": "3d46933deeb3f72a",
+  "where": "Tyranids · Invasion Fleet · Adrenal Surge",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Adrenal Surge), read against the faction page."
+ },
+ {
+  "key": "f8ab970fe12f3379",
+  "where": "Tyranids · Invasion Fleet · Death Frenzy",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Death Frenzy), read against the faction page."
+ },
+ {
+  "key": "35568c58e6cfd212",
+  "where": "Tyranids · Invasion Fleet · Overrun",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Overrun), read against the faction page."
+ },
+ {
+  "key": "c5461d0942903459",
+  "where": "Tyranids · Invasion Fleet · Predatory Imperative",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Predatory Imperative), read against the faction page."
+ },
+ {
+  "key": "087eca4164327fe3",
+  "where": "Tyranids · Invasion Fleet · Endless Swarm",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Invasion Fleet · Endless Swarm), read against the faction page."
+ },
+ {
+  "key": "b901fdd610e26bd7",
+  "where": "Tyranids · Synaptic Nexus rule · Synaptic Imperatives",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus rule · Synaptic Imperatives), read against the faction page."
+ },
+ {
+  "key": "6ed7bedcb8edc9d4",
+  "where": "Tyranids · Synaptic Nexus · The Smothering Shadow",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · The Smothering Shadow), read against the faction page."
+ },
+ {
+  "key": "dc69f79751438465",
+  "where": "Tyranids · Synaptic Nexus · Synaptic Channelling",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · Synaptic Channelling), read against the faction page."
+ },
+ {
+  "key": "bbd8cb9754b75625",
+  "where": "Tyranids · Synaptic Nexus · Irresistible Will",
+  "verdict": "fix",
+  "why": "TARGET “One SYNAPSE unit … and one enemy unit”: any of the same keyword twice. Harmless for matching but a misread (derive.js should dedupe). Program-made label: the correction belongs in derive.js (for the labels list), not a hand label.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Synapse"
+    ]
+   }
+  }
+ },
+ {
+  "key": "f738756895aa1b62",
+  "where": "Tyranids · Synaptic Nexus · Reinforced Hive Node",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · Reinforced Hive Node), read against the faction page."
+ },
+ {
+  "key": "c7d9d551e8182ab2",
+  "where": "Tyranids · Synaptic Nexus · Imperative Dominance",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Imperative Dominance), read against the faction page."
+ },
+ {
+  "key": "4e322e886783aa57",
+  "where": "Tyranids · Synaptic Nexus · Override Instincts",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Override Instincts), read against the faction page."
+ },
+ {
+  "key": "f36f39bae94d6beb",
+  "where": "Tyranids · Unending Swarm rule · Insurmountable Odds",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm rule · Insurmountable Odds), read against the faction page."
+ },
+ {
+  "key": "9bdf32447c4045aa",
+  "where": "Tyranids · Unending Swarm · Synaptic Goading",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Synaptic Goading), read against the faction page."
+ },
+ {
+  "key": "14fd3e85e3d02a08",
+  "where": "Tyranids · Unending Swarm · Unending Waves",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Unending Waves), read against the faction page."
+ },
+ {
+  "key": "83326bf32075d844",
+  "where": "Tyranids · Unending Swarm · Teeming Masses",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Teeming Masses), read against the faction page."
+ },
+ {
+  "key": "56c9d1068a9125af",
+  "where": "Tyranids · Unending Swarm · Swarming Masses",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Swarming Masses), read against the faction page."
+ },
+ {
+  "key": "8807ec417fe383d5",
+  "where": "Tyranids · Unending Swarm · Bounding Advance",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Bounding Advance), read against the faction page."
+ },
+ {
+  "key": "19eeea6d75c93049",
+  "where": "Tyranids · Unending Swarm · Preservation Imperative",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Preservation Imperative), read against the faction page."
+ },
+ {
+  "key": "b2d6b5a613f14cfe",
+  "where": "Tyranids · Vanguard Onslaught rule · Questing Tendrils",
+  "verdict": "fix",
+  "why": "See Vanguard Onslaught: the rule names TYRANIDS (and VANGUARD INVADER) units; with {rule:[Questing Tendrils]} no unit meets it. Program-made label: the correction belongs in derive.js (for the labels list), not a hand label.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   }
+  }
+ },
+ {
+  "key": "13fd125e65443c34",
+  "where": "Tyranids · Vanguard Onslaught · Surprise Assault",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader]} (Vanguard Onslaught · Surprise Assault), read against the faction page."
+ },
+ {
+  "key": "defa274ed5f89239",
+  "where": "Tyranids · Vanguard Onslaught · Assassin Beasts",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader,Infantry]} (Vanguard Onslaught · Assassin Beasts), read against the faction page."
+ },
+ {
+  "key": "e3cff3528bc2eadf",
+  "where": "Tyranids · Vanguard Onslaught · Seeded Broods",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Vanguard Onslaught · Seeded Broods), read against the faction page."
+ },
+ {
+  "key": "63b5d023c9106f29",
+  "where": "Tyranids · Vanguard Onslaught · Hypersensory Scillia",
+  "verdict": "fix",
+  "why": "“Up to two VANGUARD INVADER units … or one other TYRANIDS INFANTRY unit … within 8\"”. Program-made label: the correction belongs in derive.js (for the labels list), not a hand label.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ],
+    "any": [
+     "Vanguard Invader",
+     "Infantry"
+    ]
+   }
+  }
+ },
+ {
+  "key": "162557ecdd499676",
+  "where": "Tyranids · Vanguard Onslaught · Unseen Lurkers",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader]} (Vanguard Onslaught · Unseen Lurkers), read against the faction page."
+ },
+ {
+  "key": "f92e63e16463c810",
+  "where": "Tyranids · Vanguard Onslaught · Invisible Hunter",
+  "verdict": "fix",
+  "why": "“Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army”. Program-made label: the correction belongs in derive.js (for the labels list), not a hand label.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ],
+    "any": [
+     "Vanguard Invader",
+     "Infantry"
+    ]
+   }
+  }
+ },
+ {
+  "key": "3f5ae99ce78af82a",
+  "where": "Tyranids · Warrior Bioform Onslaught rule · Leader-beasts",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Tyranid Warriors With Ranged Bio-Weapons,Tyranid Warriors With Melee Bio-Weapons,Tyranid Warriors,Tyranid Prime With Lash Whip,Winged Tyranid Prime]} (Warrior Bioform Onslaught rule · Leader-beasts), read against the faction page."
+ },
+ {
+  "key": "0e513baf550ef923",
+  "where": "Tyranids · Warrior Bioform Onslaught · Alien Physiology",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Alien Physiology), read against the faction page."
+ },
+ {
+  "key": "5447f6d89083ec27",
+  "where": "Tyranids · Warrior Bioform Onslaught · Synaptic Micronodes",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Synaptic Micronodes), read against the faction page."
+ },
+ {
+  "key": "23132c7a093ab1ae",
+  "where": "Tyranids · Warrior Bioform Onslaught · Parasitic Payload",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Parasitic Payload), read against the faction page."
+ },
+ {
+  "key": "14d8bcebdc947d65",
+  "where": "Tyranids · Subterranean Assault rule · Surprise Assault",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Faction: Tyranids,Mawloc,Trygon]} (Subterranean Assault rule · Surprise Assault), read against the faction page."
+ },
+ {
+  "key": "d3fc3158b20f74cc",
+  "where": "Tyranids · Subterranean Assault · Adaptive Optimisation",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Mawloc,Trygon]} (Subterranean Assault · Adaptive Optimisation), read against the faction page."
+ },
+ {
+  "key": "f24e9f9137515014",
+  "where": "Tyranids · Subterranean Assault · Replenishing Swarms",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Replenishing Swarms), read against the faction page."
+ },
+ {
+  "key": "80a14da70962b006",
+  "where": "Tyranids · Subterranean Assault · Enfilading Emergence",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Enfilading Emergence), read against the faction page."
+ },
+ {
+  "key": "bba0b6e9ab022c56",
+  "where": "Tyranids · Subterranean Assault · Tunnel Network",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Tunnel Network), read against the faction page."
+ },
+ {
+  "key": "b5e9e7b4c0dcbf9e",
+  "where": "Tyranids · Subterranean Assault · Swarming Assault",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids,Monster]} (Subterranean Assault · Swarming Assault), read against the faction page."
+ },
+ {
+  "key": "6008621561949fcc",
+  "where": "Tyranids · Subterranean Assault · Retreat Below",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Retreat Below), read against the faction page."
+ },
+ {
+  "key": "1d3b64dee2e40b0d",
+  "where": "Tyranids · Ambush Predators rule · Mindhunger",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor]} (Ambush Predators rule · Mindhunger), read against the faction page."
+ },
+ {
+  "key": "e58797ee9fe14b7c",
+  "where": "Tyranids · Ambush Predators · Counterpredation",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor,Von Ryan's Leapers]} (Ambush Predators · Counterpredation), read against the faction page."
+ },
+ {
+  "key": "2ed313ae2ac161aa",
+  "where": "Tyranids · Ambush Predators · Hypersensory Adaptations",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor,Von Ryan's Leapers]} (Ambush Predators · Hypersensory Adaptations), read against the faction page."
+ },
+ {
+  "key": "5dde267c50b6cf60",
+  "where": "Tyranids · Ambush Predators · Scanner Gheist",
+  "verdict": "ok",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor]} (Ambush Predators · Scanner Gheist), read against the faction page."
+ },
+ {
+  "key": "12971af6f6956b5c",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "verdict": "ok",
+  "why": "As I asked in round 1: Creeping Dread goes to all ANATHEMA PSYKANA units. Its timing is now on the rule option (command:opp in RULE_OPTIONS)."
+ }
+]

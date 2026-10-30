@@ -60,7 +60,8 @@ function guide() {
     // a line that goes on from the one before ("Wardens of Ultramar: Gaius Silva, …, Dainal Kornelius," / "Lucia Vestha")
     const prevRow = factions[cur][factions[cur].length - 1];
     if (!m && prevRow && prevRow.line === i && /,$/.test(prevRow.name)) { prevRow.name += ' ' + t; prevRow.models = modelsOf(prevRow.name); prevRow.line = i + 1; prevRow.lines = [prevRow.first, i + 1]; continue; }
-    if (!m || !/\d+mm|Hull|Base|Flying/i.test(m[2])) continue;
+    // (and "Unique": a model GW's guide says fits no Citadel base of standard size, its Designer's Note; the Harridan, the Manta)
+    if (!m || !/\d+mm|Hull|Base|Flying|^Unique$/i.test(m[2])) continue;
     factions[cur].push({ name: m[1].trim(), printed: m[2].trim(), base: appBase(m[2].trim()), line: i + 1, first: i + 1, models: modelsOf(m[1].trim()) });
   }
   return (CACHE = { file: 'verify/.cache/gw/' + f, factions });

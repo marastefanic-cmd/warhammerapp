@@ -1,0 +1,22 @@
+{
+ "_about": "The faction catalogue import (verify/from-bsdata.js adeptus-custodes) reads BSData's whole Adeptus Custodes catalogue through verify/from-json.js as the export catalog-adeptus-custodes; this is its hand file. weaponNames: a weapon BSData names otherwise than GW's datasheet (Wahapedia) by more than the spelling rules of verify/from-json.js can tell, so that GW's profile is found and its values checked; the app keeps BSData's name (New Recruit's, which the in-app import matches), and verify/out/catalog/adeptus-custodes.md lists it as named otherwise. modelNames: a model (stats row) BSData names otherwise than GW's datasheet (its UNIT COMPOSITION, Wahapedia): typo, BSData's spelling is a misprint of GW's name, and the app has GW's (as for every GW misprint or typo, declared in verify/deviations-bsdata.json); kept, another name for the same model (unit and model names follow New Recruit / BSData, as the lists' Vertus Praetors row does), listed in verify/out/catalog/<faction>.md.",
+ "weaponNames": {
+  "Twin Iliastus Accelerator Cannon": "Iliastus Accelerator Cannon",
+  "Tarsis buckler": "Tarsus Buckler",
+  "Solarite Power Talons": "Solarite Power Talon"
+ },
+ "modelNames": {
+  "Palas Grav-attack": {
+   "gw": "Pallas Grav-attack",
+   "kind": "typo",
+   "why": "BSData's model profile is \"Palas Grav-attack\"; its datasheet, category and GW's datasheet are \"Pallas Grav-attack\" (UNIT COMPOSITION: \"1 Pallas Grav-attack model\"): a misprint, GW's spelling",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html: UNIT COMPOSITION \"1 Pallas Grav-attack model\""
+  },
+  "Gyrfalcon Jetbike": {
+   "gw": "Gyrfalcon Jetbiker",
+   "kind": "kept",
+   "why": "BSData names the model after its bike, GW's UNIT COMPOSITION after its rider (\"2 Gyrfalcon Jetbiker models\"): the same model, another name, not a misprint; BSData's (New Recruit's) name kept, as the lists keep BSData's \"Vertus Praetors\" for GW's Vertus Praetor models",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html: UNIT COMPOSITION \"2 Gyrfalcon Jetbiker models\""
+  }
+ }
+}

@@ -1,0 +1,74 @@
+[
+ {
+  "key": "5f917ae92cc6f9aa",
+  "where": "verify/derive.js or-target-cancel and the evidence.js “(excluding …)” skip (c144a08)",
+  "verdict": "fix",
+  "why": "derive.js is right: it cancels K only for two alternatives, one S + K and the other S excluding exactly K, and it reads the first alternative from ors[0] alone. Tested by script in a scratch copy, as derive.js stratNeeds and through evidence.js targetNeeds. These stay unparsed: the round-1 bites (LD MONSTER | LD SLAANESH excl. MONSTERS; SLAANESH MONSTER | KHORNE excl. MONSTERS); three alternatives (three variants, including two that once gave any:[Khorne, Slaanesh]); K in S (“… SLAANESH MONSTER units (excluding MONSTERS)”, which once gave Slaanesh); “excluding K and L”, “K or L”, “K/L”, “K, L”; a run of two keywords (PINK HORRORS, EPIC HERO); an exclusion on both alternatives. Exclusion first, “one other”, “that cannot FLY” and CHARACTERS all give S, which is right. Before vs after across all 263 stratagems: no needs changed, and one label changed, Archagonists kw-or-same → or-target-cancel. Nit: it adds an empty rule label '' because c.rules is [] when sets.length is 1. The hole is in evidence.js. The commit says “any other exclusion among alternatives stays unparsed”, but that holds only when derive.js sees the exclusion. needsOf reads an “(excluding …)” only right after the unit or within 60 characters of it. A further one, as in “One LEGIONES DAEMONICA MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units from your army that are wholly within 6\\\" of each other and of your Warlord (excluding MONSTERS)”, gives alternatives with no none. combineAlts gives all:[LD], any:[Monster, Slaanesh]. The skip no longer applies (no or-target-cancel), so evidence.js lays none:[Monster] over the whole union. That is {all:[LD], any:[Monster, Slaanesh], none:[Monster]}, which drops the first alternative completely, and it is not unparsed. Added as a fixed case in a scratch evidence.js, it fails. Before c144a08 the skip gave the union. No stratagem today has this shape, so nothing on screen is wrong. Fix: in evidence.js targetNeeds, a TARGET whose derive reasons include or-target (but not or-target-cancel) and whose first sentence has “(excluding” is unparsed. Add it as a fixed case."
+ },
+ {
+  "key": "738247cfe4032763",
+  "where": "BOXES: main’s 243 list boxes after 189adf2",
+  "verdict": "ok",
+  "why": "Checked by script against 2399c6e: all 243 main keys are in HEAD’s BOXES with lines byte-identical (and equal as objects), none missing. The four new rules misfire on none of them. Before (674cd9f) → HEAD, only six keys changed: r|16kt1jq, s|15l8sj, s|1pislf8 (removed), s|jmtnfy, s|kj5cu3, s|n3dvjc. 276 → 275 sources. No box in HEAD names a target (“target(s)”) without a target condition, except Excessive Assault (“targets an enemy unit with a melee attack”, the attack’s kind, correctly not a restriction)."
+ },
+ {
+  "key": "edb76fced0a05257",
+  "where": "verify/evidence.js G9 mutation tests",
+  "verdict": "ok",
+  "why": "Scratch copies, one mutation each, evidence.js run. (1) The defenceLead call dropped from extract fails G9 on Shield of Honour. (2) defenceLead → false fails the Shield of Honour bite. (3) kindOf without the DURATION_RE strip fails the Enfilading Emergence bite. (4) The new QP patterns and the TARGET_RESTR nc guard both dropped fail G9 on Counterpredation, Draught of Terror and Assemblage of Might. (5) TARGET_RESTR never matching fails the Counterpredation and Draught bites. (6) hasTargetCond → true fails the same two bites. (7) afterAttack → false fails the Psy-Chaff bite. (8) The afterAttack nc line dropped fails G9 on Psy-Chaff Volley. Only the TARGET_RESTR nc guard dropped alone passes, as it should: QP now gives a q for every current case, so the guard is a safety net that nothing reaches today. Every class bites. Nits: TARGET_RESTR needs “a/an/an enemy” before the unit, so “attacks that target your opponent’s Warlord” or “the closest eligible unit” would not count as a restriction. The new QP “targets a unit that is …” also reads the permission “it can target an enemy unit that is not visible” as a q (a harmless toggle)."
+ },
+ {
+  "key": "c705448deec9782f",
+  "where": "BOXES s|1pislf8 Shield of Honour: no box",
+  "verdict": "ok",
+  "why": "GW (both caches identical): “When an enemy model engaged with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have: - -1 to hit rolls. - -1 to wound rolls.” This is a penalty on the enemy’s attacks, so no attack box is right. With no BOXES key, dmBoxRules lists it under “Not counted in the Damage tab” with GW’s words (dmStratText) for every unit it can target, so it is not hidden."
+ },
+ {
+  "key": "519d146b259f86ac",
+  "where": "BOXES s|jmtnfy Enfilading Emergence: kind all",
+  "verdict": "ok",
+  "why": "GW: WHEN “End of your Movement phase.”, EFFECT “Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.” That is ranged and melee, and kind:'all' with lasts:'turn' (this turn’s Fight phase) is right. DURATION_RE drops only “until the end/start of (the|your|…) <phase> phase”, so a phase named any other way still sets the kind."
+ },
+ {
+  "key": "954b8200a4a0214a",
+  "where": "BOXES s|kj5cu3 Counterpredation: q “that target a hidden unit”",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s attacks that target a hidden unit have +1 S and AP.”, WHEN Fight phase, selected to fight. +1 S and +1 AP, melee, behind q “that target a hidden unit”: right."
+ },
+ {
+  "key": "16adac93cebeceab",
+  "where": "BOXES s|n3dvjc Draught of Terror: q “targets a unit that is Battle-shocked”",
+  "verdict": "ok",
+  "why": "GW: “… improve the Armour Penetration characteristic … by 1. In addition, until the end of the phase, each time such a weapon targets a unit that is Battle-shocked, you can re-roll the Wound roll.” The first box (AP 1, unconditional) is unchanged. The second (rrWound) is now behind q “targets a unit that is Battle-shocked”: right."
+ },
+ {
+  "key": "5702b235ae19b3c7",
+  "where": "BOXES s|15l8sj Psy-Chaff Volley: not counted",
+  "verdict": "ok",
+  "why": "GW: WHEN “Your Shooting phase, when a friendly PROSECUTOR SQUAD unit has shot.”, EFFECT “Select one enemy unit hit by those attacks. That unit is prosecuted until the end of the turn: - Attacks that target a prosecuted unit have +1 AP.” The benefit goes to other units’ later attacks, which the round-1 review accepted as nc. It is stored as nc with GW’s quote and a why, and the app shows it under “Not counted in the Damage tab” on the Prosecutor unit. Not shown on the other units it helps, which is the known cost of nc."
+ },
+ {
+  "key": "91dd03b3de3e235b",
+  "where": "BOXES r|16kt1jq Assemblage of Might: gains q “that target a dreadful foe unit”",
+  "verdict": "ok",
+  "why": "GW (Auric Champions detachment rule, both caches identical): “In your Command phase, you can select one enemy unit to be a dreadful foe unit until the start of your next Command phase. Friendly ADEPTUS CUSTODES CHARACTER models’ attacks that target a dreadful foe unit have +1 to wound rolls.” +1 wound applies only against the one dreadful foe unit. Before, it was unconditional, which round 1 wrongly OK’d. Now it is behind q “that target a dreadful foe unit”, verbatim, and the other fields are unchanged (scope char, reach Custodes Characters, lasts round). This is right. Nit, not new: mark:'selected' comes from the lead’s “select one enemy unit”. The app shows that mark only for grp other, so a detachment rule never shows it."
+ },
+ {
+  "key": "e3beb11d71392e5e",
+  "where": "“Not counted” boxes in the app",
+  "verdict": "ok",
+  "why": "dmBoxRules shows a source’s nc (GW’s quote plus why, “not counted in the Damage tab”) only when the source has no counted box. In HEAD (and main) no BOXES entry has both b and nc, so nothing is hidden today. Latent nit: with the new TARGET_RESTR nc, a source with one counted sentence and one sentence not counted for its target condition would show only the counted box and drop the other silently. A G9 or G4 check that fails on a source with both b and nc would close this."
+ },
+ {
+  "key": "3d267d319f3208a9",
+  "where": "docs nits (c08f99a)",
+  "verdict": "ok",
+  "why": "tables.md DATASHEETS now lists points under gw, matching columns.json (DATASHEETS.columns.points source gw). The aiStatus note of FACTIONS.detachments no longer names calcMods. The three calcMods mentions left in columns.json are the fingerprint notes, the same as on main 2399c6e, so they are out of scope."
+ },
+ {
+  "key": "1f732dcf8606e49a",
+  "where": "snapshot diffs (scratchpad/cat-merge/diffs2)",
+  "verdict": "ok",
+  "why": "The builder’s diffs2 equal round 1’s diffs line for line, except shooty’s BOXES count, now 275 rows instead of 276 (Shield of Honour has no box). healybois and nidzillas show only the Tyrannofex +FRAME and the removed Wahapedia note. shooty shows only How-screen counts and column lists. I re-ran the full gate (verify/run.js) in a scratch copy (git archive of HEAD c08f99a, caches linked). Every step passes except snapshots, which changed only in healybois, nidzillas and shooty, and my diffs are line-for-line identical to diffs2. Evidence passes: G1-G9, 5 of 5 G9 bites, 4 of 4 fixed TARGET cases. Helpers: 1618 of 1618 approved."
+ }
+]

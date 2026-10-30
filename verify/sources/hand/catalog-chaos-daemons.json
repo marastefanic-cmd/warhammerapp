@@ -1,0 +1,127 @@
+{
+ "_about": "The faction catalogue import (verify/from-bsdata.js chaos-daemons) reads BSData's whole Chaos Daemons catalogue (and the Daemons Library it imports root entries from) through verify/from-json.js as the export catalog-chaos-daemons; this is its hand file. weaponNames: a weapon BSData names otherwise than GW's datasheet (Wahapedia), so that GW's profile is found and its values checked; the app keeps BSData's name (New Recruit's, which the lists' signed-off rows and the in-app import use). fixes: GW's words where Wahapedia's transcription of a detachment differs ({ at:\"<detachment>/<kind>/<name>\", field, from, to, why }, exactly once), as for a list (verify/from-json.js). texts: the same for a datasheet's ability ({ \"<datasheet id>\": { \"<ability>\": { from, to, why } } }), where GW's Faction Pack prints the datasheet in full.",
+ "weaponNames": {
+  "Fires of Tzeentch - blue fire": "Fire of Tzeentch - blue fire",
+  "Fires of Tzeentch - pink fire": "Fire of Tzeentch - pink fire",
+  "Lashing tongues": "Lashing tongue"
+ },
+ "fixes": [
+  {
+   "at": "plague-legion/enhancement/Cankerblight",
+   "field": "name",
+   "from": "Cankerblight",
+   "to": "Cankerblight (Aura)",
+   "why": "GW's Faction Pack Chaos Daemons (Plague Legion, Enhancements) names it \"CANKERBLIGHT (AURA)\"; Wahapedia \"Cankerblight\". GW's name, its (Aura) part of it, as the app writes an enhancement GW tags Aura (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  {
+   "at": "lords-of-the-warp/stratagem/Bilious Blessing",
+   "field": "effect",
+   "from": "suffers 1 **mortal wound**",
+   "to": "suffers 1 **mortal wound**.",
+   "why": "GW's Faction Pack Chaos Daemons (Lords of the Warp, Bilious Blessing, EFFECT) ends the bullet \"For each 4+, that enemy unit suffers 1 mortal wound.\"; Wahapedia drops the full stop"
+  }
+ ],
+ "texts": {
+  "chaos-daemons/kairos-fateweaver": {
+   "One Head Looks Back": {
+    "from": "the CP cost of the use of that stratagem",
+    "to": "the CP cost of that use of that stratagem",
+    "why": "GW's Faction Pack Chaos Daemons (30-09) prints Kairos Fateweaver's datasheet: \"increase the CP cost of that use of that stratagem by 1CP\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 1100); BSData and Wahapedia (which shows an older errata's words) \"the use of\". The Tzeeeeentch list's signed-off row has GW's"
+   }
+  },
+  "chaos-daemons/fluxmaster": {
+   "Altered Reality": {
+    "from": "a **Wound roll**, or a saving throw",
+    "to": "a **Wound roll** or a saving throw",
+    "why": "GW's Faction Pack Chaos Daemons prints the Fluxmaster's datasheet: \"after a Hit roll, a Wound roll or a saving throw is made\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 1312-1313); BSData and Wahapedia have a comma after Wound roll. The Tzeeeeentch list's signed-off row has GW's"
+   }
+  },
+  "chaos-daemons/khorne-soul-grinder": {
+   "Daemonic Allegiance": {
+    "from": "stated for that keyword below:",
+    "to": "stated for that keyword below.",
+    "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+   }
+  },
+  "chaos-daemons/tzeentch-soul-grinder": {
+   "Daemonic Allegiance": {
+    "from": "stated for that keyword below:",
+    "to": "stated for that keyword below.",
+    "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+   }
+  },
+  "chaos-daemons/nurgle-soul-grinder": {
+   "Daemonic Allegiance": {
+    "from": "stated for that keyword below:",
+    "to": "stated for that keyword below.",
+    "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+   }
+  },
+  "chaos-daemons/slaanesh-soul-grinder": {
+   "Daemonic Allegiance": {
+    "from": "stated for that keyword below:",
+    "to": "stated for that keyword below.",
+    "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+   }
+  },
+  "chaos-daemons/plaguebearers": {
+   "Infected Outbreak": {
+    "from": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "to": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "why": "GW's Faction Pack Chaos Daemons (legal from 30 Sep 2026) prints the Plaguebearers' datasheet: \"If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2149-2153); Wahapedia's Level of Control wording is in no cached GW document. BSData agrees with GW"
+   }
+  },
+  "chaos-daemons/horticulous-slimux": {
+   "Leader": {
+    "from": "BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS",
+    "to": "BEASTS OF NURGLE",
+    "why": "GW's Faction Pack Chaos Daemons prints Horticulous Slimux's LEADER section \"This model can be attached to the following unit: ■ Beasts of Nurgle\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2129-2130); Wahapedia also lists the Legends Plague Toads and Pox Riders. BSData agrees with GW"
+   }
+  }
+ },
+ "rows": {
+  "chaos-daemons/tormentbringer": {
+   "kwRemove": [
+    "Tormentbringer On Exalted Seeker Chariot"
+   ],
+   "rulesAdd": [
+    {
+     "name": "Leader",
+     "after": "Deep Strike"
+    }
+   ],
+   "abilities": {
+    "Hysterical Frenzy": {
+     "tag": null
+    }
+   },
+   "why": "GW's Faction Pack Chaos Daemons prints the Tormentbringer datasheet with \"CORE: Deep Strike, Leader\" (line 2717), \"Hysterical Frenzy: Each time a model …\" untagged (line 2724) and \"KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer\" (lines 2736-2737); Wahapedia's page, which the import reads, differs (its keyword names the Legends Exalted Seeker Chariot). BSData agrees with GW (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "chaos-daemons/contorted-epitome": {
+   "abilities": {
+    "Horrible Fascination(Psychic)": {
+     "name": "Horrible Fascination"
+    }
+   },
+   "why": "GW's Faction Pack prints \"Horrible Fascination(Psychic):\" (line 2670): the name Horrible Fascination with its (Psychic) tag, a space missing; the tag stays in tag. BSData agrees (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "chaos-daemons/keeper-of-secrets": {
+   "abilities": {
+    "Shining aegis": {
+     "name": "Shining Aegis"
+    }
+   },
+   "why": "GW's Faction Pack prints \"Shining Aegis: The bearer has a Save characteristic of 3+.\" (line 2469); BSData names it \"Shining aegis\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "chaos-daemons/belakor": {
+   "abilityAdd": [
+    {
+     "name": "Shadow Form",
+     "after": "The Dark Master",
+     "text": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability."
+    }
+   ],
+   "why": "GW's Faction Pack prints on Be'lakor's datasheet \"Shadow Form: At the start of the battle round, select one Shadow Form ability (see reverse). Until the end of the battle round, this model has that ability.\" (lines 3032-3036); Wahapedia names it \"Shadow Form Abilities:\", so the import did not find it. GW's words, \"(see below)\" for the card's reverse, as Wahapedia writes it: the three Shadow Form abilities follow it; BSData's leaves \"(see reverse)\" out (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  }
+ }
+}

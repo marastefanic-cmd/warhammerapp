@@ -1,0 +1,391 @@
+[
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/bs-catalog.js staticHidden: one \"and\" group with a Crusade/Boarding force condition; hidden categories",
+  "judgement": {
+   "code": "// a modifier's conditions all of one \"and\": none in groups, or one \"and\" group with no group inside\nconst oneAndGroup = m => { const g = m.conditionGroups || []; return !g.length || (g.length === 1 && g[0].type === 'and' && !(g[0].conditionGroups || []).length && !(g[0].localConditionGroups || []).length && !(m.conditions || []).length); };\nfunction staticHidden(x, listChoice){\n  if(!x) return false;\n  let h = !!x.hidden;\n  const mods = [].concat(x.modifiers || [], ...((x.modifierGroups || []).filter(g => !/crusade/i.test(g.comment || '')).map(g => [].concat(g.modifiers || []).map(m => Object.assign({}, m, { conditions:[].concat(g.conditions || [], m.conditions || []), conditionGroups:[].concat(g.conditionGroups || [], m.conditionGroups || []) }))))).filter(m => m.field === 'hidden' && m.type === 'set');\n  for(const m of mods){\n    const v = m.value === true || m.value === 'true', cs = condList(m);\n    if(!cs.length) h = v;\n    // (a condition on a list's choice, an enhancement or the Warlord taken on the unit, a detachment, is the list's, whatever its scope)\n    else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope) && !(listChoice && listChoice(c.childId)))) h = false;\n    // hidden unless the list took something (a detachment's ability on the unit, Shadow Legion's, Legion of Excess's): no datasheet's own\n    // (its conditions in one \"and\" group too, and with it one that the force is not Crusade or Boarding Actions: Disciples of\n    // Be'lakor, hidden unless the roster has Shadow Legion and the force is no Crusade Force)\n    else if(v && !h && oneAndGroup(m)){\n      const absent = c => (['force', 'roster'].includes(c.scope) || (listChoice && listChoice(c.childId))) && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0));\n      const mode = c => c.scope === 'force' && c.type === 'notInstanceOf' && MODE_FORCES.has(c.childId);\n      if(cs.some(absent) && cs.every(c => absent(c) || mode(c))) h = true;\n    }\n  }\nverify/bs-catalog.js: const lcats = ((l && l.categoryLinks) || []).concat(e.categoryLinks || []).filter(c => !hiddenStatic(c) && !hiddenStatic(get(c.targetId)));"
+  },
+  "source": {
+   "implements": "review fix 1: Disciples of Be’lakor and UNDIVIDED leave Be’lakor’s row (shown only with Shadow Legion). Every other row change it makes: Trygon loses the option \"Trygon Character upgrade\" (BSData: hidden unless the Subterranean Assault detachment or a Crusade force; GW: Subterranean Assault's \"you can select up to 2 TRYGON models … gain the CHARACTER keyword\"). Custodes rows unchanged; tested (hidden cases)"
+  },
+  "key": "1ed508d3cb3b7a95"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/catalog.js scan: names of the left-out Legends / Crucible / Crusade entries",
+  "judgement": {
+   "code": "// (and the names of the entries it left out as Legends, Crucible or Crusade, without their bracket tag: Horticulous Slimux's Leader\n    // naming Plague Toads, Tormentbringer's keyword \"Tormentbringer On Exalted Seeker Chariot\")\n    { const esc = x => x.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n      const gone = [...new Set((cat.excluded || []).filter(x => ['legends', 'crucible', 'crusade'].includes(x.kind)).map(x => String(x.name).replace(/\\s*\\[[^\\]]*\\]\\s*$/, '').trim()).filter(n => n.length > 3))];\n      const goneRe = gone.length ? new RegExp('(?<![A-Za-z’\\'])(?:' + gone.map(esc).join('|') + ')(?![A-Za-z’\\'])', 'gi') : null;\n      // (not a part of a longer name, a title-case word after it: \"Null Maiden Vigil\", the detachment)\n      const goneIn = o => { if (!goneRe) return null; goneRe.lastIndex = 0; for (let m; (m = goneRe.exec(o));) if (!/^\\s+[A-Z][a-z]/.test(o.slice(m.index + m[0].length))) return m; return null; };\n      // (a LEADER list in GW's words may name a Legends datasheet, \"the following units: …, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS\":\n      // GW's text is shown, checked by verify/texts.js; the unit is no catalogue row, so it is never offered)\n      const leaderText = at => /\\.abilities\\[\\d+\\]\\.text$/.test(at) && /^This (?:model|unit) can be attached to the following units?:/.test(curText);\n      let curText = '';\n      const bad = []; const walk = (o, at) => { if (typeof o === 'string') { curText = o; const g = leaderText(at) ? null : goneIn(o); if (/\\[(?:Legends|Crucible)\\]|\\bCrucible\\b|\\bCrusade\\b|\\bOrder of Battle\\b/i.test(o) || g) bad.push(at + ': ' + (g ? '\"' + g[0] + '\" (left out) in ' : '') + o.slice(0, 80)); return; }\n        if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) walk(v, at + (Array.isArray(o) ? '[' + k + ']' : '.' + k)); };\n      for (const [id, row] of Object.entries(cat.datasheets)) walk(row, id);\n      walk(cat.detachments || [], 'detachments'); walk(cat.detachmentRows || {}, 'detachmentRows');"
+  },
+  "source": {
+   "implements": "review fix 2: a left-out entry's name (bracket tag dropped) in any catalogue string fails, unless it is part of a longer title-case name (\"Null Maiden Vigil\") or a LEADER list in GW's words (Custodes' Trajann Valoris and Shield-Captain name the Legends Custodian Guard Sodality with Adrasite / Pyrithite Spears, as the codex and the signed-off lists do; the unit is never offered, it is no catalogue row). Horticulous Slimux's Leader now GW's Faction Pack list (BEASTS OF NURGLE)"
+  },
+  "key": "430877a1920c3376"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/from-bsdata.js hand rows (GW's Faction Pack datasheet where Wahapedia differs)",
+  "judgement": {
+   "code": "// GW's datasheet as its Faction Pack prints it, where Wahapedia's page (which the import reads as GW's) differs from it (the hand\n  // file's rows: { \"<datasheet id>\": { kwRemove:[…], rulesAdd:[{ name, after }], abilities:{ \"<name>\": { name?, tag? } },\n  // abilityAdd:[{ name, text, after }], why }); each recorded (handApplied) and declared where it differs from BSData\n  for (const [id, h] of Object.entries(HAND().rows || {})) {\n    const row = rows[id], bad = w => { throw new Error('verify/sources/hand/catalog-' + faction + '.json rows ' + id + ': ' + w); };\n    if (!row) bad('no such row');\n    for (const k of h.kwRemove || []) { if (!(row.kw || []).includes(k)) bad('no keyword ' + k); row.kw = row.kw.filter(x => x !== k); handApplied.push({ id, field: 'kw', app: null, was: k, why: h.why }); }\n    for (const r of h.rulesAdd || []) { if ((row.rules || []).includes(r.name)) bad('already has ' + r.name); const i = r.after ? row.rules.indexOf(r.after) : -1; if (r.after && i < 0) bad('no rule ' + r.after); row.rules.splice(i + 1, 0, r.name); handApplied.push({ id, field: 'rules', app: r.name, was: null, why: h.why }); }\n    for (const [an, fx] of Object.entries(h.abilities || {})) {\n      const ab = (row.abilities || []).find(a => a.name === an); if (!ab) bad('no ability ' + an);\n      if ('tag' in fx) { const was = ab.tag; if (fx.tag == null) delete ab.tag; else ab.tag = fx.tag; handApplied.push({ id, field: 'ability[' + an + '].tag', app: fx.tag, was, why: h.why }); }\n      if ('name' in fx) { ab.name = fx.name; handApplied.push({ id, field: 'ability[' + fx.name + '].name', app: fx.name, was: an, why: h.why }); }\n    }\n    for (const a of h.abilityAdd || []) { if ((row.abilities || []).some(x => x.name === a.name)) bad('already has ' + a.name); const i = a.after ? row.abilities.findIndex(x => x.name === a.after) : -1; if (a.after && i < 0) bad('no ability ' + a.after);\n      const o = Object.assign({ name: a.name }, a.tag ? { tag: a.tag } : {}, { text: a.text }); row.abilities.splice(i + 1, 0, o); handApplied.push({ id, field: 'ability[' + a.name + '].text', app: a.text, was: null, why: h.why }); }\n  }"
+  },
+  "source": {
+   "implements": "review fix 3: Tormentbringer kw/CORE/tag, Contorted Epitome and Keeper of Secrets names, Be’lakor's Shadow Form, The Red Terror's \"Burrowers\" (newly surfaced by fix 6), each with GW's evidence in the hand files"
+  },
+  "key": "260d8553d60f05e4"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/derive.js label rules: fell-back-charge, charge-then-turn, label-granted-ability, \"eligible to charge\"; grants \"the X and Y keywords\"",
+  "judgement": {
+   "code": "// (a move the unit made this turn as a condition, \"eligible to declare a charge in a turn in which they Fell Back\": the rule is used when\n// it shoots or charges, not when it moved)\nconst MOVED_TURN = { id:'fell-back-charge', re:/\\beligible to (?:declare a )?charge in a turn in which (?:it|they|this unit|that unit) fell back\\b/gi,\n  why:'\"eligible to (declare a) charge in a turn in which they Fell Back\" (Beguiling Aura, Questing Tendrils): used when the charge is declared, the Charge phase; the Fall Back is its condition. (A unit eligible to shoot or charge after it Advanced keeps the Movement phase, as the signed-off Thrill Seekers, Adaptive Strategy and Bounding Leaps labels have it: the Advance is chosen there)' };\n// (an effect \"until the end of the turn\" triggered when the unit ends a Charge move: the Fight phase is left in that turn, no Shooting phase)\nconst CHARGE_THEN = { id:'charge-then-turn', re:/\\bends a charge move\\b[^]*?\\buntil the end of the turn\\b/i,\n  why:'triggered when the unit ends a Charge move, \"until the end of the turn\": its attacks are the Fight phase\\'s that follows (Seductive Gambit), not the Shooting phase\\'s' };\n// what a label leaves out (a label is the phase tags on an ability or rule row; the checklist and RULE_OPTIONS read table 1 without these)\nconst LABEL_RULES = [\n  { id:'label-damaged', why:'a Damaged band (\"While this model has 1-N wounds remaining, …\"): shown by its damaged chip and footnote; its label is only a phase its words name (\"… only one of the C\\'tan Powers weapons in your Shooting phase\"), else none' },\n  { id:'label-own-target', why:'\"makes a ranged attack that targets X\" / \"ranged attacks that target X\" (the closest eligible target, a unit on an objective): a bonus for the targets the unit picks in its own Shooting phase, as the signed-off lists label it; Fire Overwatch is not added. (A labelling choice, not a Core Rules limit: snap shooting, 15.09, can target any visible eligible enemy unit within 24\", but hits only on an unmodified 6 and cannot re-roll hit rolls, so a hit bonus does nothing there)' },\n  { id:'label-named-weapons', why:'a weapon ability given to weapons the unit\\'s datasheet names (\"its hellforged weapons have the [DEVASTATING WOUNDS] ability\", \"its Dark Blessing has the [SUSTAINED HITS D3] ability\"): the phase of those weapons, your Shooting phase for ranged ones, the Fight phase for melee ones (not \"weapons have\": both)' },\n  { id:'label-those-attacks', why:'\"Each time this model is selected to shoot or fight, you can re-roll one Hit roll … when resolving those attacks\": the attacks of that activation, your Shooting phase and the Fight phase; not added for Fire Overwatch' },\n  { id:'label-options', why:'the options of a rule or ability: written in its own lines (\"**Name:** effect\", a bullet \"**Name**\" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not \"**Additional Effect:**\", which is no choice); set out as a table or under headings of their own, each row\\'s phases are added (from its own WHEN, else the item\\'s trigger: Martial Ka\\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\\'s ranged attacks when it lasts \"until the start of your next Command phase\" (Kindred Sorcery); not a table of abilities the units \"gain\" (Doctrina Imperatives, Harbingers of Dread: each unit\\'s sheet has them). A detachment\\'s KEYWORDS section is left out (army building)' },\n  { id:'label-assault', why:'[ASSAULT] given to ranged attacks or weapons: they shoot after an Advance move, your Movement phase too' },\n  { id:'label-at-choice', why:'\"At the start of your Command phase\" is shown as the moment only for a rule with options chosen then (Martial Ka\\'tah, Combat Doctrines)' },\n  { id:'label-select-ability', why:'\"select one Throttlerokkit Shokka Engine ability\": the phases of the unit\\'s abilities of that kind (whose name ends as it does: \"… Engine\")' },\n  { id:'label-section', why:'a section of options another ability of the unit selects from (\"In your Command phase, select one of the abilities in the Icon of War section\": Rod of the War Forge), its text only its options (\"**Fanatical Devotion:** …\"): the selecting ability\\'s trigger and its options\\' readings together' },\n  { id:'label-favoured', why:'\"**Favoured ka\\'tah: SALVUS**\" / \"**Additional Effect:** …\": the additional effect is granted when that ka\\'tah ability is used (Martial Ka\\'tah), so it is read as that option\\'s WHEN (Salvus: your Shooting phase, no Fire Overwatch; Kaptaris: the start of the Fight phase), not from its own words' },\n  { id:'label-no-defence', why:'a protection (a save, Feel No Pain, -1 to wound against it, Lone Operative; a text opening \"Each time / When an enemy unit … targets this model\"): shown by its When targeted line, not by phase tags; an item that only protects has no label. Not a protection that is an option to select (\"- Select one objective marker …\": Singular Purpose) or that an enemy unit selected to shoot or fight triggers (Warpmeld Sacrifice)' },\n];\n// the unit's weapons a clause gives a weapon ability to (\"… have the [X] ability\", \"… has [X]\"), by profile name or group (W: { ranged, melee }\n// as lists of names, lower case); null when it names none\nfunction namedWeapons(s, W){\n  if(!/\\b(?:has|have)\\s+(?:the\\s+)?\\*{0,2}\\[|\\b(?:has|have) that ability\\b/i.test(s)) return null;\n  const lc = plain(s).toLowerCase(), out = {};\n  const hit = n => { const b = plain(n).toLowerCase().replace(/\\s+weapons?$/, '').trim(); if(b.length < 4) return false;\n    return new RegExp('(?:^|[^a-z])' + b.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '(?:s|es)?(?: weapons?)?(?![a-z])').test(lc); };\n  for(const k of ['ranged', 'melee']) for(const n of W[k] || []) if(hit(n)){ out[k] = true; out.match = (out.match ? out.match + ', ' : '') + k + ' ' + n; }\n  return out.match ? out : null;\n}\nconst OWN_TARGET = /\\bmakes? a ranged attack that targets\\b(?! (?:this|that) (?:unit|model)\\b| it\\b| the bearer\\b)|\\branged attacks that target\\b(?! (?:this|that) (?:unit|model)\\b| it\\b| the bearer\\b)/i;\nconst EVERY = Object.fromEntries(PH.map(p => [p, 'either']));\nfunction EVERY_MOVE(){ return { movement:'either', charge:'either', fight:'either' }; }\nconst ROLL_KINDS = /\\b(advance roll|hit roll|wound roll|damage roll|saving throw|hazardous test|charge roll|battle-shock test)s?\\b/gi;\nconst LABEL_SENTENCE = [\n  { id:'label-other-unit', re:/^while a unit is ([a-z][a-z ]*?)(?=,| subtract\\b| add\\b| it\\b| that\\b)/i, state:true, ph:{}, skip:true,\n    why:'\"While a unit is wracked with agonies, subtract 2\" from its Move characteristic …\": what the item does to another unit it selected, not when the item is used' },\n  { id:'label-move-each', re:/\\bthis unit or an enemy unit ends a move\\b/i, ph:EVERY_MOVE(), skip:true,\n    why:'\"each time this unit or an enemy unit ends a move\": any move of either player (Normal, Advance, Fall Back, charge, pile-in, consolidation): the Movement, Charge and Fight phases of both turns' },\n  { id:'label-enemy-cannot-move', re:/^enemy units? cannot [^.]*?\\b(?:normal|advance|fall[- ]back) moves?\\b/i, ph:{ movement:'opp' }, skip:true,\n    why:'\"Enemy units cannot start or end an Advance move …\": the enemy\\'s moves, your opponent\\'s Movement phase' },\n  { id:'label-model-destroyed', first:true, re:/^when a friendly [^.]*?\\bmodel is destroyed\\b/i, ph:EVERY, skip:true,\n    why:'the text opens \"When a friendly X model is destroyed\": a model can be destroyed in any phase of either turn' },\n  { id:'label-any-roll', re:{ exec:x => new Set([...x.matchAll(ROLL_KINDS)].map(m => m[1].toLowerCase())).size >= 4 ? [x.slice(0, 80)] : null }, ph:EVERY, skip:true,\n    why:'a re-roll of four or more kinds of roll (\"an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test\"): rolls made in every phase of both turns' },\n  { id:'label-objective-control', re:/\\b(?:add|subtract) \\d+ (?:to|from) the objective control characteristic\\b/i, ph:EVERY,\n    why:'a change to the Objective Control characteristic: objectives are controlled at the end of every phase and turn, in both turns' },\n  { id:'label-destroys', re:/\\beach time (?:this|the bearer's|that) (?:unit|model)(?:'s unit)? destroys an enemy unit\\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,\n    why:'\"each time the bearer\\'s unit destroys an enemy unit\": with its attacks, your Shooting phase and the Fight phase' },\n  { id:'label-named-roll', re:/\\bmake an? ([A-Z][\\w'’]*(?: (?:of )?[A-Z][\\w'’]*)*) roll\\b/, named:'trigger',\n    why:'\"each time you make a Blessings of Khorne roll\": when that rule\\'s roll is made (its trigger and moment)' },\n  { id:'label-named-option', re:/\\bthe ([A-Z][\\w'’]*(?: [A-Z][\\w'’]*)*)(?: and (?:the )?([A-Z][\\w'’]*(?: [A-Z][\\w'’]*)*))? (?:is|are)(?: both)? active for\\b/, option:true, skip:true,\n    why:'\"the Conqueror Imperative and Protector Imperative are both active for that unit\": what those options of another rule do (their rows in RULE_OPTIONS)' },\n  { id:'label-named-move', re:/\\bmakes? an? ([A-Z][\\w'’]*(?: [A-Z][\\w'’]*)*) move\\b/, named:'all',\n    why:'\"each time that unit makes a Blood Surge move\": the phases of the ability of that name' },\n];\nconst TABLE_LIKE = /^(?:table row|heading)/;   // options set out as a table or under headings of their own (not written in a sentence's line)\nconst LABEL_NONE = ['label-no-defence', 'label-damaged'];\nconst DAMAGED_BAND = /^while this (?:model|unit's [^,.]*? model) has 1-\\d+ wounds remaining\\b/i;\nconst ENEMY_ACT = /\\beach time an enemy unit is selected to (?:shoot|fight|shoot or fight)\\b/i;\n\nconst addPh = (out, p, t) => { out[p] = out[p] && out[p] !== t ? 'either' : t; };\nconst OTHER = { your:'opp', opp:'your', either:'either' };\n// phases named in the text (table 1, explicit part); null when it names none\nfunction explicitTiming(text, opts){\n  let t = plain(rulesText(text));\n  const reasons = [], out = {}, named = new Set();\n  let at, atPh = [];\n  // the moment a text opens with comes after an enhancement's \"X model only.\" and a tag in brackets (\"IMPERIAL KNIGHTS model only.\n  // (Once per battle, per army) At the end of your opponent’s turn, …\": Mysterious Guardian): those are who may take it and how often\n  const tm = t.replace(/^[A-Z][A-Z0-9 '’/-]*? (?:models?|units?|characters?) only\\.\\s+(?:\\([^)]*\\)\\s+)?/, '');\n  for(const r of MOMENT_RULES){\n    if(r.rulesOnly && !(opts && opts.rule)) continue;\n    if(r.labelOnly && !(opts && opts.label)) continue;\n    const m = r.re.exec(r.re.source[0] === '^' ? tm : t);\n    if(!m) continue;\n    if(r.id === 'start-battle-round-later' && at) continue;      // already the opening moment\n    if(r.id === 'start-battle-round' && at) continue;\n    if(r.at){ at = r.at; atPh = Object.keys(r.ph); }\n    for(const [p, o] of Object.entries(r.ph)) addPh(out, p, o);\n    reasons.push({ rule:r.id, match:m[0] });\n    if(r.id === 'any-phase') t = t.replace(r.re, ' ');\n  }\n  if(!(opts && opts.keepDurations)) for(const r of NOT_TIMING) t = t.replace(r.re, m => { reasons.push({ rule:'skip-' + r.id, match:m }); return ' '; });\n  t = t.replace(/\\bstart of the (?:first )?battle round\\b/gi, ' ');\n  PHASE_RE.lastIndex = 0;\n  for(let m; (m = PHASE_RE.exec(t));){\n    const own = OWNER_RULES.find(o => o.re.test(m[1] || ''));\n    for(const p of m[2].toLowerCase().split(/\\s*\\/\\s*|\\s*,\\s*|\\s+or\\s+|\\s+and\\s+/)){ addPh(out, p, own.turn); named.add(p); }\n    reasons.push({ rule:own.id, match:m[0] });\n  }\n  // atOnly: the phases only the opening moment gives (\"At the start of the battle round\": listed with the Command phase)\n  return Object.keys(out).length ? { ph:out, at, reasons, atOnly:atPh.filter(p => !named.has(p)) } : null;\n}\n\nconst PHASE_LOCKED = USED_MODIFIERS.find(r => r.id === 'phase-locked');\n// table 1 in full: where it is triggered (the phases and moments the text names) and where its effect is used\nverify/derive.js: const granted = ctx && ctx.label && opts.length === 1 && !(CARD_ABILITIES && CARD_ABILITIES.has(norm(opts[0].name).toLowerCase())) && !TABLE_LIKE.test(opts[0].how) && (pre => /\\bha(?:ve|s) the following ability:$/i.test(pre) && !/[.\\n]/.test(pre.replace(/:$/, '')))(plain(rulesText(text)).split(plain(opts[0].name))[0].trim());\nverify/derive.js: { id:'declare-charge', re:/\\bdeclares? a charge\\b|\\beligible to (?:declare a )?charge\\b/i, ph:{ charge:'your' },\nverify/derive.js: const andKw = /^\\s*and \\*\\*([^*]+)\\*\\*\\s+keywords\\b/i.exec(norm(sent).slice(m.index + m[0].length));"
+  },
+  "source": {
+   "implements": "review fix 4. Labels changed anywhere: Chaos Daemons · Legion of Excess rule · Beguiling Aura {movement, charge, your} → {charge, your}; Seductive Gambit {} → {charge, fight, either} (its option reading without shooting); Tyranids · Vanguard Onslaught rule · Questing Tendrils {movement, your} → {movement, charge, your} (the Fall Back part is its condition, the Advance part keeps Movement); Adeptus Custodes · Solar Watch rule · Talon Sortie {movement, your} → {movement, charge, your} (\"does not prevent that unit from being eligible to charge\"); GRANTS: Thralls of the First Prince also gives UNDIVIDED. No list label changes. Kept narrow on purpose: \"eligible to shoot and declare a charge in a turn in which it Advanced/Fell Back\" keeps Movement (signed off: Thrill Seekers, Adaptive Strategy, Bounding Leaps)"
+  },
+  "key": "69e08aee098891ba"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/texts.js: \"Index: <faction>\" as the Datasheets group; LEADER lists compared as lists; KEYWORDS, CORE and Aura/Psychic tags of catalogue rows against the pack",
+  "judgement": {
+   "code": "verify/texts.js: if (/^Index: \\S/.test(m[1])) { group = 'Datasheets'; toc.push({ name: m[1], page: +m[2], group: 'top', index: true }); continue; }\n// (the datasheet's KEYWORDS line, its CORE line and the Aura / Psychic tags GW prints in an ability's name: the row has them; a\n    // datasheet whose keywords GW prints per model, \"KEYWORDS – ALL MODELS: …\", is checked by its abilities only)\n    { const L = [].concat(...d.pages.slice(p0, p0 + 2).map(pg => pg.lines)), seg = x => x.trim().split(/\\s{4,}/)[0].trim();\n      // (a catalogue row: a list's unit carries its list's choices, a Warlord, an allegiance, its attached unit's keywords)\n      const ki = a.id === 'catalog' ? L.findIndex(l => /^\\s*KEYWORDS:/.test(l)) : -1;\n      if (ki >= 0) {\n        let kt = seg(L[ki].replace(/^\\s*KEYWORDS:\\s*/, '').replace(/FACTION KEYWORDS:.*$/, ''));\n        for (let j = ki + 1; /,$/.test(kt) && j < L.length; j++) kt += ' ' + seg(L[j]);\n        const gwKw = kt.replace(/,$/, '').split(/\\s*,\\s*/).map(x => norm(x)).filter(Boolean).sort(), appKw = (u.kw || []).filter(k => !/^Faction: /.test(k)).map(x => norm(x)).sort();\n        count('packDatasheet');\n        if (gwKw.join('|') !== appKw.join('|')) fail('packDatasheet', a.id, u.id, 'kw', (u.kw || []).join(', '), 'KEYWORDS: ' + kt, wh);\n      }\n      const ci = a.id === 'catalog' ? L.findIndex(l => /\\bCORE: /.test(l)) : -1;\n      if (ci >= 0) {\n        const gwCore = L[ci].replace(/^.*\\bCORE: /, '').trim().split(/\\s*,\\s*/).map(x => norm(x)).filter(Boolean), appR = new Set((u.rules || []).map(x => norm(x)));\n        count('packDatasheet');\n        const miss = gwCore.filter(x => !appR.has(x));\n        if (miss.length) fail('packDatasheet', a.id, u.id, 'rules', (u.rules || []).join(', '), 'CORE: ' + L[ci].replace(/^.*\\bCORE: /, '').trim() + ' (the row lacks ' + miss.join(', ') + ')', wh);\n      }\n      const page = norm(L.join(' ').replace(/\\s+/g, ' '));\n      for (const ab of a.id === 'catalog' ? u.abilities || [] : []) {\n        if (ab.who && norm(ab.who) !== norm(u.name)) continue;\n        const esc = norm(ab.name).replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'), m = new RegExp('(?:^|[^a-z’\\'])' + esc + '\\\\s*(\\\\(([^)]*)\\\\))?:').exec(page);\n        if (!m) continue;\n        for (const tg of ['aura', 'psychic']) { const gw = new RegExp('\\\\b' + tg + '\\\\b').test(m[2] || ''), app = new RegExp('\\\\b' + tg + '\\\\b').test(norm(ab.tag || ''));\n          count('packDatasheet');\n          if (gw !== app) fail('packDatasheet', a.id, u.id, 'ability:' + ab.name + ' (tag)', ab.tag || '', 'GW prints \"' + (m[0].replace(/^[^a-z]/, '')) + '\"', wh); } } }\n// (LEADER: GW prints \"This model can be attached to the following unit(s):\" and a \"■ Name\" line per unit; the app writes them in one\n      // line, \"…: BLOODLETTERS, FLAMERS\": the same units, compared as a list)\n      const lm = norm(ab.name) === 'leader' && /attached to the following units?:\\s*([\\s\\S]+)$/i.exec(String(ab.text).replace(/\\*\\*/g, ''));\n      if (lm) {\n        count('packDatasheet');\n        const want = lm[1].split(/\\s*,\\s*|\\n/).map(x => norm(x.replace(/^[-■]\\s*/, ''))).filter(Boolean).sort();\n        const got = []; for (const pg of d.pages.slice(p0, p0 + 2)) { const L = pg.lines; for (let i = 0; i < L.length; i++) if (/can be attached to the following units?:/i.test(L[i])) {\n          if (/■/.test(L[i + 1] || '')) for (let j = i + 1; j < L.length && /■/.test(L[j]); j++) got.push(norm(L[j].split('■').pop().trim()));\n          // (or a sentence of names, \"Hormagaunts, Termagants, Tyranid Warriors / with Melee Bio-weapons, ….\" over its lines)\n          else { const ls = []; for (let j = i + 1; j < L.length && L[j].trim(); j++) ls.push(L[j].trim()); got.push(...ls.join(' ').replace(/\\.$/, '').split(/\\s*,\\s*/).map(x => norm(x))); } } }\n        prov.push({ item: a.id + ' / ' + u.id + ' / ability:' + ab.name, field: 'text', doc: d.label, file: d.file, sha256: d.sha256, where: wh });\n        if (got.sort().join('|') !== want.join('|')) fail('packDatasheet', a.id, u.id, 'ability:' + ab.name, ab.text, 'LEADER: ' + (got.join(', ') || '(no unit list found)'), wh);\n        continue;\n      }"
+  },
+  "source": {
+   "implements": "review fix 6: packDatasheet now checks the 53 Daemons datasheets (168 → every ability, kw, CORE and tag of catalogue rows). Newly surfaced and fixed against GW: Disciples of Be’lakor, Horticulous Slimux's Leader, Infected Outbreak, Tormentbringer (3), Contorted Epitome's name, Be’lakor's UNDIVIDED, The Red Terror's Burrowers; GW misprints declared in deviations-texts.json (Daemonettes \"one of more\", Fortification \"so not need\" ×2, Rotigus \"(Aura):While\", Contorted Epitome \"Fascination(Psychic):\"; Be’lakor \"(see reverse)\" written \"(see below)\")"
+  },
+  "key": "c0dc3944d005083d"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "data",
+  "where": "RULES: Reverberating Summons",
+  "judgement": {
+   "text": "Each time a model is destroyed by this weapon, you can select one friendly **PLAGUEBEARERS** unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit."
+  },
+  "source": {
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 1843-1844 (Great Unclean One, doomsday bell)"
+  },
+  "key": "77c1ef7a5c6f6ccf"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "data",
+  "where": "hand file catalog-chaos-daemons.json texts: Plaguebearers Infected Outbreak, Horticulous Slimux Leader; rows",
+  "judgement": {
+   "texts": {
+    "chaos-daemons/kairos-fateweaver": {
+     "One Head Looks Back": {
+      "from": "the CP cost of the use of that stratagem",
+      "to": "the CP cost of that use of that stratagem",
+      "why": "GW's Faction Pack Chaos Daemons (30-09) prints Kairos Fateweaver's datasheet: \"increase the CP cost of that use of that stratagem by 1CP\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 1100); BSData and Wahapedia (which shows an older errata's words) \"the use of\". The Tzeeeeentch list's signed-off row has GW's"
+     }
+    },
+    "chaos-daemons/fluxmaster": {
+     "Altered Reality": {
+      "from": "a **Wound roll**, or a saving throw",
+      "to": "a **Wound roll** or a saving throw",
+      "why": "GW's Faction Pack Chaos Daemons prints the Fluxmaster's datasheet: \"after a Hit roll, a Wound roll or a saving throw is made\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 1312-1313); BSData and Wahapedia have a comma after Wound roll. The Tzeeeeentch list's signed-off row has GW's"
+     }
+    },
+    "chaos-daemons/khorne-soul-grinder": {
+     "Daemonic Allegiance": {
+      "from": "stated for that keyword below:",
+      "to": "stated for that keyword below.",
+      "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+     }
+    },
+    "chaos-daemons/tzeentch-soul-grinder": {
+     "Daemonic Allegiance": {
+      "from": "stated for that keyword below:",
+      "to": "stated for that keyword below.",
+      "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+     }
+    },
+    "chaos-daemons/nurgle-soul-grinder": {
+     "Daemonic Allegiance": {
+      "from": "stated for that keyword below:",
+      "to": "stated for that keyword below.",
+      "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+     }
+    },
+    "chaos-daemons/slaanesh-soul-grinder": {
+     "Daemonic Allegiance": {
+      "from": "stated for that keyword below:",
+      "to": "stated for that keyword below.",
+      "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+     }
+    },
+    "chaos-daemons/plaguebearers": {
+     "Infected Outbreak": {
+      "from": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "to": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+      "why": "GW's Faction Pack Chaos Daemons (legal from 30 Sep 2026) prints the Plaguebearers' datasheet: \"If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2149-2153); Wahapedia's Level of Control wording is in no cached GW document. BSData agrees with GW"
+     }
+    },
+    "chaos-daemons/horticulous-slimux": {
+     "Leader": {
+      "from": "BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS",
+      "to": "BEASTS OF NURGLE",
+      "why": "GW's Faction Pack Chaos Daemons prints Horticulous Slimux's LEADER section \"This model can be attached to the following unit: ■ Beasts of Nurgle\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2129-2130); Wahapedia also lists the Legends Plague Toads and Pox Riders. BSData agrees with GW"
+     }
+    }
+   },
+   "rows": {
+    "chaos-daemons/tormentbringer": {
+     "kwRemove": [
+      "Tormentbringer On Exalted Seeker Chariot"
+     ],
+     "rulesAdd": [
+      {
+       "name": "Leader",
+       "after": "Deep Strike"
+      }
+     ],
+     "abilities": {
+      "Hysterical Frenzy": {
+       "tag": null
+      }
+     },
+     "why": "GW's Faction Pack Chaos Daemons prints the Tormentbringer datasheet with \"CORE: Deep Strike, Leader\" (line 2717), \"Hysterical Frenzy: Each time a model …\" untagged (line 2724) and \"KEYWORDS: Mounted, Character, Psyker, Chaos, Daemon, Slaanesh, Tormentbringer\" (lines 2736-2737); Wahapedia's page, which the import reads, differs (its keyword names the Legends Exalted Seeker Chariot). BSData agrees with GW (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+    },
+    "chaos-daemons/contorted-epitome": {
+     "abilities": {
+      "Horrible Fascination(Psychic)": {
+       "name": "Horrible Fascination"
+      }
+     },
+     "why": "GW's Faction Pack prints \"Horrible Fascination(Psychic):\" (line 2670): the name Horrible Fascination with its (Psychic) tag, a space missing; the tag stays in tag. BSData agrees (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+    },
+    "chaos-daemons/keeper-of-secrets": {
+     "abilities": {
+      "Shining aegis": {
+       "name": "Shining Aegis"
+      }
+     },
+     "why": "GW's Faction Pack prints \"Shining Aegis: The bearer has a Save characteristic of 3+.\" (line 2469); BSData names it \"Shining aegis\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+    },
+    "chaos-daemons/belakor": {
+     "abilityAdd": [
+      {
+       "name": "Shadow Form",
+       "after": "The Dark Master",
+       "text": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability."
+      }
+     ],
+     "why": "GW's Faction Pack prints on Be'lakor's datasheet \"Shadow Form: At the start of the battle round, select one Shadow Form ability (see reverse). Until the end of the battle round, this model has that ability.\" (lines 3032-3036); Wahapedia names it \"Shadow Form Abilities:\", so the import did not find it. GW's words, \"(see below)\" for the card's reverse, as Wahapedia writes it: the three Shadow Form abilities follow it; BSData's leaves \"(see reverse)\" out (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+    }
+   }
+  },
+  "source": {
+   "reason": "GW's Faction Pack words (the review's changes)"
+  },
+  "key": "45284cb5f884b7e2"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "data",
+  "where": "hand file catalog-tyranids.json rows: The Red Terror without \"Burrowers\"",
+  "judgement": {
+   "rows": {
+    "tyranids/the-red-terror": {
+     "kwRemove": [
+      "Burrowers"
+     ],
+     "why": "GW's Faction Pack Tyranids prints The Red Terror's datasheet with \"KEYWORDS: Character, Mobile, Epic Hero, Great Devourer, Monster, Burrower, Vanguard Invader, The Red Terror\" (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 305-306): BURROWER, not BSData's category \"Burrowers\" as well"
+    }
+   }
+  },
+  "source": {
+   "reason": "GW's Faction Pack Tyranids KEYWORDS line (surfaced by the new keywords check); note: Wahapedia prints BURROWERS on Raveners (not printed in the pack), left as is"
+  },
+  "key": "9afae176e3353730"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "data",
+  "where": "deviations-texts.json: 6 GW Faction Pack misprints and the \"(see below)\"",
+  "judgement": {
+   "entries": [
+    "chaos-daemons/belakor · ability:Shadow Form",
+    "chaos-daemons/rotigus · ability:Deluge of Nurgle (name)",
+    "chaos-daemons/contorted-epitome · ability:Horrible Fascination (name)",
+    "chaos-daemons/daemonettes · ability:Horrifying Beauty",
+    "chaos-daemons/feculent-gnarlmaw · ability:Fortification",
+    "chaos-daemons/skull-altar · ability:Fortification"
+   ]
+  },
+  "source": {
+   "reason": "each GW's misprint the app does not copy, with its line"
+  },
+  "key": "dc82083b764c22ed"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "detachment-labels",
+  "where": "chaos-daemons · Legion of Excess",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Beguiling Aura",
+     "ph": [
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "rule": "Seductive Gambit",
+     "ph": [
+      "charge",
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "rapturous-agony",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ],
+      "none": [
+       "Monster",
+       "Vehicle"
+      ]
+     }
+    },
+    {
+     "id": "archagonists",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "id": "sensory-excruciation",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh",
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "phantasmal-longing",
+     "phases": [
+      "movement",
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "id": "cavalcade-of-blades",
+     "phases": [
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "id": "overwhelming-excess",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives (no hand label); Archagonists {all:[Faction: Legiones Daemonica, Slaanesh]} from the round-2 or-target rule (confirmed)"
+  },
+  "key": "9f47721b56a3214e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Archagonists",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Archagonists",
+   "text": "WHEN: Fight phase.\nTARGET: One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**) from your army that have not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the **Wound roll**."
+  },
+  "key": "9df12e4a5b6c5c03"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^reverberating summons$/i",
+  "judgement": {
+   "opens": "Reverberating Summons"
+  },
+  "source": {
+   "rule": "Reverberating Summons",
+   "text": "Each time a model is destroyed by this weapon, you can select one friendly **PLAGUEBEARERS** unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit."
+  },
+  "key": "cf9189e0cf878a39"
+ }
+]

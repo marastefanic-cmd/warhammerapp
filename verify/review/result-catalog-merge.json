@@ -1,0 +1,62 @@
+[
+ {
+  "key": "a5259972dea5fcbe",
+  "where": "verify/evidence.js targetNeeds: the \"(excluding …)\" override skipped on an or-target TARGET",
+  "verdict": "fix",
+  "why": "Correct for Archagonists, and every bite I tried still fails: Archagonists needs +none:[Monster], +Monster, or the Slaanesh dropped; Retreat Below +Burrower; Hypersensory Scillia without Infantry; The Realm of Chaos +none:[Monster]. An exclusion that no other alternative cancels also still fails as unparsed (derive.js returns none): an exclusion on either alternative of Retreat Below, “(excluding MONSTERS and VEHICLES)”, “(excluding MONSTERS and CHARACTERS)”, “(excluding PINK HORRORS)”. Only Archagonists is affected today (it is the only or-target TARGET with “(excluding”). The problem is that the skip hands the whole case to derive.js's cancellation rule, which is too broad: a keyword is dropped from every alternative whenever any alternative has it. That is right only when the alternatives are S+K and S excluding K, so their union is S. Tested in a scratch copy: the TARGET “One LEGIONES DAEMONICA MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS)” with needs {all:[Faction: Legiones Daemonica]} now passes the whole evidence step. That needs offers the stratagem to Khorne Infantry, which GW excludes. Main's override would have flagged it (as a mismatch). derive.js gives “…SLAANESH MONSTER … or … KHORNE units (excluding MONSTERS)” as any:[Slaanesh, Khorne], which also lets in Slaanesh non-Monsters and Khorne Monsters. Fix: cancel (and skip the override) only when one alternative's keywords minus K equal the other's and the other excludes exactly K; anything else stays unparsed. Put the check in derive.js or-target, and keep the evidence.js skip conditional on it."
+ },
+ {
+  "key": "502a6a2b0b53a948",
+  "where": "Chaos Daemons · Legion of Excess · Archagonists needs",
+  "verdict": "ok",
+  "why": "GW (verify/.cache/waha and cat-cache, identical): “One LEGIONES DAEMONICA SLAANESH MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS)”. That is Slaanesh Monster ∪ Slaanesh non-Monster = every Slaanesh unit, so {all:[Faction: Legiones Daemonica, Slaanesh]} is exactly the union. Adding none:[Monster] (main's override) would wrongly drop the first alternative."
+ },
+ {
+  "key": "d0b26887cea84c65",
+  "where": "BOXES s|1pislf8 Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "verdict": "fix",
+  "why": "GW: “When an enemy model engaged with your unit selects targets, if that enemy model does not select your unit … that enemy model’s attacks have: -1 to hit rolls. -1 to wound rolls.” That is a penalty on the enemy's attacks, but the box gives hit -1 and wound -1 to the Custodes unit's own melee attacks (behind two q toggles). The cause: effects-extract.js DEFENCE does not read a lead “that enemy model’s attacks have:” over list lines. Fix it in DEFENCE (or the lead handling) so this goes to nc / no box. The rule is general, not a hand entry."
+ },
+ {
+  "key": "55fd4cafe6f617e7",
+  "where": "BOXES s|jmtnfy Tyranids · Subterranean Assault · Enfilading Emergence",
+  "verdict": "fix",
+  "why": "GW: WHEN “End of your Movement phase”, EFFECT “Until the end of your next Fight phase, weapons equipped by models in your unit have [SUSTAINED HITS 1] and [IGNORES COVER]”. That covers the Shooting phase in between too, and “weapons” means ranged and melee. The box has kind:'melee' because kindOf sees “fight phase” in the duration, so its ranged attacks lose both, and Ignores Cover does nothing in melee. It should be kind:'all'. kindOf should not read a phase named in an “until the end of …” duration as the kind."
+ },
+ {
+  "key": "4c4cd74f71f05b48",
+  "where": "BOXES s|kj5cu3 / s|15l8sj / s|n3dvjc: a target-status condition dropped (Counterpredation, Psy-Chaff Volley, Draught of Terror)",
+  "verdict": "fix",
+  "why": "Three new boxes lose the condition GW puts on the target, so the Damage tab counts the effect unconditionally. Counterpredation: “attacks that target a hidden unit have +1 S and AP”, on:[]. Psy-Chaff Volley: “Attacks that target a prosecuted unit have +1 AP”, on:[]. Also, its WHEN is “has shot”, so the benefit is for other units' attacks (all attacks, not only ranged) against the prosecuted unit, not for the Prosecutors' own attacks, which are already made. Draught of Terror, 2nd sentence: “each time such a weapon targets a unit that is Battle-shocked, you can re-roll the Wound roll”, on:[]. Compare Tip of the Talon and Slayers of Nightmares, which get a q condition from QP. Fix: QP or COND should read “that target(s) a **<status>** unit” and “targets a unit that is <status>” as a q condition. For Psy-Chaff Volley, either a reach to friendly units or nc. These come from general rules, not hand entries, but G4/G5 do not catch a missing condition."
+ },
+ {
+  "key": "20c3c61fdcc53128",
+  "where": "BOXES: the other 33 new boxes from the catalogue detachments, spot-checked",
+  "verdict": "ok",
+  "why": "Every quote and lead of all 33 new hashed boxes is verbatim in Wahapedia's text, checked by script against cat-cache/waha and verify/.cache/waha. Read against GW with effects, kind, conditions, reach and duration right: Archagonists, Prime Target, Unlimited Endurance, Anathema Blademastery (pick), Tip of the Talon, Grim Responsibility, Slayers of Nightmares, Purgation Sweep, Call to Murder (charged), Fever Visions, Assemblage of Might, Surprise Assault (both: the Subterranean Assault rule and the Vanguard Onslaught stratagem), Mindhunger, Seductive Gambit, Hyper-adaptations, Martial Mastery, Irresistible Will, Channelled Wrath, Swarming Masses. Same rules as main: effects.js, effects-extract.js, effects-migrate.js, damage-node.js, calc-test.js and app.html are byte-identical to 2399c6e, and G7 (BOXES equals what effects-migrate gives) passes. No hand entries."
+ },
+ {
+  "key": "d1adb79bc8e4df25",
+  "where": "verify/approvals.json merge",
+  "verdict": "ok",
+  "why": "Checked by script: main 2744 and branch 2850 keys, merge 2907 = the exact union. No key was lost. No key present in both parents had different values. Every merged value equals its parent's. Nothing was added that neither parent had, and nothing was deleted on either side since the merge base."
+ },
+ {
+  "key": "2b5a68c7afcfbf90",
+  "where": "docs/tables.md hand merge",
+  "verdict": "ok",
+  "why": "Against git merge-file: every conflict is resolved to main's retired-column removals (no calcMods, calcNc, both, limit, embarked, always, calc or oneModel came back; the count of retired-word mentions equals main's) plus the branch's additions: FACTIONS.detachments nr and aiStatus, DATASHEETS points, composition, options and aiStatus, and the Faction catalogues section. Diffed against verify/columns.json, the schema table has the same 20 drifts on main, on the branch and in the merge (source labels ai/hand vs ai-reading, and others), so the merge adds none. Nits, not blocking: (1) tables.md lists DATASHEETS points under bsdata, but columns.json and the How screen say gw; (2) the columns.json aiStatus note still mentions calcMods, which main retired."
+ },
+ {
+  "key": "c1c0e5ad1e61cc63",
+  "where": "data.js conflict resolution: Skulltaker and Bloodmaster mods, retired columns",
+  "verdict": "ok",
+  "why": "Skulls for Khorne (Skulltaker) and Bloodmaster's mods rows equal main's, with no always:true. Every added line of the diff against main that has calc, always, oneModel, dice, follow, onDeath, calcMods, calcNc, both or embarked (6 lines, all guard rows) is a line already on main, moved by the datasheet reorder. The whole-file counts of each retired key are identical at 2399c6e and d62e339. G6 passes."
+ },
+ {
+  "key": "bb3a682ef65ae356",
+  "where": "snapshot diffs (scratchpad/cat-merge/diffs)",
+  "verdict": "ok",
+  "why": "I re-ran the full gate in a scratch copy (git archive of HEAD). Every step passes except snapshots, which changed only in healybois, nidzillas and shooty. My diffs are line-for-line identical to the builder's: healybois and nidzillas show only the Tyrannofex +FRAME and the removed Wahapedia note; shooty shows only How-screen counts and column lists (BOXES 243→276, detachments 40→59, the nr, aiStatus and points columns, and RULE_SRC's sample row now showing the last added row). Nothing else."
+ }
+]

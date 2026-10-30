@@ -1,0 +1,678 @@
+[
+ {
+  "key": "4eb388d2438f8bbe",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[command]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil rule · Silent Sisterhood)."
+ },
+ {
+  "key": "70b91e7cfe92cdcf",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil rule · Silent Sisterhood)."
+ },
+ {
+  "key": "c8c98764a01463ba",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "verdict": "fix",
+  "why": "The needs pick up the first unit phrase, the mustering bullet (“select a friendly ANATHEMA PSYKANA CHARACTER model to be your WARLORD”). The rule’s in-game part, Creeping Dread (Aura), is given to “Friendly ANATHEMA PSYKANA units” (all of them; derive.js’s own grant reading says to:{all:[Faction: Anathema Psykana]}), and PROSECUTOR SQUAD (BATTLELINE) is Anathema Psykana too. With “Character” the rule row reaches only Knight-Centura. On the derive-only branch this must be a derive.js rule (first-unit should not take a “When mustering your army” sentence), not a hand label.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: Anathema Psykana"
+    ]
+   }
+  }
+ },
+ {
+  "key": "cd283fb449ac7411",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Anathema Blademastery",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Anathema Blademastery)."
+ },
+ {
+  "key": "8d7d18e897205611",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Anathema Blademastery",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Anathema Blademastery)."
+ },
+ {
+  "key": "c762a2df5e80bb59",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Anathema Blademastery",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Vigilator Squad]}} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Anathema Blademastery)."
+ },
+ {
+  "key": "01d6c69cd7032a50",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Psy-Chaff Volley",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Psy-Chaff Volley)."
+ },
+ {
+  "key": "2c1b9e134174fdfb",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Psy-Chaff Volley",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Psy-Chaff Volley)."
+ },
+ {
+  "key": "1d80ec9fd5eaa70d",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Psy-Chaff Volley",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Prosecutor Squad]}} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Psy-Chaff Volley)."
+ },
+ {
+  "key": "62ac27f817ae78b4",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Purgation Sweep",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Purgation Sweep)."
+ },
+ {
+  "key": "03450e6e9bf04852",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Purgation Sweep",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Purgation Sweep)."
+ },
+ {
+  "key": "ab252514dfa444b7",
+  "where": "Adeptus Custodes · Null Maiden Vigil · Purgation Sweep",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Witchseeker Squad]}} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Purgation Sweep)."
+ },
+ {
+  "key": "31708f41086199da",
+  "where": "Adeptus Custodes · Auric Champions rule · Assemblage of Might",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[command]} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions rule · Assemblage of Might)."
+ },
+ {
+  "key": "7784492ce2233948",
+  "where": "Adeptus Custodes · Auric Champions rule · Assemblage of Might",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions rule · Assemblage of Might)."
+ },
+ {
+  "key": "8b3c42936f3dbb88",
+  "where": "Adeptus Custodes · Auric Champions rule · Assemblage of Might",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Character]}} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions rule · Assemblage of Might)."
+ },
+ {
+  "key": "8d25603b2e4034e3",
+  "where": "Adeptus Custodes · Auric Champions · Gilded Champion",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[command,movement,shooting,charge,fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Gilded Champion)."
+ },
+ {
+  "key": "0d323c58e9f4991d",
+  "where": "Adeptus Custodes · Auric Champions · Gilded Champion",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Gilded Champion)."
+ },
+ {
+  "key": "4116f0f78c8473c2",
+  "where": "Adeptus Custodes · Auric Champions · Gilded Champion",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Character]}} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Gilded Champion)."
+ },
+ {
+  "key": "90178f7bdceba35e",
+  "where": "Adeptus Custodes · Auric Champions · Duty Unto Death",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Duty Unto Death)."
+ },
+ {
+  "key": "2d336ff433f21e0a",
+  "where": "Adeptus Custodes · Auric Champions · Duty Unto Death",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Duty Unto Death)."
+ },
+ {
+  "key": "9128507d242a7aad",
+  "where": "Adeptus Custodes · Auric Champions · Duty Unto Death",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Duty Unto Death)."
+ },
+ {
+  "key": "f222c548afd8d3a3",
+  "where": "Adeptus Custodes · Guardians of the Throne rule · Martial Mastery",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne rule · Martial Mastery)."
+ },
+ {
+  "key": "79b60bf77becc5b4",
+  "where": "Adeptus Custodes · Guardians of the Throne rule · Martial Mastery",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne rule · Martial Mastery)."
+ },
+ {
+  "key": "d1f82e411447a4eb",
+  "where": "Adeptus Custodes · Guardians of the Throne rule · Martial Mastery",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne rule · Martial Mastery)."
+ },
+ {
+  "key": "3a39c4fc004d71d9",
+  "where": "Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
+ },
+ {
+  "key": "3e965a536e3219f6",
+  "where": "Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
+ },
+ {
+  "key": "ceb6d55889eeafae",
+  "where": "Adeptus Custodes · Guardians of the Throne · Shield of Honour",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],any:[Infantry,Mounted]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
+ },
+ {
+  "key": "8595836d1a888038",
+  "where": "Adeptus Custodes · Guardians of the Throne · Superhuman Focus",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[command,movement,shooting,charge,fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
+ },
+ {
+  "key": "d6cf828a8963899f",
+  "where": "Adeptus Custodes · Guardians of the Throne · Superhuman Focus",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
+ },
+ {
+  "key": "33a05c97634c9d90",
+  "where": "Adeptus Custodes · Guardians of the Throne · Superhuman Focus",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
+ },
+ {
+  "key": "7d1210f969b51afc",
+  "where": "Adeptus Custodes · Guardians of the Throne · Prime Target",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
+ },
+ {
+  "key": "7aa258acf57c583a",
+  "where": "Adeptus Custodes · Guardians of the Throne · Prime Target",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
+ },
+ {
+  "key": "9e7d7193641e3745",
+  "where": "Adeptus Custodes · Guardians of the Throne · Prime Target",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
+ },
+ {
+  "key": "c7fc01e0c820472f",
+  "where": "Adeptus Custodes · Guardians of the Throne · Unlimited Endurance",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
+ },
+ {
+  "key": "e7035834fe607b7c",
+  "where": "Adeptus Custodes · Guardians of the Throne · Unlimited Endurance",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
+ },
+ {
+  "key": "54cc6dd22280694e",
+  "where": "Adeptus Custodes · Guardians of the Throne · Unlimited Endurance",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
+ },
+ {
+  "key": "5f80042b0761fcee",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "verdict": "fix",
+  "why": "GW: “ranged attacks that target that unit … have -1 to wound rolls” plus Favoured ka’tah SALVUS “Your unit’s ranged attacks have +6\" R”. Nothing of it is in the Fight phase: derive.js matched the generic `targeted` rule (“attacks that target that unit”) although the attacks are ranged (its own Additional Effect reading gives [movement, shooting]). Shadowkeepers’ melee twin is the mirror case. On the derive-only branch: a derive.js change (“ranged attacks that target” → targeted-ranged), not a hand label.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting"
+   ]
+  }
+ },
+ {
+  "key": "c7587da39b74b8a5",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield rule · Gilded Guardians)."
+ },
+ {
+  "key": "0762f027bcdb70cb",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],none:[Vehicle]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield rule · Gilded Guardians)."
+ },
+ {
+  "key": "34caeedc8042b3cf",
+  "where": "Adeptus Custodes · Aquilan Shield · Manoeuvre and Fire",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Manoeuvre and Fire)."
+ },
+ {
+  "key": "78db5d4bf7883444",
+  "where": "Adeptus Custodes · Aquilan Shield · Manoeuvre and Fire",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Manoeuvre and Fire)."
+ },
+ {
+  "key": "56db6e3083916215",
+  "where": "Adeptus Custodes · Aquilan Shield · Manoeuvre and Fire",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Manoeuvre and Fire)."
+ },
+ {
+  "key": "90d5e462a18e3604",
+  "where": "Adeptus Custodes · Aquilan Shield · Tip of the Talon",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Tip of the Talon)."
+ },
+ {
+  "key": "002fa06586195a02",
+  "where": "Adeptus Custodes · Aquilan Shield · Tip of the Talon",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Tip of the Talon)."
+ },
+ {
+  "key": "5449a3733c5b80c1",
+  "where": "Adeptus Custodes · Aquilan Shield · Tip of the Talon",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Tip of the Talon)."
+ },
+ {
+  "key": "0d562d88c511240c",
+  "where": "Adeptus Custodes · Aquilan Shield · Rapid Reactions",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
+ },
+ {
+  "key": "aad20ff5bc413e8a",
+  "where": "Adeptus Custodes · Aquilan Shield · Rapid Reactions",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
+ },
+ {
+  "key": "4b76817153181281",
+  "where": "Adeptus Custodes · Aquilan Shield · Rapid Reactions",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Infantry]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
+ },
+ {
+  "key": "180049664af80920",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[movement,fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
+ },
+ {
+  "key": "929092d16109b0cd",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
+ },
+ {
+  "key": "a221ddcd38375d15",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turns:{movement:your}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
+ },
+ {
+  "key": "2ef92d21db9028cd",
+  "where": "Adeptus Custodes · Emissaries Imperatus rule · Heralds of the Throne",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
+ },
+ {
+  "key": "f7a3347937d183ba",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Bearers of His Light",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
+ },
+ {
+  "key": "32920d6527fd499e",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Bearers of His Light",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
+ },
+ {
+  "key": "7ebd2a9007ef7a5a",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Bearers of His Light",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
+ },
+ {
+  "key": "01e170e09914c43b",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Slayers of Nightmares",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Slayers of Nightmares)."
+ },
+ {
+  "key": "1c9796c61ca577ff",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Slayers of Nightmares",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Slayers of Nightmares)."
+ },
+ {
+  "key": "8b6346b43cd434c6",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Slayers of Nightmares",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Slayers of Nightmares)."
+ },
+ {
+  "key": "fa04c7595e8b407f",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Selfless Service",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[charge]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
+ },
+ {
+  "key": "f916f3263cf3d2b4",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Selfless Service",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
+ },
+ {
+  "key": "f8b6f876ed32a8e5",
+  "where": "Adeptus Custodes · Emissaries Imperatus · Selfless Service",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],unless:{all:[Vehicle],none:[Character,Walker]}}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
+ },
+ {
+  "key": "fa9ba317d6e75b96",
+  "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],none:[Vehicle]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers rule · Wardens of the Dark Cells)."
+ },
+ {
+  "key": "8a35309aff984d07",
+  "where": "Adeptus Custodes · Shadowkeepers · Grim Responsibility",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Grim Responsibility)."
+ },
+ {
+  "key": "81d666581bbf748f",
+  "where": "Adeptus Custodes · Shadowkeepers · Grim Responsibility",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Grim Responsibility)."
+ },
+ {
+  "key": "dce14f090f2a504e",
+  "where": "Adeptus Custodes · Shadowkeepers · Grim Responsibility",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Infantry]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Grim Responsibility)."
+ },
+ {
+  "key": "20fc9dad8ce9ed6f",
+  "where": "Adeptus Custodes · Shadowkeepers · No Escape",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
+ },
+ {
+  "key": "540a45a3dd26389d",
+  "where": "Adeptus Custodes · Shadowkeepers · No Escape",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
+ },
+ {
+  "key": "d1bb1f8c83f69cd6",
+  "where": "Adeptus Custodes · Shadowkeepers · No Escape",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Infantry]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
+ },
+ {
+  "key": "444078273c1adc64",
+  "where": "Adeptus Custodes · Shadowkeepers · Indomitable Guardians",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Indomitable Guardians)."
+ },
+ {
+  "key": "8c19b12bb89bfe93",
+  "where": "Adeptus Custodes · Shadowkeepers · Indomitable Guardians",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Indomitable Guardians)."
+ },
+ {
+  "key": "b62e2e5b13e6d244",
+  "where": "Adeptus Custodes · Shadowkeepers · Indomitable Guardians",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Indomitable Guardians)."
+ },
+ {
+  "key": "1a83a98325cf9d1f",
+  "where": "Adeptus Custodes · Solar Watch rule · Talon Sortie",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
+ },
+ {
+  "key": "852048f410e5a817",
+  "where": "Adeptus Custodes · Solar Watch rule · Talon Sortie",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
+ },
+ {
+  "key": "a69296c19cf3f632",
+  "where": "Adeptus Custodes · Solar Watch rule · Talon Sortie",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
+ },
+ {
+  "key": "ccf41cb41b973358",
+  "where": "Adeptus Custodes · Solar Watch · Inexorable",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Inexorable)."
+ },
+ {
+  "key": "060aa85314bc34e3",
+  "where": "Adeptus Custodes · Solar Watch · Inexorable",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Inexorable)."
+ },
+ {
+  "key": "e35823424a736940",
+  "where": "Adeptus Custodes · Solar Watch · Inexorable",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Inexorable)."
+ },
+ {
+  "key": "ad97d131bd45fd67",
+  "where": "Adeptus Custodes · Solar Watch · At Spear’s Length",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · At Spear’s Length)."
+ },
+ {
+  "key": "e88a255cb9583b96",
+  "where": "Adeptus Custodes · Solar Watch · At Spear’s Length",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · At Spear’s Length)."
+ },
+ {
+  "key": "40ca2c4f5e8ed9cc",
+  "where": "Adeptus Custodes · Solar Watch · At Spear’s Length",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · At Spear’s Length)."
+ },
+ {
+  "key": "57d00fd05e0a423d",
+  "where": "Adeptus Custodes · Solar Watch · Gravimetric Grenade",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[charge]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Gravimetric Grenade)."
+ },
+ {
+  "key": "2cd86d1c93754fe4",
+  "where": "Adeptus Custodes · Solar Watch · Gravimetric Grenade",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Gravimetric Grenade)."
+ },
+ {
+  "key": "b1c71477fcab8929",
+  "where": "Adeptus Custodes · Solar Watch · Gravimetric Grenade",
+  "verdict": "ok",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Gravimetric Grenade)."
+ },
+ {
+  "key": "716181c586423305",
+  "where": "resolveArmies",
+  "verdict": "ok",
+  "why": "Only change: points, composition, options and aiStatus join HIDE, so they stay on DATASHEETS and never reach a list unit. Screens 390/320 and snapshots unchanged in my full gate run; tables: 0 facts kept per list."
+ },
+ {
+  "key": "6fec273edfc3b25d",
+  "where": "verify/bs-catalog.js FILTER (Legends / Crusade / Crucible / config)",
+  "verdict": "ok",
+  "why": "Each mark checked on the catalogue at the pin: Legends by the [Legends] suffix (all 7 Wahapedia marks sLegendary: Aleya, Valerian, Venerable Contemptor, Venerable Land Raider, Custodian Guard Sodality with Adrasite / Pyrithite Spears, Sagittarum Custodians Sodality — exactly these 7 plus the Agents library’s Legends); every Legends/Crucible root is also hidden by a “Show Legends”/“Show Crucible Characters” modifier, consistent. Crusade: Order of Battle only at root; `\\bCrusade\\b` does not catch the Imperial Knights category “Knight Crusader” (classified ally, right). Config: Detachment, Show/Hide Options, Martial Ka’tah Reference, Code Chivalric, Unseated Pilot, NOTICE. Ally: every Imperial Knights, Agents and Titans library root. Result 29 datasheets = Wahapedia’s 36 minus its 7 Legends; 13 detachments = Wahapedia’s 13 (Boarding Actions detachments, which BSData does not offer, rightly absent). Note only: docs/catalog.md and the be1039b message say “the Imperial Knights library’s Armigers and the Imperial Agents”; it is every Imperial Knight (Paladin … Acastus), the Agents and the four Titans (Library - Titans)."
+ },
+ {
+  "key": "176b2588657c67d5",
+  "where": "verify/bs-catalog.js children / selection (every option taken)",
+  "verdict": "ok",
+  "why": "Every option taken, Crusade groups (Crusade, Weapon Modifications, Crusade Relic Upgrades, Specialisms) and Enhancements left out. No Custodes datasheet option is hidden:true at the pin (checked every child), so hiddenStatic loses nothing here. Latent: the comment at verify/bs-catalog.js:105 says “and no modifier that shows it”, but hiddenStatic (line 106) only reads `hidden`; an option hidden:true with a “hidden = false” modifier (shown when a condition holds) would be dropped for another faction. Make the code match the comment before the next faction."
+ },
+ {
+  "key": "2e72b00ff71fa261",
+  "where": "verify/bs-catalog.js points / composition / options",
+  "verdict": "fix",
+  "why": "Two errors in the BSData-only points column. (1) verify/bs-catalog.js:220 sums each model entry’s own min; Vertus Praetors’ model entry is min 0 inside the group “2-3 Vertus Praetors” (groupMin 2), so lo = 0 → 1 and the tiers read “1 model 220, 3 models 330” (GW: 2 models 220, 3 models 330). (2) line 218 writes every instanceOf+before modifier as “each earlier copy of this datasheet”, dropping the localConditionGroup’s threshold: Venatari (both) are `atLeast 2` earlier copies, i.e. GW’s “YOUR 1ST TO 2ND UNITS COST 255 / YOUR 3RD+ 280”, but read as +25 from the 2nd. Tested fix (1): only Vertus Praetors changes, to [{models:2,pts:220},{models:3,pts:330}]. Also note: Prosecutors/Vigilators/Witchseekers tiers say 6 models 80/90/100 where GW prices 9 (BSData’s atLeast 6); and the column is nowhere compared with GW’s costs.",
+  "fix": "verify/bs-catalog.js:220 `const comp = composition(root), grp = new Map(comp.filter(c => c.group && c.groupMin != null).map(c => [c.group, c.groupMin])), lo = (comp.filter(c => !grp.has(c.group)).reduce((t, c) => t + (c.min || 0), 0) + [...grp.values()].reduce((t, v) => t + v, 0)) || 1, hi = …` (rest unchanged); verify/bs-catalog.js:218 the when of an instanceOf+before modifier names its group’s count: `when: … ? (g && g.value > 1 ? 'each copy after the first ' + g.value + ' of this datasheet in the army' : 'each earlier copy of this datasheet in the army') : …` with g the localConditionGroup (type atLeast, value) the conditions came from; then from-bsdata.js --write."
+ },
+ {
+  "key": "7a67aafca6be60b0",
+  "where": "verify/from-json.js --emit",
+  "verdict": "ok",
+  "why": "--emit is the same reading as a list’s (GW over BSData), before anything of data.js is taken over; rerun of `from-bsdata.js adeptus-custodes --write` then `tables.js --write` in my copy: data.js and every written file byte-identical (git status clean)."
+ },
+ {
+  "key": "d4082161e7e436fe",
+  "where": "verify/from-json.js: detachment by GW’s name or BSData’s (nr), loose heading match, EFFECT bold run, enhancement weapon keywords, oval bases, weaponNames, articles in ability names, SUPPORT",
+  "verdict": "ok",
+  "why": "Shared reader changes: no list output changes (nr, import 23/23, texts, snapshots unchanged). Checked consequences: Shadowkeepers by GW’s name with nr “Shadow Keepers” (dispositions match BSData); Oval bases written as the guide writes them; “Master of Ka’tahs” (GW) over “Master of the Ka’tahs” (BSData) on the three Shield-Captains; SUPPORT read (Knight-Centura). Pre-existing quirk surfaced by the catalogue (verify/from-json.js ~1063, not new code): a BSData datasheet-level rule GW does not print is dropped even when a weapon of the unit carries it, so Vigilator Squad loses “Devastating Wounds” from its Rules line although its Executioner greatblade has [DEVASTATING WOUNDS: PSYKER]; Knight-Centura, with the same weapon, keeps it. Suggest: keep a dropped rule that names a weapon ability of the unit."
+ },
+ {
+  "key": "e677bf3b06603770",
+  "where": "verify/waha-words.js: \"non-\" in a keyword span",
+  "verdict": "ok",
+  "why": "GW prints [SUSTAINED HITS 1: non-MONSTER/VEHICLE] (Caladius Grav-tank Iliastus Accelerator Cannon); Wahapedia’s keyword span upper-cased the “non-”. Texts pass, no list text changed."
+ },
+ {
+  "key": "398110c331fabfdd",
+  "where": "verify/from-bsdata.js rowOf (a unit to its DATASHEETS row; Leader / Support)",
+  "verdict": "ok",
+  "why": "Rows hold the datasheet’s facts only; GW’s LEADER/SUPPORT lists match Wahapedia word for word for all six (Trajann, Blade Champion, the three Shield-Captains, Knight-Centura). Note only (not this item): stats rows keep BSData’s profile names, so the new Pallas row reads “Palas Grav-attack” (BSData typo; GW: Pallas Grav-attack) and Gyrfalcon’s “Gyrfalcon Jetbike” (GW: Gyrfalcon Jetbiker); undeclared — a profile-name hand entry like weaponNames would fix the first."
+ },
+ {
+  "key": "1ebe523af376bdd2",
+  "where": "verify/from-bsdata.js build (detachments, stratagem ids)",
+  "verdict": "ok",
+  "why": "Stratagem ids: the three that Guardians of the Throne shares by name (Superhuman Focus and In Auramite Clad with Emperor’s Chosen, Swift as the Eagle with Honoured Companions) get “-guardians-of-the-throne”; the list detachments keep their ids (no list change). No gists written (aiStatus not-read)."
+ },
+ {
+  "key": "d9f9f2ae5b9b830c",
+  "where": "verify/catalog-write.js",
+  "verdict": "ok",
+  "why": "Writes exactly the files docs/catalog.md lists, deterministically (rerun byte-identical). Flag for the derive-only branch: line 71 skips derive.js’s timing for a rule whose reasons are all targeted/overwatch/lone-operative — a hand rule outside derive.js. It leaves Shadowkeepers’ Wardens of the Dark Cells with no ph/turn while derive.js derives {ph:[movement,shooting,fight]…} (derive.md lists it as “different”). When derive.js becomes the only labeller, this exception must move into derive.js (or Shadowkeepers gets derive’s labels); and Gilded Guardians, which escapes the exception only because its reasons also include `ranged`, shows the two rules are not handled alike."
+ },
+ {
+  "key": "69b54e75cb6b60b5",
+  "where": "verify/tables.js catalogue merge",
+  "verdict": "ok",
+  "why": "The 12 differences against list rows are all of the allowed kinds: markup (Captain-General bold), tag-in-text (Moment Shackle, Vengeful Surge, Master of Ka’tahs), apostrophe (Martial Ka'tah vs ’) and the catalogue’s fuller Rules line (weapon abilities of untaken weapons); the list rows keep theirs. Fills: OC on 7 rows, Warblade, 13 untaken weapons appended after the list’s rows. The three Caladius Annihilator entries that took “all” weapons now name their two (Arachnus Blaze Carronade + Twin Lastrum Bolt Cannon, as their gear says): screens 390/320 and all snapshots unchanged in my full run, nr/import pass. Pinning the entries is the right choice over a resolver rule: the entry’s gear already names them (New Recruit), and a resolver rule would need to know which rows came from the catalogue. Minor: a filled row’s Rules line stays the list’s, so e.g. Caladius Annihilator’s added Twin Neutronium Cascade Projectors has no Torrent/Blast on the row; invisible until a list takes it (the in-app import)."
+ },
+ {
+  "key": "b6b1810b103c4a1a",
+  "where": "verify/catalog.js (the gate step)",
+  "verdict": "fix",
+  "why": "Steps work: I broke a catalogue-only stat (Vigilator T), an ability’s words (Deft Parry -2) and dropped aiStatus / added a reading: each fails catalog.js. One bug in the declarations it writes: verify/catalog.js:159 finds the from-json deviation by `x.name === d.app || x.bsdata === d.source || x.app === d.app`; for a dropped rule d.app is null, so `x.app === d.app` matches the unit’s first dropped rule. Result in deviations-bsdata.json: vigilator-squad rules “Devastating Wounds” (app null, source “Devastating Wounds”) carries the reason “GW’s datasheet does not print Fights First. GW wins.”",
+  "fix": "verify/catalog.js:159 `const j = jd.find(x => x.field === 'rules' && (d.app ? (x.app === d.app || x.name === d.app) : x.bsdata === d.source));` then `node verify/from-bsdata.js adeptus-custodes --write`. Tested in a scratch copy: exactly one line of deviations-bsdata.json changes (the Vigilator Devastating Wounds reason becomes “GW’s datasheet does not print Devastating Wounds. GW wins.”), catalog.js passes."
+ },
+ {
+  "key": "d0c26025a7dab4f0",
+  "where": "verify/bases.js, verify/texts.js, verify/dispositions.js, verify/bsdata.js, verify/import-ids.js: catalogue rows and detachments",
+  "verdict": "ok",
+  "why": "Confirmed by breaking a catalogue-only value per check: Vigilator base 40mm → bases.js FAIL (“catalog · Vigilator Squad · Vigilator: app 40mm, GW 32mm”); Null Maiden Vigil dispositions → dispositions.js FAIL; Psy-Chaff Volley effect words → texts.js FAIL ([detachment] …/psy-chaff-volley/effect) and catalog.js FAIL."
+ },
+ {
+  "key": "f4450f0eab6058b2",
+  "where": "verify/helpers.js: judgements on DATASHEETS rows no list has and on catalogue detachments",
+  "verdict": "ok",
+  "why": "A def added to a catalogue-only ability (Vigilator · Deft Parry) → helpers 85 to check (ability-def 1) and fails; a changed label on a catalogue detachment (Psy-Chaff Volley turn your→either) gets a new key (4ab541b68d46240b, not the todo’s 2c1b9e134174fdfb), so a signed-off label cannot be changed silently. (catalog.js itself does not compare detachment labels: helpers is the only guard, by design.)"
+ },
+ {
+  "key": "0ed3295866058bc6",
+  "where": "verify/tables.js sites: fingerprints of DATASHEETS rows no list has",
+  "verdict": "ok",
+  "why": "tables.js --fingerprints: a def on a catalogue-only ability → “NO FINGERPRINT adeptus-custodes/vigilator-squad · Deft Parry · def”, FAIL; mods on the row → “NO TEXT … mods”, FAIL."
+ },
+ {
+  "key": "a8ef9010f7b82a00",
+  "where": "verify/readings.js notReadYet",
+  "verdict": "ok",
+  "why": "Lists 37 not-read gaps without failing, as docs say; a reading put on a not-read row fails in catalog.js (“marked not-read but has readings”) and fingerprints, not here — consistent with docs/catalog.md."
+ },
+ {
+  "key": "ab6eae6ed419cf15",
+  "where": "left out by the filter",
+  "verdict": "ok",
+  "why": "93 left out, reasons spot-checked (all 7 Custodes Legends = Wahapedia’s sLegendary set; Order of Battle crusade; 6 Crucible incl. the Agents’ three; 55+4 allies from the Knights/Agents/Titans libraries; config entries). Crucible: BSData model entries (Guardian of the Throne 130 pts, Null Maiden, Kataphraktoi Exemplar) built from pick groups (Specialisms, Abilities, Weapons), hidden behind “Show Crucible Characters”; no Wahapedia datasheet and no GW document in the cache prints them, so they cannot be checked. Recommendation for the owner: keep them out (like Legends) until GW publishes their rules in a document the gate can cache; if wanted, a separate opt-in kind, never mixed with the datasheets."
+ },
+ {
+  "key": "f973b453b9340baf",
+  "where": "adeptus-custodes/aquilon-terminators-with-solarite-power-gauntlets · Aquilon Terminator",
+  "verdict": "ok",
+  "why": "Guide line 2623 “Aquilon Custodians 50mm”, the only Aquilon row; Wahapedia ⌀50mm."
+ },
+ {
+  "key": "430d2c4ebd54c3a7",
+  "where": "adeptus-custodes/aquilon-terminators-with-solarite-power-talons · Aquilon Terminator",
+  "verdict": "ok",
+  "why": "As the gauntlets: “Aquilon Custodians 50mm”, Wahapedia ⌀50mm."
+ },
+ {
+  "key": "5fe60f7252f96956",
+  "where": "adeptus-custodes/venatari-with-kinetic-destroyers · Venatari",
+  "verdict": "ok",
+  "why": "Guide line 2634 “Venatari Custodians 40mm”; Wahapedia ⌀40mm."
+ },
+ {
+  "key": "84132767fdb32a56",
+  "where": "adeptus-custodes/venatari-with-verutum-lances · Venatari",
+  "verdict": "ok",
+  "why": "As above: 40mm both."
+ },
+ {
+  "key": "40bb5062aa8449b7",
+  "where": "adeptus-custodes/gyrfalcon-jetbike-sodality · Gyrfalcon Jetbike",
+  "verdict": "fix",
+  "why": "Gyrfalcon Jetbike Sodality is the renamed Agamatus Custodians, exactly as Aquilon Terminators are the renamed Aquilon Custodians: the previous Faction Pack 1.2 (line 671) “Agamatus Custodians take Gyrfalcon-pattern jetbikes”, same weapons (lastrum bolt cannon → adrathic devastator / twin las-pulser / volley cannon) and Death Blow; and BSData’s Dawneagle Leader list (previous codex) “AGAMATUS CUSTODIANS, VERTUS PRAETORS” is GW’s “GYRFALCON JETBIKE SODALITY, VERTUS PRAETORS” now. So the guide row “Agamatus Custodians 75x42mm Oval Base” (line 2622) is the one to compare, as for the Aquilon rows; the value is unchanged.",
+  "fix": {
+   "guide": {
+    "section": "ADEPTUS CUSTODES",
+    "entry": "Agamatus Custodians"
+   }
+  }
+ },
+ {
+  "key": "df2083564611475d",
+  "where": "BSData Twin Iliastus Accelerator Cannon",
+  "verdict": "ok",
+  "why": "Wahapedia Caladius Grav-tank: “Iliastus Accelerator Cannon … 48\" 4 2+ 10 -1 3” = BSData’s Twin Iliastus Accelerator Cannon profile."
+ },
+ {
+  "key": "6284075b541916eb",
+  "where": "BSData Tarsis buckler",
+  "verdict": "ok",
+  "why": "Wahapedia Venatari with Kinetic Destroyers: “Tarsus Buckler … Melee 5 2+ 6 -2 1”."
+ },
+ {
+  "key": "ed1f5b4a73bed03f",
+  "where": "BSData Solarite Power Talons",
+  "verdict": "ok",
+  "why": "Wahapedia Aquilon with Solarite Power Talons: weapon “Solarite Power Talon” (singular)."
+ },
+ {
+  "key": "0f2ea96f0be74084",
+  "where": "verify/deviations-bsdata.json army \"catalog\" (84, written mechanically with GW evidence)",
+  "verdict": "fix",
+  "why": "Spot-checked 32 of the 84 against the cached GW pages, all GW’s: Gun Stock Knight-Centura WS2+, Prosecutor A2, Witchseeker A2; Hurricanis AP-2; Ares magna-blaze AP-3; Armoured Hull Pallas A3, Coronus A6 S8; Venatari Ld5+ (both); Knight-Centura 32mm, Rhino Hull, Caladius/Coronus/Annihilator 170×109mm Oval (guide lines 2625/2628 over Wahapedia’s 150×95); CALADIUS keyword on both Caladius; Supreme Commander on Trajann (Wahapedia header box “If this model is in your army, it must be your WARLORD”); Creeping Dread dropped from Knight-Centura, Rhino, Prosecutors, Vigilators, Witchseekers (no datasheet prints it; GW gives it only through Null Maiden Vigil’s Silent Sisterhood, faction page line 567; BSData links it unconditionally); the six Leader/Support lists; Master of Ka’tahs, Slayer of Tyrants, Archeotech Teleport-shunter (Once per battle, per unit); Living Fortress, Destructor Optics, Corner the Quarry, Sanctified Flames, Swift Ruin words; Scouts 7\", Firing Deck 2, Deadly Demise/Damaged values. One wrong reason (code bug, see verify/catalog.js item): vigilator-squad rules “Devastating Wounds” says “does not print Fights First”. And that drop itself is questionable (its weapon has [DEVASTATING WOUNDS: PSYKER]; Knight-Centura keeps the rule).",
+  "fix": "deviations-bsdata.json army catalog, unit adeptus-custodes/vigilator-squad, field rules, source “Devastating Wounds”: reason “GW’s datasheet does not print Devastating Wounds. GW wins.” (written by the verify/catalog.js:159 fix on rerun, not by hand)"
+ }
+]
