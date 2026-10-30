@@ -1458,7 +1458,7 @@ Add a group
 of 5 destroyed
 1.6 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1486,12 +1486,7 @@ MODELS IF UNTICKED
 AGAINST THIS TARGET
 [ANTI-VEHICLE 4+]
 0
-SITUATION AND RULES
-Spirit Thief (Lord Discordant on Helstalker)
-Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
-if it applies
-+0.1
-MODELS
+SITUATION
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1516,78 +1511,86 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-Damaged (1-4 wounds left)
--1 to hit rolls
+Damaged: 1-4 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+ARMY RULES
 Dark Pacts
-A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 [LETHAL HITS]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
 0
 [SUSTAINED HITS 1]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
 0
-Both
-with Touch of the Arkifane (1CP)
-0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Soul Forge Boons
+“HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword. HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword. SOUL FORGE units from your army have a 5+ invulnerable save.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+Unholy Mechanisms
+“While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.” · not counted in the Damage tab
+Reorder Reality
+“Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Indentured Daemon Engines
+“While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Spirit Thief (Lord Discordant on Helstalker)
+Selected by it · The target is the enemy unit selected · The target: Vehicle: Re-roll Wound rolls of 1
+if it applies
++0.1
+MODELS
 STRATAGEMS
 with their CP
 2CP Soul-Tally Offering
-Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+The target: Character or Monster or Vehicle: Re-roll Wound rolls
 if used
 BEST · MOST MODELS
 +0.2
 MODELS
 1CP Balefire Boon
-Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
++1 AP
 if used
 +0.2
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Touch of the Arkifane AI
-Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Touch of the Arkifane
+“WHEN: Any phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” · not counted in the Damage tab
+1CP Biomechanoid Regeneration
+“WHEN: Your Command phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units). EFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” · not counted in the Damage tab
+1CP Forge-Fire Surge
+“WHEN: Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances. TARGET: That HERETIC ASTARTES unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. …” · not counted in the Damage tab
+1CP Unholy Fortitude
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1708,7 +1711,7 @@ of 5 destroyed
 Vashtorr’s hammer: sweep
 Charged this turn
 ×
-3 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1766,84 +1769,94 @@ AGAINST THIS TARGET
 [ANTI-VEHICLE 4+]
 +0.5
 models
-SITUATION AND RULES
-Dark Pacts
-A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
-if it applies
-≈0
-MODELS
-[LETHAL HITS]
-≈0
-[SUSTAINED HITS 1]
-+0.3
-Both
-with Touch of the Arkifane (1CP)
-+0.3
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Damaged (1-4 wounds left)
--1 to hit rolls
+Damaged: 1-4 wounds remaining
+−1 to Hit rolls
 if it applies
 −24% wiped
 −0.6
 MODELS
+ARMY RULES
+Dark Pacts
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
+if it applies
+≈0
+MODELS
+[LETHAL HITS]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
+≈0
+[SUSTAINED HITS 1]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
++0.3
+BEST
+NOT COUNTED IN THE DAMAGE TAB (1)
+Soul Forge Boons
+“HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword. HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword. SOUL FORGE units from your army have a 5+ invulnerable save.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+Unholy Mechanisms
+“While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.” · not counted in the Damage tab
+Reorder Reality
+“Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Indentured Daemon Engines
+“While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Balefire Boon
-Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
++1 AP
 if used
 BEST · MOST MODELS+21% wiped
 +0.4
 MODELS
 2CP Soul-Tally Offering
-Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+The target: Character or Monster or Vehicle: Re-roll Wound rolls
 if used
 +18% wiped
 +0.3
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +8% wiped
 +0.2
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Touch of the Arkifane AI
-Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Touch of the Arkifane
+“WHEN: Any phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” · not counted in the Damage tab
+1CP Biomechanoid Regeneration
+“WHEN: Your Command phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units). EFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” · not counted in the Damage tab
+1CP Forge-Fire Surge
+“WHEN: Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances. TARGET: That HERETIC ASTARTES unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. …” · not counted in the Damage tab
+1CP Unholy Fortitude
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1967,7 +1980,7 @@ Shoot 0.5 · Fight 4.0 · the charge is taken to succeed
 Vashtorr’s hammer: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+28 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -2000,14 +2013,7 @@ MODELS IF UNTICKED
 AGAINST THIS TARGET
 [ANTI-VEHICLE 4+]
 0
-SITUATION AND RULES
-Spirit Thief (Lord Discordant on Helstalker)
-Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
-if it applies
-+2% wiped
-≈0
-MODELS
-+1 MORE ▾
+SITUATION
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -2026,81 +2032,91 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-Damaged (1-4 wounds left)
--1 to hit rolls
+Damaged: 1-4 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+ARMY RULES
 Dark Pacts
-A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 [LETHAL HITS]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
 0
 [SUSTAINED HITS 1]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
 0
-Both
-with Touch of the Arkifane (1CP)
-0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Soul Forge Boons
+“HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword. HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword. SOUL FORGE units from your army have a 5+ invulnerable save.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+Unholy Mechanisms
+“While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.” · not counted in the Damage tab
+Reorder Reality
+“Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Indentured Daemon Engines
+“While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Spirit Thief (Lord Discordant on Helstalker)
+Selected by it · The target is the enemy unit selected · The target: Vehicle: Re-roll Wound rolls of 1
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
 STRATAGEMS
 with their CP
 2CP Soul-Tally Offering
-Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+The target: Character or Monster or Vehicle: Re-roll Wound rolls
 if used
 +4% wiped
 +0.1
 MODELS
 1CP Balefire Boon
-Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
++1 AP
 if used
 +3% wiped
 +0.1
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +2% wiped
 ≈0
 MODELS
 +1 MORE ▾
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Touch of the Arkifane AI
-Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Touch of the Arkifane
+“WHEN: Any phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” · not counted in the Damage tab
+1CP Biomechanoid Regeneration
+“WHEN: Your Command phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units). EFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” · not counted in the Damage tab
+1CP Forge-Fire Surge
+“WHEN: Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances. TARGET: That HERETIC ASTARTES unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. …” · not counted in the Damage tab
+1CP Unholy Fortitude
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -2155,84 +2171,94 @@ AGAINST THIS TARGET
 [ANTI-VEHICLE 4+]
 +0.4
 models
-SITUATION AND RULES
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Dark Pacts
-A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase: [LETHAL HITS] or [SUSTAINED HITS 1]
-if it applies
-≈0
-MODELS
-[LETHAL HITS]
-≈0
-[SUSTAINED HITS 1]
-+0.2
-Both
-with Touch of the Arkifane (1CP)
-+0.2
-Damaged (1-4 wounds left)
--1 to hit rolls
+Damaged: 1-4 wounds remaining
+−1 to Hit rolls
 if it applies
 −22% wiped
 −0.5
 MODELS
+ARMY RULES
+Dark Pacts
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
+if it applies
+≈0
+MODELS
+[LETHAL HITS]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
+≈0
+[SUSTAINED HITS 1]
+If it uses this ability · “If your Army Faction is HERETIC ASTARTES”
++0.2
+BEST
+NOT COUNTED IN THE DAMAGE TAB (1)
+Soul Forge Boons
+“HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword. HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword. SOUL FORGE units from your army have a 5+ invulnerable save.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+Unholy Mechanisms
+“While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.” · not counted in the Damage tab
+Reorder Reality
+“Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Indentured Daemon Engines
+“While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Balefire Boon
-Your Shooting phase or the Fight phase, until the end of the phase: +1 AP
++1 AP
 if used
 BEST · MOST MODELS+17% wiped
 +0.3
 MODELS
 2CP Soul-Tally Offering
-Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units: re-roll the wound roll
+The target: Character or Monster or Vehicle: Re-roll Wound rolls
 if used
 +14% wiped
 +0.3
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +7% wiped
 +0.1
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Touch of the Arkifane AI
-Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Touch of the Arkifane
+“WHEN: Any phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” · not counted in the Damage tab
+1CP Biomechanoid Regeneration
+“WHEN: Your Command phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units). EFFECT: One model in your unit regains up to D3 lost wounds. If your unit has the SOUL FORGE keyword, one model in your unit regains up to 3 lost wounds instead.” · not counted in the Damage tab
+1CP Forge-Fire Surge
+“WHEN: Your Movement phase, just after a HERETIC ASTARTES unit from your army Advances. TARGET: That HERETIC ASTARTES unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. …” · not counted in the Damage tab
+1CP Unholy Fortitude
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

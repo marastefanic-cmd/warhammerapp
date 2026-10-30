@@ -1213,7 +1213,7 @@ Add a group
 of 5 destroyed
 7.8 wounds lost · wiped in 41% of games
 Infernal Gateway: focused witchfire
-2 NOT COUNTED
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1271,7 +1271,7 @@ AP
 D
 3
 BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1282,17 +1282,12 @@ Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 0
-Damaged (1-7 wounds left)
--1 to hit rolls
+Damaged: 1-7 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
 ALL ▾
-Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
-Within 6" of the Lord of Change: +1 S
-if it applies
-no change: S10 still wounds T4 on 2+
-0
 Indirect shooting
 [INDIRECT FIRE] weapons: the target has cover, no hit re-rolls, an unmodified 1-5 fails
 if it applies
@@ -1317,61 +1312,78 @@ if it applies
 −41% wiped
 −3.9
 MODELS
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Fates in Flux
+“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+One Head Looks Forward
+“At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
+One Head Looks Back
+“Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
+Aura · Within 6" of it: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Improbable Shield (Aura)
+“LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+11% wiped
 +0.3
 MODELS
 1CP Pyrogenesis
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
 if used
 no change: S11 still wounds T4 on 2+
 0
 +2 S
 0
-Flux token spent
++3 S, +1 AP
+“spend one Flux token”
 +0.6
 BEST
-NOT FOR THIS STEP, BY THE RULES (3)
-
-Nothing to count: 1CP Delirium Unmade, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Impossible Eclipse AI
-Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Ficklefire AI
-Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Impossible Eclipse
+“WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Flickering Reality
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Fateborne Nightmares
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Ficklefire
+“WHEN: Your Shooting phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Delirium Unmade
+“WHEN: End of your opponent’s Fight phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is not within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1491,7 +1503,7 @@ of 5 destroyed
 3.7 wounds lost · wiped in 1% of games
 Charged this turn
 ×
-4 NOT COUNTED
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1516,76 +1528,90 @@ D
 PSYCHIC
 −1.8
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Damaged (1-7 wounds left)
--1 to hit rolls
+Damaged: 1-7 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Fates in Flux
+“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+One Head Looks Forward
+“At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
+One Head Looks Back
+“Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Improbable Shield (Aura)
+“LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+2% wiped
 +0.4
 MODELS
 1CP Pyrogenesis
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
 if used
 no change: S10 still wounds T4 on 2+
 0
 +2 S
 0
-Flux token spent
++3 S, +1 AP
+“spend one Flux token”
 +0.5
 BEST
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Ficklefire (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Impossible Eclipse AI
-Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Delirium Unmade AI
-End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Impossible Eclipse
+“WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Flickering Reality
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Fateborne Nightmares
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Ficklefire
+“WHEN: Your Shooting phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Delirium Unmade
+“WHEN: End of your opponent’s Fight phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is not within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1709,7 +1735,7 @@ Shoot 3.9 · Fight 0.8 · the charge is taken to succeed
 Infernal Gateway: focused witchfire
 Charged this turn
 ×
-6 NOT COUNTED
+34 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1771,7 +1797,7 @@ AP
 D
 3
 BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1782,17 +1808,12 @@ Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 0
-Damaged (1-7 wounds left)
--1 to hit rolls
+Damaged: 1-7 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
 ALL ▾
-Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
-Within 6" of the Lord of Change: +1 S
-if it applies
-no change: S10 still wounds T4 on 2+
-0
 Indirect shooting
 [INDIRECT FIRE] weapons: the target has cover, no hit re-rolls, an unmodified 1-5 fails
 if it applies
@@ -1811,61 +1832,78 @@ if it applies
 −78% wiped
 −2.8
 MODELS
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Fates in Flux
+“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+One Head Looks Forward
+“At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
+One Head Looks Back
+“Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
+Aura · Within 6" of it: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Improbable Shield (Aura)
+“LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+6% wiped
 +0.1
 MODELS
 1CP Pyrogenesis
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
 if used
 no change: S11 still wounds T4 on 2+
 0
 +2 S
 0
-Flux token spent
++3 S, +1 AP
+“spend one Flux token”
 +0.2
 BEST
-NOT FOR THIS STEP, BY THE RULES (3)
-
-Nothing to count: 1CP Delirium Unmade, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Impossible Eclipse AI
-Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Ficklefire AI
-Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Impossible Eclipse
+“WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Flickering Reality
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Fateborne Nightmares
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Ficklefire
+“WHEN: Your Shooting phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Delirium Unmade
+“WHEN: End of your opponent’s Fight phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is not within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1888,76 +1926,90 @@ PSYCHIC
 −38% wiped
 −0.8
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Damaged (1-7 wounds left)
--1 to hit rolls
+Damaged: 1-7 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Fates in Flux
+“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+One Head Looks Forward
+“At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
+One Head Looks Back
+“Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Improbable Shield (Aura)
+“LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+4% wiped
 +0.1
 MODELS
 1CP Pyrogenesis
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: +2 S (one Flux token spent: +3 S and +1 AP instead)
 if used
 no change: S10 still wounds T4 on 2+
 0
 +2 S
 0
-Flux token spent
++3 S, +1 AP
+“spend one Flux token”
 +0.1
 BEST
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Ficklefire (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Impossible Eclipse AI
-Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
-1CP Delirium Unmade AI
-End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Impossible Eclipse
+“WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Flickering Reality
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Fateborne Nightmares
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Ficklefire
+“WHEN: Your Shooting phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Delirium Unmade
+“WHEN: End of your opponent’s Fight phase. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that is not within Engagement Range of one or more enemy units. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

@@ -787,7 +787,7 @@ Add a group
 of 5 destroyed
 8.0 wounds lost · wiped in 50% of games
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -860,35 +860,27 @@ Within 12"
 bonus for Questoris heavy stubber and Frag bombard
 +28% wiped
 +0.6
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +22% wiped
 +0.5
 MODELS
-Code Chivalric
-Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
-if it applies
-+11% wiped
-+0.3
-MODELS
 The target within range of an objective marker
+ticks Saturation Fire
 if it holds
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-RULES IT SWITCHES ON
-Saturation Fire
-0
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 −25% wiped
 −0.8
 MODELS
-Damaged (1-6 wounds left)
--1 to hit rolls (and -4 OC)
+Damaged: 1-6 Wounds Remaining
+−1 to Hit rolls
 if it applies
 −25% wiped
 −0.8
@@ -911,57 +903,69 @@ by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding 
 −49% wiped
 −2.9
 MODELS
+ARMY RULES
+Code Chivalric
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
++11% wiped
++0.3
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+Knights of Legend
+“IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
+UNIT RULES
+Saturation Fire
+The target within range of an objective marker: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (2)
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
+Invulnerable Save (5+*)
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if used
 BEST · MOST MODELS+29% wiped
 +0.7
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +5% wiped
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Noble Sacrifice AI
-Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Point-Blank Barrage AI
-Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Noble Sacrifice
+“Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Full Tilt
+“WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
+1CP Point-Blank Barrage
+“In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, y …” · it removes a penalty the Damage tab does not apply: not counted in the Damage tab
+1CP Survivor of Strife
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1081,7 +1085,7 @@ of 5 destroyed
 1.3 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-3 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1105,73 +1109,78 @@ D
 2
 −0.7
 MODELS IF UNTICKED
-SITUATION AND RULES
-Code Chivalric
-Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
-if it applies
-+0.4
-MODELS
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Damaged (1-6 wounds left)
--1 to hit rolls (and -4 OC)
+Damaged: 1-6 Wounds Remaining
+−1 to Hit rolls
 if it applies
 −0.2
 MODELS
+ARMY RULES
+Code Chivalric
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
++0.4
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+Knights of Legend
+“IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (2)
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
+Invulnerable Save (5+*)
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if used
 BEST · MOST MODELS
 +0.3
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Noble Sacrifice AI
-Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Noble Sacrifice
+“Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Full Tilt
+“WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
+1CP Point-Blank Barrage
+“In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, y …” · it removes a penalty the Damage tab does not apply: not counted in the Damage tab
+1CP Survivor of Strife
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1294,7 +1303,7 @@ Shoot 4.0 · Fight 0.3 · the charge is taken to succeed
 
 Charged this turn
 ×
-5 NOT COUNTED
+26 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1371,35 +1380,27 @@ Within 12"
 bonus for Questoris heavy stubber and Frag bombard
 +23% wiped
 +0.5
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +18% wiped
 +0.4
 MODELS
-Code Chivalric
-Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
-if it applies
-+9% wiped
-+0.2
-MODELS
 The target within range of an objective marker
+ticks Saturation Fire
 if it holds
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-RULES IT SWITCHES ON
-Saturation Fire
-0
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 −23% wiped
 −0.6
 MODELS
-Damaged (1-6 wounds left)
--1 to hit rolls (and -4 OC)
+Damaged: 1-6 Wounds Remaining
+−1 to Hit rolls
 if it applies
 −23% wiped
 −0.6
@@ -1416,57 +1417,69 @@ if it applies
 −48% wiped
 −1.5
 MODELS
+ARMY RULES
+Code Chivalric
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
++9% wiped
++0.2
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+Knights of Legend
+“IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
+UNIT RULES
+Saturation Fire
+The target within range of an objective marker: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (2)
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
+Invulnerable Save (5+*)
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if used
 BEST · MOST MODELS+24% wiped
 +0.5
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +5% wiped
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Noble Sacrifice AI
-Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Point-Blank Barrage AI
-Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Noble Sacrifice
+“Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Full Tilt
+“WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
+1CP Point-Blank Barrage
+“In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, y …” · it removes a penalty the Damage tab does not apply: not counted in the Damage tab
+1CP Survivor of Strife
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1488,76 +1501,81 @@ D
 −13% wiped
 −0.3
 MODELS IF UNTICKED
-SITUATION AND RULES
-Code Chivalric
-Quality 1–2 (…with our martial valour risen over all), each time this model is selected to shoot or fight: re-roll one hit roll and re-roll one wound roll
-if it applies
-+6% wiped
-+0.1
-MODELS
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Damaged (1-6 wounds left)
--1 to hit rolls (and -4 OC)
+Damaged: 1-6 Wounds Remaining
+−1 to Hit rolls
 if it applies
 −4% wiped
 −0.1
 MODELS
+ARMY RULES
+Code Chivalric
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
++6% wiped
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+Knights of Legend
+“IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (2)
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
+Invulnerable Save (5+*)
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
+“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if used
 +3% wiped
 +0.1
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +3% wiped
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Noble Sacrifice AI
-Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Noble Sacrifice
+“Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Full Tilt
+“WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
+1CP Point-Blank Barrage
+“In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, y …” · it removes a penalty the Damage tab does not apply: not counted in the Damage tab
+1CP Survivor of Strife
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

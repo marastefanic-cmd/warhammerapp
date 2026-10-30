@@ -956,7 +956,7 @@ Add a group
 of 5 destroyed
 4.2 wounds lost · wiped in 1% of games
 Nothing ticked: the datasheets as printed
-1 NOT COUNTED
+11 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1010,16 +1010,13 @@ Within 12"
 bonus for Combi-bolter and Reaper autocannon
 +45% wiped
 +2.2
-SITUATION AND RULES
+SITUATION
 The target is the closest eligible target
+ticks Bloody Fury
 if it holds
 +7% wiped
 +1
 MODELS
-RULES IT SWITCHES ON
-Bloody Fury
-+1
-models
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1036,61 +1033,55 @@ the target within 24" (15.09): hits only on an unmodified 6, never critical; no 
 if it applies
 −1.5
 MODELS
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Adamantine Avalanche
+“At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+UNIT RULES
+Bloody Fury
+The target is the closest eligible target: Re-roll Hit rolls
+if it applies
++7% wiped
++1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Gore-stained Veterans
+“TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
-
-1CP Hack and Slash
-Fight phase only
-+0.6
-MODELS IF YOU COUNT IT
-1CP Focused Ferocity
-Fight phase only
-+0.8
-MODELS IF YOU COUNT IT
-1CP A Trophy for the Throne
-Fight phase only
-+0.5
-MODELS IF YOU COUNT IT
-
-Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+2CP Wrath Beyond Reason
+“WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit. TARGET: That TERMINATOR SQUAD unit. EFFECT: Ranged attacks that target your unit have -1 D until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1213,7 +1204,7 @@ of 5 destroyed
 Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-4 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1267,103 +1258,105 @@ AP
 D
 2
 DEVASTATING WOUNDS
-SITUATION AND RULES
-Driven by Ultimate Rage
-Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-if it applies
-+10% wiped
-+0.1
-MODELS
-Beacons of Rage (Eightbound)
-Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
-if it applies
-+8% wiped
-+0.1
-MODELS
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-if it applies
-+6% wiped
-+0.1
-MODELS
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-if it applies
-+3% wiped
-+0.1
-MODELS
+SITUATION
 Charged this turn
 also the condition of 1CP Hack and Slash (tick it under Stratagems)
 said to hold
 no change: no rule here needs it
 0
-Beacons of Rage (Eightbound)
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
-if it applies
-no change: already hits on 2+
-0
-Decapitating Strikes
-Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
-if it applies
-0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Damaged: 1-6 wounds remaining
+−1 to Hit rolls
 if it applies
 −18% wiped
 −0.3
 MODELS
+ARMY RULES
+Blessings of Khorne
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1]
+if it applies
++6% wiped
++0.1
+MODELS
+Blessings of Khorne
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS]
+if it applies
++3% wiped
++0.1
+MODELS
+Blessings of Khorne
+Decapitating Strikes · double 6 or triple 3+ · The target: Infantry: [DEVASTATING WOUNDS]
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Relentless Rage
++1 A · already in its weapons’ profiles above (A, marked +): counted there
+UNIT RULES
+Driven by Ultimate Rage
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++10% wiped
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (4)
+Reborn in Blood
+“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
+Wrathful Presence
+“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+The Blood God’s Favour
+“Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
+Overwhelming Wrath
+“Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Beacons of Rage (Eightbound)
+Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
+if it applies
++8% wiped
++0.1
+MODELS
+Beacons of Rage (Eightbound)
+Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
+if it applies
+no change: already hits on 2+
+0
 STRATAGEMS
 with their CP
 1CP Hack and Slash
-Made a charge move this turn: +1 AP in the Fight phase
+Charged this turn: +1 AP
 if used
 BEST · MOST MODELS+7% wiped
 +0.1
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +3% wiped
 ≈0
 MODELS
 +1 MORE ▾
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Skulls for the Skull Throne! AI
-Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1507,7 +1500,7 @@ Shoot 1.9 · Fight 3.1 · the charge is taken to succeed
 
 Charged this turn
 ×
-4 NOT COUNTED
+23 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1563,12 +1556,10 @@ bonus for Reaper autocannon
 Within 12"
 bonus for Combi-bolter and Reaper autocannon
 0
-SITUATION AND RULES
+SITUATION
 The target is the closest eligible target
+ticks Bloody Fury
 if it holds
-0
-RULES IT SWITCHES ON
-Bloody Fury
 0
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
@@ -1578,57 +1569,52 @@ Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
 0
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Adamantine Avalanche
+“At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+UNIT RULES
+Bloody Fury
+The target is the closest eligible target: Re-roll Hit rolls
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Gore-stained Veterans
+“TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
-
-1CP Hack and Slash
-Fight phase only
-NO CHANGE
-1CP Focused Ferocity
-Fight phase only
-NO CHANGE
-1CP A Trophy for the Throne
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+2CP Wrath Beyond Reason
+“WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit. TARGET: That TERMINATOR SQUAD unit. EFFECT: Ranged attacks that target your unit have -1 D until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1679,88 +1665,87 @@ D
 −1% wiped
 ≈0
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Charged this turn
 also the condition of 1CP Hack and Slash (tick it under Stratagems)
 holds: Both takes the charge as made (no charge roll)
 0
+ARMY RULES
+Blessings of Khorne
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1]
+if it applies
+0
+Blessings of Khorne
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS]
+if it applies
+0
+Blessings of Khorne
+Decapitating Strikes · double 6 or triple 3+ · The target: Infantry: [DEVASTATING WOUNDS]
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (2)
+Adamantine Avalanche
+“At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+Relentless Rage
++1 A · already in its weapons’ profiles above (A, marked +): counted there
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Gore-stained Veterans
+“TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
 Driven by Ultimate Rage (Angron)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Aura · Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
 0
 Beacons of Rage (Eightbound)
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
+Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound)
-Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
-if it applies
-0
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-if it applies
-0
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-if it applies
-0
-Decapitating Strikes
-Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
 with their CP
 1CP Hack and Slash
-Made a charge move this turn: +1 AP in the Fight phase
+Charged this turn: +1 AP
 if used
 0
 1CP Focused Ferocity
-When selected to fight: +1 A
++1 A
 if used
 0
 1CP A Trophy for the Throne
-When selected to fight, vs MONSTER/VEHICLE targets: +1 to wound rolls
+The target: Monster or Vehicle: +1 to Wound rolls
 if used
 0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Skulls for the Skull Throne! AI
-Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+2CP Wrath Beyond Reason
+“WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit. TARGET: That TERMINATOR SQUAD unit. EFFECT: Ranged attacks that target your unit have -1 D until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

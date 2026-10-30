@@ -984,7 +984,7 @@ of 5 destroyed
 6.8 wounds lost · wiped in 30% of games
 Atrapos lascutter: high intensity
 Graviton singularity cannon: contained
-2 NOT COUNTED
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1089,50 +1089,21 @@ AP
 D
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +17% wiped
 +0.6
 MODELS
-Macro-extinction Protocols
-vs MONSTER/VEHICLE: +1 to hit rolls
-if it applies
-+17% wiped
-+0.6
-MODELS
-Macro-extinction Protocols
-vs TITANIC/TOWERING: +1 to wound rolls
-if it applies
-+8% wiped
-+0.3
-MODELS
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+8% wiped
-+0.3
-MODELS
-Malefic Surge
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
-if it applies
-+3% wiped
-+0.1
-MODELS
-Lethal Hits
-+0.1
-Sustained Hits 1
-+0.2
-BEST
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 −14% wiped
 −0.6
 MODELS
-Damaged (1-10 wounds left)
--1 to hit rolls (and -5 OC)
+Damaged: 1-10 wounds remaining
+−1 to Hit rolls
 if it applies
 −14% wiped
 −0.6
@@ -1155,57 +1126,84 @@ by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding 
 −30% wiped
 −2.6
 MODELS
+ARMY RULES
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++8% wiped
++0.3
+MODELS
+Malefic Surge
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”
+if it applies
++3% wiped
++0.1
+MODELS
+[LETHAL HITS]
++0.1
+[SUSTAINED HITS 1]
++0.2
+BEST
+NOT COUNTED IN THE DAMAGE TAB (1)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+UNIT RULES
+Macro-extinction Protocols
+The target: Monster or Vehicle: +1 to Hit rolls
+if it applies
++17% wiped
++0.6
+MODELS
+Macro-extinction Protocols
+The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+if it applies
++8% wiped
++0.3
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Consumed with Hunger
+“While a friendly WAR DOG model is within 6" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+11% wiped
 +0.4
 MODELS
 1CP Warp Vision
-Your Shooting phase: ranged weapons have [IGNORES COVER]
+[IGNORES COVER]
 if used
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Profane Symbiosis AI
-End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Unleash Balefire AI
-After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Profane Symbiosis
+“WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Hellforged Construction
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Corrupting Taint
+“WHEN: Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge. TARGET: That CHAOS KNIGHTS CHARACTER unit. EFFECT: Select one objective marker your unit is within range of that you control. …” · not counted in the Damage tab
+1CP Unleash Balefire
+“WHEN: Your Shooting phase. TARGET: One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase. EFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. …” · not counted in the Damage tab
+1CP Diabolic Bulwark
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1326,7 +1324,7 @@ of 5 destroyed
 Atrapos lascutter: high intensity
 Charged this turn
 ×
-3 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1380,101 +1378,99 @@ AP
 D
 4
 SUSTAINED HITS 1
-SITUATION AND RULES
+SITUATION
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Damaged: 1-10 wounds remaining
+−1 to Hit rolls
+if it applies
+−16% wiped
+−0.6
+MODELS
+ARMY RULES
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++18% wiped
++0.4
+MODELS
+Malefic Surge
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”
+if it applies
++4% wiped
+≈0
+MODELS
+[LETHAL HITS]
++4% wiped
+[SUSTAINED HITS 1]
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+UNIT RULES
 Macro-extinction Protocols
-vs TITANIC/TOWERING: +1 to wound rolls
+The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +18% wiped
 +0.4
 MODELS
 Knight Diabolus
-Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE]
+“While the bearer is using the Diabolic Power ability”: [LANCE]
 if it applies
 +18% wiped
 +0.4
 MODELS
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+18% wiped
-+0.4
-MODELS
-Charged this turn
-said to hold
-no change: no rule here needs it
-0
 Macro-extinction Protocols
-vs MONSTER/VEHICLE: +1 to hit rolls
+The target: Monster or Vehicle: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
-Malefic Surge
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
-if it applies
-+4% wiped
-≈0
-MODELS
-Lethal Hits
-+4% wiped
-Sustained Hits 1
-0
-Damaged (1-10 wounds left)
--1 to hit rolls (and -5 OC)
-if it applies
-−16% wiped
-−0.6
-MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Consumed with Hunger
+“While a friendly WAR DOG model is within 6" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.” · not counted in the Damage tab
+Knight Diabolus
+BS/WS improved by 1 · already in its weapons’ profiles above (WS, marked +): counted there
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+17% wiped
+BEST · MOST MODELS+17% wiped
 +0.4
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
-
-1CP Warp Vision
-Shooting phase only
-NO CHANGE
-
-Nothing to count: 1CP Unleash Balefire (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Profane Symbiosis AI
-End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Profane Symbiosis
+“WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Hellforged Construction
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Corrupting Taint
+“WHEN: Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge. TARGET: That CHAOS KNIGHTS CHARACTER unit. EFFECT: Select one objective marker your unit is within range of that you control. …” · not counted in the Damage tab
+1CP Unleash Balefire
+“WHEN: Your Shooting phase. TARGET: One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase. EFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. …” · not counted in the Damage tab
+1CP Diabolic Bulwark
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1599,7 +1595,7 @@ Atrapos lascutter: high intensity
 Graviton singularity cannon: contained
 Charged this turn
 ×
-5 NOT COUNTED
+25 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1708,14 +1704,7 @@ AP
 D
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-SITUATION AND RULES
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+3% wiped
-≈0
-MODELS
-+1 MORE ▾
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1723,36 +1712,14 @@ if it applies
 ≈0
 MODELS
 +1 MORE ▾
-Macro-extinction Protocols
-vs MONSTER/VEHICLE: +1 to hit rolls
-if it applies
-+3% wiped
-≈0
-MODELS
-+1 MORE ▾
-Macro-extinction Protocols
-vs TITANIC/TOWERING: +1 to wound rolls
-if it applies
-+1% wiped
-≈0
-MODELS
-Malefic Surge
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
-if it applies
-≈0
-MODELS
-Lethal Hits
-≈0
-Sustained Hits 1
-≈0
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 −5% wiped
 −0.1
 MODELS
-Damaged (1-10 wounds left)
--1 to hit rolls (and -5 OC)
+Damaged: 1-10 wounds remaining
+−1 to Hit rolls
 if it applies
 −5% wiped
 −0.1
@@ -1769,58 +1736,84 @@ if it applies
 −20% wiped
 −0.3
 MODELS
+ARMY RULES
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++1% wiped
+≈0
+MODELS
+Malefic Surge
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”
+if it applies
+≈0
+MODELS
+[LETHAL HITS]
+≈0
+[SUSTAINED HITS 1]
+≈0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+UNIT RULES
+Macro-extinction Protocols
+The target: Monster or Vehicle: +1 to Hit rolls
+if it applies
++3% wiped
+≈0
+MODELS
++1 MORE ▾
+Macro-extinction Protocols
+The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+if it applies
++1% wiped
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Consumed with Hunger
+“While a friendly WAR DOG model is within 6" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +2% wiped
 ≈0
 MODELS
 +1 MORE ▾
 1CP Warp Vision
-Your Shooting phase: ranged weapons have [IGNORES COVER]
+[IGNORES COVER]
 if used
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Profane Symbiosis AI
-End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Unleash Balefire AI
-After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Profane Symbiosis
+“WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Hellforged Construction
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Corrupting Taint
+“WHEN: Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge. TARGET: That CHAOS KNIGHTS CHARACTER unit. EFFECT: Select one objective marker your unit is within range of that you control. …” · not counted in the Damage tab
+1CP Unleash Balefire
+“WHEN: Your Shooting phase. TARGET: One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase. EFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. …” · not counted in the Damage tab
+1CP Diabolic Bulwark
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1871,106 +1864,104 @@ AP
 D
 4
 SUSTAINED HITS 1
-SITUATION AND RULES
+SITUATION
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Damaged: 1-10 wounds remaining
+−1 to Hit rolls
+if it applies
+−7% wiped
+−0.1
+MODELS
+ARMY RULES
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Malefic Surge
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”
+if it applies
+−1% wiped
+≈0
+MODELS
++1 MORE ▾
+[LETHAL HITS]
+−1% wiped
+[SUSTAINED HITS 1]
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Super-heavy Walker
+“Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
+UNIT RULES
 Macro-extinction Protocols
-vs TITANIC/TOWERING: +1 to wound rolls
+The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +2% wiped
 ≈0
 MODELS
 +1 MORE ▾
 Knight Diabolus
-Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE]
+“While the bearer is using the Diabolic Power ability”: [LANCE]
 if it applies
 +2% wiped
 ≈0
 MODELS
 +1 MORE ▾
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+2% wiped
-≈0
-MODELS
-+1 MORE ▾
-Charged this turn
-holds: Both takes the charge as made (no charge roll)
-no change: no rule here needs it
-0
 Macro-extinction Protocols
-vs MONSTER/VEHICLE: +1 to hit rolls
+The target: Monster or Vehicle: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
-Malefic Surge
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
-if it applies
-−1% wiped
-≈0
-MODELS
-+1 MORE ▾
-Lethal Hits
-−1% wiped
-Sustained Hits 1
-0
-Damaged (1-10 wounds left)
--1 to hit rolls (and -5 OC)
-if it applies
-−7% wiped
-−0.1
-MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Consumed with Hunger
+“While a friendly WAR DOG model is within 6" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.” · not counted in the Damage tab
+Knight Diabolus
+BS/WS improved by 1 · already in its weapons’ profiles above (WS, marked +): counted there
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +3% wiped
 ≈0
 MODELS
 +1 MORE ▾
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
-
-1CP Warp Vision
-Shooting phase only
-NO CHANGE
-
-Nothing to count: 1CP Unleash Balefire (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Profane Symbiosis AI
-End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Profane Symbiosis
+“WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Hellforged Construction
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Corrupting Taint
+“WHEN: Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge. TARGET: That CHAOS KNIGHTS CHARACTER unit. EFFECT: Select one objective marker your unit is within range of that you control. …” · not counted in the Damage tab
+1CP Unleash Balefire
+“WHEN: Your Shooting phase. TARGET: One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase. EFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. …” · not counted in the Damage tab
+1CP Diabolic Bulwark
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

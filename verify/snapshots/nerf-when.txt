@@ -1462,11 +1462,11 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-2.4
+1.8
 of 5 destroyed
-4.8 wounds lost · wiped in 3% of games
-Primarch of the XIII
-2 NOT COUNTED
+3.5 wounds lost · wiped in 1% of games
+Nothing ticked: the datasheets as printed
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1489,8 +1489,8 @@ AP
 D
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-−3% wiped
-−2.4
+−1% wiped
+−1.8
 MODELS IF UNTICKED
 HALF RANGE
 [RAPID FIRE], [MELTA]
@@ -1499,94 +1499,94 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18"
 bonus for Hand of Dominion
-+23% wiped
-+1.1
-SITUATION AND RULES
-Primarch of the XIII
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: −0.6 models · −2% wiped
++8% wiped
++0.9
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 no change: already hits on 2+
 0
-Soul Sight (Librarian in Phobos Armour)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
-if it applies
-no change: [IGNORES COVER] counts only when the target has the benefit of cover
-0
-ALL ▾
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−1% wiped
-−0.4
+−0.3
 MODELS
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-−1% wiped
-−0.4
+−0.3
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−1% wiped
-−0.4
+−0.3
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 if it applies
-−3% wiped
-−2.1
+−1% wiped
+−1.5
 MODELS
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Combat Doctrines
+“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+Transhuman Strategist
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
+Primarch of the XIII
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++2% wiped
++0.6
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (4)
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Codex Adept
+“The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Soul Sight (Librarian in Phobos Armour)
+Selected by it · The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +2% wiped
-+0.3
++0.4
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-Codex Adept
-Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
-1CP Gene-Wrought Might
-Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
-COUNT IT BY HAND: AP +1
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Armour of Contempt
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Duty in Death
+“WHEN: Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1701,13 +1701,12 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-5.0
+4.6
 of 5 destroyed
-10 wounds lost · wiped in >99% of games
+9.1 wounds lost · wiped in 69% of games
 Charged this turn
 ×
-Primarch of the XIII
-3 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1715,8 +1714,6 @@ FIGHT · BIGGEST FIRST
 Effects are on the damage these attacks deal.
 
 The charge is taken to succeed (no charge roll).
-
-Nothing here changes this: the target is destroyed in every game anyway.
 
 MELEE WEAPONS
 Roboute Guilliman
@@ -1733,8 +1730,8 @@ D
 4
 LETHAL HITS
 one of the weapons its models pick between
-−100% wiped
-−5
+−69% wiped
+−4.6
 MODELS IF UNTICKED
 The Emperor’s Sword
 A
@@ -1749,57 +1746,82 @@ D
 2
 CLEAVE 2, DEVASTATING WOUNDS
 one of the weapons its models pick between
-0
-SITUATION AND RULES
-Primarch of the XIII
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: −0.4 models · −31% wiped
++25% wiped
++0.4
+MODELS
+SITUATION
 Charged this turn
 said to hold
+no change: no rule here needs it
 0
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Combat Doctrines
+“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+Transhuman Strategist
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
+Primarch of the XIII
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++31% wiped
++0.4
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (4)
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Codex Adept
+“The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
+if used
+BEST · MOST MODELS+15% wiped
++0.2
+MODELS
+1CP Gene-Wrought Might
+if used
+no change: already wounds on 2+
+0
+[LANCE]
+0
+[LANCE], +1 AP
+“If the assault doctrine is active for your unit”
+0
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Gene-Wrought Might
-Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
-COUNT IT BY HAND: AP +1
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Armour of Contempt
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Duty in Death
+“WHEN: Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1914,17 +1936,15 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-5.0
+4.9
 of 5 destroyed
-10 wounds lost · wiped in >99% of games
+9.8 wounds lost · wiped in 92% of games
 
-Shoot 2.41 · Fight 2.59 · the charge is taken to succeed
+Shoot 1.8 · Fight 3.1 · the charge is taken to succeed
 
-Primarch of the XIII
 Charged this turn
 ×
-Primarch of the XIII (fight)
-5 NOT COUNTED
+28 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1932,8 +1952,6 @@ SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
-
-Nothing here changes this: the target is destroyed in every game anyway.
 
 THE SHOOTING
 FIRST
@@ -1953,7 +1971,9 @@ AP
 D
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-0
+−23% wiped
+−0.3
+MODELS IF UNTICKED
 HALF RANGE
 [RAPID FIRE], [MELTA]
 No half-range bonus
@@ -1961,76 +1981,95 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18"
 bonus for Hand of Dominion
-0
-SITUATION AND RULES
++4% wiped
++0.1
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
+no change: already hits on 2+
 0
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-0
+−3% wiped
+≈0
+MODELS
++1 MORE ▾
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-0
+−3% wiped
+≈0
+MODELS
++1 MORE ▾
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-0
+−3% wiped
+≈0
+MODELS
++1 MORE ▾
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Combat Doctrines
+“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+Transhuman Strategist
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
 Primarch of the XIII
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: no change
-Soul Sight (Librarian in Phobos Armour)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
++4% wiped
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (4)
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Codex Adept
+“The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Soul Sight (Librarian in Phobos Armour)
+Selected by it · The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
+ALL ▾
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-Codex Adept
-Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
-1CP Gene-Wrought Might
-Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
-COUNT IT BY HAND: AP +1
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Armour of Contempt
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Duty in Death
+“WHEN: Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -2051,8 +2090,8 @@ D
 4
 LETHAL HITS
 one of the weapons its models pick between
-−97% wiped
-−2.6
+−91% wiped
+−3.1
 MODELS IF UNTICKED
 The Emperor’s Sword
 A
@@ -2067,57 +2106,82 @@ D
 2
 CLEAVE 2, DEVASTATING WOUNDS
 one of the weapons its models pick between
-0
-SITUATION AND RULES
-Primarch of the XIII
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: ≈0 models · −3% wiped
++5% wiped
++0.1
+MODELS
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
 0
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Combat Doctrines
+“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+Transhuman Strategist
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
+Primarch of the XIII
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++8% wiped
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (4)
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Codex Adept
+“The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
+if used
+BEST · MOST MODELS+4% wiped
++0.1
+MODELS
+1CP Gene-Wrought Might
+if used
+no change: already wounds on 2+
+0
+[LANCE]
+0
+[LANCE], +1 AP
+“If the assault doctrine is active for your unit”
+0
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Gene-Wrought Might
-Fight phase, selected to fight: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP)
-COUNT IT BY HAND: AP +1
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Armour of Contempt
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Duty in Death
+“WHEN: Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
