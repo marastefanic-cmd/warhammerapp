@@ -323,6 +323,12 @@
   "at": "2026-10-28",
   "why": "Your turn."
  },
+ "049c115883e9a52a": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 7ac8d6c1ecfaa2d9 (review:fellhammer-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Every ranged attack\",\"note\":\"can ignore any or all modifiers to BS and any or all modifiers to the hit roll\",\"from\":\"Stabilisation Talo…) is the one signed against GW’s words, unchanged: “GW wording kept; the Damage tab parses it to ignoreHitMods; always is right (passive).”"
+ },
  "04a8ae4d39a7f565": {
   "verdict": "ok",
   "by": "review:gists",
@@ -653,6 +659,12 @@
   "at": "2026-10-17",
   "why": "EFFECT “Your unit makes an ingress move” plus RESTRICTIONS “You cannot use this stratagem during the first battle round.” Same; “in strategic reserves” is from the TARGET."
  },
+ "08cc997745dff369": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 7d389b29f9e84bc2 (review:r15b-v2, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"weapon\":\"Incendine combustor\",\"set\":{\"A\":\"+2\"},\"when\":\"In Protector Protocol\",\"note\":\"selected in your Command phase\",\"from\":\"Battle Protocols…) is the one signed against GW’s words, unchanged: ““In your Command phase … you can select one protocol … Once a unit enters a protocol, it remains in that protocol until it enters a different one”: a different protocol can only be entered in your Com”"
+ },
  "08df86c119fd6e0a": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -802,6 +814,12 @@
   "by": "review:healybois",
   "at": "2026-10-28",
   "why": "GW: Hive Tyrant CORE ABILITIES \"Deadly Demise D3, Leader\"; Tyrant Guard none. Right."
+ },
+ "0a7724e22806a1d6": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 939cee318ff5b336 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Warden (Bondsman, your Command phase)\",\"note\":\"[SUSTAINED HITS …) is the one signed against GW’s words, unchanged: “Warden’s Duty, first half: 'weapons … have [SUSTAINED HITS 1]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command pha”"
  },
  "0a96a2f600152412": {
   "verdict": "ok",
@@ -971,6 +989,12 @@
   "at": "2026-10-24",
   "why": "GW lists it under WARGEAR ABILITIES on Karanak’s card, and Karanak is “equipped with … Brass Collar of Bloody Vengeance”."
  },
+ "0cf35d74aa8a767e": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 7c2a8777b1cf5335 (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Every ranged attack\",\"note\":\"re-roll wound rolls of 1\",\"from\":\"Bringers of Change\"}…) is the one signed against GW’s words, unchanged: “\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.\" The note is now only that unconditional part, calc {rrWound:'1s'} says it exactly, and always is right. It is the Rub”"
+ },
  "0d16f5c226759018": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -1054,6 +1078,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "The +1 to hit option of Bladeguard: \"In the Fight phase, when this unit is selected to fight\". The when says it is once per turn and instead of the -1 option, so the choice is stated and not made. Melee only (\"This unit’s melee attacks\"). Under 19.04 it covers the whole attached unit."
+ },
+ "0e93f183b5d9c545": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 5774666c9dddd1d1 (review:r14-picks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs TITANIC/TOWERING\",\"note\":\"+1 to wound rolls\",\"from\":\"Macro-extinction Protocols\",\"vs\":{\"any\":[\"Titanic\",\"Towering\"],\"also\":{\"any\":[\"Mon…) is the one signed against GW’s words, unchanged: “\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering wi”"
  },
  "0eaf090d296936fb": {
   "verdict": "ok",
@@ -2063,6 +2093,12 @@
   "at": "2026-10-25",
   "why": "GW p5 is the same text. at End of your opponent’s turn plus fight:opp is the end-opp-turn moment (the same as the approved Hunters from the Warp). movement:your comes from “must make an ingress move in your next Movement phase”. “until the start of your next Shooting phase” is a duration, correctly skipped. The checklist shows it once per battle, per army, at End of your opponent’s turn."
  },
+ "1ea0f05bb70f0bb8": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved fe120c3b8fad0846 (review:fellhammer-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Allocated to a MONSTER or VEHICLE model\",\"note\":\"can re-roll the damage roll\",\"from\":\"Annihilator\",\"vs\":{\"any\":[\"Monster\",\"Vehicle\"]}}…) is the one signed against GW’s words, unchanged: “GW Faction Pack wording; vs MONSTER/VEHICLE, always while vs holds.”"
+ },
  "1ea14b9bc0ac6a8a": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -2140,6 +2176,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "EFFECT: \"Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.\" The gist says \"attacks against\" where the rule says \"attacks that target\". Same meaning, nothing added."
+ },
+ "1fdeb75535f6d1b0": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 75ca10d32d1676b6 (review:nerf-units (its fix), 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Every ranged attack\",\"note\":\"can re-roll damage rolls\",\"from\":\"Total Obliteration\"}…) is the one signed against GW’s words, unchanged: “The content is right: ranged, \"re-roll damage rolls\", from Total Obliteration, always. But when:'Always' is new and appears nowhere else in data.js. Approved always-on footnotes say \"Every ranged atta”"
  },
  "1fe59d86fe263de4": {
   "verdict": "ok",
@@ -2596,6 +2638,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “That battle-shock roll is automatically successful.” The RESTRICTIONS “more than once per battle” are on the row already: the timing line shows the stratagem’s limit “Once per battle” (stratWhenLine adds s.limit)."
+ },
+ "26588c2e9195edc3": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved e96341584e050020 (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"vs MONSTER/VEHICLE\",\"note\":\"+1 to wound rolls\",\"from\":\"Monstrous Nemesis\",\"vs\":{\"any\":[\"Monster\",\"Vehicle\"]}}…) is the one signed against GW’s words, unchanged: “\"TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.\" The Hive Tyrant is a TYRANIDS MONSTER; vs any Monster/Vehicle ”"
  },
  "26600be2890f7970": {
   "verdict": "ok",
@@ -3089,6 +3137,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army” = “Just after a saving throw is failed for your PSYKER model” (now a model keyword, as kwOnly says); EFFECT “Change the Damage characteristic of that attack to 0” = “change the Damage of that attack to 0”. The fast-dice sentences only widen when it can be used, they set no condition, so leaving them to the full text loses none."
  },
+ "2e6d5e1175bc5d45": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 7fafc7db3ad168b6 (review:necrons-2, 2026-10-28) with only the retired Damage-tab fields removed (always calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"Every attack\",\"note\":\"re-roll wound rolls of 1\",\"from\":\"Implacable Eradication\"}…) is the one signed against GW’s words, unchanged: “\"re-roll a Wound roll of 1\" on every attack, always, with calc rrWound 1s. It covers the whole attached unit (19.04), which the app shows as ALL ATTACKS · WHOLE UNIT, so the Staff of light gets it too”"
+ },
  "2e8a7337084e3ca9": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -3148,6 +3202,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "“Friendly ADEPTUS ASTARTES TERMINATOR units”: {all:['Faction: Adeptus Astartes','Terminator']}."
+ },
+ "30250f4578d9b6de": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved cb976747a14831e8 (review:tzeentch-data, 2026-10-27) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"Every melee attack\",\"note\":\"+1 to hit rolls\",\"from\":\"Neverblade\"}…) is the one signed against GW’s words, unchanged: “Neverblade: \"each time the bearer makes a melee attack, add 1 to the Hit roll\": every melee attack, always.”"
  },
  "3050abb455be6ffa": {
   "verdict": "ok",
@@ -3214,6 +3274,12 @@
   "by": "review:howto-3",
   "at": "2026-10-29",
   "why": "{\"limit\":\"Once per battle\"}: the same key and judgement as result-howto-2. RESTRICTIONS \"You cannot use this stratagem more than once per battle.\""
+ },
+ "3106d9f62e85d781": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 649eba0fd02c5533 (review:calc, 2026-10-26) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"vs MONSTER/VEHICLE\",\"note\":\"re-roll one hit roll, one wound roll and one damage roll\",\"from\":\"Advanced Firepower\",\"vs\":{\"any\":[\"Monster…) is the one signed against GW’s words, unchanged: “The Wahapedia datasheet (ds/adeptus-custodes_Caladius-Annihilator-Grav-Tank.html) matches data.js: 'This unit’s ranged attacks that target a MONSTER/VEHICLE unit can: Re-roll one hit roll. Re-roll one”"
  },
  "3119d9f672bc8ad0": {
   "verdict": "ok",
@@ -3478,6 +3544,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” {all:[Havocs]}. Unengaged is a condition in play, not a keyword."
+ },
+ "34b65670f75a3303": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 524ba944704b412b (review:defilers-and-friends, 2026-10-22) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"mod\":{\"kind\":\"all\",\"when\":\"Command phase, until the end of the turn\",\"note\":\"can ignore any or all modifiers to BS or WS, to the hit roll and to the wound rol…) is the one signed against GW’s words, unchanged: “Note: \"you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll\", all three kept; when \"Until the end of the tur”"
  },
  "34c2a5f2dfceae77": {
   "verdict": "ok",
@@ -3983,6 +4055,12 @@
   "at": "2026-10-21",
   "why": "There is no turn limit, and both players fight in the Fight phase, so either turn."
  },
+ "3c2569901fb434c6": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved e8ff7e822cf29d57 (review:fellhammer-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"While the Dark Apostle leads this unit and it contains its DARK APOSTLE model\",\"note\":\"+1 to wound rolls\",\"from\":\"Dark Zealotry\"}…) is the one signed against GW’s words, unchanged: “GW: while leading and containing a DARK APOSTLE model, melee attacks of that unit +1 to wound; kind melee, the whole attached unit (19.04). always: the DA leads in this list (approved leader-buff conv”"
+ },
  "3c384fe1f144dd56": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -4055,6 +4133,18 @@
   "at": "2026-10-24",
   "why": "It is on the Bloodcrushers datasheet."
  },
+ "3ccc86b6f7cc00f0": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 40c8700c8c258af0 (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"weapon\":\"Blitzkannon\",\"set\":{\"A\":\"+6\"},\"when\":\"vs non-MONSTER/VEHICLE targets\",\"note\":\"in your Shooting phase\",\"from\":\"Blitz Dem Gitz!\",\"vs\":{…) is the one signed against GW’s words, unchanged: “Datasheet (Wahapedia the same): \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" vs none Monster/Vehicle is the exclu”"
+ },
+ "3cd1b64de9388cf4": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved a010a2da186d0c10 (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs units with no T 7+ models\",\"note\":\"+1 to hit rolls\",\"from\":\"Spiteful Power Trip\",\"vs\":{\"maxT\":6}}…) is the one signed against GW’s words, unchanged: “\"This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.\" maxT:6 = no target model above T6, exactly that; nothing else conditions it, so always is right.”"
+ },
  "3cd6cd2ed1272a23": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -4078,6 +4168,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "NR standard: \"255 PTS SLAUGHTERBOUND\" (Berzerker Glaive), roster lines \"Slaughterbound Character 125\" and \"(3) Exalted Eightbound Infantry 130\". So the split 125 + 130 = 255 still holds after the stats rename."
+ },
+ "3d37af83eaf8a338": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved f45eb2bc6b70eec2 (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"vs MONSTER/VEHICLE\",\"note\":\"+1 D\",\"from\":\"Rend and Tear\",\"vs\":{\"any\":[\"Monster\",\"Vehicle\"]}}…) is the one signed against GW’s words, unchanged: “\"Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.\" vs any Monster/Vehicle ”"
  },
  "3d3ed1fb83bb0a92": {
   "verdict": "ok",
@@ -4174,6 +4270,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "WHEN: \"Any phase, just after an enemy unit has selected its targets\" (Wahapedia): all five phases."
+ },
+ "3e3fc0f1ce57cc6c": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 0bff2841140fb5a4 (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs PSYKER CHARACTER units\",\"note\":\"re-roll the hit roll and the wound roll\",\"from\":\"Hunter of Souls\",\"vs\":{\"all\":[\"Psyker\",\"Character\"]}}…) is the one signed against GW’s words, unchanged: “\"(if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead)\": vs all [Psyker, Character] needs both keywords, as the words do, and dmVs n”"
  },
  "3e799ad04dc00c2e": {
   "verdict": "ok",
@@ -5195,6 +5297,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”: your turn."
  },
+ "4ea2e6db8b3c42e7": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 1dd70c039f74eaa3 (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"needs\":{\"all\":[\"Faction: World Eaters\"]},\"when\":\"Within 6\\\" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets\",\"selfWhe…) is the one signed against GW’s words, unchanged: “\"If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well\" (Wahapedia repeats \"(excluding MONSTERS and VEHICLES)\" there): note \"+1 to wound rolls\", calc {wound:1}, vs”"
+ },
  "4ebbce2bcd4a58bc": {
   "verdict": "ok",
   "by": "review:healybois",
@@ -5416,6 +5524,12 @@
   "by": "review:r23-army (its fix)",
   "at": "2026-10-22",
   "why": "The text has two triggers. “Each time you make a Blessings of Khorne roll” is at the start of the battle round (Blessings of Khorne: “at the start of the battle round, you can make a Blessings of Khorne roll”) or via Skulls for the Skull Throne! (Fight phase): the new at:“Start of the battle round” (gStep → round: shown in the round’s first Command phase only, not under Command abilities 08.04) plus fight cover it, and that is what the play test (g5 F13) asked for. But “each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit, and the Lord’s unit (plasma pistols, bolt pistols, GRENADES for Explosives; not TITANIC, so Fire Overwatch at the end of your opponent’s Movement phase) can destroy units in your Shooting phase and their Movement phase too. Dropping those two phases drops where that sentence triggers, against the app’s convention for attack-triggered abilities (Hunter of Souls: movement opp, shooting your, fight either; the fixlist keeps Fire Overwatch “opp movement” tags as deliberate) and against the earlier sign-off of exactly these tags for this text (result-literal 52c3668253df7eb6). Keep the at (it alone fixes the Command placement; in the other phases place() gives “during”) and restore the phases."
+ },
+ "52f350c255f883c4": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 702a230267ae7949 (review:necrons, 2026-10-28) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"mod\":{\"kind\":\"all\",\"when\":\"Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase\",\"note\":\"a Critical Hit on a…) is the one signed against GW’s words, unchanged: “\"an unmodified Hit roll of 5+ scores a Critical Hit\", until the end of the phase; critHit 5 is literal.”"
  },
  "530787891908c7bc": {
   "verdict": "ok",
@@ -5729,6 +5843,12 @@
   "at": "2026-10-27",
   "why": "GW Lord of Change: \"DAMAGED: 1-7 WOUNDS REMAINING While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\" (FP 1.2 l.1150): all attacks, -1 to hit, quoted."
  },
+ "57ee9a6f13459d2c": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 01e6c4a19e689f9e (review:necrons-2, 2026-10-28) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"Target within range of an objective marker\",\"cond\":\"targetObjective\",\"note\":\"re-roll the wound roll\",\"from\":\"Implacable Eradication\"}…) is the one signed against GW’s words, unchanged: “\"If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead\": a condition (targetObjective), with a full re-roll replacing the 1s re-roll”"
+ },
  "5816d01e0fa16461": {
   "verdict": "ok",
   "by": "review:healybois",
@@ -5824,6 +5944,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Pack 1.2 WHEN: “Fight phase, when an enemy unit targets a friendly WAR DOG unit.”"
+ },
+ "58dc993ce0d0501c": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 1372c45944297afe (review:fellhammer-units, 2026-10-24) with only the retired Damage-tab fields removed (always calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"Every attack\",\"note\":\"a Critical Hit on an unmodified hit roll of 5+\",\"from\":\"Mark of the Soul Forges\"}…) is the one signed against GW’s words, unchanged: “GW: \"Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\" Single-model unit, so every attack; always + calc critHit 5 are right.”"
  },
  "58ea7cd756f7c62d": {
   "verdict": "ok",
@@ -6881,6 +7007,12 @@
   "at": "2026-10-28",
   "why": "unitById finds reference sheets."
  },
+ "6a86f8bb5a6739e6": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved f2603203e43d1fbe (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"weapon\":\"Ferrumite cannon\",\"when\":\"Ferrumite cannon vs MONSTER or VEHICLE targets\",\"note\":\"+1 to hit rolls\",\"from\":\"Blistering Salvoes\",\"vs\":{…) is the one signed against GW’s words, unchanged: “\"Each time this model makes an attack with a ferrumite cannon that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.\" weapon Ferrumite cannon and vs any Monster/Vehicle match, with no table co”"
+ },
  "6a8c69c292be75d3": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -7331,6 +7463,12 @@
   "at": "2026-10-26",
   "why": "Matches the text (data.js = Wahapedia Magnus the Red): at the start of your opponent's Shooting phase, one enemy unit within 24\" of this PSYKER; until the end of the phase its ranged weapons have [HAZARDOUS]. The effect is on the enemy unit's weapons, whatever they shoot at. So a 'When targeted' line on every unit of the list (no needs) is the right place, and that includes Magnus himself (selfWhen; he can be shot by that unit too). It adds nothing the text does not say. Ranged only, opponent's Shooting phase, until the end of the phase: correct. There is no psychic roll in this text, so none is needed. Rendered in pubstomper (8 units) and mucho-mutantes (9 lines), with the 'When targeted' counts +1. Those are the only changes against main's own render."
  },
+ "72d30975da729636": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 2cd7024961fb6a08 (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"vs MONSTER/VEHICLE\",\"note\":\"can re-roll wound rolls\",\"from\":\"Da Bigger Dey Iz…\",\"vs\":{\"any\":[\"Monster\",\"Vehicle\"]}}…) is the one signed against GW’s words, unchanged: “\"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" vs any Monster/Vehicle is the target condition and there is no table condition, so always is right.”"
+ },
  "730222f6b64fa49c": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -7414,6 +7552,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
+ },
+ "74121172bc1f77a1": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 10ac82460327eacd (review:fellhammer-2, 2026-10-24) with only the retired Damage-tab fields removed (calc oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"needs\":{\"all\":[\"Faction: Heretic Astartes\",\"Vehicle\"]},\"when\":\"Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3\\\")\"…) is the one signed against GW’s words, unchanged: “Master of Mechanisms: the Wahapedia datasheet (the GW pack does not change it) says \"In your Command phase, select one friendly HERETIC ASTARTES VEHICLE model within 3\" of this model. That VEHICLE mod”"
  },
  "741749fa5f768f7d": {
   "verdict": "ok",
@@ -7600,6 +7744,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Readied “At the start of your Command phase”; ka’tah WHENs: Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”, Dacatarai/Kaptaris “Start of the Fight phase”, Rendax “Fight phase”. No ka’tah is in the Charge phase, so command, movement, shooting, fight."
+ },
+ "76b64929ee0eb472": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 34f2fbbb1f9ce13f (review:infernal-lance, 2026-10-22) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs MONSTER/VEHICLE\",\"note\":\"+1 to hit rolls\",\"from\":\"Macro-extinction Protocols\",\"vs\":{\"any\":[\"Monster\",\"Vehicle\"]}}…) is the one signed against GW’s words, unchanged: ““Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” The footnote covers all attacks with +1 to hit vs MONSTER/VEHICLE. Being always on, keyed to the h”"
  },
  "76ba10b0097c3940": {
   "verdict": "ok",
@@ -7931,6 +8081,12 @@
   "at": "2026-10-21",
   "why": "\"At the start of the Fight phase … Until the end of the phase, that Blessing of Khorne is active\": the roll and the effect are both in the Fight phase."
  },
+ "7bd6101bcb425cda": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 39a186ff4c7294a2 (review:defilers2, 2026-10-26) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"Every melee attack\",\"note\":\"re-roll wound rolls of 1\",\"from\":\"Excessive Assault\"}…) is the one signed against GW’s words, unchanged: ““Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1”: every melee attack. Right.”"
+ },
  "7c00106c3da079a2": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -8141,6 +8297,12 @@
   "at": "2026-10-16",
   "why": "\"At the start of your Shooting phase ... Until the end of the phase\"."
  },
+ "7f92af88864ab63e": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved be4e410bd7f1109e (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Paladin (Bondsman, your Command phase)\",\"note\":\"[LANCE]\",\"fro…) is the one signed against GW’s words, unchanged: “Paladin’s Duty, second half: 'melee weapons … have [LANCE]', so kind melee is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), one friend”"
+ },
  "7fa7abac9436c47b": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -8188,6 +8350,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Each time this model’s unit is selected to fight\" = Fight phase, either turn."
+ },
+ "80517db3db127581": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved cc76946b279a491f (review:r15-v2, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"weapon\":\"Omnissian axe\",\"set\":{\"A\":\"6\"},\"when\":\"After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\\\" of it\",\"note\":\"until…) is the one signed against GW’s words, unchanged: ““If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.” lasts 'battle' and t”"
  },
  "807cc3fe795740f7": {
   "verdict": "ok",
@@ -8944,6 +9112,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "\"WHEN: Your Movement phase, when … selected to move.\""
+ },
+ "8bc4865fafd5485f": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 49b1b573bbc039b6 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Crusader (Bondsman, your Command phase)\",\"note\":\"+1 to hit r…) is the one signed against GW’s words, unchanged: “Crusader’s Duty: each ranged attack adds 1 to the hit roll, so kind ranged, '+1 to hit rolls'. dmEffects turns that into hit:+1, so no calc is needed (Clever Know-wotz's calc:{hit:1} is equivalent). T”"
  },
  "8bdb8f3b66a68e4e": {
   "verdict": "ok",
@@ -10073,6 +10247,12 @@
   "at": "2026-10-21",
   "why": "Sanctuary is under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Destrier's NR Options (\"Sanctuary, Questoris heavy stubber, ...\")."
  },
+ "9d3db102b3b07013": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 57327e691bf68e00 (review:exiled-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"While the Bloodmaster is leading the unit\",\"note\":\"+1 to wound rolls\",\"from\":\"Bloodmaster\"}…) is the one signed against GW’s words, unchanged: ““While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll”: all attacks, always (he is leading in this list), and the Bloodmaster’s own attacks inclu”"
+ },
  "9d3e520c45152207": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -10271,6 +10451,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Fight phase, when an enemy unit targets a friendly WAR DOG unit” + EFFECT “Your unit has Feel No Pain 5+.”: both kept, nothing added."
  },
+ "9f909de95018e800": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 7f141f8d03921ac2 (review:r15-v2, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"mod\":{\"kind\":\"ranged\",\"lasts\":\"round\",\"when\":\"Your Command phase, until the start of your next Command phase\",\"note\":\"BS 3+, [IGNORES COVER]; can only target …) is the one signed against GW’s words, unchanged: ““EFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability …” lasts 'round' is exac”"
+ },
  "9f95b099784a3975": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -10294,6 +10480,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "WHEN 'Your Command phase.' (waha l.473); icons Command, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "9fdabf25db2de8d0": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 5a5c48532674282d (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"needs\":{\"all\":[\"Faction: World Eaters\"]},\"when\":\"Within 6\\\" of Eightbound, vs non-MONSTER/VEHICLE targets\",\"selfWhen\":\"Own aura, vs non-MONSTER…) is the one signed against GW’s words, unchanged: “\"each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll\": the note is now only \"+1 to hit\" (calc {hit:1}), with vs none Monste”"
  },
  "9ff8605c6ff55b02": {
   "verdict": "ok",
@@ -10360,6 +10552,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "GW: “While this model is within 3\" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.” The def keeps the condition and has the same shape as the approved Mechanicus Bodyguard and Da Grand Warlord’s Ladz."
+ },
+ "a0b67e093f6ad4e9": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "GW (Wahapedia Chaos Daemons, Warptide): “TARGET: One friendly LEGIONES DAEMONICA BATTLELINE unit (excluding PINK HORRORS units).” needs all Faction: Legiones Daemonica + Battleline, unless all [Pink, Horrors]: GW’s Horrors datasheet gives PINK HORRORS models the keywords HORRORS and PINK (“KEYWORDS – ALL MODELS: … HORRORS; PINK HORRORS: PINK”), and the database splits them so (fluxmaster-pink-horrors kw Pink + Horrors; Blue Horrors Blue + Horrors), so a unit with Pink Horrors is excluded and Blue/Brimstone Horrors are not. Main’s none [“Pink Horrors”] matched no keyword in the data: this reading is the correction. In the-exiled-legion it allows Skulltaker+Bloodletters and Bloodmaster+Bloodletters only (BATTLELINE)."
  },
  "a0c98d5661f941f6": {
   "verdict": "ok",
@@ -10439,6 +10637,12 @@
   "at": "2026-10-16",
   "why": "Crimson King section lists \"Impossible Form (Psychic)\"."
  },
+ "a2048d49e1dbd599": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved fe0f2cc5b9a306a6 (review:r15-v2, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"After an aetherstride this turn\",\"note\":\"Dark Blessing has [SUSTAINED HITS D3]\",\"from\":\"Aetherstride\",\"lasts\":\"turn\"}…) is the one signed against GW’s words, unchanged: ““Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” lasts 'turn' is exactly that; Dark Blessing is this model’s ranged weapon (24\", PSYCHIC).”"
+ },
  "a21b3d1d582dd504": {
   "verdict": "ok",
   "by": "review:readings-3 (its fix)",
@@ -10456,6 +10660,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "WHEN “Your opponent’s Shooting phase …”. Matches GW word for word; 1CP."
+ },
+ "a22b0211ae16780f": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 65d677763a1c70ab (review:lite-knights, 2026-10-23) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"mod\":{\"kind\":\"ranged\",\"when\":\"Your Shooting phase, selected to shoot\",\"note\":\"can ignore modifiers to BS and hit rolls\"}}…) is the one signed against GW’s words, unchanged: ““Your unit can ignore modifiers to your unit’s: BS. Hit rolls.” ignoreHitMods is exactly that (BS and hit roll modifiers).”"
  },
  "a25cf56c859a00e3": {
   "verdict": "ok",
@@ -10582,6 +10792,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” Same."
+ },
+ "a47852d1b7666ede": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved f3b278734996b305 (review:defilers3, 2026-10-26) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"Called upon daemonic patrons when selected to fight (until the end of the phase)\",\"note\":\"a Critical Wound on an unmodified wound roll o…) is the one signed against GW’s words, unchanged: ““an unmodified Wound roll of 3+ scores a Critical Wound” after calling upon daemonic patrons when selected to fight, until the end of the phase: melee (selected to fight), critWound 3. The cost (one m”"
  },
  "a493c970772a43dd": {
   "verdict": "ok",
@@ -11039,6 +11255,12 @@
   "at": "2026-10-21",
   "why": "Its own words give no duration (“Each time a model in a SKITARII unit from your army makes an attack: If the Protector Imperative is active for that unit, re-roll a Hit roll of 1 …”), so with no lasts it is asked in each step and never carries longer than the words say. (Doctrina Imperatives’ “Until the end of the battle round” would also support 'round', but leaving it out is not wrong.) The picks match the text, and “Both” is what Transcendent Cogitation and Omnicogitator give (“both active for your unit”)."
  },
+ "abc41e4d2e827f6c": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved f736e877a0ebaf02 (review:r15-v2, 2026-10-21) with only the retired Damage-tab fields removed (calc oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"needs\":{\"all\":[\"Faction: Orks\",\"Vehicle\"],\"none\":[\"Aircraft\",\"Titanic\"]},\"when\":\"Picked by a Mek’s Clever Know-wotz\",\"note\":\"that VEHICLE model’s…) is the one signed against GW’s words, unchanged: ““That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and sti”"
+ },
  "abdb65a1b1bd8834": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -11165,6 +11387,12 @@
   "at": "2026-10-24",
   "why": "The bearer is the Skullmaster, which the export takes it on."
  },
+ "adaf66dfa80bec45": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved c07ed511b2a7806a (review:exiled-units (its fix), 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"Melee attacks that target a CHARACTER or MONSTER unit\",\"note\":\"can re-roll the wound roll\",\"from\":\"Champion Slayer\",\"vs\":{\"any\":[\"Charac…) is the one signed against GW’s words, unchanged: “The content is right: melee, vs CHARACTER or MONSTER, “can re-roll the wound roll”. But an always-on, target-keyword melee re-roll carries always:true in approved lists, so the Damage tab counts it wh”"
+ },
  "adbc1343c5ec5af2": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -11290,6 +11518,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "WHEN: \"Fight phase\", with no \"your\" or \"your opponent’s\", so either turn."
+ },
+ "af2026e5a78055c8": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved fafffd8bb3be1965 (review:defilers-and-friends, 2026-10-22) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"mod\":{\"kind\":\"all\",\"lasts\":\"battle\",\"when\":\"Pact points gained during the battle (cumulative)\",\"note\":\"1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls…) is the one signed against GW’s words, unchanged: “Table: \"1+: ... re-roll a Hit roll of 1. 3+: ... re-roll a Wound roll of 1. ... 7+: ... a Critical Hit is scored on an unmodified Hit roll of 5+\" and \"(these are all cumulative)\": each pick holds the ”"
  },
  "af2215338e8d56ad": {
   "verdict": "ok",
@@ -11585,6 +11819,12 @@
   "at": "2026-10-21",
   "why": "NR: every one of the four models lines has \"Tzaangor blades\" (Brayhorn and Herd banner are printed on their lines, kept in the line names); Tzaangor blades (x10) = 1+7+1+1."
  },
+ "b3d8e7e4661e1c95": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 507bb89a309d636a (review:infernal-lance, 2026-10-22) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs TITANIC/TOWERING\",\"note\":\"+1 to wound rolls\",\"from\":\"Macro-extinction Protocols\",\"vs\":{\"any\":[\"Titanic\",\"Towering\"],\"also\":{\"any\":[\"Mon…) is the one signed against GW’s words, unchanged: ““If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.” “That target” is the MONSTER or VEHICLE target of the first sentence, so vs any TITANIC/TOWERING also requiring MONSTER/VEHICL”"
+ },
  "b3e3c481f1c7193d": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -11596,6 +11836,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "GW: \"While this model is within 3\\\" of one or more friendly HERETIC ASTARTES VEHICLE units, this model has the Lone Operative ability.\" Faithful."
+ },
+ "b406a209d7957e54": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 6ec5caadaddaba9e (review:r15b-v2, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"weapon\":\"Twin Kastelan fist\",\"set\":{\"A\":\"+2\"},\"when\":\"In Conqueror Protocol\",\"note\":\"selected in your Command phase\",\"from\":\"Battle Protocols\",…) is the one signed against GW’s words, unchanged: “Same words as the Protector footnote: “it remains in that protocol until it enters a different one”, and a new one is selected only “In your Command phase”. So Conqueror’s +2 A to the Twin Kastelan fi”"
  },
  "b4070d441c4828c0": {
   "verdict": "ok",
@@ -12179,6 +12425,12 @@
   "at": "2026-10-21",
   "why": "“In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol…” This is the one phase named. “At the start of the battle” is not a phase. The protocols’ effects are the footnotes and the When targeted line."
  },
+ "bd9cf80ebc611159": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved a98587ee506d5ca4 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Errant (Bondsman, your Command phase)\",\"note\":\"[ASSAULT]\",\"f…) is the one signed against GW’s words, unchanged: “Errant’s Duty: ranged weapons of the model have [ASSAULT] (kind ranged, note [ASSAULT]). The re-roll of Advance rolls is not an attack effect, so leaving it out says nothing extra. The Bondsman army r”"
+ },
  "bdb105417cb7cae1": {
   "verdict": "ok",
   "by": "review:gists (its fix)",
@@ -12190,6 +12442,12 @@
   "by": "review:r17d-v2",
   "at": "2026-10-21",
   "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model” has no ‘other’ (01.02.05), and “units are within range of their own abilities” (01.02.04). So the Dakkarig can pick its own unit, and “Picked by the Dreadherder for its own unit” says that and nothing more, as a footnote should. It stays unticked (no selfAlways), which fits “you can select”; needs, when, note and lasts 'turn' are unchanged."
+ },
+ "bdbb2848700b73bc": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 36a12a1284646acb (review:fellhammer-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"vs INFANTRY units\",\"note\":\"+1 AP\",\"from\":\"Destructor\",\"vs\":{\"any\":[\"Infantry\"]}}…) is the one signed against GW’s words, unchanged: “+1 AP vs INFANTRY (parsed), ranged, always while vs holds.”"
  },
  "bdd8fab4c3dc1ba5": {
   "verdict": "ok",
@@ -12557,6 +12815,12 @@
   "at": "2026-10-23",
   "why": "Export categories: Lord on Juggernaut “Mounted, Character, Chaos, Khorne, Lord on Juggernaut, Faction: Blood Legions” (New Recruit has already applied Disciple of Khorne); Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Battleline, Berzerkers, Faction: World Eaters, Grenades and Infantry come from the bodyguard. Blood Legions comes from the enhancement, quoted word for word as the export's Disciple of Khorne profile (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
  },
+ "c4c020b1fa584bda": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 984f18bb80704834 (review:fellhammer-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Within Engagement Range of one or more enemy units\",\"note\":\"no penalty to hit rolls for being within Engagement Range; the demolisher c…) is the one signed against GW’s words, unchanged: “Both parts of Siege Shield kept, condition (no other friendly unit in Engagement Range) kept. Passive, so always is acceptable; note it is not counted by the calculator (listed only).”"
+ },
  "c4c9092c178fed09": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -12917,6 +13181,12 @@
   "at": "2026-10-21",
   "why": "Their units are offered only where an option says to select one from the opponent’s army. Code Chivalric Deed 1–2 (“select one CHARACTER model in your opponent’s army”: their units with CHARACTER, e.g. “Mek + Tankbustas”, the unit holding that model). Invocation of Machine Vengeance (“select one unit from your opponent’s army”). Singular Purpose (“Select one enemy unit”). Nothing is offered before their list is picked."
  },
+ "ca4a3334a5640f29": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 84bb08851ed1db5e (review:nerf-units, 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Codex Adept (the devastator doctrine is active for this unit)\",\"note\":\"[ASSAULT]\",\"from\":\"Codex Adept\"}…) is the one signed against GW’s words, unchanged: “Codex Adept: \"The assault doctrine, devastator doctrine and tactical doctrine are active for this unit\". The army rule's Devastator Doctrine reads \"This unit’s ranged attacks have [ASSAULT]\", so range”"
+ },
  "ca803e22dbfdaccf": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -12946,6 +13216,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army.\" The pack’s Rules Update adding \"has not been selected to move\" is the Valourstrike Lance (2CP) Full Tilt, not this one."
+ },
+ "cb09022326cb6a1e": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved e7eb2482506d098d (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs MONSTER/VEHICLE\",\"note\":\"+1 to hit rolls\",\"from\":\"Macro-extinction Protocols\",\"vs\":{\"any\":[\"Monster\",\"Vehicle\"]}}…) is the one signed against GW’s words, unchanged: “\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.\" vs any Monster/Vehicle and the note \"+1 to hit rolls\" match, and the only condition is the target’”"
  },
  "cb2c7d34813046ec": {
   "verdict": "ok",
@@ -13307,6 +13583,12 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Finderz Keeperz - Flash Gitz”; model lines as NR."
  },
+ "d0ac091842e5b247": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 7bb68f628e3ff944 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Paladin (Bondsman, your Command phase)\",\"note\":\"[LETHAL HITS]\",…) is the one signed against GW’s words, unchanged: “Paladin’s Duty, first half: 'weapons equipped by that model have [LETHAL HITS]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase (”"
+ },
  "d0b4035f30bd248a": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -13408,6 +13690,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "\"makes an attack\": derived convention (derive.js overwatch modifier, signed off on the Maulerfiend/Defiler \"makes an attack\" labels): Fire Overwatch (their Movement), your Shooting, either Fight."
+ },
+ "d1b518d9fbefd0ac": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 8a04304e5afbe2e7 (review:woof-woof, 2026-10-22) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"mod\":{\"kind\":\"melee\",\"when\":\"Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)\",\"note\":\"a Critical Hit on…) is the one signed against GW’s words, unchanged: ““each time a model in one of those WAR DOG units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit” = critHit 5. Melee for a Fight-phase stratagem is the settled convention (Rampagin”"
  },
  "d1ba45843b5d09c0": {
   "verdict": "ok",
@@ -13547,11 +13835,23 @@
   "at": "2026-10-24",
   "why": "Charge rolls: Charge, either turn (core Heroic Intervention). This is the same as the approved Battle-lust and Terminatus Assault."
  },
+ "d43038aff8772b88": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved fe6402b8b9c6a250 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Warden (Bondsman, your Command phase)\",\"note\":\"[IGNORES COVE…) is the one signed against GW’s words, unchanged: “Warden’s Duty, second half: 'ranged weapons … have [IGNORES COVER]', so kind ranged is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command phase' in when), o”"
+ },
  "d474d22b48703968": {
   "verdict": "ok",
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "The leader’s ability (\"While this model is leading a unit\")."
+ },
+ "d49670069f12677d": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved f1b5ca6f42dd5db6 (review:r12-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"vs non-MONSTER/VEHICLE targets\",\"note\":\"ranged attacks have [DEVASTATING WOUNDS]\",\"from\":\"Thin Their Ranks\",\"vs\":{\"none\":[\"Monster\",\"Ve…) is the one signed against GW’s words, unchanged: “\"Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.\" vs none Monster/Vehicle matches and nothing”"
  },
  "d49899fb07983b48": {
   "verdict": "ok",
@@ -14561,6 +14861,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Crusader's Duty (Bondsman)\" and Wahapedia \"Crusader's Duty (Bondsman)\"."
  },
+ "e41dc755215440e7": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved cd844d7cb47f2619 (review:exiled-units (its fix), 2026-10-24) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"who\":\"Skulltaker\",\"when\":\"Attacks that target a CHARACTER unit\",\"note\":\"can re-roll the hit roll and the wound roll\",\"from\":\"Skulls for Khorne\",\"…) is the one signed against GW’s words, unchanged: “The content is right: Skulltaker’s own attacks (who), all kinds, vs CHARACTER, and GW’s “can re-roll the Hit roll and … the Wound roll”. But this is an always-on, target-keyword ability, and approved ”"
+ },
  "e43f9cb95ff24f77": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -14788,6 +15094,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "Khorne Berzerkers datasheet ability (New Recruit \"Blood Surge - Khorne Berzerkers\"); \"this unit\" is the attached unit while a Berzerker lives (19.04)."
+ },
+ "e7bb307ee819f9a4": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 5c66bad42301351a (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs CHARACTER units\",\"note\":\"re-roll hit rolls of 1 and wound rolls of 1\",\"from\":\"Hunter of Souls\",\"vs\":{\"any\":[\"Character\"]}}…) is the one signed against GW’s words, unchanged: “\"Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": vs any Character and the note match, and the only condition is the target’s”"
  },
  "e7e23bb54c7b0bc5": {
   "verdict": "ok",
@@ -15070,6 +15382,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR \"Icon of Flame - Rubric Marines\": who names the unit, not a model; the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\" and NR say no more about the bearer, and the model lines no longer name one."
+ },
+ "ebb6227818b801dc": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 6add443b67e95080 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Cerastus Knight Atrapos (Bondsman, your Command phase), vs TITANIC/TOW…) is the one signed against GW’s words, unchanged: “Atrapos’ Duty: each attack (any weapon, so kind 'all') that targets a TITANIC or TOWERING model may re-roll the hit roll and the wound roll. vs any [Titanic, Towering] is right. The note parses (dmEff”"
  },
  "ebc03cdbc2bf4c18": {
   "verdict": "ok",
@@ -15563,6 +15881,12 @@
   "at": "2026-10-16",
   "why": "Single wording only when the unit has 1 model (starting strength 1: \"Below starting strength: model's remaining wounds are less than its W\"); attached units count all models so never take it. Used for Enraged Behemoths on the Tyranid monsters."
  },
+ "f55d6ef9854b771a": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 543e6ae95f0ec502 (review:mucho-mutantes, 2026-10-23) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"Every attack (this model leads the unit)\",\"note\":\"+1 to hit rolls\",\"from\":\"Bestial Prophet\"}…) is the one signed against GW’s words, unchanged: ““While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.” No who: every model of the unit, the Shaman included; always while leading.”"
+ },
  "f574fb4896c8105a": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -15628,6 +15952,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "Wahapedia’s Scarab Occult Terminators: “KEYWORDS – ALL MODELS: INFANTRY; TERMINATOR; CHAOS; TZEENTCH; RUBRICAE; SCARAB OCCULT … SCARAB OCCULT SORCERER ONLY: PSYKER”; the Sorcerer in Terminator Armour: “KEYWORDS: INFANTRY; CHARACTER; PSYKER; TERMINATOR; CHAOS; TZEENTCH; SORCERER”. BSData: Psyker on the Scarab Occult Sorcerer model only. So PSYKER is those two models’ only, as the judgement says; it is what Rites of Coalescence (“While this unit contains one or more PSYKER models”) turns on."
+ },
+ "f70d5dce0406c507": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 125b2502c668bb4d (review:r14-cond, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"when\":\"Target within range of an objective marker you do not control\",\"cond\":\"targetObjectiveNotYours\",\"note\":\"re-roll the wound roll\",\"from\":…) is the one signed against GW’s words, unchanged: “\"If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead\": that is the whole condition of the full re-roll, which is marked cond tar”"
  },
  "f72be3bef6871c99": {
   "verdict": "ok",
@@ -15941,6 +16271,12 @@
   "at": "2026-10-23",
   "why": "NR: “Trajann Valoris … 265”, “(2) Allarus Custodians … 180”, 445 PTS on the sheet; Wahapedia: Trajann 1 model 265, Allarus 2 models 180."
  },
+ "fd3bb54779db02d0": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved 9efd39853175103b (review:defilers3, 2026-10-26) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs CHARACTER, MONSTER or WALKER units\",\"note\":\"re-roll the hit roll and the wound roll\",\"from\":\"A Challenge Worthy of Skill\",\"vs\":{\"any\":[…) is the one signed against GW’s words, unchanged: “Reads GW’s “you can re-roll the Hit roll and you can re-roll the Wound roll” for attacks that target CHARACTER, MONSTER or WALKER units; always:true and vs any of the three are right; identical to the”"
+ },
  "fd477bbee10d5064": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -16006,6 +16342,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "GW Faction Pack wording; vs MONSTER/VEHICLE, always while vs holds."
+ },
+ "fe3ada198421000e": {
+  "verdict": "ok",
+  "by": "review:effects-helpers",
+  "at": "2026-10-30",
+  "why": "Same judgement as approved d57a09e1836f0288 (review:navigator, 2026-10-25) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"ranged\",\"weapon\":\"Conversion beam obliterator\",\"when\":\"Target more than 18\\\" away\",\"note\":\"an unmodified successful hit roll of 4+ scores a Critical Hi…) is the one signed against GW’s words, unchanged: “Wahapedia Knight Defender, under the weapons: “Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ sc”"
  },
  "fe4e20b85edf76f4": {
   "verdict": "ok",
