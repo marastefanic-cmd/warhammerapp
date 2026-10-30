@@ -483,7 +483,8 @@ const NEEDS_RULES = {
   'mustering':     'a line "When mustering your army, …" (who may be the Warlord, what may be included), or one that only gives units BATTLELINE when another line names a unit, is army building: not read for who the rule is for',
   'with-this-ability':'a rule for "a model with this ability" and no keyword: the units whose Rules line names this rule (needs.rule)',
   'kw-with-this-ability':'a rule for "X units with this ability" that names keywords ("TYRANIDS units with this ability", Questing Tendrils): the units with those keywords, as for a friendly unit (the rule is the detachment\'s, every such unit has it)',
-  'or-target':     'TARGET with alternatives ("Up to two X units …, or one (other) Y unit …"): for a unit of either kind (the alternatives as "or"); "One X MONSTER unit or up to two X units (excluding MONSTERS)" is X either way',
+  'or-target':     'TARGET with alternatives ("Up to two X units …, or one (other) Y unit …"): for a unit of either kind (the alternatives as "or")',
+  'or-target-cancel':'two alternatives, one S + K and the other S excluding exactly K ("One X MONSTER unit or up to two X units (excluding MONSTERS)"): S, their union; any other exclusion among alternatives is not read',
   'kw-or-faction-alone':'alternatives one of which is the army\'s Faction keyword alone ("One TYRANIDS unit … or up to two BURROWER units"): every unit of the army, that keyword',
   'kw-or-same':    'alternatives naming the same keywords ("One SYNAPSE unit … and one enemy unit within 24\" of … the SYNAPSE unit"): those keywords, once',
   'that-unit':     'TARGET "That … unit": the unit WHEN names (its keywords and exclusions) and TARGET\'s keywords',
@@ -659,7 +660,9 @@ function stratNeeds(V, s){
   // "Up to two X units …, or one (other) Y unit …": for a unit of either kind
   const ors = parts.length === 1 ? first.split(/,?\s+or\s+(?=(?:one|two|up to \w+)\b)/i) : [first];
   if(ors.length > 1){
-    const alts = [n];
+    // (the first alternative read from its own words only: an exclusion after the second one is the second's)
+    const u1 = friendlyUnit(V, ors[0], { any:true }), n1 = u1 && needsOf(V, u1, []);
+    const alts = [n1 && !n1.bad ? Object.assign(n1, n.rule ? { rule:n.rule } : {}) : n];
     for(const part of ors.slice(1)){
       const u2 = friendlyUnit(V, part, { any:true });
       if(!u2) continue;
@@ -669,14 +672,25 @@ function stratNeeds(V, s){
       reasons.push({ rule:'or-target', match:plain(u2.matched) });
     }
     if(alts.length > 1){
-      // (a keyword one alternative has and another excludes, "One X MONSTER unit or up to two X units (excluding MONSTERS)": X either way)
-      const has = k => alts.some(a => a.all.includes(k)), excl = k => alts.some(a => a.none.includes(k));
-      const sets = alts.map(a => a.all.filter(k => !excl(k)));
-      const none = [...new Set(alts.flatMap(a => a.none).filter(k => !has(k)))];
-      if(alts.some(a => a.any.length) || none.length || sets.some(x => !x.length)) return { how:'none', reasons:[{ rule:'unparsed', match:'alternatives with "/" or exclusions: ' + clip(plain(first), 90) }] };
+      // (a keyword one alternative has and the other excludes, "One X MONSTER unit or up to two X units (excluding MONSTERS)": X
+      // either way. Only that exact shape: two alternatives, one is S + K, the other is S excluding exactly K (nothing else excluded,
+      // no "unless"), so their union is S. Any other exclusion among alternatives stays unparsed: "One X MONSTER unit or up to two X Y
+      // units (excluding MONSTERS)" is not X, nor is "… X Y MONSTER … or … X Z units (excluding MONSTERS)" Y or Z.)
+      const unparsedAlts = { how:'none', reasons:[{ rule:'unparsed', match:'alternatives with "/" or exclusions: ' + clip(plain(first), 90) }] };
+      if(alts.some(a => a.any.length || a.unless)) return unparsedAlts;
+      let sets = alts.map(a => a.all);
+      if(alts.some(a => a.none.length)){
+        const same = (x, y) => x.length === y.length && x.every(k => y.includes(k));
+        const ex = alts.length === 2 && alts.find(a => a.none.length === 1), other = ex && alts.find(a => a !== ex);
+        const K = ex && ex.none[0];
+        if(!ex || other.none.length || !other.all.includes(K) || ex.all.includes(K) || !same(other.all.filter(k => k !== K), ex.all)) return unparsedAlts;
+        sets = [ex.all];
+        reasons.push({ rule:'or-target-cancel', match:plain(K) + ': ' + other.all.join(' ') + ' | ' + ex.all.join(' ') + ' excluding ' + K });
+      }
+      if(sets.some(x => !x.length)) return unparsedAlts;
       // (an alternative that is the Faction keyword alone, "One TYRANIDS unit … or up to two BURROWER units": every unit of the army)
       const fac = sets.find(x => x.length === 1 && /^Faction: /.test(x[0]));
-      const c = fac ? { all:fac, any:[], rules:['kw-or-faction-alone'] } : combineAlts(sets);
+      const c = sets.length === 1 ? { all:sets[0], any:[], rules:[] } : fac ? { all:fac, any:[], rules:['kw-or-faction-alone'] } : combineAlts(sets);
       if(c.bad) return { how:'none', reasons:[{ rule:'unparsed', match:c.bad }] };
       n = { all:c.all, any:c.any, none:[] };
       reasons.push({ rule:c.rules.join('+'), match:sets.map(x => x.join(' ')).join(' | ') });

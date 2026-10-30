@@ -162,10 +162,10 @@ function targetNeeds(s){
     if(r.needs.any.some(x => !x)) r = { how:'none', reasons:[{ rule:'unparsed', match:first }] };
   }
   // "(excluding **PINK HORRORS** units)": each bold run one keyword; a run whose words the lists keep as keywords of their own (a
-  // unit with Pink and Horrors) is a unit with all of them (unless). Not for a TARGET of alternatives (derive.js or-target): there the
-  // exclusion is one alternative's, and derive.js already reads it across them ("One X MONSTER unit or up to two X units (excluding
-  // MONSTERS)" is X either way)
-  if(r.how !== 'none' && !(r.reasons || []).some(x => x.rule === 'or-target') && (m = /\(excluding ([^)]*)\)/.exec(first))){
+  // unit with Pink and Horrors) is a unit with all of them (unless). Not where derive.js cancelled the exclusion across two alternatives
+  // by its one exact shape (or-target-cancel: S + K, or S excluding exactly K, is S); any other exclusion among alternatives derive.js
+  // leaves unparsed
+  if(r.how !== 'none' && !(r.reasons || []).some(x => x.rule === 'or-target-cancel') && (m = /\(excluding ([^)]*)\)/.exec(first))){
     const runs = [...m[1].matchAll(/\*\*([^*]+)\*\*/g)].flatMap(x => x[1].split(/\s*\/\s*/)), none = [], unless = [];
     for(const w of runs){ const ks = spanKw(w); if(ks.length > 1 && !/^Faction: /.test(ks[0])) unless.push(ks); else none.push(...ks); }
     if(runs.length){ r.needs.none = none; if(unless.length === 1) r.needs.unless = { all:unless[0] }; else if(unless.length) r = { how:'none', reasons:[{ rule:'unparsed', match:m[0] }] }; } }
@@ -246,11 +246,28 @@ stats.sourcesChecked = D.armies.reduce((t, a) => t + a.units.length, 0);
   if(!bit) fail('targets', 'bite', 'a stratagem tag broken on purpose (' + s.name + ') went unnoticed');
   stats.bite = bit ? 'a broken tag on ' + s.name + ' is caught' : 'NOT caught'; }
 function matches0(n, u){ return dm.app.matches(n, u); }
+// fixed cases: an exclusion among a TARGET's alternatives is cancelled only in its one exact shape (derive.js or-target-cancel); any
+// other stays unparsed, so the targets check above fails on it (the review of the catalogue merge, result-catalog-merge.json)
+{ const tail = ' from your army that have not been selected to fight this phase.';
+  const CASES = [
+    ['Archagonists', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**)', { all:['Faction: Legiones Daemonica', 'Slaanesh'] }],
+    ['a keyword only one alternative has', 'One **LEGIONES DAEMONICA MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**)', null],
+    ['different keywords besides the excluded one', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA KHORNE** units (excluding **MONSTERS**)', null],
+    ['two keywords excluded', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS** and **VEHICLES**)', null]
+  ];
+  let ok = 0;
+  for(const [name, target, want] of CASES){
+    const r = targetNeeds({ name, when:'Fight phase.', target:target + tail, effect:'' });
+    const got = r.how === 'none' ? null : JSON.stringify(Dv.canonNeeds(Dv.tidyNeeds(r.needs), null));
+    const exp = want && JSON.stringify(Dv.canonNeeds(Dv.tidyNeeds(Object.assign({ any:[], none:[] }, want)), null));
+    if(got !== exp) fail('targets', 'fixed case: ' + name, 'its TARGET gives ' + (got || 'unparsed') + ', not ' + (exp || 'unparsed') + ': “' + target + '”'); else ok++;
+  }
+  stats.targetCases = ok + ' of ' + CASES.length; }
 stats.strats = allStrats.length; stats.unparsed = unparsed; stats.needsDiffer = differ; stats.units = unitsChecked;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/evidence.json'), JSON.stringify({ stats, fails }, null, 1));
 console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G8); the army, unit and other-units groups of ' + stats.sourcesChecked + ' units as the database gives them; ' +
-  stats.strats + ' stratagems read from their TARGET, shown for ' + stats.units + ' units exactly as their keywords meet it (' + stats.bite + ')');
+  stats.strats + ' stratagems read from their TARGET, shown for ' + stats.units + ' units exactly as their keywords meet it (' + stats.bite + '); ' + stats.targetCases + ' fixed TARGET cases of alternatives with an exclusion');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
