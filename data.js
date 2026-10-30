@@ -8974,6 +8974,10 @@ const DATASHEETS = {
     { name:'Powers of the C’tan', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).' },
     { name:'Damaged: 1-8 wounds remaining', damaged:'1-8', ph:['shooting'], turn:'your', text:'While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.', readOf:'0835b104' }
   ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'all', when:'Damaged (1-8 wounds left)', note:'-4 OC; you can only select one of the C\'tan Powers weapons in your Shooting phase, instead of two', from:'Damaged: 1-8 wounds remaining', readOf:'0835b104', readBy:'derive' }
+  ],
   rules:['Deadly Demise D6+3','Reanimation Protocols','Anti','Blast','Indirect Fire','Ignores Cover','Devastating Wounds','Torrent','Precision','Sustained Hits'],
   kw:['Vehicle','Titanic','Fly','Frame','Towering','Tesseract Vault','Faction: Necrons']
 }

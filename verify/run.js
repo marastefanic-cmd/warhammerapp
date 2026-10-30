@@ -24,6 +24,8 @@
 //               guide has under another name, or not at all, declared in verify/deviations-bases.json
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
+//   numbers     verify/numbers.js: every profile number shown (stats per model type, weapon Range A BS WS S AP D, the number in a weapon
+//               keyword) is the Wahapedia datasheet's, GW's documents on top; each difference declared in verify/deviations-numbers.json
 //   calc        verify/calc-test.js: the damage calculator (calc.js) gives the averages worked out by hand from the Core Rules
 //   import      verify/import-test.js: the list import (import.js) turns each New Recruit JSON export into exactly its list in data.js
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
@@ -73,6 +75,7 @@ step('dispositions', ['verify/dispositions.js']);   // each detachment's Force D
 step('bases', ['verify/bases.js']);   // every base size against GW's base size guide
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
+step('numbers', ['verify/numbers.js']);   // every profile number against GW's datasheet (Wahapedia), GW's documents on top
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases
 step('import', ['verify/import-test.js']);   // the list import against every New Recruit JSON export
 // the screens need the built page: build it without the gate, check it, and the real build follows

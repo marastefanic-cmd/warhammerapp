@@ -38,7 +38,8 @@ function parse(html, chapter) {
       if (m2) kws.push(txt(row.slice(k.index + k[0].length, m2.index)));
     }
     const name = txt(nm[1]), parts = name.split(/ [-–] /);
-    weapons[hd.k].push({ name, group:parts.length > 1 ? parts[0] : null, profile:parts.length > 1 ? parts.slice(1).join(' - ') : null, kw:kws });
+    const v = [...row.matchAll(/<div class="ct pad2626">([\s\S]*?)<\/div>/g)].map(k => txt(k[1]));   // (its numbers: verify/numbers.js)
+    weapons[hd.k].push({ name, group:parts.length > 1 ? parts[0] : null, profile:parts.length > 1 ? parts.slice(1).join(' - ') : null, kw:kws, range:v[0], A:v[1], skill:v[2], S:v[3], AP:v[4], D:v[5] });
   }
   const labels = {};
   for (const m of h.matchAll(/class="dsCoreArmyLabel[^"]*">([\s\S]*?)<\/td><td class="dsCoreArmyValue">([\s\S]*?)<\/td>/g)) labels[txt(m[1])] = txt(m[2]).split(/\s*,\s*/).filter(Boolean);
@@ -51,7 +52,7 @@ function parse(html, chapter) {
   }
   const ds = WW.wahaDatasheet(html, null) || {};
   const kws = (ds.keywords || []).concat(...Object.values(ds.modelKeywords || {}));
-  return { weapons, labels, abilities, keywords:kws, factionKeywords:ds.factionKeywords || [] };
+  return { weapons, labels, abilities, keywords:kws, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
 }
 
 module.exports = function make(ROOT) {
@@ -182,5 +183,5 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { units, sheet, orderKw, partsOf, pageFor, noPage, kwBase, n };
+  return { units, sheet, orderKw, partsOf, pageFor, noPage, kwBase, n, weaponIndex };
 };

@@ -1237,6 +1237,11 @@ const READING_RULES = [
   { id:'damaged-hit', re:/^While this model has 1-(\d+) wounds remaining, (?:subtract (\d+) from this model's Objective Control characteristic and )?each time this model makes an attack, subtract 1 from the Hit roll\.$/i,
     give:(m, name) => [{ kind:'all', when:'Damaged (1-' + m[1] + ' wounds left)', note:'-1 to hit rolls' + (m[2] ? ' (and -' + m[2] + ' OC)' : ''), from:name }],
     why:'a Damaged ability whose only effect is -1 to its attacks\' hit rolls (and a lower OC, said in brackets): one footnote for every attack' },
+  // "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the
+  // C'tan Powers weapons in your Shooting phase, instead of two.": a lower OC (and the rest in GW's words) and no hit penalty
+  { id:'damaged-oc', re:/^While this model has 1-(\d+) wounds remaining, subtract (\d+) from (?:its|this model's) Objective Control characteristic(?: and (?!each time this model makes an attack, subtract 1 from the Hit roll)([^.]+))?\.$/i,
+    give:(m, name) => [{ kind:'all', when:'Damaged (1-' + m[1] + ' wounds left)', note:'-' + m[2] + ' OC' + (m[3] ? '; ' + m[3] : ''), from:name }],
+    why:'a Damaged ability that lowers OC and has no hit penalty: its OC said as the others\' are, the rest of its effect in GW\'s words' },
   // the core ability Damaged X (its glossary text, with its name): "while damaged, that model's attacks have -1 to hit rolls"
   { id:'damaged-core', re:/^Damaged (\d+): .*\bwhile damaged, that model's attacks have -1 to hit rolls\b/i,
     give:(m, name) => name === 'Damaged ' + m[1] ? [{ kind:'all', when:'Damaged (' + m[1] + ' or fewer wounds remaining)', note:'-1 to hit rolls', from:name }] : null,

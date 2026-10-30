@@ -1,0 +1,195 @@
+[
+ {
+  "ds": "imperial-knights/knight-destrier",
+  "kind": "melee",
+  "row": "Titanic feet",
+  "field": "S",
+  "app": "7",
+  "waha": "8",
+  "gw": {
+   "file": "eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.txt",
+   "quote": "Titanic feet Melee 4 4+ 7 -1 2",
+   "value": "7"
+  },
+  "reason": "GW's Imperial Knights Faction Pack 1.2 prints the Knight Destrier datasheet with Titanic feet S7; Wahapedia still has S8. GW wins (New Recruit and BSData have S7).",
+  "evidence": "verify/.cache/gw/eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.txt (KNIGHT DESTRIER, MELEE WEAPONS: \"Titanic feet Melee 4 4+ 7 -1 2\"); verify/.cache/waha/ds/imperial-knights_Knight-Destrier.html (S 8)."
+ },
+ {
+  "ds": "world-eaters/master-of-executions",
+  "kind": "ranged",
+  "row": "Bolt pistol",
+  "field": "BS",
+  "app": "3+",
+  "waha": "4+",
+  "reason": "GW's datasheet BS 3+ over Wahapedia 11e's 4+: The World Eaters Faction Pack v1.3 (30 Sep 2026) changes only S5 AP-1 of the bolt pistols of \"Khorne Berzerkers, Lord Invocatus, Master of Executions\", not their BS. There is no 11th-edition World Eaters codex. The Codex datasheet, as Wahapedia printed it for 10th edition, gives \"Bolt pistol 12\" 1 3+ 4 0 1\". BSData has the Master of Executions' own profile 2682-33c5-c4f5-4bf9 at BS 3+ in every revision; the Khorne Berzerkers' shared pistol 2ba4-635b-fffd-0f59 is 4+. Wahapedia 11e's 4+ looks like the Berzerkers' pistol copied in while applying the pack's S/AP change.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt (the bolt pistol change: S5 AP-1 only); BSData profile 2682-33c5-c4f5-4bf9 (BS 3+) and 2ba4-635b-fffd-0f59 (the Berzerkers', 4+); verify/.cache/waha/ds/world-eaters_Master-of-Executions.html (BS 4+)."
+ },
+ {
+  "ds": "adeptus-custodes/vertus-praetors",
+  "kind": "stats",
+  "row": "Vertus Praetors",
+  "field": "T",
+  "app": "8",
+  "waha": "8",
+  "gw": {
+   "file": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt",
+   "quote": "Change Toughness characteristic to ‘7’ and Wounds",
+   "value": "7"
+  },
+  "superseded": "Codex: Adeptus Custodes (17 Oct 2026)",
+  "reason": "Superseded: the 30 Sep 2026 Custodes Faction Pack v1.2 lines (Vertus Praetors T7 W5; Salvo Launcher A1 AP-3 D D6+1 [TWIN-LINKED]; Shield-Captain on Dawneagle Jetbike T7 W8) are in black, i.e. unchanged since an earlier pack version, and equal the 10th-edition codex profile. Codex: Adeptus Custodes (11th edition, released 17 Oct 2026) supersedes them: the 14 Oct Printed Product Updates for it do not touch the Vertus Praetors, and BSData commit a61f957 \"Custodes Codex\" (17 Oct) changes T7 W5 to T8 W7 (and the Dawneagle from T7 W8 to T8 W10). The owner, 2026-10-23: the new codex applies everywhere (verify/deviations-bsdata.json). The app keeps T8 W7 and Salvo launcher A2 AP-2 D D3+2, as Wahapedia prints the new codex.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt (Vertus Praetors, Profile: \"Change Toughness characteristic to ‘7’ and Wounds characteristic to ‘5’\"); verify/.cache/waha/ds/adeptus-custodes_Vertus-Praetors.html (T8 W7); BSData a61f957."
+ },
+ {
+  "ds": "adeptus-custodes/vertus-praetors",
+  "kind": "stats",
+  "row": "Vertus Praetors",
+  "field": "W",
+  "app": "7",
+  "waha": "7",
+  "gw": {
+   "file": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt",
+   "quote": "characteristic to ‘5’.",
+   "value": "5"
+  },
+  "superseded": "Codex: Adeptus Custodes (17 Oct 2026)",
+  "reason": "Superseded: the 30 Sep 2026 Custodes Faction Pack v1.2 lines (Vertus Praetors T7 W5; Salvo Launcher A1 AP-3 D D6+1 [TWIN-LINKED]; Shield-Captain on Dawneagle Jetbike T7 W8) are in black, i.e. unchanged since an earlier pack version, and equal the 10th-edition codex profile. Codex: Adeptus Custodes (11th edition, released 17 Oct 2026) supersedes them: the 14 Oct Printed Product Updates for it do not touch the Vertus Praetors, and BSData commit a61f957 \"Custodes Codex\" (17 Oct) changes T7 W5 to T8 W7 (and the Dawneagle from T7 W8 to T8 W10). The owner, 2026-10-23: the new codex applies everywhere (verify/deviations-bsdata.json). The app keeps T8 W7 and Salvo launcher A2 AP-2 D D3+2, as Wahapedia prints the new codex.",
+  "evidence": "as for T."
+ },
+ {
+  "ds": "adeptus-custodes/vertus-praetors",
+  "kind": "ranged",
+  "row": "Salvo launcher",
+  "field": "A",
+  "app": "2",
+  "waha": "2",
+  "gw": {
+   "file": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt",
+   "quote": "24\" 1 2+ 10 -3 D6+1",
+   "value": "1"
+  },
+  "superseded": "Codex: Adeptus Custodes (17 Oct 2026)",
+  "reason": "Superseded: the 30 Sep 2026 Custodes Faction Pack v1.2 lines (Vertus Praetors T7 W5; Salvo Launcher A1 AP-3 D D6+1 [TWIN-LINKED]; Shield-Captain on Dawneagle Jetbike T7 W8) are in black, i.e. unchanged since an earlier pack version, and equal the 10th-edition codex profile. Codex: Adeptus Custodes (11th edition, released 17 Oct 2026) supersedes them: the 14 Oct Printed Product Updates for it do not touch the Vertus Praetors, and BSData commit a61f957 \"Custodes Codex\" (17 Oct) changes T7 W5 to T8 W7 (and the Dawneagle from T7 W8 to T8 W10). The owner, 2026-10-23: the new codex applies everywhere (verify/deviations-bsdata.json). The app keeps T8 W7 and Salvo launcher A2 AP-2 D D3+2, as Wahapedia prints the new codex.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt (Salvo Launcher [TWIN-LINKED]: \"24\" 1 2+ 10 -3 D6+1\")."
+ },
+ {
+  "ds": "adeptus-custodes/vertus-praetors",
+  "kind": "ranged",
+  "row": "Salvo launcher",
+  "field": "AP",
+  "app": "-2",
+  "waha": "-2",
+  "gw": {
+   "file": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt",
+   "quote": "24\" 1 2+ 10 -3 D6+1",
+   "value": "-3"
+  },
+  "superseded": "Codex: Adeptus Custodes (17 Oct 2026)",
+  "reason": "Superseded: the 30 Sep 2026 Custodes Faction Pack v1.2 lines (Vertus Praetors T7 W5; Salvo Launcher A1 AP-3 D D6+1 [TWIN-LINKED]; Shield-Captain on Dawneagle Jetbike T7 W8) are in black, i.e. unchanged since an earlier pack version, and equal the 10th-edition codex profile. Codex: Adeptus Custodes (11th edition, released 17 Oct 2026) supersedes them: the 14 Oct Printed Product Updates for it do not touch the Vertus Praetors, and BSData commit a61f957 \"Custodes Codex\" (17 Oct) changes T7 W5 to T8 W7 (and the Dawneagle from T7 W8 to T8 W10). The owner, 2026-10-23: the new codex applies everywhere (verify/deviations-bsdata.json). The app keeps T8 W7 and Salvo launcher A2 AP-2 D D3+2, as Wahapedia prints the new codex.",
+  "evidence": "as for A."
+ },
+ {
+  "ds": "adeptus-custodes/vertus-praetors",
+  "kind": "ranged",
+  "row": "Salvo launcher",
+  "field": "D",
+  "app": "D3+2",
+  "waha": "D3+2",
+  "gw": {
+   "file": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt",
+   "quote": "24\" 1 2+ 10 -3 D6+1",
+   "value": "D6+1"
+  },
+  "superseded": "Codex: Adeptus Custodes (17 Oct 2026)",
+  "reason": "Superseded: the 30 Sep 2026 Custodes Faction Pack v1.2 lines (Vertus Praetors T7 W5; Salvo Launcher A1 AP-3 D D6+1 [TWIN-LINKED]; Shield-Captain on Dawneagle Jetbike T7 W8) are in black, i.e. unchanged since an earlier pack version, and equal the 10th-edition codex profile. Codex: Adeptus Custodes (11th edition, released 17 Oct 2026) supersedes them: the 14 Oct Printed Product Updates for it do not touch the Vertus Praetors, and BSData commit a61f957 \"Custodes Codex\" (17 Oct) changes T7 W5 to T8 W7 (and the Dawneagle from T7 W8 to T8 W10). The owner, 2026-10-23: the new codex applies everywhere (verify/deviations-bsdata.json). The app keeps T8 W7 and Salvo launcher A2 AP-2 D D3+2, as Wahapedia prints the new codex.",
+  "evidence": "as for A."
+ },
+ {
+  "ds": "imperial-knights/canis-rex",
+  "kind": "stats",
+  "row": "Sir Hekhtur",
+  "field": "page",
+  "reason": "Wahapedia's Canis Rex page prints one profile (Canis Rex); Sir Hekhtur's profile and weapons come from BSData / New Recruit only (Wahapedia gives him a datasheet page of his own, not in the cache). Not checked against GW: no GW source here.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html (one profile; no Hekhtur's pistol or close combat weapon rows)."
+ },
+ {
+  "ds": "imperial-knights/canis-rex",
+  "kind": "ranged",
+  "row": "Hekhtur’s pistol",
+  "field": "page",
+  "reason": "as for Sir Hekhtur's profile: BSData / New Recruit only.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html."
+ },
+ {
+  "ds": "imperial-knights/canis-rex",
+  "kind": "melee",
+  "row": "Close combat weapon",
+  "field": "page",
+  "reason": "Sir Hekhtur's close combat weapon: BSData / New Recruit only, as his profile.",
+  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html."
+ },
+ {
+  "ds": "chaos-daemons/brimstone-horrors",
+  "kind": "stats",
+  "row": "Brimstone Horror",
+  "field": "page",
+  "reason": "A reference sheet (the Brimstone Horrors the Pink Horrors split into): no datasheet page of its own on Wahapedia; its profile is the Pink Horrors page's BLUE HORROR/BRIMSTONE HORROR, checked there.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html."
+ },
+ {
+  "ds": "chaos-daemons/brimstone-horrors",
+  "kind": "ranged",
+  "row": "Coruscating Yellow flames",
+  "field": "page",
+  "reason": "as for the Brimstone Horror profile: the Pink Horrors page's Coruscating Yellow Flames row, checked there.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html."
+ },
+ {
+  "ds": "chaos-daemons/brimstone-horrors",
+  "kind": "melee",
+  "row": "Yellow claws",
+  "field": "page",
+  "reason": "as for the Brimstone Horror profile: the Pink Horrors page's Yellow claws row, checked there.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html."
+ },
+ {
+  "ds": "chaos-daemons/pink-horrors",
+  "kind": "stats",
+  "row": "Blue/Brimstone Horror (ref. only)",
+  "wahaName": "BLUE HORROR/BRIMSTONE HORROR",
+  "reason": "New Recruit's name of the profile; Wahapedia names it BLUE HORROR/BRIMSTONE HORROR.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html."
+ },
+ {
+  "ds": "tyranids/norn-assimilator",
+  "kind": "ranged",
+  "row": "Toxinjecter Harpoon",
+  "wahaName": "Toxinjector Harpoon",
+  "reason": "New Recruit's spelling (Toxinjecter); Wahapedia spells it Toxinjector. Weapon names follow New Recruit; the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html."
+ },
+ {
+  "ds": "tyranids/norn-assimilator",
+  "kind": "melee",
+  "row": "Toxinjecter Harpoon",
+  "wahaName": "Toxinjector harpoon",
+  "reason": "as for its ranged profile.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html."
+ },
+ {
+  "ds": "ultramarines/bladeguard-veteran-squad",
+  "kind": "melee",
+  "row": "Master-crafted power weapon",
+  "wahaName": "Master-crafted Power Sword",
+  "reason": "New Recruit's name; GW (Wahapedia) prints Master-crafted Power Sword. Weapon names follow New Recruit; the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Bladeguard-Veteran-Squad.html."
+ },
+ {
+  "ds": "ultramarines/wardens-of-ultramar",
+  "kind": "stats",
+  "row": "Dainal Kornelius",
+  "wahaName": "Dainal Komelius",
+  "reason": "New Recruit's (and GW's) Dainal Kornelius; Wahapedia misspells him Komelius. Model names follow New Recruit; the numbers are checked against this profile.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Wardens-of-Ultramar.html (profile \"Dainal Komelius\")."
+ }
+]
