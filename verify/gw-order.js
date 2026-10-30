@@ -273,7 +273,19 @@ module.exports = function make(ROOT) {
     const longest = l => l.sort((a, b) => (suf(b.k) - suf(a.k)) || n(b.k).length - n(a.k).length)[0];
     const head = longest(all.filter(x => (x.from === 'page' || !pk.some(k => same(k, x.k))) && (suf(x.k) || pre(x.k))).filter((x, i, l) => x.from === 'page' || !l.some(y => y.from === 'page')));
     const dec = NAMES.find(d => d.datasheet === (faction ? faction + '/' : '') + p.name || d.datasheet === p.name);
-    if (dec) return Object.assign({ kw:dec.nameKeyword, from:dec.from || (all.find(x => same(x.k, dec.nameKeyword)) || {}).from || '?', how:'declared' }, all.some(x => same(x.k, dec.nameKeyword)) ? {} : { bad:'the declared ' + dec.nameKeyword + ' is neither on the page nor in BSData' });
+    if (dec) {
+      // (the declaration accepts the head match the rule finds, no other keyword; its evidence quotes that keyword where it is: the page's
+      // KEYWORDS line as the page has it, or BSData's category)
+      const ev = String(dec.evidence || ''), line = (/KEYWORDS "([^"]*)"/.exec(ev) || [])[1], bad = [];
+      if (!head || !same(head.k, dec.nameKeyword)) bad.push('the declared ' + dec.nameKeyword + ' is not the head match the rule finds (' + (head ? head.k : 'none') + ')');
+      if (!ev.includes('verify/.cache/waha/ds/' + p.page.file)) bad.push('its evidence does not cite the page verify/.cache/waha/ds/' + p.page.file);
+      if (line === undefined || line !== uk.join('; ')) bad.push('its evidence does not quote the page\'s KEYWORDS line ("' + uk.join('; ') + '")');
+      const where = head && head.from;
+      if (where === 'page' && line !== undefined && !line.split('; ').some(k => same(k, dec.nameKeyword))) bad.push('the KEYWORDS line it quotes has no ' + dec.nameKeyword);
+      if (where === 'bsdata' && !(ev.includes('"' + dec.nameKeyword + '"') && bc.some(c => same(c, dec.nameKeyword)))) bad.push('its evidence does not quote BSData\'s category "' + dec.nameKeyword + '", or BSData has none');
+      if (dec.from && where && dec.from !== where) bad.push('it says from ' + dec.from + ', the pick is from ' + where);
+      return Object.assign({ kw:dec.nameKeyword, from:where || dec.from || '?', how:'declared' }, bad.length ? { bad:bad.join('; ') } : {});
+    }
     return head ? { kw:head.k, from:head.from, how:'head', undeclared:true } : null;
   }
   // cats: each part's BSData categories (partCats), for its name keyword; the result's .names: each part's name keyword, .missing: the
