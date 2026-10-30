@@ -148,7 +148,7 @@ module.exports = function make(ROOT) {
   // a resolved unit's datasheet parts and their pages
   const partsOf = (u, faction) => {
     const names = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name];
-    return names.map(nm0 => ({ name:nm0, page:pageFor(faction, nm0) }));
+    const out = names.map(nm0 => ({ name:nm0, page:pageFor(faction, nm0) })); out.faction = faction; return out;
   };
   const partIx = (parts, r) => parts.length === 1 ? 0 : parts.findIndex(p => p.name === r.who);
 
@@ -225,25 +225,56 @@ module.exports = function make(ROOT) {
   // the BSData categories of each part of a list's unit (by the roots data.js BS_IDS names for it), [] when unknown
   const partCats = (bsIds, unitKey, parts) => { const sig = ((bsIds || {}).units || {})[unitKey];
     return parts.map((p, i) => Array.isArray(sig) && sig.length === parts.length ? bsCats(sig[i].split('|')[0]) : []); };
-  // a datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's):
-  // the page's keyword that is the name; else BSData's category that is the name; else the page keyword the name ends with (KHORNE
-  // BERZERKERS: BERZERKERS), else the one it starts with (EXALTED SORCERER ON DISC OF TZEENTCH: EXALTED SORCERER), the longest; else BSData's
-  // category not on the page it ends or starts with (LIBRARIAN IN PHOBOS ARMOUR: LIBRARIAN). null: none found (verify/keywords.js fails)
-  function nameKeyword(p, cats) {
-    const nm = n(String(p.name).replace(/\s*\([^()]*\)\s*$/, '')), pk = p.page.unitKeywords.concat(...Object.values(p.page.modelKeywords)).map(k => k.replace(/\s*:\s*$/, ''));
-    const eq = k => n(k) === nm || n(k) + 's' === nm || n(k) === nm + 's';
-    // (the noun the name ends with first, CHAOS RHINO: RHINO; else the one it starts with, DAEMON PRINCE OF KHORNE: DAEMON PRINCE)
-    // (of the name's head, before "of", "on", "in" or "with": DAEMON PRINCE of Khorne, LIBRARIAN in Phobos Armour)
-    const hd = n(String(p.name).replace(/\s*\([^()]*\)\s*$/, '').split(/\s+(?:of|on|in|with)\s+/i)[0]);
+  // a datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's)
+  //   1. exact: the page's keyword or BSData's category that is the whole name; else the name less its leading words that are the page's
+  //      own keywords (CHAOS Rhino, KHORNE Berzerkers, CANOPTEK Spyders, WAR DOG Brigand) and less "of <a page keyword>" (Daemon Prince of
+  //      SLAANESH with Wings): that, as a keyword ("Daemon Prince with Wings"), as "<it, singular> Squad" (Chaos Terminators: TERMINATOR
+  //      SQUAD), or less a last word that is a page keyword (Scarab Occult TERMINATORS: SCARAB OCCULT)
+  //   2. head: the keyword the name's head (before of/on/in/with) ends with, else starts with, on the page or else in BSData. Not
+  //      GW's by itself: only as verify/deviations-keywords.json declares it for the datasheet (name, with its evidence); else none
+  //      (how:'head', undeclared), and verify/keywords.js fails
+  //   A pick the page prints for another reason (a keyword of other datasheets too: HORRORS, SORCERER) is never exact by a head match.
+  // a Wahapedia faction page's keyword index ("BERZERKERS (1); DAEMON PRINCE (2); …"): keyword -> how many datasheets have it
+  const IDX = new Map();
+  function keywordIndex(fac) {
+    if (IDX.has(fac)) return IDX.get(fac);
+    let out = {};
+    try { const t = fs.readFileSync(path.join(ROOT, 'verify/.cache/waha', fac + '.html'), 'utf8').replace(/<[^>]+>/g, ' ').replace(/&rsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+      const m = /((?:[A-Z][A-Z’'\- ]+ \(\d+\); )+[A-Z][A-Z’'\- ]+ \(\d+\)) The keywords presented/.exec(t);
+      if (m) out = Object.fromEntries(m[1].split('; ').map(x => { const q = /^(.*) \((\d+)\)$/.exec(x.trim()); return [q[1].trim().replace(/’/g, "'"), +q[2]]; })); } catch (e) {}
+    IDX.set(fac, out); return out;
+  }
+  const NAMES = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-keywords.json'), 'utf8')).filter(d => d.nameKeyword); } catch (e) { return []; } })();
+  function nameKeyword(p, cats, faction) {
+    const name = String(p.name).replace(/\s*\([^()]*\)\s*$/, ''), nm = n(name), uk = p.page.unitKeywords.map(k => k.replace(/\s*:\s*$/, ''));
+    const pk = uk.concat(...Object.values(p.page.modelKeywords)).map(k => k.replace(/\s*:\s*$/, ''));
+    const bc = (cats || []).filter(c => !/^Faction: /.test(c)), all = pk.map(k => ({ k:TC(k), from:'page' })).concat(bc.map(c => ({ k:c, from:'bsdata' })));
+    const same = (x, y) => n(x) === n(y), find = v => all.find(x => same(x.k, v)) || all.find(x => n(x.k) + 's' === n(v) || n(x.k) === n(v) + 's');
+    // the whole name, then less its leading words that are the page's own keywords or a god's name (one, then more), each also less
+    // "of <a page keyword or god>"; the first that is a keyword (as it is, "<singular> Squad", in the plural or singular, or less a
+    // last word that is a page keyword) is the name keyword
+    const GOD = /^(khorne|tzeentch|nurgle|slaanesh)$/i, lead = x => GOD.test(x) || uk.some(y => same(y, x));
+    const vs = [], words = name.split(/\s+/);
+    for (let s0 = [words]; s0.length;) { const w = s0.shift(); vs.push(w.join(' ')); for (let k = 1; k <= Math.min(3, w.length - 1); k++) if (lead(w.slice(0, k).join(" "))) { s0.push(w.slice(k)); break; } }
+    for (const v of vs.slice()) { const o = v.replace(/\s+of\s+(\S+)(?=\s|$)/i, (m, g) => lead(g) ? "" : m).trim(); if (o && o !== v) vs.push(o); }
+    // (a part of the name is never a keyword the faction's Wahapedia keyword index gives two or more datasheets: WAR DOG, HORRORS,
+    // DAEMON PRINCE, TERMINATOR; the index leaves out a name keyword only one datasheet has)
+    const idx = keywordIndex(String(p.page.file).split('_')[0]), mine = x => !((idx[String(x.k).toUpperCase().replace(/’/g, "'")] || 0) >= 2);
+    const ok = r => r && mine(r) ? { kw:r.k, from:r.from, how:'exact' } : null;
+    for (const v of vs) {
+      if (v === name) { const r = all.find(x => same(x.k, v)) || find(v); if (r) return { kw:r.k, from:r.from, how:'exact' }; }   // (the whole name: GW's, shared or not, WARBOSS)
+      const r = ok(all.find(x => same(x.k, v))) || ok(all.find(x => same(x.k, v.replace(/s$/i, '') + ' Squad'))) || ok(find(v)); if (r) return r;
+    }
+    for (const v of vs) { const vw = v.split(/\s+/);
+      if (vw.length > 2 && uk.some(x => same(x, vw[vw.length - 1]) || n(x) + 's' === n(vw[vw.length - 1]))) { const r = ok(all.find(x => same(x.k, vw.slice(0, -1).join(' ')))); if (r) return r; } }
+    // head matches: only as declared
+    const hd = n(name.split(/\s+(?:of|on|in|with)\s+/i)[0]);
     const suf = k => { const x = n(k); return x.length > 2 && (hd.endsWith(x) || hd.endsWith(x + 's')); }, pre = k => { const x = n(k); return x.length > 2 && hd.startsWith(x); };
-    const ends = k => suf(k) || pre(k);
-    const longest = l => l.sort((a, b) => (suf(b) - suf(a)) || n(b).length - n(a).length)[0];
-    const own = (cats || []).filter(c => !/^Faction: /.test(c) && !pk.some(k => n(k) === n(c)));
-    let k = pk.find(eq); if (k) return { kw:TC(k), from:'page' };
-    k = (cats || []).find(c => !/^Faction: /.test(c) && eq(c)); if (k) return { kw:k, from:'bsdata' };
-    k = longest(pk.filter(ends)); if (k) return { kw:TC(k), from:'page' };
-    k = longest(own.filter(ends)); if (k) return { kw:k, from:'bsdata' };
-    return null;
+    const longest = l => l.sort((a, b) => (suf(b.k) - suf(a.k)) || n(b.k).length - n(a.k).length)[0];
+    const head = longest(all.filter(x => (x.from === 'page' || !pk.some(k => same(k, x.k))) && (suf(x.k) || pre(x.k))).filter((x, i, l) => x.from === 'page' || !l.some(y => y.from === 'page')));
+    const dec = NAMES.find(d => d.datasheet === (faction ? faction + '/' : '') + p.name || d.datasheet === p.name);
+    if (dec) return Object.assign({ kw:dec.nameKeyword, from:dec.from || (all.find(x => same(x.k, dec.nameKeyword)) || {}).from || '?', how:'declared' }, all.some(x => same(x.k, dec.nameKeyword)) ? {} : { bad:'the declared ' + dec.nameKeyword + ' is neither on the page nor in BSData' });
+    return head ? { kw:head.k, from:head.from, how:'head', undeclared:true } : null;
   }
   // cats: each part's BSData categories (partCats), for its name keyword; the result's .names: each part's name keyword, .missing: the
   // parts with none found
@@ -251,8 +282,9 @@ module.exports = function make(ROOT) {
     if (!Array.isArray(u.kw) || parts.some(p => !p.page)) return null;
     const want = [], keep = new Set(), add = (k, tc) => { if (!want.some(x => n(x) === n(k))) want.push(tc ? TC(k) : k); };
     for (const p of parts) for (const k of p.page.unitKeywords) add(k, true);
-    const names = parts.map((p, i) => nameKeyword(p, (cats || [])[i]));
-    for (const x of names) if (x) add(x.kw);
+    const fac = parts.faction;
+    const names = parts.map((p, i) => nameKeyword(p, (cats || [])[i], fac));
+    for (const x of names) if (x && !x.undeclared) add(x.kw);
     for (const p of parts) for (const k of p.page.factionKeywords) add('Faction: ' + TC(k));
     const listed = new Set([].concat(parts.map(p => p.name), own || [], Object.keys(u.kwOnly || {}),
       parts.flatMap(p => Object.values(p.page.modelKeywords).flat().map(k => k.replace(/\s*:\s*$/, ''))), parts.flatMap(p => Object.keys(p.page.detachmentKeywords)),
@@ -260,7 +292,7 @@ module.exports = function make(ROOT) {
     for (const k of u.kw) if (listed.has(n(k)) || /^Allies: /.test(k)) keep.add(n(k));
     const out = u.kw.filter(k => keep.has(n(k)) || want.some(x => n(x) === n(k)));
     for (const k of want) if (!out.some(x => n(x) === n(k))) out.push(k);
-    out.names = names.map(x => x && x.kw); out.missing = parts.filter((p, i) => !names[i]).map(p => p.name);
+    out.names = names.map(x => x && !x.undeclared ? x.kw : null); out.picks = names; out.missing = parts.filter((p, i) => !names[i] || names[i].undeclared || names[i].bad).map(p => p.name);
     return out;
   }
   // every resolved unit of the lists (the old form): its rows, a weapon's keywords, the Rules line (keywords: orderKw, with the list's own)

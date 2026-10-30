@@ -5,5 +5,19 @@
   "kw": "page",
   "reason": "A reference sheet (the Brimstone Horrors the Pink Horrors split into): no Wahapedia datasheet page of its own; its keywords are the Pink Horrors page's, with its BRIMSTONE model keyword. Kept as BSData / New Recruit have them.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"BRIMSTONE HORRORS: BRIMSTONE\"; FACTION KEYWORDS \"LEGIONES DAEMONICA\"."
+ },
+ {
+  "datasheet": "ultramarines/Librarian in Phobos Armour",
+  "nameKeyword": "Librarian",
+  "from": "bsdata",
+  "reason": "A head match (the name's head LIBRARIAN, before \"in Phobos Armour\"), accepted: Wahapedia's new-codex page leaves name keywords out; BSData gives the unit the category Librarian, and Wahapedia's Space Marines keyword index lists LIBRARIAN (a keyword of the Librarian datasheets).",
+  "evidence": "verify/sources/bsdata-extract.json (Librarian in Phobos Armour: categories … Librarian …); verify/.cache/waha/space-marines.html (keyword index: LIBRARIAN); verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html (KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; IMPERIUM; PHOBOS; PSYKER)."
+ },
+ {
+  "datasheet": "chaos-space-marines/Lord Discordant on Helstalker",
+  "nameKeyword": "Lord Discordant",
+  "from": "page",
+  "reason": "A head match (the name's head LORD DISCORDANT, before \"on Helstalker\"), accepted: the page prints LORD DISCORDANT, the datasheet's own keyword (no other datasheet has it).",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Lord-Discordant-on-Helstalker.html (KEYWORDS: MOUNTED; CHARACTER; CHAOS; DAEMON; LORD DISCORDANT)."
  }
 ]
