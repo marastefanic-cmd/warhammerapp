@@ -471,6 +471,7 @@ const NEEDS_RULES = {
   'that-unit':     'TARGET "That … unit": the unit WHEN names (its keywords and exclusions) and TARGET\'s keywords',
   'first-unit':    'stratagems: the first unit TARGET names; rules: the first friendly / "from your army" unit the text names with a keyword. Later units (a unit it is near, an enemy) are not who it is for',
   'no-keyword':    'the unit named has no keyword: any unit (no needs)',
+  'your-keywords': 'TARGET "Your X." with no unit or model ("Your NECRONS WARLORD."): the unit with the keywords X',
   'multi-target':  'TARGET with two targets ("One X model …, and one friendly Y unit …"): for a unit of either kind (the alternatives as "or")',
   'kw-every':      'compared without a keyword every unit of that faction\'s lists has (the Faction keyword "ORKS" in Orks lists): in the app\'s matches() it selects nothing, and data.js names it in some needs and not in others',
 };
@@ -566,7 +567,7 @@ const excluded = (V, inner) => [...prepBold(inner).matchAll(/\*\*([^*]+)\*\*/g)]
 // the first friendly unit a text names: its keyword run, and the clause right after it
 function friendlyUnit(V, text, opts){
   const s = prepBold(text);
-  const re = new RegExp('(?:' + RUN + '\\s+)?\\b(units?|models?)\\b', 'g');
+  const re = new RegExp('(?:' + RUN + '\\s+)?\\b([Uu]nits?|[Mm]odels?)\\b', 'g');   // (GW's "That ADEPTUS CUSTODES Unit.": capitalised too)
   for(let m; (m = re.exec(s));){
     const before = s.slice(Math.max(0, m.index - 40), m.index), after = s.slice(m.index + m[0].length);
     if(/\benemy\s*$|\benemy (?:\w+ )?$/i.test(before)) continue;
@@ -613,6 +614,9 @@ function stratNeeds(V, s){
   const target = norm(String(s.target).replace(/~~([^~*]+)~~/g, '**$1**')), when = norm(s.when).split(/\n/)[0];
   const first = target.split(/(?<=\.)\s+/)[0];
   let unit = friendlyUnit(V, first, { any:true });
+  // "Your **NECRONS WARLORD**.": a TARGET that is a keyword run and no unit or model: the unit with those keywords (your-keywords)
+  const bare = !unit && /^your (\*\*[^*]+\*\*)\.?$/i.exec(prepBold(first).trim());
+  if(bare){ unit = { run:bare[1], noun:'', at:0, after:'', matched:bare[0].replace(/\.$/, '') }; reasons.push({ rule:'your-keywords', match:plain(bare[0]) }); }
   if(!unit) return { how:'none', reasons:[{ rule:'no-unit', match:clip(plain(first)) }] };
   reasons.push({ rule:'first-unit', match:plain(first.slice(0, unit.at + unit.matched.length)) });
   let n = needsOf(V, unit, reasons);

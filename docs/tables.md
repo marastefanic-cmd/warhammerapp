@@ -63,7 +63,7 @@ help it gives them when they are attacked (`guard`), and a rule's or ability's o
 | an army rule | that rule's row in `FACTIONS` (`mods`, …) | every unit with the rule on its Rules line (Synapse) |
 | a detachment rule (`rule`, `moreRules`) | that rule's row | every unit of a list with the detachment whose needs it meets (Pledges to the Dark Prince) |
 | an enhancement | the enhancement's row | its bearer (Dreadherder, Bringer of Justice) |
-| a stratagem | the stratagem (`mod`, `help`, `shield`, as before) | the units it can be used on (the app) |
+| a stratagem | the stratagem (`mod`, `shield`, as before) | the units its TARGET names (`needs`, by verify/derive.js) |
 | nothing but the list | the list's entry, its reason in `why` (`why:{ mods:{ <from>:… } }`) | that unit |
 
 `data.js` resolves them in that order (`resolveArmies`): the army rules on the unit's Rules line, each datasheet of the unit,
@@ -136,13 +136,13 @@ Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k
 | `RULE_SRC` | where a RULES entry comes from when it is not a core rule | **hand**: `name`, `source` |
 | `RULE_ALIASES` | which RULES entry a keyword or rule chip opens: [pattern, rule] | **hand**: `pattern`, `rule` |
 | `CONCEPTS` | core terms kept out of a unit's rule list | **gw**: `term` |
-| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `help`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
+| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
 | `FACTIONS` | one row per faction: its army rules, detachments and aliases | **gw**: `name`, `armyRules`, `detachments` · **hand**: `aliases`, `allies` |
 | `FACTIONS.armyRules` | a faction's army rules | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf`, `defPh`, `readOf` · **hand**: `coreTwin`, `note`, `calcDefs`, `mod`, `parts`, `statNote`, `tableAt`, `missing`, `mods`, `aura`, `guard` · **ai**: `def` |
 | `FACTIONS.detachments` | a faction's detachments | **bsdata**: `dispositions` · **gw**: `name`, `dp`, `rule`, `moreRules`, `enhancements`, `stratagems` |
 | `FACTIONS.detachments.rule` | a detachment's rule | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf`, `defPh`, `readOf` · **hand**: `coreTwin`, `note`, `calcDefs`, `mod`, `parts`, `statNote`, `tableAt`, `missing`, `mods`, `aura`, `guard` · **ai**: `def` |
 | `FACTIONS.detachments.moreRules` | a detachment's further rule (moreRules), with the columns of its first | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf`, `defPh`, `readOf` · **hand**: `coreTwin`, `note`, `calcDefs`, `mod`, `parts`, `statNote`, `tableAt`, `missing`, `mods`, `aura`, `guard` · **ai**: `def` |
-| `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `help`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
+| `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
 | `FACTIONS.detachments.enhancements` | a detachment's enhancements | **newrecruit**: `pts`, `nr` · **bsdata**: `upgrade` · **gw**: `name`, `text` · **wahapedia**: `limit` · **hand**: `mods`, `aura`, `guard` |
 | `ARMIES` | one row per list | **newrecruit**: `name`, `faction`, `points`, `pointsUsed`, `battleSize`, `disposition`, `detachments`, `source`, `config` · **hand**: `id`, `units` |
 | `ARMIES.units` | a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS | **newrecruit**: `pts`, `ptsNote`, `copies`, `models`, `gear`, `unplaced`, `enhancement`, `warlord`, `enhOn`, `warlordOn`, `upgrade`, `leads`, `support`, `also`, `role`, `name`, `rules`, `kw`, `stats`, `ranged`, `melee`, `abilities` · **derived**: `ds`, `why` · **hand**: `id`, `short`, `kwNote`, `kwOnly`, `partialRules`, `srcNote`, `mods`, `aura`, `guard`, `over`, `note` |
