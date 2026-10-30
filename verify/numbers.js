@@ -133,6 +133,11 @@ for(const a of D.armies) for(const u of [...a.units, ...(a.refs || [])]){
     }
   }
 }
+// an ability's declared spelling (kind 'abilities', for verify/gw-order.js): the unit has the ability, the page the spelling
+DEVS.forEach((d, i) => { if(d.kind !== 'abilities' || !d.wahaName) return;
+  const [fac, ...rest] = d.ds.split('/'), sheet = D.datasheets[d.ds], P = sheet && O.pageFor(fac, sheet.name);
+  if(sheet && (sheet.abilities || []).some(x => x.name === d.row) && P && P.abilities.some(x => x.name === d.wahaName)) used.add(i);
+  else fails.push({ ds:d.ds, kind:d.kind, row:d.row, field:'name', why:'verify/deviations-numbers.json #' + i + ': no such ability, or its page has no ' + d.wahaName }); });
 // a GW document over Wahapedia (gw: { file, quote, value }): its words must be in that file (verify/.cache/gw); one the app follows
 // where Wahapedia agrees with the app (a Faction Pack line a newer codex superseded: superseded true) is matched by the value shown
 const GWDIR = path.join(ROOT, 'verify/.cache/gw'), sp = t => String(t).replace(/\s+/g, ' ');

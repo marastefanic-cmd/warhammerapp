@@ -191,5 +191,13 @@
   "wahaName": "Dainal Komelius",
   "reason": "New Recruit's (and GW's) Dainal Kornelius; Wahapedia misspells him Komelius. Model names follow New Recruit; the numbers are checked against this profile.",
   "evidence": "verify/.cache/waha/ds/ultramarines_Wardens-of-Ultramar.html (profile \"Dainal Komelius\")."
+ },
+ {
+  "ds": "world-eaters/kharn-the-betrayer",
+  "kind": "abilities",
+  "row": "Berserker Frenzy",
+  "wahaName": "Berzerker Frenzy",
+  "reason": "New Recruit's spelling (Berserker Frenzy); GW's page prints Berzerker Frenzy (ABILITIES, third). Ability names follow GW for their wording; this declares the spelling so verify/gw-order.js matches it on the page.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Kh-rn-The-Betrayer.html (ABILITIES: \"Berzerker Frenzy\")."
  }
 ]

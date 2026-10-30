@@ -7840,7 +7840,7 @@ const DATASHEETS = {
     { kind:'ranged', when:'Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll)', note:'[IGNORES COVER]', from:'Soul Sight', readOf:'a4058129' }
   ],
   rules:['Deep Strike','Infiltrators','Leader','Scouts 6"','Stealth','Combat Doctrines','Librarius','Close-quarters','Psychic','Hazardous','Devastating Wounds'],
-  kw:['Infantry','Character','Explosives','Imperium','Phobos','Psyker','Faction: Adeptus Astartes']
+  kw:['Infantry','Character','Explosives','Imperium','Phobos','Psyker','Librarian','Faction: Adeptus Astartes']
 },
 'ultramarines/heavy-intercessor-squad':{
   name:'Heavy Intercessor Squad', faction:'ultramarines', bsId:'7324-e591-939b-b675', role:'Battleline',

@@ -52,7 +52,9 @@ the page does not name stays after the item before it; a datasheet with no page 
 
 **GW's keywords.** A unit's keywords are its datasheets' (`gwKeywords`, written by `--write`, checked by the gate step `keywords`,
 `verify/keywords.js`): every part's KEYWORDS and FACTION KEYWORDS, in GW's spelling where the unit has none; of the unit's own only its
-datasheet's name keyword (GW prints it; Wahapedia's new-codex pages leave it out), a keyword a named rule of the list gives (`why.kw`, a
+datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's: the
+page's keyword or BSData's category that is the name, else the one the name's head ends or starts with; `--write` supplies it, and the
+`keywords` step fails on a datasheet without one), a keyword a named rule of the list gives (`why.kw`, a
 `kwNote`'s "comes from <rule>"), a model's or a detachment's keyword the list takes (`kwOnly`), an Allies marker. A difference from
 BSData or New Recruit is declared in `verify/deviations-bsdata.json` / `verify/deviations-nr.json`; one from GW in
 `verify/deviations-keywords.json`.

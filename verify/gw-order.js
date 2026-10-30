@@ -123,7 +123,7 @@ module.exports = function make(ROOT) {
   // an ability's place on the page: [box, its place in the box]; one named as a box (Supreme Commander, Transport, Leader, a Damaged band)
   // at its box's head
   function abilityAt(P, ab) {
-    const N = names(ab.name), B = P.boxes;
+    const sp = SPELL.find(x => x.kind === 'abilities' && x.row === ab.name), N = names(ab.name).concat(sp ? names(sp.wahaName) : []), B = P.boxes;
     for (let b = 0; b < B.length; b++) { if (B[b].h === 'UNIT COMPOSITION') continue; const j = B[b].ab.findIndex(x => N.includes(n(x.name)) || N.includes(art(n(x.name)))); if (j >= 0) return [b, j]; }
     for (let b = 0; b < B.length; b++) { if (B[b].h === 'UNIT COMPOSITION') continue; const j = B[b].ab.findIndex(x => N.some(a => a.length > 3 && (n(x.name).startsWith(a) || a.startsWith(n(x.name))))); if (j >= 0) return [b, j]; }
     const hb = B.findIndex(x => N.includes(n(x.h)) || (/^damaged/i.test(ab.name) && n(x.h) === n(ab.name)));
@@ -196,11 +196,11 @@ module.exports = function make(ROOT) {
   }
 
   // keywords: own = the list's (Warlord, a keyword a rule of the list gives), last
-  function orderKw(u, parts, own) {
+  function orderKw(u, parts, own, names) {
     if (!Array.isArray(u.kw) || parts.every(p => !p.page)) return;
     const K = [], F = [];
     // (each part's KEYWORDS, then its datasheet's name keyword where the page leaves it out; an Allies marker is the list's own)
-    for (const p of parts) if (p.page) { for (const k of p.page.keywords) if (!K.includes(n(k))) K.push(n(k)); if (!K.includes(n(p.name))) K.push(n(p.name)); for (const k of p.page.factionKeywords) if (!F.includes(n(k))) F.push(n(k)); }
+    for (const p of parts) if (p.page) { for (const k of p.page.keywords) if (!K.includes(n(k))) K.push(n(k)); for (const x of [p.name, (names || [])[parts.indexOf(p)]]) if (x && !K.includes(n(x))) K.push(n(x)); for (const k of p.page.factionKeywords) if (!F.includes(n(k))) F.push(n(k)); }
     const ownSet = new Set((own || []).concat(u.kw.filter(k => /^Allies: /.test(k))).map(n));
     u.kw = sortBy(u.kw, (k, i) => {
       // (a keyword GW's page prints is in GW's place, though a rule of the list also gives it: the Bloodmaster's BATTLELINE)
@@ -216,10 +216,43 @@ module.exports = function make(ROOT) {
   // (kwOnly; a page's "MODEL: KW") or a detachment's (Wahapedia's detachment-only keyword) the list has, an Allies marker. Spelled as the
   // unit has it, else as GW prints it in title case. null: a part with no page (as it is)
   const TC = k => k.toLowerCase().replace(/(^|[\s-])([a-z\u00e0-\u00ff])/g, (m, a, b) => a + b.toUpperCase());
-  function gwKeywords(u, parts, own) {
+  // each BSData entry's own categories (verify/sources/bsdata-extract.json, by id), loaded on first use
+  let BSC = null;
+  const bsCats = id => { if (!BSC) { BSC = new Map(); try { const x = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/bsdata-extract.json'), 'utf8'));
+      const walk = o => { if (Array.isArray(o)) { o.forEach(walk); return; } if (!o || typeof o !== 'object') return; if (o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); for (const k in o) if (o[k] && typeof o[k] === 'object') walk(o[k]); };
+      walk(x.files); } catch (e) {} }
+    return BSC.get(id) || []; };
+  // the BSData categories of each part of a list's unit (by the roots data.js BS_IDS names for it), [] when unknown
+  const partCats = (bsIds, unitKey, parts) => { const sig = ((bsIds || {}).units || {})[unitKey];
+    return parts.map((p, i) => Array.isArray(sig) && sig.length === parts.length ? bsCats(sig[i].split('|')[0]) : []); };
+  // a datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's):
+  // the page's keyword that is the name; else BSData's category that is the name; else the page keyword the name ends with (KHORNE
+  // BERZERKERS: BERZERKERS), else the one it starts with (EXALTED SORCERER ON DISC OF TZEENTCH: EXALTED SORCERER), the longest; else BSData's
+  // category not on the page it ends or starts with (LIBRARIAN IN PHOBOS ARMOUR: LIBRARIAN). null: none found (verify/keywords.js fails)
+  function nameKeyword(p, cats) {
+    const nm = n(String(p.name).replace(/\s*\([^()]*\)\s*$/, '')), pk = p.page.unitKeywords.concat(...Object.values(p.page.modelKeywords)).map(k => k.replace(/\s*:\s*$/, ''));
+    const eq = k => n(k) === nm || n(k) + 's' === nm || n(k) === nm + 's';
+    // (the noun the name ends with first, CHAOS RHINO: RHINO; else the one it starts with, DAEMON PRINCE OF KHORNE: DAEMON PRINCE)
+    // (of the name's head, before "of", "on", "in" or "with": DAEMON PRINCE of Khorne, LIBRARIAN in Phobos Armour)
+    const hd = n(String(p.name).replace(/\s*\([^()]*\)\s*$/, '').split(/\s+(?:of|on|in|with)\s+/i)[0]);
+    const suf = k => { const x = n(k); return x.length > 2 && (hd.endsWith(x) || hd.endsWith(x + 's')); }, pre = k => { const x = n(k); return x.length > 2 && hd.startsWith(x); };
+    const ends = k => suf(k) || pre(k);
+    const longest = l => l.sort((a, b) => (suf(b) - suf(a)) || n(b).length - n(a).length)[0];
+    const own = (cats || []).filter(c => !/^Faction: /.test(c) && !pk.some(k => n(k) === n(c)));
+    let k = pk.find(eq); if (k) return { kw:TC(k), from:'page' };
+    k = (cats || []).find(c => !/^Faction: /.test(c) && eq(c)); if (k) return { kw:k, from:'bsdata' };
+    k = longest(pk.filter(ends)); if (k) return { kw:TC(k), from:'page' };
+    k = longest(own.filter(ends)); if (k) return { kw:k, from:'bsdata' };
+    return null;
+  }
+  // cats: each part's BSData categories (partCats), for its name keyword; the result's .names: each part's name keyword, .missing: the
+  // parts with none found
+  function gwKeywords(u, parts, own, cats) {
     if (!Array.isArray(u.kw) || parts.some(p => !p.page)) return null;
     const want = [], keep = new Set(), add = (k, tc) => { if (!want.some(x => n(x) === n(k))) want.push(tc ? TC(k) : k); };
     for (const p of parts) for (const k of p.page.unitKeywords) add(k, true);
+    const names = parts.map((p, i) => nameKeyword(p, (cats || [])[i]));
+    for (const x of names) if (x) add(x.kw);
     for (const p of parts) for (const k of p.page.factionKeywords) add('Faction: ' + TC(k));
     const listed = new Set([].concat(parts.map(p => p.name), own || [], Object.keys(u.kwOnly || {}),
       parts.flatMap(p => Object.values(p.page.modelKeywords).flat().map(k => k.replace(/\s*:\s*$/, ''))), parts.flatMap(p => Object.keys(p.page.detachmentKeywords)),
@@ -227,6 +260,7 @@ module.exports = function make(ROOT) {
     for (const k of u.kw) if (listed.has(n(k)) || /^Allies: /.test(k)) keep.add(n(k));
     const out = u.kw.filter(k => keep.has(n(k)) || want.some(x => n(x) === n(k)));
     for (const k of want) if (!out.some(x => n(x) === n(k))) out.push(k);
+    out.names = names.map(x => x && x.kw); out.missing = parts.filter((p, i) => !names[i]).map(p => p.name);
     return out;
   }
   // every resolved unit of the lists (the old form): its rows, a weapon's keywords, the Rules line (keywords: orderKw, with the list's own)
@@ -243,5 +277,5 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { units, sheet, orderKw, gwKeywords, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { units, sheet, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };

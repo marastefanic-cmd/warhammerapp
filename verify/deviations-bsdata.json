@@ -2951,14 +2951,5 @@
   "source": "Rubric",
   "reason": "BSData at the pin gives the Rubric Marine w/ soulreaper cannon the category Rubric; GW’s datasheets (Exalted Sorcerer, Rubric Marines) do not print RUBRIC (\"KEYWORDS: INFANTRY; BATTLELINE; CHAOS; TZEENTCH; RUBRICAE; RUBRIC MARINES\"). GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
   "evidence": "verify/.cache/waha/ds/thousand-sons_Rubric-Marines.html and thousand-sons_Exalted-Sorcerer.html: KEYWORDS."
- },
- {
-  "army": "nerf-when",
-  "unit": "librarian-in-phobos-armour",
-  "field": "kw",
-  "app": "",
-  "source": "Librarian",
-  "reason": "BSData at the pin gives the unit the category Librarian; GW’s datasheet does not print LIBRARIAN (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; IMPERIUM; PHOBOS; PSYKER\", the Ultramarines view). GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: KEYWORDS."
  }
 ]

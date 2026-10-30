@@ -423,8 +423,8 @@ function build(R){
   // (and their content: GW's KEYWORDS and FACTION KEYWORDS, and of the unit's own only what GW prints or the list takes, verify/gw-order.js
   // gwKeywords; verify/keywords.js checks it)
   for(const U of units){ const parts = GWO().partsOf(U.u, U.a.faction), own = Object.keys((U.why || {}).kw || {});
-    const kw = GWO().gwKeywords(U.u, parts, own); if(kw) U.u.kw = kw;
-    GWO().orderKw(U.u, parts, own); }
+    const kw = GWO().gwKeywords(U.u, parts, own, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts)); if(kw) U.u.kw = kw.slice();
+    GWO().orderKw(U.u, parts, own, kw && kw.names); }
   // the readings, each to the row it reads (readingTables); the list's own keep their reason
   const RT = readingTables(R, units, conflicts);
   for(const U of units){
