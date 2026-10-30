@@ -1,6 +1,6 @@
 {
- "hash": "4245a57fc7cc95c9ad6251d903a7d677af0fe0e2d7c80c79e1446eeb51ce83ce",
- "at": "2026-10-30T16:22:42.559Z",
+ "hash": "e70048b78961c3352c1960b2bca19142f232f8b84873507938a8894dc3622af4",
+ "at": "2026-10-30T20:36:52.972Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,7 +9,7 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 213 unit entries in 25 lists over 169 datasheets, 74 rule options, 64 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 213 unit entries in 25 lists over 261 datasheets, 89 rule options, 76 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
@@ -17,11 +17,11 @@
   },
   "readings": {
    "ok": true,
-   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json)"
+   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json); 163 not read yet (catalogue rows and detachments, aiStatus not-read)"
   },
   "evidence": {
    "ok": true,
-   "summary": "evidence: 243 sources, 241 boxes and 34 picks made by script from GW’s words (G1-G8); the army, unit and other-units groups of 213 units as the database gives them; 176 stratagems read from their TARGET, shown for 213 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught)"
+   "summary": "evidence: 275 sources, 273 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 213 units as the database gives them; 263 stratagems read from their TARGET, shown for 213 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
   },
   "invariants": {
    "ok": true,
@@ -29,7 +29,7 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1071 agreed labels hold; 3 differ, 183 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1071 agreed labels hold; 3 differ, 191 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
@@ -37,23 +37,27 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 16364 facts checked against BSData b4dc3f4 (clone) {\"gear\":1153,\"stats\":2484,\"weapons\":7790,\"abilities\":1476,\"keywords\":1824,\"rules\":1100,\"grants\":248,\"points\":288,\"extract\":1}; 282 deviations used; 0 failures"
+   "summary": "bsdata: 16366 facts checked against BSData b4dc3f4 (clone) {\"gear\":1153,\"stats\":2484,\"weapons\":7790,\"abilities\":1476,\"keywords\":1826,\"rules\":1100,\"grants\":248,\"points\":288,\"extract\":1}; 285 deviations used; 0 failures"
   },
   "dispositions": {
    "ok": true,
-   "summary": "dispositions: 40 detachments match BSData; every list’s disposition is one its detachments allow"
+   "summary": "dispositions: 59 detachments match BSData; every list’s disposition is one its detachments allow"
   },
   "bases": {
    "ok": true,
-   "summary": "bases: 277 model rows in 25 lists have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 12 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
+   "summary": "bases: 277 model rows in 25 lists and 96 of catalogue datasheets no list has have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 17 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
+  },
+  "catalog": {
+   "ok": true,
+   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":168,\"complete\":169,\"fresh\":3,\"tables\":156,\"nr\":463,\"bsdata\":399,\"texts\":461}; 399 BSData deviations used"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 11234 facts checked (army 185, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1493, ranged 2259, from 71, melee 2007, abilities 1154, kw 172, rules 1333, glossary 298); 200 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11234 facts checked (army 185, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1493, ranged 2259, from 71, melee 2007, abilities 1154, kw 172, rules 1333, glossary 298); 202 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 4483 checked facts, 19 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 5712 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "calc": {
    "ok": true,
@@ -77,7 +81,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1511 judgements, 1511 approved, 0 to check, 1233 stale approvals"
+   "summary": "helpers: 1618 judgements, 1618 approved, 0 to check, 1289 stale approvals"
   }
  }
 }
