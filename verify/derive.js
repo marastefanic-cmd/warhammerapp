@@ -693,7 +693,7 @@ function stratNeeds(V, s){
       const c = sets.length === 1 ? { all:sets[0], any:[], rules:[] } : fac ? { all:fac, any:[], rules:['kw-or-faction-alone'] } : combineAlts(sets);
       if(c.bad) return { how:'none', reasons:[{ rule:'unparsed', match:c.bad }] };
       n = { all:c.all, any:c.any, none:[] };
-      reasons.push({ rule:c.rules.join('+'), match:sets.map(x => x.join(' ')).join(' | ') });
+      if(c.rules.length) reasons.push({ rule:c.rules.join('+'), match:sets.map(x => x.join(' ')).join(' | ') });
     }
   }
   if(/^that\b/i.test(plain(first))){
