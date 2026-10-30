@@ -19,5 +19,47 @@
   "from": "page",
   "reason": "A head match (the name's head LORD DISCORDANT, before \"on Helstalker\"), accepted: the page prints LORD DISCORDANT, the datasheet's own keyword (no other datasheet has it).",
   "evidence": "verify/.cache/waha/ds/chaos-space-marines_Lord-Discordant-on-Helstalker.html (KEYWORDS: MOUNTED; CHARACTER; CHAOS; DAEMON; LORD DISCORDANT)."
+ },
+ {
+  "datasheet": "world-eaters/Daemon Prince of Khorne",
+  "nameKeyword": "Daemon Prince",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared DAEMON PRINCE (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Daemon-Prince-of-Khorne.html: KEYWORDS \"MONSTER; CHARACTER; CHAOS; KHORNE; DAEMON; DAEMON PRINCE\"."
+ },
+ {
+  "datasheet": "thousand-sons/Daemon Prince of Tzeentch with wings",
+  "nameKeyword": "Daemon Prince",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared DAEMON PRINCE (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Daemon-Prince-of-Tzeentch-with-Wings.html: KEYWORDS \"MONSTER; CHARACTER; DAEMON; FLY; PSYKER; CHAOS; TZEENTCH; DAEMON PRINCE\"."
+ },
+ {
+  "datasheet": "thousand-sons/Sorcerer in Terminator Armour",
+  "nameKeyword": "Sorcerer",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared SORCERER (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Sorcerer-In-Terminator-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; PSYKER; TERMINATOR; CHAOS; TZEENTCH; SORCERER\"."
+ },
+ {
+  "datasheet": "thousand-sons/Exalted Sorcerer on Disc of Tzeentch",
+  "nameKeyword": "Exalted Sorcerer",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared EXALTED SORCERER (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Exalted-Sorcerer-on-Disc-of-Tzeentch.html: KEYWORDS \"INFANTRY; MOUNTED; CHARACTER; FLY; GRENADES; PSYKER; CHAOS; TZEENTCH; EXALTED SORCERER\"."
+ },
+ {
+  "datasheet": "chaos-daemons/Pink Horrors",
+  "nameKeyword": "Horrors",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared HORRORS (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"PINK HORRORS: PINK\"."
+ },
+ {
+  "datasheet": "chaos-daemons/Blue Horrors",
+  "nameKeyword": "Horrors",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared HORRORS (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"BLUE HORRORS: BLUE\"."
  }
 ]
