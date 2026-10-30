@@ -1,0 +1,32 @@
+[
+ {
+  "key": "993719392a6fd2ec",
+  "where": "verify/evidence.js targetNeeds: alternatives with an exclusion derive.js did not read (adbde0f)",
+  "verdict": "ok",
+  "why": "This fixes round 2’s finding (result-catalog-merge-2.json). An or-target TARGET without or-target-cancel whose first sentence has “(excluding” is now unparsed. The new fixed case “an exclusion further from its unit” passes: 5 of 5. In a scratch copy I added six more cases and all 11 pass: a far exclusion with Slaanesh | Khorne, three alternatives, K in S, exclusion first (still S), a plain “(excluding MONSTERS)” TARGET (still none:[Monster], so the override still works outside alternatives), and an or-target with no exclusion (still any:[Khorne, Slaanesh]). Mutation: with the new branch disabled, the fixed case fails with {all:[LD], any:[Monster, Slaanesh], none:[Monster]}, so the case bites. The gate’s targets check still passes for all 263 stratagems, so the branch catches no real TARGET."
+ },
+ {
+  "key": "415a3a50d9c03360",
+  "where": "verify/evidence.js G9: counted boxes and not-counted words in one source (adbde0f)",
+  "verdict": "ok",
+  "why": "This closes round 2’s nit: the app lists a source’s not-counted words only when it has no counted box. I tested it in a scratch copy by putting an nc on a source with boxes (Even More Dakka). G9 fails with “counted boxes and not-counted words in one source …”. With the check disabled, only G7 is left (because the injection changes T), so the check is what catches a both-source. No source has both today, so it passes. Nit, not blocking: it has no bite of its own the way the other G9 classes do."
+ },
+ {
+  "key": "7db1bd8733f0f807",
+  "where": "verify/derive.js: no empty rule label after an or-target-cancel (d5b75f0)",
+  "verdict": "ok",
+  "why": "Re-ran stratNeeds over all 263 stratagems before and after: needs are unchanged, and one label changed, Archagonists’ trailing '', now gone. c.rules is [] only when sets.length is 1 (the cancel), so no other label is lost."
+ },
+ {
+  "key": "112959bc142b40cd",
+  "where": "snapshot diffs (scratchpad/cat-merge/diffs3)",
+  "verdict": "ok",
+  "why": "healybois, nidzillas and shooty in diffs3 are line-for-line the same as diffs2, which I reproduced myself in round 2 by running the whole gate on a scratch copy: Tyrannofex +FRAME and the Wahapedia note removed (healybois, nidzillas), How-screen counts (shooty, BOXES 275). The new commits touch only evidence.js and one derive.js label, so no screen can change. A scratch evidence.js run on HEAD d5b75f0 passes (G1-G9, 5 of 5 G9 bites, 5 of 5 fixed cases), and so does derive.js."
+ },
+ {
+  "key": "28b261f1867e13f9",
+  "where": "BOXES mark 'selected' on rules that select an enemy unit: a|10pf8qz Soul Sight, a|13ur237 Spirit Thief, a|1tafhr4 Blood Throne, r|14qasst Cabal of Sorcerers, r|1p9ywjd Worthy Foes, r|16kt1jq Assemblage of Might (not blocking this release)",
+  "verdict": "ok",
+  "why": "Kept as is for this release. My opinion, for a later branch: In all six, GW’s “select one” selects an ENEMY unit: Soul Sight “that enemy unit”, Spirit Thief “select one visible enemy VEHICLE unit”, Blood Throne and Cabal “select one enemy unit within …”, Worthy Foes “In your Command phase, select one enemy unit”, Assemblage “select one enemy unit to be a dreadful foe unit”. The friendly units each one helps are reached by keyword (HERETIC ASTARTES, KHORNE LEGIONES DAEMONICA, THOUSAND SONS or SCINTILLATING LEGIONS, NOBLE/LYCHGUARD/TRIARCH, ADEPTUS CUSTODES CHARACTER), never selected. So the right mark is 'friendly' (shown as “From it”), not 'selected' (“Selected by it”, which says the player picked this friendly unit). The enemy selection is already its own condition: targetSelected on five, and the dreadful-foe q on Assemblage. Cabal of Sorcerers shows the slip: its first box is 'selected' and its continuation, with the same reach, is 'friendly'. The app shows the mark only for grp 'other' (another unit’s ability), so today the wrong label is visible on Spirit Thief and Blood Throne (and on Soul Sight if its empty reach puts it there). It is never visible on the army or detachment rules Cabal, Worthy Foes and Assemblage. Suggested rule: 'selected' only where the lead selects a friendly unit (“select one (other) friendly …”, as line 338 does for stratagems). Otherwise 'friendly', or 'aura' if it is one. The calculation does not change."
+ }
+]
